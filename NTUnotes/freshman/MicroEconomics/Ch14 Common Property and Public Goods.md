@@ -5,8 +5,8 @@ title: Ch14 Common Property and Public Goods
 ![](https://i.imgur.com/YJWcKuO.png)
 ---
 居民休閒選項有兩個  
-到公園野餐價值為 \$2   
-去水族館的價值為 ​\$10  
+到公園野餐價值為 $2   
+去水族館的價值為 $10  
 但有別人一起到水族館，價值就會下降（如遮住你的視線）  
 因此均衡為居民休閒價值 \$2 i.e. 價值公園野餐&去水族館價值皆為 $2  
 
@@ -51,10 +51,9 @@ vice versa
 ![](https://i.imgur.com/HFyYVz0.png)
 ### 2. P13.
 ![](https://i.imgur.com/bwogDhI.png)
-
 ### 3.
-
 ![](https://i.imgur.com/YDkYdXF.png)
 ### 4.
 ![](https://i.imgur.com/4ld5sDb.png)
 ![](https://i.imgur.com/GLiO0UZ.png)
+
