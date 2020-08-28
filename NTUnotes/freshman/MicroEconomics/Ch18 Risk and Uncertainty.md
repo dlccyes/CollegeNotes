@@ -1,5 +1,6 @@
 ---
 title: Ch18 Risk and Uncertainty
+###### tags: `Microeconomics`
 ---
 ![](https://i.imgur.com/jSXLMk1.png)
 
