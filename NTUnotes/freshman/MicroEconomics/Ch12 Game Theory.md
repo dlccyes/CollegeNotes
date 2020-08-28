@@ -11,11 +11,10 @@ dominant strategy
 mixed strategy
 : 牽扯到隨機決定
 [stricly dominant mixed strategy](https://www.youtube.com/watch?v=3dd-IRedU0U&feature=youtu.be&list=PLKI1h_nAkaQoDzI4xDIXzx6U2ergFmedo)
-
 ```
-1. 刪掉不可能的 strategy 算
-2. 設 row player indifferent, 算 column player 各 strategy 的機率 （Nash 之下，給定對方策略，不會想換策略）
-3. 設 column player indifferent, 算 row player 各 strategy 的機率
+1. 刪掉不可能的 strategy算
+2. 設 row player indiffrent, 算 column player 各 strategy 的機率 （Nash 之下，給定對方策略，不會想換策略）d
+3. 設 column player indiffrent, 算 row player 各 strategy 的機率
 ```
 
 pareto-optimal
