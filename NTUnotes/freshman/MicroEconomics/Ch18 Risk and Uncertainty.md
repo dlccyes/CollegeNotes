@@ -120,6 +120,6 @@ so 均衡時 P~5~ = P~6~
 
 ### 5.
 
-![image-20200615131802098](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20200615131802098.png)
+![image-20200615131802098](https://i.loli.net/2020/09/13/kqGflSMc3omDaEp.png)
 
 ![image-20200615131812138](https://i.loli.net/2020/06/15/P8HjWpfsgYNOvXd.png)
