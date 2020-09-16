@@ -51,6 +51,7 @@ fair insurance
 ![](https://i.imgur.com/3Sz9w6p.png)
 
 ## adverse selection
+
 ![](https://i.imgur.com/5FXe116.png)
 
 ## CAPM, Capital Assets Pricing Model
