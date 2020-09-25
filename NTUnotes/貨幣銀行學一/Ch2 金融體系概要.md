@@ -172,14 +172,14 @@ e.g. 10 年期 & 3 個月公債殖利率利差
   - 存款 liquidity 高，放款 liquidity 低 → 營運風險高
   - 主要資產
     - 放款
-    - 中央銀行透過債權[^2]、貸款、購買證券、收購金銀外匯等方式，讓紙幣流入市場 [ref](https://wiki.mbalib.com/zh-tw/%E4%B8%AD%E5%A4%AE%E9%93%B6%E8%A1%8C%E7%9A%84%E8%B4%9F%E5%80%BA%E4%B8%9A%E5%8A%A1)
+    - 對中央銀行債權：央行透過貼現[^2]、貸款、購買證券、收購金銀外匯等方式，讓紙幣流入市場 [ref](https://wiki.mbalib.com/zh-tw/%E4%B8%AD%E5%A4%AE%E9%93%B6%E8%A1%8C%E7%9A%84%E8%B4%9F%E5%80%BA%E4%B8%9A%E5%8A%A1)
   - 主要負債
     - 定存
     - 活存
   
   ![Image](https://i.imgur.com/pXmnxFP.png)
 
-[^2]:匯票到期前，付點錢給銀行讓銀行馬上把錢給你，把權力轉給銀行，到期時銀行再向承兌人收款 [ref](https://wiki.mbalib.com/zh-tw/%E7%A5%A8%E6%8D%AE%E8%B4%B4%E7%8E%B0)
+[^2]:貼現：匯票到期前，付點錢給銀行讓銀行馬上把錢給你，把權力轉給銀行，到期時銀行再向承兌人收款 [ref](https://wiki.mbalib.com/zh-tw/%E7%A5%A8%E6%8D%AE%E8%B4%B4%E7%8E%B0)
 
 - 專業銀行：不給一般人用的銀行
   - 多已轉型為商業銀行
@@ -188,11 +188,19 @@ e.g. 10 年期 & 3 個月公債殖利率利差
     - 企業放款
   - 中國輸出入銀行：協助政府貿易 [ref](https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9C%8B%E8%BC%B8%E5%87%BA%E5%85%A5%E9%8A%80%E8%A1%8C)
 
+- 中央銀行
+![Image](https://i.imgur.com/NOgiZ7S.png)
+
 - 基層金融機構：限會員
   - 信用合作社
+  ![Image](https://i.imgur.com/pb8bHAF.png)
   - 農漁會信用部
+  ![Image](https://i.imgur.com/TYjxGms.png)
 - 中華郵政公司儲匯處
   - 郵政儲金轉存央行(?)
+
+  ![Image](https://i.imgur.com/fqzHvgu.png)
+
 - 保險公司
   - 人壽保險公司：跟人有關
   - 產物保險公司：跟財產有關
@@ -212,7 +220,9 @@ e.g. 10 年期 & 3 個月公債殖利率利差
 ### 資產三特性
 - 風險 risk
 - 獲利 profitability
-- 流動性 liquidity
+- 流動性 liquidity：轉換成現金容易度
+  - 轉換成現金所花時間
+  - 轉換成現金之折損
 
 ### 資產轉換 asset tranformation：轉換資產特性  
 - 有人有錢
