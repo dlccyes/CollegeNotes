@@ -158,7 +158,7 @@ e.g. 10 年期 & 3 個月公債殖利率利差
 
 ## 金融仲介機構
 - 存款貨幣機構 depository institution：存放款，e.g. 商業銀行
-- 契約是儲蓄機構 contractual savings institution：按契約按期取得資金，e.g. 保險公司、退休基金
+- 契約式儲蓄機構 contractual savings institution：按契約按期取得資金，e.g. 保險公司、退休基金
 - 投資仲介機構 investment intermediary：發行證券 e.g. 證券公司
 
 [ref](https://www.3people.com.tw/%E7%9F%A5%E8%AD%98/%E9%87%91%E8%9E%8D%E9%AB%94%E7%B3%BB%E6%A6%82%E8%BF%B0/%E9%87%91%E8%9E%8D%E8%AD%89%E7%85%A7-%E6%8A%95%E4%BF%A1%E6%8A%95%E9%A1%A7%E6%A5%AD%E5%8B%99%E5%93%A1/e82b4582-7af0-4a49-a6c4-f8d3d2aa3443)
