@@ -571,7 +571,7 @@ liberals 支持政府干預
 因為怕 [inflation bias](#Barro-Gordan-Model-inflation-bias)  
 ![](https://i.imgur.com/DonBYmm.png)
 
-evidence of ECB veing conservative
+evidence of ECB being conservative
 ![](https://i.imgur.com/afocXl2.png)
 
 output gap
