@@ -48,7 +48,7 @@
 
 ## 電子貨幣
 - VISA 金融卡（轉帳卡, debit card）為全球使用率最高之支付工具
-- 信用卡`(credit card）非貨幣，為借貸性質
+- 信用卡 (credit card）非貨幣，為借貸性質
 
 ## 貨幣總計數
 - M~1~A = C + D － liquidity 最高的資產
