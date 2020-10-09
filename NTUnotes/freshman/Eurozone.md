@@ -639,7 +639,7 @@ US Fed 透明度高，independence 較低因為要幫政府
 >
 > https://www.investopedia.com/terms/l/lenderoflastresort.asp
 
-![image-20200605112423940](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20200605112423940.png)
+![image-20200605112423940](https://i.loli.net/2020/10/09/oYupPFHcxyI7K1n.png)
 
 2008&2011-12 ECB 有當 lender of last resort
 
@@ -772,7 +772,7 @@ finantial integration can be a substitude of fidcal integration
 
 WW1 → 歐洲動亂 → 資金如英鎊轉往美國 → 美金價值大升
 
-![image-20200616133639790](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20200616133639790.png)
+![image-20200616133639790](https://i.loli.net/2020/10/09/hxBDwbSQ12URIqH.png)
 
 戰後英鎊地位即回升  
 

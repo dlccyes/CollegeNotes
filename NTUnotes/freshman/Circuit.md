@@ -20,7 +20,6 @@ if have only dependent souces
 
 if have both independent & dependent sources
 : 打開 terminal → 算 V~OC~ → terminal 接上電線算 I~SC~ → $R_{TH}=\frac{V_{OC}}{I_{SC}}$  
-$
 
 ### source exchange
 ![](https://i.imgur.com/MRqLp2f.png)
@@ -260,7 +259,7 @@ $j\omega+x$
 
 $j\omega+x$
 
-1. 若在分子，則 +45$^{\circ}$/decade， $omega = x$ 時通過 45$^{\circ}$ ，直到 90$^{\circ}$
+1. 若在分子，則 +45$^{\circ}$/decade， $\omega = x$ 時通過 45$^{\circ}$ ，直到 90$^{\circ}$
 2. 在分母則 -45$^{\circ}$/decade，直到 -90$^{\circ}$
 3. （若只有 $j\omega$ (x=0) 則分子 → 一直 90$^{\circ}$；分母 → 一直 -90$^{\circ}$）
 4. 把漸進線疊起來
