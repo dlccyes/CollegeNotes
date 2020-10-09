@@ -57,8 +57,8 @@ in _t=$\infty$_ (_>5$\tau$_)
 
 **step 5**
 $R_{TH}$ 為以電容/電感為 terminal 的等效電阻  
-$\tau=\frac{1}{R_{TH}C}$  
-$\tau=\frac{L}{R_{TH}}$  
+$\tau=R_{TH}C$  
+$\tau=\dfrac{L}{R_{TH}}$  
 
 ### second order
 $s^2Ke^{st}+2\zeta \omega_0sKe^{st}+{\omega_0}^2Ke^{st}$  
