@@ -91,8 +91,13 @@ output
   - $g=\dfrac{P_{t+1}-P_t}{P_t}$ 
 
 ## 實質利率&名目利率
+- 通貨膨脹率 $\pi=\frac{P_{t+1}-P_t}{P_t}$
 - 實質利率 real interest rate
   - 考慮通貨膨脹
+  - 費雪方程式：$i\approx\pi^e+i_r$
+    1. $1+i_r=\dfrac{1+i}{1+\pi}$
+    2. $\pi i_r$可省略
+    3. $i\approx\pi+i_r$
+    4. $\pi為事後得知通膨率$，$\pi^e為事前預測通膨率$
 - 名目利率 nominal interest rate 
   - 不考慮通貨膨脹
-- 通貨膨脹率 $\pi=\frac{P_{t+1}-P_t}{P_t}$
