@@ -13,7 +13,13 @@ limited commitment
 
 
 IPO, Initial Public Offering
-: 首次公開募股
+: 首次公開募股haircut
+
+haircut
+: 擔保品的價值打折
+e.g. 20% haircut → 只可借 80% 其價值的錢
+
+
 
 ## 金融體系
 ![Image](https://i.imgur.com/ULnBu3F.png)
@@ -131,6 +137,8 @@ e.g. 10 年期 & 3 個月公債殖利率利差
   - 商業承兌匯票 commercial acceptance bills：付款人為接受商品/勞務之人，且經其承諾兌現
   - 銀行承兌匯票 bank's acceptance bills：付款人為銀行，且經其承諾兌現
 - 附買回協定 Repurchase Agreemants, Repos：like 當東西，議定出售 security 取得資金，並在未來某特定日期以某特定價格買回
+  - MBS liquidity < 公債
+  - 次貸危機：fed 買 MBS 賣公債，注入流動性到市場
 
 ### 資本市場
 - 股票 stocks
@@ -140,6 +148,9 @@ e.g. 10 年期 & 3 個月公債殖利率利差
     - 分配股利時，優先於普通股`
     - 固定股息，若公司營利足以分派股利，則似債券
     - 通常無表決權
+  - etf
+    - exchange-traded funds 指數股票型基金
+    - 共同基金，買股票組合
 - 債券 bonds
   - 政府公債 government bonds
   - 公司債 corporate bonds
@@ -191,6 +202,7 @@ e.g. 10 年期 & 3 個月公債殖利率利差
 
 - 中央銀行
 ![Image](https://i.imgur.com/NOgiZ7S.png)
+銀行買中央銀行定期存單－台灣特有
 
 - 基層金融機構：限會員
   - 信用合作社
