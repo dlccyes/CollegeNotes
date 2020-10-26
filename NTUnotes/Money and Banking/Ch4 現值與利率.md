@@ -106,3 +106,7 @@
     4. $\pi為事後得知通膨率$，$\pi^e為事前預測通膨率$
 - 名目利率 nominal interest rate 
   - 不考慮通貨膨脹
+
+## 題目
+![Image](https://i.imgur.com/rsHAkRb.png)  
+0.135x0.6-0.1 = -0.019

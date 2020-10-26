@@ -15,9 +15,7 @@ limited commitment
 IPO, Initial Public Offering
 : 首次公開募股
 
-haircut
-: 擔保品的價值打折
-e.g. 20% haircut → 只可借 80% 其價值的錢
+
 
 
 
@@ -143,13 +141,18 @@ e.g. 10 年期 & 3 個月公債殖利率利差
   - 商業承兌匯票 commercial acceptance bills：付款人為接受商品/勞務之人，且經其承諾兌現
   - 銀行承兌匯票 bank's acceptance bills：付款人為銀行，且經其承諾兌現
 - 附買回協定 Repurchase Agreemants, Repos：like 當東西，議定出售 security 取得資金，並在未來某特定日期以某特定價格買回
-
+  - haircut：
+    - 擔保品的價值打折
+    - > For example, if an asset has a market value of $100 and a bank sells it for $80 with an agreement to repurchase it for $88, then we would say that the repo rate is 10 percent(=88-80 / 80), and the haircut is 20 percent (100 – 80 / 100). If the bank defaults on the promise to repurchase, then the investor keeps the collateral.
+    - e.g. 20% haircut → 只可借 80% 其價值的錢
+    - 次貸時 haircut 大漲
+      - 用很爛的 collateral → haircut 漲 → 銀行流動性降低 (只能借到很少的錢)
 ### 資本市場
 - 股票 stocks
   - 優先股
     - > 固定收益、先派息、先清償、權利小 [^ref^](https://news.cnyes.com/news/id/1991360)
-    - 公司清算時，順序為 `債權 → 優先股 → 普通股
-    - 分配股利時，優先於普通股`
+    - 公司清算時，順序為 債權 → 優先股 → 普通股
+    - 分配股利時，優先於普通股
     - 固定股息，若公司營利足以分派股利，則似債券
     - 通常無表決權
   - etf
@@ -158,7 +161,7 @@ e.g. 10 年期 & 3 個月公債殖利率利差
 - 債券 bonds
   - 政府公債 government bonds
   - 公司債 corporate bonds
-    - 可轉讓公司債
+    - 可轉讓公司債：
       - 可在到期間轉換為股票
       - 誘因較高
     - 普通公司債
@@ -227,13 +230,13 @@ e.g. 10 年期 & 3 個月公債殖利率利差
   - 很多投資人給專業投資機構錢，機構把這些錢集合起來拿去投資，利益風險皆共享
   - 依投資標的可分為股票型、債券型、貨幣市場基金等
   - 依變現方式
-    - 開放型基金：like 活存，在初級市場直接交易，不限時限量，可隨時贖回
+    - 開放型基金：like 活存，在初級市場直接交易，不限時不限量，可隨時贖回
       - 以開放式基金為多
     - 封閉型基金：like 可轉讓定存，在初級市場限時限量，可在股票市場交易
 - 投資銀行 investment bank：為客戶操盤
   - 證券承銷
   - 諮詢
-  - e.g. Morgan Stanley（JPMorgan 為純商業 due to US 法規`)、HSBC（匯豐）
+  - e.g. Morgan Stanley（JPMorgan 為純商業 due to US 法規)、HSBC（匯豐）
 
 ## 金融仲介的功能
 ### 資產三特性
@@ -268,3 +271,8 @@ e.g. 10 年期 & 3 個月公債殖利率利差
           - so that 銀行會自己去監督
       - 降低存款人擠兌動機
 
+## 題目
+![Image](https://i.imgur.com/CoHp0kK.png)  
+?
+![Image](https://i.imgur.com/qpmDc9a.png)  
+?
