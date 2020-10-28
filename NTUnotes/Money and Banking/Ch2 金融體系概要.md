@@ -275,4 +275,5 @@ e.g. 10 年期 & 3 個月公債殖利率利差
 ![Image](https://i.imgur.com/CoHp0kK.png)  
 ?
 ![Image](https://i.imgur.com/qpmDc9a.png)  
-?
+$(1.08^{\frac{2}{12}}-1)\times 0.9+100000$  
+貼現率：利息收取比率
