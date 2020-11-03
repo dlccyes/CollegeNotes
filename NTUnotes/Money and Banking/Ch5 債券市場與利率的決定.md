@@ -39,4 +39,4 @@ RET：
   - 影響大多數資產
 - 非系統性風線 non-systematic risk
   - 又稱個別性風險 idiosyncratic risk
-god dman
+  - 股票&債券相關度較低 → 平衡型基金：投資組合包括兩者
