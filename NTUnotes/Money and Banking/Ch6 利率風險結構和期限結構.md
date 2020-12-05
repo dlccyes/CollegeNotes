@@ -18,7 +18,7 @@
 - 流動性風險
   - 融資流動性風險 funding liquidity risk
     - 無法獲得足夠資金
-  - 市場流動性風險 market liquidity risk
+  - 市場流動性風險 market liquidity risk 
     - 資產流動性不足（asset illiquidity）
 - 政府債券/公債 government bond／主權債 sovereign debt
 
