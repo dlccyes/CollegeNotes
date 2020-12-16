@@ -87,3 +87,37 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
 
 
 ## 利率風險
+### 利率變動對淨利息所得（net interest income，利息收入 - 利息支出）影響
+  - 重新定價模型 repricing model / 融資缺口模型 funding gap model
+    - 存款&放款期限不同 → 資金缺口
+      - 存款到期而放款尚未到期時，需要籌措新資金，此時利率上升會導致淨利息所得下降
+      - 放款到期而存款尚未到期時，需要尋找新投資機會，此時利率上升會導致淨利息所得上升
+  - 對利率敏感或不敏感的資產或負債
+    - 未來一年內會被利率波動影響 → interest-rate sensitive
+    - GAP = 對利率敏感資產 - 對利率敏感負債
+      - 利潤變動 = 利率變動 x GAP    - 
+    - ![Image](https://i.imgur.com/7LOXOwr.png)
+    - 降低利率風險方法
+      - 利率交換 interest rate swap
+        - 約定未來交換一連串不同利息支付的契約
+      - 機動利率房債 adjustable-rate mortgage, ARM
+        - 浮動利率
+        - 可能增加信用風險（客戶因利率大漲而倒帳）
+### 利率變動對銀行資產&負債影響
+  - 到期期限模型 maturity model
+    - 銀行資產負債表是用帳面價值會計法（book value accounting），但用市價會計法（mark to market）才有實質意義
+      - 清算時是看市值而非帳面價值
+    - 銀行貸長借短，資產期限 >> 負債期限
+      - 利率上升 → 資產跌幅 >> 負債跌幅
+      e.g. if 利率 10% → 11%
+      ![Image](https://i.imgur.com/Yv571XZ.png)
+        - 美國儲貸機構類似上圖，1979-1982 利率大漲 → 多家倒閉 
+  - 存續期間模型 duration model
+    - ![Image](https://i.imgur.com/Ubylgz4.png)
+      - https://www.masterhsiao.com.tw/CatBonds/Duration/Duration.php
+    - 利率上升 1% → 價值下降 D%
+
+## 資產負債表之外的風險
+
+
+
