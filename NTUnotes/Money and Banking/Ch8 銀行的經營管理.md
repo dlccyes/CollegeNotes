@@ -1,4 +1,4 @@
-#　Ch8 銀行的經營管理
+# Ch8 銀行的經營管理
 
 ## 商業銀行的資產負債表
 ### 資產
@@ -51,7 +51,7 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
     - 淨值報酬率 / 股東權益報酬率 return on equity, ROE
       - $ROE=\dfrac{net\space profit\space after\space taxes\space 稅後淨利}{bank\space capital\space 銀行資本}$
         - 資本高 → ROE 低
-        - 愈增加 ROE by 增加 EM
+        - 欲增加 ROE by 增加 EM
           - 買回股票
             - 準備金減少 → 資本減少
             - 發放現金股利 → 盈餘減少 → 資本減少
@@ -60,14 +60,14 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
           - 資產報酬率 return on assets, ROA
             - $ROA=\dfrac{net\space profit\space after\space taxes\space 稅後淨利}{assets\space 資產}$
             - 每一元資產賺取的稅後淨利
-            - 銀行利用資本的效率
+            - 銀行利用資產的效率
           - 權益乘數 equity multiplier, EM
             - $EM=\dfrac{assets\space 資產}{bank\space capital\space 銀行資本}$
             - 每一元資本支撐的資產金額
             - $EM=\dfrac{assets}{capital}=\dfrac{capital+liabilities}{capital}=1+\dfrac{liabilities}{capital}$
-              - EM 高 → 財務槓桿率 finantial leverage 高
+              - EM 高 → 財務槓桿率 financial leverage 高
   - 維持政府規範的資本適足性 capital adequacy requirements
-    - $\dfrac{資本}{風險性資產}>=8% $
+    - $\dfrac{資本}{風險性資產}>=$ 8%
     - 1990-1991 美國 資本緊縮 capital crunch → 信用緊縮 credit crunch
       - 儲待機構危機 → 呆帳多 → 用資本打銷呆帳 → 資本低 → 許多金融機構倒閉 → 政府提高資本適足性要求 → 銀行想辦法減少資產 → 減少放款 → 企業難以獲得資金 → 信用緊縮 → 倒帳率提高 → 呆帳增加 → feedback
 
@@ -95,8 +95,9 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
   - 對利率敏感或不敏感的資產或負債
     - 未來一年內會被利率波動影響 → interest-rate sensitive
     - GAP = 對利率敏感資產 - 對利率敏感負債
-      - 利潤變動 = 利率變動 x GAP    - 
+      - 利潤變動 = 利率變動 x GAP    
     - ![Image](https://i.imgur.com/7LOXOwr.png)
+      - 活存因為利率太低，所以算非利率敏感
     - 降低利率風險方法
       - 利率交換 interest rate swap
         - 約定未來交換一連串不同利息支付的契約
@@ -118,6 +119,9 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
     - 利率上升 1% → 價值下降 D%
 
 ## 資產負債表之外的風險
+
+
+## 題目
 
 
 
