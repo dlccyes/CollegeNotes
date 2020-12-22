@@ -122,6 +122,11 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
 
 
 ## 題目
+![](https://i.imgur.com/Rp9CKtY.jpg)
+![](https://i.imgur.com/exqw7Zj.jpg)
+![](https://i.imgur.com/ihRewWw.jpg)
+![](https://i.imgur.com/fhOUps5.jpg)
 
-
-
+### 詳解
+![](https://i.imgur.com/SJqW3Xm.jpg)
+![](https://i.imgur.com/fauGWr9.jpg)
