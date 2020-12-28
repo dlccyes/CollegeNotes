@@ -193,6 +193,26 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
     - 契約沒寫好 → 產生法律效力問題  
 - 策略風險
 
+## 資產證券化與金融機構的風險
+### 資產證券化 securitization
+- 將資產如債權包一包發行成證券售出
+- 單位
+![Image](https://i.imgur.com/8MRdNEj.png)
+  - 創始機構 originator
+    - 放款者
+  - 特殊目的機構 special purpose vehicle, SPV
+    - 購買創始機構的貸款群組，包成證券，給證券承銷機構賣
+  - 信用增強機構 credit enhancement agency
+    - 外部增強
+      - 提供保險
+    - 內部增強
+      - 發行順位償還 senior class & 次順位償還 subordinate class 債券
+      發行機構持有後者，承擔大部分信用風險
+  - 信用評等機構 credit rating agency
+  - 證券承銷機構 underwriter
+- 
+  - 
+
 
 ## 題目
 ![](https://i.imgur.com/Rp9CKtY.jpg)
