@@ -205,15 +205,43 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
   - 信用增強機構 credit enhancement agency
     - 外部增強
       - 提供保險
+        - 違約時代償
     - 內部增強
       - 發行順位償還 senior class & 次順位償還 subordinate class 債券
       發行機構持有後者，承擔大部分信用風險
   - 信用評等機構 credit rating agency
   - 證券承銷機構 underwriter
-- 
-  - 
+- 風險
+  - 錯綜複雜，風險不清
 
-
+### 影子銀行體系 shadow banking system
+- 業務如金融中介，但未受金融監理&管制的機構
+- 美國
+  - 投資銀行 investment bank
+  - 融資公司 finance company
+  - 貨幣市場共同基金
+  - 對沖基金 hedge fund
+  - 私募股權基金 private equity fund
+- 與一般商業銀行差異
+  - 商業銀行
+    - 受到金融監理機關管制
+      - 資本適足率
+      - 法定準備率
+      - 流動性比率
+    - 受到金融安全網保障
+      - 存款保險
+      - 央行流動性支援
+    - 帳面價值會計法
+  - 重要資金來源：存款
+  - 影子銀行
+    - 以市價記值 → 資產價格變動造成立即且重大之影響（高 GI，無水土保持）
+    - 主要資金來源：金融工具
+      - 負債（融資工具）
+        - 資產擔保的短期商業本票
+        - repo
+      - 資產
+        - 中長期債券 & 房貸保證券
+      - 
 ## 題目
 ![](https://i.imgur.com/Rp9CKtY.jpg)
 ![](https://i.imgur.com/exqw7Zj.jpg)
