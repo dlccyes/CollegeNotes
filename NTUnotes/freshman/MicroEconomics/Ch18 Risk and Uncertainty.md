@@ -63,6 +63,7 @@ fair insurance
 ![](https://i.imgur.com/Fk1rTDL.png)
 
 ### beta
+sensitivity to movements in the relevant market
 ![](https://i.imgur.com/dl7ib4p.png)
 ![](https://i.imgur.com/h0htARK.png)
 ![](https://i.imgur.com/EK7LQMj.png)
