@@ -1,4 +1,10 @@
 ## U3 review of statistics
+- unbiasedness
+  - bias = $E(\hat{\mu_Y})-\mu_Y$
+- consistency
+  - $\hat{\mu_Y}$ → $\mu_Y$ on large sample
+- efficency
+  - lower variation → higher efficency
 - standard error, SE 
   - std for sample
 - $\hat{p}$ 
