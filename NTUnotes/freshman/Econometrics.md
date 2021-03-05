@@ -22,3 +22,16 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - for two-sided, p-value < 0.05 i.e. $|t^{act}|>1.96$ ($\Phi(1.96)=0.975$)
   - for one-sided, p-value < 0.05 i.e. $|t^{act}|>1.64$ ($\Phi(1.64)=0.95$)
   - meaning you would incorrectly reject the null hypothesis once in 20 cases on average
+
+### confidence interval
+- $\Phi(1.645)=95\%$
+- $\Phi(1.96)=97.5\%$ → 95% confidence interval for two sided
+- $\Phi(2.576)=99.5\%$ → 99% confidence interval for two sided
+
+![Image](https://i.imgur.com/wGhdMSF.png)
+
+### 名詞
+- size of a test
+  - the probability that a test incorrectly rejects the null hypothesis when the null hypothesis is true)
+- power of a test
+  - the probability that a test correctly rejects the null hypothesis when the alternative is true
