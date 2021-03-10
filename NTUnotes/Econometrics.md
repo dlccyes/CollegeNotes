@@ -41,5 +41,20 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - the probability that a test incorrectly rejects the null hypothesis when the null hypothesis is true)
 - power of a test
   - the probability that a test correctly rejects the null hypothesis when the alternative is true
+
+
+## U4 Linear Regression with One Regressor
 - degree of freedom
   - variance degree of freedom is n-1 as the sample mean is decided → only n-1 sample values is free
+- $Y_i=\beta_0+\beta_1X_i+u_i$
+  - $u_i$: factor other than X (error term)
+  - if random assignment → $E(u_i|X_i)=0$ → $cov(u_i|X_i)=0$ i.e. $u_i$ is not correlated to X
+- SER, standard error of the regression
+  - standard error of $u_i$
+  - ![Image](https://i.imgur.com/Oh17JUf.png)
+- $R^2$
+  - fraction of Var(Y) explained by X
+    - both X and $u_i$ contributes to Var(Y)
+  - ![Image](https://i.imgur.com/Pcm6SBU.png)
+- least square assumptions
+  - ![Image](https://i.imgur.com/1vfXqkc.png)
