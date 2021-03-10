@@ -41,3 +41,5 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - the probability that a test incorrectly rejects the null hypothesis when the null hypothesis is true)
 - power of a test
   - the probability that a test correctly rejects the null hypothesis when the alternative is true
+- degree of freedom
+  - variance degree of freedom is n-1 as the sample mean is decided → only n-1 sample values is free

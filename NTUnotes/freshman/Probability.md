@@ -243,7 +243,7 @@ continuous
 
 ![image-20200618004024897](https://i.loli.net/2020/06/18/NmgODtKo4URyIrp.png)
 
-![image-20200618004108936](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20200618004108936.png)
+![Image](https://i.imgur.com/84ebCaE.png)
 
 ![image-20200618004126028](https://i.loli.net/2020/06/18/Wt76krqYOFEBcdX.png)
 
@@ -353,7 +353,7 @@ use Chebyshev inequality
 
 ### proposition 4
 
-![image-20200610210511510](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20200610210511510.png)
+![Image](https://i.imgur.com/h6FoRU4.png)
 
 
 
@@ -500,7 +500,7 @@ likelihood function
 C~01~=cost of MISS  
 C~10~=cost of FA
 
-![image-20200614195223255](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20200614195223255.png)
+![Image](https://i.imgur.com/YZNJdZe.png)
 
 #### likelyhood ratio
 
