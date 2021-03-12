@@ -113,7 +113,7 @@ $R=\sqrt{Z}cos(\theta_Z)$
 $X=\sqrt{Z}sin(\theta_Z)$
 
 so
-$$
+<!-- $$
 \left\{
 \begin{array}{ln}
 j=1\angle 90^{\circ}\\
@@ -121,8 +121,10 @@ j=1\angle 90^{\circ}\\
 1=1\angle 0^{\circ}
 \end{array}
 \right.
-$$
-
+$$ -->
+$j=1\angle 90^{\circ}\\
+-j=1\angle -90^{\circ}\\
+1=1\angle 0^{\circ}$
 
 ### Z&Y
 ![](https://i.imgur.com/D7ON7T1.png)
