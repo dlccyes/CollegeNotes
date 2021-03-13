@@ -7,7 +7,7 @@
   - lower variation → higher efficency
 - standard error, SE 
   - std for sample
-- $\hat{p}$ 
+- $\hat{p}$
   - p for sample
 
 ![Image](https://i.imgur.com/rgsUJXu.png)
@@ -53,8 +53,18 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - standard error of $u_i$
   - ![Image](https://i.imgur.com/Oh17JUf.png)
 - $R^2$
+  - correlation efficient $^2$
   - fraction of Var(Y) explained by X
     - both X and $u_i$ contributes to Var(Y)
   - ![Image](https://i.imgur.com/Pcm6SBU.png)
+  - $\Delta$ adjusted R-squared
+    - > Let us first understand what is R-squared:
+    R-squared or R2 explains the degree to which your input variables explain the variation of your output / predicted variable. So, if R-square is 0.8, it means 80% of the variation in the output variable is explained by the input variables. So, in simple terms, higher the R squared, the more variation is explained by your input variables and hence better is your model.
+    However, the problem with R-squared is that it will either stay the same or increase with addition of more variables, even if they do not have any relationship with the output variables. This is where “Adjusted R square” comes to help. Adjusted R-square penalizes you for adding variables which do not improve your existing model.
+    Hence, if you are building Linear regression on multiple variable, it is always suggested that you use Adjusted R-squared to judge goodness of model. In case you only have one input variable, R-square and Adjusted R squared would be exactly same.
+    Typically, the more non-significant variables you add into the model, the gap in R-squared and Adjusted R-squared increases.
+    https://discuss.analyticsvidhya.com/t/difference-between-r-square-and-adjusted-r-square/264/3
+      - 不懂
+      為何加 data 點 R-squared 就一定會不變 or 上升
 - least square assumptions
   - ![Image](https://i.imgur.com/1vfXqkc.png)
