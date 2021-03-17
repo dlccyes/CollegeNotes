@@ -52,7 +52,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - $\hat{Y}$: predicted value
   - $\bar{Y}$: sample mean
 - formulas
-  - sample variance = $\frac{TSS}{n-1}$
+  - sample variance = $\frac{TSS}{n-1}=std^2$
   - $SER=\frac{SSR}{n-2}$
   - $TSS=ESS+SSR$
   - $R^2=\frac{ESS}{TSS}=\frac{TSS-SSR}{TSS}=1-\frac{SSR}{TSS}$
