@@ -29,6 +29,9 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - for one-sided, p-value < 0.05 i.e. $|t^{act}|>1.64$ ($\Phi(1.64)=0.95$)
   - meaning you would incorrectly reject the null hypothesis once in 20 cases on average
 
+- between two means
+  - ![Image](https://i.imgur.com/kq5dhmQ.png)
+
 ### confidence interval
 - $\Phi(1.645)=95\%$
 - $\Phi(1.96)=97.5\%$ → 95% confidence interval for two sided
@@ -44,6 +47,16 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 
 
 ## U4 Linear Regression with One Regressor
+- notations
+  - $Y$: real sample value
+  - $\hat{Y}$: predicted value
+  - $\bar{Y}$: sample mean
+- formulas
+  - sample variance = $\frac{TSS}{n-1}$
+  - $SER=\frac{SSR}{n-2}$
+  - $TSS=ESS+SSR$
+  - $R^2=\frac{ESS}{TSS}=\frac{TSS-SSR}{TSS}=1-\frac{SSR}{TSS}$
+  - ![Image](https://i.imgur.com/Pcm6SBU.png)
 - degree of freedom
   - variance degree of freedom is n-1 as the sample mean is decided → only n-1 sample values is free
 - $Y_i=\beta_0+\beta_1X_i+u_i$
@@ -56,7 +69,6 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - correlation efficient $^2$
   - fraction of Var(Y) explained by X
     - both X and $u_i$ contributes to Var(Y)
-  - ![Image](https://i.imgur.com/Pcm6SBU.png)
   - $\Delta$ adjusted R-squared
     - > Let us first understand what is R-squared:
     R-squared or R2 explains the degree to which your input variables explain the variation of your output / predicted variable. So, if R-square is 0.8, it means 80% of the variation in the output variable is explained by the input variables. So, in simple terms, higher the R squared, the more variation is explained by your input variables and hence better is your model.
@@ -66,5 +78,6 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     https://discuss.analyticsvidhya.com/t/difference-between-r-square-and-adjusted-r-square/264/3
       - 不懂
       為何加 data 點 R-squared 就一定會不變 or 上升
+- ![Image](https://i.imgur.com/ccjGWE2.png)
 - least square assumptions
   - ![Image](https://i.imgur.com/1vfXqkc.png)
