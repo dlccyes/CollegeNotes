@@ -52,6 +52,10 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - $\hat{Y}$: predicted value
   - $\bar{Y}$: sample mean
 - formulas
+  - $Y_i=\hat{Y_i}+\hat{u_i}$
+  - total sum of squares $TSS=\displaystyle\sum_{i=1}^n(Y_i-\bar{Y})^2$
+  - explained sum of squares $ESS=\displaystyle\sum_{i=1}^n(\hat{Y_i}-\bar{Y})^2$
+  - sum of squared residuals $SSR=\displaystyle\sum_{i=1}^n\hat{u_i}^2$
   - sample variance = $\frac{TSS}{n-1}=std^2$
   - $SER=\frac{SSR}{n-2}$
   - $TSS=ESS+SSR$
