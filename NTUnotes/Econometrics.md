@@ -1,3 +1,11 @@
+## review of probability
+## skewnesse
+![Image](https://i.imgur.com/FofAvWw.png)
+The skewness of a symmetric distribution is 0.
+### kurtosis
+![Image](https://i.imgur.com/hDzO9It.png)
+![Image](https://i.imgur.com/5q76hMD.png)
+
 ## U3 review of statistics
 - unbiasedness
   - bias = $E(\hat{\mu_Y})-\mu_Y$
@@ -56,8 +64,10 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - total sum of squares $TSS=\displaystyle\sum_{i=1}^n(Y_i-\bar{Y})^2$
   - explained sum of squares $ESS=\displaystyle\sum_{i=1}^n(\hat{Y_i}-\bar{Y})^2$
   - sum of squared residuals $SSR=\displaystyle\sum_{i=1}^n\hat{u_i}^2$
-  - sample variance = $\frac{TSS}{n-1}=std^2$
-  - $SER=\frac{SSR}{n-2}$
+  - sample variance = $\frac{TSS}{n-1}={s_Y}^2$
+  - $SER=s_{\hat{u}}=\sqrt{\frac{SSR}{n-2}}$
+    - SER: standard error of regression
+    - $s_{\hat{u}}$: standard error of $u_i$
   - $TSS=ESS+SSR$
   - $R^2=\frac{ESS}{TSS}=\frac{TSS-SSR}{TSS}=1-\frac{SSR}{TSS}$
   - ![Image](https://i.imgur.com/Pcm6SBU.png)
