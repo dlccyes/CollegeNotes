@@ -1,11 +1,18 @@
 ## review of probability
-## skewnesse
+### correlation & independence
+- uncorrelated is weaker than independent
+  - E(X)(Y)=E(XY) $\iff$ uncorrelated
+  - P(X)(Y)=P(XY) $\iff$ independent $\Longrightarrow$ uncorrelated
+  - https://www.themathcitadel.com/uncorrelated-and-independent-related-but-not-equivalent/
+## skewness
 ![Image](https://i.imgur.com/FofAvWw.png)
 The skewness of a symmetric distribution is 0.
 ### kurtosis
 ![Image](https://i.imgur.com/hDzO9It.png)
 ![Image](https://i.imgur.com/5q76hMD.png)
 
+### law of iterated expectations
+![Image](https://i.imgur.com/Qbz7r9H.png)
 ## U3 review of statistics
 - unbiasedness
   - bias = $E(\hat{\mu_Y})-\mu_Y$
@@ -59,8 +66,17 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - $Y$: real sample value
   - $\hat{Y}$: predicted value
   - $\bar{Y}$: sample mean
+- $Y_i=\beta_0+\beta_1X_i+u_i$
+  - $u_i$: factor other than X (error term)
+  - if random assignment → $E(u_i|X_i)=0$ → $cov(u_i|X_i)=0$ i.e. $u_i$ is not correlated to X
+- correlation efficient
+  - $$r_{XY}=\dfrac{s_{XY}}{s_Xs_Y}=\dfrac{\dfrac{1}{n-1}\displaystyle\sum_{i=1}^n(X_i-\bar{X})(Y_i-\bar{Y})}{\sqrt{\dfrac{1}{n-1}\displaystyle\sum_{i=1}^n(X_i-\bar{X})^2}\sqrt{\dfrac{1}{n-1}\displaystyle\sum_{i=1}^n(Y_i-\bar{Y})^2}}$$
+- OLS
+  - $\hat{\beta_0}$、$\hat{\beta_1}$： $\beta_0$、$\beta_1$ minimalizing $\displaystyle\sum_{i=1}^n(Y_i-\beta_0-\beta_1X_i)^2$
+  - $\hat{Y}=\hat{\beta_0}+\hat{\beta_1}\bar{X}$
+  - $Y_i=\hat{Y_i}+\hat{u_i}=\hat{\beta_0}+\hat{\beta_1}\bar{X}+\hat{u_i}$
+  - ![Image](https://i.imgur.com/hJgFDT1.png)
 - formulas
-  - $Y_i=\hat{Y_i}+\hat{u_i}$
   - total sum of squares $TSS=\displaystyle\sum_{i=1}^n(Y_i-\bar{Y})^2$
   - explained sum of squares $ESS=\displaystyle\sum_{i=1}^n(\hat{Y_i}-\bar{Y})^2$
   - sum of squared residuals $SSR=\displaystyle\sum_{i=1}^n\hat{u_i}^2$
@@ -73,9 +89,6 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - ![Image](https://i.imgur.com/Pcm6SBU.png)
 - degree of freedom
   - variance degree of freedom is n-1 as the sample mean is decided → only n-1 sample values is free
-- $Y_i=\beta_0+\beta_1X_i+u_i$
-  - $u_i$: factor other than X (error term)
-  - if random assignment → $E(u_i|X_i)=0$ → $cov(u_i|X_i)=0$ i.e. $u_i$ is not correlated to X
 - SER, standard error of the regression
   - standard error of $u_i$
   - ![Image](https://i.imgur.com/Oh17JUf.png)
