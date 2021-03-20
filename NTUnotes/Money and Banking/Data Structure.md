@@ -3,6 +3,8 @@
 - sup: least upper bound
 
 ## Big-Oh Notation
+![Image](https://i.imgur.com/37ry1mM.png)
+
 If $\lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)}$ exists, then
 $$\lim_{n \rightarrow \infty} \inf_{m \geq n} \frac{|T(m)|}{\phi(m)} = \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} = \lim_{n \rightarrow \infty} \sup_{m \geq n} \frac{|T(m)|}{\phi(m)}$$
 Therefore
@@ -41,3 +43,89 @@ Assume all functions are positive.
   + Ex. $\sum_{k=1}^n k = \frac{n(n+1)}{2} \in \Theta(n^2)$.
 
 The performance of an algorithm may also depend on the exact values of the data, specified by the **best case**, **worst case**, and **average case** performance.
+
+## Analyzing an Algorithm
+- Simple statement sequence
+  ```python
+      Statement_1  # O(1)
+      Statement_2  # O(1)
+      ...
+      Statement_k  # O(1)
+  ```
+  - Time complexity is $O(1)$ as long as $k$ is constant
+  
+* Simple loops
+  ```python
+      for i in range(n):
+          Statement  # O(1)
+  ```
+  + Time complexity is $O(n)$
+  
+* Nested loops
+  ```python
+      for i in range(n):
+          for j in range(n):
+              Statement  # O(1)
+  ```
+  + Time complexity is $O(n^2)$
+  
+* Loop index does't vary linearily
+  ```python
+      while h <= n:
+          h = h*2
+  ```
+  + h = 1,2,4,8,... until exceeding n
+  + 大概有 $\log_2 n$ 項 → Time complexity is $O(\log_2 n)$
+
+* Loop index depends on outer loop index
+  ```python
+      for i in range(n):
+          for j in range(i):
+              Statement  # O(1)
+  ```
+  + Inner loop executed $1+2+...+n = \frac{n(n+1)}{2}$ times
+  + Time complexity $O(n^2)$
+
+Let's analyze the time complexity for the following algorithms:
+
+Example 1:
+```python
+def myFunc(n):
+    x = 0
+    y = 0
+    z = 0
+    u = 0
+    v = 0
+    w = 0
+    for i in range(n):
+        for j in range(n):
+            x = x + i * i
+            y = y + i * j
+            z = z + j * j
+    for k in range(n):
+        u = w + (5*k + 45)
+        v = v + k*k*k
+    w = u+v
+    return w
+```
+$O(n^2)+O(n) → O(n^2)$
+
+Example 2:
+```python
+def maxSubSum(myArray):
+    maxSum = 0
+    idx_start = -1
+    idx_end = -1
+    for i in range(0, len(myArray)):
+        for j in range(i, len(myArray)):
+            thisSum = 0
+            for k in range(i,j+1):
+                thisSum = thisSum + myArray[k]
+            if thisSum > maxSum:
+                maxSum = thisSum
+                idx_start = i
+                idx_end = j
+    return maxSum,idx_start,idx_end
+```
+n = len(myArray)  
+O(n^3)
