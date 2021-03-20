@@ -128,4 +128,32 @@ def maxSubSum(myArray):
     return maxSum,idx_start,idx_end
 ```
 n = len(myArray)  
-O(n^3)
+$O(n^3)$
+
+## actual implementation
+![Image](https://i.imgur.com/qm7KSRD.png)
+pop(2) 需要 O(n) at worst case  
+In Python’s implementation, when an item is taken from the front of the list, all the other elements in the list are shifted one position closer to the beginning. For instance, what `pop(2)` does is as follows:
+![Image](https://i.imgur.com/lDlbUcD.png)
+
+Though it causes time for pop operation, this allows the index operation to be $O(1)$. This is a tradeoff that the Python implementors makes based on how people most commonly use the list data structure. The implementation is optimized so that the most common operations were very fast, sometimes by sacrificing the performance of less common operations.
+
+
+| Operation        | Big-O Efficiency |
+| ---------------- | ---------------- |
+| index []         | O(1)             |
+| index assignment | O(1)             |
+| append           | O(1)             |
+| pop()            | O(1)             |
+| pop(i)           | O(n)             |
+| insert(i,item)   | O(n)             |
+| del operator     | O(n)             |
+| iteration        | O(n)             |
+| contains (in)    | O(n)             |
+| get slice [x:y]  | O(k)             |
+| del slice        | O(n)             |
+| reverse          | O(n)             |
+| concatenate      | O(k)             |
+| sort             | O(n log n)       |
+| multiply         | O(nk)            |
+- index[]: ** 指到 *0 → 加法到所要位置 → 指到 object
