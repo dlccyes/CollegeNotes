@@ -157,3 +157,32 @@ Though it causes time for pop operation, this allows the index operation to be $
 | sort             | O(n log n)       |
 | multiply         | O(nk)            |
 - index[]: ** 指到 *0 → 加法到所要位置 → 指到 object
+
+
+It is should be clear that the execution time for `pop(0)` and `pop()` are `O(n)` and `O(1)`, respectively.
+
+Some sources of error occurs due to other processes running on the computer which may slow down our code. That is why loop the experiments many times to make the measurement more statistically reliable.
+
+<!-- ## 2.7 Python Built-in Dictionary Operation Time Complexity -->
+## Python Built-in Dictionary Operation Time Complexity
+
+If you were the implementor of Python, how do you implement dictionary so that the `contain`, `get item` and `set item` operations all have *average case* time complexity of $O(1)$.?
+
+Currently, Python dictionaries are implemented as hash tables (Reference: *dictobject.h*). We will get into hash tables later in the course, but the following figure might give you some hints on how it works.
+
+![Image](https://i.imgur.com/1hxUgQL.png)
+
+<!-- https://stackoverflow.com/questions/327311/how-are-pythons-built-in-dictionaries-implemented  -->
+
+The *average case* time complexity of dictionary operations are as follows:
+
+| Operation       | Big-O Efficiency |
+| --------------- | ---------------- |
+| `copy`          | $O(n)$           |
+| `get item`      | $O(1)$           |
+| `set item`      | $O(1)$           |
+| `delete item`   | $O(1)$           |
+| `contains (in)` | $O(1)$           |
+| `iteration`     | $O(n)$           |
+
+In the following experiment we compare the performance of the `contains` operation between lists and dictionaries.
