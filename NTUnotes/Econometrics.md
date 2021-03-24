@@ -108,3 +108,8 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - ![Image](https://i.imgur.com/ccjGWE2.png)
 - least square assumptions
   - ![Image](https://i.imgur.com/1vfXqkc.png)
+
+## Ch5 Multiple Regressor
+- more regressor → $R^2$ $\uparrow$ as SER $\downarrow$
+  - adjusted $R^2$
+  ![Image](https://i.imgur.com/qEdhYSz.png)
