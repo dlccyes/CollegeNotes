@@ -2,7 +2,9 @@
 - inf: greatest lower bound
 - sup: least upper bound
 
+![Image](https://i.imgur.com/ay40yL4.png)
 ## Big-Oh Notation
+[cheatsheet](https://www.bigocheatsheet.com/)
 ![Image](https://i.imgur.com/37ry1mM.png)
 
 If $\lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)}$ exists, then
