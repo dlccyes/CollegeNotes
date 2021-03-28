@@ -2,8 +2,14 @@
 - inf: greatest lower bound
 - sup: least upper bound
 
-![Image](https://i.imgur.com/ay40yL4.png)
 ## Big-Oh Notation
+檢測
+- $f(x)=\dfrac{h(x)}{g(x)}$
+  - $\lim_{x\to\infty} f(x) $
+  - $\lim_{x\to\infty} \frac{f(x+1)}{f(x)}$
+
+![Image](https://i.imgur.com/ay40yL4.png)
+![Image](https://i.imgur.com/iBumeVf.png)
 [cheatsheet](https://www.bigocheatsheet.com/)
 ![Image](https://i.imgur.com/37ry1mM.png)
 
