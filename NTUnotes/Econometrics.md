@@ -51,7 +51,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - $\Phi(1.645)=95\%$
 - $\Phi(1.96)=97.5\%$ → 95% confidence interval for two sided
 - $\Phi(2.576)=99.5\%$ → 99% confidence interval for two sided
-
+![Image](https://i.imgur.com/lZc2V6j.png)
 ![Image](https://i.imgur.com/wGhdMSF.png)
 
 ### 名詞
@@ -112,8 +112,26 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 ## Ch5 Multiple Regressor
 - more regressor → $R^2$ $\uparrow$ as SER $\downarrow$
   - adjusted $R^2$
-  ![Image](https://i.imgur.com/qEdhYSz.png)]
+  $\bar{R}^2=1-\dfrac{n-1}{n-k-1}\dfrac{SSR}{TSS}$
+  ![Image](https://i.imgur.com/qEdhYSz.png)
 -  omitted variable bias
    -  影響的眾多因素之間可能非 independent → 用較少 regressor 的話會 overestimate 那個 regressor 的影響
 
+- F test
+  - for multiple regressors
+    - ![Image](https://i.imgur.com/zfTOddH.png)
+  - ![Image](https://i.imgur.com/BGOZ1mH.png)
+  - table
+  ![![Image](https://i.imgur.com/jnBHUoO.png)
+  ![Image](https://i.imgur.com/YavV3xS.png)
+    - e.g. $f_{2,\infty}$=3
+    for 2 regressors, $F^{act}$ for 5% is 3
+    ![Image](https://i.imgur.com/ofPa18q.png)
+  - Homoskedasticity
+    - restricted & unrestricted
+      - ![Image](https://i.imgur.com/iNUB8bw.png)
+    - ![Image](https://i.imgur.com/4BX7KdG.png)
+  - turn multiple into singular
+    - ![Image](https://i.imgur.com/ZKMfJe0.png)
+  
 
