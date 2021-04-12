@@ -51,6 +51,8 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - $\Phi(1.645)=95\%$
 - $\Phi(1.96)=97.5\%$ → 95% confidence interval for two sided
 - $\Phi(2.576)=99.5\%$ → 99% confidence interval for two sided
+
+(看 inf)
 ![Image](https://i.imgur.com/lZc2V6j.png)
 ![Image](https://i.imgur.com/wGhdMSF.png)
 
@@ -117,12 +119,32 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 -  omitted variable bias
    -  影響的眾多因素之間可能非 independent → 用較少 regressor 的話會 overestimate 那個 regressor 的影響
 
+
+
+## Ch6 Linear Regression with Multiple Regressors
+- treat intercept as a regressor
+![Image](https://i.imgur.com/MKDfX7o.png)
+![Image](https://i.imgur.com/KAHJULZ.png)
+
+### least square assumptions
+1. Assumption 1: The Conditional Distribution of ui Given X1i, X2i, . . . , Xki Has a Mean of 0
+2. Assumption 2: (X1i, X2i, . . . , Xki, Yi), i = 1, . . . , n, Are i.i.d.
+3. Assumption 3: Large Outliers Are Unlikely
+4. Assumption 4: No Perfect Multicollinearity
+   - if one of the regressors is a perfect linear function of the other regressors → perfect multicollinearity
+     - multiple regression: 其他 regressor 不動，只動這一個 → 不合理 when one variable is a linear function to another
+   - dummy variable trap
+     - ![Image](https://i.imgur.com/YNwOx7H.png)
+     - ![Image](https://i.imgur.com/hunkfPQ.png)
+
+
+## Ch7 Hypothesis Tests & Condence Intervals in Multiple Regression
 - F test
   - for multiple regressors
     - ![Image](https://i.imgur.com/zfTOddH.png)
   - ![Image](https://i.imgur.com/BGOZ1mH.png)
   - table
-  ![![Image](https://i.imgur.com/jnBHUoO.png)
+  ![Image](https://i.imgur.com/jnBHUoO.png)
   ![Image](https://i.imgur.com/YavV3xS.png)
     - e.g. $f_{2,\infty}$=3
     for 2 regressors, $F^{act}$ for 5% is 3
@@ -134,12 +156,3 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - turn multiple into singular
     - ![Image](https://i.imgur.com/ZKMfJe0.png)
     ![Image](https://i.imgur.com/uYKtePD.png)
-
-## Ch6
-### least square assumptions
-1. Assumption 1: The Conditional Distribution of ui Given X1i, X2i, . . . , Xki Has a Mean of 0
-2. Assumption 2: (X1i, X2i, . . . , Xki, Yi), i = 1, . . . , n, Are i.i.d.
-3. Assumption 3: Large Outliers Are Unlikely
-4. Assumption 4: No Perfect Multicollinearity
-   - if one of the regressors is a perfect linear function of the other regressors → perfect multicollinearity
-     - multiple regression: 其他 regressor 不動，只動這一個 → 不合理 when one variable is a linear function to another
