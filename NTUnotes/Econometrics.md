@@ -135,5 +135,11 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     - ![Image](https://i.imgur.com/ZKMfJe0.png)
     ![Image](https://i.imgur.com/uYKtePD.png)
 
-  
-
+## Ch6
+### least square assumptions
+1. Assumption 1: The Conditional Distribution of ui Given X1i, X2i, . . . , Xki Has a Mean of 0
+2. Assumption 2: (X1i, X2i, . . . , Xki, Yi), i = 1, . . . , n, Are i.i.d.
+3. Assumption 3: Large Outliers Are Unlikely
+4. Assumption 4: No Perfect Multicollinearity
+   - if one of the regressors is a perfect linear function of the other regressors → perfect multicollinearity
+     - multiple regression: 其他 regressor 不動，只動這一個 → 不合理 when one variable is a linear function to another
