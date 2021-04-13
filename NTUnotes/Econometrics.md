@@ -148,11 +148,14 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   ![Image](https://i.imgur.com/YavV3xS.png)
     - e.g. $f_{2,\infty}$=3
     for 2 regressors, $F^{act}$ for 5% is 3
-    ![Image](https://i.imgur.com/ofPa18q.png)
-  - Homoskedasticity
-    - restricted & unrestricted
-      - ![Image](https://i.imgur.com/iNUB8bw.png)
+  - restricted & unrestricted
     - ![Image](https://i.imgur.com/4BX7KdG.png)
+      - q = num of restrictions under the null
+      - k = num of regressor of the unrestricted one
+    - ![Image](https://i.imgur.com/iNUB8bw.png)
+    ![Image](https://i.imgur.com/nJeOber.png)
+    - Homoskedasticity
+      - ![Image](https://i.imgur.com/ofPa18q.png)
   - turn multiple into singular
     - ![Image](https://i.imgur.com/ZKMfJe0.png)
     ![Image](https://i.imgur.com/uYKtePD.png)
