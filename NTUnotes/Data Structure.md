@@ -194,3 +194,8 @@ The *average case* time complexity of dictionary operations are as follows:
 | `iteration`     | $O(n)$           |
 
 In the following experiment we compare the performance of the `contains` operation between lists and dictionaries.
+
+
+## Master Theorem
+
+![Image](https://i.imgur.com/4VxHWnM.png)
