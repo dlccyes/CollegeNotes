@@ -116,6 +116,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - adjusted $R^2$
   $\bar{R}^2=1-\dfrac{n-1}{n-k-1}\dfrac{SSR}{TSS}$
   ![Image](https://i.imgur.com/qEdhYSz.png)
+    - k: regressor 數量 (對 k=1 的時候 $\bar{R}^2$ 不一樣)
 -  omitted variable bias
    -  影響的眾多因素之間可能非 independent → 用較少 regressor 的話會 overestimate 那個 regressor 的影響
 
