@@ -199,3 +199,9 @@ In the following experiment we compare the performance of the `contains` operati
 ## Master Theorem
 
 ![Image](https://i.imgur.com/4VxHWnM.png)
+
+## Dynamic Programming
+- store the solutions
+  - 查表 (T(1)) instead of recursion(T(n-k)) 
+- start from small → get big
+- 用空間換取時間
