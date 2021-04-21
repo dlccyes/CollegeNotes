@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Images in Markdown</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h2 id="images-in-markdown">Images in Markdown</h2>
+<p>In markdown, image is written like <code>![alt](src)</code>. The <code>src</code> here can either be a URL like <code>https://octodex.github.com/images/yaktocat.png</code>, or an absolute/relative file path, like <code>../images/test.png</code>.</p>
+<ul>
+<li>Outline #這句事幹嘛的
+{:toc}</li>
+</ul>
+<h2 id="how-to-insert-images-in-typora">How to insert images in Typora</h2>
+<h3 id="write-the-markdown">Write the Markdown</h3>
+<p>You could simply write down the markdown syntax to insert the image. Or click &quot;image&quot; from the menu bar, or press the shortcut key. When you do this, and meanwhile, if there is an image URL in clipboard, then the URL will be inserted into the <code>src</code> part directly.</p>
+<h3 id="drag--drop">Drag &amp; Drop</h3>
+<p>Of course, there's a easier way — drag &amp; drop, like the screencast below.</p>
+<p><img src="file:////media/about-image/drag-img.gif" alt="drag-img"></p>
+<p>You could also drag &amp; drop multiple image files at one time.</p>
+<h3 id="select-from-local-files">Select from local files</h3>
+<p>You could click menu item <code>Format</code> → <code>Image</code> → <code>Insert Local Images…</code> from menu bar to open a dialog to select and insert local image(s).</p>
+<p>If you use this menu item frequently, we would suggest you to re-assign the shortcut key for this &quot;insert image&quot; command following <a href="http://support.typora.io/Custom-Key-Binding/">Custom Key Binding</a>.</p>
+<h3 id="paste-images-from-clipboard">Paste images from clipboard</h3>
+<p>Since Markdown file is only plain text file, users could not insert image data into Markdown file directly, but can insert image reference to file/URL.</p>
+<p>Typora support paste image data from clipboard, <strong>after telling typora where to put those images</strong>. Typora would put image data into given folder or server, then insert images referring to that stored file or URL. Please refer to section <strong><a href="#when-insert-local-image%E2%80%A6">When insert local image…</a></strong> for more detail.</p>
+<blockquote>
+<p><strong>Tips</strong>: on macOS, users could copy image file from finder and then paste into typora. It has same behavior with drag and drop.</p>
+<p><strong>Tips</strong>: on macOS, you could also copy images from iPhone and then paste into Typora after setup the location to put image files.</p>
+</blockquote>
+<h2 id="when-insert-images">When insert images...</h2>
+<p>Typora support copying image files into given folder or web server (require <a href="https://itunes.apple.com/app/id1101244278?ls=1&amp;mt=12---">iPic</a>) when insert local images using drag &amp; drop, or from menu bar. Following are instructions on the set-up.</p>
+<h3 id="default-behaviors">Default behaviors</h3>
+<p>By default, when you insert or drag &amp; drop a image file into Typora, we will use the path of image file for attribute <code>src</code>.</p>
+<h3 id="use-relative-path">Use Relative Path</h3>
+<p>If you enable <code>Editor</code> → <code>Image Insert</code> →  <code>Use relative path if possible</code> in preferences panel, and your writing has been saved into a file, then when you drag &amp; drop a local image, the <code>src</code> attribute will be set as its relative path to current file (folder).</p>
+<h3 id="copy-image-files-to-target-folder-when-insert-local-image">Copy image files to target folder when insert local image</h3>
+<blockquote>
+<p>To use this feature, you need to opt-in the option <code>Allow copy images to given folder</code> in preferences panel.</p>
+</blockquote>
+<p>One common scenario is to edit <code>*.md</code> posts in static sites (like Jekyll) using Typora. For example, if the <code>.*md</code> file is put under <code>_posts</code> folder while the image files goes into <code>_media</code> folder, you may want to copy images files into folder <code>_media</code> when you drag/drop or paste images into Markdown file automatically. Here's how:</p>
+<ol>
+<li>
+<p>Save your file into some path.</p>
+</li>
+<li>
+<p>Enable <code>Editor</code> → <code>Image Insert</code> → <code>Allow copy images to given folder</code> in preferences panel.</p>
+<img src="https://support.typora.io/media/about-image/Snip20161117_2.png" style="zoom:50%" />
+</li>
+<li>
+<p>Select <code>Format</code> → <code>Image</code> → <code>When Insert Local Images</code> → <code>Copy Image File to Folder</code> from the menu bar, pick the target folder.</p>
+<p><img src="https://support.typora.io/media/about-image/Snip20161117_6.png" alt="Snip20161117_6"></p>
+</li>
+</ol>
+<p>In step 3, a new item <code>typora-copy-images-to: {relative path}</code> will be inserted into the <a href="http://yaml.org/">YAML Front Matter</a> block of current document. So you could also manually add <strong>typora-copy-images-to</strong> property in YAML Front Matter to enable this behavior.</p>
+<p>After that, if you drag &amp; drop <strong>local</strong> images or paste images into Typora, the image file will be copied into the target file and update related <code>src</code>.</p>
+<h3 id="upload-image-file-to-web-server">Upload image file to web server.</h3>
+<p>Please refer <a href="https://support.typora.io/Upload-Image/#upload-automatically-when-insert-images">Upload Automatically When Insert Images</a>.</p>
+<h3 id="use-global-setting-for-image-insert-operations">Use global setting for image insert operations.</h3>
+<p>You could tell Typora where to copy images or upload images when insert images for all documents (global setting). You could find the images under &quot;image&quot; section in preferences panel.</p>
+<p><img src="https://support.typora.io/media/about-image/20190802.png" alt="20190802"></p>
+<h2 id="display-images-in-relative-path">Display images in relative path</h2>
+<h3 id="relative-path-to-current-filefolder-default-behavior">Relative path to current file/folder (default behavior)</h3>
+<p>By default, users could refer to local image by relative path to current <code>*.md</code> file. For example, if the <code>*.md</code> file is at <code>/User/typora/desktop/test.md</code>, then the <code>![img](image.png)</code> will display image from <code>/User/typora/desktop/image.png</code> just like the <code>&lt;img&gt;</code> tag in HTML. Also, for <code>../download/image.png</code>, image from <code>/User/typora/download/image.png</code> will be fetched.</p>
+<h3 id="relative-path-to-certain-folder">Relative path to certain folder</h3>
+<p>If you’re using markdown for building websites, you may specify a URL prefix for image preview in local computer with property <code>typora-root-url</code> in YAML Front Matters.</p>
+<p>For example, input <code>typora-root-url:/User/Abner/Website/typora.io/</code> in YAML Front Matters, and then <code>![alt](/blog/img/test.png)</code> will be treated as <code>![alt](file:///User/Abner/Website/typora.io/blog/img/test.png)</code> in typora.</p>
+<p>In new version, instead of manually input <code>typora-root-url</code> property, you could just click item from the menu bar <code>Format</code> → <code>Image</code> → <code>Use Image Root Path</code> to tell Typora to generate <code>typora-root-url</code> property automatically.</p>
+<h2 id="upload-images-to-cloud-server">Upload images to cloud server</h2>
+<p>Typora supports to upload image to a cloud image server.</p>
+<img src="https://support.typora.io/media/image-upload/upload.gif" style="zoom:50%;" />
+<p>Please refer <a href="https://support.typora.io/Upload-Image">Upload Image</a>.</p>
+<h3 id="upload-all-local-images-to-cloud-server">Upload all local images to cloud server</h3>
+<p>Please refer <a href="https://support.typora.io/Upload-Image/#upload-all-local-images">Upload All Local Images</a></p>
+<h3 id="upload-when-inserting-images">Upload when inserting images</h3>
+<p>How-tos for this part can be found in section <a href="#when-insert-local-image%E2%80%A6">When insert local image…</a> → Upload image file to web server.</p>
+<h2 id="align-images">Align images</h2>
+<p>Currently Typora does not support image alignment. But you could use HTML code like <code>&lt;center&gt;![img](src)&lt;/center&gt;</code> to align images on exported HTML or PDF.</p>
+<p>Also, by default, if one paragraph only contains one image, it will be center aligned. It is controlled by CSS, and can be reverted by <a href="http://support.typora.io/Add-Custom-CSS/">add custom CSS</a>:</p>
+<pre><code class="language-css"><div><span class="hljs-selector-tag">p</span> <span class="hljs-selector-class">.md-image</span><span class="hljs-selector-pseudo">:only-child</span>{
+    <span class="hljs-attribute">width</span>: auto;
+    <span class="hljs-attribute">text-align</span>: inherit;
+}
+</div></code></pre>
+<h2 id="resize-images">Resize images</h2>
+<p>Please check <a href="http://support.typora.io/Resize-Image/">this link</a>.</p>
+
+    </body>
+    </html>

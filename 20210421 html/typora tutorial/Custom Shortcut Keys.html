@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Custom Shortcut Keys</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="custom-shortcut-keys">Custom Shortcut Keys</h1>
+<p>User can set or reassign shortcut keys for commands in Typora's menubar. This article will show how to customise typora' key binding.</p>
+<h1 id="macos">macOS</h1>
+<p>We use macOS's system feature to customise typora's key binding on macOS.</p>
+<ol>
+<li>
+<p>Open <code>System Preference</code> → <code>Keyboard</code>, select tab <code>Shortcuts</code>. Select <code>App Shortcuts</code> in its left panel.</p>
+<p><img src="file:///c:\GitHub\CollegeNotes\typora tutorial\img\Snip20160814_1.png" alt="Snip20160814_1"></p>
+</li>
+<li>
+<p>Click the &quot;+&quot; button, a dialog sheet would popup. Select &quot;Typora.app&quot; from field <code>Application</code>, then input the exact name of the menu command you want to add, and then input the shortcut key you want to assign.</p>
+<p>For example, assume you want to add/change the shortcut key to pin typora's window, you could fill the dialog like following:</p>
+<p><img src="file:///c:\GitHub\CollegeNotes\typora tutorial\img\Snip20160814_5.png" alt="Snip20160814_5"></p>
+<p>Then <code>Command+Shift+P</code> will be the shortcut key for menu command &quot;Always on Top&quot;</p>
+</li>
+</ol>
+<h1 id="windows">Windows</h1>
+<p><em>(Requires Typora ≥ v0.9.16)</em></p>
+<ol>
+<li>
+<p>Open <code>Menu</code>  →  <code>Preference</code> in Typora, then click &quot;Open Advanced Settings&quot;.</p>
+<p><img src="file:///c:\GitHub\CollegeNotes\typora tutorial\img\sshot-1.png" alt="sshot-1"></p>
+</li>
+<li>
+<p>Open and edit <code>conf.user.json</code> from opened &quot;File Explore&quot;. If there's no such file, create one.</p>
+</li>
+<li>
+<p>Set or add JSON object which represents a key binding, for example:</p>
+<p><img src="file:///c:\GitHub\CollegeNotes\typora tutorial\img\Snip20160814_7.png" alt="sshot-2"></p>
+</li>
+<li>
+<p>Restart Typora, and the new key binding will be applied.</p>
+<p><img src="file:///c:\GitHub\CollegeNotes\typora tutorial\img\sshot-2.png" alt="sshot-2"></p>
+</li>
+</ol>
+<p>You could set or change shortcut keys for menu items in menu bar in native window style.</p>
+
+    </body>
+    </html>

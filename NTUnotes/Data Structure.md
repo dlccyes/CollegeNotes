@@ -11,7 +11,7 @@
 ![Image](https://i.imgur.com/ay40yL4.png)
 ![Image](https://i.imgur.com/iBumeVf.png)
 [cheatsheet](https://www.bigocheatsheet.com/)
-![Image](https://i.imgur.com/37ry1mM.png)
+![Image](https://i.imgur.com/DD20YyN.png)
 
 If $\lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)}$ exists, then
 $$\lim_{n \rightarrow \infty} \inf_{m \geq n} \frac{|T(m)|}{\phi(m)} = \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} = \lim_{n \rightarrow \infty} \sup_{m \geq n} \frac{|T(m)|}{\phi(m)}$$

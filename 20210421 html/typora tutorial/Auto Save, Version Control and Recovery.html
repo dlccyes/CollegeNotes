@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Auto Save&comma; Version Control and Recovery</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="auto-save-version-control-and-recovery">Auto Save, Version Control and Recovery</h1>
+<h2 id="macos">macOS</h2>
+<p>On macOS, the operation system will schedule auto save operation for document-based apps, like Typora or TextEdit. So &quot;auto-save&quot; is always enabled as a system feature.</p>
+<p><img src="file:///c:\GitHub\CollegeNotes\typora tutorial\img\general.png" alt="general"></p>
+<p>If you want Typora to auto save content when quit or close, without popping up a confirm dialog, please <strong>uncheck</strong> the checkbox one.</p>
+<p>If you want Typora to restore all windows/documents when restart, please <strong>uncheck</strong> the checkbox two.</p>
+<h2 id="windowslinux">Windows/Linux</h2>
+<p><img src="file:///c:\GitHub\CollegeNotes\typora tutorial\img\Snip20161027_2.png" alt="Snip20161027_2"></p>
+<p>You could enable this feature on preferences panel.</p>
+<p>By default, the documents will be saved every 5 minutes.</p>
+<p>If you want to change the time interval, please click &quot;Open Advanced Settings&quot; button on preferences panel, which would pop up a folder named <code>conf</code>, then edit or create a file named <code>conf.user.json</code>, and modify/add following setting:</p>
+<pre><code class="language-json"><div>{
+  <span class="hljs-attr">&quot;autoSaveTimer&quot;</span>: <span class="hljs-number">5</span> <span class="hljs-comment">// Double, default is 5. The unit is &quot;minute&quot;</span>
+}
+</div></code></pre>
+<h3 id="recover-unsaved-drafts-windowslinux">Recover Unsaved Drafts (Windows/Linux)</h3>
+<p>No matter whether the &quot;auto-save&quot; option is enabled or not, if Typora exit or crashed without saving file, or you accidentally quite Typora without saving your writings, you could click the &quot;Recover Unsaved Drafts&quot; button to found some writing drafts auto saved by Typora.</p>
+<p>The filename of those backed-up drafts is like <code>{date}-{filename}.md</code>, if your content is newly created without a file path (which is, &quot;Untitled&quot;), the <code>{filename}</code> part is auto generated, which is usually the first heading or first sentence. You could find and copy out the corresponding backup file to retrieve some part of your writings.</p>
+
+    </body>
+    </html>

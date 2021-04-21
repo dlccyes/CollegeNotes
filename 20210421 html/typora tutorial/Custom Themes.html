@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Change Themes</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h2 id="change-themes">Change Themes</h2>
+<p>Typora has 5~6 built-in themes. Changing writing theme can be done by selecting theme under the <code>theme</code> menu bar. You could also download, install, modify or write your own custom theme to stylize Typora.</p>
+<p>Typora use CSS to stylish all contents, each theme under <code>theme</code> menu is one <code>.css</code> files under &quot;typora's theme folder&quot;. So, briefly speaking, you could add/modify themes by adding/modifying correspond css files under &quot;typora's theme folder&quot;.</p>
+<h2 id="get-typora-themes">Get Typora Themes</h2>
+<p>We have an office website <a href="http://theme.typora.io">Typora Theme Gallery</a> for designers/developers to share their custom themes with others. You could download theme from there.</p>
+<h2 id="install-custom-themes">Install Custom Themes</h2>
+<ol>
+<li>Open Theme Folder. (see instructions below)</li>
+<li>Copy or move <code>.css</code> file and related resources, like fonts or images, into the newly opened folder.</li>
+<li>Restart typora, then select it from <code>Themes</code> menu.</li>
+</ol>
+<h2 id="open-theme-folder">Open Theme Folder</h2>
+<h3 id="macos">macOS</h3>
+<p>Open preference panel by <code>cmd+`</code>, then click &quot;Open Theme Folder&quot;</p>
+<img src="file:///c:\GitHub\CollegeNotes\typora tutorial\img\Snip20160921_1.png" style="zoom:50%" />
+<h3 id="windowslinux">Windows/Linux</h3>
+<p>Open preference panel from <code>File</code> → <code>Preference</code> from menubar, then click &quot;Open Theme Folder&quot;:</p>
+<img src="file:///c:\GitHub\CollegeNotes\typora tutorial\img\Snip20160921_2.png" style="zoom:50%" />
+<h2 id="modify-current-styles">Modify Current Styles</h2>
+<p>Sometimes, you may just want to change font family for all themes, for change font-color for headings for a specific themes. In this case, you do not need to copy/modify a whole exiting css file, just <a href="https://support.typora.io/Add-Custom-CSS/">Add Custom CSS</a> is enough. In brief:</p>
+<ul>
+<li>Create &amp; write a <code>base.user.css</code> under theme folder, the css rules inside it will be applied to all themes.</li>
+<li>Create &amp; write a <code>{theme-css-name}.user.css</code> under theme folder, the css rules inside it will only be applied to theme file <code>{theme-css-name}.css</code>.</li>
+</ul>
+<p>Please note that the built-in CSS theme files will get overwritten completely on typora version up, so, write your custom css into <code>*.user.css</code>, instead of the existing files, will prevent your modifications from being lost after update.</p>
+<h2 id="write-my-own-theme">Write My Own Theme</h2>
+<p>Please refer to <a href="http://theme.typora.io/doc/Write-Custom-Theme/">Write Custom Theme for Typora</a>.</p>
+
+    </body>
+    </html>

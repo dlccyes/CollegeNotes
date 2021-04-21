@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>0&period;9&period;88 &lpar;beta&rpar;</title>
+        <style>
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h2 id="0988-beta">0.9.88 (beta)</h2>
+<p>24, May</p>
+<ol>
+<li>Fix some regression bugs.</li>
+</ol>
+<h2 id="0987-beta">0.9.87 (beta)</h2>
+<p>23, May</p>
+<ol>
+<li>Improve table parsing rules.</li>
+<li>Show error message for invalid mermaid diagrams.</li>
+<li>Improve typewriter mode.</li>
+<li>Support file encode: UTF-8 with BOM.</li>
+<li>No indent for image block when &quot;Indent first line of paragraphs&quot; is enabled.</li>
+<li>Add <code>${filename}</code> and <code>${filepath}</code> variable support in custom image upload command.</li>
+<li>Improve sort in sidebar.</li>
+<li>Fix delete table row shortcut.</li>
+<li>Fix math rendering bug that scripts after comments in new lines are not rendered.</li>
+<li>Fix cursor position not restored when switch between source code mode and hybrid editing mode.</li>
+<li>Fix ref link with encoded URLs.</li>
+<li>Fix bugs related to image paste and upload.</li>
+<li>Fix Delete key and shift + arrow key on large files.</li>
+<li>Other improvements and bug fix.</li>
+</ol>
+<h2 id="0986-beta">0.9.86 (beta)</h2>
+<ol>
+<li>Fix option &quot;restore last closed files and folders&quot; not working.</li>
+<li>Fix &quot;copy image to&quot; under Linux.</li>
+<li>Update Polish translation and credits file.</li>
+<li>Small fix on styles.</li>
+</ol>
+<h2 id="0984-beta">0.9.84 (beta)</h2>
+<p><a href="https://support.typora.io/What's-New-0.9.84/">Detail</a></p>
+<ol>
+<li>Support upload images via PicGo or custom commands.</li>
+<li>Update i18n translations for some language.</li>
+<li>Support quick jump between footnote definitions and references.</li>
+<li>Improve Mermaid pie chart style.</li>
+<li>Fixed an mXSS vulnerability.</li>
+<li>Fix cursor and arrow key related bugs.</li>
+<li>Fix bugs about software update.</li>
+<li>Improve spellcheck.</li>
+<li>Improve find and replace function.</li>
+<li>Improve stability.</li>
+<li>Other small fix.</li>
+</ol>
+<h2 id="0983-beta">0.9.83 (beta)</h2>
+<ol>
+<li>Add more commands on context menu of sidebar.</li>
+<li>Improve compatibility with Sogou IME.</li>
+<li>Hot fix loops and rendering error of mermaid.</li>
+<li>Add APL and GLSL code syntax highlight, add SystemVerilog as alias of verilog language.</li>
+<li>Fix user defined internal links on exported PDF.</li>
+<li>Able to parse Azure style <code>[[_TOC_]]</code> as Table of Content.</li>
+<li>Able to detect potential data lost in earlier stage.</li>
+<li>Improve update logic.</li>
+<li>Fix app crash when editing large lists.</li>
+<li>Fix icon missing in Windows “open with” dialog.</li>
+<li>Fix a security issue on Windows.</li>
+<li>Add Swiss German language (by Indeximal).</li>
+<li>Improve paste web contents.</li>
+<li>Other bug fix and improvements.</li>
+</ol>
+<h2 id="0980-beta">0.9.80 (beta)</h2>
+<p><a href="https://support.typora.io/What's-New-0.9.80/">Detail</a></p>
+<p>30, Nov</p>
+<ol>
+<li>Add Danish (by archfrog) and Ukrainian (by oleksavyshnivsky) translations.</li>
+<li>Improve copy paste from website.</li>
+<li>Improve find and replace function.</li>
+<li>Upgrade mermaid to 8.4.0, fix XSS issue, supporting state diagram, pie chart diagrams and other improvements.</li>
+<li>Improve natural sort algorithm on file sidebar.</li>
+<li>Fix bugs about navigation keys.</li>
+<li>Fix anchor and internal links for exported HTML and PDF.</li>
+<li>Bug fix on lists.</li>
+<li>Fix a critical compatibility bug with Sougo IME.</li>
+<li>Fix &quot;New&quot; command on JumpList of Windows taskbar.</li>
+<li>Other bug fix and small improvements.</li>
+</ol>
+<h2 id="0979-beta">0.9.79 (beta)</h2>
+<p>22, Oct</p>
+<ol>
+<li>Fix global search not working on Linux.</li>
+<li>Fix print / export on dark theme.</li>
+<li>Change naming rule for temp images to unify with macOS version.</li>
+<li>Re-group menu items under Edit menu for small screens.</li>
+<li>Other small fix.</li>
+</ol>
+<h2 id="0978-beta">0.9.78 (beta)</h2>
+<p>11, Oct</p>
+<ol>
+<li>Support context menu on search result on files panel.</li>
+<li>Add perl6 syntax highlight.</li>
+<li>Fix bug about internal link and TOC on export.</li>
+<li>Fix parse of horizontal line.</li>
+<li>Improve spellcheck behavior.</li>
+<li>Improve copy and paste feature.</li>
+<li>Support copy as plain text explicitly.</li>
+<li>Add config for math for copy / export.</li>
+<li>Fix code indent not saved.</li>
+<li>Fix load image / video / link from URL.</li>
+<li>Improve stability and fix other bugs.</li>
+</ol>
+<h2 id="0977-beta">0.9.77 (beta)</h2>
+<p>5, Sep</p>
+<ol>
+<li>Fix a critical bug that editing in code fences may cause save failure.</li>
+</ol>
+<h2 id="0976-beta">0.9.76 (beta)</h2>
+<p>2, Sep</p>
+<ol>
+<li>Support set image zoom factor from menu or context menu.</li>
+<li>Fix bugs about undo / redo.</li>
+<li>Fix bugs about math auto numbering.</li>
+<li>Fix XSS when export.</li>
+<li>Small UX and Stability improvement.</li>
+</ol>
+<h2 id="0975-beta">0.9.75 (beta)</h2>
+<p>18, Aug</p>
+<ol>
+<li>Add Slovak language thanks to Petr Mátl.</li>
+<li>Add syntax highlight for turtle.</li>
+<li>Add move table row / column related operations in main menu.</li>
+<li>Improve compatibility with GFM for auto generated anchor names.</li>
+<li>Fix some settings not updated in preferences panel.</li>
+</ol>
+<h2 id="0974-beta">0.9.74 (beta)</h2>
+<p>08, Aug</p>
+<ol>
+<li>Remove unnecessary <code>&lt;span&gt;</code> from exported HTML.</li>
+<li>Fix issue Home / End key.</li>
+</ol>
+<h2 id="0973-beta">0.9.73 (beta)</h2>
+<p>03, Aug</p>
+<p><a href="https://support.typora.io/What's-New-0.9.73/">Detail</a></p>
+<ol>
+<li>Redesign of preference panels.</li>
+<li>Add table operations in menu bar, move &quot;image&quot; related operation to &quot;Format&quot; menu.</li>
+<li>Add smalltalk language syntax.</li>
+<li>Use new app update component on Windows.</li>
+<li>Fix auto reload not working.</li>
+<li>Improve mermaid gantt rendering.</li>
+<li>Support auto escape image path when export.</li>
+<li>Add pre-defined settings for reading speed.</li>
+<li>Fix bug that sidebar folder will not be kept after move to trash.</li>
+<li>Fix bugs about export HTML without styles.</li>
+<li>Fix bug that global search cannot contain special keys like &quot;#&quot;.</li>
+</ol>
+<h2 id="0972-beta">0.9.72 (beta)</h2>
+<p>21, Jun</p>
+<ol>
+<li>Fix bug that user cannot input after confirm or error dialog pops up.</li>
+<li>Fix bug about typewriter mode.</li>
+<li>Fix bug that open folder not working.</li>
+<li>Fix bug about internal links on export.</li>
+</ol>
+<h2 id="0971-beta">0.9.71 (beta)</h2>
+<p>20, Jun</p>
+<ol>
+<li>[Dev] Upgrade to Electron to 5.0 for better performance. Linux 32bit is no longer supported.</li>
+<li>Improve URL parse logic.</li>
+<li>Add Gherkin language syntax highlight.</li>
+<li>Support Catalan language.</li>
+<li>Support “Descending” order when sorting in file panel.</li>
+<li>UI Improvement on Night theme.</li>
+<li>Improve search and quick open on unicode characters.</li>
+<li>Improve logics about file save and multi-window management.</li>
+<li>Unify default rules for line break options.</li>
+<li>Fix some bugs on file side panel.</li>
+<li>Fix some bugs on PDF export. Zoom oversize mermaid diagrams, math blocks and tables on exported PDF.</li>
+<li>Fix spellcheck on pt-PT.</li>
+<li>Fix bug that inline math not get updated sometimes.</li>
+<li>Fix quote and brackets when using Chinese IME.</li>
+<li>Fix bug that <code>$</code> get omitted on headings.</li>
+<li>Fix some bugs about cursor jump on click or on Shift + Enter.</li>
+<li>Fix bugs about <code>&amp;</code> cannot be escaped in some cases.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0970-beta">0.9.70 (beta)</h2>
+<p>20, Apr</p>
+<ol>
+<li>Fix wrong cursor position calculation logic on lines contain emoji.</li>
+<li>Fix quote auto pair issue.</li>
+</ol>
+<h2 id="0969-beta">0.9.69 (beta)</h2>
+<p>19, Apr</p>
+<ol>
+<li>Fix security bug on export and editing.</li>
+<li>Add ASN.1 syntax highlight support.</li>
+<li>Fix no default theme is loaded on first launch.</li>
+<li>Improve copy &amp; paste logic.</li>
+<li>Improve search function, now search will not ignore whitespace.</li>
+<li>Add error message for flowchart when rendering failed.</li>
+<li>Fix image operations, support <code>align</code> attribute for <code>img</code> tag.</li>
+<li>Fix emoji auto complete.</li>
+<li>Fix bug that math not rendered on open sometimes, fix cursor issues relates to inline math.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0968-beta">0.9.68 (beta)</h2>
+<p>20, Mar, 2019</p>
+<ol>
+<li>Fix security issues.</li>
+<li>Fix regression bug on side bar, edit, images, links related functions.</li>
+<li>Add syntax highlight for SPARQL and Crystal.</li>
+</ol>
+<h2 id="0967-beta">0.9.67 (beta)</h2>
+<p>16, Mar, 2019</p>
+<ol>
+<li>Fix export HTML not working.</li>
+<li>Improve Pandoc version detect logic.</li>
+</ol>
+<h2 id="0966-beta">0.9.66 (beta)</h2>
+<p>15, Mar, 2019</p>
+<p><a href="https://support.typora.io/What's-New-0.9.66/">Detail</a></p>
+<ol>
+<li>Fix security issues.</li>
+<li>Fix unnecessary escape in outline.</li>
+<li>Fix click outline will cause content jumping.</li>
+<li>Fix hide status bar not working.</li>
+<li>Add language Vietnamese by <a href="https://github.com/1234hdpa">1234hdpa</a>.</li>
+<li>Remove options for emoji autocomplete, it is now enabled by default.</li>
+<li>Update flowchart library and fix issues related to flowchart.</li>
+<li>Add options to configure reading speed.</li>
+<li>Add <code>oz</code> ad supported language for syntax highlight.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0965-beta">0.9.65 (beta)</h2>
+<p>18, Feb, 2019</p>
+<ol>
+<li>Save last chosen encodings for file.</li>
+<li>Add Indonesia language support by <a href="https://github.com/snatalius">snatalius</a>.</li>
+<li>Allow drag &amp; drop to insert file links quickly.</li>
+<li>Fix XSS for inline math, add security check for area tag.</li>
+<li>Fix math block rendering issue.</li>
+<li>Fix footnotes numbering on export.</li>
+<li>Improve compatibility on Linux OS.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0964-beta">0.9.64 (beta)</h2>
+<p>25, Jan, 2019</p>
+<ol>
+<li>Fix an XSS issue.</li>
+<li>Fix word count in selection in word count panel.</li>
+</ol>
+<h2 id="0963-beta">0.9.63 (beta)</h2>
+<p>25, Jan, 2019</p>
+<p><a href="https://support.typora.io/What's-New-0.9.63/">Detail</a></p>
+<ol>
+<li>Improve open quickly.</li>
+<li>Support “Copy without Theme Styling”.</li>
+<li>Add recent folders in jump list.</li>
+<li>Show full path on file tree when hover on items.</li>
+<li>Improved Japanese and Hrvatski translation.</li>
+<li>Fix bugs on parsing Markdown content.</li>
+<li>Improve math support and update to mhchem 3.3 for Chemistry support.</li>
+<li>Fix button actions and links for spellcheck panel.</li>
+<li>Add basic context menu in source code mode.</li>
+<li>Fix bugs cursor jump when input block quotes or task lists.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0962-beta">0.9.62 (beta)</h2>
+<p>10, Jan, 2019</p>
+<ol>
+<li>Fix bugs on math input and rendering.</li>
+<li>Other regression bug fix.</li>
+</ol>
+<h2 id="0961-beta">0.9.61 (beta)</h2>
+<p>08, Jan, 2019</p>
+<ol>
+<li>Support global search in opened folder.</li>
+<li>Support filter in outline panel.</li>
+<li>Support search in preferences panel.</li>
+<li>Support select default unit for word count (character count, line counts, etc).</li>
+<li>Support move file by drag &amp; drop in file tree panel, support duplicate file in file panel.</li>
+<li>Add Portuguese (Portugal) support by <a href="https://github.com/jcamilo93">camilo93</a>, add Galician support by <a href="https://github.com/nunhes">nunhes</a>.</li>
+<li>Add COLOL as supported code highlight language.</li>
+<li>Fix text in menu bar is invisible on Linux.</li>
+<li>Update MathJax Rendering engine to 2.7.5</li>
+<li>Fix word count bug when document contains list.</li>
+<li>Support disable GPU acceleration when launch Typora.</li>
+<li>Add warnings for file move/delete, add options to reset all warning dialogs.</li>
+<li>Fix an SSX issue when rendering <code>&lt;img&gt;</code>.</li>
+<li>Fix bugs about math block in exported PDF/docx</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0960-beta">0.9.60 (beta)</h2>
+<p>27, Oct, 2018</p>
+<ol>
+<li>Fix rename or move file would make window unresponsive.</li>
+<li>Fix shift+ctrl+v will trigger paste twice.</li>
+<li>Fix cannot open markdown file by double click on Linux.</li>
+<li>Fix links relates to spellcheck.</li>
+<li>Fix some content cannot be parsed in limited time.</li>
+<li>Fix inline math would get corrupt or wrong cursor after editing.</li>
+</ol>
+<h2 id="0959-beta">0.9.59 (beta)</h2>
+<p>23, Oct, 2018</p>
+<p><a href="https://support.typora.io/What's-New-0.9.59/">Detail</a></p>
+<ol>
+<li>Support spellcheck for non-English languages.</li>
+<li>Save learned spelling and support unlearn spelling from context menu.</li>
+<li>Add menu item to open file properties on Windows.</li>
+<li>Fix “preserve line break” get ignore when export as PDF. Fix incorrect modify/create time for exported PDF file.</li>
+<li>Add warnings when user enter typewriter/focus mode in their first time.</li>
+<li>Fix bug about cursor and update issues for math.</li>
+<li>Improve typing response, improve scroll performance and slightly improve speed for opening document.</li>
+<li>Improve behaviors for “indent first line”.</li>
+<li>Fix bug that image storage folder not updated after open new file.</li>
+<li>Add sort function for file tree in sidebar.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0958-beta">0.9.58 (beta)</h2>
+<p>12, Sep, 2018</p>
+<ol>
+<li>Add options for custom image storage folder.</li>
+<li>Fix a critical bug triggered when pasting contents into tables.</li>
+<li>Fix bugs relates to loading remote images.</li>
+<li>Fix bugs that <code>&lt;source&gt;</code> tag inside <code>&lt;video&gt;</code> does not work.</li>
+<li>Fix a security issue when loading local iframes. (Special Thanks to Zhiyang Zeng(@Wester) from Tencent Blade Team).</li>
+<li>Fix bugs about pasting into lists.</li>
+<li>Fix save failure when user does not have a &quot;document&quot; folder.</li>
+<li>Auto hide menubar when entering full screen mode.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0957-beta">0.9.57 (beta)</h2>
+<p>30, Aug, 2018</p>
+<ol>
+<li>Fix image export.</li>
+<li>Fix crashment on glibc 2.28. (Linux)</li>
+<li>Fix copy math into MS Word (Windows).</li>
+<li>Fix parse error for lists and links.</li>
+<li>Fix outline not updated after switch documents.</li>
+<li>Improve paste behavior.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0956-beta">0.9.56 (beta)</h2>
+<p>22, Aug, 2018</p>
+<ol>
+<li>Fix some bugs on previous version.</li>
+</ol>
+<h2 id="0954-beta">0.9.54 (beta)</h2>
+<p>19, Aug, 2018</p>
+<p><a href="https://support.typora.io/What's-New-0.9.54/">Detail</a></p>
+<ol>
+<li>support preview for inline HTML, support HTML blocks.</li>
+<li>Support all common HTML tags including <code>video</code>, <code>iframe</code>, <code>kbd</code>, <code>details</code>, <code>ruby</code>, etc.</li>
+<li>Change a few default shortcut keys.</li>
+<li>Follow CommonMark’s standard for parsing line break. Now line break is aligned in inline styles.</li>
+<li>Improve UI for table, math, search panel, etc. And fix some CSS issues.</li>
+<li>Add Swedish UI. (Thanks to <a href="https://github.com/FelixZY">@FelixZY</a>)</li>
+<li>Improve paste logic, and support parsing/converting more HTML contents, include gist snip, iframe embed, etc.</li>
+<li>Fix <code>Return</code> key and related undo/redo on tables.</li>
+<li>Fix rendering bugs when <code>Indent first line of paragraph</code> is enabled.</li>
+<li>Math block with Pandoc style attributes can be still parsed as Math block.</li>
+<li>Search text will begin from current caret position, instead of start from document beginning.</li>
+<li>Fix bug that sometimes Typora window is invisible on start.</li>
+<li>Fix typo for language <code>sqlite</code>, add <code>tsx</code>, <code>stylus</code>, <code>julia</code> syntax highlight.</li>
+<li>Language and other attribute of code fences will be included when export using Pandoc.</li>
+<li>Support HTML Entity Number.</li>
+<li>Improve logic about picking correct smart quotes. Fix smart pants not exported when using Pandoc.</li>
+<li>Fix window will scroll to incorrect position when user input code or math block.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0953-beta">0.9.53 (beta)</h2>
+<p>1, Jun, 2018</p>
+<ol>
+<li>Fix Markdown line break does not work.</li>
+<li>Fix bugs relates to SmartyPants.</li>
+<li>Fix return key on tables.</li>
+<li>Fix mirror styles and typos.</li>
+<li>Remove default shortcut keys of  &quot;typewriter&quot; mode to prevent user from activating it accidentally and does not know how to exit.</li>
+</ol>
+<h2 id="0952-beta">0.9.52 (beta)</h2>
+<p>27, May, 2018</p>
+<ol>
+<li>Add Smart Punctuation (SmartyPants) Support.</li>
+<li>Support remap unicode punctuations on parse. <a href="https://support.typora.io/SmartyPants">detail</a>.</li>
+<li>Fix bugs on saving process.</li>
+<li>Fix bugs that some options are not saved after change.</li>
+<li>Fix bugs and improve UI of table functions.</li>
+<li>Fix bug that styles inside underline (<code>&lt;u&gt;</code>) are not rendered.</li>
+<li>Fix undo/redo logic when changing styles or in source code mode.</li>
+<li>Add syntax highlight for pseudocode.</li>
+<li>Add Hungarian interface. Improve labels and translations.</li>
+<li>Improve URL detect logic.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0951-beta">0.9.51 (beta)</h2>
+<p>15, May, 2018</p>
+<ol>
+<li>Add Croatian language.</li>
+<li>Add Dependency on deb package.</li>
+<li>Fix logic when quiting and open Typora.</li>
+<li>other bug fix.</li>
+</ol>
+<h2 id="0950-beta">0.9.50 (beta)</h2>
+<p>4, May, 2018</p>
+<ol>
+<li>Fix a bug that some code fences cannot be edited.</li>
+</ol>
+<h2 id="0949-beta">0.9.49 (beta)</h2>
+<p>2, May, 2018</p>
+<ol>
+<li>Add option to reopen last files/folders or open custom folders on start up.</li>
+<li>Add 'Save All' command in menubar.</li>
+<li>Allow escape <code>^</code> when superscript is enabled.</li>
+<li>Better select word, delete word and triple click support.</li>
+<li>Bug fix on typing in inline math.</li>
+<li>Support launch flag in advanced setting.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0948-beta">0.9.48 (beta)</h2>
+<p>3, Apr, 2018</p>
+<ol>
+<li>Add options for preserve or ignore whitespace/single line break when editing or export.</li>
+<li>Update mermaid support and re-enable html labels in mermaid diagram.</li>
+<li>Use colored emoji on Windows.</li>
+<li>Fix bugs on ordered lists.</li>
+<li>Improve logic for auto pair.</li>
+<li>Remember typewriter/focus mode on window close.</li>
+<li>Improve syntax highlight logic in source code mode.</li>
+<li>Fix bugs on editing files in One Drive.</li>
+<li>Re-open unsaved content when restart Typora after crash.</li>
+<li>Add Dutch language support.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0947-beta">0.9.47 (beta)</h2>
+<p>14, Mar, 2018</p>
+<ol>
+<li>Fix insert table or headins from enu not work in v0.9.46</li>
+</ol>
+<h2 id="0946-beta">0.9.46 (beta)</h2>
+<p>13, Mar, 2018</p>
+<ol>
+<li>Task lists follows GFM's spec (<a href="https://github.com/typora/typora-issues/issues/643">#643</a>). You may need to update your theme if your theme are downloaded.</li>
+<li>Support disable auto-warp for code fences.</li>
+<li>Support paste image directly. Add default actions and quick actions when insert images.</li>
+<li>New language supports: German by <a href="https://github.com/rcvd">rcvd</a> and Gert, Czech by <a href="https://github.com/byDave251">byDave251</a>, Greek by <a href="https://github.com/typora/kiriakosv">kiriakosv</a>.</li>
+<li>Add <code>mediawiki-texvc</code> support for math.</li>
+<li>Improve UI for mermaid and sequence.</li>
+<li>Fix bug for copy and resize table.</li>
+<li>Improve export quotation for math equations for PDF, ePub and image output.</li>
+<li>Fix parsing errors for blockquote and emphasis.</li>
+<li>Fix bugs relates to Chinese IME.</li>
+<li>Other bug fix and improvements.</li>
+</ol>
+<h2 id="0944-beta">0.9.44 (beta)</h2>
+<p>9, Feb, 2018</p>
+<ol>
+<li>Fix bug that sometimes sidebar cannot be hide completely after resize.</li>
+<li>Use background on diagram nodes, fix hyperlink on flowchart cannot be opened.</li>
+<li>Improve URL auto detect logic.</li>
+<li>Fix <code>****</code> cannot be parsed as <code>&lt;hr&gt;</code>.</li>
+<li>Fix bug relates to context menu.</li>
+<li>Other mirror fix.</li>
+</ol>
+<h2 id="0943-beta">0.9.43 (beta)</h2>
+<p>6, Feb, 2018</p>
+<ol>
+<li>New language support: Spanish by  <a href="https://github.com/thepiratejester">thepiratejester</a>, French by <a href="https://github.comMOrdinateur">MOrdinateur</a>, Russian by <a href="https://github.com/dragomano">dragomano</a>, Japanese by <a href="https://github.com/tomochan001">tomochan001</a>, Portuguese by <a href="https://github.com/akz92">akz92</a>.</li>
+<li>Improve parse logic for block quotes, lists, and tables.</li>
+<li>Support custom tab size for code blocks. Add options for default ordered list styles.</li>
+<li>Improve compatibility with net drivers.</li>
+<li>Fix <code>&lt;br&gt;</code> not exported.</li>
+<li>Fix scrollbar on sidebar cannot be dragged.</li>
+<li>Fix a bug that window may become invisible on start up sometimes.</li>
+<li>Add syntax highlight for <code>SAS</code>.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0942-beta">0.9.42 (beta)</h2>
+<p>25, Jan, 2018</p>
+<ol>
+<li>Improve Simplified Chinese translation by <a href="https://github.com/NoDotCat">NoDotCat</a>, <a href="https://github.com/HowardTangHw">HowardTangHw</a>,  <a href="https://github.com/Emphasia">Emphasia</a></li>
+<li>More language support: Traditional Chinese translation (by <a href="https://github.com/cyberrob">cyberrob</a>), Polish translation (by  <a href="https://github.com/iriusturar">iriusturar</a>), Korean translation (by  <a href="https://github.com/ryush00">ryush00</a>,  <a href="https://github.com/marigold9124">marigold9124</a>), Italian translation (by  <a href="https://github.com/starise">starise</a>, <a href="https://github.com/jethro17">jethro17</a>).</li>
+<li>Support resize on sidebar.</li>
+<li>Add Privacy Policy.</li>
+<li>Support quick open.</li>
+<li>Fix some bugs for table editing.</li>
+<li>Fix a bug that highlight, superscript, subscript, image and inline math is not rendered in outline.</li>
+<li>Fix a bug that Typora may be opened in nonexistent display when multiple displays are used.</li>
+<li>Some performance improvement on opening file.</li>
+<li>Fix a bug that flowchart is not correctly rendered when Windows style line ending is used.</li>
+<li>Equation numbering is support after export as docx format for some math formula.</li>
+<li>Fix a word count bug for Korean language.</li>
+<li>Fix bugs on list editing.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0941-beta">0.9.41 (beta)</h2>
+<p>14, Dec, 2017</p>
+<ol>
+<li>Add Chinese user interface.</li>
+<li>Tables with long content supports scroll horizontally.</li>
+<li>Improve PDF export, fix bugs relates to PDF export.</li>
+<li>Add <a href="https://support.typora.io/Strict-Mode/">strict mode</a> option for parsing markdown.</li>
+<li>Fix bug that cannot open correct link address for hyperlink syntax.</li>
+<li>Some fix bug about markdown parse logic.</li>
+<li>Fix bugs about <code>[TOC]</code> .</li>
+<li>Fix a bug that some options in advanced settings are not applied.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0938-beta">0.9.38 (beta)</h2>
+<p>29, Oct, 2017</p>
+<ol>
+<li>Support <code>&lt;br/&gt;</code> tag in live rendering.</li>
+<li>Update emoji library to cover emojis introduced during Unicode 7.0~10.0</li>
+<li>Add syntax highlight for twig.</li>
+<li>Improve auto indent in code fences</li>
+<li>Fix bug that file attributes are reset after save.</li>
+<li>Fix bugs on PDF export.</li>
+<li>Fix a bug that YAML does not follow CRLF preference.</li>
+<li>Fix a bug that user cannot open folder from command line sometime.</li>
+<li>Fix window restore logic relates to multiple screens.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0937-beta">0.9.37 (beta)</h2>
+<p>25, Sep, 2017</p>
+<ol>
+<li>Support show word count in selection.</li>
+<li>Add syntax highlight for scheme.</li>
+<li>Support natural sort in files panel.</li>
+<li>Fix task list cannot be copy/pasted correctly.</li>
+<li>Fix code fences padding on PDF export.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0936-beta">0.9.36 (beta)</h2>
+<p>26, Aug, 2017</p>
+<ol>
+<li>Fix a bug that user cannot jump using [TOC].</li>
+<li>Fix on exported HTML, <code>@include-when-export</code> failed to convert as <code>&lt;link&gt;</code>.</li>
+</ol>
+<h2 id="0934-beta">0.9.34 (beta)</h2>
+<p>24, Aug, 2017</p>
+<ol>
+<li>Add menu items for changing task list status.</li>
+<li>Add syntax highlight for makefile, tcl.</li>
+<li>Fix mermaid gantt cannot be rendered.</li>
+<li>Fix backspace after emoji.</li>
+<li>Fix window will scroll to top when switch from inactive window to active one.</li>
+<li>Fix a bug that sometimes <code>Return</code> does not work.</li>
+<li>Hot fix for <code>-</code> will be converted to other character in exported PDF.</li>
+<li>Fix a bug that typora cannot be opened from terminal multiple times.</li>
+<li>Other mirror fix.</li>
+</ol>
+<h2 id="0933-beta">0.9.33 (beta)</h2>
+<p>15, Aug, 2017</p>
+<ol>
+<li>Fix a critical bug that some code fences may crash the app.</li>
+</ol>
+<h2 id="0932-beta">0.9.32 (beta)</h2>
+<p>13, Aug, 2017</p>
+<ol>
+<li>Fix 100% CPU usage with menu on KDE on some linux distribution.</li>
+<li>Fix some regression bug:
+<ol>
+<li><code>Ctrl+-</code>/<code>Ctrl+=</code>/<code>ctrl+[</code>/<code>ctrl+]</code> not work as expect.</li>
+<li>Auto pair for normal markdown characters does not work.</li>
+<li>Fix for <code>&lt;img height=&quot;200&quot; /&gt;</code> , the height attribute won't be correctly added when rendering.</li>
+<li>Performance improving when typing.</li>
+<li>Zoom level sometimes is incorrect on startup.</li>
+</ol>
+</li>
+<li><code>@import</code> and <code>@include-when-export</code> will be converted to linked stylesheet when export to HTML.</li>
+<li>Fix a bug that <code>ctrl</code>+click on hyperlink cannot open other protocol like <code>magic:</code> or others.</li>
+<li>Fix a bug that selection should extend by word in some cases.</li>
+<li>Fix a bug that after selection, the select anchor will always move to its start boundary.</li>
+<li>Ctrl+Ip/Down key and PageUp/PageDown key can exit code fences when the cursor is at start/end position of the code fences.</li>
+<li>Better image select logic when editing: double click and auto select all raw text of an image.</li>
+<li>Can copy tables to Words from context menu.</li>
+<li>Select word/select line also supports code fences and source code mode.</li>
+</ol>
+<h2 id="0930-beta">0.9.30 (beta)</h2>
+<p>9, Aug, 2017</p>
+<ol>
+<li>Support file tree/list in left side panel.</li>
+<li>Start using CSS variable in themes. Change theme styles may be easier.</li>
+<li>Support relative link to files without adding <code>.md</code> or <code>.markdown</code>  explicitly.</li>
+<li>Diagrams can auto fit the max-width.</li>
+<li>Improve auto detect logic for urls.</li>
+<li>Fix exported HTML/PDF does not follow original markdown's logic of line break.</li>
+<li>Fix syntax highlight in night theme and syntax for protobuf, diff and php+html does not work.</li>
+<li>Change some inappropriate descriptions in menu, dialog and tooltip.</li>
+<li>Fix bug that some <code>&lt;a&gt;</code> tags are not parsed correctly.</li>
+<li>No auto-pair for markdown symbols in inline math.</li>
+<li>Support Chinese character in header anchors.</li>
+<li>Fix bug of delete and return key on selected text or table.</li>
+<li>Find/Replace input supports undo/redo and hit selection in code fences won't be removed.</li>
+<li>Fix excepted HTML tags are not escaped in exported HTML.</li>
+<li>Fix nav key on context menu</li>
+<li>Fix  bug that Math block cannot be copied.</li>
+<li>Add tooltips on button.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0929-beta">0.9.29 (beta)</h2>
+<p>24, Apr, 2017</p>
+<ol>
+<li>Fix a critical bug.</li>
+</ol>
+<h2 id="0928-beta">0.9.28 (beta)</h2>
+<p>22, Apr, 2017</p>
+<ol>
+<li>Fix launch errors.</li>
+</ol>
+<h2 id="0927-beta">0.9.27 (beta)</h2>
+<p>17, Apr, 2017</p>
+<ol>
+<li>Support setting line ending char. Support CRLF line ending.</li>
+<li>Add syntax highlight support for <code>ProtoBuf</code>, fix syntax highlight for <code>php+html</code> and <code>diff</code>.</li>
+<li>Fix styles for &quot;unibody&quot; style.</li>
+<li>Fix font not applied when exporting.</li>
+<li>Improve copy/paste to prevent data or style lost.</li>
+<li>Fix key navigation on context menu.</li>
+<li>Fix a few typos in text resource.</li>
+<li>Fix header anchor cannot support some unicode char.</li>
+<li>Fix spellcheck sometimes not working in Linux.</li>
+</ol>
+<h2 id="0925-beta">0.9.25 (beta)</h2>
+<p>09, Mar, 2017</p>
+<ol>
+<li>Fix &quot;import&quot; does not work.</li>
+<li>Imporve encoding detecting logic for better compatibility.</li>
+</ol>
+<h2 id="0924-beta">0.9.24 (beta)</h2>
+<p>27, Feb, 2017</p>
+<ol>
+<li>Support <code>alt</code> key on Windows to popup related menu.</li>
+<li>Support open recent files from menubar.</li>
+<li>Fix a bug that Typora cannot detect the encode of some files correctly. Allow manually select file encode from menubar.</li>
+<li>Fix bugs that table headers and bold Chinese characters cannot be printed (export to PDF) correctly.</li>
+<li>Fix crash when export contents into jpg file.</li>
+<li>Show horizontal scrollbar when some table or dialog is too width.</li>
+<li>Set default extensions for save and export dialog.</li>
+<li>Add syntax highligh for <code>fortran</code>. Fix bugs of syntax highlight function for <code>Scala</code> and <code>C#</code>.</li>
+<li>Exported HTML (without class) for code fences could follow w3c recommendations and be more friendly with Prism.</li>
+<li>Fix some bugs relates to crash and data lose.</li>
+<li>Fix bugs that some behavior for links are not correct.</li>
+<li>Fix table parsing logic for special characters.</li>
+<li>Fix a bug that some math block is invalid in exported EPub.</li>
+<li>Fix a bug that <code>\{</code> is not correctly handled in inline math.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0923-beta">0.9.23 (beta)</h2>
+<p>4, Jan, 2017</p>
+<ol>
+<li>Support move table row/col when drag on left/top side of table row/col or using shortcut keys: shift + ctrl + arrow key.</li>
+<li>Add syntax highlighting for <code>cmake</code>, <code>cypher</code>, <code>dart</code>, <code>django</code>, <code>dtd</code>, <code>dylan</code>, <code>handlebars</code>, <code>idl</code>, <code>web idl</code>, <code>yacas</code>, <code>mbox</code>, <code>vhdl</code>, <code>julia</code>, <code>haxe</code>, and <code>hxml</code>.</li>
+<li>Remove <code>//</code> after <code>mailto:</code> for auto generated mail link.</li>
+<li>Fix image position for flowchart.</li>
+<li>Fix a bug that some link url or image url are escaped twice.</li>
+<li>Fix a  bug that <code>:+1:</code> is not recognized as emoji.</li>
+<li>Fix refresh mathjax will convert inline math when inline math is not enabled.</li>
+<li>Fix freeze when insert images.</li>
+<li>Other bug fix and improvements.</li>
+</ol>
+<h2 id="0922-beta">0.9.22 (beta)</h2>
+<p>20, Nov, 2016</p>
+<ol>
+<li>Fix the logic for relative path for <code>typora-root-url</code>.</li>
+<li>Support recent used files on Windows jumplist.</li>
+<li>Support paste images into Typora(after set-up).</li>
+<li>Support copy images to selected folder when insert images.</li>
+<li>Fix bugs related to collapsible outline panel.</li>
+<li>Fix bugs that exported PDF may contain  HTML in bookmark.</li>
+<li>Fix bugs about undo/redo for nest task list.</li>
+<li>Fix mermaid no responding when Chinese character exists.</li>
+<li>Change <code>Copy as Markdown</code> option from opt-in to opt-out.</li>
+<li>Support elixir for code fences.</li>
+<li>Fix cli support on Linux.</li>
+<li>Fix some typo on interface.</li>
+</ol>
+<h2 id="0921-beta">0.9.21 (beta)</h2>
+<p>18, Oct, 2016</p>
+<ol>
+<li>Support insert image from local file. Support drag &amp; drop multiple images.</li>
+<li>Add preference to use relative path when insert images.</li>
+<li>Improve footnote export and behavior.</li>
+<li>Add option for auto-numbering math blocks. Support command for refreshing math expression.</li>
+<li>Add option set left outline panel collapsible.</li>
+<li>Support <code>&lt;img&gt;</code> tag without a close tag.</li>
+<li>Remove unnecessary math delimiter for exported LaTeX.</li>
+<li>Add syntax highlight for <code>ocaml</code>, <code>F#</code>, <code>elm</code>, <code>spreadsheet</code> and <code>pgp(Ascii Armor)</code>.</li>
+<li>Auto-save time schedule can be configured in advanced options.</li>
+</ol>
+<h2 id="0920-beta">0.9.20 (beta)</h2>
+<p>6, Oct, 2016</p>
+<ol>
+<li>Add support for simple HTML fragments, only includes: <code>&lt;!--comments--&gt;</code>, <code>&lt;a href=&quot;http://typora.io&quot;&gt;link&lt;/a&gt;</code>, <code>&lt;img src=&quot;http://www.w3.org/html/logo/img/mark-word-icon.png&quot; width=&quot;200px&quot; /&gt;</code>.</li>
+<li>Fix syntax highlight for <code>Octave</code> is not working, and add <code>matlab</code> as its alias.</li>
+<li>Math expressions now support export to epub. Diagrams will be converted to images when export to epub/docx.</li>
+<li>Fix a bug that arrow of diagrams is missing when export to HTML/PDF.</li>
+<li>Fix a critical bug on tables.</li>
+<li>Fix some export options are missing in <code>Export</code> menu.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0919-beta">0.9.19 (beta)</h2>
+<p>26, Sep, 2016</p>
+<ol>
+<li>Launched our <a href="http://theme.typora.io">Theme Gallery</a> to share and download Typora themes.</li>
+<li>Fix a bug the menubar won't show automatically when Typora is fullscreened.</li>
+<li>Improve paste behavior.</li>
+<li>Fix unnecessary scroll.</li>
+<li>Fix backspace after UTF-32 character.</li>
+<li>Fix bugs related to inline code inside table.</li>
+<li>Recover outline panel status when switch from source code mode.</li>
+<li>Other bug fix.</li>
+<li>A Linux build (Debian/Ubuntu) is <a href="https://typora.io/#linux">available</a>.</li>
+</ol>
+<h2 id="0918-beta">0.9.18 (beta)</h2>
+<p>4, Sep, 2016</p>
+<ol>
+<li>Add options to auto pair common markdown symbols, like `*_ etc.</li>
+<li>Add options to show markdown source for simple blocks when focus, like headings.</li>
+<li>Fix a bug that sometimes special characters will cause inline math not rendered.</li>
+<li>Fix a bug that sometime <code>Enter</code> key is not working.</li>
+<li>Fix some bugs under high DPI screen.</li>
+<li>Fix a bug that footnote definition cannot be correctly input.</li>
+</ol>
+<h2 id="0917-beta">0.9.17 (beta)</h2>
+<p>27, Aug, 2016</p>
+<ol>
+<li>Fix special characters cannot be input inside inline math.</li>
+<li>Fix backspace cannot expand inline style.</li>
+</ol>
+<h2 id="0916-beta">0.9.16 (beta)</h2>
+<p>19, Aug, 2016</p>
+<ol>
+<li>Support diagrams, includes sequence, flowchart and mermaid (<a href="https://support.typora.io/Draw-Diagrams-With-Markdown/">doc</a>).</li>
+<li>Fix a bug related to parsing <code>*</code> and escaped character.</li>
+<li>Fix backspace inside code fences.</li>
+<li>Fix escape character will gone in inline math, inline code, and other inline styles.</li>
+<li>Fix special character, such as <code>#</code> cannot be inserted in ceylon code block.</li>
+<li>Fix quote mark would cause typora not respond sometimes.</li>
+<li>Allow custom keybindings (<a href="https://support.typora.io/Custom-Key-Binding/">doc</a>).</li>
+<li>Allow custom search service (<a href="https://support.typora.io/Add-Search-Service/">doc</a>).</li>
+<li>Fix shift+ctrl+home/end key on Windows.</li>
+<li>Other bug fix and improvements.</li>
+</ol>
+<h2 id="0915-beta">0.9.15 (beta)</h2>
+<p>29, Jul, 2016</p>
+<ol>
+<li>Fix a bug that <code>**</code> is not correctly parsed.</li>
+<li>Fix bookmark not generated when export to PDF when there's h5 and h6 in article.</li>
+<li>Fix list indentation not correctly saved.</li>
+<li>Fix footnotes contains &quot;_&quot; cannot be exported correctly.</li>
+<li>Fix a bug some file format cannot be exported via pandoc.</li>
+<li>Add &quot;Textile&quot; as one export option.</li>
+<li>Improve URL auto detection.</li>
+<li>Fix content will be pasted twice when paste from typora to Word.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0914-beta">0.9.14 (beta)</h2>
+<p>25, Jul, 2016</p>
+<ol>
+<li>Fix print/export PDF not work.</li>
+</ol>
+<h2 id="0913-beta">0.9.13 (beta)</h2>
+<p>24, Jul, 2016</p>
+<ol>
+<li>Release x64 build.</li>
+<li>Add focus mode and typewriter mode support.</li>
+<li>Remember last status of outline bar.</li>
+<li>Add syntax support for assembly and TOML.</li>
+<li>Avoid the usage of 'AltGr' key combination in assigned shortcut.</li>
+<li>Support kramdown style <code>[toc]</code> syntax.</li>
+<li>Improve list indent/outdent logic.</li>
+<li>Fix HTML entities not escaped in meta block.</li>
+<li>Fix a bug that triple click cannot select current line correctly.</li>
+<li>Fix auto indent for brackets in code fences.</li>
+<li>Add options to export reStructuredText, and OPML format.</li>
+<li>Fix user.css not included in exported HTML/PDF.</li>
+<li>Fix some export option not work in unibody window style.</li>
+<li>Fix cannot export/print in dark theme.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="0912-beta">0.9.12 (beta)</h2>
+<p>22, Jun, 2016</p>
+<ol>
+<li>Fix a critical bug that the indent in multi-level lists may keep increasing after save.</li>
+<li>Fix the scrollbar style on side panel.</li>
+</ol>
+<h2 id="0911-beta">0.9.11 (beta)</h2>
+<p>21, Jun, 2016</p>
+<ol>
+<li>Fix a critical bug that the indents of multi-level lists are wrong when parsing and generating markdown source.</li>
+<li>Better ECMAScript6 syntax highlight support for javascript code fences. Add syntax highlight support for NSIS, JSX (<a href="http://facebook.github.io/react">React</a>'s JavaScript syntax extension), vue, LiveScript, mathematica, properties (and .ini), tiki wiki, dockerfile in code fences.</li>
+<li>Hide auto-complete lists when scrolling.</li>
+<li>Fix internal link to heading (like <a href="#0.9.4.5-(beta)">this</a>) not work.</li>
+<li>Fix a bug sometimes, pasting would append duplicate texts.</li>
+<li>Rule change: capitalized characters are not allowed in filenames for theme css file</li>
+<li>Make link clickable in about page.</li>
+<li>Support single column table in insert table dialog.</li>
+<li>Add enabled optional inline style support, like highlight or inline math, in menubar.</li>
+</ol>
+<h2 id="0910-beta">0.9.10 (beta)</h2>
+<p>15, Jun, 2016</p>
+<ol>
+<li>Fix style that sometimes user can see script content.</li>
+<li>Fix auto pair match inside image and avoid glitch when complete brackets.</li>
+<li>Fix paste table, and paste inside footnotes.</li>
+<li>Fix <code>]</code> cannot be escaped in footnotes.</li>
+<li>Fix <code>h6</code> indent inside <code>[TOC]</code>.</li>
+<li>Fix multiple level lists inside blockquote cannot be parsed correctly.</li>
+<li>Enable ESC key to close insert table dialog.</li>
+<li>Fix outline sidebar jumpping around when scrolling.</li>
+<li>Fix ctrl+home/end not working.</li>
+</ol>
+<h2 id="09-beta">0.9 (beta)</h2>
+<p>2, Jun, 2016</p>
+<ol>
+<li>Fix a bug that Typora cannot be launched by opening md files on PCs without <em>Visual C++ library</em> installed.</li>
+</ol>
+<h2 id="098-beta">0.9.8 (beta)</h2>
+<p>1, Jun, 2016</p>
+<ol>
+<li>Fix a critical bug about saving in source code mode.</li>
+<li>Fix save dialog keep poping up sometimes.</li>
+<li>Improve logic for auto match paired quotes and brackets.</li>
+<li>Fix inline math cannot be exported to some file types via pandoc.</li>
+<li>Fix a bug that improper file name is auto generated when the article contains YAML forn matters.</li>
+</ol>
+<h2 id="097-beta">0.9.7 (beta)</h2>
+<p>30, May, 2016</p>
+<ol>
+<li>Fix typora.exe is misreported by some anti virus software.</li>
+</ol>
+<h2 id="096-beta">0.9.6 (beta)</h2>
+<p>27, May, 2016</p>
+<ol>
+<li>Add mobile &quot;responsive&quot; support for exported HTML.</li>
+<li>Pandoc requires 1.16 and above. Fix exporting fail using Pandoc.</li>
+<li>Better support for monitoring file content change by external apps.</li>
+<li>Fix generating PDF takes too much time and reduce file size for PDF. Also fix a bug anchor link in PDF not working and Chinese character in printed PDF is not selectable.</li>
+<li>Fix shortcut keys for <code>h6</code> not working.</li>
+<li>Add syntax highlight for Powershell.</li>
+<li>Remember windows size when creating new window.</li>
+<li>Can open <code>.md</code> file from <code>cmd.exe</code> directly, if typora is its default reader.</li>
+<li>Fix that some advance options not work. Add options to auto hide menu bar.</li>
+<li>Fix a critical bug in paste/undo which may case data lose.</li>
+<li>Make <code>\label</code> work in math block.</li>
+<li>Fix unnecessary empty char in inserted footnote.</li>
+<li>Fix auto pair match and find&amp;replace in math block.</li>
+<li>Fix up/down key behavior on code fences.</li>
+<li>Fix some HTML code  (like <code>&amp;phone;</code>) not escaped in inline code.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="095-beta">0.9.5 (beta)</h2>
+<p>5, May, 2016</p>
+<ol>
+<li>Add pandoc integration, import function and export function for docx, rtf, LaTeX, etc.</li>
+<li>Able to open <code>.md</code> file or import supported files by drag and drop into typora's window.</li>
+<li>Fix a bug that sometimes PDF cannot be exported correctly.</li>
+<li>Fix <code>H4</code> style in <code>pixyll</code> theme.</li>
+<li>Fix sql mode error for code blocks.</li>
+<li>Fix a bug for parsing headers with underline style.</li>
+<li>Fix a bug for undo/redo for editing lists.</li>
+<li>Fix a bug when pasting lists.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="094-beta">0.9.4 (beta)</h2>
+<p>23, Apr, 2016</p>
+<ol>
+<li>Fix LaTeX is not correctly exported after opening existing files.</li>
+<li>Fix a bug which may cause content inside list items get lost.</li>
+<li>Fix wrong indent for content inside list after parsing raw markdown.</li>
+<li>Support &quot;Open File Location&quot; action.</li>
+<li>Fix a bug that if image path contains special chars like quotes, the image cannot be displayed correctly.</li>
+<li>Fix a bug related to paste lists.</li>
+<li>Fix a bug some line breaks disappear in exported PDF.</li>
+</ol>
+<h2 id="093-beta">0.9.3 (beta)</h2>
+<p>19, Apr, 2016</p>
+<ol>
+<li>Fix the wrong bookmark structure in exported PDF.</li>
+<li>Fix sometimes Chinese characters cannot be saved to file correctly.</li>
+<li>In exported HTML, file name will be set to <code>&lt;title&gt;</code> tag.</li>
+</ol>
+<h2 id="092-beta">0.9.2 (beta)</h2>
+<p>18, Apr, 2016</p>
+<ol>
+<li>Better save feature: Support file auto save (need enable it from preference panel) and allow users to recover unsaved drafts form preference panel.</li>
+<li>Better word count: Now click word count button from status bar, detailed info would show.</li>
+<li>Better Print: Fix a bug that current window, instead of generated web view woulc be printted.</li>
+<li>Better PDF exporting: Now exported PDF could contains Table of Contents as bookmarks, just like Mac version</li>
+<li>Better fullscreen mode: Fullscreen mode can auto show menu bar for native style windows, and auto show/hide title bar control buttons for unibody windows. Newly created windows would also be fullscreen in fullscreen mode.</li>
+<li>Fix table cannot be deleted in the beginning of the article.</li>
+<li>Fix a bug that some lines will be duplicated after open.</li>
+<li>Fix files on external disks cannot be opened.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="091-beta">0.9.1 (beta)</h2>
+<p>6, Apr, 2016</p>
+<ol>
+<li>Fix a critical bug for saving.</li>
+<li>Fix a critical bug for task list.</li>
+</ol>
+<h2 id="090-beta">0.9.0 (beta)</h2>
+<p>4, Apr, 2016</p>
+<ol>
+<li>Rewrite typora's Markdown parse engine and largely improve the performance on opening mid-sized files.</li>
+<li>Fix bugs for pair auto-complete.</li>
+<li>Fix bugs for Korean IME.</li>
+<li>Fix a bug that typora will eat and replace non-breaking space.</li>
+<li>Fix relative image path on exported HTML.</li>
+<li>Fix a bug typora will detech wrong encoding sometimes.</li>
+<li>Other bugs.</li>
+</ol>
+<h2 id="088-beta">0.8.8 (beta)</h2>
+<p>13, Mar, 2016</p>
+<ol>
+<li>Fix minor parse issue for URL, subscript and superscript.</li>
+<li>Fix compatibility issue between Chinese IME and auto-pair feature</li>
+<li>Include and autoload MathJax extension, including chemistry package and others (e.g. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">C</mi><msub><mpadded width="0px"><mphantom><mi>X</mi></mphantom></mpadded><mpadded height="0px"><mn>6</mn></mpadded></msub><mi mathvariant="normal">H</mi><msub><mpadded width="0px"><mphantom><mi>X</mi></mphantom></mpadded><mpadded height="0px"><mn>5</mn></mpadded></msub><mo lspace="0em" rspace="0em">−</mo><mrow><mi mathvariant="normal">C</mi><mi mathvariant="normal">H</mi><mi mathvariant="normal">O</mi></mrow></mrow><annotation encoding="application/x-tex">\ce{C6H5-CHO}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">C</span></span><span class="mord"><span class="mord"><span class="mord rlap"><span class="inner"><span class="mord" style="color:transparent;"><span class="mord mathdefault" style="margin-right:0.07847em;color:transparent;">X</span></span></span><span class="fix"></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.15em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0em;"><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span><span class="mord mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathrm">H</span></span><span class="mord"><span class="mord"><span class="mord rlap"><span class="inner"><span class="mord" style="color:transparent;"><span class="mord mathdefault" style="margin-right:0.07847em;color:transparent;">X</span></span></span><span class="fix"></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.15em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0em;"><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span><span class="mord mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord">−</span></span><span class="mord"><span class="mord mathrm">C</span><span class="mord mathrm">H</span><span class="mord mathrm">O</span></span></span></span></span></span>).</li>
+<li>Fix bug triggered by pressing <code>ctrl+`</code> twice.</li>
+<li>Fix some menu item under &quot;Edit&quot; submenu does not work.</li>
+<li>Support open hyperlink from context menu.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="086-beta">0.8.6 (beta)</h2>
+<p>4, Mar, 2016</p>
+<ol>
+<li>Fix a critical bug on Delete key.</li>
+</ol>
+<h2 id="085-beta">0.8.5 (beta)</h2>
+<p>3, Mar, 2016</p>
+<ol>
+<li>Support ==highlight== syntax (should enable it from preference panel).</li>
+<li>Support auto complete pairs of brackets, quotes and parentheses.</li>
+<li>Fix bugs on lists.</li>
+<li>Fix cut on windows.</li>
+<li>Fix selection styles in code fences, python code in code fences will use 4-space indent.</li>
+<li>Fix customize font size, local image, local font does not work for exported PDF.</li>
+<li>Fix bugs for LaTeX editing/rendering.</li>
+<li>Auto insert path/urls from clipboard when insert images/hyperlinks from menubar or shortcut keys.</li>
+<li>Other bug fix.</li>
+</ol>
+<h2 id="083-beta">0.8.3 (beta)</h2>
+<p>24, Feb, 2015</p>
+<ol>
+<li>Add basic support for editing in source code mode directly.</li>
+<li>Support signle line break (shift+return).</li>
+<li>Improve LaTeX rendering quality.</li>
+<li>Support non-UTF8/16 encoded files, includes Shift-JIS, Big5, EUC-JP, EUC-KR, GB18030, ISO-8859-1, ISO-8859-2, ISO-8859-5, ISO-8859-6, ISO-8859-7, ISO-8859-8, ISO-8859-9, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256. Other encodings is not supported yet.</li>
+<li>Fix bug that tab+subbullet will be parsed as code fences.</li>
+<li>Fix syntax highlight support for PHP, SQL, Objective-c, etc.</li>
+<li>Fix then behavior when pressing ctrl or shift and arrow key.</li>
+<li>Fix bugs in find/replace.</li>
+<li>Fix small bugs in exported HTMLs.</li>
+<li>Support drag &amp; drop to insert images and fix images not shown with relative path.</li>
+<li>Fix cut &amp; paste function.</li>
+</ol>
+<h2 id="077-beta">0.7.7 (beta)</h2>
+<p>11, Jun, 2015</p>
+<ol>
+<li>Imporve stability and reliability on saving</li>
+</ol>
+<h2 id="076-beta">0.7.6 (beta)</h2>
+<p>3, Jun, 2015</p>
+<ol>
+<li>Fix a critical bug which may cause data lose.</li>
+<li>Fix syntax parse for task list.</li>
+<li>Improve theme <code>newsprint</code>.</li>
+<li>Fix the unnecessary io operation when starting Typora.</li>
+</ol>
+<h2 id="075-beta">0.7.5 (beta)</h2>
+<p>24, DEC, 2015</p>
+<p>First beta version.</p>
+<h2 id="070-alpha">0.7.0 (alpha)</h2>
+<p>19, DEC, 2015</p>
+<p>First alpha version.</p>
+
+    </body>
+    </html>
