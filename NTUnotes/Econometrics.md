@@ -42,7 +42,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - if p-value < 5% → reject the null hypothesis
   - for two-sided, p-value < 0.05 i.e. $|t^{act}|>1.96$ ($\Phi(1.96)=0.975$)
   - for one-sided, p-value < 0.05 i.e. $|t^{act}|>1.64$ ($\Phi(1.64)=0.95$)
-  - meaning you would incorrectly reject the null hypothesis once in 20 cases on average
+  - meaning you would incorrectly reject the null hypotheㄅsis once in 20 cases on average
 
 - between two means
   - ![Image](https://i.imgur.com/kq5dhmQ.png)
