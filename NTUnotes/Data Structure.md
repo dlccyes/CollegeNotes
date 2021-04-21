@@ -200,6 +200,8 @@ In the following experiment we compare the performance of the `contains` operati
 
 ![Image](https://i.imgur.com/4VxHWnM.png)
 
+
+
 ## Dynamic Programming
 - store the solutions
   - 查表 (T(1)) instead of recursion(T(n-k)) 
