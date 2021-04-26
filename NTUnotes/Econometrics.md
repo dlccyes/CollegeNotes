@@ -24,7 +24,9 @@ The skewness of a symmetric distribution is 0.
   - std for sample
 - $\hat{p}$
   - p for sample
-
+- central limit theoreom
+  - $\dfrac{\bar{Y}-\mu}{\frac{\sigma}{\sqrt{n}}} →N(0,1)$ as $n → \infty$
+  - ![Image](https://i.imgur.com/ba5VwGh.png)
 ![Image](https://i.imgur.com/rgsUJXu.png)
 ### null hypothesis & alternate hypothesis
 ![Image](https://i.imgur.com/1uIykec.png)
