@@ -60,7 +60,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 
 ### 名詞
 - size of a test
-  - the probability that a test incorrectly rejects the null hypothesis when the null hypothesis is true)
+  - the probability that a test incorrectly rejects the null hypothesis when the null hypothesis is true
 - power of a test
   - the probability that a test correctly rejects the null hypothesis when the alternative is true
 
