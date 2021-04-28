@@ -196,14 +196,6 @@ The *average case* time complexity of dictionary operations are as follows:
 In the following experiment we compare the performance of the `contains` operation between lists and dictionaries.
 
 
-### 題目
-- W2-1(c)
-  - ![Image](https://i.imgur.com/0ZiwsK0.png)
-  - https://stackoverflow.com/a/46704014/15493213
-- ![Image](https://i.imgur.com/fhZcZFv.png)
-  - 令 $n=2^{2^m}$
-  - https://stackoverflow.com/a/9550494/15493213
-
 ## Master Theorem
 
 ![Image](https://i.imgur.com/4VxHWnM.png)
