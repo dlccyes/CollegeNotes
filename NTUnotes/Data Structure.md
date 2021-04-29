@@ -207,3 +207,6 @@ In the following experiment we compare the performance of the `contains` operati
   - 查表 (T(1)) instead of recursion(T(n-k)) 
 - start from small → get big
 - 用空間換取時間
+
+Bell (W2)
+- https://www.geeksforgeeks.org/bell-numbers-number-of-ways-to-partition-a-set/
