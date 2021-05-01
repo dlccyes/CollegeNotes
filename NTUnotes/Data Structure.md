@@ -210,3 +210,38 @@ In the following experiment we compare the performance of the `contains` operati
 
 Bell (W2)
 - https://www.geeksforgeeks.org/bell-numbers-number-of-ways-to-partition-a-set/
+
+## tree
+### binary tree
+- order
+  - preorder/prefix
+    - 接到任務的先後順序 (左支先)
+    - ![Image](https://i.imgur.com/GjqMv2M.png)
+  - postorder/postfix
+    - 完成任務的先後順序
+    - ![Image](https://i.imgur.com/j0zeake.png)
+  - inorder/infix
+    - 由左往又數
+    - ![Image](https://i.imgur.com/WugYDnI.png)
+- classification
+  - full/proper/plane
+    - 每個 node 有 0 or 2 個分支
+  - complete
+    - up/left 填滿（2 分支）才能填 bottom/right
+    - parent of node i is node i//2, unless i=1
+      - left child of node i is 2i, unless 2i > n
+      - right child of node i is 2i+1, unless 2i+1 > n
+    - ![Image](https://i.imgur.com/2oVtl4Y.png)
+  - perfect
+    - symmetrical for all branches，同 level 的 node 的分支數都一樣
+    - height k → $2^{k+1}-1$ (等比) nodes
+    - ![Image](https://i.imgur.com/Yf5Lg33.png)
+    - $k\in \Theta(logn)$ (height=k, nodes=n) 
+- insert O(height)
+- search O(height)
+- delete O(height)
+  - node with 1 child
+    - bypass 掉
+  - node with 2 children
+    - replace with 右邊 min，並 delete/bypass 掉右邊 min
+    - ![Image](https://i.imgur.com/5yCJtc6.png)
