@@ -233,7 +233,7 @@ Bell (W2)
       - right child of node i is 2i+1, unless 2i+1 > n
     - ![Image](https://i.imgur.com/2oVtl4Y.png)
   - perfect
-    - symmetrical for all branches，同 level 的 node 的分支數都一樣
+    - symmetrical for all branches，同 level 的 node 的分支數都一樣 (balanced)
     - height k → $2^{k+1}-1$ (等比) nodes
     - ![Image](https://i.imgur.com/Yf5Lg33.png)
     - $k\in \Theta(logn)$ (height=k, nodes=n) 
@@ -245,3 +245,10 @@ Bell (W2)
   - node with 2 children
     - replace with 右邊 min，並 delete/bypass 掉右邊 min
     - ![Image](https://i.imgur.com/5yCJtc6.png)
+- problem
+  - height $\in \Omega(logn)$ ($O(logn)$ if perfect), worst cast O(n)
+
+### AVL tree
+- balanced binary tree
+- ![Image](https://i.imgur.com/8frypfY.png)
+- height of left & right node 之差 <= 1
