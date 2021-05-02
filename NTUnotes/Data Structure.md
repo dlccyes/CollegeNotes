@@ -252,3 +252,9 @@ Bell (W2)
 - balanced binary tree
 - ![Image](https://i.imgur.com/8frypfY.png)
 - height of left & right node 之差 <= 1
+- height $\in \Theta(logN)$
+  - upper bound (兩邊高度差一, smallest)
+  ![Image](https://i.imgur.com/JUt0Do8.png)
+  - lower bound (兩邊等高, biggest)
+  ![Image](https://i.imgur.com/YFilgze.png)
+- 
