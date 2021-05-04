@@ -162,8 +162,15 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - turn multiple into singular
     - ![Image](https://i.imgur.com/ZKMfJe0.png)
     ![Image](https://i.imgur.com/uYKtePD.png)
-
-# Ch7
-![Image](https://i.imgur.com/pRnmULW.png)
-- bc $\frac{ln(X+\Delta X)-ln(X)}{(X+\Delta X)-X}=\frac{dln(X)}{dX}=\frac{1}{X}$
+  
+## Ch8 nonlinear
+### log
+- ![Image](https://i.imgur.com/2O38Qsd.png)
+  - - bc $\frac{ln(X+\Delta X)-ln(X)}{(X+\Delta X)-X}=\frac{dln(X)}{dX}=\frac{1}{X}$
 → $ln(X+\Delta X)-ln(X)=\frac{\Delta X}{X}$
+
+- ![Image](https://i.imgur.com/aORKKkQ.png) 
+- ![Image](https://i.imgur.com/geMT0Lc.png)
+
+### interaction variable
+![Image](https://i.imgur.com/R3SUnog.png)
