@@ -257,4 +257,23 @@ Bell (W2)
   ![Image](https://i.imgur.com/JUt0Do8.png)
   - lower bound (兩邊等高, biggest)
   ![Image](https://i.imgur.com/YFilgze.png)
-- 
+- rotation
+  - single rotation
+  ![Image](https://i.imgur.com/Fo6iCmq.png)
+    1. 原是一個 AVL Tree，x = h+2
+    2. insert C → x = h+1 but unbalanced
+    3. 弄成右圖 → y = h+2
+    4. so 對其他地方而言，不變 as 前後都是 h+2，so 整株樹仍是 AVL Tree
+    5. 檢查：
+       - A < y
+       - A < y < B
+       - y < B < x
+       - x < C
+  - double rotation
+  ![Image](https://i.imgur.com/NHnHvmN.png)
+    - insert B1 B2 後，到 x 才 violate，so B1/B2 = h/h-1
+    - 檢查
+      - 左右圖看進去的 height 相同 → 整株都符合 AVL property
+      - 各個 node
+  - 重的在內側 → single rotation
+  - 重的在外側 → double rotation
