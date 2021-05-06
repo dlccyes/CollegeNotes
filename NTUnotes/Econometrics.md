@@ -52,7 +52,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 ### confidence interval
 - $\Phi(1.645)=95\%$
 - $\Phi(1.96)=97.5\%$ → 95% confidence interval for two sided
-- $\Phi(2.576)=99.5\%$ → 99% confidence interval for two sided 
+- $\Phi(2.576)=99.5\%$ → 99% confidence interval for two sided
 
 (看 inf)
 ![Image](https://i.imgur.com/lZc2V6j.png)
