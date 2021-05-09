@@ -213,7 +213,9 @@ Bell (W2)
 
 ## tree
 ### binary tree
-- order
+- 每個 node 有 0-2 個分支 → binary tree
+  - inorder 順序正確(小→大 or 大→小) → binary search tree
+- order 
   - preorder/prefix
     - 接到任務的先後順序 (左支先)
     - ![Image](https://i.imgur.com/GjqMv2M.png)
@@ -249,9 +251,9 @@ Bell (W2)
   - height $\in \Omega(logn)$ ($O(logn)$ if perfect), worst cast O(n)
 
 ### AVL tree
-- balanced binary tree
+<!-- - balanced binary tree -->
+- height of left & right node 之差 <= 1 的 binary search tree
 - ![Image](https://i.imgur.com/8frypfY.png)
-- height of left & right node 之差 <= 1
 - height $\in \Theta(logN)$
   - upper bound (兩邊高度差一, smallest)
   ![Image](https://i.imgur.com/JUt0Do8.png)
@@ -277,3 +279,13 @@ Bell (W2)
       - 各個 node
   - 重的在內側 → single rotation
   - 重的在外側 → double rotation
+- insertion/deletion
+  1. 傳統 binary search tree 作法
+  2. 往上找，看有無違反 AVL property; if yes → rotation
+     - insertion 只要找到上一個 node 
+     - deletion 需要找到 root 才能完全確定
+       - 上方的 node: h+3 → h+2
+       ![Image](https://i.imgur.com/ZYfFUXR.png)
+       ![Image](https://i.imgur.com/jVlv91X.png)
+       - 上方的 node: 不變
+       ![Image](https://i.imgur.com/i621RuK.png)
