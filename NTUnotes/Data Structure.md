@@ -211,8 +211,8 @@ In the following experiment we compare the performance of the `contains` operati
 Bell (W2)
 - https://www.geeksforgeeks.org/bell-numbers-number-of-ways-to-partition-a-set/
 
-## tree
-### binary tree
+## Tree
+### Binary Tree
 - 每個 node 有 0-2 個分支 → binary tree
   - inorder 順序正確(小→大 or 大→小) → binary search tree
 - order 
@@ -250,7 +250,7 @@ Bell (W2)
 - problem
   - height $\in \Omega(logn)$ ($O(logn)$ if perfect), worst cast O(n)
 
-### AVL tree
+### AVL Tree
 <!-- - balanced binary tree -->
 - height of left & right node 之差 <= 1 的 binary search tree
 - ![Image](https://i.imgur.com/8frypfY.png)
@@ -277,8 +277,8 @@ Bell (W2)
     - 檢查
       - 左右圖看進去的 height 相同 → 整株都符合 AVL property
       - 各個 node
-  - 重的在內側 → single rotation
-  - 重的在外側 → double rotation
+  - 重的(比較高的)在內側 → double rotation
+  - otherwise → single rotation
 - insertion/deletion
   1. 傳統 binary search tree 作法
   2. 往上找，看有無違反 AVL property; if yes → rotation
@@ -289,3 +289,25 @@ Bell (W2)
        ![Image](https://i.imgur.com/jVlv91X.png)
        - 上方的 node: 不變
        ![Image](https://i.imgur.com/i621RuK.png)
+- pros
+  - search $\in O(logN)$
+  - insertion & deletion $\in O(logN)$
+    - height balancing (rotation) 只是加 constant
+- cons
+  - 麻煩
+  - height 還有另外存 
+  - asymptotically faster but rebalancing costs time
+  - 其他的資料結構也許需要 O(N) 做動作，但會讓後續許多其他動作比較快 → faster in the long run
+    - e.g. Splay tree
+
+### Splay Tree
+- 
+  - per operation $\in O(N)$
+  - amortized time $\in O(logN)$
+  - good locality
+    - 常用的會在上面
+- splay
+  - x 在外側 → zig-zig
+    - ![Image](https://i.imgur.com/qxmWPC6.png)
+  - x 在內側 → zig-zag
+    - ![Image](https://i.imgur.com/QGTissZ.png)
