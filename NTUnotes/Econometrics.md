@@ -174,3 +174,26 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 
 ### interaction variable
 ![Image](https://i.imgur.com/R3SUnog.png)
+
+## Ch10
+- fixed effects regression model
+  - ![Image](https://i.imgur.com/qSY8ZTb.png)
+![Image](https://i.imgur.com/CmX7yLn.png)
+![Image](https://i.imgur.com/S7JnnjW.png)
+  - omit $D_1$ to avoid perfect multicollinearity
+  - a1, a2, ..., an：entity fixed effects
+    - comes from omitted variables, vary across entities (i) but not time (t)
+    - each treated as unknown intercepts to be estimated, one for each state
+  - $Dx_i=\delta(x)$
+    - $\alpha_1=\beta_0$
+    - $\alpha_i=\beta_0+\gamma_i$ for i >= 2
+  <!-- - ![Image](https://i.imgur.com/BUc7yqM.png)
+  ![Image](https://i.imgur.com/VPG4Pq6.png) -->
+- time fixed effects regression model
+  - ![Image](https://i.imgur.com/zTMgylz.png)
+  ![Image](https://i.imgur.com/pfltMSx.png)
+  - omit $B1_t$ to avoid perfect multicollinearity
+  - $\lambda_1, ... \lambda_T$：time fixed effects
+    - comes from omitted variables, vary over time (t) but not entities (i) 
+- entity and time effects regression model
+  - ![Image](https://i.imgur.com/vyNIHmQ.png)
