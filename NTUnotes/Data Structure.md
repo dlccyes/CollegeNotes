@@ -311,3 +311,17 @@ Bell (W2)
     - ![Image](https://i.imgur.com/qxmWPC6.png)
   - x 在內側 → zig-zag
     - ![Image](https://i.imgur.com/QGTissZ.png)
+- insertion
+  1. 把找到的那個 node splay 上去
+  2. split
+  3. 插進去
+  - e.g.
+    - ![Image](https://i.imgur.com/55nbiwx.png)
+- deletion
+  1. 把目標 node splay 上去
+  2. delete 目標 node，變成兩個分開的 subtree
+  3. 把 left subtree 的 max node splay 上去
+  4. 接上 right subtree
+  - ![Image](https://i.imgur.com/vSWcPPD.png)
+  - e.g.
+    - ![Image](https://i.imgur.com/gG7JNgk.png)
