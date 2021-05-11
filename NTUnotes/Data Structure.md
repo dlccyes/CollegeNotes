@@ -301,7 +301,7 @@ Bell (W2)
     - e.g. Splay tree
 
 ### Splay Tree
-- 
+- 性質
   - per operation $\in O(N)$
   - amortized time $\in O(logN)$
   - good locality
