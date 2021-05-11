@@ -223,7 +223,7 @@ Bell (W2)
     - 完成任務的先後順序
     - ![Image](https://i.imgur.com/j0zeake.png)
   - inorder/infix
-    - 由左往又數
+    - 由左往右數
     - ![Image](https://i.imgur.com/WugYDnI.png)
 - classification
   - full/proper/plane
@@ -273,7 +273,7 @@ Bell (W2)
        - x < C
   - double rotation
   ![Image](https://i.imgur.com/NHnHvmN.png)
-    - insert B1 B2 後，到 x 才 violate，so B1/B2 = h/h-1
+    - insert B1 B2 後，(由下往上)到 x 才 violate，so B1/B2 = h/h-1
     - 檢查
       - 左右圖看進去的 height 相同 → 整株都符合 AVL property
       - 各個 node
