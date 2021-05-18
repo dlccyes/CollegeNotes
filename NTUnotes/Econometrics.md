@@ -197,3 +197,11 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     - comes from omitted variables, vary over time (t) but not entities (i) 
 - entity and time effects regression model
   - ![Image](https://i.imgur.com/vyNIHmQ.png)
+
+## Ch11 binary
+- LPM linear
+![Image](https://i.imgur.com/1HKN9gZ.png)
+- probit
+![Image](https://i.imgur.com/YtWF9Yj.png)
+- logit
+![Image](https://i.imgur.com/oz2aw35.png)
