@@ -326,3 +326,11 @@ Bell (W2)
   - e.g.
     - ![Image](https://i.imgur.com/gG7JNgk.png)
 
+- amortized cost
+  - zig-zig
+  ![Image](https://i.imgur.com/g5R5z3J.png)
+  - zig-zag
+  ![Image](https://i.imgur.com/YfMRd57.png)
+  - simple rotation
+  ![Image](https://i.imgur.com/9rWrhMJ.png)
+  - ![Image](https://i.imgur.com/WxYZMeG.png)
