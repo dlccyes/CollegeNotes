@@ -334,3 +334,9 @@ Bell (W2)
   - simple rotation
   ![Image](https://i.imgur.com/9rWrhMJ.png)
   - ![Image](https://i.imgur.com/WxYZMeG.png)
+  - locality
+    - 如果都只對幾個 node 操作 → 很快
+    - ![Image](https://i.imgur.com/0Z5kQYa.png)
+- top-down splay
+  - 深度為偶數 → 結果跟 bottom-up 一樣
+  - 深度為奇數 → 結果可能跟 bottom-up 不一樣
