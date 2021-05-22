@@ -52,6 +52,10 @@ Assume all functions are positive.
 
 The performance of an algorithm may also depend on the exact values of the data, specified by the **best case**, **worst case**, and **average case** performance.
 
+題目
+![Image](https://i.imgur.com/pCpDizk.png)
+![Image](https://i.imgur.com/CJGeC7E.png)
+
 ## Analyzing an Algorithm
 - Simple statement sequence
   ```python
