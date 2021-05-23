@@ -344,3 +344,9 @@ Bell (W2)
 - top-down splay
   - 深度為偶數 → 結果跟 bottom-up 一樣
   - 深度為奇數 → 結果可能跟 bottom-up 不一樣
+
+### Multi-Way Search Trees
+- 2-3-4 Tree
+  - all leaf on same level
+  - each node has 1/2/3 items
+  - k items → k+1 children
