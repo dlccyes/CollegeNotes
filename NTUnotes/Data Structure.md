@@ -350,3 +350,12 @@ Bell (W2)
   - all leaf on same level
   - each node has 1/2/3 items
   - k items → k+1 children
+- Red-Black Tree
+  - represent 2-3-4 tree as binary tree
+    - ![Image](https://i.imgur.com/j1tDKU0.png)
+    - ![Image](https://i.imgur.com/fQGrGQL.png)
+    - ![Image](https://i.imgur.com/E37PZJS.png)
+    - 不會連續兩個 red
+    - 每個 path 黑 node 數都一樣
+      - 2-3-4 leaf nodes 都同 level
+    - ![Image](https://i.imgur.com/qUxfsQI.png)
