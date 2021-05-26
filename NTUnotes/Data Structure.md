@@ -354,8 +354,28 @@ Bell (W2)
   - represent 2-3-4 tree as binary tree
     - ![Image](https://i.imgur.com/j1tDKU0.png)
     - ![Image](https://i.imgur.com/fQGrGQL.png)
+      - 兩種表示法
     - ![Image](https://i.imgur.com/E37PZJS.png)
     - 不會連續兩個 red
     - 每個 path 黑 node 數都一樣
       - 2-3-4 leaf nodes 都同 level
     - ![Image](https://i.imgur.com/qUxfsQI.png)
+- AA Tree
+  - Red-Black Tree but left-child can't be red
+  - ![Image](https://i.imgur.com/DGFffzI.png)
+  - level
+    - leaf = 1
+    - red = parent's level
+    - back = parent's level - 1
+    - ![Image](https://i.imgur.com/61I4mVh.png)
+      - 水平：同 level (必指到 red)
+  - operations
+    - skew：
+      - remove 1 left horizontal
+      - add 1 right horizontal
+      - ![Image](https://i.imgur.com/vqOBj3j.png)
+    - split
+      - remove consecutive right horizontal
+      - ![Image](https://i.imgur.com/nljBwPX.png)
+    - **不會考 deletion**
+    - 
