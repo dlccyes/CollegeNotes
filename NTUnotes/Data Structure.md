@@ -378,4 +378,17 @@ Bell (W2)
       - remove consecutive right horizontal
       - ![Image](https://i.imgur.com/nljBwPX.png)
     - **不會考 deletion**
-    - 
+
+## hash
+- hash function
+  - h(k) = k%m
+  - 避免是 m≒2^n bc [二進位數]/[2^n] 就是後 n 個 digit 而已
+  - 設 m = 質數
+    - 若 k = m 的因數的倍數，則只會用到某幾格
+      - e.g. key%3=0，m=18 → 只會用到 6 格
+  - 若 key 是 string
+    - sum of ASCII
+      - len = 8 → 只會用到 127x8 個 slot
+    - ![Image](https://i.imgur.com/YCYWUhH.png) 
+- 可每個 slot 存 linked list
+  - collision → 加到後面
