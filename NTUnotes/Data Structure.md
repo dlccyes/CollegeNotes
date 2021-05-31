@@ -389,6 +389,28 @@ Bell (W2)
   - 若 key 是 string
     - sum of ASCII
       - len = 8 → 只會用到 127x8 個 slot
-    - ![Image](https://i.imgur.com/YCYWUhH.png) 
-- 可每個 slot 存 linked list
-  - collision → 加到後面
+    - ![Image](https://i.imgur.com/YCYWUhH.png)
+- seperate chaining 
+  - 可每個 slot 存 linked list
+    - collision → 加到後面
+    - insertion O(1)
+      - 加到前面
+    - deletion/search O(長度)
+- open addressing
+  - collision → relocate
+  - $h_i(k)=(h(k)+f(i))mod\space m$
+  - linear probing
+    - $h_i(k)=(k+i)mod\space 10$
+    - 會形成 cluster → 耗時
+  - quadratic probing
+    - $h_i(k)=(k+i^2)mod\space 10$
+  - double hashing
+    - $f(i)=i\cdot h_2(k)$
+      - $h_2(k)=R-(k\space mod\space R)$
+        - bc $h_2(k)=0$ → 跳零格 → 沒屁用
+    - $h_i(k)=(k+i(R-(k\space mod\space R)))mod\space m$
+      - e.g. $h_i(k)=(k+i(7-(k\space mod\space7)))mod\space 10$
+    - $gcd(m,h_2(k))=1$
+      - e.g. R, m = prime AND R < m
+- deletion
+  - delete 後要留個墓碑標示先前有人，表示之後 delete 到這空格時要繼續 hash

@@ -205,3 +205,11 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 ![Image](https://i.imgur.com/YtWF9Yj.png)
 - logit
 ![Image](https://i.imgur.com/oz2aw35.png)
+
+## C12 Instrumental
+- exogenous: $cov(X_i,u_i)=0$
+- endogenous: $cov(X_i,u_i)\neq0$
+- X is correlated to u → find an instrument Z that is correlated to X but not u
+  - there are factors that will affect both X & u
+- ![Image](https://i.imgur.com/0QNSbU9.png)
+- ![Image](https://i.imgur.com/wi0hHUB.png)
