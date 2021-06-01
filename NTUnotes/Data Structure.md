@@ -350,16 +350,26 @@ Bell (W2)
   - all leaf on same level
   - each node has 1/2/3 items
   - k items → k+1 children
+  - insertion
+    - 先 insert 到所屬的 (leaf) node，再看要不要 split
+    - ![Image](https://i.imgur.com/8HqciLA.png)
+    - https://www.educative.io/page/5689413791121408/80001
+  - deletion (bottom-up)
+    - ![Image](https://i.imgur.com/5GYI7RE.png)
 - Red-Black Tree
   - represent 2-3-4 tree as binary tree
-    - ![Image](https://i.imgur.com/j1tDKU0.png)
     - ![Image](https://i.imgur.com/fQGrGQL.png)
       - 兩種表示法
     - ![Image](https://i.imgur.com/E37PZJS.png)
+    - root 是 black
     - 不會連續兩個 red
     - 每個 path 黑 node 數都一樣
       - 2-3-4 leaf nodes 都同 level
     - ![Image](https://i.imgur.com/qUxfsQI.png)
+    - max height $2log(n+1)$
+      - https://www.codesdope.com/course/data-structures-red-black-trees/
+      - https://doctrina.org/maximum-height-of-red-black-tree.html
+      - W4-2
 - AA Tree
   - Red-Black Tree but left-child can't be red
   - ![Image](https://i.imgur.com/DGFffzI.png)

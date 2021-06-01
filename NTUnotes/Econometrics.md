@@ -209,7 +209,16 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 ## C12 Instrumental
 - exogenous: $cov(X_i,u_i)=0$
 - endogenous: $cov(X_i,u_i)\neq0$
-- X is correlated to u → find an instrument Z that is correlated to X but not u
+- X is correlated to u → find an instrument Z that is 
+  - correlated to X－instrument relevacnce
+  - uncorrelated u－instrument exogeneity
   - there are factors that will affect both X & u
 - ![Image](https://i.imgur.com/0QNSbU9.png)
 - ![Image](https://i.imgur.com/wi0hHUB.png)
+### 2SLS
+![Image](https://i.imgur.com/ni4GtGd.png)
+- ![Image](https://i.imgur.com/r5TfSaI.png)
+- weak
+  - ![Image](https://i.imgur.com/Ma0mClr.png)
+- J stat
+  - ![Image](https://i.imgur.com/qxmwzsy.png)
