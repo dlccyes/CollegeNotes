@@ -351,15 +351,23 @@ Bell (W2)
   - each node has 1/2/3 items
   - k items → k+1 children
   - insertion
-    - 先 insert 到所屬的 (leaf) node，再看要不要 split
+    - insert 到 leaf node
+    - look before you leap
+      - 經過的每個 4 node 都要 split
+      - insert 的目的地是 4 node 時，先 split 再 insert
     - ![Image](https://i.imgur.com/8HqciLA.png)
     - https://www.educative.io/page/5689413791121408/80001
-  - deletion (bottom-up)
-    - ![Image](https://i.imgur.com/5GYI7RE.png)
+  - deletion 
+    - bottom-up
+      - ![Image](https://i.imgur.com/5GYI7RE.png)
+    - top-down
+      - look before you leap
+        - 經過的每個 2 node 都要 split
 - Red-Black Tree
   - represent 2-3-4 tree as binary tree
-    - ![Image](https://i.imgur.com/fQGrGQL.png)
+    - ![Image](https://i.imgur.com/ZZ7lX6d.png)
       - 兩種表示法
+    - ![Image](https://i.imgur.com/v7XVS7o.png)
     - ![Image](https://i.imgur.com/E37PZJS.png)
     - root 是 black
     - 不會連續兩個 red
@@ -370,6 +378,7 @@ Bell (W2)
       - https://www.codesdope.com/course/data-structures-red-black-trees/
       - https://doctrina.org/maximum-height-of-red-black-tree.html
       - W4-2
+  - operation：先做 2-3-4 再轉成 Red-Black
 - AA Tree
   - Red-Black Tree but left-child can't be red
   - ![Image](https://i.imgur.com/DGFffzI.png)
@@ -386,6 +395,7 @@ Bell (W2)
       - ![Image](https://i.imgur.com/vqOBj3j.png)
     - split
       - remove consecutive right horizontal
+      - 把中間堤上去
       - ![Image](https://i.imgur.com/nljBwPX.png)
     - **不會考 deletion**
 
@@ -424,3 +434,27 @@ Bell (W2)
       - e.g. R, m = prime AND R < m
 - deletion
   - delete 後要留個墓碑標示先前有人，表示之後 delete 到這空格時要繼續 hash
+  - insert 到墓碑時，就直接佔用
+
+## binary heap
+- complete binary tree
+  - all levels are filled except leaf 
+  - 先 fill 左邊
+  - $h\in O(logn)$
+- MinHeap: parent key <= child key
+- MaxHeap: parent ket >= child key
+- insertion
+  - 先 insert 到最後一項 (最右 leaf 之右)，再根據大小 percolate up
+- deletion
+  - delete root (min) → 把 bottome level 最右的 node 放到 root → percolate down
+    - 跟較小的且最小的 children 互換
+      - s.t. children 被換上去後也會小於另一個 children
+    - ![Image](https://i.imgur.com/CBDmMRa.png)
+    ![Image](https://i.imgur.com/V0A4cWF.png)
+    ![Image](https://i.imgur.com/YMzmpOq.png)
+    ![Image](https://i.imgur.com/iwx36Dr.png)
+- merge
+  - 先放到 root 再 percolate down
+    ![Image](https://i.imgur.com/zpSGPpP.png)g)
+- bottom-up construction
+  - o(n)
