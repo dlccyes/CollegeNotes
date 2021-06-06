@@ -436,7 +436,8 @@ Bell (W2)
   - delete 後要留個墓碑標示先前有人，表示之後 delete 到這空格時要繼續 hash
   - insert 到墓碑時，就直接佔用
 
-## binary heap
+## heap
+### bineary heap
 - complete binary tree
   - all levels are filled except leaf 
   - 先 fill 左邊
@@ -458,3 +459,28 @@ Bell (W2)
     ![Image](https://i.imgur.com/zpSGPpP.png)g)
 - bottom-up construction
   - o(n)
+- array representation
+  - index start from 0
+  - left child = 2i+1
+  - right child = 2i+2
+  - i = odd → left child
+  - i = even → right child
+  - ![Image](https://i.imgur.com/fFGZP98.png)
+
+### binomial heap
+- ![Image](https://i.imgur.com/mAF5mZ9.png)
+- height = k
+- $2^k$ nodes
+- 砍掉 root → k 個 binomial tree
+- n 個 nodes 只會有一種結構
+  - n 個 nodes → 一種二進位表示法
+    - $19 = (10011)_2$ → $B_4$ + $B_2$ + $B_1$
+- $k \leq \lfloor{log(n)}\rfloor$
+  - $2^k\leq n<2^{k+1}$ → $log_2(n)-1 < k\leq log_2(n)$
+- at most $k+1$($B_0$~$B_k$) $\leq \lfloor{log(n)}\rfloor+1 $ 個 tree
+- union
+  - 大的接到小的 root 下
+  - 二進位加法
+- deletion
+  - 砍掉最小 root → union rest
+  - log(n)
