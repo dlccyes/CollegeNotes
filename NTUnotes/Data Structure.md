@@ -481,6 +481,20 @@ Bell (W2)
 - union
   - 大的接到小的 root 下
   - 二進位加法
-- deletion
+- delete min
   - 砍掉最小 root → union rest
-  - log(n)
+  - $\in O(log(n))$
+- decrease key
+  - key 變小 → 重新 order (like percolate up for minheap) to match heap order (parent < child)
+  - $\in O(logn)$
+- deletion
+  - 把目標 key decrease 成 -inf → delete min → union
+  - $\in O(logn)$
+- insertion
+  - worst case $(111...11)_2+1$ → $log_2n$ time
+- construction
+  - inserting a sequence
+  - $\in O(n)$
+
+### comparison
+![Image](https://i.imgur.com/z6O0XZx.png)
