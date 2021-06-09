@@ -436,7 +436,7 @@ Bell (W2)
   - delete 後要留個墓碑標示先前有人，表示之後 delete 到這空格時要繼續 hash
   - insert 到墓碑時，就直接佔用
 
-## heap
+## heap (priority queue)
 ### bineary heap
 - complete binary tree
   - all levels are filled except leaf 
@@ -498,3 +498,71 @@ Bell (W2)
 
 ### comparison
 ![Image](https://i.imgur.com/z6O0XZx.png)
+
+
+### Fibonocci tree
+- roots of tress → circular linked list
+- degree
+  - root 有幾個小孩
+- t(H)：幾棵樹
+- m(H)：幾棵 marked 的樹
+- $\phi(H)=t(H)+2m(H)$ potential function
+- insertion
+  - 放在 min 的左邊
+  - amortized cost O(1)
+    - actual cost O(1)
+    - potential += 1
+      - t(H) += 1
+      - m(H) += 0
+  - ![Image](https://i.imgur.com/ZAxDhhs.png)
+- union
+  - 剪開 → 連起來 → update min (among circular linked list roots)
+  - amortized cost O(1)
+    - actual cost O(1) 
+    - potential += 0
+      - t(H) += 0
+      - m(H) += 0
+-  delete min
+   - 步驟
+     1. delete min O(1)
+     2. 把原 min 的 children 接上 root list O(D(n)))
+     3. consolitdate  O(t(H)+D(n)) (bc worst case t(H)+D(n) 棵樹)
+        1. 檢查每個 root 的 degree
+        2. 若有一樣的，則把較大的 root 接在較小的下面
+   - amortized cost O(D(n))
+     - actual cost O(D(n)+t(H))
+       - D(n) = max degree of Fibonocci heap with n nodes
+       - t(H) = 原 tree 數
+     - potential += O(D(n)-t(H))
+       - t(H) += (D(n)+1-t(H))
+         - 原 t(H)
+         - 做完後 max D(n) + 1 
+           - D(n-1) <= D(n)
+           - n-1 個 node 的 max degree <= n 個的
+           - 每棵 degree 不重複 → 0, 1, 2, ..., D(n) → max D(n)+1 棵
+       - m(H) += 0
+- if 只做 insertion, delete-min & union → only contains binomial tree
+  - so $D(n)\leq\lfloor log_2n\rfloor$
+- decrease key (x)
+  - parent of x = p[x]
+  - case 0：仍為 min-heap → 就這樣
+  - case 1：violate min-heap property and p[x] unmarked
+    1. x 跟 p[x] 斷開
+    2. mark p[x]
+    3. 接上 root list
+    4. unmark x
+    5. update min
+  - case 2：violate min-heap property and parent marked
+    1. x 跟 p[x] 斷開
+    2. x 接上 root list
+    3. 從 x 原鍊上溯
+       - while parent is marked, cut off link with parents, 接上 root list，在上溯
+       - elif unmarked → mark it，並終止上溯
+  - amotized cost O(1)
+    - c = 幾個獨立出來
+    - actual cost O(c)
+    - potential += 4-c
+      - t(H) += c
+      - m(H) += 1-(c-1) = 2-c
+      - c+2(-c+2) = 4-c
+  - deletion
