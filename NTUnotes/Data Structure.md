@@ -566,3 +566,5 @@ Bell (W2)
       - m(H) += 1-(c-1) = 2-c
       - c+2(-c+2) = 4-c
   - deletion
+  - size n 的 Fib heap 之 max degree
+  - degree d 的最小 Fib heap
