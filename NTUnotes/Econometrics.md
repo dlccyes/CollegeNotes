@@ -1,3 +1,4 @@
+# Econometrics
 ## review of probability
 ### correlation & independence
 - uncorrelated is weaker than independent
@@ -121,7 +122,13 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     - k: regressor 數量 (對 k=1 的時候 $\bar{R}^2$ 不一樣)
 -  omitted variable bias
    -  影響的眾多因素之間可能非 independent → 用較少 regressor 的話會 overestimate 那個 regressor 的影響
-
+### homoskedastic & heterosketasdic
+- homoskedastic
+  - if $var(u_i|X_i)$ doesn't depend on $X_i$
+- heterosketasdic
+  - if $var(u_i|X_i)$ depends on $X_i$
+- ![Image](https://i.imgur.com/kVAvxVV.png)
+  - heterosketasdic 的 distribution 因 x 而異
 
 
 ## Ch6 Linear Regression with Multiple Regressors
@@ -151,7 +158,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   ![Image](https://i.imgur.com/YavV3xS.png)
     - e.g. $f_{2,\infty}$=3
     for 2 regressors, $F^{act}$ for 5% is 3
-  - restricted & unrestricted
+  - F-stat restricted & unrestricted
     - ![Image](https://i.imgur.com/4BX7KdG.png)
       - q = num of restrictions under the null
       - k = num of regressor of the unrestricted one
@@ -205,6 +212,11 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 ![Image](https://i.imgur.com/YtWF9Yj.png)
 - logit
 ![Image](https://i.imgur.com/oz2aw35.png)
+- MLE maximum likelihood estimator
+  - ![Image](https://i.imgur.com/u2N603t.png)
+    - y1=1 → 1-y1=0
+  - likelihood function
+    - ![Image](https://i.imgur.com/RJqsTPy.png)
 
 ## C12 Instrumental
 - exogenous: $cov(X_i,u_i)=0$
@@ -215,6 +227,8 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - there are factors that will affect both X & u
 - ![Image](https://i.imgur.com/0QNSbU9.png)
 - ![Image](https://i.imgur.com/wi0hHUB.png)
+### IV regression assumptions
+![Image](https://i.imgur.com/CQoRsRg.png)
 ### 2SLS
 ![Image](https://i.imgur.com/ni4GtGd.png)
 - ![Image](https://i.imgur.com/r5TfSaI.png)
@@ -222,3 +236,22 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - ![Image](https://i.imgur.com/Ma0mClr.png)
 - J stat
   - ![Image](https://i.imgur.com/qxmwzsy.png)
+
+## Ch14 big data
+- 原始資料 notation：*
+- OOS out-of-sample
+- standardization
+- prediction error = 實際 - 預測
+- MSPE min square prediction error
+  - expected prediction error when predicting for an observation out of the sample set
+  - ![Image](https://i.imgur.com/9ATYVrU.png)
+- sparse model  
+  - most predictors except some are 0
+  - Lasso
+    - least absolute shrinkage and selection operator
+    - set many estimators to be 0
+    - ![Image](https://i.imgur.com/UyeFd5q.png)
+      - $\lambda_{Lasso}$: Lasso shrinkage parameter
+      - $\hat{\beta}^{Lasso}$ Lasso estimator = value of $b$ to minimize $S^{Lasso}(b;\lambda_{Lasso})$
+      - penalty term (second term): penalize large $b$, shrinking Lasso estimate toward 0
+      - ![Image](https://i.imgur.com/eaJs5o5.png)
