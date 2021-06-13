@@ -236,7 +236,15 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - ![Image](https://i.imgur.com/Ma0mClr.png)
 - J stat
   - ![Image](https://i.imgur.com/qxmwzsy.png)
+  - ![Image](https://i.imgur.com/otITLuN.png)
 
+## Ch13 Experiments & Quasi-Experiments
+- ![Image](https://i.imgur.com/um9yykm.png)
+- differences-in-differences estimator
+  - treatment group 的平均改變 - control group 的平均改變
+  - ![Image](https://i.imgur.com/0ijXays.png)
+  - t=1: before treatment
+  - t=2: after treatment
 ## Ch14 big data
 - 原始資料 notation：*
 - OOS out-of-sample
@@ -245,8 +253,17 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - MSPE min square prediction error
   - expected prediction error when predicting for an observation out of the sample set
   - ![Image](https://i.imgur.com/9ATYVrU.png)
+  - oracle prediction
+    - prediction with smallest MSPE is conditional means
+    - no estimation error, only prediction error
+      - estimation error $\sigma_\mu$
+      - prediction error $\sigma_u$ = variance of error term
+    - ![Image](https://i.imgur.com/TOLQvED.png)
 - sparse model  
   - most predictors except some are 0
+- shrinkage estimators
+  - Ridge
+    - ![Image](https://i.imgur.com/JLUvyBH.png)
   - Lasso
     - least absolute shrinkage and selection operator
     - set many estimators to be 0

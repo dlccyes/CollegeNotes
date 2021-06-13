@@ -568,3 +568,56 @@ Bell (W2)
   - deletion
   - size n 的 Fib heap 之 max degree
   - degree d 的最小 Fib heap
+
+## disjoint sets
+- equilavence relation
+  - ![Image](https://i.imgur.com/juDWjAR.png)
+  - 房間是否連通，是 equilavence relation
+    - x 跟自己連通
+    - x 連 y → y 連 X
+    - x 連 y 且 y 連 z → x 連 z
+- disjoint set
+  - 一個 set 裡面都互相連通
+  - 不同 set 間完全不相連
+  - name of set
+    - 其中一個元素
+  - union
+    - 連兩個元素 → 連兩個元素所屬的 set
+    - 步驟
+      1. 找兩個元素
+      2. 看這兩個元素的 root 是否一樣
+      3. if 不一樣 → 一個 root 接到另一個 root 下，變一個 up-tree
+    - 結果
+      - 任兩 node 都互通，且只有一條路徑
+    - e.g.
+      - ![Image](https://i.imgur.com/aLENyIl.png)
+      - ![Image](https://i.imgur.com/OLdrtrO.png)
+  - up-tree
+    - ![Image](https://i.imgur.com/caa08M9.png)
+    - root 為這個 disjoint set 的代表
+    - implementation
+      - array
+      - ![Image](https://i.imgur.com/zGDB53k.png)
+        - 存 root 的 index
+        - 自己是 root → -1
+    - weighted union
+        - 把小的 tree 接在大的下面 s.t. 不會太深
+      - height h → min $2^h$ nodes
+        - a tree with h=k+1 must be formed by 2 trees with h=k
+          - h=k + h=k-1 → h=k
+        - ![Image](https://i.imgur.com/d0SrOkL.png)
+        - $h \leq log_2n$
+    - Find
+      - O(max height) = O($log_2n$)
+    - rank union
+      - initial rank = 0
+      - union 時比 root 的 rank
+        - rank 小者接到大者下，大者 root rank 不變
+        - rank 相同 → rank += 1
+      - 要創造 rank=k+1 的 root，需要 2 個 rank=k 的
+      - rank r → min $2^r$ nodes
+        - $rank \leq log_2r$
+          - 證法同 weighted union
+      - parent rank > child rank
+        - x y 相同 rank →  x y 不可能為直系血親 → x y 的 descendents 不可能有交集 → 最多有 $\frac{n}{2^r}$ 個 rank=r 的 nodes 
+        (rank lemma)
