@@ -1,4 +1,9 @@
 # Econometrics
+- CI
+  - 99%: 2.5758 = 2.576 = 2.58
+  - 95%: 1.9600 = 1.960 = 1.96
+  - 90%: 1.6449 = 1.645 = 1.65
+- df: degree of freedom
 ## review of probability
 ### correlation & independence
 - uncorrelated is weaker than independent
@@ -120,8 +125,16 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   $\bar{R}^2=1-\dfrac{n-1}{n-k-1}\dfrac{SSR}{TSS}$
   ![Image](https://i.imgur.com/qEdhYSz.png)
     - k: regressor 數量 (對 k=1 的時候 $\bar{R}^2$ 不一樣)
--  omitted variable bias
+- omitted variable bias
    -  影響的眾多因素之間可能非 independent → 用較少 regressor 的話會 overestimate 那個 regressor 的影響
+- standard error of $\beta$
+  - ![Image](https://i.imgur.com/2eB2BnL.png)
+- binary variable
+  - alias
+    - indicator variable
+    - dummy variable
+- contonious variable
+  - 與 binary variable 相對
 ### homoskedastic & heterosketasdic
 - homoskedastic
   - if $var(u_i|X_i)$ doesn't depend on $X_i$
@@ -148,7 +161,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
      - ![Image](https://i.imgur.com/hunkfPQ.png)
 
 
-## Ch7 Hypothesis Tests & Condence Intervals in Multiple Regression
+## Ch7 Hypothesis Tests & Confidence Intervals in Multiple Regression
 - F test
   - for multiple regressors
     - ![Image](https://i.imgur.com/zfTOddH.png)
@@ -183,12 +196,13 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 ![Image](https://i.imgur.com/R3SUnog.png)
 
 ## Ch10
+- Standard errors should be clustered into groups within which the values of the dependent variable are likely to be correlated with one another.
 - fixed effects regression model
   - ![Image](https://i.imgur.com/qSY8ZTb.png)
 ![Image](https://i.imgur.com/CmX7yLn.png)
 ![Image](https://i.imgur.com/S7JnnjW.png)
   - omit $D_1$ to avoid perfect multicollinearity
-  - a1, a2, ..., an：entity fixed effects
+  - $\alpha_1$, $\alpha_2$, ..., $\alpha_n$：entity fixed effects
     - comes from omitted variables, vary across entities (i) but not time (t)
     - each treated as unknown intercepts to be estimated, one for each state
   - $Dx_i=\delta(x)$
