@@ -4,6 +4,7 @@
   - 95%: 1.9600 = 1.960 = 1.96
   - 90%: 1.6449 = 1.645 = 1.65
 - df: degree of freedom
+- ![Image](https://i.imgur.com/Ipt1G1S.png)
 ## review of probability
 ### correlation & independence
 - uncorrelated is weaker than independent
@@ -71,7 +72,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - the probability that a test correctly rejects the null hypothesis when the alternative is true
 
 
-## U4 Linear Regression with One Regressor
+## Ch4 Linear Regression with One Regressor
 - notations
   - $Y$: real sample value
   - $\hat{Y}$: predicted value
@@ -81,7 +82,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - if random assignment → $E(u_i|X_i)=0$ → $cov(u_i|X_i)=0$ i.e. $u_i$ is not correlated to X
 - correlation efficient
   - $$r_{XY}=\dfrac{s_{XY}}{s_Xs_Y}=\dfrac{\dfrac{1}{n-1}\displaystyle\sum_{i=1}^n(X_i-\bar{X})(Y_i-\bar{Y})}{\sqrt{\dfrac{1}{n-1}\displaystyle\sum_{i=1}^n(X_i-\bar{X})^2}\sqrt{\dfrac{1}{n-1}\displaystyle\sum_{i=1}^n(Y_i-\bar{Y})^2}}$$
-- OLS
+### OLS
   - $\hat{\beta_0}$、$\hat{\beta_1}$： $\beta_0$、$\beta_1$ minimalizing $\displaystyle\sum_{i=1}^n(Y_i-\beta_0-\beta_1X_i)^2$
   - $\hat{Y}=\hat{\beta_0}+\hat{\beta_1}\bar{X}$
   - $Y_i=\hat{Y_i}+\hat{u_i}=\hat{\beta_0}+\hat{\beta_1}\bar{X}+\hat{u_i}$
@@ -148,7 +149,8 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - treat intercept as a regressor
 ![Image](https://i.imgur.com/MKDfX7o.png)
 ![Image](https://i.imgur.com/KAHJULZ.png)
-
+### omitted variable bias
+- ![Image](https://i.imgur.com/TQeGcYz.png)
 ### least square assumptions
 1. Assumption 1: The Conditional Distribution of ui Given X1i, X2i, . . . , Xki Has a Mean of 0
 2. Assumption 2: (X1i, X2i, . . . , Xki, Yi), i = 1, . . . , n, Are i.i.d.
@@ -173,7 +175,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     for 2 regressors, $F^{act}$ for 5% is 3
   - F-stat restricted & unrestricted
     - ![Image](https://i.imgur.com/4BX7KdG.png)
-      - q = num of restrictions under the null
+    - q = num of restrictions under the null
       - k = num of regressor of the unrestricted one
     - ![Image](https://i.imgur.com/iNUB8bw.png)
     ![Image](https://i.imgur.com/nJeOber.png)
@@ -195,7 +197,25 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 ### interaction variable
 ![Image](https://i.imgur.com/R3SUnog.png)
 
-## Ch10
+## Ch9 
+### simultaneous causulity bias
+- x 影響 y，y 也影響 x
+  - e.g. 
+    - 有錢 → 吃得好用得好 → 正 → 機會比較多，也較可能嫁有錢人 → 有錢
+    - 景氣差 → 資產價格下跌 → 擔保品價值下降 → 外部融資溢酬增加 → 消費投資支出下降 → 景氣差
+    - 資源多 → 學生程度好 but 同時 學生程度差 → 政府給資源
+- 造成 corr(regressor, error term) != 0
+  - error term 影響 y， y 影響 x → error term 影響 x
+  - ![Image](https://i.imgur.com/BWfTcLh.png)
+    - (9.3) X cause Y
+    - (9.4) Y cause X
+- solution
+  - use instrument (Ch12)
+  - design and implement a randomized controlled experiment in which the reverse causality channel is nullified (Ch13)
+
+## Ch10 panel data
+- panel data
+  - each observational unit, or entity, is observed at two or more time periods
 - Standard errors should be clustered into groups within which the values of the dependent variable are likely to be correlated with one another.
 - fixed effects regression model
   - ![Image](https://i.imgur.com/qSY8ZTb.png)
@@ -236,9 +256,10 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - exogenous: $cov(X_i,u_i)=0$
 - endogenous: $cov(X_i,u_i)\neq0$
 - X is correlated to u → find an instrument Z that is 
-  - correlated to X－instrument relevacnce
-  - uncorrelated u－instrument exogeneity
-  - there are factors that will affect both X & u
+  - correlated to X (relevance)
+  - uncorrelated to u (exogeneity)
+    - Z 跟 Y 不直接相關，只是透過 X 影響 Y
+- there are factors that will affect both X & u
 - ![Image](https://i.imgur.com/0QNSbU9.png)
 - ![Image](https://i.imgur.com/wi0hHUB.png)
 ### IV regression assumptions
@@ -246,6 +267,14 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 ### 2SLS
 ![Image](https://i.imgur.com/ni4GtGd.png)
 - ![Image](https://i.imgur.com/r5TfSaI.png)
+- overidentify & underidentify
+  - m = instrument 數
+  - k = endogenous regressor 數
+  - m < k → underidentified
+  - m = k → exactly identified
+  - m > k → overidentified
+  - need m >= k for estimation of IV regression model
+    - 白話：有幾個跟 error term 有關的 variable，就需要有幾個 instrument
 - weak
   - ![Image](https://i.imgur.com/Ma0mClr.png)
 - J stat

@@ -469,10 +469,14 @@ Bell (W2)
 
 ### binomial heap
 - ![Image](https://i.imgur.com/mAF5mZ9.png)
+- ![Image](https://i.imgur.com/BHQ4JXz.png)
 - height = k
 - $2^k$ nodes
+- roots 是 singly linked list
 - 砍掉 root → k 個 binomial tree
+- 每棵都是 min 形式 (大的在下，小的在上)
 - n 個 nodes 只會有一種結構
+  - 每棵樹的 order 都不一樣
   - n 個 nodes → 一種二進位表示法
     - $19 = (10011)_2$ → $B_4$ + $B_2$ + $B_1$
 - $k \leq \lfloor{log(n)}\rfloor$
@@ -481,6 +485,8 @@ Bell (W2)
 - union
   - 大的接到小的 root 下
   - 二進位加法
+  - order 相同 → merge → repeat
+  - 每個 order 只能有一棵樹
 - delete min
   - 砍掉最小 root → union rest
   - $\in O(log(n))$
@@ -492,15 +498,17 @@ Bell (W2)
   - $\in O(logn)$
 - insertion
   - worst case $(111...11)_2+1$ → $log_2n$ time
+  - 等同於跟 union(x,H)
 - construction
-  - inserting a sequence
+  - sequence of inserts
   - $\in O(n)$
+  - ![Image](https://i.imgur.com/0L8k3PJ.png)
 
 ### comparison
 ![Image](https://i.imgur.com/z6O0XZx.png)
 
 
-### Fibonocci tree
+### Fibonocci heap
 - roots of tress → circular linked list
 - degree
   - root 有幾個小孩
@@ -607,17 +615,64 @@ Bell (W2)
           - h=k + h=k-1 → h=k
         - ![Image](https://i.imgur.com/d0SrOkL.png)
         - $h \leq log_2n$
-    - Find
+    - find
       - O(max height) = O($log_2n$)
+      - intuition
+        - find，就順便接起來節省未來時間
     - rank union
       - initial rank = 0
       - union 時比 root 的 rank
         - rank 小者接到大者下，大者 root rank 不變
         - rank 相同 → rank += 1
       - 要創造 rank=k+1 的 root，需要 2 個 rank=k 的
-      - rank r → min $2^r$ nodes
+      - rank r → 底下 min $2^r$ nodes
         - $rank \leq log_2r$
           - 證法同 weighted union
       - parent rank > child rank
         - x y 相同 rank →  x y 不可能為直系血親 → x y 的 descendents 不可能有交集 → 最多有 $\frac{n}{2^r}$ 個 rank=r 的 nodes 
         (rank lemma)
+    - path compression
+      - 把一路經過的都直接指到 root
+      - ![Image](https://i.imgur.com/VsDvNJQ.png)
+      - method
+        - union by rank
+        - path compression
+          - find-set(x)
+            - if x != p[x] i.e. x 不是 root
+              - p[x] = find-set(p[x]) i.e. 把 x 的 parent 改為 recursive 往上找後得到的 x 的 root
+              → 所有經過的 nodes 都直接接到 root 底下
+      - m 個 find's time complexity with path compression $O((m+n)log^*n)$
+          - path compression 會增大 rank gap
+            - x 改成直接接到 root，又 root 的 rank 比原本 parent 的 rank 大
+          - good & bad nodes
+            - good, if 符合以下其一
+              - x 是 root
+              - p[x] 是 root
+              - rank_block(x) < rank_block(p[x])
+                - 表示 rank 會跳很快
+            - bad, otherwise
+          - visit $O(mlog^*n)$ 個 good nodes during m finds
+            - 最多 $log^*n+2\in O(log^*n)$ 個 good nodes
+              - $log^*n$ 個 rank block
+              - root
+              - child of root
+          - visit $O(n(log^*n+1))$ 個 bad nodes
+            - p[x] 非 root
+            - rank_block(x) = rank_block(p[x])
+            - 共有 $log^*n+1$ 個 rank block
+              - $B_0,...,B_{log^*n}$
+            - 一個 rank block 最多被 visit n 次 
+              - 一個 rank block 裡，每個 node 最多被 visit $2^k$ 次
+                - 被 visit | path compression 完，被接到 root → r(p[x]') >= r(p[x])+1 → r(p[x])+=1 at least for each operation → $2^k$ visits 次後，p[x] 必會在更大的 rank block，x 變 good node
+                  - $B_k$ 有 $2^k$ 個數字
+              - 一個 rank block 最多有 $\displaystyle\sum_{r=k+1}^{2^k}\frac{n}{2^r}\leq\sum_{r=k+1}^{\infty}\frac{n}{2^r}=\frac{n}{2^k}$ 個 nodes
+                - $B_k=\{k+1,k+2,...,2^k\}$
+                - rank lemma: 最多有 $\frac{n}{2^r}$ 個 rank=r 的 nodes 
+    - $log^*n$
+      - = $k$ s.t. $log^kn\leq 1$
+      - ![Image](https://i.imgur.com/un0qJ8N.png)
+        - 指 ln
+      - 成長非常慢
+      - rank block
+        - rank_block(x) = $log^*x$
+        - ![Image](https://i.imgur.com/ULYys6S.png)
