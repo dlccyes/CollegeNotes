@@ -128,7 +128,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     - k: regressor 數量 (對 k=1 的時候 $\bar{R}^2$ 不一樣)
 - omitted variable bias
    -  影響的眾多因素之間可能非 independent → 用較少 regressor 的話會 overestimate 那個 regressor 的影響
-- standard error of $\beta$
+- standard error of $\hat{\beta}$
   - ![Image](https://i.imgur.com/2eB2BnL.png)
 - binary variable
   - alias
@@ -198,7 +198,9 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 ![Image](https://i.imgur.com/R3SUnog.png)
 
 ## Ch9 
-### simultaneous causulity bias
+![Image](https://i.imgur.com/NzpKegT.png)
+![Image](https://i.imgur.com/Tu6snYq.png)
+### simultaneous causality bias
 - x 影響 y，y 也影響 x
   - e.g. 
     - 有錢 → 吃得好用得好 → 正 → 機會比較多，也較可能嫁有錢人 → 有錢
@@ -214,8 +216,13 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - design and implement a randomized controlled experiment in which the reverse causality channel is nullified (Ch13)
 
 ## Ch10 panel data
+![Image](https://i.imgur.com/beQqHkO.png)
 - panel data
   - each observational unit, or entity, is observed at two or more time periods
+- cross-sectional data
+  - one time different subject
+- time series data
+  - one subject different time
 - Standard errors should be clustered into groups within which the values of the dependent variable are likely to be correlated with one another.
 - fixed effects regression model
   - ![Image](https://i.imgur.com/qSY8ZTb.png)
@@ -238,8 +245,10 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     - comes from omitted variables, vary over time (t) but not entities (i) 
 - entity and time effects regression model
   - ![Image](https://i.imgur.com/vyNIHmQ.png)
+![Image](https://i.imgur.com/Ek6ZOk8.png)
 
 ## Ch11 binary
+![Image](https://i.imgur.com/IGa9eaR.png)
 - LPM linear
 ![Image](https://i.imgur.com/1HKN9gZ.png)
 - probit
@@ -253,6 +262,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     - ![Image](https://i.imgur.com/RJqsTPy.png)
 
 ## C12 Instrumental
+![Image](https://i.imgur.com/0O5w3qX.png)
 - exogenous: $cov(X_i,u_i)=0$
 - endogenous: $cov(X_i,u_i)\neq0$
 - X is correlated to u → find an instrument Z that is 
@@ -277,9 +287,13 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     - 白話：有幾個跟 error term 有關的 variable，就需要有幾個 instrument
 - weak
   - ![Image](https://i.imgur.com/Ma0mClr.png)
-- J stat
+- overidentification test (J stat)
+  - test if if instrument is exogenous
+  - only possible to test this if overidentified
   - ![Image](https://i.imgur.com/qxmwzsy.png)
   - ![Image](https://i.imgur.com/otITLuN.png)
+
+![Image](https://i.imgur.com/eyjg7x0.png)
 
 ## Ch13 Experiments & Quasi-Experiments
 - ![Image](https://i.imgur.com/um9yykm.png)
@@ -288,6 +302,8 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - ![Image](https://i.imgur.com/0ijXays.png)
   - t=1: before treatment
   - t=2: after treatment
+
+![Image](https://i.imgur.com/SBdt2DJ.png)
 ## Ch14 big data
 - 原始資料 notation：*
 - OOS out-of-sample

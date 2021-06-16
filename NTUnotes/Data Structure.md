@@ -584,95 +584,121 @@ Bell (W2)
     - x 跟自己連通
     - x 連 y → y 連 X
     - x 連 y 且 y 連 z → x 連 z
-- disjoint set
-  - 一個 set 裡面都互相連通
-  - 不同 set 間完全不相連
-  - name of set
-    - 其中一個元素
-  - union
-    - 連兩個元素 → 連兩個元素所屬的 set
-    - 步驟
-      1. 找兩個元素
-      2. 看這兩個元素的 root 是否一樣
-      3. if 不一樣 → 一個 root 接到另一個 root 下，變一個 up-tree
-    - 結果
-      - 任兩 node 都互通，且只有一條路徑
+- 一個 set 裡面都互相連通
+- 不同 set 間完全不相連
+- name of set
+  - 其中一個元素
+- union
+  - 連兩個元素 → 連兩個元素所屬的 set
+  - 步驟
+    1. 找兩個元素
+    2. 看這兩個元素的 root 是否一樣
+    3. if 不一樣 → 一個 root 接到另一個 root 下，變一個 up-tree
+  - 結果
+    - 任兩 node 都互通，且只有一條路徑
+  - e.g.
+    - ![Image](https://i.imgur.com/aLENyIl.png)
+    - ![Image](https://i.imgur.com/OLdrtrO.png)
+- up-tree
+  - ![Image](https://i.imgur.com/caa08M9.png)
+  - root 為這個 disjoint set 的代表
+  - implementation
+    - array
+    - ![Image](https://i.imgur.com/zGDB53k.png)
+      - 存 root 的 index
+      - 自己是 root → -1
+- weighted union
+    - 把小的 tree 接在大的下面 s.t. 不會太深
+  - height h → min $2^h$ nodes
+    - a tree with h=k+1 must be formed by 2 trees with h=k
+      - h=k + h=k-1 → h=k
+    - ![Image](https://i.imgur.com/d0SrOkL.png)
+    - $h \leq log_2n$
+- find
+  - O(max height) = O($log_2n$)
+  - intuition
+    - find，就順便接起來節省未來時間
+- ranked union
+  - initial rank = 0
+  - union 時比 root 的 rank
+    - rank 小者接到大者下，大者 root rank 不變
+    - rank 相同 → p[y] = x, r(x) += 1
+      - 後者接到前者下，前者 rank +1
+  - 要創造 rank=k+1 的 root，需要 2 個 rank=k 的
+  - rank r → 底下 min $2^r$ nodes
+    - $rank \leq log_2r$
+      - 證法同 weighted union
+  - parent rank > child rank
+    - x y 相同 rank →  x y 不可能為直系血親 → x y 的 descendents 不可能有交集 → 最多有 $\frac{n}{2^r}$ 個 rank=r 的 nodes 
+    (rank lemma)
+
+### path compression
+- 把一路經過的都直接指到 root
+- ![Image](https://i.imgur.com/VsDvNJQ.png)
+- method
+  - use union by rank
+  - find-set(x)
+    - if x != p[x] i.e. x 不是 root
+      - p[x] = find-set(p[x]) i.e. 把 x 的 parent 改為 recursive 往上找後得到的 x 的 root
+      → 所有經過的 nodes 都直接接到 root 底下
+- m 個 find's time complexity with path compression $O((m+n)log^*n)$
+    - path compression 會增大 rank gap
+      - x 改成直接接到 root，又 root 的 rank 比原本 parent 的 rank 大
+    - good & bad nodes
+      - good, if 符合以下其一
+        - x 是 root
+        - p[x] 是 root
+        - rank_block(x) < rank_block(p[x])
+          - 表示 rank 會跳很快
+      - bad, otherwise
+    - visit $O(mlog^*n)$ 個 good nodes during m finds
+      - 最多 $log^*n+2\in O(log^*n)$ 個 good nodes
+        - $log^*n$ 個 rank block
+        - root
+        - child of root
+    - visit $O(n(log^*n+1))$ 個 bad nodes
+      - p[x] 非 root
+      - rank_block(x) = rank_block(p[x])
+      - 共有 $log^*n+1$ 個 rank block
+        - $B_0,...,B_{log^*n}$
+      - 一個 rank block 最多被 visit n 次 
+        - 一個 rank block 裡，每個 node 最多被 visit $2^k$ 次
+          - 被 visit | path compression 完，被接到 root → r(p[x]') >= r(p[x])+1 → r(p[x])+=1 at least for each operation → $2^k$ visits 次後，p[x] 必會在更大的 rank block，x 變 good node
+            - $B_k$ 有 $2^k$ 個數字
+        - 一個 rank block 最多有 $\displaystyle\sum_{r=k+1}^{2^k}\frac{n}{2^r}\leq\sum_{r=k+1}^{\infty}\frac{n}{2^r}=\frac{n}{2^k}$ 個 nodes
+          - $B_k=\{k+1,k+2,...,2^k\}$
+          - rank lemma: 最多有 $\frac{n}{2^r}$ 個 rank=r 的 nodes 
+- $log^*n$
+  - = $k$ s.t. $log^kn\leq 1$
+  - ![Image](https://i.imgur.com/un0qJ8N.png)
+    - 指 $log_2()$
+  - 成長非常慢
+  - rank block
+    - rank_block(x) = $log^*x$
+    - ![Image](https://i.imgur.com/ULYys6S.png)
+- Ackermann's function $A_k(r)$
+  - $A_k(r)=A_{k-1}^r(r)$
+    - apply $A_{k-1}$ r times to r
+    - $A_0(r)=r+1$
+    - $A_1(r)=A_0^r(r)=r+r=r\times2$
+      - r += 1 做 r 次
+    - $A_2(r)=A_1^r(r)=r2^r\geq2^r$
+      - r *= 2 做 r 次
+    - $A_3(r)=A_2^r(r)\geq2^{2^{2^{2^{.^{.^{.^{.^{.^{2^{2^r}}}}}}}}}}\geq2^{2^{2^{2^{.^{.^{.^{.^{.^{2^{2}}}}}}}}}}$ (r 個 2 的 tower)
+    - ![Image](https://i.imgur.com/RpbkZOW.png)
     - e.g.
-      - ![Image](https://i.imgur.com/aLENyIl.png)
-      - ![Image](https://i.imgur.com/OLdrtrO.png)
-  - up-tree
-    - ![Image](https://i.imgur.com/caa08M9.png)
-    - root 為這個 disjoint set 的代表
-    - implementation
-      - array
-      - ![Image](https://i.imgur.com/zGDB53k.png)
-        - 存 root 的 index
-        - 自己是 root → -1
-    - weighted union
-        - 把小的 tree 接在大的下面 s.t. 不會太深
-      - height h → min $2^h$ nodes
-        - a tree with h=k+1 must be formed by 2 trees with h=k
-          - h=k + h=k-1 → h=k
-        - ![Image](https://i.imgur.com/d0SrOkL.png)
-        - $h \leq log_2n$
-    - find
-      - O(max height) = O($log_2n$)
-      - intuition
-        - find，就順便接起來節省未來時間
-    - rank union
-      - initial rank = 0
-      - union 時比 root 的 rank
-        - rank 小者接到大者下，大者 root rank 不變
-        - rank 相同 → rank += 1
-      - 要創造 rank=k+1 的 root，需要 2 個 rank=k 的
-      - rank r → 底下 min $2^r$ nodes
-        - $rank \leq log_2r$
-          - 證法同 weighted union
-      - parent rank > child rank
-        - x y 相同 rank →  x y 不可能為直系血親 → x y 的 descendents 不可能有交集 → 最多有 $\frac{n}{2^r}$ 個 rank=r 的 nodes 
-        (rank lemma)
-    - path compression
-      - 把一路經過的都直接指到 root
-      - ![Image](https://i.imgur.com/VsDvNJQ.png)
-      - method
-        - union by rank
-        - path compression
-          - find-set(x)
-            - if x != p[x] i.e. x 不是 root
-              - p[x] = find-set(p[x]) i.e. 把 x 的 parent 改為 recursive 往上找後得到的 x 的 root
-              → 所有經過的 nodes 都直接接到 root 底下
-      - m 個 find's time complexity with path compression $O((m+n)log^*n)$
-          - path compression 會增大 rank gap
-            - x 改成直接接到 root，又 root 的 rank 比原本 parent 的 rank 大
-          - good & bad nodes
-            - good, if 符合以下其一
-              - x 是 root
-              - p[x] 是 root
-              - rank_block(x) < rank_block(p[x])
-                - 表示 rank 會跳很快
-            - bad, otherwise
-          - visit $O(mlog^*n)$ 個 good nodes during m finds
-            - 最多 $log^*n+2\in O(log^*n)$ 個 good nodes
-              - $log^*n$ 個 rank block
-              - root
-              - child of root
-          - visit $O(n(log^*n+1))$ 個 bad nodes
-            - p[x] 非 root
-            - rank_block(x) = rank_block(p[x])
-            - 共有 $log^*n+1$ 個 rank block
-              - $B_0,...,B_{log^*n}$
-            - 一個 rank block 最多被 visit n 次 
-              - 一個 rank block 裡，每個 node 最多被 visit $2^k$ 次
-                - 被 visit | path compression 完，被接到 root → r(p[x]') >= r(p[x])+1 → r(p[x])+=1 at least for each operation → $2^k$ visits 次後，p[x] 必會在更大的 rank block，x 變 good node
-                  - $B_k$ 有 $2^k$ 個數字
-              - 一個 rank block 最多有 $\displaystyle\sum_{r=k+1}^{2^k}\frac{n}{2^r}\leq\sum_{r=k+1}^{\infty}\frac{n}{2^r}=\frac{n}{2^k}$ 個 nodes
-                - $B_k=\{k+1,k+2,...,2^k\}$
-                - rank lemma: 最多有 $\frac{n}{2^r}$ 個 rank=r 的 nodes 
-    - $log^*n$
-      - = $k$ s.t. $log^kn\leq 1$
-      - ![Image](https://i.imgur.com/un0qJ8N.png)
-        - 指 ln
-      - 成長非常慢
-      - rank block
-        - rank_block(x) = $log^*x$
-        - ![Image](https://i.imgur.com/ULYys6S.png)
+      - $A_4(2)=A_3(A_3(2))=A_3(A_2(A_2(2)))=A_3(A_2(A_1(A_1(2)))))=A_3(A_2(A_1(4))))=A_3(A_2(8)))=A_3(2048))\geq$ a tower of 2048 個 2
+- inverse Ackermann's function $\alpha(n)$
+  - $\alpha(n)$ = min k s.t. $A_k(2)\geq n$
+  - ![Image](https://i.imgur.com/Udf61fh.png)
+  - $\alpha$(a tower of 2048 2s) = 4 << $log^*$(a tower of 2048 2s) = 2048
+- rank gap $\delta(x)$
+  - $\delta(x)$ = max k s.t. $rank(p[x])\geq$ $A_k(rank(x))$
+    - $\delta(x)\geq 1$ → $r(p[x])\geq A_1(r(x))=2r(x)$
+    - $\delta(x)\geq 2$ → $r(p[x])\geq A_2(r(x))=r(x)2^{r(x)}$
+    - $\delta(x)\geq 3$ → $r(p[x])\geq A_3(r(x))\geq$ a tower of r(x) 2s
+  - $\delta(x)$ 只會增加 but never 減少 over time
+    - x 若變成 non-root，則 r(x) 不再變，while r(p[x]) 可能增加
+  - if $r(x)\geq2$, then $A_{\alpha(n)}(2)\geq n\geq r(p[x])\geq A_{\delta(x)}(r(x))$ → $\alpha(n)\geq \delta(x)$
+    - $A_{\alpha(n)}(2)\geq n$ by def of inverse Ackermann's function
+    - $r(p[x])\geq A_{\delta(x)}(r(x))$ by def of rank gap
