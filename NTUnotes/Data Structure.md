@@ -622,8 +622,7 @@ Bell (W2)
   - initial rank = 0
   - union 時比 root 的 rank
     - rank 小者接到大者下，大者 root rank 不變
-    - rank 相同 → p[y] = x, r(x) += 1
-      - 後者接到前者下，前者 rank +1
+    - rank 相同 → p[x] = y, r(y) += 1
   - 要創造 rank=k+1 的 root，需要 2 個 rank=k 的
   - rank r → 底下 min $2^r$ nodes
     - $rank \leq log_2r$
@@ -676,6 +675,7 @@ Bell (W2)
   - rank block
     - rank_block(x) = $log^*x$
     - ![Image](https://i.imgur.com/ULYys6S.png)
+### Tarjan's analysis of path compression
 - Ackermann's function $A_k(r)$
   - $A_k(r)=A_{k-1}^r(r)$
     - apply $A_{k-1}$ r times to r
@@ -702,3 +702,14 @@ Bell (W2)
   - if $r(x)\geq2$, then $A_{\alpha(n)}(2)\geq n\geq r(p[x])\geq A_{\delta(x)}(r(x))$ → $\alpha(n)\geq \delta(x)$
     - $A_{\alpha(n)}(2)\geq n$ by def of inverse Ackermann's function
     - $r(p[x])\geq A_{\delta(x)}(r(x))$ by def of rank gap
+- good & bad nodes
+  - bad, if 以下四點同時成立
+    - x is not a root
+    - p[x] is not a root
+    - rank[x] >= 2
+    - x 有跟自己 rank gap 一樣的 ancestor y 
+      - $\delta(x)=\delta(y)$
+  - good, otherwise
+- cost
+  - cost = total visits of nodes = total visit of good nodes + total visit of bad nodes
+  - 
