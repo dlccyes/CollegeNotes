@@ -707,9 +707,10 @@ Bell (W2)
     - x is not a root
     - p[x] is not a root
     - rank[x] >= 2
-    - x 有跟自己 rank gap 一樣的 ancestor y 
+    - x 有跟自己 rank gap 一樣的 非 root ancestor y 
       - $\delta(x)=\delta(y)$
   - good, otherwise
-- cost
+- cost $\in O((m+n)\alpha(n))$
   - cost = total visits of nodes = total visit of good nodes + total visit of bad nodes
-  - 
+  - good visits $\in O(m\alpha(n))$
+  - bad visits $\in O(n\alpha(n))$
