@@ -714,3 +714,55 @@ Bell (W2)
   - cost = total visits of nodes = total visit of good nodes + total visit of bad nodes
   - good visits $\in O(m\alpha(n))$
   - bad visits $\in O(n\alpha(n))$
+
+### leftlist heap
+- binary heap property
+- minheap property
+  - 比兩個 children 大
+- leftheap property
+  - NPL(leftchild) >= NPL(rightchild)
+  - 違反 → swap children
+    - ![Image](https://i.imgur.com/zUvOpNE.png)
+    - ![Image](https://i.imgur.com/YUk5scL.png)
+- NPL null path length
+  - 走到只有 0 or 1 child 的 node 的最短路徑
+  - 自己就是 → NPL = 0
+  - ![Image](https://i.imgur.com/zUN7LRt.png)
+- merge
+  - 步驟
+    1. x y 兩 pointer 指向兩個 root
+    2. 比大小，較小者加進 stack，並往 right child 移動
+    3. 重複 2.，直到一個 pointer 指向 null (假設是 y)
+    4. y 指向的 x 指向的 node
+       1. ![Image](https://i.imgur.com/T1o1iwF.png)
+       2. ![Image](https://i.imgur.com/TtMhW7n.png)
+    5. 檢查 leftheap property, swap if needed
+       1. ![Image](https://i.imgur.com/UYpMDnM.png)
+    6. 根據 stack，一路往回，把 node 變成上一項的 right child，並檢查 NPL
+       1. ![Image](https://i.imgur.com/KwsdICr.png)
+       2. ![Image](https://i.imgur.com/2hpKo8J.png)
+  - cost $\in O(logn)$
+    - right path  $\in O(logn)$
+      - 一直往 right child 走
+      - 會是最短的 path 因為 NPL(left)>=NPL(right)
+      - right path = h → 所有 path >= h → $n\geq 2^{h+1}-1$ → $h\leq log_2(n+1)-1$ → max num of stack $\in O(2logn)\in O(logn)$ → cost $\in O(logn)$
+  - insertion
+    - merge leftlist heap with the node
+  - deletion
+    - merge left & right subheaps
+  - so merge, insert, delete 皆 $\in O(logn)$ 
+### skew heap
+- binary heap property
+- minheap or maxheap property
+- no NPL
+  - so right path 不一定最短，不一定 $\in O(logn)$
+- merge
+  - 跟 leftlist heap 一樣 but 根據 stack 回溯時 swap at every step
+    - 不判斷 NPL
+  - amortized cost
+    - size = subtree 的 nodes 數
+    - heavy node
+      - $size(x) > size(\frac{p[x]}{2})$
+    - light node
+      - $size(x) \leq size(\frac{p[x]}{2})$
+    -  potential function $\phi$ = num of right heavy nodes
