@@ -727,7 +727,21 @@ Bell (W2)
 - NPL null path length
   - 走到只有 0 or 1 child 的 node 的最短路徑
   - 自己就是 → NPL = 0
+  - NPL(Null) = -1
+    - → only 1 child 則 left 必不為 Null
   - ![Image](https://i.imgur.com/zUN7LRt.png)
+- right path 最短
+  - NPL(x) = NPL(x.rightchild) + 1
+    - x has 0 child
+      - 0 = -1 + 1
+    - x has 1 child
+      - 0 = -1 + 1
+    - x has 2 children
+      - NPL(x) = min(NPL(left), NPL(right)) + 1 = NPL(right) + 1
+    - 往右走一次，NPL -= 1
+    - 往左走一次，NPL -= <1
+  - path：走到 NPL=0 → 最短路徑：一直走 right
+  - pathpath
 - merge
   - 步驟
     1. x y 兩 pointer 指向兩個 root
@@ -759,10 +773,23 @@ Bell (W2)
 - merge
   - 跟 leftlist heap 一樣 but 根據 stack 回溯時 swap at every step
     - 不判斷 NPL
-  - amortized cost
+  - amortized cost $\in O(logn)$
     - size = subtree 的 nodes 數
     - heavy node
       - $size(x) > size(\frac{p[x]}{2})$
     - light node
       - $size(x) \leq size(\frac{p[x]}{2})$
-    -  potential function $\phi$ = num of right heavy nodes
+    - 2 個 children with 1 heavy child → 另一個必為 light
+      - 可為 2 個 light children
+    - potential function $\phi$ = num of **right** heavy nodes
+    - 根據 stack 往回走時 
+      - 經過 light node → size *= 2 at least → 最多經過 log(n) 個 light nodes
+        - size = 1 走到 size = n
+        - actual cost = 1 
+        - 可能被 swap 成 heavy → $\Delta\phi$ <= 1
+        - amortized cost = 1 + 1 = 2
+      - 經過 heavy node → right heavy node swap 成 left heavy mode 
+        - actual cost = 1
+        - $\Delta\phi$ = -1
+        - amortized cost = 1 - 1 = 0
+      - amortized cost = 2log(n) + 0 $\in O(logn)$
