@@ -286,8 +286,8 @@ Bell (W2)
 - insertion/deletion
   1. 傳統 binary search tree 作法
   2. 往上找，看有無違反 AVL property; if yes → rotation
-     - insertion 只要找到上一個 node 
-     - deletion 需要找到 root 才能完全確定
+     - insertion 最多只要 rotate 一次就全 ok 
+     - deletion 需要找到 root 才能完全確定，可能 rotate 很多次
        - 上方的 node: h+3 → h+2
        ![Image](https://i.imgur.com/ZYfFUXR.png)
        ![Image](https://i.imgur.com/jVlv91X.png)
@@ -385,7 +385,7 @@ Bell (W2)
   - level
     - leaf = 1
     - red = parent's level
-    - back = parent's level - 1
+    - black = parent's level - 1
     - ![Image](https://i.imgur.com/61I4mVh.png)
       - 水平：同 level (必指到 red)
   - operations
@@ -421,6 +421,7 @@ Bell (W2)
   - $h_i(k)=(h(k)+f(i))mod\space m$
   - linear probing
     - $h_i(k)=(k+i)mod\space 10$
+    - collision → 跳一格
     - 會形成 cluster → 耗時
   - quadratic probing
     - $h_i(k)=(k+i^2)mod\space 10$
@@ -428,6 +429,7 @@ Bell (W2)
     - $f(i)=i\cdot h_2(k)$
       - $h_2(k)=R-(k\space mod\space R)$
         - bc $h_2(k)=0$ → 跳零格 → 沒屁用
+        - 就是 collision 時每次跳的格數
     - $h_i(k)=(k+i(R-(k\space mod\space R)))mod\space m$
       - e.g. $h_i(k)=(k+i(7-(k\space mod\space7)))mod\space 10$
     - $gcd(m,h_2(k))=1$
@@ -447,7 +449,7 @@ Bell (W2)
 - insertion
   - 先 insert 到最後一項 (最右 leaf 之右)，再根據大小 percolate up
 - deletion
-  - delete root (min) → 把 bottome level 最右的 node 放到 root → percolate down
+  - delete root (min) → 把 bottom level 最右的 node 放到 root → percolate down
     - 跟較小的且最小的 children 互換
       - s.t. children 被換上去後也會小於另一個 children
     - ![Image](https://i.imgur.com/CBDmMRa.png)
@@ -456,7 +458,7 @@ Bell (W2)
     ![Image](https://i.imgur.com/iwx36Dr.png)
 - merge
   - 先放到 root 再 percolate down
-    ![Image](https://i.imgur.com/zpSGPpP.png)g)
+    ![Image](https://i.imgur.com/zpSGPpP.png)
 - bottom-up construction
   - o(n)
 - array representation
@@ -481,7 +483,7 @@ Bell (W2)
     - $19 = (10011)_2$ → $B_4$ + $B_2$ + $B_1$
 - $k \leq \lfloor{log(n)}\rfloor$
   - $2^k\leq n<2^{k+1}$ → $log_2(n)-1 < k\leq log_2(n)$
-- at most $k+1$($B_0$~$B_k$) $\leq \lfloor{log(n)}\rfloor+1 $ 個 tree
+- at most $k+1$ ($B_0$~$B_k$) $\leq \lfloor{log(n)}\rfloor+1 $ 個 tree
 - union
   - 大的接到小的 root 下
   - 二進位加法
@@ -509,7 +511,7 @@ Bell (W2)
 
 
 ### Fibonocci heap
-- roots of tress → circular linked list
+- roots of trees → circular linked list
 - degree
   - root 有幾個小孩
 - t(H)：幾棵樹
@@ -715,7 +717,7 @@ Bell (W2)
   - good visits $\in O(m\alpha(n))$
   - bad visits $\in O(n\alpha(n))$
 
-### leftlist heap
+## leftlist heap
 - binary heap property
 - minheap property
   - 比兩個 children 大
@@ -765,7 +767,7 @@ Bell (W2)
   - deletion
     - merge left & right subheaps
   - so merge, insert, delete 皆 $\in O(logn)$ 
-### skew heap
+## skew heap
 - binary heap property
 - minheap or maxheap property
 - no NPL
