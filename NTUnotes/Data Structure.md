@@ -380,6 +380,8 @@ Bell (W2)
       - W4-2
   - operation：先做 2-3-4 再轉成 Red-Black
 - AA Tree
+  - inerative visualization 
+  https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html
   - Red-Black Tree but left-child can't be red
   - ![Image](https://i.imgur.com/DGFffzI.png)
   - level
@@ -566,9 +568,9 @@ Bell (W2)
     1. x 跟 p[x] 斷開
     2. x 接上 root list
     3. 從 x 原鍊上溯
-       - while parent is marked, cut off link with parents, 接上 root list，在上溯
+       - while parent is marked, cut off link with parents, 接上 root list，再上溯
        - elif unmarked → mark it，並終止上溯
-  - amotized cost O(1)
+  - amortized cost O(1)
     - c = 幾個獨立出來
     - actual cost O(c)
     - potential += 4-c
@@ -576,6 +578,9 @@ Bell (W2)
       - m(H) += 1-(c-1) = 2-c
       - c+2(-c+2) = 4-c
   - deletion
+  - smallest Fib heap
+    - ![Image](https://i.imgur.com/unmM6oa.png)
+    - ![Image](https://i.imgur.com/YLbKLUf.png)
   - size n 的 Fib heap 之 max degree
   - degree d 的最小 Fib heap
 
@@ -594,8 +599,9 @@ Bell (W2)
   - 連兩個元素 → 連兩個元素所屬的 set
   - 步驟
     1. 找兩個元素
-    2. 看這兩個元素的 root 是否一樣
-    3. if 不一樣 → 一個 root 接到另一個 root 下，變一個 up-tree
+       - find 的過程就把經過的全部指到 root
+    1. 看這兩個元素的 root 是否一樣
+    2. if 不一樣 → 一個 root 接到另一個 root 下，變一個 up-tree
   - 結果
     - 任兩 node 都互通，且只有一條路徑
   - e.g.
@@ -718,6 +724,8 @@ Bell (W2)
   - bad visits $\in O(n\alpha(n))$
 
 ## leftlist heap
+- interactive visualization
+https://people.ksp.sk/~kuko/gnarley-trees/Leftist.html
 - binary heap property
 - minheap property
   - 比兩個 children 大
@@ -749,7 +757,7 @@ Bell (W2)
     1. x y 兩 pointer 指向兩個 root
     2. 比大小，較小者加進 stack，並往 right child 移動
     3. 重複 2.，直到一個 pointer 指向 null (假設是 y)
-    4. y 指向的 x 指向的 node
+    4. y 指向 x 指向的 node
        1. ![Image](https://i.imgur.com/T1o1iwF.png)
        2. ![Image](https://i.imgur.com/TtMhW7n.png)
     5. 檢查 leftheap property, swap if needed
@@ -768,6 +776,8 @@ Bell (W2)
     - merge left & right subheaps
   - so merge, insert, delete 皆 $\in O(logn)$ 
 ## skew heap
+- interactive visualization
+https://people.ksp.sk/~kuko/gnarley-trees/Skew.html
 - binary heap property
 - minheap or maxheap property
 - no NPL
