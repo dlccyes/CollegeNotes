@@ -317,6 +317,7 @@ Bell (W2)
     - ![Image](https://i.imgur.com/QGTissZ.png)
 - insertion
   1. 把找到的那個 node splay 上去
+     - 就是最後一個在的 node
   2. split
   3. 插進去
   - e.g.
