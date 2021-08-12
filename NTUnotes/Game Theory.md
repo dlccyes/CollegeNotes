@@ -43,6 +43,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 ### voting scheme
 - plurality
   - most-preferred by most people
+  - 最普通的那種
 - cumulative voting
   - multiple votes
 - approval voting
@@ -100,6 +101,36 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 - median voting
   - Condorcet winner exist whenever odd voters
     - ![Image](https://i.imgur.com/h6JOmLI.png)
+
+## mechanism design
+- inverse game theory
+- design a game
+- bayes-nash implementation
+  - problems
+    - could be more than one equilibrium
+    - agents may mis-cooperate and plan none of the equilibria
+    - asymmetric equilibria (?)
+  - refinement
+    - symmetric bayes-nash implementation
+    - ex-post implementation
+- direct implementation
+- indirect implementation
+- Duverger's Law
+  - 既存兩大派，你喜歡第三者你還是不會投
+- relevation principle
+  - if a social choice function can be implemented by any mechanism, then it can be also implemented by a truth-telling direct revelation mechanism
+    - 在 original (complicated) mechanism 外面 fascade 一層，把 truth map 成各成員想要 play 的 strategy → 各成員會想要 play truthfully (對於 original mechanism 來說各成員 strategy 不變)
+      - 那層 fascade 等同於 agent 的 mentira function
+  - direct relevation mechanism
+    - each agent is asked to report his individual preferences
+    - simultaneous move Bayesian game
+      - Bayesian version of normal form game
+  - truthful
+    - tell everything about your true preferences
+  - indirect relevation mechanism
+    - agents are asked to send messages other than preferences
+    - imperfect information Bayesian extensive form game
+
 
 ## Ch6 Learning in Games
 - sequential
