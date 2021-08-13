@@ -101,6 +101,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 - median voting
   - Condorcet winner exist whenever odd voters
     - ![Image](https://i.imgur.com/h6JOmLI.png)
+  - no incentive to lie
 
 ## mechanism design
 - inverse game theory
@@ -117,19 +118,31 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 - indirect implementation
 - Duverger's Law
   - 既存兩大派，你喜歡第三者你還是不會投
+- direct relevation mechanism
+  - each agent is asked to report his individual preferences
+  - simultaneous move Bayesian game
+    - Bayesian version of normal form game
+- truthful
+  - tell everything about your true preferences
+- indirect relevation mechanism
+  - agents are asked to send messages other than preferences
+  - imperfect information Bayesian extensive form game
 - relevation principle
   - if a social choice function can be implemented by any mechanism, then it can be also implemented by a truth-telling direct revelation mechanism
     - 在 original (complicated) mechanism 外面 fascade 一層，把 truth map 成各成員想要 play 的 strategy → 各成員會想要 play truthfully (對於 original mechanism 來說各成員 strategy 不變)
       - 那層 fascade 等同於 agent 的 mentira function
-  - direct relevation mechanism
-    - each agent is asked to report his individual preferences
-    - simultaneous move Bayesian game
-      - Bayesian version of normal form game
-  - truthful
-    - tell everything about your true preferences
-  - indirect relevation mechanism
-    - agents are asked to send messages other than preferences
-    - imperfect information Bayesian extensive form game
+  - significance: 可以用 direct & truthful 的方式分析 without the loss of generality
+- Gibbard-Satterthwaite Theorem
+  - 已知 at lease 3 outcomes & social choice function C is onto (每個 outcome O 都有被 map 到), truthful reporting is a dominant strategy iff C is dictorial
+  - only consider dominant strategy implementation
+- 有 dominant strategy 者
+  - single-peaked domains 
+    - median voting
+    - max/min of peaks
+  - trade
+    - has private value for selling/buying goods
+    - price fixed in advance
+    - decide to buy/sell at that price 
 
 
 ## Ch6 Learning in Games
