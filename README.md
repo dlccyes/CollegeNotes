@@ -1,4 +1,7 @@
 # CollegeNotes
+
+some written on hackmd, some on VsCode, some on Notion
+
 - all
   - https://derricken968.gitbook.io/college-notes/ (many syntax unsupported)
 - Microeconomics
