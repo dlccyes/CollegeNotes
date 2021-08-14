@@ -144,6 +144,74 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
     - price fixed in advance
     - decide to buy/sell at that price 
 
+### transferable utility mechanism
+- strictly pareto efficient
+  - ![Image](https://i.imgur.com/uJGjhMg.png)
+  - mechanism itself is also an agent
+- budget balance
+  - ![Image](https://i.imgur.com/CKAB5k7.png)
+  - 拿的錢跟給的錢一樣多
+  - weak budge balance
+    - \>=
+    - 不虧就好
+- individual rationality
+  - ex interim individual rationality
+    - ![Image](https://i.imgur.com/vBBKqRS.png)
+    - 參加這個 mechanism，average over the possible valuations for other agents 時，淨效益 >= 0
+  - ex post individual rationality
+    - ![Image](https://i.imgur.com/wdDp8P3.png)
+    - equilibrium 時淨效益 >= 0
+    - stronger than ex interim
+- tractability
+  - choice function & payment function $\in O(n^k)$
+- revenue maximization/minimization
+- maximum fairness
+  - maximize the happiniess of the least happy person i.e. maximize the min utility
+- price-of-anarchy minimization
+  - ![Image](https://i.imgur.com/247smHh.png)
+  - minimize {best social welfare} $\div$ {welfare of the worst equilibrium} 
+    - iterate through all equilibrium, select the max ratio of best social welfare & real equilibrium, and minimize it
+
+## Ch3 Contract Theory
+- mechanism design for the interactions between employer/seller & employee
+- solve assymetric
+- give incentive to self-reveal
+- in wireless network
+  - employer/seller
+    - service provider
+    - base station
+  - employee/buyer
+    - user
+    - device
+- employee's contraints
+  - incentive compatibility
+    - contract maximize utility
+  - individual rationality
+    - utility bigger than without contract
+- adverse selection
+  - screening problem
+    - uninformed party offer the contract
+    - solve adverse selection ny using relevation principle
+      - force the informed party to choose the contract that reveil its status
+      - offer multiple contracts intended for employees with different skill levels
+- most incentive problems are a combination of both adverse selection & moral hazard
+- bilateral & multilateral
+  - bilateral
+    - one-to-one
+  - multilateral
+    - one-to-many
+    - multilateral adverse selection ~ auction
+- one & multi-dimensional
+  - how many you consider
+- static & repeated
+  - static
+    - memoryless
+    - one-shot deal, histories don't affect
+  - repeated
+    - histories will affect
+    - more complex
+      - renegotiation & designing long-term contract
+    - equivalent to market equilibrium
 
 ## Ch6 Learning in Games
 - sequential
