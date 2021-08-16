@@ -49,11 +49,11 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 - approval voting
   - unlimited votes (?)
 - plurality with elimination
-  - iteratively eleminate one with fewest votes and revotes until a majority winner
+  - iteratively eliminate one with fewest votes and revotes until a majority winner
   - 
     ```
     while no majority winner:
-      eleminate one with fewest votes
+      eliminate one with fewest votes
       revote
     ```
   - France
@@ -172,7 +172,56 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - minimize {best social welfare} $\div$ {welfare of the worst equilibrium} 
     - iterate through all equilibrium, select the max ratio of best social welfare & real equilibrium, and minimize it
 
-## Ch3 Contract Theory
+## VCG mechanism
+- has truth as a dominant strategy
+- make efficient choices
+- Groves mechanisms
+  - ![Image](https://i.imgur.com/OZO2mNU.png)
+  - payment rule
+    - depend on others
+- Vickrey-Clarke-Groves, VCG mechanism
+  - pivotal mechanism
+  - ![Image](https://i.imgur.com/U9dsU4N.png)
+  - payment function = max of everyone else's utility when excluding you - when including you ($i$)
+    - so if you're not pivotal, you don't pay anything (as you don't change anything)
+    - generally >= 0
+    - social cost of the individual $i$
+    - \> 0 → you make things worse by existing
+  - significance
+    - internalize the externality of your choice
+      - how your choice affect others will impact your payment
+- Green-Laffont Theorem
+  - ![Image](https://i.imgur.com/Wai3Fq1.png)
+  - truthful reporting is a dominant strategy only if it's Groves mechanism
+- e.g.
+  - selfish routing
+  ![Image](https://i.imgur.com/hNzuEfO.png)
+    - 要走 A → F
+      - without AB, min sum of others' cost = 6 (max utility = -6)
+      - with AB, min sum of others' cost = 2 (max utility = -2)
+      - so $p_{AB} = -6-(-2) = -4$, AB get 4
+
+### limitations of VCG
+- require full disclosure
+  - but in repeated games, agents may want to disclose their information, and VCG isn't a good mechanism in this case
+- susceptible to collusion
+![Image](https://i.imgur.com/m7diahn.png)
+  - if 1&2 collude
+  ![Image](https://i.imgur.com/YGBfPxj.png)
+    - choice is unchanged, but they're better off
+    - so VCG is susceptible to collusion
+- not frugal
+  - payment is unbounded, might be more than what an agent's willing to accept
+  - ![Image](https://i.imgur.com/lk57Unw.png)
+- revenue monotonicity violated
+  - ![Image](https://i.imgur.com/lbTfQ17.png)
+  ![Image](https://i.imgur.com/jKGfXEt.png)
+  - agent 2 can eliminate it's payment by submitting another vote
+- couldn't return all revenue to agents
+  - if VCG return the money collected from agents, it might change agents' incentives 
+    - even if you do something else with the money, if some agents can somehow benefits from it, incentives are changed
+
+## Contract Theory
 - mechanism design for the interactions between employer/seller & employee
 - solve assymetric
 - give incentive to self-reveal
