@@ -184,6 +184,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - ![Image](https://i.imgur.com/U9dsU4N.png)
   - payment function = max of everyone else's utility when excluding you - when including you ($i$)
     - so if you're not pivotal, you don't pay anything (as you don't change anything)
+    - can be interpreted as, you get paid the sum of others' utility when you exist, and you pay the sum of others' utility when you don't
     - generally >= 0
     - social cost of the individual $i$
     - \> 0 → you make things worse by existing
@@ -212,6 +213,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
     - so VCG is susceptible to collusion
 - not frugal
   - payment is unbounded, might be more than what an agent's willing to accept
+    - → violate individual rationality
   - ![Image](https://i.imgur.com/lk57Unw.png)
 - revenue monotonicity violated
   - ![Image](https://i.imgur.com/lbTfQ17.png)
@@ -220,6 +222,93 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 - couldn't return all revenue to agents
   - if VCG return the money collected from agents, it might change agents' incentives 
     - even if you do something else with the money, if some agents can somehow benefits from it, incentives are changed
+- Mayernon-Satterthwaite Theorem
+  - ![Image](https://i.imgur.com/2vZX4Dq.png)
+  - exist distributions s.t. no Bayesian incentive-compatibile mechanism is simultaneously efficient, weakly budget balanced & interim individual rational
+  - ![Image](https://i.imgur.com/4V8YTve.png)
+    - p(1, 0) 的情況，若要 sller & buyer 都不說謊，則結果矛盾
+  - significance: there exist inefficient trades
+
+### breaking limitations
+- to satisfy individual rationality
+  - choice-set monotonicity
+    - the set of choices with one agent removed is a subset of when the agent is involved
+    - ![Image](https://i.imgur.com/Er6jXd3.png)
+  - no negative externalities
+    - when an agents is excluded, the mechanism won't do negative utitlity on the agent
+    - ![Image](https://i.imgur.com/yrvMD6R.png)
+  - scenarios that satisfy both
+    - road building
+      - ![Image](https://i.imgur.com/SSl0DJY.png)
+      - the choices is independent of the numbers of agent → satisfy choice-set monotonicity
+      - none would have negative utility under any choice → satisfy no negative externalities
+    - trading
+      - ![Image](https://i.imgur.com/gCBiBXt.png)
+  - VCG is ex-post individual rational when the choice-set monotonicity & no negative externalities are both satisfied
+    - ![Image](https://i.imgur.com/u6OXneC.png)
+    ![Image](https://i.imgur.com/kkGRYgJ.png)
+      - $x(v)$ = choice of the mechanism
+      - $u_i$ = utility under VCG's choice - payment
+      - $_{-i}$ = when exclude i
+- to satisfy weak budget balance
+  - no single-agent effect
+    - the welfare of agents other than $i$ is weakly increased when dropping i
+    - e.g. 
+    ![Image](https://i.imgur.com/UkfNrsU.png) 
+  - VCG is weakly budget-balanced when the no single-agent effect is satisfied
+    - ![Image](https://i.imgur.com/JEFwWXu.png)
+- ![Image](https://i.imgur.com/pW2439C.png)
+  - VCG is as budget-balanced as any efficient mechanism can be if it's ex post individually rational
+    - satisfies weak budget balance in any case where any dominant strategy, efficient & ex interim (weaker than ex post) is able to
+
+## auctions
+- types of auctions
+  - English auction
+    - ordinary one
+  - Japanese auction
+    - the auctioneer increases the price continously, people choose when to give up, last person standing wins
+      - giving up is irreversible
+      - analytically more tractable than English
+  - Dutch auction
+    - the actioneer decreaces the price continously, the first one call you mine wins
+    - minimal communication
+  - first-price auction
+    - sealed bid
+    - the one writing the highest price wins
+    - strategically equivalent to Dutch auction
+      - bid less than valuation
+      - tradeoff between probability of winning & amount you pay
+      - no dominant strategy
+      - ![Image](https://i.imgur.com/WU7zzgN.png)
+        - ![Image](https://i.imgur.com/GMlRvrG.png)
+        ![Image](https://i.imgur.com/JfGjJh0.png)
+      - ![Image](https://i.imgur.com/pUDM8fZ.png)
+        - more people, you bid closer to your valuation
+    - async = True
+  - second-price auction
+    - sealed bid
+    - the one writing the highest price wins, but pays what the second-highest bidder writes
+    - is VCG
+      - when pivotal, I win and others get nothing when I participate, and the one with the second highest utility wins when I don't participate, so I pay the second highest bid (??????)
+    - dominant strategy is to bid your true value i.e. truth-telling
+  - all-pay auction
+    - sealed bid
+    - the one writing the highest price wins, but everyone pays what they writes
+- definition
+  - market-based (an exchange in terms of currency)
+  - mediated (has an auctioneer)
+  - well-specified (rules)
+    - rules for bidding
+    - rules for what information if revealed
+    - rules for clearing
+      - when it ends
+      - allocation
+      - payment
+- under independent private value (IPV) model, the dominant strategy is to bid your true value in English, Japenese & second-price auctions
+  - you see other bidders in English & Japanese, but under IPV, it makes no difference
+
+### revenue equivalence
+
 
 ## Contract Theory
 - mechanism design for the interactions between employer/seller & employee
