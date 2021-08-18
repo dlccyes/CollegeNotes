@@ -308,9 +308,50 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - you see other bidders in English & Japanese, but under IPV, it makes no difference
 
 ### revenue equivalence
+- ![Image](https://i.imgur.com/Noa5lCa.png)
+- kth order stastistics
+  - expected value of kth largest draw = $\dfrac{n+1-k}{n+1}v_{max}$
+    - $\dfrac{n-1}{n+1}v_{max}$ in second-price auction
+- 1st & 2nd price auctions satisfy the requirements of revenue equivalence theorem
+  - symmetric game → symmetric equivalence
+  - in a symmetric equilibrium, higher bid iff higher valuation
+    - person with highest valuation wins
+  - a 1st-price auction bidder bids his expected payment as he's the winner of a 2nd-price auction
+    - other n-1 values are uninformly drawn from [0, $v_i$]
+    - E[2nd-highest bid] = $\dfrac{(n-1)+1-1}{(n-1)+1}v_{i}=\dfrac{n-1}{n}v_i$
+    - 
+- proof
+  - 沒看
+  - https://www.coursera.org/learn/game-theory-2/lecture/ZfHhY/4-5-revenue-equivalence 8:40
+
+### optimal auctions
+- optimal reserve price in a second-price auction
+  - reserve price also acts as another bidder
+  - if 2 bids are uniformly drawn from [0,1], with reserve price = R
+    - both < R, $p=R^2$ → revenue = 0
+    - 1 above 1 below R, $p=(1-R)(R)$, revenue = R (2nd-highest bid)
+    - both >= R, $p=(1-R)^2$, revenue $\dfrac{1+R}{3}$
+      - ![Image](https://i.imgur.com/bZ3APDy.png)
+    - expected revenue = $\dfrac{1+3R^2-4R^3}{3}$
+      - max when R=$\dfrac{1}{2}$
+    - https://math.stackexchange.com/a/2213498 
+- virutal valuation
+  - ![Image](https://i.imgur.com/RHYmXp3.png)
+    - your valuation, adjusted
+  - ![Image](https://i.imgur.com/KP1I3E2.png)
+- Mayerson's optimal auction
+  - ![Image](https://i.imgur.com/9NBveBk.png)
+  ![Image](https://i.imgur.com/Rpy1eEz.png)
+  - sell to the agent with the highest virtual valuation
+    - the winner pay the critical valuation of being the winner
+  - the optimal is a second-price aunction
+    - ![Image](https://i.imgur.com/5ce1JHg.png)
+  - not VCG, not efficient
+    - can end up not selling
+  - virtual valuation makes weak bidders more competitive → higher bidder need to bids higher, increases the competition  
 
 
-## Contract Theory
+## Ch3 Contract Theory
 - mechanism design for the interactions between employer/seller & employee
 - solve assymetric
 - give incentive to self-reveal
@@ -321,10 +362,20 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - employee/buyer
     - user
     - device
+  - cooperative spectrum sharing example
+    - one dimensional, bilateral, static, adverse selection
+    - PU 跟 SU 買不用的資源
+      - PU = primary user
+      - SU = secondary user
+      - ![Image](https://i.imgur.com/3cGB57b.png)
+        - only moral hazard & only adverse selection 的情況都把 payment 壓成 0 bc 一方資訊透明(?)
+  - mobile crowdsourcing example
+    - multidimensional, moral hazard
 - employee's contraints
-  - incentive compatibility
+  - incentive compatibility, IC
     - contract maximize utility
-  - individual rationality
+    - local downward incentive constraints (LDIC) (?)
+  - individual rationality, IR
     - utility bigger than without contract
 - adverse selection
   - screening problem
