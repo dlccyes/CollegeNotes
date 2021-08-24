@@ -445,4 +445,31 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - RNN 簡化版
   - 只 update 最後層
   - hidden layer 不 connect (sparse) 且有 randomization
-  - 
+
+
+# privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL
+- cloud-edge computing
+  - three-layer
+    - edge devices, ED
+      - process data locally
+    - acccess points
+      - nearby edge servers
+      - upload to CC
+    - cloud center, CC
+      - further processing or aggregation
+  - minimize overall latency
+  - private data of ED entirely exposed to APs
+- federated learning (FL) scheme
+  - EDs train models locally and only upload models to upper layers
+  - preserve privacy while maintaining model accuracy
+- federated cloud-edge learning (FCEL) system
+  - EDs give models to AP and aggregate → partial model; APs give partial models to CC and aggregate → global model
+  - private data outputs may be attached by leveraging the sensitive information in these outputs (?)
+- differential privacy, DP
+  - upload model updates with noise pertubation for privacy
+  - avoids high computaion & communication overhead
+  - pertubations affect model → privacy-accuracy trade-off
+- goal
+  - optimal contract design problem
+    - APs motivate EDs to participate without knowing EDs' privacy senstivitiy
+    - CC determine the monetary incentive for lower layers for max model accuracy
