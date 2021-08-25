@@ -464,12 +464,26 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - preserve privacy while maintaining model accuracy
 - federated cloud-edge learning (FCEL) system
   - EDs give models to AP and aggregate → partial model; APs give partial models to CC and aggregate → global model
-  - private data outputs may be attached by leveraging the sensitive information in these outputs (?)
+  - private data outputs may be attached by leveraging the sensitive information in these outputs
+    - og data may be partially recovered (reverse engineer)
 - differential privacy, DP
   - upload model updates with noise pertubation for privacy
   - avoids high computaion & communication overhead
   - pertubations affect model → privacy-accuracy trade-off
+  - add Gaussian noise permuation
+    - noice scaler over a threashold → AP unable to revover data
+    - large noice scale → hard to converge
 - goal
   - optimal contract design problem
+    - obtain a global model with desired accuracy in a certain time period while preserving EDs' data privacy
     - APs motivate EDs to participate without knowing EDs' privacy senstivitiy
     - CC determine the monetary incentive for lower layers for max model accuracy
+      - CC pay APs, compensate what APs pay EDs
+      - APs pay EDs, compensate the data leakage of EDs
+        - choose different privacy budget
+        - contract theory
+      - constraints
+        - incentive compatibility, IC
+        - incentive rationality, IR
+        - privacy budget $\epsilon$ reasonable
+        - total rewards < total incentive
