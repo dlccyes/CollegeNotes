@@ -487,3 +487,6 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
         - incentive rationality, IR
         - privacy budget $\epsilon$ reasonable
         - total rewards < total incentive
+      - 3 layer Stackelberg game, TLSG
+        - CC 預期 APs & EDs 策略，先手
+
