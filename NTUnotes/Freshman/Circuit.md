@@ -1,4 +1,4 @@
-# 	電路學
+# 電路學
 
 powered by $\LaTeX$
 ## 共同網頁  
