@@ -356,19 +356,12 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 - solve assymetric
 - give incentive to self-reveal
 - in wireless network
-  - employer/seller
+  - employer/seller/PU/CC
     - service provider
     - base station
-  - employee/buyer
+  - employee/buyer/SU/ED
     - user
     - device
-  - cooperative spectrum sharing example
-    - one dimensional, bilateral, static, adverse selection
-    - PU 跟 SU 買不用的資源
-      - PU = primary user
-      - SU = secondary user
-      - ![Image](https://i.imgur.com/3cGB57b.png)
-        - only moral hazard & only adverse selection 的情況都把 payment 壓成 0 bc 一方資訊透明(?)
   - mobile crowdsourcing example
     - multidimensional, moral hazard
 - employee's contraints
@@ -401,6 +394,95 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
     - more complex
       - renegotiation & designing long-term contract
     - equivalent to market equilibrium
+### CRN spectrum scheme
+- one dimensional, bilateral, static, adverse selection
+- cooperative spectrum sharing
+- PU 跟 SU 買不用的資源
+  - PU = primary user
+  - SU = secondary user
+  - ![Image](https://i.imgur.com/3cGB57b.png)
+    - only moral hazard & only adverse selection 的情況都把 SU payoff 壓成 0 bc 資訊透明
+- down payment, t
+  - 頭款，簽訂合約時 SU 付的錢
+- installment payment, r
+  - 尾款，事成後 SU 付的錢
+- hidden information → adverse selection
+  - PU doesn't know SU's capability to complete the task
+  - SU's type
+    - higher → 成功率愈高 → PU decreases down payment, increase installment payment
+    - lower → 成功率愈低 → PU increases down payment, decrease installment payment
+    - trade-off between 拿到錢 & 更多勞工
+  - solution: PU offers different types of contracs to different types of SUs
+- hidden action → moral hazard
+  - PU doesn't know how much effort i.e. transmission power SU put in
+  - SU's operation cost $\psi=\frac{c}{2}e^2$
+    - c = cost coeff.
+    - e = effort
+  - solution: PU designs each contract carefullt
+- payoff
+  - SU
+    - $U_{SU_i}=\theta_ie_i(R-r_i)-t_i-\frac{c}{2}e_i^2$
+      - $\theta_i$ = $SU_i$'s capability
+      - $\theta_ie_i$ = $SU_i$'s probability to compete the task
+        - make c high enough s.t. $\theta_ie_i<1$
+      - R = revenue (if task completed)
+      - literal meaning: expected profit - down payment - operation cost
+  - PU
+    - $U_{PU_i}=t_i+\theta_ie_ir_i$
+    - literal meaning: down payment + operation installment payment
+    - $U_{PU}=\displaystyle{\sum_{i=1}^n}\beta_i(t_i+\theta_ie_ir_i)$
+      - $\beta_i$ = $SU_i$'s type
+  - social welfare
+    - sum of the expected payoff of SU & PU
+    - $U=\displaystyle{\sum_{i=1}^n}\beta_i(\theta_ie_iR-\frac{c}{2}e_i^2)$
+      - installment payment & down payment 為內力
+      - literal meaning: expected revenue - SU's operation cost
+- cases
+  - general case
+    - both moral hazard & adverse selection
+    - PU's payoff maximization problem
+      - $\displaystyle{\max_{(t_i,r_i)}\sum_{i=1}^n}\beta_i(t_i+\theta_ie_ir_i)$
+      - (IC) $\theta_ie_i(R-r_i)-t_i-\frac{c}{2}e_i^2\geq \theta_ie_i'(R-r_j)-t_j-\frac{c}{2}e_i'^2$
+        - SU 選擇最爽的合約簽
+      - (IR) $\theta_ie_i(R-r_i)-t_i-\frac{c}{2}e_i^2\geq 0$ 
+        - SU 簽合約比不簽還爽
+      - SU's optimal effort $e_i^*=\frac{1}{c}\theta_i(R-r_i)$
+        - 跟 down payment t 無關
+        - 代進去後用 lagrange multiplier 得 t 的 iterative 解
+  - extreme case
+    - only moral hazard
+      - no adverse selection i.e. PU knows SU's capability
+      - PU's problem
+        - $\displaystyle{\max_{(t_i,r_i)}}\space t_i+\frac{1}{c}\theta_i^2(R-r_i)r_i$
+        - IR
+      - solution
+        - $t_i=\frac{1}{2c}\theta_i^2R^2$
+        - $r_i=0$
+        - 只需要 down payment 而不需 installment payment
+    - only adverse selection
+      - no moral hazard → SU's effort fixed at $\hat{e}$
+      - solution
+        - $t_i=-\frac{1}{2}c\hat{e}^2<0$
+        - $r_i=R$
+        - PU asks 100% future revenue from SU
+        - PU pays the operation cost to SU for SU to join
+- discussion
+  - adverse selection
+    - SU has the incentive to choose the intended contract and reveal its true type
+  - moral hazard
+    - provide incentive for SU to reduce its operation cost
+      - if no moral hazard, when SU reduces the effort, PU will notice and redesign the contract to seize the means of production
+- financing contract analysis when only 2 type
+  - 2 types of SU
+    - $\theta_H$: high capability
+    - $\theta_L$: low capability
+  - results
+    - installment payment $r_H=0$ regardless of cost coeff. c, revenue R or probability $\beta$
+      - ![Image](https://i.imgur.com/NsphZca.png)
+      - $\theta_H$ 多金
+  - low down payment for $\theta_L$
+    ![Image](https://i.imgur.com/DKgRPtI.png)  
+    - $\theta_L$ 窮 → 大部分 payment 在拿到 revenue 後收
 
 ## Ch6 Learning in Games
 - sequential
@@ -447,7 +529,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - hidden layer 不 connect (sparse) 且有 randomization
 
 
-# privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL
+## privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL
 - cloud-edge computing
   - three-layer
     - edge devices, ED
@@ -477,7 +559,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - optimal contract design problem
     - obtain a global model with desired accuracy in a certain time period while preserving EDs' data privacy
     - APs motivate EDs to participate without knowing EDs' privacy senstivitiy
-    - CC determine the monetary incentive for lower layers for max model accuracy
+    - CC determine the monetary incentive for lower layers for max model accuracy, 3 layer Stackelberg game + optimal contract design problem
       - CC pay APs, compensate what APs pay EDs
       - APs pay EDs, compensate the data leakage of EDs
         - choose different privacy budget
@@ -489,4 +571,14 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
         - total rewards < total incentive
       - 3 layer Stackelberg game, TLSG
         - CC 預期 APs & EDs 策略，先手
-
+      - use gradient ascent to update coeff. until winthin threashold → optimized coeff.
+- results
+  - as noise scale increase, data leakage decrease & test loss increase exponentially
+  - APs ↑ $U_{CC}$ ↓；EDs ↑ $U_{CC}$ ↑
+  - comparison with DP-FedAvg
+    - DP-FedAvg
+      - only has CC & EDs
+    - PFCEL converges faster, achieves higher accuracy & lower test loss than DP-FedAvg
+  - test accuracy & test loss are close th those with zero noise scales
+  - EDs ↑ test accuracy ↑ test loss ↓
+    - non-i.i.d. degree of the whole data set decreases
