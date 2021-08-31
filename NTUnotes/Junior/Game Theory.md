@@ -400,8 +400,6 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 - PU 跟 SU 買不用的資源
   - PU = primary user
   - SU = secondary user
-  - ![Image](https://i.imgur.com/3cGB57b.png)
-    - only moral hazard & only adverse selection 的情況都把 SU payoff 壓成 0 bc 資訊透明
 - down payment, t
   - 頭款，簽訂合約時 SU 付的錢
 - installment payment, r
@@ -483,6 +481,49 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - low down payment for $\theta_L$
     ![Image](https://i.imgur.com/DKgRPtI.png)  
     - $\theta_L$ 窮 → 大部分 payment 在拿到 revenue 後收
+- system performance
+  - only moral hazard & only adverse selection 的情況都把 SU payoff 壓成 0 bc SU 其中一項資訊透明
+  - the 2 extreme cases can be the bounds of PU's payoff & social welfare
+    - moral hazard only → upper bound
+    - adverse selection only → lower bound
+  - cost coeff. ↑ payoff & social welfare ↓
+    - ![Image](https://i.imgur.com/loruMSN.png)
+  - revenue ↑ payoff & social welfare ↑
+    - ![Image](https://i.imgur.com/mMuElAI.png)
+  - distribution ↑ PU's payoff & social welfare ↑
+    - PU will ask more money if SU is belived to be a highly capable one → $\beta$  has a negative effect on SU'spayoff
+    - ![Image](https://i.imgur.com/10MgfM6.png)
+
+## Ch4 stochastic game
+- absorbing state
+  - 不會再變的 state
+  - have a absorbing state → finite stages
+- payoffs at every stage depends on the state
+  - repeated game: payoff matrix same for every stage, i.e. only has 1 state
+- only 1 player → markov decision process (like 交電?)
+- transition probability depend on the state & the actions of the playsers
+  - only depend on 1 player → single-controller stochastic game
+- the evolution of state can follow a Markov process or DEs
+- stationary strategies
+  - mixed stategies depending only one the current state
+    - not on time
+    - not on past actions or states
+  - always play the mixed action $\sigma_{i,s}$ at state $s\in S$
+- finite-horizon stochastic game
+  - finite stages
+- infinite-horizon stochastic game
+  - infinite stages
+- discounte payoff
+  - current money is better than future money
+  - discount factor $\delta \in (0,1)$
+- $\epsilon$-Nash equilibrium
+  - near-Nash equilibrium
+  - $\epsilon=1$ → Nash equilibriums
+  - discounted infinite-horizon stochastic game
+- two-player, zero-sum stochastic game
+  - at most 1 eq payoff at every initial state $s_1$ (?)
+    - the value of the game
+- every stochastic game with finite state and action space admits a $\delta$-discounted Nash equilibrium in stationary strategies
 
 ## Ch6 Learning in Games
 - sequential
