@@ -571,6 +571,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 
 
 ## privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL
+### intro
 - cloud-edge computing
   - three-layer
     - edge devices, ED
@@ -596,30 +597,55 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - add Gaussian noise permuation
     - noice scaler over a threashold → AP unable to revover data
     - large noice scale → hard to converge
-- goal
-  - optimal contract design problem
-    - obtain a global model with desired accuracy in a certain time period while preserving EDs' data privacy
-    - APs motivate EDs to participate without knowing EDs' privacy senstivitiy
-    - CC determine the monetary incentive for lower layers for max model accuracy, 3 layer Stackelberg game + optimal contract design problem
-      - CC pay APs, compensate what APs pay EDs
-      - APs pay EDs, compensate the data leakage of EDs
-        - choose different privacy budget
-        - contract theory
-      - constraints
-        - incentive compatibility, IC
-        - incentive rationality, IR
-        - privacy budget $\epsilon$ reasonable
-        - total rewards < total incentive
-      - 3 layer Stackelberg game, TLSG
-        - CC 預期 APs & EDs 策略，先手
-      - use gradient ascent to update coeff. until winthin threashold → optimized coeff.
-- results
-  - as noise scale increase, data leakage decrease & test loss increase exponentially
-  - APs ↑ $U_{CC}$ ↓；EDs ↑ $U_{CC}$ ↑
-  - comparison with DP-FedAvg
-    - DP-FedAvg
-      - only has CC & EDs
-    - PFCEL converges faster, achieves higher accuracy & lower test loss than DP-FedAvg
-  - test accuracy & test loss are close th those with zero noise scales
-  - EDs ↑ test accuracy ↑ test loss ↓
-    - non-i.i.d. degree of the whole data set decreases
+### goal & model
+- optimal contract design problem
+  - obtain a global model with desired accuracy in a certain time period while preserving EDs' data privacy
+  - APs motivate EDs to participate without knowing EDs' privacy senstivitiy
+  - CC determine the monetary incentive for lower layers for max model accuracy, 3 layer Stackelberg game + optimal contract design problem
+    - CC pay APs, compensate what APs pay EDs
+    - APs pay EDs, compensate the data leakage of EDs
+      - choose different privacy budget
+      - contract theory
+    - constraints
+      - incentive compatibility, IC
+      - incentive rationality, IR
+      - privacy budget $\epsilon$ reasonable
+      - total rewards < total incentive
+    - 3 layer Stackelberg game, TLSG
+      - CC 預期 APs & EDs 策略，先手
+    - use gradient ascent to update coeff. until winthin threashold → optimized coeff.
+### results
+- as noise scale increase, data leakage decrease & test loss increase exponentially
+- APs ↑ $U_{CC}$ ↓；EDs ↑ $U_{CC}$ ↑
+- comparison with DP-FedAvg
+  - DP-FedAvg
+    - only has CC & EDs
+  - PFCEL converges faster, achieves higher accuracy & lower test loss than DP-FedAvg
+- test accuracy & test loss are close th those with zero noise scales
+- EDs ↑ test accuracy ↑ test loss ↓
+  - non-i.i.d. degree of the whole data set decreases
+
+## Single Controller Stochastic Games for Optimized MOving Target Defense
+### intro
+- strategically change its cryptographic techniques & keys
+  - deter the attacker
+- single-controller
+  - only the defender controls the state of the game
+- moving target defense, MTD
+  - continously randomizing the network's configuration
+    - crypto keys, network parameters, IP addresses
+    - increase the uncertainty & cost of attack
+  - three-layer model
+    - low-level contexts in separate programs
+    - model damage propagation between different programs
+    - UI for results
+  - a subclass of system agility
+    - system agility: how efficiently the IT infrastructure of an organization can respond to external stimuli
+
+### proposed model
+- single-controller non-zero-sum stochastic game
+- resource-contrained system
+  - avoid long encryption key
+    - short key more vulnerable, but with MTD, will be unlikely to be revealed before it's changed
+- Nash equilibrium always exists
+- higher defender utility than other randomly picking stategies scheme

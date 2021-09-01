@@ -1,0 +1,118 @@
+{
+  "main": {
+    "id": "1b402d92eb4c7cba",
+    "type": "split",
+    "children": [
+      {
+        "id": "5ec0e2bfa62a98eb",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "NTUnotes/Junior/Game Theory.md",
+            "mode": "source"
+          }
+        },
+        "group": "77a4f2b7f058d671"
+      },
+      {
+        "id": "ad39008e3d03113d",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "NTUnotes/Junior/Game Theory.md",
+            "mode": "preview"
+          }
+        },
+        "group": "77a4f2b7f058d671"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0fe5b284af533779",
+    "type": "split",
+    "children": [
+      {
+        "id": "50c7126381c3c50e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "31c495f90fbbb098",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "08d4cac0dcdd96fa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "\"對 a&c c\"",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "397d85049a348154",
+    "type": "split",
+    "children": [
+      {
+        "id": "9fe64eabbf67d148",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "741d7754dcff9fac",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "NTUnotes/Junior/Game Theory.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8366180746c675d2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "NTUnotes/Junior/Game Theory.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "5ec0e2bfa62a98eb",
+  "lastOpenFiles": [
+    "NTUnotes/Junior/Game Theory.md"
+  ]
+}
