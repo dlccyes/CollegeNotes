@@ -1,0 +1,15 @@
+{
+  "command_timeout": 5,
+  "template_folder": "obs_template",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "script_folder": "obs_templatejs",
+  "syntax_highlighting": true
+}

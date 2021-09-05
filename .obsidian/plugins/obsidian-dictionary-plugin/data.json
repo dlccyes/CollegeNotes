@@ -1,7 +1,7 @@
 {
   "defaultLanguage": "cn",
-  "shouldShowSynonymPopover": true,
-  "shouldShowCustomContextMenu": false,
+  "shouldShowSynonymPopover": false,
+  "shouldShowCustomContextMenu": true,
   "definitionApiName": "Offline Dictionary",
   "synonymApiName": "",
   "partOfSpeechApiName": "Systran API",

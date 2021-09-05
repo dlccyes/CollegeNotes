@@ -18,12 +18,12 @@
     {
       "path": "NTUnotes/Junior",
       "date": "2021-09-06",
-      "size": 30165
+      "size": 30177
     },
     {
       "path": "/",
       "date": "2021-09-06",
-      "size": 343839
+      "size": 344002
     }
   ],
   "activityHistory": [
@@ -32,7 +32,7 @@
       "size": [
         {
           "date": "2021-09-06",
-          "value": 25
+          "value": 37
         }
       ]
     },
@@ -41,7 +41,7 @@
       "size": [
         {
           "date": "2021-09-06",
-          "value": 25
+          "value": 188
         }
       ]
     }

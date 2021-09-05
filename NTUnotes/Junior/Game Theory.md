@@ -497,7 +497,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
     - PU will ask more money if SU is belived to be a highly capable one → $\beta$  has a negative effect on SU'spayoff
     - ![Image](https://i.imgur.com/10MgfM6.png)
 
-## Ch4 stochastic game
+## Ch4 [[stochastic game]]
 - absorbing state
   - 不會再變的 state
   - have a absorbing state → finite stages
@@ -516,12 +516,12 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - finite stages
 - infinite-horizon stochastic game
   - infinite stages
-- discounte payoff
+- discounted payoff
   - current money is better than future money
   - discount factor $\delta \in (0,1)$
 - $\epsilon$-Nash equilibrium
   - near-Nash equilibrium
-  - $\epsilon=1$ → Nash equilibriums
+  - $\epsilon=1$ → Nash equilibrium
   - discounted infinite-horizon stochastic game
 - two-player, zero-sum stochastic game
   - at most 1 eq payoff at every initial state $s_1$ (?)

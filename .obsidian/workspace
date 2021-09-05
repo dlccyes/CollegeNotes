@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "5e6b7c248cb59bd9",
+        "id": "175f0fc477b728a8",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTUnotes/Junior/Game Theory.md",
+            "file": "NTUnotes/Freshman/MicroEconomics/Ch16 The Market of Labor.md",
             "mode": "source"
           }
         },
-        "group": "7e7b342d685d92d6"
+        "group": "9baa288a32ccde11"
       },
       {
-        "id": "963e7e0ce93d3d77",
+        "id": "351a89f9ed8bdc9c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTUnotes/Junior/Game Theory.md",
+            "file": "NTUnotes/Freshman/MicroEconomics/Ch16 The Market of Labor.md",
             "mode": "preview"
           }
         },
-        "group": "7e7b342d685d92d6"
+        "group": "9baa288a32ccde11"
       }
     ],
     "direction": "vertical"
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "displaystyle",
+                "query": "tag:#GT_Papers",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "397d85049a348154",
@@ -90,14 +89,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NTUnotes/Junior/Game Theory.md",
+                "file": "NTUnotes/Freshman/MicroEconomics/Ch16 The Market of Labor.md",
                 "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
+                "extraContext": true,
+                "sortOrder": "byModifiedTime",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               }
             }
           },
@@ -107,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NTUnotes/Junior/Game Theory.md"
+                "file": "NTUnotes/Freshman/MicroEconomics/Ch16 The Market of Labor.md"
               }
             }
           },
@@ -137,17 +136,17 @@
     "direction": "horizontal",
     "width": 239
   },
-  "active": "963e7e0ce93d3d77",
+  "active": "351a89f9ed8bdc9c",
   "lastOpenFiles": [
-    "NTUnotes/Junior/Game Theory.md",
-    "obs_autolink/second-price auction.md",
+    "NTUnotes/Freshman/MicroEconomics/Ch16 The Market of Labor.md",
+    "obs_autolink/Bayesian game.md",
     "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
-    "NTUnotes/Sophomore/Data Structure.md",
-    "NTUnotes/Sophomore/Money and Banking/Ch4 現值與利率.md",
-    "obs_autolink/VCG.md",
-    "NTUnotes/Junior/Game Theory Papers/privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL.md",
-    "NTUnotes/Sophomore/Money and Banking/Ch7 金融體系的經濟分析.md",
-    "NTUnotes/Sophomore/Money and Banking/Ch1 前導.md",
-    "obs_autolink/Game Theory Papers.md"
+    "obs_autolink/adverse selection.md",
+    "obs_autolink/stochastic game.md",
+    "obs_autolink/Untitled.md",
+    "obs_autolink/individual rationality.md",
+    "obs_autolink/殭屍企業.md",
+    "obs_templatejs/test.js.md",
+    "obs_autolink/VCG.md"
   ]
 }

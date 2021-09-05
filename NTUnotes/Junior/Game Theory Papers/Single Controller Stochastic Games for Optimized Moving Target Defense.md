@@ -21,7 +21,7 @@ tags: GT_Papers
     - system agility: how efficiently the IT infrastructure of an organization can respond to external stimuli
 
 ## proposed model
-- single-controller discounted non-zero sum finite stochastic game
+- single-controller discounted non-zero sum finite [[stochastic game]]
 - resource-contrained system
   - avoid long encryption key
     - short key more vulnerable, but with MTD, will be unlikely to be revealed before it's changed
@@ -49,7 +49,7 @@ tags: GT_Papers
   - when no player can improve its utility solely by changint is actions 
   - discounted utilities → must have Nash equilibrium in stationary strategies
   - form a bimatrix game
-- defender controls the time steps of the stochastic game
+- defender controls the time steps of the [[stochastic game]]
   - choose time step $t<min(t_i)$, $i=1:N$
     - $t_i$ = brute-force time for technique $i$
 - MTD cost
