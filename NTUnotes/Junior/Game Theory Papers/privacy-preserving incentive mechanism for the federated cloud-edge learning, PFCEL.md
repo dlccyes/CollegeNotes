@@ -1,8 +1,8 @@
 ---
 tags: GT_Papers
 ---
-#[[Game Theory]] 
-#[[Game Theory Papers]]
+[[Game Theory]] 
+[[Game Theory Papers]]
 # privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL
 ## intro
 - cloud-edge computing

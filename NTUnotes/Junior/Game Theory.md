@@ -1,3 +1,6 @@
+```ActivityHistory
+/
+```
 # Game Theory
 
 ## [[Bayesian game]]
@@ -179,7 +182,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - ![Image](https://i.imgur.com/OZO2mNU.png)
   - payment rule
     - depend on others
-- Vickrey-Clarke-Groves, VCG mechanism
+- Vickrey-Clarke-Groves, [[VCG]] mechanism
   - pivotal mechanism
   - ![Image](https://i.imgur.com/U9dsU4N.png)
   - payment function = max of everyone else's utility when excluding you - when including you ($i$)
@@ -192,7 +195,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
     - internalize the externality of your choice
       - how your choice affect others will impact your payment
 - Green-Laffont Theorem
-  - ![Image](https://i.imgur.com/Wai3Fq1.png)
+	- ![Image](https://i.imgur.com/Wai3Fq1.png)
   - truthful reporting is a dominant strategy only if it's Groves mechanism
 - e.g.
   - selfish routing
@@ -365,10 +368,10 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - mobile crowdsourcing example
     - multidimensional, [[moral hazard]]
 - employee's contraints
-  -[[ incentive compatibility]], IC
+  - [ incentive compatibility]], IC
     - contract maximize utility
     - local downward incentive constraints (LDIC) (?)
-  -[[ individual rationality]], IR
+  - [[individual rationality]], IR
     - utility bigger than without contract
 - [[adverse selection]]
   - screening problem

@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "5c443fa5145ff38f",
+        "id": "5e6b7c248cb59bd9",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "obs_autolink/Bayesian game.md",
+            "file": "NTUnotes/Junior/Game Theory.md",
             "mode": "source"
           }
         },
-        "group": "3af5f547d7346fd0"
+        "group": "7e7b342d685d92d6"
       },
       {
-        "id": "6ae4b5dd6d99325f",
+        "id": "963e7e0ce93d3d77",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "obs_autolink/Bayesian game.md",
+            "file": "NTUnotes/Junior/Game Theory.md",
             "mode": "preview"
           }
         },
-        "group": "3af5f547d7346fd0"
+        "group": "7e7b342d685d92d6"
       }
     ],
     "direction": "vertical"
@@ -52,20 +52,29 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#GT_Papers",
-                "matchingCase": false,
+                "query": "displaystyle",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "650735466c496e0c",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "397d85049a348154",
@@ -81,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "obs_autolink/Bayesian game.md",
+                "file": "NTUnotes/Junior/Game Theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "obs_autolink/Bayesian game.md"
+                "file": "NTUnotes/Junior/Game Theory.md"
               }
             }
           },
@@ -112,6 +121,14 @@
                 "useHierarchy": true
               }
             }
+          },
+          {
+            "id": "77ac7ca10a89385d",
+            "type": "leaf",
+            "state": {
+              "type": "dictionary-view",
+              "state": {}
+            }
           }
         ],
         "currentTab": 1
@@ -120,17 +137,17 @@
     "direction": "horizontal",
     "width": 239
   },
-  "active": "5c443fa5145ff38f",
+  "active": "963e7e0ce93d3d77",
   "lastOpenFiles": [
-    "obs_autolink/Bayesian game.md",
     "NTUnotes/Junior/Game Theory.md",
+    "obs_autolink/second-price auction.md",
     "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
+    "NTUnotes/Sophomore/Data Structure.md",
+    "NTUnotes/Sophomore/Money and Banking/Ch4 現值與利率.md",
+    "obs_autolink/VCG.md",
     "NTUnotes/Junior/Game Theory Papers/privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL.md",
-    "NTUnotes/Junior/Game Theory Papers/Single Controller Stochastic Games for Optimized Moving Target Defense.md",
-    "obs_autolink/Game Theory Papers.md",
-    "NTUnotes/Freshman/MicroEconomics/Ch4 Consumers in Marketplace.md",
-    "typora tutorial/Use Images in Typora.md",
-    "NTUnotes/Freshman/Biology/莊曜宇.md",
-    "NTUnotes/Freshman/MicroEconomics/Ch15 The Demand for Factors of Production.md"
+    "NTUnotes/Sophomore/Money and Banking/Ch7 金融體系的經濟分析.md",
+    "NTUnotes/Sophomore/Money and Banking/Ch1 前導.md",
+    "obs_autolink/Game Theory Papers.md"
   ]
 }

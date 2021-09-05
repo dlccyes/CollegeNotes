@@ -7,5 +7,6 @@
   "attachmentFolderPath": "obs_attachment",
   "foldIndent": true,
   "foldHeading": true,
-  "showLineNumber": true
+  "showLineNumber": true,
+  "spellcheck": true
 }

@@ -1,0 +1,57 @@
+{
+  "firstRun": false,
+  "initialized": [
+    {
+      "path": "NTUnotes/Junior",
+      "initialized": true
+    },
+    {
+      "path": "/",
+      "initialized": true
+    }
+  ],
+  "trackedProjects": [
+    "NTUnotes/Junior",
+    "/"
+  ],
+  "checkpointList": [
+    {
+      "path": "NTUnotes/Junior",
+      "date": "2021-09-06",
+      "size": 30165
+    },
+    {
+      "path": "/",
+      "date": "2021-09-06",
+      "size": 343839
+    }
+  ],
+  "activityHistory": [
+    {
+      "path": "NTUnotes/Junior",
+      "size": [
+        {
+          "date": "2021-09-06",
+          "value": 25
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "size": [
+        {
+          "date": "2021-09-06",
+          "value": 25
+        }
+      ]
+    }
+  ],
+  "activityColor1": "#c6e48b",
+  "activityColor2": "#7bc96f",
+  "activityColor3": "#239a3b",
+  "activityColor4": "#196127",
+  "textColor": "#000000",
+  "emptyColor": "#ecedf0",
+  "cellRadius": 1,
+  "type": "yearly"
+}

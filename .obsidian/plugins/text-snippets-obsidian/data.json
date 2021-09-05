@@ -1,0 +1,12 @@
+{
+  "snippets_file": "snippets : It is an obsidian plugin, that replaces your selected text.\nfrac : $\\frac{}{}$\nsum : $\\displaystyle\\sum_{i=1}^{n}$",
+  "snippets": [
+    "snippets : It is an obsidian plugin, that replaces your selected text.",
+    "frac : $\\frac{}{}$",
+    "sum : $\\displaystyle\\sum_{i=1}^{n}$"
+  ],
+  "endSymbol": "$end$",
+  "newlineSymbol": "$nl$",
+  "stopSymbol": "$tb$",
+  "useTab": false
+}
