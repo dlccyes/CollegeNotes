@@ -1,6 +1,6 @@
 # Game Theory
 
-## Bayesian game
+## [[Bayesian game]]
 - https://www.youtube.com/watch?v=E0_CA9TwZ8c
 - 先把 dominated 刪掉
 在依據機率算出混合 strategic form
@@ -127,7 +127,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 - indirect relevation mechanism
   - agents are asked to send messages other than preferences
   - imperfect information Bayesian extensive form game
-- relevation principle
+- [[relevation principle]] ^ad0bd2
   - if a social choice function can be implemented by any mechanism, then it can be also implemented by a truth-telling direct revelation mechanism
     - 在 original (complicated) mechanism 外面 fascade 一層，把 truth map 成各成員想要 play 的 strategy → 各成員會想要 play truthfully (對於 original mechanism 來說各成員 strategy 不變)
       - 那層 fascade 等同於 agent 的 mentira function
@@ -154,11 +154,11 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - weak budge balance
     - \>=
     - 不虧就好
-- individual rationality
-  - ex interim individual rationality
+- [[individual rationality]]
+  - ex interim [[individual rationality]]
     - ![Image](https://i.imgur.com/vBBKqRS.png)
     - 參加這個 mechanism，average over the possible valuations for other agents 時，淨效益 >= 0
-  - ex post individual rationality
+  - ex post [[individual rationality]]
     - ![Image](https://i.imgur.com/wdDp8P3.png)
     - equilibrium 時淨效益 >= 0
     - stronger than ex interim
@@ -213,7 +213,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
     - so VCG is susceptible to collusion
 - not frugal
   - payment is unbounded, might be more than what an agent's willing to accept
-    - → violate individual rationality
+    - → violate [[individual rationality]]
   - ![Image](https://i.imgur.com/lk57Unw.png)
 - revenue monotonicity violated
   - ![Image](https://i.imgur.com/lbTfQ17.png)
@@ -230,7 +230,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - significance: there exist inefficient trades
 
 ### breaking limitations
-- to satisfy individual rationality
+- to satisfy [[individual rationality]]
   - choice-set monotonicity
     - the set of choices with one agent removed is a subset of when the agent is involved
     - ![Image](https://i.imgur.com/Er6jXd3.png)
@@ -285,7 +285,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
       - ![Image](https://i.imgur.com/pUDM8fZ.png)
         - more people, you bid closer to your valuation
     - async = True
-  - second-price auction
+  - [[second-price auction]]
     - sealed bid
     - the one writing the highest price wins, but pays what the second-highest bidder writes
     - is VCG
@@ -311,7 +311,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 - ![Image](https://i.imgur.com/Noa5lCa.png)
 - kth order stastistics
   - expected value of kth largest draw = $\dfrac{n+1-k}{n+1}v_{max}$
-    - $\dfrac{n-1}{n+1}v_{max}$ in second-price auction
+    - $\dfrac{n-1}{n+1}v_{max}$ in [[second-price auction]]
 - 1st & 2nd price auctions satisfy the requirements of revenue equivalence theorem
   - symmetric game → symmetric equivalence
   - in a symmetric equilibrium, higher bid iff higher valuation
@@ -325,7 +325,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - https://www.coursera.org/learn/game-theory-2/lecture/ZfHhY/4-5-revenue-equivalence 8:40
 
 ### optimal auctions
-- optimal reserve price in a second-price auction
+- optimal reserve price in a [[second-price auction]]
   - reserve price also acts as another bidder
   - if 2 bids are uniformly drawn from [0,1], with reserve price = R
     - both < R, $p=R^2$ → revenue = 0
@@ -363,26 +363,26 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
     - user
     - device
   - mobile crowdsourcing example
-    - multidimensional, moral hazard
+    - multidimensional, [[moral hazard]]
 - employee's contraints
-  - incentive compatibility, IC
+  -[[ incentive compatibility]], IC
     - contract maximize utility
     - local downward incentive constraints (LDIC) (?)
-  - individual rationality, IR
+  -[[ individual rationality]], IR
     - utility bigger than without contract
-- adverse selection
+- [[adverse selection]]
   - screening problem
     - uninformed party offer the contract
-    - solve adverse selection ny using relevation principle
+    - solve [[adverse selection]] ny using [[relevation principle]]
       - force the informed party to choose the contract that reveil its status
       - offer multiple contracts intended for employees with different skill levels
-- most incentive problems are a combination of both adverse selection & moral hazard
+- most incentive problems are a combination of both [[adverse selection]] & [[moral hazard]]
 - bilateral & multilateral
   - bilateral
     - one-to-one
   - multilateral
     - one-to-many
-    - multilateral adverse selection ~ auction
+    - multilateral [[adverse selection]] ~ auction
 - one & multi-dimensional
   - how many you consider
 - static & repeated
@@ -395,7 +395,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
       - renegotiation & designing long-term contract
     - equivalent to market equilibrium
 ### CRN spectrum scheme
-- one dimensional, bilateral, static, adverse selection
+- one dimensional, bilateral, static, [[adverse selection]]
 - cooperative spectrum sharing
 - PU 跟 SU 買不用的資源
   - PU = primary user
@@ -404,14 +404,14 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - 頭款，簽訂合約時 SU 付的錢
 - installment payment, r
   - 尾款，事成後 SU 付的錢
-- hidden information → adverse selection
+- hidden information → [[adverse selection]]
   - PU doesn't know SU's capability to complete the task
   - SU's type
     - higher → 成功率愈高 → PU decreases down payment, increase installment payment
     - lower → 成功率愈低 → PU increases down payment, decrease installment payment
     - trade-off between 拿到錢 & 更多勞工
   - solution: PU offers different types of contracs to different types of SUs
-- hidden action → moral hazard
+- hidden action → [[moral hazard]]
   - PU doesn't know how much effort i.e. transmission power SU put in
   - SU's operation cost $\psi=\frac{c}{2}e^2$
     - c = cost coeff.
@@ -437,7 +437,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
       - literal meaning: expected revenue - SU's operation cost
 - cases
   - general case
-    - both moral hazard & adverse selection
+    - both [[moral hazard]] & [[adverse selection]]
     - PU's payoff maximization problem
       - $\displaystyle{\max_{(t_i,r_i)}\sum_{i=1}^n}\beta_i(t_i+\theta_ie_ir_i)$
       - (IC) $\theta_ie_i(R-r_i)-t_i-\frac{c}{2}e_i^2\geq \theta_ie_i'(R-r_j)-t_j-\frac{c}{2}e_i'^2$
@@ -448,8 +448,8 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
         - 跟 down payment t 無關
         - 代進去後用 lagrange multiplier 得 t 的 iterative 解
   - extreme case
-    - only moral hazard
-      - no adverse selection i.e. PU knows SU's capability
+    - only [[moral hazard]]
+      - no [[adverse selection]] i.e. PU knows SU's capability
       - PU's problem
         - $\displaystyle{\max_{(t_i,r_i)}}\space t_i+\frac{1}{c}\theta_i^2(R-r_i)r_i$
         - IR
@@ -457,19 +457,19 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
         - $t_i=\frac{1}{2c}\theta_i^2R^2$
         - $r_i=0$
         - 只需要 down payment 而不需 installment payment
-    - only adverse selection
-      - no moral hazard → SU's effort fixed at $\hat{e}$
+    - only [[adverse selection]]
+      - no [[moral hazard]] → SU's effort fixed at $\hat{e}$
       - solution
         - $t_i=-\frac{1}{2}c\hat{e}^2<0$
         - $r_i=R$
         - PU asks 100% future revenue from SU
         - PU pays the operation cost to SU for SU to join
 - discussion
-  - adverse selection
+  - [[adverse selection]]
     - SU has the incentive to choose the intended contract and reveal its true type
-  - moral hazard
+  - [[moral hazard]]
     - provide incentive for SU to reduce its operation cost
-      - if no moral hazard, when SU reduces the effort, PU will notice and redesign the contract to seize the means of production
+      - if no [[moral hazard]], when SU reduces the effort, PU will notice and redesign the contract to seize the means of production
 - financing contract analysis when only 2 type
   - 2 types of SU
     - $\theta_H$: high capability
@@ -482,10 +482,10 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
     ![Image](https://i.imgur.com/DKgRPtI.png)  
     - $\theta_L$ 窮 → 大部分 payment 在拿到 revenue 後收
 - system performance
-  - only moral hazard & only adverse selection 的情況都把 SU payoff 壓成 0 bc SU 其中一項資訊透明
+  - only [[moral hazard]] & only [[adverse selection]] 的情況都把 SU payoff 壓成 0 bc SU 其中一項資訊透明
   - the 2 extreme cases can be the bounds of PU's payoff & social welfare
-    - moral hazard only → upper bound
-    - adverse selection only → lower bound
+    - [[moral hazard]] only → upper bound
+    - [[adverse selection]] only → lower bound
   - cost coeff. ↑ payoff & social welfare ↓
     - ![Image](https://i.imgur.com/loruMSN.png)
   - revenue ↑ payoff & social welfare ↑
@@ -500,7 +500,7 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - have a absorbing state → finite stages
 - payoffs at every stage depends on the state
   - repeated game: payoff matrix same for every stage, i.e. only has 1 state
-- only 1 player → markov decision process (like 交電?)
+- only 1 player → markov decision process (like 交電)
 - transition probability depend on the state & the actions of the playsers
   - only depend on 1 player → single-controller stochastic game
 - the evolution of state can follow a Markov process or DEs
@@ -568,136 +568,3 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - RNN 簡化版
   - 只 update 最後層
   - hidden layer 不 connect (sparse) 且有 randomization
-
-
-## privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL
-### intro
-- cloud-edge computing
-  - three-layer
-    - edge devices, ED
-      - process data locally
-    - acccess points
-      - nearby edge servers
-      - upload to CC
-    - cloud center, CC
-      - further processing or aggregation
-  - minimize overall latency
-  - private data of ED entirely exposed to APs
-- federated learning (FL) scheme
-  - EDs train models locally and only upload models to upper layers
-  - preserve privacy while maintaining model accuracy
-- federated cloud-edge learning (FCEL) system
-  - EDs give models to AP and aggregate → partial model; APs give partial models to CC and aggregate → global model
-  - private data outputs may be attached by leveraging the sensitive information in these outputs
-    - og data may be partially recovered (reverse engineer)
-- differential privacy, DP
-  - upload model updates with noise pertubation for privacy
-  - avoids high computaion & communication overhead
-  - pertubations affect model → privacy-accuracy trade-off
-  - add Gaussian noise permuation
-    - noice scaler over a threashold → AP unable to revover data
-    - large noice scale → hard to converge
-### goal & model
-- optimal contract design problem
-  - obtain a global model with desired accuracy in a certain time period while preserving EDs' data privacy
-  - APs motivate EDs to participate without knowing EDs' privacy senstivitiy
-  - CC determine the monetary incentive for lower layers for max model accuracy, 3 layer Stackelberg game + optimal contract design problem
-    - CC pay APs, compensate what APs pay EDs
-    - APs pay EDs, compensate the data leakage of EDs
-      - choose different privacy budget
-      - contract theory
-    - constraints
-      - incentive compatibility, IC
-      - incentive rationality, IR
-      - privacy budget $\epsilon$ reasonable
-      - total rewards < total incentive
-    - 3 layer Stackelberg game, TLSG
-      - CC 預期 APs & EDs 策略，先手
-    - use gradient ascent to update coeff. until winthin threashold → optimized coeff.
-### results
-- as noise scale increase, data leakage decrease & test loss increase exponentially
-- APs ↑ $U_{CC}$ ↓；EDs ↑ $U_{CC}$ ↑
-- comparison with DP-FedAvg
-  - DP-FedAvg
-    - only has CC & EDs
-  - PFCEL converges faster, achieves higher accuracy & lower test loss than DP-FedAvg
-- test accuracy & test loss are close th those with zero noise scales
-- EDs ↑ test accuracy ↑ test loss ↓
-  - non-i.i.d. degree of the whole data set decreases
-
-## Single Controller Stochastic Games for Optimized MOving Target Defense
-### intro
-- strategically change its cryptographic techniques & keys
-  - deter the attacker
-- single-controller
-  - only the defender controls the state of the game
-- moving target defense, MTD
-  - continously randomizing the network's configuration
-    - crypto keys, network parameters, IP addresses
-    - increase the uncertainty & cost of attack
-  - three-layer model
-    - low-level contexts in separate programs
-    - model damage propagation between different programs
-    - UI for results
-  - a subclass of system agility
-    - system agility: how efficiently the IT infrastructure of an organization can respond to external stimuli
-
-### proposed model
-- single-controller discounted non-zero sum finite stochastic game
-- resource-contrained system
-  - avoid long encryption key
-    - short key more vulnerable, but with MTD, will be unlikely to be revealed before it's changed
-- Nash equilibrium always exists
-- higher defender utility than other randomly picking stategies scheme
-- defender's utility
-  - $U_1(a^1,a^2,s_i)=R_1(a^2)+T_1(a^1,a^2,s_i)-P_1(s_i)$
-  - $R_1$ = reward from protecting a packet
-    - depends on attacker's action
-      - attack false technique → stonk
-  - $P_1$ = power used to decrypt a packet
-    - depends on current state (technique)
-  - $T_1$ = transition reward from applying MTD & choose a key-technique combination
-    - depends on current state, defender's action & attacker's action
-- attacker's utility
-  - $U_2(a^1,a^2,s_i)=R_2(a^1,a^2,s_i)-P_2(s_i)$
-  - $R_2$ = reward from examining the encryption key
-    - depends on current state (encryption technique), defender's action & attacker's action
-  - $P_2$ = power used to decrypt a packet
-    - depends on current state (technique)
-- non-zero sum
-- transition probabilities in $P$ deoends only on defender's actions
-  - → single-controller stochastic games
-- equilibrium
-  - when no player can improve its utility solely by changint is actions 
-  - discounted utilities → must have Nash equilibrium in stationary strategies
-  - form a bimatrix game
-- defender controls the time steps of the stochastic game
-  - choose time step $t<min(t_i)$, $i=1:N$
-    - $t_i$ = brute-force time for technique $i$
-- MTD cost
-  - reconfiguring the system & changing parameters
-  - inform all nodes
-    - propagation time
-  - cost $C(q,n)$
-    - n = consecutive changes during the past time steps (?)
-      - n=0 in the 1st step
-    - q = cost value (?)
-    - $C(q,n)=q\cdot n$
-    - $C(q,n)=q\cdot ln(n+1)$
-
-### simulation results
-- 2 encryption techniques & 2 keys per techniques
-  - 4 states
-  - defender has 4 actions each state
-  - attacker has $2^4=16$ different strategy permuations
-  - defender has $2^4=256$ different strategy permuations
-- probability of moving to a state with similar key < moving to a state with different techniques
-  - transition reward lower for the former
-- probability of attacking the same technique as the current state > attacking other technique
-- utility of all states increase as discount factor increases
-  - discount factor ↑ → defender care more about future rewards → choose actions that will increase future rewards
-- 跟 equal probability 相比
-  - defender's expected utility 都比較高
-  - discount factor 愈大差得愈多
-    - consider more state changes in the future → differ more from equal probabilities
-- technique 用 less power 愈爽

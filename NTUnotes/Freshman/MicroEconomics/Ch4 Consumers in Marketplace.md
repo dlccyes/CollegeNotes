@@ -124,7 +124,7 @@ X4 - X1 < 3(X2 - X1)
 - 作業題目
 
     個經作業, Ch.4
-    1. Landsburg, Ch.4, numerical exercises, #N1.
+    1. Landsburg, Ch.4, numerical exercises, \#N1.
     2. Landsburg, Ch.4, problem set, #23.
     3. Landsburg, Ch.4, problem set, #24.
     4. In 2003, tolls were raised on seven bridges across the Delaware River,

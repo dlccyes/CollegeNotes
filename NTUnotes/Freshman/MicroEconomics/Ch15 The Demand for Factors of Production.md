@@ -63,7 +63,7 @@ in <u>**increasing-cost industry**</u>
 
 ## HW
 
-### #1難
+### \#1難
 
 ![image-20200606171133249](https://i.loli.net/2020/06/06/KRa15nhtWqx3sku.png)
 

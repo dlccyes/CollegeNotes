@@ -3,7 +3,7 @@
 ---
 # Ch9 Knowledge and Information
 
-### Adverse Selection
+### [[adverse selection]]
 ```
 同一種商品，A = 優良品，B = 瑕疵品  
 賣家願意以 $90 賣掉 A，$50 賣掉 B；  
@@ -19,7 +19,7 @@
 4. ++optimum: 資訊全公開++
 equilibrium 會是 $90-$100 for A，$50-$60 for B
 
-### Moral Hazard
+### [[moral hazard]]
 知道自己有保險，就亂搞，讓出事期望值增大，保險費便不夠 (for sellers)，因而提高保費
 
 chartist/technical analysts: past price → future price  

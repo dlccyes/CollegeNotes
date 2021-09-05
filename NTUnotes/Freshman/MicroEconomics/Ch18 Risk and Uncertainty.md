@@ -50,7 +50,7 @@ fair insurance
 ![](https://i.imgur.com/CjEG4TN.png)
 ![](https://i.imgur.com/3Sz9w6p.png)
 
-## adverse selection
+## [[adverse selection]]
 
 ![](https://i.imgur.com/5FXe116.png)
 

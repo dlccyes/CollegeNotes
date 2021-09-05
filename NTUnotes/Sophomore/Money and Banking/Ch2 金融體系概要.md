@@ -254,9 +254,9 @@ e.g. 10 年期 & 3 個月公債殖利率利差
 
 ### 降低資訊不對稱問題
 - 銀行資訊不足問題
-  - 逆選擇 adverse selection
+  - 逆選擇 [[adverse selection]]
     - 一方隱匿資訊 → 銀行選擇較差者
-  - 道德風險 moral hazard
+  - 道德風險 [[moral hazard]]
   - 銀行規模大，監督成本低 → 降低資訊不對稱
 - 客戶資訊不足問題
   - 擠兌 bank run

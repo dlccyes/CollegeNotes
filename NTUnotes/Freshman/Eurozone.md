@@ -635,7 +635,7 @@ US Fed 透明度高，independence 較低因為要幫政府
 
 > - A lender of last resort provides emergency credit to financial institutions that are struggling financially and near collapse.
 > - The Federal Reserve, or other central bank, typically acts as the lender of last resort to banks that no longer have other available means of borrowing, and whose failure to obtain credit would dramatically affect the economy.
-> - Some argue that having a lender of last resort encourages moral hazard: that banks can take excessive risks knowing that they will be bailed out.
+> - Some argue that having a lender of last resort encourages [[moral hazard]]: that banks can take excessive risks knowing that they will be bailed out.
 >
 > https://www.investopedia.com/terms/l/lenderoflastresort.asp
 

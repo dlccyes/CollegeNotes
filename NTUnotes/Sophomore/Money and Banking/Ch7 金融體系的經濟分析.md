@@ -36,7 +36,7 @@
   - 銀行多元化投資
 - 減少資訊不對稱問題
 
-## 資訊不對稱 → adverse selection
+## 資訊不對稱 → [[adverse selection]]
 - 解決
   - signaling
     - 擁有資訊方 signal 給資訊不足方
@@ -45,7 +45,7 @@
       - 借貸：  
         - 抵押品
         - 淨值
-    - 夠大的公司才能發行 security，因為資訊為人所知，adverse selection 較不嚴重
+    - 夠大的公司才能發行 security，因為資訊為人所知，[[adverse selection]] 較不嚴重
     - 政府規範公布資訊
   - 中間商
     - 私部門販售資訊
@@ -53,7 +53,7 @@
    -  金融中介
       -  借貸資訊不公開 → 無 free-ride 問題 [^1]
       -  investmant bank 幫忙籌資，承銷 → 表這家值得信任
-      -  有代理問題 agency problem/principal-agent problem （moral hazard）
+      -  有代理問題 agency problem/principal-agent problem （[[moral hazard]]）
 
 [^1]:聯合徵信中心：個人信用資訊，會員金融機後有契約時可 access，紀錄有期限
 
@@ -69,7 +69,7 @@
           - 追回機制
             - 表現差的時候要回部分薪酬
         - 股票選擇權 stock option
-          - 可能會加深 moral hazard，只為炒股
+          - 可能會加深 [[moral hazard]]，只為炒股
       - 監督
         - 股東自己請，卻對所有有利  
         → free-ride 問題
@@ -77,7 +77,7 @@
       - 金融中介
         - 創投 venture capital
           - 介入公司經營，也是大股東
-  - moral hazard 太嚴重 → 發行股票非企業融資主要來源
+  - [[moral hazard]] 太嚴重 → 發行股票非企業融資主要來源
 - 債權契約 debt contract
   - 償還不了時才須監督 → 節省監督成本 
   - 限制條款 restrictive covenants

@@ -2,7 +2,7 @@
 ###### tags: `Microeconomics`
 ---
 
-# Ch12 Game Theory
+# Ch12 [[Game Theory]]
 
 dominant strategy
 : don't need to depend on others to decide you best strategy

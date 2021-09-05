@@ -1,0 +1,4 @@
+-   if a social choice function can be implemented by any mechanism, then it can be also implemented by a truth-telling direct revelation mechanism
+    -   在 original (complicated) mechanism 外面 fascade 一層，把 truth map 成各成員想要 play 的 strategy → 各成員會想要 play truthfully (對於 original mechanism 來說各成員 strategy 不變)
+        -   那層 fascade 等同於 agent 的 mentira function
+-   significance: 可以用 direct & truthful 的方式分析 without the loss of generality
