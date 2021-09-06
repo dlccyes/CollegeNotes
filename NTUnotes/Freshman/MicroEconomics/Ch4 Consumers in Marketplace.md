@@ -41,7 +41,7 @@ e.g. Qx = I/3 (103上期中 2.)
 
 I 對 Q 微分
 
-### Price elasticity
+### [[price elasticity]]
 
 ![img](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe2bff7b3-8aa4-497b-af36-3af410f41d21%2FC7DA787A-F2E6-44F0-A914-FE04813494A4.jpeg?table=block&id=40a18a4a-ec96-4026-bd8e-ec023dba825f&width=1920&cache=v2)
 
@@ -130,7 +130,7 @@ X4 - X1 < 3(X2 - X1)
     4. In 2003, tolls were raised on seven bridges across the Delaware River,
     connecting Pennsylvania to New Jersey. In the first two months of
     the year, bridge traffic fell by 17%, but revenue increased by 123%
-    because of the higher tolls. What is the price elasticity of demand for
+    because of the higher tolls. What is the [[price elasticity]] of demand for
     using these bridges to cross the Delaware River? (A problem from the
     previous edition.)
 

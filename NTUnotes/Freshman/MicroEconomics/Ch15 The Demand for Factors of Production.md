@@ -25,7 +25,7 @@ title: Ch15 The Demand for Factors of Production
 
 ## not a Giffen good
 
-### Giffen Goods Recap
+### [[Giffen good]] Recap
 
 Ch4 的內容?
 季芬財
@@ -34,8 +34,9 @@ Ch4 的內容?
 > （分析 X 時看右兩條，分析 Y 時看左兩條）
 
 價格上升時，需求增加
-因為 income effect > substitution effect
-發現也是劣等財
+因為 [[income effect]] > [[substitution effect]]
+發現也是劣等財  
+in oher words, [[Giffen good]] 是 [[inferior good]] (with negative [[income effect]]), so when its price increases, income decreases, [[income effect]] will cause its demand to rise, while [[substitution effect]] will cause its demand to fall, 又 [[income effect]] outweighs [[substitution effect]], so overall its demand will increase
 
 > 香港經濟學家張五常教授認為這種「季芬財」根本不成立。他解釋︰麵包價格除了貨幣價格之外，還有看不見的機會成本。對比其他食物的價格飛漲，麵包的「總價格」是相對下降了，價格降低，消費量自然上升。當時的低收入工人面對麵包價格上漲，只有犧牲其他高消費的食物如馬鈴薯、肉類（其他食物的價格也在上升），以多購「較便宜的」麵包裹腹。正常的價格機制仍在作用。
 >

@@ -15,7 +15,7 @@ title: Ch16 The Market of Labor
 ![image-20200609224417917](https://i.loli.net/2020/06/09/o7BbGVasWRv4kDF.png)
 
 C~0~ 為非勞工性質之收入（non-labor income，如股票、出租房子等）
-C~0~ 上升 → income effect → leisure 增加 i.e. L 下降
+C~0~ 上升 → [[income effect]] → leisure 增加 i.e. L 下降
 at some point, L 下降到 0，表此人不再為"工資"而工作（可為其他東如西興趣工作）
 
 ![image-20200609224618431](https://i.loli.net/2020/06/09/nuxZhrmWlPNQ93Y.png)
@@ -94,8 +94,8 @@ may choose the latter i.e. L=0
 
 工資上漲
 
-- substitution effect (綠)：working hour 增加 i.e. leisure 減少 due to leisure 漲價
-- income effect (藍)：working hour 減少 i.e. 買更多 leisure
+- [[substitution effect]] (綠)：working hour 增加 i.e. leisure 減少 due to leisure 漲價
+- [[income effect]] (藍)：working hour 減少 i.e. 買更多 leisure
 
 哪個比較大？
 
@@ -103,8 +103,8 @@ may choose the latter i.e. L=0
 
 ![image-20200609230122958](https://i.loli.net/2020/06/09/vWIT8fBwiyrpAEx.png)
 
-when wage rises, ppl with low wage experience little income effect ,  
-while ppl with high wages experience great income effect  
+when wage rises, ppl with low wage experience little [[income effect]] ,  
+while ppl with high wages experience great [[income effect]]  
 → 上圖
 見 HW P9.
 
@@ -187,8 +187,8 @@ so 商人會把 capital 從 capital 較多，勞工邊際產出較高之國，�
 
 ![image-20200611160824714](https://i.loli.net/2020/06/11/9UaYjt3hXgpWHBd.png)
 
-False, the former man experience both substutution effect & income effect, while the latter experience very little income effect  
-→ the man with most of his income from wages may works more or works less due to sub effect - income effect,  
+False, the former man experience both substutution effect & [[income effect]], while the latter experience very little [[income effect]]  
+→ the man with most of his income from wages may works more or works less due to sub effect - [[income effect]],  
 while the man with most of his income from nonlabor income works more due to sub effect 
 
 ![image-20200611175334804](https://i.loli.net/2020/06/11/aVE1gFWfAiM34rL.png)

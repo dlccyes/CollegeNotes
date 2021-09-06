@@ -1,5 +1,8 @@
 {
   "baseFontSize": 18,
   "cssTheme": "Golden Coffee",
-  "translucency": true
+  "translucency": false,
+  "enabledCssSnippets": [
+    "backimg"
+  ]
 }

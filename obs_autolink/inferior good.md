@@ -1,0 +1,1 @@
+good with negative [[income effect]], i.e. when income increases, demand will fall

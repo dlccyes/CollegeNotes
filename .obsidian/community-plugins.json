@@ -14,5 +14,6 @@
   "file-explorer-note-count",
   "obsidian-activity-history",
   "obsidian-vault-statistics-plugin",
-  "templater-obsidian"
+  "templater-obsidian",
+  "obsidian-autocomplete-plugin"
 ]

@@ -1,0 +1,40 @@
+.theme-dark{
+    /*background-image: url(https://i.imgur.com/C90lb3z.jpg) !important;*/
+    /*purple nebula*/
+    /*background-image: url(https://i.imgur.com/hAcGmG3.jpg) !important;    */
+    /*anime cafe*/
+    background-image: url("https://bit.ly/3jMF8MI") !important;    
+    /*false hope*/
+    /*background-image: url("https://i.imgur.com/FS1SsUU.jpg") !important;*/
+    /*egypt project*/
+    /*background-image: url("https://i.imgur.com/LykyHH7.jpg") !important;*/
+    background-size: cover;
+    background-position: 0% 90%;
+    --bgcolor: #00000066;
+    --background-primary: var(--bgcolor);
+    --background-secondary: var(--bgcolor);
+    --background-secondary-alt: var(--bgcolor);
+    --text-selection: #f7925b52;
+}
+.menu, .popover, .suggestion-container {
+    background-color: #2a0404dd !important;
+    border-radius: 20px;
+    border: 1px solid #79531a;
+}
+
+body {
+    font-family: "Baloo Paaji 2", Myuppy;
+}
+.markdown-preview-view blockquote {
+    font-family: "Baloo Paaji 2", Myuppy;    
+}
+.status-bar {
+    background-color: #230101b8;
+}
+.view-header {
+    background: #230101aa;
+}
+.workspace-ribbon.mod-left {
+    border: none !important;
+    background: linear-gradient(to top, #191715bf, #3d2607bf);
+}

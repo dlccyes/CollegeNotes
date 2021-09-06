@@ -17,13 +17,13 @@
   "checkpointList": [
     {
       "path": "NTUnotes/Junior",
-      "date": "2021-09-06",
-      "size": 30177
+      "date": "2021-09-07",
+      "size": 32719
     },
     {
       "path": "/",
-      "date": "2021-09-06",
-      "size": 344002
+      "date": "2021-09-07",
+      "size": 347612
     }
   ],
   "activityHistory": [
@@ -32,7 +32,11 @@
       "size": [
         {
           "date": "2021-09-06",
-          "value": 37
+          "value": 2633
+        },
+        {
+          "date": "2021-09-07",
+          "value": 150
         }
       ]
     },
@@ -41,7 +45,11 @@
       "size": [
         {
           "date": "2021-09-06",
-          "value": 188
+          "value": 4182
+        },
+        {
+          "date": "2021-09-07",
+          "value": 150
         }
       ]
     }

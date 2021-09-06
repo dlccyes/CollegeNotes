@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "175f0fc477b728a8",
+        "id": "8d872f0b38b2baeb",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTUnotes/Freshman/MicroEconomics/Ch16 The Market of Labor.md",
+            "file": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
             "mode": "source"
           }
         },
-        "group": "9baa288a32ccde11"
+        "group": "81e27a3700790080"
       },
       {
-        "id": "351a89f9ed8bdc9c",
+        "id": "ae8bdceae7a42088",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTUnotes/Freshman/MicroEconomics/Ch16 The Market of Labor.md",
+            "file": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
             "mode": "preview"
           }
         },
-        "group": "9baa288a32ccde11"
+        "group": "81e27a3700790080"
       }
     ],
     "direction": "vertical"
@@ -52,8 +52,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#GT_Papers",
-                "matchingCase": true,
+                "query": "remove ",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -62,10 +62,34 @@
             }
           },
           {
-            "id": "650735466c496e0c",
+            "id": "dd80414cc64de8eb",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "3ded797365a70b0c",
             "type": "leaf",
             "state": {
               "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "54b5f3b78b5f1883",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "56b193b9620f4512",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
               "state": {}
             }
           }
@@ -89,29 +113,19 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NTUnotes/Freshman/MicroEconomics/Ch16 The Market of Labor.md",
+                "file": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
           {
-            "id": "8366180746c675d2",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "NTUnotes/Freshman/MicroEconomics/Ch16 The Market of Labor.md"
-              }
-            }
-          },
-          {
-            "id": "534f996e0db0c893",
+            "id": "c45000b6b55d2fe1",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -122,31 +136,45 @@
             }
           },
           {
-            "id": "77ac7ca10a89385d",
+            "id": "6cda279d3c6d4fd1",
             "type": "leaf",
             "state": {
-              "type": "dictionary-view",
-              "state": {}
+              "type": "outgoing-link",
+              "state": {
+                "file": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b82596873c29f420",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md"
+              }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
     "width": 239
   },
-  "active": "351a89f9ed8bdc9c",
+  "active": "ae8bdceae7a42088",
   "lastOpenFiles": [
-    "NTUnotes/Freshman/MicroEconomics/Ch16 The Market of Labor.md",
-    "obs_autolink/Bayesian game.md",
     "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
-    "obs_autolink/adverse selection.md",
-    "obs_autolink/stochastic game.md",
-    "obs_autolink/Untitled.md",
-    "obs_autolink/individual rationality.md",
-    "obs_autolink/殭屍企業.md",
-    "obs_templatejs/test.js.md",
-    "obs_autolink/VCG.md"
+    "obs_autolink/second-price auction.md",
+    "obs_autolink/VCG.md",
+    "NTUnotes/Junior/Game Theory.md",
+    "NTUnotes/Junior/Game Theory Papers/privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL.md",
+    "NTUnotes/Freshman/MicroEconomics/Ch15 The Demand for Factors of Production.md",
+    "NTUnotes/Junior/經原上.md",
+    "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
+    "obs_autolink/[income effect.md",
+    "obs_autolink/price elasticity.md"
   ]
 }

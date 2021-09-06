@@ -7,7 +7,7 @@ Coase: 指派環境權給廠商/居民
 either will end up same  
 但 Pigoe 沒考慮到居民可搬家的情況  
 
-[Income Effect | 古慧文](https://drive.google.com/file/d/1F25f62xXniqCabAmcuED2iO77WtuWe8T/view)
+[[income effect]] | 古慧文](https://drive.google.com/file/d/1F25f62xXniqCabAmcuED2iO77WtuWe8T/view)
 
 ## Transaction Cost
 Coase: 仍需政府介入因協商成本
