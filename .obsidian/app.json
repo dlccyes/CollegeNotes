@@ -9,5 +9,6 @@
   "foldHeading": true,
   "showLineNumber": true,
   "spellcheck": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "fileSortOrder": "alphabeticalReverse"
 }

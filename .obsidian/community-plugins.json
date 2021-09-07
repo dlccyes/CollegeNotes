@@ -15,5 +15,7 @@
   "obsidian-activity-history",
   "obsidian-vault-statistics-plugin",
   "templater-obsidian",
-  "obsidian-autocomplete-plugin"
+  "obsidian-autocomplete-plugin",
+  "oz-clear-unused-images",
+  "obsidian-image-toolkit"
 ]

@@ -1,4 +1,4 @@
-change in quantity to change on price
+change in quantity on change in price
 
 $$\dfrac{\frac{\Delta Q}{Q}}{\frac{\Delta P}{P}} = \dfrac{\partial Q}{\partial P}\dfrac{P}{Q}$$
 

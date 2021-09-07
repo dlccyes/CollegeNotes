@@ -23,10 +23,10 @@ TC = FC + VC (variable cost)
 operate if operate profit > shut down profit i.e. TR > VC  
 (bc fixed cost is there whether shut down or not, so only variable cost matters)  
 TR = P×Q > VC  
-→ ==P > AVC== then a firm operate
+→ ==P > AVC== i.e. **price > average variable cost** then a firm operate
 
 bold part = supply curve  
-(only produce when P=MC>AVC)
+(**only produce when P=MC>AVC**)
 ![](https://i.imgur.com/UePlKID.png)
 produce nothing at price < P<sub>0</sub>
 

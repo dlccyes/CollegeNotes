@@ -17,7 +17,7 @@ it's negative
 ![](https://i.imgur.com/nzQk8PL.png)
 ![](https://i.imgur.com/kHa0QMt.png)
 
-## Monopoly vs Competition
+## Monopoly vs. Competition
 ![](https://i.imgur.com/yBipLH4.png)
 
 ## subsidy monopoly
@@ -61,34 +61,32 @@ e.g.
 ## Price Discrimination
 charge different price for identical items  
 
-First-Degree 
-: 完全知道每個人的需求曲線並依此定價，榨光所有 consumers' surplus
+### First-Degree 
+完全知道每個人的需求曲線並依此定價，榨光所有 consumers' surplus
 
-Second-Degree
-: price depends on quantity, no individual differences
+### Second-Degree
+price depends on quantity, no individual differences
     ```
     e.g.
     香腸 1 支 $20，3 支 $50
     等同於前兩支 $20，第三支 $10
     ```
-    ![](https://i.imgur.com/Oi8GttK.png)
-    前 Q~0~ 賣 $10 (where MR=MC) 
-    Q~0~ 之後賣 $10 > P > MC  
-    （如 第 Q~0~ 到 Q~1~ 賣 $7 (competitve price)） 
-    造成深藍色三角形的 producer's surplus & 淺藍的 consumers' surplus
+![](https://i.imgur.com/Oi8GttK.png)
+前 $Q_0$ 賣 \$10 (where MR=MC)，$Q_0$ 之後賣 \$10 > P > MC  (e.g. $Q_0$ - $Q_1$ 賣 competitive price \$7)
+→ 深藍色三角形的 producer's surplus & 淺藍的 consumers' surplus
 
 
-Third-Degree
-: different price in different markets
-    ![](https://i.imgur.com/7Teaqf4.png)
-    ![](https://i.imgur.com/rSI6qqj.png)
+### Third-Degree
+different price in different markets
+![](https://i.imgur.com/7Teaqf4.png)
+![](https://i.imgur.com/rSI6qqj.png)
 
-    ![](https://i.imgur.com/5Be2cCi.jpg)
-    ![](https://i.imgur.com/t3CPAyy.png)
+![](https://i.imgur.com/5Be2cCi.jpg)
+![](https://i.imgur.com/t3CPAyy.png)
 
 
 黃曜霆的 mail
-<!-- ![](https://i.imgur.com/mW5ScCY.jpg) -->
+![](https://i.imgur.com/mW5ScCY.jpg) 
 
 
 ## Two-Part Tariff

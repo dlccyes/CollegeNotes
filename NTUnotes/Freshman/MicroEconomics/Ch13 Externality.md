@@ -1,9 +1,9 @@
 # Ch13 Externality
-
+[[externality]]
 ### Pigoe & Coase
 [Pigoe & Coase | 古慧文](https://drive.google.com/file/d/1Ss6EyNlwzFGXNDW_UbCvMz8HZH7Zotup/view)
-Pigoe: 課環境稅  
-Coase: 指派環境權給廠商/居民  
+Pigoe (Pigouvian): 課環境稅 (government intervention)
+Coase (Coasean): 指派環境權給廠商/居民  (market method)
 either will end up same  
 但 Pigoe 沒考慮到居民可搬家的情況  
 

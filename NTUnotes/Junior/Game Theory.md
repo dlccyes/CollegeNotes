@@ -100,11 +100,14 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
   - plurality satisfies weak PE & non-dictorial, so it's not monotonic
     - ![Image](https://i.imgur.com/cefUeEK.png)
 
-### single-peaked preference
+### [[single-peaked preference]]
 - median voting
   - Condorcet winner exist whenever odd voters
     - ![Image](https://i.imgur.com/h6JOmLI.png)
   - no incentive to lie
+
+### transitivity
+x > y, y > z → x > z
 
 ## mechanism design
 - inverse game theory

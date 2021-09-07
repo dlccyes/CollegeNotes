@@ -49,7 +49,7 @@ P 對 Q 微分
 
 ### Cross Elasticity
 
-△Qx/Qx / △Py/Py
+$$\dfrac{\dfrac{\Delta Q_x}{Q_x}}{\dfrac{\Delta P_y}{P_y}}$$
 
 the cross elasticity of demand for X with respect to Y = the percent change in consumption of X divided by the percent change in the price of Y
 
