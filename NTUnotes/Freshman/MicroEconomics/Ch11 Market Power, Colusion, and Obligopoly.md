@@ -1,4 +1,4 @@
-# Ch11 Market Power, Colusion, and Obligopoly
+# Ch11 Market Power, Collusion, and Oligopoly
 
 ## Merger
 ### horizontal
@@ -21,17 +21,38 @@ deadweight loss
 resale price
 ![](https://i.imgur.com/pnsIcI5.jpg)
 
-## Cournot model
+## Oligopoly
+
+### contestable market
+firm can enter & exit costlessly
+![](https://i.imgur.com/bwxHgDs.png)
+P=MC=AC
+
+[[natural monopoly]] in a contestable market
+![](https://i.imgur.com/BC0CB6y.png)
+
+### Cournot model
+take rivals' output as given
 ![](https://i.imgur.com/G4YZgKS.png)
 
-## contestable market
-firm can enter/exit costly
-![](https://i.imgur.com/bwxHgDs.png)
+### Bertrand model
+take rivals' price as given
 
-## cartel
+### cartel
 > A group of firms engaged in collusion  
 
 will fail due to prison dilemma
+
+## monopolistic monopoly
+- basically same products with different branding
+- demand very elastic
+- Q = where MR intersects MC
+- short run : positive economic profits
+- long run : zero economic profits
+	- TR = TC i.e. P = AC
+
+![](https://i.imgur.com/p1V8kF9.png)
+
 
 ## HW
 [answer by 助教](https://drive.google.com/drive/u/3/folders/1VJ2BcWJKF0M0Glnc-pkwsoHiV6YCBYL0)

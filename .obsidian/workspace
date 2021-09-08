@@ -9,23 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
+            "file": "NTUnotes/Junior/經原上.md",
             "mode": "source"
           }
         },
-        "group": "df863bb55db8441e"
+        "group": "26aaf51d08b807b3"
       },
       {
-        "id": "d734a65036b25d18",
+        "id": "00c728691a458fe6",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
+            "file": "NTUnotes/Junior/經原上.md",
             "mode": "preview"
           }
         },
-        "group": "df863bb55db8441e"
+        "group": "26aaf51d08b807b3"
       }
     ],
     "direction": "vertical"
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "first-de",
+                "query": "condorcet",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -62,26 +62,10 @@
             }
           },
           {
-            "id": "dd80414cc64de8eb",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
             "id": "3ded797365a70b0c",
             "type": "leaf",
             "state": {
               "type": "recent-files",
-              "state": {}
-            }
-          },
-          {
-            "id": "54b5f3b78b5f1883",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
               "state": {}
             }
           },
@@ -115,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
+                "file": "NTUnotes/Junior/經原上.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -143,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
+                "file": "NTUnotes/Junior/經原上.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,12 +139,11 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md"
+                "file": "NTUnotes/Junior/經原上.md"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -168,15 +151,15 @@
   },
   "active": "78a3068269f8f3b5",
   "lastOpenFiles": [
-    "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
     "NTUnotes/Junior/經原上.md",
-    "NTUnotes/Freshman/MicroEconomics/Ch10 Monopoly.md",
-    "obs_autolink/single-peaked preference.md",
-    "NTUnotes/Junior/Game Theory.md",
+    "obs_autolink/price elasticity.md",
     "NTUnotes/Freshman/MicroEconomics/Ch11 Market Power, Colusion, and Obligopoly.md",
+    "obs_autolink/natural monopoly.md",
+    "NTUnotes/Freshman/MicroEconomics/Ch10 Monopoly.md",
+    "NTUnotes/Junior/Game Theory.md",
+    "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
+    "obs_autolink/single-peaked preference.md",
     "NTUnotes/Freshman/MicroEconomics/Ch4 Consumers in Marketplace.md",
-    "NTUnotes/Freshman/MicroEconomics/Ch13 Externality.md",
-    "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
-    "obs_autolink/price elasticity.md"
+    "NTUnotes/Freshman/MicroEconomics/Ch13 Externality.md"
   ]
 }

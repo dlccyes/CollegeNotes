@@ -1,0 +1,116 @@
+{
+  "main": {
+    "id": "1b402d92eb4c7cba",
+    "type": "split",
+    "children": [
+      {
+        "id": "5a81f83f1bf12f35",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0232e78e401ba837",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "77de654f1cff9e08",
+        "type": "leaf",
+        "state": {
+          "type": "recent-files",
+          "state": {}
+        }
+      },
+      {
+        "id": "51750193fa8d361f",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "57b4308d7142d15c",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "dc47fb6a7c3ddfdb",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      }
+    ],
+    "currentTab": 1
+  },
+  "right": {
+    "id": "43c300e6c96703cb",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "b6d499fd23be9464",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": true,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "a74270339ca3f0a0",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "5a81f83f1bf12f35",
+  "lastOpenFiles": [
+    "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
+    "NTUnotes/Junior/Game Theory.md",
+    "obs_autolink/stochastic game.md",
+    "NTUnotes/Junior/Game Theory Papers/Single Controller Stochastic Games for Optimized Moving Target Defense.md",
+    "obs_autolink/second-price auction.md",
+    "NTUnotes/Sophomore/Data Structure.md",
+    "NTUnotes/Sophomore/Money and Banking/Ch4 現值與利率.md",
+    "obs_autolink/VCG.md",
+    "NTUnotes/Junior/Game Theory Papers/privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL.md",
+    "NTUnotes/Sophomore/Money and Banking/Ch7 金融體系的經濟分析.md"
+  ]
+}

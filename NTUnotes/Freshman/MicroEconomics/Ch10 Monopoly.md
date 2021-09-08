@@ -34,22 +34,25 @@ C+D+F+G 必> F+G+H
 如果要求 monopoly 跟 competition 一樣 zero economic profits
 ![](https://i.imgur.com/N4rVtKe.png)
 
-## Natural Monopoly
-台電花大錢架好供電網路之後的 MC 就很小了
-因此形成 natural monopoly  
+## [[natural monopoly]]
+if AC crosses demand curve when slope < 0
 
-一家軟體廠商  
+- 一家軟體廠商  
 開發完軟體之後的複製費用幾乎為零  
-因此 AC 斜向下 (一個開發費用 / 產量)  
+因此 AC i.e. $\dfrac{開發費用}{產量}$ 斜向下   
 demand curve 交 AC 於 AC 斜向下處  
 又 MC 交 AC 於 AC 最小值處  
+- 台電花大錢架好供電網路之後的 MC 就很小了
+因此形成 [[natural monopoly]]  
+
 ![](https://i.imgur.com/S2u3eIw.png)
-→ competitive 下的 P (where MC = D) < AC
-→ earn negative profit if competitve
+→ competitive 下的 P  ($P_C$, where MC = D) < AC
+→ earn negative profit if competitive
+→ competitive industry 不可能存在
 
 所以會給 limited time 的 patent，兼顧廠商的 profit & 社會福利
 
-### innovation for natural monopoly
+### innovation for [[natural monopoly]]
 不是一定會造成正向 social gain  
 ```
 e.g. 
@@ -62,7 +65,10 @@ e.g.
 charge different price for identical items  
 
 ### First-Degree 
-完全知道每個人的需求曲線並依此定價，榨光所有 consumers' surplus
+- 完全知道每個人的需求曲線並依此定價，榨光所有 consumers' surplus
+- monopolist 會生產至 competition quantity (D=MC) →** social welfare maximized, no deadweight loss**
+
+![](https://i.imgur.com/FReUCAS.png)
 
 ### Second-Degree
 price depends on quantity, no individual differences
@@ -71,13 +77,16 @@ price depends on quantity, no individual differences
     香腸 1 支 $20，3 支 $50
     等同於前兩支 $20，第三支 $10
     ```
-![](https://i.imgur.com/Oi8GttK.png)
+![](https://i.imgur.com/HnrzsNJ.png)
 前 $Q_0$ 賣 \$10 (where MR=MC)，$Q_0$ 之後賣 \$10 > P > MC  (e.g. $Q_0$ - $Q_1$ 賣 competitive price \$7)
 → 深藍色三角形的 producer's surplus & 淺藍的 consumers' surplus
+
+quantity & PS & CS & social welfare increases
 
 
 ### Third-Degree
 different price in different markets
+Man City 的人願意用 \$7 買 whatever quantity → $MR_{city}=\$7$
 ![](https://i.imgur.com/7Teaqf4.png)
 ![](https://i.imgur.com/rSI6qqj.png)
 

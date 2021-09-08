@@ -54,6 +54,7 @@ date updated: '2021-09-06T00:51:13+08:00'
 ## SDN architecture
 ![](https://i.imgur.com/MX5vvzM.png)
 - a network framework separating control & data plane
+	- 電網導會教
 ### service plane
 - provides multimedia multicast services with the satellite & distributed BSs
 - BSs' mobile user (MU) & satellite's users (SUs) are randomly distributed in the coverage of BSs & satellite
@@ -83,3 +84,5 @@ date updated: '2021-09-06T00:51:13+08:00'
 	- which channel will be occupied by the satellite exclusively
 	- how much traffic of MNO's MUs  will be onloaded to the satellite
 3. send the decisions to the H-STN Controller in the control plane →  strategy distribution
+
+[28] STIN overview 可參考
