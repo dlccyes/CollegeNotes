@@ -316,6 +316,14 @@ function initViewContainer(targetEl, containerEl) {
         }
         // add event: for img-toolbar ul
         imgToolbarUl.addEventListener('click', clickToolbarUl);
+        window.addEventListener('click', function(e){   //editderrick
+            console.log(e.target.classList);
+            if (e.target.classList.contains('img-container') || 
+                e.target.classList.contains('image-toolkit-view-container' ||
+                e.target.classList.contains('img-footer'))){
+                closeViewContainer();
+            }
+        });
     }
     // show the clicked image
     renderImgTitle(targetEl.alt);
@@ -422,8 +430,14 @@ function closeViewContainerByKeyup(event) {
         case 'Escape': // Esc
             closeViewContainer();
             break;
+        case 'KeyZ': // Esc
+            closeViewContainer();
+            break;
     }
 }
+// document.getElementsByClassName.onclick('image-toolkit-view-container') {
+//     closeViewContainer();
+// }
 const mousedownImgView = (event) => {
     // console.log('mousedownImgView', event);
     DRAGGING = true;

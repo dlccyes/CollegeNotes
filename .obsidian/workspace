@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTUnotes/Junior/經原上.md",
+            "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTUnotes/Junior/經原上.md",
+            "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
             "mode": "preview"
           }
         },
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NTUnotes/Junior/經原上.md",
+                "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NTUnotes/Junior/經原上.md",
+                "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NTUnotes/Junior/經原上.md"
+                "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md"
               }
             }
           }
@@ -149,8 +149,9 @@
     "direction": "horizontal",
     "width": 239
   },
-  "active": "78a3068269f8f3b5",
+  "active": "00c728691a458fe6",
   "lastOpenFiles": [
+    "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
     "NTUnotes/Junior/經原上.md",
     "obs_autolink/price elasticity.md",
     "NTUnotes/Freshman/MicroEconomics/Ch11 Market Power, Colusion, and Obligopoly.md",
@@ -159,7 +160,6 @@
     "NTUnotes/Junior/Game Theory.md",
     "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
     "obs_autolink/single-peaked preference.md",
-    "NTUnotes/Freshman/MicroEconomics/Ch4 Consumers in Marketplace.md",
-    "NTUnotes/Freshman/MicroEconomics/Ch13 Externality.md"
+    "NTUnotes/Freshman/MicroEconomics/Ch4 Consumers in Marketplace.md"
   ]
 }
