@@ -30,6 +30,9 @@ bold part = supply curve
 ![](https://i.imgur.com/UePlKID.png)
 produce nothing at price < P<sub>0</sub>
 
+MC intersect AVC & AC at min point
+- 原因：marginal < average 時，會讓 average 減少；> average 時，會讓 average 增加，又 fixed cost 不變
+
 ### elasticity of supply
 <!-- elasticity = $$\frac{\frac{△Q}{Q}}{\frac{△P}{P}}$$ -->
 elasticity = $$\frac{△Q/Q}{△P/P}$$
@@ -49,7 +52,7 @@ industry supply curve
 
 ### changes in variable costs
 ![](https://i.imgur.com/NbGg2Ty.png)
-a frim:  
+a firm:  
 - marginal cost rises → supply curve shifts upward/leftward
 - in industry, price = P<sub>0</sub> → P<sub>2</sub>, so d→d' in a firm, q<sub>2</sub> not necessarily < q<sub>0</sub>  
 
@@ -64,28 +67,38 @@ an industry:
 P<sub>0</sub>→P<sub>1</sub>
 short run: S  
 long run: LRS, S'
-![](https://i.imgur.com/8BxsPoH.png)
+![](https://i.imgur.com/XH1UndZ.png)
+p.183
 
-==to p.183==
+## 7.4 The Competitive Industry in the Long Run
 
-## 7.4 The Competitive Industry in Long Run
+### change in demand 
+#### constant-cost
+long run: price don't change
+![](https://i.imgur.com/GREULXc.png)
+short run: price goes up
+![](https://i.imgur.com/1bicQPe.png)
 
+### change in cost
+#### constant-cost
 changes in variable cost
 ![](https://i.imgur.com/VmEEeOS.png)
 如果每單位 output 上升相同的 marginal cost，AC 就會垂直上升，讓均衡 output 不變  
 但若是 variable cost 按比例上升，output 愈大 marginal cost 上升愈多
 
-### a rise in fixed cost
-
 suppose a lecense fee is charged
 ![](https://i.imgur.com/TNV1nS7.jpg)
-
-
 
 ![](https://i.imgur.com/xUR2fY2.jpg)
 
 短期才會有好處
 長期而言都是 0 profit
+
+#### increasing-cost
+same as constant-cost except the shape of LRS
+![](https://i.imgur.com/grWN56e.png)
+![](https://i.imgur.com/MhJ0a1L.png)
+
 
 ### applications
 1. apartment rent for $400
@@ -100,7 +113,7 @@ suppose a lecense fee is charged
 
 ### Constant-Cost Industries
 
-break-even price (price the makes you profit = 0 ) is constant as q ↑
+break-even price (price that makes you profit = 0 ) is constant as q ↑
 
 ### Increasing-Cost Industries
 
@@ -135,7 +148,7 @@ costs ↓ as q ↑ → break-even price ↓ as q ↑ e.g. 3C industry
 ![](https://i.imgur.com/5h1CIgR.jpg)
 
 ![](https://i.imgur.com/ujP8xXV.jpg)
-a. short(no change in long)  
-b. long  
-c. short  
-d. short
+- a. short(no change in long)
+- b. long  
+- c. short  
+- d. short

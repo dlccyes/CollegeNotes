@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "condorcet",
+                "query": "tag:#7-4-the-competitive-industry-in-the-long-run",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -143,13 +143,14 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
     "width": 239
   },
-  "active": "00c728691a458fe6",
+  "active": "78a3068269f8f3b5",
   "lastOpenFiles": [
     "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
     "NTUnotes/Junior/經原上.md",
