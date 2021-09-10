@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
+            "file": "NTUnotes/Junior/經原上.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
+            "file": "NTUnotes/Junior/經原上.md",
             "mode": "preview"
           }
         },
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
+                "file": "NTUnotes/Junior/經原上.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
+                "file": "NTUnotes/Junior/經原上.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md"
+                "file": "NTUnotes/Junior/經原上.md"
               }
             }
           }
@@ -152,8 +152,8 @@
   },
   "active": "78a3068269f8f3b5",
   "lastOpenFiles": [
-    "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
     "NTUnotes/Junior/經原上.md",
+    "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
     "obs_autolink/price elasticity.md",
     "NTUnotes/Freshman/MicroEconomics/Ch11 Market Power, Colusion, and Obligopoly.md",
     "obs_autolink/natural monopoly.md",
