@@ -1,0 +1,1 @@
+producing a product that differs sufficiently from the output of other producers that some consumers will have a distinct preference for it

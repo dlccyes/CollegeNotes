@@ -37,6 +37,14 @@ C+D+F+G 必> F+G+H
 ## [[natural monopoly]]
 if AC crosses demand curve when slope < 0
 
+![](https://i.imgur.com/S2u3eIw.png)
+→ competitive 下的 P  ($P_C$, where MC = D) < AC
+→ earn negative profit if competitive
+→ competitive industry 不可能存在
+
+所以會給 limited time 的 patent，兼顧廠商的 profit & 社會福利
+
+e.g.
 - 一家軟體廠商  
 開發完軟體之後的複製費用幾乎為零  
 因此 AC i.e. $\dfrac{開發費用}{產量}$ 斜向下   
@@ -44,13 +52,6 @@ demand curve 交 AC 於 AC 斜向下處
 又 MC 交 AC 於 AC 最小值處  
 - 台電花大錢架好供電網路之後的 MC 就很小了
 因此形成 [[natural monopoly]]  
-
-![](https://i.imgur.com/S2u3eIw.png)
-→ competitive 下的 P  ($P_C$, where MC = D) < AC
-→ earn negative profit if competitive
-→ competitive industry 不可能存在
-
-所以會給 limited time 的 patent，兼顧廠商的 profit & 社會福利
 
 ### innovation for [[natural monopoly]]
 不是一定會造成正向 social gain  

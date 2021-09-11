@@ -64,6 +64,12 @@ an industry:
 ![](https://i.imgur.com/CaDdIKy.png)
 
 ## 7.3 The Competitive Firm in the Long Run
+min AC point = equilibrium quantity q&p (horizontal demand i.e. price is the tangent of min AC)
+- if p > AC, the firm is earning positive economic profits, so more firms will come in, making p decreases
+- if p < AC, the firm is earning negative economic profits, so it will quit
+
+i.e. in long run, price = min AC
+
 P<sub>0</sub>→P<sub>1</sub>
 short run: S  
 long run: LRS, S'

@@ -43,7 +43,8 @@ take rivals' price as given
 
 will fail due to prison dilemma
 
-## monopolistic monopoly
+## [[monopolistic competition]]
+- producing a product that **differs sufficiently from the output of other producers** that some consumers will have a distinct preference for it
 - basically same products with different branding
 - demand very elastic
 - Q = where MR intersects MC

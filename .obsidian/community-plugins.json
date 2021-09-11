@@ -17,5 +17,9 @@
   "templater-obsidian",
   "obsidian-autocomplete-plugin",
   "oz-clear-unused-images",
-  "obsidian-image-toolkit"
+  "obsidian-image-toolkit",
+  "quick-explorer",
+  "obsidian-fullscreen-plugin",
+  "hover-external-link",
+  "dual-obsidian"
 ]
