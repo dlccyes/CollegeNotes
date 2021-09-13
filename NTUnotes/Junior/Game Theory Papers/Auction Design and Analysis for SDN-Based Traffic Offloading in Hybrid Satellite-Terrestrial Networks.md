@@ -55,6 +55,9 @@ date updated: '2021-09-06T00:51:13+08:00'
 ![](https://i.imgur.com/MX5vvzM.png)
 - a network framework separating control & data plane
 	- 電網導會教
+- the MNO has many BSs
+- the satellite has many beam groups
+- [28] STIN overview 可參考
 ### service plane
 - provides multimedia multicast services with the satellite & distributed BSs
 - BSs' mobile user (MU) & satellite's users (SUs) are randomly distributed in the coverage of BSs & satellite
@@ -85,4 +88,93 @@ date updated: '2021-09-06T00:51:13+08:00'
 	- how much traffic of MNO's MUs  will be onloaded to the satellite
 3. send the decisions to the H-STN Controller in the control plane →  strategy distribution
 
-[28] STIN overview 可參考
+## system model of traffic offloading
+### fully-loaded (?)
+- time-slotted
+	- constant in each time slot, change over time slots
+- quasi-static
+
+### transmission rate
+- N groups of beams from the satellite serve SUs with 2 rates
+	- rate under co-channel interference by BSs
+		- $\mu_n$
+			-  a continuous random variable
+			-  PDF & CDF independent of n
+				-  known by all BSs anbeam groups 
+			-  local & private information of beam group $n$
+				-  other channel can't obtain
+	- rate without co-channel interference by BSs
+		- $\alpha \mu_n>\mu_n$ $(\alpha >1)$
+- in each time slot, the satellite detects the occupancy status & the existence of co-channel interference and select the appropriate transmission rate 
+
+## BS's modes
+### cooperative mode 
+BSs make a deal with beam group $m$
+- MNO give satellite
+	- all BSs turn off channel $m$
+	- no co-channel interference for beam group $m$
+	- other $N-1$ beam groups still have co-channel interference
+- satellite give MNO
+	- allow MUs of the MNO use channel $m$ with guaranteed offloading rate $\mu_{cost}$
+
+### competition mode
+- no deal between MNO & satellite
+- MUs serve all data with BSs
+- BSs randomly select 1 channel from N channels and increase the transmission power in this channel
+	- this channel therefor suffers more interference → less transmission rate with discounting factor $\beta \in (0,1)$
+
+## [[second-price auction]] based traffic offloading mechanism
+### auction overview
+- auctioneer (channel seller)
+	- MNO (operating multiple BSs)
+- bidders
+	- all beam groups (of the satellite)
+	- succeed → [[#cooperative mode]]
+	- payment = $\mu_{cost}$
+- operated at the beginning of each time slot
+
+### auction operation
+- stage 1
+	- MNO announce its requests offloading rate threshold $R_{thr}\in[0,+\infty)$
+- stage 2
+	- each beam group $n$ submit its bid $b_n\in[R_{thr},+\infty)\cup\{\varnothing\}$
+		- $b_n<R_{thr}$ → $b_n=\varnothing$ 
+
+### auction outcome
+$$\displaystyle{\mathcal{M}\triangleq \left\{m\in \mathcal{N}:m=arg\max_{n\in \mathcal{N}}b_n\right\}}$$
+numbers of the max bid
+- $|\mathcal{M}|=1$
+	- winner = the highest bidder → [[#cooperative mode]]
+	- $\mu_{cost}$ = second highest bid ($R_{thr}$ counts as one bid) = $\displaystyle{max\left\{R_{thr}, \max_{n\in \mathcal{N}\backslash \{m\}}b_n\right\}}$
+- $|\mathcal{M}|\geq2$
+	- winner = randomly selected one from $|\mathcal{M}|$  → [[#cooperative mode]]
+		- with probability $\dfrac{1}{|\mathcal{M}|}$ 
+	- $\mu_{cost}$ = second-highest bidder's bid =  highest bid = $\displaystyle{max\left\{R_{thr}, b_n\right\}}$
+- $|\mathcal{M}|=0$ i.e. $\displaystyle{max_{i\in\mathcal{N}}}b_i=\varnothing$
+	- [[#competition mode]]
+### expected utility
+- [[#cooperative mode]]
+	- MNO
+		- $\pi_{MNO}=\mu_{cost}+\pi_1$
+	- beam group $n$
+		- $\pi_n=p[win]\times(\alpha \mu_n- \mu_{cost})+p[loss]\times \mu_n$
+			- $\alpha=2$ to achieve equilibrium
+			- es el único highest bidder → p[win]=1
+				- $\pi_n=\alpha \mu_n- \mu_{cost}$
+			- no es el highest bidder → p[loss]=1
+				- $\pi_n=\mu_n$
+- [[#competition mode]]
+	- MNO
+		- $\pi_{MNO}=\gamma R_0-\pi_2$
+	- beam group $n$
+		- $\pi_n=\dfrac{1}{N}\beta\mu_n+\dfrac{N-1}{N}\mu_n$
+			- p[selected by MNO] = $\dfrac{1}{N}$
+			- discounted transmission rate $\because$ extra transmission power from BSs → more interference = $\beta\mu_n$
+			- $\pi_n<\mu_n$ → will rather others win the auction than nobody wins → ==motivate participating in the auction==
+				- me winning will make others better off → positive allocative externalities
+
+## satellite's equilibrium bidding strategies
+### symmetric bayesian equilibrium, SBNE
+won't better off if change from $b^*(\mu_n,R_(thr))$ to any $s_n\in[R_{thr},+\infty)\cup\{\varnothing\}$
+
+### bidding strategy for

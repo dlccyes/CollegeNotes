@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "78a3068269f8f3b5",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
-            "mode": "source"
-          }
-        },
-        "group": "29475cf86f253ee4"
-      },
-      {
         "id": "02f33a82beb42b87",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
+            "file": "NTU Course Review/index.md",
+            "mode": "source"
+          }
+        },
+        "group": "bf3406a876ecf241"
+      },
+      {
+        "id": "07b584a112f3a035",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "NTU Course Review/index.md",
             "mode": "preview"
           }
         },
-        "group": "29475cf86f253ee4"
+        "group": "bf3406a876ecf241"
       }
     ],
     "direction": "vertical"
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "curve",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,13 +77,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "397d85049a348154",
@@ -99,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
+                "file": "NTU Course Review/index.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -127,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
+                "file": "NTU Course Review/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,16 +137,8 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md"
+                "file": "NTU Course Review/index.md"
               }
-            }
-          },
-          {
-            "id": "c8d0d9ea256eef79",
-            "type": "leaf",
-            "state": {
-              "type": "chat",
-              "state": {}
             }
           }
         ],
@@ -158,17 +148,17 @@
     "direction": "horizontal",
     "width": 239
   },
-  "active": "78a3068269f8f3b5",
+  "active": "07b584a112f3a035",
   "lastOpenFiles": [
-    "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
-    "obs_autolink/www.google.com.md",
-    "NTUnotes/Freshman/MicroEconomics/Ch12 Game Theory.md",
-    "NTUnotes/Freshman/MicroEconomics/Ch11 Market Power, Colusion, and Obligopoly.md",
-    "obs_autolink/monopolistic competition.md",
-    "NTUnotes/Junior/經原上.md",
-    "NTUnotes/Freshman/MicroEconomics/Ch8 Welfare Economics and the Gains from Trade.md",
-    "NTUnotes/Freshman/MicroEconomics/Ch10 Monopoly.md",
-    "NTUnotes/Freshman/MicroEconomics/Ch9 Knowledge and Information.md",
-    "obs_autolink/natural monopoly.md"
+    "NTU Course Review/index.md",
+    "NTU Course Review/Untitled.md",
+    "NTUnotes/Sophomore/Money and Banking/Ch1 前導.md",
+    "obs_attachment/Pasted image 20210908162441.png",
+    "NTUnotes/Sophomore/Money and Banking/Ch5 債券市場與利率的決定.md",
+    "NTUnotes/Sophomore/Money and Banking/Ch6 利率風險結構和期限結構.md",
+    "NTU Course Review/歐元區的理論與實證.md",
+    "NTUnotes/Freshman/Probability.md",
+    "NTUnotes/Freshman/普物報告 核融合發電.md",
+    "NTU Course Review/貨幣銀行學二.md"
   ]
 }

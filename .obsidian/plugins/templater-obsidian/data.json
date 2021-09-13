@@ -1,6 +1,6 @@
 {
   "command_timeout": 5,
-  "template_folder": "obs_template",
+  "template_folder": "obs_templater",
   "templates_pairs": [
     [
       "",

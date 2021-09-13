@@ -19,7 +19,7 @@ Pareto criterion
 
 ![](https://i.imgur.com/BD5P5YH.jpg)
 >At a price of P0, consumers want to buy more goods than are available. Therefore, ==they compete with each other to acquire the limited supply==. Depending on the nature of the good, this may take the form of standing in line, searching from store to store, advertising, or any of a number of other possibilities. All of these activities are costly, in time, gasoline, energy, and other currency, and these costs must be added to the “price” that consumers actually pay for the item.  
-How high does the price go? ==It must go to exactly P1 in Exhibit 8.14. At any lower price the quantity demanded still exceeds Qs, and consumers intensify their efforts.== Only when the “price” reaches P1 does the market equilibrate. ++Of course, even though P1 is the price paid by consumers, the price received by suppliers is still P0++. Therefore, we use P1 to calculate consumers’ surplus and P0 to calculate producers’ surplus. In each case, the appropriate quantity is Qs, the quantity actually traded. The computations are shown in Exhibit 8.14
+How high does the price go? ==It must go to exactly P1 in Exhibit 8.14. At any lower price the quantity demanded still exceeds Qs, and consumers intensify their efforts.== Only when the “price” reaches P1 does the market equilibrate. <u>Of course, even though P1 is the price paid by consumers, the price received by suppliers is still P0</u>. Therefore, we use P1 to calculate consumers’ surplus and P0 to calculate producers’ surplus. In each case, the appropriate quantity is Qs, the quantity actually traded. The computations are shown in Exhibit 8.14
 
 ### tariff
 ![](https://i.imgur.com/hd6oII4.jpg)

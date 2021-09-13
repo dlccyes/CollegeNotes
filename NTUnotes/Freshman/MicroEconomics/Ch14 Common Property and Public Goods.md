@@ -28,17 +28,17 @@ Coase 的解方：將財產權分配給一個人 → 他會追求 max ticket rev
 實際解方：North England 草原有 stints (=許可證)  
 
 ## Clarke tax 路燈
-居 i 提出願付的稅 v~i~  
-政府有一個未知數字 x~i~  
-V~i~ $\geq$ x~i~ 則見路燈且課稅 x~i~ 
-v~i~ < x~i~ 則沒路燈  
+居民 $i$ 提出願付的稅 $v_i$
+政府有一個未知數字 $x_i$  
+$v_i\geq x_i$  則建路燈且課稅 $x_i$ 
+$v_i<x_i$ 則沒路燈  
 同哥德 vs. 出版商 case  
-v~i~ 會是真實的價值  
+$v_i$ 會是真實的價值  
 
-設 x~i~ 為 $300 - Σv~j~  （路燈造價 $300）
-→ Σv~i~ $\geq$ $300 → samuelson condition
+設 $x_i$ 為 \$300 - $\sum v_j$  （路燈造價 $300）
+→ $\sum v_i\geq$ \$300 → samuelson condition
 只要這個成立  
-則每個不等式（不同 i）都會成立  
+則每個不等式（不同 $i$）都會成立  
 vice versa  
 
 但是 Clarke tax 會造成財政問題  

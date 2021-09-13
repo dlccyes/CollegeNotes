@@ -1,0 +1,136 @@
+{
+  "main": {
+    "id": "1b402d92eb4c7cba",
+    "type": "split",
+    "children": [
+      {
+        "id": "00c728691a458fe6",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "NTUnotes/Junior/經原上.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d8afd1168ed7047b",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "f9757b10b146723f",
+        "type": "leaf",
+        "state": {
+          "type": "recent-files",
+          "state": {}
+        }
+      },
+      {
+        "id": "a8e7767632739dd6",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "5a84173dfa939cfe",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "a5f31063503eaeb7",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "e9dd9a6bb4877ff1",
+        "type": "leaf",
+        "state": {
+          "type": "starred",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "1404327cf38f6f04",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "f6f1f04bc5a1a2fa",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "NTUnotes/Junior/經原上.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "45eaed77ffc6ec60",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "NTUnotes/Junior/經原上.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "ccad4b1cc5ee5c08",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "NTUnotes/Junior/經原上.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 2
+  },
+  "active": "00c728691a458fe6",
+  "lastOpenFiles": [
+    "NTUnotes/Junior/經原上.md",
+    "NTUnotes/Freshman/MicroEconomics/Ch7 Competition.md",
+    "obs_autolink/price elasticity.md",
+    "NTUnotes/Freshman/MicroEconomics/Ch11 Market Power, Colusion, and Obligopoly.md",
+    "obs_autolink/natural monopoly.md",
+    "NTUnotes/Freshman/MicroEconomics/Ch10 Monopoly.md",
+    "NTUnotes/Junior/Game Theory.md",
+    "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md",
+    "obs_autolink/single-peaked preference.md",
+    "NTUnotes/Freshman/MicroEconomics/Ch4 Consumers in Marketplace.md"
+  ]
+}

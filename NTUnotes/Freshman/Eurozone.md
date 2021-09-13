@@ -204,7 +204,7 @@ GIIPS suffered from 歐元區的財政要求 (SGP, Stability And Growth Pact)
 簡單來說  
 根據 De Grauwe 的模型  
 再根據歐元區的狀況去簡化  
-再套入 SGP 的 ++赤字佔 GDP 3%++ & ++債務佔 GDP 60%++ 的要求  
+再套入 SGP 的 <u>赤字佔 GDP 3%</u> & <u>債務佔 GDP 60%</u> 的要求  
 得出經濟成長率高得不合理  
 (y-r = 5%，若 r 為 0%，y 還要 5%)
 

@@ -22,6 +22,10 @@ resale price
 ![](https://i.imgur.com/pnsIcI5.jpg)
 
 ## Oligopoly
+### cartel
+> A group of firms engaged in collusion  
+
+will fail due to prison dilemma, unless repeated
 
 ### contestable market
 firm can enter & exit costlessly
@@ -32,22 +36,20 @@ P=MC=AC
 ![](https://i.imgur.com/BC0CB6y.png)
 
 ### Cournot model
-take rivals' output as given
+==assumption: the rival has fixed quantity== i.e. take rivals' output as given
 ![](https://i.imgur.com/G4YZgKS.png)
 
 ### Bertrand model
-take rivals' price as given
+==assumption: the rival has fixed price== i.e. take rivals' price as given, and assume the rival won't change it → will undercut its price as long as > MC s.t. it can capture the entire market → repeatedly undercut each's price → ==price = MC = competition price==
 
-### cartel
-> A group of firms engaged in collusion  
-
-will fail due to prison dilemma
+### about Cournot & Bertrand model
+if the assumptions fail, which is always the case, the models won't work
 
 ## [[monopolistic competition]]
 - producing a product that **differs sufficiently from the output of other producers** that some consumers will have a distinct preference for it
 - basically same products with different branding
 - demand very elastic
-- Q = where MR intersects MC
+- Q = where MR = MC
 - short run : positive economic profits
 - long run : zero economic profits
 	- TR = TC i.e. P = AC
@@ -61,7 +63,7 @@ will fail due to prison dilemma
 ![](https://i.imgur.com/6aNWOLj.png)
 ### N2
 ![](https://i.imgur.com/gy7SimL.png)
-N2(b) N 先根據 P~M~ 定出 P~N~ 定出 Q，M 再 根據 Q 定出 P~M~
+N2(b) N 先根據 $P_M$ 定出 $P_N$ 定出 Q，M 再根據 Q 定出 $P_M$
 ### N3
 ![](https://i.imgur.com/SRH0uHi.png)
 ![](https://i.imgur.com/HMiwi3W.png)
@@ -73,7 +75,7 @@ N2(b) N 先根據 P~M~ 定出 P~N~ 定出 Q，M 再 根據 Q 定出 P~M~
 ### N4
 ![](https://i.imgur.com/ULwB3cj.png)
 橋有先後  
-i.e. 2^nd^ bridge take 1^st^ as given in (b)  
+i.e. 2nd bridge take 1st as given in (b)  
 thus idendical with N2(b)
 ### P15
 ![](https://i.imgur.com/fuVIRRS.png)
