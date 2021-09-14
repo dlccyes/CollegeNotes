@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTU Course Review/index.md",
+            "file": "README.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTU Course Review/index.md",
+            "file": "README.md",
             "mode": "preview"
           }
         },
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NTU Course Review/index.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NTU Course Review/index.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NTU Course Review/index.md"
+                "file": "README.md"
               }
             }
           }
@@ -148,8 +148,10 @@
     "direction": "horizontal",
     "width": 239
   },
-  "active": "07b584a112f3a035",
+  "active": "02f33a82beb42b87",
   "lastOpenFiles": [
+    "README.md",
+    "NTUnotes/Sophomore/Money and Banking/Untitled.md",
     "NTU Course Review/index.md",
     "NTU Course Review/Untitled.md",
     "NTUnotes/Sophomore/Money and Banking/Ch1 前導.md",
@@ -157,8 +159,6 @@
     "NTUnotes/Sophomore/Money and Banking/Ch5 債券市場與利率的決定.md",
     "NTUnotes/Sophomore/Money and Banking/Ch6 利率風險結構和期限結構.md",
     "NTU Course Review/歐元區的理論與實證.md",
-    "NTUnotes/Freshman/Probability.md",
-    "NTUnotes/Freshman/普物報告 核融合發電.md",
-    "NTU Course Review/貨幣銀行學二.md"
+    "NTUnotes/Freshman/Probability.md"
   ]
 }

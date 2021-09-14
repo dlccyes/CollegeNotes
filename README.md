@@ -1,6 +1,6 @@
 # CollegeNotes
 
-some written on hackmd, some on VsCode, some on Notion
+some written on hackmd, some on VsCode, some on Notion, some on Obsidian
 
 - all
   - https://derricken968.gitbook.io/college-notes/ (many syntax unsupported)

@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "README",
+      "path": "NTUnotes/Sophomore/Money and Banking/README.md"
+    },
+    {
       "basename": "index",
       "path": "NTU Course Review/index.md"
     },
@@ -75,10 +83,6 @@
     {
       "basename": "Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks",
       "path": "NTUnotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "經原上",
@@ -195,10 +199,6 @@
     {
       "basename": "substitution effect",
       "path": "obs_autolink/substitution effect.md"
-    },
-    {
-      "basename": "Bayesian game",
-      "path": "obs_autolink/Bayesian game.md"
     }
   ],
   "omittedPaths": [],
