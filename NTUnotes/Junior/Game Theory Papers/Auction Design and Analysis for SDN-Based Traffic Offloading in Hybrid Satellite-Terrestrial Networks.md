@@ -177,4 +177,4 @@ numbers of the max bid
 ### symmetric bayesian equilibrium, SBNE
 won't better off if change from $b^*(\mu_n,R_(thr))$ to any $s_n\in[R_{thr},+\infty)\cup\{\varnothing\}$
 
-### bidding strategy for
+### bidding strategies
