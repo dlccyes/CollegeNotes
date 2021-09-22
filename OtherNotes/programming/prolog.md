@@ -9,10 +9,29 @@
 	- after that you can start doing things about the file
 - comment with `%`
 - `:-` means $\leftarrow$
-- capitalized variable for to-be-filled variable, put it in the left
-- uncapitalized variable for variable, put it in the right
+- variable
+	- capitalized
+	- put it in the left
+- terms
+	- uncapitalized
+	- put it in the right
 - `,` : AND
 - `;` : OR
+- anonymous variable with `_`
+- equality
+	- `\=` : unequal
+- to make rules symmetric
+	- don't mix facts & rules or you might end up in infinite loop
+		-     love(Alice,Bob)
+			    love(X,Y) :- love(Y,X)
+	- instead, separate them
+		-     llove(Alice,Bob)
+		      love(X,Y) :- llove(X,Y);llove(Y,X)
+  - print
+	  - `write('something')`
+  - if then
+	  - `prin(X) :- X is 2 -> write('aaa')`
+	  - use `;` to else
 
 ## list
 ```prlog
@@ -21,7 +40,7 @@
 %X=a
 %Y=[b,c,d,e]
 ```
-omit variable with `_`
+anonymous variable with `_`
 ```
 [_,X|_]=[a,b,c,d,e]
 %will return
@@ -51,4 +70,11 @@ in console (line by line)
 		- need to press `;` to output next result
 
 ## resources
-- https://blog.bhavul.com/prolog-mind-blown/
+- blog
+	- https://blog.bhavul.com/prolog-mind-blown/
+- nice comprehensive slides
+	- http://www.let.rug.nl/bos/lpn//lpnpage.php?pageid=teaching
+		- list view http://www.let.rug.nl/bos/lpn/slides/official/
+- 99 problems & solutions
+	- https://www.ic.unicamp.br/~meidanis/courses/mc336/2009s2/prolog/problemas/
+- 
