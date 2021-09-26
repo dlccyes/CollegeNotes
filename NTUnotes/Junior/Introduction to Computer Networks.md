@@ -1,0 +1,10 @@
+- connections
+	- link, node, cloud
+	- direct link
+		- LAN, local area network
+		- types
+			- point to point
+				- simple
+				- bad scalability
+			- multiple access
+				- MAC, multiple access control
