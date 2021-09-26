@@ -1,0 +1,16 @@
+# tmux
+## commands
+- help
+	- `ctrl+b ?`
+- detach (quit but don't end)
+	- `ctrl+b d`
+- list all sessions
+	- `tmux ls`
+- go to session 3
+	- `tmux a -t 3`
+	- `tmux attach -t 3`
+- rename session 3 to hahaha
+	- `tmux rename-session -t 3 hahaha`
+- kill session bruh
+	- go inside and `ctrl+d`
+	- `tmux kill-session -t bruh`
