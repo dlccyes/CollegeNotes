@@ -1,0 +1,34 @@
+{
+  "recentFiles": [
+    {
+      "basename": "Psychology",
+      "path": "NTUNotes/Junior/Psychology.md"
+    },
+    {
+      "basename": "Wikibook",
+      "path": "OtherNotes/Wikibook.md"
+    },
+    {
+      "basename": "Macroeconomics",
+      "path": "NTUNotes/Junior/Macroeconomics.md"
+    },
+    {
+      "basename": "Computer Architecture",
+      "path": "NTUNotes/Junior/Computer Architecture.md"
+    },
+    {
+      "basename": "Computer Networks",
+      "path": "NTUNotes/Junior/Computer Networks.md"
+    },
+    {
+      "basename": "Game Theory",
+      "path": "NTUNotes/Junior/Game Theory.md"
+    },
+    {
+      "basename": "Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks",
+      "path": "NTUNotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md"
+    }
+  ],
+  "omittedPaths": [],
+  "maxLength": null
+}

@@ -1,0 +1,34 @@
+- social media to emotions
+	- 社會比較 → 負面情緒
+		- 滑一滑看到別人很勝利
+	- 社會支持 → 正面情緒
+		- 跟好友聊天、互動
+- 教授不認真教課原因
+	- 認真寫 paper 報酬較高
+		- 經費
+		- 聲望
+	- 認真教課沒什麼報酬
+		- 很多人選課
+- 心理學史
+	1. 注重內在
+		- 結構論
+			- 內省觀察自己心智
+		- 心理動力論
+			- 檢討潛意識
+	2. 注重外在
+		- 功能論反結構論
+			- 觀察行為，推論心智
+		- 行為論反結構論
+			- 只需在意行為，不需在意心智
+	3. 注重內在
+		- 認知論反行為論
+			- 行為背後有心智歷程
+		- 人本論反行為/心動論
+			- 人類特有自由意志&正向價值(?)
+- 信度 & 效度
+	- 信度 reliability
+		- 能不能被 reproduce
+		- consistency
+	- 效度 validity
+		- 弄出來的東西有沒有用
+	- <iframe src="https://www.scribbr.com/methodology/reliability-vs-validity/" width=100% height=500px></iframe>
