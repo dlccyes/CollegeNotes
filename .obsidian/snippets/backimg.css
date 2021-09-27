@@ -71,3 +71,7 @@ body {
 .cm-s-obsidian span.cm-inline-code {
     font-family: Consolas, Myuppy !important;
 }
+/* codeblock edit */
+.cm-s-obsidian .HyperMD-codeblock, .markdown-preview-view code, .cm-s-obsidian .cm-inline-code {
+    font-family: 'Consolas' !important;
+}
