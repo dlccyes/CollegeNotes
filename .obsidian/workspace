@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTUNotes/Junior/Psychology.md",
+            "file": "NTUNotes/Freshman/Biology/莊曜宇.md",
             "mode": "source"
           }
         },
@@ -21,8 +21,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "NTUNotes/Junior/Psychology.md",
-            "mode": "preview"
+            "file": "NTUNotes/Freshman/Biology/莊曜宇.md",
+            "mode": "source"
           }
         },
         "group": "14191a1f1bdec808"
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NTUNotes/Junior/Psychology.md",
+                "file": "NTUNotes/Freshman/Biology/莊曜宇.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NTUNotes/Junior/Psychology.md",
+                "file": "NTUNotes/Freshman/Biology/莊曜宇.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NTUNotes/Junior/Psychology.md"
+                "file": "NTUNotes/Freshman/Biology/莊曜宇.md"
               }
             }
           }
@@ -149,15 +149,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "12bdd7f42a57d631",
+  "active": "7425dfeabeb0467e",
   "lastOpenFiles": [
+    "NTUNotes/Freshman/Biology/莊曜宇.md",
+    "NTUNotes/Freshman/Biology/楊健志.md",
+    "NTUNotes/Freshman/Biology/README.md",
     "NTUNotes/Junior/Psychology.md",
     "OtherNotes/Untitled.md",
     "NTUNotes/Junior/Untitled.md",
     "NTUNotes/Junior/Macroeconomics.md",
     "NTUNotes/Junior/Computer Architecture.md",
     "NTUNotes/Junior/Introduction to Computer Networks.md",
-    "NTUNotes/Junior/Game Theory.md",
-    "NTUNotes/Junior/Game Theory Papers/Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks.md"
+    "NTUNotes/Junior/Game Theory.md"
   ]
 }
