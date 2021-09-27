@@ -59,3 +59,15 @@ body {
     /*min-height: 600px;*/
     width: 500px;
 }
+
+/* inline code preview*/
+.markdown-preview-section pre code, .markdown-preview-section code {
+    font-size: 0.9em !important;
+    background-color: #372611 !important;
+    font-family: Consolas, Myuppy !important;
+}
+
+/* inline code edit */
+.cm-s-obsidian span.cm-inline-code {
+    font-family: Consolas, Myuppy !important;
+}

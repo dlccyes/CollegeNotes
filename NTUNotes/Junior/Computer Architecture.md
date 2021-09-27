@@ -1,0 +1,18 @@
+- chip
+	- 台積電 pricing 較高但良率很高
+	- wafer
+		- 晶圓
+	- die
+		- wafer 切出來的一小片一小片
+		- 晶粒/裸晶
+	- cost
+		- ![](https://i.imgur.com/P7SEjQB.png)
+			- 經驗公式
+			- 台積電工程師提出的
+		- wafer cost & area
+			- fixed
+		- defect rate
+			- determined by manufacturing process
+		- die rate
+			- determined by disign
+
