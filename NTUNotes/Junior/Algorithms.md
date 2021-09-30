@@ -1,5 +1,7 @@
+---
+aliases: [演算法]
+---
 # Algorithms
-
 ### insertion sort
 ```cpp
 void insertion_sort(int x[],int length)//define function

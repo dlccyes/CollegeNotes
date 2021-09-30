@@ -10,5 +10,6 @@
   "showLineNumber": true,
   "spellcheck": true,
   "alwaysUpdateLinks": true,
-  "fileSortOrder": "alphabeticalReverse"
+  "fileSortOrder": "alphabeticalReverse",
+  "readableLineLength": true
 }

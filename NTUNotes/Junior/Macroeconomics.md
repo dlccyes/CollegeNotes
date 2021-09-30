@@ -1,5 +1,7 @@
+---
+aliases: 總體經濟學
+---
 # Macroeconomics
-
 ## intro
 ### 總體經濟學主要議題
 - 長期的經濟成長
@@ -50,3 +52,53 @@
 	- 分析方法仍須用(新興)古典的方法
 
 ### 總體經濟模型
+
+ ## 產出與物價的衡量
+ ### GDP & GNI
+ - GDP, gross domestic product
+	 - the market value of all final goods and services that an economy produces in a given period **within it boarder**
+- GNI, gross national income / GNP, gross national product
+	 - the market value of all final goods and services that an economy produces in a given period **by its permanent residents**
+		 - 不是看本國籍者，而是看常住居民
+			 - 台：半年
+ - final output 附加價值/最終產出
+	 - 生產總值 - 中間投入
+ - 差異：生產要素 (labor & capital) 的跨國移動
+	 - GNI/GNP = GDP + NFIA
+	 - NFIA, net factor income from abroad
+		 - 國外要素所得 - 國外要素支出
+			 - 國外要素所得
+				 - 去國外賺的錢
+				 - {residents outside of broader}'s income
+			 - 國外要素支出
+				 - 給外來人的錢
+				 - {non-residents within broader}'s income
+				 - e.g. 外勞薪資
+ - flow variable 流量變數
+	- in a range of time
+	- GDP & GNI
+- stock variable 存量變數
+	- at a specific time
+	- 機器設備、存貨、餘額
+- 僅涵蓋有市場交易的 goods and services
+	- 地下經濟、主婦勞務不算
+	- 政府活動以政府決算支出&生產成本為計價基礎
+		- 國防司法外交治安
+
+### GDP 的三個面向
+- ![](https://i.imgur.com/RByM7OH.png)
+	- 供給面
+		- 生產者
+	- 支出面
+		- 誰吃掉?
+			- 家計單位
+			- 廠商
+			- 政府
+			- 國外需求
+	- 分配面
+		- 生產要素
+			- 勞動
+			- 資本
+			- 土地
+			- 企業經營能力
+- 三個面的計算結果會一致
