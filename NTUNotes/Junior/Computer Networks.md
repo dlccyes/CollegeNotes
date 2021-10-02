@@ -140,60 +140,77 @@ aliases: [電網導]
 
 
 ### delay, loss & throughput
-- reliability
-	- 原汁原味
-		- error-free
-			- 測不出 error
-		- in-sequence
-			- 原有順序
-		- no duplication
-		- no loss
-	- failure
-		- bit level
-			- wired $10^{-12}$
-			- wireless $10^{-5}$
-		- packet level
-		- node/link level
-			- power off
-			- 系統問題
-			- virus
-- QoS, quality of service
-	- error rate
-	- delay
-		- delay jitter
-			- variance of delay
-			- 不同 packet 間 delay 的差異
-	- throughput
-		- data transfer rate between sender & receiver
-		- instantaneous rate
-		- average rate
-		- determined by the min rate link
-			- 還有多少人在分
-- delay/latency
-	- one-way delay
-	- RTT, round trip time
-		- 送出 to 收到回覆 (ack)
-	- one-hop delay
-		- $d_{nodal} = d_{proc}+d_{queue}+d_{trans}+d_{prop}$
-		- transmit in → process → queue → transmit out → propagate
-			- ![](https://i.imgur.com/dBUCcIo.png)
-		- transmission delay / store-and-forward delay
-			- L = packet length (bits)
-			- R = link bandwidth (bps)
-			- $d_{trans}=\frac{L}{R}$
-		- propagation delay
-			- d = link.length()
-			- s = propagation speed ~ $2\times 10^8m/s$
-				- 介質光速
-			- $d_{prop}=\frac{d}{s}$
-	- end-to-end delay = P+T+Q
-		- P, propagation delay
-		- T, transmission delay
-		- Q, queuing delay
-	- message segmenting
-		- ![](https://i.imgur.com/UQu1tA2.png)
-			- 1 packet 1ms, 接收完就送出，一邊接收下一個
-			- take 1ms x 5001
+#### reliability
+- 原汁原味
+	- error-free
+		- 測不出 error
+	- in-sequence
+		- 原有順序
+	- no duplication
+	- no loss
+- failure
+	- bit level
+		- wired $10^{-12}$
+		- wireless $10^{-5}$
+	- packet level
+	- node/link level
+		- power off
+		- 系統問題
+		- virus
+#### QoS, quality of service
+- error rate
+- delay
+	- delay jitter
+		- variance of delay
+		- 不同 packet 間 delay 的差異
+- throughput
+	- data transfer rate between sender & receiver
+	- instantaneous rate
+		- client 端看到的 bits/sec
+	- average rate
+	- determined by the min rate link
+		- 有 common link → 大家平分
+		- ![](https://i.imgur.com/ohQCSVt.png)
+			- $min(R/10,R_1,R_2,....,R_{10})$  
+#### delay/latency
+- one-way delay
+- RTT, round trip time
+	- 送出 to 收到回覆 (ack)
+- one-hop delay / total nodal delay
+	- the delay at a single router
+	- $d_{nodal} = d_{proc}+d_{queue}+d_{trans}+d_{prop}$
+	- transmit in → process → queue → transmit out → propagate
+		- ![](https://i.imgur.com/dBUCcIo.png)
+	- processing delay
+		- examine packet's header and determine which link to direct to
+		- check for bit-level errors in the packet
+		- often negligible in total nodal delay
+		- influence a router's max throughput
+	- queuing delay
+		- traffic intensity = La/R
+			- a packets per second
+			- \> 1 → queue increases → average queuing delay approaches $\infty$
+		- 1 packet every L/R → no delay
+		- N packets every NL/R → significant delay
+		- ![](https://i.imgur.com/Ba1ETtF.png)
+		- packet arrives at full queue → packet poss
+	- transmission delay / store-and-forward delay
+		- L = packet length (bits)
+		- R = link bandwidth (bps)
+		- $d_{trans}=\frac{L}{R}$
+	- propagation delay
+		- 從 link 頭跑到 link 尾的時間
+		- d = link.length()
+		- s = propagation speed ~ $2\times 10^8m/s$
+			- 介質光速
+		- $d_{prop}=\frac{d}{s}$
+- end-to-end delay
+	- total delay from source to destination
+	- $d_{end-end}=N(d_{proc}+d_{trans}+d_{prop})$
+- message segmenting
+	- ![](https://i.imgur.com/UQu1tA2.png)
+		- 1 packet 1ms, 接收完就送出，一邊接收下一個
+		- take 1ms x 5001
 
 ### network architecture
 - layered architecture
