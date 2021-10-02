@@ -16,7 +16,7 @@ aliases: 總體經濟學
 		- 21st 關係不明顯
 		- ![](https://i.imgur.com/GZ7kmuO.png)
 - 政府的政策干預
-	- 移轉性支付
+	- transfer payment 移轉性支付
 		- 近幾十年來佔約 US GDP 10%
 		- ![](https://i.imgur.com/uT0cbFj.png)
 		- 政府作為仲介者
@@ -102,3 +102,106 @@ aliases: 總體經濟學
 			- 土地
 			- 企業經營能力
 - 三個面的計算結果會一致
+
+#### 生產面
+- 用聯合國會計準則 SNA08
+- GDP = 境內所有生產者創造的生產價值
+	- 生產價值 = 生產總值 - 中間投入
+- 中間投入沿革
+	- SNA68 企業軟體支出&礦藏探勘費用 $\in$ 中間投入，but SNA93 改成投資支出－無形投資，$\not\in$ 中間投入
+		- 投資支出
+			- 可能在未來創造利潤的支出
+	- SNA08 廠商研究發展(R&D) & 專利權支出改成投資支出－無形投資
+
+#### 支出面
+$$GDP = C+I+G+NX = C+I+G+(X-M)$$
+- C
+	- 民間消費支出
+	- 占比最高，60-70%
+	- 波動不大
+	- 依消費屬性
+		- nondurables 非耐久財消費
+			- 2011 佔台 24%
+			- 實體商品
+		- durables 耐久財消費
+			- 2011 佔台 24%
+			- 包括主計處的半耐久財消費
+		- services 服務消費
+			- 2011 佔台 52%
+			- 包括自有住宅的設算租金
+				- 估計自有住宅創造的價值
+- I 
+	- 國內投資支出/固定資本形成毛額
+	- 生展者購買資本財的支出
+	- 約 20%
+	- 波動幅度大
+	- 依所有主
+		- 民間投資
+			- 2011 佔台 15.8%
+		- 公部門投資
+			- 2011 佔台 5%
+			- 政府投資
+			- 公營企業投資
+	- 依資本財屬性
+		- 實體投資/有形投資
+			- 2011 佔台國內投資 93%
+		- 無形投資
+			- 企業 copyright fee
+			- SNA93 納入企業軟體支出、礦藏探勘費用
+			- SNA08 納入研究發展 & 專利權支出
+		- 存貨變動
+			- 期末 - 期初存貨
+			- flow variable
+			- 今年生產但沒有賣掉 → 存貨增加
+	- DEP,  depreciation
+		-  資本耗損/折舊
+		-  net investment = gross investment - depreciation
+		-  NDP = GDP - DEP
+			-  net domestic product
+		-  NNI = GNI - DEP
+				-  net national income
+	-  期末資本存量 = 期初資本存量 + 淨投資
+- G
+	- 政府消費支出
+	- 已實際決算為計價基礎
+		- 有些並未透過市場完成
+	- 2011 佔台 12.4%
+		- 偏低
+	- 政府預算支出
+		- 消費性支出
+		- 投資性支出
+		- 移轉性支付 & 公債利息
+			- 屬於 transfer payment，不計入 GDP
+- NX = X - M
+	- 淨出口/ trade surplus 貿易盈餘
+	- merchanting trade 三角貿易
+		- e.g. 鴻海台灣資，中國生產，美國買 (iphone)
+		- 以銷貨淨額計入 GDP
+	- X
+		- 出口
+	- M
+		- 進口
+- ![](https://i.imgur.com/kNI1flv.png)
+
+#### 分配面
+- National Income (NI) 國民所得 
+	- = 工資 + ( 利息 + 地租 + 利潤 )
+		- 利息包含地租以外的租金
+			- 店租、房租、資本租金 etc.
+		- 利潤是減掉 NDI & DEP 後
+			- Net Indirect Tax (NDI) 間接稅淨額 = 間接稅 - 生產補貼
+				- 間接稅
+					- 營業加值稅
+					- 關稅
+				- 生產補貼
+					- 出口補貼
+					- 雜糧補貼
+					- 不勞而獲
+		- GDP = DI + ( DEP + NIT )
+		- GNI = NI + ( DEP + NIT )
+			- 把減項加回來
+	- = 受僱人員報酬 + 營業盈餘 (混合所得)
+		- 屬籍
+	- = Domestic Factor Income (DI) 國內要素所得 + NFIA
+- ![](https://i.imgur.com/rdbXJXy.png)
+	- 受僱人員拿到的份變少
