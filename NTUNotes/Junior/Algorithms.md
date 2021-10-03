@@ -36,6 +36,14 @@ void insertion_sort(int x[],int length)//define function
 - está verda siempre
 	- pre, peri & post loop iteration
 - like math induction
+- 3 properties
+	- initialization
+		- in for loop, just after the assignment of i, before the boolean test
+		- ![](https://i.imgur.com/lxcNBvp.png)
+	- maintenance
+	- termination
+	- ![](https://i.imgur.com/yv9NKzi.png)
+
 
 ## complexity
 - time complexity

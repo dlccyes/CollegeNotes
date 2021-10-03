@@ -5,7 +5,7 @@
 ## Big-Oh Notation
 檢測
 - $f(x)=\dfrac{h(x)}{g(x)}$
-  - $\lim_{x\to\infty} f(x) $
+  - $\lim_{x\to\infty} f(x)$
   - $\lim_{x\to\infty} \frac{f(x+1)}{f(x)}$
 
 ![Image](https://i.imgur.com/ay40yL4.png)
@@ -204,6 +204,7 @@ In the following experiment we compare the performance of the `contains` operati
 
 ![Image](https://i.imgur.com/4VxHWnM.png)
 
+![](https://i.imgur.com/XywJmrF.png)
 
 
 ## Dynamic Programming
