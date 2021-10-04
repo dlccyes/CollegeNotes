@@ -32,3 +32,45 @@
 	- 效度 validity
 		- 弄出來的東西有沒有用
 	- <iframe src="https://www.scribbr.com/methodology/reliability-vs-validity/" width=100% height=500px></iframe>
+- personality test
+	- 受試者知道在問什麼 → 有亂寫的誘因
+	- alternatives
+		- 玩遊戲
+			- me: 但快思慢想表示看那一兩次的結果，根本完全無法解釋日後的行為 (因為小樣本)
+		- social media interactions
+- 相關法 vs. 實驗法
+	- 相關法
+		- passively 找相關
+	- 實驗法
+		- actively 操作 variables
+- nature & nurture
+	- twins' IQ
+		- ![](https://i.imgur.com/ZgLwk4m.png)
+	- children's performance vs. mother's responsiveness
+		- ![](https://i.imgur.com/Er8iZcO.png)
+		- 對於某一種基因型，mother's responsiveness 沒什麼影響，對於另一種基因型，則是影響非常大
+	- 表關遺傳學 epigenetics
+		- 環境引發遺傳性的基因
+
+## 考
+- 神經傳導素 neurotransmitter
+	- ![](https://i.imgur.com/ip2DMki.png)
+	- ![](https://i.imgur.com/CgDAiUB.png)
+	- comparison
+		- 多巴胺跟預期有關
+		- 腦內啡止痛
+		- 血清素 開心
+- 大腦結構
+	- ![](https://i.imgur.com/WJUwUwh.jpg)
+	- ![](https://i.imgur.com/HaJIpGg.png)
+	- ![](https://i.imgur.com/2uZjFrn.jpg)
+	- 左右腦
+		- 左腦
+			- sequential processing
+		- 右腦
+			- parallel processing
+		- ![](https://i.imgur.com/2KbxiE8.png)
+
+
+
+

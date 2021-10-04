@@ -75,3 +75,7 @@ body {
 .cm-s-obsidian .HyperMD-codeblock, .markdown-preview-view code, .cm-s-obsidian .cm-inline-code {
     font-family: 'Consolas' !important;
 }
+/* image tool tip scale percent number */
+.img-tip {
+    display: none;
+}

@@ -2,6 +2,6 @@
   "viewImageToggle": true,
   "viewImageInCPB": true,
   "viewImageWithALink": false,
-  "imageMoveSpeed": 19,
+  "imageMoveSpeed": 25,
   "imgFullScreenMode": "FIT"
 }
