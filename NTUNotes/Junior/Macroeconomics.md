@@ -10,22 +10,25 @@ aliases: 總體經濟學
 - 持續的物價膨脹
 	- CPI
 	- > Inflation is always and everywhere a monetary phenomenon <br> - Milton Friedman
-	- Philips curve
+	- [[Philips curve]]
 		- CPI vs. unemployment rate
 		- 20th 兩者呈負相關
 		- 21st 關係不明顯
 		- ![](https://i.imgur.com/GZ7kmuO.png)
 - 政府的政策干預
+	- 政府影響總體經濟 20th 才開始
+		- especially WW2 後
 	- transfer payment 移轉性支付
 		- 近幾十年來佔約 US GDP 10%
 		- ![](https://i.imgur.com/uT0cbFj.png)
-		- 政府作為仲介者
-			- e.g. 健保、消費券
+		- 政府作為仲介者，左手進右手出
+			- e.g. 健保、消費券、社福
 - 金融市場的波動
 - 國際貿易與金融
 	- US 貿易依存度
 		- 1970 後不斷攀升
 		- ![](https://i.imgur.com/1FeZMNo.png)
+	- 大部分資本移動皆為套利性質，跟貿易無關
 - 財富的集中與分配
 	- Thomas Piketty : Capital in the Twenty First Century (2014)
 	- 資本份額
@@ -37,21 +40,65 @@ aliases: 總體經濟學
 - 古典學派 Classical School
 	- before 1930s
 	- rationality &  equilibrium
+		- rationality: sustainable & predictable
+		- Say's Law 賽伊法則
+			- 供給會自創需求 (Keynes 對此的理解)
+			- 商品不會滯銷，充分就業是常態
 	- 無個體總體之分
+	- Adam Smith
 - 凱因斯經濟學 The Economics of Keynes
 	- 1936-1950
+	- 1930s financial crisis
+		- 失業率居高不下，不符 Say's Law
+	- 需求自創供給
+	- The General Theory if Employment, Interest and Money 就業，利息與貨幣的一般理論 by Keynes
+		- Macroeconomics 之始
+		- 艱澀
+		- 顛覆 rationality & equilibrium
+			- 人類行為由 animal spirits (動物本能) 驅使
+				- 景氣循環沒什麼道理，不過是人類反覆的情緒
+			- 用 Rule of Thumb 經驗法則
+				- 提出很多經驗公式
+		- 認為他的理論較 general，不若古典理論那麼 special 
+	- 解決 economic depression by 增加政府支出
+		- functional finance 功能財政
+			- 政府課稅、舉債 to 影響總體經濟活動
+		- WW2 劇增，失業的人都去從軍 → 失業問題紓解
 - 新古典融合 Neoclassical Synthesis
 	- 1950-1980
-	- 凱因斯學派
+	- 戰後軍費支出下降，有效需求下降，預測陷入 stagnation，US 卻反而欣欣向榮
+		- 因為戰爭期間民生消費品停止生產，人民沒東西買，強迫儲蓄，戰後有太多錢，消費大增，不符 Keynes 的模型
+			- Keynes 的消費函數的主要因素是所得，但戰後所得並無增加，只是財富增加
+	- 凱因斯學派+理性基礎
+	- 統計學 & [[Econometrics]] 量化 Keynesians
+		- [[Philips curve]]
 - 新興古典學派 New Classical School
 	- 1970-
+	- 1974 & 1980 energy crisis，各國失業率高 & inflation rate 高，形成 stagflation (stagnation+inflation)	
+		- 不符 [[Philips curve]]
+			- 各國採寬鬆貨幣政策，失業率卻沒有下降
+	- 對 [[Philips curve]] 的批評
+		- Friedman 
+			- 重要的不是 inflation rate，而是 real inflation rate 之於 expected inflation rate
+				- 又 inflation rate 上升時，expected inflation rate 也會上升 → expectations-augmented [[Philips curve]] 預期擴張型菲利普曲線 (see [[Eurozone]])
+		- Lucas
+			- [[Philips curve]] 會移動，斜率也會隨貨幣政策改變
+				- 政府想製造 unexpected Inflation → 變成垂直線 or 甚至正斜率
+			- [[Philips curve]] 不是 structural relationship，只是不穩定的統計相關
+	- SDGE, Stochastic Dynamic General Equilibrium Model 隨機動態均衡模型
+	- 支持市場機制，所有市場隨時都是處於均衡狀態
+	- 較關心政策的長期效果
+		- Keynes: In the long run, we are all dead.
+		- 被批為脫離現實，不知民間疾苦
 	- 貨幣學派、芝加哥學派
 	- 這堂課
-- 新興凱因斯學派 New Keynes School
+- 新興凱因斯學派 New Keynesians
+	- 又稱新興新古典融合 New Neoclassical Synthesis 
 	- 1995-
+	- new Keynesian [[Philips curve]]
+		- 給定 expected inflation，inflation rate & 實質產出同向移動
+			- 是 structural relationship 而非統計假象
 	- 分析方法仍須用(新興)古典的方法
-
-### 總體經濟模型
 
  ## 產出與物價的衡量
  ### GDP & GNI
@@ -176,14 +223,14 @@ $$GDP = C+I+G+NX = C+I+G+(X-M)$$
 	- 淨出口/ trade surplus 貿易盈餘
 	- merchanting trade 三角貿易
 		- e.g. 鴻海台灣資，中國生產，美國買 (iphone)
-		- 以銷貨淨額計入 GDP
+		- 以銷貨淨額 (output-input) 計入 GDP
 	- X
 		- 出口
 	- M
 		- 進口
 - ![](https://i.imgur.com/kNI1flv.png)
 
-#### 分配面
+#### 分配面/要素所得面
 - National Income (NI) 國民所得 
 	- = 工資 + ( 利息 + 地租 + 利潤 )
 		- 利息包含地租以外的租金
@@ -205,3 +252,19 @@ $$GDP = C+I+G+NX = C+I+G+(X-M)$$
 	- = Domestic Factor Income (DI) 國內要素所得 + NFIA
 - ![](https://i.imgur.com/rdbXJXy.png)
 	- 受僱人員拿到的份變少
+
+## real GDP
+- nominal GDP / GDP at current price != real output
+	- 需減掉價格波動
+### 固定價格 GDP (GDP at constant prices)
+- 選擇一個固定的 base period，以基期價格計算各期 GDP
+- 不同的 base period 選擇會有不同的成長率
+- 忽略了商品間相對價格的變動
+	- 需要定期改變基期
+
+### 連鎖加權 GDP (chain weighting GDP)
+- Fisher Quantity Index
+	- 以兩個基期計算的 GDP 成長率的幾何平均數
+	- ![](https://i.imgur.com/efXNOGO.png)
+	- $F_t^Q=\sqrt{(1+g_t^1)(1+g_t^2)}=1+\bar{g_t}$
+		- $\bar{g_t}$ = 費雪成長率

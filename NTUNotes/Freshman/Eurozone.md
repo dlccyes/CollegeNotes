@@ -248,7 +248,7 @@ GIIPS suffered from 歐元區的財政要求 (SGP, Stability And Growth Pact)
 ### Barro-Gordan Model (inflation bias)
 {p|．}: 物價  
 U: unemployment  
-<u>philips curve</u>：
+<u>[[Philips curve]]</u>：
 ![](https://i.imgur.com/bvHMbaH.png)
 {p|．} & U 的 budget line  
 ![](https://i.imgur.com/lhZP0vR.png)
