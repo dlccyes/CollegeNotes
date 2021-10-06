@@ -125,6 +125,8 @@ void insertion_sort(int x[],int length)//define function
 	- basis step
 	- inductive step
 		- $P(0)\land P(1)\land .... \land P(K) → P(K+1)$ $\forall k\in N$
+	- 跟 weak induction 一樣強
+	- 比較好正
 - defective chessboard
 	- $2^n\times2^n$ 缺一塊的 chessboard 可被 triominoes 拼完
 	- basis step
@@ -139,8 +141,23 @@ void insertion_sort(int x[],int length)//define function
 	- iteration
 	- recursion tree
 - substitution
-	- guess and proof
+	- guess and proof (with strong induction)
+	- 不太需要管 n/2 是不是整數之類的的問題
+	- 猜答案方法
+		- 隨便畫個 recursion tree
+	- e.g.
+		- ![](https://i.imgur.com/DoduKNT.png)
+			- strong induction
+		- ![](https://i.imgur.com/IXGvBrO.png)
+			- \>cn → wrong
+	- 減掉一個 lower order term
+		- ![](https://i.imgur.com/W4PALFT.png)
+	- 考法
+		- 跟你說要證什麼 (不用猜)
 - Master theorem
+	- ![](https://i.imgur.com/NS95Ds4.png)
+	- ![](https://i.imgur.com/Tw5Bxt8.png)
+		- 最下層最好用 k or c 代替，之後再 asymptotic
 
 ### merge sort
 ```pseudo
@@ -178,3 +195,44 @@ MergeSort(A,1,A.length)
 	- stable
 		- 數值相同時，sorting 前後順序一致
 	- not in-place
+	
+### maximum subarray
+- leetcode maximum subarray 四部曲
+- 分成左&右&橫跨部分
+	- ![](https://i.imgur.com/Eajglcd.png)
+	- 橫跨部分
+		- ![](https://i.imgur.com/gyRAe29.png)
+- ![](https://i.imgur.com/8gaxx9D.png)
+- $\Theta(nlgn)$
+	- ![](https://i.imgur.com/hefWWpw.png)
+
+### Strassen's method
+matrix multiplication 
+- normal $\in O(n^3)$
+	- $n^2$ elements, each is the sum of $n$ values
+- divide into 4 n/2xn/2 
+	- $\in \Theta(n^{lg8})=\Theta(n^3)$
+		- ![](https://i.imgur.com/dOguHFK.png)
+			- Master theorem
+		- 只要 T(n/2) 係數是 7，就會 $\in o(n^3)$
+	- Strassen's method $\in \Theta(n^{lg7}) \in o(n^3)$
+		- ![](https://i.imgur.com/jVACP7J.png)
+
+## sorting
+### comparison
+![](https://i.imgur.com/H2pkRv5.png)
+
+### Quicksort
+- use divide-and-conquer
+- ![](https://i.imgur.com/HIkmxlz.png)
+	- partition 後基準的位置的左右再各執行
+- partition
+	- 選基準點 (e.g. rightmost)
+	- 掃過 array，把小於基準的放在前面，大於基準的放在後面，最後基準放前後之間
+	- ![](https://i.imgur.com/CFfTYYR.png)
+		- return 最後基準點在的位置
+			- $\Delta i=$ 小於基準者的數目
+	- ![](https://i.imgur.com/q0gDUxX.png)
+		- unrestricted: 還沒掃到的
+	- ![](https://i.imgur.com/r74wukj.png)
+		- 用 swap 的
