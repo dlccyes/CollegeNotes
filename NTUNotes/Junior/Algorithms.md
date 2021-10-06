@@ -22,8 +22,12 @@ void insertion_sort(int x[],int length)//define function
 ```
 - 排撲克牌時的排法
 - n 很小時表現很好
-- memory: in place
-	- 直接在原 array 做，不須額外 space
+- properties
+	- incremental approach
+	- in place
+		- 直接在原 array 做，不須額外 space
+	- stable
+		- 數值相同時，sorting 前後順序一致
 - time complexity
 	- worst case
 		- reverse sorted, while loop iterate j
@@ -139,7 +143,9 @@ void insertion_sort(int x[],int length)//define function
 ### solve recurence
 - unrolling
 	- iteration
+		- ![](https://i.imgur.com/IFGAiT4.png)
 	- recursion tree
+		- ![](https://i.imgur.com/54xwZji.png)
 - substitution
 	- guess and proof (with strong induction)
 	- 不太需要管 n/2 是不是整數之類的的問題
@@ -192,8 +198,8 @@ MergeSort(A,1,A.length)
 			- 猜 $O(nlgn)$
 				- basis & inductive
 		- beats	[[#insertion sort]]
+- properties
 	- stable
-		- 數值相同時，sorting 前後順序一致
 	- not in-place
 	
 ### maximum subarray
