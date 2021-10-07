@@ -2,6 +2,13 @@
 aliases: 總體經濟學
 ---
 # Macroeconomics
+## 影片
+- W1 intro
+	- https://www.dropbox.com/s/n1usof8hkcrq3b8/macro_intro.mp4
+- W2 macro measurement
+	- https://www.dropbox.com/s/392h185o12whyye/Macro_Measurement.mp4
+- W3 macro measurement 2
+	- https://www.dropbox.com/s/3cxs832ipt3vpsb/Macro_Measurement2.mp4
 ## intro
 ### 總體經濟學主要議題
 - 長期的經濟成長

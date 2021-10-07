@@ -16,8 +16,88 @@ aliases: [電網導]
 		- circuit switching
 		- packet switching
 
-## computer network and the Internet
-### the network core
+## Computer Network and the Internet
+### The Network Edge
+#### access networks
+- residential access networks
+	- HFC, hybrid fiber coax
+		- cable TV
+		- FDM
+		- 樹狀
+		-  download 是 boardcast，upload 是 multiple-access
+		- ![](https://i.imgur.com/fSAP7MK.png)
+	- (A)DSL
+		- xDSL, x=A, S, H, V etc.
+		- point to point
+		- ![](https://i.imgur.com/ChQ16fd.png)
+	- FTTH/FTTC/FTTB
+		- 用光纖
+		- FTTH, fiber to the home
+			- fiber 直接到你家
+		- FTTB, fiber to the curb
+			- fiber 到你家附近，再透過電話線之類的連到你家
+		- AON, active optical network
+		- PON, passive optical network
+		- ![](https://i.imgur.com/bHhX2An.png)
+- company access networks
+	- Ethernet
+	- Wireless LAN
+		- IEEE 802.11a/b/g (WiFi)
+			- Ethernet wireless version
+- mobile access networks
+	- cellular system
+		- xG
+			- 每十年一個 generation
+	- wireless local loop
+####  physical media
+-  guided media
+	-  physically wired
+	-  twisted pair
+		-  copper
+		-  兩根纏在一起
+		-  纏愈密愈好
+			-  ![](https://i.imgur.com/JEWBAVi.png)
+		-  網路線
+		-  simple, low cost, low data rate, short range
+		-  接頭：RH-45 (網路孔)
+	-  coaxial cable
+		-  copper
+		-  ![](https://i.imgur.com/f9XhWMj.png)
+	-  fiber optics 光纖
+		-  ![](https://i.imgur.com/d9bhTIm.png)
+		-  secure
+			-  很難被偷接
+		-  greater capacities (長距離)
+			-  全反射
+		-  smaller, lighter
+			-  直徑小 → 全反射幾乎直線
+		-  貴在人工，本身很便宜
+-  unguided media
+	-  via antenna
+	-  terrestrial & satellite radio channels
+		-  download 是 boardcast，upload 是 multiple-access
+		-  terrestrial
+		-  satellite
+			-  ![](https://i.imgur.com/yUrgMsp.png)
+			-  GEO, geostationary earth orbit 同步衛星
+				-  3 顆就覆蓋全球
+			-  MEO, middle earth orbit
+			-  LEO, low earth orbit 低軌道衛星
+				-  要很多顆
+				-  Teledesic
+					-  失敗
+				-  SpaceX Starlink
+-  transmission
+	-  simplex
+		-  one direction
+		-  like webinar
+	-  half duplex
+		-  one direction at a time
+		-  like 對講機
+	-  full duplex
+		-  both direction at the same time
+		-  like 電話
+### The Network Core
 #### packet switching
 - long messages → small packets → through communication links & packet switching
 - middleman
@@ -102,6 +182,7 @@ aliases: [電網導]
 			- e.g. AT&T
 			- pay no one
 			- not 100% global
+			- 台灣沒有
 		-  regional ISPs
 			-  pay tier-1 ISP
 			-  some has hierarchical regional ISPs
@@ -109,11 +190,12 @@ aliases: [電網導]
 		-  access ISPs
 			-  pay regional ISP
 	-  Network Structure 4
-		-  mult-tier hierarchy (Network Stucture 3)
+		-  mult-tier hierarchy (based on Network Stucture 3)
 		-  PoPs, points of presence
 			-  interface in provider's network for customer's network to connect into
 			-  consist of routers
 			-  exist everywhere except the bottom level
+			-  e.g.  台大、科技大樓、交大
 		-  multi-home
 			-  connect to more than 1 higher level ISPs
 				-  e.g. an access ISP multi-home with 2 regional & 1 tier-1 ISPs
@@ -127,9 +209,9 @@ aliases: [電網導]
 			-  provide a meeting point for multiple ISPs to peer
 			-  standalone building with its own switches
 	-  Network Structure 5
-		-  Network Structure 4
+		-  based on Network Structure 4
 		-  content-provider networks
-			-  e.g. Google
+			-  e.g. Google, Amazon, Netflix
 			-  data centers are interconnected privately, separated from the public Internet
 			-  peer with lower-tier ISPs
 				-  directly or through IXP
@@ -139,7 +221,7 @@ aliases: [電網導]
 		- ![](https://i.imgur.com/GEm9pHI.png)
 
 
-### delay, loss & throughput
+### Delay, Loss & Throughput
 #### reliability
 - 原汁原味
 	- error-free
@@ -212,22 +294,76 @@ aliases: [電網導]
 		- 1 packet 1ms, 接收完就送出，一邊接收下一個
 		- take 1ms x 5001
 
-### network architecture
+### Protocol Layers
 - layered architecture
 	- ![](https://i.imgur.com/50Knl9b.png)
 		- 同一層互相溝通
-	- encapsulation
-		- PDU, packet data union
-			- header + data/payload
-			- ![](https://i.imgur.com/hqoyytD.png)
-			- 加上 header 送到下一層
-			- 除掉 header 送到上一層
-	- reference models
-		- ISO OSI 7-layer model
-			- ![](https://i.imgur.com/CSqX8ak.png)
-			- physical layer
-				- 跟 media 相關的
-			- data link layer
-				- LLC, logical link control
-				- MAC, media access control
-		- IETF TCP/IP protocol stack/suite
+#### protocol layering
+- ![](https://i.imgur.com/apS8Dld.png)
+- ![](https://i.imgur.com/wEz7EST.png)
+- 愈上層愈軟，愈下層愈硬
+- ![](https://i.imgur.com/fVHIPOD.png)
+- 5-layer model (the Internet)
+	- application layer
+		- e.g. HTTP(web documents), SMTP(emails), FTP(files), DNS
+		- **message** - application-layer packet
+		- exchange message with the application in another end system
+	- transport layer (layer 4)
+		- transport messages between application endpoints
+		- 2 protocols in the Internet
+			- TCP
+				- connection-oriented
+				- guaranteed delivery of messages
+				- flow control (sender/receiver speed matching)
+				- breaks long messages into shorter segments
+				- congestion control
+			- UDP
+				- connectionless
+				- no reliability
+				- no flow control
+				- no congestion crontrol
+		- **segment** - transport-layer packet
+	- network layer / IP layer (layer 3)
+		-  **datagrams** -  network-layer packet
+			-  或就叫 **packet**
+		-  deliver the segment to destination's transport layer
+		-  IP protocol
+		-  routing protocols
+			-  determine the route datagrams take between source & destination
+		-  forwarding
+	-  link layer (layer 2)
+		-  move a packet from one node to another
+		-  get datagrams from network layer,  deliver to next node, pass up to its network layer
+			-  a datagram may be handled by different link-layer protocols at different link along the route
+		-  e.g. Ethernet, WiFi, DOCSIS
+		-  **frame** - link-layer packet
+	-  physical layer (layer 1)
+		-  move the individual bits in the frame from one node to another
+		-  protocols depend on link & transmission medium of the link
+- ISO OSI 7-layer model
+	- ![](https://i.imgur.com/CSqX8ak.png)
+	- 2 additional layers (也算 application layer)
+		- presentation layer
+			- provide services for communicating applications to interpret the meaning of data exchanged
+				- data compression
+				- data encryption
+				- data description
+					- resolve the different formats between different computers (???)
+		- session layer
+			- delimiting & sync of data exchange
+			- build a checkpointing & recovery sheme
+			- conference call
+				- video+audio+text
+	- data link layer
+		- LLC, logical link control
+		- MAC, media access control
+- IETF TCP/IP protocol stack/suite
+#### encapsulation
+- PDU, packet data union
+	- header + data/payload
+	- ![](https://i.imgur.com/hqoyytD.png)
+	- 加上 header 送到下一層
+	- 除掉 header 送到上一層
+
+
+### Network Security

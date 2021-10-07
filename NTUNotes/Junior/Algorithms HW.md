@@ -14,3 +14,10 @@
 ![](https://i.imgur.com/GgoFatF.png)
 ![](https://i.imgur.com/yLFo8Id.png)
 ![](https://i.imgur.com/F7Lf4Dh.png)
+
+### 4. big theta pf
+![](https://i.imgur.com/V18dEh8.png)
+![](https://i.imgur.com/kyhTkVv.png)
+
+### 5. rank functions
+![](https://i.imgur.com/lqNMS9W.png)
