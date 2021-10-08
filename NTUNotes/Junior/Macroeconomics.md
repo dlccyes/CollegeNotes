@@ -169,8 +169,7 @@ aliases: 總體經濟學
 
 #### 支出面
 $$GDP = C+I+G+NX = C+I+G+(X-M)$$
-- C
-	- 民間消費支出
+- C = 民間消費支出
 	- 占比最高，60-70%
 	- 波動不大
 	- 依消費屬性
@@ -184,8 +183,7 @@ $$GDP = C+I+G+NX = C+I+G+(X-M)$$
 			- 2011 佔台 52%
 			- 包括自有住宅的設算租金
 				- 估計自有住宅創造的價值
-- I 
-	- 國內投資支出/固定資本形成毛額
+- I = 國內投資支出/固定資本形成毛額
 	- 生展者購買資本財的支出
 	- 約 20%
 	- 波動幅度大
@@ -215,8 +213,7 @@ $$GDP = C+I+G+NX = C+I+G+(X-M)$$
 		-  NNI = GNI - DEP
 				-  net national income
 	-  期末資本存量 = 期初資本存量 + 淨投資
-- G
-	- 政府消費支出
+- G = 政府消費支出
 	- 已實際決算為計價基礎
 		- 有些並未透過市場完成
 	- 2011 佔台 12.4%
@@ -226,8 +223,7 @@ $$GDP = C+I+G+NX = C+I+G+(X-M)$$
 		- 投資性支出
 		- 移轉性支付 & 公債利息
 			- 屬於 transfer payment，不計入 GDP
-- NX = X - M
-	- 淨出口/ trade surplus 貿易盈餘
+- NX = X - M = 淨出口/ trade surplus 貿易盈餘
 	- merchanting trade 三角貿易
 		- e.g. 鴻海台灣資，中國生產，美國買 (iphone)
 		- 以銷貨淨額 (output-input) 計入 GDP
@@ -260,18 +256,57 @@ $$GDP = C+I+G+NX = C+I+G+(X-M)$$
 - ![](https://i.imgur.com/rdbXJXy.png)
 	- 受僱人員拿到的份變少
 
-## real GDP
+### real GDP
 - nominal GDP / GDP at current price != real output
 	- 需減掉價格波動
-### 固定價格 GDP (GDP at constant prices)
+#### 固定價格 GDP (GDP at constant prices)
 - 選擇一個固定的 base period，以基期價格計算各期 GDP
 - 不同的 base period 選擇會有不同的成長率
 - 忽略了商品間相對價格的變動
 	- 需要定期改變基期
 
-### 連鎖加權 GDP (chain weighting GDP)
+#### 連鎖加權 GDP (chain-weighting GDP)
 - Fisher Quantity Index
 	- 以兩個基期計算的 GDP 成長率的幾何平均數
 	- ![](https://i.imgur.com/efXNOGO.png)
 	- $F_t^Q=\sqrt{(1+g_t^1)(1+g_t^2)}=1+\bar{g_t}$
 		- $\bar{g_t}$ = 費雪成長率
+- chained index
+	- GDP 複率成長
+	- $I_t=I_{t-1}\times F^Q_t= ...=F^Q_1\times F^Q_2\times ...\times F^Q_t$
+- chain-weighting GDP
+	- $Y^C_t=I_t\times Y_0=(F^Q_1\times F^Q_2\times ...\times F^Q_t)\times Y_0$
+	- $Y_0$ = base period nominal GDP
+- e.g.
+	- ![](https://i.imgur.com/2Ru9IDC.png)
+		- ((260/200)*(350/280))**0.5=1.275
+		- 1.275*1.088=1.387
+		- 200*1.387=277
+
+#### 購買力平價 GDP (purchasing-power parity GDP)
+- 基準商品籃
+
+### 國民所得&國民儲蓄
+#### 民間儲蓄
+- 家計所得 = 要素所得 + 政府移轉所得 (TR) + 公債利息 (INT)
+- 廠商盈餘 = GNI - 要素成本 = (GDP + NFIA) - 要素成本
+- 民間可支配所得 <br>= (家計所得 + 廠商盈餘) - Tax (直接稅 + 間接稅淨額) <br>= (GDP + NFIA + TR + INT) - TAX
+- 民間儲蓄 = 民間可支配所得 - 民間消費支出 (C) = (GDP + NFIA + TR + INT) - TAX - C
+#### 政府儲蓄
+- 政府儲蓄 <br>= TAX - (G + TR + INT)<br>= 政府投資支出 + 政府預算盈餘 <br>= 政府投資支出 - 政府預算赤字
+	- 政府預算盈餘 = TAX - (G + TR + INT + 政府投資支出)
+#### 國民儲蓄
+- 國民儲蓄 (S) = 民間儲蓄 + 政府儲蓄<br>= (GDP + NFIA) - (C + G)<br>= GNI - (民間消費 (C) + 政府消費 (G))<br>= (C + I + G + NX + NFIA) - (C + G)<br>= I + (NX + NFIA)<br>= 國內投資支出 (I) + 經常帳盈餘 (CA)
+- 經常帳盈餘 (CA) = 貿易盈餘 + 國外要素所得淨額
+	- CA > 0 → 國民儲蓄 > 國內投資 → 超額儲蓄 excessive saving
+		- 代表賺來的錢沒被消費掉
+- 國民儲蓄流向
+	- 留在國內 → 國內投資支出 (I) 增加
+	- 流向國外 → 經常帳盈餘 (CA) 增加 → 國外資產增加
+
+### 物價指數 price index, general price level
+#### GDP 平減指數 (GDP Deflator)
+- GDP Deflator = nominal GDP / 固定價格 GDP
+	- ![](https://i.imgur.com/8ToPLCG.png)
+		- base period: t=0 
+		- sum{ i 商品佔 GDP 的比例 x 漲價幅度}
