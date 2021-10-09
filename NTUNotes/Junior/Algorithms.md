@@ -2,6 +2,11 @@
 aliases: [演算法]
 ---
 # Algorithms
+### pseudocode
+- array position 1-A.length
+- for
+	- `for i = 1 to A.length`
+
 ### insertion sort
 ```cpp
 void insertion_sort(int x[],int length)//define function
@@ -141,29 +146,29 @@ void insertion_sort(int x[],int length)//define function
 			- so 假設 k-1 成立，則 k 必成立
 
 ### solve recurence
-- unrolling
-	- iteration
-		- ![](https://i.imgur.com/IFGAiT4.png)
-	- recursion tree
-		- ![](https://i.imgur.com/54xwZji.png)
-- substitution
-	- guess and proof (with strong induction)
-	- 不太需要管 n/2 是不是整數之類的的問題
-	- 猜答案方法
-		- 隨便畫個 recursion tree
-	- e.g.
-		- ![](https://i.imgur.com/DoduKNT.png)
-			- strong induction
-		- ![](https://i.imgur.com/IXGvBrO.png)
-			- \>cn → wrong
-	- 減掉一個 lower order term
-		- ![](https://i.imgur.com/W4PALFT.png)
-	- 考法
-		- 跟你說要證什麼 (不用猜)
-- Master theorem
-	- ![](https://i.imgur.com/NS95Ds4.png)
-	- ![](https://i.imgur.com/Tw5Bxt8.png)
-		- 最下層最好用 k or c 代替，之後再 asymptotic
+#### unrolling
+- iteration
+	- ![](https://i.imgur.com/IFGAiT4.png)
+- recursion tree
+	- ![](https://i.imgur.com/54xwZji.png)
+#### substitution
+- guess and proof (with strong induction)
+- 不太需要管 n/2 是不是整數之類的的問題
+- 猜答案方法
+	- 隨便畫個 recursion tree
+- e.g.
+	- ![](https://i.imgur.com/DoduKNT.png)
+		- strong induction
+	- ![](https://i.imgur.com/IXGvBrO.png)
+		- \>cn → wrong
+- 減掉一個 lower order term
+	- ![](https://i.imgur.com/W4PALFT.png)
+- 考法
+	- 跟你說要證什麼 (不用猜)
+#### Master theorem
+- ![](https://i.imgur.com/NS95Ds4.png)
+- ![](https://i.imgur.com/Tw5Bxt8.png)
+	- 最下層最好用 k or c 代替，之後再 asymptotic
 
 ### merge sort
 ```pseudo

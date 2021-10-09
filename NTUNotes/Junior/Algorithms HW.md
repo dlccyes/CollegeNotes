@@ -21,3 +21,11 @@
 
 ### 5. rank functions
 ![](https://i.imgur.com/lqNMS9W.png)
+
+### 6. labeled linear time maximum subarray
+![](https://i.imgur.com/U13C9Nt.jpg)
+https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm
+
+### 7.
+![](https://i.imgur.com/4p2RcAD.png)
+![](https://i.imgur.com/diyBwoe.png)
