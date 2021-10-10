@@ -26,6 +26,11 @@
 ![](https://i.imgur.com/U13C9Nt.jpg)
 https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm
 
-### 7.
+### 7. recurrence matrix multiplication
 ![](https://i.imgur.com/4p2RcAD.png)
 ![](https://i.imgur.com/diyBwoe.png)
+
+### 8. solve recurrence
+![](https://i.imgur.com/dkDsqog.png)
+![](https://i.imgur.com/IKB3THc.png)
+- 不是用這個解法
