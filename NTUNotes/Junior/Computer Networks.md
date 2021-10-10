@@ -18,75 +18,10 @@ aliases: [電網導]
 
 ## Computer Network and the Internet
 ### The Network Edge
-#### access networks
-- residential access networks
-	- HFC, hybrid fiber coax
-		- cable TV
-		- FDM
-		- 樹狀
-		-  download 是 boardcast，upload 是 multiple-access
-		- ![](https://i.imgur.com/fSAP7MK.png)
-	- (A)DSL
-		- xDSL, x=A, S, H, V etc.
-		- point to point
-		- ![](https://i.imgur.com/ChQ16fd.png)
-	- FTTH/FTTC/FTTB
-		- 用光纖
-		- FTTH, fiber to the home
-			- fiber 直接到你家
-		- FTTB, fiber to the curb
-			- fiber 到你家附近，再透過電話線之類的連到你家
-		- AON, active optical network
-		- PON, passive optical network
-		- ![](https://i.imgur.com/bHhX2An.png)
-- company access networks
-	- Ethernet
-	- Wireless LAN
-		- IEEE 802.11a/b/g (WiFi)
-			- Ethernet wireless version
-- mobile access networks
-	- cellular system
-		- xG
-			- 每十年一個 generation
-	- wireless local loop
-####  physical media
--  guided media
-	-  physically wired
-	-  twisted pair
-		-  copper
-		-  兩根纏在一起
-		-  纏愈密愈好
-			-  ![](https://i.imgur.com/JEWBAVi.png)
-		-  網路線
-		-  simple, low cost, low data rate, short range
-		-  接頭：RH-45 (網路孔)
-	-  coaxial cable
-		-  copper
-		-  ![](https://i.imgur.com/f9XhWMj.png)
-	-  fiber optics 光纖
-		-  ![](https://i.imgur.com/d9bhTIm.png)
-		-  secure
-			-  很難被偷接
-		-  greater capacities (長距離)
-			-  全反射
-		-  smaller, lighter
-			-  直徑小 → 全反射幾乎直線
-		-  貴在人工，本身很便宜
--  unguided media
-	-  via antenna
-	-  terrestrial & satellite radio channels
-		-  download 是 boardcast，upload 是 multiple-access
-		-  terrestrial
-		-  satellite
-			-  ![](https://i.imgur.com/yUrgMsp.png)
-			-  GEO, geostationary earth orbit 同步衛星
-				-  3 顆就覆蓋全球
-			-  MEO, middle earth orbit
-			-  LEO, low earth orbit 低軌道衛星
-				-  要很多顆
-				-  Teledesic
-					-  失敗
-				-  SpaceX Starlink
+- end system = host
+	- client
+	- server
+- CO = central office
 -  transmission
 	-  simplex
 		-  one direction
@@ -97,6 +32,156 @@ aliases: [電網導]
 	-  full duplex
 		-  both direction at the same time
 		-  like 電話
+#### access networks
+##### residential access networks
+###### DSL, digital subscriber line
+- ![](https://i.imgur.com/wuohUfP.png)
+- ![](https://i.imgur.com/ChQ16fd.png)
+- xDSL, x=A, S, H, V etc.
+- point to point
+- share DSL link with telephone signals at the same time through FDM
+	- high-speed downstream
+		- 50kHz-1MHz
+	- medium-speed upstream
+		- 4kHz-50kHz
+	- ordinary two-way telephone
+		- 0-4kHz
+	- downstream upstream speed different → asymmetric
+	- use telco's existing local telephone infrastructure
+- DSLAM, digital subscriber line access multiplexer
+	- CO side
+	- AD convert
+	- separate the data & telephone signals
+	- send the data to DSL modem
+- splitter
+	- customer side
+	- separate the data & telephone signals
+	- send the data to the Internet
+- for short distance
+	- 5-10 miles
+###### HFC, hybrid fiber coax
+- ![](https://i.imgur.com/DOj2gaR.png)
+- ![](https://i.imgur.com/fSAP7MK.png)
+- use cable TV's existing infrastructure
+- use fiber optics to reach neighborhood-level junctions
+- use coaxial cable to reach individual houses
+- cable modem
+	- connect to home PC through Ethernet port
+- CMTS, cable modem termination system
+	- like DSLAM
+	- AD convert
+- FDM
+	- asymmetric
+		- downstream > upstream
+- shared broadcast medium
+	- 樹狀
+-  download 是 broadcast，upload 是 multiple-access
+###### FTTH/FTTC/FTTB
+- ![](https://i.imgur.com/t5bAxxO.png)
+- 用光纖
+- FTTH, fiber to the home
+	- fiber 直接到你家
+- FTTB, fiber to the curb
+	- fiber 到你家附近，再透過電話線之類的連到你家
+- AON, active optical network
+	- switched Ethernet
+- PON, passive optical network
+	- each home has ONT
+	- splitter 
+		- connect many homes to one optical fiber, connect to telco's CO's OLT
+		- all packets sent from OLT are replicated in the splitter
+	- OLT, optical line terminator
+		- optical & electrical signals conversion
+		- connect to the Internet via a telco router
+	- ONT, optical network termination
+		- home user connects a home router to ONT, and access the Internet via the home router
+- ![](https://i.imgur.com/bHhX2An.png)
+###### satellite link
+- Starband, HughesNet
+##### company access networks
+- LAN, local access networks
+- connect end system to edge router
+- Ethernet
+	- ![](https://i.imgur.com/pRsNJ9k.png)
+	- twisted-pair copper wire
+	- connect to an Ethernet switch
+- Wireless LAN
+	- IEEE 802.11a/b/g (WiFi)
+		- Ethernet wireless version
+	- user exchange packets with an access point connected into enterprise's network through wired Ethernet
+- ![](https://i.imgur.com/gGYmjUr.png)
+##### mobile access networks
+- wide-area wireless access
+	- kms
+- same wireless infrastructure as cellular telephony
+- cellular system
+	- xG
+		- 每十年一個 generation
+	- LTE, long-term evolution
+- wireless local loop (?)
+####  physical media
+#####  guided media
+-  solid medium, physically wired
+-  installation cost >> material cost
+-  twisted-pair copper wire
+	-  simple, low cost, low bit rate, short range
+	-  telephone networks, LANs, residential Internet access
+	-  兩根纏在一起
+	-  纏愈密愈好
+		-  ![](https://i.imgur.com/JEWBAVi.png)
+	-  接頭：RH-45 (網路孔)
+	-  UTP, unshielded twisted pair
+		-  LANs
+-  coaxial cable
+	-  ![](https://i.imgur.com/f9XhWMj.png)
+	-  copper
+	-  cable TV
+-  fiber optics 光纖
+	-  ![](https://i.imgur.com/d9bhTIm.png)
+	-  conduct pulses of light
+		-  1 pulse = 1 bit
+	-  very high bit rates
+	-  immune to electromagnetic interference 
+	-  secure
+		-  很難被偷接
+	-  smaller, lighter
+		-  直徑小 → 全反射幾乎直線
+	-  low signal attenuation, great capacities
+		- 全反射
+		- used in long distance links
+	-  high cost
+		-  optical devices
+#####  unguided media
+-  in atmosphere & outer space, with antenna
+-  download 是 broadcast，upload 是 multiple-access
+######  terrestrial radio channels
+-  via electromagnetic spectrum
+-  penetrate walls, long distance
+-  greatly dependent on environment & distance
+-  by operating area
+	-  very short distance
+		-  personal devices
+	-  local area
+		-  wireless LAN
+	-  wide area
+		-  cellular access
+######  satellite radio channels
+-  ![](https://i.imgur.com/yUrgMsp.png)
+-  link between ground stations
+-  receive in one frequency, repeat the signal, transmit in another frequency
+-  GEO, geostationary earth orbit 同步衛星
+	-  3 顆就覆蓋全球
+	-  永遠在地球一個點上面
+	-  substantial propagation delay
+		- 離地球表面太遠
+-  LEO, low earth orbit 低軌道衛星
+	-  會繞著地球轉
+	-  may communicate with each other
+	-  要很多顆
+	-  Teledesic
+		-  失敗
+	-  SpaceX Starlink
+
 ### The Network Core
 #### packet switching
 - long messages → small packets → through communication links & packet switching

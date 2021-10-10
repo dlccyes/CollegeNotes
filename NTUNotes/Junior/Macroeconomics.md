@@ -307,6 +307,35 @@ $$GDP = C+I+G+NX = C+I+G+(X-M)$$
 ### 物價指數 price index, general price level
 #### GDP 平減指數 (GDP Deflator)
 - GDP Deflator = nominal GDP / 固定價格 GDP
-	- ![](https://i.imgur.com/8ToPLCG.png)
-		- base period: t=0 
-		- sum{ i 商品佔 GDP 的比例 x 漲價幅度}
+- ![](https://i.imgur.com/WIE29PD.png)
+	- base period: t=0 
+	- sum{ i 商品漲價幅度 x 佔 GDP 的比例} i.e. 商品漲價幅度加權平均
+	- 分母：現在的商品數量用過去的價格算
+	- Paasche index, 使用當期費量
+		- 會低估 inflation
+			- a 商品長特別凶 → 均衡數量降低 → a 商品加權較少
+			- 無法排除商品相對價格的影響
+
+#### 消費者物價指數 (CPI, consumer price index)
+- 用 retail price
+	- 生產者物價指數用 wholesale price
+- ![](https://i.imgur.com/B0KChNH.png)
+	- base period: t=0
+	- 分子：過去的商品數量用現在的價格算
+	- Laspeyres index, 使用 base period 消費量 i.e. 價格改變前的消費量
+		- 會高估 inflation
+			- 忽略人們會少買漲得多的東西 ([[substitution effect]])
+#### PCE deflator, personal consumption expenditures deflator
+- Fisher Price Index
+	- like Fisher Quantity Index but 變動項為 price
+- 現在的數量拿去過去 (Paasche) & 過去的數量拿來現在 (Laspeyres) 的幾何平均
+- ![](https://i.imgur.com/4J8jmnh.png)
+- $P^C_t=F^P_1\times F^P_2\times...\times F^P_t$
+- 介於 Paasche & Laspeyres 之間，考慮了相對價格的影響 → 較能反映 inflation
+#### e.g.
+- ![](https://i.imgur.com/63ujz23.png)
+	- 350/260 = 1.346
+	- 280/200 = 1.400
+	- (1.346*1.4)**0.5 = 1.373
+	-  ((440/350)*(480/380))**0.5 = 1.260
+	- 1.373*1.260 = 1.730
