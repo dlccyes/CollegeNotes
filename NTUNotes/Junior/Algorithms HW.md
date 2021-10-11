@@ -33,4 +33,12 @@ https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm
 ### 8. solve recurrence
 ![](https://i.imgur.com/dkDsqog.png)
 ![](https://i.imgur.com/IKB3THc.png)
-- 不是用這個解法
+- 我不是用這個解法
+
+![](https://i.imgur.com/5RkHVhL.png)
+![](https://i.imgur.com/BCpaJyq.png)
+
+### 9. polynomial multiplication
+![](https://i.imgur.com/H4N4oao.jpg)
+![](https://i.imgur.com/jufqRYj.jpg)
+http://algorithm.cs.nthu.edu.tw/~course/Extra_Info/Divide%20and%20Conquer_supplement.pdf
