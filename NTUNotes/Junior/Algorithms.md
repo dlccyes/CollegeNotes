@@ -120,6 +120,11 @@ void insertion_sort(int x[],int length)//define function
 - ratio limit doesn't exist
 	- $f(n)=2^n$
 	- $g(n)=2^n$ if n is even, $g(n)=2^{n-1}$ otherwise
+- ![](https://i.imgur.com/CoYpovZ.png)
+- Stirling's approximation
+	- ![](https://i.imgur.com/AyvoMnd.png)
+
+
 
 ## Divide and Conquer
 - divide into subproblems
@@ -212,7 +217,7 @@ MergeSort(A,1,A.length)
 - 分成左&右&橫跨部分
 	- ![](https://i.imgur.com/Eajglcd.png)
 	- 橫跨部分
-		- ![](https://i.imgur.com/gyRAe29.png)
+		- ![](https://i.imgur.com/G5xs4rz.png)
 - ![](https://i.imgur.com/8gaxx9D.png)
 - $\Theta(nlgn)$
 	- ![](https://i.imgur.com/hefWWpw.png)
