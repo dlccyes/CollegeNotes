@@ -1,5 +1,6 @@
 [
   "obsidian-imgur-plugin",
+  "dataview",
   "obsidian-tabs",
   "obsidian-mind-map",
   "better-word-count",
@@ -16,10 +17,9 @@
   "templater-obsidian",
   "obsidian-autocomplete-plugin",
   "oz-clear-unused-images",
-  "obsidian-image-toolkit",
   "quick-explorer",
   "obsidian-fullscreen-plugin",
   "hover-external-link",
   "obsidian-code-block-enhancer",
-  "obsidian-git"
+  "obsidian-image-toolkit"
 ]
