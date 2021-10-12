@@ -168,7 +168,7 @@ aliases: 總體經濟學
 	- SNA08 廠商研究發展(R&D) & 專利權支出改成投資支出－無形投資
 
 #### 支出面
-$$GDP = C+I+G+NX = C+I+G+(X-M)$$
+$$D = C+I+G+(X-M)$$
 - C = 民間消費支出
 	- 占比最高，60-70%
 	- 波動不大
@@ -234,12 +234,12 @@ $$GDP = C+I+G+NX = C+I+G+(X-M)$$
 - ![](https://i.imgur.com/kNI1flv.png)
 
 #### 分配面/要素所得面
-- National Income (NI) 國民所得 
+- 國民所得 National Income (NI)  
 	- = 工資 + ( 利息 + 地租 + 利潤 )
 		- 利息包含地租以外的租金
 			- 店租、房租、資本租金 etc.
 		- 利潤是減掉 NDI & DEP 後
-			- Net Indirect Tax (NDI) 間接稅淨額 = 間接稅 - 生產補貼
+			- 間接稅淨額 Net Indirect Tax (NDI)  = 間接稅 - 生產補貼
 				- 間接稅
 					- 營業加值稅
 					- 關稅
@@ -252,7 +252,7 @@ $$GDP = C+I+G+NX = C+I+G+(X-M)$$
 			- 把減項加回來
 	- = 受僱人員報酬 + 營業盈餘 (混合所得)
 		- 屬籍
-	- = Domestic Factor Income (DI) 國內要素所得 + NFIA
+	- = 國內要素所得 Domestic Factor Income (DI)  + NFIA
 - ![](https://i.imgur.com/rdbXJXy.png)
 	- 受僱人員拿到的份變少
 
@@ -280,48 +280,74 @@ $$GDP = C+I+G+NX = C+I+G+(X-M)$$
 - e.g.
 	- ![](https://i.imgur.com/2Ru9IDC.png)
 		- ((260/200)*(350/280))**0.5=1.275
+		- ((38/35)*(48/44))**0.5=1.088
 		- 1.275*1.088=1.387
 		- 200*1.387=277
+- pros
+	- 較能反映鄰近期間實際生產活動變化
+- cons
+	- 非線性轉換 → GDP=C+I+G+NX 不成立
 
-#### 購買力平價 GDP (purchasing-power parity GDP)
-- 基準商品籃
+#### 購買力平價 GDP (purchasing power parity GDP)
+- PPP-GDP
+- 以基準商品籃建立國際貨幣單位 international dollar
 
 ### 國民所得&國民儲蓄
-#### 民間儲蓄
-- 家計所得 = 要素所得 + 政府移轉所得 (TR) + 公債利息 (INT)
-- 廠商盈餘 = GNI - 要素成本 = (GDP + NFIA) - 要素成本
-- 民間可支配所得 <br>= (家計所得 + 廠商盈餘) - Tax (直接稅 + 間接稅淨額) <br>= (GDP + NFIA + TR + INT) - TAX
-- 民間儲蓄 = 民間可支配所得 - 民間消費支出 (C) = (GDP + NFIA + TR + INT) - TAX - C
-#### 政府儲蓄
-- 政府儲蓄 <br>= TAX - (G + TR + INT)<br>= 政府投資支出 + 政府預算盈餘 <br>= 政府投資支出 - 政府預算赤字
-	- 政府預算盈餘 = TAX - (G + TR + INT + 政府投資支出)
-#### 國民儲蓄
-- 國民儲蓄 (S) = 民間儲蓄 + 政府儲蓄<br>= (GDP + NFIA) - (C + G)<br>= GNI - (民間消費 (C) + 政府消費 (G))<br>= (C + I + G + NX + NFIA) - (C + G)<br>= I + (NX + NFIA)<br>= 國內投資支出 (I) + 經常帳盈餘 (CA)
-- 經常帳盈餘 (CA) = 貿易盈餘 + 國外要素所得淨額
-	- CA > 0 → 國民儲蓄 > 國內投資 → 超額儲蓄 excessive saving
+#### 民間儲蓄 private saving
+- 家計所得 household income<br>= 要素所得 + 政府移轉所得 (TR) + 公債利息 (INT)
+- 廠商盈餘<br>= GNI - 要素成本<br>= (GDP + NFIA) - 要素成本
+	- 生產者附加價值 = GNI
+- 民間所得 private income <br>= 家計所得 + 廠商盈餘<br>=GNI + TR + INT<br>=GDP + NFIA + TR + INT
+- 民間可支配所得 private disposable income <br>$Y^P$= (家計所得 + 廠商盈餘) - TAX (直接稅 + 間接稅淨額) <br>= (GDP + NFIA + TR + INT) - TAX
+	- TAX
+		- 家計單位繳直接稅
+		- 廠商繳間接稅淨額
+- 民間儲蓄<br>$S^P$ = 民間可支配所得 ($Y^P$) - 民間消費支出 (C)<br>= (GDP + NFIA + TR + INT) - TAX - C
+#### 政府儲蓄 government saving
+- 政府儲蓄 <br>$S^G$ = TAX - (G + TR + INT)<br>= 政府投資支出 + 政府預算盈餘 <br>= 政府投資支出 - 政府預算赤字
+	- 政府預算盈餘 budget surplus = 總稅收 - 總支出<br>= TAX - (G + TR + INT + 政府投資支出)
+	- TAX 包含公營事業盈餘等
+#### 國民儲蓄 national saving
+- 國民儲蓄 (S) = 民間儲蓄 ($S^P$) + 政府儲蓄 ($S^G$)<br>= 國民所得毛額 - ( 民間消費 + 政府消費 )<br>= GNI - (C + G)<br>= (GDP + NFIA) - (C + G)<br>= (C + I + G + NX + NFIA) - (C + G)<br>= I + (NX + NFIA)<br>= 國內投資支出 (I) + 經常帳盈餘 (CA)
+- 國民儲蓄 - 折舊<br>= 國民儲蓄毛額 gross national saving - 折舊<br>= 國民儲蓄淨額 net national saving
+- 經常帳盈餘 (CA, current account) = 貿易盈餘 (NX) + 國外要素所得淨額 (NFIA)
+	-  國外資產持有 = 對外國住民的求償權
+	-   CA > 0 → 國外資產淨額增加 i.e. 對外國住民求償權增加，資本帳赤字
+	-   current account + 資本帳 (capital account) =  0
+		-   https://www.investopedia.com/ask/answers/031615/whats-difference-between-current-account-and-capital-account.asp
+		-   <iframe src="https://www.investopedia.com/ask/answers/031615/whats-difference-between-current-account-and-capital-account.asp" width=100% height=500px></iframe>
+- 國民儲蓄 S = I + CA 流向
+	- 留在國內 → 國內投資支出 (I)
+	- 流向國外 → 經常帳盈餘 (CA) i.e. 以商品或要素形式流向國外
+		- e.g. 買 US treasury OR 國外資產 ==(???????????????? 到底是金錢還是商品或要素形式流出)==
+	- CA > 0 → 國民儲蓄 → 國內投資 → 超額儲蓄 excessive saving
 		- 代表賺來的錢沒被消費掉
-- 國民儲蓄流向
-	- 留在國內 → 國內投資支出 (I) 增加
-	- 流向國外 → 經常帳盈餘 (CA) 增加 → 國外資產增加
+
+	- 期末資本存量 = 期初資本存量 + 淨投資 (I)
+	- 期末國外資產淨額 = 期初國外資產淨額 + 經常帳盈餘 (CA)
 
 ### 物價指數 price index, general price level
 #### GDP 平減指數 (GDP Deflator)
 - GDP Deflator = nominal GDP / 固定價格 GDP
 - ![](https://i.imgur.com/WIE29PD.png)
 	- base period: t=0 
-	- sum{ i 商品漲價幅度 x 佔 GDP 的比例} i.e. 商品漲價幅度加權平均
-	- 分母：現在的商品數量用過去的價格算
-	- Paasche index, 使用當期費量
+	- 利用當期支出比重做加權平均
+		- sum{ i 商品漲價幅度 x 佔 GDP 的比例} i.e. 商品漲價幅度加權平均
+	- intuition: 現在的商品拿去過去賣，漲了多少
+		- 分母：現在的商品數量用過去的價格算
+	- Paasche index, 使用當期消費量
 		- 會低估 inflation
-			- a 商品長特別凶 → 均衡數量降低 → a 商品加權較少
+			- a 商品長特別凶 → 均衡數量降低 → a 商品加權較少 ([[substitution effect]])
 			- 無法排除商品相對價格的影響
 
 #### 消費者物價指數 (CPI, consumer price index)
 - 用 retail price
-	- 生產者物價指數用 wholesale price
+	- 生產者物價指數 WPI 用 wholesale price
 - ![](https://i.imgur.com/B0KChNH.png)
 	- base period: t=0
-	- 分子：過去的商品數量用現在的價格算
+	- intuition: 過去的商品拿來現在賣，貴了多少
+		- 分子：過去的商品數量用現在的價格算
+	- 利用基期支出比重做加權平均
 	- Laspeyres index, 使用 base period 消費量 i.e. 價格改變前的消費量
 		- 會高估 inflation
 			- 忽略人們會少買漲得多的東西 ([[substitution effect]])
@@ -332,6 +358,8 @@ $$GDP = C+I+G+NX = C+I+G+(X-M)$$
 - ![](https://i.imgur.com/4J8jmnh.png)
 - $P^C_t=F^P_1\times F^P_2\times...\times F^P_t$
 - 介於 Paasche & Laspeyres 之間，考慮了相對價格的影響 → 較能反映 inflation
+- 使用滾動基期 → 較能反映貨幣政策對物價的實際影響
+- Fed 政策主要參考指標
 #### e.g.
 - ![](https://i.imgur.com/63ujz23.png)
 	- 350/260 = 1.346
