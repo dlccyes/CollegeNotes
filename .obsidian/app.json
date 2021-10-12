@@ -11,5 +11,11 @@
   "spellcheck": true,
   "alwaysUpdateLinks": true,
   "fileSortOrder": "alphabeticalReverse",
-  "readableLineLength": true
+  "readableLineLength": true,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "1",
+    "downscalePercent": 37
+  }
 }

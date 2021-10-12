@@ -94,12 +94,12 @@ void insertion_sort(int x[],int length)//define function
 - rule of products
 	- $f_1(n)=\Pi(g_1(n))$ and $f_2(n)=\Pi(g_2(n))$ → $f_1(n)f_2(n)=\Pi(g_1(n)g_2(n))$ for $\Pi=everything$
 - transpose symmetry
-	- $f(n)=O(g(n))$ iff $g(n)=\Omega(f(n))$
-	- $f(n)=o(g(n))$ iff $g(n)=\omega(f(n))$
+	- $f(n)=O(g(n))\iff g(n)=\Omega(f(n))$
+	- $f(n)=o(g(n))\iff g(n)=\omega(f(n))$
 - reflexivity
 	- $f(n)=\Pi(f(n))$ for $\Pi=big$
 - symmetry
-	- $f(n)=\Theta(g(n))$ iff $g(n)=\Theta(f(n))$
+	- $f(n)=\Theta(g(n))\iff g(n)=\Theta(f(n))$
 
 ### notation
 - $lgn = log_2n$
@@ -123,8 +123,14 @@ void insertion_sort(int x[],int length)//define function
 - ![](https://i.imgur.com/CoYpovZ.png)
 - Stirling's approximation
 	- ![](https://i.imgur.com/AyvoMnd.png)
-
-
+	- can use it to approximate $(lgn)!\in\Theta(n^{lg(lgn)})>n^k$
+- ![](https://i.imgur.com/sVeoHV6.png)
+- $ln(n!)\in \Theta(nlnn)$
+	- ![](https://i.imgur.com/nezIpjR.png)
+	- ![](https://i.imgur.com/J6UEIoy.png)
+- $T(n)=T(n/2)+T(n/4)+n\in\Theta(n)$
+	- substitution
+	- [看不懂](https://stackoverflow.com/questions/5628260/how-to-solve-tn-tn-2-tn-4-tn-8-n)
 
 ## Divide and Conquer
 - divide into subproblems
@@ -140,7 +146,7 @@ void insertion_sort(int x[],int length)//define function
 	- inductive step
 		- $P(0)\land P(1)\land .... \land P(K) → P(K+1)$ $\forall k\in N$
 	- 跟 weak induction 一樣強
-	- 比較好正
+	- 比較好證
 - defective chessboard
 	- $2^n\times2^n$ 缺一塊的 chessboard 可被 triominoes 拼完
 	- basis step
@@ -155,7 +161,9 @@ void insertion_sort(int x[],int length)//define function
 - iteration
 	- ![](https://i.imgur.com/IFGAiT4.png)
 - recursion tree
-	- ![](https://i.imgur.com/54xwZji.png)
+	- ![](https://i.imgur.com/cGkapaH.png)
+		- do n work and call n/2 4 times at level n
+	- ![](https://i.imgur.com/HcwSiCU.png)
 #### substitution
 - guess and proof (with strong induction)
 - 不太需要管 n/2 是不是整數之類的的問題
@@ -236,7 +244,10 @@ matrix multiplication
 
 ## sorting
 ### comparison
-![](https://i.imgur.com/H2pkRv5.png)
+- time complexity
+	- ![](https://i.imgur.com/H2pkRv5.png)
+- stable
+	- ![](https://i.imgur.com/xo3n0Z8.png)
 
 ### Quicksort
 - use divide-and-conquer

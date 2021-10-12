@@ -206,6 +206,9 @@ In the following experiment we compare the performance of the `contains` operati
 
 ![](https://i.imgur.com/XywJmrF.png)
 
+## generating function
+![](https://i.imgur.com/zA52xoh.png)
+![](https://i.imgur.com/tTwAMXQ.png)
 
 ## Dynamic Programming
 - store the solutions
