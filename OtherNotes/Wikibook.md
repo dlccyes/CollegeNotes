@@ -16,3 +16,8 @@
 - heading
 	- `==h2==`
 	- `====h4====`
+- wikipedia link
+	- 英文
+		- `[[wikipedia:Functional psychology|Functionalism]]`
+	- 中文
+		- `[[w:可证伪性|可否證性]]`

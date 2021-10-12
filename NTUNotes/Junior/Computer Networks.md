@@ -16,7 +16,7 @@ aliases: [電網導]
 		- circuit switching
 		- packet switching
 
-## Computer Network and the Internet
+## Ch1 Computer Network and the Internet
 ### The Network Edge
 - end system = host
 	- client
@@ -452,3 +452,43 @@ aliases: [電網導]
 
 
 ### Network Security
+the Internet was originally designed on the concept of 
+> a group of mutually trusting users attached to a transparent netowrk
+
+so there're many security problems now
+
+#### malware
+- self-replicating
+	- 感染 host → 複製 → 透過該 host 感染其他 host
+- virus
+	- infect user's device through user interaction
+- worm
+	- infect user's device without explicit user interaction
+
+#### DOS, denial-of-service attack
+- make things unusable
+- methods
+	- vulnerability attack
+		- send few well-crafted messages
+	- bandwidth flooding
+		- send a lot of packets → target's access link clogged → legitimate packets can't enter
+		- DDOS, distributed DOS attack
+			- use botnets (many controlled hosts) to send traffic to the target
+			- don't need huge traffic for each source
+			- harder to detect and defend against
+			- ![](https://i.imgur.com/WoJYyXt.png)
+	- connection flooding
+		- establish a lot of half-open or fully open TCP connections at target → connection bogged → target stops accepting legitimate connections
+
+#### packet sniffer
+- a passive receiver copying every packet transmitted
+	- wireless or wired environment
+- passive, don't inject packets → hard to detect
+- solution
+	- cryptography (Ch8)
+
+#### IP spoofing
+- send packet with fake source address with malicious contents
+- solution
+	- end-point authentication (Ch8)
+		- check if the source address is correct
