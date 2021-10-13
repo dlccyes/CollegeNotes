@@ -118,7 +118,7 @@ void insertion_sort(int x[],int length)//define function
 	- billion instruction/operation per second
 - ![](https://i.imgur.com/JeFmLQ9.png)
 
-### examples
+### growth of function examples
 - ratio limit doesn't exist
 	- $f(n)=2^n$
 	- $g(n)=2^n$ if n is even, $g(n)=2^{n-1}$ otherwise
@@ -129,7 +129,7 @@ void insertion_sort(int x[],int length)//define function
 - ![](https://i.imgur.com/sVeoHV6.png)
 - $ln(n!)\in \Theta(nlnn)$
 	- ![](https://i.imgur.com/nezIpjR.png)
-	- ![](https://i.imgur.com/J6UEIoy.png)
+	- ![](https://i.imgur.com/X23recI.png)
 - $T(n)=T(n/2)+T(n/4)+n\in\Theta(n)$
 	- substitution
 	- ![](https://i.imgur.com/lEo5Wv1.png)
