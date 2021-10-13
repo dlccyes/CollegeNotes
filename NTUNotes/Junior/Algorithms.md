@@ -8,6 +8,8 @@ aliases: [演算法]
 	- `for i = 1 to A.length`
 
 ### insertion sort
+![](https://i.imgur.com/8aTILkM.png)
+![](https://i.imgur.com/1yfkAvE.png)
 ```cpp
 void insertion_sort(int x[],int length)//define function
 {
@@ -243,7 +245,7 @@ matrix multiplication
 		- ![](https://i.imgur.com/jVACP7J.png)
 
 ## sorting
-### comparison
+### sorting comparisons
 - time complexity
 	- ![](https://i.imgur.com/H2pkRv5.png)
 - stable
