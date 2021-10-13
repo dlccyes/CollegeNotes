@@ -132,7 +132,10 @@ void insertion_sort(int x[],int length)//define function
 	- ![](https://i.imgur.com/J6UEIoy.png)
 - $T(n)=T(n/2)+T(n/4)+n\in\Theta(n)$
 	- substitution
-	- [看不懂](https://stackoverflow.com/questions/5628260/how-to-solve-tn-tn-2-tn-4-tn-8-n)
+	- ![](https://i.imgur.com/lEo5Wv1.png)
+		- if p+q>1 && p,q>1
+			- $2^{log_{1/q} (n)} <= leaves <= 2^{log_{1/p} (n)}$
+- ![](https://i.imgur.com/161Pvrb.png)
 
 ## Divide and Conquer
 - divide into subproblems
