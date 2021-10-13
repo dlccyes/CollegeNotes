@@ -268,3 +268,11 @@ matrix multiplication
 		- unrestricted: 還沒掃到的
 	- ![](https://i.imgur.com/r74wukj.png)
 		- 用 swap 的
+- time complexity
+	- best case & average case $\in\Theta(nlgn)$
+	- worst case $\in\Theta(n^2)$
+		- already sorted
+		- ![](https://i.imgur.com/nutGH85.png)
+- randomized quick sort
+	- random 選一個 element 跟最後一位交換
+	- ![](https://i.imgur.com/jqWEcR5.png)
