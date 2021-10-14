@@ -507,27 +507,58 @@ so there're many security problems now
 ### principles
 #### architectures
 - client-server
+	- single server
+		- may be overwhelmed
+	- data center
+		- many hosts
+	- client don't communicate with each other directly
 - P2P
-	- sender → server
-	- receiver → client
+	- server
+		- sender
+		- wait to be contacted
+	- client
+		- initiator
+		- receiver
+	- self-scalability
+	- decentralized → security, performance, reliability issues
+	- e.g.
+		- skype, bittorrent
 - ![](https://i.imgur.com/UWe894G.png)
+- hybrid
+	- e.g. instant messaging apps
+		- server to track user IPs
+		- direct messages with P2P
 #### process communicating
+- processes in different hosts connect with each other across the computer network
+- browser process initiates contact with web server
+	- browser is the client
 - socket
-	- ![](https://i.imgur.com/llzwl5V.png)
 	- interface between [[#application layer]] & [[#transport layer]]
 		- [[#transport-layer protocols]]
 		- process 透過 socket 跟 transport layer 溝通
 	- API between application & network
+	- port number for identifying which process in the host to send to
+		- 80 → web server
+		- 25 → mail server
+	- ![](https://i.imgur.com/llzwl5V.png)
 #### transport-layer protocols
-- important qualities
+- possible qualities
 	- data integrity
-		- some need no data loss (reliable data transfer)
-		- duplication
-		- in-sequence
+		- reliable data transfer
+			- no data loss
+			- no duplication
+			- in sequence
+		- some apps need guaranteed delivery
+			- mail, file transfer
+		- some is loss-tolerant
+			- multimedia
 	- throughput
-		- some require min throughput
+		- some have throughput requirement (bandwidth-sensitive)
+			- multimedia
+		- some are elastic
 	- timing
 		- some need low delay
+			- real-time apps
 	- security
 		- encryption, data integrity etc.
 - differential coding
@@ -539,18 +570,21 @@ so there're many security problems now
 	- 講義：multimedia 可 UDP
 ##### TCP
 - provide
+	- connection-oriented
+		- handshaking before communicating
+			- exchange infos
+		- full-duplex connection
 	- reliable transport
 		- ARQ, automatic repeat request
 			- 送一個拿到 ACK 才下一個 → reliable but slow 
-	- flow control
-		- receiver 不會被 overwhelmed
-			- receiver 在控制
-		- between a pair of sender & receiver
 	- congestion control
 		- 讓 sender 送慢一點
 		- give alternate route
 		- congestion control solves congestion; admission control prevents congestion
-	- connection-oriented
+	- flow control
+		- receiver 不會被 overwhelmed
+			- receiver 在控制
+		- between a pair of sender & receiver
 - does not provide
 	- timing
 	- min throughput guarantee
@@ -562,13 +596,15 @@ so there're many security problems now
 - does not provide anything
 - 適合要快不用準的
 	- multimedia
+	- Skype
+- many firewalls block UDP
 
 #### application-layer protocols
 
 ---
 ## miscellaneous
-logical channel??
-
+- logical channel??
+<br><br>
 - telecom
 	- ATM, Asynchronous Transfer Mode
 	- from telephone
