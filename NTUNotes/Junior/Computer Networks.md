@@ -245,7 +245,12 @@ aliases: [電網導]
 		- not suitable for real-time services
 			- variable & unpredictable end-to-end delays
 				- queuing delays
+		- best-effort service
+			- no guarantee
 - circuit switching
+	- pros
+		- reliable transport
+			- guaranteed delivery
 	- cons
 		- circuit is idle during silent periods → waste
 			- 佔用資源但暫時不 transmit data
@@ -388,60 +393,65 @@ aliases: [電網導]
 - ![](https://i.imgur.com/wEz7EST.png)
 - 愈上層愈軟，愈下層愈硬
 - ![](https://i.imgur.com/fVHIPOD.png)
-- 5-layer model (the Internet)
-	- application layer
-		- e.g. HTTP(web documents), SMTP(emails), FTP(files), DNS
-		- **message** - application-layer packet
-		- exchange message with the application in another end system
-	- transport layer (layer 4)
-		- transport messages between application endpoints
-		- 2 protocols in the Internet
-			- TCP
-				- connection-oriented
-				- guaranteed delivery of messages
-				- flow control (sender/receiver speed matching)
-				- breaks long messages into shorter segments
-				- congestion control
-			- UDP
-				- connectionless
-				- no reliability
-				- no flow control
-				- no congestion crontrol
-		- **segment** - transport-layer packet
-	- network layer / IP layer (layer 3)
-		-  **datagrams** -  network-layer packet
-			-  或就叫 **packet**
-		-  deliver the segment to destination's transport layer
-		-  IP protocol
-		-  routing protocols
-			-  determine the route datagrams take between source & destination
-		-  forwarding
-	-  link layer (layer 2)
-		-  move a packet from one node to another
-		-  get datagrams from network layer,  deliver to next node, pass up to its network layer
-			-  a datagram may be handled by different link-layer protocols at different link along the route
-		-  e.g. Ethernet, WiFi, DOCSIS
-		-  **frame** - link-layer packet
-	-  physical layer (layer 1)
-		-  move the individual bits in the frame from one node to another
-		-  protocols depend on link & transmission medium of the link
-- ISO OSI 7-layer model
-	- ![](https://i.imgur.com/CSqX8ak.png)
-	- 2 additional layers (也算 application layer)
-		- presentation layer
-			- provide services for communicating applications to interpret the meaning of data exchanged
-				- data compression
-				- data encryption
-				- data description
-					- resolve the different formats between different computers (???)
-		- session layer
-			- delimiting & sync of data exchange
-			- build a checkpointing & recovery sheme
-			- conference call
-				- video+audio+text
-	- data link layer
-		- LLC, logical link control
-		- MAC, media access control
+##### 5-layer model (the Internet)
+###### application layer
+- e.g. HTTP(web documents), SMTP(emails), FTP(files), DNS
+- **message** - application-layer packet
+- exchange message with the application in another end system
+###### transport layer
+- layer 4
+- transport messages between application endpoints
+- 2 protocols in the Internet
+	- TCP
+		- connection-oriented
+		- guaranteed delivery of messages
+		- flow control (sender/receiver speed matching)
+		- breaks long messages into shorter segments
+		- congestion control
+	- UDP
+		- connectionless
+		- no reliability
+		- no flow control
+		- no congestion crontrol
+- **segment** - transport-layer packet
+###### network layer 
+- layer 3
+- IP layer
+-  **datagrams** -  network-layer packet
+	-  或就叫 **packet**
+-  deliver the segment to destination's transport layer
+-  IP protocol
+-  routing protocols
+	-  determine the route datagrams take between source & destination
+-  forwarding
+######  link layer
+- layer 2
+-  move a packet from one node to another
+-  get datagrams from network layer,  deliver to next node, pass up to its network layer
+	-  a datagram may be handled by different link-layer protocols at different link along the route
+-  e.g. Ethernet, WiFi, DOCSIS
+-  **frame** - link-layer packet
+######  physical layer 
+- layer 1
+- move the individual bits in the frame from one node to another
+- protocols depend on link & transmission medium of the link
+##### ISO OSI 7-layer model
+- ![](https://i.imgur.com/CSqX8ak.png)
+- 2 additional layers (也算 application layer)
+	- presentation layer
+		- provide services for communicating applications to interpret the meaning of data exchanged
+			- data compression
+			- data encryption
+			- data description
+				- resolve the different formats between different computers (???)
+	- session layer
+		- delimiting & sync of data exchange
+		- build a checkpointing & recovery sheme
+		- conference call
+			- video+audio+text
+- data link layer
+	- LLC, logical link control
+	- MAC, media access control
 - IETF TCP/IP protocol stack/suite
 #### encapsulation
 - PDU, packet data union
@@ -492,3 +502,82 @@ so there're many security problems now
 - solution
 	- end-point authentication (Ch8)
 		- check if the source address is correct
+
+## Ch2 Application Layer
+### principles
+#### architectures
+- client-server
+- P2P
+	- sender → server
+	- receiver → client
+- ![](https://i.imgur.com/UWe894G.png)
+#### process communicating
+- socket
+	- ![](https://i.imgur.com/llzwl5V.png)
+	- interface between [[#application layer]] & [[#transport layer]]
+		- [[#transport-layer protocols]]
+		- process 透過 socket 跟 transport layer 溝通
+	- API between application & network
+#### transport-layer protocols
+- important qualities
+	- data integrity
+		- some need no data loss (reliable data transfer)
+		- duplication
+		- in-sequence
+	- throughput
+		- some require min throughput
+	- timing
+		- some need low delay
+	- security
+		- encryption, data integrity etc.
+- differential coding
+	- video 只要前後看起來差不多就可
+	- 2 frames, 後者只要送跟前者不一樣的部分就好了
+	- 隔幾個就取一次全 frame，以免掉一個全掛
+- ![](https://i.imgur.com/i7O8XId.png)
+- ![](https://i.imgur.com/wx0bRpv.png)
+	- 講義：multimedia 可 UDP
+##### TCP
+- provide
+	- reliable transport
+		- ARQ, automatic repeat request
+			- 送一個拿到 ACK 才下一個 → reliable but slow 
+	- flow control
+		- receiver 不會被 overwhelmed
+			- receiver 在控制
+		- between a pair of sender & receiver
+	- congestion control
+		- 讓 sender 送慢一點
+		- give alternate route
+		- congestion control solves congestion; admission control prevents congestion
+	- connection-oriented
+- does not provide
+	- timing
+	- min throughput guarantee
+	- security
+- TCP socket
+	- header 很大 bc 提供很多功能
+	- 3-way handshaking
+##### UDP
+- does not provide anything
+- 適合要快不用準的
+	- multimedia
+
+#### application-layer protocols
+
+---
+## miscellaneous
+logical channel??
+
+- telecom
+	- ATM, Asynchronous Transfer Mode
+	- from telephone
+	- philosophy
+		- 專制
+		- 把一切規劃好
+	- 輸了
+- datacom
+	- the Internet
+	- philosophy
+		- whatever
+		- 海納百川
