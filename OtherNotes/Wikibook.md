@@ -21,3 +21,6 @@
 		- `[[wikipedia:Functional psychology|Functionalism]]`
 	- 中文
 		- `[[w:可证伪性|可否證性]]`
+- reference
+	- `<ref>this is a reference</ref>`
+		- 會自動標號
