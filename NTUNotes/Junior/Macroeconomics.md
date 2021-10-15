@@ -9,7 +9,7 @@ aliases: 總體經濟學
 	- https://www.dropbox.com/s/392h185o12whyye/Macro_Measurement.mp4
 - W3 macro measurement 2
 	- https://www.dropbox.com/s/3cxs832ipt3vpsb/Macro_Measurement2.mp4
-## intro
+## Ch1 intro
 ### 總體經濟學主要議題
 - 長期的經濟成長
 - 短期的景氣波動
@@ -107,7 +107,7 @@ aliases: 總體經濟學
 			- 是 structural relationship 而非統計假象
 	- 分析方法仍須用(新興)古典的方法
 
- ## 產出與物價的衡量
+ ## Ch2 產出與物價的衡量
  ### GDP & GNI
  - GDP, gross domestic product
 	 - the market value of all final goods and services that an economy produces in a given period **within it boarder**
@@ -367,3 +367,79 @@ $$D = C+I+G+(X-M)$$
 	- (1.346*1.4)**0.5 = 1.373
 	-  ((440/350)*(480/380))**0.5 = 1.260
 	- 1.373*1.260 = 1.730
+
+## Ch4 廠商的靜態選擇
+-  static model 
+	-  no tomorrow
+		-  no savings
+		-  no investment
+### 模型
+-  ![](https://i.imgur.com/mu0tRif.png)
+- labor market & goods market are in perfect competition
+	- consumer & firm 都是 price taker
+	- 廠商生產 homogeneous products
+#### 角色
+- 廠商
+	- 收入
+		- 付工資
+		- 以股利分給消費者
+	- 屬於消費者
+		- so 不用繳稅
+- 消費者
+	- 繳稅
+		- 定額稅淨額 net lump-sum tax = 定額稅 - transfer payment
+		- 定額 lump-sum
+			- 大家都繳一樣的
+	- 可支配所得 = 工資+股利-定額稅淨額
+		- 全部用於消費
+- 政府
+	- 收入
+		- 課定額稅 from 消費者
+	- 支出
+		- transfer payment
+		- 買商品
+	- 課稅量 = 支出
+		- no 借貸 no 公債
+#### 特性
+- barter economy
+	- 沒有貨幣
+	- 以商品為計價單位 (numeraire)
+	- 實質工資率
+	- 無 nominal
+- closed economy
+	- 無貿易
+### 生產函數
+- 代表性個人模型  representative agent model
+	- 所有單位都一樣
+$$y=AF(k,n)(+B)$$
+- y = 產出
+- k = capital
+- n = labor
+- A, B = 生產面衝擊
+	- 影響生產的東西
+	- B 使生產函數平行變動
+		- e.g. 中獎、欠收
+#### 特性
+- 資本勞動缺一不可
+	- $AF(k,0)=AF(0,n)=0$ if B=0
+- 投入愈多，產出愈多
+	- $MPL, MPK>0$
+		- marginal productivity of labor/capital
+	- ![](https://i.imgur.com/kHUYNlm.png)
+- marginal productivity 遞減
+	- ![](https://i.imgur.com/Lfdj8FU.png)
+	- ![](https://i.imgur.com/d4Jzhru.png)
+	- 廠商規模未成熟時可能 MP 遞增，但這種情況不會持續存在
+- 資本勞動互補
+- Inada condition
+	- ![](https://i.imgur.com/B7zwc65.png)
+	- 非必較條件
+- 固定規模報酬 constant return to scale
+	- 資本勞動階 x2 → output x2
+	- 生產效率 independent to  廠商規模
+	- ![](https://i.imgur.com/Fi9pedd.png)
+	- $AF(ak,an)>ay$ → 規模報酬遞增 increasing return to scale
+		- e.g. 台GG
+	-  $AF(ak,an)=ay$ → 規模報酬固定 constant return to scale
+	- $AF(ak,an)<ay$ → 規模報酬遞減 decreasing return to scale
+		- e.g. 精緻餐廳、文創
