@@ -256,6 +256,7 @@ matrix multiplication
 
 ### Quicksort
 - use divide-and-conquer
+- ==去看 Hoare 原始版本==
 - ![](https://i.imgur.com/HIkmxlz.png)
 	- partition 後基準的位置的左右再各執行
 - partition
@@ -265,14 +266,19 @@ matrix multiplication
 		- return 最後基準點在的位置
 			- $\Delta i=$ 小於基準者的數目
 	- ![](https://i.imgur.com/q0gDUxX.png)
+	- loop invariant 
+		- ![](https://i.imgur.com/dxSYm2u.png)
 		- unrestricted: 還沒掃到的
 	- ![](https://i.imgur.com/r74wukj.png)
 		- 用 swap 的
 - time complexity
-	- best case & average case $\in\Theta(nlgn)$
+	- best case $\in\Theta(nlgn)$
+		- 每個都均勻分
+		- ![](https://i.imgur.com/vkKjwX3.png)
 	- worst case $\in\Theta(n^2)$
-		- already sorted
+		- sorted OR reversely sorted
 		- ![](https://i.imgur.com/nutGH85.png)
+	- practically very good, but asymptotically bad
 - randomized quick sort
 	- random 選一個 element 跟最後一位交換
 	- ![](https://i.imgur.com/jqWEcR5.png)
