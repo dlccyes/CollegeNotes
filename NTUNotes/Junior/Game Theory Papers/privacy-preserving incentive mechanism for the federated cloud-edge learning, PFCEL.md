@@ -41,7 +41,7 @@ tags: GT_Papers
       - contract theory
     - constraints
       - [[incentive compatibility]], IC
-      - [[incentive rationality]], IR
+      - [[individual rationality]], IR
       - privacy budget $\epsilon$ reasonable
       - total rewards < total incentive
     - 3 layer Stackelberg game, TLSG
