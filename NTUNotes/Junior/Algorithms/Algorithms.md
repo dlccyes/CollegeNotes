@@ -282,3 +282,24 @@ matrix multiplication
 - randomized quick sort
 	- random 選一個 element 跟最後一位交換
 	- ![](https://i.imgur.com/jqWEcR5.png)
+	- time complexity
+		- worst case
+			- ![](https://i.imgur.com/Lx8KUT3.png)
+		- expected $\in O(nlgn)$
+			- method 1
+				- ![](https://i.imgur.com/G8YbDPT.png)<br>![](https://i.imgur.com/dwZxmtx.png)
+					- $X_q=1/n$
+					- sum(T(q-1))=sum(T(n-q))
+					- 忽略 q=0, 1
+					- 猜 nlgn
+			- method 2
+				- $\in O(n+X)$
+				- n elements → max n partitions
+				- X comparisons
+					- 只有 pivot 需要跟別人比較
+					- 兩 elements 至多比較一次
+					- ![](https://i.imgur.com/VE8VtXN.png)
+						- E[X] = expected X
+					- ![](https://i.imgur.com/W0OswXI.png)
+						- $E[X_{ij}] = z_i$ or $z_j$ 為 pivot 的機率
+

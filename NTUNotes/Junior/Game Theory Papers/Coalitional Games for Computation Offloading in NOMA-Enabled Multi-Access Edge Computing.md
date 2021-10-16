@@ -46,3 +46,59 @@ tags: GT_Papers
 		- achieve Nash-equilibrium
 
 ## system model
+### network model
+![](https://i.imgur.com/PivTF7t.png)
+- N UEs
+	- $\mathcal{N}=\{1,...,N\}$
+- 1 MEC
+	- $\mathcal{S}=\{1,...,S\}$
+- quasi-static Rayleigh fading
+	- UEs don't change in offloading period & vary independently between 2 periods
+- UEs & MeNB has 1 antenna
+- NOMA → the signal MeNB receives contain interference signal from co-sharing UEs
+- each UE can only use 1 subcarrier
+	- 但 [[#intro]] 的例子裡，big packet 是用兩個？
+
+### communication model
+- offloading decision profile $A=\{a_{ns}|n\in \mathcal{N},s\in S\}$
+	- UE n use subcarrier s → $a_{ns}=1$
+	- UE n don't use subcarrier s → $a_{ns}=0$
+- 1 UE use 0 or 1 subcarrier → $\displaystyle{\sum_{s\in S}\leq1,\forall n\in \mathcal{N}}$
+- signal-to-interference-plus-noise ratio (SINR)
+	- ![](https://i.imgur.com/9Q2hrpR.png)
+		- j with $b_s(j)<b_s(n)$ isn't decoded by UE n → noise ==(???)==
+	- uplink channel gain $h_{ns}$
+		- sorted in ascending order
+	- transmit power $p_{ns}$
+	- noise power $n_0$
+- achievable rate 
+	- $R_{ns}=Blog_2(1+\Gamma_{ns})$ ==(???)==
+	- B = bandwidth of an orthogonal carrier
+	- ![](https://i.imgur.com/0iH34Dl.png)
+		- $R_n$ = sum($R_{ns}$)
+
+### computation model
+- offloading decision
+	- local execution
+		- all in local, no offloading
+	- full offloading
+		- all in remote edge server
+	- partial offloading
+		- some local some remote`
+	- binary offloading
+		- either local or full offloading
+- local execution → $x_n=1$<br>full offloading → $x_n=0$
+- 1 UE use 0 or 1 subcarrier → $\displaystyle{\sum_{s\in S}a_{ns}=x_n}$
+	- local i.e. use 0 subcarrier → = 0
+- computation task $I_n=\{\alpha_n,\beta_n\}$
+#### local execution
+- $\alpha_n$ = data size of $I_n$
+- $\beta_n$ = required CPU cycles to finish $I_n$
+- completion time $T^l_n=\frac{\beta_n}{f^l_n}$
+	- $f^l_n$ = UE n's local computing capability
+- energy consumption $E^l_n=\kappa\beta_n(f^l_n)^2$
+	- $\kappa_n$ = constant factor dependent on hardware architecture
+- computation overhead $Z^l_n=\lambda^t_nT^l_n+\lambda^e_nE^l_n$
+	- $\lambda^t_n,\lambda^e_n$ = weighted parameters, decided by UE's offloading decision
+		- e.g. latency-sensitive → set $\lambda^t_n$ higher
+#### full offloading
