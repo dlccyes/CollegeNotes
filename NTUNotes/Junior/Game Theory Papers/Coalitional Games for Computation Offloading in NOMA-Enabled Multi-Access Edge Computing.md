@@ -57,7 +57,7 @@ tags: GT_Papers
 - UEs & MeNB has 1 antenna
 - NOMA → the signal MeNB receives contain interference signal from co-sharing UEs
 - each UE can only use 1 subcarrier
-	- 但 [[#intro]] 的例子裡，big packet 是用兩個？
+	- ==但 [[#intro]] 的例子裡，big packet 是用兩個？==
 
 ### communication model
 - offloading decision profile $A=\{a_{ns}|n\in \mathcal{N},s\in S\}$
@@ -91,10 +91,10 @@ tags: GT_Papers
 - 1 UE use 0 or 1 subcarrier → $\displaystyle{\sum_{s\in S}a_{ns}=x_n}$
 	- local i.e. use 0 subcarrier → = 0
 - computation task $I_n=\{\alpha_n,\beta_n\}$
+	- $\alpha_n$ = data size of $I_n$
+	- $\beta_n$ = required CPU cycles to finish $I_n$
 #### local execution
-- $\alpha_n$ = data size of $I_n$
-- $\beta_n$ = required CPU cycles to finish $I_n$
-- completion time $T^l_n=\frac{\beta_n}{f^l_n}$
+- completion time $T^l_n=\dfrac{\beta_n}{f^l_n}$ = execution time
 	- $f^l_n$ = UE n's local computing capability
 - energy consumption $E^l_n=\kappa\beta_n(f^l_n)^2$
 	- $\kappa_n$ = constant factor dependent on hardware architecture
@@ -102,3 +102,12 @@ tags: GT_Papers
 	- $\lambda^t_n,\lambda^e_n$ = weighted parameters, decided by UE's offloading decision
 		- e.g. latency-sensitive → set $\lambda^t_n$ higher
 #### full offloading
+- completion time = uplink transmission time + execution time<br>$T^r_n=\dfrac{\alpha_n}{R_n}+\dfrac{\beta_n}{f^l_n}$ 
+	- $f_n$ = remote computing resourcess
+		- MEC give each UE a fixed amount of $f_n$
+- total energy consumption = task offloading + remote computing + result downloading
+- UE's energy consumption = task offloading<br>$E^r_n=\dfrac{p_n}{\varsigma_n}T^t_n=\dfrac{p_n}{\varsigma_n}\dfrac{\alpha_n}{R_n}$ ==(???)==
+	- $\varsigma_n$ = UE power amplifier efficiency
+- computation overhead $Z^r_n=\lambda^t_nT^r_n+\lambda^e_nE^r_n$
+
+### problem formulation
