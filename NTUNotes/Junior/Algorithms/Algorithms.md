@@ -303,3 +303,24 @@ matrix multiplication
 					- ![](https://i.imgur.com/W0OswXI.png)
 						- $E[X_{ij}] = z_i$ or $z_j$ 為 pivot 的機率
 
+### heapsort
+#### heap (priority queue)
+- ![](https://i.imgur.com/Lkrx2KU.png)
+- [[Data Structure#bineary heap]]
+- heapify
+	- percolate down
+	- ![](https://i.imgur.com/KYKyu9D.png)
+	- worst case
+		- ![](https://i.imgur.com/hUl80rR.png)
+		- 最下層 half full → 左邊 size <= 2n/3
+	- time complexity
+		- ![](https://i.imgur.com/PbcGwU5.png)
+- depth vs. height
+	- ![](https://i.imgur.com/iPaoMFL.png)
+- binary tree to max-heap
+	- ![](https://i.imgur.com/oWNCSBd.png)
+	- bottom-up, percolate up
+	- ![](https://i.imgur.com/voE6lW8.png)
+#### heapsort
+- ![](https://i.imgur.com/GUlJxk9.png)
+- 用 max-heap 做 selection sort

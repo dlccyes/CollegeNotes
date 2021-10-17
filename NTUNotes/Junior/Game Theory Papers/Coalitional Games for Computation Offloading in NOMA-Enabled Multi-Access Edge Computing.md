@@ -111,3 +111,18 @@ tags: GT_Papers
 - computation overhead $Z^r_n=\lambda^t_nT^r_n+\lambda^e_nE^r_n$
 
 ### problem formulation
+- goal: minimize total computation overhead
+- total computation overhead $Z(A)=\displaystyle{\sum_{n\in \mathcal{N}}(x_nZ^r_n+(1-x_n)Z^l_n)}$
+- ![](https://i.imgur.com/QnQsInf.png)
+	- mixed-integer programming (MIP) problem
+		- binary & integer variables ==(???)==
+		- [[NP-hard]] → limited applications
+
+## coalition game
+- UE's decision: execute locally OR through a subcarrier
+- N UEs & S subcarriers → S+N coalitions (可能 execute 的地方有 S+N 個，N locally & S in subcarriers)
+- coalitions $\mathcal{F}=\{\mathcal{F_1,...,\mathcal{F}_{S+N}}\}$
+	- $\cup^{S+N}_{j=1}\mathcal{F}_j=\mathcal{N}$
+	- $\mathcal{F}_j$ with $1\leq j\leq S$ → the set of UEs using subcarrier j
+	- $\mathcal{F}_j$ with $S+1\leq j\leq S+N$ → UE j executing locally
+- more UEs using 1 subcarrier → more complex to cancel interference → transmission latency & computation overhead increase → SINR reduces, lower channel gains

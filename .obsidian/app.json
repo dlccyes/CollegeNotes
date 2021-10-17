@@ -17,5 +17,7 @@
     "landscape": false,
     "margin": "1",
     "downscalePercent": 37
-  }
+  },
+  "vimMode": true,
+  "autoPairMarkdown": false
 }

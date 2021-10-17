@@ -1,0 +1,2 @@
+- 沒找到 polynomial time 的解
+- 不確定能不能在 polynomial time 驗證一個解
