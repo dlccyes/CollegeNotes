@@ -42,7 +42,7 @@
 - instruction set
 	- e.g. x86, ARM, RISC-V
 
-### RISC-V
+### RISC-V intro
 - 較簡單的 instruction set
 - regularity → simpler implementation
 - simplicity → higher performance, lower cost
@@ -65,3 +65,61 @@ add x6, x22, x23
 sub x19, x5, x6
 ```
 → `f=(g+h)-(i+j)`
+
+- little endian
+	- least-significant byte @ least address
+- bytes s不一定要 4 or 8 or whatever 的倍數
+- 一個 instruction 是 8 bytes
+- ![](https://i.imgur.com/53tWD5q.png)
+	- 8x8=64
+	- 12x8=96
+	- load A[8] to x9
+	- add x9 & h, store to x9
+		- x21 在 register 裡面所以可以直接 access
+	- store x9 to A[12]
+
+### 2s complement
+交電
+![](https://i.imgur.com/T1hJSQe.png)
+![](https://i.imgur.com/q2huzgm.png)
+
+### R-format
+- register
+- ![](https://i.imgur.com/0eAXKRU.png)
+	- e.g.<br>![](https://i.imgur.com/c1yk3kC.png)
+		- 51 是查表來的
+
+### I-format
+- immediate
+- ![](https://i.imgur.com/frYek0d.png)
+- opcode & func3 告訴電腦要做什麼 instruction (arithmetic OR load)
+
+### operations
+![](https://i.imgur.com/XC0k2XB.png)
+
+`slli a, b, 1` → a = b<<1 (=2bs)  
+`addi a, b, 1` → a=b+1
+#### if
+`beq a, b, callback` → if(a\==b){callback()}
+`bne a, b, callback` → if(a!=b){callback()}
+`blt a, b, callback` → if(a<b)
+![](https://i.imgur.com/If15MR8.png)
+![](https://i.imgur.com/GTajnpc.png)
+`bge a, b, callback` → if(a>=b)
+![](https://i.imgur.com/KzsbwRQ.png)
+#### while
+![](https://i.imgur.com/XAybNUB.png)
+
+- signed: 正 or 負
+- unsigned: nonnegative
+
+
+#### procedure
+`jal` call procedure
+`jalr` return
+- leaf procedure
+	- ![](https://i.imgur.com/PA6olYE.png)![](https://i.imgur.com/PEuNYOX.png)
+- non-leaf procedure
+	- recursive?
+	- ![](https://i.imgur.com/hBfLGMq.png)![](https://i.imgur.com/V5N5pbB.png)
+

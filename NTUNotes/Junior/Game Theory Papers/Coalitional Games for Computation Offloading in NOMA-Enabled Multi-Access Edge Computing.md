@@ -124,5 +124,14 @@ tags: GT_Papers
 - coalitions $\mathcal{F}=\{\mathcal{F_1,...,\mathcal{F}_{S+N}}\}$
 	- $\cup^{S+N}_{j=1}\mathcal{F}_j=\mathcal{N}$
 	- $\mathcal{F}_j$ with $1\leq j\leq S$ → the set of UEs using subcarrier j
-	- $\mathcal{F}_j$ with $S+1\leq j\leq S+N$ → UE j executing locally
+	- $\mathcal{F}_j$ with $S+1\leq j\leq S+N$ → UE j executes locally
 - more UEs using 1 subcarrier → more complex to cancel interference → transmission latency & computation overhead increase → SINR reduces, lower channel gains
+- $\mathfrak{R}$ = real-valued coalition payoff function
+- coalition $\mathcal{F}_k$ with $1\leq k\leq S$
+	- total computation over head by all UEs<br>![](https://i.imgur.com/ypzFTYK.png)
+		- $Z^r_n =\lambda^t_nT^r_n+\lambda^e_nE^r_n$ <br>$=\lambda^t_n(\dfrac{\alpha_n}{R_n}+\dfrac{\beta_n}{f^l_n})+\lambda^e_n\dfrac{p_n}{\varsigma_n}\dfrac{\alpha_n}{R_n}$
+		- $R_n =R_{nk}=Blog_2(1+\Gamma_{ns})$
+	- utility $\mathfrak{R}(\mathcal{F}_k)$ = computation if executed locally - computation if in coalition
+		- ![](https://i.imgur.com/IxHTY48.png)
+- coalition $\mathcal{F}_k$ with $S+1\leq k\leq S+N$
+	- utility $\mathfrak{R}(\mathcal{F}_k)=0$ ==(???)==

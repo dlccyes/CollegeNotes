@@ -18,6 +18,7 @@
     "margin": "1",
     "downscalePercent": 37
   },
-  "vimMode": true,
-  "autoPairMarkdown": false
+  "vimMode": false,
+  "autoPairMarkdown": true,
+  "autoPairBrackets": true
 }
