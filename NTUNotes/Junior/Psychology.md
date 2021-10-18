@@ -51,6 +51,16 @@
 		- 對於某一種基因型，mother's responsiveness 沒什麼影響，對於另一種基因型，則是影響非常大
 	- 表關遺傳學 epigenetics
 		- 環境引發遺傳性的基因
+- 感覺
+	- Weber-Fechner Law
+		- marginal product 遞減
+		- 感覺 = kln(刺激)
+	- Stevens' Power Law
+		- more general than Weber-Fechner Law
+		- 感覺 = k(刺激)^a, a<1
+	- 知覺褪色 perceptual fading
+		- 一直盯著同一點，視野其他地方都會不見
+			- 有用 VR 實驗過，會 eye-tracking 主動抵銷掉眼睛的動，讓視野完全不動，結果沒多久視野就全灰了
 
 ## 考
 - 神經傳導素 neurotransmitter
