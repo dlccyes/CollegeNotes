@@ -80,7 +80,3 @@
 		- 右腦
 			- parallel processing
 		- ![](https://i.imgur.com/2KbxiE8.png)
-
-
-
-
