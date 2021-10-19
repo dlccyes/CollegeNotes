@@ -72,7 +72,16 @@
 	- neon color spreading
 		- ![](https://i.imgur.com/t77TrHq.png)
 		- 連續性包起來 → 顏色擴散到裡面
-
+- ![](https://i.imgur.com/voT6JRA.png)
+	- 處理外白中黑的神經元較多
+- what vs. where
+	- 處理 where 比較強
+		- 在動的時候就看不出顏色也在變
+			- https://www.youtube.com/watch?v=IjMVsTFVX10
+			- <iframe width="426" height="274" src="https://www.youtube.com/embed/IjMVsTFVX10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		- 周遭在動黃色就不見了
+			- https://www.youtube.com/watch?v=4Aye9FWgxUg
+			- <iframe width="426" height="552" src="https://www.youtube.com/embed/4Aye9FWgxUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 考
 - 神經傳導素 neurotransmitter

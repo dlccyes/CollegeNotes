@@ -8,12 +8,14 @@
 		- 0.1425%
 
 ## resources
-### websited
+### websites
 - https://www.macromicro.me/ 👍
 	- 及時圖表
 	- 詳細資料
 - https://earning.tw/
 	- 台灣各股票詳細介紹
+- https://www.stockfeel.com.tw/
+	- 文章
 ### podcasts
 - Motley Fool Money 
 
@@ -42,3 +44,5 @@
 	- 0.66%
 - 資料
 	- <iframe src="https://www.macromicro.me/etf/tw/intro/0056" width=100% height=500px></iframe>
+
+### 00878 國泰高股息
