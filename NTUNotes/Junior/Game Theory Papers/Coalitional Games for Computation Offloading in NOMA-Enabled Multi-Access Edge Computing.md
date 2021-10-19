@@ -135,3 +135,26 @@ tags: GT_Papers
 		- ![](https://i.imgur.com/IxHTY48.png)
 - coalition $\mathcal{F}_k$ with $S+1\leq k\leq S+N$
 	- utility $\mathfrak{R}(\mathcal{F}_k)=0$ ==(???)==
+- $\mathcal{F}_s$ is strictly preferred to $\mathcal{F}_k$ $\iff$ utility of $\mathcal{F}_s$ with UE n + utility of $\mathcal{F}_k$ without UE n is greater than the reverse situation for all n && no other UE j  in $\mathcal{F}_s$ and $\mathcal{F}_k$ is negatively affected by UE n joining
+	- ==???只看得出來不是負的而無法看出 not negatively affected???==
+	- ==???為甚麼 n 會在意其他人有沒有 worse off???==
+	- ![](https://i.imgur.com/3cW4NUl.png)
+- switch from k to s
+	- ![](https://i.imgur.com/0a98lpz.png)
+- $I_n$ executed locally → $\mathcal{F_{S+n}}=\{n\}$ i.e. the UE executing locally in n is n && $\mathcal{F_{S+n}}\cap \mathcal{F_k}=\emptyset$ $\forall k\neq (S+n)$
+- $I_n$ executed in subcarrier s → $\mathcal{F_{S+n}}=\emptyset$ i.e. the UE executing locally in n is nothing && $n\in\mathcal{F_{s}}$ i.e. the UEs executed in subcarrier s includes n
+### algorithm
+- ![](https://i.imgur.com/RHREfn4.png)
+- keep switching until stable
+- num = unsuccessful consecutive switch operations i.e. how many iterations since last switch
+	- algorithm terminates when num = 10 x amount of UEs
+### analysis
+- convergence: a final Nash-stable partition $\mathcal{F}_{fin}$ is guaranteed
+	- $\because$ each switch creates a new partition and the number of partitions is finite
+- stability: $\mathcal{F}_{fin}$ is Nash-stable
+	- ![](https://i.imgur.com/IOmHZAB.png)
+	- trivial
+- complexity $\in O($number of iterations$)$
+	- at most 1 switch in each iteration
+
+## simulation results
