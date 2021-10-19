@@ -206,11 +206,13 @@ MergeSort(A,1,A.length)
 		- 兩個已經 sort 好的 n/2 array，做 sorting → n 次比較
 	- 需要額外 memory
 		- 兩半各一個 auxiliary array
-	- ![](https://i.imgur.com/SwlMq2t.png)
-		- 4-5: L = 左半 array
-		- 6-7: R = 右半 array
-		- 8-9: L & R 的最後一項設成無限
-		- 10-17: 從小到大，一個一個比對 L & R，較小者填進 main array
+	- pseudo code
+		- ![](https://i.imgur.com/GjATP2e.png)
+		- ![](https://i.imgur.com/SwlMq2t.png)
+			- 4-5: L = 左半 array
+			- 6-7: R = 右半 array
+			- 8-9: L & R 的最後一項設成無限
+			- 10-17: 從小到大，一個一個比對 L & R，較小者填進 main array
 	- time complexity $\in \Theta(nlgn)$
 		- ![](https://i.imgur.com/riBAsoE.png)
 			- 其實是 $T(n)=T(\lfloor n/2\rfloor)+T(\lceil n/2\rceil)+cn$ $\because$左右數量非 n/2，但可忽略

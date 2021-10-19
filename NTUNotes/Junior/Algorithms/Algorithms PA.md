@@ -9,3 +9,5 @@ cd bin
 `make clean` to clear the results from `make` 
 
 `ulimit -s 262144` to prevent stack overflow
+
+`./bin/NTU_sort -IS inputs/1000.case1.in outputs/1000.case1.out`

@@ -53,9 +53,10 @@
 		- 環境引發遺傳性的基因
 ## 感覺與知覺
 - bottom-up processing
-	- 直覺
+	- 慢想
 - top-down processing
 	- 經驗
+	- 快思
 - Weber-Fechner Law
 	- marginal product 遞減
 	- 感覺 = kln(刺激)
