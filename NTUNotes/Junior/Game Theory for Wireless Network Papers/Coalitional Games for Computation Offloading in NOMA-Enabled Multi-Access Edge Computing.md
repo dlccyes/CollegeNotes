@@ -129,13 +129,14 @@ tags: GT_Papers
 - more UEs using 1 subcarrier → more complex to cancel interference → transmission latency & computation overhead increase → SINR reduces, lower channel gains
 - $\mathfrak{R}$ = real-valued coalition payoff function
 - coalition $\mathcal{F}_k$ with $1\leq k\leq S$
-	- total computation over head by all UEs<br>![](https://i.imgur.com/ypzFTYK.png)
+	- total computation overhead by all UEs<br>![](https://i.imgur.com/ypzFTYK.png)
 		- $Z^r_n =\lambda^t_nT^r_n+\lambda^e_nE^r_n$ <br>$=\lambda^t_n(\dfrac{\alpha_n}{R_n}+\dfrac{\beta_n}{f^l_n})+\lambda^e_n\dfrac{p_n}{\varsigma_n}\dfrac{\alpha_n}{R_n}$
 		- $R_n =R_{nk}=Blog_2(1+\Gamma_{ns})$
 	- utility $\mathfrak{R}(\mathcal{F}_k)$ = computation if executed locally - computation if in coalition
 		- ![](https://i.imgur.com/IxHTY48.png)
 - coalition $\mathcal{F}_k$ with $S+1\leq k\leq S+N$
-	- utility $\mathfrak{R}(\mathcal{F}_k)=0$ ==(???)==
+	- utility $\mathfrak{R}(\mathcal{F}_k)=0$ 
+		- utility = how much computation overhead you save comparing to local execution
 - $\mathcal{F}_s$ is strictly preferred to $\mathcal{F}_k$ $\iff$ utility of $\mathcal{F}_s$ with UE n + utility of $\mathcal{F}_k$ without UE n is greater than the reverse situation for all n && no other UE j  in $\mathcal{F}_s$ and $\mathcal{F}_k$ is negatively affected by UE n joining
 	- ==???只看得出來不是負的而無法看出 not negatively affected???==
 	- ==???為甚麼 n 會在意其他人有沒有 worse off???==
@@ -169,3 +170,70 @@ tags: GT_Papers
 - computation model: facial recognition app
 	- $\alpha_n=420KB$
 	- $\beta_n=1000$ megacycles
+- local computing capability $f^1_n$ random from $\{0.5, 0.8, 1.0\}GHz$
+- MEC allocates 1GHz for each offloading UE → $f_n=1GHz$
+- UE weights $\lambda^t_n=\lambda^e_n=0.5$
+- 3 schemes
+	- LCO, local computing only
+	- COO, computation offloading only
+	- HOO, heuristic orthogonal offloading
+		- OMA
+		- a subcarrier can only be used by 1 UE
+		- typically S<N → S UEs with highest computational gain from offloading use all the subcarriers, while the other N-S UEs compute locally
+	- proposed [[#algorithm]]
+		- each UE can choose between executing locally or offloading to remote
+		- each UE has S+1 options → $\in O(N^{S+1})$ → only simulate N=4~9 in this paper
+
+### vs. optimal scheme
+![](https://i.imgur.com/VNh3sqI.png)
+perform close to the optimal scheme
+
+### % of offloading UEs
+#### vs. number of UEs
+![](https://i.imgur.com/3FO6Bbv.png)
+- fix number of coalitions/subcarriers to 3 i.e. $S=3$
+- more UEs → more competition for subcarriers → less favorable offloading is
+- NOMA (proposed) enables more UEs to benefit from offloading than OMA (HOO) does
+#### vs. number of coalitions
+![](https://i.imgur.com/cdn1a9H.png)
+- fix number of UEs to 10 i.e. $N=10$
+- more subcarriers → more choice for UEs → more favorable offloading is
+- NOMA (proposed) enables more UEs to benefit from offloading than OMA (HOO) does
+### total computation overhead
+#### vs. number of UEs
+![](https://i.imgur.com/9AOhPiL.png)
+- fix number of coalitions/subcarriers to 3 i.e. $S=3$
+- proposed scheme has smallest computation overhead
+- more UEs → more computation overhead
+- in COO (100% offloading),<br>more UEs<br>→ more UEs sharing the same subcarrier<br>→ more intra-coalition interference<br>→ total computation overhead increases more dramatically with UE increasing than in other schemes<br>→ LCO (100% local) better than COO with large number of UEs
+
+#### vs. number of coalitions
+![](https://i.imgur.com/z9oS0iL.png)
+- fix number of UEs to 10 i.e. $N=10$
+- proposed scheme has smallest computation overhead
+- if offloading is available, more subcarriers → better chance for an UE to choose the preferred subcarrier → less computation overhead
+- more subcarriers → less difference between the three offloading-available schemes
+
+#### vs. remote computing resources
+![](https://i.imgur.com/p8etcxU.png)
+- fix number of coalitions/subcarriers to 3 i.e. $S=3$
+- fix number of UEs to 6 i.e. $N=6$
+- proposed scheme has smallest computation overhead
+
+
+#### vs. transmit power
+![](https://i.imgur.com/4WZvSoe.png)
+![](https://i.imgur.com/olHR7On.png)
+- proposed scheme has smallest computation overhead
+- more transmit power → higher transmission rate → uplink transmission time & remote computation overhead reduce
+- when transmit power is sufficiently large, inter-coalition interference is severe → transmission rate drops → computation overhead increases (0.2W-0.3W in Fig. 9) ==???==
+- computation gain = how much computation you save from choosing offloading over local execution so LCO's computation gain = 0
+
+#### convergence rate
+![](https://i.imgur.com/RyxS5yK.png)
+- more subcarriers → more options for subcarriers with good channel condition to reduce uplink transmission rate → converges slower
+- converges rapidly
+
+## conclusion
+- proposed algorithm is competitive to the optimal scheme (from 暴力搜索)
+- proposed scheme beats the other 3 schemes in terms of offloading percentage, computation overhead & convergence rate ==(???他這個沒有跟人家比吧???)==

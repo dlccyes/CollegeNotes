@@ -326,3 +326,91 @@ matrix multiplication
 #### heapsort
 - ![](https://i.imgur.com/GUlJxk9.png)
 - 用 max-heap 做 selection sort
+
+### sorting in linear time
+![](https://i.imgur.com/CKPm9vK.png)
+#### counting sort
+- 有 m 個數字 <= k → 把 k 放在位置 m
+- ![](https://i.imgur.com/1ooBJew.png)
+- time complexity $\in O(n+k)$
+	- $\in O(n)$ if $k\in O(n)$
+	- pseudo-linear time otherwise
+
+#### radix sort
+- 一個位數一個位數 sort，從最小位數開始
+	- 需 stable sorter
+		- counting sort
+			- not in-place → need more memory
+		- insertion sort
+			- fast when size small
+- time complexity $\in\Theta(d(n+k))$
+	- n d-digit numbers
+	- each digit has k possible values ???
+	- $\in O(n)$ if $d\in O(1)$ & $k\in O(n)$
+- ![](https://i.imgur.com/sCIxPnl.png)
+
+#### bucket sort
+???
+
+### order statistics
+- ith order statistic = ith smallest element
+#### selection
+- pseudo code
+	- ![](https://i.imgur.com/03BEJRK.png)
+		- q = random 找的這個 element 排序後排在的位置
+- time complexity
+	- ![](https://i.imgur.com/eY0IurG.png)
+	- expected linear time
+		- ![](https://i.imgur.com/mVb59d5.png)
+		- ![](https://i.imgur.com/4k0lPox.png)
+		- 猜 linear time<br>![](https://i.imgur.com/Vlu9bNx.png)
+	- worst case linear time
+		- 五五一組，找到各組 median，再找這些 median 的 median
+		- ![](https://i.imgur.com/Tm65CUc.png)
+		- 可用這個 procedure 去幫 [[#Quicksort]] 找 median → guarantee O(nlogn)
+
+## Trees
+### [[Binary Tree]]
+- see [[Data Structure#Binary Tree]]
+- tree construction
+	- worst case $O(n^2)$
+	- average case $O(nlgn)$
+- height
+	- worst case $h\in O(n)$
+		- skewed
+	- best case $h\in O(lgn)$
+		- balanced
+- most operations $O(h)$
+#### operations
+- traversal
+	- inorder/infix
+		- ![](https://i.imgur.com/t70K3cK.png)
+	- preorder/prefix
+	- postorder/postfix
+- search
+	- ![](https://i.imgur.com/ih6pMcy.png)
+- successor
+	- 比我大的最小的 node
+		- 有 right subtree →  right subtree 的 min 
+		- 沒 right subtree → 找我是誰的 predecessor
+			- irl operation: 往左上走直到轉折 as in line 3-6
+		- ![](https://i.imgur.com/E3azJpO.png)
+- predecessor
+	- 比我小的最大的 node
+		- 有 left subtree → left subtree 的 max
+- insertion
+	- ![](https://i.imgur.com/rV6p3pc.png)
+- deletion
+	- no children → just die
+	- 1 child → 小孩給媽媽養
+	- 2 children → 找 successor 取代
+	- ![](https://i.imgur.com/eufkiVO.png)
+	- ![](https://i.imgur.com/K4GMY6E.png)
+	- ![](https://i.imgur.com/2LmoLue.png)
+
+### [[Red-Black Tree]]
+- see [[Data Structure#Red-Black Tree]]
+- ![](https://i.imgur.com/1Hq2txg.png)
+- rotation
+	- inorder preservation
+	- ![](https://i.imgur.com/z1JPT7g.png)

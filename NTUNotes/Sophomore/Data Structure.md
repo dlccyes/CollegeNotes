@@ -220,7 +220,7 @@ Bell (W2)
 - https://www.geeksforgeeks.org/bell-numbers-number-of-ways-to-partition-a-set/
 
 ## Tree
-### Binary Tree
+### [[Binary Tree]]
 - 每個 node 有 0-2 個分支 → binary tree
   - inorder 順序正確(小→大 or 大→小) → binary search tree
 - order 
@@ -351,60 +351,60 @@ Bell (W2)
   - 深度為奇數 → 結果可能跟 bottom-up 不一樣
 
 ### Multi-Way Search Trees
-- 2-3-4 Tree
-  - all leaf on same level
-  - each node has 1/2/3 items
-  - k items → k+1 children
-  - insertion
-    - insert 到 leaf node
-    - look before you leap
-      - 經過的每個 4 node 都要 split
-      - insert 的目的地是 4 node 時，先 split 再 insert
-    - ![Image](https://i.imgur.com/8HqciLA.png)
-    - https://www.educative.io/page/5689413791121408/80001
-  - deletion 
-    - bottom-up
-      - ![Image](https://i.imgur.com/5GYI7RE.png)
-    - top-down
-      - look before you leap
-        - 經過的每個 2 node 都要 split
-- Red-Black Tree
-  - represent 2-3-4 tree as binary tree
-    - ![Image](https://i.imgur.com/ZZ7lX6d.png)
-      - 兩種表示法
-    - ![Image](https://i.imgur.com/v7XVS7o.png)
-    - ![Image](https://i.imgur.com/E37PZJS.png)
-    - root 是 black
-    - 不會連續兩個 red
-    - 每個 path 黑 node 數都一樣
-      - 2-3-4 leaf nodes 都同 level
-    - ![Image](https://i.imgur.com/qUxfsQI.png)
-    - max height $2log(n+1)$
-      - https://www.codesdope.com/course/data-structures-red-black-trees/
-      - https://doctrina.org/maximum-height-of-red-black-tree.html
-      - W4-2
-  - operation：先做 2-3-4 再轉成 Red-Black
-- AA Tree
-  - inerative visualization 
-  https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html
-  - Red-Black Tree but left-child can't be red
-  - ![Image](https://i.imgur.com/DGFffzI.png)
-  - level
-    - leaf = 1
-    - red = parent's level
-    - black = parent's level - 1
-    - ![Image](https://i.imgur.com/61I4mVh.png)
-      - 水平：同 level (必指到 red)
-  - operations
-    - skew：
-      - remove 1 left horizontal
-      - add 1 right horizontal
-      - ![Image](https://i.imgur.com/vqOBj3j.png)
-    - split
-      - remove consecutive right horizontal
-      - 把中間堤上去
-      - ![Image](https://i.imgur.com/nljBwPX.png)
-    - **不會考 deletion**
+#### 2-3-4 Tree
+- all leaf on same level
+- each node has 1/2/3 items
+- k items → k+1 children
+- insertion
+- insert 到 leaf node
+- look before you leap
+  - 經過的每個 4 node 都要 split
+  - insert 的目的地是 4 node 時，先 split 再 insert
+- ![Image](https://i.imgur.com/8HqciLA.png)
+- https://www.educative.io/page/5689413791121408/80001
+- deletion 
+- bottom-up
+  - ![Image](https://i.imgur.com/5GYI7RE.png)
+- top-down
+  - look before you leap
+	- 經過的每個 2 node 都要 split
+#### [[Red-Black Tree]]
+- represent 2-3-4 tree as binary tree
+- ![Image](https://i.imgur.com/ZZ7lX6d.png)
+  - 兩種表示法
+- ![Image](https://i.imgur.com/v7XVS7o.png)
+- ![Image](https://i.imgur.com/E37PZJS.png)
+- root 是 black
+- 不會連續兩個 red
+- 每個 path 黑 node 數都一樣
+  - 2-3-4 leaf nodes 都同 level
+- ![Image](https://i.imgur.com/qUxfsQI.png)
+- max height $2log(n+1)$
+  - https://www.codesdope.com/course/data-structures-red-black-trees/
+  - https://doctrina.org/maximum-height-of-red-black-tree.html
+  - W4-2
+- operation：先做 2-3-4 再轉成 Red-Black
+#### AA Tree
+- inerative visualization 
+https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html
+- Red-Black Tree but left-child can't be red
+- ![Image](https://i.imgur.com/DGFffzI.png)
+- level
+- leaf = 1
+- red = parent's level
+- black = parent's level - 1
+- ![Image](https://i.imgur.com/61I4mVh.png)
+  - 水平：同 level (必指到 red)
+- operations
+- skew：
+  - remove 1 left horizontal
+  - add 1 right horizontal
+  - ![Image](https://i.imgur.com/vqOBj3j.png)
+- split
+  - remove consecutive right horizontal
+  - 把中間堤上去
+  - ![Image](https://i.imgur.com/nljBwPX.png)
+- **不會考 deletion**
 
 ## hash
 - hash function
