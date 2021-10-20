@@ -6,6 +6,7 @@ tags: GT_Papers
 # Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
 ## intro
 - MEC, multi-access edge computing
+	- aka MeNB ==???==
 	- provide computing capabilities within the radio access network at the network edge
 	- low latency
 	- save energy
@@ -158,3 +159,13 @@ tags: GT_Papers
 	- at most 1 switch in each iteration
 
 ## simulation results
+### settings
+- UEs randomly positioned within the range of MeNB coverage
+- min distance between UE & MeNB = 5m
+- pathloss of distance d from UE to MeNB $L(d)=15.3+37.6log(d)$
+- noise power $n_0$ = -100dB
+- transmit power = 100mW
+- subcarrier bandwidth B = 1MHz
+- computation model: facial recognition app
+	- $\alpha_n=420KB$
+	- $\beta_n=1000$ megacycles
