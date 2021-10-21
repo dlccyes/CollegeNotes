@@ -575,7 +575,7 @@ so there're many security problems now
 			- exchange infos
 		- full-duplex connection
 	- reliable transport
-		- ARQ, automatic repeat request
+		- [[#Automatic Repeat reQuest ARQ]]
 			- 送一個拿到 ACK 才下一個 → reliable but slow 
 	- congestion control
 		- 讓 sender 送慢一點
@@ -600,6 +600,100 @@ so there're many security problems now
 - many firewalls block UDP
 
 #### application-layer protocols
+
+## reliable data transfer
+- properties
+	- no error
+	- no loss
+	- in sequence
+	- no duplication
+- acknowledgment
+	- positive → ACK
+	- negative → NAK
+		- → retransmission
+### error detection
+- parity check
+	- even or odd number of 1s
+	- 2D parity check
+		- like 數獨
+		- 知道哪裡出錯
+			- 出錯的 row & column 之 intersection
+- Internet checksum
+	- procedure
+		1. 2 條 16 bits 相加
+		2.  overflow → 加到 least significant bit
+		3. sum 做 1's complement → checksum
+			- 0 1 互換
+		4. receiver 的 sum 加上 sender 的 checksum = 全部 1 → correct
+			- bc 理論上互為 complement
+	- ![](https://i.imgur.com/2uAiupB.png)
+
+### Automatic Repeat reQuest (ARQ)
+- stop & wait
+	- resend when
+		- timeout 沒收到 ACK
+		- 收到 corrupted ACK
+	- problems
+		- ACK transmission 可能出錯
+			- sol: [[#alternating-bit protocol]]
+		- propagation delay 可能很長
+			- a = propagation delay/transmission delay
+			- a > 1
+				- 大部分時間都花在 propagation 而非 transmission → bad utilization of 網路
+			- a < 1
+				- 還沒 transmit 完已經 propagate 到了
+			- sol: [[#sliding window protocol]]
+#### alternating-bit protocol
+- stop & wait but 多一個 bit 標示 sequence number
+	- 0 or 1
+	- 可判斷是重傳 or 新 packet
+		- 重傳 → 用原本的 number
+		- 傳新的 → 用另一個 number
+	- receiver 收到 duplicate → 還是回 ACK but 不把東西往上層送
+- ![](https://i.imgur.com/sZArr7j.png)<br>![](https://i.imgur.com/sDi1rO2.png)
+	- lost packet & lost ACK 對 sender 來說一樣
+
+#### sliding window protocol
+- Go Back N (GBN)
+	- 一樣有 sequence number
+		- 3 bit → 0-7
+	- sender
+		- ![](https://i.imgur.com/Lk1S4u3.png)
+		- window size 固定 N，隨著 ACK 回來往右 slides
+		- timeout 沒有 ACK → resend 整個 window
+		- timer 根據 windows 裡最舊者
+	- receiver
+		- cumulative ACK
+			- 只需要 maintain 一個 ACK
+			- ACK n 表 n 以前的全部都收到
+		- 收到什麼就 ACK 什麼
+			- 收到 out of order → 丟掉 but ACK
+	- ![](https://i.imgur.com/1jeQHRf.png)
+	- problems
+		- 1 失敗 23456 成功 → resend all but 換其他失敗 → 浪費效能
+			- sol: [[#Selective Repeat SR]]
+
+#### Selective Repeat (SR)
+- sender & receiver 都有 sliding window
+	- ![](https://i.imgur.com/uTb6mZr.png)
+- ![](https://i.imgur.com/3k5gJBx.png)
+- out of order → store
+- in order → slide
+- sender
+	- timeout 是一個 packet 一個 packet 看 (selective repeat)
+- receiver
+	- windows 已經滑走 but 收到之前的 packet → 還是要 ACK
+- ![](https://i.imgur.com/YrZMeSG.png)
+- problem
+	- window size 相比於 sequence number 不能太大
+		- 無法 differentiate 是 repeated 還是 new
+	- ![](https://i.imgur.com/HtGtPqf.png)
+
+
+## Ch3 Transport Layer
+- ![](https://i.imgur.com/iMPrEhU.png)
+- UDP
+	- max 65535 = 2^16-1
 
 ---
 ## miscellaneous
