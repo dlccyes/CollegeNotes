@@ -322,13 +322,11 @@ matrix multiplication
 - binary tree to max-heap
 	- ![](https://i.imgur.com/oWNCSBd.png)
 	- bottom-up, percolate up
-	- ![](https://i.imgur.com/voE6lW8.png)
 - build max heap
 	- bottom-up heapify
 	- ![](https://i.imgur.com/1zdcwLQ.png)
 
 #### heapsort
-- ![](https://i.imgur.com/GUlJxk9.png)
 - 用 max-heap 做 selection sort
 - ![](https://i.imgur.com/Z5DBlGa.png)
 	- 存成 max-heap → 重複把 delete min i.e. 把 max (第一項) 跟 bottom-level 最右 (第二項) 交換 → 成功排序

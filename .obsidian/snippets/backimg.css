@@ -79,3 +79,6 @@ body {
 .img-tip {
     display: none;
 }
+[aria-label="Preview (Ctrl+Click to open in new pane)"] {
+    opacity: 1 !important;
+}
