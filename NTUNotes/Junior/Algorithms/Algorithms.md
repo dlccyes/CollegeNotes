@@ -323,9 +323,28 @@ matrix multiplication
 	- ![](https://i.imgur.com/oWNCSBd.png)
 	- bottom-up, percolate up
 	- ![](https://i.imgur.com/voE6lW8.png)
+- build max heap
+	- bottom-up heapify
+	- ![](https://i.imgur.com/1zdcwLQ.png)
+
 #### heapsort
 - ![](https://i.imgur.com/GUlJxk9.png)
 - 用 max-heap 做 selection sort
+- ![](https://i.imgur.com/Z5DBlGa.png)
+	- 存成 max-heap → 重複把 delete min i.e. 把 max (第一項) 跟 bottom-level 最右 (第二項) 交換 → 成功排序
+- ![](https://i.imgur.com/SNWXpIN.png)
+- time complexity $\in O(nlgn)$
+	- heapify O(lgn)
+	- iterate n 次
+- in-place
+	- 都在原本的 array 上面做
+
+### comparison-based sorters
+- decision tree
+	- leaf 代表 n 個數字排序可能的結果 → n! leaves
+	- ![](https://i.imgur.com/RIfsgIp.png)
+		- ==???==
+- ![](https://i.imgur.com/miRgVNZ.png)
 
 ### sorting in linear time
 ![](https://i.imgur.com/CKPm9vK.png)
