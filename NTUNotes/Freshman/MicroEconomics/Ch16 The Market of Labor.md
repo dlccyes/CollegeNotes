@@ -37,7 +37,7 @@ at some point, L 下降到 0，表此人不再為"工資"而工作（可為其�
 
 ### Changes in Productivity
 
-若 individual MP~L~ 上升  
+若 individual$MP_L$ 上升  
 → MRP~L~ 上升 → demand 上升  
 → wage 上升 & quantity of labor supply 上升
 
@@ -141,18 +141,18 @@ BUTT, 更多 nurse 進入市場 due to wage of nurse rise
 投資自己  
 如進修 → 增加自己的 human capital
 
-### MP~L~ and capital goods
+### $MP_L$ and capital goods
 
 #### labor move
 
-機器設備 capital 較好 → 勞工生產力 MP~L~ 較高
+機器設備 capital 較好 → 勞工生產力 $MP_L$ 較高
 與 capital goods 為 complementary goods 互補品
 
-capital 多 → MP~L~ 高 → MRP~L~ 高
-又 wage = MRP~L~ = P x MP~L~
+capital 多 → $MP_L$ 高 → $MRP_L$ 高
+又 wage = $MRP_L$ = $P \times MP_L$
 
-已知 labor 變多 → MP~L~ 下降  
-→ labor 會一直從資本多，MP~L~ 高的國家地方移動到資本少，MP~L~ 低的地方，直到兩地 MP~L~ 相等
+已知 labor 變多 →$MP_L$ 下降  
+→ labor 會一直從資本多，$MP_L$ 高的國家地方移動到資本少，$MP_L$ 低的地方，直到兩地$MP_L$ 相等
 
 但是勞工會有移動限制
 
@@ -167,7 +167,7 @@ so 商人會把 capital 從 capital 較多，勞工邊際產出較高之國，�
 
 ![image-20200609235252385](https://i.loli.net/2020/06/09/9i6vyxRmkSTDwlC.png)
 
-但是這也不符和實際世界情況，不同國家間仍存在 MP~L~ 差異
+但是這也不符和實際世界情況，不同國家間仍存在$MP_L$ 差異
 
 <p style="color:blue">此乃經濟學之</p><p style="color:blue;font-size:34px"> unsolved mystery</p>
 

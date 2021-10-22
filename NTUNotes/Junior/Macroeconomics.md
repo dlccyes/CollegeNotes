@@ -411,6 +411,7 @@ $$D = C+I+G+(X-M)$$
 ### 生產函數
 - 代表性個人模型  representative agent model
 	- 所有單位都一樣
+
 $$y=AF(k,n)(+B)$$
 - y = 產出
 - k = capital
@@ -420,26 +421,84 @@ $$y=AF(k,n)(+B)$$
 	- B 使生產函數平行變動
 		- e.g. 中獎、欠收
 #### 特性
-- 資本勞動缺一不可
-	- $AF(k,0)=AF(0,n)=0$ if B=0
-- 投入愈多，產出愈多
-	- $MPL, MPK>0$
-		- marginal productivity of labor/capital
-	- ![](https://i.imgur.com/kHUYNlm.png)
-- marginal productivity 遞減
-	- ![](https://i.imgur.com/Lfdj8FU.png)
-	- ![](https://i.imgur.com/d4Jzhru.png)
-	- 廠商規模未成熟時可能 MP 遞增，但這種情況不會持續存在
-- 資本勞動互補
-- Inada condition
-	- ![](https://i.imgur.com/B7zwc65.png)
-	- 非必較條件
-- 固定規模報酬 constant return to scale
-	- 資本勞動階 x2 → output x2
-	- 生產效率 independent to  廠商規模
-	- ![](https://i.imgur.com/Fi9pedd.png)
-	- $AF(ak,an)>ay$ → 規模報酬遞增 increasing return to scale
-		- e.g. 台GG
-	-  $AF(ak,an)=ay$ → 規模報酬固定 constant return to scale
-	- $AF(ak,an)<ay$ → 規模報酬遞減 decreasing return to scale
-		- e.g. 精緻餐廳、文創
+##### 資本勞動缺一不可
+- $AF(k,0)=AF(0,n)=0$ if B=0
+##### 投入愈多，產出愈多
+- $MPL, MPK>0$
+	- marginal productivity of labor/capital
+- ![](https://i.imgur.com/kHUYNlm.png)
+##### marginal productivity 遞減
+- ![](https://i.imgur.com/Lfdj8FU.png)
+- ![](https://i.imgur.com/d4Jzhru.png)
+- 廠商規模未成熟時可能 MP 遞增，但這種情況不會持續存在
+##### 資本勞動互補
+##### Inada condition
+- ![](https://i.imgur.com/B7zwc65.png)
+- 非必較條件
+##### 固定規模報酬 constant return to scale
+- 生產效率 independent to  廠商規模
+	- 資本勞動皆 x2 → output x2
+		- 一階齊次函數
+	- 大公司切成 10 個小公司 → 生產效率不變
+- ![](https://i.imgur.com/Fi9pedd.png)
+- $AF(ak,an)>ay$ → 規模報酬遞增 increasing return to scale
+	- e.g. 台GG
+-  $AF(ak,an)=ay$ → 規模報酬固定 constant return to scale
+- $AF(ak,an)<ay$ → 規模報酬遞減 decreasing return to scale
+	- e.g. 精緻餐廳、文創
+
+#### Cobb-Douglas 生產函數
+$$y=Ak^{\alpha}n^{1-\alpha},\alpha\in(0,1)$$
+- 要素產出彈性 output elasticity factor
+	- output 之於 factor 的彈性
+	- 資本產出彈性 = $\dfrac{dy/y}{dk/k}$<br>$=\dfrac{dlny}{dlnk}$<br>$=\dfrac{dy/dk\cdot k}{y}=\dfrac{MPK\cdot k}{y}=\dfrac{capital \space income}{output}$<br>= 資本份額 capital share
+- $MPK=\dfrac{dy}{dk}=\alpha Ak^{\alpha-1}n^{1-\alpha}=\alpha \dfrac{y}{k}$
+	- so $\alpha$ = 資本產出彈性 = capital share = constant
+- labor share = $1-\alpha$ = constant
+- 滿足 6 [[#生產函數#特性|特性]]
+
+#### Euler 性質
+[[#固定規模報酬 constant return to scale]]<br>→ $ay\equiv AF(ak,an)$<br>→ $\dfrac{d(ay)}{da}=y=AF_k(ak,an)\cdot k+AF_n(ak,an)\cdot n$<br>$=MPK\cdot k+MPL\cdot n$ for $a=1$ (see [[#投入愈多，產出愈多]])<br>= capital income + labor income
+i.e. 廠商生產全部被資本&勞動報酬瓜分掉
+
+### Decision Problem
+- 目標：max divident
+	- dividend (profit) = revenue - cost
+	- $d(n;A,k,w)=AF(k,n)-wn$
+- 一階必要條件
+	- $AF_n(k,n^*)=w$ i.e. marginal profit = 0
+- 二階充分條件
+	- $AF_{nn}(k,n^*)<0$ i.e. MPL 遞減
+- ![](https://i.imgur.com/2gO92JZ.png)
+	- $MPL<w$ → d 遞增
+	- $MPL>w$ → d 遞減
+	- $MPL=w$ → d has max 
+### labor & supply
+- wage
+	- w increase → n decrease
+	- ![](https://i.imgur.com/mH9mtW2.png)
+- A or k
+	- A or k increase → MPL increase → n increase
+	- ![](https://i.imgur.com/nXdMmYW.png)
+		- B → wage increase → C
+		- B → A or k increase → D
+	- ![](https://i.imgur.com/UqQqrY8.png)
+		- B → wage increase → C
+		- B → A or k increase → D
+- supply & demand
+	- labor demand $n^d(w,A,k)$
+		- w: negative
+		- A & k: positive
+	- product supply $y^s(k,n^d(w,A,k))$
+		- w: negative
+		- A & k: positive
+	- ![](https://i.imgur.com/HtmTUsG.png)
+		- [[Econometrics#Ch8 nonlinear]]
+### 能源危機
+- $y=F(k,n,x)$
+	- x = 原油量
+	- q = 原油價格
+- 一階條件
+	- $MPX=F_x(k,n,x)=q$
+	- $MPL=F_n(k,n,x)=w$
+
