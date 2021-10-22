@@ -11,3 +11,8 @@ cd bin
 `ulimit -s 262144` to prevent stack overflow
 
 `./bin/NTU_sort -IS inputs/1000.case1.in outputs/1000.case1.out`
+
+![](https://i.imgur.com/dtXdJWj.png)
+- 1000000-3
+	- IS 
+		- The total CPU time: 350656ms<br>memory: 0KB
