@@ -4,6 +4,8 @@ tags: GT_Papers
 [[Game Theory]] 
 [[Game Theory Papers]]
 # Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
+my part in 2021.10.29 Game Theory Study Group  Presentation: Coalition Game
+
 ## intro
 - MEC, multi-access edge computing
 	- aka MeNB ==???==
