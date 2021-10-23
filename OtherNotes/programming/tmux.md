@@ -14,3 +14,7 @@
 - kill session bruh
 	- go inside and `ctrl+d`
 	- `tmux kill-session -t bruh`
+- split window vertically
+	- `ctrl+b %`
+- change focus to another pane
+	- `ctrl+b arrow_key`

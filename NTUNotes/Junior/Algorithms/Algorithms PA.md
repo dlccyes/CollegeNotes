@@ -29,5 +29,7 @@ case structure
 
 - compress
 	- `tar -zcvf b08901001_pa1.tgz b08901001_pa1`
+- extract
+	- `tar zxvf b08901001_pa1.tgz`
 - to check submission
 	- (in utility) `checkSubmitPA1.sh b08901001_pa1.tgz`

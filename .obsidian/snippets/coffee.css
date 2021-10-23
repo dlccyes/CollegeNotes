@@ -83,3 +83,21 @@ body {
 [aria-label="Preview (Ctrl+Click to open in new pane)"] {
     opacity: 1 !important;
 }
+
+.cm-header-1, .markdown-preview-section h1{
+}
+.cm-header-2, .markdown-preview-section h2{
+    color: #ffe5ce  !important;
+}
+.cm-header-3, .markdown-preview-section h3{
+    color: #ffd8a8 !important;
+}
+.cm-header-4, .markdown-preview-section h4{
+    color: #ffca90 !important;
+}
+.cm-header-5, .markdown-preview-section h5{
+    color: #ffb154 !important;
+}
+.cm-header-6, .markdown-preview-section h6{
+    color: #ff9f23 !important;
+}
