@@ -495,10 +495,23 @@ i.e. 廠商生產全部被資本&勞動報酬瓜分掉
 	- ![](https://i.imgur.com/HtmTUsG.png)
 		- [[Econometrics#Ch8 nonlinear]]
 ### 能源危機
+- 中間投入價格上升 → → MPL & MPK 下降
 - $y=F(k,n,x)$
 	- x = 原油量
 	- q = 原油價格
+- $d(n,x)=F(k,n,x)-(wn+qx)$ 求 max
 - 一階條件
 	- $MPX=F_x(k,n,x)=q$
 	- $MPL=F_n(k,n,x)=w$
+- ![](https://i.imgur.com/Mdhu0lV.png)
+	- 原油價格上升 → E to F，原油 & 勞動需求下降，商品供給下降, just like A 下降的結果
+		- q 上升 → x 下降  → MPL 下降 → labor demand 左移 → n 下降 → MPX 下降 → 原油 demand 左移 → x 下降
 
+#### Cobb-Douglas 生產函數
+$$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
+- $MPL=w=\beta\dfrac{y}{n}$
+- $MPX=q=(1-\alpha-\beta)\dfrac{y}{x}$
+- 把 x 取代掉 →<br>![](https://i.imgur.com/n8Tkmtb.png)<br>$=A_1k^{\phi}n^{1-\phi}$
+	- q 上升 → $A_1$ 下降 → MPL & MPK 下降
+- ![](https://i.imgur.com/rLG0qWY.png)
+	- q 上升 → $x^d$ & $n^d$ & $y^s$ 下降 
