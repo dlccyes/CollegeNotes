@@ -258,7 +258,6 @@ matrix multiplication
 
 ### Quicksort
 - use divide-and-conquer
-- ==去看 Hoare 原始版本==
 - ![](https://i.imgur.com/HIkmxlz.png)
 	- partition 後基準的位置的左右再各執行
 - partition
@@ -281,29 +280,41 @@ matrix multiplication
 		- sorted OR reversely sorted
 		- ![](https://i.imgur.com/nutGH85.png)
 	- practically very good, but asymptotically bad
-- randomized quick sort
-	- random 選一個 element 跟最後一位交換
-	- ![](https://i.imgur.com/jqWEcR5.png)
-	- time complexity
-		- worst case
-			- ![](https://i.imgur.com/Lx8KUT3.png)
-		- expected $\in O(nlgn)$
-			- method 1
-				- ![](https://i.imgur.com/G8YbDPT.png)<br>![](https://i.imgur.com/dwZxmtx.png)
-					- $X_q=1/n$
-					- sum(T(q-1))=sum(T(n-q))
-					- 忽略 q=0, 1
-					- 猜 nlgn
-			- method 2
-				- $\in O(n+X)$
-				- n elements → max n partitions
-				- X comparisons
-					- 只有 pivot 需要跟別人比較
-					- 兩 elements 至多比較一次
-					- ![](https://i.imgur.com/VE8VtXN.png)
-						- E[X] = expected X
-					- ![](https://i.imgur.com/W0OswXI.png)
-						- $E[X_{ij}] = z_i$ or $z_j$ 為 pivot 的機率
+#### randomized partition
+- random 選一個 element 跟最後一位交換
+- ![](https://i.imgur.com/jqWEcR5.png)
+- time complexity
+	- worst case
+		- ![](https://i.imgur.com/Lx8KUT3.png)
+	- expected $\in O(nlgn)$
+		- method 1
+			- ![](https://i.imgur.com/G8YbDPT.png)<br>![](https://i.imgur.com/dwZxmtx.png)
+				- $X_q=1/n$
+				- sum(T(q-1))=sum(T(n-q))
+				- 忽略 q=0, 1
+				- 猜 nlgn
+		- method 2
+			- $\in O(n+X)$
+			- n elements → max n partitions
+			- X comparisons
+				- 只有 pivot 需要跟別人比較
+				- 兩 elements 至多比較一次
+				- ![](https://i.imgur.com/VE8VtXN.png)
+					- E[X] = expected X
+				- ![](https://i.imgur.com/W0OswXI.png)
+					- $E[X_{ij}] = z_i$ or $z_j$ 為 pivot 的機率
+- Hoarse
+#### Hoarse partition
+- 原始提出版本
+- ==很愛考==
+- ![](https://i.imgur.com/cX71iZV.png)
+- i & j 交疊 → 完成
+- pseudo code
+	- ![](https://i.imgur.com/8LicOkw.png)
+- ![](https://i.imgur.com/vgDTdFO.png)
+- loop invariant
+	- ![](https://i.imgur.com/8AlyGZJ.png)
+- 好處壞處 complexity 都跟課本版本一樣
 
 ### heapsort
 #### heap (priority queue)
