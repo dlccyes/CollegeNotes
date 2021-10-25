@@ -42,7 +42,7 @@
 - instruction set
 	- e.g. x86, ARM, RISC-V
 
-### RISC-V intro
+### [[RISC-V]] intro
 - 較簡單的 instruction set
 - regularity → simpler implementation
 - simplicity → higher performance, lower cost
@@ -68,7 +68,7 @@ sub x19, x5, x6
 
 - little endian
 	- least-significant byte @ least address
-- bytes s不一定要 4 or 8 or whatever 的倍數
+- bytes 不一定要 4 or 8 or whatever 的倍數
 - 一個 instruction 是 8 bytes
 - ![](https://i.imgur.com/53tWD5q.png)
 	- 8x8=64
@@ -100,7 +100,7 @@ sub x19, x5, x6
 - ![](https://i.imgur.com/frYek0d.png)
 - opcode & func3 告訴電腦要做什麼 instruction (arithmetic OR load)
 
-### operations
+### [[RISC-V]] operations
 ![](https://i.imgur.com/XC0k2XB.png)
 ![](https://i.imgur.com/PX629AE.png)
 
