@@ -83,6 +83,12 @@ sub x19, x5, x6
 ![](https://i.imgur.com/T1hJSQe.png)
 ![](https://i.imgur.com/q2huzgm.png)
 
+
+### sign extension
+多加幾個 bits
+![](https://i.imgur.com/sQJYKhN.png)
+
+
 ### R-format
 - register
 - ![](https://i.imgur.com/0eAXKRU.png)
@@ -96,6 +102,7 @@ sub x19, x5, x6
 
 ### operations
 ![](https://i.imgur.com/XC0k2XB.png)
+![](https://i.imgur.com/PX629AE.png)
 
 `slli a, b, 1` → a = b<<1 (=2bs)  
 `addi a, b, 1` → a=b+1
@@ -123,3 +130,44 @@ sub x19, x5, x6
 	- recursive?
 	- ![](https://i.imgur.com/hBfLGMq.png)![](https://i.imgur.com/V5N5pbB.png)
 
+#### load/store
+![](https://i.imgur.com/oDaZ5am.png)
+
+lui
+![](https://i.imgur.com/RNsyU2I.png)
+`lui x19, 976` → 把 976 插到 [31:12]
+
+#### example
+![](https://i.imgur.com/vXfjxEW.png)
+![](https://i.imgur.com/nD2SLNx.png)
+
+![](https://i.imgur.com/VTMg82Q.png)
+![](https://i.imgur.com/nvB3V8L.png)
+![](https://i.imgur.com/hnQl3Zq.png)
+![](https://i.imgur.com/kMbiMGJ.png)
+![](https://i.imgur.com/3VIvzZh.png)
+![](https://i.imgur.com/uI2GcCJ.png)
+
+![](https://i.imgur.com/W0bskcu.png)
+
+
+### dynamic linking
+only link/load library procedure when called
+
+- Java just in time compiler
+	- 根據執行狀況做優化
+
+### performance judging
+- IC (why?) & CPI alone 不是好的 performance indicators
+- compiler optimizations are sensitive to algorithms
+- Java just-in-time >> Java Virtual Machine
+	- 直逼 C
+
+### array vs. pointer
+- pointer 省略 indexing 的部分
+- e.g.
+	- ![](https://i.imgur.com/D8y8N2C.png)
+		- x7 = size-1
+		- array 每次 loop 都要 `slli` & `add`
+			- `slli`: 算 i 的實際 index
+			- `add`: 得出 array[i] 的實際 address

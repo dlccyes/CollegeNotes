@@ -601,7 +601,17 @@ so there're many security problems now
 
 #### application-layer protocols
 
-## reliable data transfer
+
+## Ch3 Transport Layer
+- ![](https://i.imgur.com/iMPrEhU.png)
+- UDP
+	- max 65535 = 2^16-1
+
+### reliable data transfer
+- difficulties
+	- the layer below may be unreliable
+- assumption
+	- packets sent (from below) won't be out of order
 - properties
 	- no error
 	- no loss
@@ -611,7 +621,7 @@ so there're many security problems now
 	- positive → ACK
 	- negative → NAK
 		- → retransmission
-### error detection
+#### error detection
 - parity check
 	- even or odd number of 1s
 	- 2D parity check
@@ -628,7 +638,7 @@ so there're many security problems now
 			- bc 理論上互為 complement
 	- ![](https://i.imgur.com/2uAiupB.png)
 
-### Automatic Repeat reQuest (ARQ)
+#### Automatic Repeat reQuest (ARQ)
 - stop & wait
 	- resend when
 		- timeout 沒收到 ACK
@@ -643,7 +653,7 @@ so there're many security problems now
 			- a < 1
 				- 還沒 transmit 完已經 propagate 到了
 			- sol: [[#sliding window protocol]]
-#### alternating-bit protocol
+##### alternating-bit protocol
 - stop & wait but 多一個 bit 標示 sequence number
 	- 0 or 1
 	- 可判斷是重傳 or 新 packet
@@ -653,7 +663,7 @@ so there're many security problems now
 - ![](https://i.imgur.com/sZArr7j.png)<br>![](https://i.imgur.com/sDi1rO2.png)
 	- lost packet & lost ACK 對 sender 來說一樣
 
-#### sliding window protocol
+##### sliding window protocol
 - Go Back N (GBN)
 	- 一樣有 sequence number
 		- 3 bit → 0-7
@@ -673,7 +683,7 @@ so there're many security problems now
 		- 1 失敗 23456 成功 → resend all but 換其他失敗 → 浪費效能
 			- sol: [[#Selective Repeat SR]]
 
-#### Selective Repeat (SR)
+##### Selective Repeat (SR)
 - sender & receiver 都有 sliding window
 	- ![](https://i.imgur.com/uTb6mZr.png)
 - ![](https://i.imgur.com/3k5gJBx.png)
@@ -690,10 +700,6 @@ so there're many security problems now
 	- ![](https://i.imgur.com/HtGtPqf.png)
 
 
-## Ch3 Transport Layer
-- ![](https://i.imgur.com/iMPrEhU.png)
-- UDP
-	- max 65535 = 2^16-1
 
 ---
 ## miscellaneous

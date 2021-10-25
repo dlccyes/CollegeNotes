@@ -101,3 +101,10 @@ body {
 .cm-header-6, .markdown-preview-section h6{
     color: #ff9f23 !important;
 }
+
+/* edit mode link color */
+.theme-dark a:hover, .theme-dark .cm-url, .theme-dark .cm-hmd-internal-link:hover {
+    color: #ccc622 !important;
+    text-decoration: none !important;
+}
+
