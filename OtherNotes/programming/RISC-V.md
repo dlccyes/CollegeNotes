@@ -19,11 +19,17 @@ https://godbolt.org/
 
 ## syntax
 ### operations
+![](https://i.imgur.com/XC0k2XB.png)
+![](https://i.imgur.com/PX629AE.png)
 - `li x19, 0` → x19 = 0
 - `mv a, b` → a=b
 - ori
 	- or immediate
 	- OR the two values
+- `slli a, b, 1` → a = b<<1 (i.e. 2b)
+- `srli a, b, 1` → a = b>>1 (i.e. b/2)
+-   
+- `addi a, b, 1` → a=b+1
 
 ```
 ori S1, S0, 0x5678
@@ -46,9 +52,14 @@ OR 0x00005678
 	- load address
 	- https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md#load-address
 
-#### compare
-- slti
-	- `slti a, b, c` → if(b<c){a=1}else{a=0}
+### compare
+- `beq a, b, callback` → if(a\==b){callback()}
+	- equal
+- `bne a, b, callback` → if(a!=b){callback()}
+	- not equal
+- `blt a, b, callback` → if(a<b){callback()}
+	- less than
+- `slti a, b, c` → if(b<c){a=1}else{a=0}
 
 ## examples
 https://hackmd.io/@sysprog/By5OE6fOr

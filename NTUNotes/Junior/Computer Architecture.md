@@ -104,7 +104,7 @@ sub x19, x5, x6
 ![](https://i.imgur.com/XC0k2XB.png)
 ![](https://i.imgur.com/PX629AE.png)
 
-`slli a, b, 1` → a = b<<1 (=2bs)  
+`slli a, b, 1` → a = b<<1 (=2b)  
 `addi a, b, 1` → a=b+1
 #### if
 `beq a, b, callback` → if(a\==b){callback()}
