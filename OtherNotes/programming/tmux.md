@@ -1,4 +1,13 @@
 # tmux
+## environment
+### enable color
+```
+vim ~/.tmux.conf
+set -g default-terminal "screen-256color"
+```
+and then restart terminal or whatever
+
+ref: https://unix.stackexchange.com/a/355391
 ## commands
 - help
 	- `ctrl+b ?`
@@ -18,3 +27,4 @@
 	- `ctrl+b %`
 - change focus to another pane
 	- `ctrl+b arrow_key`
+

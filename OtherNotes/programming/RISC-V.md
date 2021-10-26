@@ -7,6 +7,8 @@ https://github.com/andrescv/Jupiter
 doc
 https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md
 
+RISC-V converter
+https://godbolt.org/
 
 ## general registers
 - https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md#general-registers
@@ -16,9 +18,9 @@ https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md
 	- ![](https://i.imgur.com/0clQgx7.png)
 
 ## syntax
-- lui
-	- load upper intermediate's immediate
-	- https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md#load-upper-immediates-immediate
+### operations
+- `li x19, 0` → x19 = 0
+- `mv a, b` → a=b
 - ori
 	- or immediate
 	- OR the two values
@@ -32,33 +34,73 @@ OR 0x00005678
    0x12345678 = S1
 ```
 
-
+### load & store
+- byte/halfword/word/doubleword
+- https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md#load-and-store-global
+- `ld x9, 64(x22)` → x9 = x22[8]
+- `sd 64(x22), x9` → x22[8]=x9
+- lui
+	- load upper intermediate's immediate
+	- https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md#load-upper-immediates-immediate
 - la
 	- load address
 	- https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md#load-address
-- load & store global
-	- byte/halfword/word/doubleword
-	- https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md#load-and-store-global
-	- `ld a b`
-		- load a to b
-		- e.g. 
-			- `ld x9, 64(x22)` → x9 = x22[8]
-	- `sd a b`
-		- store a to b
-	- `li x19, 0` → x19 = 0
-	- `mv a, b` → a=b
+
+#### compare
+- slti
+	- `slti a, b, c` → if(b<c){a=1}else{a=0}
 
 ## examples
 https://hackmd.io/@sysprog/By5OE6fOr
 ### recursive
+#### factorial
+https://stackoverflow.com/a/58139545/15493213
+```
+.text  # recursive implementation of factorial
+.globl __start
+# sp = stack pointer
+# ra = return address
+fact:       # arg: n in a0, returns n! in a1
+    addi  sp, sp, -8    # reserve our stack area
+    sw ra, 0(sp)    # save the return address
+    li t0, 2        # t0 <- 2
+    blt a0, t0, ret_one # a0<2 → a1 <- 1 (bc 0! and 1! == 1)
+    sw a0, 4(sp)    # save our n # n -> 4(sp)
+    addi a0, a0, -1 # n <- n-1
+    jal fact        # call fact (n-1)
+                    # a1 <- fact(n-1)
+    lw t0, 4(sp)    # t0 <- n
+    mul a1, t0, a1  # a1 <- n * fact(n-1)
+    j done
+ret_one:
+    li a1, 1
+done:
+    lw ra, 0(sp)    # restore return address from stack
+    addi sp, sp, 8  # free our stack frame
+    jr ra           # and return
+
+__start:
+    li a0, 5        # n <- 5
+    jal fact        # fact(5)
+    li a0, 1        # print it ??????
+    ecall
+    li a0, 17       # ????????
+    ecall       # and exit
+```
 #### bubble sort
 https://github.com/Shengyuu/Assignment_computer_arch/blob/master/Lab1_bubble_sort/bubble.s
 
-#### fibonacci
+#### Fibonacci
 https://courses.cs.washington.edu/courses/cse378/02sp/sections/section4-5.html
+```cpp
+int fib(int n) {
+  if (n < 2) return 1;
+  else return fib(n - 1) + fib(n - 2);
+}
+```
 ```risc-v
 fib:  addi $sp, $sp,   -8     # Entry code
-      sw   $ra, 0($sp)
+      sw   $ra, 0($sp) 		  # ra = return address
       sw   $fp, 4($sp)
       add  $fp, $sp,   $zero  # End of entry code
 
@@ -114,3 +156,8 @@ exit: lw   $ra, 0($sp)        # Exit code
       jr   $ra                # End of exit code
 
 ```
+
+### iterative
+#### Fibonacci
+https://my.ece.utah.edu/~kstevens/5710/mips.pdf
+![](https://i.imgur.com/5dEPF2f.png)

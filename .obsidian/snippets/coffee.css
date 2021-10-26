@@ -120,4 +120,8 @@ body {
     color: #f5b069 !important;
     text-decoration: none !important;
 }
-
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
