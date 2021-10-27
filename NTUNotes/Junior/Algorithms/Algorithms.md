@@ -249,7 +249,7 @@ matrix multiplication
 	- Strassen's method $\in \Theta(n^{lg7}) \in o(n^3)$
 		- ![](https://i.imgur.com/jVACP7J.png)
 
-## sorting
+## Sorting
 ### sorting comparisons
 - time complexity
 	- ![](https://i.imgur.com/H2pkRv5.png)
@@ -442,3 +442,46 @@ matrix multiplication
 - rotation
 	- inorder preservation
 	- ![](https://i.imgur.com/z1JPT7g.png)
+
+## Dynamic Programming
+### memoization
+- top-down
+- recursive but 記錄那些被執行過了，if 執行過則 skip
+- ![](https://i.imgur.com/Ar9Zp20.png)
+- ![](https://i.imgur.com/B8NC2so.png)
+	- 其實是走右邊的 3
+- pros
+	- 不一定沒個 subproblem 都要算
+
+### iteration
+- bottom-up
+- [[Data Structure#Dynamic Programming]]
+- ![](https://i.imgur.com/SrQ21Rw.png)
+- pros
+	- less overhead
+### keys
+- distinct subs (table size) $\in$ polynomial
+- optimal substructure
+	- optimal subs → optimal overall solution
+- overlapping subproblem
+	- 很多 overlap 的 subproblems
+
+### Rod Cutting
+- 鋼條長度 vs. 價格非線性，求 max revenue 切法
+- ![](https://i.imgur.com/tkZxkRm.png)
+- top-down
+	- $\in O(n^2)$
+	- ![](https://i.imgur.com/TN0K9S9.png)
+- bottom-up
+	- $\in O(n^2)$
+	- ![](https://i.imgur.com/Sd0HImC.png)
+	- record choice
+		- ![](https://i.imgur.com/cM327fg.png)
+
+### Matrix-Chain Multiplication
+- minimize multiplications
+- ![](https://i.imgur.com/QilPx2n.png)
+- bottom-up
+	- ![](https://i.imgur.com/pyswYI5.png)
+- top-down
+	- ![](https://i.imgur.com/E0CDOD3.png)

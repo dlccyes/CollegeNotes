@@ -83,6 +83,20 @@
 			- https://www.youtube.com/watch?v=4Aye9FWgxUg
 			- <iframe width="426" height="552" src="https://www.youtube.com/embed/4Aye9FWgxUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## 注意與意識
+- 體型愈小，睡眠時間愈多
+- 睡眠周期
+	- NREM
+		- stage 1
+		- stage 2
+		- stage 3/4
+	- REM
+	- ![](https://i.imgur.com/ouaZ21v.png)
+		- 會慢慢進入深層睡眠 bc 怕環境有狀況
+		- NREM 變 REM 是非常快入的 bc 瞬間回復可以應對外在狀況的情況
+- lucid dream
+	- 前額葉沒完全關閉
+
 ## 考
 - 神經傳導素 neurotransmitter
 	- ![](https://i.imgur.com/ip2DMki.png)
