@@ -639,10 +639,14 @@ so there're many security problems now
 	- ![](https://i.imgur.com/2uAiupB.png)
 
 #### Automatic Repeat reQuest (ARQ)
+- states
+	- ![](https://i.imgur.com/dyjvawQ.png)
+	- ![](https://i.imgur.com/1Qj6GYC.png)
 - stop & wait
 	- resend when
 		- timeout 沒收到 ACK
 		- 收到 corrupted ACK
+		- 收到 NAK
 	- problems
 		- ACK transmission 可能出錯
 			- sol: [[#alternating-bit protocol]]
