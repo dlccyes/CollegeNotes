@@ -603,9 +603,14 @@ so there're many security problems now
 
 
 ## Ch3 Transport Layer
+### intro
+- network laryer: host 2 host
+- transport layer: process 2 process
+- www.ietf.org
 - ![](https://i.imgur.com/iMPrEhU.png)
 - UDP
 	- max 65535 = 2^16-1
+- mss: maximum segment size
 
 ### reliable data transfer
 - difficulties
@@ -668,26 +673,26 @@ so there're many security problems now
 	- lost packet & lost ACK 對 sender 來說一樣
 
 ##### sliding window protocol
-- Go Back N (GBN)
-	- 一樣有 sequence number
-		- 3 bit → 0-7
-	- sender
-		- ![](https://i.imgur.com/Lk1S4u3.png)
-		- window size 固定 N，隨著 ACK 回來往右 slides
-		- timeout 沒有 ACK → resend 整個 window
-		- timer 根據 windows 裡最舊者
-	- receiver
-		- cumulative ACK
-			- 只需要 maintain 一個 ACK
-			- ACK n 表 n 以前的全部都收到
-		- 收到什麼就 ACK 什麼
-			- 收到 out of order → 丟掉 but ACK
-	- ![](https://i.imgur.com/1jeQHRf.png)
-	- problems
-		- 1 失敗 23456 成功 → resend all but 換其他失敗 → 浪費效能
-			- sol: [[#Selective Repeat SR]]
+###### Go Back N (GBN)
+- 一樣有 sequence number
+	- 3 bit → 0-7
+- sender
+	- ![](https://i.imgur.com/Lk1S4u3.png)
+	- window size 固定 N，隨著 ACK 回來往右 slides
+	- timeout 沒有 ACK → resend 整個 window
+	- timer 根據 windows 裡最舊者
+- receiver
+	- cumulative ACK
+		- 只需要 maintain 一個 ACK
+		- ACK n 表 n 以前的全部都收到
+	- 收到什麼就 ACK 什麼
+		- 收到 out of order → 丟掉 but ACK
+- ![](https://i.imgur.com/1jeQHRf.png)
+- problems
+	- 1 失敗 23456 成功 → resend all but 換其他失敗 → 浪費效能
+		- sol: [[#Selective Repeat SR]]
 
-##### Selective Repeat (SR)
+###### Selective Repeat (SR)
 - sender & receiver 都有 sliding window
 	- ![](https://i.imgur.com/uTb6mZr.png)
 - ![](https://i.imgur.com/3k5gJBx.png)
@@ -703,7 +708,58 @@ so there're many security problems now
 		- 無法 differentiate 是 repeated 還是 new
 	- ![](https://i.imgur.com/HtGtPqf.png)
 
+### UDP
+- UDP 有 checksum
+- RFC 768
+- chrome 在 UDP 上做自己的 protocol 
+- 不用記錄 connection state
+- segment
+	- ![](https://i.imgur.com/CGnQLXN.png)
+	- header size fixed
+	
+### TCP
+- 用 [[#sliding window protocol]]
+- segment
+	- ![](https://i.imgur.com/lIio3JT.png)
+	- header size not fixed
+	- window size not fixed
+		- flow control
+	- UAPRSF
+		- 0 or 1 each
+		- U: urgent
+			- Urg data pointer: urgent data 的位置
+			- 沒在用
+		- A: ACK
+		- P: push
+			- 沒在用
+		- R: reset
+	- Internet checksum
+- rdf
+	- sender maintain sliding window
+	- receiver maintain expected next byte (seq. num)
+- round trip time
+	- ==???==
+	- EWMA
+		- 舊 RTT & 新 RTT (sample RTT)  的加權平均
+#### reliable data transfer
+- cumulative ACKs
+- timer: oldest unACKed segment
+- receive → ACK next seq. number
+- 只 restransmit timeout 的 segment
+- ![](https://i.imgur.com/QI3MCOv.png)
+- fast retransmit
+	- 3 same seq. number ACKs → retransmit
+	- ![](https://i.imgur.com/FnAIrmG.png)
+	- ==???==
 
+#### flow control
+#### TCP 3-way handshake
+- SYN-ACK attack
+	- 不停 request connection 但不回 ACK
+- receiver 透過 ACL 告訴 sender 自己剩餘  sliding window (buffer)  大小
+	- 沒空間 → sender 不能送，等 receiver 慢慢消化往上層送
+	- sender 定期要去問 receiver buffer 夠不夠
+		- otherwise 都不 send 東西，沒拿到 ACK 的話就不知道 receiver buffer 大小
 
 ---
 ## miscellaneous
