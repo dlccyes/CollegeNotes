@@ -282,6 +282,7 @@ $$D = C+I+G+(X-M)$$
 - e.g.
 	- ![](https://i.imgur.com/2Ru9IDC.png)
 		- ((260/200)*(350/280))**0.5=1.275
+		- 200*1.275=255
 		- ((38/35)*(48/44))**0.5=1.088
 		- 1.275*1.088=1.387
 		- 200*1.387=277
@@ -332,7 +333,7 @@ $$D = C+I+G+(X-M)$$
 #### GDP 平減指數 (GDP Deflator)
 - GDP Deflator = nominal GDP / 固定價格 GDP
 - ![](https://i.imgur.com/WIE29PD.png)
-	- base period: t=0 
+	- base period: 0 
 	- 利用當期支出比重做加權平均
 		- sum{ i 商品漲價幅度 x 佔 GDP 的比例} i.e. 商品漲價幅度加權平均
 	- intuition: 現在的商品拿去過去賣，漲了多少
@@ -346,7 +347,7 @@ $$D = C+I+G+(X-M)$$
 - 用 retail price
 	- 生產者物價指數 WPI 用 wholesale price
 - ![](https://i.imgur.com/B0KChNH.png)
-	- base period: t=0
+	- base period: ㄋ0
 	- intuition: 過去的商品拿來現在賣，貴了多少
 		- 分子：過去的商品數量用現在的價格算
 	- 利用基期支出比重做加權平均
