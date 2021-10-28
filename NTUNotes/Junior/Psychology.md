@@ -94,6 +94,7 @@
 	- ![](https://i.imgur.com/ouaZ21v.png)
 		- 會慢慢進入深層睡眠 bc 怕環境有狀況
 		- NREM 變 REM 是非常快入的 bc 瞬間回復可以應對外在狀況的情況
+	- 剝奪 REM，補眠時是補 REM；剝奪 NREM，補眠時是補 NREM
 - lucid dream
 	- 前額葉沒完全關閉
 - 通靈者通靈時會進入睡覺的那種腦波狀態
@@ -103,10 +104,37 @@
 		- 被催眠時產生另一個分離的 state
 	- non-state
 		- 被催眠時假戲真做
-- caffeine 長得跟 adenosine 很像 → 身體以為已經很多 adenosine 了，生產出來的 adenosine 就在那邊飄，沒有發生作用，讓人較清醒 → caffeine 代謝掉後，在那邊飄的一堆 adenosine 發生作用，加深睡意
+- caffeine 長得跟 adenosine 很像 → 卡住作用位置，生產出來的 adenosine 無法作用，就在那邊飄，人因此不會想睡 → caffeine 代謝掉後，在那邊飄的一堆 adenosine 終於發生作用，加深睡意
 	- adenosine: 會讓人想睡
 	- ![](https://i.imgur.com/EJBOQZa.png)
-
+- 心理作用藥
+	- 抑制劑
+		- 酒精
+			- 抑制理性
+	- 興奮劑
+		- caffeine
+	- 幻覺劑
+		- 大麻
+		- LSD
+- perceptual awareness
+	- perceptually unaware
+		- blindsight
+			- 無視覺但可以繞過障礙
+			- 上丘
+				- 無意識的視覺區
+		- subthreshold stimuli
+			- 刺激太弱沒感覺
+			- alias subconsious / subliminal stimuli
+			- e.g. 影片偷偷塞幾個 frame
+		- inattentional blindness
+			- 刺激夠強但沒注意到
+			- 數傳球猩猩影片
+			- 魔術
+		- change blindness
+			- 有注意到但沒看到
+- mindfulness
+	- 活在當下
+	- 一日三省吾身
 ## 考
 - 神經傳導素 neurotransmitter
 	- ![](https://i.imgur.com/ip2DMki.png)
