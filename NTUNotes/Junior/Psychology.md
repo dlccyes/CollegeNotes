@@ -96,6 +96,16 @@
 		- NREM 變 REM 是非常快入的 bc 瞬間回復可以應對外在狀況的情況
 - lucid dream
 	- 前額葉沒完全關閉
+- 通靈者通靈時會進入睡覺的那種腦波狀態
+	- 老師自己抓來測的
+- 催眠
+	- state theory
+		- 被催眠時產生另一個分離的 state
+	- non-state
+		- 被催眠時假戲真做
+- caffeine 長得跟 adenosine 很像 → 身體以為已經很多 adenosine 了，生產出來的 adenosine 就在那邊飄，沒有發生作用，讓人較清醒 → caffeine 代謝掉後，在那邊飄的一堆 adenosine 發生作用，加深睡意
+	- adenosine: 會讓人想睡
+	- ![](https://i.imgur.com/EJBOQZa.png)
 
 ## 考
 - 神經傳導素 neurotransmitter
