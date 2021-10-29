@@ -115,7 +115,7 @@ aliases: 總體經濟學
 	 - the market value of all final goods and services that an economy produces in a given period **by its permanent residents**
 		 - 不是看本國籍者，而是看常住居民
 			 - 台：半年
- - final output 附加價值/最終產出
+ - final output 附加價值/最終產出/生產價值
 	 - 生產總值 - 中間投入
  - 差異：生產要素 (labor & capital) 的跨國移動
 	 - GNI/GNP = GDP + NFIA
@@ -160,17 +160,17 @@ aliases: 總體經濟學
 #### 生產面
 - 用聯合國會計準則 SNA08
 - GDP = 境內所有生產者創造的生產價值
-	- 生產價值 = 生產總值 - 中間投入
+	- 生產價值 / 最終產出 = 生產總值 - 中間投入
 - 中間投入 = 投資支出－無形投資
 	- 投資支出
 		- 可能在未來創造利潤的支出
 	- 無形投資沿革
-		- SNA93 新增**企業軟體支出**&**礦藏探勘費用** → 不算在中間投入
+		- SNA93 新增**企業軟體支出** & **礦藏探勘費用** → 不算在中間投入
 		- SNA08 新增**廠商研究發展(R&D) & 專利權支出** → 不算在中間投入
 	- 存料不算中間投入，so 買 20 顆 CPU 生產&賣掉 10 台電腦，中間投入只要減掉 10 顆 CPU 的價格
 
 #### 支出面
-$$D = C+I+G+(X-M)$$
+$$GDP = C+I+G+NX$$
 - C = 民間消費支出
 	- 占比最高，60-70%
 	- 波動不大
@@ -240,8 +240,8 @@ $$D = C+I+G+(X-M)$$
 	- = 工資 + ( 利息 + 地租 + 利潤 )
 		- 利息包含地租以外的租金
 			- 店租、房租、資本租金 etc.
-		- 利潤是減掉 NDI & DEP 後
-			- 間接稅淨額 Net Indirect Tax (NDI)  = 間接稅 - 生產補貼
+		- 利潤是減掉 NIT (間接稅淨額) & DEP (折舊) 後
+			- 間接稅淨額 Net Indirect Tax (NIT)  = 間接稅 - 生產補貼
 				- 間接稅
 					- 營業加值稅
 					- 關稅
@@ -297,10 +297,10 @@ $$D = C+I+G+(X-M)$$
 
 ### 國民所得&國民儲蓄
 #### 民間儲蓄 private saving
-- 家計所得 household income<br>= 要素所得 + 政府移轉所得 (TR) + 公債利息 (INT)
+- 家計所得 household income<br>= 要素所得 + 政府移轉所得 (TR) + 公債利息 (INT, interest income)
 - 廠商盈餘<br>= GNI - 要素成本<br>= (GDP + NFIA) - 要素成本
 	- 生產者附加價值 = GNI
-- 民間所得 private income <br>= 家計所得 + 廠商盈餘<br>=GNI + TR + INT<br>=GDP + NFIA + TR + INT
+- 民間所得 private income <br>= 家計所得 + 廠商盈餘<br>= GNI + TR + INT<br>= GDP + NFIA + TR + INT
 - 民間可支配所得 private disposable income <br>$Y^P$= (家計所得 + 廠商盈餘) - TAX (直接稅 + 間接稅淨額) <br>= (GDP + NFIA + TR + INT) - TAX
 	- TAX
 		- 家計單位繳直接稅
@@ -311,7 +311,7 @@ $$D = C+I+G+(X-M)$$
 	- 政府預算盈餘 budget surplus = 總稅收 - 總支出<br>= TAX - (G + TR + INT + 政府投資支出)
 	- TAX 包含公營事業盈餘等
 #### 國民儲蓄 national saving
-- 國民儲蓄 (S) = 民間儲蓄 ($S^P$) + 政府儲蓄 ($S^G$)<br>= 國民所得毛額 - ( 民間消費 + 政府消費 )<br>= GNI - (C + G)<br>= (GDP + NFIA) - (C + G)<br>= (C + I + G + NX + NFIA) - (C + G)<br>= I + (NX + NFIA)<br>= 國內投資支出 (I) + 經常帳盈餘 (CA)
+- ==S (國民儲蓄) = $S^P$ (民間儲蓄) + $S^G$ (政府儲蓄)==<br>=== GNI (國民所得毛額) - ( C (民間消費) + G (政府消費) )==<br>= (GDP + NFIA) - (C + G)<br>= (C + I + G + NX + NFIA) - (C + G)<br>= I + (NX + NFIA)<br>= I (國內投資支出) + CA (經常帳盈餘)
 - 國民儲蓄 - 折舊<br>= 國民儲蓄毛額 gross national saving - 折舊<br>= 國民儲蓄淨額 net national saving
 - 經常帳盈餘 (CA, current account) = 貿易盈餘 (NX) + 國外要素所得淨額 (NFIA)
 	-  國外資產持有 = 對外國住民的求償權
@@ -319,7 +319,7 @@ $$D = C+I+G+(X-M)$$
 	-   current account + 資本帳 (capital account) =  0
 		-   https://www.investopedia.com/ask/answers/031615/whats-difference-between-current-account-and-capital-account.asp
 		-   <iframe src="https://www.investopedia.com/ask/answers/031615/whats-difference-between-current-account-and-capital-account.asp" width=100% height=500px></iframe>
-- 國民儲蓄 S = I + CA 流向
+- ==國民儲蓄 S = I + CA 流向==
 	- 留在國內 → 國內投資支出 (I)
 	- 流向國外 → 經常帳盈餘 (CA) i.e. 以商品或要素形式流向國外
 		- e.g. 買 US treasury OR 國外資產 ==(???????????????? 到底是金錢還是商品或要素形式流出)==
