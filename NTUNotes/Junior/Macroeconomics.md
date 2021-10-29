@@ -371,6 +371,26 @@ $$D = C+I+G+(X-M)$$
 	-  ((440/350)*(480/380))**0.5 = 1.260
 	- 1.373*1.260 = 1.730
 
+## Ch3 景氣波動的定型特徵
+- business cycle 景氣循環
+	- real GDP 隨著長期趨勢上下波動的 stochastic process
+### filtering
+- 把短期波動濾出
+- 各期產出 = 長期趨勢 + 短期波動
+- 波動比例 = 實際&趨勢差異 / 趨勢值
+	- ![](https://i.imgur.com/Df89cbe.png)
+#### 產出成長率濾波器
+- 將上一期視為長期趨勢值
+	- 簡單但不合理
+
+- 產出成長率 = $\dfrac{y_t-y_{t-1}}{y_t}=lny_t-lny_{t-1}$
+	- $lny_t$ vs. t 圖之斜率 = 產出成長率
+		- ![](https://i.imgur.com/rsQtsGR.png)
+	- ![](https://i.imgur.com/P3PlIIv.png)
+
+#### HP 濾波器
+
+
 ## Ch4 廠商的靜態選擇
 -  static model 
 	-  no tomorrow
@@ -517,4 +537,37 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - 把 x 取代掉 →<br>![](https://i.imgur.com/n8Tkmtb.png)<br>$=A_1k^{\phi}n^{1-\phi}$
 	- q 上升 → $A_1$ 下降 → MPL & MPK 下降
 - ![](https://i.imgur.com/rLG0qWY.png)
-	- q 上升 → $x^d$ & $n^d$ & $y^s$ 下降 
+	- q 上升 → $x^d$ & $n^d$ & $y^s$ 下降
+
+
+## Ch5 消費者的靜態選擇
+### constraints
+- time contraint
+	- l (leisure hours) + n (working hours) = 1
+- income constraint
+	- c (商品消費) = a (非勞動所得) + wn (勞動所得)
+		- a (非勞動所得) = d (dividend) - T (定期稅淨額)
+- budget constaint
+	- x = c + wl = a + w = full income
+	- wl 相當於花費於 leisure 的錢
+		- w = wage = 每時間單位的 leisure 的 oppurtinity cost
+	- ![](https://i.imgur.com/w7euRuK.png)
+		- a 增加 → 向上平移
+
+### utility function
+- assumptions
+	- marginal utility > 0
+		- ![](https://i.imgur.com/yKqw3fo.png)
+	- marginal utility 遞減
+		- ![](https://i.imgur.com/4YLrHFw.png)
+	- concave preference
+		- 凹函數
+		- ![](https://i.imgur.com/C4aSIDW.png)
+	- c & l $\in$ normal goods
+		- 消費 & leisure 都是 normal goods
+		- sufficient conditions ==???==
+			- $u_{cc}-u_{cl}\dfrac{u_c}{u_l}<0$
+				- $\dfrac{u_{cc}}{u_{cl}}<\dfrac{u_c}{u_l}$
+			- $u_{ll}-u_{cl}\dfrac{u_l}{u_c}<0$
+- indifference curve
+	- $MR_{l,c} = \dfrac{u_l}{u_c}$
