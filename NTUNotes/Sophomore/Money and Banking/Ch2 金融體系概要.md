@@ -146,7 +146,7 @@ e.g. 10 年期 & 3 個月公債殖利率利差
     - 擔保品的價值打折
     - > For example, if an asset has a market value of $100 and a bank sells it for $80 with an agreement to repurchase it for $88, then we would say that the repo rate is 10 percent(=88-80 / 80), and the haircut is 20 percent (100 – 80 / 100). If the bank defaults on the promise to repurchase, then the investor keeps the collateral.
     - e.g. 20% haircut → 只可借 80% 其價值的錢
-    - 次貸時 haircut 大漲
+    - [[次貸危機]]時 haircut 大漲
       - 用很爛的 collateral → haircut 漲 → 銀行流動性降低 (只能借到很少的錢)
 ### 資本市場
 - 股票 stocks
@@ -171,10 +171,10 @@ e.g. 10 年期 & 3 個月公債殖利率利差
 - 資產擔保證券 asset-backed security：將各種債權包一包後再賣出去
   - 資產證券化 securitization
   - e.g.各式貸款、信用卡債權
-  - 次貸危機
+  - [[次貸危機]]
     - 房貸倒帳 → 房貸證券化之債券違約
   - MBS liquidity < 公債
-  - 次貸危機：fed 買 MBS 賣公債，注入流動性到市場
+  - [[次貸危機]]：fed 買 MBS 賣公債，注入流動性到市場
 
 ![Image](https://i.imgur.com/vgH9F5h.png)
 

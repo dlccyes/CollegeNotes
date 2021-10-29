@@ -375,21 +375,183 @@ $$D = C+I+G+(X-M)$$
 - business cycle 景氣循環
 	- real GDP 隨著長期趨勢上下波動的 stochastic process
 ### filtering
-- 把短期波動濾出
+- 把短期波動獨立濾出來
 - 各期產出 = 長期趨勢 + 短期波動
 - 波動比例 = 實際&趨勢差異 / 趨勢值
 	- ![](https://i.imgur.com/Df89cbe.png)
+	
 #### 產出成長率濾波器
-- 將上一期視為長期趨勢值
-	- 簡單但不合理
-
 - 產出成長率 = $\dfrac{y_t-y_{t-1}}{y_t}=lny_t-lny_{t-1}$
 	- $lny_t$ vs. t 圖之斜率 = 產出成長率
 		- ![](https://i.imgur.com/rsQtsGR.png)
-	- ![](https://i.imgur.com/P3PlIIv.png)
+- 將上一期視為長期趨勢值
+	- 顯然不合理
+		- 長期趨勢太波動
+	- 可能濾掉很多短期波動  → over differencing
+- 寫成時間的線性函數<br>$ln\bar{y_t}=\alpha+\beta t$，留下跟時間無關的 $\alpha$
+	- 直接假設長期波動 not a function of 時間 → 不合理
+		- 長期趨勢太淡定
+	- $\alpha$ 可能包含了長期波動 → under differencing
 
 #### HP 濾波器
+- Hodrick-Perscott filter
+- ![](https://i.imgur.com/hEvO67h.png)
+	- 只有第一項 → 長期&實際愈接近愈好
+	- 只有第二項 → 長期愈 linear 愈好
+	- $\lambda$ 平滑參數控制第二項的 weight
+		- $\lambda=1600$ for 季資料
+		- $\lambda=100$ for 年資料
+- HP 循環波動序列 = $lny_t-ln\bar{y_t}$
+	- 台以 HP 循環波動序列做景氣轉折點的認定
+- ![](https://i.imgur.com/P3PlIIv.png)
 
+
+### 台美景氣波動
+- 台美景氣波動很接近
+- 1972-2012 台經歷 9 次景氣循環
+- 景氣循環都是跌得快漲得慢
+	- [[Psychology#注意與意識|睡眠週期]]的相反
+- 台 std 較美大 bc 台灣較小，應對衝擊能力較低
+- 約 2-6 年一次 cycle
+- ![](https://i.imgur.com/VszGQq9.png)
+- ![](https://i.imgur.com/BV7FXhL.png)
+- ![](https://i.imgur.com/rJY9ctM.png)
+
+#### 第一次能源危機
+- 1973 以阿戰爭，阿拉伯向西方實施石油禁運，國際油價大漲
+- 停滯性膨脹
+
+#### 第二次能源危機
+- 1979 Iran 回教革命，1980 兩伊戰爭，原油供給受干擾，油價大漲
+
+#### 廣場協議
+- 1985 要求日德幣升值
+- 新台幣也受牽連升值，出口導向的台灣陷入衰退
+
+#### 第三次能源危機
+- [[#廣場協議]]後，預期新台幣升值 → 國際熱錢湧入台灣 → 股市蓬勃
+- 1990 Iraq 入侵科威特，波斯灣戰爭爆發 → 熱錢流出、預期油價上漲 → 股市崩跌
+
+#### 台海飛彈危機
+- 1995-1996 小幅度衰退
+- NBER 未認定有景氣衰退
+
+#### [[亞洲金融風暴]]
+- 1997 泰國放棄固定匯率，George Sorus 等炒家突襲外匯市場，泰銖暴跌，一路往北跌到俄羅斯
+- 台灣替手新台幣，讓炒家過門不入，因此受創就輕微 ==???==
+- 經濟衰退 → 原油需求下降 → 國際油價下跌
+
+#### dot- com bubble
+- 20th 末
+- 同時台灣 1999 921、2000 政黨輪替 & 美國 911
+- 經濟衰退 → 原油需求下降 → 國際油價下跌
+
+#### [[次貸危機]]
+- 2007 年底
+- [[#dot- com bubble]] 後，US 採寬鬆貨幣政策 → 房價大漲 → 高槓桿金融商品
+	- 包很多層的避險衍生性商品
+- 2010-11 [[歐債危機]]
+	- US 因 QE 沒受什麼影響
+	- 也對國際油價沒什麼影響
+
+### 景氣波動 3 面向
+#### 波動幅度 volatility
+- 經過處理的標準差
+	- ![](https://i.imgur.com/kOs1LNR.png)
+		- 分母應是 T-1 但沒什麼差
+- 處理過後再計算標準差才有意義
+	- 原始資料包含長期趨勢的影響，為 non-stationary 時間序列，因此要先用 [[#filtering]] 濾成 stationary 序列
+		- 可證明 HP 循環波動必為 stationary
+		- s.t. 標準差是相對於長期趨勢的標準差 i.e. 在長期趨勢上下波動的幅度
+
+#### 變數同步性 co-movement
+- 順循環 pro-cyclical
+	- x y covariance > 0
+- 逆循環 counter-cyclical
+	- x y covariance < 0
+- ![](https://i.imgur.com/gPhg8Hf.png)
+- covariance 大小不代表相關強度，bc 受 x or y 單位 or 標準差影響
+- correlation $\centernot{\implies}$ causation
+- 相關係數只說明了 x y 間的線性關係，無法說明非線性關係
+	- e.g. y=|x| 相關係數 = 0 但顯然有關係
+
+#### 波動持續性 persistence
+- 跨期相關
+- auto-covariance 自我共變異數
+	- 當期跟 j 期以前的 covariance
+	- ![](https://i.imgur.com/acx9inZ.png)
+	- 隨著 j 增加而遞減 (intuitive)
+- cross auto-covariance 
+	- x 跟 j 期外的 y 的 covariance
+	- ![](https://i.imgur.com/8wEvS5B.png)
+	- j > 0 → 領先期
+	- j < 0 → 落後期
+	- $p_{xy}(-1)>0$ → 今天消費與昨天所得呈正相關
+	- 不能用於判斷因果關係
+		- Granger causality test
+
+### 台美氣波動定型特徵
+- ![](https://i.imgur.com/UXTKwva.png)
+	- 實質利率
+		- 台：一個月平均款利率
+		- 美：三個月國庫券利率
+#### 波動幅度
+- smooth consumption
+	- 民間消費波動幅度 < 實質產出波動幅度
+	- 凱因斯學派解釋
+		- $c=a+by$ $(a>0 \implies c>by)$
+		- $\dfrac{c-\bar{c}}{\bar{c}}=b\dfrac{\bar{y}}{\bar{c}}\dfrac{y-\bar{y}}{\bar{y}}<\dfrac{y-\bar{y}}{\bar{y}}$
+	- 新興古典學派解釋
+		- 景氣繁榮 → save 部分額外所得 i.e. 增加儲蓄
+		- 景氣衰退 → 減少儲蓄
+- 耐久財波動幅大較大
+	- bc 較貴，景氣衰退時更不買，景氣繁榮時更買
+- 民間固定投資波動幅度 > 實質產出波動幅度
+	- 景氣衰退時減少資本財購買 (just as 耐久財)
+	- 景氣繁榮 → [[#國民儲蓄 national saving]] 上升 → 資本存量增加 if  流向國內投資
+	- 與 smooth consumption 為一體兩面
+	- 凱因斯學派解釋：multiplier-accelerator model
+- 貿易盈餘波動幅度 > 實質產出波動幅度
+	- 景氣繁榮 → [[#國民儲蓄 national saving]] 上升 → 經常帳盈餘增加 if  流向國外
+- 勞動工時波動幅度 < 實質產出波動幅度
+	- 勞動窖藏 labor hoarding
+		- hire & fire 勞工有成本&風險
+		- 不景氣 → 就讓勞工閒著
+		- 景氣 → 狠操勞工
+	- leisure 也是一種 consumption
+- inflation rate & real interest rate 波動幅度 > 實質產出波動幅度
+	- 美國是相反
+	- 台灣前兩次能源危機物價波動太激烈
+		- 除去前兩次能源危機後，也是小於
+
+#### 同期相關
+- ![](https://i.imgur.com/R9w6s3o.png)
+- 民間消費&民間投資是順循環
+	- 跟 real  GDP 一起浮動
+- 政府購買&產出波動無明顯同期相關
+	- 不代表政府支出政策對產出沒影響，可能只是個因素互相抵銷
+- 台淨出口&產出波動正相關，美負相關
+	- 景氣繁榮時出口增加 > 進口增加 for 台灣，相反 for US&others
+	- ![](https://i.imgur.com/tYu0u1X.png)
+	- 台灣也有變成負相關的趨勢
+- 勞動工時&實質工資率為順循環
+- 物價水準與 real GDP 逆循環
+	- 相對於長期趨勢，景氣繁榮時物價較低
+- inflation rate 與 real GDP 順循環
+	- 又 unemployment rate 與 real GDP 負相關 → inflation rate 與 unemployment rate 負相關 → [[Philips curve]]
+- real interest rate 與產出波動負相關
+
+#### 跨期相關
+- ![](https://i.imgur.com/R9w6s3o.png)
+- 高度跨期自我相關
+- 傳導機制 propagation mechanism
+	- smooth consumption & 資本累積
+- ![](https://i.imgur.com/bXkp0h8.png)
+- 台 real interest rate 跟前後一年 real GDP 負相關
+- US real interest rate 跟未來一年 real GDP 負相關
+- 台政府支出與過去一年 real GDP 負相關，與未來一年 real GDP 正相關
+	- 景氣衰退時採取寬鬆貨幣政策，一年後效果顯現
+- 美政府支出與未來一年 real GDP 負相關，與兩年後 real GDP 正相關
 
 ## Ch4 廠商的靜態選擇
 -  static model 
