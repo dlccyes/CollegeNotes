@@ -1,5 +1,6 @@
 # RISC-V
-with [[Computer Architecture]]
+## resources
+[[Computer Architecture]]
 
 IDE－Jupiter
 https://github.com/andrescv/Jupiter
@@ -7,8 +8,17 @@ https://github.com/andrescv/Jupiter
 doc
 https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md
 
-RISC-V converter
+code to assembly
 https://godbolt.org/
+C++ can convert to RISC-V
+
+## RV64I Instruction Sets
+![](https://i.imgur.com/QitoPQd.png)
+
+![](https://i.imgur.com/v5eQayh.png)
+https://book.rvemu.app/instruction-set/01-rv64i.html
+
+https://programmermedia.org/root/陳鍾誠/課程/系統程式/10-riscv/_doc/RISC-V編碼表.md
 
 ## general registers
 - https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md#general-registers
@@ -21,15 +31,19 @@ https://godbolt.org/
 ### operations
 ![](https://i.imgur.com/XC0k2XB.png)
 ![](https://i.imgur.com/PX629AE.png)
-- `li x19, 0` → x19 = 0
+`add` for register + register, `addi` for register + number
+
+- `add a, b, c` → a=b+c
+- `addi a, b, 1` → a=b+1
 - `mv a, b` → a=b
+	- 實際上執行 `addi a, b, 0`
+- `sub a, b, c` → a=b-c
+- `li x19, 0` → x19 = 0
 - ori
 	- or immediate
 	- OR the two values
 - `slli a, b, 1` → a = b<<1 (i.e. 2b)
 - `srli a, b, 1` → a = b>>1 (i.e. b/2)
--   
-- `addi a, b, 1` → a=b+1
 
 ```
 ori S1, S0, 0x5678
@@ -98,6 +112,9 @@ __start:
     li a0, 17       # ????????
     ecall       # and exit
 ```
+
+![](https://i.imgur.com/zd27zIq.png)
+
 #### bubble sort
 https://github.com/Shengyuu/Assignment_computer_arch/blob/master/Lab1_bubble_sort/bubble.s
 

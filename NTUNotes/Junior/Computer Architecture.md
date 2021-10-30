@@ -79,6 +79,18 @@ sub x19, x5, x6
 	- store x9 to A[12]
 
 ### 2s complement
+- 1s complement: negation
+	- e.g. 0110 → 1001
+- 2s complement: 1s complement +1
+	- e.g. 6 = 0110 → -6 = 1001+1 = 1010
+	- 要算 8-D → 算 8+2s(D) = 8+2s(1101) = 8+0011 = 8+3 = 11 = B
+		- https://quizlet.com/explanations/questions/assume-that-registers-s0-and-s1-hold-the-values-0x80000000-and-0xd0000000-respectively-1-what-is-the-9a341a5d-4e07-4ef8-8471-fd38030f7e4f
+		- ![](https://i.imgur.com/kj2N40b.png)
+		- 歷屆 quiz 1 (4.)
+			- ![](https://i.imgur.com/YVKQkpm.png)
+			- ![](https://i.imgur.com/Vly2VUS.png)
+
+
 交電
 ![](https://i.imgur.com/T1hJSQe.png)
 ![](https://i.imgur.com/q2huzgm.png)
@@ -88,17 +100,62 @@ sub x19, x5, x6
 多加幾個 bits
 ![](https://i.imgur.com/sQJYKhN.png)
 
+### encoding
+- ![](https://i.imgur.com/NQfNS5U.png)
+- I SB UJ 的 10:5 位置都一樣
+- 都是 32 bits
 
-### R-format
-- register
+#### binary representation
+- 15 → 0xF
+
+#### R-format
+- Register-format
+- `operation rd, rs1, rs2`
 - ![](https://i.imgur.com/0eAXKRU.png)
-	- e.g.<br>![](https://i.imgur.com/c1yk3kC.png)
-		- 51 是查表來的
+	- funct7 & funct3 & opcode 決定哪一個 operation
+		- e.g.
+			- ![](https://i.imgur.com/LBm5TC1.png)
+				- 51 是查表來的
+			- https://brainly.com/question/14287027
+			- ![](https://i.imgur.com/SMZm3DK.png)
 
-### I-format
-- immediate
+
+#### I-format
+- Immediate-format
+- `operation rd, imm(rs1)`
 - ![](https://i.imgur.com/frYek0d.png)
 - opcode & func3 告訴電腦要做什麼 instruction (arithmetic OR load)
+
+#### SB-format
+![](https://i.imgur.com/kleSjvP.png)
+
+#### UJ-format
+- only for `jal`, unconditional jump-and-link
+- 20-bit immediate，表示跳了幾行
+	- 往回跳 → 負數 (2s complement)
+- ![](https://i.imgur.com/TYpO760.png)
+- ![](https://i.imgur.com/GSrCM7V.png)
+- 沒有 0 bit
+- e.g.
+	- ![](https://i.imgur.com/asAhCpn.png)
+		- ![](https://i.imgur.com/q12ffzy.png)
+		- 往回跳 9 格 → imm = -36 = 2s complement of 36，再移掉 0th bit
+		- jal 的 opcode = 1101111
+
+####  RV32I Instruction Sets (查表)
+![](https://i.imgur.com/6pitTXl.png)
+p.119
+
+![](https://i.imgur.com/GfmNZRO.png)
+https://book.rvemu.app/instruction-set/01-rv64i.html
+I-format `LX` 的部分，是 load byte/halfword/word/doubleword，以 funct3 值區分
+- ![](https://i.imgur.com/KqDEBNf.png)
+	- https://ithelp.ithome.com.tw/articles/10194907
+
+e.g.
+- ![](https://i.imgur.com/gDWS5iV.png)
+	- ![](https://i.imgur.com/0jEcaOb.png)
+
 
 ### [[RISC-V]] operations
 ![](https://i.imgur.com/XC0k2XB.png)

@@ -15,7 +15,7 @@
     --background-secondary: var(--bgcolor);
     --background-secondary-alt: var(--bgcolor);
     --text-selection: #f7925b52;
-    --text-highlight-bg: rgb(202 111 88 / 40%);
+    --text-highlight-bg: rgb(232 149 106 / 53%); /* search highlight */
     --text-normal: #ead3a7;
 }
 body{

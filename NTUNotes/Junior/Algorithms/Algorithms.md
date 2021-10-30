@@ -459,7 +459,14 @@ matrix multiplication
 - ![](https://i.imgur.com/SrQ21Rw.png)
 - pros
 	- less overhead
+### weighted interval scheduling
+- ![](https://i.imgur.com/AtAJv8w.png)
+	- sort by finished time
+	- jth 的最佳解 = max{包含 j 時的最佳解, 不包含 j 時的最佳解 i.e. j-1 的最佳解}
+
 ### keys
+- 適合用在 optimization problem
+	- 有目標的 problem
 - distinct subs (table size) $\in$ polynomial
 - optimal substructure
 	- optimal subs → optimal overall solution
