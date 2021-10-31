@@ -119,6 +119,7 @@ e.g.
 - addi x30, x30, 32 代表跳 32 bits i.e. 跳 4 bytes → array index +4
 - 若 x30 = 8，0(x30) 代表 D[2]，4(x30) 代表 D[3]
 	- 前面是 offset，是 immediate，會 x 2 → 跳 4 同跳 8 bits 同跳 1 byte
+	- see [[#array vs pointer]]
 - 題目中會一直蓋掉 D[0:3] 的值，直到 x7 >= x5 = 4
 
 ### encoding
@@ -147,9 +148,20 @@ e.g.
 - `operation rd, imm(rs1)`
 - ![](https://i.imgur.com/frYek0d.png)
 - opcode & func3 告訴電腦要做什麼 instruction (arithmetic OR load)
+- immediate: offset for base address
+
+#### S-format
+- ![](https://i.imgur.com/aVvWAoF.png)
+- store byte/halfword/word/doubleword
+- immediate: offset for base address i.e. rs1
+- `sb rs1 rs2`
+
 
 #### SB-format
-![](https://i.imgur.com/kleSjvP.png)
+- ![](https://i.imgur.com/kleSjvP.png)
+- branch addressing
+- if xxxx jump to branch xxxx
+- `blt` `bge` etc.
 
 #### UJ-format
 - only for `jal`, unconditional jump-and-link
