@@ -1,5 +1,8 @@
 # Computer Architecture
 
+## resources
+https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architecture.html
+
 ## Ch1 Computer Abstractions & Technology
 - chip
 	- 台積電 pricing 較高但良率很高
@@ -95,15 +98,34 @@ sub x19, x5, x6
 ![](https://i.imgur.com/T1hJSQe.png)
 ![](https://i.imgur.com/q2huzgm.png)
 
+### signed & unsigned
+- signed
+	- 有正負
+	- 表示負數方法
+		- 最左邊 1 → 負
+		- complement (1s 2s etc.)
+- unsigned
+	- 只有正數
 
 ### sign extension
 多加幾個 bits
 ![](https://i.imgur.com/sQJYKhN.png)
 
+### array
+e.g.
+![](https://i.imgur.com/97JnRYn.png)
+![](https://i.imgur.com/ErUYFDm.png)
+- x30 = x10 是 array D 的指標
+- addi x30, x30, 32 代表跳 32 bits i.e. 跳 4 bytes → array index +4
+- 若 x30 = 8，0(x30) 代表 D[2]，4(x30) 代表 D[3]
+	- 前面是 offset，是 immediate，會 x 2 → 跳 4 同跳 8 bits 同跳 1 byte
+- 題目中會一直蓋掉 D[0:3] 的值，直到 x7 >= x5 = 4
+
 ### encoding
 - ![](https://i.imgur.com/NQfNS5U.png)
 - I SB UJ 的 10:5 位置都一樣
 - 都是 32 bits
+- address 會 x 2 → 沒有第 0 bit
 
 #### binary representation
 - 15 → 0xF
@@ -139,7 +161,7 @@ sub x19, x5, x6
 - e.g.
 	- ![](https://i.imgur.com/asAhCpn.png)
 		- ![](https://i.imgur.com/q12ffzy.png)
-		- 往回跳 9 格 → imm = -36 = 2s complement of 36，再移掉 0th bit
+		- 往回跳 9 行，每個 instruction 4 bits → imm = -36 = 2s complement of 36，再移掉 0th bit
 		- jal 的 opcode = 1101111
 
 ####  RV32I Instruction Sets (查表)
@@ -173,10 +195,6 @@ e.g.
 ![](https://i.imgur.com/KzsbwRQ.png)
 #### while
 ![](https://i.imgur.com/XAybNUB.png)
-
-- signed: 正 or 負
-- unsigned: nonnegative
-
 
 #### procedure
 `jal` call procedure
