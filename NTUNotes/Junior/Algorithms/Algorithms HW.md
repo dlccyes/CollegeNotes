@@ -42,3 +42,39 @@ https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm
 ![](https://i.imgur.com/H4N4oao.jpg)
 ![](https://i.imgur.com/jufqRYj.jpg)
 http://algorithm.cs.nthu.edu.tw/~course/Extra_Info/Divide%20and%20Conquer_supplement.pdf
+
+## HW2
+### 1. d-ary heap
+![](https://i.imgur.com/mXbTMUX.png)
+![](https://i.imgur.com/mXt3W3q.png)
+
+(a.)
+課本解答怪怪的
+![](https://i.imgur.com/9NgaiYr.png)
+https://www.cs.cmu.edu/~eugene/teach/algs03b/works/s6.pdf
+(b.)
+$log_dn$
+(c.)
+![](https://i.imgur.com/iRyHvH8.png)
+有些地方寫錯了
+(d.)
+![](https://i.imgur.com/KqlP2XA.png)
+![](https://i.imgur.com/l9ZzZuk.png)
+不太完整
+(e.)
+![](https://i.imgur.com/VlfRhhe.png)
+
+### 2. tail recursive quicksort
+![](https://i.imgur.com/dtBqlS9.png)
+![](https://i.imgur.com/vObRscQ.png)
+
+(a.)
+![](https://i.imgur.com/xFNQb7f.png)
+(b.)
+![](https://i.imgur.com/CCoKYpY.png)
+
+### 3.
+![](https://i.imgur.com/HzGLTrp.png)
+![](https://i.imgur.com/ch3U4vu.png)
+![](https://i.imgur.com/1sbUDdM.png)
+![](https://i.imgur.com/WzYaHLV.png)

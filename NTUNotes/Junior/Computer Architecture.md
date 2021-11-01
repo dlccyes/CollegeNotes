@@ -287,3 +287,93 @@ only link/load library procedure when called
 ### MIPS
 - successor of RISC-V
 - ![](https://i.imgur.com/7nEGnwD.png)
+
+## Ch3 Arithmetic
+- for multipedia
+	- overflow → 留在最大值
+### multiplication
+#### basic multiplier
+- 每次 cycle 加一次，要很多個 cycle
+	- sol: [[#faster multiplier]]，空間換取時間
+- ![](https://i.imgur.com/tV01U63.png)
+- ![](https://i.imgur.com/lWq3ENV.png)
+- 每輪都上面 pointer 都左移一格
+- 每輪下面 pointer 都右移一格
+	- 指到 1 → 相加
+- optimized
+	- ![](https://i.imgur.com/4HWH8JZ.png)
+
+#### faster multiplier
+- 用多一點加法器，省下時間
+- more cost higher performance
+	- cost performance tradeoff
+- ![](https://i.imgur.com/MGGdODU.png)
+- 可以 pipeline
+	- 很多 in parallel
+
+#### instructions
+- mul
+	- multiply
+	- return lower 64 bits
+- mulh
+	- multiply high
+	- return upper 64 bits
+	- can check 64-bit overflow
+- mulhu
+	- multiply high unsigned
+	- assume unsigned, return upper 64 bits
+- mulhsu
+	- multiply high signed/unsigned
+	- assume 1 signed other unsigned, return upper 64 bits
+
+### division
+- ![](https://i.imgur.com/XzFB48b.png)
+- long division
+- retoring division
+	- 先剪，小於 0 再加回來
+- signed division
+	- abs()
+- division 後面 dependent on 前面結果 → 無法 parallel → time complexity 高
+
+#### divisor
+- ![](https://i.imgur.com/cTJXGXV.png)
+- 每輪 divisor pointer 右移一格，quotient pointer 左移一格
+- optimized divider
+	- ![](https://i.imgur.com/PjlPHf1.png)
+	- divisor 不用動ㄅ
+	- like optimized multiplier
+		- ![](https://i.imgur.com/Sip3DHI.png)
+- 每次 cycle 減一次，要很多個 cycle
+- faster division
+	- 不能 parallel 因為 conditional to 前一級 remainter
+	- multiple quotient bits per step
+	- 還是要好多 cycles
+
+#### instructions
+- div, rem
+- divu, remu
+- no overflow for 除以 0 & overflow
+	- return 定義
+
+### float
+- $\pm 1.xxxxx_2\times 2^{yyyyyyyy}$
+- 2 representations
+	- single precision (32-bit)
+	- double precision (64-bit)
+		- `double` in C
+
+#### format
+- IEEE Std 754
+- ![](https://i.imgur.com/fZi1DqR.png)
+- Bias 把全部轉成正 → unsigned
+- 00....000 & 11...111 都保留
+- single-precision
+	- min 00000001
+	- max 11111110
+- double-precision
+	- min 00000000001
+	- max 11111111110
+
+#### e.g.
+- ![](https://i.imgur.com/6DoZ7tn.png)
+- ![](https://i.imgur.com/7NmpchQ.png)
