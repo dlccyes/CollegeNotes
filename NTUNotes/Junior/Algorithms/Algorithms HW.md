@@ -73,8 +73,39 @@ $log_dn$
 (b.)
 ![](https://i.imgur.com/CCoKYpY.png)
 
-### 3.
+### 3. counting sort
 ![](https://i.imgur.com/HzGLTrp.png)
 ![](https://i.imgur.com/ch3U4vu.png)
 ![](https://i.imgur.com/1sbUDdM.png)
 ![](https://i.imgur.com/WzYaHLV.png)
+(e.)
+https://www.itread01.com/articles/1485928815.html
+```py
+def countingsort(seq, k): 
+    """In-place counting sort. """ 
+    c = [0] * k 
+    sn = len(seq) 
+    for i in range(sn): 
+        c[seq[i]] += 1 
+        ac = c[:] 
+    for i in range(1,k): 
+        ac[i] += ac[i-1] 
+        act = ac[:] 
+    i = sn - 1 
+    i = 0
+    while i <= sn-1:
+        elem = seq[i] 
+        # 該區間為排好序的序列中elem及所有相等的元素所處的位置 
+        if ac[elem] - c[elem] <= i <= ac[elem] - 1: 
+            i += 1 
+        else:
+            # 交換兩元素，在下一次循環繼續檢查該位置 
+            seq[i] = seq[act[elem]-1] 
+            seq[act[elem]-1] = elem 
+	        act[elem] -= 1 
+```
+==不太懂為何是 while loop 是 O(n)==
+
+### 4.
+![](https://i.imgur.com/ZcGl76U.png)
+![](https://i.imgur.com/8PCU4pX.png)
