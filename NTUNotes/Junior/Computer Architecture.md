@@ -49,26 +49,14 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 - 較簡單的 instruction set
 - regularity → simpler implementation
 - simplicity → higher performance, lower cost
+- 執行邏輯
+	- 從上到下，該跳則跳
 - 32x64-bit register file
 	- 32-bit data: word
 	- 64-bit data: doubleword
 	- ![](https://i.imgur.com/5bxfy2N.png)
-- syntax
-	- two sources, one destination
-	- `add a,b,c` → `a=b+c`
-	- `sub a,b,c` → `a=b-c`
-```
-add t0,g,h
-add t1,i,j
-sub f,t0,t1
-
-#compiled
-add x5, x20, x21
-add x6, x22, x23
-sub x19, x5, x6
-```
-→ `f=(g+h)-(i+j)`
-
+- Instructions are word-aligned
+	- address 一次跳 4 bytes
 - little endian
 	- least-significant byte @ least address
 - bytes 不一定要 4 or 8 or whatever 的倍數
@@ -80,6 +68,13 @@ sub x19, x5, x6
 	- add x9 & h, store to x9
 		- x21 在 register 裡面所以可以直接 access
 	- store x9 to A[12]
+
+### b/h/w/d
+- byte  = 8 bits
+- halfword = 16 bits
+- word = 32 bits
+- doubleword = 64 bits
+
 
 ### 2s complement
 - 1s complement: negation
@@ -111,30 +106,42 @@ sub x19, x5, x6
 多加幾個 bits
 ![](https://i.imgur.com/sQJYKhN.png)
 
+### offset
+![](https://i.imgur.com/4yMSaoN.png)
+
 ### array
-e.g.
-![](https://i.imgur.com/97JnRYn.png)
-![](https://i.imgur.com/ErUYFDm.png)
-- x30 = x10 是 array D 的指標
-- addi x30, x30, 32 代表跳 32 bits i.e. 跳 4 bytes → array index +4
-- 若 x30 = 8，0(x30) 代表 D[2]，4(x30) 代表 D[3]
-	- 前面是 offset，是 immediate，會 x 2 → 跳 4 同跳 8 bits 同跳 1 byte
-	- see [[#array vs pointer]]
-- 題目中會一直蓋掉 D[0:3] 的值，直到 x7 >= x5 = 4
+- ![](https://i.imgur.com/2sMipzq.png)
+
+- e.g.
+	- ![](https://i.imgur.com/97JnRYn.png)
+		- ![](https://i.imgur.com/ErUYFDm.png)
+		- x30 = x10 是 array D 的指標
+		- addi x30, x30, 32 代表跳 32 bytes i.e. 跳 4 doublewords → array index +4
+		- 若 x30 = 8，0(x30) 代表 D[2]，4(x30) 代表 D[3]
+			- 前面是 offset，加上括號 除以 8 (for doubleword) → array 的 index
+				- 像這個是 word = 4 bytes<br>![](https://i.imgur.com/wn6rMIH.png)
+			- see [[#array vs pointer]]
+		- 題目中會一直蓋掉 D[0:3] 的值，直到 x7 >= x5 = 4
 
 ### encoding
+#### overall
 - ![](https://i.imgur.com/NQfNS5U.png)
 - I SB UJ 的 10:5 位置都一樣
 - 都是 32 bits
-- address 會 x 2 → 沒有第 0 bit
+- major opcode in bits 0-6
+- destination register in bits 7-11
+- first source register in bits 15-19
+- second source register in bits 20-24
+- https://stackoverflow.com/a/39450410/15493213
 
 #### binary representation
 - 15 → 0xF
+- 整個 32-bit format，4 bits 一單位，寫成 8 個 16 進位數字，前面加 0x
 
 #### R-format
-- Register-format
-- `operation rd, rs1, rs2`
 - ![](https://i.imgur.com/0eAXKRU.png)
+- Register-format
+- `add rd, rs1, rs2`
 	- funct7 & funct3 & opcode 決定哪一個 operation
 		- e.g.
 			- ![](https://i.imgur.com/LBm5TC1.png)
@@ -148,7 +155,7 @@ e.g.
 - `operation rd, imm(rs1)`
 - ![](https://i.imgur.com/frYek0d.png)
 - opcode & func3 告訴電腦要做什麼 instruction (arithmetic OR load)
-- immediate: offset for base address
+- immediate: constant OR offset for base address 
 
 #### S-format
 - ![](https://i.imgur.com/aVvWAoF.png)
@@ -159,22 +166,40 @@ e.g.
 
 #### SB-format
 - ![](https://i.imgur.com/kleSjvP.png)
+- conditional jump
+	- if xxxx jump to branch xxxx
 - branch addressing
-- if xxxx jump to branch xxxx
 - `blt` `bge` etc.
+- immediate 沒有 0th bit
+- immediate 表示要跳多少
+- take the branch → go to PC + immediate x 2
+	- ![](https://i.imgur.com/KEFpELt.png)
+- skip → go to PC + 4 i.e. next line
+- 1 instruction 4 bytes
+- `beq rs1, rs2, imm`
 
 #### UJ-format
-- only for `jal`, unconditional jump-and-link
-- 20-bit immediate，表示跳了幾行
-	- 往回跳 → 負數 (2s complement)
 - ![](https://i.imgur.com/TYpO760.png)
+- unconditional jump
+- only for `jal`, unconditional jump-and-link
 - ![](https://i.imgur.com/GSrCM7V.png)
+- 20-bit immediate，表示跳了多少
+	- 往回跳 → 負數 (2s complement)
+	- 1 instruction 4 bytes
+	- 往後跳 x 行 → immediate = 4x/2
 - 沒有 0 bit
 - e.g.
 	- ![](https://i.imgur.com/asAhCpn.png)
 		- ![](https://i.imgur.com/q12ffzy.png)
-		- 往回跳 9 行，每個 instruction 4 bits → imm = -36 = 2s complement of 36，再移掉 0th bit
+		- 往回跳 9 行，每個 instruction 4 bits → imm = -36 = 2s complement of 36，再 shift right i.e. 除 2 i.e. 移掉 0th bit
 		- jal 的 opcode = 1101111
+
+
+#### U-format
+- ![](https://i.imgur.com/MZZRPXV.png)
+- `lui rd constant`
+- `imm[31:12]` = constant represented with 20 bits，把這 20 bits 弄到  rd[31:12]
+- ![](https://i.imgur.com/4quFIhS.png)
 
 ####  RV32I Instruction Sets (查表)
 ![](https://i.imgur.com/6pitTXl.png)
@@ -257,4 +282,8 @@ only link/load library procedure when called
 		- x7 = size-1
 		- array 每次 loop 都要 `slli` & `add`
 			- `slli`: 算 i 的實際 index
-			- `add`: 得出 array[i] 的實際 address
+			- `add`🔢
+
+### MIPS
+- successor of RISC-V
+- ![](https://i.imgur.com/7nEGnwD.png)
