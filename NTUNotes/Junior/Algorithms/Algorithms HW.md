@@ -129,11 +129,41 @@ build max heap take O(n) time
 ![](https://i.imgur.com/4rkV4ox.png)
 
 ### 6.
-![](https://i.imgur.com/9ElBkSG.png)
+![](https://i.imgur.com/YS5hpk6.png)
 
 
-### 7.
+### 7. dynamic programming
+![](https://i.imgur.com/BS5TH64.png)
+
+ https://github.com/zain58/DAA_Project_15B-058-SE
+先 solve 第 n 個月
+s = 現存 surplus
+for s = 1:D
+calculate min cost to produce 剛好 (last month so 不用多做)
+把結果存進 costable[n,s]
+U = $d_n$ 表示這個月最多可以做多少
+然後往回解
+**for k = n-1 downto 1** (第一層)
+在第 k 個月
+U += $d_k$
+表示最多可以做前面幾個月的需求量加上這個月的需求量 (U<=D)
+**for s = 1 to D** (第二層)
+f = 這個月做多少
+**for f = max($d_k$-s) to U-s** (第三層)
+cost = costable[k+1, s+f-$d_k$] + c*(f-m) + h(s+f-$d_k$)
+（因為第 k+1 個月已經算過了，所以 costable[k+1, :] 都有值）
+結果存進 costable[k,s]
+一路解到第一個月
+完成 nxD 的 costable
+也得到最佳解
+
+3 個 for loop，$\in O(nD^2)$
+space $\in O(nD)$
+
 ![](https://i.imgur.com/u3pNkXP.png)
+
+<!--
+解法 1:
 m 可選 1:D
 n 月 → O(nD)
 每月又可以選多做多少 1:D (D_m:D)
@@ -143,4 +173,7 @@ n 月 → O(nD)
 
 - 陳富中
 
-![](https://i.imgur.com/BS5TH64.png)
+解法 2:
+m 為給定
+每個月可不花錢生產 1:m
+-->
