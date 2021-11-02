@@ -109,3 +109,8 @@ def countingsort(seq, k):
 ### 4.
 ![](https://i.imgur.com/ZcGl76U.png)
 ![](https://i.imgur.com/8PCU4pX.png)
+![](https://i.imgur.com/zK5fz58.png)
+![](https://i.imgur.com/MwKQP2K.png)
+![](https://i.imgur.com/6ZPWi2V.png)
+
+https://www.techiedelight.com/water-jugs-problem/
