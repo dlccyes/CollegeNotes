@@ -336,6 +336,9 @@ matrix multiplication
 - build max heap
 	- bottom-up heapify
 	- ![](https://i.imgur.com/1zdcwLQ.png)
+		- taylor series
+		- ![](https://i.imgur.com/gbxjjIQ.png)
+	- https://stackoverflow.com/a/18742428/15493213
 
 #### heapsort
 - 用 max-heap 做 selection sort

@@ -106,11 +106,41 @@ def countingsort(seq, k):
 ```
 ==不太懂為何是 while loop 是 O(n)==
 
-### 4.
+### 4. quicksort
 ![](https://i.imgur.com/ZcGl76U.png)
 ![](https://i.imgur.com/8PCU4pX.png)
+like [[Algorithms#Quicksort]]
+partition:  
+blue 到處跟 red 比，得到比他大的一堆，跟他一樣的一個，比他小的一堆
+
 ![](https://i.imgur.com/zK5fz58.png)
 ![](https://i.imgur.com/MwKQP2K.png)
 ![](https://i.imgur.com/6ZPWi2V.png)
 
 https://www.techiedelight.com/water-jugs-problem/
+
+### 5. 綜合
+![](https://i.imgur.com/Lw3CKHQ.png)
+(b.)
+build max heap take O(n) time
+[[Algorithms#heapsort]]
+(c.)
+[[Algorithms#order statistics]]
+![](https://i.imgur.com/4rkV4ox.png)
+
+### 6.
+![](https://i.imgur.com/9ElBkSG.png)
+
+
+### 7.
+![](https://i.imgur.com/u3pNkXP.png)
+m 可選 1:D
+n 月 → O(nD)
+每月又可以選多做多少 1:D (D_m:D)
+→ O(nD^2)
+
+但用 greedy 的話，每月多做多少就固定選剛剛好，就一個選擇 → O(nD)
+
+- 陳富中
+
+![](https://i.imgur.com/BS5TH64.png)
