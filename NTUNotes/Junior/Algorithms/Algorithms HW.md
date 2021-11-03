@@ -178,9 +178,10 @@ m 為給定
 每個月可不花錢生產 1:m
 -->
 
-### 8.
+### 8. maximum subarray dp
 ![](https://i.imgur.com/xxiCvHG.png)
-https://www.geeksforgeeks.org/maximum-subarray-sum-using-divide-and-conquer-algorithm/
-
+Kandane's algorithm
+https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d
 ### 9.
 ![](https://i.imgur.com/HMFOqvf.png)
+![](https://i.imgur.com/XOmQt87.png)
