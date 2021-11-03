@@ -177,3 +177,10 @@ n 月 → O(nD)
 m 為給定
 每個月可不花錢生產 1:m
 -->
+
+### 8.
+![](https://i.imgur.com/xxiCvHG.png)
+https://www.geeksforgeeks.org/maximum-subarray-sum-using-divide-and-conquer-algorithm/
+
+### 9.
+![](https://i.imgur.com/HMFOqvf.png)

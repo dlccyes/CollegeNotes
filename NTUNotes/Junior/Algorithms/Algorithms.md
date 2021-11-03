@@ -462,10 +462,6 @@ matrix multiplication
 - ![](https://i.imgur.com/SrQ21Rw.png)
 - pros
 	- less overhead
-### weighted interval scheduling
-- ![](https://i.imgur.com/AtAJv8w.png)
-	- sort by finished time
-	- jth 的最佳解 = max{包含 j 時的最佳解, 不包含 j 時的最佳解 i.e. j-1 的最佳解}
 
 ### keys
 - 適合用在 optimization problem
@@ -475,6 +471,12 @@ matrix multiplication
 	- optimal subs → optimal overall solution
 - overlapping subproblem
 	- 很多 overlap 的 subproblems
+
+### weighted interval scheduling
+- ![](https://i.imgur.com/AtAJv8w.png)
+	- sort by finished time
+	- jth 的最佳解 = max{包含 j 時的最佳解, 不包含 j 時的最佳解 i.e. j-1 的最佳解}
+
 
 ### Rod Cutting
 - 鋼條長度 vs. 價格非線性，求 max revenue 切法
