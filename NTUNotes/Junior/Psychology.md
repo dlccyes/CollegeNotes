@@ -135,6 +135,32 @@
 - mindfulness
 	- 活在當下
 	- 一日三省吾身
+
+## 學習與記憶
+- 制約（考）
+	- 古典制約
+	- 操作制約
+	- CS：conditioned stimulus
+		- 制約後才是刺激
+		- 鈴聲
+	- CR：conditioned response
+		- 制約後，聽到鈴聲 → 流口水
+	- US：unconditioned stimulus 
+		- 先天的刺激
+		- 食物
+	- UR：unconditioned response
+		- 看到食物 → 流口水
+			- 真的不是制約結果嗎
+	- ![](https://i.imgur.com/7ROViqG.png)
+	- ![](https://i.imgur.com/V1B6T8m.png)
+	- US 不再隨著 CS 而來 → 制約逐漸削弱
+		- ![](https://i.imgur.com/Av3RETj.png)
+	- 有因果關係的制約最有效
+		- CS → US > CS = US > US → CS
+- generalization
+	- 一朝被蛇咬，十年怕草繩
+- discrimination
+	- 對常看到的種族臉孔辨別度較高，對其他則不敏感
 ## 考
 - 神經傳導素 neurotransmitter
 	- ![](https://i.imgur.com/ip2DMki.png)
@@ -153,3 +179,4 @@
 		- 右腦
 			- parallel processing
 		- ![](https://i.imgur.com/2KbxiE8.png)
+

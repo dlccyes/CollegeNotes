@@ -708,60 +708,201 @@ so there're many security problems now
 		- 無法 differentiate 是 repeated 還是 new
 	- ![](https://i.imgur.com/HtGtPqf.png)
 
+### congestion control
+- congestion → packet loss → retransmission → waste resources
+- if a packet has traveled through many routers, but dropped due to congestion, the work done by previous routers is lost
+
+#### approaches
+- end-to-end congestion control
+	- network layer doesn't provide feedback
+	- TCP uses it
+		- TCP detect congestion with segment loss or RRT increases → decrease window size
+- network-assisted congestion control
+	- routers provide feedback
+		- if congestion, do:
+			- send choke packet 
+			- modify a field in the packet
+	- ATM Available Bit Rate (ABR) 
+		- router tells sender the max bit rate supported
+	- recent IP/TCP can implement it as well, tho still uses end-to-end as default
+
 ### UDP
 - UDP 有 checksum
+	- 但發現 error 不會做 recovery
+		- some discard corrupted part
+		- some goes on with a warning
 - RFC 768
 - chrome 在 UDP 上做自己的 protocol 
 - 不用記錄 connection state
 - segment
-	- ![](https://i.imgur.com/CGnQLXN.png)
+	- ![](https://i.imgur.com/QLZm6U4.png)
+		- ![](https://i.imgur.com/CGnQLXN.png)
 	- header size fixed
 	
 ### TCP
 - 用 [[#sliding window protocol]]
-- segment
+#### TCP  segment
+- header size not fixed
+- window size not fixed
+	- flow control
+- ![](https://i.imgur.com/mFnFg96.png)
 	- ![](https://i.imgur.com/lIio3JT.png)
-	- header size not fixed
-	- window size not fixed
-		- flow control
-	- UAPRSF
-		- 0 or 1 each
-		- U: urgent
-			- Urg data pointer: urgent data 的位置
-			- 沒在用
-		- A: ACK
-		- P: push
-			- 沒在用
-		- R: reset
-	- Internet checksum
+- UAPRSF
+	- 0 or 1 each
+	- URG = urgent
+		- Urg data pointer: urgent data 的位置
+		- 沒在用
+	- ACK
+	- PSH = push
+		- 沒在用
+	- RST = reset
+	- SYN
+		- 1 to start connection
+		- see [[#TCP connection management]]
+	- FIN
+		- 1 to end connection
+		- see [[#TCP connection management]]
+- Internet checksum
 - rdf
 	- sender maintain sliding window
 	- receiver maintain expected next byte (seq. num)
-- round trip time
-	- ==???==
-	- EWMA
-		- 舊 RTT & 新 RTT (sample RTT)  的加權平均
+#### RTT & Timeout
+##### Estimated RTT
+- RTT = rount trip time
+	- time from data sent to ACK received
+- SampleRTT = the RTT of the newly recieved ACK
+	- won't measure retransmissions
+	- measured about once every RTT
+- $EstimatedRTT = (1-\alpha)\cdot EstimatedRTT+\alpha\cdot SampleRTT$
+	- EWMA for SampleRTT
+		- weight of a SampleRTT decays exponentially fast ($(1-\alpha)^n$ for n before)
+			- → recent ones are more important
+	- recommend $\alpha=0.125$ per RFC 6298
+	- 舊 RTT & 新 RTT (sample RTT)  的加權平均
+- EWMA, exponential weighted moving average
+	- something that takes the form of $Y_{EWMA} = (1-\alpha)\cdot Y_{EWMA}+\alpha\cdot Y_{instantaneous}$
+- $DevRTT = (1-\beta)\cdot DevRTT+\beta\cdot |SampleRTT-EstimatedRTT|$
+	- variability of SampleRTT from EstimatedRTT
+	- EWMA of the difference of SampleRTT &  Estimated RTT
+- ![](https://i.imgur.com/esZHebV.png)
+
+##### Timeout
+$TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
+- timeout interval should > Estimated RTT, and the more fluntuating RTT is, the bigger the margin
+- TimeoutInterval will double after timeout, follow the formula again after receiving next segment
+	- exponential backoff
+
 #### reliable data transfer
+- [[#network layer]] isn't reliable
+- timeout
+	- single timer
+		- oldest unACKed segment
+	- timeout → retransmit the segment causing the timeout → restart timer
+
+##### cumulative ACK
+- hybrid of [[#Go Back N GBN]] & [[#Selective Repeat SR]]
+	- differences with GBN
+		- TCP will buffer out-of-order segments
+		- TCP uses cumulative ACK
+			- 1 : N segment all received by receiver,  ACK n lost while other received by sender → GBN resend segment n : N while TCP resend segment n or none (if receive ACK #>n before timeout n)
+	- differences with SR
+		- TCP won't individually ACK out-of-order segments 
+		- TCP only maintains the smallest-seq-no (oldest) unACKed byte
+- `SendBase` =  the seq #  of oldest unACKed segment
+- `NextSeqNum` = next byte to be sent
+- receive ACK → compare ACK #  with `SendBase` 
+- no negative ACK
+- always ACK the last in-order byte received
+	- even if receive non-in-order byte or duplicate byte
 - cumulative ACKs
-- timer: oldest unACKed segment
-- receive → ACK next seq. number
-- 只 restransmit timeout 的 segment
+	- receive ACK y = ACK all segment <= y
+	- y > `Sendbase` → ACK many unACKed segments
+- if receive many consecutive segment, send ACK when 500ms without next one
+- receive segment #92 with 8 bytes of data → ACK 100
+- e.g.
+	- ![](https://i.imgur.com/MqoOXDk.png)
+		- B will discard the retransmission
+	- ![](https://i.imgur.com/NjH98KK.png)
+		- (Host A) send #92 → send #100 → #92 timeout → resend #92 & restart timer → ACK for #100 arrive within new timer → accept and don't resend
+		- (Host B) receive duplicate segment → ACK the received newest bytes =  120，表 120 前的所有 bytes 都收到了 including segment #92
+	- ![](https://i.imgur.com/gSOdmia.png)
+		- 收到 ACK 120 就表示 120 以前的所有 bytes 都收到了
+
+##### exponential backoff
+- timeout → double timeout interval
+- receive data from application above OR receive ACK → use [[#Timeout|formula]] again to set timeout inteval
+- provide some congestion control
+	- congestion → packet dropped or long queue → many timeout, and retransmitting will worsen the congestion → set timeout interval longer, retransmit in a lower rate
+
+##### fast retransmit
+- sender often sends many segments consecutively → if 1 segment lost, receiver will send many duplicate ACKs (bc it always ACK the last in-order byte received)
+- receive 3 duplicate ACKs → retransmit the segment following the duplicate ACK seq No., without waiting to timeout
 - ![](https://i.imgur.com/QI3MCOv.png)
-- fast retransmit
-	- 3 same seq. number ACKs → retransmit
-	- ![](https://i.imgur.com/FnAIrmG.png)
-	- ==???==
+- ![](https://i.imgur.com/VqvfPfG.png)
 
 #### flow control
-#### TCP 3-way handshake
-- SYN-ACK attack
-	- 不停 request connection 但不回 ACK
-- receiver 透過 ACL 告訴 sender 自己剩餘  sliding window (buffer)  大小
+- make sending rate <= receiving rate
+- receiver 透過 ACL 告訴 sender 自己剩餘  sliding window (buffer space)  大小
+	- ![](https://i.imgur.com/L9624NA.png)
+	- `rwnd` = how much buffer space left for receiver
+	- receiver places `rwnd` in `receive window` field in segments sending to sender
+	- sender keeps total bytes of unACKed data < `rwnd`<br>i.e. 送出去的 data 量 < receiver 可承受的量
+		- `LastByteSend - LastByteAcked <= rwnd`
 	- 沒空間 → sender 不能送，等 receiver 慢慢消化往上層送
-	- sender 定期要去問 receiver buffer 夠不夠
-		- otherwise 都不 send 東西，沒拿到 ACK 的話就不知道 receiver buffer 大小
+	- sender 的 last known `rwnd` = 0 時，需定期要去問 receiver buffer 夠不夠
+		- otherwise  if receiver 都不 send 東西，sender 沒拿到 ACK 的話就不知道 receiver buffer 大小，只能以為 buffer 還是 0，就都不能送東西
+
+#### TCP connection management
+- SYN flood attack
+	- 不停 request connection 但不回 ACK
+- TCP 3-way handshake
+	1. client send a segment to server
+		- header
+			- SYN <- 1
+			- seq  <- `client_isn` = rand()
+		- payload
+			- none
+	2. server allocates resources for the connection, and sends a connection-granted segment i.e. **SYNACK segment** to client
+		- header
+			- SYN <- 1
+			- ack <- `client_isn+1`
+			- seq <- `server_isn` (chosen)
+		- payload
+			- none
+	3. client allocate resources for the connection, and sends an segment to ACK server's connection-granted segment
+		- header
+			- SYN = 0
+			- seq  <- `client_isn+1`
+			- ack <- `server_isn+1`
+		- payload
+			- may put data
+	- ![](https://i.imgur.com/gZHvvq5.png)
+- resources
+	- buffers
+	- variables
+- after the 3-way handshake, each segment header's `SYN` = 0, and can contain payload with data
+- termination
+	1. client sends a segment with `FIN` = 1 
+	2. server ACKs
+	3. server sends a segment with `FIN` = 1
+	4. client ACKs
+	5. deallocates resources on both ends
+	- ![](https://i.imgur.com/j0YPZux.png)
+- TCP states
+	- receiver<br>![](https://i.imgur.com/qQdz3zT.png)
+	- sender<br>![](https://i.imgur.com/7FZrj6q.png)
+- if server receives a packet requesting an unavailable port
+	- if it's a TCP SYN packet, server will send a reset segment with `RST=1`, telling client not to resend the segment
+	- if it's a UDP packet, server will send an ICMP datagram
+
+#### congestion control
+
 
 ---
+
+
+
+
 ## miscellaneous
 - logical channel??
 <br><br>

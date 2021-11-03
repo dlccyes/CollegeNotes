@@ -153,12 +153,42 @@ f = 這個月做多少
 cost = costable[k+1, s+f-$d_k$] + c*(f-m) + h(s+f-$d_k$)
 （因為第 k+1 個月已經算過了，所以 costable[k+1, :] 都有值）
 結果存進 costable[k,s]
+productiontable[k,s] 則存 kth 月存量 s 的情況下該 produce 多少
 一路解到第一個月
-完成 nxD 的 costable
-也得到最佳解
+完成 nxD 的 costable & productiontable
+從 costable[1,0] & productiontable[1,0] 開始往後推
+就可得到最佳 production plan & cost
 
 3 個 for loop，$\in O(nD^2)$
 space $\in O(nD)$
+
+```py
+def invent_plan( n = [], m, c, D = [], d, h):
+#let cost[1..n, 0..D] and make[1..n, 0..D] be new tables # Compute cost[n, 0..D] and make[n, 0..D]
+ for s in range(len(D)):
+        f = max(dn - s, 0)
+        cost[n, s] = c * max(f - m, 0) + h(s + f - dn)
+        make[n, s] = f
+ U = dn
+for k in range(len(n)):
+   U = U + dk
+   for s in range(len(D)):
+     cost[k, s] = 0
+     for f in range(max(dk - s, 0), U - s):
+       val = cost[k + 1, s + f - dk] + c * max(f - m, 0) + h(s + f - dk)
+       if val < cost[k, s]:
+         cost[k, s] = val
+         make[k, s] = f
+         print(cost[1, 0])
+         plan(make, n=[], d)
+         return;
+def plan(make, n=[], d):
+  s = 0
+  for k in range(len(n)):
+    print("For month ", k ,"manufacture ", make[k, s], "machines")
+    s = s + make[k, s] - dk
+    return;
+```
 
 ![](https://i.imgur.com/u3pNkXP.png)
 
@@ -178,10 +208,24 @@ m 為給定
 每個月可不花錢生產 1:m
 -->
 
-### 8. maximum subarray dp
+### 8. maximum subarray dp !!
 ![](https://i.imgur.com/xxiCvHG.png)
+https://www.csie.ntu.edu.tw/~hsinmu/courses/_media/ada_13fall/midterm2013_sol.pdf
+see my written solution
+(a.)
+![](https://i.imgur.com/r77lu7G.png)
+![](https://i.imgur.com/GZJxaoQ.png)
+==不太懂==
+(b.)
 Kandane's algorithm
 https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d
+http://people.cs.bris.ac.uk/~konrad/courses/2019_2020_COMS10007/slides/18-elements-of-dynamic-programming-short.pdf
+
+
+
 ### 9.
 ![](https://i.imgur.com/HMFOqvf.png)
 ![](https://i.imgur.com/XOmQt87.png)
+
+https://github.com/jason88012/Maximum-Planner-Subset
+其實沒什麼用

@@ -492,8 +492,52 @@ matrix multiplication
 
 ### Matrix-Chain Multiplication
 - minimize multiplications
+- (axb) x (bxc) → ac multiplications
+- 建立 table m，m[i, j] 記錄 $A_i$ 乘到 $A_j$ 的 min multiplication
+- m[i, j+1] 就是 loop over 各種之間連乘對到的格子 + the rest 連乘的 cost 的 min
 - ![](https://i.imgur.com/QilPx2n.png)
 - bottom-up
 	- ![](https://i.imgur.com/pyswYI5.png)
 - top-down
 	- ![](https://i.imgur.com/E0CDOD3.png)
+
+### longest common subsequence
+- ![](https://i.imgur.com/jFIijzU.png)
+- table
+	- c[i,j] 表 X[1:i] & Y[1:j] 的 LCS 長度
+	- X.length = m, Y.length = n → c[m,n] = X Y overall LCS 長度
+- top-down
+	- ![](https://i.imgur.com/HGK6tZD.png)
+- bottom-up
+	- ![](https://i.imgur.com/IYriidx.png)
+
+### optimal [[Binary Tree]]
+- binary tree with minimum expeceted search cost
+- table
+	- p[i] probability
+		- probability of node i to be searched
+	- q[i] ==???==
+	- e[i,j] ==???==
+		- ![](https://i.imgur.com/cTuPYJ1.png)
+- ![](https://i.imgur.com/vQRRZHi.png)
+- ![](https://i.imgur.com/ZEU4eHr.png)
+
+### Subset Sums
+- NP-Complete
+- 包包限重 W，給定各種不同重量的物品，怎麼塞能夠 maximize 塞的重量？
+- 給定一個 set & 一個 constraint W，求 max subset 的 sum < W
+- table m = n x W
+- ![](https://i.imgur.com/7c0K1ZP.png)
+	- max(沒自己, 有自己)
+	- w 剩餘可用的 weight
+- e.g.
+	- ![](https://i.imgur.com/SUrJ7BV.png)
+- time complexity $\in O(nW)$
+	- pseudo-polynomial
+		- W may not be polynomial to n
+
+### Knapsacks
+- [[#Subset Sums]] problem but each item has a value and the goal is to maximize the total value
+- ![](https://i.imgur.com/4DFfbOJ.png)
+
+### Traveling Salesman Problem

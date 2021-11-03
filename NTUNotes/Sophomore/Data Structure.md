@@ -142,7 +142,7 @@ def maxSubSum(myArray):
 n = len(myArray)  
 $O(n^3)$
 
-## actual implementation
+## python list actual implementation
 ![Image](https://i.imgur.com/qm7KSRD.png)
 pop(2) 需要 O(n) at worst case  
 In Python’s implementation, when an item is taken from the front of the list, all the other elements in the list are shifted one position closer to the beginning. For instance, what `pop(2)` does is as follows:
@@ -810,3 +810,7 @@ https://people.ksp.sk/~kuko/gnarley-trees/Skew.html
         - $\Delta\phi$ = -1
         - amortized cost = 1 - 1 = 0
       - amortized cost = 2log(n) + 0 $\in O(logn)$
+
+## Dijkastra's Algorithm
+![](https://i.imgur.com/vAECkKj.png)
+![](https://i.imgur.com/rZnNe0Z.png)

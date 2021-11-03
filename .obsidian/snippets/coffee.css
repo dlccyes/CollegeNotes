@@ -21,8 +21,12 @@
 body{
 	color: var(--text-normal);
 }
-/* bullet point text color */
+/* bullet list i.e. unordered list text color */
 .theme-dark ul > li {
+    color: var(--text-normal) !important;
+}
+/* ordered list text color */
+.theme-dark ol > li {
     color: var(--text-normal) !important;
 }
 .menu, .popover, .suggestion-container {
