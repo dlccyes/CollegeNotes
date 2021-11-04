@@ -711,6 +711,8 @@ so there're many security problems now
 ### congestion control
 - congestion → packet loss → retransmission → waste resources
 - if a packet has traveled through many routers, but dropped due to congestion, the work done by previous routers is lost
+- multimedia 常是 broadcasting，難做 congestion control
+	- 切 band
 
 #### approaches
 - end-to-end congestion control
@@ -808,6 +810,9 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- differences with SR
 		- TCP won't individually ACK out-of-order segments 
 		- TCP only maintains the smallest-seq-no (oldest) unACKed byte
+	- selective ACK (SACK) - a modified ACK
+		- ACK out-of-order segments selectively
+		- a lot like SR
 - `SendBase` =  the seq #  of oldest unACKed segment
 - `NextSeqNum` = next byte to be sent
 - receive ACK → compare ACK #  with `SendBase` 
@@ -908,6 +913,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 
 ##### TCP congestion-control algorithm
 1. Slow Start
+	- come to this state whenever timeout
 	- initial `cwnd = 1 MSS(max segment size)`, which is very smol
 	- receive 1 ACK → `cwnd += 1 MSS`
 		- → `cwnd` grows exponentially
@@ -918,29 +924,66 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- `cwnd == ssthresh` → go to Congestion Avoidance state
 		- `beq cwnd, ssthresh, Congestion Avoidance`
 		- when `cwnd` grows to 1/2 of the last time timeout occurs
-	- receive 3 duplicate ACKs → fast restransmit && go to Fast Recovery state
+	- receive 3 duplicate ACKs → `ssthresh = cwnd/2` && `cwnd = ssthresh + 3 MSS` && fast restransmit && go to Fast Recovery state
 2. Congestion Avoidance
-	- same as Slow Start except `cwnd += MSS*(MSS/cwnd)` for each ACK received<br>i.e. `cwnd += 1MSS` for **each RTT**
+	- same as Slow Start except `cwnd += MSS*(MSS/cwnd)` for each ACK received<br>i.e. `cwnd += 1 MSS` for **each RTT**
 		- will receive `cwnd/MSS` ACKs each RTT
-3. Fast Recovery
-	- receive duplicate ACK → `cwnd += 1 MSS` 
-	- receive new ACK → go to Congestion Avoidance
 	- timeout → go to Slow Start
-	- before goint to other 2 states, `ssthresh = cwnd/2 && cwnd = 1`
+	- receive 3 duplicate ACKs → `ssthresh = cwnd/2` && `cwnd = ssthresh + 3 MSS` && fast restransmit && go to Fast Recovery state
+3. Fast Recovery
+	- optional state
+		- if don't use this state, then both timeout & 3 duplicate ACKs go to Slow Startㄅ
+	- come to this state whenever 3 duplicate ACKs
+	- receive duplicate ACK → `cwnd += 1 MSS` 
+		- 代表有 segment 成功送到
+	- receive new ACK → `cwnd = ssthresh` && go to Congestion Avoidance
+	- timeout → `ssthresh = cwnd/2` && `cwnd = 1` && go to Slow Start
 	- a recommended pero no es necesario state
+	- timeout → go to Slow Start
 - FSM state change
 	- ![](https://i.imgur.com/HBiLVxJ.png)
 - versions
 	- TCP Tahoe: no Fast Revcovery State
 	- TCP Reno: has Fast Revcovery State
+		- fair
+	- TCP Vegas
+		- detect congestion before packet loss → lower the rate linearlt
+			- detect with observing RTT
+		- no es fair
 	- ![](https://i.imgur.com/Vcgf6QW.png)
 - additive-increase, multiplicative-decrease, AIMD
 	- ![](https://i.imgur.com/GffxjVr.png)
+
+##### TCP thoughput
+?
+
+#### TCP fairness
+- TCP Reno es muy muy fair
+- for 2 competing connections
+	- ![](https://i.imgur.com/m8OSzwQ.png)
+
 
 ---
 
 
 
+
+
+## Ch4 Network Layer
+- routing
+	- 找出路徑 to send
+	- 最好路徑 = shortest path
+		- min hop count
+		- max reward
+		- min cost
+		- reinforcement learning 分配資源
+- forwarding
+	- 拿到後正確丟出 router
+	- forwarding table
+		- IP 32 bits → forwarding table max $2^{32}$ entries
+		- 大家合力算出來的 source to destination path
+- control plane 建路徑
+- data plane 做 forwarding
 
 ## miscellaneous
 - logical channel??

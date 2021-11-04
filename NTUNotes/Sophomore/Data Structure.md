@@ -374,6 +374,8 @@ Bell (W2)
   - 兩種表示法
 - ![Image](https://i.imgur.com/v7XVS7o.png)
 - ![Image](https://i.imgur.com/E37PZJS.png)
+- properties
+	- ![](https://i.imgur.com/GkrzJ7X.png)
 - root 是 black
 - 不會連續兩個 red
 - 每個 path 黑 node 數都一樣

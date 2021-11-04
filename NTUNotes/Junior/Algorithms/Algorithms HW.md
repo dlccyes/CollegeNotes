@@ -223,9 +223,31 @@ http://people.cs.bris.ac.uk/~konrad/courses/2019_2020_COMS10007/slides/18-elemen
 
 
 
-### 9.
+### 9. dynamic programming
 ![](https://i.imgur.com/HMFOqvf.png)
 ![](https://i.imgur.com/XOmQt87.png)
 
 https://github.com/jason88012/Maximum-Planner-Subset
-其實沒什麼用
+有一點點幫助
+
+### DIY
+- ideas
+	- 電路 debug
+		- 哪條線有問題
+		- min debug 次數
+		- 每條線 debug 時間/cost 不同，求 min debug time/cost
+		- options
+			- 每個元件按一按確認有接好
+				- low cost, debug 成功率低
+			- 換/測試元件
+				- 每個元件有不同的 cost
+					- 有些線藏在一堆線之中很難換
+					- 有些元件很難測試
+						- 電阻就量電阻就好
+						- ua741 不知道要怎麼測
+					- 有些元件很難換成新的
+						- 很難找
+						- 電源供應器 示波器 etc.
+				- assume 換/測試完元件後，這個元件就不可能會有問題了 for simplification → remove from array (or set value to something distinguishable)
+		- given a cost array
+		- basically maximum subarray problem

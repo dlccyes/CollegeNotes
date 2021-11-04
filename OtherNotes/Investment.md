@@ -28,6 +28,15 @@
 - 資料
 	- <iframe src="https://www.macromicro.me/etf/tw/intro/00646" width=100% height=500px></iframe>
 
+### 00757 統一FANG+
+- https://www.macromicro.me/etf/tw/intro/00757
+- 官方介紹<br>https://www.ezmoney.com.tw/events/2018fang/
+- 追蹤 FANG+
+	- 形狀跟 SP500 NASDAQ 差不多但幅度較大
+	- ![](https://i.imgur.com/8p3HHK5.png)
+	- 成分股
+		- Tesla Nvidia Apple Google Alibaba Facebook Netflix Baidu Amazon Twitter
+
 ### 0050 元大台灣50
 - https://earning.tw/what-is-0050/
 - 配息
