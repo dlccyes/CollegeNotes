@@ -896,7 +896,46 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- if it's a UDP packet, server will send an ICMP datagram
 
 #### congestion control
+##### brief
+- use congestion window to limit the sending rate
+- sender keeps total bytes of unACKed data (data transmitting) < `min(cwnd, rwnd)`  
+	- `LastByteSend - LastByteAcked <= min(cwnd, rwnd)`
+- bandwidth probing
+	- network 不提供明確的 congestion rate → 試探性地不停增增減減 sending rate 看反應
+	- receive ACK → increase `cwnd` (**self-clocking**)
+	- loss event (timeout OR 3 duplicate ACKs) → decrease `cwnd`
+		- ACKs come quickly → `cwnd` increases quickly
 
+##### TCP congestion-control algorithm
+1. Slow Start
+	- initial `cwnd = 1 MSS(max segment size)`, which is very smol
+	- receive 1 ACK → `cwnd += 1 MSS`
+		- → `cwnd` grows exponentially
+			- send 1 receive 1 → send 1+1 receive 2 → send 2+2 receive 4 etc.
+			- ![](https://i.imgur.com/1cc8aGz.png)
+	- timeout → `ssthresh = cwnd/2` && `cwnd = 1 MSS`
+		- `ssthresh` = slow start threshold
+	- `cwnd == ssthresh` → go to Congestion Avoidance state
+		- `beq cwnd, ssthresh, Congestion Avoidance`
+		- when `cwnd` grows to 1/2 of the last time timeout occurs
+	- receive 3 duplicate ACKs → fast restransmit && go to Fast Recovery state
+2. Congestion Avoidance
+	- same as Slow Start except `cwnd += MSS*(MSS/cwnd)` for each ACK received<br>i.e. `cwnd += 1MSS` for **each RTT**
+		- will receive `cwnd/MSS` ACKs each RTT
+3. Fast Recovery
+	- receive duplicate ACK → `cwnd += 1 MSS` 
+	- receive new ACK → go to Congestion Avoidance
+	- timeout → go to Slow Start
+	- before goint to other 2 states, `ssthresh = cwnd/2 && cwnd = 1`
+	- a recommended pero no es necesario state
+- FSM state change
+	- ![](https://i.imgur.com/HBiLVxJ.png)
+- versions
+	- TCP Tahoe: no Fast Revcovery State
+	- TCP Reno: has Fast Revcovery State
+	- ![](https://i.imgur.com/Vcgf6QW.png)
+- additive-increase, multiplicative-decrease, AIMD
+	- ![](https://i.imgur.com/GffxjVr.png)
 
 ---
 
