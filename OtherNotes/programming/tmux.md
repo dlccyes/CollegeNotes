@@ -39,12 +39,18 @@ run '~/.tmux/plugins/tpm/tpm'
 1. `vim ~/.tmux.conf`
 2. `set -g @plugin 'tmux-plugins-XXXX'`
 3. `tmux source ~/.tmux.conf`
+	- need to have running session
 
-### save tmux layouts
+### save tmux layouts (no success yet)
 https://github.com/tmux-plugins/tmux-resurrect
+https://github.com/tmux-plugins/tmux-continuum
+
 
 #### install  
-use [[#tmux plugin manager]] and `set -g @plugin 'tmux-plugins/tmux-resurrect'`
+using [[#tmux plugin manager]]
+- `vim ~/.tmux.conf` 
+- `set -g @plugin 'tmux-plugins/tmux-resurrect'`
+- `tmux source ~/.tmux.conf`
 
 #### usage
 `ctrl+b s`
