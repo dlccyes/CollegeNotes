@@ -161,6 +161,16 @@
 	- 一朝被蛇咬，十年怕草繩
 - discrimination
 	- 對常看到的種族臉孔辨別度較高，對其他則不敏感
+- reward schedule
+	- variable ratio 最會讓人上癮
+		- variable 的 reward → 大 response
+		- e.g.
+			- 賭博
+			- social media
+	- ![](https://i.imgur.com/bOOLRKn.png)
+- 會學別人，制約自己
+
+
 ## 考
 - 神經傳導素 neurotransmitter
 	- ![](https://i.imgur.com/ip2DMki.png)
