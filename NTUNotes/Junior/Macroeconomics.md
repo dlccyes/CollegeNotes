@@ -321,6 +321,10 @@ $$GDP = C+I+G+NX$$
 		-   <iframe src="https://www.investopedia.com/ask/answers/031615/whats-difference-between-current-account-and-capital-account.asp" width=100% height=500px></iframe>
 - ==國民儲蓄 S = I + CA 流向==
 	- 留在國內 → 國內投資支出 (I)
+		- 若也沒有做有形 or 無形投資，則只會讓存貨增加
+			- Keynesian: paradox ot thrift
+				- 儲蓄是一種罪惡，會使均衡產出下降
+				- 你 save  → 別人的 income 減少 → overall saving drop in the long term
 	- 流向國外 → 經常帳盈餘 (CA) i.e. 以商品或要素形式流向國外
 		- e.g. 買 US treasury OR 國外資產 ==(???????????????? 到底是金錢還是商品或要素形式流出)==
 	- CA > 0 → 國民儲蓄 → 國內投資 → 超額儲蓄 excessive saving
@@ -733,3 +737,6 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 			- $u_{ll}-u_{cl}\dfrac{u_l}{u_c}<0$
 - indifference curve
 	- $MR_{l,c} = \dfrac{u_l}{u_c}$
+- homothetic preference
+	- $u(ax,ay) = au(x,y)$
+	- x y 比值相同 → MRS 相同
