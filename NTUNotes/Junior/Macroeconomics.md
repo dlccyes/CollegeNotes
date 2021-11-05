@@ -736,7 +736,15 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 				- $\dfrac{u_{cc}}{u_{cl}}<\dfrac{u_c}{u_l}$
 			- $u_{ll}-u_{cl}\dfrac{u_l}{u_c}<0$
 - indifference curve
-	- $MR_{l,c} = \dfrac{u_l}{u_c}$
+	- $MRS_{l,c} = \dfrac{u_l}{u_c}=w$
 - homothetic preference
 	- $u(ax,ay) = au(x,y)$
 	- x y 比值相同 → MRS 相同
+- solution
+	- budget constaint $c=x-wl$
+	- $u_c(c^*,l^*)w=u_l(c^*,l^*)$<br> $u_c(c^*,l^*)=u_l(c^*,l^*)\dfrac{1}{w}$
+		- 一單位的消費 = w 單位的 leisure
+	- ![](https://i.imgur.com/2bxid1j.png)
+- w 上升 → leisure 變貴 → budget line 變陡
+- ![](https://i.imgur.com/LoIt5iz.png)
+- ![](https://i.imgur.com/zyp6jz0.png)
