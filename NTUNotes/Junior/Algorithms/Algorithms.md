@@ -445,6 +445,7 @@ matrix multiplication
 - rotation
 	- inorder preservation
 	- ![](https://i.imgur.com/z1JPT7g.png)
+- doubly black 指的是 deletion 後 2-3-4 一個 node 空掉的狀況
 
 ## Dynamic Programming
 ### memoization

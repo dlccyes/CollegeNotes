@@ -377,6 +377,7 @@ Bell (W2)
 - properties
 	- ![](https://i.imgur.com/GkrzJ7X.png)
 - root 是 black
+- 注意 ==leaf 是指 NIL==，永遠是黑色
 - 不會連續兩個 red
 - 每個 path 黑 node 數都一樣
   - 2-3-4 leaf nodes 都同 level

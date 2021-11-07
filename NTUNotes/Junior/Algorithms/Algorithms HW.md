@@ -19,8 +19,10 @@
 ![](https://i.imgur.com/V18dEh8.png)
 ![](https://i.imgur.com/kyhTkVv.png)
 
-### 5. rank functions
+### 5. ranking functions
 ![](https://i.imgur.com/lqNMS9W.png)
+![](https://i.imgur.com/JC8Ljg5.png)
+
 
 ### 6. labeled linear time maximum subarray
 ![](https://i.imgur.com/U13C9Nt.jpg)
@@ -32,9 +34,9 @@ https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm
 
 ### 8. solve recurrence
 ![](https://i.imgur.com/dkDsqog.png)
-![](https://i.imgur.com/IKB3THc.png)
-- 我不是用這個解法
-
+(b.)
+把 lg 換成 $log_3$，最後近似成積分
+![](https://i.imgur.com/C2rprXa.png)
 ![](https://i.imgur.com/5RkHVhL.png)
 ![](https://i.imgur.com/BCpaJyq.png)
 
@@ -73,6 +75,9 @@ $log_dn$
 (b.)
 ![](https://i.imgur.com/CCoKYpY.png)
 
+正解
+![](https://i.imgur.com/0gZeyMV.png)
+
 ### 3. counting sort
 ![](https://i.imgur.com/HzGLTrp.png)
 ![](https://i.imgur.com/ch3U4vu.png)
@@ -105,6 +110,9 @@ def countingsort(seq, k):
 	        act[elem] -= 1 
 ```
 ==不太懂為何是 while loop 是 O(n)==
+
+正解
+![](https://i.imgur.com/a46n4Ys.png)
 
 ### 4. quicksort
 ![](https://i.imgur.com/ZcGl76U.png)
@@ -221,7 +229,8 @@ Kandane's algorithm
 https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d
 http://people.cs.bris.ac.uk/~konrad/courses/2019_2020_COMS10007/slides/18-elements-of-dynamic-programming-short.pdf
 
-
+正解
+![](https://i.imgur.com/TFmOmiC.png)
 
 ### 9. dynamic programming
 ![](https://i.imgur.com/HMFOqvf.png)
@@ -229,6 +238,8 @@ http://people.cs.bris.ac.uk/~konrad/courses/2019_2020_COMS10007/slides/18-elemen
 
 https://github.com/jason88012/Maximum-Planner-Subset
 有一點點幫助
+
+有沒有 +1 應該是等效的?
 
 ### DIY
 #### ideas
