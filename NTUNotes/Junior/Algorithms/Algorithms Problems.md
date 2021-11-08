@@ -1,6 +1,7 @@
 ---
 parent: Algorithms
 ---
+# Algorithms Problems
 ## HW1
 ### 1. linear search
 ![](https://i.imgur.com/YnPRYZp.png)
