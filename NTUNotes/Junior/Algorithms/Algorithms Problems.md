@@ -1,5 +1,5 @@
 ---
-parent: Algorithm
+parent: Algorithms
 ---
 ## HW1
 ### 1. linear search

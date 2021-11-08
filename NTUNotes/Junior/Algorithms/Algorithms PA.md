@@ -1,5 +1,5 @@
 ---
-parent: Algorithm
+parent: Algorithms
 ---
 # Algorithms PA
 ## PA1 sort
