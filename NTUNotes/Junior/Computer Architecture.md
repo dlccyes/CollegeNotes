@@ -356,6 +356,7 @@ only link/load library procedure when called
 	- return 定義
 
 ### float
+- 之前介紹的東西都是 integer 的
 - $\pm 1.xxxxx_2\times 2^{yyyyyyyy}$
 - 2 representations
 	- single precision (32-bit)
@@ -365,7 +366,8 @@ only link/load library procedure when called
 #### format
 - IEEE Std 754
 - ![](https://i.imgur.com/fZi1DqR.png)
-- Bias 把全部轉成正 → unsigned
+- Bias 把 exponent 轉成正 → unsigned
+	- $2^{-100}$ → $2^{-100+Bias}$
 - 00....000 & 11...111 都保留
 - single-precision
 	- min 00000001
@@ -373,7 +375,62 @@ only link/load library procedure when called
 - double-precision
 	- min 00000000001
 	- max 11111111110
+- e.g.
+	- ![](https://i.imgur.com/6DoZ7tn.png)
+	- ![](https://i.imgur.com/7NmpchQ.png)
 
-#### e.g.
-- ![](https://i.imgur.com/6DoZ7tn.png)
-- ![](https://i.imgur.com/7NmpchQ.png)
+#### number representation
+![](https://i.imgur.com/SnIXuuf.png)
+
+- denormalized number
+	- exponent = 0
+		- so $fraction\times 2^{-Bias}$
+	- < normal numbers
+- infinity
+	- exponent = all 1s
+	- fraction = 0
+- not a number (NaN)
+	- exponent = all 1s
+	- fraction != 0
+
+#### addition
+![](https://i.imgur.com/MPx04i7.png)
+![](https://i.imgur.com/Auvppb2.png)
+
+#### multiplication
+![](https://i.imgur.com/e9W7yvI.png)
+
+#### instructions
+![](https://i.imgur.com/og6dgKP.png)
+
+#### examples
+F to C
+![](https://i.imgur.com/n8xMAts.png)
+
+array mul
+![](https://i.imgur.com/poiyR71.png)
+![](https://i.imgur.com/u6ye4CT.png)
+![](https://i.imgur.com/NS7iJfq.png)
+
+#### rounding
+- extra bits of precision
+	- guard
+	- round
+	- sticky
+- ![](https://i.imgur.com/tPo5qeq.png)
+	- nearest even
+		- 超額比序（剛好一半時）為 nearest even 優先
+		- ![](https://i.imgur.com/3V7aXS1.png)
+
+
+## Ch4 Processor
+###  CPU
+- implementation of the RISC-V subset
+	- ![](https://i.imgur.com/QJ7rsrQ.png)
+	- ![](https://i.imgur.com/hWQPcIy.png)
+		- with multiplexers & control lines
+
+### logic design
+- 1 wire 1 bit
+- multiple wire → bus
+- ![](https://i.imgur.com/oJx3GwW.png)

@@ -349,3 +349,7 @@ return 的第二項則是演算法跑出的 subset 解 i.e. 實際上該 debug �
 
 該演算法所用的 space = n x MP x  3 $\in O(n(MP))$
 該演算法的 time complexity = MP + n + n x MP $\in O(n(MP))$
+
+## Midterm Review
+![](https://i.imgur.com/2nGoQvj.png)
+![](https://i.imgur.com/862d2BZ.png)
