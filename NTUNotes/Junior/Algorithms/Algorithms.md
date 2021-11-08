@@ -364,6 +364,7 @@ matrix multiplication
 #### counting sort
 - 有 m 個數字 <= k → 把 k 放在位置 m
 - ![](https://i.imgur.com/1ooBJew.png)
+- stable
 - time complexity $\in O(n+k)$
 	- $\in O(n)$ if $k\in O(n)$
 	- pseudo-linear time otherwise

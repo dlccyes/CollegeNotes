@@ -3,7 +3,10 @@
 some written on hackmd, some on VsCode, some on Notion, some on Obsidian
 
 - all
-  - https://derricken968.gitbook.io/college-notes/ (many syntax unsupported)
+  - <https://derricken968.gitbook.io/college-notes/> 
+    - many syntax unsupported
+  - <https://dlccyes.github.io/CollegeNotes>
+    - many syntax unsupported
 - Microeconomics
   - https://hackmd.io/@dlcc/SJ72EmYnB/%2FcXKG-rRkTNKo6Y93uKs3Vw%3F
 - Biology (生物科學通論)

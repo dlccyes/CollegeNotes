@@ -357,3 +357,7 @@ return 的第二項則是演算法跑出的 subset 解 i.e. 實際上該 debug �
 ## Midterm Review
 ![](https://i.imgur.com/2nGoQvj.png)
 ![](https://i.imgur.com/862d2BZ.png)
+
+### guides
+- 建議不要用 limit 去 prove function 關係
+	- limit 太多
