@@ -1,11 +1,12 @@
 # git
 
 ## squash
-### using amend
-method 1: reset & ammend設你有最近 3 個 commit 為
+### using reset & amend
+設你有最近 3 個 commit 為
 - 9a7792
 - 9a7791
 - 9a7790
+- 9a7789
 
 想要把三個 commits squash 在一起
 1. `git reset --soft 9a7990`
@@ -20,7 +21,7 @@ https://www.burntfen.com/2015-10-30/how-to-amend-a-commit-on-a-github-pull-reque
 https://gitbook.tw/chapters/using-git/reset-commit.html about git reset
 
 ### using rebase & squash
-method 2: rebase & squash設你有最近 4 個 commit 為
+設你有最近 4 個 commit 為
 - 9a7792
 - 9a7791
 - 9a7790
@@ -28,7 +29,7 @@ method 2: rebase & squash設你有最近 4 個 commit 為
 
 想要把 9a7792 & 9a7791 squash 到 97790
 1. `git rebase -i 9a7790`
-2. 出現 editor，把 9a7792 & 9a7791 改成 squash
+2. 出現 editor，把 9a7792 & 9a7791 改成 squash (注意這時較早的 commit 是在上面)
 3. 出現 editor，把 多個 message 改成單一個 message
 4. `git push -f`
 5. 完成
