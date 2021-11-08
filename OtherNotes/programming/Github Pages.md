@@ -24,3 +24,11 @@ https://pmarsceill.github.io/just-the-docs/#getting-started
 	- `parent:` `grandparent:` in yaml
 - if you don't specify `parent:` in yaml, it will appear as the top level in the left sidebar
 - doesn't care about the filename, but the first heading
+
+## latex (mathjax)
+- https://alanduan.me/random/mathjax/
+	- won't work
+	- seems like now don't use `_layouts`
+- kramdown
+- https://github.com/jeffreytse/jekyll-spaceship
+	- haven't test
