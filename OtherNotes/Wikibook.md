@@ -1,3 +1,6 @@
+---
+parent: OtherNotes
+---
 # Wikibook
 ## appearance
 `MinervaNeue` the best
