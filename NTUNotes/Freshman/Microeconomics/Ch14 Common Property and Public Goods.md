@@ -1,5 +1,6 @@
 ---
 title: Ch14 Common Property and Public Goods
+parent: Microeconomics
 ---
 <!-- # Ch14 Common Property and Public Goods -->
 ![](https://i.imgur.com/YJWcKuO.png)

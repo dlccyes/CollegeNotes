@@ -1,7 +1,9 @@
 ---
 title: Ch18 Risk and Uncertainty
 ###### tags: `Microeconomics`
+parent: Microeconomics
 ---
+# Ch18 Risk and Uncertainty
 ![](https://i.imgur.com/jSXLMk1.png)
 
 [Uncertainty_budget](https://drive.google.com/file/d/1QpBeDmqbnydl0Kf9clRVAXefRWLfDDb9/view)

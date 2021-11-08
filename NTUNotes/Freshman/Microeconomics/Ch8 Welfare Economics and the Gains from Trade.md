@@ -1,5 +1,6 @@
 ---
 ###### tags: `College Notes`,`Microeconomics`
+parent: Microeconomics
 ---
 # Ch8 Welfare Economics and the Gains from Trade
 

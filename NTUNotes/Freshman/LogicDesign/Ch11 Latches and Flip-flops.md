@@ -1,5 +1,5 @@
 ---
-###### tags: `College Notes`,`SCLD`
+parent: LogicDesign
 ---
 # Chap 11 Latches and Flip-flops
 
@@ -189,3 +189,4 @@ Q<sup>+</sup> = Q·CE' + D·CE (when Ck=1)
 Q<sup>+</sup> = Q·CE' + D<sub>in</sub>·CE
 
 ## skip 11.9 =))
+

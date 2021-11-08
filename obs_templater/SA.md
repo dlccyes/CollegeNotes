@@ -1,6 +1,7 @@
 ---
 tags: 
 - SA
+parent: Scientific American
 ---
 # title
 ## issue

@@ -1,3 +1,6 @@
+---
+parent: Money and Banking
+---
 # Ch7 金融體系的經濟分析
 ## 金融體系概況
 - 金融體系

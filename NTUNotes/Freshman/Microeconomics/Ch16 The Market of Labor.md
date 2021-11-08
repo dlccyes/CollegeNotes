@@ -1,6 +1,7 @@
 ---
 title: Ch16 The Market of Labor
 ###### tags: `Microeconomics`
+parent: Microeconomics
 ---
 
 ![image-20200609214927125](https://i.loli.net/2020/06/09/HJXBlQvt3czmNoj.png)

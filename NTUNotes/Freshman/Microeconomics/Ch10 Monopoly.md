@@ -1,3 +1,6 @@
+---
+parent: Microeconomics
+---
 # 	Ch10 Monopoly
 
 ## 核心概念

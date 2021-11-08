@@ -1,3 +1,6 @@
+---
+parent: Money and Banking
+---
 # Ch4 現值與利率
 
 ### 七二法則

@@ -1,3 +1,6 @@
+---
+parent: Microeconomics
+---
 # Ch13 Externality
 [[externality]]
 ### Pigoe & Coase

@@ -1,6 +1,7 @@
 ---
 title: Ch15 The Demand for Factors of Production
 ###### tags: `Microeconomics`
+parent: Microeconomics
 ---
 
 ![image-20200606021155974](https://i.loli.net/2020/06/06/OQx4t6LjBcTaeWy.png)

@@ -1,3 +1,6 @@
+---
+parent: Microeconomics
+---
 # Chap 4 Consumers in Marketplace
 
 from https://www.notion.so/Chap-4-Consumers-in-Marketplace-17ac94e393db45709d26c55bedebeb1b

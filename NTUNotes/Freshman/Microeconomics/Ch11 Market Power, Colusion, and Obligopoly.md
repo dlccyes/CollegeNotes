@@ -1,3 +1,6 @@
+---
+parent: Microeconomics
+---
 # Ch11 Market Power, Collusion, and Oligopoly
 
 ## Merger

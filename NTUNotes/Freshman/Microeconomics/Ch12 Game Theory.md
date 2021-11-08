@@ -1,5 +1,6 @@
 ---
 ###### tags: `Microeconomics`
+parent: Microeconomics
 ---
 
 # Ch12 [[Game Theory]]

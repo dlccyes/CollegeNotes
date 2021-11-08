@@ -1,5 +1,6 @@
 ---
 aliases: [演算法]
+has_children: true
 ---
 # Algorithms
 ### pseudocode

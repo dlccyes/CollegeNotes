@@ -1,9 +1,10 @@
 ---
 tags: GT_Papers
+parent: Game Theory for Wireless Networks Papers
 ---
+# Single Controller Stochastic Games for Optimized Moving Target Defense
 [[Game Theory]] 
 [[Game Theory Papers]]
-# Single Controller Stochastic Games for Optimized Moving Target Defense
 ## intro
 - strategically change its cryptographic techniques & keys
   - deter the acttacker

@@ -1,4 +1,10 @@
+---
+tags: GT_Papers
+parent: Game Theory for Wireless Networks Papers
+---
 # Opportunistic Data Collection in Cognitive Wireless Sensor Networks: Air–Ground Collaborative Online Planning
+[[Game Theory]] 
+[[Game Theory Papers]]
 https://ieeexplore.ieee.org/document/9103004
 
 ## intro

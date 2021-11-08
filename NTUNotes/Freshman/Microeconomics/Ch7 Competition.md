@@ -1,5 +1,6 @@
 ---
 ###### tags: `College Notes`,`Microeconomics`
+parent: Microeconomics
 ---
 # Ch7 Competition
 

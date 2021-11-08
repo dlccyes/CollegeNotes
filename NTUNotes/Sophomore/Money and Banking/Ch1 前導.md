@@ -1,5 +1,6 @@
 ---
 tags: MNB
+parent: Money and Banking
 ---
 
 # Ch1 前導

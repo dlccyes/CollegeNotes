@@ -1,5 +1,5 @@
 ---
-###### tags: Money and Banking
+parent: Money and Banking
 ---
 # Ch2 金融體系概要
 

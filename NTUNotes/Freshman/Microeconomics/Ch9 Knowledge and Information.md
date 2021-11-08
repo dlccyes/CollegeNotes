@@ -1,5 +1,6 @@
 ---
 ###### tags: `Microeconomics`
+parent: Microeconomics
 ---
 # Ch9 Knowledge and Information
 

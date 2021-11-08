@@ -1,9 +1,7 @@
 ---
 title: Ch17 Allocating Goods Over Time
 ###### tags: `Microeconomics`
-# font-family: questa-grande, serif;
-# font-style: normal;
-# font-weight: 300;
+parent: Microeconomics
 ---
 
 

@@ -1,3 +1,6 @@
+---
+parent: Algorithm
+---
 # Algorithms PA
 ## PA1 sort
 to execute (in root)
