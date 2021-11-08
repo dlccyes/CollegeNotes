@@ -1,11 +1,12 @@
 {
-  "snippets_file": "snippets : It is an obsidian plugin, that replaces your selected text.\nfrac : $\\frac{}{}$\nsum : $\\displaystyle\\sum_{i=1}^{n}$\niframe : <iframe src=\"\" width=100% height=500px></iframe>\n   : <br>",
+  "snippets_file": "snippets : It is an obsidian plugin, that replaces your selected text.\nfrac : $\\frac{}{}$\nsum : $\\displaystyle\\sum_{i=1}^{n}$\niframe : <iframe src=\"\" width=100% height=500px></iframe>\n   : <br>\nmathjax :  {% include mathjax.html %}",
   "snippets": [
     "snippets : It is an obsidian plugin, that replaces your selected text.",
     "frac : $\\frac{}{}$",
     "sum : $\\displaystyle\\sum_{i=1}^{n}$",
     "iframe : <iframe src=\"\" width=100% height=500px></iframe>",
-    "   : <br>"
+    "   : <br>",
+    "mathjax :  {% include mathjax.html %}"
   ],
   "endSymbol": "$end$",
   "newlineSymbol": "$nl$",

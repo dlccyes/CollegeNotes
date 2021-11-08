@@ -1,3 +1,9 @@
+---
+title: 電路學
+---
+ 
+ {% include mathjax.html %}
+
 # 電路學
 
 powered by $\LaTeX$

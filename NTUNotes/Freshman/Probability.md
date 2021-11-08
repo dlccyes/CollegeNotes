@@ -1,3 +1,6 @@
+---
+title: Probability
+---
 共同網頁
 https://sites.google.com/g.ntu.edu.tw/ntuee-probability-108-2/syllabus
 

@@ -1,7 +1,10 @@
 ---
 aliases: [演算法]
 has_children: true
+title: Algorithms
 ---
+ {% include mathjax.html %}
+ 
 # Algorithms
 ### pseudocode
 - array position 1-A.length
@@ -131,12 +134,6 @@ void insertion_sort(int x[],int length)//define function
 - $ln(n!)\in \Theta(nlnn)$
 	- ![](https://i.imgur.com/nezIpjR.png)
 	- ![](https://i.imgur.com/X23recI.png)
-- $T(n)=T(n/2)+T(n/4)+n\in\Theta(n)$
-	- substitution
-	- ![](https://i.imgur.com/lEo5Wv1.png)
-		- if p+q>1 && p,q>1
-			- $2^{log_{1/q} (n)} <= leaves <= 2^{log_{1/p} (n)}$
-- ![](https://i.imgur.com/161Pvrb.png)
 
 ## Divide and Conquer
 - divide into subproblems
@@ -170,6 +167,7 @@ void insertion_sort(int x[],int length)//define function
 	- ![](https://i.imgur.com/cGkapaH.png)
 		- do n work and call n/2 4 times at level n
 	- ![](https://i.imgur.com/HcwSiCU.png)
+
 #### substitution
 - guess and proof (with strong induction)
 - 不太需要管 n/2 是不是整數之類的的問題
@@ -185,9 +183,19 @@ void insertion_sort(int x[],int length)//define function
 - 考法
 	- 跟你說要證什麼 (不用猜)
 #### Master theorem
+- [[Data Structure#Master Theorem]]
 - ![](https://i.imgur.com/NS95Ds4.png)
 - ![](https://i.imgur.com/Tw5Bxt8.png)
 	- 最下層最好用 k or c 代替，之後再 asymptotic
+
+#### examples
+- $T(n)=T(n/2)+T(n/4)+n\in\Theta(n)$
+	- substitution
+	- ![](https://i.imgur.com/3DUygZc.png)
+		- 最後分母是 1-(p+q) 
+		- if p+q>1 && p,q>1
+			- $2^{log_{1/q} (n)} <= leaves <= 2^{log_{1/p} (n)}$
+- ![](https://i.imgur.com/161Pvrb.png)
 
 ### merge sort
 ```pseudo

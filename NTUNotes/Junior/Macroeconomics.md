@@ -1,6 +1,8 @@
 ---
 aliases: 總體經濟學
+title: Macroeconomics
 ---
+ {% include mathjax.html %}
 # Macroeconomics
 ## 影片
 - W1 intro
@@ -108,6 +110,7 @@ aliases: 總體經濟學
 			- 是 structural relationship 而非統計假象
 	- 分析方法仍須用(新興)古典的方法
 
+ 
  ## Ch2 產出與物價的衡量
  ### GDP & GNI
  - GDP, gross domestic product
@@ -706,7 +709,6 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - ![](https://i.imgur.com/rLG0qWY.png)
 	- q 上升 → $x^d$ & $n^d$ & $y^s$ 下降
 
-
 ## Ch5 消費者的靜態選擇
 ### constraints
 - time contraint
@@ -743,7 +745,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- x y 比值相同 → MRS 相同
 - solution
 	- budget constaint $c=x-wl$
-	- $u_c(c^*,l^*)w=u_l(c^*,l^*)$<br> $u_c(c^*,l^*)=u_l(c^*,l^*)\dfrac{1}{w}$
+	- $u_c(c^*,l^*)w=u_l(c^*,l^*)$ <br> $u_c(c^*,l^*)=u_l(c^*,l^*)\dfrac{1}{w}$
 		- 一單位的消費 = w 單位的 leisure
 	- ![](https://i.imgur.com/2bxid1j.png)
 - w 上升 → leisure 變貴 → budget line 變陡

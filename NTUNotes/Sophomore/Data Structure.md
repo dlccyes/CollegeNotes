@@ -1,3 +1,7 @@
+ ---
+ title: Data Structure
+ ---
+ {% include mathjax.html %}
 # Data Structure
 - inf: greatest lower bound
 - sup: least upper bound

@@ -1,3 +1,19 @@
+---
+title: Github Pages
+---
+
+  <head>
+	   <script type="text/x-mathjax-config">
+		 MathJax.Hub.Config({
+		   tex2jax: {
+			 inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+			 processEscapes: true
+		   }
+		 });
+	   </script>
+	   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+   </head>
+
 # Github Pages
 ## themes
 ### just the doc
@@ -26,9 +42,38 @@ https://pmarsceill.github.io/just-the-docs/#getting-started
 - doesn't care about the filename, but the first heading
 
 ## latex (mathjax)
-- https://alanduan.me/random/mathjax/
-	- won't work
-	- seems like now don't use `_layouts`
-- kramdown
-- https://github.com/jeffreytse/jekyll-spaceship
-	- haven't test
+in `_includes` folder, add a new file, say `mathjax.html`, and add the following codes into it
+
+```
+<head>
+    <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {
+         inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+         processEscapes: true
+       }
+     });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+```
+
+in the pages you want to use mathjax, `{% raw  %}{% include mathjax.html %}{% endraw %}` before the heading, after the yaml
+
+you should add a `title:` in yaml or your Jekyll theme might not recognize the file name
+
+
+ref
+- <http://csega.github.io/mypost/2017/03/28/how-to-set-up-mathjax-on-jekyll-and-github-properly.html>
+	- works
+- <https://alanduan.me/random/mathjax/>
+	- doesn't work
+
+## page building
+it uses Jekyll & liquid
+
+### escaping liquid
+`{% raw  %}{% include mathjax.html %}{% endraw %}`
+without the raw & endraw, the include tag will be rendered and the codes in `mathjax.html` will be injected, or if `mathjax.html` doesn't exist, the page built would fail
+
+https://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags
