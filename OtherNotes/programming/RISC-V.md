@@ -120,12 +120,14 @@ https://github.com/Shengyuu/Assignment_computer_arch/blob/master/Lab1_bubble_sor
 
 #### Fibonacci
 https://courses.cs.washington.edu/courses/cse378/02sp/sections/section4-5.html
+
 ```cpp
 int fib(int n) {
   if (n < 2) return 1;
   else return fib(n - 1) + fib(n - 2);
 }
 ```
+
 ```risc-v
 fib:  addi $sp, $sp,   -8     # Entry code
       sw   $ra, 0($sp) 		  # ra = return address
@@ -187,5 +189,5 @@ exit: lw   $ra, 0($sp)        # Exit code
 
 ### iterative
 #### Fibonacci
-https://my.ece.utah.edu/~kstevens/5710/mips.pdf
+<https://my.ece.utah.edu/~kstevens/5710/mips.pdf>
 ![](https://i.imgur.com/5dEPF2f.png)

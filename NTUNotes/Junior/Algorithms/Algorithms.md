@@ -462,6 +462,7 @@ radix & bucket sort use other sorters to do the actual sorting
 
 ### [[Red-Black Tree]]
 - see [[Data Structure#Red-Black Tree]]
+- black height of node x = num of blacks on path to leaf - 1 (not counting x)
 - ![](https://i.imgur.com/1Hq2txg.png)
 - rotation
 	- inorder preservation
@@ -496,8 +497,11 @@ radix & bucket sort use other sorters to do the actual sorting
 
 ### weighted interval scheduling
 - ![](https://i.imgur.com/AtAJv8w.png)
+	- p(j) = largest i < j s.t. i & j are disjoint 
 	- sort by finished time
 	- jth 的最佳解 = max{包含 j 時的最佳解, 不包含 j 時的最佳解 i.e. j-1 的最佳解}
+- ![](https://i.imgur.com/U5Zw3KC.png) 
+- time complexity $\in O(n)$
 
 
 ### Rod Cutting
@@ -518,6 +522,8 @@ radix & bucket sort use other sorters to do the actual sorting
 - 建立 table m，m[i, j] 記錄 $A_i$ 乘到 $A_j$ 的 min multiplication
 - m[i, j+1] 就是 loop over 各種之間連乘對到的格子 + the rest 連乘的 cost 的 min
 - ![](https://i.imgur.com/QilPx2n.png)
+- time $\in O(n^3)$
+- space $\in O(n^2)$
 - bottom-up
 	- ![](https://i.imgur.com/pyswYI5.png)
 - top-down
@@ -563,3 +569,6 @@ radix & bucket sort use other sorters to do the actual sorting
 - ![](https://i.imgur.com/4DFfbOJ.png)
 
 ### Traveling Salesman Problem
+- ![](https://i.imgur.com/vu0IlEZ.png)
+- space $\in O(2^nn^2)$
+- runtime $\in O(2^nn^3)$
