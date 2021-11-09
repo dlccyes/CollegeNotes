@@ -358,6 +358,14 @@ return 的第二項則是演算法跑出的 subset 解 i.e. 實際上該 debug �
 ![](https://i.imgur.com/2nGoQvj.png)
 ![](https://i.imgur.com/862d2BZ.png)
 
+**Q: Heapsort can be used as the auxiliary sorting routine in radix sort, because it operates in place.
+**A: False because radix sort should be stable, while heapsort isn't stable
+
+**Q: There exists a comparison sort of 5 numbers that uses at most 6 comparisons in the worst case.
+**A: False
+using decistion tree, we have 5!=120 leaves, so the height >= lg(120) = 6.xxxx
+→ height >= 7 i.e. need at least 7 comparisons 
+
 ### guides
 - 建議不要用 limit 去 prove function 關係
 	- limit 太多

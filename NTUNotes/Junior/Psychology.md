@@ -1,3 +1,11 @@
+ ---
+ title: Psychology
+ ---
+ 
+ {% include mathjax.html %}
+# Psychology
+普通心理學
+
 - social media to emotions
 	- 社會比較 → 負面情緒
 		- 滑一滑看到別人很勝利
@@ -136,7 +144,7 @@
 	- 活在當下
 	- 一日三省吾身
 
-## 學習與記憶
+## 學習
 - 制約（考）
 	- 古典制約
 	- 操作制約
@@ -170,6 +178,14 @@
 	- ![](https://i.imgur.com/bOOLRKn.png)
 - 會學別人，制約自己
 
+## 記憶
+- 視覺記憶 capacity 大 but decay fast
+	- ![](https://i.imgur.com/riGWQBT.png)
+		- partial report: 一樣先看所有字母一秒，根據聽到的去寫下對應的一行 → 記得比較清楚，表示視覺記憶 capacity 是大的
+- 超憶者抽象思考能力較弱
+	- 只注意到細微的差異處，而非背後的 concept（這種感覺）
+- arousal: capacity
+- 注意: selection
 
 ## 考
 - 神經傳導素 neurotransmitter

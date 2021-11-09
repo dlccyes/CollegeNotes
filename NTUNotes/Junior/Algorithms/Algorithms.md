@@ -342,7 +342,7 @@ matrix multiplication
 - binary tree to max-heap
 	- ![](https://i.imgur.com/oWNCSBd.png)
 	- bottom-up, percolate up
-- build max heap
+- build max heap $\in O(n)$
 	- bottom-up heapify
 	- ![](https://i.imgur.com/1zdcwLQ.png)
 		- taylor series
@@ -364,11 +364,13 @@ matrix multiplication
 - decision tree
 	- leaf 代表 n 個數字排序可能的結果 → n! leaves
 	- ![](https://i.imgur.com/RIfsgIp.png)
-		- ==???==
 - ![](https://i.imgur.com/miRgVNZ.png)
 
 ### sorting in linear time
-![](https://i.imgur.com/CKPm9vK.png)
+![](https://i.imgur.com/SiKs69T.png)
+![](https://i.imgur.com/GnKQbCp.png)
+radix & bucket sort use other sorters to do the actual sorting
+
 #### counting sort
 - 有 m 個數字 <= k → 把 k 放在位置 m
 - ![](https://i.imgur.com/1ooBJew.png)
@@ -379,19 +381,28 @@ matrix multiplication
 
 #### radix sort
 - 一個位數一個位數 sort，從最小位數開始
-	- 需 stable sorter
-		- counting sort
-			- not in-place → need more memory
-		- insertion sort
-			- fast when size small
-- time complexity $\in\Theta(d(n+k))$
+	- ![](https://i.imgur.com/sCIxPnl.png)
+- 需 stable sorter
+	- counting sort
+		- not in-place → need more memory
+	- insertion sort
+		- fast when size small
+- time complexity $\in O(d(n+k))$
 	- n d-digit numbers
 	- each digit has k possible values ???
 	- $\in O(n)$ if $d\in O(1)$ & $k\in O(n)$
-- ![](https://i.imgur.com/sCIxPnl.png)
+- stable, in-place or not depends on what sorter used (to sort each digit)
 
 #### bucket sort
-???
+- 分成很多個同樣大小的 bucket，先把各數字放進各自的 bucket，在各 bucket 裡 sort，最後 combine
+	- ![](https://i.imgur.com/BnAkOLS.png)
+- k buckets
+- space complexity $\in O(n+k)$
+- time complexity
+	- iterate all elements, in each bucket, but will iterate n elements at most
+	- expected & best case $\in O(n+k)$
+	- worst case $\in O(n^2)$
+		- when all elements go to 1 bucket → runtime depends on what sorter used → worst case $\in O(n^2)$
 
 ### order statistics
 - ith order statistic = ith smallest element

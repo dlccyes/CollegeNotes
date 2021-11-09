@@ -360,18 +360,19 @@ Bell (W2)
 - each node has 1/2/3 items
 - k items → k+1 children
 - insertion
-- insert 到 leaf node
-- look before you leap
-  - 經過的每個 4 node 都要 split
-  - insert 的目的地是 4 node 時，先 split 再 insert
-- ![Image](https://i.imgur.com/8HqciLA.png)
-- https://www.educative.io/page/5689413791121408/80001
+	- insert 到 leaf node
+	- look before you leap
+	  - 經過的每個 4 node 都要 split
+	  - insert 的目的地是 4 node 時，先 split 再 insert
+	- ![Image](https://i.imgur.com/8HqciLA.png)
+	- https://www.educative.io/page/5689413791121408/80001
+	- ![](https://i.imgur.com/ne2Tzd3.png)
 - deletion 
-- bottom-up
-  - ![Image](https://i.imgur.com/5GYI7RE.png)
-- top-down
-  - look before you leap
-	- 經過的每個 2 node 都要 split
+	- bottom-up
+	  - ![Image](https://i.imgur.com/5GYI7RE.png)
+	- top-down
+	  - look before you leap
+		- 經過的每個 2 node 都要 split
 #### [[Red-Black Tree]]
 - represent 2-3-4 tree as binary tree
 - ![Image](https://i.imgur.com/ZZ7lX6d.png)
