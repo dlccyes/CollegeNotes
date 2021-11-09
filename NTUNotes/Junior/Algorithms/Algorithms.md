@@ -12,6 +12,7 @@ layout: meth
   <summary>
     Outline
   </summary>
+
 - TOC
 {:toc}
 </details>
@@ -149,6 +150,7 @@ void insertion_sort(int x[],int length)//define function
 - divide into subproblems
 - conquer subproblems recursively
 - combine the subsolutions into an overall solution
+
 ### mathematical induction
 - weak induction
 	- basis step
@@ -192,6 +194,7 @@ void insertion_sort(int x[],int length)//define function
 	- ![](https://i.imgur.com/W4PALFT.png)
 - 考法
 	- 跟你說要證什麼 (不用猜)
+
 #### Master theorem
 - [[Data Structure#Master Theorem]]
 - ![](https://i.imgur.com/NS95Ds4.png)
@@ -299,6 +302,7 @@ matrix multiplication
 		- sorted OR reversely sorted
 		- ![](https://i.imgur.com/nutGH85.png)
 	- practically very good, but asymptotically bad
+
 #### randomized partition
 - random 選一個 element 跟最後一位交換
 - ![](https://i.imgur.com/jqWEcR5.png)
@@ -313,7 +317,7 @@ matrix multiplication
 				- 忽略 q=0, 1
 				- 猜 nlgn
 		- method 2
-			- $\in O(n+X)$
+			- runtime $\in O(n+X)$
 			- n elements → max n partitions
 			- X comparisons
 				- 只有 pivot 需要跟別人比較
@@ -322,7 +326,7 @@ matrix multiplication
 					- E[X] = expected X
 				- ![](https://i.imgur.com/W0OswXI.png)
 					- $E[X_{ij}] = z_i$ or $z_j$ 為 pivot 的機率
-- Hoarse
+
 #### Hoarse partition
 - 原始提出版本
 - ==很愛考==
@@ -404,9 +408,10 @@ radix & bucket sort use other sorters to do the actual sorting
 - stable, in-place or not depends on what sorter used (to sort each digit)
 
 #### bucket sort
-- 分成很多個同樣大小的 bucket，先把各數字放進各自的 bucket，在各 bucket 裡 sort，最後 combine
+- 分成很多個同樣區間的 bucket，先把各數字放進各自的 bucket，在各 bucket 裡 sort，最後 combine
 	- ![](https://i.imgur.com/BnAkOLS.png)
 - k buckets
+	- 區間為 1 → [[#counting sort]]
 - space complexity $\in O(n+k)$
 - time complexity
 	- iterate all elements, in each bucket, but will iterate n elements at most
@@ -416,6 +421,7 @@ radix & bucket sort use other sorters to do the actual sorting
 
 ### order statistics
 - ith order statistic = ith smallest element
+
 #### selection
 - pseudo code
 	- ![](https://i.imgur.com/03BEJRK.png)
@@ -443,6 +449,7 @@ radix & bucket sort use other sorters to do the actual sorting
 	- best case $h\in O(lgn)$
 		- balanced
 - most operations $O(h)$
+
 #### operations
 - traversal
 	- inorder/infix
@@ -512,7 +519,6 @@ radix & bucket sort use other sorters to do the actual sorting
 	- jth 的最佳解 = max{包含 j 時的最佳解, 不包含 j 時的最佳解 i.e. j-1 的最佳解}
 - ![](https://i.imgur.com/U5Zw3KC.png) 
 - time complexity $\in O(n)$
-
 
 ### Rod Cutting
 - 鋼條長度 vs. 價格非線性，求 max revenue 切法

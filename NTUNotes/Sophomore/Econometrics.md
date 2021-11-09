@@ -34,7 +34,7 @@ The skewness of a symmetric distribution is 0.
 
 ### law of iterated expectations
 ![Image](https://i.imgur.com/Qbz7r9H.png)
-## U3 review of statistics
+## Ch3 review of statistics
 - unbiasedness
   - bias = $E(\hat{\mu_Y})-\mu_Y$
 - consistency

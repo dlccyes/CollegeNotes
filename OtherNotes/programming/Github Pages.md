@@ -30,7 +30,6 @@ title: Github Pages
 https://pmarsceill.github.io/just-the-docs/#getting-started
 
 #### build locally
-**you don't need this**
 1. vim `_config.yml`
 	- `remote_theme: pmarsceill/just-the-docs`
 2. `sudo gem install just-the-docs`
@@ -75,6 +74,31 @@ layout: default
 {{ content }}
 ```
 {% endraw %}
+
+#### TOC
+{% raw %}
+`{: .no_toc }` to not include this header in TOC
+```
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+```
+to see collapsible unnumbered TOC
+
+or
+```
+1. TOC
+{:toc}
+```
+
+for collapsible numbered TOC
+{% endraw %}
+
+
 
 ## latex (mathjax)
 in `_includes` folder, add a new file, say `mathjax.html`, and add the following codes into it
