@@ -1,6 +1,7 @@
 ---
 tags: GT_Papers
 parent: Game Theory for Wireless Networks Papers
+layout: meth
 ---
 # A Game Theoretic Mechanism for Low-Cost M2M and Mission-Critical M2M
 [[Game Theory]] 

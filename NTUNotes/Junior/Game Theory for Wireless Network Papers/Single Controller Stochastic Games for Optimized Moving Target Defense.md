@@ -1,6 +1,8 @@
 ---
 tags: GT_Papers
 parent: Game Theory for Wireless Networks Papers
+title: Single Controller Stochastic Games for Optimized Moving Target Defense
+layout: meth
 ---
 # Single Controller Stochastic Games for Optimized Moving Target Defense
 [[Game Theory]] 

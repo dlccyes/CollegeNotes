@@ -1,8 +1,8 @@
- ---
+---
  title: Psychology
- ---
+ layout: meth
+---
  
- {% include mathjax.html %}
 # Psychology
 普通心理學
 

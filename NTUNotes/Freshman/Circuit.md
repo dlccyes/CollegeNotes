@@ -1,8 +1,7 @@
 ---
 title: 電路學
+layout: meth
 ---
- 
- {% include mathjax.html %}
 
 # 電路學
 

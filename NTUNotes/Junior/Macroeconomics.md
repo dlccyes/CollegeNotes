@@ -1,8 +1,8 @@
 ---
 aliases: 總體經濟學
 title: Macroeconomics
+layout: meth
 ---
- {% include mathjax.html %}
 # Macroeconomics
 ## 影片
 - W1 intro

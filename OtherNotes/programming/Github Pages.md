@@ -27,7 +27,7 @@ https://pmarsceill.github.io/just-the-docs/#getting-started
 	-  if (ruby related) error, `sudo apt-get install ruby-all-dev` and retry
 		-  https://github.com/github/pages-gem/issues/133#issuecomment-411918159
 
-#### structure
+#### navigation structure
 - it doesn't care about the real folder subfolder relationship, instead, you specify the hierarchy manually
 - say you want `aa.md` & `bb.md` inside folder `A` in the left sidebar
 	- `has_children: true` in yaml && `#A` at: (2 options)
@@ -40,6 +40,31 @@ https://pmarsceill.github.io/just-the-docs/#getting-started
 	- `parent:` `grandparent:` in yaml
 - if you don't specify `parent:` in yaml, it will appear as the top level in the left sidebar
 - doesn't care about the filename, but the first heading
+
+#### layouts structure
+https://github.com/pmarsceill/just-the-docs/tree/master/_layouts
+
+each page use the `page` layout, which is like
+
+{% raw %}
+```
+---
+layout: default
+---
+
+{{ content }}
+```
+
+so if you want to add anything before the content, mathjax header for example, just
+
+```
+---
+layout: default
+---
+{% include mathjax.html %}
+{{ content }}
+```
+{% endraw %}
 
 ## latex (mathjax)
 in `_includes` folder, add a new file, say `mathjax.html`, and add the following codes into it
@@ -68,6 +93,14 @@ ref
 	- works
 - <https://alanduan.me/random/mathjax/>
 	- doesn't work
+
+## Jekyll struture
+https://carpentries-incubator.github.io/jekyll-pages-novice/layouts/index.html
+### _layouts
+- create a `_layouts` folder in the root
+- specify the layout in the yaml of a file, then the file will use that layout
+	- like in Laravel's view blade 
+### _includes
 
 ## page building
 it uses Jekyll & liquid

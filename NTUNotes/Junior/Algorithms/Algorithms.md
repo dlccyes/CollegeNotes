@@ -2,8 +2,8 @@
 aliases: [演算法]
 has_children: true
 title: Algorithms
+layout: meth
 ---
- {% include mathjax.html %}
  
 # Algorithms
 ### pseudocode

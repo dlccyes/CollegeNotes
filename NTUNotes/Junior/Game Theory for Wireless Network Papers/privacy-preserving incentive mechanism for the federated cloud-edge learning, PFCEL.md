@@ -1,8 +1,10 @@
 ---
 tags: GT_Papers
 parent: Game Theory for Wireless Networks Papers
+layout: meth
+title: Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Learning
 ---
-# privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL
+# Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Learning
 [[Game Theory]] 
 [[Game Theory Papers]]
 ## intro

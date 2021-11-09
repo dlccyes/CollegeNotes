@@ -1,7 +1,8 @@
- ---
+---
  title: Data Structure
- ---
- {% include mathjax.html %}
+ layout: meth
+---
+ 
 # Data Structure
 - inf: greatest lower bound
 - sup: least upper bound
