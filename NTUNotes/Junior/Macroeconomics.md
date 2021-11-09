@@ -4,6 +4,16 @@ title: Macroeconomics
 layout: meth
 ---
 # Macroeconomics
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
 ## 影片
 - W1 intro
 	- https://www.dropbox.com/s/n1usof8hkcrq3b8/macro_intro.mp4

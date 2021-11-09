@@ -2,19 +2,29 @@
 title: Github Pages
 ---
 
-  <head>
-	   <script type="text/x-mathjax-config">
-		 MathJax.Hub.Config({
-		   tex2jax: {
-			 inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-			 processEscapes: true
-		   }
-		 });
-	   </script>
-	   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-   </head>
+<head>
+   <script type="text/x-mathjax-config">
+	 MathJax.Hub.Config({
+	   tex2jax: {
+		 inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		 processEscapes: true
+	   }
+	 });
+   </script>
+   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
 
 # Github Pages
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
 ## themes
 ### just the doc
 https://pmarsceill.github.io/just-the-docs/#getting-started
@@ -94,7 +104,7 @@ ref
 - <https://alanduan.me/random/mathjax/>
 	- doesn't work
 
-## Jekyll struture
+## Jekyll structure
 https://carpentries-incubator.github.io/jekyll-pages-novice/layouts/index.html
 ### _layouts
 - create a `_layouts` folder in the root

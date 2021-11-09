@@ -6,6 +6,16 @@ layout: meth
 ---
  
 # Algorithms
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
 ### pseudocode
 - array position 1-A.length
 - for

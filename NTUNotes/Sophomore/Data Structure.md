@@ -4,6 +4,16 @@
 ---
  
 # Data Structure
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
 - inf: greatest lower bound
 - sup: least upper bound
 

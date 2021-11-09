@@ -1,4 +1,18 @@
+---
+title: Econometrics
+layout: meth
+---
 # Econometrics
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
 - CI
   - 99%: 2.5758 = 2.576 = 2.58
   - 95%: 1.9600 = 1.960 = 1.96
