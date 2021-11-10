@@ -162,3 +162,94 @@ min 的第一項是 transmission capacity，不可能超過
 	- clustering & offloading data to sensors closer to UAV trajectory will then stop its interference to others
 
 ### coalition formation game model
+ - utility of sensor i<br>$u_i(a_i,a_{-i})=f_R(a_i)\zeta(i,a_i)min(C_{ia_i},r_i)$
+	- $a_i$ = $i$'s cluster selection strategy<br>i.e. who $i$ choose to offload to<br>i.e. $i$'s cluster head
+	- $a_{-i}$ = others' cluster selection strategy
+	- $f_R(a_i)$ = $i$'s cluster head's transmission reliability
+	- $\zeta(i,a_i)$ = interference between $i$ & $i$'s cluster head
+	- $min(C_{ia_i},r_i)$ = data gathering rate
+		- generation rate capped by transmission rate
+	- ==為何要乘 zeta==
+- a sensor can select 1 coalition at most
+#### pareto-based preference criterion
+basically, do the operation iff the subject of the operation is better off && everyone else isn't worse off (pareto) after the operation
+- switch
+	- sensor $i$ switch coalition iff sensor $i$ is better off after the switch && everyone in the 2 coalitions isn't worse off after the switch
+	- ![](https://i.imgur.com/MqaGgTd.png)
+- merge
+	- 2 coalitions merge iff total utility is greater after the merge && everyone in the 2 coalitions isn't worse off after the merge
+	- ![](https://i.imgur.com/rhAotUH.png)
+- split
+	- a coalition splits iff total utility is greater after the split && everyone in the coalition isn't worse off after the split
+	- ![](https://i.imgur.com/zrG2EpP.png)
+- exchange
+	- 2 non-head sensors in different coalitions exchange coalitions iff they're both better off after the exchange && everyone in the 2 coalitions isn't worse off after the exchange
+- equilibrium
+	- every sensor wouldn't find a better coalition to join (only considering itself)
+	- ![](https://i.imgur.com/PPpsszj.png)
+- at least one stabe coalition structure
+	- strategies are limited
+	- all operations are monotonicity
+		- each operation contributes to the total utility
+		- ![](https://i.imgur.com/tVQfIc4.png)
+	- so it will eventually converge to a coalition equilibrium structure
+
+### algorithm
+- ![](https://i.imgur.com/K9KGQ5V.png)
+- for coalition members
+	- switch operation
+		- directly updates its coalition selection policy
+	- each sensor only needs to interact with coalition head to meet the pareto criterions
+		- bc sensor performance is a function of cluster head's transmission reliability<br>→ if $f_R(j)$ unchanged, the pareto criterion is satisfied
+- for coalition heads
+	- merge & exchange operation
+	- split operation can be covered with members departure & exchange, so not separately calculated
+- $O(C_1+2(\eta N-1)+C_2)$
+	- $\eta$ = probability of sensors to update active states
+
+## UAV online flight control
+- network topology & coalition formation unknown → UAV can't plan flight status in advance
+
+### transmission protocol
+- problems to solve
+	- equilibrium of coalitions doesn't guarantee no interference
+	- coalitions can't obtain all strategies of other coalitions
+	- increase gathered data → increase transmission range → more likely to affect other coalitions
+- ![](https://i.imgur.com/cshvAv2.png)
+	- UAV continuously broadcasts its position & transmission status during flight, and coalition heads initialize in **listening state**
+	- the coalition head closest to UAV will be allowed for transmission, while others remain in listening
+		- if UAV isn't actually in the transmission range, the coalition head will go to **unexpected transmission** state
+		- otherwise, it goes to **expected transmission** state
+		- one at a time, siempre
+	- having upload all the gathered data, sensors will go to **silence state**
+
+### UAV flight mode
+- given a trajectory, adjust the flight speed
+
+#### passive data collection
+- doesn't detect any ground network status
+- fix to normal speed $v_m=\dfrac{2D_{max}}{T_{max}}$
+
+#### partially detectable system
+- receive data upload requirement of ground sensors
+- 3 processes
+	- estimating
+		- receives data uploading requests from ground sensors
+		- find the max transmission efficiency $\gamma_{jm}'$ of all detectable coalitions
+			- ![](https://i.imgur.com/DKAOMDF.png)
+	- flying
+		- fly to the optimum transmission position of the nearest coalition head with max speed $v_{max}$
+	- hovering
+		- hovering at the optimum transmission position, receiving data
+		- flight time threshold
+		- ![](https://i.imgur.com/A06vSYK.png)
+- transmission time difficult to guarantee
+	- transmission time affects later coalitions
+
+#### fully detectable system
+- ![](https://i.imgur.com/rrhdpfp.png)
+- detect all the coalition strategy states
+- estimate transmission efficiency at different locations
+- obtain optimal flight speed & hovering time in the entire network through the algorithm
+
+## simulation results
