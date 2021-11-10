@@ -1,12 +1,24 @@
 ---
 parent: Algorithms
+layout: meth
 ---
 # Algorithms Problems
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
 ## HW1
 ### 1. linear search
 ![](https://i.imgur.com/YnPRYZp.png)
 ![](https://i.imgur.com/xdOjjhF.png)
 ![](https://i.imgur.com/aTGLUwF.png)
+
 ### 2. binary search
 ![](https://i.imgur.com/tekzuYF.png)
 ![](https://i.imgur.com/9gzSSqL.png)
@@ -245,6 +257,11 @@ https://github.com/jason88012/Maximum-Planner-Subset
 
 有沒有 +1 應該是等效的?
 
+類題
+![](https://i.imgur.com/CCfLwsw.png)
+![](https://i.imgur.com/AXAIqOb.png)
+
+
 ### DIY
 #### ideas
 - 電路 debug
@@ -370,6 +387,9 @@ using decistion tree, we have 5!=120 leaves, so the height >= lg(120) = 6.xxxx
 A: keypoint - x & y 之 lowest common ancestor 在 x & y 之間, so
 ![](https://i.imgur.com/zdjn5GQ.png)
 
+optimal BST
+![](https://i.imgur.com/1bsL5Bb.png)
+![](https://i.imgur.com/2sGmcnm.png)
 
 ### guides
 - 建議不要用 limit 去 prove function 關係

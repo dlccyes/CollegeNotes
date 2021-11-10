@@ -1,6 +1,16 @@
 ---
 title: Probability
+layout: meth
 ---
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
+
 共同網頁
 https://sites.google.com/g.ntu.edu.tw/ntuee-probability-108-2/syllabus
 

@@ -5,9 +5,19 @@ layout: meth
 title: Opportunistic Data Collection in Cognitive Wireless Sensor Networks - Air–Ground Collaborative Online Planning
 ---
 # Opportunistic Data Collection in Cognitive Wireless Sensor Networks - Air–Ground Collaborative Online Planning
-[[Game Theory]] 
-[[Game Theory Papers]]
+{: .no_toc }
+
+[[Game Theory]]  
+[[Game Theory Papers]]  
 https://ieeexplore.ieee.org/document/9103004
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+1. TOC
+{:toc}
+</details>
 
 ## intro
 - UAV: unmanned aerial vehicle

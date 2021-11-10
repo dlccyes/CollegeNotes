@@ -4,8 +4,17 @@
 ---
  
 # Psychology
-普通心理學
+{: .no_toc }
 
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
+## intro
 - social media to emotions
 	- 社會比較 → 負面情緒
 		- 滑一滑看到別人很勝利
@@ -51,6 +60,27 @@
 		- passively 找相關
 	- 實驗法
 		- actively 操作 variables
+
+## 生理心理學
+- 神經傳導素 neurotransmitter
+	- ==考==
+	- ![](https://i.imgur.com/ip2DMki.png)
+	- ![](https://i.imgur.com/CgDAiUB.png)
+	- comparison
+		- 多巴胺跟預期有關
+		- 腦內啡止痛
+		- 血清素 開心
+- 大腦結構
+	- ==考==
+	- ![](https://i.imgur.com/WJUwUwh.jpg)
+	- ![](https://i.imgur.com/HaJIpGg.png)
+	- ![](https://i.imgur.com/2uZjFrn.jpg)
+	- 左右腦
+		- 左腦
+			- sequential processing
+		- 右腦
+			- parallel processing
+		- ![](https://i.imgur.com/2KbxiE8.png)
 - nature & nurture
 	- twins' IQ
 		- ![](https://i.imgur.com/ZgLwk4m.png)
@@ -186,23 +216,20 @@
 	- 只注意到細微的差異處，而非背後的 concept（這種感覺）
 - arousal: capacity
 - 注意: selection
-
-## 考
-- 神經傳導素 neurotransmitter
-	- ![](https://i.imgur.com/ip2DMki.png)
-	- ![](https://i.imgur.com/CgDAiUB.png)
-	- comparison
-		- 多巴胺跟預期有關
-		- 腦內啡止痛
-		- 血清素 開心
-- 大腦結構
-	- ![](https://i.imgur.com/WJUwUwh.jpg)
-	- ![](https://i.imgur.com/HaJIpGg.png)
-	- ![](https://i.imgur.com/2uZjFrn.jpg)
-	- 左右腦
-		- 左腦
-			- sequential processing
-		- 右腦
-			- parallel processing
-		- ![](https://i.imgur.com/2KbxiE8.png)
-
+- 長期記憶
+	- primary effect
+		- 最前面的東西記得較清楚
+		- 因為前面的東西回憶較多次
+- working memory
+	- 儲存記憶並做 manipulation
+- 短期記憶
+	- recency effect
+		- 最近的東西記得較清楚
+		- decay 較少
+- 語音迴路
+	- ![](https://i.imgur.com/LuCsfX2.png)
+		- primary & recency effect
+		- 順向干擾
+			- 前面學的東西干擾後面學的東西
+		- 逆向干擾
+			- 後面學的東西干擾前面學的東西

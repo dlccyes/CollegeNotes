@@ -2,25 +2,34 @@
 title: Github Pages
 ---
 
-  <head>
-	   <script type="text/x-mathjax-config">
-		 MathJax.Hub.Config({
-		   tex2jax: {
-			 inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-			 processEscapes: true
-		   }
-		 });
-	   </script>
-	   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-   </head>
+<head>
+   <script type="text/x-mathjax-config">
+	 MathJax.Hub.Config({
+	   tex2jax: {
+		 inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		 processEscapes: true
+	   }
+	 });
+   </script>
+   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
 
 # Github Pages
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
 ## themes
 ### just the doc
 https://pmarsceill.github.io/just-the-docs/#getting-started
 
 #### build locally
-**you don't need this**
 1. vim `_config.yml`
 	- `remote_theme: pmarsceill/just-the-docs`
 2. `sudo gem install just-the-docs`
@@ -66,6 +75,31 @@ layout: default
 ```
 {% endraw %}
 
+#### TOC
+{% raw %}
+`{: .no_toc }` to not include this header in TOC
+```
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+```
+to see collapsible unnumbered TOC
+
+or
+```
+1. TOC
+{:toc}
+```
+
+for collapsible numbered TOC
+{% endraw %}
+
+
+
 ## latex (mathjax)
 in `_includes` folder, add a new file, say `mathjax.html`, and add the following codes into it
 
@@ -94,7 +128,7 @@ ref
 - <https://alanduan.me/random/mathjax/>
 	- doesn't work
 
-## Jekyll struture
+## Jekyll structure
 https://carpentries-incubator.github.io/jekyll-pages-novice/layouts/index.html
 ### _layouts
 - create a `_layouts` folder in the root

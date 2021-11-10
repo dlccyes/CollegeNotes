@@ -1,4 +1,16 @@
+---
+layout: meth
+---
+
 # 經濟貨幣整合：歐元區理論與實證
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
 
 ## 3/4
 推薦讀德意志三部曲

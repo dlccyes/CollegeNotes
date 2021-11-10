@@ -1,4 +1,18 @@
+---
+title: Econometrics
+layout: meth
+---
 # Econometrics
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
 - CI
   - 99%: 2.5758 = 2.576 = 2.58
   - 95%: 1.9600 = 1.960 = 1.96
@@ -20,7 +34,7 @@ The skewness of a symmetric distribution is 0.
 
 ### law of iterated expectations
 ![Image](https://i.imgur.com/Qbz7r9H.png)
-## U3 review of statistics
+## Ch3 review of statistics
 - unbiasedness
   - bias = $E(\hat{\mu_Y})-\mu_Y$
 - consistency

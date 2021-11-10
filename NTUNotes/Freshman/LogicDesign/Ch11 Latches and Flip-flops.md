@@ -2,6 +2,13 @@
 parent: LogicDesign
 ---
 # Chap 11 Latches and Flip-flops
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
 
 flip-flop: only response to a ==clock input== (but not a data input)
 <img src="https://i.imgur.com/o0ZQV5r.jpg" height = "300">
