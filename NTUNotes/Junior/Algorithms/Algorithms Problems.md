@@ -257,6 +257,11 @@ https://github.com/jason88012/Maximum-Planner-Subset
 
 有沒有 +1 應該是等效的?
 
+類題
+![](https://i.imgur.com/CCfLwsw.png)
+![](https://i.imgur.com/AXAIqOb.png)
+
+
 ### DIY
 #### ideas
 - 電路 debug
@@ -377,6 +382,11 @@ return 的第二項則是演算法跑出的 subset 解 i.e. 實際上該 debug �
 **A: False
 using decistion tree, we have 5!=120 leaves, so the height >= lg(120) = 6.xxxx
 → height >= 7 i.e. need at least 7 comparisons 
+
+optimal BST
+![](https://i.imgur.com/1bsL5Bb.png)
+![](https://i.imgur.com/2sGmcnm.png)
+
 
 ### guides
 - 建議不要用 limit 去 prove function 關係
