@@ -1,5 +1,13 @@
 # git
 
+## history
+https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
+- `git log`
+- `git reflog`
+	- each commit oneline
+- `git log -p abcdef`
+	- commit details of `abcdef`
+
 ## squash
 ### using reset & amend
 設你有最近 3 個 commit 為

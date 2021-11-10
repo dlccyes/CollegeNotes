@@ -366,6 +366,11 @@ return 的第二項則是演算法跑出的 subset 解 i.e. 實際上該 debug �
 using decistion tree, we have 5!=120 leaves, so the height >= lg(120) = 6.xxxx
 → height >= 7 i.e. need at least 7 comparisons 
 
+**Q: for a binary tree with left & right children pointer but not parent pointer, how to find x & y's lowest common ancestor in O(n)?**
+A: keypoint - x & y 之 lowest common ancestor 在 x & y 之間, so
+![](https://i.imgur.com/zdjn5GQ.png)
+
+
 ### guides
 - 建議不要用 limit 去 prove function 關係
 	- limit 太多

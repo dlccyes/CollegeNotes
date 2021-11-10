@@ -123,7 +123,7 @@ min 的第一項是 transmission capacity，不可能超過
 	- if i doesn't belong to others, it would be a cluster head and upload data when UAV pasts it
 
 ## coalition game
-### LoS transmission
+### reliable LoS transmission
 - ![](https://i.imgur.com/ZzbQKPg.png)
 	- $\bar{D_j}$ = UAV 飛在 j 範圍內的總長 
 - 3 flight modes
@@ -137,3 +137,18 @@ min 的第一項是 transmission capacity，不可能超過
 		- constant velocity of $\bar{v}=2D_{max}/T_{max}$
 		- effective transmittion time $T_j'$ =<br>![](https://i.imgur.com/FN5IKy8.png)
 			- UAV 飛在 j 範圍內的總時
+- ground sensor near UAV trajectory will help others upload data when its capacity is better than what it needs itself
+	- when total gathering data $R_j$ > capacity $R_j'$, transmission reliability $f_R(j)$  decays exponentially
+		- ![](https://i.imgur.com/VctTey7.png)
+
+### transmission correlation
+- ideal data uploading range
+- j will upload data when y coordinate $\in \tilde{D_j}$
+	- $\tilde{D_j}$ changes with cluster situation
+	- ![](https://i.imgur.com/f2qE3yI.png)
+- transmission correlation $\zeta(i,j)$ = inteference between i & j
+	- when i & j's uploading data range overlaps, they might cause interference to each other's uploading
+	- ![](https://i.imgur.com/28dy5jS.png)
+	- clustering & offloading data to sensors closer to UAV trajectory will then stop its interference to others
+
+### coalition formation game model
