@@ -46,5 +46,10 @@ ref
 https://gitbook.tw/chapters/rewrite-history/merge-multiple-commits-to-one-commit.html
 
 ## config related
+`git config --global XXX YYY` will add or change XXX's value to YYY in `~/.gitconfig`
+
 ### store credentials
-https://stackoverflow.com/a/35942890/15493213
+1. `git config --global credential.helper store`
+2. push or pull in your repo, enter your username & passphrase, then they will be saved to `~/.git-credentials`
+
+<https://stackoverflow.com/questions/35942754/how-can-i-save-username-and-password-in-git>

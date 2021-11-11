@@ -1,20 +1,17 @@
 ---
 aliases: [電網導]
+layout: meth
 ---
 # Computer Networking
-- connections
-	- link, node, cloud
-	- direct link
-		- LAN, local area network
-		- types
-			- point to point
-				- simple
-				- bad scalability
-			- multiple access
-				- MAC, multiple access control
-	- indirect link
-		- circuit switching
-		- packet switching
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
 
 ## Ch1 Computer Network and the Internet
 ### The Network Edge
@@ -32,6 +29,7 @@ aliases: [電網導]
 	-  full duplex
 		-  both direction at the same time
 		-  like 電話
+
 #### access networks
 ##### residential access networks
 ###### DSL, digital subscriber line
@@ -59,6 +57,7 @@ aliases: [電網導]
 	- send the data to the Internet
 - for short distance
 	- 5-10 miles
+
 ###### HFC, hybrid fiber coax
 - ![](https://i.imgur.com/DOj2gaR.png)
 - ![](https://i.imgur.com/fSAP7MK.png)
@@ -76,6 +75,7 @@ aliases: [電網導]
 - shared broadcast medium
 	- 樹狀
 -  download 是 broadcast，upload 是 multiple-access
+
 ###### FTTH/FTTC/FTTB
 - ![](https://i.imgur.com/t5bAxxO.png)
 - 用光纖
@@ -96,8 +96,10 @@ aliases: [電網導]
 	- ONT, optical network termination
 		- home user connects a home router to ONT, and access the Internet via the home router
 - ![](https://i.imgur.com/bHhX2An.png)
+
 ###### satellite link
 - Starband, HughesNet
+
 ##### company access networks
 - LAN, local access networks
 - connect end system to edge router
@@ -110,6 +112,7 @@ aliases: [電網導]
 		- Ethernet wireless version
 	- user exchange packets with an access point connected into enterprise's network through wired Ethernet
 - ![](https://i.imgur.com/gGYmjUr.png)
+
 ##### mobile access networks
 - wide-area wireless access
 	- kms
@@ -119,6 +122,7 @@ aliases: [電網導]
 		- 每十年一個 generation
 	- LTE, long-term evolution
 - wireless local loop (?)
+
 ####  physical media
 #####  guided media
 -  solid medium, physically wired
@@ -151,9 +155,11 @@ aliases: [電網導]
 		- used in long distance links
 	-  high cost
 		-  optical devices
+
 #####  unguided media
 -  in atmosphere & outer space, with antenna
 -  download 是 broadcast，upload 是 multiple-access
+
 ######  terrestrial radio channels
 -  via electromagnetic spectrum
 -  penetrate walls, long distance
@@ -165,6 +171,7 @@ aliases: [電網導]
 		-  wireless LAN
 	-  wide area
 		-  cellular access
+
 ######  satellite radio channels
 -  ![](https://i.imgur.com/yUrgMsp.png)
 -  link between ground stations
@@ -310,7 +317,6 @@ aliases: [電網導]
 				-  pay
 		- ![](https://i.imgur.com/GEm9pHI.png)
 
-
 ### Delay, Loss & Throughput
 #### reliability
 - 原汁原味
@@ -329,6 +335,7 @@ aliases: [電網導]
 		- power off
 		- 系統問題
 		- virus
+
 #### QoS, quality of service
 - error rate
 - delay
@@ -388,16 +395,19 @@ aliases: [電網導]
 - layered architecture
 	- ![](https://i.imgur.com/50Knl9b.png)
 		- 同一層互相溝通
+
 #### protocol layering
 - ![](https://i.imgur.com/apS8Dld.png)
 - ![](https://i.imgur.com/wEz7EST.png)
 - 愈上層愈軟，愈下層愈硬
 - ![](https://i.imgur.com/fVHIPOD.png)
+
 ##### 5-layer model (the Internet)
 ###### application layer
 - e.g. HTTP(web documents), SMTP(emails), FTP(files), DNS
 - **message** - application-layer packet
 - exchange message with the application in another end system
+
 ###### transport layer
 - layer 4
 - transport messages between application endpoints
@@ -414,6 +424,7 @@ aliases: [電網導]
 		- no flow control
 		- no congestion crontrol
 - **segment** - transport-layer packet
+
 ###### network layer 
 - layer 3
 - IP layer
@@ -424,6 +435,7 @@ aliases: [電網導]
 -  routing protocols
 	-  determine the route datagrams take between source & destination
 -  forwarding
+
 ######  link layer
 - layer 2
 -  move a packet from one node to another
@@ -431,10 +443,12 @@ aliases: [電網導]
 	-  a datagram may be handled by different link-layer protocols at different link along the route
 -  e.g. Ethernet, WiFi, DOCSIS
 -  **frame** - link-layer packet
+
 ######  physical layer 
 - layer 1
 - move the individual bits in the frame from one node to another
 - protocols depend on link & transmission medium of the link
+
 ##### ISO OSI 7-layer model
 - ![](https://i.imgur.com/CSqX8ak.png)
 - 2 additional layers (也算 application layer)
@@ -453,6 +467,7 @@ aliases: [電網導]
 	- LLC, logical link control
 	- MAC, media access control
 - IETF TCP/IP protocol stack/suite
+
 #### encapsulation
 - PDU, packet data union
 	- header + data/payload
@@ -504,6 +519,19 @@ so there're many security problems now
 		- check if the source address is correct
 
 ### miscellaneous
+- connections
+	- link, node, cloud
+	- direct link
+		- LAN, local area network
+		- types
+			- point to point
+				- simple
+				- bad scalability
+			- multiple access
+				- MAC, multiple access control
+	- indirect link
+		- circuit switching
+		- packet switching
 - logical channel??
 - telecom
 	- ATM, Asynchronous Transfer Mode
@@ -970,20 +998,13 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - additive-increase, multiplicative-decrease, AIMD
 	- ![](https://i.imgur.com/GffxjVr.png)
 
-##### TCP thoughput
+##### TCP throughput
 ?
 
 #### TCP fairness
 - TCP Reno es muy muy fair
 - for 2 competing connections
 	- ![](https://i.imgur.com/m8OSzwQ.png)
-
-
----
-
-
-
-
 
 ## Ch4 Network Layer - Data Plane
 - routing
@@ -1042,3 +1063,6 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 			- x 原本到 z 是 7，拿到 y 的資料後發現 3 就好，update 並告訴 neighbor
 - async
 - ![](https://i.imgur.com/NjrbAFN.png)
+- count to infinity problem
+	- can't stabilize
+	- don't know the route is through who

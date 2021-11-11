@@ -112,7 +112,7 @@ min 的第一項是 transmission capacity，不可能超過
 	- sum = num of sensors simultaneously uploading to UAV $m$ → (11)
 	- es el strategy of uploading
 		- hard to obtain strategies of other sensors & flight mode of UAV → difficult to make this strategy
-		- limited path & time for UAV → mutual inteference among ground sensors
+		- limited path & time for UAV → mutual interference among ground sensors
 - UAV 不能在 WSN 範圍待太久 → (12)
 
 ### with clustering
