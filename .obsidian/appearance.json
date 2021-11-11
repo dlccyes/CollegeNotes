@@ -4,7 +4,10 @@
   "translucency": false,
   "enabledCssSnippets": [
     "backimg",
-    "coffee"
+    "coffee",
+    "wyss",
+    "sjw",
+    "test"
   ],
   "theme": "obsidian"
 }
