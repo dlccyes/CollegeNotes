@@ -9,8 +9,9 @@ title: Opportunistic Data Collection in Cognitive Wireless Sensor Networks - Air
 
 [[Game Theory]]  
 [[Game Theory Papers]]  
-https://ieeexplore.ieee.org/document/9103004
 
+source: <https://ieeexplore.ieee.org/document/9103004>
+`
 <details open markdown="block">
   <summary>
     Outline
@@ -61,6 +62,7 @@ https://ieeexplore.ieee.org/document/9103004
 
 
 ## system model
+- ![](https://i.imgur.com/9WZPB39.png)
 - WSN
 	- can't connect with ground control directly
 	- has a radius of $D_{max}$

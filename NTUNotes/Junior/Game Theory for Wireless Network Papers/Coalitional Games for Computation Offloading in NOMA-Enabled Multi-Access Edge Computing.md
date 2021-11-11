@@ -5,12 +5,14 @@ layout: meth
 title: Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
 ---
 # Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
-[[Game Theory]]  
-[[Game Theory Papers]]  
+[[Game Theory]]
+[[Game Theory Papers]]
+
 my part in 2021.10.29 Game Theory Study Group  Presentation: Coalition Game
 
-summary:  
-https://ieeexplore.ieee.org/document/8917566
+source: <https://ieeexplore.ieee.org/document/8917566>
+ 
+my summary: <https://docs.google.com/presentation/u/2/d/1EhezbDUEwNOG1C-rk7YdQcB8-KnjVoxv>
 
 ## intro
 - MEC, multi-access edge computing
@@ -244,4 +246,4 @@ perform close to the optimal scheme
 
 ## conclusion
 - proposed algorithm is competitive to the optimal scheme (from 暴力搜索)
-- proposed scheme beats the other 3 schemes in terms of offloading percentage, computation overhead & convergence rate ==(???他這個沒有跟人家比吧???)==
+- proposed scheme beats the other 3 schemes in terms of offloading percentage, computation overhead & convergence rate
