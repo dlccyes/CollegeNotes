@@ -121,11 +121,10 @@ min 的第一項是 transmission capacity，不可能超過
 ![](https://i.imgur.com/Y61033Q.png)
 - ground sensors have incentive to form data cluster when they want to upload at the same time to the same UAV
 	- assume $jm$ link is better than $im$ link, and they want to upload at the same time
-		- sharing the bandwidth will make the overall rate between $im$'s & $jm$'s, thus $j$ 吃虧
-		- if $j$ help $i$ to upload its data, the overall rate = $jm$'s → faster than the bandwidth sharing scenario
+		- sharing the bandwidth will make $j$ uploads slower, therefor, if the fast $j$ help the slow $i$ to upload its data with its high speed, both will be better off
 - ![](https://i.imgur.com/6aJJDXL.png)
-	- $R_j$ is the total data needed to be uploaded by cluster head $j$
-		- $j$ is the cluster head, need to gather & upload all data of its member
+	- $R_j$ is the gathered data, the total data needed to be uploaded by cluster head $j$
+		- including all its members' data
 	- $\delta_{ij}$ = $i$ connects to cluster head $j$ (binary variable)
 	- a sensor can only be in one cluster at max → (18)
 	- a sensor can't be both cluster head & member → (19)
@@ -171,8 +170,8 @@ min 的第一項是 transmission capacity，不可能超過
 	- $\zeta(i,a_i)$ = interference between $i$ & $i$'s cluster head
 	- $min(C_{ia_i},r_i)$ = data gathering rate
 		- generation rate capped by transmission rate
-	- ==為何要乘 zeta==
 - a sensor can select 1 coalition at most
+
 #### pareto-based preference criterion
 basically, do the operation iff the subject of the operation is better off && everyone else isn't worse off (pareto) after the operation
 - switch
@@ -186,12 +185,13 @@ basically, do the operation iff the subject of the operation is better off && ev
 	- ![](https://i.imgur.com/zrG2EpP.png)
 - exchange
 	- 2 non-head sensors in different coalitions exchange coalitions iff they're both better off after the exchange && everyone in the 2 coalitions isn't worse off after the exchange
+	- ![](https://i.imgur.com/KsOEHIl.png)
 - equilibrium
 	- every sensor wouldn't find a better coalition to join (only considering itself)
 	- ![](https://i.imgur.com/PPpsszj.png)
 - at least one stabe coalition structure
 	- strategies are limited
-	- all operations are monotonicity
+	- all operations are monotonic
 		- each operation contributes to the total utility
 		- ![](https://i.imgur.com/tVQfIc4.png)
 	- so it will eventually converge to a coalition equilibrium structure
@@ -240,12 +240,12 @@ basically, do the operation iff the subject of the operation is better off && ev
 		- find the max transmission efficiency $\gamma_{jm}'$ of all detectable coalitions
 			- ![](https://i.imgur.com/DKAOMDF.png)
 	- flying
-		- fly to the optimum transmission position of the nearest coalition head with max speed $v_{max}$
+		- fly to the optimum transmission position of the nearest coalition head in max speed $v_{max}$
 	- hovering
 		- hovers at the optimum transmission position, receives data
 		- flight time threshold
 		- ![](https://i.imgur.com/A06vSYK.png)
-- transmission time difficult to guarantee
+- remaining transmission time difficult to estimate
 	- transmission time affects later coalitions
 
 #### fully detectable system
@@ -299,3 +299,6 @@ It converges!
 ## conclusion
 - air-ground combined online optimization >> unilateral data collection of UAV
 - UAV flight planning improves the data uploading efficiency
+
+## comments
+> Making a friend is better than making an enemy.

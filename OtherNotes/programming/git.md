@@ -51,5 +51,6 @@ https://gitbook.tw/chapters/rewrite-history/merge-multiple-commits-to-one-commit
 ### store credentials
 1. `git config --global credential.helper store`
 2. push or pull in your repo, enter your username & passphrase, then they will be saved to `~/.git-credentials`
+3. next time you push or pull, you won't need to enter the credentials
 
 <https://stackoverflow.com/questions/35942754/how-can-i-save-username-and-password-in-git>
