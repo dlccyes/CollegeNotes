@@ -26,5 +26,6 @@
   "emoji-shortcodes",
   "obsidian-auto-pair-chinese-symbol",
   "obsidian-outliner",
-  "graph-analysis"
+  "graph-analysis",
+  "obsidian-codemirror-options"
 ]

@@ -124,8 +124,13 @@ body {
     color: #f5b069 !important;
     text-decoration: none !important;
 }
+/* preview mode width */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+}
+/* edit mode width */
+.markdown-source-view.is-readable-line-width .CodeMirror {
+    max-width: 900px;
 }
