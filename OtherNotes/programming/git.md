@@ -44,3 +44,7 @@ https://gitbook.tw/chapters/using-git/reset-commit.html about git reset
 
 ref
 https://gitbook.tw/chapters/rewrite-history/merge-multiple-commits-to-one-commit.html
+
+## config related
+### store credentials
+https://stackoverflow.com/a/35942890/15493213

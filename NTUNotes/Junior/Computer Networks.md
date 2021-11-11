@@ -503,6 +503,21 @@ so there're many security problems now
 	- end-point authentication (Ch8)
 		- check if the source address is correct
 
+### miscellaneous
+- logical channel??
+- telecom
+	- ATM, Asynchronous Transfer Mode
+	- from telephone
+	- philosophy
+		- 專制
+		- 把一切規劃好
+	- 輸了
+- datacom
+	- the Internet
+	- philosophy
+		- whatever
+		- 海納百川
+
 ## Ch2 Application Layer
 ### principles
 #### architectures
@@ -688,8 +703,9 @@ so there're many security problems now
 	- 收到什麼就 ACK 什麼
 		- 收到 out of order → 丟掉 but ACK
 - ![](https://i.imgur.com/1jeQHRf.png)
+- 收到 ACK i → <=i 全部送達
 - problems
-	- 1 失敗 23456 成功 → resend all but 換其他失敗 → 浪費效能
+	- 1 傳掉 23456 傳成功 → resend all but 換其他失敗 → 浪費效能
 		- sol: [[#Selective Repeat SR]]
 
 ###### Selective Repeat (SR)
@@ -969,7 +985,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 
 
 
-## Ch4 Network Layer
+## Ch4 Network Layer - Data Plane
 - routing
 	- 找出路徑 to send
 	- 最好路徑 = shortest path
@@ -984,19 +1000,45 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- 大家合力算出來的 source to destination path
 - control plane 建路徑
 - data plane 做 forwarding
+- SDN, software-defined network
 
-## miscellaneous
-- logical channel??
-<br><br>
-- telecom
-	- ATM, Asynchronous Transfer Mode
-	- from telephone
-	- philosophy
-		- 專制
-		- 把一切規劃好
-	- 輸了
-- datacom
-	- the Internet
-	- philosophy
-		- whatever
-		- 海納百川
+## Ch5 Network Layer - Control Plane
+### routing
+- 網管去設 link cost
+- ![](https://i.imgur.com/XPxvgIm.png)
+- 找 least cost path
+- a node
+	- incoming interface
+	- outgoing interface
+- flooding
+	- 從原本的 node 透過 link 擴散出去
+	- outgoing interface 各 copy 一份
+	- 正常 forwarding
+		- 找到要的 outgoing interface 送出去
+
+#### link-state routing algorithm
+- flood global information
+- source routing
+- ![](https://i.imgur.com/6gHVg6I.png)
+- [[Dijkstra's Algorithm]]
+	- $\in O(n^2)$
+	- oscillation may occur
+	- ![](https://i.imgur.com/c8jA1F0.png)
+	- ![](https://i.imgur.com/m5b1nab.png)
+	- ![](https://i.imgur.com/IjR1OEq.png)
+		- D(x) is x's cost (from source) and its predecessor (how it got the cost)
+- if any node has been changed, run the Dijkstra's algorithm again
+
+#### distance-vector routing algorithm
+- hop-by-hop routing
+- Bellman-Ford Algorithm
+	- $d_x(y)=min_v\{c(x,v)+d_v(y)\}$
+		- $d_x(y)$ = least cost from x to y
+		- $c(x,v)$ = direct cost from x to v, with x neighboring v
+	- ![](https://i.imgur.com/YjAqSYK.png)
+- 跟鄰居交換訊息
+	- new info / change → recompute 到達 neighbor 的 least cost path → tell neighbors for any change
+		- ![](https://i.imgur.com/WSTZZFF.png)
+			- x 原本到 z 是 7，拿到 y 的資料後發現 3 就好，update 並告訴 neighbor
+- async
+- ![](https://i.imgur.com/NjrbAFN.png)

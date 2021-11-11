@@ -124,7 +124,7 @@ min 的第一項是 transmission capacity，不可能超過
 - ![](https://i.imgur.com/6aJJDXL.png)
 	- $R_j$ is the total data needed to be uploaded by cluster head $j$
 		- $j$ is the cluster head, need to gather & upload all data of its member
-	- $\delta_{ij}$ = i connects to cluster head j
+	- $\delta_{ij}$ = $i$ connects to cluster head $j$ (binary variable)
 	- a sensor can only be in one cluster at max → (18)
 	- a sensor can't be both cluster head & member → (19)
 - ![](https://i.imgur.com/a7c5hMI.png)
@@ -156,8 +156,8 @@ min 的第一項是 transmission capacity，不可能超過
 - j will upload data when y coordinate $\in \tilde{D_j}$
 	- $\tilde{D_j}$ changes with cluster situation
 	- ![](https://i.imgur.com/f2qE3yI.png)
-- transmission correlation $\zeta(i,j)$ = inteference between i & j
-	- when i & j's uploading data range overlaps, they might cause interference to each other's uploading
+- transmission correlation $\zeta(i,j)$ = inteference between $i$ & $j$
+	- when $i$ & $j$'s uploading data range overlaps, they might cause interference to each other's uploading
 	- ![](https://i.imgur.com/28dy5jS.png)
 	- clustering & offloading data to sensors closer to UAV trajectory will then stop its interference to others
 
@@ -204,7 +204,7 @@ basically, do the operation iff the subject of the operation is better off && ev
 - for coalition heads
 	- merge & exchange operation
 	- split operation can be covered with members departure & exchange, so not separately calculated
-- $O(C_1+2(\eta N-1)+C_2)$
+- $O(C_1+2(\eta N-1)+C_2)$ each strategy updates
 	- $\eta$ = probability of sensors to update active states
 
 ## UAV online flight control
@@ -240,7 +240,7 @@ basically, do the operation iff the subject of the operation is better off && ev
 	- flying
 		- fly to the optimum transmission position of the nearest coalition head with max speed $v_{max}$
 	- hovering
-		- hovering at the optimum transmission position, receiving data
+		- hovers at the optimum transmission position, receives data
 		- flight time threshold
 		- ![](https://i.imgur.com/A06vSYK.png)
 - transmission time difficult to guarantee
@@ -253,3 +253,47 @@ basically, do the operation iff the subject of the operation is better off && ev
 - obtain optimal flight speed & hovering time in the entire network through the algorithm
 
 ## simulation results
+- parameter settings
+	- ![](https://i.imgur.com/ThAPgm4.png)
+- forming coalitions
+	- ![](https://i.imgur.com/HhGiS6y.png)
+- UAV flight mode
+	-  ![](https://i.imgur.com/TxHHdES.png)
+-  if not specified, 
+	-  $N=40$
+	-  $\eta=0.8$
+	-  $T_{max}=400s$
+	-  $p_j=0.1W$
+	-  $P_{LoS}'=0.6$
+
+### collected data vs. number of sensors
+- ![](https://i.imgur.com/uFesFfc.png)
+- without coalition, collected data doesn't increase with the increase of ground sensors
+	- UAV has limited flight time
+- with coalition, collected data is closed to data gathered
+### collected data vs. sensors' active rate
+- ![](https://i.imgur.com/uFux52b.png)
+- active rate = probability of being in active state (as opposed to silent  state)
+- limited UAV capability → the gap from collected data to gathered data increase with the increase of active rate
+
+### collected data vs. flying time constraint
+- ![](https://i.imgur.com/krBXYYT.png)
+
+### collected data vs. sensors' transmission power
+- ![](https://i.imgur.com/HtXLbJb.png)
+- more transmission power → larger transmission range → more upload on its own → more interference → marginal improvement decreases
+
+### collected data vs. transmission reliability threshold
+- ![](https://i.imgur.com/vMscY0c.png)
+- transmission reliability < threshold → can't be coalition head
+- lower threshold → more options (still the nearest to the UVA trajectory would be selected, so below 0.7 the coalition formation is always the same)
+- but more options mean more information interaction between sensors → $P_{LoS}'=0.7$ is optimal 
+
+### convergence
+![](https://i.imgur.com/aWzyWXP.png)
+
+It converges!
+
+## conclusion
+- air-ground combined online optimization >> unilateral data collection of UAV
+- UAV flight planning improves the data uploading efficiency

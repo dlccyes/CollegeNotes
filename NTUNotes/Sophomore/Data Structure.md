@@ -830,6 +830,6 @@ https://people.ksp.sk/~kuko/gnarley-trees/Skew.html
         - amortized cost = 1 - 1 = 0
       - amortized cost = 2log(n) + 0 $\in O(logn)$
 
-## Dijkastra's Algorithm
+## [[Dijkstra's Algorithm]]
 ![](https://i.imgur.com/vAECkKj.png)
 ![](https://i.imgur.com/rZnNe0Z.png)
