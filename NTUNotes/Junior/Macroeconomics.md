@@ -770,3 +770,6 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- 非勞動所得 < 0 (poor) → [[income effect]] 較大 → 增加工時
 	- ![](https://i.imgur.com/hBsytbN.png)
 	
+### 消費券 concumption voucher
+- 為 transfer payment
+- 既是消費也是支出（一定需要花掉） → 左右相消，不影響選擇
