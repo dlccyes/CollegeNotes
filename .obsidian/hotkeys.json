@@ -129,5 +129,13 @@
       ],
       "key": "ArrowUp"
     }
+  ],
+  "app:open-settings": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "O"
+    }
   ]
 }

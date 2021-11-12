@@ -149,6 +149,11 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 			- https://brainly.com/question/14287027
 			- ![](https://i.imgur.com/SMZm3DK.png)
 
+```py
+
+print('ddd')
+```
+
 
 #### I-format
 - Immediate-format
@@ -295,21 +300,28 @@ only link/load library procedure when called
 #### basic multiplier
 - 每次 cycle 加一次，要很多個 cycle
 	- sol: [[#faster multiplier]]，空間換取時間
-- ![](https://i.imgur.com/tV01U63.png)
-- ![](https://i.imgur.com/lWq3ENV.png)
+- ![](https://i.imgur.com/UG28Xcy.png)
+- length of product = sum of multiplicand & multiplier length, ignoring the sign bit
+- ![](https://i.imgur.com/r4vUwwN.png)
 - 每輪都上面 pointer 都左移一格
 - 每輪下面 pointer 都右移一格
 	- 指到 1 → 相加
 - optimized
-	- ![](https://i.imgur.com/4HWH8JZ.png)
+	- ![](https://i.imgur.com/S6NL0BB.png)
+	- multiplicand & ALU reduced to 64 bits
+		- unused portion of registers & adders
+- e.g.
+	- ![](https://i.imgur.com/FVmWzJt.png)
+
+#### signed multiplication
+- 先弄成正的，乘完再轉回去
 
 #### faster multiplier
 - 用多一點加法器，省下時間
-- more cost higher performance
+- more cost, higher performance
 	- cost performance tradeoff
-- ![](https://i.imgur.com/MGGdODU.png)
-- 可以 pipeline
-	- 很多 in parallel
+- ![](https://i.imgur.com/XxyrRy2.png)
+- 可以 pipeline → 可以很多 in parallel → even faster
 
 #### instructions
 - mul
@@ -336,24 +348,44 @@ only link/load library procedure when called
 - division 後面 dependent on 前面結果 → 無法 parallel → time complexity 高
 
 #### divisor
-- ![](https://i.imgur.com/cTJXGXV.png)
+- ![](https://i.imgur.com/g1OFxzb.png)
+- ![](https://i.imgur.com/fRJLg8N.png)
+- e.g.
+	- ![](https://i.imgur.com/HrGvEdK.png)
 - 每輪 divisor pointer 右移一格，quotient pointer 左移一格
 - optimized divider
-	- ![](https://i.imgur.com/PjlPHf1.png)
-	- divisor 不用動ㄅ
+	- ![](https://i.imgur.com/aLtn0IG.png)
+	- shift the operands & quotient simultaneously
+	- divisor register & ALU halved 
 	- like optimized multiplier
 		- ![](https://i.imgur.com/Sip3DHI.png)
 - 每次 cycle 減一次，要很多個 cycle
-- faster division
-	- 不能 parallel 因為 conditional to 前一級 remainter
-	- multiple quotient bits per step
-	- 還是要好多 cycles
+
+#### signed division
+- 正負號不應影響數字
+	- e.g. 
+		- 7/2 = 3 ... 1
+		- -7/2 = -3 ... -1 NOT 4 ... 1
+
+#### faster division
+- 不能 parallel 因為需要先知道 remainder 之正負才能繼續
+	- if negative → remainder 要加回 divisor
+- SRT division
+	- predict multiple quotient bits in one step, then correct errors later
+- nonrestoring division
+	- don't add the divisor back immediately if the remainder's negative
+	- 1 clock cycle per step
+- nonperforming division
 
 #### instructions
 - div, rem
 - divu, remu
 - no overflow for 除以 0 & overflow
 	- return 定義
+
+### instruction set with multiplication & division
+![](https://i.imgur.com/QdxrsDH.png)
+
 
 ### float
 - 之前介紹的東西都是 integer 的
