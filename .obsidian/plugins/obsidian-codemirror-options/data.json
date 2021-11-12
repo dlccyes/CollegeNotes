@@ -12,7 +12,7 @@
   "enableOpenMD": false,
   "cursorBlinkRate": 530,
   "foldLinks": false,
-  "foldImages": false,
+  "foldImages": true,
   "containerAttributes": false,
   "syntaxHighlighting": false,
   "autoAlignTables": false,

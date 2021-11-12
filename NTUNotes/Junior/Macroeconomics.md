@@ -761,3 +761,15 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - w 上升 → leisure 變貴 → budget line 變陡
 - ![](https://i.imgur.com/LoIt5iz.png)
 - ![](https://i.imgur.com/zyp6jz0.png)
+
+### 勞動所得稅
+- 勞動所得稅率 $\tau$
+- real wage w → $(1-\tau)w$ 
+	- leisure 變便宜 → 消費 demand 降低 ([[substitution effect]])
+	- 非勞動所得 > 0 (rich) → [[substitution effect]] 較大 → 減少工時 ($n^s$)
+	- 非勞動所得 < 0 (poor) → [[income effect]] 較大 → 增加工時
+	- ![](https://i.imgur.com/hBsytbN.png)
+	
+### 消費券 concumption voucher
+- 為 transfer payment
+- 既是消費也是支出（一定需要花掉） → 左右相消，不影響選擇
