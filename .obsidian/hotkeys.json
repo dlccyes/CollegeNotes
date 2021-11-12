@@ -24,6 +24,13 @@
         "Shift"
       ],
       "key": "/"
+    },
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "C"
     }
   ],
   "command-palette:open": [

@@ -1,11 +1,12 @@
 {
   "baseFontSize": 21,
-  "cssTheme": "Golden Coffee",
+  "cssTheme": "",
   "translucency": false,
   "enabledCssSnippets": [
     "backimg",
     "sjw",
-    "coffee"
+    "test",
+    "nebula"
   ],
   "theme": "obsidian"
 }
