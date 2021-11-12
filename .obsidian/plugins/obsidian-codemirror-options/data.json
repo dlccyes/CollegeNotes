@@ -17,7 +17,7 @@
   "syntaxHighlighting": false,
   "autoAlignTables": false,
   "renderCode": false,
-  "renderHTML": false,
+  "renderHTML": true,
   "renderChart": false,
   "renderAdmonition": false,
   "renderQuery": false,

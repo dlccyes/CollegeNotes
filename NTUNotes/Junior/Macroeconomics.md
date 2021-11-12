@@ -282,7 +282,8 @@ $$GDP = C+I+G+NX$$
 	- 需要定期改變基期
 
 #### 連鎖加權 GDP (chain-weighting GDP)
-- Fisher Quantity Index
+- Fisher Quantity Index $F^Q_t$
+	- 實質產出成長率
 	- 以兩個基期計算的 GDP 成長率的幾何平均數
 	- ![](https://i.imgur.com/efXNOGO.png)
 	- $F_t^Q=\sqrt{(1+g_t^1)(1+g_t^2)}=1+\bar{g_t}$
@@ -295,11 +296,11 @@ $$GDP = C+I+G+NX$$
 	- $Y_0$ = base period nominal GDP
 - e.g.
 	- ![](https://i.imgur.com/2Ru9IDC.png)
-		- ((260/200)*(350/280))**0.5=1.275
-		- 200*1.275=255
-		- ((38/35)*(48/44))**0.5=1.088
-		- 1.275*1.088=1.387
-		- 200*1.387=277
+		- ((260/200)x(350/280))^0.5=1.275
+		- 200x1.275=255
+		- ((38/35)x(48/44))^0.5=1.088
+		- 1.275x1.088=1.387
+		- 200x1.387=277
 - pros
 	- 較能反映鄰近期間實際生產活動變化
 - cons
@@ -343,7 +344,6 @@ $$GDP = C+I+G+NX$$
 		- e.g. 買 US treasury OR 國外資產 ==(???????????????? 到底是金錢還是商品或要素形式流出)==
 	- CA > 0 → 國民儲蓄 → 國內投資 → 超額儲蓄 excessive saving
 		- 代表賺來的錢沒被消費掉
-
 	- 期末資本存量 = 期初資本存量 + 淨投資 (I)
 	- 期末國外資產淨額 = 期初國外資產淨額 + 經常帳盈餘 (CA)
 
@@ -365,7 +365,7 @@ $$GDP = C+I+G+NX$$
 - 用 retail price
 	- 生產者物價指數 WPI 用 wholesale price
 - ![](https://i.imgur.com/B0KChNH.png)
-	- base period: ㄋ0
+	- base period: 0
 	- intuition: 過去的商品拿來現在賣，貴了多少
 		- 分子：過去的商品數量用現在的價格算
 	- 利用基期支出比重做加權平均
@@ -373,11 +373,14 @@ $$GDP = C+I+G+NX$$
 		- 會高估 inflation
 			- 忽略人們會少買漲得多的東西 ([[substitution effect]])
 #### PCE deflator, personal consumption expenditures deflator
-- Fisher Price Index
-	- like Fisher Quantity Index but 變動項為 price
-- 現在的數量拿去過去 (Paasche) & 過去的數量拿來現在 (Laspeyres) 的幾何平均
-- ![](https://i.imgur.com/4J8jmnh.png)
+- Fisher Price Index $F^P_t$
+	- 物價上漲率
+	- like [[#連鎖加權 GDP chain-weighting GDP|Fisher Quantity Index]] $F^Q_t$ but 變動項為 price
+	- 現在的數量拿去過去 (Paasche) & 過去的數量拿來現在 (Laspeyres) 的幾何平均
+	- ![](https://i.imgur.com/4J8jmnh.png)
+	- $F^P_t\times F^Q_t=\dfrac{Y_t}{Y_{t-1}}$<br>i.e.物價上漲率 x 實質產出成長率 = 名目 GDP 成長率
 - $P^C_t=F^P_1\times F^P_2\times...\times F^P_t$
+- $P^C_t\times Y^C_t=Y_t$<br>i.e.物價指數 x 實質 GDP = 名目 GDP
 - 介於 Paasche & Laspeyres 之間，考慮了相對價格的影響 → 較能反映 inflation
 - 使用滾動基期 → 較能反映貨幣政策對物價的實際影響
 - Fed 政策主要參考指標
@@ -388,6 +391,11 @@ $$GDP = C+I+G+NX$$
 	- (1.346*1.4)**0.5 = 1.373
 	-  ((440/350)*(480/380))**0.5 = 1.260
 	- 1.373*1.260 = 1.730
+
+### practicar
+![](https://i.imgur.com/6fj7KzX.png)
+![](https://i.imgur.com/ybsGYwk.png)
+
 
 ## Ch3 景氣波動的定型特徵
 - business cycle 景氣循環
@@ -744,7 +752,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- ![](https://i.imgur.com/C4aSIDW.png)
 	- c & l $\in$ normal goods
 		- 消費 & leisure 都是 normal goods
-		- sufficient conditions ==???==
+		- sufficient conditions
 			- $u_{cc}-u_{cl}\dfrac{u_c}{u_l}<0$
 				- $\dfrac{u_{cc}}{u_{cl}}<\dfrac{u_c}{u_l}$
 			- $u_{ll}-u_{cl}\dfrac{u_l}{u_c}<0$
@@ -770,6 +778,15 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- 非勞動所得 < 0 (poor) → [[income effect]] 較大 → 增加工時
 	- ![](https://i.imgur.com/hBsytbN.png)
 	
-### 消費券 concumption voucher
+### 消費券 consumption voucher
 - 為 transfer payment
-- 既是消費也是支出（一定需要花掉） → 左右相消，不影響選擇
+- 既是消費也是支出（一定需要花掉） → 左右相消，不影響 budget constraint
+- 會使 $MRS_{l,c}$ 上升，leisure 意願上升，消費&勞動意願下降
+	- ![](https://i.imgur.com/EdcqPEn.png)
+	- $u_{cc}-u_{cl}\dfrac{u_c}{u_l}<0$ 是 normal good 的必要條件
+	- ![](https://i.imgur.com/ISyQ9e7.png)
+- ![](https://i.imgur.com/HXCodFH.png)
+	- endowment = E
+	- got voucher $v$ → MRC i.e. slope of indifference curve increase, budget line stays the same → new equilibrium F
+	- $c_2<c_1$ but  $c_2+v>c_1$ 
+	- 所謂 budget line 不變是在 c 已經剪掉了 $v$ 的情況下，不然其實是 budget line 上移，indifference curve 穿過 $c_1+v$，於是移到新均衡 where indifference curve 切 new budget line
