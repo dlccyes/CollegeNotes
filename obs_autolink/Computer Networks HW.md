@@ -1,8 +1,9 @@
 ---
-title: Computer Networks HW
+title: Computer Networks PA
 layout: meth
+parent: Computer Networks PA
 ---
-# Computer Networks HW
+# Computer Networks PA
 {: .no_toc }
 
 <details open markdown="block">

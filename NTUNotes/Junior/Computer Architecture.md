@@ -1,3 +1,8 @@
+---
+title: Computer Architecture
+layout: meth
+has_children: true
+---
 # Computer Architecture
 
 ## resources
@@ -266,7 +271,7 @@ e.g.
 
 lui
 ![](https://i.imgur.com/RNsyU2I.png)
-`lui x19, 976` → 把 976 插到 [31:12]
+`lui x19, 976` → 放 12 個 0 到 976 後面 
 
 #### example
 ![](https://i.imgur.com/vXfjxEW.png)

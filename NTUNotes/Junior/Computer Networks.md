@@ -1,8 +1,10 @@
 ---
 aliases: [電網導]
 layout: meth
+title: Computer Networks
+has_children: true
 ---
-# Computer Networking
+# Computer Networks
 {: .no_toc }
 
 <details open markdown="block">
