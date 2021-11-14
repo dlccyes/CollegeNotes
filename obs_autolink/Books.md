@@ -1,2 +1,0 @@
-# Books
-https://whatihaveread.net/

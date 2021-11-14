@@ -99,6 +99,13 @@ img {
     border-radius: 15px;
 }
 
+
+.theme-dark {
+    --settings-red: #d0535375;
+    --settings-blue: #7772d76e;
+    --settings-red-light: var(--interactive-accent);
+    --overlay-bg: #101f618a;
+}
 /*prompt i.e. search box*/ 
     .prompt{
         background-color: var(--overlay-bg);
@@ -110,11 +117,9 @@ img {
     }
 
 /*settings*/
-    .theme-dark {
-        --settings-red: #d0535375;
-        --settings-blue: #7772d76e;
-        --settings-red-light: var(--interactive-accent);
-        --overlay-bg: #53619f4d;
+    .modal.mod-settings .vertical-tab-content-container {
+        padding: 0px 0 0px 0;
+        /*height: 70vh;*/
     }
     /*group title*/
         .vertical-tab-header-group {
@@ -164,6 +169,20 @@ img {
     color: #ffc5c5db !important;
     /*transition: color ease-out 200ms;*/
 }
+
+/*blockquote*/
+/*edit*/
+.cm-s-obsidian span.cm-quote{
+    color: var(--text-normal);
+}
+/*preview*/
+div:not(.CodeMirror-activeline)>.HyperMD-quote, blockquote {
+    background: #6e96df36;
+    border-radius: 10px;
+    border: 0px solid var(--background-modifier-border) !important;
+    border-left: 3px solid #989fded1 !important;
+}
+
 
 /*link*/
     /*external link*/
@@ -304,21 +323,64 @@ body {
     border: 0px solid #ddd;
     padding: 0.1em 0.4em;
 }*/
-.cm-inline-code, .markdown-preview-view code{
-    margin-right: .2em;
-    border-radius: 7px;
-    color: #e9eaff !important;
-    background: #5fabe161;
-    border: 0px solid #ddd;
-    padding: 0.1em 0.4em;
-}
+
+
+/* inline code */
+    /*edit*/
+        /*``*/
+        .cm-s-obsidian span.cm-inline-code{
+            /*background: #5fabe161;*/
+            background: transparent;
+            padding: 0em 0em;
+        }
+        /*context*/
+        .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight){
+            background: #5fabe161;
+            /*background: transparent;*/
+            padding: 0em 0em;
+        }
+    /*preview*/
+    .cm-inline-code, .markdown-preview-view code{
+        margin-right: .2em;
+        border-radius: 7px;
+        color: #e9eaff !important;
+        background: #5fabe161;
+        border: 0px solid #ddd;
+        padding: 0.1em 0.4em;
+    }
 
 /*codeblock*/
+    /*edit*/
+    .cm-s-obsidian .HyperMD-codeblock{
+        background: #00000055 !important;
+        color: #e9eaff !important;
+        line-height: 2em;
+        border-radius: 10px;
+    }
+    /*preview*/
     .code-block-wrap{
         background: #00000055 !important;
         border-radius: 10px;
     }
     .code-block-wrap code{
-        background: #000 !important;
+        background: #00000000 !important;
     }
 
+/*custom codeblock*/
+    /*red*/
+        .language-red{
+            background: #ef26269e !important;
+        }
+        .language-red.code-block-pre__has-linenum{
+            padding-left: 2em !important;
+        }
+        .language-red .code-block-linenum-wrap, .language-red .code-block-lang-name{
+            display: none !important;
+        }
+
+
+/*higlight*/
+.markdown-preview-view mark, .cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight {
+    background-color: #f997cf00;
+    color: #ffb365;
+}

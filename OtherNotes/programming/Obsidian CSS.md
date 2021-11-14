@@ -16,3 +16,7 @@ resize no % number
     display: none;
 }
 ```
+
+## customized codeblock
+<https://forum.obsidian.md/t/notice-blocks-warning-info-success-danger-blocks/4216/7?u=dlccyes>
+` ```red ` 會變成 class `language-red`

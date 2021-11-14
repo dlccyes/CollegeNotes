@@ -724,12 +724,14 @@ so there're many security problems now
 	- window size 固定 N，隨著 ACK 回來往右 slides
 	- timeout 沒有 ACK → resend 整個 window
 	- timer 根據 windows 裡最舊者
+	- ![](https://i.imgur.com/CpIzweW.png)
 - receiver
 	- cumulative ACK
 		- 只需要 maintain 一個 ACK
 		- ACK n 表 n 以前的全部都收到
 	- 收到什麼就 ACK 什麼
 		- 收到 out of order → 丟掉 but ACK
+	- ![](https://i.imgur.com/SAZvT9b.png)
 - ![](https://i.imgur.com/1jeQHRf.png)
 - 收到 ACK i → <=i 全部送達
 - problems

@@ -38,8 +38,10 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-list {
    display: inline !important;
 }
   
-/* except list markers */ span.cm-formatting-list,
-/*code block backticks */ span.cm-formatting-code-block.cm-hmd-codeblock,
+/* except list markers */ 
+span.cm-formatting-list,
+/*code block backticks */
+span.cm-formatting-code-block.cm-hmd-codeblock,
 /* optionally header hashes */ /*span.cm-formatting-header
 { display: inline !important; }
   
@@ -84,11 +86,11 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hmd-indent-in-quote {
 }
 
 div:not(.CodeMirror-activeline)>.HyperMD-quote {
-   background-color:rgb(238, 234, 234);
-   border-left: 3px solid var(--text-selection);
-   border-color: red !important; 
+   /*background-color:rgb(238, 234, 234);*/
+   /*border-left: 3px solid var(--text-selection);*/
+   /*border-color: red !important; */
    border-radius: 0 8px 8px 0;
-   font-size: 17px;
+   /*font-size: 17px;*/
    line-height: 1.5em;
    margin-left: 5px;
    padding: 12px 10px 15px 8.5px;

@@ -149,12 +149,6 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 			- https://brainly.com/question/14287027
 			- ![](https://i.imgur.com/SMZm3DK.png)
 
-```py
-
-print('ddd')
-```
-
-
 #### I-format
 - Immediate-format
 - `operation rd, imm(rs1)`
@@ -167,7 +161,6 @@ print('ddd')
 - store byte/halfword/word/doubleword
 - immediate: offset for base address i.e. rs1
 - `sb rs1 rs2`
-
 
 #### SB-format
 - ![](https://i.imgur.com/kleSjvP.png)
@@ -398,8 +391,16 @@ only link/load library procedure when called
 #### format
 - IEEE Std 754
 - ![](https://i.imgur.com/fZi1DqR.png)
-- Bias 把 exponent 轉成正 → unsigned
-	- $2^{-100}$ → $2^{-100+Bias}$
+- placed this way for sorting purpose
+	- sign → exponent → fraction
+- exponent
+	- overflow: 太正
+	- underflow: 太負
+	- Bias 把 exponent 轉成正 → unsigned
+		- $2^{-100}$ → $2^{-100+Bias}$
+		- simplicity for sorting
+		-   不然 negative 的 2s complement 看起來很大
+- fraction = 0-1
 - 00....000 & 11...111 都保留
 - single-precision
 	- min 00000001
@@ -412,8 +413,7 @@ only link/load library procedure when called
 	- ![](https://i.imgur.com/7NmpchQ.png)
 
 #### number representation
-![](https://i.imgur.com/SnIXuuf.png)
-
+- ![](https://i.imgur.com/SnIXuuf.png)
 - denormalized number
 	- exponent = 0
 		- so $fraction\times 2^{-Bias}$
@@ -426,32 +426,54 @@ only link/load library procedure when called
 	- fraction != 0
 
 #### addition
+![](https://i.imgur.com/bFgTJBs.png)
 ![](https://i.imgur.com/MPx04i7.png)
-![](https://i.imgur.com/Auvppb2.png)
+![](https://i.imgur.com/84xT9Wf.png)
 
 #### multiplication
+![](https://i.imgur.com/YMjRktx.png)
 ![](https://i.imgur.com/e9W7yvI.png)
+FP multiplier is FP adder but use multiplier for significands
 
 #### instructions
 ![](https://i.imgur.com/og6dgKP.png)
+- ![](https://i.imgur.com/buhsiTs.png)
 
 #### examples
-F to C
+##### escaping from barbaric yanks
 ![](https://i.imgur.com/n8xMAts.png)
 
-array mul
+```
+flw f0, const5(x3) //f0 = 5
+flw f1, const(x9) //f1 = 9
+fdiv.s f0, f0, f1 //f0 = f0/f1 = 5/9
+flw f1, const32(x3) //f1 = 32
+fsub.s f10, f10, f1 //f10 = f10 - f1 = f10 - 32
+fmul.s f10, f0, f10 //f10 = f0 x f10 = 5/9 x f10
+jalr x0, 0(x1) //return
+```
+
+##### array multiplication
 ![](https://i.imgur.com/poiyR71.png)
 ![](https://i.imgur.com/u6ye4CT.png)
+- $a_{2,3}$ in 5x5 → 1x5+3 = 8th item (左到右，上到下)
+- 64-bit → 要再 x8 `slli 3`
 ![](https://i.imgur.com/NS7iJfq.png)
 
 #### rounding
 - extra bits of precision
-	- guard
-	- round
+	- guard & round
+		- guard 存目標位數後 1st 位，round 存目標位數後 2nd 位，then round with 這兩位
+			- e.g. (round to 小數點後第二位) 1.5252 → 1.53 bc $52\in [51,99]$
+		- without these 2，則永遠只保留目標位數
+		- ![](https://i.imgur.com/cQfcxqf.png)
 	- sticky
+		- guard & round bit 右邊有非 0 位數 
+		- without sticky bit，不知道 0.50 是否其實是 0.500000...000001
 - ![](https://i.imgur.com/tPo5qeq.png)
 	- nearest even
-		- 超額比序（剛好一半時）為 nearest even 優先
+		- tie (剛好一半) → round to even
+		- tie 時 round 完 last bit 絕對是 0
 		- ![](https://i.imgur.com/3V7aXS1.png)
 
 

@@ -19,3 +19,6 @@ layout: meth
 
 ## CSS
 [[Obsidian CSS]]
+
+## jekyll
+<https://simply-jekyll.netlify.app/posts/setup>
