@@ -764,7 +764,7 @@ finantial integration can be a substitude of fidcal integration
 
 - size：沒歐美大
 - regulation：金融管制嚴格
-- price stability：通貨緊縮（金融危機錢比歐美穩定）
+- price stability：通貨緊縮（金融危機前比歐美穩定）
 - macroeconomics stability：失落的三十年
 
 歐元區

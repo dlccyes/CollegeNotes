@@ -1,7 +1,7 @@
 ---
 title: Computer Networks PA
 layout: meth
-parent: Computer Networks PA
+parent: Computer Networks
 ---
 # Computer Networks PA
 {: .no_toc }
