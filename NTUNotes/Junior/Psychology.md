@@ -229,7 +229,15 @@
 - 語音迴路
 	- ![](https://i.imgur.com/LuCsfX2.png)
 		- primary & recency effect
-		- 順向干擾
-			- 前面學的東西干擾後面學的東西
-		- 逆向干擾
-			- 後面學的東西干擾前面學的東西
+- 順向干擾 proactive interference
+	- 前面學的東西干擾後面學的東西
+- 逆向干擾 retroactive interference
+	- 後面學的東西干擾前面學的東西
+- 深度學習 deep learning
+	- 內化
+	- ![](https://i.imgur.com/MVgcC7n.png)
+- false memory
+	- 覺得怎樣就該怎樣，據此創造假意義
+	- e.g. 命案該有刀 → 問目擊者有沒有刀，會回答有刀，however 其實沒有刀
+	- 被 leading question 暗示
+		- 小孩很容易接受暗示，亂回答
