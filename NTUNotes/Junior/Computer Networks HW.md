@@ -32,6 +32,13 @@ parent: Computer Networks
 
 > 作業二有要求大家實作 EWMA ，這部分的實作需要追蹤模擬程式裡面的時間，因此要把 time 這個 global variable 移到上面，大家可以使用這個 global variable 讀取封包傳出和接收的時間，修改過的程式碼已經傳新上傳，同學也可以自行將 time 這個 variable 移到上面讓你的 function 可以讀取到。
 
+`gcc [student id].c -o [student id] -std=gnu11`
+`./[student ID] 10 0 0 10 2`
+`(b) ./[student ID] 20 0.1 0 10 2`
+`(c) ./[student ID] 20 0 0.1 10 2`
+`(d) ./[student ID] 20 0.1 0.1 10 2`
+
+
 - implementations
 	- https://github.com/JordanMontgomery/go-back-n
 	- https://github.com/KiranThomasCherian/Computer-Networks-/tree/main/Flow%20control%20protocols/Go%20back%20n
