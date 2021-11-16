@@ -78,3 +78,19 @@ parent: Computer Networks
 		- 在 main while loop，`evptr->evtype = TIMER_INTERRUPTTIMER_INTERRUPT` 時 call `timerinterrupt()`
 	- `insertevernt()`
 		- 把 function 設的 `evptr` 真正弄到 `evlist` 裡
+
+### report
+./b08901064 10 0 0 10 2
+![](https://i.imgur.com/u9R99Gw.png)
+
+./b08901064 20 0.1 0 10 2
+time = 391
+![](https://i.imgur.com/R7jTnQN.png)
+
+./b08901064 20 0 0.1 10 2
+time = 511
+![](https://i.imgur.com/ohbsz4A.jpg)
+
+ ./b08901064 20 0.1 0.1 10 2
+ time = 385
+![](https://i.imgur.com/v5MjGoS.png)

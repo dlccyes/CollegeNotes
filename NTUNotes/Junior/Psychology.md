@@ -229,15 +229,23 @@
 - 語音迴路
 	- ![](https://i.imgur.com/LuCsfX2.png)
 		- primary & recency effect
-- 順向干擾 proactive interference
-	- 前面學的東西干擾後面學的東西
-- 逆向干擾 retroactive interference
-	- 後面學的東西干擾前面學的東西
+- interference
+	- 順向干擾 proactive interference
+		- 前面學的東西干擾後面學的東西
+	- 逆向干擾 retroactive interference
+		- 後面學的東西干擾前面學的東西
+	- 雙語環境的小孩學語言較慢
+		- 思考較有彈性
 - 深度學習 deep learning
 	- 內化
 	- ![](https://i.imgur.com/MVgcC7n.png)
 - false memory
-	- 覺得怎樣就該怎樣，據此創造假意義
+	- 你對於各個人事物的知識有連結，據此創造假意義
+		- 可能發生於 encoding or retrieval
 	- e.g. 命案該有刀 → 問目擊者有沒有刀，會回答有刀，however 其實沒有刀
 	- 被 leading question 暗示
 		- 小孩很容易接受暗示，亂回答
+	- so 各種問卷式量表問題很多
+- 海馬迴
+	- 移除海馬迴，舊記憶還在，but 新記憶 no
+	- 參與記憶的形成
