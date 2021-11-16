@@ -17,3 +17,8 @@
 ## zip
 - zip `haha` to `haha.zip`
 	- `zip -r haha.zip haha`
+
+## other commands
+- autocomplete from history
+	- `ctrl+R`
+	

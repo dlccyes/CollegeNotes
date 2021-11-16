@@ -57,3 +57,5 @@ layout: meth
 	- https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/
 		- haven't read
 		- said to be commonly sited
+- 台灣狀況
+	- https://forum.gamer.com.tw/C.php?bsn=60076&snA=5444020

@@ -719,6 +719,8 @@ so there're many security problems now
 
 ##### sliding window protocol
 ###### Go Back N (GBN)
+- nice interactive visualization
+	- <iframe src="https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/go-back-n-protocol/index.html" width=100% height=500px></iframe>
 - 一樣有 sequence number
 	- 3 bit → 0-7
 - sender
@@ -727,6 +729,7 @@ so there're many security problems now
 	- timeout 沒有 ACK → resend 整個 window
 	- timer 根據 windows 裡最舊者
 	- ![](https://i.imgur.com/CpIzweW.png)
+	- receive 的時候，若 acknum+1 = nextseqnum，則沒有 active 的 packet，so 不用 timer
 - receiver
 	- cumulative ACK
 		- 只需要 maintain 一個 ACK

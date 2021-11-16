@@ -51,6 +51,9 @@
 ### 0056 元大高股息
 - 總管理費
 	- 0.66%
+- 配息
+	- every 15 months
+	- 1.5% 左右
 - 資料
 	- <iframe src="https://www.macromicro.me/etf/tw/intro/0056" width=100% height=500px></iframe>
 
