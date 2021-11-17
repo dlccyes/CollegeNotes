@@ -14,13 +14,16 @@ layout: meth
 {:toc}
 </details>
 
-## 影片
-- W1 intro
-	- https://www.dropbox.com/s/n1usof8hkcrq3b8/macro_intro.mp4
-- W2 macro measurement
-	- https://www.dropbox.com/s/392h185o12whyye/Macro_Measurement.mp4
-- W3 macro measurement 2
-	- https://www.dropbox.com/s/3cxs832ipt3vpsb/Macro_Measurement2.mp4
+## resources
+- 影片
+	- W1 intro
+		- https://www.dropbox.com/s/n1usof8hkcrq3b8/macro_intro.mp4
+	- W2 macro measurement
+		- https://www.dropbox.com/s/392h185o12whyye/Macro_Measurement.mp4
+	- W3 macro measurement 2
+		- https://www.dropbox.com/s/3cxs832ipt3vpsb/Macro_Measurement2.mp4
+- 考古題
+	- https://sites.google.com/a/ntuecon.co.cc/tai-da-jing-ji-zi-liao-ku/6-zong-ti-jing-ji-xue/6-1-mao-qing-sheng
 
 ## Ch1 intro
 ### 總體經濟學主要議題
@@ -467,14 +470,14 @@ $$GDP = C+I+G+NX$$
 - 台灣替手新台幣，讓炒家過門不入，因此受創就輕微 ==???==
 - 經濟衰退 → 原油需求下降 → 國際油價下跌
 
-#### dot- com bubble
+#### dot-com bubble
 - 20th 末
 - 同時台灣 1999 921、2000 政黨輪替 & 美國 911
 - 經濟衰退 → 原油需求下降 → 國際油價下跌
 
 #### [[次貸危機]]
 - 2007 年底
-- [[#dot- com bubble]] 後，US 採寬鬆貨幣政策 → 房價大漲 → 高槓桿金融商品
+- [[#dot-com bubble]] 後，US 採寬鬆貨幣政策 → 房價大漲 → 高槓桿金融商品
 	- 包很多層的避險衍生性商品
 - 2010-11 [[歐債危機]]
 	- US 因 QE 沒受什麼影響

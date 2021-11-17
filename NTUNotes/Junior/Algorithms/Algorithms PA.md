@@ -36,3 +36,7 @@ case structure
 	- `tar zxvf b08901001_pa1.tgz`
 - to check submission
 	- (in utility) `checkSubmitPA1.sh b08901001_pa1.tgz`
+
+
+## PA2 dynamic programming
+<https://github.com/jason88012/Maximum-Planner-Subset>

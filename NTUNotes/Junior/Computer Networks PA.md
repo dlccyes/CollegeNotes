@@ -80,23 +80,45 @@ parent: Computer Networks
 		- 把 function 設的 `evptr` 真正弄到 `evlist` 裡
 
 ### report
-./b08901064 10 0 0 10 2
-![](https://i.imgur.com/u9R99Gw.png)
+`./b08901064 10 0 0 10 2`
+output log 在 `0.2_10-0-0-10-2.txt`
+![](https://i.imgur.com/A5UF6Ea.png)
+沒有 loss，也沒有 corruption 的情況
 
-./b08901064 20 0.1 0 10 2
-time = 391
-![](https://i.imgur.com/R7jTnQN.png)
+`./b08901064 20 0.1 0 10 2`
+output log 在 `0.2_20-0.1-0-10-2.txt`
+![](https://i.imgur.com/KRgnxSX.png)
+可看到有 loss 的情況。當 sender timeout 時，會 resend window 裡的所有 packet。
 
-./b08901064 20 0 0.1 10 2
-time = 511
-![](https://i.imgur.com/ohbsz4A.jpg)
+`./b08901064 20 0 0.1 10 2`
+output log 在 `0.2_20-0-0.1-10-2.txt`
+![](https://i.imgur.com/7ROXvUy.png)
+可看到有 corruption 的情況。當 receiver 收到 corrupted 的 packet 時，會直接 drop，且不回 ACK，因此 sender 就會發生 timeout 的事件，並 resend window 裡的所有 packet。
 
- ./b08901064 20 0.1 0.1 10 2
- time = 385
-![](https://i.imgur.com/v5MjGoS.png)
+ `./b08901064 20 0.1 0.1 10 2`
+output log 在 `0.2_20-0.1-0.1-10-2.txt`
+![](https://i.imgur.com/RmBgtjj.png)
+可看到同時有 loss & corruption 的情況。
 
-2000 0.2 0.2 10 2
-![](https://i.imgur.com/w8X50RO.png)
-![](https://i.imgur.com/XzPt1ad.png)
-![](https://i.imgur.com/1r0bhGu.png)
-![](https://i.imgur.com/ya0XXd6.png)
+`./b08901064 100 0 0 10 2`
+（依照 $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$ 來定 timeout interval）
+output log 在 `0.1_100-0-0-10-2.txt`
+![](https://i.imgur.com/WzMJDXF.png)
+
+output log 在 `0.2_100-0-0-10-2.txt`
+![](https://i.imgur.com/WW8lnFz.png)
+
+output log 在 `0.4_100-0-0-10-2.txt`
+![](https://i.imgur.com/ne8AyGx.png)
+
+output log 在 `0.6_100-0-0-10-2.txt`
+![](https://i.imgur.com/MffgilZ.png)
+
+output log 在 `0.8_100-0-0-10-2.txt`
+![](https://i.imgur.com/PjIVoyN.png)
+從圖中可以發現，$\alpha$ 愈大，estimated RTT 愈會跟著 sample RTT 浮動，隨著目前的壅塞狀況而調整 timeout interval，sample RTT 的鋸齒因此較不明顯。$\alpha$ 很小時，estimated RTT 則不太改變，sample RTT 的鋸齒則較明顯。
+
+Estimated_RTT = 15
+output log 在 `0_100-0-0-10-2.txt`
+![](https://i.imgur.com/ZbzgUaz.png)
+這是在 estimated RTT 直接設為 15 的情況。可以看到 sample RTT 的鋸齒較多。
