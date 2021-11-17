@@ -94,3 +94,9 @@ time = 511
  ./b08901064 20 0.1 0.1 10 2
  time = 385
 ![](https://i.imgur.com/v5MjGoS.png)
+
+2000 0.2 0.2 10 2
+![](https://i.imgur.com/w8X50RO.png)
+![](https://i.imgur.com/XzPt1ad.png)
+![](https://i.imgur.com/1r0bhGu.png)
+![](https://i.imgur.com/ya0XXd6.png)
