@@ -732,12 +732,12 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 
 ## Ch5 消費者的靜態選擇
 ### constraints
-- time contraint
+- time constraint
 	- l (leisure hours) + n (working hours) = 1
 - income constraint
 	- c (商品消費) = a (非勞動所得) + wn (勞動所得)
 		- a (非勞動所得) = d (dividend) - T (定期稅淨額)
-- budget constaint
+- budget constraint
 	- x = c + wl = a + w = full income
 	- wl 相當於花費於 leisure 的錢
 		- w = wage = 每時間單位的 leisure 的 oppurtinity cost
@@ -766,8 +766,8 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- x y 比值相同 → MRS 相同
 - solution
 	- budget constaint $c=x-wl$
-	- $u_c(c^*,l^*)w=u_l(c^*,l^*)$ <br> $u_c(c^*,l^*)=u_l(c^*,l^*)\dfrac{1}{w}$
-		- 一單位的消費 = w 單位的 leisure
+	- $u_c(c^*,l^*)w=u_l(c^*,l^*)$ <br> $w=\dfrac{u_l(c^*,l^*)}{u_c(c^*,l^*)}$
+		- 休閒取代消費的邊際效益 (MR) = wage (MC)
 	- ![](https://i.imgur.com/2bxid1j.png)
 - w 上升 → leisure 變貴 → budget line 變陡
 - ![](https://i.imgur.com/LoIt5iz.png)

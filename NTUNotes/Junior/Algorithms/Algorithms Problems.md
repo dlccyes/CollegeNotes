@@ -257,6 +257,10 @@ https://github.com/jason88012/Maximum-Planner-Subset
 
 有沒有 +1 應該是等效的?
 
+正解
+![](https://i.imgur.com/TYJ7ZjU.png)
+![](https://i.imgur.com/kkZPZRJ.png)
+
 類題
 ![](https://i.imgur.com/CCfLwsw.png)
 ![](https://i.imgur.com/AXAIqOb.png)

@@ -29,3 +29,38 @@ int main(){
     cout << result << endl; //15
 }
 ```
+
+## associative array
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    map<string, int> marks{ { "Rithvik", 78 },
+            { "Suraj", 91 }, { "Jessie", 100 },
+            { "Praveen", 99 }, { "Bisa", 84 } };
+    marks["Haha"] = 50; //add element just like in python
+    cout << marks["Bisa"] << endl;
+    cout << marks["Haha"] << endl;
+}
+```
+ref: https://www.geeksforgeeks.org/associative-arrays-in-cpp/
+
+## read file
+```
+#include <bits/stdc++.h>
+using namespace std;
+int main(int argc, char* argv[]){
+    fstream fin(argv[1]);
+    int one,two;
+    map<int, int> chords{};
+    char buffer[200];
+    fin.getline(buffer,200);
+    while (fin >> one >> two){ //separated by space
+        // printf("one=%d, two=%d\n",one,two);
+        chords[one] = two;
+        chords[two] = one;
+    }
+    cout << chords[5] << endl;
+}
+```
