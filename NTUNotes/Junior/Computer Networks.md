@@ -1029,6 +1029,29 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - control plane 建路徑
 - data plane 做 forwarding
 - SDN, software-defined network
+- datagram
+	- best effort
+- ATM
+	- virtual circuit
+	- 送之前先決定好 source to destination path
+	- 服務多
+		- ![](https://i.imgur.com/4PMUB5v.png)
+- longest prefix matching
+	- 根據 prefix 判斷要 forward 到哪裡
+	- 看跟哪個 prefix 相同到最多位 (特別法優於普通法)
+	- e.g.
+		- ![](https://i.imgur.com/nBFE2xU.png)
+- output port queuing
+	- discard policy
+		- tail drop
+			- 滿了 → drop 進來的
+		- priority
+		- round robin
+		- RED, random early drop
+			- buffer 愈滿，進來的 packet 被 drop 的機率愈高
+- TTL = time to live
+	- lifespan of a packet
+	- in time or hop counts
 
 ## Ch5 Network Layer - Control Plane
 ### routing
@@ -1043,6 +1066,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- outgoing interface 各 copy 一份
 	- 正常 forwarding
 		- 找到要的 outgoing interface 送出去
+- ![](https://i.imgur.com/G9WmL2B.png)
 
 #### link-state routing algorithm
 - flood global information
@@ -1071,5 +1095,18 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - async
 - ![](https://i.imgur.com/NjrbAFN.png)
 - count to infinity problem
+	- when link cost increases
+	- e.g.
+		- ![](https://i.imgur.com/IoCHUzF.png)
+			- cost(y to x) = min(cost(yx),cost(yz)+cost(z to x))
+			- y 知道 cost(z to x) = 5，所以會選擇後者的路徑，因此傳到 z，但 z 為了傳給 x 又會傳給 y，就這樣一直互丟
+			- won't stabilize until 44th iteration in this case
+				- → z 發現 zy+yx 的 cost > 50 → 改走 zx
+	- 還沒收斂就有 packet 進來
 	- can't stabilize
 	- don't know the route is through who
+
+### OSPF
+不講
+
+## ICMP
