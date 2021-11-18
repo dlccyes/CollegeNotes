@@ -646,9 +646,12 @@ $$y=AF(k,n)(+B)$$
 - ![](https://i.imgur.com/d4Jzhru.png)
 - 廠商規模未成熟時可能 MP 遞增，但這種情況不會持續存在
 ##### 資本勞動互補
+- capital 增加 → MPL 增加，反之亦然
+- ![](https://i.imgur.com/zB3jhau.png)
+
 ##### Inada condition
 - ![](https://i.imgur.com/B7zwc65.png)
-- 非必較條件
+- 非必要條件
 ##### 固定規模報酬 constant return to scale
 - 生產效率 independent to  廠商規模
 	- 資本勞動皆 x2 → output x2
@@ -676,7 +679,7 @@ $$y=Ak^{\alpha}n^{1-\alpha},\alpha\in(0,1)$$
 i.e. 廠商生產全部被資本&勞動報酬瓜分掉
 
 ### Decision Problem
-- 目標：max divident
+- 目標：max dividend
 	- dividend (profit) = revenue - cost
 	- $d(n;A,k,w)=AF(k,n)-wn$
 - 一階必要條件
