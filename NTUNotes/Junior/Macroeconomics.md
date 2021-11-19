@@ -233,7 +233,7 @@ $$GDP = C+I+G+NX$$
 				-  net national income
 	-  期末資本存量 = 期初資本存量 + 淨投資
 - G = 政府消費支出
-	- 已實際決算為計價基礎
+	- 以實際決算為計價基礎
 		- 有些並未透過市場完成
 	- 2011 佔台 12.4%
 		- 偏低
@@ -549,6 +549,7 @@ $$GDP = C+I+G+NX$$
 		- 景氣 → 狠操勞工
 	- leisure 也是一種 consumption
 - inflation rate & real interest rate 波動幅度 > 實質產出波動幅度
+	- real interest rate = 消費&投資的機會成本
 	- 美國是相反
 	- 台灣前兩次能源危機物價波動太激烈
 		- 除去前兩次能源危機後，也是小於
@@ -560,9 +561,9 @@ $$GDP = C+I+G+NX$$
 - 政府購買&產出波動無明顯同期相關
 	- 不代表政府支出政策對產出沒影響，可能只是個因素互相抵銷
 - 台淨出口&產出波動正相關，美負相關
-	- 景氣繁榮時出口增加 > 進口增加 for 台灣，相反 for US&others
+	- 景氣繁榮時出口增加 > 進口增加 for 台灣 (before 1992)，相反 for US&others
+	- 1992 後台灣也是負相關
 	- ![](https://i.imgur.com/tYu0u1X.png)
-	- 台灣也有變成負相關的趨勢
 - 勞動工時&實質工資率為順循環
 - 物價水準與 real GDP 逆循環
 	- 相對於長期趨勢，景氣繁榮時物價較低
@@ -675,7 +676,7 @@ $$y=Ak^{\alpha}n^{1-\alpha},\alpha\in(0,1)$$
 - 滿足 6 [[#生產函數#特性|特性]]
 
 #### Euler 性質
-[[#固定規模報酬 constant return to scale]]<br>→ $ay\equiv AF(ak,an)$<br>→ $\dfrac{d(ay)}{da}=y=AF_k(ak,an)\cdot k+AF_n(ak,an)\cdot n$<br>$=MPK\cdot k+MPL\cdot n$ for $a=1$ (see [[#投入愈多，產出愈多]])<br>= capital income + labor income
+[[#固定規模報酬 constant return to scale]] <br>→ $ay\equiv AF(ak,an)$<br>→ $\dfrac{d(ay)}{da}=y=AF_k(ak,an)\cdot k+AF_n(ak,an)\cdot n$<br>$=MPK\cdot k+MPL\cdot n$ for $a=1$ (see [[#投入愈多，產出愈多]])<br>= capital income + labor income
 i.e. 廠商生產全部被資本&勞動報酬瓜分掉
 
 ### Decision Problem
@@ -743,7 +744,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - budget constraint
 	- x = c + wl = a + w = full income
 	- wl 相當於花費於 leisure 的錢
-		- w = wage = 每時間單位的 leisure 的 oppurtinity cost
+		- w = wage = 每時間單位的 leisure 的 opportunity cost
 	- ![](https://i.imgur.com/w7euRuK.png)
 		- a 增加 → 向上平移
 
@@ -768,7 +769,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- $u(ax,ay) = au(x,y)$
 	- x y 比值相同 → MRS 相同
 - solution
-	- budget constaint $c=x-wl$
+	- budget constraint $c=a+wn=a+w(1-l)$ → $c+wl=a+w$
 	- $u_c(c^*,l^*)w=u_l(c^*,l^*)$ <br> $w=\dfrac{u_l(c^*,l^*)}{u_c(c^*,l^*)}$
 		- 休閒取代消費的邊際效益 (MR) = wage (MC)
 	- ![](https://i.imgur.com/2bxid1j.png)
