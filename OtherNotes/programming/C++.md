@@ -1,6 +1,9 @@
 # C++
 ## vector
 `#include<vector>`
+### sort
+https://stackoverflow.com/a/14669733/15493213
+
 ### array to vector
 ```cpp
 int arr[] = {1,2,3,4,5};
@@ -12,6 +15,14 @@ vector<int> oldd(begin(arr),end(arr));
 vector<int> neww = {oldd.begin()+1, oldd.end()-1}; //neww = oldd[1:-1]
 ```
 https://stackoverflow.com/a/58724503/15493213
+
+### nested vector
+2-dimensional NxN
+`vector<vector<int>> M(N, vector<int>(N))`
+
+3-dimensional NxNxN
+`vector<vector<vector<int>>> M(N, vector<vector<int>>(N, vector<int>(N)))`
+https://stackoverflow.com/a/9812469/15493213
 
 ## string
 `#include<string>`
