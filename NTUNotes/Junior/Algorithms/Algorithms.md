@@ -588,3 +588,9 @@ radix & bucket sort use other sorters to do the actual sorting
 - ![](https://i.imgur.com/vu0IlEZ.png)
 - space $\in O(2^nn^2)$
 - runtime $\in O(2^nn^3)$
+
+## Greedy
+### interval scheduling
+quickest finished
+![](https://i.imgur.com/U1UIrgh.png)
+![](https://i.imgur.com/zZKpt2Q.png)

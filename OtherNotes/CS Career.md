@@ -37,8 +37,8 @@ layout: meth
 
 ## applying preparation
 - DSA
-	- grind leetcodes
-		- Blind 75
+	- grind leetcode
+		- [Blind 75](https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions)
 - complex personal projects
 
 ## resources

@@ -42,3 +42,14 @@ case structure
 <https://github.com/jason88012/Maximum-Planner-Subset>
 <https://github.com/blacktomato/Algorithms/blob/master/pa2/b02901001-p2/maxPlanarSubset.cpp>
 top-down，分一半存值，一半存 case
+`reserved`
+
+my bottom-up stat
+```
+alg21f032@edaU6:~/b08901064_pa2/pa2$ ./bin/mps inputs/100000.in outputs/100000.out
+100000
+566
+ho many traversed? 705082704
+486.446
+```
+

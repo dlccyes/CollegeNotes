@@ -59,6 +59,8 @@ using [[#tmux plugin manager]]
 - default prefix = `ctrl+b`
 - help
 	- `ctrl+b ?`
+
+### sessions
 - detach (quit but don't end)
 	- `ctrl+b d`
 - list all sessions
@@ -71,9 +73,20 @@ using [[#tmux plugin manager]]
 - kill session bruh
 	- go inside and `ctrl+d`
 	- `tmux kill-session -t bruh`
+- new session named hahaha
+	- `tmux new -s hahaha`
+
+### multiple panes
 - split window vertically
 	- `ctrl+b %`
 - change focus to another pane
 	- `ctrl+b arrow_key`
-- new session named hahaha
-	- `tmux new -s hahaha`
+
+
+### multiple windows
+- new window
+	- `ctrl+b c`
+- switch to next window
+	- `ctrl+b n`
+- switch to previous window
+	- `ctrl+b p`

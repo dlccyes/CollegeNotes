@@ -17,3 +17,6 @@
 - append to file
 	- `echo haha >> file.txt`
 
+## commands
+### memory
+`free -h`
