@@ -594,3 +594,16 @@ radix & bucket sort use other sorters to do the actual sorting
 quickest finished
 ![](https://i.imgur.com/U1UIrgh.png)
 ![](https://i.imgur.com/zZKpt2Q.png)
+
+#### pf
+![](https://i.imgur.com/kv8tK3n.png)
+exchange → 數量一樣
+
+### comparison to [[#Dynamic Programming]]
+- greedy
+	- top-down
+	- 1 subproblem
+	- 一定也能用 dynamic programming 解
+- dynamic programming
+	- bottom-up
+	- several subproblems
