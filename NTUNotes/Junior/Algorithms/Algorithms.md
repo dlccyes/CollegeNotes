@@ -607,3 +607,16 @@ exchange → 數量一樣
 - dynamic programming
 	- bottom-up
 	- several subproblems
+
+### Huffman codes
+- characters represented by binary string
+- fixed-length code (block code)
+	- 3 bits a character
+	- a-f
+- variable-length code
+	- less bits for more frequent ones
+- prefix code
+	- no code is a prefix of some other codes
+- binary search tree
+	- 每輪把 frequency 最低者 pair 在一起 → 最後 frequency 最低者會沉在最下面
+	- ![](https://i.imgur.com/obP6l1h.png)
