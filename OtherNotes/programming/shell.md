@@ -20,3 +20,6 @@
 ## commands
 ### memory
 `free -h`
+
+### exec time
+`time command`

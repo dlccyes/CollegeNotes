@@ -1,4 +1,8 @@
 # C++
+
+## compile
+with optimization `g++ -O2 --static`
+
 ## vector
 `#include<vector>`
 ### sort

@@ -53,3 +53,27 @@ ho many traversed? 705082704
 486.446
 ```
 
+my top-down stat
+```
+alg21f032@edaU6:~/b08901064_pa2/pa2$ time ./bin/mps inputs/100000.in outputs/100000.out
+real    4m15.829s
+user    3m43.621s
+sys     0m27.887s
+```
+
+top-down 富中黑魔法版 stat
+```
+alg21f032@edaU6:~/b08901064_pa2/pa2$ time ./bin/mps inputs/100000.in outputs/100000.out
+real    1m34.693s
+user    1m14.506s
+sys     0m20.155s
+```
+
+```
+alg21f032@edaU6:~/b08901064_pa2/pa2$ time ./bin/mps inputs/100000.in outputs/100000.out
+
+real    2m20.060s
+user    1m16.116s
+sys     0m40.273s
+```
+
