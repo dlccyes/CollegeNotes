@@ -14,6 +14,10 @@ parent: OtherNotes
 {:toc}
 </details>
 
+## resources
+https://www.youtube.com/watch?v=Y3xzOLp1OsE
+
+## intro
 
 ![](https://i.imgur.com/7ytJc9s.png)
 
