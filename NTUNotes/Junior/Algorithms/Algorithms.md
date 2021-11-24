@@ -621,7 +621,46 @@ exchange → 數量一樣
 	- 每輪把 frequency 最低者 pair 在一起 → 最後 frequency 最低者會沉在最下面
 	- ![](https://i.imgur.com/obP6l1h.png)
 
-## task scheduling
+### task scheduling
 - n 個需要花時間 1 單位時間完成的 tasks
 - $N_t(A)<=t$ 
 	- 在 t 時間內能夠完成的 tasks 數不超過 t
+
+## Graph
+- $V$ nodes
+	- n nodes
+- $E$ edges
+	- m edges
+- undirected
+	- `{u,v}`
+- directed
+	- `(u,v)`
+- path
+	- simple path
+		- all nodes are distinct
+	- cycle
+- connectivity
+	- there is a path for every pair of nodes in this graph → connected
+
+### graph representation
+![](https://i.imgur.com/c5i4Vx0.png)
+
+#### adjacency matrix
+- 存 edge
+- 查看任兩點有沒有相連 → 一格 → constant time
+- 找一點有幾個 neighbor → 1 row → O(n)
+- space $\in O(n^2)$
+- ![](https://i.imgur.com/MV5eN7u.png)
+
+#### adjacency list
+- 存 node
+- 放該 node 的 neighbors
+- $O(deg(u))$ for 檢查是否為 neighbor
+	- deg(u) = amount of u's neighbors
+- space $\in O(n+m)$
+- ![](https://i.imgur.com/f8emIZ0.png)
+
+### graph traversal
+#### BFS
+- breadth-first-search
+- ![](https://i.imgur.com/MwB76Vm.png)
