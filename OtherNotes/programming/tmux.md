@@ -7,10 +7,17 @@ https://tmuxcheatsheet.com/
 ```
 vim ~/.tmux.conf
 set -g default-terminal "screen-256color"
+tmux source ~/.tmux.conf
 ```
-and then restart terminal or whatever
 
 ref: https://unix.stackexchange.com/a/355391
+
+## keep you vim keybindings
+```
+vim ~/.tmux.conf
+set -g default-terminal "xterm"
+tmux source ~/.tmux.conf
+```
 
 ## plugins
 ### tmux plugin manager
