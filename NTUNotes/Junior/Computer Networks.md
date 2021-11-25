@@ -1055,6 +1055,25 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 
 ## Ch5 Network Layer - Control Plane
 ### routing
+- classifications
+	- centralized or decentralized
+		- centralized
+			- complete knowledge about the network
+			- calculate path with the knowledge
+		- decentralized
+			- each node only know it links at first, then exchange information with neighbors
+			- carry out the path iteratively 
+	- static of dynamic
+		- static
+			- routes seldom change
+		- dynamic
+			- routes change whenever link costs or topology or other things change
+	- load-sensitive or load insensitive
+		- load-sensitive
+			- link costs reflect congestion
+		- load-insensitive
+			- link costs don't reflect congestion
+			- the Internet
 - 網管去設 link cost
 - ![](https://i.imgur.com/XPxvgIm.png)
 - 找 least cost path
@@ -1069,7 +1088,8 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - ![](https://i.imgur.com/G9WmL2B.png)
 
 #### link-state routing algorithm
-- flood global information
+- centralized
+- broadcast (flood) global information s.t. each node has the same complete information
 - source routing
 - ![](https://i.imgur.com/6gHVg6I.png)
 - [[Dijkstra's Algorithm]]
@@ -1080,8 +1100,17 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- ![](https://i.imgur.com/IjR1OEq.png)
 		- D(x) is x's cost (from source) and its predecessor (how it got the cost)
 - if any node has been changed, run the Dijkstra's algorithm again
+- oscillation
+	- if link costs depend on the amount of traffic, nodes may simultaneously detect a better route, simultaneously change to that route, thus making the route be crowded, so they simultaneously switch back again, and so on and so forth → oscillation
+		- ![](https://i.imgur.com/UkFEjQB.png)
+			- (x,y,z) want to send (1,1,e) to z
+		- solution
+			- ensure not all routers run the algorithm at the same time
+			- the Internet can self-sync → randomized the broadcasting time
 
 #### distance-vector routing algorithm
+- iterative, async, distributed, self-terminating
+- decentralized
 - hop-by-hop routing
 - Bellman-Ford Algorithm
 	- $d_x(y)=min_v\{c(x,v)+d_v(y)\}$
@@ -1109,4 +1138,4 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 ### OSPF
 不講
 
-## ICMP
+### ICMP

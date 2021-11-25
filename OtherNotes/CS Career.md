@@ -38,7 +38,9 @@ layout: meth
 ## applying preparation
 - DSA
 	- grind leetcode
-		- [Blind 75](https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions)
+		- Blind 75
+			- https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU OG
+			- https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions
 - complex personal projects
 
 ## resources
