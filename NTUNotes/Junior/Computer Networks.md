@@ -1041,6 +1041,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- 看跟哪個 prefix 相同到最多位 (特別法優於普通法)
 	- e.g.
 		- ![](https://i.imgur.com/nBFE2xU.png)
+	- 可犧牲幾個 bits 當 subnet id
 - output port queuing
 	- discard policy
 		- tail drop
@@ -1052,6 +1053,20 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - TTL = time to live
 	- lifespan of a packet
 	- in time or hop counts
+	- in case 陷進 routing loop
+	- 也可限制 broadcasting range
+- ip addressing
+	- 每個 interface 一個 ip
+- subnet
+	- 全 1 表broadcast packet
+		- 255.255.255.255
+		- 被 router 擋在裡面
+	- 全 0 表 this
+		- 0.0.0.0
+- isolating network
+
+### DHCP
+?
 
 ## Ch5 Network Layer - Control Plane
 ### routing
@@ -1135,7 +1150,63 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- can't stabilize
 	- don't know the route is through who
 
-### OSPF
-不講
+### intra-AS routing - OSPF
+- autonomous systems, AS i.e. domains
+	- a group of routers under the same administrative protocol
+	- routers in the same AS runs the same intra-AS routing protocol
+	- routers of an ISP will be under one or more ASs
+- alias: interior gateway protocols, IGP
+- open shortest path first, OSPF
+	- link-state protocol
+	- each router broadcast link-state information when changes occur or periodically to all other routers
+	- each router constructs a complete topology map and compute the shortest path to all subnets
+	- properties
+		- security
+			- authentication
+		- multiple same-cost paths → can 分流
+		- multicast routing (?)
+		- hierarchy
+			- local area runs locally
+
+### inter-AS routing - BGP
+- border gateway protocol, BGP
+- all ASs in the Internet run this inter-AS protocol
+- gateway router
+	- 有連到其他 AS 的 router
+- internal router
+	- 沒有連到其他 AS 的 router
+- external BGP (eBGP) connection
+	- BGP session between routers of 2 ASs
+- internal BGP (iBGP) connection
+	- BGP session between routers of the same AS
+- e.g.
+	- ![](https://i.imgur.com/LB5VwKR.png)
+		- 3a 跟 2c 說可到 x → 2c 跟 2abc 說可到 x → 2a 跟 1c 說可到 x → 1c 跟 1abd 說可到 x
+- BGP attributes
+	- AS-PATH
+		- 通往目標會經過的 ASs
+	- NEXT-HOP
+		- the IP of the router interface that begins the AS-PATH
+		- 就是我選這個路徑需要對接的口
+		- e.g. NEXT-HOP of `AS2 AS3 x` is the IP of 2a's leftmost interface
+	- destination prefix
+- route-selection algorithm (priority high → low)
+	1. local preference value
+	- each route has a local preference value attribute 
+	2. shortest AS-path
+	- use [[#distance-vector routing algorithm]], but with the number of AS hops
+	3. hot potato routing
+	- select path by choosing the NEXT-HOP with least intra-AS cost <br>i.e. route with the closest NEXT-HOP router
+	- 不管 inter-AS cost
+	- 像丟炸彈，把這個 packet 愈早弄出自己的 AS 愈好
+	- 2 routers in the same AS may select different paths for the same destination
+	4. BGP identifiers
+- policy-based routing
+	- 商業考量，看 contract 怎麼簽
+	- 知道路徑不一定要告訴你
+
+
 
 ### ICMP
+- internet control message protocol
+- error message
