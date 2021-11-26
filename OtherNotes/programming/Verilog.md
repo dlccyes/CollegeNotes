@@ -124,8 +124,10 @@ https://www.youtube.com/watch?v=Y3xzOLp1OsE
 	- ![](https://i.imgur.com/RQeo9Mb.png)
 - combinational circuit
 	- memoryless
+	- use blocking
 - sequential circuit
 	- has memory
+	- use nonblocking
 
 ## finite state machine
 - 期末考會考

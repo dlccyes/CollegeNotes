@@ -799,10 +799,38 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- 所謂 budget line 不變是在 c 已經剪掉了 $v$ 的情況下，不然其實是 budget line 上移，indifference curve 穿過 $c_1+v$，於是移到新均衡 where indifference curve 切 new budget line
 
 ## Ch6 靜態模型的全面均衡
-## Walras Law of Markets
+### Walras Law of Markets
 - ![](https://i.imgur.com/43x7A38.png)
 - ![](https://i.imgur.com/SgZkEbt.png)
 	- 商品市場超額需求 + 勞動市場超額需求 = 0
 	- 薪資水準低 → 消費需求低，勞動供給高 (?)
+
+### 競爭均衡三面向
+#### 第一面向－連立方程解
+- ![](https://i.imgur.com/cku8daY.png)
+
+#### 第二面向－市場供需模型
 - ![](https://i.imgur.com/scEPptH.png)
 	- w' < w* → 勞動超額需求 → w 上升 直到 E 點
+
+#### 第三面向－通吃型圖形
+- 全面均衡
+	- ![](https://i.imgur.com/f4AopCg.png)
+- 生產可能線 PPF
+	- ![](https://i.imgur.com/xxqBMCA.png)
+	- x y 兩產品
+	- 可生產 x or y
+	- 邊際生產力遞減 → y 很多，x 很少時，消耗一些 y 的生產力，減少一點 y，能夠多生產很多 x → 凸
+- 價格調整
+	- ![](https://i.imgur.com/mKTLfjO.png)
+	- w' → 超額勞動需求，超額商品供給 → w 上升 to w* → 廠商 & 消費者 converge to E 點，MPS = MPS = w*
+
+### Crusoe 荒島經濟
+- Crusoe 同時為消費者 & 生產者
+- 這裡的 pareto optimum 是唯一
+- ![](https://i.imgur.com/EnUeNoH.png)
+	- A: MPL > MRS
+	- B: MPL < MRS
+	- E: MRS = MPL
+		- slope = leisure's 影子價格
+	- competitive equilibrium 即為 pareto optimum
