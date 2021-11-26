@@ -797,3 +797,12 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- got voucher $v$ → MRC i.e. slope of indifference curve increase, budget line stays the same → new equilibrium F
 	- $c_2<c_1$ but  $c_2+v>c_1$ 
 	- 所謂 budget line 不變是在 c 已經剪掉了 $v$ 的情況下，不然其實是 budget line 上移，indifference curve 穿過 $c_1+v$，於是移到新均衡 where indifference curve 切 new budget line
+
+## Ch6 靜態模型的全面均衡
+## Walras Law of Markets
+- ![](https://i.imgur.com/43x7A38.png)
+- ![](https://i.imgur.com/SgZkEbt.png)
+	- 商品市場超額需求 + 勞動市場超額需求 = 0
+	- 薪資水準低 → 消費需求低，勞動供給高 (?)
+- ![](https://i.imgur.com/scEPptH.png)
+	- w' < w* → 勞動超額需求 → w 上升 直到 E 點
