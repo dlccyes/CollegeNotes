@@ -61,7 +61,7 @@ user    3m43.621s
 sys     0m27.887s
 ```
 
-top-down 富中黑魔法版 stat
+top-down 單個 2Nx2N matrix stat
 ```
 alg21f032@edaU6:~/b08901064_pa2/pa2$ time ./bin/mps inputs/100000.in outputs/100000.out
 real    1m34.693s
@@ -76,4 +76,16 @@ real    2m20.060s
 user    1m16.116s
 sys     0m40.273s
 ```
+用 14.8 % memory
 
+如果 map 成一維
+只會用 7.4% memory
+```
+alg21f032@edaU6:~/b08901064_pa2$ time ./bin/mps inputs/100000.in outputs/100000.out
+
+real    1m39.321s
+user    1m29.190s
+sys     0m10.119s
+```
+
+跑 180k 還沒漲完主要 matrix/vector 就會 seg fault
