@@ -540,4 +540,119 @@ jalr x0, 0(x1) //return
 ### logic design
 - 1 wire 1 bit
 - multiple wire → bus
+- multiplexer (mux)
+	- 多個 input，選擇一個 output
 - ![](https://i.imgur.com/oJx3GwW.png)
+
+### building a datapath
+#### fetching instruction
+- ![](https://i.imgur.com/RrCEyhE.png)
+- 用寫死做 Add 的 ALU，每次 PC +4
+- instruction memory 用 combinational logic
+
+#### R-type instructions
+- arithmetic-logical instructions
+- read 2 registers → perform an ALU operation (arithmetic or logical operation) → write result to register
+- ![](https://i.imgur.com/jWMlP3Y.png)
+
+#### load/store
+- immediate generation: convert 成 ALU 所需的格式
+	- 32-bit instruction as input 
+	- selects a 12-bit field for load, store, and branch if equal that is sign-extended into a 64-bit result appearing on the output (?)
+- ![](https://i.imgur.com/UFB8wsc.png)
+
+#### branch instructions (beq)
+- ![](https://i.imgur.com/oFNkbhE.png)
+- shift left 是加 0 到 sign-extended offset field 的後面，丟掉 sign bit
+	- 之前 x2 的部分
+- branch target = PC + imm slli 1
+- 用 ALU 做 rs1-rs2，若為 0 則 PC = branch target，otherwise PC = PC+4
+
+#### 合起來
+- ![](https://i.imgur.com/uvu621u.png)
+	- 加上 mux 來連接&控制不同 instruction class
+- ![](https://i.imgur.com/UuZNk6t.png)
+
+### single-cycle implementation
+#### ALU
+- ![](https://i.imgur.com/eeWVO9A.png)
+
+#### main control unit
+- truth table
+	- ![](https://i.imgur.com/YcsWkxv.png)
+	- 愈多 don't care 愈好
+- ![](https://i.imgur.com/Wlx7GlL.png)
+- ![](https://i.imgur.com/Ico4Mx7.png)
+- control signals
+	- ![](https://i.imgur.com/RKDbqqY.png)
+
+#### operation of datapath
+- ![](https://i.imgur.com/3qLc5gk.png)
+	- 加上 control unit，input 是 7-bit opcode，output 控制各種東西
+- e.g.
+	- add
+		- ![](https://i.imgur.com/35Gd9fv.png)
+			1. read address && pc+=4
+			2. instruction decode
+			- read register 等等
+			3. instruction execution
+			- ALU
+			4. write data back (to destination register)
+			- R-type 不用處理到 data memory
+	- load
+		- ![](https://i.imgur.com/kAw4f4u.png)
+			1. ALU 算 sum of register 1 & offset → address of data memory
+			2. data from the memory unity write into register file
+	- beq
+		- ![](https://i.imgur.com/ILz81Zn.png)
+			- imm gen 找 offset
+				- offset slli 1
+			- imm slli 1 + pc → branch target
+			- ALU 做 rs1-rs2
+				- = 0 → PC = branch target
+				- != 0 → PC = PC+4
+
+#### finalizing control
+- ![](https://i.imgur.com/Z2U2dNw.png)
+
+#### performance issues
+- clock period determined by worst-case delay (longest path)
+	- load instruction 最慢
+		- instruction memory → register file → ALU → data memory register file，5 個 stage 都要跑一遍
+			- ![](https://i.imgur.com/uSIBZq0.png)
+		- but load instruction 又很常用
+	- solution: pipelining
+
+
+### pipelining
+#### RISC-V 5-stage pipeline
+1. IF = instruction fetch
+2. ID = instruction decode & register read
+3. EX = execute operation OR calculate address
+4. MEM = access memory operand
+5. WB = write result back to register
+
+#### performance
+- cycle 數較多，cycle period 較短
+- if all stages take the same time, $T_c$ /= num of stages with pipelining
+- e.g.
+	- ![](https://i.imgur.com/W32S6D3.png)
+		- 如果每個 stage 都花同樣時間，速度就會是 5 倍而非 4 倍
+
+#### pipeline hazards
+##### structure hazard
+- 資源不夠用
+- 一個資源一個時間只能一個人用
+- solution: more resources
+##### data hazard
+- current instruction depends on the result of previous instructions → pipeline stall
+- e.g.
+	- add x19, x0, x1<br>sub x2, x19, x3
+		- ![](https://i.imgur.com/qNl157r.png)
+		- 要等上一個 WB 才能 ID → 要多等 2 個 cycle 
+- solution: forwarding/bypassing
+	- 不等 write back，一生出答案就直接拿
+
+
+##### control hazard
+- controlling action depends on other instructions

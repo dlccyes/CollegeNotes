@@ -627,7 +627,7 @@ exchange → 數量一樣
 	- 在 t 時間內能夠完成的 tasks 數不超過 t
 
 ## Graph
-- $V$ nodes
+- $V$ nodes (vertexes)
 	- n nodes
 - $E$ edges
 	- m edges
@@ -663,4 +663,41 @@ exchange → 數量一樣
 ### graph traversal
 #### BFS
 - breadth-first-search
+- 先走完所有 neighbor 再往下走
 - ![](https://i.imgur.com/MwB76Vm.png)
+- e.g.
+	- ![](https://i.imgur.com/FC60HwN.png)
+- time complexity $\in O(V+E)$
+	- each vertex enqueued & dequeued once
+	- each edge considered once
+
+#### DFS
+- depth-first search
+- 先走到底再走鄰居
+- ![](https://i.imgur.com/aki4I0T.png)
+- 經過 → grey
+- retreat → black
+- e.g.
+	- ![](https://i.imgur.com/14owN8P.png)
+- parenthesis property
+	- if u is v's descendant，經過順序會是 v → u → u → v
+	- ![](https://i.imgur.com/zJ3Zwtq.png)
+	- 因為會 retreat
+- edge classification
+	- directed graph
+		- tree edge
+			- DFS 後的一般 edge
+		- back edge
+			- descendant 指到 ancestor
+			- 出現 cycle
+		- forward edge
+			- ancestor 指到 indirect descendant (為 nontree edge)
+		- cross edge
+			- 非直系血親 (為 nontree edge)
+	- undirected graph
+		- tree edge
+		- back edge
+		- no forward edge
+			- forward edge = back edge in undirected graph
+		- no cross edge
+			- 沒有 ancestor or descendant 關係 → 無法判斷是否為旁系

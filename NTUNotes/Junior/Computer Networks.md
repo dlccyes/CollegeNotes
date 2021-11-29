@@ -1204,9 +1204,15 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - policy-based routing
 	- 商業考量，看 contract 怎麼簽
 	- 知道路徑不一定要告訴你
+		- 確保自己不被用作中介點
+		- 確保不被 free ride
 
-
+### SDN
 
 ### ICMP
 - internet control message protocol
 - error message
+- architecturally lies just above IP
+- ICMP messages carried as IP payload
+	- 收到 → demultiplex to ICMP
+- ![](https://i.imgur.com/96cZ10A.png)
