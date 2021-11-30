@@ -48,6 +48,8 @@ layout: meth
 - r/csmajors
 - https://www.levels.fyi/
 	- company salaries
+- https://techinterviewhandbook.org/
+	- author of Blind 75
 
 ### good threads
 - bonus skills

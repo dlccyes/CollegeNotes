@@ -1013,7 +1013,8 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - for 2 competing connections
 	- ![](https://i.imgur.com/m8OSzwQ.png)
 
-## Ch4 Network Layer - Data Plane
+## Network Layer
+### intro
 - routing
 	- 找出路徑 to send
 	- 最好路徑 = shortest path
@@ -1023,33 +1024,116 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- reinforcement learning 分配資源
 - forwarding
 	- 拿到後正確丟出 router
+	- input link interface to output link interface
 	- forwarding table
 		- IP 32 bits → forwarding table max $2^{32}$ entries
 		- 大家合力算出來的 source to destination path
-- control plane 建路徑
-- data plane 做 forwarding
-- SDN, software-defined network
+		- indicate outgoing link interface
+- control plane 
+	- physically separated from router
+	- computes & distributes forwarding tables
+	- SDN, software-defined network
+- data plane 
+	- 根據 control plane 給的 forwarding table 做 forwarding
 - datagram
 	- best effort
 - ATM
 	- virtual circuit
+	- guaranteed in-order, bounded delay (一定的 delay 以內), minimal bandwidth 
 	- 送之前先決定好 source to destination path
 	- 服務多
 		- ![](https://i.imgur.com/4PMUB5v.png)
-- longest prefix matching
-	- 根據 prefix 判斷要 forward 到哪裡
-	- 看跟哪個 prefix 相同到最多位 (特別法優於普通法)
-	- e.g.
-		- ![](https://i.imgur.com/nBFE2xU.png)
-	- 可犧牲幾個 bits 當 subnet id
-- output port queuing
+
+### Data Plane
+#### router
+- ![](https://i.imgur.com/uCIPEyC.png)
+
+##### input port
+- ![](https://i.imgur.com/kmA6Xsl.png)
+1. terminate incoming physical link
+2. perform necessary link-layer function to interoperate with the link layer at the other side of the incoming link
+3. lookup - use forwarding table to determine output port
+	- forwarding table copied from routing processor → forwarding decisions made locally at input port
+	- destination based forwarding
+		- longest prefix matching
+			- 根據 prefix 判斷要 forward 到哪裡
+			- 看跟哪個 prefix 相同到最多位 (特別法優於普通法)
+			- e.g.
+				- ![](https://i.imgur.com/nBFE2xU.png)
+			- 可犧牲幾個 bits 當 subnet id
+4. send to switching fabric → send to specified output port 
+-  switching speed not fast enough → input zqueue
+	-  head-of-the-line (HOL) blocking
+		-  前一個 packet 因為 destined output port 被搶所以在等，但自己的 output port 是空的
+
+##### switching fabric
+- ![](https://i.imgur.com/hkbWIOa.png)
+- switching via memory
+	- packet copied from input port to routing processor memory → routing processor extract destination address and lookup forwarding table → copy to output port buffers
+	- 1 read/write action at a time (for a bus)
+	- in modern routers, the above is done by input port
+- switching via a bus
+	- input port transfers a packet directly to output port via a shared bus
+		- skip routing processor
+	- label the output port, all output port receives the packet but only the destined one keep it
+	- switching speed limited by bus speed
+		- max 1 packet crosses the bus at a time
+- switching via an interconnection network (crossbar)
+	- to overcome the bandwidth limitation of a single shared bus
+	- can forward multiple packets in parallel
+		- but 1 for an output at a time
+	- non-blocking
+		- need to wait if more than one packet destined at 1 output port
+
+##### output port
+- ![](https://i.imgur.com/U2YM1It.png)
+- perform necessary link-layer & physical-layer functions
+- if bidirectional → paired with input port
+- switching speed > line speed → output queue
 	- discard policy
 		- tail drop
-			- 滿了 → drop 進來的
-		- priority
-		- round robin
-		- RED, random early drop
-			- buffer 愈滿，進來的 packet 被 drop 的機率愈高
+			- 滿了 → drop arriving packet
+		- AQM, active queue management
+			- drop before full
+			- RED, random early drop
+				- buffer 愈滿，進來的 packet 被 drop 的機率愈高
+	- buffer size
+		- B = RTT x C (link capacity) generally
+
+##### packet scheduling
+- the order of the output of queue
+- FIFO, first-in-first-out
+	- or FCFS, first-come-first-serve
+- priority queuing
+	- packets classified into priority classes
+	- maintain FIFO queues for each priority class, lower priority won't be send until higher priority's queue is emptied
+	- non-preemptive priority queuing
+		- packet transmission won't be interrupted once started
+- round robin
+	- packet classified into classes
+	- transmission alternate between classes
+		- e.g. class 1 → class 2 → class 3 → class 1 → class 2 and so on and so forth
+		- 像每個子彈都是一個 queue 的左輪手槍
+	- work-conserving queuing
+		- this class queue is empty → immediately go to the next class queue
+- weighted fair queuing, WFQ
+	- generalized round robin
+	- alternative circularly between classes but each class has weight
+	- guaranteed a fraction of service (the fraction of weight to total weight) in any interval of time
+	- ![](https://i.imgur.com/1hNeK2r.png)
+
+##### routing processor
+- perform control plane functions
+- in traditional router
+	- maintain routing table
+	- attach link state info
+	- compute forwarding table and copy to input ports 
+- in SDN router
+	- communicate with remote controller, get forwarding table
+	- copy forwarding table to input ports
+	- perform network management functions
+
+
 - TTL = time to live
 	- lifespan of a packet
 	- in time or hop counts
@@ -1065,11 +1149,11 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- 0.0.0.0
 - isolating network
 
-### DHCP
+#### DHCP
 ?
 
-## Ch5 Network Layer - Control Plane
-### routing
+### Control Plane
+#### routing
 - classifications
 	- centralized or decentralized
 		- centralized
@@ -1102,7 +1186,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- 找到要的 outgoing interface 送出去
 - ![](https://i.imgur.com/G9WmL2B.png)
 
-#### link-state routing algorithm
+##### link-state routing algorithm
 - centralized
 - broadcast (flood) global information s.t. each node has the same complete information
 - source routing
@@ -1123,7 +1207,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 			- ensure not all routers run the algorithm at the same time
 			- the Internet can self-sync → randomized the broadcasting time
 
-#### distance-vector routing algorithm
+##### distance-vector routing algorithm
 - iterative, async, distributed, self-terminating
 - decentralized
 - hop-by-hop routing
@@ -1150,7 +1234,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- can't stabilize
 	- don't know the route is through who
 
-### intra-AS routing - OSPF
+#### intra-AS routing - OSPF
 - autonomous systems, AS i.e. domains
 	- a group of routers under the same administrative protocol
 	- routers in the same AS runs the same intra-AS routing protocol
@@ -1168,7 +1252,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- hierarchy
 			- local area runs locally
 
-### inter-AS routing - BGP
+#### inter-AS routing - BGP
 - border gateway protocol, BGP
 - all ASs in the Internet run this inter-AS protocol
 - gateway router
@@ -1207,9 +1291,9 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- 確保自己不被用作中介點
 		- 確保不被 free ride
 
-### SDN
+#### SDN
 
-### ICMP
+#### ICMP
 - internet control message protocol
 - error message
 - architecturally lies just above IP
