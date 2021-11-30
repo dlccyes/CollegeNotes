@@ -701,3 +701,20 @@ exchange → 數量一樣
 			- forward edge = back edge in undirected graph
 		- no cross edge
 			- 沒有 ancestor or descendant 關係 → 無法判斷是否為旁系
+
+### DAG
+- directed acyclic graphs, directed graphs without cycles
+- undirected graph without cycle → tree / forest
+- topological ordering
+	- nodes 排成一條線，edge 的方向一致
+	- 找法：從沒有 incoming edge 者開始
+	- ![](https://i.imgur.com/HsqcHwT.png)
+	- time complexity $\in O(n^2)$ to $O(m+n)$
+	- e.g.
+		- ![](https://i.imgur.com/UoIXGbM.png)
+- has topological ordering iff is DAG
+- topological sort
+	- sort nodes in decreasing finishing time
+	- ![](https://i.imgur.com/RxjanyC.png)
+	- time complexity $\in O(V+E)$
+- 
