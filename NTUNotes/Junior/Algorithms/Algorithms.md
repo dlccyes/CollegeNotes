@@ -629,6 +629,8 @@ exchange → 數量一樣
 ## Graph
 - $V$ nodes (vertexes)
 	- n nodes
+	- node.d = discovery time of node
+	- node.f = finishing time of node
 - $E$ edges
 	- m edges
 - undirected
@@ -717,4 +719,31 @@ exchange → 數量一樣
 	- sort nodes in decreasing finishing time
 	- ![](https://i.imgur.com/RxjanyC.png)
 	- time complexity $\in O(V+E)$
-- 
+
+### connectivity in directed graph
+- every node is mutually reachable → the graph is strongly connected
+
+#### SCC
+- strongly connected component
+- SCC of s = maximal set of v s.t. s & v are mutually reachable
+- for any 2 nodes s & v in a directed graph, their strongly connected components are
+	- identical if s & v are mutually reachable
+	- disjoint if s & v aren't mutually reachable
+- SCC of a directed graph G=(V, E) = maximal set of node $U\in V$ s.t. u→v & v→u
+	- ![](https://i.imgur.com/t3ZcDVl.png)
+	- time complexity $\in O(V+E)$
+- SCC graph is a [[#DAG]]
+
+### minimum spanning tree, MST
+- find edges that connect all nodes with min cost
+- 不會有 cycle
+	- 有 cycle → 去掉連回去的那個 edge 還是會是 connected graph
+- use greedy to solve
+- Kruskal's algorithm
+	- start with no selected edge, sort edge by cost，每次都選剩下的最便宜的 edge，會 cycle 則 discard
+	- 每多一個 edge 就會 merge 兩個 tree
+- Prim's algorithm
+	- start with root node, greedily expands outward from the current tree
+- reverse-delete algorithm
+	- reverse of Kruskal's algorithm
+	- start with all edges selected, sort edge by cost, delete the max cost edge, skip if it would disconnect the graph

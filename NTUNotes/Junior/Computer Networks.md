@@ -1133,14 +1133,69 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- copy forwarding table to input ports
 	- perform network management functions
 
-
-- TTL = time to live
+#### IPv4
+##### datagram format
+- ![](https://i.imgur.com/oeiSslz.png)
+- version number
+	- IP protocol version
+	- how to interpret this datagram
+- header length
+	- to know where payload begins
+	- without options → 20-byte
+		- TCP header 也是 20-byte → IP+TCP header 共 40-byte
+- type of service, TOS
+	- distinguish different type of IP datagrams
+- datagram length
+	- total length
+- identifier, flags, fragmentation offset
+	- for [[#datagram fragmentation]]
+- time-to-live, TTL 
 	- lifespan of a packet
 	- in time or hop counts
 	- in case 陷進 routing loop
 	- 也可限制 broadcasting range
-- ip addressing
-	- 每個 interface 一個 ip
+- protocol
+	- specify transport-layer protocol
+		- 6 → TCP
+		- 17 → UDP
+- header checksum
+	- recompute & update at each router
+		- some field may change, e.g. TTL
+	- checksum at both transport & network layers bc
+		- IP only checksum the IP header
+			- while TCP/UDP checksum the entire segment
+		- TCP/UDP 不一定接 IP
+			- 也可以用 ATM
+		- IP 也不一定接 TCP/UDP
+- source & destination IP address
+- options
+	- extend IP header
+	- 有些 datagram 有用 options，某些沒用 → processing time of datagrams varies greatly
+- data / payload
+	- transport-layer segment
+	- ICMP message
+
+##### datagram fragmentation
+- maximum transmission unit, MTU
+	- max amount of data a link-layer frame can carry
+- each link may use different link-layer protocols, with different MTUs → need fragmentation when sending via a link with smaller MTU
+- destination host reassembles fragments
+- related header fields
+	- identification number
+		- seq num of the original datagram
+	- flag
+		- 0 for last fragment, 1 otherwise
+	- offset
+		- where the fragment fits in the original datagram
+
+##### addressing
+- interface
+	- boundary between host & physical link
+	- multiple interfaces in a router
+- 每個 interface 一個 ip
+- dotted-decimal notation
+	- 32 bits, 4 section, each section 8 bits → 0-255
+- a portion of IP address determined by belonged subnet
 - subnet
 	- 全 1 表broadcast packet
 		- 255.255.255.255
