@@ -8,6 +8,10 @@ https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
 - `git log -p abcdef`
 	- commit details of `abcdef`
 
+## commit related
+### discard all unstaged files
+`git checkout -- .`
+
 ## squash
 ### using reset & amend
 設你有最近 3 個 commit 為

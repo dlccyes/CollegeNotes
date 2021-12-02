@@ -125,5 +125,19 @@ output log 在 `0_100-0-0-10-2.txt`
 
 
 ## HW3 [[Dijkstra's Algorithm]]
-` py src1/linkedin.py test/test01.txt test/test01out1.txt`
-`vimdiff test/*01*out1.txt`
+part 1
+`py src1/linkedin.py -lf test/test01.txt -of test/test01_out1_me.txt`
+`vimdiff test/*01*out1*.txt`
+
+`py src1/linkedin.py -lf test/test02.txt -of test/test02_out1_me.txt`
+`vimdiff test/*02*out1*.txt`
+
+有多種解的情況？
+
+part 2
+`py src2/linkedin.py -lf test/test01.txt -of test/test01_out2_me.txt -rm 2`
+`vimdiff test/*01*out2*.txt`
+
+`py src2/linkedin.py -lf test/test02.txt -of test/test02_out2_me.txt -rm 2`
+`vimdiff test/*02*out2*.txt`
+
