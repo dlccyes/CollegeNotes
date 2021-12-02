@@ -1197,15 +1197,152 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- 32 bits, 4 section, each section 8 bits → 0-255
 - a portion of IP address determined by belonged subnet
 - subnet
-	- 全 1 表broadcast packet
-		- 255.255.255.255
+	- isolated network
+	- interconnecting host interfaces & router interface
+		- ![](https://i.imgur.com/Qjlpmlj.png)
+		- ![](https://i.imgur.com/d3a2vEF.png)
+	- /24 notation i.e. subnet mask
+		- 223.1.1.0/24 表 left 24 bits 都要是 233.1.1
+	- 全 1 (255.255.255.255) 表 broadcast packet
+		- send to all hosts of the same subnet
 		- 被 router 擋在裡面
-	- 全 0 表 this
-		- 0.0.0.0
-- isolating network
+	- 全 0 (0.0.0.0) 表 this
+- classless interdomain routing, CIDR
+	- a.b.c.d/x
+	- leading x bits is network portion i.e. prefix
+	- only the leading x bits will be considered by outside routers
+	- may have multiple hierarchy
+		- e.g. a.b.c.d/21 → an organization, a.b.c.d/24 → a subnet in the organization
+- classful addressing
+	- before CIDR
+	- prefix length fixed to 8/16/24 bits → class A/B/C
+	- 不同 class 之間可容納的 hosts 數量差太多，造成資源分配沒有效率
+- ICANN, Internet Corporation for Assigned Names and Numbers
+	- allocate IP addresses
+	- manages DNS root servers
 
 #### DHCP
-?
+- dynamic host configuration protocol
+- alias: plug-and-play / zeroconf protocol
+- a client-server protocol
+- allows host to obtain IP address automatically
+	- permanent (always same) or temporary (different every time)
+- allows host to get more info
+	- subnet mask
+	- address of first-hop router (default gateway)
+	- address of local DNS server
+- steps
+	1. DHCP server discovery
+		- newly arriving host want to find the DHCP server
+		- client broadcasts DHCP discover message
+			- destination IP address 255.255.255.255 → broadcast
+			- source IP address 0.0.0.0
+	2. DHCP server offer
+		- DHCP server broadcasts DHCP offer message
+			- destination IP address 255.255.255.255 → broadcast
+			- contents
+				- transaction ID
+				- proposed IP address
+				- network mask
+				- IP address lease time
+					- IP address valid time
+		- there may be several DHCP servers → client can choose
+	3. DHCP request
+		- client broadcasts DHCP request message
+			- responds with the selected offer
+	4. DHCP ACK
+	- ![](https://i.imgur.com/XEgSRWn.png)
+
+#### NAT
+- network address translation
+- IPv4 address 不夠解法之一
+- acts like a single device with a single IP address to the outside
+	- hide home network
+- private IP address
+	- only meaningful in its subnet
+- translate between public IP address + port number & private IP address + port number using NAT translation table
+- criticisms
+	- violate data integrity
+	- port number should be for processes
+- cons
+	- bottleneck → may be slow
+	- NAT traversal problem
+		- private IP is temporary, can't make itself public accessible
+		- solution: universal plug-and-play 
+- middleboxes
+	- don't perform traditional datagram forwarding
+	- NAT
+	- load balancing
+		- forward packet to one of a set of servers
+	- firewall
+
+#### IPv6
+- background
+	- 32-bit IPv4 address space would run out before long
+	- successor to IPv6
+- compatibility to IPv4 - tunneling
+	- IPv6 datagram needs to pass through IPv4 router → put into the payload field of a IPv4 datagram → another IPv6 router receive, examine the protocol field = 41, extract the IPv6 datagram, and continue
+	- ![](https://i.imgur.com/XFVZE9k.png)
+
+##### datagram format
+- differences from IPv4
+	- simpler, more streamlined structure
+	- 128 bits of IP address
+		- won't ever run out
+	- anycast address
+		- deliver to anyone of a group of hosts
+	- 40-bit header
+		- fixed length
+		- drop or made optional some IPv4 fields
+		- faster processing
+		- more flexible options processing
+	- flow labeling
+		- 讓你 label 東西
+	- discard some fields
+		- fragmentation/reassembly
+			- IPv6 doesn't allow fragmentation & reassembly in routers, but in source & destination
+			- fragmentation & reassembly is very time-consuming
+			- packet too big → drop & send "packet too big" ICMP error message
+		- header checksum
+			- transport-layer & link-layer protocol already has checksum → redundant
+			- IPv4 has TTL & IPv6 has hop limit → need to recompute checksum at every hop → very time consuming
+		- options
+			- field removed, but not gone
+			- next header field can be TCP heaer or UDP header or options
+			- removed → 40-bit fixed header
+- fields
+	- ![](https://i.imgur.com/legsmRb.png)
+	- version
+		- IP version number
+	- traffic class
+		- priority
+	- flow label
+	- payload length
+	- next header
+		- IPv4 的 protocol field
+	- hop limit
+		- like IPv4 的 TTL
+	- source and destination addresses
+		- 128-bit address
+	- data
+		- payload
+
+#### generalized forwarding
+- match-plus-action
+- Openflow
+- ![](https://i.imgur.com/Og7ebwI.png)
+- flow table
+	- headers
+		- to match packet
+		- forwarding based many header field values
+		- not all IP header fields can be matched
+			- some is too complex
+	- counters
+	- actions
+		- actions to be taken
+		- forwarding
+		- dropping
+		- modify-field
 
 ### Control Plane
 #### routing
@@ -1216,7 +1353,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 			- calculate path with the knowledge
 		- decentralized
 			- each node only know it links at first, then exchange information with neighbors
-			- carry out the path iteratively 
+			- carry out the path iteratively
 	- static of dynamic
 		- static
 			- routes seldom change
@@ -1347,6 +1484,62 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- 確保不被 free ride
 
 #### SDN
+- software-defined network
+- flow-based forwarding
+	- forwarding based many header field values
+- separations of data plane & control plane
+- network control functions
+	- control plane implemented in software
+		- can implement any form of forwarding by changing the application-control software
+	- logically centralized but physically distributed
+		- implemented on several servers
+		- fault tolerance
+		- scalable
+		- high availability
+- programmable network
+- separated entities → open ecosystem with rich innovations
+	- pre-SDN: all vertically integrated
+- ![](https://i.imgur.com/nGoHIjZ.png)
+
+##### controller
+- communication layer
+	- communication between SDN controller & network devices
+	- southbound interface
+	- Openflow
+- network-wide state-management layer
+	- information of everything
+- interface to network-control application layer
+	- northbound interface
+	- read/write network state & flow tables (of state-management layer)
+	- app can register to be notified on state change
+
+##### OpenFlow protocol
+- operates between SDN controller & SDN-controller switch or other devices
+- messages from controller to controlled switch
+	- configuration
+		- query & set config paramenters
+		- modify-state
+			- add/delete/modify switch's flow table entries
+			- set switch port properties
+		- read-state
+			- read values in flow table & port
+		- send-packet
+			- send the containing packet to a specific port
+- messages from controlled switch to controller 
+	- flow-removed
+		- a flow table entry was removed
+	- port-status
+		- port status change
+	- packet-in
+		- send packet to controller
+
+##### example
+- ![](https://i.imgur.com/xj70Xz0.png)
+	1. link s1 s2 goes down
+	2. s1 notify SDN controller about the link-state change with OpenFlow port-status message
+	3. SDN controller notifies link-state manager → update link-state database
+	4. network-control application notified because of the link-state change → get updated link-state from link-state manager → computes new least-cost path → interacts with the flow table manager
+	5. flow table manager uses OpenFlow protocol to update flow table at affected switches - s1, s2, s4 (需要幫 s1 s2 互相溝通) 
 
 #### ICMP
 - internet control message protocol
@@ -1355,3 +1548,17 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - ICMP messages carried as IP payload
 	- 收到 → demultiplex to ICMP
 - ![](https://i.imgur.com/96cZ10A.png)
+
+
+## Ch6 Link Layer
+
+### error detection
+#### CRC, cyclic redundancy check
+- generator
+	- sender & receiver agree on before hand
+	- r+1 個 bits
+- data 補 r 個 0 i.e. slli r
+- 長除法 data 除 generator but 相減時用 XOR
+- send bit string of data 接餘數
+- receiver 把收到的 bit string 長 XOR generator，餘數為 0 → perfecto
+- ![](https://i.imgur.com/yspDL5m.png)

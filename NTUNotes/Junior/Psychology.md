@@ -261,3 +261,6 @@
 		- e.g. 閱讀
 	- 閱讀時，是跳著看的
 	- 中英文涉及的腦區差不多
+- 捷思法 heuristics
+	- think outside the box
+	- 適合處理結構不清的問題

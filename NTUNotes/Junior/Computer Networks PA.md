@@ -122,3 +122,8 @@ Estimated_RTT = 15
 output log 在 `0_100-0-0-10-2.txt`
 ![](https://i.imgur.com/ZbzgUaz.png)
 這是在 estimated RTT 直接設為 15 的情況。可以看到 sample RTT 的鋸齒較多。
+
+
+## HW3 [[Dijkstra's Algorithm]]
+` py src1/linkedin.py test/test01.txt test/test01out1.txt`
+`vimdiff test/*01*out1.txt`
