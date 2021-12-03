@@ -739,11 +739,42 @@ exchange → 數量一樣
 - 不會有 cycle
 	- 有 cycle → 去掉連回去的那個 edge 還是會是 connected graph
 - use greedy to solve
+
+#### solutions
+- generic
+	- ![](https://i.imgur.com/aeLcPY7.png)
+	- add a safe edge every time
+	- 找 cut 裡最便宜的 edge
 - Kruskal's algorithm
 	- start with no selected edge, sort edge by cost，每次都選剩下的最便宜的 edge，會 cycle 則 discard
 	- 每多一個 edge 就會 merge 兩個 tree
+	- implementation
+		- 每個小 tree 都是一個 disjoint set
+		- 新的 edge 屬於同 disjoint set → cycle
+		- ![](https://i.imgur.com/IEeN2kc.png)
+		- time complexity $\in O(ElgE+V)=O(ElgV+V)$
 - Prim's algorithm
 	- start with root node, greedily expands outward from the current tree
+	- implementation
+		- 用 heap 找最便宜的 cut
+		- ![](https://i.imgur.com/XyBYMr9.png)
+			- 先把所有 key 設 infty
+			- root 的 key 為 0
+			- heap 存所有 nodes
+			- 更新 min node 連到的所有 node 的 key
+			- $\pi$  for 路徑
+		- time complexity 
+			- $O(ElgV)$ with binary heap
+			- $O(E+VlgV)$ with Fibonacci heap
+	- ![](https://i.imgur.com/m2NH7Mb.png)
 - reverse-delete algorithm
 	- reverse of Kruskal's algorithm
 	- start with all edges selected, sort edge by cost, delete the max cost edge, skip if it would disconnect the graph
+
+#### properties
+- cut property
+	- a MST must contain the min cost edge than connects S & V-S for all subset S
+	- pf
+		- assume spanning tree T doesn't have the min cost edge (u,v) that connect S & V-S, if we replace the edge connecting S & V-S with (u,v), we'll have a smaller cost
+- cycle property
+	- for any cycle，cycle 裡最貴的 edge 不屬於任何 MST

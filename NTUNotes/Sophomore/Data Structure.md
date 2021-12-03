@@ -609,7 +609,7 @@ https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html
   - degree d 的最小 Fib heap
 
 ## disjoint sets
-- equilavence relation
+- equivalence relation
   - ![Image](https://i.imgur.com/juDWjAR.png)
   - 房間是否連通，是 equilavence relation
     - x 跟自己連通

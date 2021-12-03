@@ -398,3 +398,11 @@ optimal BST
 ### guides
 - 建議不要用 limit 去 prove function 關係
 	- limit 太多
+
+## HW3
+### 1. [[Algorithms#Huffman codes]]
+![](https://i.imgur.com/k8NiQDd.png)
+
+![](https://i.imgur.com/RUoP70b.png)
+![](https://i.imgur.com/NkX82Bs.png)
+![](https://i.imgur.com/ZSo6ZBY.png)
