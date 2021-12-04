@@ -631,6 +631,7 @@ exchange → 數量一樣
 	- n nodes
 	- node.d = discovery time of node
 	- node.f = finishing time of node
+	- node.$\pi$ = parent of node
 - $E$ edges
 	- m edges
 - undirected
@@ -681,21 +682,26 @@ exchange → 數量一樣
 - retreat → black
 - e.g.
 	- ![](https://i.imgur.com/14owN8P.png)
+		- 圖中有標示 edge type
 - parenthesis property
 	- if u is v's descendant，經過順序會是 v → u → u → v
 	- ![](https://i.imgur.com/zJ3Zwtq.png)
 	- 因為會 retreat
-- edge classification
+- edge type
 	- directed graph
 		- tree edge
 			- DFS 後的一般 edge
+			- if 指到 white (not discovered)
 		- back edge
 			- descendant 指到 ancestor
 			- 出現 cycle
+			- if 指到 grey (already discovered)
 		- forward edge
 			- ancestor 指到 indirect descendant (為 nontree edge)
+			- if 指到晚輩 black (already completed)
 		- cross edge
 			- 非直系血親 (為 nontree edge)
+			- if 指到非晚輩 black (already completed)
 	- undirected graph
 		- tree edge
 		- back edge

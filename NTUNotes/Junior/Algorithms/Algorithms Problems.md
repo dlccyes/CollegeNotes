@@ -402,7 +402,24 @@ optimal BST
 ## HW3
 ### 1. [[Algorithms#Huffman codes]]
 ![](https://i.imgur.com/k8NiQDd.png)
+畫成 binary tree 去 merge 來看
 
 ![](https://i.imgur.com/RUoP70b.png)
 ![](https://i.imgur.com/NkX82Bs.png)
 ![](https://i.imgur.com/ZSo6ZBY.png)
+
+### 2. BFS
+![](https://i.imgur.com/R8VeIvW.png)
+
+![](https://i.imgur.com/VHr1ZUu.png)
+![](https://i.imgur.com/hYsPpFK.png)
+
+### 3. edge types
+![](https://i.imgur.com/59B5DaQ.png)
+
+![](https://i.imgur.com/aJWHHzf.png)
+
+### 4. BFS
+![](https://i.imgur.com/1vmLXy3.png)
+![](https://i.imgur.com/9XZBfgi.png)
+![](https://i.imgur.com/m43qqgV.png)
