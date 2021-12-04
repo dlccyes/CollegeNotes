@@ -85,3 +85,12 @@ inoremap <C-]> <Esc>I<Del><Esc>
 nnoremap <C-]> I<Del><Esc>
 xnoremap <C-]> :norm x<CR>
 ```
+
+## go to character
+in normal mode, type `fa` to go to the next a, `Fa` to go to previous a
+
+## go to position
+in normal mode, type `18l` to to the 18th character in your current line
+
+## go to line
+`:18` to go to line 18
