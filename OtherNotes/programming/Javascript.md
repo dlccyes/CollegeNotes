@@ -37,8 +37,12 @@ $('#night-btn').click(function(e){
 
 $('#night-btn').mousedown(function(e){
 	initPos = [e.clientX, e.clientY];
+	yoffset = $('#night-btn').offset().top-e.clientY;
+	xoffset = $('#night-btn').offset().left-e.clientX;
 	onmousemove = function(e){
-		$("#night-btn").css({top: e.clientY-10, left: e.clientX-10, position:'fixed'});
+		yy = yoffset+e.clientY;
+		xx = xoffset+e.clientX
+		$("#night-btn").css({top: yy, left: xx, position:'absolute'});
 	};
 });
 $('#night-btn').mouseup(function(e){
