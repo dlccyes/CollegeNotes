@@ -423,3 +423,24 @@ optimal BST
 ![](https://i.imgur.com/1vmLXy3.png)
 ![](https://i.imgur.com/9XZBfgi.png)
 ![](https://i.imgur.com/m43qqgV.png)
+
+### 5-6. Euler tour
+![](https://i.imgur.com/irV5KEu.png)
+
+![](https://i.imgur.com/SqFEIEO.png)
+![](https://i.imgur.com/p5DULH1.png)
+![](https://i.imgur.com/z2PRwSJ.png)
+![](https://i.imgur.com/ZYd7yZN.png)
+
+
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiOm6-5u8z0AhXCJKYKHbZDCgkQFnoECAoQAQ&url=http%3A%2F%2Fwww.bowdoin.edu%2F~ltoma%2Fteaching%2Fcs231%2Ffall09%2FHomeworks%2Fold%2FH9-sol%25203.pdf&usg=AOvVaw11Aglt7zTgaartpiheFGjj
+![](https://i.imgur.com/WBHdwdu.png)
+
+### 7 Shannon code
+![](https://i.imgur.com/yGy1HmT.png)
+![](https://i.imgur.com/XfZVMKf.png)
+
+### 8.
+![](https://i.imgur.com/kG3u2S0.png)
+![](https://i.imgur.com/mI3qOfB.png)
+![](https://i.imgur.com/OZ1smZz.png)

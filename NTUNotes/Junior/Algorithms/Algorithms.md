@@ -590,6 +590,9 @@ radix & bucket sort use other sorters to do the actual sorting
 - runtime $\in O(2^nn^3)$
 
 ## Greedy
+### properties
+![](https://i.imgur.com/MPK8kV8.png)
+
 ### interval scheduling
 quickest finished
 ![](https://i.imgur.com/U1UIrgh.png)
@@ -609,6 +612,7 @@ exchange → 數量一樣
 	- several subproblems
 
 ### Huffman codes
+- https://iq.opengenus.org/huffman-coding-vs-fano-shannon-algorithm/
 - characters represented by binary string
 - fixed-length code (block code)
 	- 3 bits a character
