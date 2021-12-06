@@ -644,6 +644,7 @@ jalr x0, 0(x1) //return
 - 資源不夠用
 - 一個資源一個時間只能一個人用
 - solution: more resources
+
 ##### data hazard
 - current instruction depends on the result of previous instructions → pipeline stall
 - e.g.
@@ -652,7 +653,103 @@ jalr x0, 0(x1) //return
 		- 要等上一個 WB 才能 ID → 要多等 2 個 cycle 
 - solution: forwarding/bypassing
 	- 不等 write back，一生出答案就直接拿
+	- need extra connection
+	- e.g.
+		- ![](https://i.imgur.com/FnLRhwt.png)
+- load-use data hazard
+	- 用到的 variable 來自上一個 instruction 的 load
+	- need to wait 1 more cycle even with forwarding
+		- ![](https://i.imgur.com/3fzSYYN.png)
+	-  schedule codes to avoid it
+		- ![](https://i.imgur.com/hu8AwBa.png)
 
 
 ##### control hazard
-- controlling action depends on other instructions
+- depends on branch outcome of previous instruction
+- e.g.
+	- ![](https://i.imgur.com/41CXIKw.png)
+		- 要等 beq 判斷（要不要跳）之後才能執行下一個 instruction
+- sol: branch prediction
+	- static branch prediction
+		- assume branch not taken and do the next instruction immediately, if the branch is taken (assumption incorrect), cancel the instruction
+		- ![](https://i.imgur.com/iWX0bW5.png) 
+	- dynamic
+		- assumption based on history
+#### datapath
+- ![](https://i.imgur.com/3jKRTf0.png)
+- IF
+	- ![](https://i.imgur.com/jKyIoo8.png)
+- ID
+	- ![](https://i.imgur.com/7FRJQH7.png)
+- EX
+	- load
+		- ![](https://i.imgur.com/2VmZ0eW.png)
+	- store
+		- ![](https://i.imgur.com/o6llAj8.png)
+		- 2nd register value loaded into EX/MEM 
+		- ???
+- MEM
+	- load
+		- ![](https://i.imgur.com/H78RUS5.png)
+	- store
+		- ![](https://i.imgur.com/GNIg099.png)
+
+- WB
+	- load
+		- ![](https://i.imgur.com/D1AGz6h.png)
+			- would be the wrong register number
+		- ![](https://i.imgur.com/G0HnxYa.png)
+			- correct ver.
+			- register number passed from ID stage
+			- 有之後需要用到的 information → 需要 pass along with the datapath
+	- store
+		- ![](https://i.imgur.com/Qz3bKWr.png)
+
+
+
+#### diagram
+- ![](https://i.imgur.com/Dck03PJ.png)
+- ![](https://i.imgur.com/340jugr.png)
+- ![](https://i.imgur.com/a7uh68Z.png)
+	- cycle 5 of previous diagrams
+
+#### control
+- ![](https://i.imgur.com/eJYJ5AG.png)
+- ![](https://i.imgur.com/Oq97wu1.png)
+- ![](https://i.imgur.com/mxjIMe1.png)
+
+### data hazard & forwarding
+#### data hazard
+- EX hazard & MEM hazard
+	- ![](https://i.imgur.com/F5M1vro.png)
+- destination = 前兩個指令的 register
+- e.g.
+	- ![](https://i.imgur.com/LadFQF0.png)
+	- ![](https://i.imgur.com/uuKu2yz.png)
+- double hazard
+	- EX hazard & MEM hazard both happen
+	- e.g.
+		- ![](https://i.imgur.com/FvmlX1m.png)
+			- 1a & 2a
+
+#### forwarding
+- without forwarding
+	- ![](https://i.imgur.com/iYAObPi.png)
+- with forwarding
+	- ![](https://i.imgur.com/x3ckRNn.png)
+- need forwarding when
+	- EX/MEM or MEM/WB will write to a register && RD != x0 && RD = RS of ID/EX
+	- EX hazard
+		- ![](https://i.imgur.com/9uv7vcd.png)
+	- MEM hazard
+		- ![](https://i.imgur.com/8Bfm5dU.png)
+		- blue part: only forward this type when no EX hazard to avoid double hazard
+- control
+	- 哪一種 hazard → mux control
+	- ![](https://i.imgur.com/hFHNbpn.png)
+	- 1a → ForwardA = 10
+	- 2a → ForwardA = 01
+	- 1b → ForwardB = 10
+	- 2b → ForwardB = 01
+- datapath
+	- ![](https://i.imgur.com/WYPhqDs.png)

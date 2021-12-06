@@ -14,8 +14,6 @@ layout: meth
 </details>
 
 
-
-
 ## acronyms
 - OA = online assessment
 	- 1st stage in applying
@@ -34,6 +32,25 @@ layout: meth
 - YoE = years of experience
 - FAANG
 	- means Amazon most of the time
+
+## building portfolio
+### projects
+- solve real problems
+	- a story behind it
+- good code structure
+	- consistent style
+	- reusable codes
+	- maintainable
+- have doc
+	- how to run
+- deployed as a site, can be easily run
+	- ability to deploy and host a site
+- have dockerfile
+- references
+	- what a good full stack project need 
+		- https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwyopk/
+	- build a site yourself
+		- https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwz0dx
 
 ## applying preparation
 - DSA

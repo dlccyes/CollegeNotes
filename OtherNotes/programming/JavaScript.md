@@ -15,6 +15,11 @@
 `str.slice(0,5)`
 
 ## drag element
+https://jsfiddle.net/dlccyes/s84thyLn/2/
+- embed
+	- <iframe src="https://jsfiddle.net/dlccyes/s84thyLn/2/" width=100% height=500px></iframe>
+
+
 using jquery
 drag `#night-btn` in this code
 ```js
