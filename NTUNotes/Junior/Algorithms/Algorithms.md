@@ -760,6 +760,7 @@ exchange → 數量一樣
 	- 每多一個 edge 就會 merge 兩個 tree
 	- implementation
 		- 每個小 tree 都是一個 disjoint set
+			- [[Data Structure#disjoint sets]]
 		- 新的 edge 屬於同 disjoint set → cycle
 		- ![](https://i.imgur.com/IEeN2kc.png)
 		- time complexity $\in O(ElgE+V)=O(ElgV+V)$
