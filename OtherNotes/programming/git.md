@@ -12,6 +12,24 @@ https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
 ### discard all unstaged files
 `git checkout -- .`
 
+### how many insertions and deletions for a user
+`git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{insertions+=$1; deletions+=$2} END {print NR, "files changed,", insertions, "insertions(+),", deletions, "deletions(+)"}';`
+https://stackoverflow.com/a/48575013/15493213
+
+### all commits
+- `git log`
+- `git reflog`
+- commit counts
+	- `git rev-list HEAD --count`
+
+####  by users
+- all commits
+	- `git shortlog`
+- commit counts
+	- `git shortlog -s -n`
+
+https://stackoverflow.com/questions/677436/how-do-i-get-the-git-commit-count
+
 ## squash
 ### using reset & amend
 設你有最近 3 個 commit 為
