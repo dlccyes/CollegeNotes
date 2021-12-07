@@ -29,13 +29,15 @@ after tariff, seller 賺到 Q~0~'處，實際成交到 Q~1~' 處，so  tariff re
 ![](https://i.imgur.com/cm5tT9c.png)
 
 ### general equilibrium
-#### edgeworth box
+#### [[Edgeworth box]]
 endowment point: 初始位置(情況)
 Bob’s endowment point (measured along his axes) is the same as Aline’s endowment point (measured along her axes)
 ![](https://i.imgur.com/brRXFnx.png)
-D：region of mudtual advantage
+D：region of mutual advantage
 ![](https://i.imgur.com/4JKm2X5.png)
 P is Pareto optimal
+
+every point on contract curve is Pareto optimal 
 ![](https://i.imgur.com/ORwwwma.png)
 
 <!-- ![](https://i.imgur.com/J6Eg0XL.jpg) -->

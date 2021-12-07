@@ -22,6 +22,10 @@ layout: meth
 		- https://www.dropbox.com/s/392h185o12whyye/Macro_Measurement.mp4
 	- W3 macro measurement 2
 		- https://www.dropbox.com/s/3cxs832ipt3vpsb/Macro_Measurement2.mp4
+	- all
+		- https://www.youtube.com/playlist?list=PLp29FF3ioia0StLO86w_xM0rYq0CKcLd5
+- slides
+	- http://homepage.ntu.edu.tw/%7Emao/
 - 考古題
 	- https://sites.google.com/a/ntuecon.co.cc/tai-da-jing-ji-zi-liao-ku/6-zong-ti-jing-ji-xue/6-1-mao-qing-sheng
 
@@ -633,11 +637,14 @@ $$y=AF(k,n)(+B)$$
 - n = labor
 - A, B = 生產面衝擊
 	- 影響生產的東西
+	- A 是 TFP, total factor productivity
 	- B 使生產函數平行變動
 		- e.g. 中獎、欠收
+
 #### 特性
 ##### 資本勞動缺一不可
 - $AF(k,0)=AF(0,n)=0$ if B=0
+
 ##### 投入愈多，產出愈多
 - $MPL, MPK>0$
 	- marginal productivity of labor/capital
@@ -653,6 +660,7 @@ $$y=AF(k,n)(+B)$$
 ##### Inada condition
 - ![](https://i.imgur.com/B7zwc65.png)
 - 非必要條件
+
 ##### 固定規模報酬 constant return to scale
 - 生產效率 independent to  廠商規模
 	- 資本勞動皆 x2 → output x2
@@ -772,6 +780,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- budget constraint $c=a+wn=a+w(1-l)$ → $c+wl=a+w$
 	- $u_c(c^*,l^*)w=u_l(c^*,l^*)$ <br> $w=\dfrac{u_l(c^*,l^*)}{u_c(c^*,l^*)}$
 		- 休閒取代消費的邊際效益 (MR) = wage (MC)
+		- work 1 time unit more → lose $u_l$ more utility but get w more money → consume w more money → get $wu_c$ more utility
 	- ![](https://i.imgur.com/2bxid1j.png)
 - w 上升 → leisure 變貴 → budget line 變陡
 - ![](https://i.imgur.com/LoIt5iz.png)
@@ -827,10 +836,70 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 
 ### Crusoe 荒島經濟
 - Crusoe 同時為消費者 & 生產者
-- 這裡的 pareto optimum 是唯一
+	- 生產&消費椰果 all by himself
+- ![](https://i.imgur.com/5Zumf3A.png)
+	- G 是 loss of 椰果 for whatever reason
+- $u_l(c^*,l^*)=u_c(c^*,l^*)AF_n$<br>$MRS_{l,c}=\dfrac{u_l}{u_c}=AF_n=MPL$
+	- MPL = $AF_n$ = 設算價格 imputed price / 影子價格 shadow price，即市場的 real wage
+	- work 1 time unit more → lose $u_l$ more utility but get MPL more coconuts → consume w more coconuts → get $MPL\times u_c$ more utility
+- 與市場經濟的不同
+	- 消費者生產量會決定 leisure 的 cost
+	- 這裡的 pareto optimum 是效益最大化那個唯一解，因為只有一個人要考慮
 - ![](https://i.imgur.com/EnUeNoH.png)
 	- A: MPL > MRS
 	- B: MPL < MRS
 	- E: MRS = MPL
 		- slope = leisure's 影子價格
 	- competitive equilibrium 即為 pareto optimum
+
+#### 福利定理
+- first welfare theorem
+	- in perfectly competition, equilibrium will be Pareto optimal
+- second welfare theorem
+	- any Pereto optimum can be achieved as the competitive equilibrium for some endowment distribution
+- pf with [[Edgeworth box]]
+	- ![](https://i.imgur.com/s8A03ct.png)
+	- 在 contract curve 以外的點都存在 mutually advantage area → converge 到 contract curve while maintaining Pareto → first welfare theorem
+	- to achieve a certain point in the contract curve i.e. a certain Pareto optimal solution, just redistribute the endowment points, e.g. all endowment points on line CD will converge to point F → second welfare theorem
+
+## Ch7 靜態模型的均衡分析
+### 政府消費支出增加
+- for Crusoe
+	- ![](https://i.imgur.com/BVS48nm.png)
+	- 政府消費增加 → 政府定額稅增加 → 等效於 G 增加
+	- 不影響 MPL → slope unchanged for any n
+	- E to F
+		- leisure 下降，coconuts i.e. 商品供給 變多
+		- consumption i.e. 商品需求 下降 ([[income effect]])
+		- MPL i.e. real wage 下降
+- for market
+	- ![](https://i.imgur.com/SWqKXVV.png)
+	- 直接效果
+		- G 上升 → y shift right (E to A)
+	- [[income effect]]
+		- 定額稅上升 → 非勞動所得下降 → leisure & consumption demand 下降，labor supply 上升 → y shift left (A to D), n shift right (E to S)
+		- income effect 的 y shift left 幅度 < 直接效果的 y shift right 幅度 → end in EA 之間
+			- c+wl = w+(d-T) → $\Delta c+w\Delta l=\Delta T$ for w & d unchanged → $\Delta c<\Delta T$
+			- 如果 y shift left 幅度較大，end with w'>w* in 商品市場，則商品&勞動市場皆存在超額供給 → 違反 [[#Walras Law of Markets]]
+	- 工資效果
+		- at w*，商品市場出現超額需求 (ED)，勞動市場出現超額供給 (ES) → w 下降
+			- → 商品供給上升 & 勞動需求上升 (E to F)
+			- → leisure 變便宜 ([[substitution effect]]) → 商品需求下降 (D to F) & 勞動供給下降 (S to F)
+	- [[income effect]] & [[substitution effect]] 均使 consumption demand 下降
+	- [[income effect]] 使 labor supply 上升幅度 > [[substitution effect]] 使 labor supply 下降幅度，最終 E to F，勞動量 & 生產量上升
+		- 因為 wage 降低，廠商 hire more
+	- 與 Crusoe model 一致
+- 結論
+	- 排擠效果
+		- 政府支出使消費者均衡消費量下降 i.e. 政府消費排擠民間消費
+	- y = c + G → $\Delta y=\Delta c+\Delta G$，又 G 上升會使 c 減少 → $\Delta y<\Delta G$
+		- 不存在 multiplier effect
+	- 政府消費性支出使消費者 utility 下降
+		- 勞動增加、消費減少、工資減少
+	- 政府支出會使產出&就業增加，但會使消費&實質工資下降，so 政府支出不是造成景氣波動的主因
+	- 模型的缺陷
+		- 有些政府支出能替代民間消費 → 提升消費者 utility
+			- e.g. 營養午餐、治安
+		- 公共工程會刺激民間生產 (?)
+
+### 供給面衝擊
