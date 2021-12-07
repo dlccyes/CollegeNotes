@@ -22,3 +22,17 @@
 - autocomplete from history
 	- `ctrl+R`
 	
+## modules
+### cowsay
+https://github.com/tnalpgge/rank-amateur-cowsay
+`echo "haha" | cowsay -f gnu`
+
+### fortune
+`fortune`
+
+### uwuify
+`echo "rank" | uwuify`
+
+### lolcat
+`fortune | uwuify | cowsay -f gnu | lolcat`
+
