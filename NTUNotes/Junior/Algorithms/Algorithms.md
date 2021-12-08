@@ -624,6 +624,11 @@ exchange → 數量一樣
 - binary search tree
 	- 每輪把 frequency 最低者 pair 在一起 → 最後 frequency 最低者會沉在最下面
 	- ![](https://i.imgur.com/obP6l1h.png)
+- ![](https://i.imgur.com/qgJ6XIV.png)
+- time complexity $\in O(nlgn)$
+- greedy properties
+	- ![](https://i.imgur.com/xWZNj7K.png)
+	- ![](https://i.imgur.com/82O4bX8.png)
 
 ### task scheduling
 - n 個需要花時間 1 單位時間完成的 tasks

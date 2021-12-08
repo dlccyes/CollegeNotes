@@ -440,7 +440,28 @@ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiOm6-5
 ![](https://i.imgur.com/yGy1HmT.png)
 ![](https://i.imgur.com/XfZVMKf.png)
 
-### 8.
+### 8. coin change greedy
 ![](https://i.imgur.com/kG3u2S0.png)
 ![](https://i.imgur.com/mI3qOfB.png)
 ![](https://i.imgur.com/OZ1smZz.png)
+
+## recitation
+### [[Algorithms#Huffman codes]]
+![](https://i.imgur.com/rkMTtLk.png)
+8 個 → 加一個 null 便 9 個，跟 1 2 合
+
+### semiconnected
+![](https://i.imgur.com/8mhCHk3.png)
+![](https://i.imgur.com/k3KQN9y.png)
+
+### BFS
+![](https://i.imgur.com/GUdTSpo.png)
+不停找
+
+### DFS
+![](https://i.imgur.com/pxTa6Ew.png)
+把 G 的 edge 都弄成反邊 s.t. R(u) 都是指到 u
+
+### topological sort
+![](https://i.imgur.com/35tjUVY.png)
+會把所有 out-degree = 1 in-degree=0 者清掉，剩下的都在 cycle 裡，所以找不到 in-degree=0 → queue emptied
