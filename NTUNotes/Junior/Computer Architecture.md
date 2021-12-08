@@ -180,6 +180,7 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 	- for signed number
 	- e.g. -8 = 11111000, -8/2 = -4 = 11111100, the right arithmetic shift of the former
 	- left arithmetic shift 則等同於 left logical shift, so no SRLI
+		- 應該是 undefined https://stackoverflow.com/questions/4009885/arithmetic-bit-shift-on-a-signed-integer
 - `ANDI` = bit-by-bit AND operation
 	- `ANDI x20, x10, 3` → x20 = the result of x10 AND 3 i.e. 只保留最低兩位數 i.e. x10%4
 
