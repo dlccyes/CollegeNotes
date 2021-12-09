@@ -1562,3 +1562,76 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - send bit string of data 接餘數
 - receiver 把收到的 bit string 長 XOR generator，餘數為 0 → perfecto
 - ![](https://i.imgur.com/yspDL5m.png)
+
+### multiple access protocols
+- uplink - (多對一) multiple access
+- downlink - (一對多) broadcast or scheduling
+- cellular network
+	- 蜂巢式無縫隙 coverege
+		- 六角形
+		- coverage 重疊處會互相干擾，but 外圍訊號差還好
+- more suitable than point-to-point when there're many idle moments
+- in-band signaling
+	- control signal & data 在同 channel 傳
+- out-of-band signaling
+	- control signal & data 在不同 channel 傳
+
+#### channel partitioning
+- TDMA
+	- time division multiple access
+- FDMA
+	- frequency division multiple access
+
+#### random access
+##### slotted ALOHA
+- time slots
+- can only send at the start of a slot
+- more than one transmission in a slot → collision
+- collision → retransmit in subsequent slot with probability p
+- pros
+	- if only 1 node → utilize 100%
+	- decentralized
+	- simple
+- cons
+	- unefficient
+		- many collision/idle slots
+		- max 37% utilization if N → infinity
+
+##### ALOHA
+- no time slots
+- transmit immediately after receiving
+- collision when transmission time overlaps with others' transmission time
+	- not propagation time
+- max 18% utilization if N → infinity
+
+##### CSMA
+- carrier sense multiple access
+- get the state of current carrier
+	- idle → transmit
+	- busy → don't transmit
+- if long propagation delay → need long time to sense other's transmission
+- ??
+
+##### CMSA/CD
+- CDMA with collision detection
+- detect collision while transmitting → abort
+- exponential backoff
+	- nth collision → choose k from random 0:$2^{n-1}$  and wait kx512 bit time
+- used by Ethernet
+- transmit 完才發生的 collision 不是 MAC 的事
+
+##### CSMA/CA - collision avoidance
+-  for wireless → can't detect collision
+
+#### taking turns
+##### polling
+- master polls and allow if slave wants to transmit
+- no collision
+- cons
+	- polling overhead
+
+##### token passing
+- 繞圈圈輪流送
+- cons
+	- token overhead
+	- token maintenance problem
