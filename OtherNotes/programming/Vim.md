@@ -86,20 +86,21 @@ nnoremap <C-]> I<Del><Esc>
 xnoremap <C-]> :norm x<CR>
 ```
 
-## go to character
+## syntax
+### go to character
 in normal mode, type `fa` to go to the next a, `Fa` to go to previous a
 
-## go to position
+### go to position
 in normal mode, type `18l` to to the 18th character in your current line
 
-## go to line
+### go to line
 `:18` to go to line 18
 
   
-## comment & uncomment
+### comment & uncomment
 https://stackoverflow.com/a/15588798/15493213
 
-### comment
+#### comment
 1.  go to start of line
 2.  ctrl+v (visual block)
 3.  select
@@ -107,8 +108,22 @@ https://stackoverflow.com/a/15588798/15493213
 5.  enter # or whatever
 6.  Esc → automatically inject the same thing to each line you select
     
-### uncomment
+#### uncomment
 1.  go to start of line
 2.  ctrl+v (visual block)
 3.  select
 4.  d
+
+### autocomplete
+`ctrl-x +`
+- `ctrl-n` → word completion
+- `ctrl-l` → line completion
+
+## commands
+### toggle commands
+`set commands!`
+
+### ignore case
+- `set ignorecase`
+- `set smartcase` to ignore case at all lowercase but sensitive otherwise
+	- need to have ignorecase on

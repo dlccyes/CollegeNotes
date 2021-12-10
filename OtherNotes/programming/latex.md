@@ -34,8 +34,8 @@ https://tex.stackexchange.com/a/460857
 ### local
 1. install a LaTeX distro
 	- tex live
+		- official https://www.tug.org/texlive/acquire-netinstall.html
 		- https://www.ibm.com/docs/en/strategicsm/10.1.1?topic=analysis-installing-tex-live-windows
-		- https://www.tug.org/texlive/acquire-netinstall.html
 2. run with editor or something else
 	- editors
 		- https://tex.stackexchange.com/questions/339/latex-editors-ides

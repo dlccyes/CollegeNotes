@@ -80,3 +80,7 @@ layout: meth
 		- said to be commonly sited
 - 台灣狀況
 	- https://forum.gamer.com.tw/C.php?bsn=60076&snA=5444020
+
+## linkedin
+- skill assessment answers
+	- https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes
