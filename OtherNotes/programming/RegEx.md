@@ -1,7 +1,7 @@
 ---
 title: RegEx
 layout: meth
-parent: OtherNotes
+parent: Programming
 ---
 # RegEx
 {: .no_toc }

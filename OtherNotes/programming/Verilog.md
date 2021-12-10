@@ -1,7 +1,7 @@
 ---
 title: Verilog
 layout: meth
-parent: OtherNotes
+parent: Programming
 ---
 # Verilog
 {: .no_toc }

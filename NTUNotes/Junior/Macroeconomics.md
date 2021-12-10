@@ -854,13 +854,28 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 
 #### 福利定理
 - first welfare theorem
-	- in perfectly competition, equilibrium will be Pareto optimal
+	- in perfect competition, equilibrium will be Pareto optimal
 - second welfare theorem
 	- any Pereto optimum can be achieved as the competitive equilibrium for some endowment distribution
 - pf with [[Edgeworth box]]
 	- ![](https://i.imgur.com/s8A03ct.png)
 	- 在 contract curve 以外的點都存在 mutually advantage area → converge 到 contract curve while maintaining Pareto → first welfare theorem
 	- to achieve a certain point in the contract curve i.e. a certain Pareto optimal solution, just redistribute the endowment points, e.g. all endowment points on line CD will converge to point F → second welfare theorem
+
+### 市場均衡的不效率性
+- irl 使 equilibrium 非 pareto optimal 的因素
+- 存在外部性 → 存在改善空間
+	- marginal private cost < marginal social cost
+		- e.g. 汙染
+	- marginal private gain < marginal social gain
+		- e.g. 不同工同酬
+- information incomplete/asymmetric
+	- extra cost for information → deadweight loss
+	- agency problem
+- 扭曲性租稅 distorting taxes
+	- model 用定額稅 i.e. 人頭稅，not a function of labor time → won't affect wage → won't affect choice between consumption & leisure
+	- irl 不會用人頭稅，是會影響生產者 or 消費者選擇的 distorting taxes
+- monopoly power of firms
 
 ## Ch7 靜態模型的均衡分析
 ### 政府消費支出增加
@@ -903,3 +918,30 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- 公共工程會刺激民間生產 (?)
 
 ### 供給面衝擊
+- A (TFP) 上升
+- for Crusoe
+	- ![](https://i.imgur.com/OmEFHDw.png)
+	- MPL increase → leisure more expensive → E to D ([[substitution effect]])
+	- more coconuts → D to F ([[income effect]])
+	- 消費量&生產量上升
+	- labor amount 方向不一定
+- for market
+	- ![](https://i.imgur.com/ktEgASS.png)
+	- 直接效果
+		- A increase → MPL increase → labor demand ($n^d$) & goods supply ($y^s$) increase
+		- $\Delta d=F\Delta A$ i.e. dividend increase = A 上升的直接效果
+			- $\Delta y^s=F\Delta A+MPL n^d$
+			- $\Delta d=\Delta y^s-w\Delta n^d$
+			- $\Delta d=F\Delta A+(MPL-w)\Delta n^d$
+			- $MPL = w$
+	- [[income effect]]
+		- A increase → consumer dividend increase → consumption demand ($y^d$) increase & leisure demand increase i.e. labor supply ($n^s$) decrease
+		- income effect 的 $y^d$ shift left 幅度 < 直接效果的 $y^s$ shift right 幅度 (ED<EA)
+			- c+wl = w+(d-T) → $\Delta c+w\Delta l=\Delta d$ for w & T unchanged → $\Delta c<\Delta d$
+	- 工資效果
+		- 在 w*，goods market 超額供給，labor market 超額需求
+		- wage increase 
+			- → consumption demand ($y^d$) increase (D to F) & labor supply ($n^s$) increase (B to F)
+			- → goods supply ($y^s$) decrease (A to F) & labor demand ($n^d$) decrease (A to F)
+- 結論
+	- A 上升 → production & consumption & wage 上升，labor 不一定

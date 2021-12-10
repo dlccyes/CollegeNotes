@@ -1,7 +1,7 @@
 ---
 title: CSS
 layout: meth
-parent: OtherNotes
+parent: Programming
 ---
 # CSS
 {: .no_toc }

@@ -1,7 +1,7 @@
 ---
 title: WSL
 layout: meth
-parent:OtherNotes
+parent: Programming
 ---
 # WSL
 {: .no_toc }
