@@ -17,6 +17,19 @@ parent: Programming
 ## resources
 https://www.youtube.com/watch?v=Y3xzOLp1OsE
 
+## syntax	
+### always block
+```verilog
+always @ (sensitivily list) begin
+	[statements]
+end
+```
+- `always @ (a or b)` → execute when `a` or `b` changes
+- `*` =  all of the wires that the always block depends on
+	- `always @ (*)`
+
+https://www.chipverify.com/verilog/verilog-always-block
+
 ## intro
 
 ![](https://i.imgur.com/7ytJc9s.png)

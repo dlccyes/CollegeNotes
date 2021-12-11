@@ -794,3 +794,14 @@ exchange → 數量一樣
 		- assume spanning tree T doesn't have the min cost edge (u,v) that connect S & V-S, if we replace the edge connecting S & V-S with (u,v), we'll have a smaller cost
 - cycle property
 	- for any cycle，cycle 裡最貴的 edge 不屬於任何 MST
+
+### optimal substructure
+- unweighted shortest path
+	- have optimal substructure
+- unweighted longest path
+	- don't have optimal substructure
+	- e.g.
+		- ![](https://i.imgur.com/t0WpAcB.png)
+			- longest path simple path of q → t is q → r → t
+			- longest path simple path of q → r is q → s → t → r
+			- longest path simple path of r → t is r → q → s → t

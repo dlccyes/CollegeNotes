@@ -97,3 +97,9 @@ using [[#tmux plugin manager]]
 	- `ctrl+b n`
 - switch to previous window
 	- `ctrl+b p`
+
+### navigation
+- scroll mode
+	- `ctrl+b [` to enter
+	- up/down arrow key become navigation
+	- `q` to exit

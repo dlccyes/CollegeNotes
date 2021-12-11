@@ -14,7 +14,8 @@ parent: Computer Architecture
 {:toc}
 </details>
 
-## recursion
+## HW1 [[RISC-V]]
+### recursion
 T(n) = 2T(n/2) + 8n + 5, T(1) = 4
 
 python
@@ -114,7 +115,7 @@ result:
 ```
 
 
-## Caesar
+### Caesar
 shift characters by 3
 
 ```
@@ -207,3 +208,7 @@ end: # end
   
 ################################################################################
 ```
+
+## HW2 [[verilog]] ALU
+<!--⚠️Imgur upload failed, check dev console-->
+![](https://i.imgur.com/wwncllN.png)

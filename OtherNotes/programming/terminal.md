@@ -21,7 +21,9 @@
 ## other commands
 - autocomplete from history
 	- `ctrl+R`
-	
+- cd to previous directory
+	- `cd -`
+		
 ## modules
 ### cowsay
 https://github.com/tnalpgge/rank-amateur-cowsay
