@@ -1551,15 +1551,47 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 
 
 ## Ch6 Link Layer
+### intro
+- services
+	- framing
+		- encapsulate network-layer datagram to link-layer frame
+	- link access
+		- medium access protocol (MAC)
+			- coordinate frame transmission
+	- reliable delivery
+		- used in high error links e.g. wireless link
+		- not used in low error links e.g. wired links
+	- error detection & correction
+		- implemented in hardware
+		- detect where exactly the errors are (bit-level) and correct them
+- implemented in network adapter / network interface card (NIC)
+	- ![](https://i.imgur.com/NVMUbTo.png)
 
 ### error detection
+#### parity check
+- even or odd number of 1s
+- single-bit
+	- even number of bit errors → can't detect
+	- errors often clustered together (bursts) → 50% miss
+- two-dimensional 
+	- parity check for every row and column
+
+#### checksum 
+- low overhead but weak
+- used in transport layer
+	- implemented in software → need to be simple & fast
+- link layer uses CRC
+	- implemented in hardware → can perform complex operations quickly
+
 #### CRC, cyclic redundancy check
 - generator
 	- sender & receiver agree on before hand
 	- r+1 個 bits
 - data 補 r 個 0 i.e. slli r
-- 長除法 data 除 generator but 相減時用 XOR
-- send bit string of data 接餘數
+- modulo-2 arithmetic
+	- addition without carry = subtraction without carry = XOR
+	- 長除法 data 除 generator but 相減時用 XOR
+- send bit string of data 接餘數 R
 - receiver 把收到的 bit string 長 XOR generator，餘數為 0 → perfecto
 - ![](https://i.imgur.com/yspDL5m.png)
 

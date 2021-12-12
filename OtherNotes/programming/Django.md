@@ -30,6 +30,22 @@ parent: Programming
 - create app
 	- `python manage.py startapp app1`
 
+
+## routing
+```py
+from django.contrib import admin
+from django.urls import path, include
+from django.views.generic import TemplateView
+from . import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('app1.urls')), # route to app1's urls.py
+    path('doc', TemplateView.as_view(template_name='doc.html')), # return template directly
+	path('', views.index, name='index'), # use function index() in file views
+]
+
+
 ## views
 `urls.py` is [[Laravel]]'s `web.php`
 
@@ -82,3 +98,4 @@ why not put in `templates/index.html`?
 		- `--plan` to print in list
 
 
+```

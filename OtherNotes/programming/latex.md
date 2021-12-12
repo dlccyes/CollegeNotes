@@ -30,6 +30,18 @@ https://tex.stackexchange.com/a/460857
 ### align center
 `\begin{center} context \end{center}`
 
+### link color
+```tex
+\hypersetup{
+    colorlinks=true,
+    % linkcolor=blue,
+    % filecolor=magenta,      
+    urlcolor=[HTML]{2c8eb5},
+    % pdftitle={Overleaf Example},
+    % pdfpagemode=FullScreen,
+    }
+```
+
 ## environment
 ### local
 1. install a LaTeX distro

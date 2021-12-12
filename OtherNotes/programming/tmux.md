@@ -60,7 +60,9 @@ using [[#tmux plugin manager]]
 - `tmux source ~/.tmux.conf`
 
 #### usage
-`ctrl+b s`
+- `ctrl+b I` to activate it
+- `ctrl+b ctrl+s` to save all sessions (will display "saving")
+- `ctrl+b ctrl+r` to restore all sessions (will display "restoring")
 
 ## commands
 - default prefix = `ctrl+b`
@@ -68,20 +70,23 @@ using [[#tmux plugin manager]]
 	- `ctrl+b ?`
 
 ### sessions
-- detach (quit but don't end)
-	- `ctrl+b d`
 - list all sessions
-	- `tmux ls`
+	- (outside) `tmux ls`
+	- (inside) `ctrl+b s` (and switch)
 - go to session 3
 	- `tmux a -t 3`
 	- `tmux attach -t 3`
-- rename session 3 to hahaha
-	- `tmux rename-session -t 3 hahaha`
-- kill session bruh
-	- go inside and `ctrl+d`
-	- `tmux kill-session -t bruh`
 - new session named hahaha
 	- `tmux new -s hahaha`
+- rename session 3 to hahaha
+	- `tmux rename-session -t 3 hahaha`
+- detach (quit but don't end)
+	- `ctrl+b d`
+- kill session bruh
+	- (inside) `ctrl+d`
+	- (outside) `tmux kill-session -t bruh`
+- kill all sessions
+	- `tmux kill-server`
 
 ### multiple panes
 - split window vertically

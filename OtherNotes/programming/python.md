@@ -4,7 +4,7 @@
 - for every libraries you have
 	- `python -m pip freeze > requirements.txt`
 - for a specific directory
-	- `pipreq /path/to/project`
+	- `pipreqs /path/to/project`
 	- https://stackoverflow.com/a/31684470/15493213
 
 ## exec

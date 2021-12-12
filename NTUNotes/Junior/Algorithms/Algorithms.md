@@ -805,3 +805,31 @@ exchange → 數量一樣
 			- longest path simple path of q → t is q → r → t
 			- longest path simple path of q → r is q → s → t → r
 			- longest path simple path of r → t is r → q → s → t
+- shortest path
+	- subpaths of shortest paths are shortest paths
+
+### SSSP
+- single-source shortest path
+- shortest path from source node s to every other nodes
+- 不考慮 negative edge
+	- negative cycle → 使 node cost 變成 -infty
+		- ![](https://i.imgur.com/mCIyU5N.png)
+- triangular inequality
+	- s to u $\leq$ s to v to u
+- relaxation
+	- ![](https://i.imgur.com/uvAKi86.png)
+- 更新 node cost
+
+#### [[Dijkstra's Algorithm]]
+- ![](https://i.imgur.com/Y6CtnkY.png)
+- ![](https://i.imgur.com/ucdyzRS.png)
+- all edge weights $\geq 0$
+- Prim's algorithm
+- time complexity
+	- Q = linear array → $O(V^2)$
+	- Q = binary heap → $O(VlgV)$
+	- Q = fibonacci heap → $O(E+VlgV)$
+- e.g.
+	- ![](https://i.imgur.com/Fkm71k3.png)
+- correctness (?)
+	- ![](https://i.imgur.com/2Fa8WKE.png)
