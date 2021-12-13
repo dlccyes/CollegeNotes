@@ -68,7 +68,7 @@ layout: meth
 - https://techinterviewhandbook.org/
 	- author of Blind 75
 
-### good threads
+### good posts or threads
 - bonus skills
 	- https://www.reveddit.com/v/csMajors/comments/qsz0wy/five_programming_skills_to_boost_your_resume_that/
 		- SQL, Jira (agile), Git, Azure & AWS, Docker
@@ -80,6 +80,11 @@ layout: meth
 		- said to be commonly sited
 - 台灣狀況
 	- https://forum.gamer.com.tw/C.php?bsn=60076&snA=5444020
+- resume
+	- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-1-introduction-f1dcb67e4798
+- interview
+	- 台灣小公司
+		- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-4-summary-f34efeaa50a9?p=208b417e8140
 
 ## linkedin
 - skill assessment answers

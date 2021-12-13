@@ -754,3 +754,32 @@ jalr x0, 0(x1) //return
 	- 2b → ForwardB = 01
 - datapath
 	- ![](https://i.imgur.com/WYPhqDs.png)
+
+#### stalling
+- load-use data hazard 只能 stall
+- ![](https://i.imgur.com/bLUubxz.png)
+- ![](https://i.imgur.com/z9sIWYY.png)
+- ![](https://i.imgur.com/uFThGYX.png)
+
+### control hazards
+- ![](https://i.imgur.com/v88zP4e.png)
+
+#### dynamic branch prediction
+- 1-bit predictor
+- 2-bit predictor
+	- wrong prediction twice → change
+	- ![](https://i.imgur.com/k70qCuV.png)
+
+### exceptions
+- flush instructions
+- handling exception
+	- ![](https://i.imgur.com/rtM3d13.png)
+
+### instruction level parellellism, ILP
+- to increase ILP
+	- deeper pipeline
+		- less work per stage → shorter clock cycle
+	- multiple issue
+		- multiple pipeline
+		- multiple instructions per cycle
+			- CPI < 1, IPC = 1/CPI > 1
