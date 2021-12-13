@@ -1,5 +1,6 @@
 ---
 has_children: true
+title: OtherNotes
 ---
-# Other Notes
+# OtherNotes
 other notes

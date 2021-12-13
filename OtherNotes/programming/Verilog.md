@@ -129,10 +129,12 @@ https://www.chipverify.com/verilog/verilog-always-block
 	- nonblocking
 		- 都計算完後才一起更新
 			- s.t. 不會馬上更新又影響到其他人
+		- 所有指令都 parallel 進行 without interfering each other
 		- `x <= a + b`
 - 東西都要寫滿，每個 variable 都要 specify
 	- ![](https://i.imgur.com/AiY9jZM.png)
 	- not full case → latch
+	- 用 `<=` 時，沒被走道的就被默認為原值
 - switch case
 	- ![](https://i.imgur.com/RQeo9Mb.png)
 - combinational circuit
