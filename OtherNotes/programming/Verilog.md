@@ -30,6 +30,11 @@ end
 
 https://www.chipverify.com/verilog/verilog-always-block
 
+
+### print
+`$display("counter%d out=%d", counter, out);` decimal
+`$display("counter%b out=%b", counter, out);` binary
+
 ## intro
 
 ![](https://i.imgur.com/7ytJc9s.png)
@@ -150,3 +155,8 @@ https://www.chipverify.com/verilog/verilog-always-block
 	- output 只跟 current state 有關
 - mealy
 	- output 跟 current state & input 有關
+
+## debug
+- `A net is not a legal lvalue in this context`
+	- you might have `output ready` and you do `ready = 1` in an `always` block; you should add `reg ready`
+	- https://stackoverflow.com/questions/29820382/compilation-error-a-net-is-not-a-legal-lvalue-in-this-context
