@@ -945,3 +945,43 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 			- → goods supply ($y^s$) decrease (A to F) & labor demand ($n^d$) decrease (A to F)
 - 結論
 	- A 上升 → production & consumption & wage 上升，labor 不一定
+
+### 計算實例
+- 給定
+	- $u=lnc+lnl$
+	- $y=An^{\alpha}, \alpha\in(0,1)$
+	- $G=gy=T$
+		- $g$ = 政策變數，表政府支出佔總產出的比例
+	- $c=y-G=y-gy=y(1-g)$
+- 均衡條件
+	- $MRS=\frac{u_l}{u_c}=\frac{c}{l}=\frac{(1-g)y}{1-n}=MPL=y_n=\frac{\alpha y}{n}$
+- 解得
+	- $n=\frac{\alpha}{1+\alpha-g}$
+	- $y=An^{\alpha}=A(\frac{\alpha}{1+\alpha-g})^{\alpha}$
+	- $c=(1-g)y=(1-g)A(\frac{\alpha}{1+\alpha-g})^{\alpha}$
+	- $w=MPL=\frac{\alpha y}{n}=\alpha A(\frac{1+\alpha-g}{\alpha})^{1-\alpha}$
+- A 不影響 n
+	- u & y 使 A 變動產生的 [[income effect]] & [[substitution effect]] 剛好抵銷
+- y, c, w 接隨 A 上升
+- n 隨 g 上升
+	- [[income effect]]
+- $\frac{dlnc}{dg}=\frac{-1}{1-g}+\frac{\alpha}{1+\alpha-g}=\frac{(1-\alpha)g-1}{(1-g)(1+\alpha-g)}<0$
+	- g 上升會使 c 下降
+
+### 勞動所得稅
+- $\tau$ = 所得稅率
+- $G=T+\tau wn$ = 定額稅+所得稅
+- $c=(d-T)+(1-\tau)wn$ = 非勞動所得+勞動所得
+- $MRS=\frac{u_l}{u_c}=(1-\tau w)$
+- ![](https://i.imgur.com/lYldYzs.png)
+- 稅率 $\tau$ 上升 
+	- [[substitution effect]] → consumption demand ($c^d$) & labor supply ($n^s$) 下降 bc
+	- 廠商最適選擇不變 → $n^d$ & $y^s$ 不動
+	- → 在原 wage，商品市場超額供給，勞動市場超額需求 → 移動到新均衡 F，(稅前) wage 上升
+		- 睡前工資率上升，but 稅後工資率是下降
+			- ![](https://i.imgur.com/RWJ35vL.png)
+
+- 市場結清條件
+	- $c^d+G=y$
+	- $n^d=n^s$
+- 

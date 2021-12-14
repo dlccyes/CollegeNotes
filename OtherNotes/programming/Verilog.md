@@ -35,6 +35,9 @@ https://www.chipverify.com/verilog/verilog-always-block
 `$display("counter%d out=%d", counter, out);` decimal
 `$display("counter%b out=%b", counter, out);` binary
 
+## extend bits
+`outt = {64{in_A}};` → extend `int_A` to 64 bits
+
 ## intro
 
 ![](https://i.imgur.com/7ytJc9s.png)

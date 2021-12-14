@@ -158,3 +158,7 @@ parent: OtherNotes
 - tasks
 - Text Snippets
 	- enter certain phrase + hotkey → insert long predefined text
+
+## good Sublime plugins
+- NeoVintageous
+	- vim

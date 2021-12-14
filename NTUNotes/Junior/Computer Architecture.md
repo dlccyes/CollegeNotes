@@ -333,6 +333,8 @@ only link/load library procedure when called
 	- multiplicand & ALU reduced to 64 bits
 		- unused portion of registers & adders
 	- multiplier placed in the right half of product
+	- e.g.
+		- ![](https://i.imgur.com/eR3p3Vu.png)
 
 #### signed multiplication
 - 先弄成正的，乘完再轉回去
