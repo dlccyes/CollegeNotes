@@ -833,3 +833,32 @@ exchange → 數量一樣
 	- ![](https://i.imgur.com/Fkm71k3.png)
 - correctness (?)
 	- ![](https://i.imgur.com/2Fa8WKE.png)
+
+#### in DAGs
+- ![](https://i.imgur.com/tQbLvj6.png)
+- time complexity $\in O(V+E)$
+- e.g.
+	- ![](https://i.imgur.com/HSpMMmk.png)
+
+#### [[Bellman-Ford Algorithm]]
+- 接受 negative weight edge
+- ![](https://i.imgur.com/4z857Pa.png)
+	- 5.-7. - if detect negative cycle then return False
+- time complexity $\in O(VE)$
+- e.g.
+	- ![](https://i.imgur.com/DotpVIE.png)
+- correction
+	- ![](https://i.imgur.com/JQpT6R7.png)
+- negative cycle detection
+	- bellman-ford 做完後，多 run 一個 iteration 數值會下降 → 有 negative cycle
+	- ![](https://i.imgur.com/B5svpb5.png)
+	- find negative cycle for a graph
+		- ![](https://i.imgur.com/nSCYOOp.png)
+		- 做一個 new source S 連到所有 node with 0-cost edge，原本 graph 存在 negative cycle iff 從 S 開始 bellman-ford 找得到 negative cycle
+		- ![](https://i.imgur.com/M6NG09D.png)
+		- ?? 為什麼不要直接在原本的 graph 做 bellman-ford ??
+	- linear programming
+		- 線性規劃
+		- constraint graph
+			- ![](https://i.imgur.com/RMwivhf.png)
+			- ???

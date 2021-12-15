@@ -1403,7 +1403,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - iterative, async, distributed, self-terminating
 - decentralized
 - hop-by-hop routing
-- Bellman-Ford Algorithm
+- [[Bellman-Ford Algorithm]]
 	- $d_x(y)=min_v\{c(x,v)+d_v(y)\}$
 		- $d_x(y)$ = least cost from x to y
 		- $c(x,v)$ = direct cost from x to v, with x neighboring v
@@ -1607,12 +1607,25 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- control signal & data 在同 channel 傳
 - out-of-band signaling
 	- control signal & data 在不同 channel 傳
+- desired properties
+	- full rate when only one node
+	- rate = R/M when M nodes
+	- decentralizedno single point of failure
 
 #### channel partitioning
 - TDMA
 	- time division multiple access
+	- divide bandwidth fairly by time slots
+	- cons
+		- max bandwidth R/N for each node, even if there's only 1 node
 - FDMA
 	- frequency division multiple access
+	- divide bandwidth fairly by frequencies
+	- cons
+		- max bandwidth R/N for each node, even if there's only 1 node
+- CDMA, code division multiple access
+	- different code to each node
+	- use the unique code to encode data → can correctly transmit even if collide with others  
 
 #### random access
 ##### slotted ALOHA
@@ -1622,45 +1635,69 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - collision → retransmit in subsequent slot with probability p
 - pros
 	- if only 1 node → utilize 100%
-	- decentralized
+	- highly decentralized
+		- but still need synchronized time slots for all nodes
 	- simple
 - cons
 	- unefficient
 		- many collision/idle slots
-		- max 37% utilization if N → infinity
+		- max 37% (1/e) utilization if N → infinity
 
 ##### ALOHA
 - no time slots
 - transmit immediately after receiving
 - collision when transmission time overlaps with others' transmission time
 	- not propagation time
-- max 18% utilization if N → infinity
+- max 18% (1/2e) utilization if N → infinity
+- fully decentralized
 
 ##### CSMA
 - carrier sense multiple access
 - get the state of current carrier
 	- idle → transmit
 	- busy → don't transmit
-- if long propagation delay → need long time to sense other's transmission
-- ??
+- can't sense others' transmissions if they haven't arrive to my node → propagation delay matters 
+	- long propagation delay → need long time to sense other's transmission
+	- may sense idle when there's transmission far away in the channel → transmit → collide
+- once start transmitting, won't stop even if detect collision
 
-##### CMSA/CD
-- CDMA with collision detection
-- detect collision while transmitting → abort
-- exponential backoff
-	- nth collision → choose k from random 0:$2^{n-1}$  and wait kx512 bit time
+##### CSMA/CD
+- CSMA with collision detection (CD)
+- detect collision while transmitting (for a short time) → abort → wait for some time and resend
+- binary exponential backoff
+	- nth collision → choose k from random $0:2^{n-1}$  and wait kx512 bit time
 - used by Ethernet
 - transmit 完才發生的 collision 不是 MAC 的事
+- efficiency = $\frac{1}{1+5d_{prop}/d_{trans}}$
+	- $d_{prop}$ = propagation time
+		- small → colliding nodes abort immediately
+		- 0 → efficiency = 1
+	- $d_{trans}$ = transmission time
+		- big → channel is productive most of the time
+		- 1 → efficiency = 1
 
 ##### CSMA/CA - collision avoidance
 -  for wireless → can't detect collision
 
 #### taking turns
 ##### polling
-- master polls and allow if slave wants to transmit
-- no collision
+- centralized, one node is the master node
+- master node polls and allow if slave nodes wants to transmit
+- polls in a cyclic manner
+	- round robbin
+- pros
+	- no collision
+	- high efficiency
+		- no empty slots
 - cons
 	- polling overhead
+		- communication time
+		- poll and send capacity info even for inactive nodes
+		- → less than full rate if only one node
+	- centralized
+		- single point of failure
+- e.g.
+	- Bluetooth
 
 ##### token passing
 - 繞圈圈輪流送

@@ -89,6 +89,8 @@ layout: meth
 		- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-2-interview-944c81dca809
 		- https://hackmd.io/@lindaya0913/HkekYB1dPO
 			- 很多很詳細
+	- google Taiwan
+		- https://keep-brain-alive.com/taiwan-google-interview-experience/
 
 ## linkedin
 - skill assessment answers
