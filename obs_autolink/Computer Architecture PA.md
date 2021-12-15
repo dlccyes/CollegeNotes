@@ -209,6 +209,6 @@ end: # end
 ################################################################################
 ```
 
-## HW2 [[verilog]] ALU
+## HW2 [[Verilog]] ALU
 <!--⚠️Imgur upload failed, check dev console-->
 ![](https://i.imgur.com/wwncllN.png)

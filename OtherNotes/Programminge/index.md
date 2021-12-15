@@ -1,7 +1,7 @@
 ---
-title: programming
+title: Programming
 layout: meth
 has_children: true
 ---
-# programming
+# Programming
 programming related notes
