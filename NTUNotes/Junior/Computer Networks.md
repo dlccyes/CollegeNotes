@@ -1700,7 +1700,11 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- Bluetooth
 
 ##### token passing
-- 繞圈圈輪流送
+- 繞圈圈傳 token，持有者可傳 data，傳完 or 沒要傳就 pass 給下個 node
+- pros
+	- decentralized
+	- efficient
 - cons
+	- one node failure → whole system fails
 	- token overhead
 	- token maintenance problem

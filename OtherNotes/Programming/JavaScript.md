@@ -6,6 +6,14 @@
 `<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>`
 
 ## syntax
+### declaration
+- var
+- let
+	- block scoped
+- const
+	- block scoped
+	- can't change value
+
 ### for loop
 - `for(let i=0; i<=s.length; i++)`
 	- 千萬要加 `let`

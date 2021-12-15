@@ -87,6 +87,13 @@ xnoremap <C-]> :norm x<CR>
 ```
 
 ## syntax
+## navigation
+- page up/down
+	- `ctrl+f` `ctrl+b`
+- jump bracket of codes
+	- `ctrl+[` `ctrl+]`
+
+
 ### go to character
 in normal mode, type `fa` to go to the next a, `Fa` to go to previous a
 

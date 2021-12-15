@@ -130,10 +130,12 @@ ref
 
 ## Jekyll structure
 https://carpentries-incubator.github.io/jekyll-pages-novice/layouts/index.html
+
 ### _layouts
 - create a `_layouts` folder in the root
 - specify the layout in the yaml of a file, then the file will use that layout
 	- like in Laravel's view blade 
+
 ### _includes
 
 ## page building

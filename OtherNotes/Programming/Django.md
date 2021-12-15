@@ -88,7 +88,7 @@ why not put in `templates/index.html`?
 	- alter `app1/models.py` and run `python manage.py makemigrations app1`, will generate migration files at `app1/migration` for you
 		- equivalent to [[Laravel]]'s `php artisan migrate` except you only have to alter the database format directly without worrying about the create table drop column syntax
 - print migration file
-	- `python manage.py sqlmigrate app1 0001
+	- `python manage.py sqlmigrate app1 0001`
 - run migration
 	- `python manage.py migrate`
 		- equivalent to [[Laravel]]'s `php artisan migrate`

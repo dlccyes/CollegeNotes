@@ -1,3 +1,7 @@
+---
+parent: Programming
+---
+
 # makefile
 `make`
 - 會根據 `makefile` 執行

@@ -212,3 +212,10 @@ end: # end
 ## HW2 [[Verilog]] ALU
 <!--⚠️Imgur upload failed, check dev console-->
 ![](https://i.imgur.com/wwncllN.png)
+
+problems
+- MUL
+	- deal with overflow(?)
+	- now `in_B` with 1 as the MSB always fail, always succeed otherwise
+	- sign extension by 1 bit?
+	- https://stackoverflow.com/questions/24586842/signed-multiplication-overflow-detection-in-verilog
