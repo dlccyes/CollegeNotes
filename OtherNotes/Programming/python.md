@@ -29,3 +29,7 @@ b64_cred = base64.b64encode(cred.encode('ascii')).decode('ascii')
 import json
 json.loads(str)
 ```
+
+## heap
+`import heapq`
+- 

@@ -149,7 +149,6 @@ my summary: <https://docs.google.com/presentation/u/2/d/1EhezbDUEwNOG1C-rk7YdQcB
 		- utility = how much computation overhead you save comparing to local execution
 - $\mathcal{F}_s$ is strictly preferred to $\mathcal{F}_k$ $\iff$ utility of $\mathcal{F}_s$ with UE n + utility of $\mathcal{F}_k$ without UE n is greater than the reverse situation for all n && no other UE j  in $\mathcal{F}_s$ and $\mathcal{F}_k$ is negatively affected by UE n joining
 	- ==???只看得出來不是負的而無法看出 not negatively affected???==
-	- ==???為甚麼 n 會在意其他人有沒有 worse off???==
 	- ![](https://i.imgur.com/3cW4NUl.png)
 - switch from k to s
 	- ![](https://i.imgur.com/0a98lpz.png)
