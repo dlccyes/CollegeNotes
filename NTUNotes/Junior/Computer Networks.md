@@ -1584,15 +1584,17 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- implemented in hardware → can perform complex operations quickly
 
 #### CRC, cyclic redundancy check
-- generator
+- generator G
 	- sender & receiver agree on before hand
 	- r+1 個 bits
 - data 補 r 個 0 i.e. slli r
 - modulo-2 arithmetic
 	- addition without carry = subtraction without carry = XOR
 	- 長除法 data 除 generator but 相減時用 XOR
-- send bit string of data 接餘數 R
+- send bit string of data D 接餘數 R → $D2^R$
+	- ![](https://i.imgur.com/uPVdRbY.png)
 - receiver 把收到的 bit string 長 XOR generator，餘數為 0 → perfecto
+	- R = remainder of $D2^R \div G$
 - ![](https://i.imgur.com/yspDL5m.png)
 
 ### multiple access protocols
@@ -1708,3 +1710,44 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- one node failure → whole system fails
 	- token overhead
 	- token maintenance problem
+
+#### DOCSIS
+- DOCSIS, data-over-cable service interface specifications
+- for cable access network
+- CMTS, cable modem termination system
+- upstream - many to 1 → multiple access problem
+	- many cable modems share same upstream channel
+- downstream - 1 to many → no multiple access problem
+- many modems connect to CMTS
+- time slotted multiple access, steps
+	1. modems send request to CMTS in a special set of slots
+		- random access
+		- if little traffic, can send data directly in this set of slots
+	2. CMTS grant permission for each time slot
+		- with MAP control message
+	3. modem ACK
+		- CMTS think collision happens if it didn't receive ACK
+		- binary exponential backoff if collision
+- ![](https://i.imgur.com/bqiqyUK.png)
+
+### switched local area networks
+#### link layer address
+##### MAC address
+- LAN / physical / MAC address
+- 6-byte (48-bit) long
+- don't change as you move
+	- portable
+	- while IP address not portable (position: fixed)
+- adapter receive frame → check if the destination MAC match its own MAC, discard if not matched
+- all 1s → broadcast address
+
+##### ARP, address resolution protocol
+- translate IP address to MAC address
+- only for hosts and router interfaces on the same subnet
+- ARP table
+	- each host & router has ARP table
+	- mapping from IP to MAC
+	- have TTL
+		- when to delete this value
+	- don't necessarily contain entries for every host & router
+	- 

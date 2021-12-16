@@ -20,6 +20,7 @@
     --text-muted: #efd1d1;
     --interactive-accent: #b44949;
     --background-modifier-cover: rgb(0 0 0 / 70%);
+    --text-highlight-bg: #c9e7aba3;
 }
 
 .cm-math, .span.cm-formatting-math{
