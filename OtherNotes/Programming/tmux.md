@@ -40,18 +40,19 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 run '~/.tmux/plugins/tpm/tpm'
 ```
 
-3. `tmux source ~/.tmux.conf`
+
+3. `tmux source ~/.tmux.conf` (or just `tmux` if no active tmux session)
+4. in tmux, `ctrl+b I` to load plugins
+	- may lag a little
 
 #### add plugins
 1. `vim ~/.tmux.conf`
 2. `set -g @plugin 'tmux-plugins-XXXX'`
-3. `tmux source ~/.tmux.conf`
-	- need to have running session
+3. `tmux source ~/.tmux.conf` (or just `tmux` if no active tmux session)
 
-### save tmux layouts (no success yet)
+### save tmux layouts
 https://github.com/tmux-plugins/tmux-resurrect
 https://github.com/tmux-plugins/tmux-continuum
-
 
 #### install  
 using [[#tmux plugin manager]]

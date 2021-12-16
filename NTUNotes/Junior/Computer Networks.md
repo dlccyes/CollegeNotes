@@ -1718,26 +1718,28 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - upstream - many to 1 → multiple access problem
 	- many cable modems share same upstream channel
 - downstream - 1 to many → no multiple access problem
-- many modems connect to CMTS
-- time slotted multiple access, steps
+- 先 FDM 成很多個 channel，每個 channel 又有 many modems connect to CMTS，so use TDM to avoid collision
+- TDM steps
 	1. modems send request to CMTS in a special set of slots
 		- random access
 		- if little traffic, can send data directly in this set of slots
 	2. CMTS grant permission for each time slot
 		- with MAP control message
-	3. modem ACK
-		- CMTS think collision happens if it didn't receive ACK
-		- binary exponential backoff if collision
+	3. if modem didn't get response of its request, it would interpret as collision happened (so its request didn't get to CMTS), and will retransmit with binary exponenetial backoff 
 - ![](https://i.imgur.com/bqiqyUK.png)
 
 ### switched local area networks
 #### link layer address
+- each host has 1 IP & 1 adapter
+- each router interface has 1 IP, 1 ARP module, 1 adapter
+- each adapter has 1 MAC
+
 ##### MAC address
 - LAN / physical / MAC address
 - 6-byte (48-bit) long
 - don't change as you move
-	- portable
-	- while IP address not portable (position: fixed)
+	- portable (flat structure)
+	- while IP address not portable (position: fixed) (hierarchical structure)
 - adapter receive frame → check if the destination MAC match its own MAC, discard if not matched
 - all 1s → broadcast address
 
@@ -1750,4 +1752,48 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- have TTL
 		- when to delete this value
 	- don't necessarily contain entries for every host & router
-	- 
+	- plug-and-play
+		- built and maintained automatically
+		- don't have to be configured by system admin
+- if sender wants to send to an IP with no entry in ARP table
+	1. sender sends ARP packet to adapter
+		 - sending IP, receiving IP, MAC
+	2. adapter encapsulate ARP packet to link-layer frame and broadcast to subnet
+	3. all receiving adapters pass the packet to their ARP module, if IP matches, send response ARP packet with the mapping
+	4. sender update its ARP table and send to obtained MAC
+
+#### Ethernet
+- datagram format
+	- ![](https://i.imgur.com/8D8Lvyo.png)
+	- type
+		- network-layer protocol to use
+	- preamble
+	- sync clock rates
+
+#### switches
+- filtering
+	- forward or drop
+- forwarding
+- switch table
+	- MAC, switch interface to use, time created
+	- not necessarily contain all hosts & routers on a LAN
+	- self-learning (plug-and-play)
+		- table initially empty
+		- receive frame → record its source MAC, coming interface & current time
+		- not receive from a MAC for a certain time (aging time) → delete entry
+- a frame arrives to the switch
+	- no entry in switch table → broadcast
+	- have entry, and the matching interface is already this interface (i.e. the LAN it's coming from contains the dest. MAC) → drop, otherwise → forward to the matching interface
+- pros
+	- no collision
+		- switches buffer frames
+	- heterogeneous links
+		- switches isolated links → links can have different speed & run on different media
+	- management
+		- auto detect & disconnect malfunctioning adapters 
+	- plug-and-play
+- cons
+	- broadcast storm
+		- 一堆 broadcast 跑來跑去
+	- restricted to spanning tree
+		- s.t. if have cycles, broadcast will run forever
