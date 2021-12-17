@@ -414,14 +414,14 @@ $$GDP = C+I+G+NX$$
 	- ![](https://i.imgur.com/Df89cbe.png)
 	
 #### 產出成長率濾波器
-- 產出成長率 = $\dfrac{y_t-y_{t-1}}{y_t}=lny_t-lny_{t-1}$
-	- $lny_t$ vs. t 圖之斜率 = 產出成長率
+- 產出成長率 = $\dfrac{y_t-y_{t-1}}{y_t}=\ln y_t-\ln y_{t-1}$
+	- $\ln y_t$ vs. t 圖之斜率 = 產出成長率
 		- ![](https://i.imgur.com/rsQtsGR.png)
 - 將上一期視為長期趨勢值
 	- 顯然不合理
 		- 長期趨勢太波動
 	- 可能濾掉很多短期波動  → over differencing
-- 寫成時間的線性函數<br>$ln\bar{y_t}=\alpha+\beta t$，留下跟時間無關的 $\alpha$
+- 寫成時間的線性函數<br>$\ln \bar{y_t}=\alpha+\beta t$，留下跟時間無關的 $\alpha$
 	- 直接假設長期波動 not a function of 時間 → 不合理
 		- 長期趨勢太淡定
 	- $\alpha$ 可能包含了長期波動 → under differencing
@@ -434,7 +434,7 @@ $$GDP = C+I+G+NX$$
 	- $\lambda$ 平滑參數控制第二項的 weight
 		- $\lambda=1600$ for 季資料
 		- $\lambda=100$ for 年資料
-- HP 循環波動序列 = $lny_t-ln\bar{y_t}$
+- HP 循環波動序列 = $\ln y_t-\ln \bar{y_t}$
 	- 台以 HP 循環波動序列做景氣轉折點的認定
 - ![](https://i.imgur.com/P3PlIIv.png)
 
@@ -490,7 +490,7 @@ $$GDP = C+I+G+NX$$
 ### 景氣波動 3 面向
 #### 波動幅度 volatility
 - 經過處理的標準差
-	- ![](https://i.imgur.com/kOs1LNR.png)
+	- ![](https://i.imgur.com/kOs1\ln R.png)
 		- 分母應是 T-1 但沒什麼差
 - 處理過後再計算標準差才有意義
 	- 原始資料包含長期趨勢的影響，為 non-stationary 時間序列，因此要先用 [[#filtering]] 濾成 stationary 序列
@@ -677,7 +677,7 @@ $$y=AF(k,n)(+B)$$
 $$y=Ak^{\alpha}n^{1-\alpha},\alpha\in(0,1)$$
 - 要素產出彈性 output elasticity factor
 	- output 之於 factor 的彈性
-	- 資本產出彈性 = $\dfrac{dy/y}{dk/k}$<br>$=\dfrac{dlny}{dlnk}$<br>$=\dfrac{dy/dk\cdot k}{y}=\dfrac{MPK\cdot k}{y}=\dfrac{capital \space income}{output}$<br>= 資本份額 capital share
+	- 資本產出彈性 = $\dfrac{dy/y}{dk/k}$<br>$=\dfrac{d\ln y}{d\ln k}$<br>$=\dfrac{dy/dk\cdot k}{y}=\dfrac{MPK\cdot k}{y}=\dfrac{capital \space income}{output}$<br>= 資本份額 capital share
 - $MPK=\dfrac{dy}{dk}=\alpha Ak^{\alpha-1}n^{1-\alpha}=\alpha \dfrac{y}{k}$
 	- so $\alpha$ = 資本產出彈性 = capital share = constant
 - labor share = $1-\alpha$ = constant
@@ -948,7 +948,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 
 ### 計算實例
 - 給定
-	- $u=lnc+lnl$
+	- $u=\ln c+\ln l$
 	- $y=An^{\alpha}, \alpha\in(0,1)$
 	- $G=gy=T$
 		- $g$ = 政策變數，表政府支出佔總產出的比例
@@ -965,7 +965,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - y, c, w 接隨 A 上升
 - n 隨 g 上升
 	- [[income effect]]
-- $\frac{dlnc}{dg}=\frac{-1}{1-g}+\frac{\alpha}{1+\alpha-g}=\frac{(1-\alpha)g-1}{(1-g)(1+\alpha-g)}<0$
+- $\frac{d\ln c}{dg}=\frac{-1}{1-g}+\frac{\alpha}{1+\alpha-g}=\frac{(1-\alpha)g-1}{(1-g)(1+\alpha-g)}<0$
 	- g 上升會使 c 下降
 
 ### 勞動所得稅
@@ -978,10 +978,44 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- [[substitution effect]] → consumption demand ($c^d$) & labor supply ($n^s$) 下降 bc
 	- 廠商最適選擇不變 → $n^d$ & $y^s$ 不動
 	- → 在原 wage，商品市場超額供給，勞動市場超額需求 → 移動到新均衡 F，(稅前) wage 上升
-		- 睡前工資率上升，but 稅後工資率是下降
+		- 稅前工資率上升，but 稅後工資率是下降
 			- ![](https://i.imgur.com/RWJ35vL.png)
 
 - 市場結清條件
 	- $c^d+G=y$
 	- $n^d=n^s$
-- 
+- Laffer curve
+	- 背景 (1980s)
+		- 經濟不景氣
+		- 雙赤字問題 twin deficits
+			- 貿易逆差
+			- 預算赤字
+	- 供給面經濟學 / 雷根經濟學
+		- 降低稅率 → 刺激景氣&增加總稅收
+	- $R=\tau wn$
+	- $\tau$ 上升 → (稅前) w 上升，n 下降
+	- $\ln R=\ln \tau+\ln w+\ln n$
+	- if w 不變，$\frac{d\ln R}{d\ln \tau}=1+\frac{d\ln n}{d\ln \tau}=1-\eta_{\tau}$
+		- $\eta_{\tau}$ = 勞動供給的稅率彈性
+		- $\eta_{\tau}<1$ → R 隨 $\tau$ 上升 
+		- $\eta_{\tau}>1$ → $\tau$ 上升使 R 下降  
+	- $\tau$ 上升，稅後 w 下降幅度變大
+	- ![](https://i.imgur.com/8cSbJpc.png)
+- 待補
+
+### 消費券均衡效果
+- 消費券會替代部分私人消費 & 使勞動供給下降，but 總消費量仍增加
+	- [[#消費券 consumption voucher]]
+- 均衡條件
+	- $MPL = f'(n) = w$
+		- 廠商利潤極大
+		- 不受 voucher 影響
+	- $MRS=\frac{u_l}{u_c}=(1-\tau)w$
+		- 邀費者效用極大
+	- $c+v=\tilde{c}=y=f(n)$
+		- 市場結清條件
+	- $v=T+\tau wn$
+		- 政府預算均衡
+- 消費券有中立性質
+	- 前三項均衡解與 $v$ 無關
+	- $v$ 不影響產出、勞動、市場工資率 → 私人消費完全被排擠

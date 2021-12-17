@@ -85,12 +85,18 @@ layout: meth
 - interview
 	- 台灣小公司
 		- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-4-summary-f34efeaa50a9?p=208b417e8140
+		- https://www.ptt.cc/bbs/Soft_Job/M.1632988517.A.302.html
 	- 台灣大公司
 		- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-2-interview-944c81dca809
 		- https://hackmd.io/@lindaya0913/HkekYB1dPO
 			- 很多很詳細
+		- https://ptt-life.com/Soft_Job/l/LIFE.M.1622535654.A.079
+			- 112 CS 全滅 哭
 	- google Taiwan
 		- https://keep-brain-alive.com/taiwan-google-interview-experience/
+	- Amazon Taiwan
+		- https://www.dcard.tw/f/job/p/236316977
+		- https://jackkuo.org/post/台灣亞馬遜實習心得/
 
 ## linkedin
 - skill assessment answers
