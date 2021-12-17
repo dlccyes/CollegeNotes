@@ -29,6 +29,9 @@ title: Github Pages
 ### just the doc
 https://pmarsceill.github.io/just-the-docs/#getting-started
 
+doesn't support Chinese search
+https://github.com/pmarsceill/just-the-docs/discussions/437#discussioncomment-85470
+
 #### build locally
 1. vim `_config.yml`
 	- `remote_theme: pmarsceill/just-the-docs`

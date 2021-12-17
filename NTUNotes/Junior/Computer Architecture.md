@@ -335,6 +335,7 @@ only link/load library procedure when called
 	- multiplier placed in the right half of product
 	- e.g.
 		- ![](https://i.imgur.com/eR3p3Vu.png)
+			- ... 不是吧
 
 #### signed multiplication
 - 先弄成正的，乘完再轉回去

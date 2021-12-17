@@ -17,6 +17,19 @@ parent: Programming
 ## resources
 https://www.youtube.com/watch?v=Y3xzOLp1OsE
 
+## execute
+to run
+```shell
+source /usr/cad/cadence/cshrc && source /usr/cad/synopsys/CIC/synthesis.cshrc
+ncverilog HW2_tb.v HW2.v +access+r
+```
+
+to check
+```shell
+dv -no_gui
+read_verilog HW2.v
+```
+
 ## syntax	
 ### always block
 ```verilog
@@ -163,3 +176,9 @@ https://www.chipverify.com/verilog/verilog-always-block
 - `A net is not a legal lvalue in this context`
 	- you might have `output ready` and you do `ready = 1` in an `always` block; you should add `reg ready`
 	- https://stackoverflow.com/questions/29820382/compilation-error-a-net-is-not-a-legal-lvalue-in-this-context
+- `the statements in this 'always' block are outside the scope of the synthesis policy. Only an 'if' statement is allowed at the top level in this always block. (ELAB-302)`
+	- 在 clock 類型 (還是說 sequential block ?) 的 `always` block 裡，top level 只能是 `if`，不能有其他東西
+	- http://www.eda8.com/?action-viewthread-tid-80474
+- `or a directly connected net is driven by more than one source, and not all drivers are three-state`
+	- a variable value is changed in more than one `always` block i.e. 只能在同一個 `always` block 對變數進行操作
+	- https://bbs.eetop.cn/thread-305696-1-1.html
