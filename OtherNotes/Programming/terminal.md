@@ -1,4 +1,18 @@
+---
+title: terminal
+layout: meth
+parent: Programming
+---
 # terminal
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
 
 ## awk
 - substring index
