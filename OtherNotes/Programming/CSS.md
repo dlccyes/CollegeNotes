@@ -20,3 +20,6 @@ head elements can also has class or id
 ## remove element
 - jquery
 	- `$('#id').remove()`
+
+## selector
+`[class*='xterm-dom-renderer-owner-']` → anything class containing `.xterm-dom-renderer-owner-`

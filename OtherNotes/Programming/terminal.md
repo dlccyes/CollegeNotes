@@ -18,6 +18,32 @@
 - zip `haha` to `haha.zip`
 	- `zip -r haha.zip haha`
 
+## ssh
+### keygen
+`
+1. `ssh-keygen -t ed25519 -C [username]`
+2. press ok til the end (or type something to set password or change saving location)
+3. private key & public key would be in `~/.ssh`
+
+### gcp
+https://ithelp.ithome.com.tw/articles/10251134
+
+generate a new ssh key or use existing ssh key and paste (the public one) to your Computing Engine VM (click the VM)
+
+`vim ~/.ssh/config`
+
+```
+Host [my_alias]
+HostName   [external_ip]
+Port 22
+IdentitiesOnly yes
+IdentityFile [private key location]
+User [username]
+```
+change the `[]`to fit your need
+
+and then just simply `ssh my_alias` to ssh into it
+
 ## other commands
 - autocomplete from history
 	- `ctrl+R`
@@ -37,4 +63,3 @@ https://github.com/tnalpgge/rank-amateur-cowsay
 
 ### lolcat
 `fortune | uwuify | cowsay -f gnu | lolcat`
-

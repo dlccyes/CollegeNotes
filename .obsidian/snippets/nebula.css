@@ -385,3 +385,10 @@ body {
     background-color: #f997cf00;
     color: #ffb365;
 }
+
+/*hiccup ----*/
+.markdown-preview-view hr {
+    border: none;
+    border-top: 2px solid;
+    border-color: #99c1ffcf;
+}
