@@ -182,3 +182,8 @@ https://www.chipverify.com/verilog/verilog-always-block
 - `or a directly connected net is driven by more than one source, and not all drivers are three-state`
 	- a variable value is changed in more than one `always` block i.e. 只能在同一個 `always` block 對變數進行操作
 	- https://bbs.eetop.cn/thread-305696-1-1.html
+- how to not latch
+	- full case
+	- use `var_nxt = var` and update `var <= var_nxt` in sequential block
+	- all things used in `always` block is in the sensitivity list
+	- https://stackoverflow.com/questions/20036401/if-statements-causing-latch-inference-in-verilog

@@ -862,3 +862,25 @@ exchange → 數量一樣
 		- constraint graph
 			- ![](https://i.imgur.com/RMwivhf.png)
 			- ???
+
+#### APSP
+- all-pairs shortest paths
+- use adjacency matrix
+	- most use adjacency list
+- extened shortest paths
+	- ![](https://i.imgur.com/AK95Rkn.png)
+- show all-pairs shortest path
+	- for $n^2$ 個 entries，算所有可能的 k 到所有可能的 m → $\in O(n^4)$
+		- ![](https://i.imgur.com/ilDtvMe.png)
+	- 可優化
+		- ![](https://i.imgur.com/3iqOvj2.png)
+
+##### Floyd-Warshell's APSP Algorithm
+- i to j subproblem to i to k + k to j
+- ![](https://i.imgur.com/8ydiFxo.png)
+	-  k 為中繼點
+-  time complexity $\in O(V^3)$
+-  執行完對角線上有 < 0 數字 → negative cycle
+-  ![](https://i.imgur.com/Q5tZDf7.png)
+- e.g.
+	- ![](https://i.imgur.com/rOPFpj7.png)
