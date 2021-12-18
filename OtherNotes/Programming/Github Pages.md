@@ -32,12 +32,17 @@ https://pmarsceill.github.io/just-the-docs/#getting-started
 doesn't support Chinese search
 https://github.com/pmarsceill/just-the-docs/discussions/437#discussioncomment-85470
 
+#### build with github page
+in `_config.yml` add `remote_theme: pmarsceill/just-the-docs`
+
+
 #### build locally
-1. vim `_config.yml`
-	- `remote_theme: pmarsceill/just-the-docs`
-2. `sudo gem install just-the-docs`
-	-  if (ruby related) error, `sudo apt-get install ruby-all-dev` and retry
-		-  https://github.com/github/pages-gem/issues/133#issuecomment-411918159
+1. `sudo gem install just-the-docs`
+	- if (ruby related) error, `sudo apt-get install ruby-all-dev` and retry  
+		- https://github.com/github/pages-gem/issues/133#issuecomment-411918159
+2. in `vim _config.yml` add `theme: "just-the-docs"`
+	- uncomment it when use github page to build or it might lead to build failure
+3. `jekyll serve`
 
 #### navigation structure
 - it doesn't care about the real folder subfolder relationship, instead, you specify the hierarchy manually

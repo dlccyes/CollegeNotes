@@ -1,6 +1,6 @@
 #theme: jekyll-theme-cayman
 remote_theme: pmarsceill/just-the-docs
-theme: "just-the-docs"
+#theme: "just-the-docs" #enabling it when using github page might lead to failure
 markdown: kramdown
 
 # Footer "Edit this page on GitHub" link text
