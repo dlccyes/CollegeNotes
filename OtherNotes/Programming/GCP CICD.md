@@ -118,8 +118,7 @@ steps:
   - 'us-central1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:$SHORT_SHA'
 # [END cloudbuild]
 ```
-which will run the unit test, build & push the image to artifact registry i.e. container registry
-
+which will run the unit test, build & push the image to artifact registry (the successor of container registry, or GCR)
 
 ```shell
 cd ~/hello-cloudbuild-app

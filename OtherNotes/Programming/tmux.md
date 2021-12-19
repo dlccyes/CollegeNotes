@@ -73,14 +73,15 @@ using [[#tmux plugin manager]]
 ### sessions
 - list all sessions
 	- (outside) `tmux ls`
-	- (inside) `ctrl+b s` (and switch)
+	- (inside) `ctrl+b s` (and switch) (sorted by name)
 - go to session 3
 	- `tmux a -t 3`
 	- `tmux attach -t 3`
 - new session named hahaha
 	- `tmux new -s hahaha`
 - rename session 3 to hahaha
-	- `tmux rename-session -t 3 hahaha`
+	- (outside) `tmux rename-session -t 3 hahaha`
+	- (inside) `ctrl+b $`
 - detach (quit but don't end)
 	- `ctrl+b d`
 - kill session bruh

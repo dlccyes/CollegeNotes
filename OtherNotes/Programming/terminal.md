@@ -69,6 +69,9 @@ and then just simply `ssh my_alias` to ssh into it
 	- `free -h`
 - list all running processes
 	- `ps aux`
+- size of all top level directories
+	- `du -sh *`
+	- `du -sh * | sort -rh`
 		
 ## modules
 ### cowsay
@@ -83,3 +86,23 @@ https://github.com/tnalpgge/rank-amateur-cowsay
 
 ### lolcat
 `fortune | uwuify | cowsay -f gnu | lolcat`
+
+## WSL
+### list all running distros
+`wsl -l -v` (in command line)
+
+### terminate
+`wsl -t DISTRO` to terminate DISTRO
+
+`wsl --shutdown` to terminate all
+
+### memory problem
+it won't return your memory once it allocated it, until termination
+
+ref
+- <https://blog.simonpeterdebbarma.com/2020-04-memory-and-wsl/>
+- <https://github.com/microsoft/WSL/issues/4166>
+
+or `sudo sh -c 'echo 1 > /proc/sys/vm/drop_caches'`
+
+per <https://medium.com/hungys-blog/clear-linux-memory-cache-manually-90bec95ea003>

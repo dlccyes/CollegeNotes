@@ -9,6 +9,9 @@
 	- commit details of `abcdef`
 
 ## commit related
+## view your current changes
+`git diff`
+
 ### discard changes
 - `git checkout -- .`
 	- clear all unstaged files
@@ -20,8 +23,10 @@
 	- clear the untracked files `haha.txt`
 
 ### how many insertions and deletions for a user
-`git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{insertions+=$1; deletions+=$2} END {print NR, "files changed,", insertions, "insertions(+),", deletions, "deletions(+)"}';`
-https://stackoverflow.com/a/48575013/15493213
+```
+git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{insertions+=$1; deletions+=$2} END {print NR, "files changed,", insertions, "insertions(+),", deletions, "deletions(+)"}';
+```
+<https://stackoverflow.com/a/48575013/15493213>
 
 ### all commits
 - `git log`
