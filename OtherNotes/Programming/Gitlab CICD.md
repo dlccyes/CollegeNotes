@@ -18,7 +18,11 @@ guides followed
 - <https://blog.cloud-ace.tw/application-modernization/devops/devops-gitlab-asp-net-core-kubernetes-engine-ci-cd/>
 
 ## install gitlab on GCP VM
-create a computing engine instance with boot disk size >= 30GB
+Create a computing engine instance with boot disk size >= 30GB
+
+Reserve the ephemeral external IP to make it static
+- go to <https://console.cloud.google.com/networking/addresses/>
+- click "Reserve"
 
 ```
 sudo apt-get update 
@@ -55,7 +59,7 @@ assign the `Storage Admin` & `Kubernetes Enginer Developer` role to it and hit `
 
 login to gitlab (not with admin)
 
-Go to `user settings` → `SSH Keys` and add your ssh public key in your local computer, may be in `~/.ssh`).
+Go to  `edit profile`(in avatar dropdown) →  `user settings` → `SSH Keys` and add your ssh public key in your local computer, may be in `~/.ssh`).
 
 Create a new project.
 
@@ -219,15 +223,7 @@ push codes
 
 In your repo, go to `CI/CD` → `Jobs` to see what happened.
 
- Cannot connect to the Docker daemon ????????????????????????????????????????\
- 
-sudo gitlab-runner register \
-  --non-interactive \
-  --url "http://34.138.254.115" \
-  --registration-token "sF2sXJZfqx7wAyWyRuYy" \
-  --executor "docker" \
-  --docker-image docker:19.03.12 \
-  --description "pls work" \
-  --tag-list "test" \
-  --run-untagged="true" \
-  –-docker-privilege="true"
+- problems
+-  Cannot connect to the Docker daemon ????????????????????????????????????????
+-  docker pull docker:dind problem?
+-  docker login problem?

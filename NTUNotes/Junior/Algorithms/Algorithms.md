@@ -811,7 +811,7 @@ exchange → 數量一樣
 ### SSSP
 - single-source shortest path
 - shortest path from source node s to every other nodes
-- 不考慮 negative edge
+- if have negative edges
 	- negative cycle → 使 node cost 變成 -infty
 		- ![](https://i.imgur.com/mCIyU5N.png)
 - triangular inequality
@@ -833,6 +833,8 @@ exchange → 數量一樣
 	- ![](https://i.imgur.com/Fkm71k3.png)
 - correctness (?)
 	- ![](https://i.imgur.com/2Fa8WKE.png)
+- 不接受 negative edges，否則會陷入 negative cycle
+	- 不能所有 edge cost 直接往上平移到 >=0，因為每個 path 經過的 edge 數目不一，會破壞 shortest path 解
 
 #### in DAGs
 - ![](https://i.imgur.com/tQbLvj6.png)
@@ -863,7 +865,7 @@ exchange → 數量一樣
 			- ![](https://i.imgur.com/RMwivhf.png)
 			- ???
 
-#### APSP
+### APSP
 - all-pairs shortest paths
 - use adjacency matrix
 	- most use adjacency list
@@ -875,7 +877,7 @@ exchange → 數量一樣
 	- 可優化
 		- ![](https://i.imgur.com/3iqOvj2.png)
 
-##### Floyd-Warshell's APSP Algorithm
+#### Floyd-Warshell's APSP Algorithm
 - i to j subproblem to i to k + k to j
 - ![](https://i.imgur.com/8ydiFxo.png)
 	-  k 為中繼點
@@ -884,3 +886,24 @@ exchange → 數量一樣
 -  ![](https://i.imgur.com/Q5tZDf7.png)
 - e.g.
 	- ![](https://i.imgur.com/rOPFpj7.png)
+- transitive closure
+-  i to k AND k to j → i to j
+-  ![](https://i.imgur.com/nJhIpo7.png)
+
+#### Johnson's Algorithm
+- reweight s.t. all edges are nonnegative without changing the shortest path solution → [[Dijkstra's Algorithm]]
+- 移動 node 的位置
+- $h(u)$ = 把 node u 往前移動多少
+- $\hat{w}(u,v)=w(u,v)+h(u)-h(v)$ 
+- shortest path 不變
+	- ![](https://i.imgur.com/33LjIHE.png)
+- cycle preserving
+	- cycle 位置都跟原本一樣
+- ![](https://i.imgur.com/6zWiq7F.png)
+- e.g.
+	- ![](https://i.imgur.com/4MsfE22.png)
+-  yellow: 原本 graph
+-  create new node 接上所有 node with weight 0
+-  run [[Bellman-Ford Algorithm]]
+-  red edge 的起點提前 0，終點提前 -1 → new weight = 3+1 = 4
+-  下面是 node 表示法：altered cost / 反推回的 original cost
