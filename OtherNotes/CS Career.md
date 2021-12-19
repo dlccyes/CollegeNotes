@@ -61,10 +61,16 @@ layout: meth
 - complex personal projects
 
 ## resources
+### forums
+- Blind
 - r/cscareerquestions
 - r/csmajors
+
+### websites
 - https://www.levels.fyi/
 	- company salaries
+- https://www.glassdoor.com/
+	- company salaries & reviews
 - https://techinterviewhandbook.org/
 	- author of Blind 75
 

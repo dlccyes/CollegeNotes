@@ -41,6 +41,7 @@ gcloud services enable container.googleapis.com \
 gcloud artifacts repositories create my-repository \  --repository-format=docker \  --location=us-central1
 ```
 
+create GKE cluster  
 ```
 gcloud container clusters create-auto hello-cloudbuild \    --region us-central1
 ```

@@ -42,10 +42,12 @@ parent: Programming
 ### gcp
 https://ithelp.ithome.com.tw/articles/10251134
 
-generate a new ssh key or use existing ssh key and paste (the public one) to your Computing Engine VM (click the VM)
+1. generate a new ssh key or use existing ssh key and paste (the public one) to your Computing Engine VM (click the VM name → edit → add ssh key → save)
+3. `ssh -i [private_key_location] id_ed25519 [username]@[external_IP_of_VM]`
+	- if successfully go into your VM, go to next step
+	- if permission denied, then the public key on the VM and your private key on your machine don't match
 
-`vim ~/.ssh/config`
-
+to set alias, go to `~/.ssh/config` and add  
 ```
 Host [my_alias]
 HostName   [external_ip]

@@ -1,7 +1,7 @@
 # git
 
 ## history
-https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
+<https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History>
 - `git log`
 - `git reflog`
 	- each commit oneline
@@ -9,8 +9,15 @@ https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
 	- commit details of `abcdef`
 
 ## commit related
-### discard all unstaged files
-`git checkout -- .`
+### discard changes
+- `git checkout -- .`
+	- clear all unstaged files
+- `git checkout -- haha.txt`
+	- clear the unstaged file `haha.txt`
+- `git clean -df`
+	- clear all untracked files
+- `git clean -f haha.txt`
+	- clear the untracked files `haha.txt`
 
 ### how many insertions and deletions for a user
 `git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{insertions+=$1; deletions+=$2} END {print NR, "files changed,", insertions, "insertions(+),", deletions, "deletions(+)"}';`
@@ -76,3 +83,22 @@ https://gitbook.tw/chapters/rewrite-history/merge-multiple-commits-to-one-commit
 3. next time you push or pull, you won't need to enter the credentials
 
 <https://stackoverflow.com/questions/35942754/how-can-i-save-username-and-password-in-git>
+
+## clone related
+### partial clone
+```
+git init
+git remote add -f origin <url>
+git config core.sparsecheckout true
+echo <dir1>/ >> .git/info/sparse-checkout
+echo <dir2>/ >> .git/info/sparse-checkout
+echo <dir3>/ >> .git/info/sparse-checkout
+git pull origin master
+```
+
+works like a charm
+
+ref:  
+- https://stackoverflow.com/a/43902478/15493213
+	- pasta from https://stackoverflow.com/a/17075665/15493213
+		- pasta from http://jasonkarns.com/blog/2011/11/15/subdirectory-checkouts-with-git-sparse-checkout/
