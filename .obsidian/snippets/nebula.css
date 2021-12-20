@@ -43,13 +43,14 @@
 
 /*main pane*/
 .mod-vertical.mod-root {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://i.imgur.com/C90lb3z.jpg") !important;    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://i.imgur.com/C90lb3z.jpg") !important;
     background-size: cover;
 }
 
 /*right sidebar*/
     .mod-right-split {
         background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://i.imgur.com/hAcGmG3.jpg);
+
         background-size: cover;
         background-position: 54%;
     }

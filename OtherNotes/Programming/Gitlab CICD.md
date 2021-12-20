@@ -16,18 +16,26 @@ parent: Programming
 
 ## intro
 ### What does it do?
-Whenever you push code to your gitlab repo, gitlab's CI/CD pipeline would be triggered. First it will create a docker image, if succesful, it will push the docker image to your Google Container Registry (GCR) & Google Kubernetes Engine (GKE).
+Whenever you push code to your gitlab repo, gitlab's CI/CD pipeline would be triggered. In the first step, it will build a docker image and push the docker image to your Google Container Registry (GCR). In the second step, it will push the image to your Google Kubernetes Engine (GKE).
 
 ### guides followed
 - main
 	- <https://blog.cloud-ace.tw/application-modernization/devops/devops-gitlab-asp-net-core-kubernetes-engine-ci-cd/>
+		- build & push docker image to google container registry
+		- push image to google kubernetes engine
 		- contain some mistakes
 		- his repo
 			- <https://gitlab.com/kevin354/gitlab-iis-k8s-deploy-sample/-/tree/master>
 - supplementary
-	- <https://ludusrusso.space/blog/2020/09/gitlab-ci-gcr>
 	- <https://medium.com/@tasslin/隨手寫寫-gcp-5-gitlab-ci-gke-7c7b1c4e9eec>
+		- build & push docker image to google container registry
+		- push image to google kubernetes engine
+	- <https://ludusrusso.space/blog/2020/09/gitlab-ci-gcr>
+		- build image and push to google container registry
 	- <https://ithelp.ithome.com.tw/articles/10266722?sc=iThomeR>
+		- build & push docker image to Gitlab container registry
+	- https://ikala.cloud/tutorials-kubernetes-engine-load-balancer/
+	- https://cloud.google.com/architecture/implementing-deployment-and-testing-strategies-on-gke#perform_a_rolling_update_deployment
 - troubleshooting
 	- Cannot connect to the Docker daemon at . Is the docker daemon running?
 		- <https://gitlab.com/gitlab-org/gitlab-runner/-/issues/4566#note_199261985>
@@ -111,6 +119,7 @@ Back to Gitlab and add `GCP_CLUSTER_NAME`, the value is the name of the cluster 
 ![](https://i.imgur.com/W7mMI42.png)
 
 Add `GCP_GCR`, the value is `gcr.io/[GCP_project_ID]/[Gitlab_repo_name]`  
+(if the region you use isn't US, you probably should use `asia.gcr.io` `eu.gcr.io` etc. instead)
 ![](https://i.imgur.com/tsAw5Zv.png)
 GCR means Google Container Registry, set this up so that later on your docker images would be pushed to GCR also.
 
@@ -199,7 +208,7 @@ gke-deploy:
   script:
     - kubectl set image deployment/app-deployment app=$GCP_GCR:$CI_COMMIT_SHA
 ```
-as defined in `stages`, it will first execute `docker-build`, then (if successful) `gke-deploy`
+As defined in `stages`, it will first execute `docker-build`, then (if successful) `gke-deploy`.
 
 Go to your gitlab repo and add `deployment.yaml`  
 ```yaml
@@ -251,6 +260,8 @@ spec:
  cpu: 50m
  memory: 50Mi
 ```
+learn more about `deployment.yaml` [here](https://www.mirantis.com/blog/introduction-to-yaml-creating-a-kubernetes-deployment)
+
 
 Pull sample codes from <https://github.com/dotnet/dotnet-docker/tree/main/samples/aspnetapp> and delete everything except `aspnetapp` &  `Dockerfile` & `aspnetapp.sln`.  
 (you can partial clone like [this](https://stackoverflow.com/a/43902478/15493213))  
@@ -323,13 +334,32 @@ In your repo, go to `CI/CD` → `Jobs` to see what happened.
 
 ![](https://i.imgur.com/awhlYSX.png)
 
-If succeed, go to  [GCP → Kubernetes Engine](https://console.cloud.google.com/kubernetes/) to see if your image is up.
+Go to [GCR](https://console.cloud.google.com/gcr/imagess), a repo containing your docker images should appear.
 
-Go to [GCP → Container Registry](https://console.cloud.google.com/gcr/imagess), a repo containing your docker images should appear.
+If succeed, go to  [GKE/workload](https://console.cloud.google.com/kubernetes/workload) to see if your image is up.
 
-go to `Services and Ingress` (in GKE) and click the endpoint, you should see this  
+Go to [GKE/Services & Ingress](https://console.cloud.google.com/kubernetes/discovery) and click the endpoint, you should see this  
 ![](https://i.imgur.com/tPcX7yy.png)
+you can also get the endpoint by  
+```
+SERVICE_IP=$(kubectl get svc app-service \
+    -o jsonpath="{.status.loadBalancer.ingress[0].ip}")
+```
+and then check it with  
+```
+curl "http://${SERVICE_IP}:8080/version"
+```
 
+You can open Google cloud shell and  
+```
+kubectl rollout status deployment/app-deployment
+kubectl get deployment
+kubectl get pods
+kubectl get svc/app-service
+```
+to see your GKE status.   
+Check the official guide for more  
+<https://cloud.google.com/kubernetes-engine/docs/how-to/updating-apps#kubectl-set>
 
 ## troubleshooting
 ### gitlab CI/CD job pending forever
