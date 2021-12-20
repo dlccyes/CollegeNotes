@@ -778,7 +778,7 @@ jalr x0, 0(x1) //return
 - handling exception
 	- ![](https://i.imgur.com/rtM3d13.png)
 
-### instruction level parellellism, ILP
+### instruction level parallelism, ILP
 - to increase ILP
 	- deeper pipeline
 		- less work per stage → shorter clock cycle
@@ -786,3 +786,44 @@ jalr x0, 0(x1) //return
 		- multiple pipeline
 		- multiple instructions per cycle
 			- CPI < 1, IPC = 1/CPI > 1
+
+#### Static Multiple Issue
+- two-issue pipeline
+	- ![](https://i.imgur.com/gLyZuz4.png)
+	- 一邊 ALU/branch 一邊 load/store
+	- ![](https://i.imgur.com/h6IOHS1.png)
+- need extra hardware
+- more instructions executing in parallel to avoid hazard
+	- EX data hazard
+		- can't forward ALU result to load/store, need to stall (?)
+	- load-use hazard
+		- load result can't be used at next cycle (?)
+- scheduling
+	- ![](https://i.imgur.com/1RpWIrz.png)
+- loop unrolling
+	- replicate loop body multiple times → more things to fill in the blanks, and can 化減
+	- ![](https://i.imgur.com/CoabQ0O.png)
+	- e.g.
+		- ![](https://i.imgur.com/AdBiVOF.png)
+		- ![](https://i.imgur.com/unJsF56.png)
+
+#### Dynamic Multiple Issue
+- dynamic multiple-issue processors = superscalar processors
+- dynamic pipeline scheduling
+	- can execute instructions out of order
+	- e.g.
+		- ![](https://i.imgur.com/StlZC0O.png)
+- ![](https://i.imgur.com/8SJFndu.png)
+
+## Ch5 Memory Hierarchy
+- locality
+	- temporal locality
+		- 時間上很近的會很常被用到
+	- spatial locality
+		- 空間上很近的會很常被用到
+- ![](https://i.imgur.com/RloQTF7.png)
+
+### cache
+- direct map
+	- ![](https://i.imgur.com/gVi6Vm9.png)
+	- n entries → map with lower $log_2n$ bits
