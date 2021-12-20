@@ -178,6 +178,7 @@ variables:
 stages:
   - docker-build
   - gke-deploy
+  - test
 
 docker-build:
   stage: docker-build
@@ -191,6 +192,7 @@ docker-build:
   script:
     - docker build -t $GCP_GCR:latest .
     - docker tag $GCP_GCR:latest $GCP_GCR:$CI_COMMIT_SHA
+    # push to google container registry
     - docker push $GCP_GCR:latest && docker push $GCP_GCR:$CI_COMMIT_SHA
 
 gke-deploy:
@@ -204,9 +206,12 @@ gke-deploy:
     - gcloud config set project $GCP_PROJECT
     # point kubectl at a specific GKE cluster
     - gcloud container clusters get-credentials $GCP_CLUSTER_NAME --zone $GCP_ZONE --project $GCP_PROJECT
+    # apply the configuration in deployment.yaml
     - kubectl apply -f deployment.yaml
   script:
+    # rolling update on image
     - kubectl set image deployment/app-deployment app=$GCP_GCR:$CI_COMMIT_SHA
+    - kubectl rollout status deployment/app-deployment
 ```
 As defined in `stages`, it will first execute `docker-build`, then (if successful) `gke-deploy`.
 
@@ -288,17 +293,17 @@ sudo gitlab-runner register \
   --url "[VM's external IP]" \
   --registration-token "[token]" \
   --executor "docker" \
-  --docker-image docker:19.03.12 \
+  --docker-image docker:stable \
   --description "[whatever]" \
   --tag-list "gke" \
-  --run-untagged="true" \
-  –-docker-privilege="true"
+  –-docker-privileged="true"
 ```
 - registration token can be found in (your gitlab repo) `Settings` → `CI/CD` → `Runners` → `Specific runners`
 - executor = `docker`
 - default docker image = `docker:19.03.12`
 - tag-list: the tag you use should be the same as what you wrote in `.gitlab-ci.yml`, as the runner would only run the jobs with the matching tag
 	- alternatively, you can go to `Settings` → `CI/CD` → `Runners` → edit your runner and uncheck `Indicates whether this runner can pick jobs without tags` so that the runner would run all jobs regardless of if the tag matches
+	- or just add `--run-untagged="true"` when registering runner
 
 Alternatively, you can run  
 ```
@@ -384,3 +389,27 @@ make `privileged` = `true`
 
 as in  
 <https://forum.gitlab.com/t/error-during-connect-post-http-docker-2375-v1-40-auth-dial-tcp-lookup-docker-on-169-254-169-254-no-such-host/28678/4>
+
+## more
+### php test
+official guide: <https://docs.gitlab.com/ee/ci/examples/php.html>
+
+create a new stage in `.gitlab-ci.yml`  
+
+```yml
+test:
+  stage: test
+  image: php:5.6
+  tags:
+    - gke
+  script:
+    - php test.php
+```
+also add this stage to `stages`  
+
+In `test.php`, write your tests.
+- `exit(0)` will indicate the test has succeeded
+- `exit(1)` will indicate the test has failed
+- <https://stackoverflow.com/a/54025268/15493213>
+
+![](https://i.imgur.com/ymbF1FD.png)

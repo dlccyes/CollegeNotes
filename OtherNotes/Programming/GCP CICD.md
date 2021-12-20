@@ -26,7 +26,7 @@ tips
 GKE = google kubernetes engine
 
 ---
-open a new terminal
+In cloud shell
 
 ```
 gcloud services enable container.googleapis.com \

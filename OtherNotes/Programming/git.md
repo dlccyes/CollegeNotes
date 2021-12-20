@@ -26,7 +26,10 @@ sudo apt install gh
 	- commit details of `abcdef`
 
 ## commit related
-## view your current changes
+### reset
+`git reset HEAD~2` to reset to latest_commit.parent.parent
+
+### view your current changes
 `git diff`
 
 ### discard changes
@@ -124,3 +127,19 @@ ref:
 - https://stackoverflow.com/a/43902478/15493213
 	- pasta from https://stackoverflow.com/a/17075665/15493213
 		- pasta from http://jasonkarns.com/blog/2011/11/15/subdirectory-checkouts-with-git-sparse-checkout/
+
+## remote related
+### check remote
+```
+git remote -v
+```
+
+### add remote
+```
+git remote add origin http://gitlab.com/name/repo
+```
+
+### switch default push repo
+```
+git push -u origin
+```
