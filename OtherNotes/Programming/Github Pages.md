@@ -154,3 +154,8 @@ it uses Jekyll & liquid
 without the raw & endraw, the include tag will be rendered and the codes in `mathjax.html` will be injected, or if `mathjax.html` doesn't exist, the page built would fail
 
 https://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags
+
+### view the CI/CD workflow
+go to the `Actions` tab and see all your past & current workflows
+
+to debug, click into the one failed and see the error messages

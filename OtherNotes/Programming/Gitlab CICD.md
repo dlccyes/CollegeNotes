@@ -35,7 +35,7 @@ Whenever you push code to your gitlab repo, gitlab's CI/CD pipeline would be tri
 		- <https://forum.gitlab.com/t/error-during-connect-post-http-docker-2375-v1-40-auth-dial-tcp-lookup-docker-on-169-254-169-254-no-such-host/28678/4>
 
 ## create GCP VM and install Gitlab
-(Not really necessarily, you can just use your own machine and <https://gitlab.com/>. If you're using your local machine, just do all the steps involving GCP VM on your local machine instead, and make sure you have cloud SDK installed.)
+(Not really necessarily, you can just use your own machine and <https://gitlab.com/>. If you're using your local machine, just do all the steps involving GCP VM on your local machine instead.)
 
 Create a computing engine instance
 - boot disk size >= 30GB
@@ -51,7 +51,7 @@ sudo apt-get update
 sudo apt-get install -y curl openssh-server ca-certificates tzdata
 ```
 
-`sudo apt-get install -y postfix`
+`sudo apt-get install -y postfix`  
 Internet Site → Ok
 
 install gitlab  
@@ -66,20 +66,18 @@ then go to `http://external_ip`
 you should see  
 ![](https://i.imgur.com/AHK8MCg.png)
 
-to login as admin, use the username `root` and the password in `/etc/gitlab/initial_root_password`
+- To login as admin, use the username `root` and the password in `/etc/gitlab/initial_root_password`
+- To use a new account, first register and then login.
+- If you see you account is pending approval, login as admin and go menu → admin → settings → sign-up restrictions and uncheck `Require admin approval for new sign-up` and save changes.    
+	- <https://docs.gitlab.com/ee/user/admin_area/settings/sign_up_restrictions.html#require-administrator-approval-for-new-sign-ups>
 
-To use a new account, first register and then login.
+(in gcp) Search `service accounts` and create a new service account.
 
-If you see you account is pending approval, login as admin and go menu → admin → settings → sign-up restrictions and uncheck `Require admin approval for new sign-up` and save changes.  
-<https://docs.gitlab.com/ee/user/admin_area/settings/sign_up_restrictions.html#require-administrator-approval-for-new-sign-ups>
-
-(in gcp) search `service accounts` and create a new service account
-
-assign the `Storage Admin` & `Kubernetes Enginer Developer` role to it and hit `done`
+Assign the `Storage Admin` & `Kubernetes Enginer Developer` role to it and hit `done`.
 
 ## create gitlab repo
 
-login to gitlab (not with admin)
+Login to gitlab (not with admin)
 
 Go to  `edit profile`(in avatar dropdown) →  `user settings` → `SSH Keys` and add your ssh public key in your local computer, may be in `~/.ssh`).
 
