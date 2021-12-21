@@ -30,8 +30,12 @@ layout: meth
 	- TC = total compensation
 		- total equivalence of money you got
 - YoE = years of experience
+- WLB
+	- work life balance
 - FAANG
-	- means Amazon most of the time
+	- Facebook Amazon Apple Netflix (Microsoft actually) Google
+- PIP = performance improvement plan
+	- get PIPed = about to get fired
 
 ## building portfolio
 ### projects
@@ -59,6 +63,11 @@ layout: meth
 			- https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU OG
 			- https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions
 - complex personal projects
+- system design
+	- DDIA
+		- 簡中譯 <https://github.com/Vonng/ddia>
+		- <https://github.com/Yang-Yanxiang/Designing-Data-Intensive-Applications/blob/master/Designing%20Data%20Intensive%20Applications.pdf>
+	- Grokking
 
 ## resources
 ### forums
@@ -73,6 +82,9 @@ layout: meth
 	- company salaries & reviews
 - https://techinterviewhandbook.org/
 	- author of Blind 75
+- grinding
+	- leetcode
+	- codewars
 
 ### good posts or threads
 - bonus skills
@@ -108,9 +120,20 @@ layout: meth
 - skill assessment answers
 	- https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes
 
-## 刷題網站
-> LeetCode 的題目來源主要是蒐集是各大科技公司的 面試題目；且 LeetCode 會在題目完成後，告知你提交的程式效能如何、使用的記憶體、運行時間贏過全部挑戰者中的多少百分比，是重視「演算法」、「資料結構」等基本功的練習平台。
-> 
-> 而 CodeWars 則開放讓所有使用者自創題目，再由其他玩家協同開發各語言版本、提供 Test case、回報 issue 等等，自成一個小社群；並在通過測試、提交答案之後，就能查看別人提交的程式碼，除了給予評論、點讚等社交互動外，也能藉由理解別人的程式來再次釐清自己的想法、看到自己的盲點。
-
-[ref](https://medium.com/schaoss-blog/工程師們刷題刷起來-codewars-刷題心得分享-13a89e8e7736)
+## companies
+- WLB
+	- good WLB
+		- Google
+		- Salesforce
+		- Microsoft
+	- not so relaxed environment
+		- Amazon
+		- Meta
+		- quant companies
+- hiring bar
+	- high
+		- Google
+		- Meta
+	- low
+		- Amazon
+		- Microsoft

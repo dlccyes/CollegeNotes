@@ -556,10 +556,12 @@ jalr x0, 0(x1) //return
 
 #### R-type instructions
 - arithmetic-logical instructions
+- don't use sign extender (P4.3.3)
 - read 2 registers → perform an ALU operation (arithmetic or logical operation) → write result to register
 - ![](https://i.imgur.com/jWMlP3Y.png)
 
 #### load/store
+- only load & store use data memory (P4.3.1)
 - immediate generation: convert 成 ALU 所需的格式
 	- 32-bit instruction as input 
 	- selects a 12-bit field for load, store, and branch if equal that is sign-extended into a 64-bit result appearing on the output (?)
@@ -587,6 +589,9 @@ jalr x0, 0(x1) //return
 	- 愈多 don't care 愈好
 - ![](https://i.imgur.com/Wlx7GlL.png)
 - ![](https://i.imgur.com/Ico4Mx7.png)
+	- rs1 = read register 1
+	- rs2 = read register 2
+	- rd = write register
 - control signals
 	- ![](https://i.imgur.com/RKDbqqY.png)
 
@@ -650,7 +655,7 @@ jalr x0, 0(x1) //return
 - solution: more resources
 
 ##### data hazard
-- current instruction depends on the result of previous instructions → pipeline stall
+- current instruction depends on the result of previous instructions → pipeline stall (nop i.e. do nothing)
 - e.g.
 	- add x19, x0, x1<br>sub x2, x19, x3
 		- ![](https://i.imgur.com/qNl157r.png)
@@ -759,7 +764,7 @@ jalr x0, 0(x1) //return
 	- ![](https://i.imgur.com/WYPhqDs.png)
 
 #### stalling
-- load-use data hazard 只能 stall
+- load-use data hazard 只能 stall → nop i.e. do nothing
 - ![](https://i.imgur.com/bLUubxz.png)
 - ![](https://i.imgur.com/z9sIWYY.png)
 - ![](https://i.imgur.com/uFThGYX.png)

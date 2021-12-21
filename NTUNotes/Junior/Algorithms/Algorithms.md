@@ -907,3 +907,26 @@ exchange → 數量一樣
 -  run [[Bellman-Ford Algorithm]]
 -  red edge 的起點提前 0，終點提前 -1 → new weight = 3+1 = 4
 -  下面是 node 表示法：altered cost / 反推回的 original cost
+
+### Flow Network
+- directed graph
+- 求 max flow
+- e.g.
+	- ![](https://i.imgur.com/8yx5g0E.png)
+		- s → a → b 後，推 1 回 a → t ，其餘 2 繼續 b → t
+- flow out  = flow in
+- upper bound of flow = min cut 
+	- ![](https://i.imgur.com/GOIAcfT.png)
+- solution
+	- residual network
+	- 在 flow networkm，s to t 找到 path → 更新 flow network 各 edge 的 capacity，更新 residual，把 path 都弄成 backward edge → repeat
+	- e.g.
+		- ![](https://i.imgur.com/PXdFZD4.png)
+		- ![](https://i.imgur.com/ku2Bau4.png)
+		- ![](https://i.imgur.com/Cpr0f7D.png)
+		- ![](https://i.imgur.com/xr08QYz.png)
+		- ![](https://i.imgur.com/cgCfkUK.png)
+
+
+
+
