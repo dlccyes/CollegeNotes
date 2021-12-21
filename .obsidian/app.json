@@ -20,5 +20,7 @@
   },
   "vimMode": false,
   "autoPairMarkdown": true,
-  "autoPairBrackets": true
+  "autoPairBrackets": true,
+  "legacyEditor": false,
+  "livePreview": true
 }

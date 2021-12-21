@@ -919,7 +919,7 @@ exchange → 數量一樣
 	- ![](https://i.imgur.com/GOIAcfT.png)
 - solution
 	- residual network
-	- 在 flow networkm，s to t 找到 path → 更新 flow network 各 edge 的 capacity，更新 residual，把 path 都弄成 backward edge → repeat
+	- 在 flow network，s to t 找到 path → 更新 flow network 各 edge 的 capacity，更新 residual，把 path 都弄成 backward edge → repeat
 	- e.g.
 		- ![](https://i.imgur.com/PXdFZD4.png)
 		- ![](https://i.imgur.com/ku2Bau4.png)
