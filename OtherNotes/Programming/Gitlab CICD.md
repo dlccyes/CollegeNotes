@@ -14,11 +14,11 @@ parent: Programming
 {:toc}
 </details>
 
-## intro
+## Intro
 ### What does it do?
 Whenever you push code to your gitlab repo, gitlab's CI/CD pipeline would be triggered. In the first step, it will build a docker image and push the docker image to your Google Container Registry (GCR). In the second step, it will push the image to your Google Kubernetes Engine (GKE).
 
-### guides followed
+### Guides followed
 - main
 	- <https://blog.cloud-ace.tw/application-modernization/devops/devops-gitlab-asp-net-core-kubernetes-engine-ci-cd/>
 		- build & push docker image to google container registry
@@ -42,7 +42,7 @@ Whenever you push code to your gitlab repo, gitlab's CI/CD pipeline would be tri
 	- dial tcp: lookup docker on : no such host
 		- <https://forum.gitlab.com/t/error-during-connect-post-http-docker-2375-v1-40-auth-dial-tcp-lookup-docker-on-169-254-169-254-no-such-host/28678/4>
 
-## create GCP VM and install Gitlab
+## Create GCP VM and install Gitlab
 (Not really necessarily, you can just use your own machine and <https://gitlab.com/>. If you're using your local machine, just do all the steps involving GCP VM on your local machine instead.)
 
 Create a computing engine instance
@@ -83,7 +83,7 @@ you should see
 
 Assign the `Storage Admin` & `Kubernetes Enginer Developer` role to it and hit `done`.
 
-## create gitlab repo
+## Create gitlab repo
 
 Login to gitlab (not with admin)
 
@@ -94,7 +94,7 @@ Create a new project.
 (in local) Clone the repo and try push something.
 
 
-## set gitlab CI/CD environmental variables
+## Set gitlab CI/CD environmental variables
 (in repo) `Settings` → `CI/CD` → `Variables`
 ![](https://i.imgur.com/wiVNpvW.png)
 
@@ -126,7 +126,7 @@ GCR means Google Container Registry, set this up so that later on your docker im
 Now you have 5 variables set.  
 ![](https://i.imgur.com/iuLqolO.png)
 
-## install docker on GCP VM
+## Install docker on GCP VM
 Go to GCP VM terminal and install docker.  
 official doc: <https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository>
 
@@ -161,7 +161,7 @@ sudo docker run hello-world
 will download the image `hello-world` and pring some messages  
 `sudo docker ps -a` to check if it's running
 
-## add necessary files in gitlab repo
+## Add necessary files in gitlab repo
 Go to your gitlab repo and add `.gitlab-ci.yml`  
 Whenever you push code, Gitlab runner would run your CI/CD pipeline according to this file.  
 ```yml
@@ -271,7 +271,7 @@ learn more about `deployment.yaml` [here](https://www.mirantis.com/blog/introduc
 Pull sample codes from <https://github.com/dotnet/dotnet-docker/tree/main/samples/aspnetapp> and delete everything except `aspnetapp` &  `Dockerfile` & `aspnetapp.sln`.  
 (you can partial clone like [this](https://stackoverflow.com/a/43902478/15493213))  
 
-## install & register Gitlab Runner on GCP VM
+## Install & register Gitlab Runner on GCP VM
 official doc: https://docs.gitlab.com/runner/install/linux-repository.html
 
 (go to your GCP VM)  
@@ -320,10 +320,9 @@ sudo vim /etc/gitlab-runner/config.toml
 
 change original values to this
 ```
-image = "docker:stable"
 privileged = true
 ```
-
+(if you've set up your gitlab runner properly it's probably already like this)  
 ![](https://i.imgur.com/bkK5hhy.png)
 
 ref:  
@@ -332,7 +331,7 @@ ref:
 for more troubleshooting:  
 <https://gitlab.com/gitlab-org/gitlab-runner/-/issues/4566#note_199261985>
 
-## push and trigger CI/CD
+## Push and trigger CI/CD
 push codes  
 
 In your repo, go to `CI/CD` → `Jobs` to see what happened.
@@ -366,8 +365,8 @@ to see your GKE status.
 Check the official guide for more  
 <https://cloud.google.com/kubernetes-engine/docs/how-to/updating-apps#kubectl-set>
 
-## troubleshooting
-### gitlab CI/CD job pending forever
+## Troubleshooting
+### Gitlab CI/CD job pending forever
 Your runner can't be picked up. Go to where your gitlab runner is installed and  
 ```
 sudo gitlab-runner start
@@ -390,8 +389,10 @@ make `privileged` = `true`
 as in  
 <https://forum.gitlab.com/t/error-during-connect-post-http-docker-2375-v1-40-auth-dial-tcp-lookup-docker-on-169-254-169-254-no-such-host/28678/4>
 
-## more
-### php test
+## More
+This part isn't included in the main guide I followed.
+
+### PHP test
 official guide: <https://docs.gitlab.com/ee/ci/examples/php.html>
 
 create a new stage in `.gitlab-ci.yml`  
@@ -413,3 +414,91 @@ In `test.php`, write your tests.
 - <https://stackoverflow.com/a/54025268/15493213>
 
 ![](https://i.imgur.com/ymbF1FD.png)
+
+### Continue after failure
+<https://docs.gitlab.com/ee/ci/yaml/#allow_failure>
+
+```yml
+job1:
+  stage: test
+  script:
+    - execute_script_1
+
+job2:
+  stage: test
+  script:
+    - execute_script_2
+  allow_failure: true
+
+job3:
+  stage: deploy
+  script:
+    - deploy_to_staging
+```
+
+### Conditions to run jobs
+#### rules
+<https://docs.gitlab.com/ee/ci/yaml/index.html#rules>
+```yml
+ job1:
+  stage: test
+  rules:
+    - if: '$CI_COMMIT_TITLE =~ /cicd/'
+  script:
+    - execute_script_1
+
+job2:
+  stage: test
+  script:
+    - execute_script_2
+```
+For this `.gitlab-ci.yml`, if the commit message contains `cicd`, both jobs would be run, otherwise only job2 would be run.
+
+#### when
+<https://docs.gitlab.com/ee/ci/yaml/index.html#when>
+
+```yml
+cleanup_build_job:
+  stage: cleanup_build
+  script:
+    - cleanup build when failed
+  when: on_failure
+```
+run when at least one job has failed in previous stages
+
+``
+```
+cleanup_job:
+  stage: cleanup
+  script:
+    - cleanup after jobs
+  when: always
+```
+run whenever, regardless of any previous failures
+
+```yml
+deploy_job:
+  stage: deploy
+  script:
+    - make deploy
+  when: manual
+```
+never run automatically, have to be run manually
+
+
+### Predefined variables
+<https://docs.gitlab.com/ee/ci/variables/predefined_variables.html?
+
+Variables that is defined by Gitlab. You can just use them directly without first setting them up.
+
+e.g.
+- `CI_COMMIT_TITLE` = first line of your commit message
+- `CI_COMMIT_BRANCH` = committing branch name
+
+### Job dependencies (Needs)
+<https://docs.gitlab.com/ee/ci/yaml/index.html#needs>
+
+### Notified when Job failed
+profile (right top avatar) → edit profile → Notifications → right bottom drop down → custom
+
+<https://about.gitlab.com/blog/2020/06/17/notification-on-pipeline-succeeds/>

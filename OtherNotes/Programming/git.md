@@ -143,3 +143,9 @@ git remote add origin http://gitlab.com/name/repo
 ```
 git push -u origin
 ```
+
+## tag
+<https://git-scm.com/book/en/v2/Git-Basics-Tagging>
+
+Only point at a specific commit, to indicate version for example.  
+A tag can't be used on multiple commits.

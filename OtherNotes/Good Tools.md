@@ -17,6 +17,13 @@ parent: OtherNotes
 ## websites
 - Photophea
 	- Photoshop clone
+- https://12ft.io/
+	- remove paywall
+		- work
+			- Financial Times
+		- don't work
+			- The Atheletic
+	- add `https://12ft.io/` in front of the url
 
 ## browser extensions
 - tab manager (firefox)
