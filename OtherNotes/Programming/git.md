@@ -10,6 +10,11 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 sudo apt install gh
 ```
+## pull related
+### git pull all subdiretories
+```
+for i in */.git; do ( echo $i; git -C $i/.. pull; ); done
+```
 
 ### commands
 - login
