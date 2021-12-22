@@ -1,40 +1,44 @@
-table.graph-analysis-table {
-  border-collapse: collapse;
-}
-table.graph-analysis-table,
-table.graph-analysis-table tr,
-table.graph-analysis-table td {
-  border: 1px solid var(--background-modifier-border);
-}
-
-table.graph-analysis-table td {
-  padding: 2px;
-}
-
 td.internal-link,
+div.internal-link,
 span.internal-link {
   color: var(--text-accent);
   text-decoration-line: none !important;
 }
 
 td.internal-link:hover,
+div.internal-link:hover,
 span.internal-link:hover {
   color: var(--text-accent-hover, var(--text-accent));
 }
 
-tr.analysis-linked td:first-child::before,
-span.analysis-linked::before {
-  content: '🔗 ';
+tr.GA-linked td:first-child::before,
+span.GA-linked::before,
+div.GA-linked::before {
 }
-tr.analysis-not-linked,
-span.analysis-not-linked {
+tr.GA-not-linked,
+span.GA-not-linked {
   /* background-color: yellow; */
 }
 
-td.analysis-measure {
+.GA-icon {
+  color: var(--text-normal);
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  padding-top: 2px !important;
+}
+
+.GA-Global {
+  color: red;
+}
+.GA-Global::before {
+  content: '🌍';
+}
+
+td.GA-measure {
   /* display:none */
 }
-td.analysis-node {
+td.GA-node {
   /* background-color: yellow */
 }
 
@@ -45,7 +49,6 @@ select.dropdown.GA-DD {
 }
 
 button.GA-Refresh-Button {
-  /* float: right; */
   margin-left: 5px;
   padding: 3px;
 }
@@ -73,4 +76,30 @@ body.is-mobile .GA-details::before {
   100% {
     background-color: transparent;
   }
+}
+
+.GA-View ::-webkit-scrollbar {
+  width: 1em;
+  height: 0px;
+  border-radius: 10px;
+  background-color: var(--scrollbar-bg);
+}
+
+.scrollContainer {
+  padding: 0px 0px 4px 0px;
+}
+.scrollContainer:hover {
+  padding: 0px;
+}
+
+.GA-View .scrollContainer:hover ::-webkit-scrollbar {
+  height: 4px;
+}
+.GA-View ::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.GA-View ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--scrollbar-thumb-bg);
 }

@@ -8,7 +8,7 @@
   "foldIndent": true,
   "foldHeading": true,
   "showLineNumber": true,
-  "spellcheck": true,
+  "spellcheck": false,
   "alwaysUpdateLinks": true,
   "fileSortOrder": "alphabeticalReverse",
   "readableLineLength": true,
@@ -22,5 +22,9 @@
   "autoPairMarkdown": true,
   "autoPairBrackets": true,
   "legacyEditor": false,
-  "livePreview": true
+  "livePreview": true,
+  "spellcheckLanguages": [
+    "en-US",
+    "es"
+  ]
 }
