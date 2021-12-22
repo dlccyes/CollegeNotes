@@ -104,7 +104,6 @@ Create a new project.
 Add `GCP_SERVICE_KEY`, the value is the key json file you've just downloaded. Uncheck `Protect variable` also.
 ![](https://i.imgur.com/MfXI2kA.png)
 
-
 Add `GCP_PROJECT`, the value is your GCP project ID.  
 ![](https://i.imgur.com/TkEzmts.png)
 

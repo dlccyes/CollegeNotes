@@ -1000,8 +1000,14 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- $\eta_{\tau}<1$ → R 隨 $\tau$ 上升 
 		- $\eta_{\tau}>1$ → $\tau$ 上升使 R 下降  
 	- $\tau$ 上升，稅後 w 下降幅度變大
-	- ![](https://i.imgur.com/8cSbJpc.png)
-- 待補
+	- 總稅收 R vs. 稅率 $\tau$ (if w 不變)
+		- ![](https://i.imgur.com/8cSbJpc.png)
+- 全面均衡 (考慮 w)
+	- 令 $u=\ln l+\ln c$ && $y=n^\alpha$
+	- $MRS=\dfrac{c}{1-n}=(1-\tau)w=(1-\tau)MPL=(1-\tau)\dfrac{\alpha y}{n}$
+	- $w=MPL=\dfrac{\alpha y}{n}$
+	- $n=\dfrac{\alpha (1-\tau)}{1+\alpha(1-\tau)}\in(0,1)$
+	- $R=\tau wn=\tau\alpha y=\tau\alpha {\left[\dfrac{\alpha (1-\tau)}{1+\alpha(1-\tau)}\right]}^\alpha$
 
 ### 消費券均衡效果
 - 消費券會替代部分私人消費 & 使勞動供給下降，but 總消費量仍增加
@@ -1019,3 +1025,39 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - 消費券有中立性質
 	- 前三項均衡解與 $v$ 無關
 	- $v$ 不影響產出、勞動、市場工資率 → 私人消費完全被排擠
+- ![](https://s2.loli.net/2021/12/22/zZf5IsCkhMUBcNR.png)
+- 直接效果
+	- 商品需求 $y^d$ 右移 E to A
+- [[substitution effect]]
+	- 消費券替代部分私人消費
+	- 商品需求 $y^d$ 左移 A to B 
+	- labor supply $n^s$ 左移 E to B
+- [[income effect]]
+	- 定額稅增加 EA → 商品需求 $y^d$ 左移
+	- labor supply $n^s$ 右移
+- [[income effect]] 幅度不可能同時大於 or 小於 [[substitution effect]]，否則會陷入不均衡狀態 → 必回到原均衡點 E
+	- e.g. C 點與原點 E 比， labor supply 下降，comsumption demand 卻上升  
+	- so 定額稅融通消費券具中立性質，對整體經濟毫無影響
+
+### 工時的長期趨勢
+- ![](https://s2.loli.net/2021/12/22/q5WU4Erz6fAYl3y.png)
+- ![](https://s2.loli.net/2021/12/22/o6qnNs1khDlBZzp.png)
+- 早期 PPF 較低，indifference curve 較平緩
+- PPF 上升 → [[income effect]] & [[substitution effect]]
+	- [[income effect]] 使 labor 下降
+	- [[substitution effect]] 使 labor 上升
+	- for 窮人 (A → B)，[[income effect]] 很強 → labor 下降 i.e. leisure 上升明顯
+	- for 較有錢的人 (B → C)，[[substitution effect]] 抵銷 [[income effect]] → labor 下降 i.e. leisure 上升趨勢減緩
+
+## Ch8 消費與儲蓄
+### 費雪兩期模型
+- Fisher Two-Period Model
+- $a_1=y_1-T_1$ = 1st 期稅後 endowment
+- $a_2=y_2-T_2$ = 2nd 期稅後 endowment
+- $c_1+b_1=a_1+(1+r)b_0$
+	- $b_0$ = 1st 期期初擁有之債券，可為負數
+	- $b_1$ = 1st 期期末債券餘額
+	- $c_1$ = 1st 期可花的錢
+- $s_1=(a_1+rb_0)-c_1=b_1-b_0$
+	- $s_1$ = 1st 期 saving = 可支配所得 - 消費
+	- 債券本金 $b_0$ 不是所得，而是原本就存著的

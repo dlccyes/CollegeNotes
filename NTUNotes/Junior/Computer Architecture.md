@@ -649,13 +649,14 @@ jalr x0, 0(x1) //return
 		- 如果每個 stage 都花同樣時間，速度就會是 5 倍而非 4 倍
 
 #### pipeline hazards
-##### structure hazard
+##### structural hazard
 - 資源不夠用
 - 一個資源一個時間只能一個人用
 - solution: more resources
 
 ##### data hazard
-- current instruction depends on the result of previous instructions → pipeline stall (nop i.e. do nothing)
+- current instruction depends on the result of previous instructions → NOP (an operation that does nothing)
+	- NOP is in code, stall in in hardware
 - e.g.
 	- add x19, x0, x1<br>sub x2, x19, x3
 		- ![](https://i.imgur.com/qNl157r.png)
@@ -819,6 +820,12 @@ jalr x0, 0(x1) //return
 	- e.g.
 		- ![](https://i.imgur.com/StlZC0O.png)
 - ![](https://i.imgur.com/8SJFndu.png)
+
+### problems
+![](https://s2.loli.net/2021/12/22/bqMuJpVXtgOGr2k.png)
+load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的 MEM stage 衝到
+
+![](https://s2.loli.net/2021/12/22/trKeaQEgcOx9u5f.png)
 
 ## Ch5 Memory Hierarchy
 - locality

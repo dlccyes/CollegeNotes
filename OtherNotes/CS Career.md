@@ -37,6 +37,63 @@ layout: meth
 - PIP = performance improvement plan
 	- get PIPed = about to get fired
 
+## resources
+### forums
+- Blind
+- r/cscareerquestions
+- r/csmajors
+
+### websites
+- https://www.levels.fyi/
+	- company salaries
+- https://www.glassdoor.com/
+	- company salaries & reviews
+- https://techinterviewhandbook.org/
+	- author of Blind 75
+- rooftopslushie.com
+	- get referral (for some money)
+- grinding
+	- leetcode
+	- codewars
+
+## good posts or threads
+- bonus skills
+	- https://www.reveddit.com/v/csMajors/comments/qsz0wy/five_programming_skills_to_boost_your_resume_that/
+		- SQL, Jira (agile), Git, Azure & AWS, Docker
+- applying details
+	- https://www.reddit.com/r/cscareerquestions/comments/qpxbpg/review_of_2022_new_grad_recruiting_process/
+	- https://www.reddit.com/r/CSCQSimulator/comments/e0mqjs/how_i_got_7_offers_heres_what_i_learned/
+		- original posts is removed
+- negotiation
+	- https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/
+		- haven't read
+		- said to be commonly sited
+- 台灣狀況
+	- https://forum.gamer.com.tw/C.php?bsn=60076&snA=5444020
+- resume
+	- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-1-introduction-f1dcb67e4798
+	- https://www.teamblind.com/post/Rejected-FAANG-interviews-even-with-referrals-pQ43s0TA
+- interviews
+	- 台灣小公司
+		- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-4-summary-f34efeaa50a9?p=208b417e8140
+		- https://www.ptt.cc/bbs/Soft_Job/M.1632988517.A.302.html
+	- 台灣大公司
+		- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-2-interview-944c81dca809
+		- https://hackmd.io/@lindaya0913/HkekYB1dPO
+			- 很多很詳細
+		- https://ptt-life.com/Soft_Job/l/LIFE.M.1622535654.A.079
+			- 112 CS 全滅 哭
+	- google Taiwan
+		- https://keep-brain-alive.com/taiwan-google-interview-experience/
+	- Amazon Taiwan
+		- https://www.dcard.tw/f/job/p/236316977
+		- https://jackkuo.org/post/台灣亞馬遜實習心得/
+	- FAANG
+		- https://reddit.com/eitna9 (removed)
+			- all FAAMG detailed interview process 
+			- [uddit archive](https://www.unddit.com/r/cscareerquestions/comments/eitna9/processes_at_each_company_at_least_what_i_remember/)
+			- [camas archive](https://camas.github.io/reddit-search/#{"author":"d2k9000","subreddit":"cscareerquestions","searchFor":1,"resultSize":100,"query":"Processes"} )
+
 ## building portfolio
 ### projects
 - solve real problems
@@ -68,53 +125,6 @@ layout: meth
 		- 簡中譯 <https://github.com/Vonng/ddia>
 		- <https://github.com/Yang-Yanxiang/Designing-Data-Intensive-Applications/blob/master/Designing%20Data%20Intensive%20Applications.pdf>
 	- Grokking
-
-## resources
-### forums
-- Blind
-- r/cscareerquestions
-- r/csmajors
-
-### websites
-- https://www.levels.fyi/
-	- company salaries
-- https://www.glassdoor.com/
-	- company salaries & reviews
-- https://techinterviewhandbook.org/
-	- author of Blind 75
-- grinding
-	- leetcode
-	- codewars
-
-### good posts or threads
-- bonus skills
-	- https://www.reveddit.com/v/csMajors/comments/qsz0wy/five_programming_skills_to_boost_your_resume_that/
-		- SQL, Jira (agile), Git, Azure & AWS, Docker
-- applying details
-	- https://www.reddit.com/r/cscareerquestions/comments/qpxbpg/review_of_2022_new_grad_recruiting_process/
-- negotiation
-	- https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/
-		- haven't read
-		- said to be commonly sited
-- 台灣狀況
-	- https://forum.gamer.com.tw/C.php?bsn=60076&snA=5444020
-- resume
-	- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-1-introduction-f1dcb67e4798
-- interview
-	- 台灣小公司
-		- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-4-summary-f34efeaa50a9?p=208b417e8140
-		- https://www.ptt.cc/bbs/Soft_Job/M.1632988517.A.302.html
-	- 台灣大公司
-		- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-2-interview-944c81dca809
-		- https://hackmd.io/@lindaya0913/HkekYB1dPO
-			- 很多很詳細
-		- https://ptt-life.com/Soft_Job/l/LIFE.M.1622535654.A.079
-			- 112 CS 全滅 哭
-	- google Taiwan
-		- https://keep-brain-alive.com/taiwan-google-interview-experience/
-	- Amazon Taiwan
-		- https://www.dcard.tw/f/job/p/236316977
-		- https://jackkuo.org/post/台灣亞馬遜實習心得/
 
 ## linkedin
 - skill assessment answers

@@ -24,6 +24,13 @@ parent: OtherNotes
 		- don't work
 			- The Atheletic
 	- add `https://12ft.io/` in front of the url
+- reddit archives
+	- https://camas.github.io/reddit-search/
+		- very good
+	- https://www.reveddit.com/
+	- https://www.unddit.com/
+	- https://github.com/pushshift
+		- underlying service of all the above sites
 
 ## browser extensions
 - tab manager (firefox)
