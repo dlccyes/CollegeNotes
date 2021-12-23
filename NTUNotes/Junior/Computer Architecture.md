@@ -641,6 +641,9 @@ jalr x0, 0(x1) //return
 4. MEM = access memory operand
 5. WB = write result back to register
 
+stage utilization of each type
+![](https://i.imgur.com/uSIBZq0.png)
+
 #### performance
 - cycle 數較多，cycle period 較短
 - if all stages take the same time, $T_c$ /= num of stages with pipelining
@@ -668,6 +671,7 @@ jalr x0, 0(x1) //return
 		- ![](https://i.imgur.com/FnLRhwt.png)
 - load-use data hazard
 	- 用到的 variable 來自上一個 instruction 的 load
+	- load 要到 MEM 後才能被使用，while ALU 計算需要在 EX 前拿到值
 	- need to wait 1 more cycle even with forwarding
 		- ![](https://i.imgur.com/3fzSYYN.png)
 	-  schedule codes to avoid it
@@ -685,6 +689,7 @@ jalr x0, 0(x1) //return
 		- ![](https://i.imgur.com/iWX0bW5.png) 
 	- dynamic
 		- assumption based on history
+
 #### datapath
 - ![](https://i.imgur.com/3jKRTf0.png)
 - IF
@@ -802,7 +807,7 @@ jalr x0, 0(x1) //return
 - more instructions executing in parallel to avoid hazard
 	- EX data hazard
 		- can't forward ALU result to load/store, need to stall (?)
-	- load-use hazard
+	- load-use data hazard
 		- load result can't be used at next cycle (?)
 - scheduling
 	- ![](https://i.imgur.com/1RpWIrz.png)
@@ -835,7 +840,41 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 		- 空間上很近的會很常被用到
 - ![](https://i.imgur.com/RloQTF7.png)
 
-### cache
-- direct map
+### basic cache
+- direct mapped cache
 	- ![](https://i.imgur.com/gVi6Vm9.png)
-	- n entries → map with lower $log_2n$ bits
+	- map with block address % num of blocks<br>i.e. n entries/blocks → map with lower $log_2n$ bits 
+- tag
+	- contain upper portion of block address (block address = {tag}{index})
+- valid bit
+	- contain valid address or not
+	- not valid → don't match
+- ![](https://s2.loli.net/2021/12/24/29CAfUKaLk6trSx.png)
+- total size calculation
+	- cache size = $2^{n+m+2}$ bytes = $2^{n+m}$ words = $2^n$ blocks
+		- e.g. 16KiB = $2^{14}$ bytes = $2^{12}$ words
+	- block size = $2^m$ words = $2^{m+5}$ bits = $2^m\times 32$ bits
+	- word size = $2^2$ bytes = 4x8 bits = 32 bits
+	- tag size = address size - (n+m+2) bits = address size (bits) - cache size (bytes)
+	- 1 valid bit
+	- total size = $2^n$ x (block size + tag size + valid size) bits
+		- every block need original + tag & valid bits
+		- i.e. 原本的 cache size 加上 tag&valid 總共所需的 bits
+- cache miss = search for a data in cache but find nothing
+- block size vs. miss rate
+	- ![](https://s2.loli.net/2021/12/24/8z9ji5sVMHDoYcC.png)
+	- larger block size → spatial locality → lower miss rate
+	- larger block size → fewer blocks can be held in cache → more competition, blocks would be bumped out of cache (?) before all words is accessed → higher miss rate
+	- larger block size → hit time increases → slower
+	- larger block size → transfer time increase (?) → bigger miss penalty
+
+### cache performance
+- associative cache
+	- full associative cache
+		- a block can be placed anywhere
+		- need to search all entries to find a block
+			- 1 comparator for each entry → costly
+	- n-way set associative cache
+		- n blocks in each set, each block can placed in any element of that set
+	- ![](https://s2.loli.net/2021/12/24/R43pWNL2mTExec8.png)
+		- middle: 2-way set associative cache i.e. each set has 2 blocks, so need to search 2 blocks
