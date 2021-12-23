@@ -78,7 +78,8 @@ using [[#tmux plugin manager]]
 	- `tmux a -t 3`
 	- `tmux attach -t 3`
 - new session named hahaha
-	- `tmux new -s hahaha`
+	- (outside) `tmux new -s hahaha`
+	- (inside) `ctrl+b :new -s hahaha`
 - rename session 3 to hahaha
 	- (outside) `tmux rename-session -t 3 hahaha`
 	- (inside) `ctrl+b $`
