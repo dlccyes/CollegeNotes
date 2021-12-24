@@ -24,6 +24,18 @@
 #### slice
 `str.slice(0,5)`
 
+## disable/enable style
+jQuery
+```js
+$('#your_style').get(0).type = 'text' //diable
+$('#your_style').get(0).type = '' //enable
+```
+
+<https://stackoverflow.com/questions/5609165/changing-attribute-type-from-text-to-password>
+
+vanilla
+<https://stackoverflow.com/questions/54440748/how-to-disable-a-style-element-in-html-js>
+
 ## drag element
 https://jsfiddle.net/dlccyes/s84thyLn/2/
 - embed

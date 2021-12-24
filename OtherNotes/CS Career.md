@@ -60,6 +60,8 @@ layout: meth
 - bonus skills
 	- https://www.reveddit.com/v/csMajors/comments/qsz0wy/five_programming_skills_to_boost_your_resume_that/
 		- SQL, Jira (agile), Git, Azure & AWS, Docker
+- preparation
+	- https://www.teamblind.com/post/cracked-7-offers-4-of-them-are-principalstaff-and-3-senior-doubled-my-tc-LZLoXM7t
 - applying details
 	- https://www.reddit.com/r/cscareerquestions/comments/qpxbpg/review_of_2022_new_grad_recruiting_process/
 	- https://www.reddit.com/r/CSCQSimulator/comments/e0mqjs/how_i_got_7_offers_heres_what_i_learned/
@@ -93,6 +95,8 @@ layout: meth
 			- all FAAMG detailed interview process 
 			- [uddit archive](https://www.unddit.com/r/cscareerquestions/comments/eitna9/processes_at_each_company_at_least_what_i_remember/)
 			- [camas archive](https://camas.github.io/reddit-search/#{"author":"d2k9000","subreddit":"cscareerquestions","searchFor":1,"resultSize":100,"query":"Processes"} )
+	- offers
+		- https://www.teamblind.com/post/giving-back-with-tc-on-8-offers-hLE5CRYQ
 
 ## building portfolio
 ### projects
