@@ -833,14 +833,44 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 ![](https://s2.loli.net/2021/12/22/trKeaQEgcOx9u5f.png)
 
 ## Ch5 Memory Hierarchy
+### intro
 - locality
 	- temporal locality
 		- 時間上很近的會很常被用到
+		- loop
 	- spatial locality
 		- 空間上很近的會很常被用到
-- ![](https://i.imgur.com/RloQTF7.png)
+		- sequential instructions
+- memory hierarchy
+	- ![](https://i.imgur.com/RloQTF7.png)
+	- faster → more expensive → smaller
+	- upper level
+		- closer to processor
+		- faster, more expensive, smaller
+	- lower level
+		- slower to access, bigger capacity
+	- line/block: min unit of info 
+	- ![](https://s2.loli.net/2021/12/24/2HgsVT8B9qb7ZoK.png)
+- data requested is in upper level → hit
+	- hit rate = # found in upper level / # access
+	- hit time = time to access upper level 
+- data reques is not in upper level → miss
+	- mis rate = # not found in upper level / # access
+	- miss penalty = total time to fetch the requested block to the requested level
+		- access time + transmit time
+- ![](https://s2.loli.net/2021/12/24/1KdxXWrO7DABS82.png)
 
-### basic cache
+### memory
+- DRAM
+	- slow
+	- smaller area used per bit → cheaper
+- SRAM
+	- fast
+	- expensive
+	- used in upper levels
+
+### cache 
+- the memory between processor & main memory
 - direct mapped cache
 	- ![](https://i.imgur.com/gVi6Vm9.png)
 	- map with block address % num of blocks<br>i.e. n entries/blocks → map with lower $log_2n$ bits 
@@ -861,20 +891,35 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 		- every block need original + tag & valid bits
 		- i.e. 原本的 cache size 加上 tag&valid 總共所需的 bits
 - cache miss = search for a data in cache but find nothing
+	- miss rate = # miss / # all access
 - block size vs. miss rate
 	- ![](https://s2.loli.net/2021/12/24/8z9ji5sVMHDoYcC.png)
 	- larger block size → spatial locality → lower miss rate
-	- larger block size → fewer blocks can be held in cache → more competition, blocks would be bumped out of cache (?) before all words is accessed → higher miss rate
+	- larger block size → fewer blocks can be held in cache → more competition, blocks would be bumped out of cache before all words is accessed → higher miss rate
 	- larger block size → hit time increases → slower
-	- larger block size → transfer time increase (?) → bigger miss penalty
+	- larger block size → transfer time increase → bigger miss penalty
 
-### cache performance
-- associative cache
-	- full associative cache
-		- a block can be placed anywhere
-		- need to search all entries to find a block
-			- 1 comparator for each entry → costly
-	- n-way set associative cache
-		- n blocks in each set, each block can placed in any element of that set
-	- ![](https://s2.loli.net/2021/12/24/R43pWNL2mTExec8.png)
-		- middle: 2-way set associative cache i.e. each set has 2 blocks, so need to search 2 blocks
+#### associative cache
+- fully associative cache
+	- a block can be placed anywhere
+	- need to search all entries to find a block
+		- 1 comparator for each entry → costly
+- set associative cache
+	- n-way → n blocks in each set, each block can placed in any block of that set
+	- indexed by (# block) % (# of set)
+- ![](https://s2.loli.net/2021/12/24/R43pWNL2mTExec8.png)
+	- middle: 2-way set associative cache i.e. each set has 2 blocks, so need to search 2 blocks
+
+#### miss
+- compulsory miss
+	- first time access, not in cache yet
+- capacity miss
+	- cache capacity not enough to contain all blocks, so some is replaced
+- conflict miss
+	- multiple blocks compete for same set
+	- in set-associative & direct-mapped caches
+- ![](https://s2.loli.net/2021/12/24/cxU9Cn3a5EAXf7B.png)
+
+#### multilevel cache
+- not in 1st level cache → search 2nd level cache
+- higher miss penalty if not found in any level of cache 
