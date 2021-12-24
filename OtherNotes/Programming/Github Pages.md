@@ -1,5 +1,6 @@
 ---
-title: Github Pages
+title: Jekyll
+alias: Github Page
 ---
 
 <head>
@@ -14,7 +15,7 @@ title: Github Pages
    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 </head>
 
-# Github Pages
+# Jekyll
 {: .no_toc }
 
 <details open markdown="block">
@@ -106,7 +107,13 @@ or
 for collapsible numbered TOC
 {% endraw %}
 
+#### custom theme
 
+Add `_sass/color_schemes/mystyle.scss` and add `color_scheme: mystyle` in `_config.yml`
+
+Write your theme as <https://github.com/pmarsceill/just-the-docs/blob/master/_sass/support/_variables.scss>.
+
+but **NO IT DOES NOT WORK**
 
 ## latex (mathjax)
 in `_includes` folder, add a new file, say `mathjax.html`, and add the following codes into it
@@ -146,8 +153,20 @@ https://carpentries-incubator.github.io/jekyll-pages-novice/layouts/index.html
 
 ### _includes
 
+## yaml
+#### date
+many examples  
+<https://www.alanwsmith.com/posts/20emx2csq8do--jekyll-and-github-pages-liquid-date-formatting-examples>
+
 ## page building
 it uses Jekyll & liquid
+
+### view the CI/CD workflow
+go to the `Actions` tab and see all your past & current workflows
+
+to debug, click into the one failed and see the error messages
+
+## liquid
 
 ### escaping liquid
 `{% raw  %}{% include mathjax.html %}{% endraw %}`
@@ -155,7 +174,34 @@ without the raw & endraw, the include tag will be rendered and the codes in `mat
 
 https://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags
 
-### view the CI/CD workflow
-go to the `Actions` tab and see all your past & current workflows
+### operators
+<https://shopify.github.io/liquid/basics/operators/>
+#### if
+below will execute if the page has `data` in YAML
+```html
+{% raw  %}
+{% if page.date %}
+	<span class="date-txt"> {{ page.date | date: "%Y-%m-%d" }} </span>
+{% endif %}
+{% endraw %}
+```
+### variables
+<https://jekyllrb.com/docs/variables/>
 
-to debug, click into the one failed and see the error messages
+### examples
+#### backlinks
+```html
+{% raw  %}
+<hr>
+<h2>Backlinks</h2> 
+<ul>
+{% for pp in site.pages %}
+	{% if pp.content contains page.title %}
+		{% if pp.title != page.title %}
+			<li><a href="/blog/{{ page.url }}">{{ pp.title }}</a></li>
+		{% endif %}
+	{% endif %}
+{% endfor %}
+</ul>
+{% endraw %}
+```

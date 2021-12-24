@@ -677,7 +677,6 @@ stage utilization of each type
 	-  schedule codes to avoid it
 		- ![](https://i.imgur.com/hu8AwBa.png)
 
-
 ##### control hazard
 - depends on branch outcome of previous instruction
 - e.g.

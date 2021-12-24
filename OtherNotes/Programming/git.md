@@ -17,11 +17,15 @@ gh auth login
 ```
 
 ### repo
-view all repos
+#### view all repos
 ```
 gh repo list
 ```
 
+#### create repo
+```
+gh repo create
+```
 
 ## pull related
 ### git pull all subdiretories
@@ -44,6 +48,11 @@ for i in */.git; do ( echo $i; git -C $i/.. pull; ); done
 	- commit details of `abcdef`
 
 ## commit related
+### delete all commits
+`git update-ref -d HEAD`
+
+<https://stackoverflow.com/a/6637891/15493213>
+
 ### reset
 `git reset HEAD~2` to reset to latest_commit.parent.parent
 
@@ -89,7 +98,7 @@ https://stackoverflow.com/questions/677436/how-do-i-get-the-git-commit-count
 - 9a7789
 
 想要把三個 commits squash 在一起
-1. `git reset --soft 9a7990`
+1. `git reset --soft 9a7789`
 2. `git commit --amend` OR 直接去 gui 
 	- new commit message
 3. `git push -f`
