@@ -915,18 +915,65 @@ exchange → 數量一樣
 	- ![](https://i.imgur.com/8yx5g0E.png)
 		- s → a → b 後，推 1 回 a → t ，其餘 2 繼續 b → t
 - flow out  = flow in
-- upper bound of flow = min cut 
-	- ![](https://i.imgur.com/GOIAcfT.png)
-- solution
-	- residual network
-	- 在 flow network，s to t 找到 path → 更新 flow network 各 edge 的 capacity，更新 residual，把 path 都弄成 backward edge → repeat
-	- e.g.
-		- ![](https://i.imgur.com/PXdFZD4.png)
-		- ![](https://i.imgur.com/ku2Bau4.png)
-		- ![](https://i.imgur.com/Cpr0f7D.png)
-		- ![](https://i.imgur.com/xr08QYz.png)
-		- ![](https://i.imgur.com/cgCfkUK.png)
+- augmentating path = 可灌更多 flow 的 path
+
+#### max-flow min-cut theorem
+- <https://brilliant.org/wiki/max-flow-min-cut-algorithm/>
+- 每個 cut 都是一個 upper bound → min cut is the min upper bound i.e. the real upper bound
+- ![](https://i.imgur.com/GOIAcfT.png)
+- ![](https://s2.loli.net/2021/12/25/Ict1jYOXg864nuC.png)
+- proof
+	- ![](https://s2.loli.net/2021/12/26/wjPGi4SK1ml5nfJ.png)
+	- ![](https://s2.loli.net/2021/12/26/YS4WRT9uHhJmVpD.png)
+		- 有 augmentation path → 可以灌更多 → not max flow
+	- ![](https://i.imgur.com/ZhPpzy3.png)
+	- ![](https://i.imgur.com/EpTbjAl.png)
+		- 一定會用盡 capacity，否則還會有路出去
+
+#### Ford-Fulkerson Algorithm
+- residual network
+- 在 flow network，s to t 找到 path → 更新 flow network 各 edge 的 capacity，更新 residual network，把 path 都弄成 backward edge → repeat
+- ![](https://s2.loli.net/2021/12/25/JZavDWYRGgNs5H8.png)
+- ![](https://s2.loli.net/2021/12/25/dBoenztJY4gk9uG.png)
+- legal flow pf
+	- ![](https://s2.loli.net/2021/12/25/uPKXT7zEDtFbSZe.png)
+- flow will increase after applying augmentation
+	- ![](https://s2.loli.net/2021/12/25/ZDV4NMbUfckOpts.png)
+- time complexity $\in O(EC)$
+	- not polynomial to input size (but capacity)
+	- at most C iterations
+		- C = flow upper bound
+		- each aumentation increase flow by at least 1 → at most C iterations
+		- ![](https://s2.loli.net/2021/12/25/FXfG9JzVtykRo3u.png)
+		- e.g.
+			- ![](https://s2.loli.net/2021/12/25/StHPZKo1cgvVODC.png)
+				- worst case 200 interations
+	- each augmentation $O(V+2E)=O(E)$
+- e.g.
+	- ![](https://i.imgur.com/PXdFZD4.png)
+	- ![](https://i.imgur.com/ku2Bau4.png)
+	- ![](https://i.imgur.com/Cpr0f7D.png)
+	- ![](https://i.imgur.com/xr08QYz.png)
+	- ![](https://i.imgur.com/cgCfkUK.png)
 
 
+#### Edmonds-Karp Algorithm
+- <https://brilliant.org/wiki/edmonds-karp-algorithm/>
+- [[#Ford-Fulkerson Algorithm]] but find the shortest augmentation path (min edges) in residual network with BFS
+- time complexity $\in O(VE(V+E))=O(VE^2)$
+	- $\dfrac{VE}{2}$ iterations
+		- an edge is critical when it's filled → edge reversed
+		- distance from source would increase at least 2 at the next time it become critical
+		- max distance = V → max iteration = V/2 for each node
+	- $V+E$ each iteration (path finding)
+		- BFS
 
-
+#### Bipartite Matching
+- no 2 edges share same endpoints
+	- one-to-one for both sides
+- build a flow network and find the max flow
+	- only 1 direction
+	- create source & destination
+	- each edge's capacity = 1
+	- ![](https://s2.loli.net/2021/12/25/2y3Ys6UVcLMAIZl.png)
+	- ![](https://s2.loli.net/2021/12/25/fd9q1iFowtuLTUX.png)

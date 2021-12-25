@@ -185,6 +185,11 @@ below will execute if the page has `data` in YAML
 {% endif %}
 {% endraw %}
 ```
+
+#### for
+reverse
+<https://stackoverflow.com/a/12574250/15493213s>
+
 ### variables
 <https://jekyllrb.com/docs/variables/>
 

@@ -210,12 +210,32 @@ end: # end
 ```
 
 ## HW2 [[Verilog]] ALU
-<!--⚠️Imgur upload failed, check dev console-->
 ![](https://i.imgur.com/wwncllN.png)
 
-problems
-- MUL
-	- deal with overflow(?)
-	- now `in_B` with 1 as the MSB always fail, always succeed otherwise
-	- sign extension by 1 bit?
-	- https://stackoverflow.com/questions/24586842/signed-multiplication-overflow-detection-in-verilog
+```
+source /usr/cad/cadence/cshrc && source /usr/cad/synopsys/CIC/synthesis.cshrc
+ncverilog HW2_tb.v HW2.v +access+r
+```
+
+## final project [[Verilog]] CPU
+![](https://i.imgur.com/3qLc5gk.png)
+
+IF → ID → EX → MEM → WB
+
+- IF
+	- RS1 = instruction[19-15]
+	- RS2 = instruction[24-20]
+	- RD = instruction[11-7]
+
+109-1 CSIE  
+single-cycle CPU  
+very complete  
+<https://github.com/tzutengweng33176/Computer_Architecture_109_1>
+
+
+<https://www.fpga4student.com/2017/04/verilog-code-for-16-bit-risc-processor.html>
+
+
+pipelined CPU
+<https://github.com/HouHou0925/MIPS_CPU>
+

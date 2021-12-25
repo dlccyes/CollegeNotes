@@ -27,6 +27,7 @@ parent: OtherNotes
 - reddit archives
 	- https://camas.github.io/reddit-search/
 		- very good
+		- can search comments
 	- https://www.reveddit.com/
 	- https://www.unddit.com/
 	- https://github.com/pushshift
