@@ -465,3 +465,19 @@ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiOm6-5
 ### topological sort
 ![](https://i.imgur.com/35tjUVY.png)
 會把所有 out-degree = 1 in-degree=0 者清掉，剩下的都在 cycle 裡，所以找不到 in-degree=0 → queue emptied
+
+## HW4
+### 1. MST
+![](https://i.imgur.com/1GQQb2F.png)
+![](https://i.imgur.com/GXpPjiA.png)
+
+<http://www.jade-cheng.com/uh/coursework/ics-311/homework/homework-07.pdf>
+
+![](https://i.imgur.com/D884Hyl.png)
+![](https://i.imgur.com/MFCwcry.png)
+
+## 2.
+![](https://i.imgur.com/phkAJRW.png)
+![](https://i.imgur.com/PyFTPe6.jpg)
+
+![](https://i.imgur.com/36gLYAN.png)

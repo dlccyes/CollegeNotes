@@ -1,9 +1,8 @@
 ---
-title: page template
 layout: meth
-parent: 
+parent: Programming
 ---
-# page template
+# HTML
 {: .no_toc }
 
 <details open markdown="block">
@@ -13,3 +12,8 @@ parent:
 - TOC
 {:toc}
 </details>
+
+## make all links open in new tab
+```html
+<base target="_blank">.
+```

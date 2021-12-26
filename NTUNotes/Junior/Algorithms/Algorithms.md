@@ -17,48 +17,16 @@ layout: meth
 {:toc}
 </details>
 
-### pseudocode
+## resources
+Solutions to Introduction to Algorithms Third Edition  
+<https://walkccc.me/CLRS/>
+
+## pseudocode
 - array position 1-A.length
 - for
 	- `for i = 1 to A.length`
 
-### insertion sort
-![](https://i.imgur.com/8aTILkM.png)
-![](https://i.imgur.com/1yfkAvE.png)
-```cpp
-void insertion_sort(int x[],int length)//define function
-{
-  int key,i;
-  for(int j=1;j<length;j++)
-  {
-     key=x[j];
-     i=j-1;
-     while(x[i]>key && i>=0)
-     {
-         x[i+1]=x[i];
-         i--;
-     }
-     x[i+1]=key;
-  }
-}
-```
-- 排撲克牌時的排法
-- n 很小時表現很好
-- properties
-	- incremental approach
-	- in place
-		- 直接在原 array 做，不須額外 space
-	- stable
-		- 數值相同時，sorting 前後順序一致
-- time complexity
-	- worst case
-		- reverse sorted, while loop iterate j
-	- best case
-		- already sorted
-	- average case
-		- while loop iterate j/2
-
-### loop invariant
+## loop invariant
 - está verda siempre
 	- pre, peri & post loop iteration
 - like math induction
@@ -277,6 +245,42 @@ matrix multiplication
 	- ![](https://i.imgur.com/H2pkRv5.png)
 - stable
 	- ![](https://i.imgur.com/xo3n0Z8.png)
+
+### insertion sort
+![](https://i.imgur.com/8aTILkM.png)
+![](https://i.imgur.com/1yfkAvE.png)
+```cpp
+void insertion_sort(int x[],int length)//define function
+{
+  int key,i;
+  for(int j=1;j<length;j++)
+  {
+     key=x[j];
+     i=j-1;
+     while(x[i]>key && i>=0)
+     {
+         x[i+1]=x[i];
+         i--;
+     }
+     x[i+1]=key;
+  }
+}
+```
+- 排撲克牌時的排法
+- n 很小時表現很好
+- properties
+	- incremental approach
+	- in place
+		- 直接在原 array 做，不須額外 space
+	- stable
+		- 數值相同時，sorting 前後順序一致
+- time complexity
+	- worst case
+		- reverse sorted, while loop iterate j
+	- best case
+		- already sorted
+	- average case
+		- while loop iterate j/2
 
 ### Quicksort
 - use divide-and-conquer
@@ -769,6 +773,8 @@ exchange → 數量一樣
 		- 新的 edge 屬於同 disjoint set → cycle
 		- ![](https://i.imgur.com/IEeN2kc.png)
 		- time complexity $\in O(ElgE+V)=O(ElgV+V)$
+			- find-set for a set of V nodes = $\alpha(V)$
+			- for each edge → $O(E\alpha(V))$
 - Prim's algorithm
 	- start with root node, greedily expands outward from the current tree
 	- implementation
