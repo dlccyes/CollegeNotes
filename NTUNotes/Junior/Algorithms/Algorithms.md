@@ -977,3 +977,46 @@ exchange → 數量一樣
 	- each edge's capacity = 1
 	- ![](https://s2.loli.net/2021/12/25/2y3Ys6UVcLMAIZl.png)
 	- ![](https://s2.loli.net/2021/12/25/fd9q1iFowtuLTUX.png)
+
+## [[NP-completeness]]
+### decision problem
+- output True/False
+
+### turing machine
+- DTM, deterministic turing machine
+	- 1 outgoing edge
+- NTP, nondeterministic turing machine
+	- multiple outgoing edges
+- ![](https://i.imgur.com/dja532C.png)
+
+### complexity class P
+- polynomial-time solvable
+
+### complexity class NP
+- polynomial-time verifiable by NTM
+- for decision problem
+- $P\in NP$
+	- ![](https://i.imgur.com/0Nvnnl3.png)
+- e.g.
+	- set cover problem
+		- Are there k subsets of set U s.t. their union is U?
+		- procedure (polynomial-time)
+			- for each subset, if an element of U isn't presented, indicate with 0, otherwise 1
+			- ![](https://i.imgur.com/HRhxboJ.png)
+
+### polynomial-time reduction
+- algo A can solve Y, then we'll do some mapping in polynomial-time and solve X with A
+- $X\leq_P Y$ (polynomial-time reduction function f from  X to Y)
+	- f(x)=y $\in Y$ for any x
+	- x is true iff f(x)=y is true
+	- mapping function is polynomial-time
+- hardness of Y >= X
+- ![](https://i.imgur.com/YEWQKGm.png)
+
+### class NP-complete
+- hardest problems in NP
+- if any NP-complete problem $\in P$, then $P=NP$ (???????)
+- ![](https://i.imgur.com/RCEuddJ.png)
+- ![](https://i.imgur.com/DRHRJDr.png)
+- e.g. Hamiltonian path/cycle, set cover, Tetris, Sudoku
+
