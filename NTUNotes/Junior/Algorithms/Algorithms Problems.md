@@ -495,6 +495,16 @@ https://github.com/gzc/CLRS/blob/master/C24-Single-Source-Shortest-Paths/24.2.md
 ![](https://i.imgur.com/7OwebSS.png)
 ![](https://i.imgur.com/mFR0GSh.png)
 
-## 4.
+### 4. floyd warshell
 ![](https://i.imgur.com/SH1wUdd.png)
+
+https://cs.stackexchange.com/questions/74870/why-can-we-drop-the-superscripts-in-the-floyd-warshall-algorithm
+
 ![](https://i.imgur.com/GqanklO.png)
+
+### 5.
+![](https://i.imgur.com/bV3BBY9.png)
+![](https://i.imgur.com/iIZLrKR.png)
+
+![](https://i.imgur.com/VCbdEoI.png)
+![](https://i.imgur.com/eemNCje.png)
