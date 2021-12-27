@@ -18,8 +18,9 @@ layout: meth
 </details>
 
 ## resources
-Solutions to Introduction to Algorithms Third Edition  
-<https://walkccc.me/CLRS/>
+Solutions to Introduction to Algorithms Third Edition
+- <https://walkccc.me/CLRS/>
+- https://github.com/gzc/CLRS
 
 ## pseudocode
 - array position 1-A.length
@@ -407,8 +408,9 @@ radix & bucket sort use other sorters to do the actual sorting
 		- fast when size small
 - time complexity $\in O(d(n+k))$
 	- n d-digit numbers
-	- each digit has k possible values ???
+	- each digit has k possible values
 	- $\in O(n)$ if $d\in O(1)$ & $k\in O(n)$
+	- 如果用 $O(nlgn)$ sorter 就是 $O(dnlgn)$
 - stable, in-place or not depends on what sorter used (to sort each digit)
 
 #### bucket sort
@@ -657,6 +659,10 @@ exchange → 數量一樣
 	- cycle
 - connectivity
 	- there is a path for every pair of nodes in this graph → connected
+
+### notations
+- node.d = distance from source ode
+- node.$\pi$ = parent of node
 
 ### graph representation
 ![](https://i.imgur.com/c5i4Vx0.png)

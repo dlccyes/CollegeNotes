@@ -476,8 +476,25 @@ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiOm6-5
 ![](https://i.imgur.com/D884Hyl.png)
 ![](https://i.imgur.com/MFCwcry.png)
 
-## 2.
+### 2. relax
 ![](https://i.imgur.com/phkAJRW.png)
 ![](https://i.imgur.com/PyFTPe6.jpg)
 
 ![](https://i.imgur.com/36gLYAN.png)
+
+![](https://i.imgur.com/yybxTyB.png)
+https://github.com/gzc/CLRS/blob/master/C24-Single-Source-Shortest-Paths/24.2.md
+
+### 3. graph
+![](https://i.imgur.com/0ZP8cpv.png)
+![](https://i.imgur.com/60NlYzn.png)
+
+![](https://i.imgur.com/4bEx1TC.png)
+[CSIE HW5 sol](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwj8-r7S14P1AhUZxYsBHY6CCDkQFnoECAIQAQ&url=https%3A%2F%2Fwww.csie.ntu.edu.tw%2F~hsinmu%2Fcourses%2F_media%2Fada_11fall%2Fhw5-sol.pdf&usg=AOvVaw1xN7Q0oDNN_JihDSQJJK0M)
+
+![](https://i.imgur.com/7OwebSS.png)
+![](https://i.imgur.com/mFR0GSh.png)
+
+## 4.
+![](https://i.imgur.com/SH1wUdd.png)
+![](https://i.imgur.com/GqanklO.png)
