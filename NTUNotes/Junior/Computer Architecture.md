@@ -853,7 +853,7 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 - data requested is in upper level → hit
 	- hit rate = # found in upper level / # access
 	- hit time = time to access upper level 
-- data reques is not in upper level → miss
+- data request is not in upper level → miss
 	- mis rate = # not found in upper level / # access
 	- miss penalty = total time to fetch the requested block to the requested level
 		- access time + transmit time
@@ -885,6 +885,7 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 	- block size = $2^m$ words = $2^{m+5}$ bits = $2^m\times 32$ bits
 	- word size = $2^2$ bytes = 4x8 bits = 32 bits
 	- tag size = address size - (n+m+2) bits = address size (bits) - cache size (bytes)
+	- byte offset = how many bytes per block
 	- 1 valid bit
 	- total size = $2^n$ x (block size + tag size + valid size) bits
 		- every block need original + tag & valid bits
@@ -897,6 +898,9 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 	- larger block size → fewer blocks can be held in cache → more competition, blocks would be bumped out of cache before all words is accessed → higher miss rate
 	- larger block size → hit time increases → slower
 	- larger block size → transfer time increase → bigger miss penalty
+- miss → CPU pipeline stall → fetch block from lower level
+- ![](https://i.imgur.com/e8MMiAl.png)
+- AMAT (average memory access time) = hit time + miss rate x miss penalty
 
 #### associative cache
 - fully associative cache
@@ -908,6 +912,14 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 	- indexed by (# block) % (# of set)
 - ![](https://s2.loli.net/2021/12/24/R43pWNL2mTExec8.png)
 	- middle: 2-way set associative cache i.e. each set has 2 blocks, so need to search 2 blocks
+- replace policy
+	- least recently used (LRU)
+		- not scalable, hard for n-way with big n
+	- random
+		- same performance for whatever n
+- high associative → low miss rate
+- e.g.
+	- ![](https://i.imgur.com/RGssgly.png)
 
 #### miss
 - compulsory miss
@@ -921,4 +933,9 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 
 #### multilevel cache
 - not in 1st level cache → search 2nd level cache
-- higher miss penalty if not found in any level of cache 
+- higher miss penalty if not found in any level of cache
+- 2-level
+	- primary
+		- focus on low hit time
+	- L-2
+		- focus on low miss rate
