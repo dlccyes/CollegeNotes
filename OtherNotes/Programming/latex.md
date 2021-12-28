@@ -27,6 +27,10 @@ $\LaTeX$
 put it before `\begin{document}`
 https://tex.stackexchange.com/a/460857
 
+### line break
+- `\smallbreak`  
+- `\bigbreak`
+
 ### align center
 `\begin{center} context \end{center}`
 
@@ -40,6 +44,17 @@ https://tex.stackexchange.com/a/460857
     % pdftitle={Overleaf Example},
     % pdfpagemode=FullScreen,
     }
+```
+
+### hide link blue box
+```
+\usepackage[hidelinks]{hyperref}
+```
+
+```
+\hypersetup{%
+    pdfborder = {0 0 0}
+}
 ```
 
 ## environment

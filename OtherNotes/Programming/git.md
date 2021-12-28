@@ -11,6 +11,17 @@ sudo apt update
 sudo apt install gh
 ```
 
+## Git GUI
+### Github Desktop
+- simple
+- fast
+- intuitive
+
+### GitKraken
+- many features
+- nice UI
+- slow
+
 ### login
 ```
 gh auth login

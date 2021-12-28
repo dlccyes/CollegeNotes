@@ -20,7 +20,7 @@ layout: meth
 ## resources
 Solutions to Introduction to Algorithms Third Edition
 - <https://walkccc.me/CLRS/>
-- https://github.com/gzc/CLRS
+- <https://github.com/gzc/CLRS>
 
 ## pseudocode
 - array position 1-A.length

@@ -502,9 +502,43 @@ https://cs.stackexchange.com/questions/74870/why-can-we-drop-the-superscripts-in
 
 ![](https://i.imgur.com/GqanklO.png)
 
-### 5.
+### 5. transistive closure
 ![](https://i.imgur.com/bV3BBY9.png)
 ![](https://i.imgur.com/iIZLrKR.png)
 
 ![](https://i.imgur.com/VCbdEoI.png)
 ![](https://i.imgur.com/eemNCje.png)
+
+### 6. flow network
+![](https://i.imgur.com/PMUj9vA.png)
+![](https://i.imgur.com/nqabjxo.png)
+![](https://i.imgur.com/sJya7Fx.png)
+
+![](https://i.imgur.com/fpddJOc.png)
+
+![](https://i.imgur.com/vk06K99.png)
+![](https://i.imgur.com/zCA1IYX.png)
+[standford](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwja3cT06YX1AhXRrVYBHZUsBQ8QFnoECCMQAQ&url=https%3A%2F%2Fstanford.edu%2F~rezab%2Fclasses%2Fcme305%2FW17%2FMidterm%2Fprobsession2_2017_soln.pdf&usg=AOvVaw3dMlfAnMzmAsC9dDUYYqNR)
+
+![](https://i.imgur.com/2VA8ZAH.png)
+![](https://i.imgur.com/lHSE5RD.png)
+![](https://i.imgur.com/z3eE0mt.png)
+
+### 7. SCC
+![](https://i.imgur.com/Workt6o.png)
+[nice graphical explanation](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi56MXUgIb1AhXWy4sBHdq-DDQQFnoECAsQAQ&url=https%3A%2F%2Fwww.iitg.ac.in%2Fdeepkesh%2FCS301%2Fassignment-2%2F2sat.pdf&usg=AOvVaw3q56uzk8OQP0tZQ_BvoVas)
+
+![](https://i.imgur.com/sPltDgb.png)
+
+### 8. graph coloring (c.)
+![](https://i.imgur.com/OO2bZCO.png)
+![](https://i.imgur.com/5z3WlzQ.png)
+![](https://i.imgur.com/pbZ4YPJ.png)
+![](https://i.imgur.com/iEibUqX.jpg)
+![](https://i.imgur.com/Yy0YHa5.png)
+(c.) ??
+
+![](https://i.imgur.com/sjM3Xvr.png)
+![](https://i.imgur.com/CT2PWYM.png)
+![](https://i.imgur.com/ll4xrxv.png)
+![](https://i.imgur.com/ajePA4R.png)
