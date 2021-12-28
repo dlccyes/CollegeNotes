@@ -530,7 +530,7 @@ https://cs.stackexchange.com/questions/74870/why-can-we-drop-the-superscripts-in
 
 ![](https://i.imgur.com/sPltDgb.png)
 
-### 8. graph coloring (c.)
+### 8. graph coloring NP (cde????)
 ![](https://i.imgur.com/OO2bZCO.png)
 ![](https://i.imgur.com/5z3WlzQ.png)
 ![](https://i.imgur.com/pbZ4YPJ.png)
@@ -542,3 +542,14 @@ https://cs.stackexchange.com/questions/74870/why-can-we-drop-the-superscripts-in
 ![](https://i.imgur.com/CT2PWYM.png)
 ![](https://i.imgur.com/ll4xrxv.png)
 ![](https://i.imgur.com/ajePA4R.png)
+
+### 9. amortized
+![](https://i.imgur.com/u9YIVx5.png)
+![](https://i.imgur.com/uP8j1nT.jpg)
+
+![](https://i.imgur.com/iUug5k6.png)
+
+<https://dspace.mit.edu/bitstream/handle/1721.1/37150/6-046JFall-2004/NR/rdonlyres/Electrical-Engineering-and-Computer-Science/6-046JFall-2004/84EBB6F3-2B41-4140-9D39-960EB29423CB/0/ps4sol.pdf>
+
+<https://www.geeksforgeeks.org/queue-using-stacks/>  
+method 2

@@ -1588,6 +1588,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- sender & receiver agree on before hand
 	- r+1 個 bits
 - data 補 r 個 0 i.e. slli r
+	- size of r = size of G - 1 e.g. 4-bit G → 3-bit r
 - modulo-2 arithmetic
 	- addition without carry = subtraction without carry = XOR
 	- 長除法 data 除 generator but 相減時用 XOR
