@@ -266,7 +266,7 @@ https://github.com/jason88012/Maximum-Planner-Subset
 ![](https://i.imgur.com/AXAIqOb.png)
 
 
-### DIY
+## DIY 2
 #### ideas
 - 電路 debug
 	- 哪條線有問題
@@ -555,3 +555,10 @@ dequeue → pop from S2, if S2 is empty, push&pop everything from S1 to S2 and t
 
 <https://www.geeksforgeeks.org/queue-using-stacks/>  
 method 2
+
+## DIY 4
+- ideas
+	- queue round robin game game theory
+	- opputunistic graph
+	- 祖宗十八代 least common ancestor
+	- 時空旅人 same subtree

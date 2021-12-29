@@ -1,4 +1,4 @@
----
+x---
 aliases: [電網導]
 layout: meth
 title: Computer Networks
@@ -224,6 +224,10 @@ has_children: true
 	- round robin
 
 #### circuit switching
+- <https://eng.libretexts.org/Bookshelves/Computer_Science/Networks/Book%3A_An_Introduction_to_Computer_Networks_(Dordal)/03%3A_Other_LANs/3.04%3A_Virtual_Circuits>
+- e.g.
+	- ![](https://i.imgur.com/b3TgdvZ.png)
+		- C comes from port 2 in S1 → port 3 VCI 2 out → S2 get VCI 2 from port 1 → out port 3 VCI 2 → S3 get VCI 2 from port 1 → out port 3 → B
 - resources reserved
 	- in contrast with the queuing method in [[#packet switching]]
 		- transmission not guaranteed to succeed
@@ -1197,6 +1201,8 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- 0 for last fragment, 1 otherwise
 	- offset
 		- where the fragment fits in the original datagram
+- e.g.
+	- ![](https://i.imgur.com/gT4Y4Ds.png)
 
 ##### addressing
 - interface
@@ -1435,6 +1441,9 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- 還沒收斂就有 packet 進來
 	- can't stabilize
 	- don't know the route is through who
+	- solution: poisoned reversed
+		- notify others when a link is off
+		- but won't solve the count to infinity problem resulted from increasing edge cost
 
 #### intra-AS routing - OSPF
 - autonomous systems, AS i.e. domains
