@@ -546,9 +546,11 @@ https://cs.stackexchange.com/questions/74870/why-can-we-drop-the-superscripts-in
 ### 9. amortized
 ![](https://i.imgur.com/u9YIVx5.png)
 ![](https://i.imgur.com/uP8j1nT.jpg)
+queue → push to S1  
+dequeue → pop from S2, if S2 is empty, push&pop everything from S1 to S2 and then pop
 
 ![](https://i.imgur.com/iUug5k6.png)
-
+![](https://i.imgur.com/JUpKMs2.png)
 <https://dspace.mit.edu/bitstream/handle/1721.1/37150/6-046JFall-2004/NR/rdonlyres/Electrical-Engineering-and-Computer-Science/6-046JFall-2004/84EBB6F3-2B41-4140-9D39-960EB29423CB/0/ps4sol.pdf>
 
 <https://www.geeksforgeeks.org/queue-using-stacks/>  
