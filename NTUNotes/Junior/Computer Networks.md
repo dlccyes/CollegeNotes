@@ -353,6 +353,7 @@ has_children: true
 		- 有 common link → 大家平分
 		- ![](https://i.imgur.com/ohQCSVt.png)
 			- $min(R/10,R_1,R_2,....,R_{10})$  
+
 #### delay/latency
 - one-way delay
 - RTT, round trip time
@@ -370,7 +371,7 @@ has_children: true
 	- queuing delay
 		- traffic intensity = La/R
 			- a packets per second
-			- \> 1 → queue increases → average queuing delay approaches $\infty$
+			- > 1 → queue increases → average queuing delay approaches $\infty$
 		- 1 packet every L/R → no delay
 		- N packets every NL/R → significant delay
 		- ![](https://i.imgur.com/Ba1ETtF.png)
@@ -613,6 +614,7 @@ so there're many security problems now
 - ![](https://i.imgur.com/i7O8XId.png)
 - ![](https://i.imgur.com/wx0bRpv.png)
 	- 講義：multimedia 可 UDP
+
 ##### TCP
 - provide
 	- connection-oriented
@@ -637,6 +639,7 @@ so there're many security problems now
 - TCP socket
 	- header 很大 bc 提供很多功能
 	- 3-way handshaking
+
 ##### UDP
 - does not provide anything
 - 適合要快不用準的
@@ -684,8 +687,10 @@ so there're many security problems now
 		2.  overflow → 加到 least significant bit
 		3. sum 做 1's complement → checksum
 			- 0 1 互換
-		4. receiver 的 sum 加上 sender 的 checksum = 全部 1 → correct
-			- bc 理論上互為 complement
+		4. sum = receiver 的 sum 加上 sender 的 checksum
+			- 全部 1 → correct
+				- bc 理論上互為 complement
+		5. checksum = complement of sum
 	- ![](https://i.imgur.com/2uAiupB.png)
 
 #### Automatic Repeat reQuest (ARQ)
@@ -794,6 +799,7 @@ so there're many security problems now
 	
 ### TCP
 - 用 [[#sliding window protocol]]
+
 #### TCP  segment
 - header size not fixed
 - window size not fixed
@@ -819,6 +825,7 @@ so there're many security problems now
 - rdf
 	- sender maintain sliding window
 	- receiver maintain expected next byte (seq. num)
+
 #### RTT & Timeout
 ##### Estimated RTT
 - RTT = rount trip time
@@ -854,17 +861,18 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 
 ##### cumulative ACK
 - hybrid of [[#Go Back N GBN]] & [[#Selective Repeat SR]]
+	- reciever ACK the ==next bit== to be received
 	- differences with GBN
 		- TCP will buffer out-of-order segments
 		- TCP uses cumulative ACK
-			- 1 : N segment all received by receiver,  ACK n lost while other received by sender → GBN resend segment n : N while TCP resend segment n or none (if receive ACK #>n before timeout n)
+			- 1 : N segment all received by receiver,  ACK k lost while other received by sender → GBN resend segment k : N while TCP resend segment k or none (if receive ACK #>k before timeout k)
 	- differences with SR
 		- TCP won't individually ACK out-of-order segments 
 		- TCP only maintains the smallest-seq-no (oldest) unACKed byte
 	- selective ACK (SACK) - a modified ACK
 		- ACK out-of-order segments selectively
 		- a lot like SR
-- `SendBase` =  the seq #  of oldest unACKed segment
+- `SendBase` =  the seq # of oldest unACKed segment
 - `NextSeqNum` = next byte to be sent
 - receive ACK → compare ACK #  with `SendBase` 
 - no negative ACK
@@ -983,7 +991,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- receive 3 duplicate ACKs → `ssthresh = cwnd/2` && `cwnd = ssthresh + 3 MSS` && fast restransmit && go to Fast Recovery state
 3. Fast Recovery
 	- optional state
-		- if don't use this state, then both timeout & 3 duplicate ACKs go to Slow Startㄅ
+		- if don't use this state, then both timeout & 3 duplicate ACKs go to Slow Start
 	- come to this state whenever 3 duplicate ACKs
 	- receive duplicate ACK → `cwnd += 1 MSS` 
 		- 代表有 segment 成功送到
@@ -1043,6 +1051,8 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- 送之前先決定好 source to destination path
 	- 服務多
 		- ![](https://i.imgur.com/4PMUB5v.png)
+- datagram vs. virtual circuit
+	- ![](https://i.imgur.com/8nmPnXZ.png)
 
 ### Data Plane
 #### router
@@ -1636,6 +1646,9 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - can only send at the start of a slot
 - more than one transmission in a slot → collision
 - collision → retransmit in subsequent slot with probability p
+- efficiency
+	- ![](https://i.imgur.com/fERe5GV.png)
+	- ![](https://i.imgur.com/LpFppKV.png)
 - pros
 	- if only 1 node → utilize 100%
 	- highly decentralized
@@ -1651,7 +1664,12 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - transmit immediately after receiving
 - collision when transmission time overlaps with others' transmission time
 	- not propagation time
-- max 18% (1/2e) utilization if N → infinity
+- efficiency
+	- for a node
+		- p(transmit) x p(other nodes didn't transmit) x p(other notes won't transmit when I'm transmitting)
+	- ![](https://i.imgur.com/yllFWBH.png)
+	- ![](https://i.imgur.com/DQPs3zp.png)
+	- max 18% (1/2e) utilization if N → infinity
 - fully decentralized
 
 ##### CSMA
@@ -1764,6 +1782,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	4. sender update its ARP table and send to obtained MAC
 
 #### Ethernet
+- IEEE 802.3
 - datagram format
 	- ![](https://i.imgur.com/8D8Lvyo.png)
 	- type
@@ -1781,7 +1800,10 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- self-learning (plug-and-play)
 		- table initially empty
 		- receive frame → record its source MAC, coming interface & current time
+		- if destination MAC is in table → send to corresponding interface, otherwise flood it
 		- not receive from a MAC for a certain time (aging time) → delete entry
+	- e.g.
+		- ![](https://i.imgur.com/FTxfHgg.png)
 - a frame arrives to the switch
 	- no entry in switch table → broadcast
 	- have entry, and the matching interface is already this interface (i.e. the LAN it's coming from contains the dest. MAC) → drop, otherwise → forward to the matching interface

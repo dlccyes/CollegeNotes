@@ -856,6 +856,7 @@ exchange → 數量一樣
 
 #### [[Bellman-Ford Algorithm]]
 - 接受 negative weight edge
+- detect negative cycle
 - ![](https://i.imgur.com/4z857Pa.png)
 	- 5.-7. - if detect negative cycle then return False
 - time complexity $\in O(VE)$
@@ -903,17 +904,22 @@ exchange → 數量一樣
 -  ![](https://i.imgur.com/nJhIpo7.png)
 
 #### Johnson's Algorithm
+- <https://www.geeksforgeeks.org/johnsons-algorithm/>
 - reweight s.t. all edges are nonnegative without changing the shortest path solution → [[Dijkstra's Algorithm]]
 - 移動 node 的位置
 - $h(u)$ = 把 node u 往前移動多少
-- $\hat{w}(u,v)=w(u,v)+h(u)-h(v)$ 
+- $\hat{w}(u,v)=w(u,v)+h(u)-h(v)$
+	- 經過很多點，各點會互相 cancel，只留起終點的淨移動量，so 兩點間的每個 path 改變相同，shortest path 不變
 - shortest path 不變
 	- ![](https://i.imgur.com/33LjIHE.png)
+- create new node connecting to every node with edge weight 0，shortest distance → h i.e. node 移動的量
 - cycle preserving
 	- cycle 位置都跟原本一樣
 - ![](https://i.imgur.com/6zWiq7F.png)
 - e.g.
 	- ![](https://i.imgur.com/4MsfE22.png)
+	- ![](https://i.imgur.com/GSLmLFq.png)
+	- ![](https://i.imgur.com/MfqIYP9.png)
 -  yellow: 原本 graph
 -  create new node 接上所有 node with weight 0
 -  run [[Bellman-Ford Algorithm]]
