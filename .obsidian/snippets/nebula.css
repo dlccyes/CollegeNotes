@@ -54,7 +54,11 @@
 
 .markdown-preview-view {
     font-size: 20px;
-    line-height: 1.7;
+    line-height: 1.8;
+}
+
+.cm-s-obsidian {
+    line-height: 1.8;
 }
 
 /*main pane*/

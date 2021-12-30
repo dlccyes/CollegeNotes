@@ -557,8 +557,11 @@ dequeue → pop from S2, if S2 is empty, push&pop everything from S1 to S2 and t
 method 2
 
 ## DIY 4
-- ideas
+### ideas
 	- queue round robin game game theory
 	- opputunistic graph
 	- 祖宗十八代 least common ancestor
 	- 時空旅人 same subtree
+
+### 開寫
+小明是個時空旅人。今天他來到了西元三千年，遇到一個很欠打的人，但是他又不想要打到自己的子孫，於是他跑到了西元四千年，買了一個子孫 decendent tree calculator，一個能夠計算出以你為 root 的完整族譜，並 return root (你)。這個 decendent tree calculator 並不會考慮配偶，每個 node 只有指到自己小孩的 pointer。小明於是先用這個 decendent tree calculator 計算自己，得到自己的 node，再跑回西元四千年，對那個很欠打的人進行計算，得到他的 node。但是，要怎麼知道他是不是自己的子孫呢？一個簡單的方法是，直接對自己的 tree 做 DFS，如果遇到了他的 node，就代表他是自己的子孫。但是，受限於個人資料保護法，decendent tree calculator 並無法存取你的每個子孫的一切資訊。事實上，只有星座是被記錄的，因為西元四千年左右的人們很智障，很喜歡星座，喜歡到政府立法規定每個人的姓名裡都要包含自己的星座，星座成為絕對的公開資訊，因此 decendent tree calculator 所記錄的 node value 就是星座，是用來給老年癡呆的老人們回想起自己兒孫的星座用的好工具（過年見到兒孫們卻說不出他們的星座是會頓失失去兒孫們的尊重）。因此單單 traverse 自己的 decendent tree，是無法判斷那個很欠打的人是否在裡面的，因為 node value 就只有星座。小明苦思許久，都不知道該怎麼辦，因此決定跑回西元 2021 年來問我。我告訴他：  
