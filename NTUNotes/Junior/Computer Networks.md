@@ -375,7 +375,7 @@ has_children: true
 	- queuing delay
 		- traffic intensity = La/R
 			- a packets per second
-			- > 1 → queue increases → average queuing delay approaches $\infty$
+			- \> 1 → queue increases → average queuing delay approaches $\infty$
 		- 1 packet every L/R → no delay
 		- N packets every NL/R → significant delay
 		- ![](https://i.imgur.com/Ba1ETtF.png)
@@ -694,6 +694,7 @@ so there're many security problems now
 		4. sum = receiver 的 sum 加上 sender 的 checksum
 			- 全部 1 → correct
 				- bc 理論上互為 complement
+			- need to carry
 		5. checksum = complement of sum
 	- ![](https://i.imgur.com/2uAiupB.png)
 
