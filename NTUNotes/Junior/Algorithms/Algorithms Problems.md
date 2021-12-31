@@ -564,4 +564,56 @@ method 2
 	- 時空旅人 same subtree
 
 ### 開寫
-小明是個時空旅人。今天他來到了西元三千年，遇到一個很欠打的人，但是他又不想要打到自己的子孫，於是他跑到了西元四千年，買了一個子孫 decendent tree calculator，一個能夠計算出以你為 root 的完整族譜，並 return root (你)。這個 decendent tree calculator 並不會考慮配偶，每個 node 只有指到自己小孩的 pointer。小明於是先用這個 decendent tree calculator 計算自己，得到自己的 node，再跑回西元四千年，對那個很欠打的人進行計算，得到他的 node。但是，要怎麼知道他是不是自己的子孫呢？一個簡單的方法是，直接對自己的 tree 做 DFS，如果遇到了他的 node，就代表他是自己的子孫。但是，受限於個人資料保護法，decendent tree calculator 並無法存取你的每個子孫的一切資訊。事實上，只有星座是被記錄的，因為西元四千年左右的人們很智障，很喜歡星座，喜歡到政府立法規定每個人的姓名裡都要包含自己的星座，星座成為絕對的公開資訊，因此 decendent tree calculator 所記錄的 node value 就是星座，是用來給老年癡呆的老人們回想起自己兒孫的星座用的好工具（過年見到兒孫們卻說不出他們的星座是會頓失失去兒孫們的尊重）。因此單單 traverse 自己的 decendent tree，是無法判斷那個很欠打的人是否在裡面的，因為 node value 就只有星座。小明苦思許久，都不知道該怎麼辦，因此決定跑回西元 2021 年來問我。我告訴他：  
+小明是個時空旅人。今天他來到了西元三千年，遇到一個很欠打的人，但是他又不想要打到自己的子孫，於是他跑到了西元四千年，買了一個子孫 decendent tree calculator，一個能夠計算出以你為 root 的完整族譜，並 return root (你)。這個 decendent tree calculator 並不會考慮配偶，每個 node 只有指到自己小孩的 pointer。小明於是先用這個 decendent tree calculator 計算自己，得到自己的 node，再跑回西元四千年，對那個很欠打的人進行計算，得到他的 node。但是，要怎麼知道他是不是自己的子孫呢？一個簡單的方法是，直接對自己的 tree 做 DFS，如果遇到了他的 node，就代表他是自己的子孫。但是，受限於個人資料保護法，decendent tree calculator 並無法存取你的每個子孫的一切資訊。事實上，只有星座是被記錄的，因為西元四千年左右的人們很智障，很喜歡星座，喜歡到政府立法規定每個人的姓名裡都要包含自己的星座，星座成為絕對的公開資訊，因此 decendent tree calculator 所記錄的 node value 就是星座，是用來給老年癡呆的老人們回想起自己兒孫的星座用的好工具（過年見到兒孫們卻說不出他們的星座是會頓失失去兒孫們的尊重）。因此單單 traverse 自己的 decendent tree，是無法判斷那個很欠打的人是否在裡面的，因為 node value 就只有星座。小明苦思許久，都不知道該怎麼辦，因此決定跑回西元 2021 年來問我。我告訴他： 
+只檢那個人的星座當然是不夠，但如果檢查了他的所有後代的星座，全部照著順序出現在你的後代裡的話，那麼就可以幾乎確定是他是你的後代了！因此這就是一個檢查一個 tree 是否是另一個 tree 的 subtree 的問題！其實我們只要稍微修一下 DFS 就可以達成了！  
+```
+isSubtree(root, subRoot)
+	preorderArr = []
+	DFS(root, preorderArr)
+	mainTreeArr = preorderArr // preorder traversal of mainTree
+	preorderArr = []
+	DFS(subRoot, preorderArr)
+	subTreeArr = preorderArr // preorder traversal of subTree
+	// return True if subTreeArr is a sequence in mainTree Arr
+	for i = 1 to mainTreeArr.size
+		if mainTreeArr[i] != subTreeArr[0]
+			i += 1
+		else
+			if mainTreeArr[i:i+subtreeArr.size] == subTreeArr
+				return True
+	return False
+	
+DFS(node, preorderArr):
+	// append value of node to preorderArr
+	add node.val to preorderArr
+	if node has no children
+		add null to preorderArr
+	else
+		for v in children of node
+			DFS(v, preorderArr)
+```
+概念就是，先對兩個 tree 各做一次 preorder traversal，並把經過的 node value 都存到一個 array，之後再進行比較，如果一個的 preorder array 是另一個 preorder array 裡面的一段連續 sequence，那麼這個 tree 就是另一個 tree 的 subtree！  
+這個演算法的 time & space analysis 如下所示
+- time complexity $\in O(V+E)$ ($V$, $E$ are the $|V|$, $|E|$ of the main tree)
+	- DFS for main tree → $O(V_{main}+E_{main})$
+		- the dominating factor
+	- DFS for sub tree → $O(V_{sub}+E_{sub})$
+	- traverse through the preorder array of main tree → $O(V_{main})$
+- space complexity → $O(V)$ ($V$ are the $|V|$ of the main tree))
+	- preorder array for main tree → $O(V_{main})$
+		- the dominating factor
+	- preorder array for sub tree → $O(V_{sub})$
+
+注意在製作 preorder array 時，如果 node 沒有 children，就加一個 null 進 array，這是為了以下的情況發生：
+![](https://i.imgur.com/3VVAzeT.png)
+如圖，右 tree 並非左 tree 的 subtree，但如果沒有加 null 進 array，兩者的 preorder arrary 會是
+- [1,2,4,5,9,3,6,7,8]
+- [2,4,5]
+
+因此會誤判後者為前者的 subtree！但如果加了 null，preorder array 會變成
+- [1,2,4,null,5,9,3,6,null,7,null,8,null]
+- [2,4,null,5,null]
+
+就可以準確判斷出後者不是前者的 subtree 了！
+
+如此一來，只要發現那個很欠打的人的後代 tree 有出現在自己的後代 tree，就可以幾乎確定那個人是你的後代，那麼你就不應該打他！注意，雖然那個儀器是定位在西元四千年，跟西元三千 年差了一千年，因此那個人的後代 tree 會足夠龐大，但還是有微小機率你的某個後代的所有後代的星座跟那個人的一模一樣，所有你有可能誤判他為你的後代，而不打他。不過他的後代 tree 如果沒有出現在你的後代 tree，那麼他就絕對不是你的後代，你就可以盡情地打他！這符合人本社會的精神：寧可錯放，不可錯懲！
