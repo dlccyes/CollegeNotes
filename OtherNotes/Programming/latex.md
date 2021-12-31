@@ -52,7 +52,7 @@ https://tex.stackexchange.com/a/460857
 ```
 
 ```
-\hypersetup{%
+\hypersetup{
     pdfborder = {0 0 0}
 }
 ```
