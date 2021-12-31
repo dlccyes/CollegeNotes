@@ -1034,7 +1034,31 @@ exchange → 數量一樣
 ### class NP-complete
 - hardest problems in NP
 - if any NP-complete problem $\in P$, then $P=NP$ (???????)
-- ![](https://i.imgur.com/RCEuddJ.png)
-- ![](https://i.imgur.com/DRHRJDr.png)
+- both NP & NP-Hard
+	- NP-Hard <- exist an NP-Complete problem that can do polynomial-time reduction into it
+	- ![](https://i.imgur.com/RCEuddJ.png)
+	- ![](https://i.imgur.com/DRHRJDr.png)
 - e.g. Hamiltonian path/cycle, set cover, Tetris, Sudoku
 
+### SAT
+- Satisfiability Problem
+- Circuit-SAT $\in$ NP
+	- ![](https://i.imgur.com/TAaWUE2.png)
+- NP-Complete
+	- SAT $\in$ NP
+	- SAT $\in$ NP-Hard
+		- bc Circuit-SAT $\leq_p$ SAT
+- set cover
+- nSAT = 每個 set 最多 n 個
+- ![](https://i.imgur.com/GcUIZa1.png)
+- 3SAT
+	- 3SAT $\in$ NP
+	- 3SAT $\in$ NP-Hard
+		- bc SAT $\leq_p$ 3SAT
+- clique
+	- a subgraph that every 2 distinct elements is adjacent
+	- clique problem (Clique) $\in$ NP-Complete
+		- problem: Is there a clique of size $\geq$ k ?
+		- Clique $\in$ NP
+		- Clique $\in$ NP-hard
+			- 3SAT $\leq_p$ Clique

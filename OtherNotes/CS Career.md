@@ -151,3 +151,8 @@ layout: meth
 	- low
 		- Amazon
 		- Microsoft
+
+
+## cover letters
+- <https://resumegenius.com/cover-letter-examples/software-engineer-cover-letter-sample>
+- <https://www.reddit.com/r/cscareerquestions/comments/2afejd/what_should_my_cover_letters_be_like/>
