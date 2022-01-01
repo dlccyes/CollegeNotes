@@ -92,6 +92,12 @@ git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{inser
 - commit counts
 	- `git rev-list HEAD --count`
 
+### diff
+- git diff with vimdiff
+	- `git config --global diff.tool vimdiff` set git tool to vimdiff
+	- `git difftool` to view
+	- <https://stackoverflow.com/a/3713803/15493213>
+
 ####  by users
 - all commits
 	- `git shortlog`

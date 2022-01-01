@@ -1040,8 +1040,11 @@ exchange → 數量一樣
 	- ![](https://i.imgur.com/RCEuddJ.png)
 	- ![](https://i.imgur.com/DRHRJDr.png)
 - e.g. Hamiltonian path/cycle, set cover, Tetris, Sudoku
+- ![](https://i.imgur.com/GcUIZa1.png)
+	- ![](https://i.imgur.com/MAL8kR2.png)
+- ![](https://i.imgur.com/lDgVoWA.png)
 
-### SAT
+#### SAT
 - Satisfiability Problem
 - Circuit-SAT $\in$ NP
 	- ![](https://i.imgur.com/TAaWUE2.png)
@@ -1051,28 +1054,57 @@ exchange → 數量一樣
 		- bc Circuit-SAT $\leq_p$ SAT
 - set cover
 - nSAT = 每個 set 最多 n 個
-- ![](https://i.imgur.com/GcUIZa1.png)
 - 3SAT
 	- 3SAT $\in$ NP
 	- 3SAT $\in$ NP-Hard
 		- bc SAT $\leq_p$ 3SAT
-- clique
-	- a subgraph that every 2 distinct elements is adjacent
-	- clique problem (Clique) $\in$ NP-Complete
-		- problem: Is there a clique of size $\geq$ k ?
-		- Clique $\in$ NP
-		- Clique $\in$ NP-hard
-			- 3SAT $\leq_p$ Clique
-- vertex cover $\in$ NP-Complete
-	- problem: Is there $V'\subseteq V$ s.t. every edge has an endpoint in $V'$
-	- vertex cover $\in$ NP
-	- vertex cover $\in$ NP-hard
-		- Clique $\leq_p$ vertex cover
-			- 有 clique → 有 vertex cover
-				- 若有 clique，則剩下的 nodes + 不存在的 edge ($\bar{E}$) 就會形成 vertex cover
-					- 右邊的 edge ($\bar{E}$) 至少有 1 個 endpoint 不在 clique 裡面
-						- 2 個 endpoints 都在 clique → 會是左邊的 edge (E) → 右邊 ($\bar{E}$) 不會有這條 edge
-				- ![](https://i.imgur.com/MFU07Rf.png)
-				- ![](https://i.imgur.com/gxmRXqb.png)
-			- 有 vertex cover → 有 clique
-				- ![](https://i.imgur.com/OlbjGVy.png)
+
+#### clique
+- a subgraph that every 2 distinct elements is adjacent
+- clique problem (Clique) $\in$ NP-Complete
+	- problem: Is there a clique of size $\geq$ k ?
+	- Clique $\in$ NP
+	- Clique $\in$ NP-hard
+		- 3SAT $\leq_p$ Clique
+
+#### vertex cover
+- problem: Is there $V'\subseteq V$ s.t. every edge has an endpoint in $V'$
+- vertex cover $\in$ NP
+- vertex cover $\in$ NP-hard
+	- Clique $\leq_p$ vertex cover
+		- 有 clique → 有 vertex cover
+			- 若有 clique，則剩下的 nodes + 不存在的 edge ($\bar{E}$) 就會形成 vertex cover
+				- 右邊的 edge ($\bar{E}$) 至少有 1 個 endpoint 不在 clique 裡面
+					- 2 個 endpoints 都在 clique → 會是左邊的 edge (E) → 右邊 ($\bar{E}$) 不會有這條 edge
+			- ![](https://i.imgur.com/MFU07Rf.png)
+			- ![](https://i.imgur.com/gxmRXqb.png)
+		- 有 vertex cover → 有 clique
+			- ![](https://i.imgur.com/OlbjGVy.png)
+- approx vertex cover algo
+	- ![](https://i.imgur.com/uhuQRpe.png)
+	- 找到的解會是最佳解的兩倍以內
+		- ![](https://i.imgur.com/HPferJ3.png)
+	- e.g.
+		- ![](https://i.imgur.com/IMkb3YX.png)
+			- 得到 {b,c,e,f,d,g}，but 最佳解是 {a,c,f,g}
+
+#### independent set
+- a subset $V'\subseteq V$ s.t. no edge between any nodes in $V'$
+- independent-set problem
+	- problem: Is there an independent set of size $\geq$ k?
+	- ![](https://i.imgur.com/d8VeRZL.png)
+
+#### hitting set
+- ![](https://i.imgur.com/p9Rm9j4.png)
+	- for all $c\in C$, $c$ 的元素至少有一個在 $S'$
+- hitting-set problem
+	- Does S contain a hitting set for C of size $\leq$ k?
+- reduction to vertex cover
+	- restrict each $c\in C$ to have size of 2
+	- each $c$ is an edge in clique
+	- $S'$ 是 vertex cover 的 node 指到的每個 node
+	- restricted 版本是 NP-Complete → unrestricted 版本是 NP-Complete
+
+#### approx TSP
+- NP
+- ??
