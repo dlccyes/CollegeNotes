@@ -1035,6 +1035,7 @@ exchange → 數量一樣
 - hardest problems in NP
 - if any NP-complete problem $\in P$, then $P=NP$ (???????)
 - both NP & NP-Hard
+	- NP <- 猜一個 答案，可以在 polynomial-time 被驗證
 	- NP-Hard <- exist an NP-Complete problem that can do polynomial-time reduction into it
 	- ![](https://i.imgur.com/RCEuddJ.png)
 	- ![](https://i.imgur.com/DRHRJDr.png)
@@ -1062,3 +1063,16 @@ exchange → 數量一樣
 		- Clique $\in$ NP
 		- Clique $\in$ NP-hard
 			- 3SAT $\leq_p$ Clique
+- vertex cover $\in$ NP-Complete
+	- problem: Is there $V'\subseteq V$ s.t. every edge has an endpoint in $V'$
+	- vertex cover $\in$ NP
+	- vertex cover $\in$ NP-hard
+		- Clique $\leq_p$ vertex cover
+			- 有 clique → 有 vertex cover
+				- 若有 clique，則剩下的 nodes + 不存在的 edge ($\bar{E}$) 就會形成 vertex cover
+					- 右邊的 edge ($\bar{E}$) 至少有 1 個 endpoint 不在 clique 裡面
+						- 2 個 endpoints 都在 clique → 會是左邊的 edge (E) → 右邊 ($\bar{E}$) 不會有這條 edge
+				- ![](https://i.imgur.com/MFU07Rf.png)
+				- ![](https://i.imgur.com/gxmRXqb.png)
+			- 有 vertex cover → 有 clique
+				- ![](https://i.imgur.com/OlbjGVy.png)
