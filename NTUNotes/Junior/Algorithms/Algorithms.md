@@ -905,6 +905,7 @@ exchange → 數量一樣
 
 #### Johnson's Algorithm
 - <https://www.geeksforgeeks.org/johnsons-algorithm/>
+- can't have negative cycle (use [[Bellman-Ford Algorithm]] to verify)
 - reweight s.t. all edges are nonnegative without changing the shortest path solution → [[Dijkstra's Algorithm]]
 - 移動 node 的位置
 - $h(u)$ = 把 node u 往前移動多少
@@ -913,6 +914,7 @@ exchange → 數量一樣
 - shortest path 不變
 	- ![](https://i.imgur.com/33LjIHE.png)
 - create new node connecting to every node with edge weight 0，shortest distance → h i.e. node 移動的量
+	- e.g. h(u) = -3, h(v) = -5 → w(u,v) -= -2
 - cycle preserving
 	- cycle 位置都跟原本一樣
 - ![](https://i.imgur.com/6zWiq7F.png)
@@ -938,6 +940,7 @@ exchange → 數量一樣
 #### max-flow min-cut theorem
 - <https://brilliant.org/wiki/max-flow-min-cut-algorithm/>
 - 每個 cut 都是一個 upper bound → min cut is the min upper bound i.e. the real upper bound
+- 只算 toward destination 的 edge
 - ![](https://i.imgur.com/GOIAcfT.png)
 - ![](https://s2.loli.net/2021/12/25/Ict1jYOXg864nuC.png)
 - proof

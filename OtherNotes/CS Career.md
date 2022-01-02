@@ -131,6 +131,8 @@ layout: meth
 		- 簡中譯 <https://github.com/Vonng/ddia>
 		- <https://github.com/Yang-Yanxiang/Designing-Data-Intensive-Applications/blob/master/Designing%20Data%20Intensive%20Applications.pdf>
 	- Grokking
+	- [master doc](https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view)
+		- from <https://leetcode.com/discuss/interview-question/system-design/1205825/FANG-System-Design-Interview-Preparation-Master-Doc>
 
 ## linkedin
 - skill assessment answers
