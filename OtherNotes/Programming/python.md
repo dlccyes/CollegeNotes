@@ -32,4 +32,18 @@ json.loads(str)
 
 ## heap
 `import heapq`
-- 
+
+## collections
+### OrderedDict
+- remember the insertion order
+- great for implementing LRU
+
+### deque
+- a simple queue, O(1) for enqueuing & dequeuing from both sides
+- append()
+- appendleft()
+- pop()
+- popleft()
+
+### Counter
+- return a hash map, counting each element of a list

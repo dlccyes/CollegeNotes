@@ -79,6 +79,8 @@ layout: meth
 	- 台灣小公司
 		- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-4-summary-f34efeaa50a9?p=208b417e8140
 		- https://www.ptt.cc/bbs/Soft_Job/M.1632988517.A.302.html
+		- Umbo CV & Appier
+			- https://rain-wu.medium.com/2021-軟體工程新鮮人面試心得-appier-umbo-cv-94d514ac576
 	- 台灣大公司
 		- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-2-interview-944c81dca809
 		- https://hackmd.io/@lindaya0913/HkekYB1dPO

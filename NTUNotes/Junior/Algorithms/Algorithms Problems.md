@@ -442,6 +442,11 @@ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiOm6-5
 
 ### 8. coin change greedy
 ![](https://i.imgur.com/kG3u2S0.png)
+![](https://i.imgur.com/tEb2mAI.png)
+![](https://i.imgur.com/C1o2fsj.png)
+![](https://i.imgur.com/tYuKxg6.png)
+![](https://i.imgur.com/07mpZ9o.png)
+![](https://i.imgur.com/36BpdTI.png)
 ![](https://i.imgur.com/mI3qOfB.png)
 ![](https://i.imgur.com/OZ1smZz.png)
 
@@ -528,15 +533,28 @@ https://cs.stackexchange.com/questions/74870/why-can-we-drop-the-superscripts-in
 ![](https://i.imgur.com/Workt6o.png)
 [nice graphical explanation](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi56MXUgIb1AhXWy4sBHdq-DDQQFnoECAsQAQ&url=https%3A%2F%2Fwww.iitg.ac.in%2Fdeepkesh%2FCS301%2Fassignment-2%2F2sat.pdf&usg=AOvVaw3q56uzk8OQP0tZQ_BvoVas)
 
+![](https://i.imgur.com/fJvM5Rf.png)
+
 ![](https://i.imgur.com/sPltDgb.png)
 
-### 8. graph coloring NP (cde????)
+### 8. graph coloring NP (d.)(e.)(f.)???
 ![](https://i.imgur.com/OO2bZCO.png)
 ![](https://i.imgur.com/5z3WlzQ.png)
 ![](https://i.imgur.com/pbZ4YPJ.png)
 ![](https://i.imgur.com/iEibUqX.jpg)
 ![](https://i.imgur.com/Yy0YHa5.png)
-(c.) ??
+
+(c.)  
+1. 3-COLOR can reduce to decision problem of k=3 → if 3-COLOR is NP-Complete, then the decision problem is NP-Hard
+2. the decision problem can be verified in polynomial time → is NP
+3. is NP-Hard and NP → is NP-Complete
+
+![](https://i.imgur.com/SVA7AZp.png)
+![](https://i.imgur.com/Dh9kKZ3.png)
+![](https://i.imgur.com/e1JTSE0.png)
+![](https://i.imgur.com/OyyHXAm.png)
+![](https://i.imgur.com/Y7bjZTu.png)
+![](https://i.imgur.com/rC6ePcb.png)
 
 ![](https://i.imgur.com/sjM3Xvr.png)
 ![](https://i.imgur.com/CT2PWYM.png)
