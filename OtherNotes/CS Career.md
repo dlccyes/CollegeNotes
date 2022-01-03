@@ -127,12 +127,20 @@ layout: meth
 			- https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions
 - complex personal projects
 - system design
-	- DDIA
-		- 簡中譯 <https://github.com/Vonng/ddia>
-		- <https://github.com/Yang-Yanxiang/Designing-Data-Intensive-Applications/blob/master/Designing%20Data%20Intensive%20Applications.pdf>
-	- Grokking
-	- [master doc](https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view)
-		- from <https://leetcode.com/discuss/interview-question/system-design/1205825/FANG-System-Design-Interview-Preparation-Master-Doc>
+
+### leetcode
+- patterns
+	- <https://leetcode.com/discuss/career/448285/List-of-questions-sorted-by-common-patterns>
+	- all questions with various filters (e.g. companies)
+		- <https://seanprashad.com/leetcode-patterns/>
+
+### system design
+- DDIA
+	- 簡中譯 <https://github.com/Vonng/ddia>
+	- <https://github.com/Yang-Yanxiang/Designing-Data-Intensive-Applications/blob/master/Designing%20Data%20Intensive%20Applications.pdf>
+- Grokking
+- [master doc](https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view)
+	- from <https://leetcode.com/discuss/interview-question/system-design/1205825/FANG-System-Design-Interview-Preparation-Master-Doc>
 
 ## linkedin
 - skill assessment answers

@@ -845,8 +845,9 @@ exchange → 數量一樣
 	- ![](https://i.imgur.com/Fkm71k3.png)
 - correctness (?)
 	- ![](https://i.imgur.com/2Fa8WKE.png)
-- 不接受 negative edges，否則會陷入 negative cycle
-	- 不能所有 edge cost 直接往上平移到 >=0，因為每個 path 經過的 edge 數目不一，會破壞 shortest path 解
+- 不接受 negative edges，因為有 nagative edge 則現在找到的 min path might not be min path
+	- ![](https://i.imgur.com/3Z1voag.png)
+	- solution: [[#Johnson's Algorithm]]
 
 #### in DAGs
 - ![](https://i.imgur.com/tQbLvj6.png)

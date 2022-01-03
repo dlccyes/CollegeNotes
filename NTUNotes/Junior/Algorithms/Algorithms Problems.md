@@ -635,3 +635,13 @@ DFS(node, preorderArr):
 就可以準確判斷出後者不是前者的 subtree 了！
 
 如此一來，只要發現那個很欠打的人的後代 tree 有出現在自己的後代 tree，就可以幾乎確定那個人是你的後代，那麼你就不應該打他！注意，雖然那個儀器是定位在西元四千年，跟西元三千 年差了一千年，因此那個人的後代 tree 會足夠龐大，但還是有微小機率你的某個後代的所有後代的星座跟那個人的一模一樣，所有你有可能誤判他為你的後代，而不打他。不過他的後代 tree 如果沒有出現在你的後代 tree，那麼他就絕對不是你的後代，你就可以盡情地打他！這符合人本社會的精神：寧可錯放，不可錯懲！
+
+## Final review
+### flow network
+![](https://i.imgur.com/04DlqNu.png)
+![](https://i.imgur.com/DOt75ly.png)
+![](https://i.imgur.com/Jro7xR5.png)
+
+## flow network
+![](https://i.imgur.com/vZ4Y5y1.png)
+![](https://i.imgur.com/MlxUD75.png)

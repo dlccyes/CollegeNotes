@@ -32,6 +32,8 @@ parent: OtherNotes
 	- https://www.unddit.com/
 	- https://github.com/pushshift
 		- underlying service of all the above sites
+- note service comparisons
+	- <https://www.noteapps.info/>
 
 ## browser extensions
 - tab manager (firefox)
@@ -84,6 +86,8 @@ parent: OtherNotes
 	- Listary
 		- Mac's spotlight
 		- can customize appearance
+		- Win 11 can customize indexing location too
+			- ![](https://i.imgur.com/jq0lFwM.png)
 - screen recorder
 	- oCam
 	- obs studio

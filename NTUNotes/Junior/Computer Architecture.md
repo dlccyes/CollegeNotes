@@ -939,3 +939,36 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 		- focus on low hit time
 	- L-2
 		- focus on low miss rate
+
+### dependable memory hierarchy
+- MTTF
+	- mean time to failure
+- AFR
+	- annual failure rate
+	- 1 year / MTTF
+- MTTR
+	- mean time to repair
+- MTBF
+	- mean time between failures
+	- MTTF + MTTR
+- availability = $\dfrac{MTTF}{MTBF}$
+- improving MTTF
+	- fault avoidance
+	- fault tolerance
+		- use redundancy
+	- fault forecasting
+		- replace before failure
+
+#### Hamming SEC/DED
+- SEC, single error correcting
+- DED, double error detecting code
+- hamming distance
+	- min distance between 2 different bits
+		- e.g. 11111, 10101 → 2
+- ECC
+	- mark $2^k$th bits as parity bits
+	- bit 0001 → check bits ending with 1
+	- bit 0010 → check bits ending with 01
+	- etc.
+	- ![](https://i.imgur.com/TWmuncD.png)
+	- parity (p8p4p2p1) is (1010)$_2$ = 10 → bit 10 has error → invert bit 10 to correct it
