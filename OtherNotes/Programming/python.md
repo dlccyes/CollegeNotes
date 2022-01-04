@@ -31,15 +31,18 @@ json.loads(str)
 ```
 
 ## heap
-`import heapq`
+- priority queue
+- `import heapq`
 
 ## collections
+- `import collections`
+
 ### OrderedDict
 - remember the insertion order
 - great for implementing LRU
 
 ### deque
-- a simple queue, O(1) for enqueuing & dequeuing from both sides
+- a double sided simple queue, O(1) for enqueuing & dequeuing from both sides
 - append()
 - appendleft()
 - pop()

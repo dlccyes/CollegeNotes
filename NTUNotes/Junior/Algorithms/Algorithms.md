@@ -901,8 +901,8 @@ exchange → 數量一樣
 - e.g.
 	- ![](https://i.imgur.com/rOPFpj7.png)
 - transitive closure
--  i to k AND k to j → i to j
--  ![](https://i.imgur.com/nJhIpo7.png)
+	-  i to k AND k to j → i to j
+	-  ![](https://i.imgur.com/nJhIpo7.png)
 
 #### Johnson's Algorithm
 - <https://www.geeksforgeeks.org/johnsons-algorithm/>
