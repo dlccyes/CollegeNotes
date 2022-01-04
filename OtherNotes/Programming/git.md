@@ -67,6 +67,9 @@ for i in */.git; do ( echo $i; git -C $i/.. pull; ); done
 ### reset
 `git reset HEAD~2` to reset to latest_commit.parent.parent
 
+### revert a certain file to
+`git checkout <sha> -- <path-to-file>`
+
 ### view your current changes
 `git diff`
 

@@ -1011,10 +1011,10 @@ exchange → 數量一樣
 	- multiple outgoing edges
 - ![](https://i.imgur.com/dja532C.png)
 
-### complexity class P
+### class P
 - polynomial-time solvable
 
-### complexity class NP
+### class NP
 - polynomial-time verifiable by NTM
 - for decision problem
 - $P\in NP$
@@ -1050,6 +1050,10 @@ exchange → 數量一樣
 
 #### SAT
 - Satisfiability Problem
+- CNF = conjuntive normal form
+	- (a+b)x(c+d)
+- literal = variable
+- clause = (a+b)
 - Circuit-SAT $\in$ NP
 	- ![](https://i.imgur.com/TAaWUE2.png)
 - NP-Complete
@@ -1097,9 +1101,13 @@ exchange → 數量一樣
 - independent-set problem
 	- problem: Is there an independent set of size $\geq$ k?
 	- ![](https://i.imgur.com/d8VeRZL.png)
-- ![](https://i.imgur.com/nCCLcR8.png)
-- ![](https://i.imgur.com/0tBS69k.png)
-
+- 3SAT to independent-set decision problem
+	- ![](https://i.imgur.com/Tj2WXJu.png)
+		- https://courses.engr.illinois.edu/cs374/fa2020/lec_prerec/23/23_2_0_0.pdf
+	- 每個三角形選一個 node 作為 true，選到的 node 就是 independent set
+		- 不可能同時選 x & x' → 把 x & x' 連在一起 s.t. independent set 不會有 conflict 的 nodes
+	- ![](https://i.imgur.com/nCCLcR8.png)
+	- ![](https://i.imgur.com/0tBS69k.png)
 
 #### hitting set
 - ![](https://i.imgur.com/p9Rm9j4.png)
@@ -1114,4 +1122,4 @@ exchange → 數量一樣
 
 #### approx TSP
 - NP
-- ??
+- ![](https://i.imgur.com/31lSVwm.png)
