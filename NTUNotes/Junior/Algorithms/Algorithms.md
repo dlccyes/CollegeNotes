@@ -1097,6 +1097,9 @@ exchange → 數量一樣
 - independent-set problem
 	- problem: Is there an independent set of size $\geq$ k?
 	- ![](https://i.imgur.com/d8VeRZL.png)
+- ![](https://i.imgur.com/nCCLcR8.png)
+- ![](https://i.imgur.com/0tBS69k.png)
+
 
 #### hitting set
 - ![](https://i.imgur.com/p9Rm9j4.png)

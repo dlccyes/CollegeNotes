@@ -339,13 +339,13 @@ body {
 
 /* preview mode width */
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-    max-width: 900px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 /* edit mode width */
 .markdown-source-view.is-readable-line-width .CodeMirror {
-    max-width: 900px;
+    max-width: 800px;
 }
 
 

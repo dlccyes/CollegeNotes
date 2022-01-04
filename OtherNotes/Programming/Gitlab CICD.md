@@ -43,7 +43,7 @@ Whenever you push code to your gitlab repo, gitlab's CI/CD pipeline would be tri
 		- <https://forum.gitlab.com/t/error-during-connect-post-http-docker-2375-v1-40-auth-dial-tcp-lookup-docker-on-169-254-169-254-no-such-host/28678/4>
 
 ## Create GCP VM and install Gitlab
-(Not really necessarily, you can just use your own machine and <https://gitlab.com/>. If you're using your local machine, just do all the steps involving GCP VM on your local machine instead.)
+(Not really necessary, you can just use your own machine and <https://gitlab.com/>. If you're using your local machine, just do all the steps involving GCP VM on your local machine instead.)
 
 Create a computing engine instance
 - boot disk size >= 30GB
@@ -486,9 +486,9 @@ never run automatically, have to be run manually
 
 
 ### Predefined variables
-<https://docs.gitlab.com/ee/ci/variables/predefined_variables.html?
+<https://docs.gitlab.com/ee/ci/variables/predefined_variables.html>
 
-Variables that is defined by Gitlab. You can just use them directly without first setting them up.
+Variables defined by Gitlab. You can just use them directly without first setting them up.
 
 e.g.
 - `CI_COMMIT_TITLE` = first line of your commit message
