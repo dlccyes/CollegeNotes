@@ -661,7 +661,7 @@ exchange → 數量一樣
 	- there is a path for every pair of nodes in this graph → connected
 
 ### notations
-- node.d = distance from source ode
+- node.d = distance from source node
 - node.$\pi$ = parent of node
 
 ### graph representation
@@ -755,6 +755,7 @@ exchange → 數量一樣
 	- identical if s & v are mutually reachable
 	- disjoint if s & v aren't mutually reachable
 - SCC of a directed graph G=(V, E) = maximal set of node $U\in V$ s.t. u→v & v→u
+	- <https://www.geeksforgeeks.org/strongly-connected-components/>
 	- ![](https://i.imgur.com/t3ZcDVl.png)
 	- time complexity $\in O(V+E)$
 - SCC graph is a [[#DAG]]
@@ -992,7 +993,6 @@ exchange → 數量一樣
 
 #### Bipartite Matching
 - no 2 edges share same endpoints
-	- one-to-one for both sides
 - build a flow network and find the max flow
 	- only 1 direction
 	- create source & destination
@@ -1044,7 +1044,7 @@ exchange → 數量一樣
 	- ![](https://i.imgur.com/RCEuddJ.png)
 	- ![](https://i.imgur.com/DRHRJDr.png)
 - e.g. Hamiltonian path/cycle, set cover, Tetris, Sudoku
-- ![](https://i.imgur.com/GcUIZa1.png)
+- ![](https://i.imgur.com/o7uQitW.png)
 	- ![](https://i.imgur.com/MAL8kR2.png)
 - ![](https://i.imgur.com/lDgVoWA.png)
 
@@ -1077,6 +1077,7 @@ exchange → 數量一樣
 
 #### vertex cover
 - problem: Is there $V'\subseteq V$ s.t. every edge has an endpoint in $V'$
+- vertex cover is a complete subgraph
 - vertex cover $\in$ NP
 - vertex cover $\in$ NP-hard
 	- Clique $\leq_p$ vertex cover
@@ -1095,6 +1096,9 @@ exchange → 數量一樣
 	- e.g.
 		- ![](https://i.imgur.com/IMkb3YX.png)
 			- 得到 {b,c,e,f,d,g}，but 最佳解是 {a,c,f,g}
+- 3SAT → vertex cover
+	- <http://cgm.cs.mcgill.ca/~athens/cs507/Projects/2001/CW/npproof.html>
+	- ![](https://i.imgur.com/EhKEG73.png)
 
 #### independent set
 - a subset $V'\subseteq V$ s.t. no edge between any nodes in $V'$
