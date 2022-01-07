@@ -16,14 +16,14 @@ layout: meth
 
 ## resources
 - 影片
+	- all
+		- https://www.youtube.com/playlist?list=PLp29FF3ioia0StLO86w_xM0rYq0CKcLd5
 	- W1 intro
 		- https://www.dropbox.com/s/n1usof8hkcrq3b8/macro_intro.mp4
 	- W2 macro measurement
 		- https://www.dropbox.com/s/392h185o12whyye/Macro_Measurement.mp4
 	- W3 macro measurement 2
 		- https://www.dropbox.com/s/3cxs832ipt3vpsb/Macro_Measurement2.mp4
-	- all
-		- https://www.youtube.com/playlist?list=PLp29FF3ioia0StLO86w_xM0rYq0CKcLd5
 - slides
 	- http://homepage.ntu.edu.tw/%7Emao/
 - 考古題
@@ -1051,6 +1051,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 
 ## Ch8 消費與儲蓄
 ### 費雪兩期模型
+#### budget constraint
 - Fisher Two-Period Model
 - $a_1=y_1-T_1$ = 1st 期稅後 endowment
 - $a_2=y_2-T_2$ = 2nd 期稅後 endowment
@@ -1061,3 +1062,82 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - $s_1=(a_1+rb_0)-c_1=b_1-b_0$
 	- $s_1$ = 1st 期 saving = 可支配所得 - 消費
 	- 債券本金 $b_0$ 不是所得，而是原本就存著的
+- $c_2+b_2=a_2+(1+r)b_1$
+- $b_1 = \dfrac{c_2+b_2-a_2}{1+r}$
+- lifetime wealth
+	- $\left( c_1+\dfrac{c_2}{1+r}\right)+\dfrac{b_2}{1+r}=\left(a_1+ \dfrac{a_2}{1+r}\right)+(1+r)b_0$
+		- 右邊 = lifetime wealth = 稅後 endowment 現值 + 期初債券本利和
+		- 左邊 = 兩期消費&期末債券餘額現值
+	- 消費者會追求 $b_2=-\infty$ → 限制 $b_2\geq 0$ → $b_2=0$
+		- 否則債券市場會直接關門
+	- $b_0=b_2=0$ → $c_1+\dfrac{c_2}{1+r}=a_1+\dfrac{a_2}{1+r}\equiv x$ = lifetime wealth
+	- lifetime wealth 決定消費者各期消費能力
+	- ![](https://i.imgur.com/w2z9loL.jpg)
+
+#### utlity
+- 兩期消費 marginal utility > 0 且遞減
+- MRS 遞減
+	- $MRS_{12}=-\dfrac{d_{c_2}}{d_{c_1}}=\dfrac{U_1(c_1,c_2)}{U_2(c_1,c_2)}$
+- 兩期消費為正常財
+	- $U_{11}-U_{12}\dfrac{U_1}{U_2}<0$
+	- $U_{22}-U_{12}\dfrac{U_2}{U_1}<0$
+- $U(c_1,c_2)=u(c_1)+\beta u(c_2)$
+- 時間可分割性 & 時間可加性
+	- $U_{12}=0$ 
+	- 各期 utility independent to 他期消費水準
+- time preference
+	- $\beta\in(0,1)$ = 時間偏好因子
+	- $\beta = \dfrac{1}{1+\rho}$, $\rho>0$
+	- $\rho$ = 主觀利率 subjective interest rate
+		- utility 折現率
+	- 未來比今天爛，爛多少
+	- when $c_1=c_2=c$，$MRS_E=\dfrac{U_1(c,c)}{U_2(c,c)}=\dfrac{u'(c)}{\beta u'(c)}=\dfrac{1}{\beta}=1+\rho$
+		- ![](https://i.imgur.com/rOlQBws.jpg)
+		- 45 度線 indifference curve 切線斜率
+
+#### choice
+- budget constraint: $c_1+\dfrac{c_2}{1+r}=a_1+\dfrac{a_2}{1+r}=x$
+- utility function: $U(c_1,c_2)=u(c_1)+\beta u(c_2)$
+- 使 saving 的 marginal profit = 0
+	- $u'(c_1)=\beta u'(c_2)(1+r)$
+	- $MRS_{12}=\dfrac{u'(c_1)}{\beta u'(c_2)}=1+r$
+	- ![](https://i.imgur.com/C3bMpCZ.jpg)
+	- MRS < 1+r → 儲蓄比消費爽 → 增加儲蓄
+	- MRS > 1+r → 消費比儲蓄爽 → 增加消費
+	- MRS = 1+r → 消費跟儲蓄一樣爽 → 均衡
+
+### 所得變動 & 消費平滑
+- ![](https://i.imgur.com/u9MDXr1.jpg)
+- 當期可支配所得增加
+	- 本期可支配所得上升，未來不變 → lifetime wealth 上升 → 兩期消費同時增加
+		- wealth effect
+		- lifetime wealth 增加量 = 向右平移量 = 向上平移量 / (1+r)
+		- E → 水平往右 → 延著 new budget line 上升到 F
+		- 儲蓄增加 $\Delta b_1$ → $c_2$ 增加 $(1+r)\Delta b_1$
+	- 把今天增加的所得挪到兩期 → 消費平滑
+- 未來可支配所得增加 (預期)
+	- lifetime wealth 增加量 = 向上平移量 / (1+r) = 向右平移量
+	- E → 垂直往上 → 延著 new budget line 下滑到 F
+	- 儲蓄減少 $\Delta b_1$
+- 兩期所得等幅增加
+	- E 直接移到 F
+	- 儲蓄不變
+- 邊際消費&儲蓄傾向
+	- 邊際消費傾向 MPC, marginal propensity to consume
+		- 1st 期可支配所得增加 $\Delta a_1$ → $MPC=\dfrac{\Delta c_1}{\Delta a_1}$
+	- 邊際儲蓄傾向 MPS, marginal propensity to save
+		- $MPS=\dfrac{\Delta s_1}{\Delta a_1}=\dfrac{\Delta a_1-\Delta c_1}{\Delta a_1}=1-MPC$
+	- 所得變動永久 → MPC=1, MPS=0
+		- 拿多少就用多少
+	- 所得變動非永久 → MPC<1
+		- 分散消費到他期
+		- 無限多期 → MPC 無限小
+			- 世代家庭
+- 凱因斯消費函數
+	- $C_t=a+bY_t$
+		- $a>0$ = 最低生活水準
+		- $0<b<1$ = 邊際消費傾向
+		- $C_t$ = t 期消費
+		- $Y_t$ = t 期可支配所得
+	- liquidity 受限 → 沒有 lifetime wealth
+		- 金融體系不完備，缺乏借貸工具 → 無法透過信用市場移轉各期所得
