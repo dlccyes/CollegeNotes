@@ -76,6 +76,9 @@ layout: meth
 	- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-1-introduction-f1dcb67e4798
 	- https://www.teamblind.com/post/Rejected-FAANG-interviews-even-with-referrals-pQ43s0TA
 - interviews
+	- generic
+		- https://angelswengineer.medium.com/google-amazon-line-pay-paypay日本-apple上海-lenovo-momo-garmin-趨勢-阿里巴巴支付寶-面試心得分享-b9262fccaa2 
+		- https://angelswengineer.medium.com/2020-面試心得-google-on-site-final-round-b1a52d97201a
 	- 台灣小公司
 		- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-4-summary-f34efeaa50a9?p=208b417e8140
 		- https://www.ptt.cc/bbs/Soft_Job/M.1632988517.A.302.html
@@ -87,6 +90,10 @@ layout: meth
 			- 很多很詳細
 		- https://ptt-life.com/Soft_Job/l/LIFE.M.1622535654.A.079
 			- 112 CS 全滅 哭
+		- yahoo
+			- https://bookgin.tw/2017/09/02/2017-yahoo-%E5%AF%A6%E7%BF%92%E5%BF%83%E5%BE%97/
+		- Line Pay
+			- https://12ft.io/proxy?q=https://angelswengineer.medium.com/2020-軟體工程師-面試心得-line-pay-d9c36d28615
 	- google Taiwan
 		- https://keep-brain-alive.com/taiwan-google-interview-experience/
 	- Amazon Taiwan
@@ -97,6 +104,8 @@ layout: meth
 			- all FAAMG detailed interview process 
 			- [uddit archive](https://www.unddit.com/r/cscareerquestions/comments/eitna9/processes_at_each_company_at_least_what_i_remember/)
 			- [camas archive](https://camas.github.io/reddit-search/#{"author":"d2k9000","subreddit":"cscareerquestions","searchFor":1,"resultSize":100,"query":"Processes"} )
+		- Facebook
+			- https://angelswengineer.medium.com/2020-facebook-u-s-沒有美國學歷和身分的面試心得-faag-面試共通點總結-32fe51382005 (幹話)
 	- offers
 		- https://www.teamblind.com/post/giving-back-with-tc-on-8-offers-hLE5CRYQ
 
