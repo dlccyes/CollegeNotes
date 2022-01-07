@@ -48,8 +48,6 @@ layout: meth
 	- company salaries
 - https://www.glassdoor.com/
 	- company salaries & reviews
-- https://techinterviewhandbook.org/
-	- author of Blind 75
 - rooftopslushie.com
 	- get referral (for some money)
 - grinding
@@ -129,25 +127,31 @@ layout: meth
 		- https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwz0dx
 
 ## applying preparation
+- https://techinterviewhandbook.org/
+	- author of Blind 75
 - DSA
-	- grind leetcode
-		- Blind 75
-			- https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU OG
-			- https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions
 - complex personal projects
 - system design
 
 ### leetcode
+- [Blind 75](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU)
 - patterns
 	- <https://leetcode.com/discuss/career/448285/List-of-questions-sorted-by-common-patterns>
 	- all questions with various filters (e.g. companies, patterns)
 		- <https://seanprashad.com/leetcode-patterns/>
+	- <https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed>
+	- <https://hn.jeffjadulco.com/29775023>
+- Cracking the Coding Interview
+	- [pdf](http://englishonlineclub.com/pdf/Cracking the Coding Interview - 189 Programming Questions and Solutions (6th Edition) [EnglishOnlineClub.com].pdf)
 
 ### system design
 - DDIA
 	- 簡中譯 <https://github.com/Vonng/ddia>
-	- <https://github.com/Yang-Yanxiang/Designing-Data-Intensive-Applications/blob/master/Designing%20Data%20Intensive%20Applications.pdf>
-- Grokking
+	- [pdf](<https://github.com/Yang-Yanxiang/Designing-Data-Intensive-Applications/blob/master/Designing%20Data%20Intensive%20Applications.pdf>)
+- Grokking the system design interview
+	- <https://akshay-iyangar.github.io/system-design/>
+	- [pdf](https://raw.githubusercontent.com/sharanyaa/grok_sdi_educative/master/grok_system_design_interview.pdf)
+	- [pdf](http://libgen.rs/book/index.php?md5=3CC8A0D02BBB0644A3839F6B621BB86B)
 - [master doc](https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view)
 	- from <https://leetcode.com/discuss/interview-question/system-design/1205825/FANG-System-Design-Interview-Preparation-Master-Doc>
 

@@ -34,6 +34,8 @@ parent: OtherNotes
 		- underlying service of all the above sites
 - note service comparisons
 	- <https://www.noteapps.info/>
+- hacknews remade
+	- <https://hn.jeffjadulco.com>
 
 ## browser extensions
 - tab manager (firefox)

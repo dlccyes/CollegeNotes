@@ -1,10 +1,9 @@
 # Spotify & Last.fm 3rd party apps
 
 ## Spotify stats
-<https://playlastify.herokuapp.com/> 👍
-- mine
-
-[Spotify Statistics](https://spotifystatistics.com/)
+- <https://playlastify.herokuapp.com/> 👍
+	- mine
+- [Spotify Statistics](https://spotifystatistics.com/)
 
 [https://obscurifymusic.com/](https://obscurifymusic.com/) 
 
@@ -54,8 +53,10 @@
   
 
 ### Spotify Discovery and Others
-
-[https://www.kord.app/](https://www.kord.app/) full spotify + youtube (+ soundcloud) player, with your own account 👍
+- <https://songdata.io/>
+	- musical details of a song & similar songs
+- [https://www.kord.app/](https://www.kord.app/) 
+	- full spotify + youtube (+ soundcloud) player, with your own account 👍
 
 [http://playlist-manager.com/](http://playlist-manager.com/) manage your playlists 👍
 
@@ -104,9 +105,7 @@ calculate all your songs' (in playlist) total size (160kbs)
 
 [https://scatterfm.markhansen.co.nz](https://scatterfm.markhansen.co.nz/) scatter graph of every scrobble
 
-[http://www.lastchart.com.s3-website-us-east-1.amazonaws.com](http://www.lastchart.com.s3-website-us-east-1.amazonaws.com/) all kinds of charts of your artists
-
-  
+[http://www.lastchart.com.s3-website-us-east-1.amazonaws.com](http://www.lastchart.com.s3-website-us-east-1.amazonaws.com/) all kinds of charts of your artists  
 
 ---
 
