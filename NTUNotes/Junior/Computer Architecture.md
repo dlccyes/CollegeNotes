@@ -755,6 +755,7 @@ stage utilization of each type
 	- ![](https://i.imgur.com/iYAObPi.png)
 - with forwarding
 	- ![](https://i.imgur.com/x3ckRNn.png)
+	- 
 - need forwarding when
 	- EX/MEM or MEM/WB will write to a register && RD != x0 && RD = RS of ID/EX
 	- EX hazard
@@ -773,6 +774,10 @@ stage utilization of each type
 	- ![](https://i.imgur.com/WYPhqDs.png)
 
 #### stalling
+- hazard detection unit
+	- ![](https://i.imgur.com/95HUhsg.png)
+	- operate at ID stage
+	- have hazard → stall
 - load-use data hazard 只能 stall → nop i.e. do nothing
 - ![](https://i.imgur.com/bLUubxz.png)
 - ![](https://i.imgur.com/z9sIWYY.png)
@@ -885,16 +890,20 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 	- not valid → don't match
 - ![](https://s2.loli.net/2021/12/24/29CAfUKaLk6trSx.png)
 - total size calculation
-	- cache size = $2^{n+m+2}$ bytes = $2^{n+m}$ words = $2^n$ blocks
+	- cache size = $2^{n+m}$ words = $2^n$ blocks
 		- e.g. 16KiB = $2^{14}$ bytes = $2^{12}$ words
-	- block size = $2^m$ words = $2^{m+5}$ bits = $2^m\times 32$ bits
-	- word size = $2^2$ bytes = 4x8 bits = 32 bits
-	- tag size = address size - (n+m+2) bits = address size (bits) - cache size (bytes)
-	- byte offset = how many bytes per block
+	- block size = $2^m$ words
+	- word size = address size = $2^k$ bytes
+		- 32 bit address → 1 word = 32 bits = $2^2$ bytes
+		- 64 bit address → 1 word = 64 bits = $2^3$ bytes
+	- tag size (bits) = address size (bits) - (n+m+k) = address size (bits) - $log_2$ cache size (bytes)
+	- block offset = lg of how many words per block
+		- 2 words block → block offset = 1
+	- byte offset = lg of how many bytes per word
 	- 1 valid bit
 	- total size = $2^n$ x (block size + tag size + valid size) bits
 		- every block need original + tag & valid bits
-		- i.e. 原本的 cache size 加上 tag&valid 總共所需的 bits
+		- i.e. 原本的 cache size 加上 tag & valid 總共所需的 bits
 - cache miss = search for a data in cache but find nothing
 	- miss rate = # miss / # all access
 - block size vs. miss rate
