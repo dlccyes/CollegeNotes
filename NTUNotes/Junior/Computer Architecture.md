@@ -642,7 +642,10 @@ jalr x0, 0(x1) //return
 5. WB = write result back to register
 
 stage utilization of each type
+![](https://i.imgur.com/rteeNMM.png)
 ![](https://i.imgur.com/uSIBZq0.png)
+- jump uses WB
+- only R don't use sign extender
 
 #### performance
 - cycle 數較多，cycle period 較短
@@ -659,7 +662,8 @@ stage utilization of each type
 
 ##### data hazard
 - current instruction depends on the result of previous instructions → NOP (an operation that does nothing)
-	- NOP is in code, stall in in hardware
+	- NOP is in code, stall is in hardware
+- store won't create hazard
 - e.g.
 	- add x19, x0, x1<br>sub x2, x19, x3
 		- ![](https://i.imgur.com/qNl157r.png)
@@ -772,7 +776,8 @@ stage utilization of each type
 - load-use data hazard 只能 stall → nop i.e. do nothing
 - ![](https://i.imgur.com/bLUubxz.png)
 - ![](https://i.imgur.com/z9sIWYY.png)
-- ![](https://i.imgur.com/uFThGYX.png)
+- ![](
+
 
 ### control hazards
 - ![](https://i.imgur.com/v88zP4e.png)
