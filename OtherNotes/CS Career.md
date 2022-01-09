@@ -160,6 +160,7 @@ layout: meth
 	- https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes
 
 ## companies
+- [FAANG+ WLB](https://www.teamblind.com/post/Data-on-WLB-and-job-security-from-polls-on-FAANG-other-large-tech-companies-[x-post]-74bA5ySP)
 - WLB
 	- good WLB
 		- Google
