@@ -167,6 +167,7 @@ https://www.chipverify.com/verilog/verilog-always-block
 
 ## finite state machine
 - 期末考會考
+- see [[Logic Design]]
 - moore
 	- output 只跟 current state 有關
 - mealy

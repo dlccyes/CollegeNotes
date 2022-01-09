@@ -898,14 +898,19 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 		- 64 bit address → 1 word = 64 bits = $2^3$ bytes
 	- tag size (bits) = address size (bits) - (n+m+k) = address size (bits) - $log_2$ cache size (bytes)
 	- block offset = lg of how many words per block
-		- 2 words block → block offset = 1
+		- 2-word block → block offset = 1
 	- byte offset = lg of how many bytes per word
 	- 1 valid bit
 	- total size = $2^n$ x (block size + tag size + valid size) bits
 		- every block need original + tag & valid bits
 		- i.e. 原本的 cache size 加上 tag & valid 總共所需的 bits
+	- e.g.
+		- ![](https://i.imgur.com/zv7Ya9d.png)
+		- ![](https://i.imgur.com/ZX4Lwa9.png)
 - cache miss = search for a data in cache but find nothing
 	- miss rate = # miss / # all access
+- e.g.
+	- ![](https://i.imgur.com/AGF42dS.png)
 - block size vs. miss rate
 	- ![](https://s2.loli.net/2021/12/24/8z9ji5sVMHDoYcC.png)
 	- larger block size → spatial locality → lower miss rate
