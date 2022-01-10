@@ -897,9 +897,10 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 		- 32 bit address → 1 word = 32 bits = $2^2$ bytes
 		- 64 bit address → 1 word = 64 bits = $2^3$ bytes
 	- tag size (bits) = address size (bits) - (n+m+k) = address size (bits) - $log_2$ cache size (bytes)
-	- block offset = lg of how many words per block
-		- 2-word block → block offset = 1
-	- byte offset = lg of how many bytes per word
+	- offset = block offset + byte offset = lg of how many bytes per block
+		- block offset = lg of how many words per block
+			- 2-word block → block offset = 1
+		- byte offset = lg of how many bytes per word
 	- 1 valid bit
 	- total size = $2^n$ x (block size + tag size + valid size) bits
 		- every block need original + tag & valid bits
