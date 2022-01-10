@@ -600,9 +600,13 @@ radix & bucket sort use other sorters to do the actual sorting
 ![](https://i.imgur.com/MPK8kV8.png)
 
 ### interval scheduling
-quickest finished
-![](https://i.imgur.com/U1UIrgh.png)
-![](https://i.imgur.com/zZKpt2Q.png)
+- solution
+	1. sort by finished time
+	2. select the 1st one
+	3. if the current one overlaps the last selected one, then omit it
+- e.g.
+	- ![](https://i.imgur.com/U1UIrgh.png)
+	- ![](https://i.imgur.com/zZKpt2Q.png)
 
 #### pf
 ![](https://i.imgur.com/kv8tK3n.png)

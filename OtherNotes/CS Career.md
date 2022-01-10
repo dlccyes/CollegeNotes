@@ -73,39 +73,6 @@ layout: meth
 - resume
 	- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-1-introduction-f1dcb67e4798
 	- https://www.teamblind.com/post/Rejected-FAANG-interviews-even-with-referrals-pQ43s0TA
-- interviews
-	- generic
-		- https://angelswengineer.medium.com/google-amazon-line-pay-paypay日本-apple上海-lenovo-momo-garmin-趨勢-阿里巴巴支付寶-面試心得分享-b9262fccaa2 
-		- https://angelswengineer.medium.com/2020-面試心得-google-on-site-final-round-b1a52d97201a
-	- 台灣小公司
-		- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-4-summary-f34efeaa50a9?p=208b417e8140
-		- https://www.ptt.cc/bbs/Soft_Job/M.1632988517.A.302.html
-		- Umbo CV & Appier
-			- https://rain-wu.medium.com/2021-軟體工程新鮮人面試心得-appier-umbo-cv-94d514ac576
-	- 台灣大公司
-		- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-2-interview-944c81dca809
-		- https://hackmd.io/@lindaya0913/HkekYB1dPO
-			- 很多很詳細
-		- https://ptt-life.com/Soft_Job/l/LIFE.M.1622535654.A.079
-			- 112 CS 全滅 哭
-		- yahoo
-			- https://bookgin.tw/2017/09/02/2017-yahoo-%E5%AF%A6%E7%BF%92%E5%BF%83%E5%BE%97/
-		- Line Pay
-			- https://12ft.io/proxy?q=https://angelswengineer.medium.com/2020-軟體工程師-面試心得-line-pay-d9c36d28615
-	- google Taiwan
-		- https://keep-brain-alive.com/taiwan-google-interview-experience/
-	- Amazon Taiwan
-		- https://www.dcard.tw/f/job/p/236316977
-		- https://jackkuo.org/post/台灣亞馬遜實習心得/
-	- FAANG
-		- https://reddit.com/eitna9 (removed)
-			- all FAAMG detailed interview process 
-			- [uddit archive](https://www.unddit.com/r/cscareerquestions/comments/eitna9/processes_at_each_company_at_least_what_i_remember/)
-			- [camas archive](https://camas.github.io/reddit-search/#{"author":"d2k9000","subreddit":"cscareerquestions","searchFor":1,"resultSize":100,"query":"Processes"} )
-		- Facebook
-			- https://angelswengineer.medium.com/2020-facebook-u-s-沒有美國學歷和身分的面試心得-faag-面試共通點總結-32fe51382005 (幹話)
-	- offers
-		- https://www.teamblind.com/post/giving-back-with-tc-on-8-offers-hLE5CRYQ
 
 ## building portfolio
 ### projects
@@ -122,9 +89,9 @@ layout: meth
 - have dockerfile
 - references
 	- what a good full stack project need 
-		- https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwyopk/
+		- <https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwyopk/>
 	- build a site yourself
-		- https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwz0dx
+		- <https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwz0dx>
 
 ## applying preparation
 - https://techinterviewhandbook.org/
@@ -155,6 +122,48 @@ layout: meth
 - [master doc](https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view)
 	- from <https://leetcode.com/discuss/interview-question/system-design/1205825/FANG-System-Design-Interview-Preparation-Master-Doc>
 
+### devops
+- threads
+	- <https://www.reddit.com/r/devops/comments/eo5r1q/devops_interview_questions/>
+- question collections
+	- <https://github.com/bregman-arie/devops-exercises>
+
+## interviews
+- generic
+	- https://angelswengineer.medium.com/google-amazon-line-pay-paypay日本-apple上海-lenovo-momo-garmin-趨勢-阿里巴巴支付寶-面試心得分享-b9262fccaa2 
+	- https://angelswengineer.medium.com/2020-面試心得-google-on-site-final-round-b1a52d97201a
+- 台灣小公司
+	- https://chonyy.medium.com/2020-software-intern-%E9%9D%A2%E8%A9%A6%E5%BF%83%E5%BE%97-part-4-summary-f34efeaa50a9?p=208b417e8140
+	- https://www.ptt.cc/bbs/Soft_Job/M.1632988517.A.302.html
+	- Umbo CV & Appier
+		- https://rain-wu.medium.com/2021-軟體工程新鮮人面試心得-appier-umbo-cv-94d514ac576
+- 台灣大公司
+	- <https://chonyy.medium.com/2020-software-intern-面試心得-part-2-interview-944c81dca809>
+	- <https://hackmd.io/@lindaya0913/HkekYB1dPO>
+		- 很多很詳細
+	- <https://ptt-life.com/Soft_Job/l/LIFE.M.1622535654.A.079>
+		- 112 CS 全滅 哭
+	- <https://louisfghbvc.pixnet.net/blog/post/331156456>
+	- yahoo
+		- <https://bookgin.tw/2017/09/02/2017-yahoo-實習心得/>
+	- Line Pay
+		- <https://12ft.io/proxy?q=https://angelswengineer.medium.com/2020-軟體工程師-面試心得-line-pay-d9c36d28615>
+	- <https://www.ptt.cc/bbs/Soft_Job/M.1626282169.A.4BD.html>
+- google Taiwan
+	- <https://keep-brain-alive.com/taiwan-google-interview-experience/>
+- Amazon Taiwan
+	- <https://www.dcard.tw/f/job/p/236316977>
+	- <https://jackkuo.org/post/台灣亞馬遜實習心得/>
+- FAANG
+	- <https://reddit.com/eitna9> (removed)
+		- all FAAMG detailed interview process 
+		- [uddit archive](https://www.unddit.com/r/cscareerquestions/comments/eitna9/processes_at_each_company_at_least_what_i_remember/)
+		- [camas archive](https://camas.github.io/reddit-search/#{"author":"d2k9000","subreddit":"cscareerquestions","searchFor":1,"resultSize":100,"query":"Processes"} )
+	- Facebook
+		- <https://angelswengineer.medium.com/2020-facebook-u-s-沒有美國學歷和身分的面試心得-faag-面試共通點總結-32fe51382005> (幹話)
+- offers
+	- <https://www.teamblind.com/post/giving-back-with-tc-on-8-offers-hLE5CRYQ>
+
 ## linkedin
 - skill assessment answers
 	- https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes
@@ -177,7 +186,6 @@ layout: meth
 	- low
 		- Amazon
 		- Microsoft
-
 
 ## cover letters
 - <https://resumegenius.com/cover-letter-examples/software-engineer-cover-letter-sample>

@@ -10,6 +10,26 @@
 ## exec
 to use in function, use `exec(string, globals())`
 
+## decorator
+```py
+def plusC(c):
+    """add c"""
+    def dec(func):
+        def wrapper(a, b):
+            return func(a,b)+c
+        return wrapper
+    return dec
+
+@plusC(5)
+def plus(a, b):
+    return a + b
+
+ans = plus(1, 2)
+print(ans) # output 1+2+5 = 8
+```
+
+<https://stackoverflow.com/a/53973651/15493213>
+
 ## read file
 ```py
 with open(inputfile, 'r') as file_in:
@@ -50,3 +70,14 @@ json.loads(str)
 
 ### Counter
 - return a hash map, counting each element of a list
+
+## sort
+```py
+# [[10,16],[2,8],[1,6],[7,12]]
+sorted(points, key = lambda section: section[1]) # sort by second value
+```
+
+## infinity
+```py
+float('inf')
+```
