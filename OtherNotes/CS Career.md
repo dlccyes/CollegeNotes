@@ -129,6 +129,17 @@ layout: meth
 	- <https://github.com/bregman-arie/devops-exercises>
 
 ## interviews
+### behavioral questions
+- nugget
+	- summary about the event
+- S.A.R.
+	- situation
+	- action
+	- result
+- ![](https://s2.loli.net/2022/01/11/N1g7h4VZbfejpXE.png)
+
+
+### posts & threads
 - generic
 	- https://angelswengineer.medium.com/google-amazon-line-pay-paypay日本-apple上海-lenovo-momo-garmin-趨勢-阿里巴巴支付寶-面試心得分享-b9262fccaa2 
 	- https://angelswengineer.medium.com/2020-面試心得-google-on-site-final-round-b1a52d97201a
