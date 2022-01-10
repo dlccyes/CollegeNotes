@@ -188,3 +188,7 @@ https://www.chipverify.com/verilog/verilog-always-block
 	- use `var_nxt = var` and update `var <= var_nxt` in sequential block
 	- all things used in `always` block is in the sensitivity list
 	- https://stackoverflow.com/questions/20036401/if-statements-causing-latch-inference-in-verilog
+
+## examples
+### ALU
+![](https://i.imgur.com/X34nm9I.png)
