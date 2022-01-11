@@ -5,6 +5,7 @@ with optimization `g++ -O2 --static`
 
 ## vector
 `#include<vector>`
+
 ### sort
 https://stackoverflow.com/a/14669733/15493213
 
