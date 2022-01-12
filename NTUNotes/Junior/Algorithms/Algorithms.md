@@ -751,6 +751,7 @@ exchange → 數量一樣
 
 ### connectivity in directed graph
 - every node is mutually reachable → the graph is strongly connected
+- every node is mutually reachable ignoring the direction of edge → the graph is weakly connected
 
 #### SCC
 - strongly connected component
