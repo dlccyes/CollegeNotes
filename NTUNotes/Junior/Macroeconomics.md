@@ -1141,3 +1141,63 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- $Y_t$ = t 期可支配所得
 	- liquidity 受限 → 沒有 lifetime wealth
 		- 金融體系不完備，缺乏借貸工具 → 無法透過信用市場移轉各期所得
+
+### (跨期) substitution
+- intertemporal [[substitution effect]]
+- interest rate 上升
+	- 利率改變後 lifetime wealth 降低，但 utility 不一定
+	- ![](https://i.imgur.com/5fXY93J.jpg)
+	- E 點為原利率的消費點
+	- 貸放者 if endowment e 在 E 右邊 i.e. b1 = a1-c1 > 0
+		- 利率上升使下期利息所得上升
+		- 利率上升後的最佳選擇點 utility 較高
+		- [[substitution effect]] → E to D，c1 下降，b1 & c2 上升
+		- 財富效果 → D to F，c1 & c2 上升
+		- c2 必然上升，c1 不一定
+	- 賒借者 if endowment e 在 E 左邊 i.e. b1 = a1-c1 < 0
+		- 利率上升使下期利息支出上升
+		- 利率改變後的最佳選擇點 utility 較低
+		- [[substitution effect]] → E to D，c1 下降，b1 & c2 上升
+		- 財富效果 → D to F，c1 & c2 下降
+		- c1 必然上升，c2 不一定
+	- 代表性消費者 if b1 = 0
+		- ![](https://i.imgur.com/ZdVVw1X.jpg)
+	- endowment 就在 E，so 只有 [[substitution effect]]
+	- c1 下降，c2 上升
+
+### example
+$$c_1+\dfrac{c_2}{1+r}=x=a_1+\dfrac{a_1}{1+r}$$ 
+$$u'(c_1)=\beta u'(c_2)(1+r)$$
+$$\beta=\dfrac{1}{1+\rho}$$
+$$\ln(1+x)\approx x$$
+設 $u(c)=lnc$
+- $u'(c)=\dfrac{1}{c}$
+- $c_2=\beta(1+r)c_1$
+- $c_1(1+\beta)=x$
+- $c_1=\dfrac{x}{1+\beta}=\dfrac{1+\rho}{2+\rho}\left(a_1+\dfrac{a_2}{1+r}\right)$
+- $s_1=b_1-b_0=b_1=a_1-c_1=\dfrac{1+\rho}{2+\rho}\left(\dfrac{a_1}{1+\rho}-\dfrac{a_2}{1+r}\right)$
+- $a_1$ 增加
+	- MPS = $\dfrac{\Delta s_1}{\Delta a_1}=\dfrac{1}{2+\rho}$
+	- MPC = $\dfrac{\Delta c_1}{\Delta a_1}$ = 1 - MPS = $\dfrac{1+\rho}{2+\rho}$
+- $a_1$ & $a_2$ 等幅增加，設 $r=\rho$
+	- $s_1$ 不變
+	- so MPS = 0，MPC = 1
+	- permanent income = $c_1=c_2=\dfrac{x}{1+\beta}=\left(\dfrac{1+\rho}{2+\rho}\right)x=\left(\dfrac{1+r}{2+r}\right)x$
+- r 上升
+	- 設 $a_1,a_2>0$
+	- 跨期替代彈性 intertemporal elasticity of substitution
+		- $\ln\dfrac{c_2}{c_1}=\ln\beta+\ln(1+r)\approx\ln\beta+r$
+		- r 上升 → c2/c1 必上升
+	- 消費成長率 g
+		- $\ln c_2-\ln c_1 =\ln\dfrac{c_2}{c_1}=\ln(1+g)\approx g$
+		- r 上升 x % → g 上升 x%
+- 消費 & 債券 demand curve
+	- ![](https://i.imgur.com/bznaATA.jpg)
+	- c1 increase when
+		- r decrease
+		- a1 increase 
+		- a2 increase
+	- b1 increase when
+		- r increase
+		- a1 increase
+		- a2 decrease
