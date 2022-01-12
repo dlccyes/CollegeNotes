@@ -830,6 +830,8 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- x y 兩產品
 	- 可生產 x or y
 	- 邊際生產力遞減 → y 很多，x 很少時，消耗一些 y 的生產力，減少一點 y，能夠多生產很多 x → 凸
+	- MRT = $\dfrac{\Delta y}{\Delta x}$
+		- MRT 隨 x 遞增
 - 價格調整
 	- ![](https://i.imgur.com/mKTLfjO.png)
 	- w' → 超額勞動需求，超額商品供給 → w 上升 to w* → 廠商 & 消費者 converge to E 點，MPS = MPS = w*
@@ -858,9 +860,14 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - second welfare theorem
 	- any Pereto optimum can be achieved as the competitive equilibrium for some endowment distribution
 - pf with [[Edgeworth box]]
+	- ![](https://i.imgur.com/NFdiHLf.png)
+		- at the optimal solutions of the budget line on endowment point e 
+			- $x^A+x^B>\bar{x}$ → demand > supply
+			- $y^A+y^B<\bar{y}$ → demand < supply
+		- so $p_x$ increase, $p_y$ decrease, $\dfrac{p_x}{p_y}$ increase，until x&y's solutions meet
 	- ![](https://i.imgur.com/s8A03ct.png)
-	- 在 contract curve 以外的點都存在 mutually advantage area → converge 到 contract curve while maintaining Pareto → first welfare theorem
-	- to achieve a certain point in the contract curve i.e. a certain Pareto optimal solution, just redistribute the endowment points, e.g. all endowment points on line CD will converge to point F → second welfare theorem
+		- 在 contract curve 以外的點都存在 mutually advantage area → converge 到 contract curve while maintaining Pareto → first welfare theorem
+		- to achieve a certain point in the contract curve i.e. a certain Pareto optimal solution, just redistribute the endowment points, e.g. all endowment points on line CD will converge to point F → second welfare theorem
 
 ### 市場均衡的不效率性
 - irl 使 equilibrium 非 pareto optimal 的因素
@@ -884,8 +891,8 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- 政府消費增加 → 政府定額稅增加 → 等效於 G 增加
 	- 不影響 MPL → slope unchanged for any n
 	- E to F
-		- leisure 下降，coconuts i.e. 商品供給 變多
-		- consumption i.e. 商品需求 下降 ([[income effect]])
+		- leisure 下降，coconuts i.e. 商品供給上升
+		- consumption i.e. 商品需求下降 ([[income effect]])
 		- MPL i.e. real wage 下降
 - for market
 	- ![](https://i.imgur.com/SWqKXVV.png)
@@ -936,7 +943,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 			- $MPL = w$
 	- [[income effect]]
 		- A increase → consumer dividend increase → consumption demand ($y^d$) increase & leisure demand increase i.e. labor supply ($n^s$) decrease
-		- income effect 的 $y^d$ shift left 幅度 < 直接效果的 $y^s$ shift right 幅度 (ED<EA)
+		- income effect 的 $y^d$ shift right 幅度 < 直接效果的 $y^s$ shift right 幅度 (ED<EA)
 			- c+wl = w+(d-T) → $\Delta c+w\Delta l=\Delta d$ for w & T unchanged → $\Delta c<\Delta d$
 	- 工資效果
 		- 在 w*，goods market 超額供給，labor market 超額需求

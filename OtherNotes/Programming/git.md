@@ -183,13 +183,15 @@ git remote -v
 
 ### add remote
 ```
-git remote add origin http://gitlab.com/name/repo
+git remote add origin2 http://gitlab.com/name/repo
 ```
 
-### switch default push repo
+### switch default fetch/pull/push repo
 ```
-git push -u origin
+git branch --set-upstream-to origin2/master
 ```
+<https://stackoverflow.com/a/32469272/15493213>
+
 
 ## tag
 <https://git-scm.com/book/en/v2/Git-Basics-Tagging>

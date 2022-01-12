@@ -575,7 +575,7 @@ radix & bucket sort use other sorters to do the actual sorting
 ### Subset Sums
 - NP-Complete
 - 包包限重 W，給定各種不同重量的物品，怎麼塞能夠 maximize 塞的重量？
-- 給定一個 set & 一個 constraint W，求 max subset 的 sum < W
+- 給定一個 set & 一個 constraint W，求 max subset 的 sum <= W
 - table m = n x W
 - ![](https://i.imgur.com/7c0K1ZP.png)
 	- max(沒自己, 有自己)
