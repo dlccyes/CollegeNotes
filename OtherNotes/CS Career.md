@@ -127,6 +127,10 @@ layout: meth
 	- <https://www.reddit.com/r/devops/comments/eo5r1q/devops_interview_questions/>
 - question collections
 	- <https://github.com/bregman-arie/devops-exercises>
+	- CICD
+		- <https://www.fullstack.cafe/blog/15-continuous-integration-interview-questions-in-2018>
+	- K8s
+		- <https://www.fullstack.cafe/blog/kubernetes-interview-questions>
 
 ## interviews
 ### behavioral questions

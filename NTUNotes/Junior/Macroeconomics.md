@@ -784,6 +784,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- ![](https://i.imgur.com/2bxid1j.png)
 - w 上升 → leisure 變貴 → budget line 變陡
 - ![](https://i.imgur.com/LoIt5iz.png)
+	- Hicks
 - ![](https://i.imgur.com/zyp6jz0.png)
 
 ### 勞動所得稅
