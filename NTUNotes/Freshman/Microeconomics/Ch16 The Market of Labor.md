@@ -2,9 +2,9 @@
 title: Ch16 The Market of Labor
 ###### tags: `Microeconomics`
 parent: Microeconomics
+layout: meth
 ---
-
-![image-20200609214927125](https://i.loli.net/2020/06/09/HJXBlQvt3czmNoj.png)
+# Ch16 The Market of Labor
 
 [Factor_S_1](https://drive.google.com/file/d/1OMfGA_u3r1xH-z9gZAJMFge1UDu3Duho/view)
 [Factor_S_2](https://drive.google.com/file/d/1kPUq5B6_j7HCx4eNrX06THbTVHwiIB_C/view)

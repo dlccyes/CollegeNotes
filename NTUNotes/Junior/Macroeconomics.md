@@ -773,7 +773,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 			- $u_{ll}-u_{cl}\dfrac{u_l}{u_c}<0$
 - indifference curve
 	- $MRS_{l,c} = \dfrac{u_l}{u_c}=w$
-- homothetic preference
+- homothetic preference 同位偏好
 	- $u(ax,ay) = au(x,y)$
 	- x y 比值相同 → MRS 相同
 - solution
@@ -898,9 +898,9 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - for market
 	- ![](https://i.imgur.com/SWqKXVV.png)
 	- 直接效果
-		- G 上升 → y shift right (E to A)
+		- G 上升 → $y^d$ shift right (E to A)
 	- [[income effect]]
-		- 定額稅上升 → 非勞動所得下降 → leisure & consumption demand 下降，labor supply 上升 → y shift left (A to D), n shift right (E to S)
+		- 定額稅上升 → 非勞動所得下降 → leisure & consumption demand 下降，labor supply 上升 → $y^d$ shift left (A to D), $n^s$ shift right (E to S)
 		- income effect 的 y shift left 幅度 < 直接效果的 y shift right 幅度 → end in EA 之間
 			- c+wl = w+(d-T) → $\Delta c+w\Delta l=\Delta T$ for w & d unchanged → $\Delta c<\Delta T$
 			- 如果 y shift left 幅度較大，end with w'>w* in 商品市場，則商品&勞動市場皆存在超額供給 → 違反 [[#Walras Law of Markets]]
@@ -1025,7 +1025,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- 廠商利潤極大
 		- 不受 voucher 影響
 	- $MRS=\frac{u_l}{u_c}=(1-\tau)w$
-		- 邀費者效用極大
+		- 消費者效用極大
 	- $c+v=\tilde{c}=y=f(n)$
 		- 市場結清條件
 	- $v=T+\tau wn$
@@ -1194,6 +1194,7 @@ $$\ln(1+x)\approx x$$
 - r 上升
 	- 設 $a_1,a_2>0$
 	- 跨期替代彈性 intertemporal elasticity of substitution
+		- $\dfrac{d\ln(c_2/c_1)}{d\ln MRS_{12}}$
 		- $\ln\dfrac{c_2}{c_1}=\ln\beta+\ln(1+r)\approx\ln\beta+r$
 		- r 上升 → c2/c1 必上升
 	- 消費成長率 g

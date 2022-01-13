@@ -70,9 +70,6 @@ for i in */.git; do ( echo $i; git -C $i/.. pull; ); done
 ### revert a certain file to
 `git checkout <sha> -- <path-to-file>`
 
-### view your current changes
-`git diff`
-
 ### discard changes
 - `git checkout -- .`
 	- clear all unstaged files
@@ -96,6 +93,7 @@ git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{inser
 	- `git rev-list HEAD --count`
 
 ### diff
+- `git diff`
 - git diff with vimdiff
 	- `git config --global diff.tool vimdiff` set git tool to vimdiff
 	- `git difftool` to view
