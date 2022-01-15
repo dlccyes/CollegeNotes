@@ -176,7 +176,7 @@ https://www.chipverify.com/verilog/verilog-always-block
 ## debug
 - `A net is not a legal lvalue in this context`
 	- you might have `output ready` and you do `ready = 1` in an `always` block; you should add `reg ready`
-	- https://stackoverflow.com/questions/29820382/compilation-error-a-net-is-not-a-legal-lvalue-in-this-context
+	- <https://stackoverflow.com/questions/29820382/compilation-error-a-net-is-not-a-legal-lvalue-in-this-context>
 - `the statements in this 'always' block are outside the scope of the synthesis policy. Only an 'if' statement is allowed at the top level in this always block. (ELAB-302)`
 	- 在 clock 類型 (還是說 sequential block ?) 的 `always` block 裡，top level 只能是 `if`，不能有其他東西
 	- http://www.eda8.com/?action-viewthread-tid-80474

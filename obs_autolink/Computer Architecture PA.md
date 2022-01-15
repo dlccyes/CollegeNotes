@@ -230,12 +230,22 @@ IF → ID → EX → MEM → WB
 109-1 CSIE  
 single-cycle CPU  
 very complete  
-<https://github.com/tzutengweng33176/Computer_Architecture_109_1>
-
+<https://github.com/tzutengweng33176/Computer_Architecture_109_1>  
+note that this uses 64-bit
 
 <https://www.fpga4student.com/2017/04/verilog-code-for-16-bit-risc-processor.html>
-
 
 pipelined CPU
 <https://github.com/HouHou0925/MIPS_CPU>
 
+Control signals
+![](https://i.imgur.com/EICWqCN.png)
+<https://www.d.umn.edu/~gshute/mips/control-signal-summary.html>
+
+Data Memory  
+<https://stackoverflow.com/questions/36879351/data-memory-unit>
+
+```
+source /usr/cad/cadence/cshrc && source /usr/cad/synopsys/CIC/synthesis.cshrc
+ncverilog Final_tb.v +define+leaf +access+r
+```
