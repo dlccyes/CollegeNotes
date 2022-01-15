@@ -507,7 +507,7 @@ https://cs.stackexchange.com/questions/74870/why-can-we-drop-the-superscripts-in
 
 ![](https://i.imgur.com/GqanklO.png)
 
-### 5. transistive closure
+### 5. transitive closure
 ![](https://i.imgur.com/bV3BBY9.png)
 ![](https://i.imgur.com/iIZLrKR.png)
 

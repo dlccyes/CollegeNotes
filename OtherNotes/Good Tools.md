@@ -25,12 +25,12 @@ parent: OtherNotes
 			- The Atheletic
 	- add `https://12ft.io/` in front of the url
 - reddit archives
-	- https://camas.github.io/reddit-search/
+	- <https://camas.github.io/reddit-search/>
 		- very good
 		- can search comments
-	- https://www.reveddit.com/
-	- https://www.unddit.com/
-	- https://github.com/pushshift
+	- <https://www.reveddit.com/>
+	- <https://www.unddit.com/>
+	- <https://github.com/pushshift>
 		- underlying service of all the above sites
 - note service comparisons
 	- <https://www.noteapps.info/>
