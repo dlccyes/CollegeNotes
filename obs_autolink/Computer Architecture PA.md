@@ -249,3 +249,26 @@ Data Memory
 source /usr/cad/cadence/cshrc && source /usr/cad/synopsys/CIC/synthesis.cshrc
 ncverilog Final_tb.v +define+leaf +access+r
 ```
+- jal
+	- jal x1, offset → x1 = PC+4, PC = PC+offsetx2
+	- ![](https://i.imgur.com/21ilYxU.png)
+		- need 1 MUX & 1 control signal
+			- the adding part is the same as branch
+		- <https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi4ufPVhLb1AhVQwosBHSOgD8MQFnoECAsQAQ&url=http%3A%2F%2Fusers.ece.cmu.edu%2F~jhoe%2Fcourse%2Fece447%2FS21handouts%2FL03.pdf&usg=AOvVaw0TEcEVp4avM4EoFBc_8C6G>
+	- ![](https://i.imgur.com/nJvkahk.png)
+		- <https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi4ufPVhLb1AhVQwosBHSOgD8MQFnoECCYQAQ&url=http%3A%2F%2Fmeseec.ce.rit.edu%2Feecc550-winter2005%2F550-chapter5-exercises.pdf&usg=AOvVaw1vEta27SUXw8gQbGcmNgCx>
+- jalr
+	- jalr x1, imm(rs1) → PC = rs1+imm
+	- need 1 control signal (merged into 1 PC selector)
+	- ![](https://i.imgur.com/LIJhddO.png)
+- AUIPC
+	- auipc rd, 3 → rd[31:12] = 3, rd += PC
+	- 融進 jal & jalr 的 write back MUX
+- leaf
+	- JALR
+	- JAL
+	- ADD
+	- SUB
+	- AUIPC
+	- LW
+	- SW
