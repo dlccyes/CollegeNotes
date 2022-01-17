@@ -23,3 +23,13 @@
 
 ### exec time
 `time command`
+
+## python
+- `python -c <script>`
+- pass things in with input()
+	- `echo 2 | python -c "print(int(input())+2)"` → 4
+
+## calculate
+- `bc`
+- `bc -l` use some library
+- `echo 2+2 | bc` → 4
