@@ -24,6 +24,17 @@
 ### exec time
 `time command`
 
+## slice
+for `str[1]`  
+```sh
+echo $str | cut -c2
+```
+
+for `str.split(',')[0]`  
+```sh
+echo $str | cut -d ',' -f 1
+```
+
 ## python
 - `python -c <script>`
 - pass things in with input()

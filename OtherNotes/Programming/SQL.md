@@ -13,6 +13,23 @@ parent: Programming
 {:toc}
 </details>
 
+## if
+`IF(clause, yes, no)`
+
+```sql
+SELECT N, 
+    IF( 
+        P is NULL, 
+		'Root', 
+        IF(
+           (SELECT COUNT(*) FROM BST WHERE P = bst_o.N) = 0, 
+		'Leaf',
+        'Inner'
+        )
+    )
+FROM BST AS bst_o ORDER BY N
+```
+
 ## slice
 - `RIGHT(COLUMN, 3)` → COLUMN[-3:]
 - `SUBSTRING(COLUMN, -3)` → COLUMN[-3:]
@@ -30,6 +47,11 @@ SELECT COLUMN FROM TABLE WHERE COLUMN REGEXP ''
 - `[aeiou]` a or e or i or o or u
 - `.*` whatever
 - `<pattern> = 0` negation
+
+## join
+`JOIN` = `INNER JOIN`  
+
+![](https://i.imgur.com/6j1815K.png)
 
 
 ## others
