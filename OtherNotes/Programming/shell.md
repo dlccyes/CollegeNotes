@@ -8,8 +8,33 @@
 - `var=$(git status)`
 
 ## string
-- concat
-	- `allmsg="${allmsg}\n${msg1}\n${msg2}\n${msg3}\n"`
+### concat
+`allmsg="${allmsg}\n${msg1}\n${msg2}\n${msg3}\n"`
+
+### slice
+for `str[1]`  
+```sh
+echo $str | cut -c2
+```
+
+for str[0:4]  
+```
+echo $str | cut -c1-4
+```
+
+### split
+for `str.split(',')[0]`  
+```sh
+echo $str | cut -d ',' -f 1
+```
+
+## replace
+### tr
+`tr 'find' 'replace'`
+
+### paste
+`paste -sd'abc'`  
+replace every `\n` with `a` `b` `c` in a round robin manner
 
 ## output to file
 - write to file
@@ -23,17 +48,6 @@
 
 ### exec time
 `time command`
-
-## slice
-for `str[1]`  
-```sh
-echo $str | cut -c2
-```
-
-for `str.split(',')[0]`  
-```sh
-echo $str | cut -d ',' -f 1
-```
 
 ## python
 - `python -c <script>`
