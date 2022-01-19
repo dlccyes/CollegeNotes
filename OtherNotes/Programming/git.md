@@ -99,7 +99,7 @@ git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{inser
 	- `git difftool` to view
 	- <https://stackoverflow.com/a/3713803/15493213>
 
-####  by users
+####  by user
 - all commits
 	- `git shortlog`
 - commit counts
