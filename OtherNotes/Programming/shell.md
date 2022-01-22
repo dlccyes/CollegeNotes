@@ -30,7 +30,8 @@ echo $str | cut -d ',' -f 1
 
 ## replace
 ### sed
-`sed "s/<find>/<replace>/<position>"`  
+`echo xxx | sed "s/<find>/<replace>/<position>"`  
+`sed -i "s/<find>/<replace>/<position>" input.txt`   
 
 for `<position>`
 - `g` = all
@@ -38,6 +39,8 @@ for `<position>`
 - `2g` = 2:
 
 <https://stackoverflow.com/a/44898816/15493213>
+
+use `\bword\b` for whole word
 
 ### tr
 `tr 'find' 'replace'`
@@ -47,10 +50,25 @@ for `<position>`
 replace every `\n` with `a` `b` `c` in a round robin manner
 
 ## array
-`arr=((1 2 3))`  
+`arr=((1 2 3))`
+
+### get index
+`echo ${arr[2]}`
 
 ### replace
 `echo ${arr[@]/<find>/<replace>}`
+
+## awk
+`awk '{print $1, ":", ($2>=50 && $3>=50 && $4>=50) ? "Pass" : "Fail"}'`
+
+`awk '{print "2 " $2 " 3 " $3}' file.txt`
+
+## find
+find all files in current directory & sub-directories of current directory
+
+`find . -name haha`  
+
+`find . -size +50M -100M`  
 
 ## output to file
 - write to file

@@ -97,7 +97,6 @@ $\Phi(\alpha)=F_X(\alpha \sigma)=Pr\{X\leq=\alpha \sigma\}$
 ![](https://i.imgur.com/93Vhyvt.png)
 
 ### Binomial
-
 n 次內成功的次數
 
 ![](https://i.imgur.com/0DcFMQJ.png)
@@ -108,7 +107,6 @@ Pascal 在 k=1 的特例
 ![](https://i.imgur.com/ydgsAhg.png)
 
 ### Pascal
-
 Geometric 的 general 版本  
 X, the number of trials until the k^th^ positive occurs  
 In the n trials, there are k positives, and in the first (n - 1) trials, there are (k - 1) positives  
@@ -116,8 +114,6 @@ In the n trials, there are k positives, and in the first (n - 1) trials, there a
 
 ### Poisson
 ![](https://i.imgur.com/Wmd1xAB.png)
-
-
 
 ## Continuous Random Variables
 ### Uniform
@@ -141,13 +137,14 @@ complementary of F~X~
 ![Untitled](https://i.loli.net/2020/06/16/eB3urDpRjmw7PH4.png)
 
 ### Exponential
-
 <!-- $f_X(x)=\lambda e^{-\lambda x}$ if x >= 0 -->
 Erlang 在 n=1 的特例
 ![](https://i.imgur.com/jjcGCNp.png)
+
 ### Erlang
 Exponential 的 general 版本
 ![](https://i.imgur.com/vayQLJx.png)
+
 
 ### Transformation
 ![](https://i.imgur.com/XEpCGVz.png)

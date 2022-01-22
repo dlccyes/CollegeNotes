@@ -104,6 +104,7 @@ my summary: <https://docs.google.com/presentation/u/2/d/1EhezbDUEwNOG1C-rk7YdQcB
 - computation task $I_n=\{\alpha_n,\beta_n\}$
 	- $\alpha_n$ = data size of $I_n$
 	- $\beta_n$ = required CPU cycles to finish $I_n$
+
 #### local execution
 - completion time $T^l_n=\dfrac{\beta_n}{f^l_n}$ = execution time
 	- $f^l_n$ = UE n's local computing capability
@@ -112,6 +113,7 @@ my summary: <https://docs.google.com/presentation/u/2/d/1EhezbDUEwNOG1C-rk7YdQcB
 - computation overhead $Z^l_n=\lambda^t_nT^l_n+\lambda^e_nE^l_n$
 	- $\lambda^t_n,\lambda^e_n$ = weighted parameters, decided by UE's offloading decision
 		- e.g. latency-sensitive → set $\lambda^t_n$ higher
+
 #### full offloading
 - completion time = uplink transmission time + execution time<br>$T^r_n=\dfrac{\alpha_n}{R_n}+\dfrac{\beta_n}{f^l_n}$ 
 	- $f_n$ = remote computing resourcess
@@ -154,11 +156,13 @@ my summary: <https://docs.google.com/presentation/u/2/d/1EhezbDUEwNOG1C-rk7YdQcB
 	- ![](https://i.imgur.com/0a98lpz.png)
 - $I_n$ executed locally → $\mathcal{F_{S+n}}=\{n\}$ i.e. the UE executing locally in n is n && $\mathcal{F_{S+n}}\cap \mathcal{F_k}=\emptyset$ $\forall k\neq (S+n)$
 - $I_n$ executed in subcarrier s → $\mathcal{F_{S+n}}=\emptyset$ i.e. the UE executing locally in n is nothing && $n\in\mathcal{F_{s}}$ i.e. the UEs executed in subcarrier s includes n
+
 ### algorithm
 - ![](https://i.imgur.com/RHREfn4.png)
 - keep switching until stable
 - num = unsuccessful consecutive switch operations i.e. how many iterations since last switch
 	- algorithm terminates when num = 10 x amount of UEs
+
 ### analysis
 - convergence: a final Nash-stable partition $\mathcal{F}_{fin}$ is guaranteed
 	- $\because$ each switch creates a new partition and the number of partitions is finite
@@ -203,11 +207,13 @@ perform close to the optimal scheme
 - fix number of coalitions/subcarriers to 3 i.e. $S=3$
 - more UEs → more competition for subcarriers → less favorable offloading is
 - NOMA (proposed) enables more UEs to benefit from offloading than OMA (HOO) does
+
 #### vs. number of coalitions
 ![](https://i.imgur.com/cdn1a9H.png)
 - fix number of UEs to 10 i.e. $N=10$
 - more subcarriers → more choice for UEs → more favorable offloading is
 - NOMA (proposed) enables more UEs to benefit from offloading than OMA (HOO) does
+
 ### total computation overhead
 #### vs. number of UEs
 ![](https://i.imgur.com/9AOhPiL.png)
