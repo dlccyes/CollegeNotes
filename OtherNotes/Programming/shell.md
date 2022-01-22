@@ -61,7 +61,9 @@ replace every `\n` with `a` `b` `c` in a round robin manner
 ## awk
 `awk '{print $1, ":", ($2>=50 && $3>=50 && $4>=50) ? "Pass" : "Fail"}'`
 
-`awk '{print "2 " $2 " 3 " $3}' file.txt`
+`awk '{print "2 " $2 " 3 " $3}' file.txt`  
+
+`awk '{avg=($2+$3+$4)/3; print $0, ":", (avg>=80)?"A":(avg>=60)?"B":(avg>=50)?"C":"FAIL"}'`
 
 ## find
 find all files in current directory & sub-directories of current directory
