@@ -72,11 +72,31 @@ find all files in current directory & sub-directories of current directory
 
 `find . -size +50M -100M`  
 
+## processes
+- `ps aux`
+- `top`
+- `htop`
+- proc
+	- <https://www.kernel.org/doc/html/latest/filesystems/proc.html>
+- `free -h` for total memory usage
+
 ## output to file
 - write to file
 	- `echo haha > file.txt`
 - append to file
 	- `echo haha >> file.txt`
+
+## disk
+- size of all top level directories
+	- `du -sh *`
+	- `du -sh * | sort -rh`
+- `df -i`
+- `df -ah`
+
+## sort
+- `sort -n` for numerial sort
+- `sort -r` for reverse
+- `sort -k 2` to sort with 2nd column
 
 ## commands
 ### memory
@@ -84,6 +104,17 @@ find all files in current directory & sub-directories of current directory
 
 ### exec time
 `time command`
+
+## softlink & hardlink
+- softlink
+	- `ln -s ogfile softlink`
+	- create a pointer to ogfile
+	- deleting ogfile will make softlink unsuable
+	- like Windows shortcut
+- hardlink
+	- `ln ogfile hardlink`
+	- create a pointer to the data ogfile points to
+	- deleting ogfile won't affect hardlink
 
 ## python
 - `python -c <script>`

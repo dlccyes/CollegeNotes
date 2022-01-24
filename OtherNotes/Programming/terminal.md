@@ -34,7 +34,6 @@ parent: Programming
 
 ## ssh
 ### keygen
-`
 1. `ssh-keygen -t ed25519 -C [username]`
 2. press ok til the end (or type something to set password or change saving location)
 3. private key & public key would be in `~/.ssh`
@@ -65,13 +64,6 @@ and then just simply `ssh my_alias` to ssh into it
 	- `ctrl+R`
 - cd to previous directory
 	- `cd -`
-- see memory usage
-	- `free -h`
-- list all running processes
-	- `ps aux`
-- size of all top level directories
-	- `du -sh *`
-	- `du -sh * | sort -rh`
 		
 ## modules
 ### cowsay
