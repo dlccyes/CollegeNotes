@@ -10,3 +10,10 @@
 	"editor.findMatchHighlightBackground": "#8ed2ff73" //Other SEARCH MATCHES
 }
 ```
+
+## troubleshooting
+### terminal weird font
+settings(JSON) -> `"terminal.integrated.fontFamily": "monospace"`
+
+<https://github.com/microsoft/vscode/issues/120371#issue-848729100>
+
