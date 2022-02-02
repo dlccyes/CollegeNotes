@@ -14,27 +14,53 @@ parent: Programming
 </details>
 
 ## kubuntu installation
-it's ubuntu with KDE preinstalled
+kubuntu is ubuntu with KDE preinstalled
+
+### procedures
+from win10/11
 
 1. install kubuntu iso
 2. use [Etcher](https://www.balena.io/etcher/) to flash the iso to your USB
 	- only used for installation
-3. disk management -> partition your disk
-4. reboot and enter bios menu (press f10 for HP)
-5. boot option -> move "boot with USB" to the top -> save and exit
+3. partition your disk
+	- use 3rd party tool
+		- [Partition Wizard](https://www.partitionwizard.com/free-partition-manager.html)
+			1. move/resize
+			2. drag to resize
+			3. apply
+			4. works like a charm
+	- do it yourself
+		-  disk management -> shrink volume
+		-  if only very little is available
+			1. advanced system settings -> performance -> advanced -> virtual memory -> unchech auto xxx -> set no paging file
+			2. advanced system settings -> performance -> advanced -> system protection -> configure -> disable system protection
+			3. restart
+			4. shrink volume
+			5. redo those things after you've shrinked the volume
+4. disable fast restart
+5. reboot and enter bios menu (press f10 for HP, hold f2 for ASUS)
 6. select kubuntu
+	- (for HP) boot option -> move "boot with USB" to the top -> save and exit
+	- (for ASUS) boot menu
 7. install kubuntu
 8. remove USB stick and enter bios menu again
 9. boot option -> move "boot with USB" back -> save and exit
 10. if still boot to Windows -> cmd as admin -> `bcdedit /set {bootmgr} path \EFI\kubuntu\grubx64.efi` -> reboot
 11. you should see grub menu, now select kubuntu
 
-references
-- shrink space too small
-	- <https://superuser.com/questions/561605/how-can-i-increase-my-shrink-space-in-disk-management/1086485>
+### troubleshooting
+- stuck on install "Updates and other software" step
+	- reflash the kubuntu iso to your usb
+	- use the LTS version
+
+### references
 - install with partition
 	- <https://medium.com/linuxforeveryone/how-to-install-ubuntu-20-04-and-dual-boot-alongside-windows-10-323a85271a73>
 	- <https://www.tecmint.com/install-ubuntu-alongside-with-windows/>
+- shrink space too small
+	- <https://superuser.com/questions/1017764/how-can-i-shrink-a-windows-10-partition>
+	- <https://superuser.com/questions/561605/how-can-i-increase-my-shrink-space-in-disk-management/1086485>
+	- <https://superuser.com/questions/88131/how-to-shrink-windows-7-boot-partition-with-unmovable-files>
 - no grub menu
 	- <https://itsfoss.com/no-grub-windows-linux/> 
 
@@ -59,6 +85,8 @@ references
 	- delete `Genial` related things
 	- relogin
 	- <https://github.com/NathanPB/plasma5-genial/blob/master/README.md>
+- evernote weird font
+	- install Roboto
 
 ### tips
 - scroll on battery icon on system tray to adjust brightness
@@ -77,9 +105,25 @@ references
 - `super+left click` on any window to move
 - `super+right click` on any window to resize
 
-## touchpad gestures
-use [touchegg](https://github.com/JoseExposito/touchegg)
+### good tools
+- kio-gdrive
+	- google drive network folder
 
-coudn't install the recommended touche gui on my kubuntu, so I just use the [config file](https://github.com/NayamAmarshe/ToucheggKDE) other's wrote
+#### widgets
+- event calendar
+- win 7 mixer 
+
+#### settings
+- nordic (windows decoration)
+- nordic (login screen)
+
+## touchpad gestures
+### touchegg
+<https://github.com/JoseExposito/touchegg>
+
+[a config file other's wrote](https://github.com/NayamAmarshe/ToucheggKDE) 
 
 config file need to be in `~/.config/touchegg/`
+
+troubleshooting  
+https://github.com/JoseExposito/touchegg/issues/413#issuecomment-748473155
