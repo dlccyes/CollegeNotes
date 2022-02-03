@@ -16,7 +16,7 @@ parent: Programming
 ## kubuntu installation
 kubuntu is ubuntu with KDE preinstalled
 
-### procedures
+### procedure
 from win10/11
 
 1. install kubuntu iso
@@ -75,6 +75,26 @@ from win10/11
 
 [This](https://bbs.archlinux.org/viewtopic.php?pid=1595276#p1595276) will solve the plasma flickering issue, but will make [Touchegg](https://github.com/JoseExposito/touchegg) not working
 
+## partition resize
+### principles
+- can't directly resize the os partition you're currently on
+- the relative starting position of the os parition can't be changed
+	- can copy paste to other area but can't directly move starting point
+
+### procedure
+for windows-linux dual-boot system
+1. create unallocate space in windows
+	- disk management (native)
+	- partition wizard (3rd party) (very good)
+2. reboot with installation USB (of kubuntu)
+3. select try kubuntu
+4. use GParted to manage partitions
+	- you can copy paste your kubuntu partition to the new unallocated space right after Windows -> apply -> delete original kubuntu partition && resize -> apply
+	- [about moving partition](https://superuser.com/a/731672) 
+5. reboot normally into your kubuntu
+	-  may need to `bcdedit /set {bootmgr} path \EFI\kubuntu\grubx64.efi` again to see your grub menu
+6. success
+
 ## KDE Plasma
 ### troubleshooting
 - everything too small -> display configuration -> global scale
@@ -104,6 +124,7 @@ from win10/11
 - `alt+f3` to show options for current window
 - `super+left click` on any window to move
 - `super+right click` on any window to resize
+- system settings -> window management -> kwin scripts -> enable MinimizeAll
 
 ### good tools
 - kio-gdrive
@@ -126,4 +147,4 @@ from win10/11
 config file need to be in `~/.config/touchegg/`
 
 troubleshooting  
-https://github.com/JoseExposito/touchegg/issues/413#issuecomment-748473155
+<https://github.com/JoseExposito/touchegg/issues/413#issuecomment-748473155>
