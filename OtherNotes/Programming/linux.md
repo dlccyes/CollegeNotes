@@ -107,6 +107,8 @@ for windows-linux dual-boot system
 	- <https://github.com/NathanPB/plasma5-genial/blob/master/README.md>
 - evernote weird font
 	- install Roboto
+- go to web search keywords to set up !bang for krunner
+	- it does not recognize `!`
 
 ### tips
 - scroll on battery icon on system tray to adjust brightness

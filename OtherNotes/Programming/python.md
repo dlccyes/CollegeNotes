@@ -7,6 +7,13 @@
 	- `pipreqs /path/to/project`
 	- https://stackoverflow.com/a/31684470/15493213
 
+## virtual environment
+```
+python3 -m venv venv
+# echo venv/ >> .gitignore
+source venv/bin/activate
+```
+
 ## exec
 to use in function, use `exec(string, globals())`
 

@@ -66,7 +66,7 @@ layout: meth
 ### 總體理論發展史
 - 古典學派 Classical School
 	- before 1930s
-	- rationality &  equilibrium
+	- rationality & equilibrium
 		- rationality: sustainable & predictable
 		- Say's Law 賽伊法則
 			- 供給會自創需求 (Keynes 對此的理解)
