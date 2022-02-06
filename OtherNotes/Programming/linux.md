@@ -64,8 +64,17 @@ from win10/11
 - no grub menu
 	- <https://itsfoss.com/no-grub-windows-linux/> 
 
-## ubuntu
-### troubleshooting
+## troubleshooting
+## Windows time become UTC
+linux will set the hardware time to UTC  
+we can make the hardware time be local time with  
+(in linux)
+```
+timedatectl set-local-rtc 1
+```
+
+<https://itsfoss.com/wrong-time-dual-boot/>
+
 #### xbacklight 
 **SOLVING THIS ISSUE WILL CAUSE ANOTHER**
 
