@@ -108,6 +108,7 @@ layout: meth
 		- <https://seanprashad.com/leetcode-patterns/>
 	- <https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed>
 	- <https://hn.jeffjadulco.com/29775023>
+	- [every blind 75 explained](https://docs.google.com/spreadsheets/u/0/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/)
 - Cracking the Coding Interview
 	- [pdf](http://englishonlineclub.com/pdf/Cracking the Coding Interview - 189 Programming Questions and Solutions (6th Edition) [EnglishOnlineClub.com].pdf)
 

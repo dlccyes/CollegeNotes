@@ -64,8 +64,28 @@ from win10/11
 - no grub menu
 	- <https://itsfoss.com/no-grub-windows-linux/> 
 
+## upgrade
+for normal release
+```
+sudo do-release-upgrade
+```
+
+for development release
+```
+sudo do-release-upgrade -d
+```
+
+to change between LTS & normal  
+```
+sudo vim /etc/update-manager/release-upgrades
+```
+change between `Prompt=normal` & `Prompt=LTS`
+
+
+<https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today>
+
 ## troubleshooting
-## Windows time become UTC
+### Windows time become UTC
 linux will set the hardware time to UTC  
 we can make the hardware time be local time with  
 (in linux)
@@ -75,7 +95,43 @@ timedatectl set-local-rtc 1
 
 <https://itsfoss.com/wrong-time-dual-boot/>
 
-#### xbacklight 
+### grub menu related
+#### no grub menu
+```
+sudo vim /etc/default/grub
+```
+
+set `GRUB_TIMEOUT_STYLE` to `menu`  
+(may be `hidden` originally)
+
+```
+sudo update-grub
+```
+<https://askubuntu.com/a/1182434>
+
+
+#### no Windows in grub menu
+`sudo os-prober` to see if Windows is identified  
+<https://superuser.com/a/1392323>
+
+if there is Windows
+
+```
+sudo vim /etc/default/grub
+```
+
+add
+```
+GRUB_DISABLE_OS_PROBER=false
+```
+
+```
+sudo update-grub
+```
+
+<https://forum.manjaro.org/t/warning-os-prober-will-not-be-executed-to-detect-other-bootable-partitions/57849/2>
+
+### xbacklight 
 **SOLVING THIS ISSUE WILL CAUSE ANOTHER**
 
 `No outputs have backlight property`
@@ -83,6 +139,15 @@ timedatectl set-local-rtc 1
 [This](https://askubuntu.com/a/1060843) will solve the backlight issue, but will make plasma become very unstable, flickering all the time
 
 [This](https://bbs.archlinux.org/viewtopic.php?pid=1595276#p1595276) will solve the plasma flickering issue, but will make [Touchegg](https://github.com/JoseExposito/touchegg) not working
+
+### The following packages have been kept back
+displayed when doing `apt upgrade`
+
+solved by
+```
+sudo apt dist-upgrade
+```
+according to <https://askubuntu.com/a/602> this is not an ideal solution
 
 ## partition resize
 ### principles
