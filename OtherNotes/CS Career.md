@@ -36,6 +36,8 @@ layout: meth
 	- Facebook Amazon Apple Netflix (Microsoft actually) Google
 - PIP = performance improvement plan
 	- get PIPed = about to get fired
+- FTE = full-time equivalent
+	- what you do as a intern/contractor but full-time
 
 ## resources
 ### forums
