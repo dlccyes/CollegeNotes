@@ -84,6 +84,18 @@ change between `Prompt=normal` & `Prompt=LTS`
 
 <https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today>
 
+## power related
+<https://www.computernetworkingnotes.com/linux-tutorials/shutdown-reboot-suspend-and-hibernate-a-linux-system.html>
+### shutdown
+```
+shutdown now
+```
+
+### sleep
+```
+systemctl hybrid-sleep
+```
+
 ## troubleshooting
 ### Windows time become UTC
 linux will set the hardware time to UTC  
