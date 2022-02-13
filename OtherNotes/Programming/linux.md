@@ -224,3 +224,9 @@ config file need to be in `~/.config/touchegg/`
 
 troubleshooting  
 <https://github.com/JoseExposito/touchegg/issues/413#issuecomment-748473155>
+
+## set default editor
+```
+sudo update-alternatives --config editor
+```
+<https://unix.stackexchange.com/a/204896>

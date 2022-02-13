@@ -6,13 +6,7 @@ parent: OtherNotes
 # Spotify
 {: .no_toc }
 
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
+P{}
 
 ## download data
 https://www.spotify.com/ca-en/account/privacy/
