@@ -213,6 +213,8 @@ for windows-linux dual-boot system
 - `super+left click` on any window to move
 - `super+right click` on any window to resize
 - system settings -> window management -> kwin scripts -> enable MinimizeAll
+- set windows properties (size, position, bar, etc.)
+	- alt+f3 -> more actions -> special windows settings -> add property -> select and set as "Remember"
 
 ### good tools
 - kio-gdrive
@@ -258,9 +260,15 @@ tips
 - wheel click = home
 
 ### drive
-#### install
+it is very very slow, much slower than network folder
+
+repo  
+<https://github.com/odeke-em/drive>
+
+doc  
 <http://odeke-em.github.io/drive/>
 
+#### install
 install [go](https://go.dev/doc/install)
 
 ```
@@ -280,9 +288,9 @@ drive init
 at the target folder
 
 ```
-drive pull
+drive pull -ignore-name-clashes
 ```
 
 ```
-drive push
+drive push -ignore-name-clashes
 ```
