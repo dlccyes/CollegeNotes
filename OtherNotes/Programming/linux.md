@@ -242,3 +242,47 @@ troubleshooting
 sudo update-alternatives --config editor
 ```
 <https://unix.stackexchange.com/a/204896>
+
+## good programs
+### scrcpy - control Android
+<https://github.com/Genymobile/scrcpy>
+
+`apt install scrcpy` to install
+
+`scrcpy` to run
+
+need to enable USB debugging in your phone's settings first
+
+tips
+- right click = back
+- wheel click = home
+
+### drive
+#### install
+<http://odeke-em.github.io/drive/>
+
+install [go](https://go.dev/doc/install)
+
+```
+go install github.com/odeke-em/drive/cmd/drive@latest
+```
+
+add this to `~/.bashrc` or whatever
+```
+export GOPATH=$HOME/go
+export PATH=$GOPATH:$GOPATH/bin:$PATH
+```
+
+#### use
+```
+drive init
+```
+at the target folder
+
+```
+drive pull
+```
+
+```
+drive push
+```
