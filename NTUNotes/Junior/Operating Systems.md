@@ -1,5 +1,6 @@
 ---
 layout: meth
+has_children: True
 ---
 # Operating Systems
 {: .no_toc }
@@ -12,6 +13,3 @@ layout: meth
 {:toc}
 </details>
 
-## QEMU
-- `ctrl-p` to print info for each process
-- `ctrl-a x` quit QEMU
