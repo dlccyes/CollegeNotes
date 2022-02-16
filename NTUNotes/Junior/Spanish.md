@@ -1,0 +1,751 @@
+---
+layout: meth
+---
+# Spanish
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
+## Spanish 2-1
+    - 杰彤 emma
+    - 姿穎 anita
+    - 黃海 coco
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FWZfGKyWEIp.png?alt=media&token=638079ee-aef6-47b7-bca1-37aa6eaec192)
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FwsepuhBYgU.png?alt=media&token=fc6ae02d-1648-476b-8f33-a5ace520f025)
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FFU0e5rDw1o.png?alt=media&token=c7be96b4-ca05-4e85-b499-72923da68388)
+- deberes
+    - deberes 5
+        - p.61 上面
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FxFwwv6zOio.png?alt=media&token=8fb024f3-a06e-46f8-9518-b317c65c00b4)
+        - Lo más importante para aprender una lengua exntranjera
+            - Yo creo que lo más importante para aprender una lengua extranjera es leer muchos artículos en la lengua.
+        - Lo más defícil de la lengua española.
+            - Yo creo que lo más defícil de la lengua española es que español tiene mucho conjugación y gramática poco intuitivo.
+        - Lo más fácil de la lengua española.
+            - Yo creo que lo más fácil de la lengua española es que español tiene estructura gramatical similar a inglés.
+        - Lo más parecido de la lengua española a tu lengua.
+            - Yo creo que lo más parecido de la lengua española a chino es que tiene gramática confusa.
+        - Lo más diferente de la lengua española a tu lengua.
+            - Yo creo que lo más diferente de la lengua española a chino es que la gramática y el conjugación de chino es muy facíl y simple.
+    - deberes 4
+        - Q: imagina que son las 23, escribe que has hecho hoy
+        - Me he levantado a las 11 hoy, por qué he visto un partido de Barcelona en la liga de campeones a las 4. No he desayunado, y he comido en mi dormitorio a las 12. He venido a clase en bici a las 2 por la tarde. Despues de clases, he cenado en el restaurante cerca del campus con mis compañeros, y luego nosotros hemos jugado al fútbol en césped artificial hasta las 10 por la noche. He vuelto a mi dormitorio a las 10:30, despues me he duchado felizmente.
+    - deberes 3
+        - p.38
+        - mailto teacher
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FZE-T8BLWmE.png?alt=media&token=e023cd22-5701-42db-9ac6-5d87a0184011)
+        - ella
+            - primero
+                - gazpacho
+            - segundo
+                - calamares a la romana
+            - algo
+                - agua (?)
+            - postre
+                - fruta - naranjas
+            - toman algo más
+                - café solo
+        - él
+            - primero
+                - ensalada mixta
+            - segundo
+                - salamón a la plancha
+            - algo
+                - un poco pan (?)
+            - postre
+                - helado de vainilla
+            - toman algo más
+                - café (?)
+    - deberes 2
+        - {{audio: https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FHAKOeOZ97J.mp3?alt=media&token=6397980b-86b0-4fa9-9c41-41c89020b0cc}}
+        - 1.
+            - te encuentras muy mal?
+            - me duelen las piernas
+            - descansar poco?
+            - vale
+        - 2.
+            - no me pasa nada
+        - 3.
+            - elle está enfermo?
+            - sí, tengo la gripe
+            - y por qué no vas a la cama
+            - sí, si sigo así
+        - 4. ???????
+            - qué tal
+            - fatal
+            - tengo una tos tremenda = have serious cough
+            - es que fumas demasiado = es que smoke too much
+        - 5.
+            - duele muchísimo la cabeza
+            - aspirina?
+            - sí
+    - deberes 1
+        - **En el texto habla de tus deseos, planes e intenciones para el futuro.**
+        - translations
+            - estudiar una maestría = study for a Master's degree
+            - prepararé = future tense of preparar (prepare)
+            - después de algunos años = after some years
+            - durante un mes = for a month
+        - Me gustaría estudiar una maestría en Estados Unidos. Prepararé para TOEFL y GRE en el próximo año. Después de graduarme, ingresaré al militar durante cuatro mes y solicitaré los programas de Maestría en Estados Unidos.
+        - Quizá trabajar en Estados Unidos después obtener una maestría y volver a Taiwan después de algunos años. Posible encontrar un trabajo en MediaTek u otro empresas en Taiwan.
+- 單字
+    - convertir = turn into
+    - tapear = 吃小菜
+    - me gustaría < querer
+    - modela = model
+    - elegir = choose
+    - conseguir = to be able to
+    - fluidez = fluidity
+        - con más fluidez = with more fluidity
+    - olividar = forget
+    - comprensión = comprehension
+    - comprender = entender = comprehend
+    - interesar = interest (v.)
+        - me interesa .... = I'm interested in ...
+    - sin = without
+    - cometer = commit
+    - errores = errors
+    - communicarse = communicate
+    - ejercicio = exercise (n.)
+    - intenciones = intentions
+        - planes **e** intenciones, e replace y
+    - rapasar = review
+    - con frequencia = a menudo
+    - mantener diálogos = tener diálogos
+        - mantener = hold
+    - conmigo misma = with myself
+        - conmigo = with me
+        - misma = same
+        - contigo = with you
+    - por mi cuenta = on my own
+    - hacer los derebes = 寫作業
+    - elegir = 選
+    - canción = song
+    - buscar = look for
+    - intercambio lunguístico = 語言交換
+    - viene = come
+    - intercambio = exchange
+        - ir a Estados Unidos de intercambio
+    - excursión = excurstion
+    - lugar = place
+    - todavía = yet/still
+    - viaje (n.) = trip
+    - nadie = nobody
+    - él = he
+    - respirar = breathe
+        - respirar profundo = 深呼吸
+    - pasar
+        - qué te pasa = 妳怎麼了
+            - no me pasa nada = 什麼事也沒有
+    - caliente = hot
+        - tomas agua caliente
+    - rasparse = scratch
+    - suspender = fail (an exam)
+    - te encuentras = estás
+        - cómo estas = c;omo te encuentras
+    - seguir = continue
+        - yo sigo
+    - poner = put
+        - yo pongo
+    - un cuarto = a quartar
+    - vamos a ser = let's see
+    - buenísimos = muy bien
+    - fuma = smoke
+    - demasiado = too much
+    - fatal = muy mal
+    - plato = dish
+    - tazón = bowl
+    - dibujo = drawing
+    - cuenta = 帳單
+    - postre = dessert
+    - segundo = 2nd
+    - traer = bring
+    - cuchillo = knife
+    - taza = mug = 馬克杯 copa = cup = 高腳酒杯 vaso = glass = 玻璃杯
+    - recomendar = recommend
+        - (yo) te recomiendo el pollo frito
+        - ¿qué me recomienda (usted)?
+        - ¿qué me recomiendas (tú)?
+    - actuar = act
+    - he perdido = I miss
+        - he perdido el autobús
+    - una pena = it's a pity
+    - asignatura = subject
+    - recibir = receive
+    - esperar = wait
+    - poquísimo = muy poco
+    - mencionar = mention
+    - título = title
+    - ganas = desire
+    - luego = later
+    - paquete = package
+    - diario = diary
+    - todavía no = not yet
+    - todavía = still
+    - bañarse = take a bath
+    - recogner = pick up
+    - chaqueta = jacket
+    - apagar = turn off
+        - apagar el ordenador
+    - zapatos = shoes
+    - recoger = clean up
+        - recogido la mesa = clean up the table
+    - quitarse = take off
+    - apagar = turn off
+    - besar = kiss
+    - retirar dinero = withdraw money
+    - alquilar = rent
+    - perder = lose
+    - cosas = things
+    - estos 2 días = these 2 days
+    - no te preocupes = don't worry
+    - perdona por ... = I'm sorry for ...
+    - olvidé = forget
+    - retrasarse = be late
+    - despertardor = alarm clock
+    - tardar = take
+        - tardar una hora en encontrar el sitio
+    - encontrar = to find
+    - conocido = acquaintance
+    - yo quiero separarme = i want to break up
+    - notas = score / grade
+    - constracto = contract
+    - contractar = hire
+    - beca = scholarship
+    - solicitar = apply
+        - solicitado trabajo = apply for a job
+    - no tengo nada = I have none
+    - varias = several
+    - comunicarme = communicate
+    - objetivo = objective
+    - comprender = comprehend
+    - lo que oigo = what i hear
+    - lo que digo = what I say
+    - por esa razón = this is the reason
+    - correctamente = correctly
+    - frustrado = frustrated
+    - palabras que conozco = word I know
+    - corrige = to correct
+    - lentamente = slowly
+    - fácilmente = easily
+    - por eso = that's why
+    - entonar = pronounce (the tone)
+    - no me importa = I don't care
+    - cometer = commit
+    - pensar = think
+        - yo pienso
+    - acuerdo = agreement
+        - no me acuerdo = I can't remember
+        
+    - lo adj. de n, es que ...
+        - lo bueno de NTU es que ...
+    - lo mall de NTU es que hay muchos gentes
+    - larga = long corta = short
+    - gris = grey
+    - morado = purple
+    - regalar = give
+    - fondo = bottom
+        - está al fondo q
+    - pase = pass
+    - de acuerdo = alright
+        - estas de acuerdo = do you agree
+    - claro = of course
+    - caja = cashier
+    - tajeta de crédito = credit card
+    - qué quiere = what do you want (rude)
+    - qué desea = what would you like (polite)
+    - pagar = pay
+    - descuento = discount
+    - trabajo = 報告
+    - pedir = ask for
+    - lugares = place
+    - sentir = feel
+        - siento/sientes/siente
+    - saludar = to greet
+    - servir = serve
+    - fumar = smoke
+    - probador = 試衣間
+    - pasa por caja = checkout
+    - permiso = excuse me
+    - parecido = similar
+- deseo
+    - querer
+    - me gustaría = would like
+        - conditional tense of gustar
+- futuro
+    - pasado = past
+        - pasado mañana = the day after tomorrow
+    - próximo = next
+        - el próximo año = el año que viene = next year
+        - la próxima semana = la semana que viene = next week
+- ir a + v. infinitivo
+- probability
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FCZqF6S_l7j.png?alt=media&token=f9ee299c-4563-4b5d-80b7-6247f02d1015)
+- emotion
+    - triste = sad
+        - está triste
+    - hambre = hunger
+        - tiene hambre
+    - sed = thirst
+        - tiene sed
+    - sueño = sleepy
+        - tiene sueño
+    - preocupado = worried
+    - enfadado = angry
+    - enfermo = sick
+        - está enfermo
+    - cansado = tired
+    - feliz = contento = happy
+        - estoy feliz = estoy contento
+    - nervioso = nervous
+    - miedo = fear
+        - tiene miedo
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FbVZaeJF11n.png?alt=media&token=be0ca13e-b547-490f-a8f3-90b4a4c04102)
+- 身體部位
+    - cabeza = head
+    - cara = face
+    - oído = ear (整個器官)
+    - nariz = nose
+        - ==la== nariz
+    - boca = mouth
+    - cuello = neck
+    - estómago = stomach
+    - espalda = back
+    - brazo = arm
+        - el brazo derecho
+    - hombro = shoulder
+    - mano = hand
+        - ==la== mano izquierda
+    - dedo = finger
+    - pierna = leg
+    - rodilla = knee
+    - pie = foot
+        - ==el== pie
+    - tocarse = touch yourself
+- 病痛
+    - doler = hurt
+    - duelo/dueles/duele/dolamos/doláis/duelan
+    - resfirado = cold
+        - está resfriado
+    - fiebre = fever
+        - tiene fiebre
+    - mareada = dizzy
+        - estoy mareada
+    - le duelen las muelas
+        - muela = 臼齒 (molar)
+    - le duele el estómago
+    - le duele la cabeza
+    - alergia = alergy
+        - tiene alergia
+    - gripe = flu
+        - tiene gripe
+    - tos = cough
+        - tiene tos
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2Frgzgi-r_ig.png?alt=media&token=be59bbc1-a1c6-4726-be4b-ecf4f5c048fb)
+- remedios
+    - masaje = message
+    - coñac = brandy
+    - manzanilla = 洋甘菊
+    - jengibre = ginger
+    - pastilla = pill
+    - aspirina = aspirin
+    - calmante = painkiller
+        - tomas un calmante
+- 建議
+    - qué le pasa = what happened to him
+    - sugerir = suggest
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2F2W5I1Tv8U8.png?alt=media&token=4744f9d5-54e4-4aa1-8bfa-c8f61f88e6d3)
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FD0zJzXwlYH.png?alt=media&token=cdf434ae-938a-4df7-abcc-600c1f15cc35)
+- 日常採購
+    - ¿Qué le pongo? = ¿Qué quiere comprar?
+    - ¿A cómo está es XXX? = ¿Cuánto cuesta es XXX?
+    - no me quedan = nothing's left
+    - marca = 品牌
+    - lista de compras = shopping list
+    - qué compramos? qué quieres comprar?
+- 包裝 & 單位
+    - botella = bottle
+        - una botella de vino
+    - lata = can
+        - una latta de sardinas
+    - docena = dozen
+        - media docena = half a dozen
+        - una docena de huevos
+    - barra = stick
+        - una barra de pan
+    - cartón = cardboard
+    - paquete = package
+        - un paquete de sal
+        - un paquete de galletas
+    - trozo = piece
+        - un trozo de tata
+    - gramos = grams
+        - 200 gramos de jamón
+    - kilo
+        - un kilo de zanahorias
+    - litro = litter
+- 食物
+    - fruta = fruit
+        - manzanas = apples
+        - plátanos = bananas
+        - naranja = orange
+        - fresa = strawberry
+    - meat
+        - cordero = lamb
+        - ternera = beef
+        - pollo = chicken
+            - pollo frito = fried chicken
+        - cerdo = pork
+        - cochinillo = 乳豬
+            - cochinillo asado = 烤乳豬
+        - filete = steak
+        - chuletas = 肋排
+            - chuletas de cordero = 羊肋排
+        - jamón = ham
+        - chorizo = sausage
+    - mariscos = seafood
+        - merluza = 鱈魚
+        - atún = tuna
+        - sardinas = sardine
+        - salmón = salmon
+        - calamares = squids
+            - calamares a la romana = 炸魷魚圈
+    - lasaña = lasagna
+    - bocadillo = sandwitch
+        - un bocadillo de atún
+    - mantequilla = butter
+    - arroz = rice
+        - arroz frito = 炒飯
+    - fideo = noodles
+        - fideo con ternera = 牛肉麵
+    - firjoles = beans
+    - galletas = cookies
+    - mani = peanut
+    - azúcar = sugar
+    - sal = salt
+    - vino = wine
+    - cebolla = onion
+    - queso = cheese
+    - aceite = oil
+        - aceite de oliva = olive oil
+    - huevos = eggs
+    - calabaza = pumpkin
+    - lechuga = lettuce
+    - zanahorias = carrots
+    - tomates = tomatoes
+    - patatas = potatoes
+    - yogur = yogurt
+    - zumo = juice
+        - zumo de narania = orange juice
+    - helado = ice cream
+    - plato = dishes
+    - sopa = soup
+    - picante = spicy
+    - asado = roasted
+    - turrón = 牛軋糖 (nougat)
+    - nunca he comido = never have eaten
+- 餐廳
+    - ¿me trae XXX? = can you bring me XXX?
+    - me trae una taza de café?
+        - me trae un café? 文法錯但常用
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FSg163KpXI3.png?alt=media&token=523134df-05a1-43e9-83d7-e21d251c2b56)
+- present perfect (have/haven't)
+    - he/has/ha/hemos/habéis/han
+    - ar → ado
+    - er → ido
+    - ir → ido
+    - irregular
+        - hacer → hecho
+        - escribir → escrito
+        - volver → vuelto
+        - decir → dicho
+        - poner → puesto
+    - me he dado un paseo = go for a walk
+        - darse un paseo = pasear
+    - no me he duchado
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FCXDJqbA-Dk.png?alt=media&token=d10c8b07-4938-46c0-bcf3-6c7a78617e23)
+    - ¿A qué hora te has levantado hoy? ¿Te has duchado esta mañana? ¿A qué hora has desayunado esta mañana? ¿Qué has hecho por la mañana? ¿Has venido a clase en moto? ¿Has llegado tarde a clase de español? ¿Te has puesto una chaqueta? ¿Has abierto la ventana de tu habitación? ¿Has encendido tu ordenador? ¿Te has puesto unos pantalones negros?
+    - hace XXX = XXX ago
+        - hace media hora = half an hour ago
+        - hace 10 minutos = 10 minutes ago
+    - ya = already
+- animales = animals
+    - caballo = horse
+    - camello = camel
+    - serpiente = snake
+    - elefante = elephant
+    - animales salvajs = wild animals
+    - cazar = hunt
+        - viaje para cazar
+- ropas 衣服
+    - bufanda = scarf
+    - pañuelo = handkerchief
+    - biquini = bikini
+    - blusa = blouse (襯衫)
+    - traje = suit
+    - corbata = tie
+    - calcetines = socks
+    - jersey = jersey
+    - camiseta = T-shirt
+    - camisa = shirt
+    - pantalones = pants
+        - pantalones de vestir
+        - pantalones formales
+        - pantalones deportivos
+    - vaqueros = jeans
+    - vestido = dress
+    - falda = skirt
+    - minifalda = miniskirt
+    - medias = stockings
+    - sujetador = bra
+    - braga = panties
+    - calzoncillos = underwears
+    - gorra = cap
+    - sombrero = hat
+    - guantes = gloves
+    - pijama = pajamas
+    - bufanda = scarf
+    - cazadora = 飛行夾克
+    - bañador = swimsuit
+    - zapatos = shoe
+    - :hiccup [:hr]
+    - probarse = 試穿
+        - quiero probarme
+        - quieres probarte
+        - quiere probarse
+            - quieres probarsela
+    - piel = 皮
+    - algodón = cotton
+    - almidón = starch
+    - seda = silk
+    - talla = size
+        - qué talla tiene
+    - qué tal le queda = how does it fit
+    - me lo llevo = i'll take it
+    - pase por caja = 去結帳
+    - ancho = wide estrecha = narrow
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2Fn0GTaYq7ys.png?alt=media&token=2fa2104c-c5f6-473b-97dc-d07d155e7dc3)
+    - planchar = 燙(衣服)
+    - ponerse = put on (a clothe)
+        - ponerse la chaqueta = put on a jacket
+    - llevar puesto = wear
+    - vertirse = put on the clothe
+- more ... than ...
+    - tan como = más que
+        - la falda negra es tan cara como la blanca
+    - menos que
+        - la falda es menos larga que la blanca = la falda no es tan larga como la blanca
+- lo la
+    - (yo) lo he comprado el vestido en NET.
+    - Tengo una falda nueva. ¿Dondé la has comprado?
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FihbiZJlEpe.png?alt=media&token=3a56241e-705a-4fd1-95f0-108b9629096c)
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FkwGT-VKCy4.png?alt=media&token=87ef494e-eb8f-4d55-a4e7-9844b964fa4d)
+- gerundio = present participles (verbo+ing)
+    - e-X-ir → i-X-iendo
+    - o-X-ir → u-X-iendo
+    - e.g.
+        - bañar → estar bañando
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FsRhBYdVLok.png?alt=media&token=0363eba8-7bd3-4607-8fcc-d8775f437434)
+- 練習
+    - [[September 22nd, 2021]]
+        - exercise
+            - ¿De dónde eres?
+                - Soy taiwanesa, de Tai-Chong.
+            - ¿Qué lenguas hablas?
+                - Hablo chino, inglés y un poco de español.
+            - ¿Qué estudias?
+                - Trabajo en un banco.
+            - ¿Dónde vive?
+                - Vivo en Hsin-Dian.
+            - ¿Cuántos años tienge?
+                - Tengo 30 años.
+            - ¿Tiene hermanas?
+                - Sí, un hermano y una hermana.
+            - ¿Está casada?
+                - No. (Yo) estoy soltera.
+            - ¿A qué se dedican tu madre?
+                - Mi padre es profesor.
+            - ¿Cómo es tu madre?
+                - Mi madre es baja, un poco gorda y guapa. Tiene el pelo corto y rizado y lleva gafas.
+            - ¿Cómo se dice notebook in español?
+                - Se dice: “cuaderno”.
+            - ¿Cuonto cuesta?
+                - Cuesta 25 NT.
+            - 12. ¿Como es to barrio?
+                - Es grande, moderna, turística y muy ruidosa. Tiene muchos edificios y muchas tiendas.
+            - 13. ¿Como es tu piso?
+                - Mi piso es pequeño, antiguo y bastante tranquilo. Tiene ascensor, terraza y calefacción.
+            - 14. ¿Dónde es la lampara?
+                - Está encima de la mesa.
+            - 15. ¿Conoces el nino?
+                - No, no conozco
+            - 16. ¿Sabes nadar ... ?
+                - No, no sé nadar.
+            - 17. ¿Te gustan ...?
+                - Sí, me gustan mucho.
+            - 18. ¿Cómo vienes a clases?
+                - Vengo a clase en autobús.
+            - 19. ¿A qué hora?
+                - A las 8:00.
+            - 20. ¿Qué haces los sábados?
+                - Los sábados me levanto sobre las 9:00. Después de desayunar, normalmente hago la limpieza y lavo la ropa. Luego como en casa y descanso. Por la tarde salgo con amigos a menudo, vamos de compras o al cine. Siempre ceno fuera. Por la noche veo la tele o leo un libro. Me acuesto sobre las 24:00.
+        - ¿cómo te llamas? 1. ¿De dónde eres? 2. ¿Qué lenguas hablas? 3. ¿Qué estudias? 4. ¿Dónde vives? 5. ¿Cuántos años tienes? 6. ¿Tienes hermanos? 7. ¿Tienes novio/a? 8. ¿A qué se dedica tu padre 9. ¿Cómo es tu madre? 10. ¿Cómo se dice “..…” en español? 11. ¿Cuánto cuesta tu …..? 12. ¿Cómo es tu ciudad? 13. ¿Cómo es tu piso? 14. ¿Dónde está tu ……? 15. ¿Conoces ..…? 16. ¿Sabes nadar? 17. ¿Te gustan …..? 18. ¿Cómo vienes a clases? 19. ¿A qué hora ……? 20. ¿Qué haces los sábados?
+    - [[September 24th, 2021]]
+        - para ser presidente de Taiwán hay que ser taiwanés
+        - para ser presidente de Taiwán hay que tener 40 años
+        - ¿qué hay que hacer para ... ? ¿y tú? ¿qué crees?
+            - para ser político hay que querer poder
+            - para vivir 100 años hay que ser saludable
+            - para tener mucho dinero hay que trabajar mucho
+            - para encontar un buen trabajo hay que estudio en la universidad NTU
+            - para tener muchos novias hay que tener mucho dinero
+            - para actuar en Hollywood hay que ser famosa
+        - ¿Tienes que ir a clases mañana? Sí / No ¿y tú? ¿Necesitas comprar algo esta semana? ¿Tienes que estudiar hoy (today)? ¿(Tú) Tienes que practicar la pronunciación del español? ¿por qué? .......... ¿y tú? ¿(Tú) Tienes que trabajar? ¿por qué? ¿(Tú) Necesitas hacer mucho deporte? ¿por qué? ¿(Tú) Tienes que comer mejor (better)? ¿por qué?
+    - [[September 29th, 2021]]
+        - AKIKO cuando = 當………..的時候 elegir bien las palabras = 好好的選(我要用的)words conseguir hablar más rápido = 能夠講話快一點 con más fluidez = 更流利
+        - JENNY lo que apprendo = 我學到的(東西) olvidar = 忘記 Si = 如果
+        - NICK problemas de comprensión =了解(聽得懂)的困擾 grabaciones = 錄音檔 por mi cuenta = By myself / on my own
+        - BART me interesa = 我(對……..)有興趣 sin cometer muchos errores = 不犯很多錯
+        - GALA a mí me gustaría = 我想要 porque = 因為 comunicarme = 溝通
+        - EVELYNE mejorar(v.) = 進步 / 變好 ejercicios de pronunciación (n.) = 發音的練習 no me entiende la gente = 人不了解我
+        - ¿Quién ...
+            - ... tiene que aprender mucha gramática? (¿Gala, Nick, Evelyne, Bart, Akiko, Jenny? ) bart
+            - ... quiere elegir bien las palabras cuando habla? akiko
+            - ... quiere aprender mucho vocabulario? gala
+            - ... necesita hacer ejercicios de pronunciación en clase? evelyne
+            - ... olvida muchas cosas si no practica? jenny
+            - ... tiene problemas de comprensión cuando escucha español? nick
+        - ¿Te gustaría viajar a España? ¿por qué? Sí, me gustaría mucho porque queiro ver los partidos de fútbol de España
+        - ¿Te gustaría tener un novio/una novia extranjero/a? ¿por qué? no, no me gustaría porque tiene muchas diferencias
+        - ¿Te gustaría hacer una maestría (un master)? ¿por qué? no, no me gustaría porque no es necesario
+        - ¿Te gustaría aprender japonés? ¿por qué? Sí, me gustaría porque japonés es útil
+        - ¿Quieres casarte y tener hijos en el futuro? ¿por qué? Sí, yo queiro proque hijos es lindo
+        - para aprender español hay que hablar mucho
+        - para aprender español hay que hablar muy despacio
+        - para aprender español hay que practicar mucho
+        - para aprender español hay que escuchar mucho
+        - para aprender español hay que aprender mucha gramática
+        - para aprender español hay que aprender mucho vocabulario
+        - para aprender español hay que hacer ejercicios de pronunciación
+        - preguntar profesor, vocabularios, escuchar mucho, hablar mucho en clases, ver las peliculas en español,
+    - [[October 1st, 2021]]
+        - ¿Qué intenciones son útiles? ………………………. ¿y tú? ¿qué crees? ¿Qué intenciones no son útiles? ¿por qué? La intención 6 porque..... ¿y tú? ¿qué crees? ¿Haces alguna de estas cosas? No, no hago nada. Sí, yo escucho canciones, y también ......... ¿y tú?
+            - buscar información en español en internet
+            - hacer los derebes todos los días
+                - no interesante
+        - ¿Vas a estudiar esta noche? .. ¿y tú? ¿Vas a hacer deporte esta tarde? ¿Vas a venir a la universidad mañana? ¿Vas a salir con tus padres el sábado? ¿Vas a ir a la piscina el fin de semana? ¿Vas a tomar café esta tarde? ¿Vas a viajar en vacaciones? ¿Vas a acostarte pronto esta noche? ¿Vas a comer en McDonald´s después de la clase? ¿Vas a ver la televisión esta noche? ¿Vas a montar en bici el sábado? ¿Vas a jugar videojuegos esta noche? ¿Vas a limpiar la casa el sábado? ¿Vas a cenar en casa esta noche? ¿Vas a jugar al baloncesto el domingo? ¿Vas a lavar la ropa mañana?
+        - (Estoy seguro/a de que) sí Es probable Es posible = Puede ser Quizás = quizá (maybe) (Estoy seguro/a de que) no
+    - [[October 6th, 2021]]
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2F6ip-riEVDF.png?alt=media&token=a2bf8652-1b83-4a41-8b59-9e0a7235d773)
+    - [[October 15th, 2021]]
+        - que lepasa a palo
+    - [[October 22nd, 2021]]
+        - 12 c
+        - pan
+            - 60 centimos
+        
+    - [[October 27th, 2021]]
+        - list
+            - una latta de sardinas
+            - 1 kilo de patatas
+            - un paquete de galletas
+            - 1 botella de leche
+            - una docena de huevos
+    - [[November 12th, 2021]]
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2F-TVNwOkRh_.png?alt=media&token=84818508-6700-4065-8b6a-ee6e85c08507)
+            - ha desayunado
+            - no ha recogido la mesa
+            - le ha lavado los dientes
+            - ha hecho té
+            - ha quitado las ropas
+            - ha abrido la puerta
+            - ha visto la televisión
+            - no ha apagado la televisión
+            - ha tomado té
+            - te ha duchado
+            - no te ha bañado
+            - te ponido la chaqueta
+        - 5 preguntas
+            - Q
+                - ¿Qué has hecho por la mañana?
+                - ¿Has venido a clase en avión?
+                - ¿Has llegado pronto a clase de español?
+                - ¿A qué hora te has levantado hoy?
+                - ¿has comido una cucaracha?
+                - ¿Has encontrado tu iPad?
+            - A
+                - Si
+                - No
+                - No
+                - Sí
+                - 9:30
+        - 5 cosas compeñero ha hecho este año
+            - te has duchado
+            - has hecho deberes 3
+            - te has lavado los dientos
+            - has ganado mucho dinero
+            - has perdido tu ipad
+    - [[December 8th, 2021]]
+        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2F2Ha4QO7Qro.jpg?alt=media&token=e2f21b58-2f48-404e-9de6-48b2362b5208)
+    - [[December 15th, 2021]]
+        - a
+            - la gorra azul es tan cara como la verde (V)
+            - las calcetines azules son más larga que las gris (F)
+            - la camiseta gris son menos barato que la morado (F)
+            - la falda negra no es tan cara como la camiseta gris (V)
+            - las botas negras son tan larga como las marrónes (V)
+        - b
+            - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FlOhieTtNdW.png?alt=media&token=161728a5-5f97-4e81-bcae-758b7f718120)
+                - Dondé has comprado tu móvio? No sé, lo ha comprado mi mamá.
+                - Yo me gusta esta camisa. Quiere probarsela?
+                - Qué brogas quiere? Cómo quiere las botas? Las quiero altas.
+                - Qué tal le queda este cahquete? Demasiado ancho, quiero más estrecha. Muy ancha, la quiero más estecha.
+    - [[December 22nd, 2021]]
+        - bueno dias. qué desia
+        - ochenta y dos euros por favor
+        - de acuerdo. pase por caja por favor
+        - tenemos este de la talla cuarenta. le gusta?l
+        - cómo la queire?
+        - si claro. el probador esta al final a ka derecha
+    - [[December 29th, 2021]]
+        - el niño de los pantalones azules está corriendo (T)
+        - la abuela de la camisa roja está durmiendo (T)
+        - el perro está comiendo (F)
+        - la niña de la camisa está comiendo helado (T)
+        - el camarero se está duchando (F)
+
+## Spanish 2-2
+### words 
+- preciosa = beautiful
+- como ves = as you see
+- lo malo = la cosa mala = el aspecto malo
+- me voy = I'm leaving
+- (yo) tengo que irme = I have to leave
+- Navidad = Christmas
+
+### practice
+- 2/16
+	- barca
+		- no
+		- salí a cenar con unos amigos y luego estuvimos tomando unas copas
+		- ayer por la manana
+		- he ido a la fundación Miró y luego me he dado un paseo por el Barrio Gótico
+	- order
+		- 1977
+		- 2009
+		- el ano pasado
+		- en julio
+		- hace tres meces
+		- en Navidad
+		- el mes pasado
+		- hace dos semenas
+		- la semana pasada
+		- anteayer
+		- ayer
+		- el otro dia (?)
