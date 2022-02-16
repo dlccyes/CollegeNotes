@@ -1213,3 +1213,18 @@ $$\ln(1+x)\approx x$$
 
 ## Ch9 世代家庭的消費與儲蓄
 ### 世代家庭決策模型
+$$c_t+b_t=a_t+(1+r_{t-1})b_{t-1}\space,\space t=1,2,3,...$$
+$$s_t=(a_t+r_{t-1}b_{t-1})-c_t=b_t-b_{t-1}$$
+- 儲蓄 = 可支配所得 - 消費支出 = 期末 - 期初債券餘額
+- $c_1+b_1=a_1$
+- $c_2+b_2=a_2+(1+r)b_1$
+- $c_3+b_3=a_3+(1+r)b_2$
+- $c_1+\dfrac{c_2}{1+r}+\dfrac{b_2}{1+r}=a_1+\dfrac{a_2}{1+r}$
+- $b_2=\dfrac{c_3+b_3-a_3}{1+r}$
+- $c_1+\dfrac{c_2}{1+r}+\dfrac{c_3}{(1+r)^2}+\dfrac{b_3}{(1+r)^2}=a_1+\dfrac{a_2}{1+r}+\dfrac{a_3}{(1+r)^2}$
+	- lifetime wealth = 各期消費 & 最終債券餘額折現值
+- $$\sum_{t=1}^T \dfrac{c_t}{(1+r)^{t-1}}+\dfrac{b_T}{(1+r)^{T-1}}=\sum_{t=1}^T \dfrac{a_t}{(1+r)^{t-1}}$$
+	- $b_T=0$ if T is not infinite
+	- $lim_{T\rightarrow \infty}\dfrac{b_T}{(1+r)^{T-1}}=0$
+
+lifetime wealth = $$\sum_{t=1}^\infty\dfrac{c_t}{(1+r)^{t-1}}=\sum_{t=1}^\infty\dfrac{a_t}{(1+r)^{t-1}}\equiv x$$

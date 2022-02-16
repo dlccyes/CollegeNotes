@@ -84,6 +84,11 @@ change between `Prompt=normal` & `Prompt=LTS`
 
 <https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today>
 
+## 
+`ctrl+alt+f4` to disable gui
+
+`ctrl+alt+f1` to go back to gui
+
 ## power related
 <https://www.computernetworkingnotes.com/linux-tutorials/shutdown-reboot-suspend-and-hibernate-a-linux-system.html>
 ### shutdown
@@ -94,6 +99,40 @@ shutdown now
 ### sleep
 ```
 systemctl hybrid-sleep
+```
+
+### turn off screen
+```
+xset dpms force off
+```
+
+## session
+## command line sessions
+`ctrl+alt+f2-6`  
+would create session with TTY = tty2-6 respectively
+
+`ctrl+alt+f1` is the GUI session, so press this combination to go back to GUI
+l
+`logout` or `exit` to log out
+
+### list sessions
+```
+loginctl
+```
+
+### lock session
+```
+loginctl lock-session
+```
+
+### unlock session
+```
+loginctl unlock session <id>
+```
+
+### terminate session
+```
+loginctl terminate session <id>
 ```
 
 ## troubleshooting
@@ -219,6 +258,12 @@ for windows-linux dual-boot system
 ### good tools
 - kio-gdrive
 	- google drive network folder
+
+### type accent
+1. system settings -> keyboard -> advanced -> Position of Compose key -> select one as your compose key
+2. press compose key -> press ` -> press a -> à
+
+<https://askubuntu.com/a/993991>
 
 #### widgets
 - event calendar
