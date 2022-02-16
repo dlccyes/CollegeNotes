@@ -1210,3 +1210,6 @@ $$\ln(1+x)\approx x$$
 		- r increase
 		- a1 increase
 		- a2 decrease
+
+## Ch9 世代家庭的消費與儲蓄
+### 世代家庭決策模型

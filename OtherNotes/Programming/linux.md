@@ -294,3 +294,30 @@ drive pull -ignore-name-clashes
 ```
 drive push -ignore-name-clashes
 ```
+
+### copyq - clipboard manager
+<https://hluk.github.io/CopyQ/>
+
+#### install
+```
+sudo add-apt-repository ppa:hluk/copyq
+sudo apt update
+sudo apt install copyq
+```
+
+### battery
+#### powertop
+`tab` and go to "turnables", press enter on "bad" to make it "good"
+
+#### tlp
+<https://linrunner.de/tlp/usage/index.html>
+
+to start
+```
+sudo tlp start
+```
+
+check status
+```
+tlp-stat -s
+```

@@ -1,11 +1,17 @@
 # python
 
-## create requirements.txt
+## requirements.txt
+### create
 - for every libraries you have
 	- `python -m pip freeze > requirements.txt`
 - for a specific directory
 	- `pipreqs /path/to/project`
 	- https://stackoverflow.com/a/31684470/15493213
+
+### use
+```
+pip3 install -r requirements.txt
+```
 
 ## virtual environment
 ```
