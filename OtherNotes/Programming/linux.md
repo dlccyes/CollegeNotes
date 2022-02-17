@@ -254,6 +254,9 @@ for windows-linux dual-boot system
 - system settings -> window management -> kwin scripts -> enable MinimizeAll
 - set windows properties (size, position, bar, etc.)
 	- alt+f3 -> more actions -> special windows settings -> add property -> select and set as "Remember"
+- to set the shortcut switching trditional/simplified Chinese
+	- system settings -> input method -> configure addons
+	- <https://amigotechnotes.wordpress.com/2020/04/24/install-and-use-chinese-input-in-ubuntu/>
 
 ### good tools
 - kio-gdrive
