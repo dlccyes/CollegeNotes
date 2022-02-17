@@ -1,5 +1,6 @@
 ---
 layout: meth
+has_children: True
 ---
 # Industrial Organization
 {: .no_toc }
