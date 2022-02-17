@@ -97,6 +97,12 @@ shutdown now
 ```
 
 ### sleep
+suspend to RAM
+```
+systemctl suspend
+```
+
+to swap
 ```
 systemctl hybrid-sleep
 ```
