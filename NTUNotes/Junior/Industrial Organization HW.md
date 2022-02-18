@@ -14,6 +14,23 @@ parent: Industrial Organization
 </details>
 
 ## HW1
+### Problem 1 - Monsanto's Roundup
+![](https://i.imgur.com/6Avfj50.png)
+
+#### (1)
+0.91x1.22 > 1
+
+#### (2)
+- e = 22/(-9) = -2.44  
+- max profit price  = ??
+- Monsanto did not set the right price
+
+#### (3)
+Before the patent expired, they got a monopoly of the product, and because there are no substitutes, the price elasticity should be low, making the cutting-price strategy uneffective.
+
+Demand becomes more elastic in the long run.
+
+
 ### Problem 2 - car
 ![](https://i.imgur.com/ceAjMqX.png)
 ![](https://i.imgur.com/InSTSZo.png)
