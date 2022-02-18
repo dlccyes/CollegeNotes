@@ -70,5 +70,11 @@ rich
 - rich households use more water than poor ones, yet pay the same
 
 #### (3)
-underetimated
-- when facing a flat charge, the quantity of consumption does not affect the charge at all, so the calculated price elasticity would be very low
+underestimated
+- when facing a flat charge, the quantity of consumption does not affect the charge at all, meaning the marginal cost of using water is 0, so the calculated price elasticity would be very low
+
+#### (4)
+It should only be meaningful for people facing volume-based charge. For people facing flat charge, they would not reduce their water consumption at all.
+
+### Durable Goods
+![](https://i.imgur.com/nlzjdnL.png)
