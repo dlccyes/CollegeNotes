@@ -1213,6 +1213,7 @@ $$\ln(1+x)\approx x$$
 
 ## Ch9 世代家庭的消費與儲蓄
 ### 世代家庭決策模型
+#### budget constraint
 $$c_t+b_t=a_t+(1+r_{t-1})b_{t-1}\space,\space t=1,2,3,...$$
 $$s_t=(a_t+r_{t-1}b_{t-1})-c_t=b_t-b_{t-1}$$
 - 儲蓄 = 可支配所得 - 消費支出 = 期末 - 期初債券餘額
@@ -1228,3 +1229,23 @@ $$s_t=(a_t+r_{t-1}b_{t-1})-c_t=b_t-b_{t-1}$$
 	- $lim_{T\rightarrow \infty}\dfrac{b_T}{(1+r)^{T-1}}=0$
 
 lifetime wealth = $$\sum_{t=1}^\infty\dfrac{c_t}{(1+r)^{t-1}}=\sum_{t=1}^\infty\dfrac{a_t}{(1+r)^{t-1}}\equiv x$$
+
+#### choice
+lifetime utility = 各期 utility 折現加總
+$$max \space \sum_{t=1}^\infty\beta^{t-1}u(c_t)$$
+$$c_t+b_t=a_t+(1+r_{t-1})b_{t-1},\space\forall t$$ 
+$$b_0=0$$
+
+generalization: same choice for any t
+$$max \space \sum_{j=0}^\infty\beta^{j}u(c_{t+j})$$
+$$c_{t+j}+b_{t+j}=a_{t+j}+(1+r_{t+j-1})b_{t+j-1},\space\forall t,j$$ 
+marginal cost of savings ($c_t$ decrease) = marginal revenue of savings ($c_{t+1}$ increase)
+- $u'(c_t)=\beta u'(c_{t+1})(1+r_t)$
+- $u'(c_{t+1})=\beta u'(c_{t+2})(1+r_{t+1})$
+- $u'(c_t)=\beta^2 u'(c_{t+2})(1+r_t)(1+r_{t+1})$
+
+$$u'(c_t)=\beta^ju'(c_{t+j})(1+r_t)(1+r_{t+1})...(1+r_{t+j-1})$$
+任兩期消費的替代關係
+$$MRS_{t,t+j}=\dfrac{u'(c_t)}{\beta^ju'(c_{t+j})}=(1+r_t)(1+r_{t+1})...(1+r_{t+j-1})$$
+
+無套利空間條件

@@ -728,6 +728,22 @@ layout: meth
 - me voy = I'm leaving
 - (yo) tengo que irme = I have to leave
 - Navidad = Christmas
+- conducir = drive
+- alcohol /alcol/
+- aloharse = stay
+	- aloharse en un hotel
+- hotel accomodation plan
+	- pensión completa = full-board accomodation (all meals)
+	- media pensión (breakfast & lunch)
+	- alojamiento y desayuno (only breakfast)
+- maleta = suitcase
+- autoestop = 搭便車
+
+## cuando
+- de niño = when I was a kid
+- a los 20 años = when I was 20 yo
+- hace 10 años = 10 years ago
+- el semestre pasado
 
 ### practice
 - 2/16
@@ -739,7 +755,7 @@ layout: meth
 	- order
 		- 1977
 		- 2009
-		- el ano pasado
+		- el año pasado
 		- en julio
 		- hace tres meces
 		- en Navidad
@@ -748,4 +764,15 @@ layout: meth
 		- la semana pasada
 		- anteayer
 		- ayer
-		- el otro dia (?)
+		- el otro día (?)
+- 2/18
+	1. hace 7 años
+	2. hace 2 años
+	3. hace 2 años
+	4. hace 5 años
+	5. hace 1 mes
+	6. hace media años
+	7. hace 1 mes
+	8. hace 1 años
+	9. hace media años
+	10. nunca
