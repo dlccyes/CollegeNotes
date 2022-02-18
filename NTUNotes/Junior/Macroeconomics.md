@@ -1224,11 +1224,18 @@ $$s_t=(a_t+r_{t-1}b_{t-1})-c_t=b_t-b_{t-1}$$
 - $b_2=\dfrac{c_3+b_3-a_3}{1+r}$
 - $c_1+\dfrac{c_2}{1+r}+\dfrac{c_3}{(1+r)^2}+\dfrac{b_3}{(1+r)^2}=a_1+\dfrac{a_2}{1+r}+\dfrac{a_3}{(1+r)^2}$
 	- lifetime wealth = 各期消費 & 最終債券餘額折現值
-- $$\sum_{t=1}^T \dfrac{c_t}{(1+r)^{t-1}}+\dfrac{b_T}{(1+r)^{T-1}}=\sum_{t=1}^T \dfrac{a_t}{(1+r)^{t-1}}$$
-	- $b_T=0$ if T is not infinite
-	- $lim_{T\rightarrow \infty}\dfrac{b_T}{(1+r)^{T-1}}=0$
+
+$$\sum_{t=1}^T \dfrac{c_t}{(1+r)^{t-1}}+\dfrac{b_T}{(1+r)^{T-1}}=\sum_{t=1}^T \dfrac{a_t}{(1+r)^{t-1}}$$
+- $b_T=0$ if T is not infinite
+- $lim_{T\rightarrow \infty}\dfrac{b_T}{(1+r)^{T-1}}=0$
+	- 不一定要 $b_T\geq 0$
+	- as long as $b_T$ = constant, it's satisfied
+	- 無限期債券（只給利息，永遠不還本金）符合條件
 
 lifetime wealth = $$\sum_{t=1}^\infty\dfrac{c_t}{(1+r)^{t-1}}=\sum_{t=1}^\infty\dfrac{a_t}{(1+r)^{t-1}}\equiv x$$
+- no Ponzi
+	- g > r
+	- ???
 
 #### choice
 lifetime utility = 各期 utility 折現加總

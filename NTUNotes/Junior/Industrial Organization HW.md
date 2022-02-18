@@ -57,3 +57,18 @@ cross elasticity > 0
 - Accord Q up about 9.3% = 27.9k
 - Accord P down 2% -> Accord Q up 9.6%  
 - Taurus P down 3% -> Accord Q down 0.3%  
+
+### Water
+![](https://i.imgur.com/VzDzoHA.png)
+
+#### (1)
+bigger the total annual consumption, higher the elasticity
+- essential consumptions are inelastic
+
+#### (2)
+rich
+- rich households use more water than poor ones, yet pay the same
+
+#### (3)
+underetimated
+- when facing a flat charge, the quantity of consumption does not affect the charge at all, so the calculated price elasticity would be very low

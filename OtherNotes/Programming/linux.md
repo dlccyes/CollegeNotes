@@ -84,12 +84,8 @@ change between `Prompt=normal` & `Prompt=LTS`
 
 <https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today>
 
-## 
-`ctrl+alt+f4` to disable gui
-
-`ctrl+alt+f1` to go back to gui
-
 ## power related
+<https://userbase.kde.org/KDE_Connect/Tutorials/Useful_commands>
 <https://www.computernetworkingnotes.com/linux-tutorials/shutdown-reboot-suspend-and-hibernate-a-linux-system.html>
 ### shutdown
 ```
