@@ -95,6 +95,9 @@ layout: meth
 	- build a site yourself
 		- <https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwz0dx>
 
+## resume
+- [r/cscq resume sharing](https://www.reddit.com/r/cscareerquestions/comments/e8narz/official_excellent_and_exemplary_resume_sharing/)
+
 ## applying preparation
 - https://techinterviewhandbook.org/
 	- author of Blind 75
