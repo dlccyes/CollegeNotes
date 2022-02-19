@@ -104,10 +104,10 @@ in normal mode, type `18l` to to the 18th character in your current line
 `:18` to go to line 18
 
   
-### comment & uncomment
+## comment & uncomment
 https://stackoverflow.com/a/15588798/15493213
 
-#### comment
+### comment
 1.  go to start of line
 2.  ctrl+v (visual block)
 3.  select
@@ -115,16 +115,17 @@ https://stackoverflow.com/a/15588798/15493213
 5.  enter # or whatever
 6.  Esc → automatically inject the same thing to each line you select
     
-#### uncomment
+### uncomment
 1.  go to start of line
 2.  ctrl+v (visual block)
 3.  select
 4.  d
 
-### autocomplete
+## autocomplete
 `ctrl-x +`
 - `ctrl-n` → word completion
 - `ctrl-l` → line completion
+
 
 ## commands
 ### toggle commands
@@ -134,3 +135,7 @@ https://stackoverflow.com/a/15588798/15493213
 - `set ignorecase`
 - `set smartcase` to ignore case at all lowercase but sensitive otherwise
 	- need to have ignorecase on
+
+## other tips
+### open man page of current word
+`shift+k`

@@ -13,3 +13,6 @@ has_children: True
 {:toc}
 </details>
 
+## references
+- [xv6 textbook](https://pdos.csail.mit.edu/6.828/2020/xv6/book-riscv-rev1.pdf)
+

@@ -295,6 +295,13 @@ sudo update-alternatives --config editor
 ```
 <https://unix.stackexchange.com/a/204896>
 
+## libre office
+### draw
+#### redock pane
+`ctrl+shift+f10`  
+
+<https://ask.libreoffice.org/t/cant-dock-sidebar/40357/22>
+
 ## good programs
 ### scrcpy - control Android
 <https://github.com/Genymobile/scrcpy>
