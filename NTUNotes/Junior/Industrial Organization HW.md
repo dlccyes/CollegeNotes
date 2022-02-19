@@ -18,11 +18,13 @@ parent: Industrial Organization
 ![](https://i.imgur.com/6Avfj50.png)
 
 #### (1)
-0.91x1.22 > 1
+- 0.91x1.22 > 1
+- tillage price sensitive
 
 #### (2)
 - e = 22/(-9) = -2.44  
-- max profit price  = ??
+- max profit price = 26.55
+	- MC = P(1-1/e) = 45*(1-(1/2.44)) = 26.55 > 21 (international price)
 - Monsanto did not set the right price
 
 #### (3)
@@ -30,6 +32,14 @@ Before the patent expired, they got a monopoly of the product, and because there
 
 Demand becomes more elastic in the long run.
 
+increasing popularity of tillage
+
+#### (4)
+yes, as price decrease, elasticity becomes lower
+
+#### (5)
+High market share, in turn, allowed Monsanto to exploit economies of scale
+and work its way down the learning curve.
 
 ### Problem 2 - car
 ![](https://i.imgur.com/ceAjMqX.png)
@@ -78,3 +88,20 @@ It should only be meaningful for people facing volume-based charge. For people f
 
 ### Durable Goods
 ![](https://i.imgur.com/nlzjdnL.png)
+
+#### (1)
+- p1 = 450
+- q1 = 400
+- p2 = 150
+- q2 = 300
+
+#### (2)
+- 225000
+- 250000
+
+#### (3)
+賣一次
+500, 250
+
+#### (4)
+sell once
