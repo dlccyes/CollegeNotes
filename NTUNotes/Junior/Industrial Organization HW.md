@@ -18,13 +18,12 @@ parent: Industrial Organization
 ![](https://i.imgur.com/6Avfj50.png)
 
 #### (1)
-- 0.91x1.22 > 1
-- tillage price sensitive
+- Conservation tillage gained popularity over time, and it needs a nonselective herbicide like Roundup. As conservation tillage is sensitive to the price of herbicides, cutting price would decently increase sales for Roundup.
 
 #### (2)
 - e = 22/(-9) = -2.44  
 - max profit price = 26.55
-	- MC = P(1-1/e) = 45*(1-(1/2.44)) = 26.55 > 21 (international price)
+	- MR = MC = P(1-1/e) = 45*(1-(1/2.44)) = 26.55 > 21 (international price)
 - Monsanto did not set the right price
 
 #### (3)
@@ -35,7 +34,23 @@ Demand becomes more elastic in the long run.
 increasing popularity of tillage
 
 #### (4)
-yes, as price decrease, elasticity becomes lower
+![](https://i.imgur.com/1Qb0RT3.png)
+![](https://i.imgur.com/9e8quI6.png)
+
+- US e
+	- 1995 = -9.21
+	- 1996 = -2.33
+	- 1997 = -2.5
+	- 1998 = -2.79
+	- 1999 = -1.17
+	- 2000 = -1.04
+- internation e
+	- 1995 = -3.72
+	- 1996 = -2.71
+	- 1997 = -2.53
+	- 1998 = -2.63
+	- 1999 = -1.91
+	- 2000 = -0.2
 
 #### (5)
 High market share, in turn, allowed Monsanto to exploit economies of scale
@@ -49,7 +64,7 @@ and work its way down the learning curve.
 the change of price of a car obviously affects the quantity of the car itself the most
 
 #### (2)
-sells of Taurus increases as price of Accord increases, so they're substitutes
+sales of Taurus increases as price of Accord increases, so they're substitutes
 
 #### (3)
 Accord  
