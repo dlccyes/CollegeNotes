@@ -16,8 +16,8 @@ layout: meth
 
 ## resources
 - 影片
-	- all
-		- https://www.youtube.com/playlist?list=PLp29FF3ioia0StLO86w_xM0rYq0CKcLd5
+	- [上學期 playlist](https://www.youtube.com/playlist?list=PLp29FF3ioia0StLO86w_xM0rYq0CKcLd5)
+	- [下學期 playlist](https://www.youtube.com/playlist?list=PLp29FF3ioia1A-6TYff16io6PqnVZgQa1)
 	- W1 intro
 		- https://www.dropbox.com/s/n1usof8hkcrq3b8/macro_intro.mp4
 	- W2 macro measurement

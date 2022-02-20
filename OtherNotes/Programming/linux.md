@@ -222,6 +222,22 @@ for windows-linux dual-boot system
 	-  may need to `bcdedit /set {bootmgr} path \EFI\kubuntu\grubx64.efi` again to see your grub menu
 6. success
 
+## nvidia driver
+<https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-20-04-focal-fossa-linux>
+
+### check your graphic card
+```
+ubuntu-drivers devices
+```
+
+### install driver
+```
+sudo ubuntu-drivers autoinstall
+```
+
+and reboot
+
+
 ## KDE Plasma
 ### troubleshooting
 - everything too small -> display configuration -> global scale
