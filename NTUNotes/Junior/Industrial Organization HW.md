@@ -31,7 +31,11 @@ Before the patent expired, they got a monopoly of the product, and because there
 
 Demand becomes more elastic in the long run.
 
-increasing popularity of tillage
+increasing popularity of tillage, which is sensitive to the price of Roundup
+
+increase the market size, perparing for the competition to come
+
+
 
 #### (4)
 ![](https://i.imgur.com/1Qb0RT3.png)
@@ -120,3 +124,28 @@ It should only be meaningful for people facing volume-based charge. For people f
 
 #### (4)
 sell once
+
+## HW2
+### Problem 1 - Bundling of Office Suites
+![](https://i.imgur.com/EgLxs4o.png)
+
+#### (1)
+- $300 for Word
+	- 100x5 = 500
+	- 200x4 = 800
+	- 300x3 = 900
+	- 400x2 = 800
+- same for excel
+
+#### (2)
+- $500
+	- 500x5 = 2500
+	- 600x3 = 1800
+
+![](https://i.imgur.com/YaS5ysB.png)
+![](https://i.imgur.com/pADh6Wm.png)
+
+#### (3)
+$200
+
+#### (4)
