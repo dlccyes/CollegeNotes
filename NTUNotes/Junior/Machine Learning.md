@@ -49,3 +49,10 @@ layout: meth
 
 ## critical point
 ![](https://i.imgur.com/NE6Wcez.png)
+
+- eigen value all positive -> local minima
+- eigen value all negatuve -> local maxima
+- eigen value 有正有負 -> saddle points
+
+![](https://i.imgur.com/wnrUU3t.png)
+表示大部分時候都不是卡在 local minima，而是 saddle point
