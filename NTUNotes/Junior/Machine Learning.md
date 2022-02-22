@@ -16,7 +16,8 @@ layout: meth
 	- ![](https://i.imgur.com/HMfsboA.png)
 	- 微分取斜率
 	- 往左/右走多少 depends on 斜率
-	- local optimum problem
+	- 卡在 critical point (微分 = 0)
+		- local minima or saddle point
 - sigmoid function
 	- sigmoid(f(x)) = $e^{f(x)}$
 	- ![](https://i.imgur.com/QeRzyVt.png)
@@ -45,3 +46,6 @@ layout: meth
 	- early stopping
 	- regularization
 	- dropout
+
+## critical point
+![](https://i.imgur.com/NE6Wcez.png)
