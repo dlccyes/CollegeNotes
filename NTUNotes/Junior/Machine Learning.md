@@ -26,9 +26,22 @@ layout: meth
 - deep learning
 	- 堆很多層 ReLU
 	- 很多層 -> overfitting
+
+## general guidance
 - improving your model
 	- training loss big
 		- deeper network has bigger loss
 			- optimization problem
 		- model bias
 			- make model bigger, more complex
+	- training loss small. testing loss big
+		- overfitting
+
+### overfitting
+- ![](https://i.imgur.com/NK8JTCW.png)
+- to solve
+	- less parameters
+	- less features
+	- early stopping
+	- regularization
+	- dropout
