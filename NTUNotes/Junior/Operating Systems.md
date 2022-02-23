@@ -42,6 +42,7 @@ has_children: True
 - system call
 	- 請系統做一些事情
 	- interface to OS services
+	- system call 很少 -> 做得很 generic，接受很多 parameters -> 很難直接用，通常都經過 API
 - system boot 
 	1. bootstrap (in nonvolatile storage) find kernel
 	2. load kernel into memory
@@ -53,6 +54,15 @@ has_children: True
 			- process fails -> save memory state to core dump
 		- crash dump
 			- kernel fails -> save memory state to crash dump
+- distributed operating systems
+	- DOS, distributed operating systems
+		- tightly-coupled
+		- for homogeneous multicomputers
+	- NOS, network operating systems
+		- loosely-coupled
+		- for heterogeneous multicomputers
+	- middleware
+		- layer on top of NOS
 
 ## structure
 ### monolithtic
