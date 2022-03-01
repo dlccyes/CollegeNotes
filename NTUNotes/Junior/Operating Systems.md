@@ -18,12 +18,19 @@ has_children: True
 
 ## videos
 ### 林
-- [intro](https://www.youtube.com/watch?v=nk1Lyb3QW1M)
-- [structures](https://www.youtube.com/watch?v=TaDR2AtN8UU)
+- [Course Intro](https://www.youtube.com/watch?v=JYcRfdkhVGc)
+- [Intro](https://www.youtube.com/watch?v=nk1Lyb3QW1M)
+- [Structures](https://www.youtube.com/watch?v=TaDR2AtN8UU)
+- [Process](https://www.youtube.com/watch?v=CvXfW25jq2I)
 
 ### 施吉昇
-- [overview-1](https://www.youtube.com/watch?v=Yyuylbmw-iM)
-- [overview-2](https://www.youtube.com/watch?v=Z5u2xh0Y2QI)
+- [Course Info](https://www.youtube.com/watch?v=0QpWM5vYt-g)
+- [Intro](https://www.youtube.com/watch?v=a-1JqW5CjDQ)
+- [Overview-1](https://www.youtube.com/watch?v=Yyuylbmw-iM)
+- [Overview-2](https://www.youtube.com/watch?v=Z5u2xh0Y2QI)
+- [Process-1](https://www.youtube.com/watch?v=qAlOl-yopGU)
+- [Process-2](https://www.youtube.com/watch?time_continue=1&v=7vZIrVCW2ec)
+- [Process-3](https://www.youtube.com/watch?time_continue=1&v=K5g_6xl7fF4)
 
 ## intro
 - ![](https://i.imgur.com/C5gjElc.png)
