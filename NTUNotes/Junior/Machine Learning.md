@@ -120,3 +120,23 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 		- ![](https://i.imgur.com/0xl0LGa.png)
 		- ![](https://i.imgur.com/5OeAaf3.png)
 - ![](https://i.imgur.com/l5vBtyK.png)
+
+## classification
+- 希望 model output 接近 class 的值
+	- ![](https://i.imgur.com/B8C22qY.png)
+- represent class as one-hop vector (binary variable)
+	- ![](https://i.imgur.com/SnEsx9n.png)
+- softmax 
+	- nomalize to 0-1
+	- ![](https://i.imgur.com/fZxSonW.png)
+
+### loss
+- MSE
+- cross entropy
+	- minimize cross entropy = maximize likelihood
+	- pytorch cross entropy includes softmax already
+	- better than MSE
+		- easier for optimization
+			- ![](https://i.imgur.com/mbHe0RE.png)
+			- with MSE, when start at left top (y1 small,  y2 big, loss big), slope = 0 -> can't use gradient descent to reach right bottom (y1 big, y2 small, loss small)
+- ![](https://i.imgur.com/MGT1LCH.png)

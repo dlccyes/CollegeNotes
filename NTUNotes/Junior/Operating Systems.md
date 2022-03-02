@@ -124,3 +124,36 @@ has_children: True
 	- microkernels
 		- subsystems
 	- modular
+
+## process
+- program está en file system
+	- a static entity stored on disk
+- process está en CPU & Memory
+	- a progam in execution
+	- executable file of program loaded into memory -> process
+	- a program can have many processes
+- process is sequential
+	- parallel only in an operation, but each operation executed sequentially
+- parts of a process
+	- program code i.e. text section
+		- read only
+	- program counter, registers, etc.
+	- data section
+		- global variable
+		- inialized data
+			- have initial value
+		- uninitialized data
+			- no initial value
+	- heap
+		- dynamically allocated variable
+	- stack
+		- temporary data
+		- function parameters, return addresses, local variables
+		- recursively call function -> stack grows until reaching heap
+	- stack & heap share a space
+	- ![](https://i.imgur.com/y2A7pMu.png)
+	- ![](https://i.imgur.com/OF0zYlH.png)
+- each process has a virtual memory
+	- won't be accessed by another process
+	- OS converts virtual memory address to physical memory address
+- execution of a program: shell -> runtime environment -> load program -> process
