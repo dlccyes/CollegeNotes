@@ -2314,12 +2314,32 @@ layout: meth
 - autoestop = 搭便車
 - respuestas = response
 - costó = cost
+- no estory segura, pero creo que as falso = I'm not sure, but I think it's false
+- ni idea = no idea
+- a los quince años = at 15 yo 
+- publicó = publish
+- escolar = de la escuela
+- aquel mismo año = on that year
+- mecenas = sponsor
+- le estimuló = encourage him
+- labor artísca = trabajo artísco
+- continuar = continue
+- rechazó = reject
+- encargo = order
+- construcción = construction
+- ser atropellado = be run over
+- asesinar = assassinate
 
 ### cuando
 - de niño = when I was a kid
 - a los 20 años = when I was 20 yo
 - hace 10 años = 10 years ago
 - el semestre pasado
+
+## preterite
+- ser + preterite = be + verb
+- e.g.
+	- fue atropellado por un tranvía = he was run over by a streetcar
 
 ### practice
 - 2/16
@@ -2352,3 +2372,22 @@ layout: meth
 	8. hace 1 años
 	9. hace media años
 	10. nunca
+- 3/2
+	- Hitler quiso ser un artista. (T)
+	- Tesla nació en 1856. (T)
+	- Lionel Messi tuvo 4 hijos (F)
+	- Cristiano Ronaldo entrar en la universidad de Taiwan (F)
+	- Putin se divorció en 2014 (T)
+	- Tsai ing wun no se casó (T)
+	- a los quince años = at 15 yo 
+	- publicó = publish
+	- escolar = de la escuela
+	- aquel mismo año = in that year
+	- mecenas = sponser
+	- estimuló = encourage
+	- labor artísca = trabajo artísco
+	- continuar = continue
+	- rechazó = reject
+	- encargo = order
+	- construcción = construction
+	- fue atropellado = be run over
