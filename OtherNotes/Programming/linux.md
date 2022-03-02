@@ -137,6 +137,16 @@ loginctl unlock session <id>
 loginctl terminate session <id>
 ```
 
+## root shell
+- `sudo sh` to enter
+- different home directory `~`
+
+## cron
+- `sudo crontab -e` to enter root shell cron
+	- different from `crontab -e`
+- can't use `source` in cron
+	- just use `.`
+
 ## troubleshooting
 ### Windows time become UTC
 linux will set the hardware time to UTC  

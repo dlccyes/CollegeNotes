@@ -157,3 +157,5 @@ has_children: True
 	- won't be accessed by another process
 	- OS converts virtual memory address to physical memory address
 - execution of a program: shell -> runtime environment -> load program -> process
+- use `size` to get the size of each part (and the total size)
+- Mac OS reserves 4GB of lower memory on 64-bit processor for 32-bit codes
