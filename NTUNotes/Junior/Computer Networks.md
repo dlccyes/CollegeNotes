@@ -651,8 +651,61 @@ so there're many security problems now
 	- Skype
 - many firewalls block UDP
 
-#### application-layer protocols
+### video streaming
+#### streaming types
+##### HTTP streaming
+- one version of video, stored in an URL
+- TCP connection 
+- client GET for the video URL
+- server sends -> client collects bytes in buffer -> exceeds threashold -> playback
+- app periodically get frame from buffer -> decompress -> display
+- cons
+	- only one version, clients with different bandwidths still use the same video
 
+##### DASH streaming
+- Dynamic Adaptive Streaming over HTTP
+- many versions of videos
+	- differnt bit rates i.e. different quality
+	- stored in differnt URL
+	- manifest file
+		- URL for each version of video
+		- client requests manifest file first
+- client requests chunks of video segments, quality depends on current bandwidths
+	- measures the received bandwidth and runs rate determination algorithm to select next chunk
+- pros
+	- allows client to freely switch between different quality levels of videos
+		- important for mobile users
+
+#### Content Distribution Networks (CDN)
+- if use a single massive data center
+	- more likely to have lower througputs
+		- end-to-end throughput depends on bottleneck link
+		- client far from data center -> cross many communication links
+	- a video may be sent many times over the same link
+	- single point of failure
+- Content Distribution Networks (CDN)
+	- multiple geographically distributed servers
+	- direct user to best CDN
+	- types of CDN
+		- private CDN
+			- content provider's own CDN
+		- third-party CDN
+			- distributes content for multiple content providers
+	- server placements philosophies
+		- enter deep
+			- get close to users
+			- highly distributed
+			- lower delay & higher throughput
+			- hard to manage & maintain
+		- bring home
+			- a few large clusters
+			- more centralized
+			- higher delay & lower throughput
+			- easier to manage & maintain
+	- pull strategy
+		- basically cache
+		- get video and store a copy when requested
+		- remove not frequently requested videos when storage full
 
 ## Ch3 Transport Layer
 ### intro
