@@ -177,3 +177,20 @@ has_children: True
 - interrupt
 	- by scheduler
 	- system interrupt
+
+### process control block
+- record the info & status of process
+- infos
+	- process state 
+	- program counter
+	- CPU registers
+	- CPU scheduling info
+	- Memory-management info
+	- Accounting info
+	- I/O status info
+		- open file table
+	- ![](https://i.imgur.com/y1Eg7ek.png)
+- `task_struct` in linux
+	- ![](https://i.imgur.com/m0dyuOO.png)
+
+### multi-processor & multi-core

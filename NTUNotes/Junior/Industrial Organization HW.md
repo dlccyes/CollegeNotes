@@ -167,4 +167,31 @@ profit = 200x5M - 500M > 0, so yes
 sell at price = $326.599-\epsilon$ 
 profit = 2.177B - 500M > 0, so yes
 
-#### (7)
+#### (7) !!
+
+### location choice 
+![](https://i.imgur.com/sWhHplz.png)
+![](https://i.imgur.com/wYdWNBq.png)
+
+#### (1)
+2 shops, at 0.25 & 0.75
+
+- earn 3003 from each customer 
+	- $\sum_{k=0}^\infty \dfrac{4-1}{1.001^k}=3003$
+- each shop need at least $\dfrac{600000}{3003}=199.8$ customers to have positive profit
+- the country can have $\dfrac{1000}{200}=5$ shops max
+- max 0.5 miles between 2 shops
+- 2 shops for max profit, placed in 0.25 & 0.75
+
+#### (2)
+open 4 shops, at $0.25-\epsilon$, $0.25+\epsilon$, $0.75-\epsilon$, $0.75+\epsilon$
+
+#### (3)
+open 4 shops, at 0.2, 0.4, 0.6, 0.8
+
+#### (4)
+- no change for (1)
+- some changes for (2)
+	- CS Burgers would set price = $4-\epsilon$ and set up at $0.25\pm\epsilon$, $0.75\pm\epsilon$, this way they can get almost all customers
+- for (3)
+	- 
