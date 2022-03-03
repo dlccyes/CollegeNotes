@@ -707,6 +707,68 @@ so there're many security problems now
 		- get video and store a copy when requested
 		- remove not frequently requested videos when storage full
 
+#### CDN operation
+##### intercept & redirect request
+- suppose content provider NetCinema uses KingCDN to distributes its videos
+	- ![](https://i.imgur.com/6V5Xfgk.png)
+	1. user visit NetCinema.com
+	2. user click video link, user host sends DNS query for NetCinema.com to LDNS
+	3. LDNS passes DNS query to NetCinema authoritative DNS, which returns a hostname in KingCDN domain
+	4. LDNS sends query for xxx.kingcdn to KingCDN DNS, which return the IP of King CDN content server
+	5. LDNS passes IP to user host
+	6. client establishes TCP connection with the IP and sends GET request
+
+##### cluster selection strategy
+- direct client to a server cluster or data center within CDN
+- select geographically closest to LDNS
+	- cons
+		- may not be the shortest network path or path with fewest hop
+		- some users may use remote LDNSs
+		- ignore variation of path over time
+- real-time measurements
+	- CDN cluster periodically send probes (e.g. ping) to all LDNSs
+	- cons
+		- many LDNSs don't respond to probes
+
+#### case study
+##### Netflix 
+- runs on Amazon cloud
+	- ![](https://i.imgur.com/vI5i9Vw.png)
+	- uploads original videos to Amazon cloud
+	- Amazon cloud create different versions of videos
+	- Amazon cloud upload versions of videos to CDN
+- private CDNs
+	- support DASH
+	- push videos to CDN servers during off-peak hours
+		- doesn't use pull-caching (pull on demand and cache)
+		- big server racks contain all entire library
+		- small server racks contain only popular videos
+	- select a video -> Netflix on Amazon cloud finds CDN servers with that video -> select the best one -> sends client server IP & manifest file -> client & CDN server interacts with DASH
+		- don't need DNS to redirect to CDN server
+
+##### Youtube
+- use pull-caching
+- use DNS redirect
+- select CDN cluster with lowest RTT
+	- not always (for load balancing)
+- use HTTP streaming, not DASH
+	- requires user to select a version
+- client upload to server over HTTP
+- Google data center converts to Youtube format & create multiple versions
+
+##### Kankan
+- 迅雷看看 (???)
+- P2P
+	- similar to BitTorrent
+	- request chunks of video from other peers that have the video
+	- not using CDN because CDN is costly
+- hybrid CDN-P2P
+	- request beginning of contents from CDN servers
+		- short start-up delay
+	- if P2P is enough, only streams from peers
+		- reduce cost
+	- if P2P isn't enough, use hybrid CDN-P2P
+
 ## Ch3 Transport Layer
 ### intro
 - network laryer: host 2 host

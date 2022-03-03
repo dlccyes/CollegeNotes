@@ -134,28 +134,46 @@ has_children: True
 	- a program can have many processes
 - process is sequential
 	- parallel only in an operation, but each operation executed sequentially
-- parts of a process
-	- program code i.e. text section
-		- read only
-	- program counter, registers, etc.
-	- data section
-		- global variable
-		- inialized data
-			- have initial value
-		- uninitialized data
-			- no initial value
-	- heap
-		- dynamically allocated variable
-	- stack
-		- temporary data
-		- function parameters, return addresses, local variables
-		- recursively call function -> stack grows until reaching heap
-	- stack & heap share a space
-	- ![](https://i.imgur.com/y2A7pMu.png)
-	- ![](https://i.imgur.com/OF0zYlH.png)
+
+### parts of a process
+- program code i.e. text section
+	- read only
+- program counter, registers, etc.
+- data section
+	- global variable
+	- inialized data
+		- have initial value
+	- uninitialized data
+		- no initial value
+- heap
+	- dynamically allocated variable
+- stack
+	- temporary data
+	- function parameters, return addresses, local variables
+	- recursively call function -> stack grows until reaching heap
+- stack & heap share a space
+- ![](https://i.imgur.com/y2A7pMu.png)
+- ![](https://i.imgur.com/OF0zYlH.png)
 - each process has a virtual memory
 	- won't be accessed by another process
 	- OS converts virtual memory address to physical memory address
 - execution of a program: shell -> runtime environment -> load program -> process
 - use `size` to get the size of each part (and the total size)
 - Mac OS reserves 4GB of lower memory on 64-bit processor for 32-bit codes
+
+### requirements of running processes
+- multiplexing/time-sharing
+	- scheduling
+	- distribute resources to processes
+- isolation
+- interaction
+	- share data & code between processes
+
+### FSM of process
+![](https://i.imgur.com/U26qCqI.png)
+- resource not enough -> don't admit
+- running
+	- only this state uses CPU
+- interrupt
+	- by scheduler
+	- system interrupt

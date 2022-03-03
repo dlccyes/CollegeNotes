@@ -29,6 +29,15 @@ https://stackoverflow.com/a/58724503/15493213
 `vector<vector<vector<int>>> M(N, vector<vector<int>>(N, vector<int>(N)))`
 https://stackoverflow.com/a/9812469/15493213
 
+## for loop
+```
+for element in vec
+```
+=
+```
+for (auto & element : vec)
+```
+
 ## string
 `#include<string>`
 

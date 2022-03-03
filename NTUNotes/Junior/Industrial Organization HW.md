@@ -142,10 +142,29 @@ sell once
 	- 500x5 = 2500
 	- 600x3 = 1800
 
-![](https://i.imgur.com/YaS5ysB.png)
+![](https://i.imgur.com/kRQEdof.png)
 ![](https://i.imgur.com/pADh6Wm.png)
 
 #### (3)
-$200
+$profit=(P-MC)(1-\dfrac{P}{400})10M=P(1-\dfrac{P}{400})10M$
+
+profit maximized when P = 200
 
 #### (4)
+if sell seperately, total profit = 200x5Mx2 = 2B
+
+if sell in a bundle, profit = 2.177B > 2B when P = 326.599
+<https://math.stackexchange.com/a/357842>
+
+![](https://i.imgur.com/ZRrdfhR.png)
+![](https://i.imgur.com/t9We04G.png)
+
+#### (5)
+sell at price = $200-\epsilon$ 
+profit = 200x5M - 500M > 0, so yes
+
+#### (6)
+sell at price = $326.599-\epsilon$ 
+profit = 2.177B - 500M > 0, so yes
+
+#### (7)
