@@ -194,3 +194,37 @@ has_children: True
 	- ![](https://i.imgur.com/m0dyuOO.png)
 
 ### multi-processor & multi-core
+- multi-processor
+	- each processor has its own cache
+	- main memory & I/O shared with other processors via bus
+- multi-core
+	- many cores in a processor
+	- each core has its own L1 cache
+	- other caches shared between cores
+	- pros
+		- cache is faster
+- ![](https://i.imgur.com/RArGv9W.png)
+
+### multiple processor OS
+- one process for a processor at a time
+- schedule multiple processes to run on multiple processors simulteneously
+	- ![](https://i.imgur.com/xOy5b7L.png)
+
+#### multiple OS multiprocessor 
+- each processor has its own OS
+- memory & I/O shared among processors via bus
+- memory separated into blocks for each processor
+- ![](https://i.imgur.com/KvR8ids.png)
+
+#### master-slave multiprocessor
+- assymetric multiprocessing
+- run OS on master processor 
+- run processes on slave processors
+- memory & I/O shared among processors via bus
+- ![](https://i.imgur.com/Y435y7O.png)
+
+#### symmetric multiprocessor (SMP)
+- each processor has OS kernel
+- a global OS exists
+- global OS runs global queue, CPU then gets process from global queue and do self-scheduling with its own OS
+- ![](https://i.imgur.com/N0Qjobj.png)

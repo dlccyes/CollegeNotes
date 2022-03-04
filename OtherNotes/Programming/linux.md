@@ -109,7 +109,7 @@ xset dpms force off
 ```
 
 ## session
-## command line sessions
+## terminal emulator sessions
 `ctrl+alt+f2-6`  
 would create session with TTY = tty2-6 respectively
 
@@ -119,7 +119,7 @@ l
 
 ### list sessions
 ```
-loginctl
+loginctl list-sessions
 ```
 
 ### lock session
