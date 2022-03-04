@@ -2329,6 +2329,10 @@ layout: meth
 - construcción = construction
 - ser atropellado = be run over
 - asesinar = assassinate
+- premio = reward
+- concurso = contest
+- participar = participate
+- campeonato = championship
 
 ### cuando
 - de niño = when I was a kid
@@ -2336,7 +2340,7 @@ layout: meth
 - hace 10 años = 10 years ago
 - el semestre pasado
 
-## preterite
+### preterite
 - ser + preterite = be + verb
 - e.g.
 	- fue atropellado por un tranvía = he was run over by a streetcar
@@ -2391,3 +2395,25 @@ layout: meth
 	- encargo = order
 	- construcción = construction
 	- fue atropellado = be run over
+- 3/4
+	- se caso 2000
+	- gano un premio
+	- volvio a hacer otra peliculas
+	- se fue a zaragoza 1988
+	- nacio 1970
+	- tuvo un hijo
+	- termino los estudios 1993
+	- 1970 1988 1993 2000 2002 2004 2008
+	- Con quién se casó Juan?
+	- Dónde y en que año cuándo nació Marta?
+	- De qué uniersidad se graduó José?
+	- En qué concurso participó Marta?
+	- Lee An
+		- Dónde nació Ang Lee?
+		- De qué universidad se graduó?
+		- Con quién se casó?
+		- En que año nació su segundo hijo, Mason?
+		- En que ganó un premio?
+		- Cuál fue la primera película de Lee Ang?
+		- Qué película mucho éxito tuvo en todo el mundo?
+		- En que ganó premio al mejor director

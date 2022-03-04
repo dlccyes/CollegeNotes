@@ -194,4 +194,37 @@ open 4 shops, at 0.2, 0.4, 0.6, 0.8
 - some changes for (2)
 	- CS Burgers would set price = $4-\epsilon$ and set up at $0.25\pm\epsilon$, $0.75\pm\epsilon$, this way they can get almost all customers
 - for (3)
-	- 
+	- opposition can set price slightly lower than mine and steal away all customers, 500 customers max
+	- so set at 0.25 & 0.75 and set at price just enough to have profit with 500 customers
+		- 600000/500 = 1200
+		- 1200/1001 = 1.198
+		- so set price = 2.2
+
+#### (5)
+- if all information of each competitor is known, then first-mover has advantage
+- if competitors' info not known, then second-mover advantage
+
+#### (6)
+- 7-11 & family mart
+	- almost identical, perfect substitutes
+- vending machine
+
+### Coors in the 1970s
+**scenario**
+- Coors, A-B, Miller are 3 beer manufacturers in competition
+- Coors is in the west, while A-B & Miller in the east, so Coors dominates in the west
+- Coors doesn't spend big money on ad
+- A-B & Miller spend big money on ad
+- A-B wants to set up in the west
+	- if Coors does nothing, A-B will have positive ROI 
+	- if Coors conducts a marketing campaign, A-B will not have pcositive ROI
+		- before or during A-B the construction the plant
+	- the cost of settlement is spent preemptively, so once the construction starts, there's no going back
+- Coors has 3 strats to responds to A-B's possible expansion
+	- conducts a marketing campaign preemptively
+	- declares if A-B or Miller comes, they'll conduct a marketing campaign
+	- does nothing
+
+**Analyze the three scenarios using game theory and then recommend an action to Coors management.**
+
+2nd strategy, declares if A-B or Miller comes, they'll conduct a marketing campaign

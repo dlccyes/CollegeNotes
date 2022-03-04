@@ -336,11 +336,29 @@ sudo update-alternatives --config editor
 
 `scrcpy` to run
 
+connect your phone with USB cable -> on
+
 need to enable USB debugging in your phone's settings first
 
 tips
 - right click = back
 - wheel click = home
+
+### sdcv
+StarDict console version  
+
+[website](http://www.huzheng.org/stardict/)
+
+command line dictionary
+
+`apt install sdcv` to install
+
+find and download dictionaries [here](http://download.huzheng.org/dict.org/)
+
+`tar -xjvf <.bz2 file> -C ~/.stardict/dic` to use your dictionary  
+(`mkdir ~/.stardict; mkdir ~/.stardict/dic` first if you haven't)
+ 
+`sdcv word` to search for word
 
 ### drive
 it is very very slow, much slower than network folder
