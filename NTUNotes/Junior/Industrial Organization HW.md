@@ -160,14 +160,19 @@ if sell in a bundle, profit = 2.177B > 2B when P = 326.599
 ![](https://i.imgur.com/t9We04G.png)
 
 #### (5)
-sell at price = $200-\epsilon$ 
-profit = 200x5M - 500M > 0, so yes
+sell at price = $200-\epsilon$ for both
+profit = 200x5Mx2 - 500M > 0, so yes
 
 #### (6)
 sell at price = $326.599-\epsilon$ 
 profit = 2.177B - 500M > 0, so yes
 
 #### (7) !!
+sell at a price so that total profit = 500M
+
+- if sell seperately
+	- $2P(1-\dfrac{P}{400})10M=500M$  
+	- $P^2-400P+10000=0$
 
 ### location choice 
 ![](https://i.imgur.com/sWhHplz.png)
