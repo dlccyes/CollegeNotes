@@ -153,6 +153,7 @@ profit maximized when P = 200
 #### (4)
 if sell seperately, total profit = 200x5Mx2 = 2B
 
+![](https://i.imgur.com/RMgHp5Z.png)
 if sell in a bundle, profit = 2.177B > 2B when P = 326.599
 <https://math.stackexchange.com/a/357842>
 
@@ -164,17 +165,22 @@ sell at price = $200-\epsilon$ for both
 profit = 200x5Mx2 - 500M > 0, so yes
 
 #### (6)
+![](https://i.imgur.com/EjEmRo2.png)
+
 sell at price = $326.599-\epsilon$ 
 profit = 2.177B - 500M > 0, so yes
 
-#### (7) !!
+#### (7)
 sell at a price so that total profit = 500M
 
 - if sell seperately
 	- $2P(1-\dfrac{P}{400})10M=500M$  
 	- $P^2-400P+10000=0$
+- if sell as a bundle
+	- $(P-\dfrac{P^3}{2\times 400^2})10M=500M$
+	- P = 50.400
 
-### location choice 
+### Problem 2 - location choice 
 ![](https://i.imgur.com/sWhHplz.png)
 ![](https://i.imgur.com/wYdWNBq.png)
 
@@ -192,7 +198,7 @@ sell at a price so that total profit = 500M
 open 4 shops, at $0.25-\epsilon$, $0.25+\epsilon$, $0.75-\epsilon$, $0.75+\epsilon$
 
 #### (3)
-open 4 shops, at 0.2, 0.4, 0.6, 0.8
+open 3 shops, at 0.2, 0,5, 0.8
 
 #### (4)
 - no change for (1)
@@ -214,7 +220,7 @@ open 4 shops, at 0.2, 0.4, 0.6, 0.8
 	- almost identical, perfect substitutes
 - vending machine
 
-### Coors in the 1970s
+### Proeblem 3 - Coors in the 1970s
 **scenario**
 - Coors, A-B, Miller are 3 beer manufacturers in competition
 - Coors is in the west, while A-B & Miller in the east, so Coors dominates in the west

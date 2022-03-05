@@ -210,21 +210,81 @@ has_children: True
 - schedule multiple processes to run on multiple processors simulteneously
 	- ![](https://i.imgur.com/xOy5b7L.png)
 
-#### multiple OS multiprocessor 
+#### Multiple OS Multiprocessor 
 - each processor has its own OS
 - memory & I/O shared among processors via bus
 - memory separated into blocks for each processor
 - ![](https://i.imgur.com/KvR8ids.png)
 
-#### master-slave multiprocessor
+#### Master-Slave Multiprocessor
 - assymetric multiprocessing
 - run OS on master processor 
 - run processes on slave processors
 - memory & I/O shared among processors via bus
 - ![](https://i.imgur.com/Y435y7O.png)
 
-#### symmetric multiprocessor (SMP)
+#### Symmetric Multiprocessor (SMP)
 - each processor has OS kernel
 - a global OS exists
 - global OS runs global queue, CPU then gets process from global queue and do self-scheduling with its own OS
 - ![](https://i.imgur.com/N0Qjobj.png)
+
+#### Heterogeneous Multiprocessor
+- ![](https://i.imgur.com/4ZRSqn0.png)
+- big little architecture
+- big processors
+	- CPU intensive
+	- foreground
+- little processors
+	- I/O intensive
+	- background
+- used in Samsung, Apple chips
+
+### process scheduling
+- goal: maximize CPU use
+- ready queue
+	- multiple queue, priority queue
+	- single queue
+		- ![](https://i.imgur.com/ALSrwzW.png)
+- wait queue
+	- ![](https://i.imgur.com/S6fLR74.png)
+- I/O-bound process
+	- more I/O less computation
+- CPU-bound process
+	- more computation less I/O
+- lock
+	- spin lock
+		- try locking the resource endlessly -> CPU 100% -> be treated as CPU-bound process
+		- ![](https://i.imgur.com/M2WqA5V.png)
+	- mutex lock
+		- run only when resource is avaiable
+		- ![](https://i.imgur.com/tvuAPto.png)
+- queueing diagram
+	- ![](https://i.imgur.com/RYGOciC.png)
+- context switch
+	- context stored in PCB
+	- load the context (state, memory, code, etc.) of the new process when switching process
+	- pure overhead
+		- CPU runs no process when doing context switch
+		- direct cost
+			- load & store instruction
+		- indirect cost
+			- cache miss
+				- can happen even if some codes are prefetched, e.g. wrong branch prediction
+			- COLD cache
+				- cache blank
+	- ![](https://i.imgur.com/wj0nsV0.png)
+	- voluntarily & involuntarily context switch
+		- voluntarily context switch
+			- explicit request
+			- yield, sleep, request I/O, request to lock, make system call, etc.
+		- involuntarily context switch
+			- scheduling
+			- periodically resume/suspend
+		- I/O bound -> many voluntarily & involuntarily context switch
+		- CPU bound -> no voluntarily & little to no involuntarily context switch
+		- nanosleep()
+			- suspend process for a very short amount of time
+			- Mac OS implements it with spinlock -> involuntarily context switch
+			- Linux implements it the same as sleep() -> voluntarily context switch
+
