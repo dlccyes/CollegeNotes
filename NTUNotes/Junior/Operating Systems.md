@@ -288,3 +288,19 @@ has_children: True
 			- Mac OS implements it with spinlock -> involuntarily context switch
 			- Linux implements it the same as sleep() -> voluntarily context switch
 
+### communications
+- socket
+	- endpoint for communication
+- ip+port
+- server can listen to 5 clients max
+
+ #### remote procedure call
+- client-side stub
+	- locate server, packed up parameters (marshalling/serialization) and send
+- server-side stub
+	- receive message, unpacked parameters (unmarshalling/deserialization), perform procedures
+- ![](https://i.imgur.com/z1IylM9.png)
+- ![](https://i.imgur.com/92PDhLh.png)
+- ![](https://i.imgur.com/p50VMY6.png)
+
+

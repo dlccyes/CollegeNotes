@@ -1,8 +1,3 @@
----
-layout: meth
-parent: Industrial Organization
----
-# Industrial Organization HW
 {: .no_toc }
 
 <details open markdown="block">
@@ -14,6 +9,9 @@ parent: Industrial Organization
 </details>
 
 ## HW1
+[submission tex](Industrial_Organization_Assignment__1.tex)
+[submission pdf](Industrial_Organization_Assignment__1.pdf)  
+
 ### Problem 1 - Monsanto's Roundup
 ![](https://i.imgur.com/6Avfj50.png)
 
@@ -34,8 +32,6 @@ Demand becomes more elastic in the long run.
 increasing popularity of tillage, which is sensitive to the price of Roundup
 
 increase the market size, perparing for the competition to come
-
-
 
 #### (4)
 ![](https://i.imgur.com/1Qb0RT3.png)
@@ -154,6 +150,8 @@ profit maximized when P = 200
 if sell seperately, total profit = 200x5Mx2 = 2B
 
 ![](https://i.imgur.com/RMgHp5Z.png)
+![](https://i.imgur.com/EjEmRo2.png)
+
 if sell in a bundle, profit = 2.177B > 2B when P = 326.599
 <https://math.stackexchange.com/a/357842>
 
@@ -165,8 +163,6 @@ sell at price = $200-\epsilon$ for both
 profit = 200x5Mx2 - 500M > 0, so yes
 
 #### (6)
-![](https://i.imgur.com/EjEmRo2.png)
-
 sell at price = $326.599-\epsilon$ 
 profit = 2.177B - 500M > 0, so yes
 
@@ -176,6 +172,7 @@ sell at a price so that total profit = 500M
 - if sell seperately
 	- $2P(1-\dfrac{P}{400})10M=500M$  
 	- $P^2-400P+10000=0$
+	- P=26.795 (373.02 不合)
 - if sell as a bundle
 	- $(P-\dfrac{P^3}{2\times 400^2})10M=500M$
 	- P = 50.400
@@ -220,7 +217,7 @@ open 3 shops, at 0.2, 0,5, 0.8
 	- almost identical, perfect substitutes
 - vending machine
 
-### Proeblem 3 - Coors in the 1970s
+### Problem 3 - Coors in the 1970s
 **scenario**
 - Coors, A-B, Miller are 3 beer manufacturers in competition
 - Coors is in the west, while A-B & Miller in the east, so Coors dominates in the west
@@ -234,7 +231,7 @@ open 3 shops, at 0.2, 0,5, 0.8
 - Coors has 3 strats to responds to A-B's possible expansion
 	- conducts a marketing campaign preemptively
 	- declares if A-B or Miller comes, they'll conduct a marketing campaign
-	- does nothing
+	- does nothing1
 
 **Analyze the three scenarios using game theory and then recommend an action to Coors management.**
 

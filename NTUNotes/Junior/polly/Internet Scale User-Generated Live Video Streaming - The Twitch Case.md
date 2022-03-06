@@ -5,9 +5,8 @@ parent: polly
 # Internet Scale User-Generated Live Video Streaming: The Twitch Case
 {: .no_toc }
 
-[link](https://www.dropbox.com/s/lepurjink70hdbb/PAM17.pdf)
-
-[with my annotations](Internet Scale User-Generated Live Video Streaming The Twitch Case.pdf)
+[paper link](https://www.dropbox.com/s/lepurjink70hdbb/PAM17.pdf)  
+[paper pdf with my annotations](Internet Scale User-Generated Live Video Streaming The Twitch Case.pdf)
 
 <details open markdown="block">
   <summary>

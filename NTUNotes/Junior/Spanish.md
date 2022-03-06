@@ -2295,6 +2295,10 @@ layout: meth
         - el camarero se está duchando (F)
 
 ## Spanish 2-2
+### deberes
+#### deberes 1
+
+
 ### words 
 - preciosa = beautiful
 - como ves = as you see
