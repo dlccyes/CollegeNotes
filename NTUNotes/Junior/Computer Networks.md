@@ -1,4 +1,4 @@
-x---
+---
 aliases: [電網導]
 layout: meth
 title: Computer Networks
@@ -678,7 +678,7 @@ so there're many security problems now
 
 #### Content Distribution Networks (CDN)
 - if use a single massive data center
-	- more likely to have lower througputs
+	- more likely to have lower throughputs
 		- end-to-end throughput depends on bottleneck link
 		- client far from data center -> cross many communication links
 	- a video may be sent many times over the same link
@@ -734,9 +734,9 @@ so there're many security problems now
 ##### Netflix 
 - runs on Amazon cloud
 	- ![](https://i.imgur.com/vI5i9Vw.png)
-	- uploads original videos to Amazon cloud
-	- Amazon cloud create different versions of videos
-	- Amazon cloud upload versions of videos to CDN
+	- upload original videos to Amazon cloud
+	- software on Amazon cloud create different versions of videos
+	- software on Amazon cloud upload versions of videos to CDN
 - private CDNs
 	- support DASH
 	- push videos to CDN servers during off-peak hours
@@ -773,7 +773,7 @@ so there're many security problems now
 ### intro
 - network laryer: host 2 host
 - transport layer: process 2 process
-- www.ietf.org
+- <www.ietf.org>
 - ![](https://i.imgur.com/iMPrEhU.png)
 - UDP
 	- max 65535 = 2^16-1

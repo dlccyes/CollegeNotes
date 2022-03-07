@@ -233,6 +233,10 @@ open 3 shops, at 0.2, 0,5, 0.8
 	- declares if A-B or Miller comes, they'll conduct a marketing campaign
 	- does nothing1
 
+
+
 **Analyze the three scenarios using game theory and then recommend an action to Coors management.**
+
+![](https://i.imgur.com/60iqRy7.png)
 
 2nd strategy, declares if A-B or Miller comes, they'll conduct a marketing campaign
