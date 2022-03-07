@@ -43,7 +43,7 @@ parent: polly
 	- tiny channels tend to be served from US servers
 	- bigger channels are served from all 3 continents
 	- ![](https://i.imgur.com/xU42U6i.png)
-- San Francisco always serves first for North America, Amsterdam for EU, Seoul for Asia  
+- San Francisco always serves first for North America, Amsterdam for EU, Seoul for Asia
 
 ## Client Redirection and Traffic Localisation
 - traffic distribution for each continent
@@ -68,3 +68,5 @@ parent: polly
 	- decentralized caching useless for live streaming
 	- only replicate streams when the demand is high enough, on a per-region basis
 	- relies on effective peering & interconnection strategies
+
+## Polly's comments

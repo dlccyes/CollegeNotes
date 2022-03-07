@@ -666,7 +666,7 @@ so there're many security problems now
 - Dynamic Adaptive Streaming over HTTP
 - many versions of videos
 	- differnt bit rates i.e. different quality
-	- stored in differnt URL
+	- stored in different URL
 	- manifest file
 		- URL for each version of video
 		- client requests manifest file first
