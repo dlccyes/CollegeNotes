@@ -70,3 +70,4 @@ parent: polly
 	- relies on effective peering & interconnection strategies
 
 ## Polly's comments
+- reason why many Asia clients are redirected to US, may be that Asians watch a lot of US contents, but not enough to make Twitch push to Asia clusters
