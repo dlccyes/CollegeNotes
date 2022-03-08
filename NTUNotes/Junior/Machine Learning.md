@@ -67,7 +67,7 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 - small batch
 	- see few data in a batch
 	- more batch in an epoch
-	- can use parallel computing in a batch -> bigger epoch time
+	- can use parallel computing in a batch -> not necessarily bigger epoch time
 	- updates more noisy
 		- loss function different for each batch -> more noisy -> less likely to fall into local minima -> better training accuracy
 			- ![](https://i.imgur.com/GgC9im3.png)
@@ -140,3 +140,77 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 			- ![](https://i.imgur.com/mbHe0RE.png)
 			- with MSE, when start at left top (y1 small,  y2 big, loss big), slope = 0 -> can't use gradient descent to reach right bottom (y1 big, y2 small, loss small)
 - ![](https://i.imgur.com/MGT1LCH.png)
+
+
+## CNN
+- image classification
+	- 3D tensor
+		- length
+		- width
+		- channels
+			- RGB
+	- convert 3D tensor to 1D vector as input
+- ![](https://i.imgur.com/LB6yKi1.png)
+- alpha go
+	- 下圍棋: 19x19 (棋盤格子數) classification problem
+	- treat 棋盤 as an image and use CNN
+	- 格子 = pixel
+	- 49 channels in each pixel
+		- to store the status of the 格子
+	- 5x5 filter
+	- no pooling
+- intolerant to scaling & rotation
+	- to solve
+		- data augmentation
+			- rotate and scale first to let CNN know
+		- spatial transformer layer
+
+### receptive field
+- each neuron has a part as input, instead of giving in the whole image
+- ![](https://i.imgur.com/HH7094C.png)
+- typical settings
+	- kernel size = 3x3 (length x width)
+	- each receptive field has a set of neurons
+	- each receptive field overlaps
+		- s.t. otherwise things at the border can't be detected
+	- stride = the step, the distance between 2 receptive field
+	- when receptive field is over the image border, do padding i.e. filling values e.g. 0s -> zero padding
+	- ![](https://i.imgur.com/YAxnvFY.png)
+
+### filter
+- parameter sharing
+	- having dedicated neuron (e.g. identifying bird beak) at each receptive field is kind of a waste -> parameter sharing
+	- same weight
+- filter
+	- a set of weight
+	- used to identify certain patterns
+	- do inner product with receptive field -> feature map, then find fields giving big numbers
+		- ![](https://i.imgur.com/3saRWjG.png)
+		- ![](https://i.imgur.com/duxG4h8.png)
+- ![](https://i.imgur.com/0AqkWR4.png)
+- typical settings
+	- ![](https://i.imgur.com/03gpCu9.png)
+
+### convolution layer
+- fully connected
+	- complete flexibility
+	- can look at whole or only a small part
+- receptive field
+	- lower flexibility
+	- limited to only look at a small part
+- parameter sharing
+	- lowest flexibility
+	- forced to use shared parameters
+	- convolution layer
+	- bigger bias
+		- good for specific tasks e.g. image classification
+- ![](https://i.imgur.com/H8vynPQ.png)
+- neural network using convolutional layer -> CNN
+
+### pooling
+- subsampling, make image smaller
+- to reduce computation
+	- have enought compulation resource -> can omit pooling
+- max-pooling
+	- only select the larger number after applying filter
+	- ![](https://i.imgur.com/1a7nHw8.png)
