@@ -244,8 +244,24 @@ ubuntu-drivers devices
 ```
 sudo ubuntu-drivers autoinstall
 ```
-
 and reboot
+
+### check your nvidia GPU info
+```
+nvidia-smi
+```
+
+### select driver intel or nvidia
+```
+prime-select nvidia
+# or prime-select intel
+```
+and reboot
+
+to check what you're using
+```
+prime-select query
+```
 
 
 ## KDE Plasma

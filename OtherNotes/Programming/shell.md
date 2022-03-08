@@ -98,6 +98,13 @@ find all files in current directory & sub-directories of current directory
 - `sort -r` for reverse
 - `sort -k 2` to sort with 2nd column
 
+
+## alias
+- double quote -> evaluate at creation time
+	- ![](https://i.imgur.com/lYxsveB.png)
+- single quote -> evaluate at runtime
+	- ![](https://i.imgur.com/4PDOMd2.png)
+
 ## commands
 ### memory
 `free -h`

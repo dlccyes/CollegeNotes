@@ -89,6 +89,9 @@ git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{inser
 ### all commits
 - `git log`
 - `git reflog`
+	- every action
+- `git log --graph --decorate --oneline $(git rev-list -g --all)`
+	- tree graph of your git and where HEAD is at
 - commit counts
 	- `git rev-list HEAD --count`
 

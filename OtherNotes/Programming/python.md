@@ -13,12 +13,42 @@
 pip3 install -r requirements.txt
 ```
 
-## virtual environment
+## venv (virtual environment)
 ```
 python3 -m venv venv
 # echo venv/ >> .gitignore
 source venv/bin/activate
 ```
+
+## pyenv
+python version controller
+
+<https://github.com/pyenv/pyenv>
+
+### install
+```
+https://pyenv.run
+```
+
+add below to the end of `~/.bashrc`
+```
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
+```
+
+restart shell with `exec $SHELL` or just `source ~/.bashrc`
+
+<https://github.com/pyenv/pyenv-installer>
+
+
+### commands
+- `pyenv install <version>` to install e.g. 3.9.10
+- `pyenv uninstall <version>` to uninstall version
+- `pyenv versions` to see versions you have & the version you're using (like `git branch`)
+- `pyenv local <version>` to select your desired version **for this directory**
+	- `python3 -V` to check
+- `pyenv global <version>` to select your desired version for you machine
 
 ## exec
 to use in function, use `exec(string, globals())`
