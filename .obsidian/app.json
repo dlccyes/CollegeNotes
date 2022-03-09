@@ -2,7 +2,7 @@
   "promptDelete": false,
   "newFileLocation": "folder",
   "newFileFolderPath": "obs_autolink",
-  "useMarkdownLinks": false,
+  "useMarkdownLinks": true,
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "obs_attachment",
   "foldIndent": true,

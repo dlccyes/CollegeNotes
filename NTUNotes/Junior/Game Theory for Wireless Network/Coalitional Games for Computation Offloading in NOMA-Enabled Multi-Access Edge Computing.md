@@ -1,12 +1,10 @@
 ---
 tags: GT_Papers
-parent: Game Theory for Wireless Networks Papers
+parent: Game Theory for Wireless Networks
 layout: meth
 title: Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
 ---
 # Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
-[[Game Theory]]
-[[Game Theory Papers]]
 
 my part in 2021.10.29 Game Theory Study Group  Presentation: Coalition Game
 

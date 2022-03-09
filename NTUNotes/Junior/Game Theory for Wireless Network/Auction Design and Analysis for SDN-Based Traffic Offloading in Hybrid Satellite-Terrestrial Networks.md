@@ -2,13 +2,10 @@
 tags:
   - GT_Papers
 date updated: '2021-09-06T00:51:13+08:00'
-parent: Game Theory for Wireless Networks Papers
+parent: Game Theory for Wireless Networks
 layout: meth
 ---
 # Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks (H-STN)
-
-[[Game Theory]]
-[[Game Theory Papers]]
 
 ## intro
 ### 名詞

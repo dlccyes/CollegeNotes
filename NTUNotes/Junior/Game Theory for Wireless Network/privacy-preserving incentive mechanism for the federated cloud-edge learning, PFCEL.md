@@ -1,12 +1,10 @@
 ---
 tags: GT_Papers
-parent: Game Theory for Wireless Networks Papers
+parent: Game Theory for Wireless Networks
 layout: meth
 title: Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Learning
 ---
 # Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Learning
-[[Game Theory]] 
-[[Game Theory Papers]]
 ## intro
 - cloud-edge computing
   - three-layer

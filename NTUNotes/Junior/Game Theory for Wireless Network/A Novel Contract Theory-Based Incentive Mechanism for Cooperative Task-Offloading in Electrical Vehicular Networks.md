@@ -1,11 +1,9 @@
 ---
 tags: GT_Papers
-parent: Game Theory for Wireless Networks Papers
+parent: Game Theory for Wireless Networks
 layout: meth
 ---
 # A Novel Contract Theory-Based Incentive Mechanism for Cooperative Task-Offloading in Electrical Vehicular Networks
-[[Game Theory]] 
-[[Game Theory Papers]]
 
 2021.10.15 Game Theory Study Group  Presentation: Contract Theory
 

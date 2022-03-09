@@ -1,11 +1,9 @@
 ---
 tags: GT_Papers
-parent: Game Theory for Wireless Networks Papers
+parent: Game Theory for Wireless Networks
 layout: meth
 ---
 # A Game Theoretic Mechanism for Low-Cost M2M and Mission-Critical M2M
-[[Game Theory]] 
-[[Game Theory Papers]]
 2021.10.22 Game Theory Study Group  Presentation: Stackelberg game
 - M2M
 - H2H

@@ -1,8 +1,8 @@
 ---
-title: 魏宏宇專題
+title: Game Theory for Wireless Networks
 layout: meth
 ---
-# 魏宏宇專題
+# Game Theory for Wireless Networks
 {: .no_toc }
 
 <details open markdown="block">
@@ -13,7 +13,9 @@ layout: meth
 {:toc}
 </details>
 
-use [[Game Theory]] to solve resource allocation problems in wireless networking systems
+魏宏宇專題
+
+use [Game Theory](Game%20Theory.md) to solve resource allocation problems in wireless networking systems
 
 ## scenario 1
 ![](https://i.imgur.com/1xZKLPT.jpg)
@@ -25,7 +27,7 @@ use [[Game Theory]] to solve resource allocation problems in wireless networking
 - scenario
 	- users originally use the app on cloud, now they can choose to utilize the edge server's resource to host the app to achiever lower latency, at some cost (money)
 
-### same latency
+### 1 VM level
 - assumptions
 	- you can open unlimited (or at least n) VMs on edge server without any performance drop
 	- performance of a VM drops as more users use it
@@ -93,7 +95,7 @@ plt.show()
 ```
 ![](https://i.imgur.com/j6WUFP5.png)
 
-### different latency
+### multiple VM levels
 - settings
 	- $T$ = intrinsic latency of the app in the cloud
 	- $T_i$ = intrinsic latency of the app in edge server $i$ with only 1 user
@@ -120,22 +122,23 @@ plt.show()
 	- $cov(C_i, 1/T_i)>0$
 	- $C_i = \dfrac{c}{T_i}$, $c>0$
 	- $f(C_i)=a(\dfrac{1}{T_i})+b,a>0$
+
 #### simulation
-	- set a number so that 1 user in edge server still > in cloud first
-		- otherwise might need a coordinator?
-	- greedy
-	- a json containing all coalition
-		- each coalition is a json
-			- level
-				- cost & latency
-				- still in cloud -> level = Null
-			- members
-				- or just num of members
-	- a json to store all {member: coalition}
-	- to simplify, only consider join/switch first
-		- no merge, split etc.
+- set a number so that 1 user in edge server still > in cloud first
+	- otherwise might need a coordinator?
+- greedy
+- a json containing all coalition
+	- each coalition is a json
+		- level
+			- cost & latency
+			- still in cloud -> level = Null
+		- members
+			- or just num of members
+- a json to store all {member: coalition}
+- to simplify, only consider join/switch first
+	- no merge, split etc.
 - how to check every user and coalition and do operations?
-	- as in [[Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing]], select a user, get its coalition, randomly choose another coalition and see if it would change
+	- as in [Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing](Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing.md), select a user, get its coalition, randomly choose another coalition and see if it would change
 - steps
 	1. randomly select a user
 	2. get its coalition
@@ -145,7 +148,11 @@ plt.show()
 	- ![](https://i.imgur.com/aPrnCOn.png)
 	- ![](https://i.imgur.com/clPpdZt.png)
 
-### 方向
+#### findings
+- convergence
+- high cost -> low VM level, big coalitions (to share cost)
+
+### future direction
 - completion
 	- 隨便設數字模擬
 	- convergence proof

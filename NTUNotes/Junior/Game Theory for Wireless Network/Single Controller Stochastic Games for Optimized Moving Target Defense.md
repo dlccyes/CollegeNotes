@@ -1,12 +1,10 @@
 ---
 tags: GT_Papers
-parent: Game Theory for Wireless Networks Papers
+parent: Game Theory for Wireless Networks
 title: Single Controller Stochastic Games for Optimized Moving Target Defense
 layout: meth
 ---
 # Single Controller Stochastic Games for Optimized Moving Target Defense
-[[Game Theory]] 
-[[Game Theory Papers]]
 ## intro
 - strategically change its cryptographic techniques & keys
   - deter the acttacker
