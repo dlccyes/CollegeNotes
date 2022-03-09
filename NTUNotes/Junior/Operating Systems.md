@@ -303,4 +303,7 @@ has_children: True
 - ![](https://i.imgur.com/92PDhLh.png)
 - ![](https://i.imgur.com/p50VMY6.png)
 
-
+## threads & concurrency
+- explicit threading
+- implicit threading
+	- OS deals with most of the things
