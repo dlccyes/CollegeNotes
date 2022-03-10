@@ -23,3 +23,15 @@ head elements can also has class or id
 
 ## selector
 `[class*='xterm-dom-renderer-owner-']` → anything class containing `.xterm-dom-renderer-owner-`
+
+## responsive
+add
+```
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+and use 
+```
+@media (max-width){
+}
+```
+to write css for different width
