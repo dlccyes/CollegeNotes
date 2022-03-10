@@ -13,6 +13,12 @@ has_children: true
 {:toc}
 </details>
 
+## progress
+- 2022.3.7 
+	- [Internet Scale User-Generated Live Video Streaming - The Twitch Case](Internet%20Scale%20User-Generated%20Live%20Video%20Streaming%20-%20The%20Twitch%20Case.md)
+- 2022.3.14
+	- [Vantage - Optimizing video upload for time-shifted viewing ofsocial live streams](Vantage%20-%20Optimizing%20video%20upload%20for%20time-shifted%20viewing%20ofsocial%20live%20streams.md)
+
 ## meeting
 - 2022.3.7 14:00-15:02
 	- HLS streaming demo

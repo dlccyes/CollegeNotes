@@ -147,6 +147,27 @@ loginctl terminate session <id>
 - can't use `source` in cron
 	- just use `.`
 
+## xdg-open
+### see default opening app
+```
+xdg-mime query default <file type>
+```
+e.g.
+```
+xdg-mime query default text/html
+```
+
+### set default opening app
+<https://unix.stackexchange.com/questions/36380/how-to-properly-and-easily-configure-xdg-open-without-any-environment>
+
+```
+xdg-mime default <app> <file type>
+```
+e.g.
+```
+xdg-mime default firefox.desktop text/html
+```
+
 ## troubleshooting
 ### Windows time become UTC
 linux will set the hardware time to UTC  
