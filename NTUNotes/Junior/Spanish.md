@@ -2278,7 +2278,7 @@ layout: meth
 ## Spanish 2-2
 ### deberes
 #### deberes 1
-Hace 2 años, visitó Egipto con mi familia. Estuvo en verano, y Egipto está en un desierto, así que tuve mucho calor. Durante el primer día, llegamos al Cairo. Lo que más recuerdo del Cairo es el tráfico. El tráfico del Cairo es un desastre. No tiene el semáforo y carriles, todos los coches hace que querian! Muy interesante!
+Hace 2 años, visitó Egipto con mi familia. Estuvo en el verano, y Egipto está en un desierto, así que tuve mucho calor. Durante el primer día, llegamos al Cairo. Lo que más recuerdo del Cairo es el tráfico. El tráfico del Cairo es un desastre. No tiene el semáforo y carriles, todos los coches hace que querian! Muy interesante!
 
 Para los siguientes 5 días, fuimos al sur de Egipto al lado del Nilo en el autobús turístico, y volvímos al Cairo en el cruceno en el Nilo. Visitamos muchos templos bonitos, y comidos muchas comidas deliciosas.
 

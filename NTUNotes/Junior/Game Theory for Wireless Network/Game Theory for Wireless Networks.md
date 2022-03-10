@@ -1,6 +1,7 @@
 ---
 title: Game Theory for Wireless Networks
 layout: meth
+has_children: true
 ---
 # Game Theory for Wireless Networks
 {: .no_toc }

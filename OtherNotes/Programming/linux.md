@@ -158,8 +158,6 @@ xdg-mime query default text/html
 ```
 
 ### set default opening app
-<https://unix.stackexchange.com/questions/36380/how-to-properly-and-easily-configure-xdg-open-without-any-environment>
-
 ```
 xdg-mime default <app> <file type>
 ```
@@ -167,6 +165,14 @@ e.g.
 ```
 xdg-mime default firefox.desktop text/html
 ```
+
+<https://unix.stackexchange.com/questions/36380>
+
+### see app name
+```
+ls /usr/share/applications | less
+```
+<https://stackoverflow.com/questions/2060284>
 
 ## troubleshooting
 ### Windows time become UTC
@@ -192,7 +198,6 @@ set `GRUB_TIMEOUT_STYLE` to `menu`
 sudo update-grub
 ```
 <https://askubuntu.com/a/1182434>
-
 
 #### no Windows in grub menu
 `sudo os-prober` to see if Windows is identified  
