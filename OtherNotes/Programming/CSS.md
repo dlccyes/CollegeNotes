@@ -35,3 +35,9 @@ and use
 }
 ```
 to write css for different width
+
+## animation
+### equalizer
+- <https://codepen.io/elalemanyo/pen/wvjGYa>
+	- can view compiled HTML if don't want to use HAML
+- <https://codepen.io/yomateo/pen/ypbNrJ>

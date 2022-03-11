@@ -371,6 +371,16 @@ sudo update-alternatives --config editor
 <https://ask.libreoffice.org/t/cant-dock-sidebar/40357/22>
 
 ## good programs
+### ffmpeg
+#### mp4 to gif
+```
+ffmpeg -y -i *.mp4 -filter_complex "fps=10,scale=1080:-1:flags=lanczos,split[s0][s1  
+];[s0]palettegen=max_colors=256[p];[s1][p]paletteuse=dither=bayer" output.gif
+```
+<https://superuser.com/a/1695537>
+
+
+
 ### scrcpy - control Android
 <https://github.com/Genymobile/scrcpy>
 
