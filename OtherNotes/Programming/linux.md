@@ -64,6 +64,14 @@ from win10/11
 - no grub menu
 	- <https://itsfoss.com/no-grub-windows-linux/> 
 
+## package related
+### find package
+```
+apt-file search <package>
+```
+
+<https://unix.stackexchange.com/a/330069>
+
 ## upgrade
 for normal release
 ```
@@ -379,8 +387,6 @@ ffmpeg -y -i *.mp4 -filter_complex "fps=10,scale=1080:-1:flags=lanczos,split[s0]
 ```
 <https://superuser.com/a/1695537>
 
-
-
 ### scrcpy - control Android
 <https://github.com/Genymobile/scrcpy>
 
@@ -474,3 +480,17 @@ check status
 ```
 tlp-stat -s
 ```
+
+### alacritty 
+#### troubleshooting
+- install cargo & rust `curl https://sh.rustup.rs -sSf | sh`
+	- <https://doc.rust-lang.org/cargo/getting-started/installation.html>
+- no `cmake` error -> sudo apt install cmake`
+- no `fontconfig` error -> `sudo apt install libfontconfig1-dev`
+	- <https://unix.stackexchange.com/a/410783>
+- `error: linking with cc failed: exit status: 1` <br>`/usr/bin/ld: cannot find -lxcb-render`<br>-> `sudo apt install libxcb-render0-dev`
+	- <http://i-pogo.blogspot.com/2010/01/usrbinld-cannot-find-lxxx.html>
+	- use `apt-file search` to find what you have
+	- cannot find -lxcb-render -> install libxcb-render0-dev
+	- cannot find -lxcb-shape -> install libxcb-shape0-dev
+	- cannot find -lxcb-xfixes -> install libxcb-xfixes0-dev

@@ -305,5 +305,17 @@ has_children: True
 
 ## threads & concurrency
 - explicit threading
+	- manually create and terminate (join) threads
+	- ![](https://i.imgur.com/TE4YKgw.png)
 - implicit threading
 	- OS deals with most of the things
+- ![](https://i.imgur.com/vjZ4JYC.png)
+- ![](https://i.imgur.com/m4Crgo6.png)
+- for CPU
+	- register for each thread
+	- cache for each thread
+- for OS
+	- threads of a process shares come resources
+		- so multithreading takes a lot less resources then multiprocessing 
+	- overhead of context switch reduced
+		- thread-level context switch is lighter

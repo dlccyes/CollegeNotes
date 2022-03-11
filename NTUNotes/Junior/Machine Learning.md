@@ -214,3 +214,31 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 - max-pooling
 	- only select the larger number after applying filter
 	- ![](https://i.imgur.com/1a7nHw8.png)
+
+## self attention
+- input a (set of) vector(s)
+	- ![](https://i.imgur.com/moAtsBl.png)
+	- one-hot vector cons
+		- treat each as independent, but there may be some correlations for some
+	- graph -> a set of vectors
+- output label(s)
+- sequence labeling
+	- input.length = output.length
+		- give each a label
+	- can consider neighbor wil fully-connected network
+	- to consider the whole input sequence -> self-attention
+- can use self-attention multiple times
+	- ![](https://i.imgur.com/wtMQzsZ.png)
+	- FC = fully-connected
+	- use fully-connected to focus, use self-attention to consider the whole
+- computation
+	- ![](https://i.imgur.com/PKUO4so.png)
+	- $\alpha$ = attention score
+		- the correlation between 2 vectors
+			- ![](https://i.imgur.com/bcicrjz.png)
+		- 2 methods to compute
+			- ![](https://i.imgur.com/APFgzCt.png)
+			- left is more common
+- get all $\alpha$ and calculated weighted sum -> b1
+	- ![](https://i.imgur.com/AsUfGJJ.png)
+
