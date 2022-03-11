@@ -418,6 +418,13 @@ find and download dictionaries [here](http://download.huzheng.org/dict.org/)
  
 `sdcv word` to search for word
 
+### rclone
+install  
+```
+curl https://rclone.org/install.sh | sudo bash
+```
+
+
 ### drive
 it is very very slow, much slower than network folder
 
@@ -482,9 +489,10 @@ tlp-stat -s
 ```
 
 ### alacritty 
-#### troubleshooting
+#### install
 - install cargo & rust `curl https://sh.rustup.rs -sSf | sh`
 	- <https://doc.rust-lang.org/cargo/getting-started/installation.html>
+- install `cargo install alacritty`
 - no `cmake` error -> sudo apt install cmake`
 - no `fontconfig` error -> `sudo apt install libfontconfig1-dev`
 	- <https://unix.stackexchange.com/a/410783>
@@ -494,3 +502,11 @@ tlp-stat -s
 	- cannot find -lxcb-render -> install libxcb-render0-dev
 	- cannot find -lxcb-shape -> install libxcb-shape0-dev
 	- cannot find -lxcb-xfixes -> install libxcb-xfixes0-dev
+
+#### configuration
+put in `~/.alacritty.yml`  
+
+sample config is in [release page](https://github.com/alacritty/alacritty/releases)
+
+others' configs
+- nordic transparent <https://github.com/Anomic-cr/i3_dotfiles/blob/main/.config/alacritty/alacritty.yml>

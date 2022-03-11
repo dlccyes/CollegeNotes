@@ -72,6 +72,14 @@ find all files in current directory & sub-directories of current directory
 
 `find . -size +50M -100M`  
 
+## scp
+remote to local  
+```
+scp -P <port> <remote username>@<remote host>:path/to/file path/to/file
+```
+
+<https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/>
+
 ## processes
 - `ps aux`
 - `top`
