@@ -419,11 +419,21 @@ find and download dictionaries [here](http://download.huzheng.org/dict.org/)
 `sdcv word` to search for word
 
 ### rclone
-install  
+#### install  
 ```
 curl https://rclone.org/install.sh | sudo bash
 ```
 
+#### sync
+```
+rclone sync source dest
+```
+e.g.
+```
+rclone sync 大學講義筆記 zubar:大學講義筆記
+```
+
+for interative use (ask you to do or not to do each time), use `rclone sync -i`
 
 ### drive
 it is very very slow, much slower than network folder

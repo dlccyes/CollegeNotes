@@ -240,3 +240,24 @@ open 3 shops, at 0.2, 0,5, 0.8
 ![](https://i.imgur.com/60iqRy7.png)
 
 2nd strategy, declares if A-B or Miller comes, they'll conduct a marketing campaign
+
+## HW3
+- Aspartame is a very good sweetener, used in soft drinks
+- Monsanto has the patent of aspartame, branded as NutraSweet
+- HSC starts selling aspartament in Europe after the patent expired in Europe, but then NutraSweet cuts the price from $70 to $22-$30 per pounds
+	- HSC thus has negative profits
+	- Monsanto's revenue is also greatly reduced
+	- background
+		- patent expired few years earlier in Europe (small market) than in US (huge market)
+		- Monsanto cuts cost of aspartame production by 70% over 10 years
+	- intepretation
+		- Monsanto 殺雞儆猴, telling others don't even try to enter big markets like US when the patent expires
+		- slows down the production cost reduction of HSC
+	- result
+		- HSC slow down expansion
+		- HSC's not much of a competitor when US market opens
+		- Monsanto signs long-term contracts with Coke & Pessi before patent expires
+
+![](https://i.imgur.com/2rUvi58.png)
+
+- Monsanto's a huge firm with many products
