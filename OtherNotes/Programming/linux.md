@@ -253,6 +253,17 @@ sudo apt dist-upgrade
 ```
 according to <https://askubuntu.com/a/602> this is not an ideal solution
 
+### keyring
+github desktop & vscode may want your keyring everytime  
+solution:
+```
+sudo apt-get install seahorse
+```
+
+your keyrings would be displayed in searhorse, you can change them to blank to stop the annoyance
+
+<https://askubuntu.com/a/1270021>
+
 ## partition resize
 ### principles
 - can't directly resize the os partition you're currently on

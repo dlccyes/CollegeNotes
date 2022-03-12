@@ -178,7 +178,7 @@ has_children: True
 	- by scheduler
 	- system interrupt
 
-### process control block
+### Process Control Block (PCB)
 - record the info & status of process
 - infos
 	- process state 
@@ -319,3 +319,60 @@ has_children: True
 		- so multithreading takes a lot less resources then multiprocessing 
 	- overhead of context switch reduced
 		- thread-level context switch is lighter
+
+#### parallelism
+- multi-core
+- data parallelism
+	- different subset of data, same program on each core
+- task parallelism
+	- different program, same data on each core
+	- may be sequential or not
+	- for sequential, separate different stage/task of a program, do pipeline
+
+#### concurrency programming
+- multiple process single core
+	- context switch
+- multiple instruction multiple data (MIDI)
+	- task parallelism
+	- multi-core processor
+	- hyper-threading
+		- if current instruction is using floating-point unit, meaning ALU is idle, we can run the next instruction using ALU parallelly
+- single instruction multiple data (SIMD)
+	- data parallelism
+	- GPU, parallelly doing simple computation
+- zero instruction multiple data
+	- instruction embedded in chip, no need fetching
+	- addition & multiplication
+		- neuro network
+	- compuration in memory (CIM)
+		- analog or digital
+
+#### Thread Control Block (TCB)
+- storing info of a thread
+	- current state
+	- registers
+	- status
+	- program counter
+	- stack
+- ![](https://i.imgur.com/XnZasZD.png)
+
+#### benefits
+- more responsive
+- easier resource sharing
+- better economy
+	- thread creation cheaper than process creation
+	- lower overhead for thread switching than for context switching
+- better scalability
+	- utilize multicore
+
+#### Amdahl's Law
+speedup ratio of parallelism
+
+$$speedup\leq \frac{1}{S+\dfrac{1-S}{N}}$$
+$$lim_{s\rightarrow\infty}=\frac{1}{S}$$
+- S = portion not able to be parallelized
+- N = num of cores
+
+![](https://i.imgur.com/Os0BO5h.png)
+
+![](https://i.imgur.com/9ORxU3b.png)

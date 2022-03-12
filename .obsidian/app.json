@@ -26,5 +26,6 @@
   "spellcheckLanguages": [
     "en-US",
     "es"
-  ]
+  ],
+  "newLinkFormat": "relative"
 }
