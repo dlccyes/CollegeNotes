@@ -241,11 +241,15 @@ open 3 shops, at 0.2, 0,5, 0.8
 
 2nd strategy, declares if A-B or Miller comes, they'll conduct a marketing campaign
 
-## HW3
+## HW3 Aspartame
 - Aspartame is a very good sweetener, used in soft drinks
 - Monsanto has the patent of aspartame, branded as NutraSweet
-- HSC starts selling aspartament in Europe after the patent expired in Europe, but then NutraSweet cuts the price from $70 to $22-$30 per pounds
+- Cooperate with Ajinomoto (Japanese firm), getting tech support while giving out exclusive access to Japanese aspartame market 
+- European market opened
+	- HSC starts selling aspartament in Europe after the patent expired in Europe
+	- NutraSweet cuts the price from $70 to $22-$30 per pounds
 	- HSC thus has negative profits
+	- other competitors exit the European market
 	- Monsanto's revenue is also greatly reduced
 	- background
 		- patent expired few years earlier in Europe (small market) than in US (huge market)
@@ -257,7 +261,27 @@ open 3 shops, at 0.2, 0,5, 0.8
 		- HSC slow down expansion
 		- HSC's not much of a competitor when US market opens
 		- Monsanto signs long-term contracts with Coke & Pessi before patent expires
+- Canadian market opened
+	- HSC enters
+	- Monsanto has exclusive, multi-year contracts with customers
+		- include a clause meeting the lowest price on market from competitors
+- Asian market opened
+	- Japan imports HSC
+	- South Korea produces its own
+- new sweeteners
+	- many new types of sweetener produced in 1987-1988
+- timeline (NutraSweet's perspective)
+	- 1987 
+		- Europe patent expires
+		- HSC enters Europe
+		- Canada patent expires
+		- HSC enters Canada
+		- many new type sweeteners produced
+	- 1992 US patent expires
+	- 1993 Australia patent expires
 
 ![](https://i.imgur.com/2rUvi58.png)
 
-- Monsanto's a huge firm with many products
+- Monsanto provides “meet-or-release” and “most-favored-nation” clauses, so for the soft drink manufacturers, it's indifferent from embracing real competition instead of the contract cost-wise
+- it has been used for years, so the quality is guaranteed, meaning the risk is smaller
+- same cost + smaller risk -> more favorable

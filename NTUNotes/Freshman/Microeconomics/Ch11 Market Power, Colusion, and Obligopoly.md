@@ -4,7 +4,7 @@ parent: Microeconomics
 # Ch11 Market Power, Collusion, and Oligopoly
 
 ## Merger
-### horizontal
+### horizontal integration
 before merger: competitive (to where D=MC)  
 after merger: MC drops
 ![](https://i.imgur.com/R9Ju2dr.png)
@@ -19,6 +19,11 @@ and both consumers & producer gain
 if MC' = MC  
 ![](https://i.imgur.com/Oy73cFc.jpg)
 deadweight loss
+
+### vertical integration
+Say there's a upstream monopoly and downstream monopoly respectively. Upstream company would sell a monopoly price for downstream company, which is a part of the MC of downstream company. When they merge, Upstream would produces at MC = D, lowering the MC of downstream.
+
+![](https://i.imgur.com/Huinn2K.png)
 
 ## provide service
 resale price

@@ -182,6 +182,13 @@ ls /usr/share/applications | less
 ```
 <https://stackoverflow.com/questions/2060284>
 
+## config files locations
+- `~/.config`
+- `~/.local/share`
+
+some nice dotfiles
+- <https://github.com/Anomic-cr/i3_dotfiles>
+
 ## troubleshooting
 ### Windows time become UTC
 linux will set the hardware time to UTC  
@@ -299,6 +306,9 @@ prime-select query
 
 
 ## KDE Plasma
+### config files location
+<https://github.com/shalva97/kde-configuration-files>
+
 ### troubleshooting
 - everything too small -> display configuration -> global scale
 - `ctrl+alt+x` not working -> shortcuts -> enable clipboard actions
@@ -514,7 +524,7 @@ tlp-stat -s
 	- cannot find -lxcb-xfixes -> install libxcb-xfixes0-dev
 
 #### configuration
-put in `~/.alacritty.yml`  
+put in `~/.config/alacritty/alacritty.yml`  
 
 sample config is in [release page](https://github.com/alacritty/alacritty/releases)
 

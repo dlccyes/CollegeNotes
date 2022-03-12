@@ -1,7 +1,17 @@
 ---
 parent: Microeconomics
+layout: meth
 ---
-# 	Ch10 Monopoly
+# Ch10 Monopoly
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
 
 ## 核心概念
 for comepetition, 不管產量多少，價格都一樣  
@@ -9,7 +19,6 @@ for comepetition, 不管產量多少，價格都一樣
 
 but for monopoly, 產量提高時，價格降低  
 → MR = P - △P×先前Q
-
 
 ## Lerner Index
 ![](https://i.imgur.com/qo2ezEl.png)
