@@ -320,7 +320,7 @@ has_children: True
 	- overhead of context switch reduced
 		- thread-level context switch is lighter
 
-#### parallelism
+### parallelism
 - multi-core
 - data parallelism
 	- different subset of data, same program on each core
@@ -329,7 +329,7 @@ has_children: True
 	- may be sequential or not
 	- for sequential, separate different stage/task of a program, do pipeline
 
-#### concurrency programming
+### concurrency programming
 - multiple process single core
 	- context switch
 - multiple instruction multiple data (MIDI)
@@ -347,7 +347,7 @@ has_children: True
 	- compuration in memory (CIM)
 		- analog or digital
 
-#### Thread Control Block (TCB)
+### Thread Control Block (TCB)
 - storing info of a thread
 	- current state
 	- registers
@@ -356,7 +356,7 @@ has_children: True
 	- stack
 - ![](https://i.imgur.com/XnZasZD.png)
 
-#### benefits
+### benefits
 - more responsive
 - easier resource sharing
 - better economy
@@ -365,7 +365,7 @@ has_children: True
 - better scalability
 	- utilize multicore
 
-#### Amdahl's Law
+### Amdahl's Law
 speedup ratio of parallelism
 
 $$speedup\leq \frac{1}{S+\dfrac{1-S}{N}}$$
@@ -376,3 +376,47 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 ![](https://i.imgur.com/Os0BO5h.png)
 
 ![](https://i.imgur.com/9ORxU3b.png)
+
+### multithreading model
+- user level thread (ULT)
+	- thread libraries
+		- POSIX
+			- most popular
+		- Windows
+		- Java
+- kernel level thread (KLT)
+	- each OS has its own
+- mode switch
+	- switching between ULT & KLT
+- ![](https://i.imgur.com/lOp9nxN.png)
+	- kernel scheduler will schedule the black arrow processes
+- mapping from ULT to KLT
+	- ![](https://i.imgur.com/PGfP9Qg.png)
+	- not one-to-one
+	- if program doesn't need to use kernel mode -> no need KLT, use core directly
+		- e.g. simple math
+- OS only sees processes, not threads
+
+#### mapping from user to kernel threads
+- many-to-one
+	- ![](https://i.imgur.com/j2FBqIa.png)
+- one-to-one
+	- ![](https://i.imgur.com/QZi22LU.png)
+	- easy
+	- create 1 kernel thread for each user thread
+	- no user scheduling
+	- big overhead
+		- need to manage many kernel level threads
+	- popular
+- many-to-many
+	- ![](https://i.imgur.com/wFuYDC9.png)
+	- security issue
+		- a kernel thread may be used by multiple user threads -> need careful data protection
+	- most flexible
+	- diffucult to implement
+- two-level model
+	- ![](https://i.imgur.com/crSs2hU.png)
+	- popular
+	- many-to-many but also allows one-to-one
+
+### implicit threading
