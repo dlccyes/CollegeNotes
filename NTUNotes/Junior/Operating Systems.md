@@ -420,3 +420,14 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 	- many-to-many but also allows one-to-one
 
 ### implicit threading
+- thread pool
+	- create a pool of worker threads first
+	- pros
+		- serve faster
+		- resources used by app is limited
+	- ![](https://i.imgur.com/w0jyf7X.png)
+- worker threads
+	- threads created before requested
+	- idle before assignment -> not wasting resources
+	- won't be terminated after task done
+	- need to be explicitly free & shutdown
