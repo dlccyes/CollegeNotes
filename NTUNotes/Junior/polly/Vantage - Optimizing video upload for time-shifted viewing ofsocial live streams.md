@@ -32,8 +32,8 @@ parent: polly
 		- real-time
 		- time-shifted
 		- archived
-- Vintage
-	- live-streaming upload protocol
+- Vantage
+	- proposed live-streaming upload protocol for SLVS
 	- achievements
 		- significant latency improvement at minimal quality reduction
 		- 19.9% latency improvement (average)

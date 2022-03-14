@@ -146,12 +146,45 @@ plt.show()
 	3. see if this coalition can change level
 	4. randomly select another coalition, see if the user can join the coalition
 - simulation result
-	- ![](https://i.imgur.com/aPrnCOn.png)
-	- ![](https://i.imgur.com/clPpdZt.png)
+	- utility vs. iteration
+		- ![](https://i.imgur.com/aPrnCOn.png)
+		- ![](https://i.imgur.com/clPpdZt.png)
+	- different amount of users
+		- ![](https://i.imgur.com/d03TrTf.png)
+		- more users -> more time to converge
+	- different amount of levels
+		- a = 10
+		- ![](https://i.imgur.com/iOCe8ea.png)
+			- blue: all goes to lv3
+			- orange: all goes to lv5
+			- but all VM only has 1 user
+		- num of coalitions left vs. a
+			- no difference
+			- n = 50, lv = 10
+			- ![](https://i.imgur.com/bGmQc6a.png)
+		- avg VM level & coalition member counts vs. cost-latency ratio
+			- a = 10, n = 10
+			- ![](https://i.imgur.com/hoJ0Ziw.png)
+
+utility formula setting
+```py
+cost = {i:clr*i for i in range(1, lv+1)}    
+latency = {i:1/(clr*i) for i in range(1, lv+1)}        
+ def utility(level, ki):    
+	 # in cloud -> utility = 0    
+	 if not level: return 0    
+	    
+	 Ti = latency[level]    
+	 Ci = cost[level]    
+	 res = a*((Lc+T)-(Le+(ki)*Ti))-Ci/ki    
+	 return res
+```
+
 
 #### findings
 - convergence
-- high cost -> low VM level, big coalitions (to share cost)
+- high cost or low latency -> low VM level(no need chasing latency), big coalitions (to share cost)
+- low cost or high latency -> high VM level (for smaller latency), small coalitions (no need share cost)
 
 ### future direction
 - completion

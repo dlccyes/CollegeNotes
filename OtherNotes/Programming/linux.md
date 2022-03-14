@@ -20,8 +20,15 @@ kubuntu is ubuntu with KDE preinstalled
 from win10/11
 
 1. install kubuntu iso
-2. use [Etcher](https://www.balena.io/etcher/) to flash the iso to your USB
-	- only used for installation
+2. flash the iso to your USB -> bootable USB drive
+	- use [Etcher](https://www.balena.io/etcher/ 
+		- only used for installation
+	- use linux terminal
+		- steps
+			1. `lsblk` to see what's your USB's called
+			2. `sudo dd bs=4M if=<iso file> of=/dev/<USB disk e.g. sdb> conv=fdatasync status=progress`
+			3. wait until it terminated itself, then you're done
+		- <https://www.howtogeek.com/414574/how-to-burn-an-iso-file-to-a-usb-drive-in-linux/>
 3. partition your disk
 	- use 3rd party tool
 		- [Partition Wizard](https://www.partitionwizard.com/free-partition-manager.html)
@@ -45,7 +52,7 @@ from win10/11
 7. install kubuntu
 8. remove USB stick and enter bios menu again
 9. boot option -> move "boot with USB" back -> save and exit
-10. if still boot to Windows -> cmd as admin -> `bcdedit /set {bootmgr} path \EFI\kubuntu\grubx64.efi` -> reboot
+10. if still boot to Windows (no grub menu) -> cmd as admin -> `bcdedit /set {bootmgr} path \EFI\kubuntu\grubx64.efi` -> reboot
 11. you should see grub menu, now select kubuntu
 
 ### troubleshooting
@@ -260,7 +267,7 @@ solution:
 sudo apt-get install seahorse
 ```
 
-your keyrings would be displayed in searhorse, you can change them to blank to stop the annoyance
+your keyrings would be displayed in searhorse, right click on "default keyring" and change it (may be blank)
 
 <https://askubuntu.com/a/1270021>
 
