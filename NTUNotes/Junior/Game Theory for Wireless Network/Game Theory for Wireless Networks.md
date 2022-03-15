@@ -193,5 +193,11 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 - extension
 	- edge server
 		- tree
+			- randomize propagation delay
+			- use real-life settings (台北高雄屏東)
 		- multi-tier edge server
 			- e.g. 大安區 中正區
+			- the nearest server only points to a few user -> too expensive to use -> seek high level servers with more users under
+	- flunctuated num of users
+		- poisson
+		- (partially) racalling mechanism

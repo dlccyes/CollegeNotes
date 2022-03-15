@@ -141,6 +141,7 @@ layout: meth
 		- <https://www.fullstack.cafe/blog/kubernetes-interview-questions>
 
 ## interviews
+
 ### behavioral questions
 - nugget
 	- summary about the event
@@ -180,22 +181,29 @@ layout: meth
 	- Umbo CV & Appier
 		- <https://rain-wu.medium.com/94d514ac576>
 - 台灣大公司
-	- <https://chonyy.medium.com/944c81dca809>
-	- <https://hackmd.io/@lindaya0913/HkekYB1dPO>
-		- 很多很詳細
-	- <https://ptt-life.com/Soft_Job/l/LIFE.M.1622535654.A.079>
-		- 112 CS 全滅 哭
-	- <https://louisfghbvc.pixnet.net/blog/post/331156456>
-	- yahoo
+	- 大雜燴
+		- intern
+			- <https://chonyy.medium.com/944c81dca809>
+			- <https://hackmd.io/@lindaya0913/HkekYB1dPO>
+		- <https://juihsiuhsu.medium.com/68ee9411e4d1>
+			- 台大學碩輔資工
+			- [ptt version](https://www.ptt.cc/bbs/Soft_Job/M.1626282169.A.4BD.html)
+		- <https://ptt-life.com/Soft_Job/l/LIFE.M.1622535654.A.079>
+			- 112 CS 全滅 哭
+		- <https://medium.com/@kevin1kevin1k/9906bfeaaecc>
+			- 台大資工學碩
+			- [ptt version](https://www.ptt.cc/bbs/Soft_Job/M.1628227346.A.7C5.html)
+		- <https://louisfghbvc.pixnet.net/blog/post/331156456>
+			- 學店
+	- Yahoo
 		- <https://bookgin.tw/2017/09/02/2017-yahoo-實習心得/>
 	- Line Pay
 		- <https://angelswengineer.medium.com/d9c36d28615>
-	- <https://www.ptt.cc/bbs/Soft_Job/M.1626282169.A.4BD.html>
-- google Taiwan
-	- <https://keep-brain-alive.com/taiwan-google-interview-experience/>
-- Amazon Taiwan
-	- <https://www.dcard.tw/f/job/p/236316977>
-	- <https://jackkuo.org/post/台灣亞馬遜實習心得/>
+	- Google
+		- <https://keep-brain-alive.com/taiwan-google-interview-experience/>
+	- Amazon
+		- <https://www.dcard.tw/f/job/p/236316977>
+		- <https://jackkuo.org/post/台灣亞馬遜實習心得/>
 - FAANG
 	- <https://reddit.com/eitna9> (removed)
 		- all FAAMG detailed interview process 

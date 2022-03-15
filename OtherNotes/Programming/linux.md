@@ -357,7 +357,8 @@ prime-select query
 - `alt+f3` to show options for current window
 - `super+left click` on any window to move
 - `super+right click` on any window to resize
-- system settings -> window management -> kwin scripts -> enable MinimizeAll
+- for windows-like show desktop
+	- system settings -> window management -> kwin scripts -> enable MinimizeAll
 - set windows properties (size, position, bar, etc.)
 	- alt+f3 -> more actions -> special windows settings -> add property -> select and set as "Remember"
 - to set the shortcut switching trditional/simplified Chinese
