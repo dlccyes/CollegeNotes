@@ -125,6 +125,20 @@ plt.show()
 	- $f(C_i)=a(\dfrac{1}{T_i})+b,a>0$
 
 #### simulation
+utility formula & numeric setting
+```py
+cost = {i:clr*i for i in range(1, lv+1)}    
+latency = {i:1/(clr*i) for i in range(1, lv+1)}        
+ def utility(level, ki):    
+	 # in cloud -> utility = 0    
+	 if not level: return 0    
+	    
+	 Ti = latency[level]    
+	 Ci = cost[level]    
+	 res = a*((Lc+T)-(Le+(ki)*Ti))-Ci/ki    
+	 return res
+```
+
 - set a number so that 1 user in edge server still > in cloud first
 	- otherwise might need a coordinator?
 - greedy
@@ -165,20 +179,6 @@ plt.show()
 		- avg VM level & coalition member counts vs. cost-latency ratio
 			- a = 10, n = 10
 			- ![](https://i.imgur.com/hoJ0Ziw.png)
-
-utility formula setting
-```py
-cost = {i:clr*i for i in range(1, lv+1)}    
-latency = {i:1/(clr*i) for i in range(1, lv+1)}        
- def utility(level, ki):    
-	 # in cloud -> utility = 0    
-	 if not level: return 0    
-	    
-	 Ti = latency[level]    
-	 Ci = cost[level]    
-	 res = a*((Lc+T)-(Le+(ki)*Ti))-Ci/ki    
-	 return res
-```
 
 
 #### findings
