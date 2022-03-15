@@ -186,10 +186,8 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 - high cost or low latency -> low VM level(no need chasing latency), big coalitions (to share cost)
 - low cost or high latency -> high VM level (for smaller latency), small coalitions (no need share cost)
 
-### future direction
-- completion
-	- 隨便設數字模擬
-	- convergence proof
+### todo
+- convergence proof
 - extension
 	- edge server
 		- tree

@@ -1,6 +1,6 @@
 # Vim
 
-## my `~/.vimrc`
+## my ~/.vimrc
 `export TERM=xterm-256color` for color theme to take effect
 
 ```vim

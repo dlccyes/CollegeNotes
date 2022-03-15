@@ -260,6 +260,14 @@ sudo apt dist-upgrade
 ```
 according to <https://askubuntu.com/a/602> this is not an ideal solution
 
+about dist-upgrade:  
+
+> dist-upgrade intelligently handles changing dependencies with new versions of packages
+
+can also use `apt full-upgrade` (es el versión nuevo)
+
+<https://askubuntu.com/a/81594>
+
 ### keyring
 github desktop & vscode may want your keyring everytime  
 solution:
@@ -270,6 +278,16 @@ sudo apt-get install seahorse
 your keyrings would be displayed in searhorse, right click on "default keyring" and change it (may be blank)
 
 <https://askubuntu.com/a/1270021>
+
+### KDE plasma animation gone
+```
+alt+shift+f12
+```
+to enable compositor
+
+plasma desktop effects need compositor to work 
+
+<https://www.reddit.com/r/kde/comments/hymqco/comment/fzdotuo>
 
 ## partition resize
 ### principles
