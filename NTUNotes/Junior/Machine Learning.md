@@ -241,4 +241,23 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 			- left is more common
 - get all $\alpha$ and calculated weighted sum -> b1
 	- ![](https://i.imgur.com/AsUfGJJ.png)
-
+- full calculation
+	- ![](https://i.imgur.com/XZp8Ae6.png)
+	- ![](https://i.imgur.com/JvbptC8.png)
+	- ![](https://i.imgur.com/yCO691y.png)
+- multi-head
+	- ![](https://i.imgur.com/WqxjoZz.png)
+	- ![](https://i.imgur.com/xG9i6xJ.png)
+- positional
+	- normal self-attention is indifferent to position -> add positional vector yourselfof 
+	- ![](https://i.imgur.com/TA28g2o.png)
+- truncated self-attention
+	- not seeing the whole 
+	- speech
+- CNN is a special case of self-attention
+	- CNN is simplified self-attention (only see receptive field)
+- RNN
+	- recurrent neural network
+	- largely replaced by self-attention
+	- RNN is sequential -> slow
+	- ![](https://i.imgur.com/C1iOGz4.png)

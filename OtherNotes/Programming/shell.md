@@ -94,6 +94,15 @@ scp -P <port> <remote username>@<remote host>:path/to/file path/to/file
 - append to file
 	- `echo haha >> file.txt`
 
+## curl
+curl + python to extract json
+
+e.g.
+```bash
+curl -s "http://ws.audioscrobbler.com/2.0/?method=user.getrec  
+enttracks&user=<user>&api_key=<api key>&format=json" | python3 -c "import json,sys;result=json.load(sys.stdin);print(result['recenttracks']['track'][0]['name'])"
+```
+
 ## disk
 - size of all top level directories
 	- `du -sh *`
