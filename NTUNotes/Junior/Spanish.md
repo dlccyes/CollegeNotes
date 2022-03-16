@@ -1752,6 +1752,7 @@ layout: meth
 - quitarse = take off
 - apagar = turn off
 - besar = kiss
+	- besarme mucho
 - retirar dinero = withdraw money
 - alquilar = rent
 - perder = lose
@@ -2329,6 +2330,16 @@ Egipto esta rico en cultura y historia! Me encanta mucho!
 - but = pero = sin embargo
 - when he's 50 yo = a los 50 años = cuando tenía 50 años
 - muchos años después = after many years
+- bajar un poco (la televisión) = turn the volume down a little
+- permiso & favor
+	- permiso
+		- can I do something
+		- puedo ... ?
+	- favor
+		- can you do something
+		- puedes ... ?
+- cargado = 悶
+	- el ambiente está cargado
 
 ### cuando
 - de niño = when I was a kid
@@ -2343,7 +2354,27 @@ Egipto esta rico en cultura y historia! Me encanta mucho!
 - e.g.
 	- fue atropellado por un tranvía = he was run over by a streetcar
 
+### imperativo
+- 命令式
+- 重音變到倒數第二個
+	- ha**blar** -> **ha**bla
+- ![](https://i.imgur.com/b0GL6mZ.png)
+- ![](https://i.imgur.com/ewqCdEP.png)
+- without 受詞
+	- ![](https://i.imgur.com/8InMXbV.png)
+- with 受詞
+	- ![](https://i.imgur.com/U9F005m.png)
+	- amame = luv me
+
 ### practice
+- 3/16
+	- Di una palabra en español
+	- Toca tu cabeza
+	- Comprame una casa en Taipei
+	- Traeme un boligrafo
+	- Abrira un libro
+	- Bebe agua
+	- Escucha el professor
 - 3/9
 	- bio por Julian
 		- nació en 2001
