@@ -22,15 +22,21 @@ has_children: True
 - [Intro](https://www.youtube.com/watch?v=nk1Lyb3QW1M)
 - [Structures](https://www.youtube.com/watch?v=TaDR2AtN8UU)
 - [Process](https://www.youtube.com/watch?v=CvXfW25jq2I)
+- [Threads & Concurrency](https://www.youtube.com/watch?v=uxXtXGW2VDQ)
+- [Main Memory](https://www.youtube.com/watch?v=AeONYfNXGaE)
 
 ### 施吉昇
 - [Course Info](https://www.youtube.com/watch?v=0QpWM5vYt-g)
 - [Intro](https://www.youtube.com/watch?v=a-1JqW5CjDQ)
-- [Overview-1](https://www.youtube.com/watch?v=Yyuylbmw-iM)
-- [Overview-2](https://www.youtube.com/watch?v=Z5u2xh0Y2QI)
-- [Process-1](https://www.youtube.com/watch?v=qAlOl-yopGU)
-- [Process-2](https://www.youtube.com/watch?time_continue=1&v=7vZIrVCW2ec)
-- [Process-3](https://www.youtube.com/watch?time_continue=1&v=K5g_6xl7fF4)
+- [Overview 1](https://www.youtube.com/watch?v=Yyuylbmw-iM)
+- [Overview 2](https://www.youtube.com/watch?v=Z5u2xh0Y2QI)
+- [Process 1](https://www.youtube.com/watch?v=qAlOl-yopGU)
+- [Process 2](https://www.youtube.com/watch?time_continue=1&v=7vZIrVCW2ec)
+- [Process 3](https://www.youtube.com/watch?time_continue=1&v=K5g_6xl7fF4)
+- [Threads & Concurrency 1](https://www.youtube.com/watch?v=LlMN1Nlf-mM)
+- [Threads & Concurrency 2](https://www.youtube.com/watch?v=d6t2FF4rqi0)
+- [Threads & Concurrency 3](https://www.youtube.com/watch?v=e1BeL_Enn9w)
+- [Threads & Concurrency 4](https://www.youtube.com/watch?v=utyd7b3j73M)
 
 ## intro
 - ![](https://i.imgur.com/C5gjElc.png)
@@ -420,14 +426,22 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 	- many-to-many but also allows one-to-one
 
 ### implicit threading
-- thread pool
-	- create a pool of worker threads first
-	- pros
-		- serve faster
-		- resources used by app is limited
-	- ![](https://i.imgur.com/w0jyf7X.png)
+#### thread pool
+- create a pool of worker threads first
+- pros
+	- serve faster
+	- resources used by app is limited
+- ![](https://i.imgur.com/w0jyf7X.png)
 - worker threads
 	- threads created before requested
 	- idle before assignment -> not wasting resources
 	- won't be terminated after task done
 	- need to be explicitly free & shutdown
+
+#### fork join
+- ![](https://i.imgur.com/LjrsNxU.png)
+- divide and conquer
+- ![](https://i.imgur.com/hddFgUM.png)
+
+#### OpenMP
+- create as many threads
