@@ -182,6 +182,11 @@ ref:
 git remote -v
 ```
 
+### push to another remote
+```
+git push <remote>
+```
+
 ### add remote
 ```
 git remote add origin2 http://gitlab.com/name/repo

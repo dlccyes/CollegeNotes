@@ -371,7 +371,8 @@ has_children: True
 - better scalability
 	- utilize multicore
 
-### Amdahl's Law
+### speedup
+**Amdahl's Law**  
 speedup ratio of parallelism
 
 $$speedup\leq \frac{1}{S+\dfrac{1-S}{N}}$$
@@ -444,4 +445,11 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 - ![](https://i.imgur.com/hddFgUM.png)
 
 #### OpenMP
-- create as many threads
+- create as many threads (as num of cores)
+- speedup
+	- ![](https://i.imgur.com/7rg5GdY.png)
+	- capped by num of cores
+
+#### Grand Central Dispatch (GCD)
+- Apple
+- thread pool

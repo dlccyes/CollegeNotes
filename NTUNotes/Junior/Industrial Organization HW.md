@@ -327,11 +327,14 @@ $E = [0.649, 6.5625]$
 
 #### (4)
 $q_1=11-2\sqrt{E}$
+
+$q_1$ vs. E
 ![](https://i.imgur.com/1g8B9a5.png)
-???
 
-![](https://i.imgur.com/AefA3lC.png)
+the curve fits when $5.5\leq q_1\leq 9.389$
+$q_1 = 5.5$, otherwise
 
+not an inversed-U shape tho
 
 ### Honest Tea
 <https://www.youtube.com/watch?v=V17RYNfwIZ0>
@@ -359,20 +362,16 @@ $q_1=11-2\sqrt{E}$
 ![](https://i.imgur.com/VQmJwX9.png)
 
 #### (1)
-> the optimal amount of sugar in bottled tea
+By "the optimal amount of sugar in bottled tea", it means the profit maximization amount of sugar. The optimal amount of sugar by profit is less than that by taste is because, while reducing a little amount fo sugar (from the point of optimal taste), the reduction of taste is minimal, but the cost reduction is significant enough to shift the profit maximization amount of sugar toward the lower end. 
 
-It does't explain what it the amount of sugar is optimized for, so it's a meaningless sentence.
-
-> the best bottled tea
-
-Again, define "the best"?? "The best" is the best in what way?
+It does make sense because consumers have a wide variety of taste, and are generally not that sensitive to taste, so the sells might not necessarily be affected by reducing a little taste, but the reduction of sugar used, would for sure result in lower cost. Therefor, a better profit can be achieved.
 
 #### (2)
 - targetting customers wanting something between water and soft drink
 - those who wants cheap, healthy and tasteful beverage
 
 #### (3)
-No. There are so many competitors with no significant difference. Even if there are, established competitors can quickly roll out new products directly competing with it.
+Yes, because at the start, they perfectly exploit the space of the market at that time, targetting those who wants healthy and not-to-sweet beverages. 
 
 #### (4)
-No. Bigger brand can achieve the same quality with less cost, while reaching a bigger audience.
+No. established competitors can quickly roll out new products directly competing with it. Bigger brand can achieve the same quality with less cost, while reaching a bigger audience.
