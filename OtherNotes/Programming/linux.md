@@ -152,6 +152,27 @@ loginctl unlock session <id>
 loginctl terminate session <id>
 ```
 
+## ssh
+### ssh with password in one line
+```
+sshpass -p <password> ssh <user>@<host>
+```
+but then your password will be visible for other processes or in the shell history
+
+### ssh without password
+if you don't have ssh key on your machine yet
+```
+ssh-keygen -t rsa -f ~/.ssh/id_rsa
+```
+
+copy your ssh key to the target machine
+```
+ssh-copy-id -i ~/.ssh/id_rsa <user>@<host>
+```
+<https://apple.stackexchange.com/a/285806>  
+<https://www.ssh.com/academy/ssh/copy-id>
+
+
 ## root shell
 - `sudo sh` to enter
 - different home directory `~`

@@ -285,3 +285,94 @@ open 3 shops, at 0.2, 0,5, 0.8
 - Monsanto provides “meet-or-release” and “most-favored-nation” clauses, so for the soft drink manufacturers, it's indifferent from embracing real competition instead of the contract cost-wise
 - it has been used for years, so the quality is guaranteed, meaning the risk is smaller
 - same cost + smaller risk -> more favorable
+
+## HW4
+### Entry Deterrence in Capacity Setting Games
+![](https://i.imgur.com/sXezvbA.png)
+
+![](https://i.imgur.com/QYz4Ego.png)
+
+#### (1)
+$R=12Q-Q^2$
+$MR=12-2Q$
+$MR=MC=1$ -> $q_1=5.5$
+$p=12-Q=6.5-q_2$
+$(p-MC)q_2=5.5q_2-q_2^2$
+$q_2=2.75$, profit = 7.5625 = minimal E
+
+firm 2 won't enter the market, so $q_1^m=5.5$ (the monopoly quantity)
+
+#### (2)
+caculate $q_2$ given $q_1$
+$p=12-q_1-q_2$
+$R_2=pq_2=12q_2-q_1q_2-q_2^2$
+$MR_2=12-q_1-2q_2$
+$MC_2=1$
+$MR_2=MC_2=1$ -> $q_2=\dfrac{11-q_1}{2}$
+$p=\dfrac{13-q_1}{2}$
+profit of firm 1 = $(p-MC)q_1=\dfrac{11-q_1}{2}q_1$
+$q_1^s=5.5$
+profit of firm 1 = 15.125
+
+#### (3)
+as long as monopoly profit >= 15.125, firm 1 will try to deter firm 2
+$(p-MC)Q=(11-Q)Q\geq 15.125$
+$Q^2-11Q+15.125\leq 0$
+$q_1\leq 9.389$
+
+E = profit of firm 2 = $(p-MC_2)q_2=\dfrac{11-q_1}{2}\dfrac{11-q_1}{2}$
+at $q_1=9.389$, profit of firm 2 = 0.649
+at $q_1=5.5$, profit of firm 2 = 7.5625
+$E = [0.649, 6.5625]$
+
+#### (4)
+$q_1=11-2\sqrt{E}$
+![](https://i.imgur.com/1g8B9a5.png)
+???
+
+![](https://i.imgur.com/AefA3lC.png)
+
+
+### Honest Tea
+<https://www.youtube.com/watch?v=V17RYNfwIZ0>
+
+- tea with tiny amount of honey/cane sugar
+- pros
+	- healthy
+		- lower calories than other bottled tea and other beverages
+	- tasteful
+		- more tasteful than water
+	- affordable
+- competitors
+	- TeJava
+		- unsweetened
+		- Honest tea is more flavorful
+	- Malibu Teaz
+		- different target customer
+	- The Republic of Tea
+		- Honest tea is more affordable 
+	- Tazo
+		- Honest tea is healthier
+		- Honest tea targets at wider audience
+		- Honest tea is more affordable
+
+![](https://i.imgur.com/VQmJwX9.png)
+
+#### (1)
+> the optimal amount of sugar in bottled tea
+
+It does't explain what it the amount of sugar is optimized for, so it's a meaningless sentence.
+
+> the best bottled tea
+
+Again, define "the best"?? "The best" is the best in what way?
+
+#### (2)
+- targetting customers wanting something between water and soft drink
+- those who wants cheap, healthy and tasteful beverage
+
+#### (3)
+No. There are so many competitors with no significant difference. Even if there are, established competitors can quickly roll out new products directly competing with it.
+
+#### (4)
+No. Bigger brand can achieve the same quality with less cost, while reaching a bigger audience.
