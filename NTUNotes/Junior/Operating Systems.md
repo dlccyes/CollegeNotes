@@ -463,3 +463,44 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 	- intermediate data structure between user & kernel thread
 	- LWP & kernel thread está one-to-one
 	- ![](https://i.imgur.com/VqXUNnR.png)
+
+## main memory
+- memory protection
+	- base & limit register defining the available address space
+	- ![](https://i.imgur.com/4vGdy88.png)
+	- ![](https://i.imgur.com/FiTqrpD.png)
+- address binding
+	- ccompile time
+		- absolute code with known memory location
+		- symbolic address binding
+	- load time
+		- relocatable code with memory location not known
+		- relative address
+	- execution time (run time)
+		- physical address binding
+	- ![](https://i.imgur.com/YZ4daTc.png)
+- physical & logical address
+	- logical address is relative
+		- logical address + base -> physical address (translated by MMU)
+	- ![](https://i.imgur.com/Q5T16sG.png)
+- linking
+	- static linking
+	- dynamic linking
+		- link at execution time
+- loading
+	- static loading
+		- load entire progam to memory
+	- dynamic loading
+		- on-demand loading
+			- don't load until called
+		- load only main program first
+
+### contiguous memory allocation
+- very early
+- 2 partitions
+	- OS
+	- user processes
+		- each process has a single contiguous memory section
+- ![](https://i.imgur.com/9j98hdw.png)
+	- process terminated -> memory section freed (blue section)
+- dynamic storage-allocation problem
