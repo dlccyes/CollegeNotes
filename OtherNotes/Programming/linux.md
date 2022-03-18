@@ -446,6 +446,35 @@ sudo update-alternatives --config editor
 
 <https://ask.libreoffice.org/t/cant-dock-sidebar/40357/22>
 
+
+## control remote desktop
+(with graphical interface)
+
+use RDP & Remmina
+
+(assume you already have a desktop environment on your remote machine)
+
+install RDP
+```
+sudo apt-get install xrdp
+sudo adduser xrdp ssl-cert
+sudo ufw allow 3389/tcp
+sudo iptables -A INPUT -p tcp --dport 3389 -j ACCEPT
+sudo /etc/init.d/xrdp restart
+```
+install Remmina
+```
+sudo apt install remmina
+```
+
+`remmina` to launch remmina, add a user, and connect
+
+tips
+- to use the correct resolution, `basic` tab -> `Resolution` -> `Use client resolution`
+
+<https://www.e2enetworks.com/help/knowledge-base/how-to-install-remote-desktop-xrdp-on-ubuntu-18-04/>
+
+
 ## good programs
 ### ffmpeg
 #### mp4 to gif
