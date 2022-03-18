@@ -2340,7 +2340,26 @@ Egipto esta rico en cultura y historia! Me encanta mucho!
 		- puedes ... ?
 - cargado = 悶
 	- el ambiente está cargado
-
+- puedo subir el volumen? = can I turn up the volume?
+- encender = turn on
+	- puedo encender la luz?
+- ayudar = help
+	- ayudarme = help me
+- traducción = translation
+- ya = ahora
+- duda = question
+- coger = take
+- velocidad = velocity
+- regar = water
+	- regar las plantas
+- sacar = take 
+	- sacar el perro = take the dog out
+- llevar = give a ride
+  recoger = pick up
+- ambiente = environment
+- encendido = on
+	- la radio está encendida
+	  
 ### cuando
 - de niño = when I was a kid
 - a los 20 años = when I was 20 yo
@@ -2367,6 +2386,13 @@ Egipto esta rico en cultura y historia! Me encanta mucho!
 	- amame = luv me
 
 ### practice
+- 3/18
+	- puedes
+	- 
+	- 
+	- puedo
+	- puedes
+	- puedes
 - 3/16
 	- Di una palabra en español
 	- Toca tu cabeza

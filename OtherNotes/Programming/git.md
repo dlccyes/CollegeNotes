@@ -58,6 +58,21 @@ for i in */.git; do ( echo $i; git -C $i/.. pull; ); done
 - `git log -p abcdef`
 	- commit details of `abcdef`
 
+## maintenance
+[doc](https://git-scm.com/docs/git-maintenance)
+
+optimize your git repo  
+might free up some space
+
+```
+git maintenance run
+```
+
+```
+git maintenance run --task=gc
+```
+
+
 ## commit related
 ### delete all commits
 `git update-ref -d HEAD`

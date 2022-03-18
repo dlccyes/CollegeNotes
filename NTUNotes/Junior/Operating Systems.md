@@ -37,6 +37,7 @@ has_children: True
 - [Threads & Concurrency 2](https://www.youtube.com/watch?v=d6t2FF4rqi0)
 - [Threads & Concurrency 3](https://www.youtube.com/watch?v=e1BeL_Enn9w)
 - [Threads & Concurrency 4](https://www.youtube.com/watch?v=utyd7b3j73M)
+- [Threads & Concurrency 5 - Threading Issues](https://www.youtube.com/watch?v=DL4FHtS8OlA)
 
 ## intro
 - ![](https://i.imgur.com/C5gjElc.png)
@@ -453,3 +454,12 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 #### Grand Central Dispatch (GCD)
 - Apple
 - thread pool
+
+### threading issues
+- fork()
+	- some duplicate all threads of the process
+	- some duplicate only the calling thread of the process
+- lightweight process (LWP)
+	- intermediate data structure between user & kernel thread
+	- LWP & kernel thread está one-to-one
+	- ![](https://i.imgur.com/VqXUNnR.png)

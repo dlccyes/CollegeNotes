@@ -99,6 +99,13 @@ change between `Prompt=normal` & `Prompt=LTS`
 
 <https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today>
 
+## network related
+- edit `/etc/hosts` to change/add the domain name mapping to 127.0.0.1
+	- [ref](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-to-edit-the-Ubnutu-hosts-file-and-ping-a-domain-name-locally)
+- edit `/etc/hostname` to edit your hostname
+	- can't have underscore
+		- <https://kb.iu.edu/d/afqs>
+
 ## power related
 <https://userbase.kde.org/KDE_Connect/Tutorials/Useful_commands>
 <https://www.computernetworkingnotes.com/linux-tutorials/shutdown-reboot-suspend-and-hibernate-a-linux-system.html>

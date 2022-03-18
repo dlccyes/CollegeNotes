@@ -15,10 +15,6 @@ has_children: true
 {:toc}
 </details>
 
-## course unrelated
-- edit `/etc/hosts` to change/add the domain name mapping to 127.0.0.1
-	- [ref](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-to-edit-the-Ubnutu-hosts-file-and-ping-a-domain-name-locally)
-
 ## Ch1 Computer Network and the Internet
 ### The Network Edge
 - end system = host
