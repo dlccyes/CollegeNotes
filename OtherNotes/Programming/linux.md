@@ -575,6 +575,14 @@ drive pull -ignore-name-clashes
 drive push -ignore-name-clashes
 ```
 
+### youtube-dl
+download as mp3 with file name = `下著小雨路過的街.mp3`
+```
+youtube-dl --extract-audio --audio-format mp3 --output "下著小雨路過的街.%(ext)s" https://www.youtube.com/watch?v=AKS-hW2jgk8
+```
+
+<https://askubuntu.com/a/630138>
+
 ### copyq - clipboard manager
 <https://hluk.github.io/CopyQ/>
 
