@@ -12,6 +12,11 @@ layout: meth
 {:toc}
 </details>
 
+### resources
+- [course website](https://speech.ee.ntu.edu.tw/~hylee/ml/2022-spring.php)
+- [github](https://github.com/virginiakm1988/ML2022-Spring)
+
+## intro
 - gradient decsent
 	- ![](https://i.imgur.com/HMfsboA.png)
 	- 微分取斜率
@@ -261,3 +266,22 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- largely replaced by self-attention
 	- RNN is sequential -> slow
 	- ![](https://i.imgur.com/C1iOGz4.png)
+
+## batch normalization
+- feature normalization
+	- normalize to mean = 0, variance = 1
+		- ![](https://i.imgur.com/hdX881l.png)
+	- gradient descent converges faster after normalization
+	- error surface changed
+		- ![](https://i.imgur.com/9zszuQm.png)
+- batch normalization
+	- 只對一個 batch 做 feature normalization
+		- ![](https://i.imgur.com/R60MLCH.png)
+	- at testing, mean and std are calculated on a moving average basis
+		- otherwise will need to wait for enought data to be able to calculate
+		- ![](https://i.imgur.com/nPGDwJC.png)
+	- faster to converge (to the same accuracy)
+		- ![](https://i.imgur.com/e9SUpjL.png)
+- batch normalization is one of the many normalization methods
+	- ![](https://i.imgur.com/sagKNLY.png)
+

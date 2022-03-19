@@ -107,3 +107,41 @@ parent: polly
 		- bitrate-SSIM curve is only known after frame is encoded -> can only be estimated beforehand
 	- bandwidth estimation
 		- need future bandwidth to calculate optimal bandwidth allocation -> need to estimate
+
+## Vantage design
+
+### design overview
+- current live video upload systems
+	- client captures raw video frames -> encoder compresses and transmits to upload endpoint
+	- system's network transport mechanism estimates available bandwidth -> knows how much compressesion needed for encoding
+- Vantage's high-level architecture
+	- modify architecture to support quality-enhancing retransmissions
+	- after frames being encoded and enqueued, Vantage also compresses them in high quality and stores in memory for possible future retransmissions
+	- scheduler generates bandwidth allocation scheduler
+	- execution engine
+		- coordinate encoding
+		- adjust for inaccurate bandwidth allocation schedule
+	- transport layer
+		- provides bandwidth estimates
+		- dequeue packets
+	- ![](https://i.imgur.com/JYyV9nC.png)
+
+### scheduler design
+- problem formulation for scheduling
+	- mixed-integer optimization problem
+	- goal: quality optimization for time-shifted viewers
+	- time constraint
+		- run the scheduling optimization algorithm every P seconds
+		- omit if the optimization takes over P seconds i.e. use whatever is ready at $T=t+nP$
+- parameters (for $T$ $|$ $t+P < T < t+2P$)
+	- $B$ = max num of bytes that can be transmitted
+	- $F$ = a set of real-time frames that will be sent
+	- $G$ = a set of past frame that can be retransmitted
+	- $d_g$ = delay of past frame $g\in G$
+	- $R_g$ = SSIM of past frame $g\in G$
+		- will only retransmit frames already at endpoint
+	- $Q_g$ = bitrate-to-SSIM mapping for past frame $g\in G$ 
+	- $Q_f$ = predicted bitrate-to-SSIM mapping for real-time frame $f\in F$
+	- $N(d)$ = num of viewers with delay = $d$
+	- weight $w_g$ for past frame $g\in G$
+	- weight $w_0$ for real-time frame

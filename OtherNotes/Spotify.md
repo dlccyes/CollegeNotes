@@ -40,3 +40,17 @@ Next:
 ```
 dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 ```
+
+## local files
+### refresh local files
+to refresh, remove & add back the source folder
+
+<https://community.spotify.com/t5/Desktop-Windows/How-do-I-update-or-reset-my-local-files-list/m-p/922287/highlight/true#M14738>
+
+
+### scrobble a local songd
+- the scrobble will be added once you've finished, but you can't see it when you're scrobbling it
+- the song need to have the artist tag to be recognized
+	- KDE's [Kid3](https://kid3.kde.org/) can edit mp3 tag
+
+<https://community.spotify.com/t5/Content-Questions/How-do-I-scrobble-local-files-to-Last-fm/m-p/5098947/highlight/true#M38072>

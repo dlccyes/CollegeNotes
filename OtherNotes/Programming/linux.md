@@ -131,7 +131,7 @@ xset dpms force off
 ```
 
 ## session
-## terminal emulator sessions
+### TTY sessions
 `ctrl+alt+f2-6`  
 would create session with TTY = tty2-6 respectively
 
@@ -139,9 +139,15 @@ would create session with TTY = tty2-6 respectively
 l
 `logout` or `exit` to log out
 
+
 ### list sessions
 ```
 loginctl list-sessions
+```
+
+### see current session
+```
+loginctl session-status
 ```
 
 ### lock session
@@ -179,6 +185,8 @@ ssh-copy-id -i ~/.ssh/id_rsa <user>@<host>
 <https://apple.stackexchange.com/a/285806>  
 <https://www.ssh.com/academy/ssh/copy-id>
 
+### ssh session
+> SSH sessions will be on a pseudo-terminal slave (pts). But keep in mind that not all pts connections are necessarily SSH connections.
 
 ## root shell
 - `sudo sh` to enter
@@ -223,6 +231,19 @@ ls /usr/share/applications | less
 
 some nice dotfiles
 - <https://github.com/Anomic-cr/i3_dotfiles>
+
+## change user@host color and stuff
+settings located in `~/.bashrc`
+```bash
+if [ "$color_prompt" = yes ]; then    
+ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+```
+change the sequence to whatever you want
+
+reference ANSI  
+![](https://i.stack.imgur.com/9UVnC.png)
+
+<https://askubuntu.com/a/123306>
 
 ## troubleshooting
 ### Windows time become UTC
@@ -454,11 +475,30 @@ sudo update-alternatives --config editor
 <https://ask.libreoffice.org/t/cant-dock-sidebar/40357/22>
 
 
-## control remote desktop
+## good programs
+### ffmpeg
+#### mp4 to gif
+```
+ffmpeg -y -i *.mp4 -filter_complex "fps=10,scale=1080:-1:flags=lanczos,split[s0][s1  
+];[s0]palettegen=max_colors=256[p];[s1][p]paletteuse=dither=bayer" output.gif
+```
+<https://superuser.com/a/1695537>
+
+### Remmina - control remote desktop
 (with graphical interface)
 
 use RDP & Remmina
 
+#### usage
+`remmina` to launch remmina, add a user, and connect
+
+tips
+- to use the correct resolution, `basic` tab -> `Resolution` -> `Use client resolution`
+- the session would be called `c<0-9>`
+- must not have more than 1 session, or you'll only see black screen
+	- <https://askubuntu.com/a/623877>
+
+#### installation
 (assume you already have a desktop environment on your remote machine)
 
 install RDP
@@ -474,22 +514,7 @@ install Remmina
 sudo apt install remmina
 ```
 
-`remmina` to launch remmina, add a user, and connect
-
-tips
-- to use the correct resolution, `basic` tab -> `Resolution` -> `Use client resolution`
-
 <https://www.e2enetworks.com/help/knowledge-base/how-to-install-remote-desktop-xrdp-on-ubuntu-18-04/>
-
-
-## good programs
-### ffmpeg
-#### mp4 to gif
-```
-ffmpeg -y -i *.mp4 -filter_complex "fps=10,scale=1080:-1:flags=lanczos,split[s0][s1  
-];[s0]palettegen=max_colors=256[p];[s1][p]paletteuse=dither=bayer" output.gif
-```
-<https://superuser.com/a/1695537>
 
 ### scrcpy - control Android
 <https://github.com/Genymobile/scrcpy>
