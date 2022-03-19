@@ -133,15 +133,29 @@ parent: polly
 	- time constraint
 		- run the scheduling optimization algorithm every P seconds
 		- omit if the optimization takes over P seconds i.e. use whatever is ready at $T=t+nP$
-- parameters (for $T$ $|$ $t+P < T < t+2P$)
+- notations (for $T$ $|$ $t+P < T < t+2P$)
 	- $B$ = max num of bytes that can be transmitted
 	- $F$ = a set of real-time frames that will be sent
 	- $G$ = a set of past frame that can be retransmitted
+	- $G'$ = a set of retransmitted frame $(G'\in G)$
 	- $d_g$ = delay of past frame $g\in G$
 	- $R_g$ = SSIM of past frame $g\in G$
 		- will only retransmit frames already at endpoint
 	- $Q_g$ = bitrate-to-SSIM mapping for past frame $g\in G$ 
+		- unit of $Q=\dfrac{SSIM}{bitrate}$
 	- $Q_f$ = predicted bitrate-to-SSIM mapping for real-time frame $f\in F$
+	- $s_f$ size/bitrate of real-time frame $f\in F$
+	- $s_g$ size/bitrate of past frame $g\in G$
 	- $N(d)$ = num of viewers with delay = $d$
 	- weight $w_g$ for past frame $g\in G$
 	- weight $w_0$ for real-time frame
+- bandwidth contraints
+	- ![](https://i.imgur.com/Tq1dLnY.png)
+- objective function
+	- ![](https://i.imgur.com/KKeuLYK.png)
+	- weighted sum of SSIM from real-time frames & past/retransmitted frames
+	- if higher SSIM can be achieved, then retransmit
+- weight settings
+	- ![](https://i.imgur.com/5PydOiM.png)
+	- retransmission of real-time frames could benefit viewers with all delays
+	- retransmission of frame $g$ with delay = $d_g$ could benefit viewers with delay > $d_g$
