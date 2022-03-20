@@ -502,5 +502,32 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 	- user processes
 		- each process has a single contiguous memory section
 - ![](https://i.imgur.com/9j98hdw.png)
-	- process terminated -> memory section freed (blue section)
+	- process terminated -> memory partition freed (blue section)
 - dynamic storage-allocation problem
+
+#### external fragmentation
+- sum of free partitions > required, but not a single one is enough
+- 50-percent rule
+	- for N allocated blocks, 0.5N blocks would be unusable due to external fragmentation
+- solutions
+	- compaction
+		- relocate all free partitions into a big one
+		- possible only if relocation is dynamic and done in execution time
+			- not possible if use physical address
+	- paging
+		- allow logical address (physical memory) to be noncontiguous
+
+#### internal fragmentation
+- allocate memory based on block (paging) -> may have unused memory
+	- e.g. 50b each block, need 148b -> get 50x3=150b -> waste 2b
+	- Why allocate in block?
+		- overhead of keeping track a small hole may be larger than the hole itself
+
+### paging
+- divide physical memory into fixed-size block (frame)
+	- keep track of free frame
+- divide logical memory (process memory) into fixed-size block (page)
+	- page.size = frame.size
+	- allocate process memory of N pages by finding N free frames
+- page table
+	- mapping of logical address -> physical address (page -> frame)

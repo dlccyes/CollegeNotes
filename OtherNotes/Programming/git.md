@@ -72,6 +72,55 @@ git maintenance run
 git maintenance run --task=gc
 ```
 
+## line endings lf & crlf
+### check the eol of a file
+- `cat -A <file>`
+	- CRLF -> end with `^M$`
+	- LF -> end with `$`
+- `file <file>`
+	- <https://stackoverflow.com/a/3570574/15493213>
+
+### auto eol translation
+#### with gitattributes
+auto translation for files when checked out (into LF for Unix, CRLF for Windows)  
+```
+echo ""* text=auto" >> .gitattributes
+git commit -m "something"
+```
+
+#### with core.autocrlf
+- `git config --global core.autocrlf true` for Windows
+	- convert to LF when commit
+	- convert to CRLF when checkout
+- `git config --global core.autocrlf input` for Unix
+	- convert to LF when commit
+
+### convert entire directory to LF
+(there might be some redundant steps but idk & idc)
+
+auto translation for files when checked out (into LF for Unix, CRLF for Windows)  
+```
+echo ""* text=auto" >> .gitattributes
+git commit -m "something"
+```
+
+renormalize current directory
+```
+git add --renormalize .
+git commit -m "something"
+```
+
+```
+git rm --cached -r .  # Remove every file from git's index.
+git reset --hard      # Rewrite git's index to pick up all the new line endings.
+```
+
+- main refs
+	- <https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings#about-line-ending>
+	- <https://stackoverflow.com/a/42135910/15493213>
+- supplementary refs
+	- <https://www.edwardthomson.com/blog/advent_day_1_gitattributes_for_text_files.html>
+	- <https://blog.opasschang.com/confusing-git-autocrlf/>
 
 ## commit related
 ### delete all commits
@@ -86,14 +135,22 @@ git maintenance run --task=gc
 `git checkout <sha> -- <path-to-file>`
 
 ### discard changes
+relevant docs
+- <https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository>
+- <https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things>
+
+#### for tracked files
+- `git reset HEAD --hard`
+- `git restore .`
 - `git checkout -- .`
-	- clear all unstaged files
-- `git checkout -- haha.txt`
-	- clear the unstaged file `haha.txt`
+	- `git checkout -- haha.txt`
+		- unmodify the modified untracked file `haha.txt`
+
+#### for untracked files
 - `git clean -df`
 	- clear all untracked files
 - `git clean -f haha.txt`
-	- clear the untracked files `haha.txt`
+	- clear the untracked file `haha.txt`
 
 ### how many insertions and deletions for a user
 ```

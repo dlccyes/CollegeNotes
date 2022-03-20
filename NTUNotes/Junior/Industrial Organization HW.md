@@ -298,7 +298,7 @@ $MR=12-2Q$
 $MR=MC=1$ -> $q_1=5.5$
 $p=12-Q=6.5-q_2$
 $(p-MC)q_2=5.5q_2-q_2^2$
-$q_2=2.75$, profit = 7.5625 = minimal E
+$q_2=2.75$, profit = 7.5625 = minimal $\hat{E}$
 
 firm 2 won't enter the market, so $q_1^m=5.5$ (the monopoly quantity)
 
@@ -323,7 +323,7 @@ $q_1\leq 9.389$
 E = profit of firm 2 = $(p-MC_2)q_2=\dfrac{11-q_1}{2}\dfrac{11-q_1}{2}$
 at $q_1=9.389$, profit of firm 2 = 0.649
 at $q_1=5.5$, profit of firm 2 = 7.5625
-$E = [0.649, 6.5625]$
+$E = [0.649, 7.5625]$
 
 #### (4)
 $q_1=11-2\sqrt{E}$
@@ -367,11 +367,11 @@ By "the optimal amount of sugar in bottled tea", it means the profit maximizatio
 It does make sense because consumers have a wide variety of taste, and are generally not that sensitive to taste, so the sells might not necessarily be affected by reducing a little taste, but the reduction of sugar used, would for sure result in lower cost. Therefor, a better profit can be achieved.
 
 #### (2)
-- targetting customers wanting something between water and soft drink
+- targeting customers wanting something between water and soft drink
 - those who wants cheap, healthy and tasteful beverage
 
 #### (3)
-Yes, because at the start, they perfectly exploit the space of the market at that time, targetting those who wants healthy and not-to-sweet beverages. 
+Yes, because at the start, they exploit the unoccupied space of the market at that time, targeting those who wants healthy and not-to-sweet beverages. 
 
 #### (4)
-No. established competitors can quickly roll out new products directly competing with it. Bigger brand can achieve the same quality with less cost, while reaching a bigger audience.
+No. Established competitors can quickly roll out new products directly competing with it. Bigger brand can achieve the same quality with less cost, while reaching a bigger audience.
