@@ -529,5 +529,52 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 - divide logical memory (process memory) into fixed-size block (page)
 	- page.size = frame.size
 	- allocate process memory of N pages by finding N free frames
+- address field
+	- page number
+		- m-n bits page number -> $2^{m-n}$ bytes
+	- page offset
+		- n-bit page offset = $2^n$ bytes
+	- m-bit logical address space -> $2^m$ bytes
+	- ![](https://i.imgur.com/nXBl1ld.png)
 - page table
 	- mapping of logical address -> physical address (page -> frame)
+	- each process has its own page table
+	- size
+		- ![](https://i.imgur.com/ctImTFn.png)
+	- e.g.
+		- ![](https://i.imgur.com/IXl0a6b.png)
+- paging translation example
+	- ![](https://i.imgur.com/LwopC1M.png)
+		- page x in logical -> page y in physical
+		- 2-bit page number, 2-bit page offset
+		- $2^2=4$ bytes per page
+		- logical address = 2 -> page 0 offset 2 in logical -> page 5 offest 2 at physical -> physical address = 5x4+2 = 22 
+		- logical address = 9 -> page 2 offset 1 in logical -> page 1 offest 1 at physical -> physical address = 1x4+1 = 5 
+- internal fragmentation
+	- internal fragmentation = num of unused bytes
+	- to reduce internal fragmentation
+		- reduce frame size
+			- 50% rule: average fragmentation = 0.5 frame size -> smaller frame smaller internal fragmentation
+			- resulted in bigger table
+- paging translation overhead
+	- computation
+	- 2 memory accesses
+		- fetch page table
+		- fetch logical address
+	- memory access time takes too much portion of time
+		- 88%
+
+#### TLB
+- translation look-aside buffer
+- to reduce the overload fetching page table
+- put some page table entries in a fast memory
+	- a cache for page table entries basically
+- a associative, high-speed, small memory
+	- associative -> search in parallel (1 comparator for each entry) -> fast
+- design
+	- TLB miss -> fetch page table
+	- TLB full -> replace with some policies
+	- ![](https://i.imgur.com/aXk88IK.png)
+- hit ratio
+	- instruction has locality -> would be fairly high
+	- replacement policy largely affects it

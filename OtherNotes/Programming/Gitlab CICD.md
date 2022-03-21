@@ -59,13 +59,15 @@ sudo apt-get update
 sudo apt-get install -y curl openssh-server ca-certificates tzdata
 ```
 
-`sudo apt-get install -y postfix`  
+```
+sudo apt-get install -y postfix
+```  
 Internet Site → Ok
 
-install gitlab  
+install [Gitlab](Gitlab)    
 official doc: <https://about.gitlab.com/install/#ubuntu>  
 ```
-curl [https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh](https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh) | sudo bash
+curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash
 
 sudo EXTERNAL_URL="http://EXTERNAL_IP" apt-get install gitlab-ee
 ```

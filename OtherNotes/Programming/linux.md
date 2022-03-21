@@ -191,6 +191,29 @@ ssh-copy-id -i ~/.ssh/id_rsa <user>@<host>
 ### keep ssh session from freezing
 <https://unix.stackexchange.com/a/200256>
 
+## port
+### opening port
+```
+sudo ufw allow <port num>
+```
+e.g. 
+- `sudo ufw allow 22` -> ssh allowed
+- `sudo ufw allow 80` -> http allowed
+
+## ip
+- view local ip
+	- `hostname -I`
+	- `neofetch` (with correct config)
+	- `ifconfig | grep inet`
+	- `ip addr | grep inet`
+	- <https://stackoverflow.com/a/13322549/15493213>
+
+## http
+- install
+	- `sudo apt httpie` to be able to use
+- usage
+	- `http GET <url>`
+
 ## root shell
 - `sudo sh` to enter
 - different home directory `~`
