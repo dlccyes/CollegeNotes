@@ -109,7 +109,6 @@ parent: polly
 		- need future bandwidth to calculate optimal bandwidth allocation -> need to estimate
 
 ## Vantage design
-
 ### design overview
 - current live video upload systems
 	- client captures raw video frames -> encoder compresses and transmits to upload endpoint
@@ -127,14 +126,14 @@ parent: polly
 	- ![](https://i.imgur.com/JYyV9nC.png)
 
 ### scheduler design
-####  problem formulation
+#### problem formulation
 - mixed-integer optimization problem
 - goal: quality optimization for time-shifted viewers
 - time constraint
 	- run the scheduling optimization algorithm every P seconds
 	- omit if the optimization takes over P seconds i.e. use whatever is ready at $T=t+nP$
 
-####  notations 
+#### notations 
 for $T$ $|$ $t+P < T < t+2P$
 - $B$ = max num of bytes that can be transmitted
 - $F$ = a set of real-time frames that will be sent

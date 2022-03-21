@@ -20,7 +20,14 @@ has_children: true
 	- [Vantage - Optimizing video upload for time-shifted viewing ofsocial live streams](Vantage%20-%20Optimizing%20video%20upload%20for%20time-shifted%20viewing%20ofsocial%20live%20streams)
 
 ## meeting
+- 2022.3.21 14:00-14:55
+	- Vantage section 4.1-4.2
+	- Twitch project further details
+		- 分工
+		- system design
 - 2022.3.14 14:00-15:01
+	- Vantage section 1-3
+	- Twitch project & data center introduction 
 - 2022.3.7 14:00-15:02
 	- HLS streaming demo
 		- ![](https://i.imgur.com/CshPpPJ.jpg)
