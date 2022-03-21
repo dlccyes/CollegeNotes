@@ -188,6 +188,9 @@ ssh-copy-id -i ~/.ssh/id_rsa <user>@<host>
 ### ssh session
 > SSH sessions will be on a pseudo-terminal slave (pts). But keep in mind that not all pts connections are necessarily SSH connections.
 
+### keep ssh session from freezing
+<https://unix.stackexchange.com/a/200256>
+
 ## root shell
 - `sudo sh` to enter
 - different home directory `~`

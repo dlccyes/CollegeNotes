@@ -285,3 +285,39 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 - batch normalization is one of the many normalization methods
 	- ![](https://i.imgur.com/sagKNLY.png)
 
+## transformer
+- seq2seq
+	- input sequence, output sequence
+	- decide size of output sequence itself
+	- architecture
+		- ![](https://i.imgur.com/3P2v5Xl.png)
+		- ![](https://i.imgur.com/elg5Ik8.png)
+	- encoder
+		- ![](https://i.imgur.com/t7rkj9i.png)
+	- decoder
+		- minimize cross entropy
+		- teacher forcing
+			- give decoder correct value to teach it
+		- a "Begin of Sentence" one-hot vector
+		- output a stop one-hot vector -> terminate
+			- ![](https://i.imgur.com/oE1U2Lj.png)
+		- AT, autoregressive
+			- take previous output as input (like RNN)
+			- error may propagates
+			- ![](https://i.imgur.com/ZfS9gkR.png)
+		- NAT, non-autoregressive
+			- parallel
+			- decoder performance worse than AT
+			- ![](https://i.imgur.com/xSRX3ZT.png)
+- seq2seq usage
+	- multi-label classification
+		- decide hoe many class itself
+	- object detection
+- copy mechanism
+	- pointer network
+	- able to copy a sequence from input and output
+	- ![](https://i.imgur.com/cW9FNjb.png)
+- summarization
+- guided attention
+	- force training in certain way
+		- e.g. force left to right
