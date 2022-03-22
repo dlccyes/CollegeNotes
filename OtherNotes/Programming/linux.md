@@ -271,6 +271,14 @@ reference ANSI
 
 <https://askubuntu.com/a/123306>
 
+## grub menu customization
+- `sudo apt install grub-customizer` for GUI
+- everything in `/boot/grub/grub.cfg`
+- after modifing `/etc/default/grub`, run `sudo update-grub`
+	- auto scan your system generate `/boot/grub/grub.cfg` based on the settings in `/etc/default/grub`
+	- will run `grub-mkconfig -o /boot/grub/grub.cfg`
+	- <https://www.nixcraft.com/t/how-to-update-grub-on-rhel-or-centos-linux/3824/2>
+
 ## troubleshooting
 ### Windows time become UTC
 linux will set the hardware time to UTC  
