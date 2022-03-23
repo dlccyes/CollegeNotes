@@ -2359,6 +2359,11 @@ Egipto esta rico en cultura y historia! Me encanta mucho!
 - ambiente = environment
 - encendido = on
 	- la radio está encendida
+- hacer photos
+- autopista = highway
+- grifo = 水龍頭
+	- agua de grifo = tap water
+- ruido = noise
 	  
 ### cuando
 - de niño = when I was a kid
@@ -2386,6 +2391,18 @@ Egipto esta rico en cultura y historia! Me encanta mucho!
 	- amame = luv me
 
 ### practice
+- 3/23
+	- a
+		- no se puede hablar con el conductor
+		- se puede fuma cigarrilos
+		- no se puede hablar
+		- no se puede pisar el cesped
+		- no se puede hacer photos
+		- no se puede conducir sobre 100km/hr
+			- conducir a más de 100km/hr
+		- no se puede beber la agua de grifo
+	- b
+		- se puede 
 - 3/18
 	- puedes
 	- 

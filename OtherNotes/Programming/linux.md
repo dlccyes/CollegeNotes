@@ -94,14 +94,15 @@ go inside and run
 And then your Ventoy is ready. When booting with this USB, ventoy will search all ISOs in the USB, so you can out your ISO whenever you want (inside the USB). You can also store normal files.
 
 ## package related
-### find package
+### apt
+#### find package
 ```
 apt-file search <package>
 ```
 
 <https://unix.stackexchange.com/a/330069>
 
-## upgrade
+#### upgrade
 for normal release
 ```
 sudo do-release-upgrade
@@ -120,6 +121,50 @@ change between `Prompt=normal` & `Prompt=LTS`
 
 
 <https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today>
+
+#### The following packages have been kept back
+displayed when doing `apt upgrade`
+
+solved by
+```
+sudo apt dist-upgrade
+```
+according to <https://askubuntu.com/a/602> this is not an ideal solution
+
+about dist-upgrade:  
+
+> dist-upgrade intelligently handles changing dependencies with new versions of packages
+
+can also use `apt full-upgrade` (es el versión nuevo)
+
+<https://askubuntu.com/a/81594>
+
+### snap
+#### install local
+```
+snap <xxx.snap> --dangerous
+```
+
+<https://askubuntu.com/a/1397306>
+
+### pacman
+install
+```
+sudo pacman -S <package>
+```
+
+update & upgrade all
+```
+sudo pacman -Syu
+```
+
+### yay
+to install (unofficial) AUR packages
+
+install
+```
+yay -S <package>
+```
 
 ## network related
 - edit `/etc/hosts` to change/add the domain name mapping to 127.0.0.1
@@ -237,7 +282,7 @@ e.g.
 	- `http GET <url>`
 
 ## root shell
-- `sudo sh` to enter
+- `sudo su` or `su root` to enter
 - different home directory `~`
 
 ## cron
@@ -300,99 +345,6 @@ reference ANSI
 	- auto scan your system generate `/boot/grub/grub.cfg` based on the settings in `/etc/default/grub`
 	- will run `grub-mkconfig -o /boot/grub/grub.cfg`
 	- <https://www.nixcraft.com/t/how-to-update-grub-on-rhel-or-centos-linux/3824/2>
-
-## troubleshooting
-### Windows time become UTC
-linux will set the hardware time to UTC  
-we can make the hardware time be local time with  
-(in linux)
-```
-timedatectl set-local-rtc 1
-```
-
-<https://itsfoss.com/wrong-time-dual-boot/>
-
-### grub menu related
-#### no grub menu
-```
-sudo vim /etc/default/grub
-```
-
-set `GRUB_TIMEOUT_STYLE` to `menu`  
-(may be `hidden` originally)
-
-```
-sudo update-grub
-```
-<https://askubuntu.com/a/1182434>
-
-#### no Windows in grub menu
-`sudo os-prober` to see if Windows is identified  
-<https://superuser.com/a/1392323>
-
-if there is Windows
-
-```
-sudo vim /etc/default/grub
-```
-
-add
-```
-GRUB_DISABLE_OS_PROBER=false
-```
-
-```
-sudo update-grub
-```
-
-<https://forum.manjaro.org/t/warning-os-prober-will-not-be-executed-to-detect-other-bootable-partitions/57849/2>
-
-### xbacklight 
-**SOLVING THIS ISSUE WILL CAUSE ANOTHER**
-
-`No outputs have backlight property`
-
-[This](https://askubuntu.com/a/1060843) will solve the backlight issue, but will make plasma become very unstable, flickering all the time
-
-[This](https://bbs.archlinux.org/viewtopic.php?pid=1595276#p1595276) will solve the plasma flickering issue, but will make [Touchegg](https://github.com/JoseExposito/touchegg) not working
-
-### The following packages have been kept back
-displayed when doing `apt upgrade`
-
-solved by
-```
-sudo apt dist-upgrade
-```
-according to <https://askubuntu.com/a/602> this is not an ideal solution
-
-about dist-upgrade:  
-
-> dist-upgrade intelligently handles changing dependencies with new versions of packages
-
-can also use `apt full-upgrade` (es el versión nuevo)
-
-<https://askubuntu.com/a/81594>
-
-### keyring
-github desktop & vscode may want your keyring everytime  
-solution:
-```
-sudo apt-get install seahorse
-```
-
-your keyrings would be displayed in searhorse, right click on "default keyring" and change it (may be blank)
-
-<https://askubuntu.com/a/1270021>
-
-### KDE plasma animation gone
-```
-alt+shift+f12
-```
-to enable compositor
-
-plasma desktop effects need compositor to work 
-
-<https://www.reddit.com/r/kde/comments/hymqco/comment/fzdotuo>
 
 ## partition resize
 ### principles
@@ -463,6 +415,19 @@ prime-select query
 	- install Roboto
 - go to web search keywords to set up !bang for krunner
 	- it does not recognize `!`
+- (arch) some effect's not working (e.g. task switcher)
+	- `sudo pacman -S kdeplasma-addons` and reboot
+		- <https://bbs.archlinux.org/viewtopic.php?id=218308>
+
+#### animation gone
+```
+alt+shift+f12
+```
+to enable compositor
+
+plasma desktop effects need compositor to work 
+
+<https://www.reddit.com/r/kde/comments/hymqco/comment/fzdotuo>
 
 ### tips
 - scroll on battery icon on system tray to adjust brightness
@@ -531,7 +496,99 @@ sudo update-alternatives --config editor
 <https://ask.libreoffice.org/t/cant-dock-sidebar/40357/22>
 
 
+## troubleshooting
+### Windows time become UTC
+linux will set the hardware time to UTC  
+we can make the hardware time be local time with  
+(in linux)
+```
+timedatectl set-local-rtc 1
+```
+
+<https://itsfoss.com/wrong-time-dual-boot/>
+
+### grub menu related
+#### no grub menu
+```
+sudo vim /etc/default/grub
+```
+
+set `GRUB_TIMEOUT_STYLE` to `menu`  
+(may be `hidden` originally)
+
+```
+sudo update-grub
+```
+<https://askubuntu.com/a/1182434>
+
+#### no Windows in grub menu
+`sudo os-prober` to see if Windows is identified  
+<https://superuser.com/a/1392323>
+
+if there is Windows
+
+```
+sudo vim /etc/default/grub
+```
+
+add
+```
+GRUB_DISABLE_OS_PROBER=false
+```
+
+```
+sudo update-grub
+```
+
+<https://forum.manjaro.org/t/warning-os-prober-will-not-be-executed-to-detect-other-bootable-partitions/57849/2>
+
+### xbacklight 
+**SOLVING THIS ISSUE WILL CAUSE ANOTHER**
+
+`No outputs have backlight property`
+
+[This](https://askubuntu.com/a/1060843) will solve the backlight issue, but will make plasma become very unstable, flickering all the time
+
+[This](https://bbs.archlinux.org/viewtopic.php?pid=1595276#p1595276) will solve the plasma flickering issue, but will make [Touchegg](https://github.com/JoseExposito/touchegg) not working
+
+### keyring
+github desktop & vscode may want your keyring everytime  
+solution:
+```
+sudo apt-get install seahorse
+```
+
+your keyrings would be displayed in searhorse, right click on "default keyring" and change it (may be blank)
+
+<https://askubuntu.com/a/1270021>
+
+### emoji not shown
+solution: create backup emoji font in `~/.config/fontconfig/fonts.conf`
+
+[example file](https://github.com/AndydeCleyre/dotfiles/blob/master/.config/fontconfig/fonts.conf)
+
+[ref](https://www.reddit.com/r/kde/comments/b3xxcz/comment/ej38wwb)
+
 ## good programs
+### GParted
+```
+sudo apt install gparted
+```
+
+use it to do any operation regarding partitions with GUI
+
+### bluetooth
+(if not preinstalled)
+
+install & enable
+```
+sudo pacman -S bluez bluez-utils blueman
+sudo systemctl enable bluetooth.service
+```
+
+
+<https://www.jeremymorgan.com/tutorials/linux/how-to-bluetooth-arch-linux/>
+
 ### ffmpeg
 #### mp4 to gif
 ```
@@ -608,6 +665,7 @@ find and download dictionaries [here](http://download.huzheng.org/dict.org/)
 ```
 curl https://rclone.org/install.sh | sudo bash
 ```
+and then run `rclone config` to setup your remote
 
 #### sync
 ```
@@ -621,7 +679,7 @@ rclone sync 大學講義筆記 zubar:大學講義筆記
 for interative use (ask you to do or not to do each time), use `rclone sync -i`
 
 ### drive
-it is very very slow, much slower than network folder
+it is very very slow, much slower than network folder, use rclone instead
 
 repo  
 <https://github.com/odeke-em/drive>
