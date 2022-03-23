@@ -125,3 +125,14 @@ sorted(points, key = lambda section: section[1]) # sort by second value
 ```py
 float('inf')
 ```
+
+## convert between ipynb & python
+```
+ipynb-py-convert <in.ipynb> <out.py>
+```
+
+```
+ipynb-py-convert <in.py> <out.ipynb>
+```
+
+<https://stackoverflow.com/a/66565946/15493213>

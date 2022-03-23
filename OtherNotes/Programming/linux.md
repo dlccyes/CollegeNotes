@@ -233,6 +233,23 @@ loginctl terminate session <id>
 ```
 
 ## ssh
+### install ssh server
+install
+```
+sudo apt install openssh-server
+```
+
+enable & start
+```
+sudo systemctl enable ssh
+sudo systemctl start ssh
+```
+
+open port 22
+```
+sudo ufw allow 22
+```
+
 ### ssh with password in one line
 ```
 sshpass -p <password> ssh <user>@<host>
@@ -588,6 +605,11 @@ sudo systemctl enable bluetooth.service
 
 
 <https://www.jeremymorgan.com/tutorials/linux/how-to-bluetooth-arch-linux/>
+
+### htop
+- to show only 1 line per process (instead of per thread)
+	- setup -> display options -> hide userland process threads
+		- <https://askubuntu.com/a/1124990>
 
 ### ffmpeg
 #### mp4 to gif
