@@ -70,6 +70,28 @@ from win10/11
 	- <https://superuser.com/questions/88131/how-to-shrink-windows-7-boot-partition-with-unmovable-files>
 - no grub menu
 	- <https://itsfoss.com/no-grub-windows-linux/> 
+ 
+## flash iso to usb
+### dd
+
+### ventoy
+[tutorial](https://linuxkamarada.com/en/2020/07/29/ventoy-create-a-multiboot-usb-drive-by-simply-copying-iso-images-to-it/)
+
+download ventoy  
+<https://github.com/ventoy/Ventoy/releases>
+
+```
+tar -xf <ventoy.tar.gz>
+```
+
+check what is your USB called with `lsblk` 
+
+go inside and run
+```
+. Ventoy2Disk -i /dev/<USB disk e.g. sdb>
+```
+ 
+And then your Ventoy is ready. When booting with this USB, ventoy will search all ISOs in the USB, so you can out your ISO whenever you want (inside the USB). You can also store normal files.
 
 ## package related
 ### find package
