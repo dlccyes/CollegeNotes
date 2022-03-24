@@ -148,6 +148,8 @@ snap <xxx.snap> --dangerous
 <https://askubuntu.com/a/1397306>
 
 ### pacman
+[cheatsheet](https://devhints.io/pacman)
+
 install
 ```
 sudo pacman -S <package>
@@ -156,6 +158,16 @@ sudo pacman -S <package>
 update & upgrade all
 ```
 sudo pacman -Syu
+```
+
+remove  
+```
+sudo pacman -Rsc <package>
+```
+
+list all packages  
+```
+pacman -Ql
 ```
 
 ### yay
@@ -384,25 +396,27 @@ for windows-linux dual-boot system
 6. success
 
 ## nvidia driver
+### install on Arch
+```
+sudo pacman -S nvidia
+```
+
+
+### install on Ubuntu
 <https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-20-04-focal-fossa-linux>
 
-### check your graphic card
+#### check your graphic card
 ```
 ubuntu-drivers devices
 ```
 
-### install driver
+#### install driver
 ```
 sudo ubuntu-drivers autoinstall
 ```
 and reboot
 
-### check your nvidia GPU info
-```
-nvidia-smi
-```
-
-### select driver intel or nvidia
+#### select driver intel or nvidia
 ```
 prime-select nvidia
 # or prime-select intel
@@ -414,6 +428,11 @@ to check what you're using
 prime-select query
 ```
 
+
+### check your nvidia GPU info
+```
+nvidia-smi
+```
 
 ## KDE Plasma
 ### config files location
@@ -432,9 +451,6 @@ prime-select query
 	- install Roboto
 - go to web search keywords to set up !bang for krunner
 	- it does not recognize `!`
-- (arch) some effect's not working (e.g. task switcher)
-	- `sudo pacman -S kdeplasma-addons` and reboot
-		- <https://bbs.archlinux.org/viewtopic.php?id=218308>
 
 #### animation gone
 ```
@@ -496,7 +512,16 @@ plasma desktop effects need compositor to work
 
 config file need to be in `~/.config/touchegg/`
 
-troubleshooting  
+**Installation**  
+(arch)  
+```
+yay -S touchegg
+sudo systemctl enable touchegg.service
+sudo systemctl start touchegg
+```
+
+
+not running troubleshooting  
 <https://github.com/JoseExposito/touchegg/issues/413#issuecomment-748473155>
 
 ## set default editor
@@ -512,6 +537,59 @@ sudo update-alternatives --config editor
 
 <https://ask.libreoffice.org/t/cant-dock-sidebar/40357/22>
 
+## input method
+### ibus
+install  
+```
+sudo pacman -S ibus
+```
+
+to install chewing
+```
+sudo pacman -S ibus-chewing
+```
+
+set up variables in `/etc/environment`  
+```
+GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+
+```
+
+start ibus in background  
+```
+ibus-daemon -d
+```
+to use it on startup, put in autostart settings or `~/.bashrc` or whatever
+
+configure ibus by opening GUI "Ibus Preferences"
+
+<https://wiki.archlinux.org/title/IBus>  
+
+### fcitx5
+you might not have input method preinstalled (if you use archbtw) (it's preinstalled with Kubuntu tho)  
+
+install it
+```
+sudo pacman -S fctix5 fctix-configtool
+```
+
+in `/etc/environment`  
+```
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+```
+
+then you should be able to see "input method" in your DE's settings
+
+to use chewing  
+```
+sudo pacman -S fcitx5-chewing
+```
+
+<https://wiki.archlinux.org/title/Fcitx5>
 
 ## troubleshooting
 ### Windows time become UTC
@@ -586,7 +664,51 @@ solution: create backup emoji font in `~/.config/fontconfig/fonts.conf`
 
 [ref](https://www.reddit.com/r/kde/comments/b3xxcz/comment/ej38wwb)
 
+### perl locale warning
+(arch)  
+warning message:  
+```
+perl: warning: Please check that your locale settings:
+are supported and installed on your system.
+```
+
+fix: 
+```
+sudo locale-gen
+```
+<https://stackoverflow.com/a/9727654/15493213>
+
 ## good programs
+### KDE apps
+essential packages that might not come with arch install  
+
+to see all kde applications  
+```
+sudo pacman -S kde-applications
+```
+
+#### kdeplasma-addons
+some desktop effects and stuff
+
+`sudo pacman -S kdeplasma-addons` and reboot
+
+#### online account support
+online accounts  
+```
+sudo pacman -S kaccounts-providers
+```
+google drive network folder  
+```
+sudo pacman -S kio-gdrive
+```
+
+<https://www.reddit.com/r/kde/comments/o8b73i/why_arch_kde_does_not_have_google_option_in/>
+
+#### system monitor
+```
+udo pacman -S plasma-systemmonitor
+```
+
 ### GParted
 ```
 sudo apt install gparted
@@ -605,6 +727,7 @@ sudo systemctl enable bluetooth.service
 
 
 <https://www.jeremymorgan.com/tutorials/linux/how-to-bluetooth-arch-linux/>
+
 
 ### htop
 - to show only 1 line per process (instead of per thread)
@@ -699,6 +822,12 @@ rclone sync 大學講義筆記 zubar:大學講義筆記
 ```
 
 for interative use (ask you to do or not to do each time), use `rclone sync -i`
+
+#### ls
+list top level things  
+```
+rclone lsd remote:<path>
+```
 
 ### drive
 it is very very slow, much slower than network folder, use rclone instead
