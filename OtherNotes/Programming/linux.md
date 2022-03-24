@@ -678,6 +678,18 @@ sudo locale-gen
 ```
 <https://stackoverflow.com/a/9727654/15493213>
 
+and then run  
+```
+locale
+```
+if there are errors, `echo $LANG`, if isn't what you want, run  
+```
+localectl set-locale LANG=en_US.UTF8
+```
+to correctly set your `LANG` variable
+
+see <https://wiki.archlinux.org/title/locale#Setting_the_locale>
+
 ## good programs
 ### KDE apps
 essential packages that might not come with arch install  

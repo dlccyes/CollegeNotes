@@ -23,7 +23,9 @@ has_children: True
 - [Structures](https://www.youtube.com/watch?v=TaDR2AtN8UU)
 - [Process](https://www.youtube.com/watch?v=CvXfW25jq2I)
 - [Threads & Concurrency](https://www.youtube.com/watch?v=uxXtXGW2VDQ)
-- [Main Memory](https://www.youtube.com/watch?v=AeONYfNXGaE)
+- [Main Memory 1](https://www.youtube.com/watch?v=AeONYfNXGaE)
+- [Main Memory 2](https://www.youtube.com/watch?v=Jb0lQbvm29w)
+- [Virtual Memory](https://www.youtube.com/watch?v=VQ07KeyJXgg)
 
 ### 施吉昇
 - [Course Info](https://www.youtube.com/watch?v=0QpWM5vYt-g)
@@ -38,6 +40,9 @@ has_children: True
 - [Threads & Concurrency 3](https://www.youtube.com/watch?v=e1BeL_Enn9w)
 - [Threads & Concurrency 4](https://www.youtube.com/watch?v=utyd7b3j73M)
 - [Threads & Concurrency 5 - Threading Issues](https://www.youtube.com/watch?v=DL4FHtS8OlA)
+- [Main Memory 1](https://www.youtube.com/watch?v=Qn5ndel19PA)
+- [Main Mamory 2](https://www.youtube.com/watch?v=k4YpyOVdtJQ)
+- [Main Memory 3](https://www.youtube.com/watch?v=vlNRu1NTEkE)
 
 ## intro
 - ![](https://i.imgur.com/C5gjElc.png)
@@ -563,6 +568,11 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 		- fetch logical address
 	- memory access time takes too much portion of time
 		- 88%
+- valid bit
+	- is in the process's logical address space -> valid
+	- else -> invalid & page fault
+- share page
+	- common code shared by many processes only need to have 1 copy in physical space
 
 #### TLB
 - translation look-aside buffer
@@ -578,3 +588,63 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 - hit ratio
 	- instruction has locality -> would be fairly high
 	- replacement policy largely affects it
+
+### structure of page table
+- contiguous page table -> too large ($2^{20}>>2(2^{10})$) -> need to split
+
+#### hierarchy page table
+- page the page tables
+	- ![](https://i.imgur.com/DZRzUVk.png)
+	- ![](https://i.imgur.com/CRKSA8M.png)
+- 64-bit processor will need many layer of paging -> big memory access overhead -> inappropiate
+- e.g.
+	- ![](https://i.imgur.com/mBOEtUC.png)
+ 
+#### hashed page table
+- hash table
+- hashed logical address -> physical address 
+- linked list for collision
+- 3 fields in each element
+	- virtual page num
+	- hashed virtual page num (mapping target)
+	- pointer to next element (for collision)
+- ![](https://i.imgur.com/uNVlNvx.png)
+- clustered page table
+	- each mapped to several pages
+	- useful for sparse address space
+
+#### inverted page table
+- map physical memory page to virtual ones
+	- normally it's mapping virtual to physical
+- ASID, address-space identifier
+	- identify which process in use
+	- provide address-space protection for that process
+- given value = <pid, page num>, find key (physical page num & offset)
+- ![](https://i.imgur.com/dH76Ngm.png)
+- lower space complexity
+	- only one inverted table in whole system
+		- normally, each process has one page table 
+- higher time complexity
+	- searching key with value, instread of saerching value with key
+	- solution: hashing
+- no shared memory
+	- 1 virtual page entry for each physical page
+	- only 1 mapping virtual address at a time
+
+### swapping
+- backing store
+	- fast secondary storate
+	- large enought to store whatever swapped in
+	- have direct access to memory image (???)
+- standard swapping
+	- memory requirements > physical memory -> temporary swap processes out to backing store 
+	- ![](https://i.imgur.com/EpoHBu8.png)
+	- time moving between memory is huge
+- roll out, roll in
+	- priority-based swapping
+- swapping with paging
+	- page out
+		- move a page to backing store
+	- page in
+		- move a page back from backing store
+	- ![](https://i.imgur.com/0l1zkFk.png)
