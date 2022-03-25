@@ -2364,7 +2364,16 @@ Egipto esta rico en cultura y historia! Me encanta mucho!
 - grifo = 水龍頭
 	- agua de grifo = tap water
 - ruido = noise
-	  
+- chicle = chewing gum
+- cámara = camera
+- portátil = portable / laptop
+	- ordenado portátil = laptop
+- redacción = essay
+- significa = to mean
+	- qué significa = what it means
+- copiar = 抄寫
+- enciénder = turn on
+
 ### cuando
 - de niño = when I was a kid
 - a los 20 años = when I was 20 yo
@@ -2390,7 +2399,23 @@ Egipto esta rico en cultura y historia! Me encanta mucho!
 	- ![](https://i.imgur.com/U9F005m.png)
 	- amame = luv me
 
+### das/dejas
+- das = give
+	- me das = can you give me
+- dejas = lend
+	- me dejas = can you lend me
+- ![](https://i.imgur.com/UO7j7zZ.png)
+
+
 ### practice
+- 3/25
+	- No he traido tu ordenador portátil
+		- Me das
+	- boligrafo
+	- libro
+	- diccionario
+	- ráton
+	- movil
 - 3/23
 	- a
 		- no se puede hablar con el conductor

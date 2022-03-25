@@ -12,19 +12,39 @@ tmux source ~/.tmux.conf
 
 ref: https://unix.stackexchange.com/a/355391
 
-## keep you vim keybindings
+## use your vimrc
+in `~/.tmux.conf`  
 ```
-vim ~/.tmux.conf
 set -g default-terminal "xterm"
+```
+
+to apply immediately
+```
 tmux source ~/.tmux.conf
 ```
+
+## enable mouse scrolling
+in `~/.tmux.conf`  
+```
+set -g mouse on
+```
+
+press q to come back to current line
+
+<https://superuser.com/a/510310>
 
 ## plugins
 ### tmux plugin manager
 https://github.com/tmux-plugins/tpm
+
 #### install
-1. `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
-2. `vim ~/.tmux.conf`
+install  
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+setup plugins  
+in `~/.tmux.conf`  
 ```
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
@@ -40,25 +60,40 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 run '~/.tmux/plugins/tpm/tpm'
 ```
 
+to apply immediately
+```
+tmux source ~/.tmux.conf
+```
 
-3. `tmux source ~/.tmux.conf` (or just `tmux` if no active tmux session)
-4. in tmux, `ctrl+b I` to load plugins
-	- may lag a little
+in tmux, `ctrl+b I` to load plugins (will freeze for a while)
 
 #### add plugins
-1. `vim ~/.tmux.conf`
-2. `set -g @plugin 'tmux-plugins-XXXX'`
-3. `tmux source ~/.tmux.conf` (or just `tmux` if no active tmux session)
+in `~/.tmux.conf`
+
+```
+set -g @plugin 'tmux-plugins-XXXX'
+```
+
+to apply immediately  
+```
+tmux source ~/.tmux.conf
+```
 
 ### save tmux layouts
-https://github.com/tmux-plugins/tmux-resurrect
-https://github.com/tmux-plugins/tmux-continuum
+<https://github.com/tmux-plugins/tmux-resurrect>
+<https://github.com/tmux-plugins/tmux-continuum>
 
 #### install  
 using [[#tmux plugin manager]]
-- `vim ~/.tmux.conf` 
-- `set -g @plugin 'tmux-plugins/tmux-resurrect'`
-- `tmux source ~/.tmux.conf`
+
+in `~/.tmux.conf` 
+```
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+```
+
+```
+tmux source ~/.tmux.conf
+```
 
 #### usage
 - `ctrl+b I` to activate it

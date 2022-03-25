@@ -165,9 +165,27 @@ remove
 sudo pacman -Rsc <package>
 ```
 
+autoremove (remove orphan packages)  
+```
+sudo pacman -Rcns $(pacman -Qdtq)
+pacman -Qdtq | sudo pacman -Rcns -
+```
+
+<https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)>
+
 list all packages  
 ```
 pacman -Ql
+```
+
+search  
+```
+# exact match
+pacman -Q <pkg>
+# match and show description
+pacman -Qs <pkg>
+# exact match and show details
+pacman -Si <pkg>
 ```
 
 ### yay
@@ -188,6 +206,7 @@ yay -S <package>
 ## power related
 <https://userbase.kde.org/KDE_Connect/Tutorials/Useful_commands>
 <https://www.computernetworkingnotes.com/linux-tutorials/shutdown-reboot-suspend-and-hibernate-a-linux-system.html>
+
 ### shutdown
 ```
 shutdown now
@@ -210,12 +229,21 @@ xset dpms force off
 ```
 
 ## session
+### session settings
+- `/etc/environment`
+	- .env style
+	- set up the variables on session start
+- `/etc/profile`
+	- run on session start
+- `~/.config/plasma-localerc`
+	- .env of KDE plasma's GUI session, run after above so will overide them (bruh)
+
 ### TTY sessions
 `ctrl+alt+f2-6`  
 would create session with TTY = tty2-6 respectively
 
 `ctrl+alt+f1` is the GUI session, so press this combination to go back to GUI
-l
+
 `logout` or `exit` to log out
 
 
@@ -243,6 +271,11 @@ loginctl unlock session <id>
 ```
 loginctl terminate session <id>
 ```
+
+## network connection
+`nmcli` for cli  
+
+`nmtui` for gui in terminal  
 
 ## ssh
 ### install ssh server
@@ -438,6 +471,13 @@ nvidia-smi
 ### config files location
 <https://github.com/shalva97/kde-configuration-files>
 
+### language settings
+if the langauge displayed is not what you've set, `echo $LANG` & `echo $LANGUAGE` to see if it's set correctly
+
+if it isn't, go to `~/.config/plasma-localerc` to see if it sets the `LANGUAGE` variable for you, delete the "Translations" section if needed
+
+<https://bbs.archlinux.org/viewtopic.php?pid=1839620#p1839620>
+
 ### troubleshooting
 - everything too small -> display configuration -> global scale
 - `ctrl+alt+x` not working -> shortcuts -> enable clipboard actions
@@ -503,6 +543,72 @@ plasma desktop effects need compositor to work
 #### settings
 - nordic (windows decoration)
 - nordic (login screen)
+
+## XFCE
+### tips
+- settings is scattered, the central one is called `xfce4-settings-manager`
+- shortcut settings
+	- xfce4-settings-manager -> Window Manager -> Keyboard
+- to hide windows title/bar
+	- Settings -> Window Manager Tweaks -> Accessibility. Enable the option Hide title of window when maximized
+		- <https://codeyarns.com/tech/2015-11-05-how-to-hide-window-title-in-xfce.html>
+
+### install
+```
+sudo pacman -S xfce4 xfce4-goodies
+```
+and reboot  
+
+if you have multiple DEs, you can choose which to use at the SDDM screen
+
+## i3
+<https://github.com/i3/i3>
+
+### install
+```
+sudo pacman i3-wm
+```
+
+### relevant packages
+- `i3status`
+	- for the status bar at the bottom
+- `breeze-gtk`
+	- breeze theme for gtk
+	- and then add `gtk-theme-name = "breeze"` in `~/.config/gtkrc-2.0`
+- `thunar`
+	- dolphin-like file manager but lighter
+- `scrot`
+	- cli screenshot tool
+- `xclip`
+	- save something to clipboard
+- `feh`
+	- `feg --bg-fill <path/to/image>` to set background image
+	- <https://www.linuxandubuntu.com/home/set-background-wallpapers-on-i3wm>
+- `rofi`
+	- application launcher
+	- `rofi -show window` to show opened windows
+
+### tips
+- screenshot
+	- `scrot -e 'xclip -selection clipboard -t image/png -i $f'`
+	- <https://unix.stackexchange.com/a/625430>
+- execute command on config reload
+	- `exec_always <command>`
+	- <https://i3wm.org/docs/userguide.html#_automatically_starting_applications_on_i3_startup>
+
+### layout
+- standard mode
+	- windows side-by-side
+	- default `$mod+E`
+- stacking mode
+	- windows vertically tabbed
+	- default `$mod+S`
+- tabbed mode
+	- windows tabbed
+	- default `$mod+W`
+
+<https://unix.stackexchange.com/a/342889>  
+<https://i3wm.org/docs/userguide.html#_changing_the_container_layout>
 
 ## touchpad gestures
 ### touchegg
@@ -637,15 +743,6 @@ sudo update-grub
 
 <https://forum.manjaro.org/t/warning-os-prober-will-not-be-executed-to-detect-other-bootable-partitions/57849/2>
 
-### xbacklight 
-**SOLVING THIS ISSUE WILL CAUSE ANOTHER**
-
-`No outputs have backlight property`
-
-[This](https://askubuntu.com/a/1060843) will solve the backlight issue, but will make plasma become very unstable, flickering all the time
-
-[This](https://bbs.archlinux.org/viewtopic.php?pid=1595276#p1595276) will solve the plasma flickering issue, but will make [Touchegg](https://github.com/JoseExposito/touchegg) not working
-
 ### keyring
 github desktop & vscode may want your keyring everytime  
 solution:
@@ -689,6 +786,8 @@ localectl set-locale LANG=en_US.UTF8
 to correctly set your `LANG` variable
 
 see <https://wiki.archlinux.org/title/locale#Setting_the_locale>
+
+if the problem still persist, and only in KDE GUI session, go to system settings -> formats and set to en_US (and then restart session)
 
 ## good programs
 ### KDE apps
@@ -753,6 +852,26 @@ ffmpeg -y -i *.mp4 -filter_complex "fps=10,scale=1080:-1:flags=lanczos,split[s0]
 ];[s0]palettegen=max_colors=256[p];[s1][p]paletteuse=dither=bayer" output.gif
 ```
 <https://superuser.com/a/1695537>
+
+### xbacklight 
+#### install
+```
+sudo pacman -S xorg-xbacklight
+```
+
+#### usage
+```
+xbacklight -set percentage
+```
+
+#### troubleshooting
+**SOLVING THIS ISSUE WILL CAUSE ANOTHER**
+
+`No outputs have backlight property`
+
+[This](https://askubuntu.com/a/1060843) will solve the backlight issue, but will make plasma become very unstable, flickering all the time
+
+[This](https://bbs.archlinux.org/viewtopic.php?pid=1595276#p1595276) will solve the plasma flickering issue, but will make [Touchegg](https://github.com/JoseExposito/touchegg) not working
 
 ### Remmina - control remote desktop
 (with graphical interface)
