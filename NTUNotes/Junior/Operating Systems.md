@@ -648,3 +648,43 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 	- page in
 		- move a page back from backing store
 	- ![](https://i.imgur.com/0l1zkFk.png)
+
+## Virtual Memory
+### intro
+- in old OS with old CPU, virtual memory = logical memory
+- background
+	- no need to load entire program but just part of it
+- pros
+	- make logical memory not constrained by physical memory
+	- address spaces can be shared by many processes
+	- run many programs at the same time (each partially loaded)
+- memory segmentation
+	- modern CPU has segment selector, can switch between segments (code, data, stack, etc.)
+		- 48 bits uses for memory address in 64-bit processor
+			- 16-bit segment selector
+			- 32-bit offset
+	- segmentation fault
+		- address not in the segment you're accessing
+		- memory access violation
+		- because of memory protection
+- logical memory vs. virtual memory
+	- logical memory for entire memory address space
+		- 1 base
+		- offset ranges the entire memory
+	- virtual memory for each segment
+		- 1 base for each segment
+		- offset ranges only in the segment
+
+### demand paging
+- bring in a page to memory on demand
+	- like swapping
+	- lazy swapper
+- pros
+	- less I/O
+	- less memory needed
+	- faster
+	- support more users
+- paging
+	- invalid -> abort
+	- not in memory -> bring to memory
+- 

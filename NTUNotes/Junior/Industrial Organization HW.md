@@ -375,3 +375,43 @@ Yes, because at the start, they exploit the unoccupied space of the market at th
 
 #### (4)
 No. Established competitors can quickly roll out new products directly competing with it. Bigger brand can achieve the same quality with less cost, while reaching a bigger audience.
+
+## HW5 Farmville strategy
+- utility of lands (if cultivated by a farmer)
+	- fertile
+		- produce $3 per period
+	- meadow
+		- produce $2 per period
+	- rocky
+		- produce $1 per period
+- N teams
+- farmer
+	- can cultivate 0 or 1 land
+	- if a farmer rent your land
+		- you seizes the rent money
+		- farmer seizes the production
+	- get $0 per period when not renting any land
+	- a farmer's utility = $max(0, production-rent)$
+	- 超額比序 of lands：select the more productive one
+- trade
+	- landlords can freely trade lands with each other at any price
+- bank
+	- can get unlimited loan with no interest rate
+- rules
+	- in each period
+		- landlords decide the lands they wants to rent out 
+		- U(24, 40) farmers available
+		- the price for each land is decided by the market competition
+		- other period specific actions
+	- at the start
+		- each team get 24/N meadow lands & 24/N rocky lands
+	- period 2-10
+		- can trade the lands
+	- period 6-10
+		- can do 1 land operation each period, each operation costs $2
+		- operations available
+			- create a rocky land
+			- rocky -> meadow
+			- meadow -> fertile
+
+![](https://i.imgur.com/tBqaXK0.png)
