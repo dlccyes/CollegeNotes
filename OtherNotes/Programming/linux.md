@@ -1129,6 +1129,7 @@ others' configs
 - nordic transparent <https://github.com/Anomic-cr/i3_dotfiles/blob/main/.config/alacritty/alacritty.yml>
 
 ### polybar
+status bar for some WMs
 #### install
 ```
 sudo pacman -S polybar
@@ -1140,3 +1141,63 @@ copy it to `~/.config/polybar/config`
 #### configuration
 to move it to bottom and other bar settings  
 <https://github.com/polybar/polybar/wiki/Configuration#bar-settings>
+
+### create_ap
+my comment: I can't find anyway to create a hotspot with password that can be connected by other devices (tried `nmcli`, KDE GUI and others). This tool can create a connectable hotspot, but the it's pretty hard to use. The starting & stopping method is very obscure and don't work most of the time.
+
+see [the GUI of it](#linux-wifi-hotspot)
+
+[repo](https://github.com/oblique/create_ap)
+
+[discovery post](https://unix.stackexchange.com/a/626636)
+
+install
+```
+git clone https://github.com/oblique/create_ap
+cd create_ap
+make install
+```
+
+create a hotspot from ethernet connection (if wifi interface is `wlo1`, ethernet
+ interface is `enx00e04c360138`)  
+```
+sudo create_ap wlo1 enx00e04c360138 hh 12345678
+```
+
+see running instances
+```
+create_ap --list-running
+```
+not accurate tho
+
+stop instance associating with an interface  
+```
+sudo create_ap --stop <interface>
+```
+useless tho
+
+solving `Failed to initialize lock error`  
+```
+sudo rm /tmp/create_ap.all.lock
+```
+<https://github.com/oblique/create_ap/issues/384#issuecomment-467475995>
+
+stop instance or run in daemon (uesless tho)
+<https://github.com/oblique/create_ap/issues/58#ref-issue-179140687>
+
+### linux-wifi-hotspot
+GUI of [create_ap](#create_ap)
+
+[Github repo](https://github.com/lakinduakash/linux-wifi-hotspot)
+
+[discovery post](https://www.reddit.com/r/kde/comments/co2i1f)
+
+install  
+```
+sudo add-apt-repository ppa:lakinduakash/lwh
+sudo apt install linux-wifi-hotspot
+```
+
+launch GUI
+1. search "Wifi HotSpot"
+2. `wihotspot` in terminal

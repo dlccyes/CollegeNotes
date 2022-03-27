@@ -186,6 +186,57 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 - high cost or low latency -> low VM level(no need chasing latency), big coalitions (to share cost)
 - low cost or high latency -> high VM level (for smaller latency), small coalitions (no need share cost)
 
+#### convergence proof
+- finite amount of possible partitions
+- each operation will improve system utility under pareto condition
+- each operation will create a new partition
+- -> gauranteed to reach a final Nash-stable partition
+
+### tree
+- scenario
+	- a finite 2D space
+	- 1 cloud, placed in the center
+	- multiple edge servers, distributed in some way
+		- randomly distributed
+		- semi-randomly distributed, under some rules
+			- not too close to cloud & other edge servers
+			- more probable to be in high population density areas
+		- fixed
+		- real settings (e.g. major Taiwan cities)
+	- many users, distributed in some way
+		- randomly distributed
+		- semi-randomly distributed, under some rules
+			- more dense around cloud & edge servers
+		- real settings (e.g. Taiwan's population distribution)
+	- users originally use apps on cloud, but can switch to any edge server with necessary costs
+		- propagation delay = f(distance to server)
+		- for each edge server
+			- level
+				- only 1 level
+				- multiple levels
+			- VM
+				- no VM
+				- allow infinite VMs
+- utility function
+	- propagation delays depends both user & server, other than that, same as before
+- algorithm
+	- initialize cloud, edge servers & users spacial distribution
+	- in each iteration
+		- randomly select 1 edge server, calculate if it can change level
+		- randomly select 1 user & 1 edge server, calculate if the user can switch
+	- termination
+		- if partition stable for a certain amount of iterations
+- data structure
+	- user json
+		- location & server in for each user
+		- `{0:{'location':(0.12, 0.55), 'server': 5}}`
+	- server json
+		- a set of user ids for each server
+		- cloud = server 0 
+		- `{5: {0, 1, 2}}`
+
+### multi-level tree
+
 ### todo
 - convergence proof
 - extension

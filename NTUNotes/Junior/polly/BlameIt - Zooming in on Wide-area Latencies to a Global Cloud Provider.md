@@ -92,14 +92,35 @@ parent: polly
 	- at least 10 RTT
 
 ### distribution of bad quadrets
-- spatial distribution
-	- widely spread
-	- in all region
-	- USA has the most bad quadrets
-		- stricter threshold
-	- ![](https://i.imgur.com/w7xmq0X.png)
-- temporal distribution
-	- more bad quadrets ar night
-		- use home ISPs when not working
-			- home ISPs weaker than enterprise ones
-	- ![](https://i.imgur.com/6dx9LtV.png)
+#### spatial distribution
+- widely spread
+- in all region
+- USA has the most bad quadrets
+	- stricter threshold
+- ![](https://i.imgur.com/w7xmq0X.png)
+
+#### temporal distribution
+- more bad quadrets ar night
+	- use home ISPs when not working
+		- home ISPs weaker than enterprise ones
+	- not that significant during weekends
+- ![](https://i.imgur.com/6dx9LtV.png)
+
+#### badness duration distribution
+- long-tailed
+- ![](https://i.imgur.com/vgURvKA.png)
+- 60% < 5 min.
+- 8% > 2 hr
+- most latency issues are temporary
+- BlameIt targets at long-lived issues
+
+
+#### impact
+- impact = num of affected users x duration of badness
+- ![](https://i.imgur.com/FTFPtIQ.png)
+- CDF of problem impact vs. portion of `<cloud location, BGP path>` tuples, ranked by num of affected IP prefixes or impact
+	- ![](https://i.imgur.com/zQMMkbI.png)
+	- 20% of tuples can cover 80% problem impact when ranked by impact
+	- 20% of tuples can cover 60% problem impact when ranked by num of affected IP prefixes
+	- meaning, impact isn't evenly distributed among IP prefixes, but skewed toward a small fraction
+- using num of **affected clients x badness duration** to meaure impact is more efficient
