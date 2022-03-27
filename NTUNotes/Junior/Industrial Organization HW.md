@@ -408,10 +408,16 @@ No. Established competitors can quickly roll out new products directly competing
 	- period 2-10
 		- can trade the lands
 	- period 6-10
-		- can do 1 land operation each period, each operation costs $2
+		- can do 1 operation for each land each period (???), each operation costs $2
 		- operations available
 			- create a rocky land
 			- rocky -> meadow
 			- meadow -> fertile
 
 ![](https://i.imgur.com/tBqaXK0.png)
+
+- strategies
+	- always upgrade
+		- can often times earn $1 more each period if upgrade
+	- collude with other teams s.t. num of available lands < num of farmers
+		- no incentive to deviate bc would worse off if lands > farmers

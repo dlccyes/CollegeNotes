@@ -321,3 +321,32 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 - guided attention
 	- force training in certain way
 		- e.g. force left to right
+
+## GAN
+- generator adversarial network
+- generator
+	- input a vector, output an image
+	- maximize the score of discriminator
+- discriminator
+	- a neural network output a scalar, indicating the realness of the input
+	- using classification
+		- real images = 1
+		- generated images = 0
+	- using regression
+		- real images -> output 1
+		- generated images -> output 0
+- generator generates image, while discriminator finds out the difference between the real images and and ones from generator
+	- both learn improve in the process
+- algorithm
+	- 交替 train
+		- fix generator, train discriminator
+		- fix discriminator, train generator
+			- concat generator & discriminator but only update the parameters of generator
+			- ![](https://i.imgur.com/7HG2jCU.png)
+- theory
+	- minimize the divergence
+		- ![](https://i.imgur.com/NB3tjPH.png)
+	- difficult to train
+	- Wasserstein distance
+		- min overhead needed to transform a distribution to another
+		- ![](https://i.imgur.com/53o8PGi.png)

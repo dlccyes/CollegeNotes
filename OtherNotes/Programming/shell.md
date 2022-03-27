@@ -78,6 +78,11 @@ remote to local
 scp -P <port> <remote username>@<remote host>:path/to/file path/to/file
 ```
 
+local to remote
+```
+scp -P <port> path/to/file <remote username>@<remote host>:path/to/file
+```
+
 <https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/>
 
 ## processes
@@ -104,6 +109,8 @@ enttracks&user=<user>&api_key=<api key>&format=json" | python3 -c "import json,s
 ```
 
 ## disk
+- usage and available space of all partitions
+	- `df -h`
 - size of all top level directories
 	- `du -sh *`
 	- `du -sh * | sort -rh`

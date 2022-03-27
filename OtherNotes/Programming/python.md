@@ -54,6 +54,28 @@ restart shell with `exec $SHELL` or just `source ~/.bashrc`
 ## exec
 to use in function, use `exec(string, globals())`
 
+## function
+### inputs
+- `*args` -> unpack a list/tuple of args
+- `**args` -> unpack a dict of args
+
+```
+def foo(x, y, z):
+	pass
+# method 1
+foo(1, 2, 3)
+#method 2
+_list = [1, 2, 3]
+foo(*_list)
+# method 3
+dict = {x=1, y=2, z=3}
+foo(**_dict)
+```
+
+can also be used reversedly
+
+<https://stackoverflow.com/questions/36901/>
+
 ## decorator
 ```py
 def plusC(c):
