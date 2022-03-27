@@ -377,6 +377,8 @@ Yes, because at the start, they exploit the unoccupied space of the market at th
 No. Established competitors can quickly roll out new products directly competing with it. Bigger brand can achieve the same quality with less cost, while reaching a bigger audience.
 
 ## HW5 Farmville strategy
+<https://www.overleaf.com/7769832718zgxfxpxvhvtr>
+
 - utility of lands (if cultivated by a farmer)
 	- fertile
 		- produce $3 per period

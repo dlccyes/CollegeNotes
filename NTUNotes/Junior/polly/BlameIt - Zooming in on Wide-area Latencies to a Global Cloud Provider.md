@@ -80,3 +80,26 @@ parent: polly
 			- last longer
 			- impact more people
 		- tradeoff, sacrificing a bit accuracy for lower overhead
+
+## latency characterization
+- quadret
+	- client IP/24
+	- cloud location
+	- mobile device or not
+	- 5 minute time bucket
+- use quadret to bundle clients with similar traits together
+- average RTT of the quadret below threshold -> bad
+	- at least 10 RTT
+
+### distribution of bad quadrets
+- spatial distribution
+	- widely spread
+	- in all region
+	- USA has the most bad quadrets
+		- stricter threshold
+	- ![](https://i.imgur.com/w7xmq0X.png)
+- temporal distribution
+	- more bad quadrets ar night
+		- use home ISPs when not working
+			- home ISPs weaker than enterprise ones
+	- ![](https://i.imgur.com/6dx9LtV.png)

@@ -353,7 +353,21 @@ e.g.
 - can't use `source` in cron
 	- just use `.`
 
-## xdg-open
+## default apps
+config file in `~/.config/mimeapps.list`
+
+### open with default app
+```
+xdg-open <path/to/file>
+```
+
+to open in background
+```
+xdg-open <path/to/file> &
+```
+
+<https://unix.stackexchange.com/questions/74605>
+
 ### see default opening app
 ```
 xdg-mime query default <file type>
@@ -378,7 +392,15 @@ xdg-mime default firefox.desktop text/html
 ```
 ls /usr/share/applications | less
 ```
+
 <https://stackoverflow.com/questions/2060284>
+
+### check filetype
+```
+xdg-mime query filetype <path/to/file>
+```
+
+<https://stackoverflow.com/a/5485123/15493213>
 
 ## config files locations
 - `~/.config`
@@ -572,9 +594,13 @@ sudo pacman i3-wm
 ### relevant packages
 - `i3status`
 	- for the status bar at the bottom
+- `polybar`
+	- prettier status bar than i3status
 - `breeze-gtk`
 	- breeze theme for gtk
 	- and then add `gtk-theme-name = "breeze"` in `~/.config/gtkrc-2.0`
+- `qt5ct`
+	- apply uniform theme for both gtk & qt (e.g. KDE) apps
 - `thunar`
 	- dolphin-like file manager but lighter
 - `scrot`
@@ -587,6 +613,9 @@ sudo pacman i3-wm
 - `rofi`
 	- application launcher
 	- `rofi -show window` to show opened windows
+- `i3-volume`
+	- very simple volume control in status bar
+	- need to write in status bar config
 
 ### tips
 - screenshot
@@ -696,6 +725,51 @@ sudo pacman -S fcitx5-chewing
 ```
 
 <https://wiki.archlinux.org/title/Fcitx5>
+
+## volume control
+### pavucontrol
+fully functional GUI  
+
+```
+pavucontrol
+```
+
+<https://archived.forum.manjaro.org/t/how-to-config-sound-output-by-bluetooth-headset-in-manjaro-i3/144163/7>
+
+### amixer
+can't make it output to my bluetooth earbud tho
+
+TUI  
+```
+alsamixer
+```
+
+CLI  
+```
+amixer <something idk>
+```
+
+### pulsecontrol
+can't make it output to my bluetooth earbud tho
+
+CLI  
+```
+# list all device
+pactl list sinks
+# view device volume
+pactl get-sink-volume <sink id>
+# set device volume
+pactl set-sink-volume <sink id>
+```
+
+## natural scrolling
+to enable natural scrolling for touchpad, in `/usr/share/X11/xorg.conf.d/40-libinput.conf`, add 
+```
+Option "NaturalScrolling" "True"
+```
+in the `touchpad` entry
+
+<https://askubuntu.com/a/1122517>
 
 ## troubleshooting
 ### Windows time become UTC
@@ -1053,3 +1127,16 @@ sample config is in [release page](https://github.com/alacritty/alacritty/releas
 
 others' configs
 - nordic transparent <https://github.com/Anomic-cr/i3_dotfiles/blob/main/.config/alacritty/alacritty.yml>
+
+### polybar
+#### install
+```
+sudo pacman -S polybar
+```
+
+default config is at `/etc/polybar/config.ini`  
+copy it to `~/.config/polybar/config`
+
+#### configuration
+to move it to bottom and other bar settings  
+<https://github.com/polybar/polybar/wiki/Configuration#bar-settings>
