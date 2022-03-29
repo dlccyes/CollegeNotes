@@ -687,4 +687,37 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 - paging
 	- invalid -> abort
 	- not in memory -> bring to memory
-- 
+- page fault
+	1. check if reference is valid
+		- invalid reference -> abort
+	2. find free frame in physical memory
+	3. swap page into free frame
+	4. update table
+	5. restart instruction causing page fault
+	- ![](https://i.imgur.com/kqB2vCZ.png)
+- locality
+	- some pages access many new pages each instruction -> bad performance
+	- prefetch
+- free-frame list
+	- ![](https://i.imgur.com/IJ7N1Oh.png)
+	- maintain a linked list of free frames
+	- zero fill-on-demand
+		- when allocated, clear the frame data
+		- for security
+- swap space
+	- sequential (???)
+	- with optimization
+		- load entire process image to swap space at start
+		- filesystem -> swap -> memory
+	- without optimization
+		- load process to memory at start
+		- page out to swap space
+- COW, copy-on-write
+	- copy page only when need to write
+	- fork() -> copy parent's page table to child's
+	- before writing, parent & child have different page table but same physical address space
+	- when need to write, child copy parent's acrtual page
+	- ![](https://i.imgur.com/vuFE9Ql.png)
+- vfork()
+	- virtual memory fork()
+	- 

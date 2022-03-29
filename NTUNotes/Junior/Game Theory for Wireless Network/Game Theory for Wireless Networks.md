@@ -193,42 +193,45 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 - -> gauranteed to reach a final Nash-stable partition
 
 ### tree
-- scenario
-	- a finite 2D space
-	- 1 cloud, placed in the center
-	- M edge servers, distributed in some way
-		- randomly distributed
-		- semi-randomly distributed, under some rules
-			- not too close to cloud & other edge servers
-			- more probable to be in high population density areas
-		- fixed
-		- real settings (e.g. major Taiwan cities)
-	- N users, distributed in some way
-		- randomly distributed
-		- semi-randomly distributed, under some rules
-			- more dense around cloud & edge servers
-		- real settings (e.g. Taiwan's population distribution)
-	- users originally use apps on cloud, but can switch to any edge server with necessary costs
-		- propagation delay = f(distance to server)
-		- for each edge server
-			- level
-				- only 1 level
-				- multiple levels
-			- VM
-				- no VM
-				- allow infinite VMs
-- utility function
-	- propagation delays depends both user & server, other than that, same as before
-	- utility for user i in server j
-		- $u_{i, j}=\alpha ((L_{i,0}+T)-(L_{i,j}+k_jT))-\frac{C}{k_j}$
-- algorithm
-	- initialize cloud, edge servers & users spacial distribution
-	- in each iteration
-		- randomly select a user
-		- randomly select a server, switch the user to the server if possible
-		- randomly select another user, swap the 2 users is possible
-	- termination
-		- if partition stable for a certain amount of iterations
+#### scenario
+- a finite 2D space
+- 1 cloud, placed in the center
+- M edge servers, distributed in some way
+	- randomly distributed
+	- semi-randomly distributed, under some rules
+		- not too close to cloud & other edge servers
+		- more probable to be in high population density areas
+		- no need
+	- fixed
+	- real settings (e.g. major Taiwan cities)
+- N users, distributed in some way
+	- randomly distributed
+	- semi-randomly distributed, under some rules
+		- more dense around cloud & edge servers
+	- real settings (e.g. Taiwan's population distribution)
+- users originally use apps on cloud, but can switch to any edge server with necessary costs
+	- propagation delay = f(distance to server)
+	- for each edge server
+		- level
+			- only 1 level
+			- multiple levels
+		- VM
+			- no VM
+			- allow infinite VMs
+
+#### utility function
+- propagation delays depends both user & server, other than that, same as before
+- utility for user i in server j
+	- $u_{i, j}=\alpha ((L_{i,0}+T)-(L_{i,j}+k_jT))-\frac{C}{k_j}$
+
+#### algorithm
+- initialize cloud, edge servers & users spacial distribution
+- in each iteration
+	- randomly select a user
+	- randomly select a server, switch the user to the server if possible
+	- randomly select another user, swap the 2 users is possible
+- termination
+	- if partition stable for a certain amount of iterations
 - data structure
 	- user json
 		- location & server in for each user
@@ -236,38 +239,50 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- server json
 		- cloud = server 0
 		- `{5:{'location':(0.22, 0.64), 'users':{0, 1, 2}}}`
-- graph
-	- servers & users distribution
-		- ![](https://i.imgur.com/M2SzSAu.png)
+ 
+#### results
+- servers & users distribution
+	- ![](https://i.imgur.com/M2SzSAu.png)
+- convergence
+	- ![](https://i.imgur.com/6I3vGoY.png)
+		- select random
+- stable coalition distribution
+	- ![](https://i.imgur.com/EUyHR1b.png)
+	- ![](https://i.imgur.com/JgKHmyJ.png)
+		- no swapping
+- 2 server selecting algo
+	- ![](https://i.imgur.com/w7mVxLc.png)
+	- ![](https://i.imgur.com/ZhjNlRg.png)
 
-	- convergence
-		- ![](https://i.imgur.com/6I3vGoY.png)
-			- select random
-	- stable coalition distribution
-		- ![](https://i.imgur.com/EUyHR1b.png)
-		- ![](https://i.imgur.com/JgKHmyJ.png)
-			- no swapping
-	- 2 server selecting algo
-		- ![](https://i.imgur.com/w7mVxLc.png)
-		- ![](https://i.imgur.com/ZhjNlRg.png)
-- findings
-	- some user may choose to use a server far away, instead of a nearer one
-		- ![](https://i.imgur.com/KQ1nZGl.png)
-	- if edge servers are farther away from cloud, more users would like to be in edge server
-	- sometimes the "select best possible" strategy will have less final system utility than "select random" strategy
-		- ![](https://i.imgur.com/YUNk4In.png)
-	- users are more tend to select the nearer server with "select best possible" then "select random" strategy
-		- ![](https://i.imgur.com/kJZRY9q.png)
-	- users swap much less in "select best possible" than in "select random"
+#### findings
+- some user may choose to use a server far away, instead of a nearer one
+	- ![](https://i.imgur.com/KQ1nZGl.png)
+- if edge servers are farther away from cloud, more users would like to be in edge server
+- [x] sometimes the "select best possible" strategy will have less final system utility than "select random" strategy
+	- ![](https://i.imgur.com/YUNk4In.png)
+	- **you can get different stable partition with different total utility using the same selection method so comparing total utility is nonesense**
+- users are more tend to select the nearer er server with "select best possible" then "select random" strategy
+	- ![](https://i.imgur.com/kJZRY9q.png)
+- users swap much less in "select best possible" than in "select random"
+- the less the avg distance between user & server, the more the total utility
+	- relation between "select best possible" & "select random"
 
-- TODO
-	- edge server to cloud distance vs. coalition size
-	- [x] swap operation (user2user)
-	- why user would choose a farther server than a nearer one
-		- output those instances to a file and analyze
-	- [x] randomly select a server vs. consult every server from best to worse
-		- compare total utility given the same original distribution
-	- examine every server and consult from the best to the worst (to the user)
+#### TODO
+- edge server to cloud distance vs. coalition size
+- [x] swap operation (user2user)
+- why user would choose a farther server than a nearer one
+	- output those instances to a file and analyze
+- [x] randomly select a server vs. consult every server from best to worse
+	- compare total utility given the same original distribution
+- examine every server and consult from the best to the worst (to the user)
+- use exhaustive search to check if partition is stable
+- total utility comparison with other simple methods
+	- all in cloud
+	- random coalition
+	- exhaustive search
+	- exhaustive maximize system utility
+- when swapping,  try every other user at each iteration
+- analyze users with strange behaviour
 
 ### multi-level tree
 
