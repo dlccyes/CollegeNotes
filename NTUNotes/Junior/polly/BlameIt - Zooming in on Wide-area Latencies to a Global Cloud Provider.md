@@ -81,7 +81,7 @@ parent: polly
 			- impact more people
 		- tradeoff, sacrificing a bit accuracy for lower overhead
 
-## latency characterization
+## latency characterization & distribution
 - quadret
 	- client IP/24
 	- cloud location
@@ -91,22 +91,21 @@ parent: polly
 - average RTT of the quadret below threshold -> bad
 	- at least 10 RTT
 
-### distribution of bad quadrets
-#### spatial distribution
+### spatial distribution
 - widely spread
 - in all region
 - USA has the most bad quadrets
 	- stricter threshold
 - ![](https://i.imgur.com/w7xmq0X.png)
 
-#### temporal distribution
+### temporal distribution
 - more bad quadrets ar night
 	- use home ISPs when not working
 		- home ISPs weaker than enterprise ones
 	- not that significant during weekends
 - ![](https://i.imgur.com/6dx9LtV.png)
 
-#### badness duration distribution
+### badness duration distribution
 - long-tailed
 - ![](https://i.imgur.com/vgURvKA.png)
 - 60% < 5 min.
@@ -114,8 +113,7 @@ parent: polly
 - most latency issues are temporary
 - BlameIt targets at long-lived issues
 
-
-#### impact
+### impact distribution
 - impact = num of affected users x duration of badness
 - ![](https://i.imgur.com/FTFPtIQ.png)
 - CDF of problem impact vs. portion of `<cloud location, BGP path>` tuples, ranked by num of affected IP prefixes or impact

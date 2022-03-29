@@ -21,9 +21,15 @@ has_children: true
 - 2022.3.21
 	- [Vantage - Optimizing video upload for time-shifted viewing ofsocial live streams](Vantage%20-%20Optimizing%20video%20upload%20for%20time-shifted%20viewing%20ofsocial%20live%20streams) S4.1-4.2
 - 2022.3.28
-	- [BlameIt - Zooming in on Wide-area Latencies to a Global Cloud Provider](BlameIt%20-%20Zooming%20in%20on%20Wide-area%20Latencies%20to%20a%20Global%20Cloud%20Provider)
+	- [BlameIt - Zooming in on Wide-area Latencies to a Global Cloud Provider](BlameIt%20-%20Zooming%20in%20on%20Wide-area%20Latencies%20to%20a%20Global%20Cloud%20Provider) S1-2
 
 ## meeting
+- 2022.3.28 14:00-14:55
+	- BlameIt section 1-2
+	- python ffmpeg progress
+	- AR project
+		- might need some help collecting packet data
+		- reverse engineer player actions from packet trace 
 - 2022.3.21 14:00-14:55
 	- Vantage section 4.1-4.2
 	- Twitch project further details

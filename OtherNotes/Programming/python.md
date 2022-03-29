@@ -51,6 +51,44 @@ restart shell with `exec $SHELL` or just `source ~/.bashrc`
 	- `python3 -V` to check
 - `pyenv global <version>` to select your desired version for you machine
 
+## matplotlib
+### plot as many on demand
+<https://stackoverflow.com/a/39106673/15493213>
+
+```python
+import matplotlib.pyplot as plt
+
+xvals = [i for i in range(0, 10)]
+yvals1 = [i**2 for i in range(0, 10)]
+yvals2 = [i**3 for i in range(0, 10)]
+
+f, ax = plt.subplots(1)
+ax.plot(xvals, yvals1)
+ax.plot(xvals, yvals2)
+
+f2, ax2 = plt.subplots(1)
+ax2.plot(xvals, yvals1)
+ax2.plot(xvals, yvals2)
+
+plt.show()
+```
+plot 2 charts, each with 2 lines
+
+### subplot on demand
+<https://stackoverflow.com/a/49100437/15493213>
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+f = plt.figure(figsize=(10,3))
+ax = f.add_subplot(121)
+ax2 = f.add_subplot(122)
+x = np.linspace(0,4,1000)
+ax.plot(x, np.sin(x))
+ax2.plot(x, np.cos(x), 'r:')
+```
+
 ## exec
 to use in function, use `exec(string, globals())`
 
