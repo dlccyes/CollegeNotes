@@ -250,9 +250,9 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- ![](https://i.imgur.com/EUyHR1b.png)
 	- ![](https://i.imgur.com/JgKHmyJ.png)
 		- no swapping
-- 2 server selecting algo
-	- ![](https://i.imgur.com/w7mVxLc.png)
-	- ![](https://i.imgur.com/ZhjNlRg.png)
+- pareto-based vs. totalitarian
+	- ![](https://i.imgur.com/cmMyujE.png)
+	- ![](https://i.imgur.com/OlOuja0.png)
 
 #### findings
 - some user may choose to use a server far away, instead of a nearer one
@@ -261,9 +261,6 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 - [x] sometimes the "select best possible" strategy will have less final system utility than "select random" strategy
 	- ![](https://i.imgur.com/YUNk4In.png)
 	- **you can get different stable partition with different total utility using the same selection method so comparing total utility is nonesense**
-- users are more tend to select the nearer er server with "select best possible" then "select random" strategy
-	- ![](https://i.imgur.com/kJZRY9q.png)
-- users swap much less in "select best possible" than in "select random"
 - the less the avg distance between user & server, the more the total utility
 	- relation between "select best possible" & "select random"
 
@@ -276,13 +273,15 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- compare total utility given the same original distribution
 - examine every server and consult from the best to the worst (to the user)
 - use exhaustive search to check if partition is stable
-- total utility comparison with other simple methods
+- total utility & complexity comparison with other simple methods
 	- all in cloud
 	- random coalition
 	- exhaustive search
 	- exhaustive maximize system utility
+		- switch/swap whenever will increase system utility
 - when swapping,  try every other user at each iteration
 - analyze users with strange behaviour
+- add x y axis
 
 ### multi-level tree
 
