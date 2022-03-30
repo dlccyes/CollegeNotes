@@ -2373,6 +2373,14 @@ Egipto esta rico en cultura y historia! Me encanta mucho!
 	- qué significa = what it means
 - copiar = 抄寫
 - enciénder = turn on
+- cómodo = comfortable
+- casarse = get married
+- algo = something
+- equivocado = wrong
+- recago = message
+- reunión = meeting
+- librería = bookstore
+- avisar = tell
 
 ### cuando
 - de niño = when I was a kid
@@ -2406,8 +2414,39 @@ Egipto esta rico en cultura y historia! Me encanta mucho!
 	- me dejas = can you lend me
 - ![](https://i.imgur.com/UO7j7zZ.png)
 
+### futuro
+- yo
+	- verbo infinitivo + (r)é
+	- e.g.
+		- llamar -> llamaré
+		- comer -> comeré
+
+### telephono
+- De parte de quién? = Who's this?
+- ahora se pone = he'll come to answer now
+- se ha equivocado = you have the wrong number
+- en este momento no puede ponerse = he can't answer at this moment
+- Quieres dejar un recado? = Want to leave a message?
+- llamaré = I will call
+- Sį, soy yo. = Yes, it's me.
+- Di que (tú) le vas a avisar. = I'll tell him.
 
 ### practice
+- 3/30
+	- 3.
+		- en este momento no puede ponerse
+		- si
+		- De parte de quién?
+		- Está Ángeles, por favor?
+		- Es occupada. Quieres dejar un recado?
+		- 
+	- Es el clima de Taipei cómodo?
+	- Llevas gafas?
+	- Cuantos naciste tu padre?
+	- Quieres casarte?
+	- Puedo comprame una casa en Taipei?
+	- Es tu habitación ancho?
+	- 
 - 3/25
 	- No he traido tu ordenador portátil
 		- Me das

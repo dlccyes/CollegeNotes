@@ -544,7 +544,7 @@ plasma desktop effects need compositor to work
 	- system settings -> window management -> kwin scripts -> enable MinimizeAll
 - set windows properties (size, position, bar, etc.)
 	- alt+f3 -> more actions -> special windows settings -> add property -> select and set as "Remember"
-- to set the shortcut switching trditional/simplified Chinese
+- to set the shortcut switching trditional/simplified Chinese (for Fcitx5)
 	- system settings -> input method -> configure addons
 	- <https://amigotechnotes.wordpress.com/2020/04/24/install-and-use-chinese-input-in-ubuntu/>
 
@@ -689,7 +689,6 @@ set up variables in `/etc/environment`
 GTK_IM_MODULE=ibus
 QT_IM_MODULE=ibus
 XMODIFIERS=@im=ibus
-
 ```
 
 start ibus in background  
@@ -698,7 +697,8 @@ ibus-daemon -d
 ```
 to use it on startup, put in autostart settings or `~/.bashrc` or whatever
 
-configure ibus by opening GUI "Ibus Preferences"
+configure ibus by opening GUI "Ibus Preferences"  
+(if you see no langauge available, reboot)
 
 <https://wiki.archlinux.org/title/IBus>  
 

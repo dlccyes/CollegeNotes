@@ -1,11 +1,10 @@
 {
   "baseFontSize": 20,
-  "cssTheme": "",
+  "cssTheme": "Nebula",
   "translucency": false,
   "enabledCssSnippets": [
     "backimg",
-    "test",
-    "nebula"
+    "test"
   ],
   "theme": "obsidian"
 }
