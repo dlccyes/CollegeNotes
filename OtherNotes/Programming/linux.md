@@ -21,7 +21,7 @@ from win10/11
 
 1. install kubuntu iso
 2. flash the iso to your USB -> bootable USB drive
-	- use [Etcher](https://www.balena.io/etcher/ 
+	- use [Etcher](https://www.balena.io/etcher/ )
 		- only used for installation
 	- use linux terminal
 		- steps
@@ -347,12 +347,6 @@ e.g.
 - `sudo su` or `su root` to enter
 - different home directory `~`
 
-## cron
-- `sudo crontab -e` to enter root shell cron
-	- different from `crontab -e`
-- can't use `source` in cron
-	- just use `.`
-
 ## default apps
 config file in `~/.config/mimeapps.list`
 
@@ -544,7 +538,7 @@ plasma desktop effects need compositor to work
 	- system settings -> window management -> kwin scripts -> enable MinimizeAll
 - set windows properties (size, position, bar, etc.)
 	- alt+f3 -> more actions -> special windows settings -> add property -> select and set as "Remember"
-- to set the shortcut switching trditional/simplified Chinese (for Fcitx5)
+- to set the shortcut switching traditional/simplified Chinese (for Fcitx5)
 	- system settings -> input method -> configure addons
 	- <https://amigotechnotes.wordpress.com/2020/04/24/install-and-use-chinese-input-in-ubuntu/>
 
@@ -655,7 +649,6 @@ sudo systemctl enable touchegg.service
 sudo systemctl start touchegg
 ```
 
-
 not running troubleshooting  
 <https://github.com/JoseExposito/touchegg/issues/413#issuecomment-748473155>
 
@@ -695,7 +688,7 @@ start ibus in background
 ```
 ibus-daemon -d
 ```
-to use it on startup, put in autostart settings or `~/.bashrc` or whatever
+to use it on startup, put in autostart settings (like cron @reboot) or `~/.bashrc` or whatever
 
 configure ibus by opening GUI "Ibus Preferences"  
 (if you see no langauge available, reboot)
@@ -829,7 +822,13 @@ your keyrings would be displayed in searhorse, right click on "default keyring" 
 <https://askubuntu.com/a/1270021>
 
 ### emoji not shown
-solution: create backup emoji font in `~/.config/fontconfig/fonts.conf`
+#### system
+```
+sudo pacman -S noto-fonts-emoji
+```
+
+#### konsole
+create backup emoji font in `~/.config/fontconfig/fonts.conf`
 
 [example file](https://github.com/AndydeCleyre/dotfiles/blob/master/.config/fontconfig/fonts.conf)
 
@@ -873,7 +872,7 @@ sudo pacman -S kde-applications
 ```
 
 #### kdeplasma-addons
-some desktop effects and stuff
+some desktop effects and stuff (e.g. task switcher)
 
 `sudo pacman -S kdeplasma-addons` and reboot
 
@@ -891,7 +890,7 @@ sudo pacman -S kio-gdrive
 
 #### system monitor
 ```
-udo pacman -S plasma-systemmonitor
+sudo pacman -S plasma-systemmonitor
 ```
 
 ### GParted
@@ -910,14 +909,35 @@ sudo pacman -S bluez bluez-utils blueman
 sudo systemctl enable bluetooth.service
 ```
 
-
 <https://www.jeremymorgan.com/tutorials/linux/how-to-bluetooth-arch-linux/>
-
 
 ### htop
 - to show only 1 line per process (instead of per thread)
 	- setup -> display options -> hide userland process threads
 		- <https://askubuntu.com/a/1124990>
+
+### vim
+to copy to clipboard in arch
+```
+# (uninstall vim &) install gvim 
+sudo pacman -S gvim
+```
+and then use `vim` as normal
+
+<https://vi.stackexchange.com/a/3078>
+
+### cron
+- `sudo crontab -e` to enter root shell cron
+	- different from `crontab -e`
+- can't use `source` in cron
+	- just use `.`
+
+#### install
+```
+sudo pacman -S cronie
+sudo systemctl enable cronie.service
+sudo systemctl start cronie.service
+```
 
 ### ffmpeg
 #### mp4 to gif
@@ -972,6 +992,7 @@ sudo ufw allow 3389/tcp
 sudo iptables -A INPUT -p tcp --dport 3389 -j ACCEPT
 sudo /etc/init.d/xrdp restart
 ```
+
 install Remmina
 ```
 sudo apt install remmina
@@ -1201,3 +1222,9 @@ sudo apt install linux-wifi-hotspot
 launch GUI
 1. search "Wifi HotSpot"
 2. `wihotspot` in terminal
+
+### github desktop
+don't use the AUR `github-desktop` version, but `github-desktop-bin`
+```
+yay -S github-desktop-bin
+```
