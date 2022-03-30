@@ -147,6 +147,15 @@ snap <xxx.snap> --dangerous
 
 <https://askubuntu.com/a/1397306>
 
+### flatpak
+```
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+
+```
+sudo flatpak install flathub <app name on flathub>
+```
+
 ### pacman
 [cheatsheet](https://devhints.io/pacman)
 
