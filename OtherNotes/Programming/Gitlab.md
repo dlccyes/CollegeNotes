@@ -14,6 +14,32 @@ parent: Programming
 </details>
 
 ## self-host gitlab
+### start/stop
+<https://docs.gitlab.com/omnibus/maintenance/#starting-and-stopping>
+
+start
+```
+sudo gitlab-ctl start
+```
+
+stop
+```
+sudo gitlab-ctl stop
+```
+
+enable autostart
+```
+systemctl enable gitlab-runsvdir
+```
+<https://stackoverflow.com/a/47891691/15493213>
+
+disable autostart
+```
+sudo systemctl disable gitlab-runsvdir.service
+```
+<https://stackoverflow.com/a/35902817/15493213>
+
+### install
 install gitlab  
 official doc: <https://about.gitlab.com/install/#ubuntu>  
 
