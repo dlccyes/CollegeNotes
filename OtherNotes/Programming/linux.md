@@ -1237,3 +1237,12 @@ don't use the AUR `github-desktop` version, but `github-desktop-bin`
 ```
 yay -S github-desktop-bin
 ```
+
+### PDF Arranger
+simple lightweight pdf page-wise editing tool (move, rotate, delete, etc.)
+
+```
+sudo apt install pdfarranger
+```
+
+<https://unix.stackexchange.com/a/645755>

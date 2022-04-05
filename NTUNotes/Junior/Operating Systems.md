@@ -13,7 +13,8 @@ has_children: True
 {:toc}
 </details>
 
-## references
+## materias
+- [Operating System Concepts](Operating%20System%20Concepts.pdf)
 - [xv6 textbook](https://pdos.csail.mit.edu/6.828/2020/xv6/book-riscv-rev1.pdf)
 
 ## videos
@@ -43,6 +44,11 @@ has_children: True
 - [Main Memory 1](https://www.youtube.com/watch?v=Qn5ndel19PA)
 - [Main Mamory 2](https://www.youtube.com/watch?v=k4YpyOVdtJQ)
 - [Main Memory 3](https://www.youtube.com/watch?v=vlNRu1NTEkE)
+- [Virtual Memory 1](https://www.youtube.com/watch?v=7b7OrNga_1w)
+- [Virtual Memory 2](https://www.youtube.com/watch?v=7YftcjepKyw)
+- [Virtual Memory 3 - Page Replacement](https://www.youtube.com/watch?v=DdrW21Y5QYY)
+- [Virtual Memory 4 - Thrashing](https://www.youtube.com/watch?v=CQYI9BWZCJQ)
+
 
 ## intro
 - ![](https://i.imgur.com/C5gjElc.png)
@@ -593,13 +599,22 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 - contiguous page table -> too large ($2^{20}>>2(2^{10})$) -> need to split
 
 #### hierarchy page table
+- multilevel page table
 - page the page tables
 	- ![](https://i.imgur.com/DZRzUVk.png)
 	- ![](https://i.imgur.com/CRKSA8M.png)
 - 64-bit processor will need many layer of paging -> big memory access overhead -> inappropiate
 - e.g.
 	- ![](https://i.imgur.com/mBOEtUC.png)
- 
+- xv6
+	- virtual address
+		- EXT = 0
+		- index = concat of 3 level page table idx
+		- offset = 0
+	- ![](https://i.imgur.com/VZ0fGnI.png)
+	- ![](https://i.imgur.com/CploN8D.png)
+	- ![](https://i.imgur.com/0vAhiKX.png)
+
 #### hashed page table
 - hash table
 - hashed logical address -> physical address 
@@ -630,6 +645,7 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 - no shared memory
 	- 1 virtual page entry for each physical page
 	- only 1 mapping virtual address at a time
+- [normal vs. inverted page table](https://www.geeksforgeeks.org/difference-between-page-table-and-inverted-page-table/)
 
 ### swapping
 - backing store
@@ -712,12 +728,72 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 	- without optimization
 		- load process to memory at start
 		- page out to swap space
-- COW, copy-on-write
-	- copy page only when need to write
-	- fork() -> copy parent's page table to child's
-	- before writing, parent & child have different page table but same physical address space
-	- when need to write, child copy parent's acrtual page
-	- ![](https://i.imgur.com/vuFE9Ql.png)
+
+### COW, copy-on-write
+- copy page only when need to write
+- fork() -> copy parent's page table to child's
+- before writing, parent & child have different page tables but same physical address space
+- need to write -> page fault -> child copy parent's actual page -> continue the instruction
+- ![](https://i.imgur.com/vuFE9Ql.png)
 - vfork()
 	- virtual memory fork()
-	- 
+
+### Page Replacement
+- over-allocating / over-booking
+	- allocate only 50% of requested memory -> can have double amount of processes
+- when there's no free frame
+	- find and page out unused pages
+	- strategy
+		- terminate
+		- swap out
+		- page replacement
+	- goal
+		- min num of page faults 
+- no free frame
+	- ![](https://i.imgur.com/cW9dfaC.png)
+- frame-allocation algo
+	- frames for each process
+	- page replacement
+- page replacement algo
+	- procedure
+		- have free frame -> use it
+		- no free frame -> find victim frame and swap -> update page table -> restart the instruction
+			- max C valid 2 page transfers
+		- if victim frame isn't modified (modify/dirty bit = 1) -> no need transfer back to backing store
+	- Belady's Anomaly
+		- page-fault rate may increase on page frames increase for some algo
+		- e.g.
+			- ![](https://i.imgur.com/o0WUO5N.png)
+			- ![](https://i.imgur.com/dhJrlW1.png)
+	- optimal algo
+		- find victim frame that would not be used again
+		- would not suffer from Belady's Anomaly
+			- frame priority independent of num of frames 
+	- FIFO algo
+		- suffers from Belady's Anomaly
+			- frame priority dependent of num of frames
+		- ![](https://i.imgur.com/4cvZN8L.png)
+	- LRU algo
+		- find least recently used frame
+		- would not suffer from Belady's Anomaly
+			- frame priority independent of num of frames 
+		- using counter
+			- a counter recording the most recently referenced time for each page entry
+			- find the pte with smallest counter for replacement
+		- using stack
+			- doubly-linked list stack
+			- page referenced -> move to top of the stack
+				- change 6 pointers
+			- more expensive
+			- <https://leetcode.com/problems/lru-cache/>
+		- variations
+			- additional-reference-bits algo
+			- second-chance algo
+			- enhanced second-chance algo
+	- LFU algo
+		- find least frequently used frame to replace
+	- e.g.
+		- ![](https://i.imgur.com/zhAn75w.png)
+			- B invalid C valid ->  swap out C swap in B -> B valid C invalid
+
+### Thrashing
