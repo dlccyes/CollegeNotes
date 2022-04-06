@@ -141,8 +141,9 @@ layout: meth
 		- <https://www.fullstack.cafe/blog/kubernetes-interview-questions>
 
 ## interviews
-
 ### behavioral questions
+- resources
+	- <https://www.productmanagementexercises.com/interview-questions>
 - nugget
 	- summary about the event
 - STAR method
@@ -158,10 +159,11 @@ layout: meth
 		- [official](https://www.amazon.jobs/en/principles)
 		- [explanations](https://www.scarletink.com/interviewing-at-amazon-leadership-principles/)
 			- sign up free to view the full article
-		- examples
+		- questions
+			- <https://www.teamblind.com/post/RiwtSu0o>
+		- questions & answers
 			- <https://www.reddit.com/r/jobsearchhacks/comments/g2iv42>
 				- all related to sales tho
-			- <https://www.teamblind.com/post/RiwtSu0o>
 	- tips
 		- use STAR format
 		- each LP has 2 stories (different LPs may share)

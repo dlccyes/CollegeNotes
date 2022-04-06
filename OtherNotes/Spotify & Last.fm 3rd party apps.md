@@ -15,11 +15,9 @@
 
 <http://organizeyourmusic.playlistmachinery.com><br>每次都要重載 👍 很全面
 - sort all your songs(liked or added to playlist) into genres/moods/styles/decades/added/popularity/duration
-    
 - can graph
-    
 - also show attributes (so 功能性 >> sortyourmusics)
-    
+
 [http://sortyourmusic.playlistmachinery.com](http://sortyourmusic.playlistmachinery.com/) music attributes in a playlist
 
 [https://replayify.com](https://replayify.com/login) ordinary but fairly good visual
@@ -50,7 +48,7 @@
 
 [https://spotifytrack.net/](https://spotifytrack.net/) ordinary but can compare with others (not tested)
 
-  
+<https://everythings-connected.com/> artists graph
 
 ### Spotify Discovery and Others
 - <https://songdata.io/>

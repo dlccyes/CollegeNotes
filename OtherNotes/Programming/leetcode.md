@@ -23,8 +23,7 @@ write a function counting the num of subarrays with at most k different integers
 maintain a sliding window
 the right pointer keeps sliding
 while the left pointer slides when diff integers > k
-the sum of the length of each legal subarray
-is the answer
+the sum of the length of each legal subarray is the answer
 
 e.g.
 given [1, 2, 1, 2, 3] & k=2
