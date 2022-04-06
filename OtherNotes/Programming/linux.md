@@ -148,10 +148,18 @@ snap <xxx.snap> --dangerous
 <https://askubuntu.com/a/1397306>
 
 ### flatpak
+install flatpak
+```
+sudo pacman -S flatpak
+```
+and reboot
+
+add flathub
 ```
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
+install your flatpak app
 ```
 sudo flatpak install flathub <app name on flathub>
 ```
@@ -330,6 +338,11 @@ ssh-copy-id -i ~/.ssh/id_rsa <user>@<host>
 <https://unix.stackexchange.com/a/200256>
 
 ## port
+### see port in use
+```
+sudo lsof -i -P -n | grep <port>
+```
+
 ### opening port
 ```
 sudo ufw allow <port num>
@@ -818,6 +831,29 @@ sudo update-grub
 ```
 
 <https://forum.manjaro.org/t/warning-os-prober-will-not-be-executed-to-detect-other-bootable-partitions/57849/2>
+
+### kwallet
+It is a password manager for KDE plasma, storing your wifi passwords for example. To disable this, go to `~/.config/kwalletrc`
+
+```
+Enabled=false
+```
+
+Note that this will disable it on statup and you'll have to type the passwords it saved everytime e.g. wifi passwords.
+
+You can also set its password to blank so that you won't be asked for its password even if you've enabled it. To do so, install it
+
+```
+sudo pacman -S kwalletmanager
+```
+
+and change the password via GUI.
+
+references
+- <https://wiki.archlinux.org/title/KDE_Wallet>  
+- <https://www.reddit.com/r/kde/comments/a7n0xx/>
+- <https://unix.stackexchange.com/a/373877>  
+- <https://askubuntu.com/a/1082280>
 
 ### keyring
 github desktop & vscode may want your keyring everytime  

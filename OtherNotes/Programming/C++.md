@@ -33,7 +33,8 @@ vector<int> oldd(begin(arr),end(arr));
 ```cpp
 vector<int> neww = {oldd.begin()+1, oldd.end()-1}; //neww = oldd[1:-1]
 ```
-https://stackoverflow.com/a/58724503/15493213
+
+<https://stackoverflow.com/a/58724503/15493213>
 
 ### nested vector
 2-dimensional NxN
@@ -41,7 +42,29 @@ https://stackoverflow.com/a/58724503/15493213
 
 3-dimensional NxNxN
 `vector<vector<vector<int>>> M(N, vector<vector<int>>(N, vector<int>(N)))`
-https://stackoverflow.com/a/9812469/15493213
+
+<https://stackoverflow.com/a/9812469/15493213>
+
+## class
+### this
+like python's `self`
+```cpp
+class Solution {
+public:
+    vector<int> arr;
+    int climbStairs(int n) {
+        vector<int> arr(n+1);
+        this->arr = arr;
+        return fib(n);
+    }
+    int fib(int n) {
+        if(n==0 || n==1) return 1;
+        if(this->arr[n]) return this->arr[n];
+        this->arr[n] = fib(n-1)+fib(n-2);
+        return this->arr[n];
+    }
+};
+```
 
 ## for loop
 ```
@@ -70,6 +93,38 @@ int main(){
 ```
 
 ## associative array
+`unordered_map`
+- O(1) lookup
+- hash table
+
+```cpp
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+ 
+int main()
+{
+    // Declaring umap to be of <string, int> type
+    // key will be of string type and mapped value will
+    // be of int type
+    unordered_map<string, int> umap;
+ 
+    // inserting values by using [] operator
+    umap["GeeksforGeeks"] = 10;
+    umap["Practice"] = 20;
+    umap["Contribute"] = 30;
+
+    // Traversing an unordered map
+    for (auto x : umap)
+      cout << x.first << " " << x.second << endl;
+}
+```
+<https://www.geeksforgeeks.org/unordered_map-in-cpp-stl/>
+
+`map`
+- O(logn) lookup
+- binary tree
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -83,7 +138,28 @@ int main()
     cout << marks["Haha"] << endl;
 }
 ```
-ref: https://www.geeksforgeeks.org/associative-arrays-in-cpp/
+ref: <https://www.geeksforgeeks.org/associative-arrays-in-cpp/>
+
+## set
+`unordered_set`
+- average O(1) lookup
+- hash table
+
+```cpp
+bool containsDuplicate4(vector<int>& nums) {
+    set<int> mySet;
+    for (auto& num: nums) {
+        if (mySet.find(num) != mySet.end())
+            return true;
+        mySet.insert(num);
+    }
+    return false;
+}
+```
+
+`set`
+- O(logn) lookup
+- binary tree
 
 ## read file
 ```

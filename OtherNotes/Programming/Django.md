@@ -44,7 +44,7 @@ urlpatterns = [
     path('doc', TemplateView.as_view(template_name='doc.html')), # return template directly
 	path('', views.index, name='index'), # use function index() in file views
 ]
-
+```
 
 ## views
 `urls.py` is [[Laravel]]'s `web.php`

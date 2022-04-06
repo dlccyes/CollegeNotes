@@ -145,8 +145,9 @@ layout: meth
 ### behavioral questions
 - nugget
 	- summary about the event
-- S.A.R.
+- STAR method
 	- situation
+	- task
 	- action
 	- result
 - ![](https://s2.loli.net/2022/01/11/N1g7h4VZbfejpXE.png)
@@ -156,7 +157,17 @@ layout: meth
 	- resources
 		- [official](https://www.amazon.jobs/en/principles)
 		- [explanations](https://www.scarletink.com/interviewing-at-amazon-leadership-principles/)
-		- [examples](https://www.reddit.com/r/jobsearchhacks/comments/g2iv42/amazon_14_leadership_principles_are_my_answers/)
+			- sign up free to view the full article
+		- examples
+			- <https://www.reddit.com/r/jobsearchhacks/comments/g2iv42>
+				- all related to sales tho
+			- <https://www.teamblind.com/post/RiwtSu0o>
+	- tips
+		- use STAR format
+		- each LP has 2 stories (different LPs may share)
+		- [Good leaders understand which principle to prioritize in what situation.](https://www.teamblind.com/post/u8kPJm15)	
+		- [use one LP to explain another LP](https://www.teamblind.com/post/X7uqnVjG)
+			- > Best method is using one LP to explain the other, like I Dive Deep because I'm Curious and wanna Learn, or I like to Invent and Simplify because I'm Frugal. Or I take Ownership because I'm Obsessed with the Customer.
 	- Customer Obsession
 		- customer is always the most important, even more important than profit
 	- Ownership
@@ -170,6 +181,55 @@ layout: meth
 			- past experiences
 			- others' opinions
 			- diverse set of perspectives
+	- Learn and Be Curious
+		- open to new things
+	- Hire and Develop the Best
+		- treat top performers differently
+		- step out of comfort zone
+	- Insist on the Highest Standards
+		- never be satisfied
+		- never enough
+		- fixing the root cause
+		- always seek to improve
+	- Think Big
+		- have impossible & over the top ideas
+		- practical & realistic ideas are never big enough
+	- Bias for Action
+		- take risks
+		- take quick & bold decisions
+	- Frugality
+		- be cheap
+		- deliver with insufficient resources
+		- "Invent and Simplify"
+	- Earn Trust
+		- related to "what mistakes have you made" type of questions
+		- self-critical
+		- admit you're wrong
+		- share the failure
+			- "Ownership"
+		- "Insist on the Highest Standards"
+	- Dive Deep
+		- know every detail
+		- find the root cause
+		- "Ownership"
+		- "Insist on the Highest Standards"
+	- Have Backbone; Disagree and Commit
+		- "Ownership"
+		- don't do it because your boss said so
+		- use data to support your disagreement
+	- Deliver Results
+		- "Ownership"
+		- "Bias for Action"
+		- "Frugality"
+		- take calculated risk to deliver the right result in time
+	- Strive to be Earth's Best Employer
+		- care about people
+		- invest in people
+		- "Hire and Develop the Best"
+	- Success and Scale Bring Broad Responsibility
+		- do the right thing
+		- care not only about business
+		- "Customer Obsession"
 
 ### posts & threads
 - generic
