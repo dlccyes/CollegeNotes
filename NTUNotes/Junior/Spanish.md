@@ -2279,11 +2279,23 @@ layout: meth
 ## Spanish 2-2
 ### deberes
 #### deberes 1
+**a trip you like mucho**
+
 Hace 2 años, visitó Egipto con mi familia. Estuvo en el verano, y Egipto está en un desierto, así que tuve mucho calor. Durante el primer día, llegamos al Cairo. Lo que más recuerdo del Cairo es el tráfico. El tráfico del Cairo es un desastre. No tiene el semáforo y carriles, todos los coches hace que querian! Muy interesante!
 
 Para los siguientes 5 días, fuimos al sur de Egipto al lado del Nilo en el autobús turístico, y volvímos al Cairo en el cruceno en el Nilo. Visitamos muchos templos bonitos, y comidos muchas comidas deliciosas.
 
 Egipto esta rico en cultura y historia! Me encanta mucho!
+
+#### deberes 2
+**escribir la biografia de una persona famosa que te gusta**
+
+Lionel Andrés Messi es un futbolista muy famosa. Es el mejor jugador del mundo durante los últimos 15 años, y posiblemente el mejor jugador del mundo de todos los tiempos.
+
+Leo Messi nació en Rosario en 1987. Mudarse a Barcelona y unirce a FC Barcelona a la edad de 13. Consiguió un triplete en la 2008-2009 temporada bajo Pep Guardiola., y ganó su primer Balón de Oro en 2009. Hasta este día, Messi ha ganado 10 La Liga, 4 la Liga de Campeones de la UEFA y 7 Balón de Oro.
+
+Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expresidente de Barcelona, es horrible y equivocó con las finanzas de FC Barcelona. Despues unirce a PSG, Messi ja estando jugando mal y no siendo feliz por que PSG es una mierda.
+
 
 ### words 
 - preciosa = beautiful

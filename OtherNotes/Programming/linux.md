@@ -692,11 +692,13 @@ sudo update-alternatives --config editor
 install  
 ```
 sudo pacman -S ibus
+sudo apt install ibus
 ```
 
 to install chewing
 ```
 sudo pacman -S ibus-chewing
+sudo apt install ibus-chewing
 ```
 
 set up variables in `/etc/environment`  

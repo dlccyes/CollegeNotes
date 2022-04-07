@@ -47,7 +47,8 @@ has_children: True
 - [Virtual Memory 1](https://www.youtube.com/watch?v=7b7OrNga_1w)
 - [Virtual Memory 2](https://www.youtube.com/watch?v=7YftcjepKyw)
 - [Virtual Memory 3 - Page Replacement](https://www.youtube.com/watch?v=DdrW21Y5QYY)
-- [Virtual Memory 4 - Thrashing](https://www.youtube.com/watch?v=CQYI9BWZCJQ)
+- [Virtual Memory 4](https://www.youtube.com/watch?v=JaeSleQ6_Dk)
+- [Virtual Memory 5 - Thrashing](https://www.youtube.com/watch?v=CQYI9BWZCJQ)
 
 
 ## intro
@@ -754,46 +755,90 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 - frame-allocation algo
 	- frames for each process
 	- page replacement
-- page replacement algo
-	- procedure
-		- have free frame -> use it
-		- no free frame -> find victim frame and swap -> update page table -> restart the instruction
-			- max C valid 2 page transfers
-		- if victim frame isn't modified (modify/dirty bit = 1) -> no need transfer back to backing store
-	- Belady's Anomaly
-		- page-fault rate may increase on page frames increase for some algo
-		- e.g.
-			- ![](https://i.imgur.com/o0WUO5N.png)
-			- ![](https://i.imgur.com/dhJrlW1.png)
-	- optimal algo
-		- find victim frame that would not be used again
-		- would not suffer from Belady's Anomaly
-			- frame priority independent of num of frames 
-	- FIFO algo
-		- suffers from Belady's Anomaly
-			- frame priority dependent of num of frames
-		- ![](https://i.imgur.com/4cvZN8L.png)
-	- LRU algo
-		- find least recently used frame
-		- would not suffer from Belady's Anomaly
-			- frame priority independent of num of frames 
-		- using counter
-			- a counter recording the most recently referenced time for each page entry
-			- find the pte with smallest counter for replacement
-		- using stack
-			- doubly-linked list stack
-			- page referenced -> move to top of the stack
-				- change 6 pointers
-			- more expensive
-			- <https://leetcode.com/problems/lru-cache/>
-		- variations
-			- additional-reference-bits algo
-			- second-chance algo
-			- enhanced second-chance algo
-	- LFU algo
-		- find least frequently used frame to replace
+
+#### page replacement algo
+- procedure
+	- have free frame -> use it
+	- no free frame -> find victim frame and swap -> update page table -> restart the instruction
+		- max C valid 2 page transfers
+	- if victim frame isn't modified (modify/dirty bit = 1) -> no need transfer back to backing store
 	- e.g.
 		- ![](https://i.imgur.com/zhAn75w.png)
 			- B invalid C valid ->  swap out C swap in B -> B valid C invalid
+- Belady's Anomaly
+	- page-fault rate may increase on page frames increase for some algo
+	- e.g.
+		- ![](https://i.imgur.com/o0WUO5N.png)
+		- ![](https://i.imgur.com/dhJrlW1.png)
+- optimal algo
+	- find victim frame that would not be used again
+	- would not suffer from Belady's Anomaly
+		- frame priority independent of num of frames 
+- FIFO algo
+	- suffers from Belady's Anomaly
+		- frame priority dependent of num of frames
+	- ![](https://i.imgur.com/4cvZN8L.png)
+- LRU algo
+	- find least recently used frame
+	- would not suffer from Belady's Anomaly
+		- frame priority independent of num of frames 
+	- using counter
+		- a counter recording the most recently referenced time for each page entry
+		- find the pte with smallest counter for replacement
+	- using stack
+		- doubly-linked list stack
+		- page referenced -> move to top of the stack
+			- change 6 pointers
+		- more expensive
+		- <https://leetcode.com/problems/lru-cache/>
+- LRU algo approximation
+	- additional-reference-bits algo
+		- reference bit
+			- each page has one
+			- initially 0
+			- set to 1 when the page is referenced
+		- 8 bits (1 byte) for reference history
+		- periodically update the 8 bits, shift right and fill the reference bit at the leftmost
+		- treat as unsigned integer -> smallest one is LRU
+	- second-chance algo
+		- FIFO with reference bit
+		- iterate through reference bit of pages in FIFO's order
+			- ref bit = 1
+				- set ref bit to 0
+				- set arrival time to current time
+			- ref bit = 0 -> replace
+		- circular
+	- enhanced second-chance algo
+		- consider (reference bit, modify bit)
+		- (0,0) -> (0,1) -> (1,0) -> (1,1)
+		- modified page will have to be written out before replaced
+- couting-based algo
+	- LFU algo
+		- find least frequently used frame to replace
+	- MFU algo
+		- replace the most frequently used page
+		- bc the recent brought in pages might not be used frequently used yet
+- page-buffering algo
+	- a pool of free frames
+	- new page read into a free frame
+	- process start without waiting for victim page to be written out
+	- variation: a list of modified pages
+		- paging device idle -> write modified page to backing store && reset modify bit
+		- this way victim frame would more likely to be clean
+	- variation: use free-frame directly
+		- page fault -> if the page is in free-frame pool, use it directly
+			- no I/O
+
+### Allocation of Frames
+- fixed allocation
+	- equal allocation
+		- divide evenly
+	- proportional allocation
+		- proportional to size of process
+- global & local allocation
+	- local allocation
+		- its own set of frames
+	- global allocation
+		- process can take frame from other processes
 
 ### Thrashing
