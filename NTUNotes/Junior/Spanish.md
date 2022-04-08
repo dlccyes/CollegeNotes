@@ -2393,6 +2393,13 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - reunión = meeting
 - librería = bookstore
 - avisar = tell
+- espectáculo = show
+- no importa = not a big deal
+- obra = 舞台劇
+- parece = seem
+- entonces = then
+- quedar = 約
+	- quedamos esta noche? = 我們約這個晚上？
 
 ### cuando
 - de niño = when I was a kid
@@ -2444,6 +2451,24 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - Di que (tú) le vas a avisar. = I'll tell him.
 
 ### practice
+- 4/8
+	- order
+		- 2364175
+		- Oye, nos vemos mañana por la tarde?
+		- Vale. De acuerdo. Y qué podemos hacer? Hay algo interesante?
+		- Pues mira, hay una exposición de Miquel Barceló en el Reina Sofía.
+		- Ah! Muy bien. Me encanta Miquel Barceló. Cómo quedamos?
+		- Es que no me va bien tan pronto. Qué te parece a las seis?
+		- Vale. Entonces quedamos a las seis.
+	- taipei
+		- Qué película ponen en los cines Showtime?
+		- Qué exposición hay en el Museo 故宮?
+		- Qué tipo de comida se puede tomar en el 118?
+		- Dondé es el concierto de 周興哲?
+		- Dondé hay conciertos en Taipei?
+		- Cuánto cuesta una entrada de cine?
+		- Qué obra se puede ver en el treatro National？
+		- Qué espectáculo hay en el club 
 - 3/30
 	- 3.
 		- en este momento no puede ponerse
@@ -2458,7 +2483,6 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 	- Quieres casarte?
 	- Puedo comprame una casa en Taipei?
 	- Es tu habitación ancho?
-	- 
 - 3/25
 	- No he traido tu ordenador portátil
 		- Me das

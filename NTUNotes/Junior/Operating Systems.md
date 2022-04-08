@@ -13,7 +13,7 @@ has_children: True
 {:toc}
 </details>
 
-## materias
+## materials
 - [Operating System Concepts](Operating%20System%20Concepts.pdf)
 - [xv6 textbook](https://pdos.csail.mit.edu/6.828/2020/xv6/book-riscv-rev1.pdf)
 
@@ -835,10 +835,30 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 		- divide evenly
 	- proportional allocation
 		- proportional to size of process
-- global & local allocation
-	- local allocation
-		- its own set of frames
-	- global allocation
-		- process can take frame from other processes
+
+#### global & local allocation
+- local replacement
+	- its own set of frames
+- global replacement
+	- process can take frame from other processes
+	- process exec time depends on other processes 
+	- commonly used
+	- reclaiming pages
+		- ![](https://i.imgur.com/YVarh9b.png)
+		- num of free frames < min threshold -> start reclaim
+		- num of free frames > max threshold -> stop reclaiming
+		- ensure there's always free frames available
+- linux out-of-memory killer (OOM)
+- each process has OOM score
+	- function of memory usage percentage 
+	- high -> more likely to be killed
+	- set `oom_score_adj` to big negative to avoid being killed
+
+#### Non-Uniform Memory Access (NUMA)
+- memory not accessed equally
+- arch
+	- ![](https://i.imgur.com/OG0Xf07.png)
+- separate free-frame list for each NUMA node
+
 
 ### Thrashing

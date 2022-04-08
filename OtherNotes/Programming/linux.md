@@ -167,35 +167,47 @@ sudo flatpak install flathub <app name on flathub>
 ### pacman
 [cheatsheet](https://devhints.io/pacman)
 
-install
+#### install package
 ```
 sudo pacman -S <package>
 ```
 
-update & upgrade all
+#### update & upgrade all
 ```
 sudo pacman -Syu
 ```
 
-remove  
+#### remove package
 ```
 sudo pacman -Rsc <package>
 ```
 
-autoremove (remove orphan packages)  
+#### remove cache
+remove all uninstalled packages in cache (s.t. you can downgrade easily)
+```
+sudo pacman -Sc
+```
+
+remove all packages in cache
+```
+sudo pacman -Scc
+```
+
+#### autoremove (remove orphan packages)  
 ```
 sudo pacman -Rcns $(pacman -Qdtq)
+# or
 pacman -Qdtq | sudo pacman -Rcns -
 ```
 
 <https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)>
 
-list all packages  
+#### list all packages  
 ```
 pacman -Ql
 ```
 
-search  
+#### search package
 ```
 # exact match
 pacman -Q <pkg>
@@ -428,8 +440,7 @@ some nice dotfiles
 ## change user@host color and stuff
 settings located in `~/.bashrc`
 ```bash
-if [ "$color_prompt" = yes ]; then    
- PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 ```
 change the sequence to whatever you want
 
@@ -1284,3 +1295,8 @@ sudo apt install pdfarranger
 ```
 
 <https://unix.stackexchange.com/a/645755>
+
+### vscode
+for arch, use `visual-studio-code-bin` from AUR
+
+the official pacman vscode-oss version has some problems 

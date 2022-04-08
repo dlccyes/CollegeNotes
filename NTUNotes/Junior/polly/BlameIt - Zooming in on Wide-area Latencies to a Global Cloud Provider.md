@@ -81,7 +81,7 @@ parent: polly
 			- impact more people
 		- tradeoff, sacrificing a bit accuracy for lower overhead
 
-## latency characterization & distribution
+## Latency Characterization & Distribution
 - quadret
 	- client IP/24
 	- cloud location
@@ -122,3 +122,60 @@ parent: polly
 	- 20% of tuples can cover 60% problem impact when ranked by num of affected IP prefixes
 	- meaning, impact isn't evenly distributed among IP prefixes, but skewed toward a small fraction
 - using num of **affected clients x badness duration** to meaure impact is more efficient
+
+## Overview
+- modeling path between cloud & client (at AS-level)
+	- traditional approaches
+		- coverage of measurements are skewed
+		- ambiguities
+			- large AS -> problem in certain path but not all
+- find fault in AS -> deploy people to investigate
+
+### 2-level blame assignment
+- coarse-grained
+	- model path into 3 segments
+		- client
+		- cloud
+		- middle
+	- use passive data
+	- can find the exact path (3 points -> a line) -> no ambiguity problem
+- fine-grained
+	- view middle segment
+	- use active probe (traceroute)
+	- limited budget -> prioritizing
+		- allocate budget for probes for middle segment based on expected impact
+		- number of clients affected
+			- large IP address blocks have less active clients in Azure -> measure impact by num of IP addresses affected is meaninglesss
+		- timespane
+			- find out the long-lived ones
+			- long-tailed distribution -> no need to be very precise
+
+### end-to-end workflow
+1. RTT data passively collected from all cloud instances
+2. send to a central data analytics cluster
+3. periodically do coarse-grained blame assignment on bad ones
+4. order middle segment latency issues by impact
+5. issue active probes for fine-grained blame
+6. send top few bad issues to network admin for manual investigation
+
+## Passive Measurements
+lack some topological properties -> cannot use standard network tomography techniques to solve
+
+### empirical insights
+- most of the time, only one of cloud, middle segments, client segments is at fault
+	- 93% of the time there's one contributing >80% of RTT
+- most of the time, the fault is on the smaller possible set
+	- over 98% of the case
+
+### coarse-grained fault localization algo
+characterize quadret to cloud, middle or client segment
+
+![](https://i.imgur.com/IVmByKB.png)
+
+- fraction of bad quadrets associating with cloud > threshold -> cloud's fault
+	- fraction not calculated from num of bad RTT samples
+		- or would be affected by those with large num of RTT samples
+	- also take typical RTT value into account
+	- using empirical insight 2
+	- threshold = 0.8
+		- works well in real life
