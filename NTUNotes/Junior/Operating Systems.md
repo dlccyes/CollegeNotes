@@ -862,3 +862,30 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 
 
 ### Thrashing
+- time spent in paging > time spent in executing
+- sum of size of locality > total memory size -> thrashing
+- accept many processes/requests -> degree of multiprogramming increase -> num of free frames decrease -> keep having page fault at some point
+	- ![](https://i.imgur.com/mdbKdlb.png)
+- when doing page replacement
+	- memory & I/O busy
+	- CPU free
+- locality
+	- a set of pages that are actively used together
+	- may overlap
+	- ![](https://i.imgur.com/6wVQdxS.png)
+- when process executes, it moves from one locality to another
+	- allocate frames according to locality to avoid thrashing
+- working-set model
+	- monitors the locality of each process
+	- allocates frames according to the needs of each process
+	- sum of locality > num of available frames -> suspend a process
+		- swap out the pages of the process
+	- walking set = locality of a process
+	- maintain a working-set window $\Delta$
+		- fixed num of page references
+	- $WS(t_j)$ = working set = set of pages in $\Delta$
+		- ![](https://i.imgur.com/tsGh1vT.png)
+	- $WSS_i(t_j)$ = size of working set of process $i$
+	- $D = \sum WSS_i(t)$ = num of demanded frames at time $t$
+	- $m$ = total memory size
+	- $D>m$ -> thrashing -> suspend / swap out a process
