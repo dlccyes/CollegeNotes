@@ -438,14 +438,26 @@ some nice dotfiles
 - <https://github.com/Anomic-cr/i3_dotfiles>
 
 ## change user@host color and stuff
-settings located in `~/.bashrc`
-```bash
-PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-```
-change the sequence to whatever you want
+settings located in `~/.bashrc`  
+note that enclosing ANSI with `\[` `\]` es necesario for it to behave normally
 
-reference ANSI  
-![](https://i.stack.imgur.com/9UVnC.png)
+examples
+```bash
+# base
+PS1='\u@\h:\w\$ '  
+# 8-bit color
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# 24-bit color
+PS1='\[\033[38;2;255;189;243\]m\u@\h\[\033[0m\]:\[\033[01;34m\]\w\[\033[0m\]$ '
+# with archbtw
+PS1='\[\033[48;2;108;196;255m\033[38;2;0;0;0m\] archbtw \[\033[0m\] \[\033[38;2;255;189;243m\]\u@\h\[\033[0  
+m\]:\[\033[01;34m\]\w\[\033[0m\]$ '
+# with background
+PS1='\[\033[38;2;108;196;255m\]<archbtw>\[\033[0m\033[38;2;255;189;243m\]\u@\h\[\033[0m\]:\[\033[01;34m\]\  
+w\[\033[0\]m$ '    
+```
+
+see [ANSI](ANSI)  
 
 <https://askubuntu.com/a/123306>
 

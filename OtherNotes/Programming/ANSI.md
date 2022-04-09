@@ -33,6 +33,13 @@ e.g.
 \033[38;2;255;95;255m
 ```
 
+simple coloring  
+- ![](https://i.stack.imgur.com/9UVnC.png)
+e.g.
+```
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+```
+
 `\033[93mpp\033[0m` → yellow(pp)
 
 `\033[4m` → underline
