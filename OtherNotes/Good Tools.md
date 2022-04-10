@@ -17,13 +17,15 @@ parent: OtherNotes
 ## websites
 - Photophea
 	- Photoshop clone
-- https://12ft.io/
+- <https://12ft.io/>
 	- remove paywall
 		- work
 			- Financial Times
 		- don't work
 			- The Atheletic
 	- add `https://12ft.io/` in front of the url
+- reddit stat
+	- <https://subredditstats.com>
 - reddit archives
 	- <https://camas.github.io/reddit-search/>
 		- very good
@@ -32,6 +34,12 @@ parent: OtherNotes
 	- <https://www.unddit.com/>
 	- <https://github.com/pushshift>
 		- underlying service of all the above sites
+		- api endpoint prefix `https://api.pushshift.io`
+		- api doc
+			- [guide](https://github.com/pushshift/api)
+			- [parameters](https://pushshift.io/api-parameters/)
+		- e.g.
+			- `https://api.pushshift.io/reddit/comment/search?html_decode=true&author=dlccyes&subreddit=subredditdrama`
 - note service comparisons
 	- <https://www.noteapps.info/>
 - hacknews remade

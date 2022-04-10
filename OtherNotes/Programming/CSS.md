@@ -22,7 +22,13 @@ head elements can also has class or id
 	- `$('#id').remove()`
 
 ## selector
-`[class*='xterm-dom-renderer-owner-']` → anything class containing `.xterm-dom-renderer-owner-`
+### wildcard
+`[class*='xterm-dom-renderer-owner-']` → any class with name containing `.xterm-dom-renderer-owner-`
+
+### not
+`img:not(.img-view)` -> `img` with class != `.img-view`  
+
+<https://developer.mozilla.org/en-US/docs/Web/CSS/:not>
 
 ## responsive
 add

@@ -92,7 +92,7 @@ has_children: True
 		- layer on top of NOS
 
 ## structure
-### monolithtic
+### monolithic
 - no structure
 - one large kernel
 - everything in the same place
@@ -100,7 +100,7 @@ has_children: True
 	- ![](https://i.imgur.com/VTy7O1U.png)
 - pros
 	- fast
-		- littlt latenct
+		- little latency
 	- efficient
 	- simple
 - cons
@@ -139,7 +139,7 @@ has_children: True
 	- modular
 		- dynamically linked in new functions
 	- ![](https://i.imgur.com/VU6jjqH.png)
-- windows
+- Windows
 	- monolithtic
 	- microkernels
 		- subsystems
@@ -153,7 +153,7 @@ has_children: True
 	- executable file of program loaded into memory -> process
 	- a program can have many processes
 - process is sequential
-	- parallel only in an operation, but each operation executed sequentially
+	- parallel only in an operation, each operation executed sequentially
 
 ### parts of a process
 - program code i.e. text section
@@ -170,7 +170,7 @@ has_children: True
 - stack
 	- temporary data
 	- function parameters, return addresses, local variables
-	- recursively call function -> stack grows until reaching heap
+	- recursively call function -> stack grows until reaching heap -> stack overflow
 - stack & heap share a space
 - ![](https://i.imgur.com/y2A7pMu.png)
 - ![](https://i.imgur.com/OF0zYlH.png)
@@ -269,9 +269,9 @@ has_children: True
 - wait queue
 	- ![](https://i.imgur.com/S6fLR74.png)
 - I/O-bound process
-	- more I/O less computation
+	- more I/O, less computation
 - CPU-bound process
-	- more computation less I/O
+	- more computation, less I/O
 - lock
 	- spin lock
 		- try locking the resource endlessly -> CPU 100% -> be treated as CPU-bound process
@@ -386,11 +386,13 @@ has_children: True
 	- utilize multicore
 
 ### speedup
+
 **Amdahl's Law**  
 speedup ratio of parallelism
 
 $$speedup\leq \frac{1}{S+\dfrac{1-S}{N}}$$
 $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
+
 - S = portion not able to be parallelized
 - N = num of cores
 
@@ -670,7 +672,7 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 ## Virtual Memory
 ### intro
 - in old OS with old CPU, virtual memory = logical memory
-- background
+- backgroundㄋ
 	- no need to load entire program but just part of it
 - pros
 	- make logical memory not constrained by physical memory

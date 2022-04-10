@@ -17,42 +17,91 @@ parent: polly
 [pdf with my annotations](ZMap.pdf)
 
 ## Intro
-- fast ipv4 scannings
-	- standard measuement technique
-	- tools
-		- Zmap
-		- Masscan
-	- lack analysis about its accuracy & completeness
-- this paper
-	- goal
-		- quantify coverage with single probe ipv4 scans
-		- investigate how the scanning method affects results
-	- method
-		- syncrhonized HTTP, HTTPS, SSH ZMap+ZGrab scans
-		- from 7 networks
-			- 5 geographically & topologically diverse academic networks
-				- Australia, Brazil, Germany, Japan, USA
-			- Censys & Carinet
-				- cloud provider
-	- results & analysis
-		- miss rate
-			- HTTP 1.6-8.4%
-			- HTTPS 1.5-4.6%
-			- SSH 8.3-18.2%
-		- most HTTP(S) loss are transient (short-lived)
-			- hard to predict
-			- not due to random packet drop
-			- solution
-				- scanning from 2-3 diverse vantage points
-					- -> 98-99% coverage
-				- scanning with multiple probes with delay
-				- perform multiple independent scans
-		- regional policies skew analyses of some countries
-			- ISPs in some countries block individual scanners -> HTTP(S) miss rate of Censys >> that of academic origins
-				- 2-13 times larger
-			- some American company networks block access from Brazil
-		- high miss rate of SSH
-			- several large providers (like Alibaba) blocks SSH scanners
-			- openSSH servers drop sessions after multiple unauthenticated connections
-				- solved with immediate retries (????)
-		- global coverage lower than estimated
+### fast ipv4 scannings
+- standard measuement technique
+- tools
+	- Zmap
+	- Masscan
+- lack analysis about its accuracy & completeness
+
+### abstract
+- goal
+	- quantify coverage with single probe ipv4 scans
+	- investigate how the scanning method affects results
+- method
+	- syncrhonized HTTP, HTTPS, SSH with ZMap+ZGrab scans
+	- from 7 networks
+- results & analysis
+	- miss rate
+		- HTTP 1.6-8.4%
+		- HTTPS 1.5-4.6%
+		- SSH 8.3-18.2%
+	- most HTTP(S) loss are transient (short-lived)
+		- hard to predict
+		- not due to random packet drop
+		- solution
+			- scanning from 2-3 diverse vantage points
+				- -> 98-99% coverage
+			- scanning with multiple probes with delay
+			- perform multiple independent scans
+	- regional policies skew analyses of some countries
+		- ISPs in some countries block individual scanners -> HTTP(S) miss rate of Censys >> that of academic origins
+			- 2-13 times larger
+		- some American company networks block access from Brazil
+	- high miss rate of SSH
+		- several large providers (like Alibaba) blocks SSH scanners
+		- openSSH servers drop sessions after multiple unauthenticated connections
+			- solved with immediate retries (????)
+	- global coverage lower than estimated
+
+## Methodology
+- 9 syncrhonized scans
+- scan full IPv4 address space
+- HTTP, HTTPS, SSH with ZMap+ZGrab scans
+	- ZMap TCP SYN scan
+		- 2 back-to-back SYN packets to each IP
+		- estimate to cover 98.8%
+	- use ZGrab to complete application layer handshake with those responded with SYN-ACK packet
+	- HTTP `Get /` on TCP/80
+	- TLS handshake on TCP/443
+	- partial SSH handshake on SSH
+		- terminate after exchangin protocol version
+- from 7 networks
+	- 5 geographically & topologically diverse academic networks
+		- 5 universities from Australia, Brazil, Germany, Japan, USA
+	- Censys & Carinet
+		- cloud provider
+	- all continents except Africa & Antartica
+- prior to full scan
+	- sent ZMap scans on 1% IPs
+	- ensure compatibility & performance 
+- full scan
+	- 3 trials
+	- 2019 Oct., Nov., Dec.
+	- 21hr each trial
+	- obervations
+		- connection timeout > normal handshake time -> scanners with more timeout fall behind others
+
+### limitations
+- only include those completing L7 handshake to the analysis
+	- avoid impact from various restrictions
+		- firewalls, middleboxes, DDoS protections
+- can only detect accessible IPs
+- can only assume the cause of inaccessible hosts
+- temporal noise
+	- only 3 trials, within 8 weeks
+- bias of scanning from academic networks
+
+### minimizing negative externality
+- scan from single origin on each continent
+- only focus on 3 protocls
+- use commonly used scanning tools
+- scanner follows scanner specifications
+- close connections once a handshake is completed
+- limit scanning speed
+- spread experiment across 8 weeks
+- exclude requested IPs
+	- 0.5% of public IPv4
+	- from 9 organizations
+- post data used to public repo
+	- `Scans.io` Internet-Wide Scan Data Repository
