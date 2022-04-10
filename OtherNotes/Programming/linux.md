@@ -217,6 +217,19 @@ pacman -Qs <pkg>
 pacman -Si <pkg>
 ```
 
+#### troubleshooting
+do something with pacman but have this error
+```
+error: GPGME error: No data
+```
+
+do this to fix
+```
+sudo rm -R /var/lib/pacman/sync
+```
+
+<https://stackoverflow.com/a/67850084/15493213>
+
 ### yay
 to install (unofficial) AUR packages
 

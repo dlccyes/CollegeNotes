@@ -122,6 +122,9 @@ It should only be meaningful for people facing volume-based charge. For people f
 sell once
 
 ## HW2
+[submission pdf](Industrial_Organization_Assignment__2.pdf)  
+[submission tex](Industrial_Organization_Assignment__2.tex)
+
 ### Problem 1 - Bundling of Office Suites
 ![](https://i.imgur.com/EgLxs4o.png)
 
@@ -242,6 +245,9 @@ open 3 shops, at 0.2, 0,5, 0.8
 2nd strategy, declares if A-B or Miller comes, they'll conduct a marketing campaign
 
 ## HW3 Aspartame
+[submission pdf](Industrial_Organization_Assignment__3.pdf)  
+[submission tex](Industrial_Organization_Assignment__3.tex)
+
 - Aspartame is a very good sweetener, used in soft drinks
 - Monsanto has the patent of aspartame, branded as NutraSweet
 - Cooperate with Ajinomoto (Japanese firm), getting tech support while giving out exclusive access to Japanese aspartame market 
@@ -287,6 +293,9 @@ open 3 shops, at 0.2, 0,5, 0.8
 - same cost + smaller risk -> more favorable
 
 ## HW4
+[submission pdf](Industrial_Organization_Assignment__4.pdf)  
+[submission tex](Industrial_Organization_Assignment__4.tex)
+
 ### Entry Deterrence in Capacity Setting Games
 ![](https://i.imgur.com/sXezvbA.png)
 
@@ -377,7 +386,8 @@ Yes, because at the start, they exploit the unoccupied space of the market at th
 No. Established competitors can quickly roll out new products directly competing with it. Bigger brand can achieve the same quality with less cost, while reaching a bigger audience.
 
 ## HW5 Farmville strategy
-<https://www.overleaf.com/7769832718zgxfxpxvhvtr>
+[submission pdf](Industrial_Organization_Assignment__5.pdf)  
+[submission tex](Industrial_Organization_Assignment__5.tex)
 
 - utility of lands (if cultivated by a farmer)
 	- fertile
@@ -423,3 +433,11 @@ No. Established competitors can quickly roll out new products directly competing
 		- can often times earn $1 more each period if upgrade
 	- collude with other teams s.t. num of available lands < num of farmers
 		- no incentive to deviate bc would worse off if lands > farmers
+
+## HW6
+4. Do initial conditions of the game matter? Initial conditions include the number of landlords and the initial allocation of lands in a market. When there are more landlords, would the expected value of lands increase or decrease? When land ownership becomes more concentrated, would the expected value of lands increase or decrease?
+	- The initial conditions matter. When there are more landlords, it would be harder for landlords to collude and provide a monopolistic supply. The market would be more like competition, and the total land supply would be bigger, making the expected value of lands decrease.
+	- On the contrary, when land ownership becomes more concentrated, collusion would be easier, decreasing the total land supply, thus increasing the expected value of land.
+5. What’s the strategy you set before you start to play this game? Here your “strategy" means the big game plan you have in order to pursue your long-run goal, i.e., to maximize your cash over the 10 periods. Did your strategy work? In the middle of the game, did you ever change or revise your strategy?
+	- Our main strategy was to try to communicate and collude with other teams to avoid oversupply, benefiting everyone, which proven to be quite successful (compared to another group) despite some obstacles.
+	- Our secondary strategy is to buy or sell lands whenever we found the operation to be profitable, according the expected value of each type of land at each round we'd calculated. However, during the game, we found that our calculation was way too optimistic, as we didn't consider the fact that only the lands we decide to supply has value i.e. the lands we decide not to supply to avoid oversupply has zero value, so we almost never buy lands from others even when the price is lower than our previously calculated expected value. Instead, we actively sold our lands to others even when the price was lower than our previously calculated expected value.

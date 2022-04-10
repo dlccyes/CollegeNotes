@@ -210,3 +210,32 @@ characterize quadret to cloud, middle or client segment
 	- can also add reversed ones
 
 ### fine-grained localization
+- passive analysis -> issue traceroutes -> compare with baseline
+- issue infrequent traceroutes to get the baseline
+- challenges
+	- prioritizing those with big impact
+	- optimizing background measurement
+
+### prioritized on-demand measurements
+- group bad quadrets by BGP path -> sort with client-time product -> issue traceroutes under budget constraint
+- priority calculated with client-time product
+	- expected duration x expected num of clients impacted
+- budget constraint
+	- max num of traceroute issued by cloud in a time window
+- prediction method
+	- expected additional duration
+		- given how long the issue has already lasted
+		- given probability distribution based on historical data
+		- calculate expected additional duration
+	- expected num of impacted clients
+		- using historical data
+		- use same time window in the past 3 days
+			- more accurate than using time windows in the same day
+
+### optimized background measurements
+- traceroute once every 12 hours for each BGP path from each cloud location
+	- sweetspot of accuracy vs. overhead tradeoff
+	- 93% accuracy
+	- ![](https://i.imgur.com/QZFkKKc.png)
+- traceroute when BGP path changes
+	- 2/3 of BGP paths don't change in an entire day -> overhead not big
