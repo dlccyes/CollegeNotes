@@ -18,7 +18,7 @@ has_children: True
 - [xv6 textbook](https://pdos.csail.mit.edu/6.828/2020/xv6/book-riscv-rev1.pdf)
 
 ## videos
-### 林
+### 林忠緯
 - [Course Intro](https://www.youtube.com/watch?v=JYcRfdkhVGc)
 - [Intro](https://www.youtube.com/watch?v=nk1Lyb3QW1M)
 - [Structures](https://www.youtube.com/watch?v=TaDR2AtN8UU)
@@ -26,7 +26,8 @@ has_children: True
 - [Threads & Concurrency](https://www.youtube.com/watch?v=uxXtXGW2VDQ)
 - [Main Memory 1](https://www.youtube.com/watch?v=AeONYfNXGaE)
 - [Main Memory 2](https://www.youtube.com/watch?v=Jb0lQbvm29w)
-- [Virtual Memory](https://www.youtube.com/watch?v=VQ07KeyJXgg)
+- [Virtual Memory 1](https://www.youtube.com/watch?v=VQ07KeyJXgg)
+- [Virtual Memory 2](https://www.youtube.com/watch?v=JYv7Y7b2DGA)
 
 ### 施吉昇
 - [Course Info](https://www.youtube.com/watch?v=0QpWM5vYt-g)
@@ -875,17 +876,107 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 	- ![](https://i.imgur.com/6wVQdxS.png)
 - when process executes, it moves from one locality to another
 	- allocate frames according to locality to avoid thrashing
-- working-set model
-	- monitors the locality of each process
-	- allocates frames according to the needs of each process
-	- sum of locality > num of available frames -> suspend a process
-		- swap out the pages of the process
-	- walking set = locality of a process
-	- maintain a working-set window $\Delta$
-		- fixed num of page references
-	- $WS(t_j)$ = working set = set of pages in $\Delta$
-		- ![](https://i.imgur.com/tsGh1vT.png)
-	- $WSS_i(t_j)$ = size of working set of process $i$
-	- $D = \sum WSS_i(t)$ = num of demanded frames at time $t$
-	- $m$ = total memory size
-	- $D>m$ -> thrashing -> suspend / swap out a process
+
+#### working-set model
+- monitors the locality of each process
+- allocates frames according to the needs of each process
+- sum of locality > num of available frames -> suspend a process
+	- swap out the pages of the process
+- walking set = approximation of the locality of a process
+- maintain a working-set window $\Delta$
+	- fixed num of page references
+	- sliding window
+- $WS(t_j)$ = working set = set of pages in $\Delta$
+	- ![](https://i.imgur.com/tsGh1vT.png)
+- $WSS_i(t_j)$ = size of working set of process $i$
+- $D = \sum WSS_i(t)$ = num of demanded frames at time $t$
+- $m$ = total memory size
+- $D>m$ -> thrashing -> suspend / swap out a process
+- 2 in-memory reference bit & 1 reference bit
+- fixed-interval timer interrupt
+	- clear reference bit & update in-memory reference bit
+	- ![](https://i.imgur.com/Qe0Z6ua.png)
+- unaccurate
+	- don't know when it's referenced within the interval
+	- may have many references uncovered if interval too big or window too small
+- page fault rate
+	- ![](https://i.imgur.com/HJULyug.png)
+	- when paging a different locality, page-fault rate peaks
+
+#### Page-Fault Frequency (PFF)
+- more direct than working-set model
+- adjust allocation policy based on page-fault rate
+- page-fault rate > upper bound -> allocate frames for the process
+- page-fault rate < lower bound -> remove frames for the process
+- ![](https://i.imgur.com/dphu0bD.png)
+
+#### Allocating Kernel Memory
+- different free-frame pool than that of user-mode processes
+	- kernel need memory in various size, instead of a page
+	- some kernel memory needs to be contiguous, while user memory doesn't have to
+- 2 strategies
+	- buddy system
+	- slab allocator
+- buddy system
+	- allocate in fixed-size segment
+		- power-of-2 allocator
+	- physically contiguous page
+	- coalescing
+		- adjacent buddies become bigger buddy
+	- cons
+		- internal fragmentation
+	- ![](https://i.imgur.com/6LdV42S.png)
+- slab allocator
+	- ![](https://i.imgur.com/tztkNeW.png)
+	- slab
+		- one or more physically contiguous pages
+		- 3 states
+			- full
+				- all objects in the slab is used
+			- partial
+			- empty
+				- all objects in the slab is free
+	- a cache has one or more slabs
+	- 1 cache for each unique kernel data structure
+		- e.g. process descriptors, file objects, semaphores
+	- each cache has many objects
+		- instantiations of the respective kernel data structures
+		- num of objects depends on size of associated slab
+		- e.g. 12KB slab = 3x4KB contiguous page -> 6x2KB objects
+- cache created -> allocate objects
+- slab allocator
+	- request -> assign free object from cache -> mark as used
+	- assignment priority
+		- partial slab -> empty slab -> allocate a new slab
+- pros
+	- wasteless - no internal fragmentation
+		- cache is divided into the exact size that an object in that data structure needs
+	- fast - objects can be frequently allocated & deallocated
+		- objects are created when the cache is created -> can be quickly allocated
+		- after being released, objects are marked as free and returned to the cache -> can be allocated again immediately
+
+### Others
+#### prepaging
+- no prepaging in demand paging -> many page faults at process start
+- cons
+	- many prefetched pages may not be used
+
+#### page size
+- many tradeoffs
+- why smaller pages
+	- less internal fragmentation
+	- less transfer time
+		- transfer time is insignificant tho
+	- better locality
+		- better resolution with small page
+		- -> smaller total I/O time 
+		- e.g. need only 100kB from the 200kB process
+			- 1kB-page = 1kB -> bring in 100kB
+			- 200kB-page -> bring in 200kB
+- why bigger pages
+	- smaller page table
+		- less num of pages
+	- less I/O time (for each unit size)
+		- only a tiny bit more time needed for 1 big page than for 1 small page
+	- less page faults
+- history trends: toward larger page

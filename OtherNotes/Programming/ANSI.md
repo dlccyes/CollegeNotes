@@ -83,10 +83,10 @@ The possible integers
 
 
 
-linux don;'t support italic, bold
+linux don't support italic & bold
 
 ---
-ref
+ref  
 <https://stackoverflow.com/questions/2924697/how-does-one-output-bold-text-in-bash>  
 <https://gist.github.com/RobinMalfait/7881398>  
 <https://stackoverflow.com/a/26665998/15493213> how to rgb

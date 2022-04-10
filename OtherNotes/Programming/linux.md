@@ -539,6 +539,19 @@ if it isn't, go to `~/.config/plasma-localerc` to see if it sets the `LANGUAGE` 
 
 <https://bbs.archlinux.org/viewtopic.php?pid=1839620#p1839620>
 
+### baloo
+baloo is for indexing your files for faster search  
+It may takes large space tho.
+
+It store its files in `~/.local/share/baloo`.
+
+To disable and clear its files 
+```
+balooctl disable
+balooctl purge
+```
+enter `balooctl` for more
+
 ### troubleshooting
 - everything too small -> display configuration -> global scale
 - `ctrl+alt+x` not working -> shortcuts -> enable clipboard actions

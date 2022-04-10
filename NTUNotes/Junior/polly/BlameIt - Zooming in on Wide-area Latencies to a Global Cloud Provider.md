@@ -172,10 +172,41 @@ characterize quadret to cloud, middle or client segment
 
 ![](https://i.imgur.com/IVmByKB.png)
 
+- too few RTT samples -> insufficient
 - fraction of bad quadrets associating with cloud > threshold -> cloud's fault
 	- fraction not calculated from num of bad RTT samples
 		- or would be affected by those with large num of RTT samples
-	- also take typical RTT value into account
+	- also take typical (expected) RTT value into account
 	- using empirical insight 2
 	- threshold = 0.8
 		- works well in real life
+- (else if) fraction of quadrets with same BGP-path (i.e. same set of AS'es) > threashold -> middle segment's fault
+	- also take typical (expected) RTT value into account
+	- grouping with client AS & metro area is too coarse-grained
+		- only 47% with same <AS, Metro> has a single consistent path from cloud to client within 5 minutes
+	-  grouping by same AS'es instead of cloud to client prefix provides more RTT samples -> higher confidence
+		- ![](https://i.imgur.com/2e1yYP3.png)
+- else if client has good RTT to another cloud location -> ambiguous
+- else -> blame the client
+
+### expected RTT
+- identify RTT inflation by comparing to historical value
+- using expected RTT to calculate bad fraction is more accurate
+- expected RTT = median RTT for last 14 days
+- 80% of RTT > median RTT for last 14 days -> blame cloud
+	- distribution shifts 30%
+- works well in practice
+
+## Active Probes
+- blaming middle segment doesn't tell you which AS is at fault
+
+### selective active probing
+- if use active measurements
+	- need continuous traceroutes to compare before & after of issues
+		- too much overhead, not feasible
+- only use traceroute from cloud to client for now
+	- routing assymetry
+		- cloud-to-client & client-to-cloud paths may be different
+	- can also add reversed ones
+
+### fine-grained localization

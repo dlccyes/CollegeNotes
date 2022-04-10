@@ -1,3 +1,18 @@
+---
+layout: meth
+parent: Programming 
+---
+# page template
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
 # RISC-V
 ## resources
 [[Computer Architecture]]

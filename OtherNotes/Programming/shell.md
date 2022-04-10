@@ -111,9 +111,12 @@ enttracks&user=<user>&api_key=<api key>&format=json" | python3 -c "import json,s
 ## disk
 - usage and available space of all partitions
 	- `df -h`
-- size of all top level directories
+- size of all top level non-hidden directories or files
 	- `du -sh *`
 	- `du -sh * | sort -rh`
+		- with reversedsorting
+- size of all top level directories or files
+	- `du -ahd1 . | sort -h`
 - `df -i`
 - `df -ah`
 

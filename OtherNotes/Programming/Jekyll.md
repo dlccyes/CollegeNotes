@@ -1,6 +1,7 @@
 ---
 title: Jekyll
 alias: Github Page
+parent: Programming
 ---
 
 <head>
@@ -28,10 +29,10 @@ alias: Github Page
 
 ## themes
 ### just the doc
-https://pmarsceill.github.io/just-the-docs/#getting-started
+<https://just-the-docs.github.io/just-the-docs/>
 
 doesn't support Chinese search
-https://github.com/pmarsceill/just-the-docs/discussions/437#discussioncomment-85470
+<https://github.com/pmarsceill/just-the-docs/discussions/437#discussioncomment-85470>
 
 #### build with github page
 in `_config.yml` add `remote_theme: pmarsceill/just-the-docs`
@@ -40,7 +41,7 @@ in `_config.yml` add `remote_theme: pmarsceill/just-the-docs`
 #### build locally
 1. `sudo gem install just-the-docs`
 	- if (ruby related) error, `sudo apt-get install ruby-all-dev` and retry  
-		- https://github.com/github/pages-gem/issues/133#issuecomment-411918159
+		- <https://github.com/github/pages-gem/issues/133#issuecomment-411918159>
 2. in `vim _config.yml` add `theme: "just-the-docs"`
 	- uncomment it when use github page to build or it might lead to build failure
 3. `jekyll serve`
@@ -60,7 +61,7 @@ in `_config.yml` add `remote_theme: pmarsceill/just-the-docs`
 - doesn't care about the filename, but the first heading
 
 #### layouts structure
-https://github.com/pmarsceill/just-the-docs/tree/master/_layouts
+<https://github.com/pmarsceill/just-the-docs/tree/master/_layouts>
 
 each page use the `page` layout, which is like
 
@@ -144,7 +145,7 @@ ref
 	- doesn't work
 
 ## Jekyll structure
-https://carpentries-incubator.github.io/jekyll-pages-novice/layouts/index.html
+<https://carpentries-incubator.github.io/jekyll-pages-novice/layouts/index.html>
 
 ### _layouts
 - create a `_layouts` folder in the root
@@ -172,7 +173,7 @@ to debug, click into the one failed and see the error messages
 `{% raw  %}{% include mathjax.html %}{% endraw %}`
 without the raw & endraw, the include tag will be rendered and the codes in `mathjax.html` will be injected, or if `mathjax.html` doesn't exist, the page built would fail
 
-https://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags
+<https://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags>
 
 ### operators
 <https://shopify.github.io/liquid/basics/operators/>
