@@ -348,6 +348,7 @@ has_children: True
 	- different program, same data on each core
 	- may be sequential or not
 	- for sequential, separate different stage/task of a program, do pipeline
+- ![](https://i.imgur.com/ReNpmHi.png)
 
 ### concurrency programming
 - multiple process single core
@@ -391,7 +392,7 @@ has_children: True
 speedup ratio of parallelism
 
 $$speedup\leq \frac{1}{S+\dfrac{1-S}{N}}$$
-$$lim_{s\rightarrow\infty}=\frac{1}{S}$$
+$$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 
 - S = portion not able to be parallelized
 - N = num of cores
@@ -446,7 +447,7 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 #### thread pool
 - create a pool of worker threads first
 - pros
-	- serve faster
+	- serves faster
 	- resources used by app is limited
 - ![](https://i.imgur.com/w0jyf7X.png)
 - worker threads
@@ -546,13 +547,13 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 	- allocate process memory of N pages by finding N free frames
 - address field
 	- page number
-		- m-n bits page number -> $2^{m-n}$ bytes
+		- m-n bits page number -> num of pages = $2^{m-n}$ bytes
 	- page offset
-		- n-bit page offset = $2^n$ bytes
-	- m-bit logical address space -> $2^m$ bytes
+		- n-bit page offset -> page size = $2^n$ bytes
+	- m-bit logical address space -> logical address space = $2^m$ bytes
 	- ![](https://i.imgur.com/nXBl1ld.png)
 - page table
-	- mapping of logical address -> physical address (page -> frame)
+	- mapping of logical address page -> physical address frame
 	- each process has its own page table
 	- size
 		- ![](https://i.imgur.com/ctImTFn.png)
@@ -589,7 +590,7 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 - to reduce the overload fetching page table
 - put some page table entries in a fast memory
 	- a cache for page table entries basically
-- a associative, high-speed, small memory
+- an associative, high-speed, small memory
 	- associative -> search in parallel (1 comparator for each entry) -> fast
 - design
 	- TLB miss -> fetch page table
@@ -625,11 +626,11 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 - linked list for collision
 - 3 fields in each element
 	- virtual page num
-	- hashed virtual page num (mapping target)
+	- hashed virtual page num (mapping target physical frame)
 	- pointer to next element (for collision)
 - ![](https://i.imgur.com/uNVlNvx.png)
 - clustered page table
-	- each mapped to several pages
+	- each entry mapped to several pages
 	- useful for sparse address space
 
 #### inverted page table
@@ -653,11 +654,11 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 
 ### swapping
 - backing store
-	- fast secondary storate
-	- large enought to store whatever swapped in
+	- fast secondary storage
+	- large enough to store whatever swapped in
 	- have direct access to memory image (???)
 - standard swapping
-	- memory requirements > physical memory -> temporary swap processes out to backing store 
+	- memory requirements > physical memory -> temporarily swap processes out to backing store 
 	- ![](https://i.imgur.com/EpoHBu8.png)
 	- time moving between memory is huge
 - roll out, roll in
@@ -672,7 +673,7 @@ $$lim_{s\rightarrow\infty}=\frac{1}{S}$$
 ## Virtual Memory
 ### intro
 - in old OS with old CPU, virtual memory = logical memory
-- backgroundㄋ
+- background
 	- no need to load entire program but just part of it
 - pros
 	- make logical memory not constrained by physical memory
