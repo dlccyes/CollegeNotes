@@ -761,7 +761,7 @@ start ibus in background
 ```
 ibus-daemon -d
 ```
-to use it on startup, put in autostart settings (like cron @reboot) or `~/.bashrc` or whatever
+to use it on startup, put in autostart settings (like cron @reboot) or `~/.bashrc` or autostart settings in KDE or whatever
 
 configure ibus by opening GUI "Ibus Preferences"  
 (if you see no langauge available, reboot)

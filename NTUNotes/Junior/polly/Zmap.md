@@ -1,3 +1,4 @@
+
 ---
 layout: meth
 parent: polly
@@ -18,7 +19,7 @@ parent: polly
 
 ## Intro
 ### fast ipv4 scannings
-- standard measuement technique
+- standard measurement technique
 - tools
 	- Zmap
 	- Masscan
@@ -29,7 +30,7 @@ parent: polly
 	- quantify coverage with single probe ipv4 scans
 	- investigate how the scanning method affects results
 - method
-	- syncrhonized HTTP, HTTPS, SSH with ZMap+ZGrab scans
+	- synchronized HTTP, HTTPS, SSH with ZMap+ZGrab scans
 	- from 7 networks
 - results & analysis
 	- miss rate
@@ -55,7 +56,7 @@ parent: polly
 	- global coverage lower than estimated
 
 ## Methodology
-- 9 syncrhonized scans
+- 9 synchronized scans
 - scan full IPv4 address space
 - HTTP, HTTPS, SSH with ZMap+ZGrab scans
 	- ZMap TCP SYN scan
@@ -65,7 +66,7 @@ parent: polly
 	- HTTP `Get /` on TCP/80
 	- TLS handshake on TCP/443
 	- partial SSH handshake on SSH
-		- terminate after exchangin protocol version
+		- terminate after exchanging protocol version
 - from 7 networks
 	- 5 geographically & topologically diverse academic networks
 		- 5 universities from Australia, Brazil, Germany, Japan, USA
@@ -79,7 +80,7 @@ parent: polly
 	- 3 trials
 	- 2019 Oct., Nov., Dec.
 	- 21hr each trial
-	- obervations
+	- observations
 		- connection timeout > normal handshake time -> scanners with more timeout fall behind others
 
 ### limitations
@@ -94,7 +95,7 @@ parent: polly
 
 ### minimizing negative externality
 - scan from single origin on each continent
-- only focus on 3 protocls
+- only focus on 3 protocols
 - use commonly used scanning tools
 - scanner follows scanner specifications
 - close connections once a handshake is completed

@@ -20,7 +20,7 @@ parent: polly
 ### abstract
 - design BlameIt
 - deployed to Azure's production
-- localize the cause of instances with latency degration
+- localize the cause of instances with latency degradation
 - to localize
 	- use passive diagnosis
 		- existing connections between clients & cloud
@@ -124,12 +124,12 @@ parent: polly
 - using num of **affected clients x badness duration** to meaure impact is more efficient
 
 ## Overview
+- find fault in AS -> deploy people to investigate
 - modeling path between cloud & client (at AS-level)
 	- traditional approaches
 		- coverage of measurements are skewed
 		- ambiguities
 			- large AS -> problem in certain path but not all
-- find fault in AS -> deploy people to investigate
 
 ### 2-level blame assignment
 - coarse-grained
@@ -178,6 +178,7 @@ characterize quadret to cloud, middle or client segment
 		- or would be affected by those with large num of RTT samples
 	- also take typical (expected) RTT value into account
 	- using empirical insight 2
+		- > most of the time, the fault is on the smaller possible set
 	- threshold = 0.8
 		- works well in real life
 - (else if) fraction of quadrets with same BGP-path (i.e. same set of AS'es) > threashold -> middle segment's fault
@@ -198,7 +199,7 @@ characterize quadret to cloud, middle or client segment
 - works well in practice
 
 ## Active Probes
-- blaming middle segment doesn't tell you which AS is at fault
+blaming middle segment doesn't tell you which AS is at fault -> need finer fault localization
 
 ### selective active probing
 - if use active measurements
