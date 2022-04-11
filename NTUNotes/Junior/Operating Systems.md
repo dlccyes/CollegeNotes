@@ -764,11 +764,11 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - procedure
 	- have free frame -> use it
 	- no free frame -> find victim frame and swap -> update page table -> restart the instruction
-		- max C valid 2 page transfers
-	- if victim frame isn't modified (modify/dirty bit = 1) -> no need transfer back to backing store
+		- max 2 page transfers
+	- if victim frame isn't modified (modify/dirty bit = 0) -> no need transfer back to backing store
 	- e.g.
 		- ![](https://i.imgur.com/zhAn75w.png)
-			- B invalid C valid ->  swap out C swap in B -> B valid C invalid
+			- B invalid; C valid ->  swap out C; swap in B -> B valid; C invalid
 - Belady's Anomaly
 	- page-fault rate may increase on page frames increase for some algo
 	- e.g.
@@ -786,10 +786,10 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- find least recently used frame
 	- would not suffer from Belady's Anomaly
 		- frame priority independent of num of frames 
-	- using counter
+	- implementation with counter
 		- a counter recording the most recently referenced time for each page entry
 		- find the pte with smallest counter for replacement
-	- using stack
+	- implementation with stack
 		- doubly-linked list stack
 		- page referenced -> move to top of the stack
 			- change 6 pointers
@@ -803,7 +803,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 			- set to 1 when the page is referenced
 		- 8 bits (1 byte) for reference history
 		- periodically update the 8 bits, shift right and fill the reference bit at the leftmost
-		- treat as unsigned integer -> smallest one is LRU
+		- treated as unsigned integer -> smallest one is LRU
 	- second-chance algo
 		- FIFO with reference bit
 		- iterate through reference bit of pages in FIFO's order
@@ -816,7 +816,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- consider (reference bit, modify bit)
 		- (0,0) -> (0,1) -> (1,0) -> (1,1)
 		- modified page will have to be written out before replaced
-- couting-based algo
+- counting-based algo
 	- LFU algo
 		- find least frequently used frame to replace
 	- MFU algo
@@ -854,16 +854,29 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- ensure there's always free frames available
 - linux out-of-memory killer (OOM)
 - each process has OOM score
-	- function of memory usage percentage 
+	- function of memory usage
 	- high -> more likely to be killed
 	- set `oom_score_adj` to big negative to avoid being killed
 
 #### Non-Uniform Memory Access (NUMA)
 - memory not accessed equally
-- arch
+- some CPU can access some sections of main memory faster
+- architecture
+	- multiple CPUs
+		- each has its own local memory
+		- can access its own local memory faster
 	- ![](https://i.imgur.com/OG0Xf07.png)
-- separate free-frame list for each NUMA node
-
+- cons
+	- slower than systems with equal memory accessibility
+- pros
+	- more CPUs
+	- bigger throughput & parallelism
+- frame allocation
+	- page fault -> allocate frames near the CPU the process is running on
+	- Linux has separates free-frame list for each NUMA node
+- scheduler
+	- track each process's last CPU 
+	- schedule process to run on its previous CPU -> higher cache hit rate
 
 ### Thrashing
 - time spent in paging > time spent in executing
@@ -945,8 +958,8 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- each cache has many objects
 		- instantiations of the respective kernel data structures
 		- num of objects depends on size of associated slab
-		- e.g. 12KB slab = 3x4KB contiguous page -> 6x2KB objects
-- cache created -> allocate objects
+		- e.g. 12KB slab (3x4KB contiguous page) -> 6x2KB objects
+- create cache -> allocate objects
 - slab allocator
 	- request -> assign free object from cache -> mark as used
 	- assignment priority
