@@ -262,6 +262,7 @@ has_children: True
 
 ### process scheduling
 - goal: maximize CPU use
+- degree of multiprogramming = num of processes in memory at the same time
 - ready queue
 	- multiple queue, priority queue
 	- single queue
@@ -269,7 +270,7 @@ has_children: True
 - wait queue
 	- ![](https://i.imgur.com/S6fLR74.png)
 - I/O-bound process
-	- more I/O, less computation
+	- more I/O, less computation (time)
 - CPU-bound process
 	- more computation, less I/O
 - lock
@@ -424,6 +425,8 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 #### mapping from user to kernel threads
 - many-to-one
 	- ![](https://i.imgur.com/j2FBqIa.png)
+	- no parallelism
+	- can't utilize multiple processing cores
 - one-to-one
 	- ![](https://i.imgur.com/QZi22LU.png)
 	- easy
@@ -431,7 +434,9 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- no user scheduling
 	- big overhead
 		- need to manage many kernel level threads
-	- popular
+	- most used
+		- Linux
+		- Windows
 - many-to-many
 	- ![](https://i.imgur.com/wFuYDC9.png)
 	- security issue
@@ -443,11 +448,42 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- popular
 	- many-to-many but also allows one-to-one
 
+### thread libraries
+- user-level library
+	- everything in user space
+- kerne-level library
+	- everything in kernel space
+- main thread libraries
+	- POSIX Pthreads
+		- user-level or kerne-level
+	- Windows
+		- kerne-level
+	- Java
+		- using Windows API
+- Unix/Linux uses Pthreads
+- async & sync threading
+	- async threading
+		- parent & child execute concurrenly & independently
+		- little data shared
+	- synchronus threading
+		- parent wait for all children to termiante before resuming
+		- children execute concurrenly
+		- child terminates -> joins back parent
+		- parent & children share many data
+
 ### implicit threading
 #### thread pool
-- create a pool of worker threads first
+- without thread pool
+	- overhead of creating new thread
+	- too many threads -> waste system resources
+		- thread completes task -> discarded
+- create a pool of worker threads at startup, waiting there to serve
+- no free thread -> queue task
+- thread completes task -> return to pool
 - pros
-	- serves faster
+	- use existing thread -> serves faster
+		- compared to creating a new thread
+	- limited amount of threads
 	- resources used by app is limited
 - ![](https://i.imgur.com/w0jyf7X.png)
 - worker threads
@@ -557,6 +593,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- each process has its own page table
 	- size
 		- ![](https://i.imgur.com/ctImTFn.png)
+		- ![](https://i.imgur.com/Wd3OCfC.png)
 	- e.g.
 		- ![](https://i.imgur.com/IXl0a6b.png)
 - paging translation example
@@ -592,13 +629,18 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- a cache for page table entries basically
 - an associative, high-speed, small memory
 	- associative -> search in parallel (1 comparator for each entry) -> fast
+	- expensive
+	- power hungry
 - design
-	- TLB miss -> fetch page table
+	- TLB hit -> get frame number -> access physical memory
+	- TLB miss -> access page table, get frame number -> access physical memory & add <page num, frame num> to TLB
 	- TLB full -> replace with some policies
 	- ![](https://i.imgur.com/aXk88IK.png)
 - hit ratio
 	- instruction has locality -> would be fairly high
 	- replacement policy largely affects it
+- e.g.
+	- ![](https://i.imgur.com/VZj3fMP.png)
 
 ### structure of page table
 - contiguous page table -> too large ($2^{20}>>2(2^{10})$) -> need to split
@@ -650,6 +692,10 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - no shared memory
 	- 1 virtual page entry for each physical page
 	- only 1 mapping virtual address at a time
+- external page table for each process
+	- info about logical address space of process
+	- for demand paging to deal with page fault
+	- referenced only when page fault
 - [normal vs. inverted page table](https://www.geeksforgeeks.org/difference-between-page-table-and-inverted-page-table/)
 
 ### swapping
@@ -845,7 +891,11 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- its own set of frames
 - global replacement
 	- process can take frame from other processes
-	- process exec time depends on other processes 
+	- pros
+		- higher system throughput
+		- unused local frame can be utilized by other processes
+	- cons
+		- depends on other processes 
 	- commonly used
 	- reclaiming pages
 		- ![](https://i.imgur.com/YVarh9b.png)

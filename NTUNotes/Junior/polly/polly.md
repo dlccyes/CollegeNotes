@@ -22,8 +22,15 @@ has_children: true
 	- [Vantage - Optimizing video upload for time-shifted viewing ofsocial live streams](Vantage%20-%20Optimizing%20video%20upload%20for%20time-shifted%20viewing%20ofsocial%20live%20streams) S4.1-4.2
 - 2022.3.28
 	- [BlameIt - Zooming in on Wide-area Latencies to a Global Cloud Provider](BlameIt%20-%20Zooming%20in%20on%20Wide-area%20Latencies%20to%20a%20Global%20Cloud%20Provider) S1-2
+- 2022.4.11
+	- [BlameIt - Zooming in on Wide-area Latencies to a Global Cloud Provider](BlameIt%20-%20Zooming%20in%20on%20Wide-area%20Latencies%20to%20a%20Global%20Cloud%20Provider) S3-5
+	- [Zmap](Zmap.md) S1-2
 
 ## meeting
+- 2022.4.11 14:00-???
+	- BlameIt section 3-5
+	- ZMap section 1-2
+	- something more about AR thing
 - 2022.3.28 14:00-14:55
 	- BlameIt section 1-2
 	- python ffmpeg progress
