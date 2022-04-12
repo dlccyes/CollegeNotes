@@ -13,6 +13,8 @@ parent: Operating Systems
 {:toc}
 </details>
 
+2022.04.12 10:20 - 12:10
+
 ## Q1
 ![](https://i.imgur.com/AWC8wqB.png)
 paper about using both
