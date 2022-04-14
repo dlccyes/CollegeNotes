@@ -166,3 +166,10 @@ parent: polly
 			- Australia & Japanhave have x2
 
 ### Censys
+- most long-term inaccessible ones are from Censys
+	- 83% HTTP
+	- 69% HTTPS
+	- 37% SSH
+- only origin with missing IPs primarily in fully-inaccessible network
+- cause
+	- Censys does very frequent scans, so many networks block it
