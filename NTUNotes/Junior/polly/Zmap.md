@@ -106,3 +106,63 @@ parent: polly
 	- from 9 organizations
 - post data used to public repo
 	- `Scans.io` Internet-Wide Scan Data Repository
+
+## Result Summary
+- significance difference between Censys, US64 & other academic scanners
+	- -> many reasons beyond random packet loss
+	- use multiple paired test
+		- Cochran's Q test produces statistcally significant results in a single origin
+			- while we want to see between different origins
+	- ![](https://i.imgur.com/iKmDzVq.png)
+- classified into networks (/24) & individual IPs
+- accessiblity classification
+	- accessible
+	- transiently inaccessible
+		- definition 
+			- inaccessible from the origin but (is either)
+				- accessible from a different origin in the same trial
+				- accessible from the same origin in another trial
+		- causes
+			- packet loss
+			- temporary routing issues
+			- real-time scan blocking
+			- other transient outages
+		- stat
+			- half of inaccessible hosts
+				- 51.6%
+			- most are individual hosts
+				- 49.7% of inaccessible hosts are individual
+				- 1.9% of inaccessible hosts are networks
+			- ![](https://i.imgur.com/qW5yrdN.png)
+	- long-term inaccessible
+		- definition
+			- inaccessible from a scan origin in all 3 trials
+		- causes
+			- firewall
+			- other filter
+		- stat
+			- 1/3 of inaccessible hosts
+	- unknown
+		- definition
+			- hosts present only in 1 trial
+
+## Long-Term Inaccessibility
+- significant difference between different origins is form long-term inaccessible hosts
+	- protocols
+		- 6.8% HTTP
+		- 4.1% HTTPS
+		- 16% SSH
+	- origins
+		- Censys has x5 long-term inaccessible rate for HTTPS
+		- origins that haven's conducted scans before have x2 
+			- Brazil & Japan
+			- compared to those that does frequent scans
+		- 47% of long-term inaccessible hosts are only inaccessible from 1 origin
+			- excluding Censys
+			- significant differences between origins
+				- Germany has x3
+			- ![](https://i.imgur.com/Di330gM.png)
+		- 5-10% hosts are accessible only from 1 origin
+			- Australia & Japanhave have x2
+
+### Censys
