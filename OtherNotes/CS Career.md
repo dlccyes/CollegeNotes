@@ -247,6 +247,8 @@ layout: meth
 		- intern
 			- <https://chonyy.medium.com/944c81dca809>
 			- <https://hackmd.io/@lindaya0913/HkekYB1dPO>
+		- senior
+			- <https://angelswengineer.medium.com/92d5c6ba384c>
 		- <https://juihsiuhsu.medium.com/68ee9411e4d1>
 			- 台大學碩輔資工
 			- [ptt version](https://www.ptt.cc/bbs/Soft_Job/M.1626282169.A.4BD.html)

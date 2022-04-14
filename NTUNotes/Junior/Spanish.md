@@ -2296,7 +2296,6 @@ Leo Messi nació en Rosario en 1987. Mudarse a Barcelona y unirce a FC Barcelona
 
 Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expresidente de Barcelona, es horrible y equivocó con las finanzas de FC Barcelona. Despues unirce a PSG, Messi ja estando jugando mal y no siendo feliz por que PSG es una mierda.
 
-
 ### words 
 - preciosa = beautiful
 - como ves = as you see
