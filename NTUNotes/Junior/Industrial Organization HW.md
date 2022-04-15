@@ -447,6 +447,8 @@ No. Established competitors can quickly roll out new products directly competing
 - demand elasticity is probably very low
 	- $1.39 is still really cheap compared to cost of going to a doctor (which will still not eliminate cold symptoms)
 - assumptions
+	- $1.39 is not the monopoly price
+		- if it is, then shouldn't let the competitor in at all
 	- demanded quantity is fixed to $Q = \dfrac{900M}{1.39-0.1} = 652.174M$
 		- $(1.39-0.1)Q = 900M$
 	- B (the new entry) has production MC = 0.1

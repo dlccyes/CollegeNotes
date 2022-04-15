@@ -184,7 +184,6 @@ parent: polly
 ### Academic Origins
 - ![](https://i.imgur.com/gsC45tw.png)
 - long-term inaccessible hosts more evenly distributed among As'es than in Censys
-- 
 - Germany
 	- x1.1-x3.6 HTTP(S) miss rate
 	- 40% exclusively inaccessible in Germany
@@ -207,7 +206,8 @@ parent: polly
 	- ![](https://i.imgur.com/oGu2K0p.png)
 	- the most exclusively accessible hosts i.e. lowest num of long-term inaccessible hosts
 		- many networks block all non-US origins
-		- some networks dynamically detect and block all non-US origins with high scan rates
+		- has low scan rate
+			- some networks dynamically detect and block all non-US origins with high scan rates
 - ![](https://i.imgur.com/5Vq02Dn.png)
 
 ### Geographical Biases
@@ -216,4 +216,14 @@ parent: polly
 - largely inaccessible countries are mostly due to few major As'es
 - ![](https://i.imgur.com/Ct3UV11.png)
 - origins have better access to hosts from their own countries
-- 
+	- ![](https://i.imgur.com/xqyRn4e.png)
+	- ![](https://i.imgur.com/32M0qYA.png)
+- no correlation between countries
+	- e.g. Japan doesn't see more hosts from Asia than other countries
+- exclusive accessiblity isn't significant in global scale
+	- only 0.17% of hosts are exclusive accessible to single origin
+	- tho 20% of long-term inaccessible hosts are exclusively accessible to single origin
+- 1/3 of inaccessible hosts are long-term inacc
+	- many from Censys
+
+## Transient Inaccessibility

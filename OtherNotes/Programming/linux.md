@@ -96,10 +96,17 @@ And then your Ventoy is ready. When booting with this USB, ventoy will search al
 ## package related
 ### apt
 #### find package
+find package
+```
+apt-cache search <package>
+```
+
+find files in package
 ```
 apt-file search <package>
 ```
 
+<https://unix.stackexchange.com/q/114533/>  
 <https://unix.stackexchange.com/a/330069>
 
 #### upgrade

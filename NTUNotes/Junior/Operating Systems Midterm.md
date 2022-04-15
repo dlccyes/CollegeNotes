@@ -15,6 +15,8 @@ parent: Operating Systems
 
 2022.04.12 10:20 - 12:10
 
+[solution](https://docs.google.com/document/d/1WUwwkT1tdnjiqDtqXxkSzuEXr_HlvL_F5Nk_TEEK4_k/)
+
 ## Q1
 ![](https://i.imgur.com/AWC8wqB.png)
 paper about using both
@@ -27,12 +29,16 @@ paper about using both
 
 ## Q3
 ![](https://i.imgur.com/RwiwEJg.png)
+![](https://i.imgur.com/8sjtERN.png)
+
 
 ## Q4
 ![](https://i.imgur.com/hkCu0C8.png)
 
 ## Q5
 ![](https://i.imgur.com/JRwp8Fy.png)
+![](https://i.imgur.com/WxlU0u3.png)
+
 
 ## Q6
 ![](https://i.imgur.com/HmQDfOV.png)
@@ -57,6 +63,8 @@ paper about using both
 
 ## Q13
 ![](https://i.imgur.com/fTCJVG5.png)
+![](https://i.imgur.com/TR9vCTZ.png)
+![](https://i.imgur.com/JXTC5K8.png)
 
 ## Q14
 ![](https://i.imgur.com/dbPsXqt.png)
