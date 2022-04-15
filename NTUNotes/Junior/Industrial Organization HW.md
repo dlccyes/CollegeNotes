@@ -441,3 +441,59 @@ No. Established competitors can quickly roll out new products directly competing
 5. What’s the strategy you set before you start to play this game? Here your “strategy" means the big game plan you have in order to pursue your long-run goal, i.e., to maximize your cash over the 10 periods. Did your strategy work? In the middle of the game, did you ever change or revise your strategy?
 	- Our main strategy was to try to communicate and collude with other teams to avoid oversupply, benefiting everyone, which proven to be quite successful (compared to another group) despite some obstacles.
 	- Our secondary strategy is to buy or sell lands whenever we found the operation to be profitable, according the expected value of each type of land at each round we'd calculated. However, during the game, we found that our calculation was way too optimistic, as we didn't consider the fact that only the lands we decide to supply has value i.e. the lands we decide not to supply to avoid oversupply has zero value, so we almost never buy lands from others even when the price is lower than our previously calculated expected value. Instead, we actively sold our lands to others even when the price was lower than our previously calculated expected value.
+
+## HW7
+![](https://i.imgur.com/SX1S1o0.png)
+- demand elasticity is probably very low
+	- $1.39 is still really cheap compared to cost of going to a doctor (which will still not eliminate cold symptoms)
+- assumptions
+	- demanded quantity is fixed to $Q = \dfrac{900M}{1.39-0.1} = 652.174M$
+		- $(1.39-0.1)Q = 900M$
+	- B (the new entry) has production MC = 0.1
+	- at the same price, each firm would get half of the market
+- without collusion, would enter competition after licensing
+	- if charge a flat fee $700M
+		- both will sell at P = MC = $0.1
+		- A's profit = $0<900M$
+		- B's profit = $-700M<0$
+		- **both won't agree**
+	- if charge a royalty fee $0.5 per dose
+		- both will sell at $0.6 per dose
+			- A sells at a bit lower than $
+		- A's profit = $(0.6-0.1)Q<900M$
+		- B's profit = $-700M<0$
+		- **both won't agree**
+	- worse off in both scenarios
+- with collusion
+	- fixing price to $1.39
+		- if charge a flat fee $700M
+			- assuming each gets half of the market
+			- A's profit = $450M + 700M = 1150M > 900M$
+			- B's profit = $450M - 700M = -250M < 0$
+			- **B won't agree**
+		- if charge a royalty fee $0.5 per dose
+			- assuming each get half of the market
+			- A's profit = $450M+(0.6-0.1)\dfrac{Q}{2}<900M$
+			- B's profit = $(1.39-0.6)\dfrac{Q}{2}>0$
+			- **A won't agree**
+	- fixing price to $x
+		- assuming demanded quality doesn't change
+		- if charge a flat fee $700M
+			- assuming each gets half of the market
+			- A's profit = $(x-0.1)\dfrac{Q}{2} + 700M$
+			- B's profit = $(x-0.1)\dfrac{Q}{2} - 700M$
+				- $x\geq 2.247$ for B to agree
+			- $x\geq 2.247$ for both to agree
+				- A's profit $\geq 1400M$
+				- B's profit $\geq 0$
+		- if charge a royalty fee $0.5 per dose
+			- assuming each get half of the market
+			- A's profit = $(x-0.1)\dfrac{Q}{2}+(0.6-0.1)\dfrac{Q}{2}$
+				- $x\geq 2.26$ for A to agree
+			- B's profit = $(x-0.6)\dfrac{Q}{2}$
+			- $x\geq 2.26$ for both to agree
+				- A's profit $\geq 900M$
+				- B's profit  $\geq 541.304M$
+	- both has no incentive to deviate as that would lead to competition, resulting in extremely low profit
+- result
+	- charging a flat fee and colluding with B to fix price at at least $2.247 per dose would be the best strategy, under some assumptions 

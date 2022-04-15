@@ -164,6 +164,7 @@ parent: polly
 			- ![](https://i.imgur.com/Di330gM.png)
 		- 5-10% hosts are accessible only from 1 origin
 			- Australia & Japanhave have x2
+- ![](https://i.imgur.com/enQwOBc.png)
 
 ### Censys
 - most long-term inaccessible ones are from Censys
@@ -171,5 +172,48 @@ parent: polly
 	- 69% HTTPS
 	- 37% SSH
 - only origin with missing IPs primarily in fully-inaccessible network
+- most long-term inaccessible hosts are from 3 ASes 
+	- 67% of HTTP
+	- 38% of HTTPS
 - cause
 	- Censys does very frequent scans, so many networks block it
+- blocked network
+	- 40% government network
+	- 22% consumer businesses
+
+### Academic Origins
+- ![](https://i.imgur.com/gsC45tw.png)
+- long-term inaccessible hosts more evenly distributed among As'es than in Censys
+- 
+- Germany
+	- x1.1-x3.6 HTTP(S) miss rate
+	- 40% exclusively inaccessible in Germany
+	- over 40% packet loss rate
+	- cause
+		- Germany lacks connectivity to those networks
+- Brazil & Japan
+	- long-term inaccessible to more hosts than US1 & Australia
+		- despite Brazil & Japan haven't conduct scan before 
+	- 70% of hosts from the long-term inaccessible networks for both Brazil & Japan are from Eastern Europe
+		- unclear why they're blocked
+	- Brazil has the most long-term inaccessible As'es
+	- networks that only block Brazil
+		- half from American health or financial sectors
+			- possible cause
+				- many Mirai infection (a virus) in Brazil
+- 14% networks blocking all non-US origins are from Tegna (US digital media company)
+- ABCDE (large HK cloud provider) blocks US, Brazil & Censys
+- US64
+	- ![](https://i.imgur.com/oGu2K0p.png)
+	- the most exclusively accessible hosts i.e. lowest num of long-term inaccessible hosts
+		- many networks block all non-US origins
+		- some networks dynamically detect and block all non-US origins with high scan rates
+- ![](https://i.imgur.com/5Vq02Dn.png)
+
+### Geographical Biases
+- countries with the most hosts have the most inaccessible hosts
+- countries with few hosts are greatly 
+- largely inaccessible countries are mostly due to few major As'es
+- ![](https://i.imgur.com/Ct3UV11.png)
+- origins have better access to hosts from their own countries
+- 
