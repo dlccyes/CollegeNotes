@@ -218,6 +218,8 @@ parent: polly
 - origins have better access to hosts from their own countries
 	- ![](https://i.imgur.com/xqyRn4e.png)
 	- ![](https://i.imgur.com/32M0qYA.png)
+	- only half of the host exclusively accessible to Australia geolocate there
+		- because of anycast
 - no correlation between countries
 	- e.g. Japan doesn't see more hosts from Asia than other countries
 - exclusive accessiblity isn't significant in global scale
@@ -227,3 +229,35 @@ parent: polly
 	- many from Censys
 
 ## Transient Inaccessibility
+- majority of inaccessibility is transient
+- big variance in transient loss
+- 2/3 of transiently inaccessible HTTP(S) hosts are only inaccessible by from one origin
+- 25% of transiently inaccessible hosts are from largest 200 networks
+- ![](https://i.imgur.com/5k8nyUV.png)
+- 96% of transient loss is from individual host, rather than entire network
+- Chinese networks have high transient loss
+	- but doesn't affect Japan
+- transient loss is highly variable, no origin is consistently the best or the worst
+	- but each origin has some distinct characteristics of the transient loss
+	- 10% of AS'es have consistent worst origin
+		- 72% of those As'es have Australia as the worst origin
+			- possible cause
+				- consistently congested path between Australia and those networks
+					- unable to pinpoint the path
+
+### Packet Loss
+- can't know if inaccessibility is from unresponsive hosts or dropped packet
+- to estimate random packet drop
+	- num of hosts receiving 1 probe vs. 2 probes
+		- avoid effects from middleboxes & those not following TCP protocol
+			- exclude RST packets, duplicate responses, not completing L7 handshakes
+		- exclude cases with both probes lost
+			- can't know if they're due to packet drop
+		- only lower bound of packet drop
+- packet drop rate 0.44%-1.6%
+	- highest for Australia
+		- worst connectivity
+	- ![](https://i.imgur.com/Ah923SP.png)
+- no statistically significance relationship between packet loss & transient loss for origins
+	- only have the lower bound estimate on packet drop rates
+	- can't give accurate estimation on fraction of transiently inaccessible hosts caused by packet drop
