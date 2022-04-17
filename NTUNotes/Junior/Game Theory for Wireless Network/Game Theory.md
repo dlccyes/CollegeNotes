@@ -11,6 +11,17 @@
 算 pure strategy & mixed strategy
 
 ## coalition game
+### transferable utility
+- utility can be losslessly transfered between players
+	- have a common currency with absolutely equal value
+		- utility of the currency independent to anything else
+
+### hedonic game
+- non-transferable utility game
+- players don't care ahout the rest of the partition
+- coalitions don't allocate profit for players
+- e.g. stable marriage
+
 ### shapley value
 - each player's marginal contribution
 - rules
@@ -33,9 +44,11 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
       - UN 五理事國瓜分
     - shapley
       - $x_1=\frac{2}{3}$, $x_2=x_3=\frac{1}{6}$
+
 ### core
 - stable 的 coalition (s.t. none has the incentive to deviate and form a new coalition)
 - each coalition get at least what they can generate alone
+
 ### convex
 - $v(S\cup T)\geq v(S)+v(T)-v(S\cap T)$
 - nonempty core
