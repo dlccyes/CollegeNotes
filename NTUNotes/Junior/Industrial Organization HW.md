@@ -1,3 +1,8 @@
+---
+layout: meth
+parent: Industrial Organization
+---
+# Industrial Organization HW
 {: .no_toc }
 
 <details open markdown="block">

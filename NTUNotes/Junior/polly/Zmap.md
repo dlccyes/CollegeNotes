@@ -52,7 +52,7 @@ parent: polly
 	- high miss rate of SSH
 		- several large providers (like Alibaba) blocks SSH scanners
 		- openSSH servers drop sessions after multiple unauthenticated connections
-			- solved with immediate retries (????)
+			- solved with immediate retries
 	- global coverage lower than estimated
 
 ## Methodology
@@ -251,6 +251,7 @@ parent: polly
 	- num of hosts receiving 1 probe vs. 2 probes
 		- avoid effects from middleboxes & those not following TCP protocol
 			- exclude RST packets, duplicate responses, not completing L7 handshakes
+				- RST = reset = indicate it won't receive any more packet
 		- exclude cases with both probes lost
 			- can't know if they're due to packet drop
 		- only lower bound of packet drop
@@ -273,7 +274,32 @@ parent: polly
 - no consistent origin with biggest or smalles fraction of transient losses from burst outage
 - Australia has the most burst outage
 	- 30-40% burst origin from Australia
-- no temporal pattern during a day
+- no temporal pattern during a dayusing
 	- e.g. no significant difference between day and night
 
 ## SSH
+- different to HTTP & HTTPS, which have similar behavior
+	- cause: security protections
+- 10% less coverage than HTTP(S)
+- x5 miss rate
+- less likely to be missed by single origin
+	- ![](https://i.imgur.com/47ZaAdE.png)
+- big proportion blocked by Alibaba
+	- each Alibaba SSH hosts send RST packet immediate after completing TCP handshake
+- SSH hosts more likely to directly reject connection requests than HTTP(S)
+	- RST or FIN-ACK packet
+	- not consistently
+- solution of high miss rate
+	- retrying SSH handshake
+		- x8 success rate
+		- num of consecutive SSH handshakes increases -> success rate increases
+			- capped by max num of unauthenticated connections
+		- scan from multiple origins -> num of unauthenticated connections increases -> more likely to be rejected
+- probabilistic blocking hosts
+	- hosts rejecting handshake with one origin but not with another origin
+	- 32-63% of missed SSH hosts
+	- 30% is long-term inaccessible
+		- are only long-term inaccessible by chance
+- not counting Alibaba's blocking & probabilistic blocking, SSH miss rate is lower than HTTP & HTTPS
+- breakdown of missing reasons
+	- ![](https://i.imgur.com/qGVRCsQ.png)
