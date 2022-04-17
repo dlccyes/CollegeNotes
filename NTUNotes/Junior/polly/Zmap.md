@@ -261,3 +261,19 @@ parent: polly
 - no statistically significance relationship between packet loss & transient loss for origins
 	- only have the lower bound estimate on packet drop rates
 	- can't give accurate estimation on fraction of transiently inaccessible hosts caused by packet drop
+
+### localized temporory outages
+- to identify burst outage 
+	- look for noise 2 std away from average noise
+- to extract noise
+	- subtract smoothed time series
+		- from rolling window
+			- to minimize average MSE
+- 14-36% transient loss happens during a burst outage
+- no consistent origin with biggest or smalles fraction of transient losses from burst outage
+- Australia has the most burst outage
+	- 30-40% burst origin from Australia
+- no temporal pattern during a day
+	- e.g. no significant difference between day and night
+
+## SSH
