@@ -74,6 +74,12 @@ from win10/11
 ## flash iso to usb
 ### dd
 
+## network
+### tcpdump
+```
+sudo tcpdump -i <interface>
+```
+
 ### ventoy
 [tutorial](https://linuxkamarada.com/en/2020/07/29/ventoy-create-a-multiboot-usb-drive-by-simply-copying-iso-images-to-it/)
 

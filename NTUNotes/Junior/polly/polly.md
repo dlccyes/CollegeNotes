@@ -25,8 +25,14 @@ has_children: true
 - 2022.4.11
 	- [BlameIt - Zooming in on Wide-area Latencies to a Global Cloud Provider](BlameIt%20-%20Zooming%20in%20on%20Wide-area%20Latencies%20to%20a%20Global%20Cloud%20Provider) S3-5
 	- [Zmap](Zmap.md) S1-2
+- 2022.4.18
+	- [Zmap](Zmap.md) S3-6
 
 ## meeting
+- 2022.4.18 14:30-15:20
+	- ZMap section 3-6
+	- more about pokemon
+	- tcpdump intro
 - 2022.4.11 14:00-???
 	- BlameIt section 3-5
 	- ZMap section 1-2

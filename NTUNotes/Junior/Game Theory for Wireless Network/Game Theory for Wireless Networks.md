@@ -281,8 +281,8 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- exhaustive maximize system utility
 		- switch/swap whenever will increase system utility
 - analyze users with strange behaviour
-- add x y axis for graph
-- redefine "iteration" as attempt (either swap or switch)
+- [x] add x y axis for graph
+- [x] redefine "iteration" as attempt (either swap or switch)
 	- iteration += 1 in each attempt
 	- update stableness after each attempt
 

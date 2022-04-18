@@ -108,7 +108,7 @@ parent: polly
 	- `Scans.io` Internet-Wide Scan Data Repository
 
 ## Result Summary
-- significance difference between Censys, US64 & other academic scanners
+- significant difference between Censys, US64 & other academic scanners
 	- -> many reasons beyond random packet loss
 	- use multiple paired test
 		- Cochran's Q test produces statistcally significant results in a single origin
@@ -163,7 +163,7 @@ parent: polly
 				- Germany has x3
 			- ![](https://i.imgur.com/Di330gM.png)
 		- 5-10% hosts are accessible only from 1 origin
-			- Australia & Japanhave have x2
+			- Australia & Japan have have x2
 - ![](https://i.imgur.com/enQwOBc.png)
 
 ### Censys
@@ -212,7 +212,7 @@ parent: polly
 
 ### Geographical Biases
 - countries with the most hosts have the most inaccessible hosts
-- countries with few hosts are greatly 
+- countries with few hosts are greatly
 - largely inaccessible countries are mostly due to few major As'es
 - ![](https://i.imgur.com/Ct3UV11.png)
 - origins have better access to hosts from their own countries
@@ -222,10 +222,10 @@ parent: polly
 		- because of anycast
 - no correlation between countries
 	- e.g. Japan doesn't see more hosts from Asia than other countries
-- exclusive accessiblity isn't significant in global scale
+- exclusive accessibility isn't significant in global scale
 	- only 0.17% of hosts are exclusive accessible to single origin
 	- tho 20% of long-term inaccessible hosts are exclusively accessible to single origin
-- 1/3 of inaccessible hosts are long-term inacc
+- 1/3 of inaccessible hosts are long-term inaccessible
 	- many from Censys
 
 ## Transient Inaccessibility
@@ -263,8 +263,8 @@ parent: polly
 	- only have the lower bound estimate on packet drop rates
 	- can't give accurate estimation on fraction of transiently inaccessible hosts caused by packet drop
 
-### localized temporory outages
-- to identify burst outage 
+### localized temporary outages
+- to identify burst outage
 	- look for noise 2 std away from average noise
 - to extract noise
 	- subtract smoothed time series
@@ -303,3 +303,8 @@ parent: polly
 - not counting Alibaba's blocking & probabilistic blocking, SSH miss rate is lower than HTTP & HTTPS
 - breakdown of missing reasons
 	- ![](https://i.imgur.com/qGVRCsQ.png)
+
+## polly's comments
+- actual coverage for HTTP(S) vs.SSH
+- those with HTTP port tends to have SSH port also
+- those with only SSH port probably have firewall on
