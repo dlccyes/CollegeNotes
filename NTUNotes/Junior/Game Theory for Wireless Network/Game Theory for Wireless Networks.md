@@ -271,17 +271,20 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- output those instances to a file and analyze
 - [x] randomly select a server vs. consult every server from best to worse
 	- compare total utility given the same original distribution
-- examine every server and consult from the best to the worst (to the user)
-- use exhaustive search to check if partition is stable
-- total utility & complexity comparison with other simple methods
+- [x] when swapping,  try every other user at each iteration
+- [x] examine every server and consult from the best to the worst (to the user)
+- [x] use exhaustive search to check if partition is stable
+- (scheme comparison) total utility & complexity comparison with other simple methods
 	- all in cloud
 	- random coalition
 	- exhaustive search
 	- exhaustive maximize system utility
 		- switch/swap whenever will increase system utility
-- when swapping,  try every other user at each iteration
 - analyze users with strange behaviour
-- add x y axis
+- add x y axis for graph
+- redefine "iteration" as attempt (either swap or switch)
+	- iteration += 1 in each attempt
+	- update stableness after each attempt
 
 ### multi-level tree
 
