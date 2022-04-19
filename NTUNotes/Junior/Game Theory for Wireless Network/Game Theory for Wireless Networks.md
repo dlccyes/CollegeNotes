@@ -251,8 +251,21 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- ![](https://i.imgur.com/JgKHmyJ.png)
 		- no swapping
 - pareto-based vs. totalitarian
-	- ![](https://i.imgur.com/cmMyujE.png)
+	- ![](https://i.imgur.com/ndz1Wr3.png)
 	- ![](https://i.imgur.com/OlOuja0.png)
+- comparison of different methods
+	- ![](https://i.imgur.com/vEDL0ZX.png)
+	- ![](https://i.imgur.com/RTSYtK7.png)
+	- runtime
+		- best ~ exhaustive < random < totalitarian
+			- for same iteration
+			- because totalitarian has much more num of successful operations
+			- why random is significantly slower???
+	- system utility
+		- totalitarian > best ~ exhaustive ~ random
+		- coalition game method can reach about 70% of optimal system utility
+	- random increases more quickly at the start because of the implementation of swapping
+		- swap after done switching for the same user, and best & exhaustive will search for every other user to try to swap, which count as an iteration for each attempt, while random will just try swapping with a randomly user and go on
 
 #### findings
 - some user may choose to use a server far away, instead of a nearer one
@@ -286,6 +299,9 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- iteration += 1 in each attempt
 	- update stableness after each attempt
 
+#### problems
+- definition of iteration?
+
 ### multi-level tree
 
 ### todo
@@ -301,3 +317,5 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- flunctuated num of users
 		- poisson
 		- (partially) racalling mechanism
+	- different cloud providers?
+		- [Quality and Profit Assured Trusted Cloud Federation Formation - Game Theory Based Approach](Quality%20and%20Profit%20Assured%20Trusted%20Cloud%20Federation%20Formation%20-%20Game%20Theory%20Based%20Approach.md)
