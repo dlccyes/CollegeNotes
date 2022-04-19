@@ -129,4 +129,33 @@ parent: Game Theory for Wireless Networks
 	- ![](https://i.imgur.com/CU2usiw.png)
 - Theorem 1
 	- $f_j.Cost_{R_\mathscr{T}}$ has min when service providers are sort by cost (increasing) providing resource $R_\mathscr{T}$
+	- pf
+		- assume $S^{id}_i.C_{R_\mathscr{T}}$ for i=1:n is increasing except $S^{id}_k.C_{R_\mathscr{T}}>S^{id}_{k+1}.C_{R_\mathscr{T}}$
+		- ![](https://i.imgur.com/evegQq1.png)
 
+### Profit Distribution
+- total profit of federation $fj$ using all resources
+	- ![](https://i.imgur.com/h1gNF1K.png)
+- profit obtained by service provider $S^{id}$ from federation $f_j$
+	- ![](https://i.imgur.com/iaATENE.png)
+	- $\omega_{S^{id}}$ = ratio of total resources contributed by $S^{id}$
+	- profit({$S^{id}$}) = profit $S^{id}$ would gain without being in any federation
+	- CSP won't worse off joining a federation
+	- extra profit distributed according to resource contribution ratio
+
+### Satisfication Level
+- factors
+	- profit $\theta$
+		- earn extra money by sharing idle / underutilized resources
+		- increasing overall profit will also increase invididual profit
+	- availability $\xi$
+		- most important QoS parameter for considering joining a federation
+		- able to dynamically scale-up
+		- increasing overall availability will also increase invididual availability
+- ![](https://i.imgur.com/GupTqXS.png)
+	- $sl_{min}$ = satisfication level = 0.01
+	- $sl_{max}$ = satisfication level = 1
+- ![](https://i.imgur.com/ySI6UH6.png)
+	- just a slant line, not a triangle (the vertical & horizontal line are just for indication)
+- weighted sum of satisfication get from profit & availability 
+	- ![](https://i.imgur.com/siK6Sac.png)
