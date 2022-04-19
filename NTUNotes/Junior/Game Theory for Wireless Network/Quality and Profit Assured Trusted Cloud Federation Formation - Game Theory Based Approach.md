@@ -68,3 +68,65 @@ parent: Game Theory for Wireless Networks
 			- cost of a federation
 		- quality & trust calculated by Beta Mixture Model
 		- algorithm converges to Nash stable federation partition
+
+## Cloud Federation Architecture
+- 2 types of cloud users
+	- interact with CSPs directly
+	- interact with cloud broker
+- cloud broker
+	- CSPs leasing their excessive resources
+		- through federation manager (FM)
+	- CSPs outsourcing theire excessive request (not enough resources)
+		- through service manager (SM)
+- Service Manager, SM
+	- provide services to CSPs
+		- those running out of resources
+	- provide services to cloud users
+		- those interacting with broker
+- Federation Manager, FM
+	- manage the services requests from SM
+	- virtual owner of virtual resources from the federation
+- Federation Coordinator, FC
+	- FM assigns a FC for each federation
+	- sends FM periodic update about the state of the federation
+	- group similar resources
+		- by types
+- ![](https://i.imgur.com/4xYWdxx.png)
+
+### Notations
+- ![](https://i.imgur.com/X9oXeva.png)
+- x.u = probability of x being unavailable
+- x.a = probability of x being available
+- $S^{id}.CO_{R_\mathscr{T}}$ = num of cores of type $R_\mathscr{T}$ of service provider $S^{id}$
+- $S^{id}.Me_{R_\mathscr{T}}$ = memory used by type $R_\mathscr{T}$ of service provider $S^{id}$
+- $S^{id}.S_{R_\mathscr{T}}$ = storage used by type $R_\mathscr{T}$ of service provider $S^{id}$
+- $\rho_{R_\mathscr{T}}$ = price of resource $R_\mathscr{T}$ with availability 1
+
+### Availability
+- managed by FC
+- flow
+	- FC receives user request  -> find $S^{id}_i$ to fulfill it, by preference $i=1:N$  
+		- i = k not availability -> find i = k+1
+- probability of a federation being unavailable = probability of all resources in the federation being unavailable
+	- ![](https://i.imgur.com/uKNx38d.png)
+	- ![](https://i.imgur.com/1H8lITw.png)
+	- assuming CSPs are independent to each other
+	- ![](https://i.imgur.com/Um99Q7m.png)
+	- ![](https://i.imgur.com/aTPLi8u.png)
+
+### Cost 
+- cost of $S^{id}$ providing resource type $R_\mathscr{T}$ 
+	- ![](https://i.imgur.com/nBFNOO9.png)
+- cost of a federation providing resource type $R_\mathscr{T}$  = sum of cost of each service providing resource type $R_\mathscr{T}$ times the probability of the service being used 
+	- ![](https://i.imgur.com/YvT4GHa.png)
+- cost of a federation = sum of cost of the federation providing each type of resources
+	- ![](https://i.imgur.com/MQ4ShOH.png)
+
+### Price
+- price of a federation providing resource $R_\mathscr{T}$
+	- ![](https://i.imgur.com/JoRTaeU.png)
+- profit of a federation providing resource $R_\mathscr{T}$
+	- ![](https://i.imgur.com/CU2usiw.png)
+- Theorem 1
+	- $f_j.Cost_{R_\mathscr{T}}$ has min when service providers are sort by cost (increasing) providing resource $R_\mathscr{T}$
+

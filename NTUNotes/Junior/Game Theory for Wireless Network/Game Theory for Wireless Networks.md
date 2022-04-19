@@ -278,26 +278,14 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- relation between "select best possible" & "select random"
 
 #### TODO
-- edge server to cloud distance vs. coalition size
-- [x] swap operation (user2user)
-- why user would choose a farther server than a nearer one
-	- output those instances to a file and analyze
-- [x] randomly select a server vs. consult every server from best to worse
-	- compare total utility given the same original distribution
-- [x] when swapping,  try every other user at each iteration
-- [x] examine every server and consult from the best to the worst (to the user)
-- [x] use exhaustive search to check if partition is stable
-- (scheme comparison) total utility & complexity comparison with other simple methods
-	- all in cloud
-	- random coalition
-	- exhaustive search
-	- exhaustive maximize system utility
-		- switch/swap whenever will increase system utility
-- analyze users with strange behaviour
-- [x] add x y axis for graph
-- [x] redefine "iteration" as attempt (either swap or switch)
-	- iteration += 1 in each attempt
-	- update stableness after each attempt
+- convergence proof
+	- bound
+	- when will converge
+	- converge to where
+- another meeting about implementing to real life
+- utility function
+	- different T for cloud & edge server
+	- ppt formula resolution
 
 #### problems
 - definition of iteration?
