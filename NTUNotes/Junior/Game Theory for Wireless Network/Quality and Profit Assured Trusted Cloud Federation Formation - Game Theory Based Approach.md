@@ -155,7 +155,57 @@ parent: Game Theory for Wireless Networks
 - ![](https://i.imgur.com/GupTqXS.png)
 	- $sl_{min}$ = satisfication level = 0.01
 	- $sl_{max}$ = satisfication level = 1
-- ![](https://i.imgur.com/ySI6UH6.png)
+- satisfication vs. profit
+	- ![](https://i.imgur.com/OeH6xgP.png)
 	- just a slant line, not a triangle (the vertical & horizontal line are just for indication)
 - weighted sum of satisfication get from profit & availability 
 	- ![](https://i.imgur.com/siK6Sac.png)
+
+## Quality & Trust
+### Quality
+- hierarchical quality
+	- ![](https://i.imgur.com/5hHA8jf.png)
+- ????????
+
+### Trust
+- the trustworthy level of a service provider
+	- ![](https://i.imgur.com/a0ThfDn.png)
+	- $S^{id}.QoP_{committed}$ = promised Qos
+	- $S^{id}.QoP_{delivered}$ = originally delivered Qos
+	- $\in[0,1]$
+
+## Hedonic Cloud Federation Coalition Formation
+- hedonic coalition game
+	- non-transferable utility
+- only allow trusted CSPs
+- maximize satisfication level of federation
+- maximize overall profit & quality
+
+### Hedonic Coalition Game Formulation
+- non-transferable utility (NTU) game
+	- utility can't be distributed / transferred within coalition
+- Why is it a NTU game?
+	- utility = satisfication level
+	- satisfication level can't be distributed or transferred to other members
+- hedonic game
+	- a subset of NTU game
+	- players have preference over coalition
+	- players only care about members of its own coalition
+		- rather than the whole partition
+	- Nash stable
+	- individually stable
+- Why is it a hedonic game?
+	- utility = satisfication level
+	- satisfication level depends on profit & availability
+	- availability solely depends on the CSPs inprefer the coalition
+	- profit solely depends on the members of the coalition
+		- cost of resources solely depends on cost & availability of the CSPs in the coalition
+- preference relation
+	- CSP won't join the coalition it has joined before
+		- make the preference value of the coalition it lefts to be $-\infty$
+		- learn
+		- $h(S^{id})$  = the set of coalition $S^{id}$ has been in
+
+### Cloud Federation Formation Algorithm
+- hedonic coalition game inspired cloud federation formation, CGCFF
+- 

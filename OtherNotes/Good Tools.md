@@ -15,7 +15,7 @@ parent: OtherNotes
 </details>
 
 ## websites
-- Photophea
+- Photopea
 	- Photoshop clone
 - <https://12ft.io/>
 	- remove paywall
@@ -44,6 +44,9 @@ parent: OtherNotes
 	- <https://www.noteapps.info/>
 - hacknews remade
 	- <https://hn.jeffjadulco.com>
+- lucidcart
+	- <https://lucid.app/lucidchart>
+	- make flow charts
 
 ## browser extensions
 - tab manager (firefox)
