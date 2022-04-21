@@ -147,6 +147,17 @@ cred = f'{clientID}:{clientSecret}'
 b64_cred = base64.b64encode(cred.encode('ascii')).decode('ascii')
 ```
 
+## string
+### split
+```
+import re
+old = 'I am, not, you! Fuck!'
+new = re.split('[,\s!]', old)
+new = re.split(', | |!')
+```
+- use `|` to separate symbols
+- use `[]` to use each symbol in the bracket
+
 ## convert
 ### str to json
 ```py

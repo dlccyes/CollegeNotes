@@ -244,9 +244,22 @@ git pull origin master
 works like a charm
 
 ref:  
-- https://stackoverflow.com/a/43902478/15493213
-	- pasta from https://stackoverflow.com/a/17075665/15493213
-		- pasta from http://jasonkarns.com/blog/2011/11/15/subdirectory-checkouts-with-git-sparse-checkout/
+- <https://stackoverflow.com/a/43902478/15493213>
+	- pasta from <https://stackoverflow.com/a/17075665/15493213>
+		- pasta from <http://jasonkarns.com/blog/2011/11/15/subdirectory-checkouts-with-git-sparse-checkout/>
+
+## branch related
+### switch branch
+```
+git checkout <branch>
+```
+
+### copy everything from another branch to current branch
+```
+git checkout <other_branch> .
+```
+
+<https://stackoverflow.com/a/7188232/15493213>
 
 ## remote related
 ### check remote

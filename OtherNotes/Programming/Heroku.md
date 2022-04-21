@@ -22,3 +22,5 @@ parent: Programming
 	- `heroku login`
 - set buildstack
 	- `heroku buildpacks:set heroku/python -a playlastify`
+- see log
+	- `heroku logs --tail --app <appname>`
