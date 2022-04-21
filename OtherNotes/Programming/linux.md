@@ -1056,6 +1056,11 @@ ffmpeg -y -i *.mp4 -filter_complex "fps=10,scale=1080:-1:flags=lanczos,split[s0]
 ```
 <https://superuser.com/a/1695537>
 
+#### play
+```
+ffplay <video_file
+```
+
 ### xbacklight 
 #### install
 ```
