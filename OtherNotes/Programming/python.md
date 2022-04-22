@@ -172,6 +172,21 @@ import json
 json.loads(str)
 ```
 
+## datetime
+```
+from datetime import datetime
+```
+
+convert date & time now to iso format string
+```
+datetime.now().isoformat()
+```
+
+convert iso format string to datetime object
+```
+datetime.fromisoformat(str)
+```
+
 ## heap
 - priority queue
 - `import heapq`
@@ -270,25 +285,77 @@ pip3 install alembic
 alembic init <alembic_dir>
 ```
 
-go to `alembic.ini` and correct `sqlalchemy.url `
-to be your database url
+go to `alembic.ini` and edit `sqlalchemy.url `
+to be your database url (need to start with `postgresql://` for postgre)
 
-#### create migration
+edit `script_location` if you ever change the name of `alembic_dir`
+
+#### manually create migration
 ```
 alembic revision -m <migration name>
 ```
 would be under `<alembic_dir>/versions`
 
+#### auto generating migration
+##### init
+declare your model in a py file in project root  
+<https://docs.sqlalchemy.org/en/13/orm/extensions/declarative/basic_use.html>
+
+modify `env.py` to suit your need
+
+e.g.
+
+`chat_table.py` at project root
+```py
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
+
+class chat_t(Base):
+    __tablename__ = 'chat_t'
+    id = Column(Integer, primary_key=True)
+    identity = Column(String(50))
+    username =  Column(String(50))
+    msg_count = Column(Integer)
+    last_msg_time = Column(String(50))
+```
+
+in `env.py` in alembic directory, add this
+```py
+from chat_table import chat_t
+target_metadata = chat_t.metadata
+```
+
+to detect column type change, add `compare_type=True` in `env.py` -> `run_migrations_online()` -> `context.configure`
+
+e.g.
+```py
+with connectable.connect() as connection:
+	context.configure(
+		connection=connection, 
+		target_metadata=target_metadata,
+		compare_type=True
+	)
+```
+
+##### generate migration file
+after changing your model, run
+```
+alembic revision --autogenerate -m <migration name>
+```
+to auto generate migration file
+
 #### run migration
 in project root
 ```
-alembic update head
+alembic upgrade head
 ```
 equivalent to `php artisan migrate`
 
 or
 ```
-alembic update <id>
+alembic upgdrade <id>
 ```
 
 #### rollback

@@ -13,16 +13,16 @@ parent: Programming
 {:toc}
 </details>
 
-## kubuntu installation
-kubuntu is ubuntu with KDE preinstalled
+## installation for newbie
+Kubuntu (Ubuntu with KDE) for example
 
 ### procedure
 from win10/11
 
 1. install kubuntu iso
-2. flash the iso to your USB -> bootable USB drive
+2. [flash iso to usb](#flash%20iso%20to%20usb) -> bootable USB drive
+	- use [Ventoy](#ventoy)
 	- use [Etcher](https://www.balena.io/etcher/ )
-		- only used for installation
 	- use linux terminal
 		- steps
 			1. `lsblk` to see what's your USB's called
@@ -74,12 +74,6 @@ from win10/11
 ## flash iso to usb
 ### dd
 
-## network
-### tcpdump
-```
-sudo tcpdump -i <interface>
-```
-
 ### ventoy
 [tutorial](https://linuxkamarada.com/en/2020/07/29/ventoy-create-a-multiboot-usb-drive-by-simply-copying-iso-images-to-it/)
 
@@ -99,6 +93,31 @@ go inside and run
  
 And then your Ventoy is ready. When booting with this USB, ventoy will search all ISOs in the USB, so you can out your ISO whenever you want (inside the USB). You can also store normal files.
 
+## Ubuntu
+### system upgrade
+for normal release
+```
+sudo do-release-upgrade
+```
+
+for development release
+```
+sudo do-release-upgrade -d
+```
+
+to change between LTS & normal  
+go to `/etc/update-manager/release-upgrades` 
+- `prompt=lts` for lts
+- `prompt=normal` for normal
+
+<https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today>
+
+## network
+### tcpdump
+```
+sudo tcpdump -i <interface>
+```
+
 ## package related
 ### apt
 #### find package
@@ -114,26 +133,6 @@ apt-file search <package>
 
 <https://unix.stackexchange.com/q/114533/>  
 <https://unix.stackexchange.com/a/330069>
-
-#### upgrade
-for normal release
-```
-sudo do-release-upgrade
-```
-
-for development release
-```
-sudo do-release-upgrade -d
-```
-
-to change between LTS & normal  
-```
-sudo vim /etc/update-manager/release-upgrades
-```
-change between `Prompt=normal` & `Prompt=LTS`
-
-
-<https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today>
 
 #### The following packages have been kept back
 displayed when doing `apt upgrade`

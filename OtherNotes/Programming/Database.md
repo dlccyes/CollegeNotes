@@ -19,6 +19,7 @@ parent: Programming
 
 #### installation
 ```
+# as root
 curl -s https://api.github.com/repos/sosedoff/pgweb/releases/latest \
   | grep linux_amd64.zip \
   | grep download \

@@ -27,3 +27,5 @@ parent: Programming
 - add remote
 	- `heroku git:remote -a <appname>`
 	- <https://devcenter.heroku.com/articles/git#for-an-existing-app>
+- go into console
+	- `heroku ps:exec --app=<appname>`
