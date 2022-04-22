@@ -47,6 +47,9 @@ parent: OtherNotes
 - lucidcart
 	- <https://lucid.app/lucidchart>
 	- make flow charts
+- voicerss
+	- <https://www.voicerss.org/api/>
+	- convert text to voice via api
 
 ## browser extensions
 - tab manager (firefox)
