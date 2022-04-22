@@ -24,3 +24,6 @@ parent: Programming
 	- `heroku buildpacks:set heroku/python -a playlastify`
 - see log
 	- `heroku logs --tail --app <appname>`
+- add remote
+	- `heroku git:remote -a <appname>`
+	- <https://devcenter.heroku.com/articles/git#for-an-existing-app>

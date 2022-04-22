@@ -51,6 +51,13 @@ restart shell with `exec $SHELL` or just `source ~/.bashrc`
 	- `python3 -V` to check
 - `pyenv global <version>` to select your desired version for you machine
 
+## import
+import everything from `config.py`, including packages, functions, variables, etc. (like `include` in php or `<script></script>` in html/js)
+```
+from config import *
+```
+<https://stackoverflow.com/a/17255770/15493213>
+
 ## matplotlib
 ### plot as many on demand
 <https://stackoverflow.com/a/39106673/15493213>
@@ -207,3 +214,101 @@ ipynb-py-convert <in.py> <out.ipynb>
 ```
 
 <https://stackoverflow.com/a/66565946/15493213>
+
+## Database interaction
+### sqlalchemy
+```
+pip3 install sqlalchemy psycopg2-binary
+```
+<https://stackoverflow.com/a/49812755/15493213>
+
+#### create a table
+please use [alembic](#alembic) to do migration
+
+creating a table example
+```py
+from sqlalchemy import create_engine
+from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey
+
+DATABASE_URL = "postgresql://something"
+
+engine = create_engine(DATABASE_URL)
+metadata = MetaData()
+users = Table('users', metadata,
+    Column('id', Integer, primary_key=True),
+    Column('name', String),
+    Column('fullname', String),
+)
+addresses = Table('addresses', metadata,
+    Column('id', Integer, primary_key=True),
+    Column('user_id', None, ForeignKey('users.id')),
+    Column('email_address', String, nullable=False)
+)
+metadata.create_all(engine)
+```
+<https://medium.com/@kevinwei30/d965ca20de59>
+
+notice the database url need to start with `postgresql` but not `postgres`  
+<https://stackoverflow.com/a/64698899/15493213>
+
+tip: use `yourstr.replace()`  
+<https://help.heroku.com/ZKNTJQSK/>
+
+### alembic
+database migration tool
+
+it uses [sqlalchemy](#sqlalchemy) underneath
+
+```
+pip3 install alembic
+```
+
+<https://medium.com/@acer1832a/32d949f7f2c6>
+
+#### initialization
+```
+alembic init <alembic_dir>
+```
+
+go to `alembic.ini` and correct `sqlalchemy.url `
+to be your database url
+
+#### create migration
+```
+alembic revision -m <migration name>
+```
+would be under `<alembic_dir>/versions`
+
+#### run migration
+in project root
+```
+alembic update head
+```
+equivalent to `php artisan migrate`
+
+or
+```
+alembic update <id>
+```
+
+#### rollback
+```
+alembic downgrade -1
+```
+like `git reset HEAD~1`
+
+```
+alembic downgrade <id>
+```
+like `git reset <id>`
+
+#### migration log
+git log bit doesn't show where you're at
+```
+alembic history
+```
+
+show the id you're at
+```
+alembic current
+```
