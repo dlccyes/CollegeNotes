@@ -1,7 +1,6 @@
-mon---
-title: Django
+---
 layout: meth
-parent: Programming
+parent: Python
 ---
 # Django
 {: .no_toc }
@@ -14,9 +13,11 @@ parent: Programming
 {:toc}
 </details>
 
+easy [Python](Python.md) web framework
+
 ## resources
 - official doc
-	- https://docs.djangoproject.com/en/4.0/
+	- <https://docs.djangoproject.com/en/4.0/>
 
 ## installation
 `pip3 install django`

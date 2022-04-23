@@ -17,8 +17,8 @@
 ### for loop
 - `for(let i=0; i<=s.length; i++)`
 	- 千萬要加 `let`
-- `for(var item of array)` = `for item in array` in [[python]]
-- `for(var i in array)` = `for i in range(len(array))` in [[python]]
+- `for(var item of array)` = `for item in array` in [[Python]]
+- `for(var i in array)` = `for i in range(len(array))` in [[Python]]
 
 ### string
 #### slice
