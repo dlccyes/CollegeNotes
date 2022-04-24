@@ -28,6 +28,7 @@ has_children: True
 - [Main Memory 2](https://www.youtube.com/watch?v=Jb0lQbvm29w)
 - [Virtual Memory 1](https://www.youtube.com/watch?v=VQ07KeyJXgg)
 - [Virtual Memory 2](https://www.youtube.com/watch?v=JYv7Y7b2DGA)
+- [CPU Scheduling](https://www.youtube.com/watch?v=y4TbkJ7oCi0)
 
 ### 施吉昇
 - [Course Info](https://www.youtube.com/watch?v=0QpWM5vYt-g)
@@ -50,6 +51,9 @@ has_children: True
 - [Virtual Memory 3 - Page Replacement](https://www.youtube.com/watch?v=DdrW21Y5QYY)
 - [Virtual Memory 4](https://www.youtube.com/watch?v=JaeSleQ6_Dk)
 - [Virtual Memory 5 - Thrashing](https://www.youtube.com/watch?v=CQYI9BWZCJQ)
+- [CPU Scheduling 1](https://www.youtube.com/watch?v=4z65wVcKUl4)
+- [CPU Scheduling 2](https://www.youtube.com/watch?v=tovVVyiI3bI)
+- [CPU Scheduling 3](https://www.youtube.com/watch?v=NZz9ScquXlQ)
 
 
 ## intro

@@ -515,12 +515,14 @@ No. Established competitors can quickly roll out new products directly competing
 
 ![](https://i.imgur.com/6ECasE0.png)
 
-
-
 ### Shipbuilding
 ![](https://i.imgur.com/4tu57Qh.png)
 
 ![](https://i.imgur.com/j4RlHMR.png)
+a=25.78
+EU = 17.1616
+CN = 15.8848
+JP = 12.3736
 
 ![](https://i.imgur.com/5fDNbkt.png)
 

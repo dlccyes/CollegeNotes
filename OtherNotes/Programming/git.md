@@ -254,6 +254,12 @@ ref:
 git checkout <branch>
 ```
 
+### switch tracking remote/branch
+```
+git branch -u remote/branch
+```
+<https://stackoverflow.com/a/23458073/15493213>
+
 ### copy everything from another branch to current branch
 ```
 git checkout <other_branch> .

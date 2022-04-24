@@ -1,0 +1,255 @@
+\documentclass[a4paper]{article}
+\usepackage{student}
+\usepackage{fontspec}
+\usepackage{tikz}
+\newfontfamily\cjkfont{Noto Serif CJK TC}
+%\setmainfont{Noto Serif CJK SC}
+%\setsansfont{Noto Sans CJK SC}
+% \graphicspath{ {./picture} }
+
+% Metadata
+\date{\today}
+\setmodule{ECON5107: Industrial Organization Assignment \#8}
+\setterm{Mar, 2022}
+
+%-------------------------------%
+% Other details
+% TODO: Fill these
+%-------------------------------%
+\title{Assignment 8}
+\setmembername{{\cjkfont 魏珈民、羅啟帆、李嘉芸、黃耀霆、林雋哲}}  % Fill group member names
+\setmemberuid{b07303025, b07902047, b07303087, b08902136, b08901064}  % Fill group member uids (same order)
+
+%-------------------------------%
+% Add / Delete commands and packages
+% TODO: Add / Delete here as you need
+%-------------------------------%
+\usepackage{amsmath,amssymb,bm}
+
+\newcommand{\KL}{\mathrm{KL}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\T}{\top}
+
+\newcommand{\expdist}[2]{%
+        \normalfont{\textsc{Exp}}(#1, #2)%
+    }
+\newcommand{\expparam}{\bm \lambda}
+\newcommand{\Expparam}{\bm \Lambda}
+\newcommand{\natparam}{\bm \eta}
+\newcommand{\Natparam}{\bm H}
+\newcommand{\sufstat}{\bm u}
+
+% Main document
+\begin{document}
+    % Add header
+    \header{}
+
+    % Use `answer` environment to add solutions
+    % \begin{answer}[Question 1.1] for example starts an environment formatted
+    % for Question 1.1
+    %\begin{answer}[Question 1.1]
+    %    Your answer here.
+
+    %    An equation with numbering:
+    %    \begin{equation}
+    %        \expdist{\sufstat}{\natparam}.
+    %    \end{equation}
+
+    %    An equation without numbering (notice the $*$):
+    %    \begin{equation*}
+    %        \expparam^{\T} \sufstat(x).
+    %    \end{equation*}
+    %\end{answer}
+    \begin{answer}[Cement (1)]
+    \begin{align*}
+        P = 225 - \frac{Q}{2}, MC_A = 50, MC_B = 40, Tech_M_C = -6
+    \end{align*}
+    
+    1.We first calculate the profit of both firm without innovation, the calculations are as follows:
+    \begin{align*}
+        & MR_B = 225 - \frac{Q_A}{2} - Q_B = MC_B = 40\\
+        & MR_A = 225 - \frac{Q_B}{2} - Q_A = MC_A = 50\\
+    \end{align*}
+    The Equilibrium Q, P:
+    \begin{align*}
+        & Q_A = 110, Q_B = 130\\
+        & P = 225 - \frac{Q_A + Q_B}{2} = 105\\
+    \end{align*}
+    The profit without innovation:
+    \begin{align*}
+        & Profit_A = (105-50)*110 = 6050\\
+        & Profit_B = (105-40)*130 = 8450\\
+    \end{align*}
+    
+    2.We then calculate the profit of firm B, firm A with innovation, and compare the amount with the previously calculated profit. The calculations are as follows:\\
+    (1) Firm A:\\
+    \begin{align*}
+        & MR_B = 225 - \frac{Q_A}{2} - Q_B = MC_B = 40\\
+        & MR_A = 225 - \frac{Q_B}{2} - Q_A = MC_A = 50 - 6 = 44\\
+    \end{align*}
+    The Equilibrium Q, P:
+    \begin{align*}
+        & Q_A = 118, Q_B = 126\\
+        & P = 225 - \frac{Q_A + Q_B}{2} = 103\\
+    \end{align*}
+    The profit of firm A with innovation:
+    \begin{align*}
+        & Profit_A = (103-44)*118 = 6962\\
+    \end{align*}
+    Thus the willingness to pay for the technology for firm A will be: \\
+    \begin{align*}
+        & 6962 - 6050 = 912\\
+    \end{align*}
+    
+    (2) Firm B:\\
+    \begin{align*}
+        & MR_B = 225 - \frac{Q_A}{2} - Q_B = MC_B = 40 - 6 = 34\\
+        & MR_A = 225 - \frac{Q_B}{2} - Q_A = MC_A = 50\\
+    \end{align*}
+    The Equilibrium Q, P:
+    \begin{align*}
+        & Q_A = 106, Q_B = 138\\
+        & P = 225 - \frac{Q_A + Q_B}{2} = 103\\
+    \end{align*}
+    The profit of firm B with innovation:
+    \begin{align*}
+        & Profit_B = (103-34)*138 = 9522\\
+    \end{align*}
+    Thus the willingness to pay for the technology for firm B will be: \\
+    \begin{align*}
+        & 9522 - 8450 = 1072\\
+    \end{align*}
+    \end{answer}
+    
+    \begin{answer}[Cement (2)]
+    With both acquiring the innovation, 
+    \begin{align*}
+        & Q_2=191-\frac{Q_1}{2} \\
+        & Q_2=(181-Q_1)2 \\
+        & Q_1=114, Q_2=134  \\
+        & P=225-\frac{Q_1+Q_2}{2}=101 \\
+        & Profit_1=(P-44)Q_1-600=5898 \\
+        & Profit_2=(P-34)Q_2-600=8378
+    \end{align*}
+    The game matrix is presented below:
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Firm 1 \textbackslash \; Firm 2 & innovate & don't innovate \\
+        \hline
+        innovate  & (5898, 8378)  & (6362, 7938)  \\
+        \hline
+        don't innovate  & (5618, 8922)  & (6050, 8450)  \\
+        \hline
+    \end{tabular}
+    \end{center}
+    (The values of the left bottom and the top right box are from the calculated profit of (1) but subtract 600 from the one who innovates.)
+    
+    One can easily see that the Nash equilibrium is both deciding to acquire the innovation.
+    \end{answer}
+    
+    \begin{answer}[Shipbuilding (1)]
+    \begin{align*}
+        & 17.8 = a-0.42*19 \\ 
+        & a = 25.78, b = 0.42 \\ 
+        & q_1 = 19*0.24 \\
+        & q_2 = 19*0.08 \\
+        & q_3 = 19*0.68 \\
+        & for \; China \\
+        & MR = P’*q_1+P = a-b(2q_1+q_2+q_3) = mc_1 \\  
+        & mc_1 = 9928/625 = 15.88 \\
+        & for \; Europe \\ 
+        & MR = P’*q_2+P = a-b(q_1+2q_2+q_3) = mc_2 \\  
+        & mc_2 = 10726/625 = 17.16 \\
+        & for \; Japan \\
+        & MR = P’*q_3+P = a-b(q_1+q_2+2q_3) = mc_3 \\   
+        & mc_3 = 15467/1250 = 12.37 \\
+        & Marginal cost for (China, Europe, Japan) = (15.88, 17.16, 12.37) \\ 
+        \end{align*}
+
+
+
+    \end{answer}
+    
+    \begin{answer}[Shipbuilding (2)]
+    \begin{itemize}
+        \item Assume in 2006 Europe and Japan knew that the marginal cost of China had decreased and China knew that Europe and Japan knew this, let $q_1$ = 50k, $q_2$ = 5k, $q_3$ = 45k :
+        
+        \begin{align*}
+        & for \; China \\ 
+        & MR = P’*q_1+P = a-b(2q_1+q_2+q_3) = a-b(150k) = mc_1-z \\  
+        & for \; Europe \\ 
+        & MR = P’*q_2+P = a-b(q_1+2*q_2+q_3) = a-b(105k) = mc_2 \\  
+        & k = 171/875 = 0.195  \\
+        & for \; Japan \\
+        & MR = P’*q_2+P = a-b(q_1+q_2+2*q_3) = a-b(145k) = mc_3 \\   
+        & k = 0.215 \\
+        \end{align*}
+        Since k calculated in Europe and Japan is different, we let $\bar{k}$ be the mean of the two  = (0.215+0.195)/2 = 0.205, and plug into the equation for china to compute z,\\ which yields z = 3.015 
+
+        
+        \item Assume in 2006 Europe and Japan didn't know that the marginal cost of China had decreased and China knew that Europe and Japan didn't know this: 
+
+
+        Denote China's marginal cost in 2006 $mc_1'$. $q_2=1.52$ and $q_3=12.92$ stay the same because Europe and Japan didn't know that the marginal cost of China had decreased. Meanwhile, China knew that $q_2$ and $q_3$ will remain unchanged, so it maximizes its profit given $q_2=1.52$ and $q_3=12.92$. From the data given, $q_1 : q_2 = 10: 1$ and $q_1 : q_3 = 10 : 9$. We obtain $14.355 \leq q_1 \leq 15.2$. $q_1$ maximizes China's profit given $q_2$ and $q_3$:
+        \begin{align*}
+            &mc_1' = MR_1 = a- b(q_2+q_3) - 2bq_1 \\
+            &mc_1' = 25.78 - 0.42(1.52+12.92) - 2*0.42*q_1 \\
+        \end{align*}
+        Hence, $6.947 \leq mc_1' \leq 7.657$ and $8.228 \leq z \leq 8.938$.
+        
+        \item The situation in which China didn't know whether or not Japan and Europe knew that its marginal cost had changed needs to be dealt with a game theory model with incomplete information, and the result heavily depends on China's belief on whether or not Japan and Europe knew that its marginal cost had changed. The analysis becomes much more complicated and since we don't think this is the main point of this course, we do not derive the answer under this situation.
+    \end{itemize}
+    \end{answer}
+    
+    \begin{answer}[Shipbuilding (3)]
+    \begin{itemize}
+        \item Before 2006
+        
+        ($q_1$, $q_2$, $q_3$) = (4.56, 1.52, 12.92):
+        \begin{align*}
+            & Consumer \; Surplus \\
+            & (25.78-17.8) * 19 / 2= 75.81 \\
+            & China's \; Profit \\
+            & 4.56 * (17.8-15.885) = 8.732 \\
+            & Europe's \; Profit \\
+            & 1.52 * (17.8 - 17.162) = 0.97 \\
+            & Japan's \; Profit \\
+            & 12.92 * (17.8 - 12.374) = 70.104 \\
+        \end{align*}
+        
+        \item Assume in 2006 Europe and Japan knew that the marginal cost of China had decreased and China knew that Europe and Japan knew this:
+        assume marginal cost is constant,
+        
+        \begin{align*}
+        & q = 100*\bar{k} = 20.5, p = 25.78-0.42*q = 17.17 \\
+        & for China \\
+        & profit = (17.17-15.88)*(50*0.205) = 13.2225 \\  
+        & for Europe \\ 
+        & profit = (17.17-17.16)*(5*0.0205) = 0.001 \\  
+        & for Japan \\
+        & profit = (17.17-12.37)*(45*0.205) =44.28 \\   
+        & Consumer \; surplus = (a-p)*q/2 = (25.78-17.17)*20.5/2 = 88.2525 \\
+        \end{align*}
+        As a result, consumer is gained, china's profit is gained, and both Europe and Japan are hurt after China's subsidies.
+        
+        \item Assume in 2006 Europe and Japan didn't know that the marginal cost of China had decreased and China knew that Europe and Japan didn't know this: 
+        
+        Let us take $q_1 = (14.355+15.2)/2 =14.78$ and $mc_1' = (6.947+7.657)/2 = 7.257$ in 2006.
+        $P = 25.78 - 0.42(14.78+1.52+12.92)=13.5076$.
+        \begin{align*}
+            & Consumer \; Surplus \\
+            & (25.78-13.5076) * 29.2 * (1/2) = 179.177 \\
+            & China's \; Profit \\
+            & 14.78 * (13.508-7.257) = 92.37 \\
+            & Europe's \; Profit \\
+            & 1.52 * (13.508-17.162) = -5.55 \\
+            & Japan's \; Profit \\
+            & 12.92 * (13.508-12.374) = 14.651 \\
+        \end{align*}
+        Hence, China and consumers gained, while Europe and Japan were hurt.
+    \end{itemize}
+    \end{answer}
+\end{document}
+

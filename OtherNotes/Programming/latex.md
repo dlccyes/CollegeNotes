@@ -27,6 +27,10 @@ $\LaTeX$
 put it before `\begin{document}`
 https://tex.stackexchange.com/a/460857
 
+### space
+- `\;`
+- `\space`
+
 ### line break
 - `\smallbreak`  
 - `\bigbreak`
@@ -56,6 +60,22 @@ https://tex.stackexchange.com/a/460857
     pdfborder = {0 0 0}
 }
 ```
+
+## table
+```tex
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\hline
+	Firm 1 \textbackslash \; Firm 2 & innovate & don't innovate \\
+	\hline
+	innovate  & (5898, 8378)  & (6362, 7938)  \\
+	\hline
+	don't innovate  & (5618, 8922)  & (6050, 8450)  \\
+	\hline
+\end{tabular}
+\end{center}
+```
+<https://www.overleaf.com/learn/latex/Tables>
 
 ## environment
 ### local

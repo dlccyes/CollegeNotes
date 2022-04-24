@@ -2,7 +2,7 @@
 layout: meth
 parent: Python
 ---
-# sqlalchemy
+# SQLAlchemy
 {: .no_toc }
 
 <details open markdown="block">
