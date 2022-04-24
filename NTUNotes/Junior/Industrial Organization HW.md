@@ -506,12 +506,22 @@ No. Established competitors can quickly roll out new products directly competing
 	- charging a flat fee and colluding with B to fix price at at least $2.247 per dose would be the best strategy, under some assumptions 
 
 ## HW8
-### Shipbuilding
-![](https://i.imgur.com/4tu57Qh.png)
-
-![](https://i.imgur.com/5fDNbkt.png)
-
 ### Cement
 ![](https://i.imgur.com/AB9jRVw.png)
 
+![](https://i.imgur.com/BQEsxI8.png)
+
 ![](https://i.imgur.com/09r5KNI.png)
+
+![](https://i.imgur.com/6ECasE0.png)
+
+
+
+### Shipbuilding
+![](https://i.imgur.com/4tu57Qh.png)
+
+![](https://i.imgur.com/j4RlHMR.png)
+
+![](https://i.imgur.com/5fDNbkt.png)
+
+![](https://i.imgur.com/YCkotjy.png)

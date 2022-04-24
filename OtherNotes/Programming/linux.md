@@ -112,10 +112,90 @@ go to `/etc/update-manager/release-upgrades`
 
 <https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today>
 
-## network
+## networking
+### ifconfig
+```
+sudo pacman -S net-tools
+```
+
 ### tcpdump
+<https://homepage.ntu.edu.tw/~pollyhuang/teach/net-simtest-spring-08/slides.html>
+
+see your interfaces with `ifconfig`
+
+### read
+read packets
 ```
 sudo tcpdump -i <interface>
+```
+
+read 5 packets
+```
+sudo tcpdump -i <interface> -c 5
+```
+
+read from file
+```
+sudo tcpdump -r output.tr
+```
+
+### write
+write output to file
+```
+sudo tcpdump -i <interface> -c 5 output.tr
+```
+
+write output to file but limit to 1MB
+```
+sudo tcpdump -i <interface> -c 5 output.tr -w output.tr -C 1
+```
+over 1MB -> save to output.tr1
+
+### expressions
+add expression directly
+```
+sudo tcpdump -i <interface> ip src or dst host 140.112.42.162
+```
+
+use expressions in expression.exp
+```
+sudo tcpdump -i <interface> -F expression.exp
+```
+
+examples
+```
+Expressions:types
+tcpdump -r tmp.tr -c 2 host nslab.ee.ntu.edu.tw
+tcpdump -r tmp.tr -c 2 net 140.112.154
+tcpdump -r tmp.tr -c 2 net 140.112.154.128/25
+tcpdump -r tmp.tr -c 2 net 140.112.154.128 mask 255.255.255.128
+tcpdump -r tmp.tr -c 2 port 80
+tcpdump -r tmp.tr -c 2 port http
+tcpdump -r tmp.tr -c 2 port ssh
+
+Expressions:directions
+tcpdump -r tmp.tr -c 2 src or dst host nslab.ee.ntu.edu.tw
+tcpdump -r tmp.tr -c 2 dst net 140.112.154
+tcpdump -r tmp.tr -c 2 dst port 80
+
+Expressions:protocols
+tcpdump -r tmp.tr -c 2 ip src or dst host nslab.ee.ntu.edu.tw
+tcpdump -r tmp.tr -c 2 arp dst net 140.112.154
+tcpdump -r tmp.tr -c 2 tcp dst port 80
+tcpdump -r tmp.tr -c 2 udp 
+tcpdump -r tmp.tr -c 2 broadcast
+
+Expressions:others
+tcpdump -r tmp.tr -c 2 greater 100
+tcpdump -r tmp.tr -c 2 less 100
+
+Expressions:operands
+tcpdump -r tmp.tr -c 2 dst host nslab.ee.ntu.edu.tw and tcp 
+tcpdump -r tmp.tr -c 2 dst host nslab.ee.ntu.edu.tw \&\& tcp 
+tcpdump -r tmp.tr -c 2 dst host nslab.ee.ntu.edu.tw and \(tcp or udp\)
+
+Expressions:in a separate file
+tcpdump -r tmp.tr -c 2 -F test.exp
 ```
 
 ## package related

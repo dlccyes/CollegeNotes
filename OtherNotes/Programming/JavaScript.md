@@ -5,7 +5,7 @@
 ## jQuery
 `<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>`
 
-## syntax
+## basics
 ### declaration
 - var
 - let
@@ -24,6 +24,43 @@
 #### slice
 `str.slice(0,5)`
 
+## function
+### execute function after another
+example
+```js
+# func1 -> func2
+function func1(something, callback){
+	console.log(something);
+	callback();
+}
+function func2(something){
+	console.log(something);
+}
+func1('haha', func2);
+```
+
+### pass parameter to callback
+example
+```js
+function funcHandler(callback){
+	callback(function(){
+		console.log('2nd');
+	});
+}
+function func1(something, callback){
+	console.log(something);
+	callback();
+}
+funcHandler(function(callback){
+	func1('1st', callback);
+});
+// result: 
+// '1st'
+// '2nd'
+```
+
+<https://stackoverflow.com/a/3458816/15493213>
+
 ## disable/enable style
 jQuery
 ```js
@@ -37,10 +74,7 @@ vanilla
 <https://stackoverflow.com/questions/54440748/how-to-disable-a-style-element-in-html-js>
 
 ## drag element
-https://jsfiddle.net/dlccyes/s84thyLn/2/
-- embed
-	- <iframe src="https://jsfiddle.net/dlccyes/s84thyLn/2/" width=100% height=500px></iframe>
-
+<https://jsfiddle.net/dlccyes/s84thyLn/2/>
 
 using jquery
 drag `#night-btn` in this code
