@@ -29,3 +29,5 @@ parent: Programming
 	- <https://devcenter.heroku.com/articles/git#for-an-existing-app>
 - go into console
 	- `heroku ps:exec -a <appname>`
+- restart
+	- `heroku restart -a <appname>`

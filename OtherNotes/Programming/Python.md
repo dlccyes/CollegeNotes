@@ -3,7 +3,7 @@ layout: meth
 has_children: true
 ---
 
-# python
+# Python
 {: .no_toc }
 
 <details open markdown="block">
@@ -250,4 +250,4 @@ ipynb-py-convert <in.py> <out.ipynb>
 - [Flask](Flask.md)
 
 ## Database interaction
-see [sqlalchemy](sqlalchemy.md)
+see [SQLAlchemy](SQLAlchemy.md)

@@ -1,6 +1,6 @@
 ---
 layout: meth
-parent: Programming
+parent: Python
 ---
 # sqlalchemy
 {: .no_toc }
@@ -15,7 +15,9 @@ parent: Programming
 
 easy database interaction and migration for [Python](Python.md)
 
-## sqlalchemy
+## SQLAlchemy
+You can use its own ORM or directly use SQL queries to interact with database with SQLAlchemy.
+
 ```
 pip3 install sqlalchemy psycopg2-binary
 ```
@@ -53,7 +55,7 @@ notice the database url need to start with `postgresql` but not `postgres`
 tip: use `yourstr.replace()`  
 <https://help.heroku.com/ZKNTJQSK/>
 
-## alembic
+## Alembic
 database migration tool
 
 it uses [sqlalchemy](#sqlalchemy) underneath

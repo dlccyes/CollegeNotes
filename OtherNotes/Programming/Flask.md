@@ -80,4 +80,4 @@ to link it, do
 ```
 
 ## database
-use [sqlalchemy](sqlalchemy.md)
+use [SQLAlchemy](SQLAlchemy.md)
