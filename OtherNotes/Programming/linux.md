@@ -278,6 +278,11 @@ flatpak uninstall --unused
 sudo pacman -S <package>
 ```
 
+install from tar.xz
+```
+sudo pacman -U <something.tar.xz>
+```
+
 #### update & upgrade all
 ```
 sudo pacman -Syu
