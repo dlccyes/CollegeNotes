@@ -1,4 +1,17 @@
+---
+layout: meth
+parent: Programming
+---
 # bash
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
 
 ## variable
 - `$variable_name`

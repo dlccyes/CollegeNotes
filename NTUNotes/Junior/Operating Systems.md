@@ -1072,6 +1072,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 			- data shared among several processes
 			- inconsistent data
 				- e.g. a process is updating the data while another is reading it
+		- be preempted = be kicked away
 - scheduling goals
 	- maximize CPU utilization
 	- maximize throughput
@@ -1126,3 +1127,71 @@ ng queue
 		- EWMA
 		- $\tau_{n+1}=\alpha t_n+(1-\alpha)\tau_n$
 		- $\alpha=1$ -> memoryless
+
+#### round-robin (RR) scheduling
+- to solve convoy effect
+	- avoid one big process taking all CPU time
+- each process gets a small period of time
+	- time quantum Q
+- time passed -> process preempted and added to the end of waiting queue
+- CPU time allocation
+	- n processes
+	- divided into chunks of total CPU time
+	- each process gets 1/n of total CPU time
+	- cut CPU time into chunks
+	- allocate CPU time for processes in round-robin fasion, with base unit = a chunk
+	- a chunk = q time units
+		- $q\rightarrow \infty$ -> FCFS
+		- q small -> spend most time doing context switch
+	- each process gets a chunk
+	- each process wait at most (n-1)q time units
+- e.g.
+	- ![](https://i.imgur.com/2hkzKZy.png)
+- average performance
+	- bigger turnaround time than SJFpriority
+		- e.g.
+			- ![](https://i.imgur.com/DFzLe93.png)
+			- ![](https://i.imgur.com/zEk9a0H.png)
+	- more responsive than SJF
+
+#### priority scheduling
+- smaller number -> higher priority
+- problems
+	- starvation
+		- low priority processes never get executed
+		- solution
+			- priority increases as waiting time longer
+				- aging
+			- implement with multilevel feedback queue
+				- processes can move between queues
+	- convoy effect (for processes with same priority)
+		- solution
+			- round-robin for processes with same priority
+				- implement with multilevel queue
+					- e.g.
+						- ![](https://i.imgur.com/chywjaP.png)
+						- ![](https://i.imgur.com/jDj5KjF.png)
+							- 3 queues
+							- RR with q=8 -> process unfinished -> RR with q=16 ->  still unfinished -> FCFS
+				- e.g.
+					- ![](https://i.imgur.com/5xRRnUW.png)
+- e.g.
+	- ![](https://i.imgur.com/yLx97Eh.png)
+- priority
+	- ![](https://i.imgur.com/fP8dYO3.png)
+
+### Thread Scheduling
+- kernel threads are scheduled for modern OS
+	- rather than processes
+
+#### contention scope
+- process-contention scope (PCS)
+	- for many-to-many or many-to-one OS
+	- schedule user-level thread to run in LWP
+	- competition within process
+- system-contention scope (SCS)
+	- schedule kernel-level threads
+	- one-to-one OS only uses SCS
+		- Windows, Linux, MacOS
+	- competition among all threads
+- 

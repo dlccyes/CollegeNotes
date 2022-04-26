@@ -295,3 +295,24 @@ git branch --set-upstream-to origin2/master
 
 Only point at a specific commit, to indicate version for example.  
 A tag can't be used on multiple commits.
+
+## troubleshooting
+### unsafe directory
+git addressed a security vulnerability and changed something to solve it in April, 2022  
+see <https://github.blog/2022-04-12-git-security-vulnerability-announced/>
+
+As a result, git directories can't normally use git by non-owners.
+
+Workarounds:
+
+1. do git as the owner
+
+2. Add directories to ignore in gitconfig
+```
+git config --global --add safe.directory <your directory>
+```
+
+to add all subdiretories
+```
+for dir in */; do git config --global --add safe.directory $(realpath $dir); done
+```
