@@ -1050,3 +1050,79 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- only a tiny bit more time needed for 1 big page than for 1 small page
 	- less page faults
 - history trends: toward larger page
+
+## CPU Scheduling
+- alternate between CPU burst & I/O burst
+- CPU burst
+	- long tail distribution
+		- many short CPU bursts with a few long ones
+		- ![](https://i.imgur.com/WzyiauU.png)
+	- CPU-bound processes have longer CPU burst than I/O-bound ones
+- preemptive & nonpreemptive
+	- nonpreemptive
+		- cooperative
+		- CPU is released when
+			- process switch to waiting state
+			- process terminates
+		- simple
+	- preemptive
+		- all modern OS
+		- processes can run asynchronusly
+		- race condition
+			- data shared among several processes
+			- inconsistent data
+				- e.g. a process is updating the data while another is reading it
+- scheduling goals
+	- maximize CPU utilization
+	- maximize throughput
+	- minimize turnaround time
+		- amount of time needed for a complete process execution
+		- waiting time + execution time + I/O time
+	- minimize waiting time
+		- amount of time a process spent in waiti![](https://i.imgur.com/Hft6y2s.png)
+ng queue
+	- minimize response time
+		- amount of time needed to get a reponse
+		- interactive system
+	- may not always aim for the average value
+		- e.g. minimize max waiting time
+		- for interative system
+			- minimize variance -> more predictable
+- data computation/processing modes
+	- Batch Mode
+		- accumulate data into a group -> process at once
+		- efficiency
+		- maximize CPU utilization
+		- maximizep throughput
+	- Online Mode
+		- process & respond instantly
+		- responsiveness
+		- minimize turnaround time
+		- minimize waiting time
+		- minimize response time
+	- Real-Time Mode
+		- process & respond instantly
+		- predictability
+
+### scheduling algorithms
+#### first-come, first-serve (FCFS) scheduling
+- e.g.
+	- ![](https://i.imgur.com/00jHzcu.png)
+- convoy effect
+	- all other processes wait for one big process to finish
+		- e.g. 1 CPU-bound process & many I/O-bound processes
+		- -> low CPU & devide utilization
+
+#### shortest-job-first (SJF) scheduling
+- optimal for average waiting time minimization
+- schedulef the process with the minimal CPU burst
+- preemptive version
+	- shortest-remaining-time-first
+		- 
+- e.g.
+	- ![](https://i.imgur.com/sAv9kh3.png)
+- length of next CPU burst prediction
+	- exponential average
+		- EWMA
+		- $\tau_{n+1}=\alpha t_n+(1-\alpha)\tau_n$
+		- $\alpha=1$ -> memoryless

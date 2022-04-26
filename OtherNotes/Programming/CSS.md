@@ -31,16 +31,18 @@ head elements can also has class or id
 <https://developer.mozilla.org/en-US/docs/Web/CSS/:not>
 
 ## responsive
-add
-```
-<meta name="viewport" content="width=device-width, initial-scale=1">
-```
-and use 
+use 
 ```
 @media (max-width){
 }
 ```
 to write css for different width
+
+add
+```
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+to apply to touch devices
 
 ## animation
 ### equalizer

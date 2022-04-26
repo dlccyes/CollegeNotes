@@ -30,9 +30,14 @@ pip3 install -r requirements.txt
 ```
 
 ## venv (virtual environment)
+create
 ```
 python3 -m venv venv
 # echo venv/ >> .gitignore
+```
+
+go into
+```
 source venv/bin/activate
 ```
 

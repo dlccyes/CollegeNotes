@@ -123,7 +123,7 @@ sudo pacman -S net-tools
 
 see your interfaces with `ifconfig`
 
-### read
+#### read
 read packets
 ```
 sudo tcpdump -i <interface>
@@ -139,7 +139,7 @@ read from file
 sudo tcpdump -r output.tr
 ```
 
-### write
+#### write
 write output to file
 ```
 sudo tcpdump -i <interface> -c 5 output.tr
@@ -151,7 +151,7 @@ sudo tcpdump -i <interface> -c 5 output.tr -w output.tr -C 1
 ```
 over 1MB -> save to output.tr1
 
-### expressions
+#### expressions
 add expression directly
 ```
 sudo tcpdump -i <interface> ip src or dst host 140.112.42.162
@@ -197,6 +197,25 @@ tcpdump -r tmp.tr -c 2 dst host nslab.ee.ntu.edu.tw and \(tcp or udp\)
 Expressions:in a separate file
 tcpdump -r tmp.tr -c 2 -F test.exp
 ```
+
+#### troubleshooting
+##### permission
+If you run it in Ubuntu, it might say you don't have permission. Do the followings to fix it
+
+```
+grep tcpdump /sys/kernel/security/apparmor/profiles
+```
+If it said `tcpdump (enforce)`, make it in `complain` mode by
+```
+aa-complain /usr/sbin/tcpdump
+# or aa-complain tcpdump
+```
+
+You can install `aa-complain` by 
+```
+sudo apt install apparmor-utils
+```
+<https://blog.karatos.in/a?ID=01100-68ee7a10-9f07-412a-aa93-e67032182326>
 
 ## package related
 ### apt

@@ -1,11 +1,16 @@
-# shell
+# bash
 
 ## variable
 - `$variable_name`
 - no spacing around `=`
 
-## output
+## make as variable output
 - `var=$(git status)`
+
+## swallow output
+```
+<some command> &> /dev/null
+```
 
 ## string
 ### concat
