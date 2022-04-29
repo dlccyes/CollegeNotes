@@ -29,3 +29,20 @@ has_children: True
 	- cost of getting everyone's preference profile
 	- hard to stop resale
 
+## collusion
+- market power = $\dfrac{p-MC}{p}$
+	- how much is the firm able to sell above MC
+- system profit in Bertrand competition < system profit of monopoly
+- repeated game
+	- infinite period
+	- discount factor $\delta$ 
+		- 1 in this period -> $\sigma$ in next period
+
+### Grim Trigger Strategy
+- algo
+	- initially both firms set p = monopoly price
+	- if history price was always the monopoly price, set p = monopoly price
+	- else set p = MC
+- analysis
+	- don't deviate -> share monopoly profit
+	- deviate -> get all the profit this period

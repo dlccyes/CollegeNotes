@@ -28,7 +28,9 @@ has_children: True
 - [Main Memory 2](https://www.youtube.com/watch?v=Jb0lQbvm29w)
 - [Virtual Memory 1](https://www.youtube.com/watch?v=VQ07KeyJXgg)
 - [Virtual Memory 2](https://www.youtube.com/watch?v=JYv7Y7b2DGA)
-- [CPU Scheduling](https://www.youtube.com/watch?v=y4TbkJ7oCi0)
+- [CPU Scheduling 1](https://www.youtube.com/watch?v=y4TbkJ7oCi0)
+- [CPU Scheduling 2](https://www.youtube.com/watch?v=uqsQbWR3t_c)
+- [Mass-Storage Systems](https://www.youtube.com/watch?v=Tv5gIMhdNhM)
 
 ### 施吉昇
 - [Course Info](https://www.youtube.com/watch?v=0QpWM5vYt-g)
@@ -54,7 +56,7 @@ has_children: True
 - [CPU Scheduling 1](https://www.youtube.com/watch?v=4z65wVcKUl4)
 - [CPU Scheduling 2](https://www.youtube.com/watch?v=tovVVyiI3bI)
 - [CPU Scheduling 3](https://www.youtube.com/watch?v=NZz9ScquXlQ)
-
+https://www.youtube.com/watch?v=tEA9gCkpgEc
 
 ## intro
 - ![](https://i.imgur.com/C5gjElc.png)
@@ -1194,4 +1196,66 @@ ng queue
 	- one-to-one OS only uses SCS
 		- Windows, Linux, MacOS
 	- competition among all threads
-- 
+
+### Multi-Processor Scheduling
+- symmetric multiprocessing (SMP)
+	- each processor does its own scheduling
+	- ready queue
+		- ![](https://i.imgur.com/uNnZfiz.png)
+		- separate queue
+			- load balancing
+		- shared queue
+			- race condition
+#### multicore processor
+- memory stall
+	- spend large portion of time on memory access
+	- ![](https://i.imgur.com/26WLrj5.png)
+	- solution
+		- multithreaded processing cores
+- multithreaded processing cores
+	- each core has multiple hardware thread
+	- 1 thread wait for memory -> execute another thread
+	- ![](https://i.imgur.com/d6lPISA.png)
+- granularity
+	- coarse-grained multithreading
+		- switch on thread level
+		- long latency event -> flush out old instructions -> load new instructions
+		- big overhead
+	- fine-grained multithreading
+		- interleaved
+		- switch on instruction level
+		- special architecture to support it
+		- small overhead
+- level
+	- ![](https://i.imgur.com/Ksi1zAb.png)
+	- 1st level
+		- select software thread
+	- 2nd level
+		- select hardware thread
+
+#### Load Balancing
+- methods
+	- push migration
+		- task checker moves tasks from overloaded processors to underloaded ones
+			- need a task checker
+	- pull migration
+		- idle processors grab tasks from busy processors
+			- no need task checker
+			- more efficient
+			- but some processors may not be willing to do this
+- processor affinity
+	- a process run on a processor -> has affinity with it
+		- fill its cache
+	- load balancing -> processor affinity changed
+	- soft affinity
+		- attempt to keep a process on the same processor
+			- no gaurantee
+	- hard affinity
+		- process specificies a set of processors to run on
+- NUMA-aware OS
+	- allocate memory close to the CPU the process is on
+
+#### Proportional Share Scheduling
+- fair-share scheduler
+- each task gets a fixed share of CPU time
+	- "fair" is misleading

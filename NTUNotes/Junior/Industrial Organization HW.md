@@ -527,3 +527,9 @@ JP = 12.3736
 ![](https://i.imgur.com/5fDNbkt.png)
 
 ![](https://i.imgur.com/YCkotjy.png)
+
+## HW9
+### Multimarket Contract
+![](https://i.imgur.com/35ttIhE.png)
+
+![](https://i.imgur.com/us56L3h.png)

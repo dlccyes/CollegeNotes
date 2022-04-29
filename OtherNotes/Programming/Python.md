@@ -244,7 +244,12 @@ sorted(points, key = lambda section: section[1]) # sort by second value
 float('inf')
 ```
 
-## convert between ipynb & python
+## ipynb
+### convert between ipynb & python
+```
+pip3 install ipynb-py-convert
+```
+
 ```
 ipynb-py-convert <in.ipynb> <out.py>
 ```
@@ -254,6 +259,11 @@ ipynb-py-convert <in.py> <out.ipynb>
 ```
 
 <https://stackoverflow.com/a/66565946/15493213>
+
+### run ipynb
+```
+ipython3 -c "% run something.ipynb"
+```
 
 ## web
 - [Django](Django.md)
