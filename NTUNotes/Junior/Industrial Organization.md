@@ -46,3 +46,7 @@ has_children: True
 - analysis
 	- don't deviate -> share monopoly profit
 	- deviate -> get all the profit this period
+	- to deviate
+		- ![](https://i.imgur.com/uExqlSr.png)
+		- ![](https://i.imgur.com/KQ4RNMx.png)
+		- $\delta \geq \dfrac{1}{2}$

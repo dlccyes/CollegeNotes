@@ -532,4 +532,62 @@ JP = 12.3736
 ### Multimarket Contract
 ![](https://i.imgur.com/35ttIhE.png)
 
+- collusive agreement
+	- Grim Trigger Strategy
+	- firm 1 monopoly in market 1
+	- firm 2 monopoly in market 2
+	- once one deviate, all set p=MC earning 0 profit forever
+- firm 1's total profit when collusive
+	- $p=p^M$
+	- profit in a period
+		- $\pi^M=(p^M-c^L)q$
+	- total profit
+		- $\dfrac{1}{1-\delta}(p^M-c^L)q$
+	- same for firm 2
+- firm 1's total profit when deviate in market 2
+	- $(p^M-c^L)q+(p^M-c^H)q+\dfrac{\delta}{1-\delta}(c^H-c^L)q$
+	- deviate -> both market sell on $p=c^H$
+	- same for firm 2 when deviate in market 1
+- firm will deviate when
+	- $\dfrac{1}{1-\delta}(p^M-c^L)q<(p^M-c^L)q+(p^M-c^H)q+\dfrac{\delta}{1-\delta}(c^H-c^L)q$
+	- $(p^M-c^L)<(1-\delta)((p^M-c^H)+(p^M-c^L))+\delta(c^H-c^L)$
+	- $\delta<\dfrac{(p^M-c^L)}{2(p^M-c^L)}=\dfrac{1}{2}$
+
 ![](https://i.imgur.com/us56L3h.png)
+- the more the markets, the more loss deviating will cause
+
+### The Big Four
+![](https://i.imgur.com/vS441lR.png)
+
+![](https://i.imgur.com/FIrHiH0.png)
+
+- (1)
+	- discounting
+	- collude
+	- e.g.
+		- 零食
+			- Lays & Pringles
+- (2)
+	- 擴展產品線
+	- e.g.
+		- Android phone
+- (3)
+	- provide discount for large quantity
+	- e.g.
+		- semiconductor
+			- TSMC vs. Samsung
+- (4)
+	- just do it
+	- e.g.
+		- online sales
+- (5)
+	- use proprietory format
+	- provide distinctive features or qualities
+	- e.g.
+		- Ms Office Suite
+		- Adobe Suite
+- (6)
+	- innovate
+	- collaborate with companies focusing on new form factor
+	- e.g.
+		- pre-smartphone phones

@@ -123,6 +123,9 @@ sudo pacman -S net-tools
 
 see your interfaces with `ifconfig`
 
+#### flags
+> tcpflags are some combination of S (SYN), F (FIN), P (PUSH), R (RST), U (URG), W (ECN CWR), E (ECN-Echo) or . (ACK), or none if no flags are set.
+
 #### read
 read packets
 ```
@@ -160,6 +163,16 @@ sudo tcpdump -i <interface> ip src or dst host 140.112.42.162
 use expressions in expression.exp
 ```
 sudo tcpdump -i <interface> -F expression.exp
+```
+
+get start & end packets
+```
+sudo tcpdump -i <interface> 'tcp[tcpflags] & (tcp-syn|tcp-fin) != 0'
+```
+
+get ACK packets
+```
+sudo tcpdump -i <interface> 'tcp[tcpflags] & (tcp-ack) != 0'
 ```
 
 examples
