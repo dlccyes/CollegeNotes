@@ -121,6 +121,37 @@ ax.plot(x, np.sin(x))
 ax2.plot(x, np.cos(x), 'r:')
 ```
 
+### axis
+#### label
+```
+import matplotlib.pyplot as plt
+plt.xlabel("something")
+plt.ylabel("something")
+```
+
+#### axis interval
+y axis 20 intervals
+```
+import matplotlib.pyplot as plt
+ax = plt.gca()
+y_min, y_max = [int(i) for i in ax.get_ylim()]
+plt.yticks(range(y_min, y_max, (y_max-y_min)//20))
+plt.ylim([0, y_max])
+```
+
+#### hide axis
+```
+import matplotlib.pyplot as plt
+plt.gca().get_xaxis().set_visible(False)
+```
+
+#### date
+auto formate dates on x axis
+```
+import matplotlib.pyplot as plt
+plt.gcf().autofmt_xdate()
+```
+
 ## exec
 to use in function, use `exec(string, globals())`
 
@@ -211,6 +242,32 @@ convert iso format string to datetime object
 ```
 datetime.fromisoformat(str)
 ```
+
+### timedelta
+```
+from datetime import timedelta
+```
+
+subtract 2 datetime objects to get a timedelta object
+
+example
+```
+haha = datetime.timedelta(days=1, seconds=20, microseconds=610333)
+haha.days # -> 1
+haha.seconds # -> 20
+haha.microseconds # -> 610333
+```
+to get total passed time
+```
+# in days
+haha/timedelta(days=1)
+# in seconds
+haha/timedelta(seconds=1)
+# in microseconds
+haha/timedelta(microseconds=1)
+```
+
+<https://docs.python.org/3/library/datetime.html#datetime.timedelta.total_seconds>
 
 ## heap
 - priority queue

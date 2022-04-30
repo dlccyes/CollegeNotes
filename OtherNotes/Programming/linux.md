@@ -145,12 +145,12 @@ sudo tcpdump -r output.tr
 #### write
 write output to file
 ```
-sudo tcpdump -i <interface> -c 5 output.tr
+sudo tcpdump -i <interface> -c 5 -w output.tr
 ```
 
 write output to file but limit to 1MB
 ```
-sudo tcpdump -i <interface> -c 5 output.tr -w output.tr -C 1
+sudo tcpdump -i <interface> -c 5 -w output.tr -w output.tr -C 1
 ```
 over 1MB -> save to output.tr1
 

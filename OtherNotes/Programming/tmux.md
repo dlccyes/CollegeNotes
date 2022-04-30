@@ -10,7 +10,7 @@ set -g default-terminal "screen-256color"
 tmux source ~/.tmux.conf
 ```
 
-ref: https://unix.stackexchange.com/a/355391
+ref: <https://unix.stackexchange.com/a/355391>
 
 ## use your vimrc
 in `~/.tmux.conf`  

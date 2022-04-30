@@ -1255,7 +1255,42 @@ ng queue
 - NUMA-aware OS
 	- allocate memory close to the CPU the process is on
 
+### Real-Time CPU Scheduling
+- hard real-time systems
+	- miss deadline -> system fail (no service)
+- soft real-time systems
+	- miss deadline -> quality drop
+		- may have penalty
+	- critical real-time tasks have higher priority, but no guarantee
+- interrupt latency
+	- time between interrupt & interrupt starting to get service
+	- resulted from
+		- determining interrupt type
+		- context switch
+	- ![](https://i.imgur.com/GUuS6Eq.png)
+- dispatch latency
+	- time needed for scheduling dispatcher to stop a process & start another one
+	- conflict phase
+		- prempting running processes
+		- make low-priority processes release locked resources that is needed
+	- ![](https://i.imgur.com/WX8nHX0.png)
+
 #### Proportional Share Scheduling
 - fair-share scheduler
 - each task gets a fixed share of CPU time
+	- fixed proportion of CPU time
 	- "fair" is misleading
+- lottery scheduling
+
+#### Priority-Based Scheduling
+- soft real-time
+- periodic process
+	- rate = 1/p
+	- processing time = t
+	- deadline = d
+	- period = p
+	- $0\leq t\leq d\leq p$
+	- ![](https://i.imgur.com/MUin1vI.png)
+	- ![](https://i.imgur.com/sD0Qm57.png)
+		- red is higher-priority process
+		- need to make them finish before deadline
