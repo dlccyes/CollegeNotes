@@ -554,6 +554,7 @@ JP = 12.3736
 	- $\delta<\dfrac{(p^M-c^L)}{2(p^M-c^L)}=\dfrac{1}{2}$
 
 ![](https://i.imgur.com/us56L3h.png)
+
 - the more the markets, the more loss deviating will cause
 
 ### The Big Four

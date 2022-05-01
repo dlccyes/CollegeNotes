@@ -304,6 +304,27 @@ parent: polly
 - breakdown of missing reasons
 	- ![](https://i.imgur.com/qGVRCsQ.png)
 
+## Discussion
+- miss rate higher than expected
+	- not purely due to random packet drop
+- mult-origin scanning helps
+	- transient misses are unpredictable but can be improved witg scanning from multiple origins
+	- ![](https://i.imgur.com/JPQ3NQE.png)
+- hard to say which is the best origin
+- scanning from different geographical area matters
+	- perform 3 scans from 3 tier-1 ISPs in same location
+	- has worse coverage than scanning from 3 geographically distributed area
+- sending more probes achieves higher coverage
+	- but less significant than sending from more origins
+	- sending consecutive probes with delay is more meaningful
+	- ![](https://i.imgur.com/WL0QnNH.png)
+- blocking more severe than expected
+- regional biases existed
+	- some websites are only accessible from 1 country
+		- not significant at global scale
+	- may be more severe at countries with seperate Internet infrastructure
+		- e.g. China & Russia
+
 ## polly's comments
 - actual coverage for HTTP(S) vs.SSH
 - those with HTTP port tends to have SSH port also
