@@ -16,6 +16,8 @@ parent: polly
 [pdf link](https://www.dropbox.com/s/ekn2wltlhvxycal/mobisys21_camera.pdf)  
 [pdf with my annotation](ar_pokemon_go.pdf)
 
+2021
+
 ## Intro
 - offloading AR processing to edge device
 	- but the network delay is too simplified

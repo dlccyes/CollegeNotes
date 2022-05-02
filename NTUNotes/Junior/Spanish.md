@@ -16,7 +16,7 @@ layout: meth
 ### meta`
 - schedule
     - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FnlqI7j4ta7.png?alt=media&token=3ce21802-b2f1-4f5e-9e07-d0281e37137c)
-- lecturer:: [[馬德睿]]
+- lecturer:: 馬德睿
 - 成績
     - A
     - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2Fz4DTl3ftLf.png?alt=media&token=0b7d6bc7-9384-4cda-a2c4-c178b78c924e)
@@ -30,24 +30,24 @@ layout: meth
 - 課程 docs [https://docs.google.com/document/d/1330D9EiIB0npmUuEgtWCBFYJTR1FX-MgM2hh-CVutho/edit](https://docs.google.com/document/d/1330D9EiIB0npmUuEgtWCBFYJTR1FX-MgM2hh-CVutho/edit)
 - 老師
     - 有 3 兄弟 2 姊妹
-- 期中考 [[July 12th, 2021]] #events
+- 期中考 July 12th, 2021 #events
     - 時程
-        - 10:30 在 [[Google Meet]] 點名
-        - 10:40 50 min. [[NTU Cool]]
+        - 10:30 在 Google Meet 點名
+        - 10:40 50 min. NTU Cool
         - assignment 給 pdf，再上傳你的答案
             - 打在 word
-            - [[Goodnotes]] of course
+            - Goodnotes of course
     - 題型
         - 填空 & 翻譯
         - 打重音
-- 報告 [[July 23rd, 2021]]
+- 報告 July 23rd, 2021
     - soy 4th
     - 介紹家人 or 城市
         - if 要城市要先講
     - 3-5 min.
     - 附照片
     - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FkkIsfNJDCc.png?alt=media&token=018e4547-24b6-4e52-98c0-468d6cd31a99)
-- 期末考 [[July 29th, 2021]] #events
+- 期末考 July 29th, 2021 #events
     - 口試
         - 二人聊天 7 min.
         - 9:55
@@ -616,7 +616,7 @@ layout: meth
 	- ¿Por qué es famosa? 那裡什麼有名?
 
 ### 課
-- [[July 5th, 2021]]
+- July 5th, 2021
 	- también: too
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FC0YnCGad2p.png?alt=media&token=895253d6-b36d-444f-a9cf-a630127bc24e)
 		1.  un
@@ -629,10 +629,10 @@ layout: meth
 		8.  en
 	- 64 17 35
 		- sesenta y cuatro, diesisiete, treinta y cinco
-- [[July 8th, 2021]]
+- July 8th, 2021
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FDa6TMujJx8.png?alt=media&token=751f013d-a8bf-4c98-af4d-a3f5de4f93dd)
 		- Manuel
-- [[July 9th, 2021]]
+- July 9th, 2021
 	- Avenida Dizheng, numero 27
 		- 林翌歆 Lilian
 	- Avenida Park, Numero 12
@@ -655,7 +655,7 @@ layout: meth
 		- 徐亦薇 Leah
 	- avenida Longjiang numero 356
 		- 張家寧Heather
-- [[July 15th, 2021]]
+- July 15th, 2021
 	- mae tcy
 		- novio no
 		- farmaceutica
@@ -670,7 +670,7 @@ layout: meth
 		- Se llama Mae. No tiene novio. Estudia farmaceutica. Tiene un hermano y una hermana. Tiene 22 años. Su padre tiene 61 años. Su madre 56 años. Su hermano tiene 24 anos. Su hermana tiene 27 años. Su padre dedican a ingeniero. Su madre no trabaja. Su hermano y hermana estudia farmaceutica.
 		- tristanmarof@gmail.com
 		- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2Far6U59DUj0.png?alt=media&token=8e29f0a4-97a2-4b39-b5c2-01592a07747f)
-- [[July 23rd, 2021]]
+- July 23rd, 2021
 	- comprar
 		- un diccionario $300 ✔ una postal una mesa un libro $700 ✔ un ordenador
 	- verder
@@ -678,7 +678,7 @@ layout: meth
 	- $3000
 	- Vale. Me lo llevo.
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2F5exYjUtnoV.png?alt=media&token=118a7808-b296-4614-89d7-329a743cd1bd)
-- [[July 26th, 2021]]
+- July 26th, 2021
 	- modeda
 		- 1 5 20 1e
 	- billites
@@ -691,7 +691,7 @@ layout: meth
 		- lejos 遠
 		- museo 博物館
 		- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FoT9s770iO3.png?alt=media&token=56e484cc-b3a2-437d-a7e4-c3867c8fc214)
-- [[July 28th, 2021]]
+- July 28th, 2021
 	- antigua
 		- no es pequeña F
 		- es turística T
@@ -701,7 +701,7 @@ layout: meth
 
 ## Spanish 1-2
 ### meta
-- lecturer:: [[馬德睿]]
+- lecturer:: 馬德睿
 - 成績
     - A
     - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FKxcfrvfPmo.png?alt=media&token=86af828f-8c18-46ef-bbf4-026f62ce7f45)
@@ -710,10 +710,10 @@ layout: meth
         - 原有 3 天 4 節
 - 修課名單
     - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FxOZcz5_0Ll.png?alt=media&token=845b0ffd-269f-488b-a527-573b61a829ee)
-- 期中考 [[August 16th, 2021]] 10:30 #events
+- 期中考 August 16th, 2021 10:30 #events
     - 填空&翻譯
     - U8-10
-- oral presentation [[August 31st, 2021]] #events
+- oral presentation August 31st, 2021 #events
     - 三選一
         - 大學生活
             - tus clases en la universidad (horario, deberes, compañeros, profesores, lo que más/menos te gusta)
@@ -750,10 +750,10 @@ layout: meth
             - 攝影
                 - 男一照
             - 書
-                - [[Oathbringer]]
-                - [[Brandon Sanderson]]
+                - Oathbringer
+                - Brandon Sanderson
     - min 3 min.
-- 期末考 [[September 2nd, 2021]] #events
+- 期末考 September 2nd, 2021 #events
     - 口試
         - 10:06 with Kevin 倪楷恩
     - 筆試 11:00
@@ -800,8 +800,8 @@ layout: meth
 	- siempre = always
 	- a veces = sometimes
 	- peniarse = 梳理
-	- {{[[embed]]: ((PSOB19JMS))}}
-	- {{[[embed]]: ((l3wWlmhnj))}}
+	- {{embed: ((PSOB19JMS))}}
+	- {{embed: ((l3wWlmhnj))}}
 	- crea = create
 	- cansada = tired
 	- difícil = difficult
@@ -1332,7 +1332,7 @@ layout: meth
 	- Qué crees que es .... ? = What you think is ... ?
 		- Qué crees que es necesario? Ducharse es necesario.
 ### 課
-- [[August 3rd, 2021]]
+- August 3rd, 2021
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2Fs4aG2OjFOb.png?alt=media&token=0e1fdd60-3aa7-49b0-aa15-cbe01db9cc10)
 		- Está en la plaza de la Luna.
 		- Es nuevo.
@@ -1367,7 +1367,7 @@ layout: meth
 			- tiene 4 pisos
 			- está bien communicado
 			- 16M
-- [[August 6th, 2021]]
+- August 6th, 2021
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FFLbMKOYUI7.png?alt=media&token=f2559b97-0d8e-4718-8ee6-27160b844a1a)
 	- juana
 		- gusta
@@ -1385,9 +1385,9 @@ layout: meth
 			- la mosca
 			- el correr
 			- estudia
-- [[August 9th, 2021]]
+- August 9th, 2021
 	- José no es portugués. A el deportista le gusta el fútbol. El deportista es español. Rafael está jubilado. El mexicano es abogado A Rafael le gustan las cucarachas. A José le gusta la cerveza Pedri no es mexicano.
-- [[August 10th, 2021]]
+- August 10th, 2021
 	- me gusto el rap, F
 	- me gusta el fútbol, T
 	- no me gusta estar mucho en casa, F
@@ -1408,7 +1408,7 @@ layout: meth
 		- aparcamiento
 	- entre el aparcamiento y el supermercado
 	- enfrente de centro commercial
-- [[August 11th, 2021]]
+- August 11th, 2021
 	- Beitun es bastante grande (T)
 	- Beitun es ruidosa (F)
 	- Beitun hay muchas playas (F)
@@ -1420,7 +1420,7 @@ layout: meth
 	- 5:45
 	- 10:11
 	- 8:50
-- [[August 13th, 2021]]
+- August 13th, 2021
 	- contrarios
 		- cerca lejos
 		- debajo encima
@@ -1433,9 +1433,9 @@ layout: meth
 		- delante detrás
 		- ruidosa tranquila
 		- poco mucho
-- [[August 17th, 2021]]
+- August 17th, 2021
 	- ¿Verdadero o falso? 1. Se levanta a las 9:00. F 2. Empieza a trabajar a las 23:00. T 3. Termina de trabajar a las 6:30. T 4. Le encanta la noche. T 5. No le gusta su trabajo. F 6. Se acuesta a las 10:00. F
-- [[August 18th, 2021]]
+- August 18th, 2021
 	- antonio
 		- trabaja en un banco
 		- levanta a las 6:30
@@ -1469,7 +1469,7 @@ layout: meth
 	- Es deportista. Por las mañanas trabaja en fútbol club Barcelona. Por las tardes también.
 	- Vuelve a casa a las 7:00 de la noche, cena con su compeñeros y se acuesta a las 10:00.
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2Fk8GFntEh-v.png?alt=media&token=30bf5c8c-865e-403c-967f-0f4602b5dd68)
-- [[August 19th, 2021]]
+- August 19th, 2021
 	- A: Hola, ¿cómo es? B: Bien, ¿y tú? A: Yo también. ¿Adónde vas? B: A la universidad A: ¿Tienes clases? B: No. tengo un examen. A: ¿De qué? B: De cálculo. A: Oh! ¿es difícil? B: No se, espero que no. ¿y tú? ¿Adonde vas? A: vuelvo a casa. quiero descansar. B: ¿estás muy cansada? A: Sí. B: Es que trabajas mucho.
 	- yo me levanto de las 8 de la mañana
 	- yo como a las dos de la tarde
@@ -1481,7 +1481,7 @@ layout: meth
 	- me ducho a las ocho y media
 	- se levanta a las seis desayuna en mi casa sa;e de casa a las siete es deportista come a las doce con su compeñeros eso es todos
 	- ¿Qué les gusta hacer a los jóvenes taiwaneses en su tiempo libre? 1 ir de copas 2 hacer deporte 3 ktv 4 ir de compras 5 ir a conciertos 6 jugar vídeojuegos ¿Qué no les gusta hacer a los jóvenes taiwaneses en su tiempo libre? 1 lavar la ropa 2 limpiar la casa 3 hacer la compra 4 estudia 5 levanta 6 trabaja
-- [[August 20th, 2021]]
+- August 20th, 2021
 	- sábado
 		- siempre me levanto muy tarde
 		- normalente me acuesto muy tarde
@@ -1491,7 +1491,7 @@ layout: meth
 		- no levanto nunca pronto
 		- nunca juego al tenis = no juego nunca al tenis
 		
-- [[August 23rd, 2021]]
+- August 23rd, 2021
 	- V/F
 		- los sábados cenan en casa. X
 		- Los domingos hacen la limpieza. X
@@ -1506,7 +1506,7 @@ layout: meth
 	- cenamos a las siete en fuela
 	- nos duchamos
 	- Nosotros nos levantamos a las 8:30. Desayunamos a las 9:00 en casa. Hacemos gimnasia en el parque por la mañana. Dormimos una hora después de comer. Hacemos te y vemos Netflix en casa por la tarde. Hacemos la compra en el centro comercial por la noche. Cenamos fuera a las 6:00. Nos duchamos después de cenar.
-- [[August 24th, 2021]]
+- August 24th, 2021
 	- ¿A qué hora te levantas los sábados?
 		- 11
 	- ¿Dónde y a qué hora desayunas?
@@ -1532,7 +1532,7 @@ layout: meth
 		- un estudiante hago derebes
 		- un cocinero cocina en un restaurante
 		- un cantante canta
-- [[August 25th, 2021]]
+- August 25th, 2021
 	- que es lo que más te gusta de ...?
 		- lo que más me gusta de mi ciudad es que tiene mucho parques
 		- lo que menos me gusta de mi ciudad es el aire mal
@@ -1540,9 +1540,9 @@ layout: meth
 		- lo que menos me gusta de la universidad es que es mucho grande
 		- lo que más me gusta de mi departamento es que tiene mucho edificios
 		- lo que menos me gusta de mi departamento es que tiene muchisima asignaturas obligatorias
-- [[August 26th, 2021]]
+- August 26th, 2021
 	- agustin es cocinero. trabaja en un restaurante. va al trabajo en moto, tarda 20 minutos en llegar. Trabajo 48 horas a la semana. Tiene horario de diez a dos y de cuarto a ocho. Tiene 1 días libres. Tiene vacaciones 1 més. Lo que más te gusta de su trabajo es su compeñeros. Lo que menos te gusta de su trabajo es su horario. Está contento con su trabajo/
-- [[August 27th, 2021]]
+- August 27th, 2021
 	- Conoces un restaurante español?.... ¿y tú?
 	- Conoces un diccionario de español muy bueno?
 	- Conoces una chica japonesa?
@@ -1551,7 +1551,7 @@ layout: meth
 	- Sabes el nombre del director de tu departamento?
 	- Conoces una tienda de ropa muy barata?
 	- Sabes cuántos años tiene Mauricio?
-- [[August 30th, 2021]]
+- August 30th, 2021
 	- A
 		- Donde trabaja Clara?
 		- Como va a trabajar?
@@ -1560,7 +1560,7 @@ layout: meth
 		- Cuántas horas de clase a la semana?
 		- Qué le gusta mucho?
 		- Qué horario tienes?
-- [[September 1st, 2021]]
+- September 1st, 2021
 	- ¿A qué hora se levantó la señora Paca anteayer? 9 ¿A qué hora desayunó? 10 ¿Qué hizo por la mañana? ¿Dónde/Con quién comió? ¿Qué hizo por la tarde? ¿Dónde cenó? ¿Qué hizo por la noche? ¿A qué hora se acostó?
 
 ## Spanish 2-1
@@ -2109,7 +2109,7 @@ layout: meth
         - bañar → estar bañando
         - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FsRhBYdVLok.png?alt=media&token=0363eba8-7bd3-4607-8fcc-d8775f437434)
 ### 練習
-- [[September 22nd, 2021]]
+- September 22nd, 2021
 	- exercise
 		- ¿De dónde eres?
 			- Soy taiwanesa, de Tai-Chong.
@@ -2152,7 +2152,7 @@ layout: meth
 		- 20. ¿Qué haces los sábados?
 			- Los sábados me levanto sobre las 9:00. Después de desayunar, normalmente hago la limpieza y lavo la ropa. Luego como en casa y descanso. Por la tarde salgo con amigos a menudo, vamos de compras o al cine. Siempre ceno fuera. Por la noche veo la tele o leo un libro. Me acuesto sobre las 24:00.
 	- ¿cómo te llamas? 1. ¿De dónde eres? 2. ¿Qué lenguas hablas? 3. ¿Qué estudias? 4. ¿Dónde vives? 5. ¿Cuántos años tienes? 6. ¿Tienes hermanos? 7. ¿Tienes novio/a? 8. ¿A qué se dedica tu padre 9. ¿Cómo es tu madre? 10. ¿Cómo se dice “..…” en español? 11. ¿Cuánto cuesta tu …..? 12. ¿Cómo es tu ciudad? 13. ¿Cómo es tu piso? 14. ¿Dónde está tu ……? 15. ¿Conoces ..…? 16. ¿Sabes nadar? 17. ¿Te gustan …..? 18. ¿Cómo vienes a clases? 19. ¿A qué hora ……? 20. ¿Qué haces los sábados?
-- [[September 24th, 2021]]
+- September 24th, 2021
 	- para ser presidente de Taiwán hay que ser taiwanés
 	- para ser presidente de Taiwán hay que tener 40 años
 	- ¿qué hay que hacer para ... ? ¿y tú? ¿qué crees?
@@ -2163,7 +2163,7 @@ layout: meth
 		- para tener muchos novias hay que tener mucho dinero
 		- para actuar en Hollywood hay que ser famosa
 	- ¿Tienes que ir a clases mañana? Sí / No ¿y tú? ¿Necesitas comprar algo esta semana? ¿Tienes que estudiar hoy (today)? ¿(Tú) Tienes que practicar la pronunciación del español? ¿por qué? .......... ¿y tú? ¿(Tú) Tienes que trabajar? ¿por qué? ¿(Tú) Necesitas hacer mucho deporte? ¿por qué? ¿(Tú) Tienes que comer mejor (better)? ¿por qué?
-- [[September 29th, 2021]]
+- September 29th, 2021
 	- AKIKO cuando = 當………..的時候 elegir bien las palabras = 好好的選(我要用的)words conseguir hablar más rápido = 能夠講話快一點 con más fluidez = 更流利
 	- JENNY lo que apprendo = 我學到的(東西) olvidar = 忘記 Si = 如果
 	- NICK problemas de comprensión =了解(聽得懂)的困擾 grabaciones = 錄音檔 por mi cuenta = By myself / on my own
@@ -2190,30 +2190,30 @@ layout: meth
 	- para aprender español hay que aprender mucho vocabulario
 	- para aprender español hay que hacer ejercicios de pronunciación
 	- preguntar profesor, vocabularios, escuchar mucho, hablar mucho en clases, ver las peliculas en español,
-- [[October 1st, 2021]]
+- October 1st, 2021
 	- ¿Qué intenciones son útiles? ………………………. ¿y tú? ¿qué crees? ¿Qué intenciones no son útiles? ¿por qué? La intención 6 porque..... ¿y tú? ¿qué crees? ¿Haces alguna de estas cosas? No, no hago nada. Sí, yo escucho canciones, y también ......... ¿y tú?
 		- buscar información en español en internet
 		- hacer los derebes todos los días
 			- no interesante
 	- ¿Vas a estudiar esta noche? .. ¿y tú? ¿Vas a hacer deporte esta tarde? ¿Vas a venir a la universidad mañana? ¿Vas a salir con tus padres el sábado? ¿Vas a ir a la piscina el fin de semana? ¿Vas a tomar café esta tarde? ¿Vas a viajar en vacaciones? ¿Vas a acostarte pronto esta noche? ¿Vas a comer en McDonald´s después de la clase? ¿Vas a ver la televisión esta noche? ¿Vas a montar en bici el sábado? ¿Vas a jugar videojuegos esta noche? ¿Vas a limpiar la casa el sábado? ¿Vas a cenar en casa esta noche? ¿Vas a jugar al baloncesto el domingo? ¿Vas a lavar la ropa mañana?
 	- (Estoy seguro/a de que) sí Es probable Es posible = Puede ser Quizás = quizá (maybe) (Estoy seguro/a de que) no
-- [[October 6th, 2021]]
+- October 6th, 2021
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2F6ip-riEVDF.png?alt=media&token=a2bf8652-1b83-4a41-8b59-9e0a7235d773)
-- [[October 15th, 2021]]
+- October 15th, 2021
 	- que lepasa a palo
-- [[October 22nd, 2021]]
+- October 22nd, 2021
 	- 12 c
 	- pan
 		- 60 centimos
 	
-- [[October 27th, 2021]]
+- October 27th, 2021
 	- list
 		- una latta de sardinas
 		- 1 kilo de patatas
 		- un paquete de galletas
 		- 1 botella de leche
 		- una docena de huevos
-- [[November 12th, 2021]]
+- November 12th, 2021
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2F-TVNwOkRh_.png?alt=media&token=84818508-6700-4065-8b6a-ee6e85c08507)
 		- ha desayunado
 		- no ha recogido la mesa
@@ -2247,9 +2247,9 @@ layout: meth
 		- te has lavado los dientos
 		- has ganado mucho dinero
 		- has perdido tu ipad
-- [[December 8th, 2021]]
+- December 8th, 2021
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2F2Ha4QO7Qro.jpg?alt=media&token=e2f21b58-2f48-404e-9de6-48b2362b5208)
-- [[December 15th, 2021]]
+- December 15th, 2021
 	- a
 		- la gorra azul es tan cara como la verde (V)
 		- las calcetines azules son más larga que las gris (F)
@@ -2262,14 +2262,14 @@ layout: meth
 			- Yo me gusta esta camisa. Quiere probarsela?
 			- Qué brogas quiere? Cómo quiere las botas? Las quiero altas.
 			- Qué tal le queda este cahquete? Demasiado ancho, quiero más estrecha. Muy ancha, la quiero más estecha.
-- [[December 22nd, 2021]]
+- December 22nd, 2021
 	- bueno dias. qué desia
 	- ochenta y dos euros por favor
 	- de acuerdo. pase por caja por favor
 	- tenemos este de la talla cuarenta. le gusta?l
 	- cómo la queire?
 	- si claro. el probador esta al final a ka derecha
-- [[December 29th, 2021]]
+- December 29th, 2021
 	- el niño de los pantalones azules está corriendo (T)
 	- la abuela de la camisa roja está durmiendo (T)
 	- el perro está comiendo (F)

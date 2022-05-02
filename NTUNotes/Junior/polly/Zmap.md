@@ -307,8 +307,8 @@ parent: polly
 ## Discussion
 - miss rate higher than expected
 	- not purely due to random packet drop
-- mult-origin scanning helps
-	- transient misses are unpredictable but can be improved witg scanning from multiple origins
+- multi-origin scanning helps
+	- transient misses are unpredictable but can be improved with scanning from multiple origins
 	- ![](https://i.imgur.com/JPQ3NQE.png)
 - hard to say which is the best origin
 - scanning from different geographical area matters

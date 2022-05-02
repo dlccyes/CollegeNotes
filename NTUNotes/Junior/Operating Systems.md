@@ -56,7 +56,10 @@ has_children: True
 - [CPU Scheduling 1](https://www.youtube.com/watch?v=4z65wVcKUl4)
 - [CPU Scheduling 2](https://www.youtube.com/watch?v=tovVVyiI3bI)
 - [CPU Scheduling 3](https://www.youtube.com/watch?v=NZz9ScquXlQ)
-https://www.youtube.com/watch?v=tEA9gCkpgEc
+- [CPU Scheduling 4 - Multi-Processor & Real-Time](https://www.youtube.com/watch?v=tEA9gCkpgEc)
+- [CPU Scheduling 5 - Real-Time](https://www.youtube.com/watch?v=wzUHcFV1IzU)
+- [CPU Scheduling 6 - OS Examples & Algo Evaluation](https://www.youtube.com/watch?v=irS2Rvre0Dg)
+- [Mass-Storage Systems](https://www.youtube.com/watch?v=rN29fVYRnss)
 
 ## intro
 - ![](https://i.imgur.com/C5gjElc.png)
@@ -1055,6 +1058,10 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 
 ## CPU Scheduling
 - alternate between CPU burst & I/O burst
+- difference between CPU burst & I/O burst
+	- CPU can generally be preempted, while I/O can't
+	- CPU burst shorter than I/O burst
+		- execute I/O in batch -> more efficient but takes longer
 - CPU burst
 	- long tail distribution
 		- many short CPU bursts with a few long ones
@@ -1082,8 +1089,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- amount of time needed for a complete process execution
 		- waiting time + execution time + I/O time
 	- minimize waiting time
-		- amount of time a process spent in waiti![](https://i.imgur.com/Hft6y2s.png)
-ng queue
+		- amount of time a process spent in waiting queue
 	- minimize response time
 		- amount of time needed to get a reponse
 		- interactive system
@@ -1106,6 +1112,8 @@ ng queue
 	- Real-Time Mode
 		- process & respond instantly
 		- predictability
+- CPU scheduling isn't the only factor of responsiveness
+	- only consider CPU burst but not I/O burst
 
 ### scheduling algorithms
 #### first-come, first-serve (FCFS) scheduling
@@ -1294,3 +1302,105 @@ ng queue
 	- ![](https://i.imgur.com/sD0Qm57.png)
 		- red is higher-priority process
 		- need to make them finish before deadline
+
+#### Rate-Monotonic Scheduling
+- shorter the period, higher the priority
+- static priority
+	- a process will always have higher priority than the other
+
+- cons
+	- not always efficient
+- e.g.
+	- ![](https://i.imgur.com/G7Bqatp.png)
+		- P1 always has higher priority, can always preempt P2
+	- ![](https://i.imgur.com/as2H559.png)
+		- P2 will miss deadline while it doesn't really need to
+
+#### Earliest-Deadline-First (EDF) Scheduling
+- the closer the deadline, the higher the priority
+- e.g.
+	- ![](https://i.imgur.com/lJwO3q7.png)
+
+#### POSIX Scheduling
+- `SCHED_FIFO`
+	- [first-come first-serve FCFS scheduling](#first-come%20first-serve%20FCFS%20scheduling)
+- `SCHED_RR`
+	- [round-robin RR scheduling](#round-robin%20RR%20scheduling)
+
+### Operating Systems Examples
+#### Linux
+- pre-2.5
+	- traditional UNIX scheduling
+- 2.5
+	- constant time scheduling
+		- poor response time for interactive processes
+- 2.6.23
+	- Completely Fair Scheduler (CFS)
+		- CPU time evenly divided
+			- not evenly anymore
+		- steps
+			1. time interrupt
+			2. choose task with min vruntime
+				- RB tree
+			3. compute dynamic time slice
+				- when to do next scheduling decision
+			4. set timer for time slice
+			5. context switch and execute
+		- vruntime
+			- virtual runtime
+			- how much time unit a task has used
+			- has its own clock rate
+				- equivalent to weight
+			- virtual clock rate = virtual clock / real clock
+		-  keep vruntime of processes in RB tree
+			- not running or runnable processes
+		- time slice
+			- time slice = max(min_granularity, sched_latency/n)
+			- have weight irl
+		- weight
+
+#### Windows
+- priority-based, preemptive scheduling
+- execute idle thread if no ready queue empty
+- Win7 added user-mode scheduling
+
+#### Solaris
+- priority-based scheduling
+	- 6 classes
+	- different scheduling algo for each class
+
+### Algorithm Evaluation
+- critiria
+	- efficiency
+	- responsiveness
+	- predictability
+
+#### Deterministic Modeling
+- a type of analytic evaluation
+- take a predeterminied static workoad and calculate the performance under each algo
+- unrealistic
+- e.g.
+	- ![](https://i.imgur.com/HztAlq5.png)
+	- ![](https://i.imgur.com/guLKNmF.png)
+
+#### Queueing Models
+- given probability distribution of CPU & I/O bursts
+	- measured or estimated
+- calculate average throughput, utilization, waiting time etc. for each algorithms
+- Little's Formula
+	- $n=\lambda\times W$
+	- n = average queue length
+	- $\lambda$ = average arrival rate
+	- W = average waiting time in queue
+	- 1 arrival 1 exit in steady state
+	- pretty intuitive actually
+
+#### Simulations
+- simulate and get algo performance
+
+#### Implementation
+- implement and measure irl
+- cons
+	- high cost
+	- high risk
+	- environment vary

@@ -28,10 +28,19 @@ has_children: true
 - 2022.4.18
 	- [Zmap](Zmap.md) S3-6
 - 2022.4.25
-	- [[]]
-
+	- [Pokemon Go Project Poster](Pokemon%20Go%20Project%20Poster.md)
+- 2022.5.2
+	- [Zmap](Zmap.md) S7
+	- tcpdump labs
 
 ## meeting
+- 2022.5.2 14:00-15:05
+	- life
+	- Zmap section 7
+	- more about Pokemon Go project
+	- studying abroad
+- 2022.5.2 10:00-12:20
+	- Pokemon Go algos
 - 2022.4.18 14:30-15:20
 	- ZMap section 3-6
 	- more about pokemon
