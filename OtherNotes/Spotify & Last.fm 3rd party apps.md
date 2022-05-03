@@ -4,19 +4,17 @@
 - <https://playlastify.herokuapp.com/> 👍
 	- mine
 - [Spotify Statistics](https://spotifystatistics.com/)
-
-[https://obscurifymusic.com/](https://obscurifymusic.com/) 
-
-[http://107.170.81.187:8080/public/top](http://107.170.81.187:8080/public/top)
-
-[https://spotify.me/en](https://spotify.me/en)
-
-[https://www.skiley.net](https://www.skiley.net/) 👍
-
-<http://organizeyourmusic.playlistmachinery.com><br>每次都要重載 👍 很全面
-- sort all your songs(liked or added to playlist) into genres/moods/styles/decades/added/popularity/duration
-- can graph
-- also show attributes (so 功能性 >> sortyourmusics)
+- [Obscurify](https://obscurifymusic.com/) 
+- <https://favoritemusic.guru/>
+	- list of top stats
+- ~~<https://spotify.me/en>~~
+- [https://www.skiley.net](https://www.skiley.net/) 👍
+- <http://organizeyourmusic.playlistmachinery.com>
+	- 每次都要重載
+	- 👍 很全面
+	- sort all your songs(liked or added to playlist) into genres/moods/styles/decades/added/popularity/duration
+	- can graph
+	- also show attributes (so 功能性 >> sortyourmusics)
 
 [http://sortyourmusic.playlistmachinery.com](http://sortyourmusic.playlistmachinery.com/) music attributes in a playlist
 

@@ -15,6 +15,7 @@ parent: Programming
 </details>
 
 ## installation
+### Ubuntu
 official doc: <https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository>
 
 update apt and install necessary packages  
@@ -48,6 +49,33 @@ sudo docker run hello-world
 will download the image `hello-world` and pring some messages  
 `sudo docker ps -a` to check if it's running
 
+### Arch
+install
+```
+sudo pacman -S docker
+```
+
+start
+```
+sudo systemctl start docker
+```
+
 ## commands
+### make docker start on boot
+```
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+```
+
+<https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot>
+
 ### start docker
-`sudo service docker start`
+```
+sudo service docker start
+```
+
+or
+
+```
+sudo systemctl start docker
+```

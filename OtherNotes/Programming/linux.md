@@ -352,10 +352,10 @@ pacman -Ql
 
 #### search package
 ```
-# exact match
-pacman -Q <pkg>
 # match and show description
 pacman -Qs <pkg>
+# exact match
+pacman -Q <pkg>
 # exact match and show details
 pacman -Si <pkg>
 ```
@@ -381,7 +381,7 @@ install
 yay -S <package>
 ```
 
-## network related
+## host related
 - edit `/etc/hosts` to change/add the domain name mapping to 127.0.0.1
 	- [ref](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-to-edit-the-Ubnutu-hosts-file-and-ping-a-domain-name-locally)
 - edit `/etc/hostname` to edit your hostname
@@ -957,6 +957,17 @@ CLI
 ```
 amixer <something idk>
 ```
+
+increase 3% volume
+```
+amixer -q sset Master 3%+
+```
+
+decrease 3% volume
+```
+amixer -q sset Master 3%-
+```
+??? strange behavior
 
 ### pulsecontrol
 can't make it output to my bluetooth earbud tho
