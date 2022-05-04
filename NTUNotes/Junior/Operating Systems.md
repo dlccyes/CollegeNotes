@@ -1404,3 +1404,85 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- high cost
 	- high risk
 	- environment vary
+
+## Mass-Storage Systems
+- heirarchy
+	- ![](https://i.imgur.com/mpg9k9u.png)
+- hard-disk drive (HDD)
+	- ![](https://i.imgur.com/beO7GqR.png)
+	- positioning latency
+		- time to move disk arm to desired cylinder, mechanically
+		- seek time
+		- very slow
+		- ~10ms
+	- rotational latency
+		- time for desired sector to rotate under disk head
+		- relatively slow
+	- sequential read/write time small
+		- rotational latency
+		- ~100MBs
+	- random read/write time big
+		- positioning latency
+		- ~100KBs
+	- head crash
+		- disk head crashed with disk surface
+		- not suitable for portable devices
+		- suitable for data center
+	- 
+- soft-disk drive
+- flash memory
+	- NTU graduate
+- nonvolatile memory devices
+	- pros
+		- more reliable
+		- faster
+	- cons
+		- shorter life span
+			- limited write times
+		- more expensive
+		- update unit is page, not bit
+	- e.g.
+		- SSDs
+		- USB
+		- NVMe
+### HDD scheduling
+- can only approximate head & cylinder location
+	- don't know exact location
+
+#### FCFS scheduling
+- e.g.
+	- ![](https://i.imgur.com/AxygfeL.png)
+
+#### SCAN Scheduling
+- elevator algorithm
+- to reduce redundant movement
+- font -> end -> front -> end -> front -> ....
+	- serve the requests along the way
+- e.g.
+	- ![](https://i.imgur.com/rX1NJE4.png)
+
+#### C-SCAN Scheduling
+- front -> end ; front -> end ; ...
+- one direction
+- more uniform waiting time than [SCAN Scheduling](#SCAN%20Scheduling)
+- treat the cylinder as cirlular list
+- e.g.
+	- ![](https://i.imgur.com/7RyaQi1.png)
+
+#### Algo Comparison
+- SSTF (shortest seek time first)
+	- greedy
+	- starvation
+- SCAN & C-SCAN
+	- less starvation
+- to avoid starvation
+	- deadline scheduler
+		- Linux
+		- 2 read & 2 write queues
+		- 1 read 1 write LBA order
+			- C-SCAN
+		- 1 read 1 write FCFS order
+- NVM Scheduling
+	- FCFS
+	- random access I/O faster than HDD
+	- 

@@ -1401,6 +1401,14 @@ youtube-dl --extract-audio --audio-format mp3 --output "下著小雨路過的街
 
 <https://askubuntu.com/a/630138>
 
+It's really slow, use yt-dlp (a fork) for better speed
+
+<https://github.com/yt-dlp/yt-dlp>
+```
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp
+```
+
 ### copyq - clipboard manager
 <https://hluk.github.io/CopyQ/>
 

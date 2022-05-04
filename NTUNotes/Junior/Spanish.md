@@ -2399,6 +2399,10 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - entonces = then
 - quedar = 約
 	- quedamos esta noche? = 我們約這個晚上？
+- la esquina = corner
+- estatua = statue
+- castillo = castle
+- balonazo = 被球打到
 
 ### cuando
 - de niño = when I was a kid
@@ -2449,7 +2453,38 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - Sį, soy yo. = Yes, it's me.
 - Di que (tú) le vas a avisar. = I'll tell him.
 
+### tren
+![](https://i.imgur.com/q2rGfx3.png)
+
+### dirección
+![](https://i.imgur.com/TqL9ueM.png)
+![](https://i.imgur.com/kIJfzmJ.png)
+cojar/tomar = take
+
+![](https://i.imgur.com/1EXE0bt.jpg)
+
+![](https://i.imgur.com/kxAuOz5.png)
+
+
 ### practice
+- 4/29
+	- train
+		- ![](https://i.imgur.com/Qlogk4A.png)
+		- Bueno días
+		- Bueno días
+		- Hay trenes?
+		- Para Valencia?
+		- Si. Cuántos trenes hay pora Valencia por la mañana?
+		- Hay dos trenes por la mañana, el primero sale a las 10:10 y el otro a las 11:20.
+		- A qué hora llega el primero a Barcelona?
+		- A las 12:30
+		- A qué hora llega el primero a Madrid?
+		- A las 13:40
+		- Pues mira, quiero comprar un billete a Barcelona.
+		- Muy bien, son 35 euros.
+		- Bien!
+		- Aquí tiene su billete.
+		- Gracias! 
 - 4/8
 	- order
 		- 2364175

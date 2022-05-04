@@ -12,9 +12,25 @@ layout: meth
 {:toc}
 </details>
 
-### resources
+## resources
 - [course website](https://speech.ee.ntu.edu.tw/~hylee/ml/2022-spring.php)
 - [github](https://github.com/virginiakm1988/ML2022-Spring)
+
+## training techniques
+### gradient accumulation
+to avoid CUDA out of memory problem
+
+e.g. batch size = 8 -> batch size = 2 but accumulate 4 iterations before optimizing
+
+for at each iteration
+```
+loss /= accum_iter
+if ((batch_idx + 1) % accum_iter == 0) or (batch_idx + 1 == len(data_loader)):
+	optimizer.step()
+	optimizer.zero_grad()
+```
+
+<https://kozodoi.me/python/deep%20learning/pytorch/tutorial/2021/02/19/gradient-accumulation.html>
 
 ## intro
 - gradient decsent
