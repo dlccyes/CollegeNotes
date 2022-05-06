@@ -50,3 +50,9 @@ has_children: True
 		- ![](https://i.imgur.com/uExqlSr.png)
 		- ![](https://i.imgur.com/KQ4RNMx.png)
 		- $\delta \geq \dfrac{1}{2}$
+
+## miscellaneous
+- gross profit margin vs. operating profit margin
+	- gross profit = revenue - direct cost of the products sold
+	- operating profit = revenue - all cost
+	- <https://www.investopedia.com/ask/answers/010815/what-difference-between-gross-profit-margin-and-operating-profit-margin.asp>

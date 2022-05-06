@@ -592,3 +592,107 @@ JP = 12.3736
 	- collaborate with companies focusing on new form factor
 	- e.g.
 		- pre-smartphone phones
+
+## HW10 Cola War
+- CSD = carbonated software drink
+- CSD 1970 - 2000
+	- anual comsumption growth 3%
+	- price decrease
+	- more flavors
+- concentrate producer
+	- mix and package ingredient
+	- simple and cheap
+	- big bucks on marketing
+		- campaign
+		- trademark
+		- CDSs with retailers
+			- customer development agreements
+			- money for shelf space
+		- cooperate with bottlers
+- bottlers
+	- buy concentrate -> mix with water & sweeteners -> bottle -> deliver
+	- more limited and more cost involved
+	- production more capital-intentsive
+	- 1/3 of concentrate producer's operating profit margin
+	- give concentrade producers exclusive right
+		- can't bottle direct competing products
+- retails
+	- supermakets
+		- fight for shelf space
+	- fountain
+		- restaurants, where cola comes out from fountain
+		- Coke & Pepsi fight for exclusive right for different fast food chains
+	- vending machines
+		- handles by bottlers
+- suppliers
+	- concentrate ingredients, sweeteners, packaging materials
+	- Coke & Pepsi negotiate for their bottlers 
+	- stable long-term relationship
+- history of Coke & Pepsi
+	- start of Coke
+		- not restricted to wartime sugar rationing in WW2
+		- sold a lot to American troops, and built overseas plants following them
+		- enabling to dominate European & Asian markets postwar 
+	- start of Pepsi
+		- started later than other cola brands but eventually surpass them
+		- price lower than Coke in early stages
+	- post-WW2 boom
+	- diversified
+		- new cola flavor
+		- new non-cola flavor
+		- non-CSD
+	- launched different marketing campaigns
+	- Diet Coke very successful
+	- smaller cola brands greatly weakened
+	- cola war -> bottlers forced to spend more on advertising while pricing less -> small independent bottlers weakened
+	- bottler consolidation
+		- bought many bottlers
+		- created a separated company to handle the bottling part, and held under half of the share -> separated finantial statements
+			- Coke created CCE
+			- Pepsi created PBG
+		- makes small independent bottlers more dependent to their bottling networks
+	- flattening demand
+		- cause
+			- health awareness
+			- soda tax
+			- banned in schools
+		- response
+			- more marketing
+			- diet soda
+			- more natural, less calories sweeteners
+			- non-CSDs
+			- bottled-water
+				- little brand loyalty
+				- 2000s recession
+				- negative profit
+			- new international market
+				- Europe
+				- Asia
+- non-CSD
+	- participated more in manufacturing
+	- less reliant on bottlers
+	- less volume, more profit margin
+	- higher cost for bottlers
+
+![](https://i.imgur.com/tWqi9tg.png)
+
+### (1)
+- unlike bottled water, brand loyalty exists in soft drinks
+- with multiple marketing successes, Coke & Pepsi beat other competitors and become the 2 major producers of soft drink industry, creating oligopoly
+
+### (2) concentrate business vs. bottling business
+- concentrate industry is oligopoly, while bottling industry is competitive
+	- concentrate producers decide the flavor, creating unique brands, while people are indifferent between different bottlers
+	- bottlers need to compete for contract with concentrate producer, giving up some freedom and profit
+	- concentrate producers are decision makers, bottlers are takers
+- production of concentrate is less dependent on capital, resulting to lower marginal cost
+
+### (3) effect on profit
+- Coke & Pepsi are heavily reliant on marketing, and they also want bottlers to follow their marketing campaigns, like giving discounts, thus the profit margin of bottlers become smaller
+- as they acquire many bottlers and eliminate other competitors through their competition, their monopoly level increased,  enabling to set their own profit margin higher
+- intensive marketing increases consumer demands
+
+### (4)
+- provide diet soda and switch to more healthy sweenters in response of health concerns
+- explore new international market, especially those developing areas, where consumers markets are growing fastly, like China & India
+- expand on non-CSDs market
