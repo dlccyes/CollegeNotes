@@ -793,7 +793,9 @@ so there're many security problems now
 	- positive → ACK
 	- negative → NAK
 		- → retransmission
-#### error detection
+
+#### error detection (brief)
+- see [error detection](#error%20detection)
 - parity check
 	- even or odd number of 1s
 	- 2D parity check

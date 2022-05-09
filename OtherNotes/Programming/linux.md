@@ -113,10 +113,82 @@ go to `/etc/update-manager/release-upgrades`
 <https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today>
 
 ## networking
-### ifconfig
+### show network interfaces
+show all network interfaces
 ```
-sudo pacman -S net-tools
+# install net-tools if haven't
+ifconfig
 ```
+
+show all wireless interfaces
+```
+iwconfig
+```
+
+```
+# install aircrack-ng if haven't 
+sudo airmon-ng
+```
+
+### see wireless driver
+```
+lspci -nnk | grep -A4 0280
+ethtool -i wlan0 | grep driver
+```
+
+<https://askubuntu.com/questions/333424>
+
+### turn wireless interface into monitor mode
+#### with airmon-ng
+```
+sudo airmon-ng start <interface>
+```
+
+now the name of your interface will be changed to `<interface>mon`
+
+now you can use tcpdump or wireshark on it and spoof all broadcasted packets
+
+to change back, do
+```
+sudo airmon-ng stop <interface>mon
+```
+
+#### with iwconfig
+For some reason it doesn't seem to actually work. The mode is changed but it doesn't sniff any packet, unlike [with airmon-ng](#with%20airmon-ng), which works perfectly.
+
+```
+sudo ifconfig <interface> down
+sudo iwconfig <interface> mode monitor
+sudo ifconfig <interface> up
+```
+
+see if it's changed to monitor mode
+```
+iwconfig
+```
+
+Note that if your DE help you auto reconnects to a network, the mode will be reversed into the original managed mode. So you better disable the auto connection.
+
+to reverse
+```
+sudo ifconfig <interface> down
+sudo iwconfig <interface> mode managed
+sudo ifconfig <interface> up
+```
+
+### enable and disable interface
+enable
+```
+sudo ifconfig <interface> up
+```
+
+disable
+```
+sudo ifconfig <interface> down
+```
+
+### sniffing wireless packets
+[Sniffing Packets from Wireless Networks](Sniffing%20Packets%20from%20Wireless%20Networks.md)
 
 ### tcpdump
 <https://homepage.ntu.edu.tw/~pollyhuang/teach/net-simtest-spring-08/slides.html>

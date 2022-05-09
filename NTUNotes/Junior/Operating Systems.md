@@ -31,6 +31,8 @@ has_children: True
 - [CPU Scheduling 1](https://www.youtube.com/watch?v=y4TbkJ7oCi0)
 - [CPU Scheduling 2](https://www.youtube.com/watch?v=uqsQbWR3t_c)
 - [Mass-Storage Systems](https://www.youtube.com/watch?v=Tv5gIMhdNhM)
+- [File System Interface](https://www.youtube.com/watch?v=2njmiDSljiU)
+- [File System Implemetation](https://www.youtube.com/watch?v=TKEr3Be7UYY)
 
 ### 施吉昇
 - [Course Info](https://www.youtube.com/watch?v=0QpWM5vYt-g)
@@ -59,7 +61,8 @@ has_children: True
 - [CPU Scheduling 4 - Multi-Processor & Real-Time](https://www.youtube.com/watch?v=tEA9gCkpgEc)
 - [CPU Scheduling 5 - Real-Time](https://www.youtube.com/watch?v=wzUHcFV1IzU)
 - [CPU Scheduling 6 - OS Examples & Algo Evaluation](https://www.youtube.com/watch?v=irS2Rvre0Dg)
-- [Mass-Storage Systems](https://www.youtube.com/watch?v=rN29fVYRnss)
+- [Mass-Storage Systems 1](https://www.youtube.com/watch?v=rN29fVYRnss)
+- [Mass-Storage Systems 2](https://www.youtube.com/watch?v=GhI0mrTM3MU)
 
 ## intro
 - ![](https://i.imgur.com/C5gjElc.png)
@@ -1485,4 +1488,15 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - NVM Scheduling
 	- FCFS
 	- random access I/O faster than HDD
-	- 
+
+### Error Detection & Correction
+- error detection
+	- see [error detection](Computer%20Networks.md#error%20detection)
+	- parity bit
+		- num of 1s being old or even
+		- not practical
+	- CRC, cyclic reduncancy test
+		- see [CRC cyclic redundancy check](Computer%20Networks.md#CRC%20cyclic%20redundancy%20check)
+		- generator polynomial
+- error correction
+	- ECC, error-correction code 

@@ -689,8 +689,9 @@ JP = 12.3736
 
 ### (3) effect on profit
 - Coke & Pepsi are heavily reliant on marketing, and they also want bottlers to follow their marketing campaigns, like giving discounts, thus the profit margin of bottlers become smaller
-- as they acquire many bottlers and eliminate other competitors through their competition, their monopoly level increased,  enabling to set their own profit margin higher
+- as they acquire many bottlers and eliminate other competitors through their competition, their monopoly level increased, enabling to set their own profit margin higher
 - intensive marketing increases consumer demands
+- vertical integration
 
 ### (4)
 - provide diet soda and switch to more healthy sweenters in response of health concerns
