@@ -1283,8 +1283,9 @@ omit `-an` to have audio in original speed (so the video duration will not chang
 #### mp4 to gif
 minimalist
 ```
-ffmpeg -i input.mp4 -quality 75 output.webp
+ffmpeg -i input.mp4 -quality 75 output.gif
 ```
+may have bad results
 
 ```
 ffmpeg -y -i input.mp4 -filter_complex "fps=10,scale=1080:-1:flags=lanczos,split[s0][s1  
@@ -1304,7 +1305,6 @@ may have bad results
 lossless
 ```
 ffmpeg -i input.mp4 -vcodec libwebp -filter:v fps=fps=10 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 1080:720 output_filename.webp
-
 ```
 omit the `-s` flag to use original scale
 

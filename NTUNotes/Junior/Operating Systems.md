@@ -1491,12 +1491,207 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 
 ### Error Detection & Correction
 - error detection
-	- see [error detection](Computer%20Networks.md#error%20detection)
+	- see [error detection](Computer%20Networks#error%20detection)
 	- parity bit
 		- num of 1s being old or even
-		- not practical
+		- too simple
 	- CRC, cyclic reduncancy test
-		- see [CRC cyclic redundancy check](Computer%20Networks.md#CRC%20cyclic%20redundancy%20check)
+		- see [CRC cyclic redundancy check](Computer%20Networks#CRC%20cyclic%20redundancy%20check)
 		- generator polynomial
 - error correction
 	- ECC, error-correction code 
+		- in unreliable or noisy communication channels
+		- hamming code example
+			- ![](https://i.imgur.com/RAKJYvU.png)
+			- parity bits being 1, 2, 4
+				- each has exact one 1 bit
+			- data bits being 3, 5, 6, 7
+			- 3, 5, 7 has 1 as the least significant bit -> P1 = parity of D3, D5, D7
+			- 3, 6, 7 has 1 as the 2nd least significant bit -> P2 = parity of D3, D6, D7
+			- 5, 6, 7 has 1 as the 3nd least significant bit -> P4 = parity of D5, D6, D7
+			- for data string 1101, the correct bit string to send & receive is 1100110
+			- ![](https://i.imgur.com/srvr2Vr.png)
+			- receive bit string -> detect error and their position -> correct them 
+
+### storage device management
+- bottom to top
+	- partition
+		- os treat each as a separate device
+	- volume
+	- logical formatting
+		- creating a file system
+		- store file-system data structures onto the device
+- group blocks into a cluster
+- device I/O conducted in blocks
+	- more random access
+- file system I/O conducted in clusters
+	- more sequential access
+- root partition
+	- mounted at boot time
+- raw disk access
+	- up to apps to do their own block management
+	- database
+	- swap space
+- boot block
+	- ![](https://i.imgur.com/P0RXetn.png)
+	- MBR, master boot record
+		- 1st logical block / page
+		- contains boot code
+	- boot -> code in system firmware direct the system to read the boot code in MBR -> identify the boot partition -> read the 1st page of the partition -> direct to kernel
+- bad block
+	- defective block
+	- scan -> flag bad blocks -> avoid them while doing allocation
+
+### swap-space
+- used when DRAM not enough space
+- raw disk access
+	- no need formatting
+- slower
+- swap map
+	- like page table
+
+### storage attachment
+- host-attached
+	- through local I/O port
+	- fiber channel (FC)
+		- high speed
+- network-attached
+	- NAS, network-attached storage
+	- protocols
+		- NFS
+		- CIFS
+	- implemented with RPCs, remote procedure calls
+		- over TCP/UDP
+	- ![](https://i.imgur.com/TzaCFtf.png)
+- cloud
+	- over the Internet or WAN to remote data center
+	- access with API
+- storage-area network (SAN) & storage arrays
+	- high bandwidth
+	- SAN interconnects with fiber channel
+	- ![](https://i.imgur.com/nlWaxmU.png)
+
+### RAID
+- redundant array of independent disks
+- improve reliability with redundancy
+- increase mean time to data loss
+	- MTTDL, mean time to data loss
+	- MTBF, mean time between failures
+	- MTTR, mean time to repair
+		- time needed to repair a failed drive
+	- e.g.
+		- 2 mirrored disks, with MTBF = 10k hr, mean time to repair = 10 hr
+		- mean time to data loss = $\dfrac{(10k)(10k)}{2*10}$
+			- expected time for the 2 disks to fail within a 10 hr window
+			- need to know the distribution tho?
+	- see [this](https://www.servethehome.com/raid-reliability-failure-anthology-part-1-primer/) for more details
+	- related to [dependable memory hierarchy](Computer%20Architecture#dependable%20memory%20hierarchy)
+- improve performance with parallelism
+	- execute 2 I/O at the same time
+	- data striping
+		- distribute data across devices, improving transfer rate
+		- bit-level
+		- block-level
+	- increase throughput
+	- decrease response time
+- RAID levels
+	- RAID 0
+		- striping
+	- RAID 1`
+		- mirrored disks
+	- RAID 4
+		- block-interleaved parity
+		- a parity drive
+			- single point of failure
+	- RAID 5
+		- block-interleaved distributed parity
+		- distributing parity to each drive
+			- parity redundancy
+	- RAID 6
+		- P+Q redundancy
+		- distributing parity & error detection code to each drive
+	- combinations
+		- RAID 10 (1+0)
+			- striped mirrors
+			- ![](https://i.imgur.com/ZiTVzeZ.png)
+		- RAID 01 (0+1)
+			- mirrored striped
+			- ![](https://i.imgur.com/WuvRFJ3.png)
+		- RAID 01 & 10
+			- similar performance
+			- RAID 10 has better reliability
+			- need 4 drives
+			- ![](https://i.imgur.com/lq24wl4.png)
+	- ![](https://i.imgur.com/supyI4h.png)
+	- ![](https://i.imgur.com/vbhDjRF.png)
+- cons
+	- data not always avaiable
+	- not flexible
+- ZFS
+	- pools of storage
+	- improve flexibiity
+	- ![](https://i.imgur.com/OyAEm89.png)
+- object storage
+	- computer-oriented
+		- rather than user-oriented
+	- object storage management software
+		- Hadoop
+		- Ceph
+	- content-addressable
+		- access with content
+		- unstructered data
+	- horizontal scalability
+		- add more storage devices to scale
+
+## File Systems
+### access methos
+- sequential access
+	- most common
+	- ![](https://i.imgur.com/8FwhjsN.png)
+
+- direct access
+	- relative access
+	- a file = fixed-size logical record
+	- read/write in no particular order
+	- relative block number
+		- relative to the beginning
+	- e.g. database
+- not all OSes support both
+- direct access variance
+	- multi-level indexing
+
+### directory structure
+- single-level
+- two-level
+- tree-structured
+	- ![](https://i.imgur.com/B3zoR3m.png)
+	- absolute path name
+	- relative path name
+- acyclic-graph
+	- ![](https://i.imgur.com/hVcH6Tk.png)
+	- symbolic link
+		- soft link
+	- hard link
+	- problems
+		- handle non-existent link
+		- find cycle
+			- use i-node number
+				- real file ID
+		- ![](https://i.imgur.com/vxlNfPB.png)
+		- flagging i-nodes not practical
+			- can't modify i-node irl
+		- Floyd
+			- fast slow pointers
+			- ![](https://i.imgur.com/wee6dV5.png)
+		- external marking
+			- while 1; previous->next = temp;
+			- move to temp -> have cycle
+			- ![](https://i.imgur.com/GeV7u20.png)
+- general graph
+	- ![](https://i.imgur.com/30X90Bk.png)
+
+### protection
+- memory-mapped files
+	- ![](https://i.imgur.com/YmQ9LkB.png)
+	- ![](https://i.imgur.com/rs7XPKF.png)
+

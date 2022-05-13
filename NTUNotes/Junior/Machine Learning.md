@@ -33,6 +33,7 @@ if ((batch_idx + 1) % accum_iter == 0) or (batch_idx + 1 == len(data_loader)):
 <https://kozodoi.me/python/deep%20learning/pytorch/tutorial/2021/02/19/gradient-accumulation.html>
 
 ## intro
+![](https://i.imgur.com/wMKrsjd.gif)
 - gradient decsent
 	- ![](https://i.imgur.com/HMfsboA.png)
 	- 微分取斜率
@@ -366,3 +367,13 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- Wasserstein distance
 		- min overhead needed to transform a distribution to another
 		- ![](https://i.imgur.com/53o8PGi.png)
+
+## Auto-Encoder
+- autoencoder & variational autoencoder
+	- <https://towardsdatascience.com/ed7be1c038f2>
+	- <https://towardsdatascience.com/f70510919f73>
+- self-supervised
+	- no need label
+- ![](https://i.imgur.com/FsfL08t.png)
+- encode high dim thing into low dim -> bottleneck
+- decide low dim back to high dim

@@ -3,5 +3,6 @@
   "markdown": true,
   "expand_level": "3",
   "hide_unsearched": true,
-  "auto_expand": false
+  "auto_expand": false,
+  "regex_search": true
 }

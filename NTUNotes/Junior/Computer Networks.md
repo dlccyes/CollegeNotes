@@ -201,7 +201,7 @@ has_children: true
 	- receive the entire packet → transmit
 	- store/buffer the bits until the entire packet is recieved
 	- forward/transmit the packet onto the outbound link
-	- delay (see [[#delay loss throughput]])
+	- delay (see [Delay Loss Throughput](#Delay%20Loss%20Throughput))
 		- a packet of $L$ bits (L=packet length)
 		- transmission rate $R$ bits/s (R=link bandwidth)
 			- can store & forward at the same time with the same rate

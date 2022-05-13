@@ -1,4 +1,4 @@
----
+openop---
 layout: meth
 ---
 # Spanish
@@ -132,75 +132,75 @@ layout: meth
 
 ### 筆記
 - 一些字
-        - adivinar: guess
-        - descansar: take a rest
-        - mentira = lie mentiroso/a = lier
-            - Eres un mentiroso Eres una mentirosa
-        - verdad: truth
-        - por que 為什麼
-        - mucho gusto: nice to meet you
-        - de nada: no problem
-        - trabalenguas: 繞口令
-        - rabo: 尾巴
-        - coche: car
-        - serpiente: snake
-        - palabras: words
-        - rico: rich / delicious
-        - fiesta: party
-        - caso: case
-        - hablar de un caso: talk about a case
-        - claro: sure
-        - qué desea: what do you want
-        - tomar = drink
-        - venga: come on
-        - cariño: dear
-        - yo sé = i know
-        - el día: the day
-            - qué tal el día: how was the day?
-        - árbol: tree
-        - tambien: 肯定 too tamboco: 否定 too
-        - tu torno: your turn
-        - tu primero: you first
-        - dibujar: to draw
-        - plural
-            - unas agendas
-            - unos mapas
-            - unas llaves
-            - una hoja de papel → unas hojas de papel
-            - un movil → uno móviles
-        - moneda: coin/currency
-        - billetes: bill
-        - céntimos: cents
-        - ¿Tú escribes una moneda ... ?
-        - una moneda de __ céntimos
-            - 1 a
-            - 2 a
-            - 20 a
-            - 50
-        - un billiete de __ euros
-            - 5
-            - 10
-            - 200 a
-            - 500 a
-        - eliges: choose
-        - está en el sur = in the south
-        - region
-        - bosque = forest
-        - desierto = desert
-        - isla = island
-        - costa = coast
-        - monumento = monument
-        - playa = beach
-        - parque = park
-        - rio = river
-        - un gran valor artístico = big artistic value
-        - recuerdo = 紀念品
-        - puerto = harbor
-        - origen = origin
-        - dinámica = 有活力
-        - el mundo entero = the whole world
-        - verdadero = true falso = false
-	- hapitantes = population
+	- adivinar: guess
+	- descansar: take a rest
+	- mentira = lie mentiroso/a = lier
+		- Eres un mentiroso Eres una mentirosa
+	- verdad: truth
+	- por que 為什麼
+	- mucho gusto: nice to meet you
+	- de nada: no problem
+	- trabalenguas: 繞口令
+	- rabo: 尾巴
+	- coche: car
+	- serpiente: snake
+	- palabras: words
+	- rico: rich / delicious
+	- fiesta: party
+	- caso: case
+	- hablar de un caso: talk about a case
+	- claro: sure
+	- qué desea: what do you want
+	- tomar = drink
+	- venga: come on
+	- cariño: dear
+	- yo sé = i know
+	- el día: the day
+		- qué tal el día: how was the day?
+	- árbol: tree
+	- tambien: 肯定 too tamboco: 否定 too
+	- tu torno: your turn
+	- tu primero: you first
+	- dibujar: to draw
+	- plural
+		- unas agendas
+		- unos mapas
+		- unas llaves
+		- una hoja de papel → unas hojas de papel
+		- un movil → uno móviles
+	- moneda: coin/currency
+	- billetes: bill
+	- céntimos: cents
+	- ¿Tú escribes una moneda ... ?
+	- una moneda de __ céntimos
+		- 1 a
+		- 2 a
+		- 20 a
+		- 50
+	- un billiete de __ euros
+		- 5
+		- 10
+		- 200 a
+		- 500 a
+	- eliges: choose
+	- está en el sur = in the south
+	- region
+	- bosque = forest
+	- desierto = desert
+	- isla = island
+	- costa = coast
+	- monumento = monument
+	- playa = beach
+	- parque = park
+	- rio = river
+	- un gran valor artístico = big artistic value
+	- recuerdo = 紀念品
+	- puerto = harbor
+	- origen = origin
+	- dinámica = 有活力
+	- el mundo entero = the whole world
+	- verdadero = true falso = false
+- hapitantes = population
 - 所有音都比中文輕 (BDPT)
 - 基本字母
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FaRHmbtz04B.png?alt=media&token=4d5e9ab8-2700-46ef-8a28-7e3f299183cb)
@@ -295,7 +295,8 @@ layout: meth
 	- me lo llevo = 我把它帶走 ( = 我要買 )
 	- (yo) volveré = I'll come back
 	- (El) lo comprar. = He buys it.
-	- comprar: buy vender: sell
+	- comprar: buy
+	  vender: sell
 	- ¿Qué quiere? What do you want to buy?
 	- ¿Cuánto cuesta? Ho much $?
 	- muy caro: too expensive
@@ -561,11 +562,12 @@ layout: meth
 		- attractivo/a: attractive
 		- rubio: blonde
 		- moreno = dark skin
-		- intelligente tonto/a
+		- inteligente tonto/a
 		- sociable tímido/a
 		- simpático/a: nice antipàtico/a: unfriendly
 		- gracioso/a: humorous
-		- trabajador(a): diligent vago/a
+		- trabajador(a): diligent 
+		  vago/a
 		- alegre: cheerful serio/a
 	- tiene
 		- pelo: hair
@@ -871,8 +873,8 @@ layout: meth
 	- tener una clase = 上課
 - grammar
 	- es nombre(noun)
-	- es ^^que^^ frase(句子)
-		- lo que menos me gusta de Taipei es ^^que^^ hay muchas motos
+	- es que frase(句子)
+		- lo que menos me gusta de Taipei es que hay muchas motos
 - true of false
 	- verdadero/falso
 	- creo que (我覺得) es verdadero/falso
@@ -1331,6 +1333,7 @@ layout: meth
 	- ¿Crees que… = You think ... ? …Jay Zhou es guapo? …Jolin Tsai baila bien? …Tsai Ying-Wen es una buena presidenta? …los coreanos son simpáticos? …los chicos españoles son guapos? …tener novio/a es necesario? …Taipei es una ciudad bonita? …el taiwanés es fácil? Sí, creo que ... ¿y tú? No, creo que ...
 	- Qué crees que es .... ? = What you think is ... ?
 		- Qué crees que es necesario? Ducharse es necesario.
+
 ### 課
 - August 3rd, 2021
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2Fs4aG2OjFOb.png?alt=media&token=0e1fdd60-3aa7-49b0-aa15-cbe01db9cc10)
@@ -1796,7 +1799,6 @@ layout: meth
 	- yo pienso
 - acuerdo = agreement
 	- no me acuerdo = I can't remember
-	
 - lo adj. de n, es que ...
 	- lo bueno de NTU es que ...
 - lo mall de NTU es que hay muchos gentes
@@ -2011,104 +2013,111 @@ layout: meth
     - me trae una taza de café?
         - me trae un café? 文法錯但常用
     - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FSg163KpXI3.png?alt=media&token=523134df-05a1-43e9-83d7-e21d251c2b56)
-- present perfect (have/haven't)
-    - he/has/ha/hemos/habéis/han
-    - ar → ado
-    - er → ido
-    - ir → ido
-    - irregular
-        - hacer → hecho
-        - escribir → escrito
-        - volver → vuelto
-        - decir → dicho
-        - poner → puesto
-    - me he dado un paseo = go for a walk
-        - darse un paseo = pasear
-    - no me he duchado
-    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FCXDJqbA-Dk.png?alt=media&token=d10c8b07-4938-46c0-bcf3-6c7a78617e23)
-    - ¿A qué hora te has levantado hoy? ¿Te has duchado esta mañana? ¿A qué hora has desayunado esta mañana? ¿Qué has hecho por la mañana? ¿Has venido a clase en moto? ¿Has llegado tarde a clase de español? ¿Te has puesto una chaqueta? ¿Has abierto la ventana de tu habitación? ¿Has encendido tu ordenador? ¿Te has puesto unos pantalones negros?
-    - hace XXX = XXX ago
-        - hace media hora = half an hour ago
-        - hace 10 minutos = 10 minutes ago
-    - ya = already
-- animales = animals
-    - caballo = horse
-    - camello = camel
-    - serpiente = snake
-    - elefante = elephant
-    - animales salvajs = wild animals
-    - cazar = hunt
-        - viaje para cazar
-- ropas 衣服
-    - bufanda = scarf
-    - pañuelo = handkerchief
-    - biquini = bikini
-    - blusa = blouse (襯衫)
-    - traje = suit
-    - corbata = tie
-    - calcetines = socks
-    - jersey = jersey
-    - camiseta = T-shirt
-    - camisa = shirt
-    - pantalones = pants
-        - pantalones de vestir
-        - pantalones formales
-        - pantalones deportivos
-    - vaqueros = jeans
-    - vestido = dress
-    - falda = skirt
-    - minifalda = miniskirt
-    - medias = stockings
-    - sujetador = bra
-    - braga = panties
-    - calzoncillos = underwears
-    - gorra = cap
-    - sombrero = hat
-    - guantes = gloves
-    - pijama = pajamas
-    - bufanda = scarf
-    - cazadora = 飛行夾克
-    - bañador = swimsuit
-    - zapatos = shoe
-    - :hiccup [:hr]
-    - probarse = 試穿
-        - quiero probarme
-        - quieres probarte
-        - quiere probarse
-            - quieres probarsela
-    - piel = 皮
-    - algodón = cotton
-    - almidón = starch
-    - seda = silk
-    - talla = size
-        - qué talla tiene
-    - qué tal le queda = how does it fit
-    - me lo llevo = i'll take it
-    - pase por caja = 去結帳
-    - ancho = wide estrecha = narrow
-    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2Fn0GTaYq7ys.png?alt=media&token=2fa2104c-c5f6-473b-97dc-d07d155e7dc3)
-    - planchar = 燙(衣服)
-    - ponerse = put on (a clothe)
-        - ponerse la chaqueta = put on a jacket
-    - llevar puesto = wear
-    - vertirse = put on the clothe
-- more ... than ...
-    - tan como = más que
-        - la falda negra es tan cara como la blanca
-    - menos que
-        - la falda es menos larga que la blanca = la falda no es tan larga como la blanca
-- lo la
-    - (yo) lo he comprado el vestido en NET.
-    - Tengo una falda nueva. ¿Dondé la has comprado?
-    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FihbiZJlEpe.png?alt=media&token=3a56241e-705a-4fd1-95f0-108b9629096c)
-    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FkwGT-VKCy4.png?alt=media&token=87ef494e-eb8f-4d55-a4e7-9844b964fa4d)
-- gerundio = present participles (verbo+ing)
-    - e-X-ir → i-X-iendo
-    - o-X-ir → u-X-iendo
-    - e.g.
-        - bañar → estar bañando
-        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FsRhBYdVLok.png?alt=media&token=0363eba8-7bd3-4607-8fcc-d8775f437434)
-### 練習
+
+ ### present perfect (have/haven't)
+- he/has/ha/hemos/habéis/han
+- ar → ado
+- er → ido
+- ir → ido
+- irregular
+	- hacer → hecho
+	- escribir → escrito
+	- volver → vuelto
+	- decir → dicho
+	- poner → puesto
+- me he dado un paseo = go for a walk
+	- darse un paseo = pasear
+- no me he duchado
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FCXDJqbA-Dk.png?alt=media&token=d10c8b07-4938-46c0-bcf3-6c7a78617e23)
+- ¿A qué hora te has levantado hoy? ¿Te has duchado esta mañana? ¿A qué hora has desayunado esta mañana? ¿Qué has hecho por la mañana? ¿Has venido a clase en moto? ¿Has llegado tarde a clase de español? ¿Te has puesto una chaqueta? ¿Has abierto la ventana de tu habitación? ¿Has encendido tu ordenador? ¿Te has puesto unos pantalones negros?
+- hace XXX = XXX ago
+	- hace media hora = half an hour ago
+	- hace 10 minutos = 10 minutes ago
+- ya = already
+
+### animales = animals
+- caballo = horse
+- camello = camel
+- serpiente = snake
+- elefante = elephant
+- animales salvajs = wild animals
+- cazar = hunt
+	- viaje para cazar
+
+### ropas 衣服
+- bufanda = scarf
+- pañuelo = handkerchief
+- biquini = bikini
+- blusa = blouse (襯衫)
+- traje = suit
+- corbata = tie
+- calcetines = socks
+- jersey = jersey
+- camiseta = T-shirt
+- camisa = shirt
+- pantalones = pants
+	- pantalones de vestir
+	- pantalones formales
+	- pantalones deportivos
+- vaqueros = jeans
+- vestido = dress
+- falda = skirt
+- minifalda = miniskirt
+- medias = stockings
+- sujetador = bra
+- braga = panties
+- calzoncillos = underwears
+- gorra = cap
+- sombrero = hat
+- guantes = gloves
+- pijama = pajamas
+- bufanda = scarf
+- cazadora = 飛行夾克
+- bañador = swimsuit
+- zapatos = shoe
+- :hiccup [:hr]
+- probarse = 試穿
+	- quiero probarme
+	- quieres probarte
+	- quiere probarse
+		- quieres probarsela
+- piel = 皮
+- algodón = cotton
+- almidón = starch
+- seda = silk
+- talla = size
+	- qué talla tiene
+- qué tal le queda = how does it fit
+- me lo llevo = i'll take it
+- pase por caja = 去結帳
+- ancho = wide estrecha = narrow
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2Fn0GTaYq7ys.png?alt=media&token=2fa2104c-c5f6-473b-97dc-d07d155e7dc3)
+- planchar = 燙(衣服)
+- ponerse = put on (a clothe)
+	- ponerse la chaqueta = put on a jacket
+- llevar puesto = wear
+- vertirse = put on the clothe
+
+### more ... than ...
+- tan como = más que
+	- la falda negra es tan cara como la blanca
+- menos que
+	- la falda es menos larga que la blanca = la falda no es tan larga como la blanca
+
+### lo la
+- (yo) lo he comprado el vestido en NET.
+- Tengo una falda nueva. ¿Dondé la has comprado?
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FihbiZJlEpe.png?alt=media&token=3a56241e-705a-4fd1-95f0-108b9629096c)
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FkwGT-VKCy4.png?alt=media&token=87ef494e-eb8f-4d55-a4e7-9844b964fa4d)
+
+### gerundio = present participles (verbo+ing)
+- e-X-ir → i-X-iendo
+- o-X-ir → u-X-iendo
+- e.g.
+	- bañar → estar bañando
+	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FsRhBYdVLok.png?alt=media&token=0363eba8-7bd3-4607-8fcc-d8775f437434)
+
+### practice
 - September 22nd, 2021
 	- exercise
 		- ¿De dónde eres?
@@ -2403,6 +2412,25 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - estatua = statue
 - castillo = castle
 - balonazo = 被球打到
+- tirarse al agua = dive into water
+- salir del agua = come out from water
+- acabar de + verbo infinitivo = (have) just (done) something
+	- acabo de llegar = he llegado hace un momento = I (have) just arrived
+	- Qué acabe de hacer Elne? = What did Elne just do?
+- entrevista = interview / meeting
+- cita = appointment
+- siesta = nap
+- estupendo (adj.) = great
+- estupendamente (adv.) = great
+- reír = laugh
+	- río/ríes/ríe
+- creer = believe
+- oír = listen
+- pesado = heavy; annoying
+- quedé = stay
+	- quedé en casa
+- rollo = roll
+	- roll de primavera = spring roll
 
 ### cuando
 - de niño = when I was a kid
@@ -2465,8 +2493,93 @@ cojar/tomar = take
 
 ![](https://i.imgur.com/kxAuOz5.png)
 
+### adj. & adv.
+- lento (adj.) -> lentamente (adv.)
+- facil (adj.) -> facilmente (adv.)
+- bueno (adj.) -> bien (adv.)
+- estupendo (adj.) -> estupendamente (adv.)
+
+### past tense irregular 第三人稱
+![](https://i.imgur.com/04sMJRM.png)
+
+past tense 第三人稱中間字母會變
+
+- e->i
+	- sentir -> sintió
+	- seguir
+	- preferir
+	- repetir
+	- elegir
+	- pedir
+	- servir
+- y
+	- leer
+	- creer
+- o->u
+	- morir
+	- oír
+	- construir
+
+### superlativo absoluto
+- very very something
+- alto -> altísimo
+- inteligente -> inteligentísimo
+- gordo -> gordísimo
+- 子音結尾 -> 加 c
+	- joven -> jovencisima
 
 ### practice
+- 5/11
+	- p.160
+		- pedir
+			- pedí
+			- pediste
+			- pidío
+			- pedimos
+			- pedisteis
+			- pideron
+		- leer
+			- leí
+			- leíste
+			- leyó
+			- leímos
+			- leísteis
+			- leyeron
+		- oír
+			- oí
+			- oíste
+			- oyó
+			- oímos
+			- oísteis
+			- oyeron
+	- p.159 true or false
+		- V
+		- V
+		- V
+		- V
+		- F
+		- F
+	- p.159
+		- me los pasé estupendamente = I have a great time
+		- me diverti = I had fun
+		- me reí = I laughed
+		- di varios paseos = paseé varias veces
+		- me quedé en casa
+	- ![](https://i.imgur.com/NE4Vsxb.png)
+	- p.157
+	- p.156 label names and ask questions
+		- ![](https://i.imgur.com/xY8o47x.jpg)
+		- Qué acaba de hacer Elena?
+		- Elena está caminando.
+		- Gloria acaba de tirarse al agua
+		- Natalia acaba de salir del agua.
+		- Carlos está leyando libros.
+		- Lucia acaba de llegar a la playa.
+		- Fernando está vendiendo helados
+		- Hugo está comprando un helado.
+		- Cesar está recogiendo la basura.
+		- Pilar está mirando Elena.
+		- Raúl está jugando a castillos de arena
 - 4/29
 	- train
 		- ![](https://i.imgur.com/Qlogk4A.png)

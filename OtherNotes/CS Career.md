@@ -261,8 +261,11 @@ layout: meth
 			- 學店
 	- Yahoo
 		- <https://bookgin.tw/2017/09/02/2017-yahoo-實習心得/>
-	- Line Pay
-		- <https://angelswengineer.medium.com/d9c36d28615>
+	- Line
+		- Line Pay
+			- <https://angelswengineer.medium.com/d9c36d28615>
+		- Line Tech Fresh
+			- <https://medium.com/@troychiu/165597015e02>
 	- Google
 		- <https://keep-brain-alive.com/taiwan-google-interview-experience/>
 	- Amazon

@@ -249,6 +249,18 @@ ref:
 		- pasta from <http://jasonkarns.com/blog/2011/11/15/subdirectory-checkouts-with-git-sparse-checkout/>
 
 ## branch related
+### delete branch
+delete local branch
+```
+git branch -d <local branch>
+```
+
+delete remote branch
+```
+git push <remote> --delete <branch>
+# e.g. git push origin --delete test
+```
+
 ### switch branch
 ```
 git checkout <branch>
