@@ -145,12 +145,23 @@ import matplotlib.pyplot as plt
 plt.gca().get_xaxis().set_visible(False)
 ```
 
-#### date
+#### datetime
 auto formate dates on x axis
 ```
 import matplotlib.pyplot as plt
 plt.gcf().autofmt_xdate()
 ```
+
+manual formatting
+```
+ax = plt.gca()
+# 1 minute 1 tick
+ax.xaxis.set_major_locator(md.MinuteLocator())
+# format dateime to HH:MM
+ax.xaxis.set_major_formatter(md.DateFormatter('%H:%M'))
+```
+<https://stackoverflow.com/a/69333777/15493213>  
+<https://matplotlib.org/stable/api/dates_api.html#matplotlib.dates.MinuteLocator>
 
 ## exec
 to use in function, use `exec(string, globals())`

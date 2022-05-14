@@ -16,7 +16,12 @@ has_children: true
 
 魏宏宇專題
 
-use [Game Theory](Game%20Theory.md) to solve resource allocation problems in wireless networking systems
+use [Game Theory](Game%20Theory) to solve resource allocation problems in wireless networking systems
+
+## papers
+- [Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing](Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing)
+- [Opportunistic Data Collection in Cognitive Wireless  Sensor Networks - Air–Ground Collaborative Online Planning](Opportunistic%20Data%20Collection%20in%20Cognitive%20Wireless%20%20Sensor%20Networks%20-%20Air–Ground%20Collaborative%20Online%20Planning)
+- [Quality and Profit Assured Trusted Cloud Federation Formation - Game Theory Based Approach](Quality%20and%20Profit%20Assured%20Trusted%20Cloud%20Federation%20Formation%20-%20Game%20Theory%20Based%20Approach)
 
 ## scenario 1
 ![](https://i.imgur.com/1xZKLPT.jpg)
