@@ -1,7 +1,7 @@
 ---
-title: Game Theory for Wireless Networks
 layout: meth
 has_children: true
+parent: Hung-Yu
 ---
 # Game Theory for Wireless Networks
 {: .no_toc }

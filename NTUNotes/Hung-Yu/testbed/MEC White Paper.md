@@ -1,11 +1,12 @@
 ---
 layout: meth
-parent: Hung-Yu
+parent: Edge Computing
 ---
 # MEC White Paper
+{: .no_toc }
+
 [pdf with my annotations](etsi_wp11_mec_a_key_technology_towards_5g.pdf)
 
-{: .no_toc }
 
 <details open markdown="block">
   <summary>

@@ -1,6 +1,7 @@
 ---
 title: Dijkstra's Algorithm
 layout: meth
+parent: Algorithms
 ---
 # Dijkstra's Algorithm
 ![](https://i.imgur.com/vlpyyvk.jpg)

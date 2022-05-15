@@ -488,7 +488,7 @@ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiOm6-5
 ![](https://i.imgur.com/36gLYAN.png)
 
 ![](https://i.imgur.com/yybxTyB.png)
-https://github.com/gzc/CLRS/blob/master/C24-Single-Source-Shortest-Paths/24.2.md
+<https://github.com/gzc/CLRS/blob/master/C24-Single-Source-Shortest-Paths/24.2.md>
 
 ### 3. graph
 ![](https://i.imgur.com/0ZP8cpv.png)

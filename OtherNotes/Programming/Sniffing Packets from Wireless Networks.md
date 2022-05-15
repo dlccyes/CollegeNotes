@@ -48,7 +48,7 @@ For more usage of tcpdump, see [tcpdump](linux.md#tcpdump)
 ## Reverse interface back from monitor mode
 To reverse the wireless interface back to normal, do
 ```
-sudo airmon-ng stpo wlo1mon
+sudo airmon-ng stop wlo1mon
 ```
 
 ## References

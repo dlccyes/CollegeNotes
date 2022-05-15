@@ -1,5 +1,4 @@
 ---
-title: page template
 layout: meth
 parent: Programming
 ---

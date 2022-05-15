@@ -2,7 +2,7 @@
 layout: meth
 parent: Programming 
 ---
-# page template
+# RISC-V
 {: .no_toc }
 
 <details open markdown="block">
@@ -13,7 +13,6 @@ parent: Programming
 {:toc}
 </details>
 
-# RISC-V
 ## resources
 [[Computer Architecture]]
 
