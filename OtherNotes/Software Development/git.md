@@ -131,7 +131,7 @@ git reset --hard      # Rewrite git's index to pick up all the new line endings.
 ### reset
 `git reset HEAD~2` to reset to latest_commit.parent.parent
 
-### revert a certain file to
+### revert a certain file to a version
 `git checkout <sha> -- <path-to-file>`
 
 ### discard changes
@@ -151,6 +151,11 @@ relevant docs
 	- clear all untracked files
 - `git clean -f haha.txt`
 	- clear the untracked file `haha.txt`
+
+### remove remote but keep local
+```
+git rm --cached <file>
+```
 
 ### how many insertions and deletions for a user
 ```

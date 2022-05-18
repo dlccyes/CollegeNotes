@@ -351,3 +351,11 @@ ipython3 -c "% run something.ipynb"
 
 ## Database interaction
 see [SQLAlchemy](SQLAlchemy.md)
+
+## Troubleshooting
+### /usr/bin/env: ‘python’: No such file or directory
+Assuming you have python3 installed, do
+```
+sudo ln -s /usr/bin/python3 /usr/bin/python
+```
+<https://askubuntu.com/a/1235537>

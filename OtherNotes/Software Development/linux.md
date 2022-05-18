@@ -453,6 +453,12 @@ install
 yay -S <package>
 ```
 
+### where is your file / command
+locate the binary, source, and manual page files for a command
+```
+whereis <something>
+```
+
 ## host related
 - edit `/etc/hosts` to change/add the domain name mapping to 127.0.0.1
 	- [ref](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-to-edit-the-Ubnutu-hosts-file-and-ping-a-domain-name-locally)
