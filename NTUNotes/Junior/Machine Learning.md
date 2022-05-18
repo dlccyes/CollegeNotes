@@ -377,3 +377,23 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 - ![](https://i.imgur.com/FsfL08t.png)
 - encode high dim thing into low dim -> bottleneck
 - decide low dim back to high dim
+
+## Explainable AI
+### Lime
+- show the part of the image the model used to classify
+- green -> positive correlation
+  red -> negative correlation
+- slice an image into many small parts, turn each on/off, and see the output change
+	- like [Econometrics](../Sophomore/Econometrics)
+- references
+	- <https://www.oreilly.com/content/introduction-to-local-interpretable-model-agnostic-explanations-lime/>
+	- <https://towardsdatascience.com/interpreting-image-classification-model-with-lime-1e7064a2f2e5>
+
+### Saliency Map
+- heatmap of the importance of pixels to the classficiation result
+- visualization of the partial differential values of loss to input tensor
+- reference
+	- <https://medium.datadriveninvestor.com/visualizing-neural-networks-using-saliency-maps-in-pytorch-289d8e244ab4>
+
+### Smooth Grade
+- add random noisy and generate saliency map

@@ -1,5 +1,6 @@
 ---
 layout: meth
+grand_parent: Hung-Yu
 parent: Game Theory for Wireless Networks
 ---
 # Quality and Profit Assured Trusted Cloud Federation Formation: Game Theory Based Approach

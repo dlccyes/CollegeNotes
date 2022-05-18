@@ -14,7 +14,7 @@ read in Github Page
 
 ## Microeconomics
 read in Hackmd book mode
- <https://hackmd.io/@dlcc/SJ72EmYnB/%2FcXKG-rRkTNKo6Y93uKs3Vw%3F>
+ <https://hackmd.io/@dlcc/MicroEcon>
   
 read in Github Page
 <https://dlccyes.github.io/CollegeNotes/NTUNotes/Freshman/Microeconomics/README.html>

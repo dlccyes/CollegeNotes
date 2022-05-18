@@ -21,7 +21,7 @@ layout: meth
 official guide:  <https://publish.obsidian.md/hub/04+-+Guides%2C+Workflows%2C+%26+Courses/Guides/How+to+add+your+theme+to+the+community+theme+store>
 
 ## CSS
-[[Obsidian CSS]]
+[[../OtherNotes/Software Development/Obsidian CSS]]
 
 ## jekyll
 <https://simply-jekyll.netlify.app/posts/setup>

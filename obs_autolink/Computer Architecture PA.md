@@ -14,7 +14,7 @@ parent: Computer Architecture
 {:toc}
 </details>
 
-## HW1 [[RISC-V]]
+## HW1 [[../OtherNotes/Software Development/RISC-V]]
 ### recursion
 T(n) = 2T(n/2) + 8n + 5, T(1) = 4
 
@@ -209,7 +209,7 @@ end: # end
 ################################################################################
 ```
 
-## HW2 [[Verilog]] ALU
+## HW2 [[../OtherNotes/Software Development/Verilog]] ALU
 ![](https://i.imgur.com/wwncllN.png)
 
 ```
@@ -217,7 +217,7 @@ source /usr/cad/cadence/cshrc && source /usr/cad/synopsys/CIC/synthesis.cshrc
 ncverilog HW2_tb.v HW2.v +access+r
 ```
 
-## final project [[Verilog]] CPU
+## final project [[../OtherNotes/Software Development/Verilog]] CPU
 ![](https://i.imgur.com/3qLc5gk.png)
 
 IF → ID → EX → MEM → WB

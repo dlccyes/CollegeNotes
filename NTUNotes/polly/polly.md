@@ -34,10 +34,16 @@ has_children: true
 	- tcpdump labs
 - 2022.5.9
 	- set up environment for collecting traces
+- 2022.5.16
+	- take some Pokemon Go traces
 - 2022.5.23
-	- summary
+	- semester review
 
-## meeting
+## meetings
+- 2022.5.16 10:00-10:53
+	- Pokemon Go progress
+	- leadership
+	- about next semester
 - 2022.5.9 10:00-11:58
 	- covid
 	- Master applying
@@ -45,9 +51,7 @@ has_children: true
 			- they can tell if you're faking
 			- show your passion
 	- life
-	- 吳禎軒
-		- post-processing
-			- looking back to the past and dynamically adjust past or present judgment
+	- Pokemon Go progress
 	- OS
 	- system skill
 - 2022.5.2 14:00-15:05

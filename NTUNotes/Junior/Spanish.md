@@ -2431,6 +2431,38 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 	- quedé en casa
 - rollo = roll
 	- roll de primavera = spring roll
+- genial = great
+- (comida) estar bueno / rico / malo -> about taste
+- (comida) ser bueno / malo -> about healthy or not
+- mochla = backpack
+- pasta de dientes = toothpaste
+- peine = comb
+- llavero = key ring
+- gorra = cap
+- jabón = soap
+- colonia = 古龍水
+- cartera = wallet / purse
+- pañuelo = handkerchief
+- champú = shampoo
+- tarjeta de visita = business card
+- encendedor = lighter
+- cepillo de dientes = toothbrush
+- toalla = towel
+- maquinilla de afeitar = razor
+- sombrero = hat
+- paraguas = umbrella
+- madera = wood
+- tela = fabric
+- vidrio = glass
+- cristal = crystal
+- sirve = serve
+- duro = hard
+- redondo = round
+- rectangular
+- oscuro = dark
+- claro = clear
+- mediano = medium 
+- ligero = light(weight)
 
 ### cuando
 - de niño = when I was a kid
@@ -2506,29 +2538,61 @@ past tense 第三人稱中間字母會變
 
 - e->i
 	- sentir -> sintió
-	- seguir
-	- preferir
+	- seguir -> siguió
+	- preferir -> prefirió
 	- repetir
 	- elegir
 	- pedir
 	- servir
 - y
-	- leer
-	- creer
+	- leer -> leyó
+	- creer -> creyó
+	- construir -> construyó
+	- oír -> oyó
 - o->u
-	- morir
-	- oír
-	- construir
+	- morir -> murió
 
 ### superlativo absoluto
 - very very something
 - alto -> altísimo
 - inteligente -> inteligentísimo
 - gordo -> gordísimo
+- bueno -> buenísimo
+- malo -> malísimo
+- divertido -> divertidísimo
 - 子音結尾 -> 加 c
 	- joven -> jovencisima
 
+### posesivos
+- mine = mío
+- ![](https://i.imgur.com/5oYuPhv.png)
+- Es tuya esta agenda? = Is this agenda your?
+
 ### practice
+- 5/18
+	- ![](https://i.imgur.com/JtrmVnD.png)
+		- 1.
+			- ella
+				- domingo pro la tarde
+				- se quedó en casa
+				- se aburrió un poco
+			- el
+				- teatro con unos compañeros de trabajo
+				- buenísima
+		- 2.
+			- ella
+				- por la noche
+					- restaurante mixican
+			- el
+				- película
+				- no gusto nada
+	- ![](https://i.imgur.com/zWoKess.png)
+		- gusté
+		- estuve
+		- fue
+		- pasé
+		- aburrí
+		- encanté
 - 5/11
 	- p.160
 		- pedir

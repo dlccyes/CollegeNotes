@@ -1,8 +1,8 @@
 ---
 tags: GT_Papers
+grand_parent: Hung-Yu
 parent: Game Theory for Wireless Networks
 layout: meth
-title: Opportunistic Data Collection in Cognitive Wireless Sensor Networks - Air–Ground Collaborative Online Planning
 ---
 # Opportunistic Data Collection in Cognitive Wireless Sensor Networks - Air–Ground Collaborative Online Planning
 {: .no_toc }

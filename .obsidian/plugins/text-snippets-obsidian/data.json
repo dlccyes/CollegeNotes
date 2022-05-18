@@ -12,5 +12,9 @@
   "endSymbol": "$end$",
   "newlineSymbol": "$nl$",
   "stopSymbol": "$tb$",
-  "useTab": false
+  "pasteSymbol": "$pst$",
+  "useTab": false,
+  "useSpace": false,
+  "wordDelimiters": "$()[]{}<>,.!?;:'\"\\/",
+  "isWYSIWYG": true
 }

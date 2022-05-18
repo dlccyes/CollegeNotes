@@ -1,8 +1,8 @@
 ---
 tags: GT_Papers
+grand_parent: Hung-Yu
 parent: Game Theory for Wireless Networks
 layout: meth
-title: Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
 ---
 # Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
 

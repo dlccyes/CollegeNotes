@@ -55,7 +55,7 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 - instruction set
 	- e.g. x86, ARM, RISC-V
 
-### [[RISC-V]] intro
+### [[../../OtherNotes/Software Development/RISC-V]] intro
 - 較簡單的 instruction set
 - regularity → simpler implementation
 - simplicity → higher performance, lower cost
@@ -243,7 +243,7 @@ e.g.
 	- ![](https://i.imgur.com/0jEcaOb.png)
 
 
-### [[RISC-V]] operations
+### [[../../OtherNotes/Software Development/RISC-V]] operations
 ![](https://i.imgur.com/XC0k2XB.png)
 ![](https://i.imgur.com/PX629AE.png)
 

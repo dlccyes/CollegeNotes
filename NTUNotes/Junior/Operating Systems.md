@@ -32,7 +32,9 @@ has_children: True
 - [CPU Scheduling 2](https://www.youtube.com/watch?v=uqsQbWR3t_c)
 - [Mass-Storage Systems](https://www.youtube.com/watch?v=Tv5gIMhdNhM)
 - [File System Interface](https://www.youtube.com/watch?v=2njmiDSljiU)
-- [File System Implemetation](https://www.youtube.com/watch?v=TKEr3Be7UYY)
+- [File System Implementation 1](https://www.youtube.com/watch?v=TKEr3Be7UYY)
+- [File System Implementation 2](https://www.youtube.com/watch?v=AozCyO7tg8E)
+- [File System Internals](https://www.youtube.com/watch?v=ldBWU0jz_RM)
 
 ### 施吉昇
 - [Course Info](https://www.youtube.com/watch?v=0QpWM5vYt-g)
@@ -63,6 +65,10 @@ has_children: True
 - [CPU Scheduling 6 - OS Examples & Algo Evaluation](https://www.youtube.com/watch?v=irS2Rvre0Dg)
 - [Mass-Storage Systems 1](https://www.youtube.com/watch?v=rN29fVYRnss)
 - [Mass-Storage Systems 2](https://www.youtube.com/watch?v=GhI0mrTM3MU)
+- [File System Interface](https://www.youtube.com/watch?v=rfp9ay93HfA)
+- [File System Implementation 1](https://www.youtube.com/watch?v=FCGn9eCai1g)
+- [File System Implementation 2](https://www.youtube.com/watch?v=_a-U71V5SXo)
+- [File System Implementation 3](https://www.youtube.com/watch?v=hp0b9zzSb3Y)
 
 ## intro
 - ![](https://i.imgur.com/C5gjElc.png)
@@ -1643,7 +1649,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- horizontal scalability
 		- add more storage devices to scale
 
-## File Systems
+## File-System Interface
 ### access methos
 - sequential access
 	- most common
@@ -1695,3 +1701,186 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ![](https://i.imgur.com/YmQ9LkB.png)
 	- ![](https://i.imgur.com/rs7XPKF.png)
 
+## File-System Implementation
+### File-System Structure
+- layered file-system
+	- ![](https://i.imgur.com/kJpNur6.png)
+- logical file system
+	- control blocks
+- file-organization module
+	- logical block to physical block translation
+	- block allocation
+- file control block, FCB
+	- inode
+	- info of the file
+- basic file system
+	- translate commands to device driver
+	- manage memory buffers & caches
+- VFS
+	- virtual file systemfor linux
+
+### File-System Operations
+- on-storage structures
+	- boot control block
+		- info needed for booting
+		- 1st block of the voluming containing an OS
+		- alias
+			- boot block for UFS (Unix File System)
+			- partition boot sector for NTFS
+	- volume control block
+		- volume details
+		- alias
+			- super block for UFS
+			- master file table for NTFS
+	- per-file File Control Block
+		- defails for file
+		- NTFS use relational database to store
+			- indexed
+			- east to search & maintain
+- in-memory structures
+	- ephemeral
+	- loaded at mount time, discarded at dismount
+	- mount table
+	- system-wide open-file table
+		- copy of FCB of each file
+	- per-process open-file table
+		- pointers to entries
+	- unix treat a directory the same as a file
+		- with a type field to indicate
+	- Windows treat a directory & a file as different entities
+	- open & read a file
+		- ![](https://i.imgur.com/IG6r6hk.png)
+
+### Directory Implementation
+- linear list
+	- simple
+	- big exec time 
+- hash table
+	- need to avoid collisions
+		- on fixed size hash table
+	- small search time
+
+### Allocation Methods
+#### contiguous allocation
+- allocate contiguous blocks
+- pros
+	- easy
+	- minimal head movement for HDD
+- cons
+	- external fragmentation
+- ![](https://i.imgur.com/Yirbx3U.png)
+- compaction
+	- move all free space into contiguous blocks
+	- off-line
+		- during downtime or when unmounted
+	- on-line
+		- big impact on system performance
+- extent-based systems
+	- not enough contiguous blocks -> linked in new contiguous blocks (extent)
+	- link to 1st block of extent
+	- problems
+		- extent may have internal fragmentation
+		- allocate & deallocate extents -> external fragmentation
+
+#### linked allocation
+- linked list of storage blocks
+- pros
+	- no external fragmentation
+- cons
+	- slow direct access
+		- need to traverse through the linked list
+	- need space to store pointers
+		- solution: cluster multiple blocks
+	- low reliability
+		- a link is gone -> broke
+		- solutions
+			- doubly linked list
+			- store filename & logical block num in metadata
+				- s.t. the linked list can be reconstructed
+- ![](https://i.imgur.com/dcH4Pim.png)
+- file-allocation table, FAT
+	- ![](https://i.imgur.com/uk3PXat.png)
+- table at start of volime
+- huge seek time
+- low random access time
+	- just check the table
+
+#### indexed allocation
+- linked allocation but all pointers in a index block
+- pros
+	- faster directly access than linked allocation without FAT
+- cons
+	- need extra space for index block
+- ![](https://i.imgur.com/9N3Yr0A.png)
+- ![](https://i.imgur.com/fFX8xwP.png)
+
+#### performance
+- storage efficiency
+	- external fragmentation
+- data-block access time
+
+### free-space management
+- free-space list
+
+#### bit vector (bitmap)
+- ![](https://i.imgur.com/OIOyOp9.png)
+- pros
+	- simple
+- cons
+	- need huge space for big disk
+
+#### linked list
+- linking all free blocks
+- a pointer to 1st free block
+- pros
+	- no space wasted
+- cons
+	- big traversal time
+
+#### grouping
+- linked list but
+	- 1st free block contains addresses to n free blocks
+	- last of the above blocks contains addresses to another n free blocks
+- pros
+	- faster to find many free blocks compared to linked list
+
+#### counting
+- like extent
+- keep address of 1st free block num of subsequent contiguous free blocks
+- each list entry contains an address & a count
+- based on the fact that contiguous blocks are often allocated & deallocated together
+- pros
+	- shorter list
+
+#### space maps
+- metaslabs
+- ![](https://i.imgur.com/1vUapTC.png)
+
+#### TRIMing used blocks
+- some device need blocks to be erased before being allocated again
+- inform a page is freed and can be erased
+	- TRIM for ATA-attached drives
+	- `unallocate` for NVME-based storage
+
+### efficiency & performance
+- factors
+	- allocation & directory algos
+	- data type
+	- pointer size
+	- data structures fixed-size or not
+- unified buffer cache
+	- same page cache for memory-mapped I/O & file system I/O
+	- avoid double caching
+	- ![](https://i.imgur.com/2PxgG1v.png)
+	- ![](https://i.imgur.com/yK5rvoz.png)
+- asynchronus write
+	- writes stored in cache
+	- calling routing doesn't have to wait for writing
+	- most writes are asynchronus
+- free-behind & read-ahead
+	- for sequential access
+		- most recent used page will be the most unlikely to be used
+	- free-behind
+		- new page requested -> free the previous used page
+	- read-ahead
+		- new page requested -> cache the subsequent pages 

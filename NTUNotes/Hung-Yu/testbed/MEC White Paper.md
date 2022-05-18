@@ -1,5 +1,6 @@
 ---
 layout: meth
+grand_parent: Hung-Yu
 parent: Edge Computing
 ---
 # MEC White Paper

@@ -279,9 +279,9 @@ layout: meth
 	- Facebook
 		- <https://angelswengineer.medium.com/32fe51382005> (幹話)
 	- Amazon behavioral questions (Leadership Principles)
-		- <https://www.reddit.com/r/jobsearchhacks/comments/g2iv42/amazon_14_leadership_principles_are_my_answers/>
+		- <https://www.reddit.com/r/jobsearchhacks/comments/g2iv42>
 - offers
-	- <https://www.teamblind.com/post/giving-back-with-tc-on-8-offers-hLE5CRYQ>
+	- <https://www.teamblind.com/post/hLE5CRYQ>
 
 ## linkedin
 - skill assessment answers
