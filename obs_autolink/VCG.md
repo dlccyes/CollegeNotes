@@ -1,5 +1,6 @@
 ---
 layout: meth
+parent: Economics
 ---
 
 # Vickrey-Clarke-Groves mechanism

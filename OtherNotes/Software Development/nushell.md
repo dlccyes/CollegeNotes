@@ -1,12 +1,17 @@
+---
+layout: meth
+parent: Software Development
+---
+
 # nushell
-https://www.nushell.sh/book/
+<https://www.nushell.sh/book/>
 ## install
 1. `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 	- if no `cargo`
 2. `cargo install nu`
 	- very slow
 
-https://www.nushell.sh/book/installation.html
+<https://www.nushell.sh/book/installation.html>
 
 ## commands
 - git

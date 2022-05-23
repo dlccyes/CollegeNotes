@@ -15,7 +15,14 @@ powered by $\LaTeX$
 </details>
 
 ## 共同網頁  
-http://cc.ee.ntu.edu.tw/~ntueecircuit/ 
+<http://cc.ee.ntu.edu.tw/~ntueecircuit/> 
+
+## Bode Plot
+
+x axis : $\omega$  
+代 $\omega$ 值算出 magnitude  
+y axis : $dB = 20\times log_{10}(magnitude)$
+
 ## Ch5
 ### Superposition
 

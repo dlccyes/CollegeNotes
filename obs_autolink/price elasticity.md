@@ -1,3 +1,18 @@
+---
+layout: meth
+parent: Economics
+---
+# price elasticity
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
 change in quantity on change in price
 
 $$\dfrac{\frac{\Delta Q}{Q}}{\frac{\Delta P}{P}} = \dfrac{\partial Q}{\partial P}\dfrac{P}{Q}$$

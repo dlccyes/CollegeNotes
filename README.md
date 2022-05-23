@@ -1,27 +1,18 @@
 # CollegeNotes
+All of my public notes, despite the name. Most of them are about my college courseworks and software development.
 
-some written on hackmd, some on VsCode, some on Notion, some on Obsidian
+Some of them are written on hackmd, some on VsCode, some on Notion, some on Obsidian.
 
-## all
-read in Github Page
-<https://dlccyes.github.io/CollegeNotes>
-- some syntax unsupported
+[Who am I?](https://dlccyes.github.io/)
+
+**Read in Github Page**  
+
+<https://dlccyes.github.io/CollegeNotes>  
+
+Some syntax unsupported.
  
- read in Gitbook
- <https://derricken968.gitbook.io/college-notes/> 
-- many syntax unsupported
-- broken
+**Read in Gitbook**  
 
-## Microeconomics
-read in Hackmd book mode
- <https://hackmd.io/@dlcc/MicroEcon>
-  
-read in Github Page
-<https://dlccyes.github.io/CollegeNotes/NTUNotes/Freshman/Microeconomics/README.html>
-  
-## Biology
-read in Hackmd book mode
- <https://hackmd.io/@dlcc/r1mKbxFnB/%2FDGxooqWpQeixMQaCpxuNsw%3F>
- 
-read in Github Page
-<https://dlccyes.github.io/CollegeNotes/NTUNotes/Freshman/Biology/README.html>
+<https://derricken968.gitbook.io/college-notes/> 
+
+Many syntax unsupported. Also, deploying it on Github page with "Just the Doc" Jekyll theme broke it's navigation.

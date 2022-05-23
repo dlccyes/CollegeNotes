@@ -1,5 +1,6 @@
 ---
 layout: meth
+parent: OtherNotes
 ---
 # Wallpapers
 {: .no_toc }

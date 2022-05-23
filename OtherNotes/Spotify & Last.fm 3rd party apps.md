@@ -1,4 +1,18 @@
+---
+layout: meth
+parent: OtherNotes
+---
 # Spotify & Last.fm 3rd party apps
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
 
 ## Spotify stats
 - <https://playlastify.herokuapp.com/> 👍
