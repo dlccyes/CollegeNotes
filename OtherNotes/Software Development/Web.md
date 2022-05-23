@@ -1,7 +1,8 @@
 ---
-title: Web
 layout: meth
+parent: Software Development
 ---
+
 # Web
 {: .no_toc }
 

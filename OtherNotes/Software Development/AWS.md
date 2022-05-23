@@ -1,5 +1,4 @@
 ---
-title: page template
 layout: meth
 parent: Software Development
 ---
@@ -32,6 +31,18 @@ AWS SDK for Python
 doc  
 <https://boto3.amazonaws.com/v1/documentation/api/latest/index.html>
 
+### client & resource
+<https://stackoverflow.com/a/48867829/15493213>
+
+`client` has all the APIs, while `resource` is newer and is more object-oriented, but doesn't have all the APIs
+
+```
+import boto3
+client = boto3.client('dynamodb')
+dynamodb = session.resource('dynamodb')
+```
+
+
 ### Credentials
 see <https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html>
 
@@ -49,11 +60,28 @@ session = boto3.Session(
 If nothing specified, it will use the credentials in `~/.aws`
 
 ### DynamoDB
-boto3 dynamo sample code  
+boto3 dynamo sample code (written with `resource`)  
 <https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html>
 
-full boto3 dynamo doc  
+full boto3 dynamo doc (written with `client`)  
 <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html>
+
+#### query between range
+between times
+```python
+import boto3
+from boto3.dynamodb.conditions import Key, Attr
+from datetime import datetime, timedelta
+
+session = boto3.Session()
+dynamodb = session.resource('dynamodb')
+table = dynamodb.Table('emotion_t')
+response = table.scan(
+    FilterExpression=Key('log_time').between(time_seek, time_now)
+)
+```
+
+<https://stackoverflow.com/a/49352557/15493213>
 
 ## DynamoDB
 NoSQL database
@@ -62,6 +90,11 @@ see your table
 ```
 aws dynamodb scan --table-name <table-name>
 ```
+
+### Cautions
+It has no auto-incrementing primary key. Instead, it has a partition key, a key that you must supply value with for every entry.
+
+You can't change the structure of your table, e.g. your partition key. What you can do is migrate and delete your table.
 
 ## Elastic Beanstalk
 Easy webapp deploying with EC2 (no additional cost). It basically wraps up all the CI/CD into some simple commands.
@@ -75,6 +108,11 @@ Install CLI
 
 EB CLI docs  
 <https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-cmd-commands.html>
+
+#### eb deploy
+Deploy your code. If it's a git repo without `.ebignore`, it will deploy the latest commit code. If it has `.ebignore`, it will deploy everything except the things specified in `.ebignore`.
+
+<https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-deploy.html>
 
 ### SSH
 ```

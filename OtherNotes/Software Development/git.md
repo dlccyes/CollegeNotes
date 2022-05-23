@@ -1,3 +1,8 @@
+---
+layout: meth
+parent: Software Development
+---
+
 # git
 
 ## Github CLI

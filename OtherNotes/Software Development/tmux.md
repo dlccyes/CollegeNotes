@@ -1,3 +1,8 @@
+---
+layout: meth
+parent: Software Development
+---
+
 # tmux
 ## guides
 cheatsheet

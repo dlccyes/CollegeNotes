@@ -1884,3 +1884,34 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- new page requested -> free the previous used page
 	- read-ahead
 		- new page requested -> cache the subsequent pages 
+
+### Recovery
+- consistency checking
+	- compare data with the state on storage
+	- status bit is set -> is updating metadata
+	- `fsck`
+- log-structured file system
+	- log the metadata changes
+	- log can only be appended, past log is immutable (read only)
+		- no need lock
+		- easy to recover
+	- system crash
+		- committed / logged but not completed transactions -> complete them
+		- uncommitted / unlogged transactions -> undo them
+- other solutions
+	- snapshot
+		- checkpoint
+		- need a lot of space
+- backup an restore
+	- back up data to another storage device
+	- restore from the backup data
+- WAFL File System
+	- write-anywhere file layout
+	- optimized for random writes
+	- ![](https://i.imgur.com/KUYZn1Q.png)
+	- snapshots
+		- take a snapshot -> block updates go to new blocks instead of overwriting old blocks
+		- take very little space
+			- extra space a snapshot needs is only from the blocks that have been updated
+		- ![](https://i.imgur.com/0rEEhKS.png)
+

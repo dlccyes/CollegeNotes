@@ -244,6 +244,7 @@ json.loads(str)
 from datetime import datetime
 ```
 
+### to string
 convert date & time now to iso format string
 ```
 datetime.now().isoformat()
@@ -254,7 +255,32 @@ convert iso format string to datetime object
 datetime.fromisoformat(str)
 ```
 
+convert to custom format string
+```python
+datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+```
+
+### current time
+```python
+datetime.now()
+```
+
+UTC
+```python
+datetime.utcnow()
+```
+
+UTC+8
+```python
+from datetime import datetime, timedelta, timezone
+datetime.now(timezone(timedelta(hours=8)))
+```
+
 ### timedelta
+```
+datetime.timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0)
+```
+
 ```
 from datetime import timedelta
 ```

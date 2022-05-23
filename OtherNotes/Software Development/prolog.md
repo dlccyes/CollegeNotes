@@ -1,3 +1,8 @@
+---
+layout: meth
+parent: Software Development
+---
+
 # prolog
 ## install
 `sudo apt-get install swi-prolog`

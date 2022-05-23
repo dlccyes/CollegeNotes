@@ -1,3 +1,7 @@
+---
+layout: meth
+---
+
 # Vickrey-Clarke-Groves mechanism
 - pivotal mechanism
 - ![Image](https://i.imgur.com/U9dsU4N.png)

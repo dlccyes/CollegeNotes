@@ -232,10 +232,11 @@ In the following experiment we compare the performance of the `contains` operati
 - 用空間換取時間
 
 Bell (W2)
-- https://www.geeksforgeeks.org/bell-numbers-number-of-ways-to-partition-a-set/
+- <https://www.geeksforgeeks.org/bell-numbers-number-of-ways-to-partition-a-set/>
 
 ## Tree
-### [[Binary Tree]]
+### Binary Tree
+- [Binary Tree](../../obs_autolink/Binary%20Tree)
 - 每個 node 有 0-2 個分支 → binary tree
   - inorder 順序正確(小→大 or 大→小) → binary search tree
 - order 
@@ -384,7 +385,9 @@ Bell (W2)
 	- top-down
 	  - look before you leap
 		- 經過的每個 2 node 都要 split
-#### [[Red-Black Tree]]
+
+#### Red-Black Tree
+- [Red-Black Tree](../../obs_autolink/Red-Black%20Tree)
 - represent 2-3-4 tree as binary tree
 - ![Image](https://i.imgur.com/ZZ7lX6d.png)
   - 兩種表示法
@@ -403,6 +406,7 @@ Bell (W2)
   - https://doctrina.org/maximum-height-of-red-black-tree.html
   - W4-2
 - operation：先做 2-3-4 再轉成 Red-Black
+
 #### AA Tree
 - inerative visualization 
 https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html
@@ -830,6 +834,8 @@ https://people.ksp.sk/~kuko/gnarley-trees/Skew.html
         - amortized cost = 1 - 1 = 0
       - amortized cost = 2log(n) + 0 $\in O(logn)$
 
-## [[Dijkstra's Algorithm]]
+## Dijkstra's Algorithm
+[Dijkstra's Algorithm](../../obs_autolink/Dijkstra's%20Algorithm)
+
 ![](https://i.imgur.com/vAECkKj.png)
 ![](https://i.imgur.com/rZnNe0Z.png)

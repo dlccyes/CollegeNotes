@@ -1,3 +1,8 @@
+---
+layout: meth
+parent: Software Development
+---
+
 # VsCode
 ## good settings 
 ### selection & search highlight

@@ -35,8 +35,9 @@ to include jQuery
 ### for loop
 - `for(let i=0; i<=s.length; i++)`
 	- 千萬要加 `let`
-- `for(var item of array)` = `for item in array` in [[Python]]
-- `for(var i in array)` = `for i in range(len(array))` in [[Python]]
+- `for(var item of array)` = `for item in array` in Python
+- `for(var i in array)` = `for i in range(len(array))` in Python
+- `for(var key in json)` = `for key in dict` in Python
 
 ### string
 #### slice
@@ -78,6 +79,30 @@ funcHandler(function(callback){
 ```
 
 <https://stackoverflow.com/a/3458816/15493213>
+
+## event handler
+```javascript
+$(document).off("change","[name=refundItem]");
+$(document).on("change", "[name=refundItem]", function(){
+  itemidx = this.value;
+  if(this.checked){
+    $('#refundAmt'+itemidx).show();
+  }
+  if(!this.checked){
+    $('#refundAmt'+itemidx).hide();
+  }
+});
+```
+
+```javascript
+$('#refresh').off('click');
+$('#refresh').on('click', function(){
+  console.log('fwfw');
+  getOverallAttendance();
+});
+```
+
+<https://stackoverflow.com/questions/10979865>
 
 ## disable/enable style
 jQuery

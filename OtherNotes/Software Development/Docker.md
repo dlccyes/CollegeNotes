@@ -79,3 +79,18 @@ or
 ```
 sudo systemctl start docker
 ```
+
+### show running containers
+```
+docker ps
+```
+
+### show all docker images
+```
+docker images
+```
+
+### remove a docker image
+```
+docker image rm -f <image_id>
+```

@@ -20,14 +20,19 @@ parent: Software Development
 ## command
 - login
 	- `heroku login`
+- add `-a` flag to specify the app, otherwise it will be default to the repo you're on
 - set buildstack
-	- `heroku buildpacks:set heroku/python -a playlastify`
+	- `heroku buildpacks:set heroku/python`
 - see log
-	- `heroku logs --tail -a <appname>`
+	- `heroku logs --tail`
 - add remote
-	- `heroku git:remote -a <appname>`
+	- `heroku git:remote`
 	- <https://devcenter.heroku.com/articles/git#for-an-existing-app>
 - go into console
-	- `heroku ps:exec -a <appname>`
+	- `heroku ps:exec`
 - restart
-	- `heroku restart -a <appname>`
+	- `heroku restart`
+- check if your app is running
+	- `heroku ps`
+- make your app run
+	- `heroku ps:scale web=1`

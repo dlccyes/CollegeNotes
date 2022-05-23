@@ -1,2 +1,7 @@
+---
+layout: meth
+has_children: true
+---
+
 # Scientific American
-notes for some interesing Scientific American articles I've read
+Notes for some interesing Scientific American articles I've read,

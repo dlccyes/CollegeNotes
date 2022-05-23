@@ -5,6 +5,9 @@ parent: polly
 # ZMap - On the Origin of Scanning: The Impact of Location on Internet-Wide Scans
 {: .no_toc }
 
+[pdf link](https://www.dropbox.com/s/17nvnsawlcq18hq/6-zmap-imc20.pdf)  
+[pdf with my annotations](ZMap.pdf)
+
 <details open markdown="block">
   <summary>
     Outline
@@ -12,9 +15,6 @@ parent: polly
 - TOC
 {:toc}
 </details>
-
-[pdf link](https://www.dropbox.com/s/17nvnsawlcq18hq/6-zmap-imc20.pdf)  
-[pdf with my annotations](ZMap.pdf)
 
 ## Intro
 ### fast ipv4 scannings
@@ -273,7 +273,7 @@ parent: polly
 - no consistent origin with biggest or smalles fraction of transient losses from burst outage
 - Australia has the most burst outage
 	- 30-40% burst origin from Australia
-- no temporal pattern during a dayusing
+- no temporal pattern
 	- e.g. no significant difference between day and night
 
 ## SSH

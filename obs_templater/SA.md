@@ -4,6 +4,7 @@ tags:
 parent: Scientific American
 title: SA template
 layout: meth
+nav_exclude: true
 ---
 # title
 <details open markdown="block">

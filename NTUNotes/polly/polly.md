@@ -40,6 +40,8 @@ has_children: true
 	- semester review
 
 ## meetings
+- 2022.5.23 10:00-10:25
+	- semester review
 - 2022.5.16 10:00-10:53
 	- Pokemon Go progress
 	- leadership

@@ -1,4 +1,4 @@
-I---
+---
 title: Computer Networks PA
 layout: meth
 parent: Computer Networks
@@ -124,7 +124,7 @@ output log 在 `0_100-0-0-10-2.txt`
 這是在 estimated RTT 直接設為 15 的情況。可以看到 sample RTT 的鋸齒較多。
 
 
-## HW3 [[Dijkstra's Algorithm]]
+## HW3 Dijkstra's Algorithm
 part 1
 `py src1/linkedin.py -lf test/test01.txt -of test/test01_out1_me.txt`
 `vimdiff test/*01*out1*.txt`

@@ -1,3 +1,8 @@
+---
+layout: meth
+nav_exclude: true
+---
+
 # h1
 ## h2
 ### h3
