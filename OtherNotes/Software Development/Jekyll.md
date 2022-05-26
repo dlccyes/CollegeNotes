@@ -29,7 +29,7 @@ parent: Software Development
 
 ## themes
 ### just the doc
-<https://just-the-docs.github.io/just-the-docs/>
+[Official Doc](https://just-the-docs.github.io/just-the-docs/)
 
 doesn't support Chinese search
 <https://github.com/pmarsceill/just-the-docs/discussions/437#discussioncomment-85470>
@@ -49,16 +49,15 @@ in `_config.yml` add `remote_theme: pmarsceill/just-the-docs`
 #### navigation structure
 - it doesn't care about the real folder subfolder relationship, instead, you specify the hierarchy manually
 - say you want `aa.md` & `bb.md` inside folder `A` in the left sidebar
-	- `has_children: true` in yaml && `#A` at: (2 options)
-		- `README.md` OR `index.md` in folder `A`
-			- e.g. in Mircroeconomics
+	- `has_children: true` in yaml and put the title `A` in either
+		- `README.md` OR `index.md` in directory `A`
 		- `A.md`
-			- e.g. in [[Algorithms]]
 	- `parent:A` in yaml in `aa.md` & `bb.md`
 - support 3 level at max
 	- `parent:` `grandparent:` in yaml
 - if you don't specify `parent:` in yaml, it will appear as the top level in the left sidebar
-- doesn't care about the filename, but the first heading
+- doesn't care about the filename, but the first heading (or `title` in metadata)
+- `nav_exclude: true` to exclude it from left sidebar
 
 #### layouts structure
 <https://github.com/pmarsceill/just-the-docs/tree/master/_layouts>

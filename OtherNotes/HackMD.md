@@ -1,5 +1,6 @@
 ---
 layout: meth
+parent: OtherNotes
 ---
 # HackMD
 {: .no_toc }

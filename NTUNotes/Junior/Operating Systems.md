@@ -35,6 +35,7 @@ has_children: True
 - [File System Implementation 1](https://www.youtube.com/watch?v=TKEr3Be7UYY)
 - [File System Implementation 2](https://www.youtube.com/watch?v=AozCyO7tg8E)
 - [File System Internals](https://www.youtube.com/watch?v=ldBWU0jz_RM)
+- [Synchronization Tools](https://www.youtube.com/watch?v=1pkPcrsjwm0)
 
 ### 施吉昇
 - [Course Info](https://www.youtube.com/watch?v=0QpWM5vYt-g)
@@ -69,6 +70,9 @@ has_children: True
 - [File System Implementation 1](https://www.youtube.com/watch?v=FCGn9eCai1g)
 - [File System Implementation 2](https://www.youtube.com/watch?v=_a-U71V5SXo)
 - [File System Implementation 3](https://www.youtube.com/watch?v=hp0b9zzSb3Y)
+- [File System Internal 1](https://www.youtube.com/watch?v=LkIaVUPSHl4)
+- [File System Internal 2](https://www.youtube.com/watch?v=esn2h2T3n8w)
+- [Synchronization](https://www.youtube.com/watch?v=RvtecR_hkgg)
 
 ## intro
 - ![](https://i.imgur.com/C5gjElc.png)
@@ -1915,3 +1919,194 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 			- extra space a snapshot needs is only from the blocks that have been updated
 		- ![](https://i.imgur.com/0rEEhKS.png)
 
+## File System Internals
+- volumes & partition
+	- volume can span across partitions
+	- ![](https://i.imgur.com/r2xhHXO.png)
+
+### Mounting
+- file system must be mounted to be available to processes
+- several ways
+	- disallow mounting on unempty directory
+	- hide the original files when mounted
+		- ![](https://i.imgur.com/j9rZmoA.png)
+- verify the device -> do consistency checking (fsck) if invalid -> update mount table in memory
+
+### Partitions
+- partition can be
+	- raw
+		- no file system
+		- swap space
+	- cooked
+		- have file system
+- contains a bootable file system -> needs boot info
+	- bootstrap loader
+		- find and load the kernel
+		- mount the root partition and boot time
+
+### File Sharing
+- owner
+	- can change attributes & grant access over the file
+- group
+	- set of users having access to the file
+- owner & group ID stored in file attributes
+
+### Virtual File System
+- integrate different file-system types
+- 3 layers
+- ![](https://i.imgur.com/bOLQnA8.png)
+- virtual file system (VFS) layer
+	- vnode
+		- unique within VFS (network-wide)
+			- while inode is unique within a file system
+	- define the generic operations
+	- leave the exact implementation for each file-system to 3rd layer
+
+### Remote File Systems
+- methods
+	- ftp
+	- distributed file system (DFS)
+		- mount remote directories
+	- World Wide Web
+- client-server model
+	- server = machine with the file
+	- client = machine seeking access to the file
+	- security issues
+		- client identifiers may be spoofed or imitated
+- distributed information systems
+	- alias: distributed naming services
+	- network information service (NIS)
+		- 電話簿
+	- domain name system (DNS)
+		- host-name-to-network-address translations
+	- Microsoft's common Internet file system (CIFS)
+	- lightweight directory-access protocl (LDAP)
+- failure modes
+	- remote file systems will have more failures
+	- with state
+		- easily recover a failure
+	- stateless protocol
+		- carry all the info needed
+		- unsecure
+
+### Consistency Semantics
+- how multiple access a file simulteneously
+- file session
+	- open to close
+- session semantics
+	- changes viewable only after session closed
+	- Andrew File Systems (AFS)
+		- disconnected operations
+		- large number of users can access a file simulteneously
+		- ![](https://i.imgur.com/3L4rbge.png)
+- immutable
+	- read-only
+	- final result computed from logs
+
+### NFS
+- network file systems
+- a set of disconnected workstations
+- sharing based on client-server
+- mounting
+	- ![](https://i.imgur.com/TV9UNUT.png)
+- operate in heterogeneous environment
+- stateful & stateless
+	- ![](https://i.imgur.com/kaoV7Ti.png)
+	- stateless
+		- operations need to be indempotent (等冪)
+			- f(f(x)) = f(x)
+				- operation 做幾遍結果都一樣
+				- e.g. floor function, absolute function, etc.
+		- pros
+			- more reliable
+		- cons
+			- request message longer
+			- processing time longer
+- schematic view
+	- ![](https://i.imgur.com/LaFCwk3.png)
+- buffer & cache
+	- cache triggered by client
+	- buffer triggered by server
+
+## Synchronization Tools
+
+- 2 processes interleaved -> incorrect result
+	- e.g. count++ & count-- interleaved
+		- ![](https://i.imgur.com/aQzedri.png)
+
+### Critical-Section Problem
+
+- segment shared with other process
+- structure
+	- ![](https://i.imgur.com/Rkz4DNe.png)
+- solution requirements
+	- mutual exclusion
+		- only 1 process can execute the critical section at a time
+	- progress
+		- when none is executing critical section, only those not executing remainder section can decide which to execute critical section
+	- bounded waiting
+		- fairness
+		- order of execution has an upper limit
+			- limited waiting time
+			- from request made to request granted, how many other processes have entered critical section
+
+### Critical-Section Solutions
+
+- interrupt-based solution
+	- prevent current process from being preempted
+	- entry -> disable interrupt
+	- exit -> enable interrupt
+- software solution 1
+	- assume `load` & `store` can't possibly be interrupted
+	- ![](https://i.imgur.com/76QPB7O.png)
+		- left is i, right is j
+	- mutual exclusion satisfied
+		- `turn` is a shared variable
+	- progess unsatisfied
+		- e.g. i -> i will never happen
+	- bounded waiting unsatisfied
+- software solution 2
+	- ![](https://i.imgur.com/ncp2vgs.png)
+	- mutual exclusion satisfied
+	- progess satisfied
+		- decide next in entry section
+	- bounded waiting unsatisfied
+		- deadlock if `flag[i]` = `flag[j]` = true
+- Peterson's solution
+	- ![](https://i.imgur.com/RM25Ssw.png)
+	- all requirements satisfied
+	- not gauranteed to work on modern computer architectures
+		- multi-threaded app with shared data may reorder instructions -> incorrect result
+		- solution: memory barrier
+
+### Hardware Support
+
+#### memory barriers
+
+- an instruction forcing memory modifications to be immediately visible to other processors 
+	- ensure all load/store are completed before next load/store
+		- even with instruction reordering
+- very low level
+- ![](https://i.imgur.com/Cp4hKFf.png)
+- memory models
+	- strongly ordered
+		- memory modifications immediately visible to other processors
+	- weakly ordered
+		- memory modifications may not be immediately visible to other processors
+
+#### atomic hardware instructions
+- can't possibly be interrupted
+- `test_and_set`
+	- ![](https://i.imgur.com/0t97u4U.png)
+	- ![](https://i.imgur.com/zmC9PzD.png)
+		- bounded waiting unsatisfied
+- `compare_and_swap`
+	- ![](https://i.imgur.com/PRFKRR8.png)
+	- ![](https://i.imgur.com/PQDz5Cn.png)
+		- bounded waiting unsatisfied
+	- ![](https://i.imgur.com/1TlABVM.png)
+		- bounded waiting satisfied
+
+#### atomic variables
+- operations on atomic variables are uninterruptable
+- ![](https://i.imgur.com/4PFM53R.png)

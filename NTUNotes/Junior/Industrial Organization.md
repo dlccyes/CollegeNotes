@@ -51,6 +51,9 @@ has_children: True
 		- ![](https://i.imgur.com/KQ4RNMx.png)
 		- $\delta \geq \dfrac{1}{2}$
 
+## final
+<https://hackmd.io/lgE6h18aSzyV4I7PrE0zzg>
+
 ## miscellaneous
 - gross profit margin vs. operating profit margin
 	- gross profit = revenue - direct cost of the products sold

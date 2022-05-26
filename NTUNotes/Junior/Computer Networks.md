@@ -1907,6 +1907,9 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	2. adapter encapsulate ARP packet to link-layer frame and broadcast to subnet
 	3. all receiving adapters pass the packet to their ARP module, if IP matches, send response ARP packet with the mapping
 	4. sender update its ARP table and send to obtained MAC
+- ARP spoofing
+	- fake a ARP reply to pollute the ARP table, make it translates the IP to a wrong MAC, thus the attacker can get the packet they shouldn't get
+	- ![](https://i.imgur.com/2qcrEEy.png)
 
 #### Ethernet
 - IEEE 802.3

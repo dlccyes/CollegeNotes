@@ -104,6 +104,14 @@ $('#refresh').on('click', function(){
 
 <https://stackoverflow.com/questions/10979865>
 
+## cookie
+When setting a cookie on the child page / subdomain that has been set in root page / main domain, it will create a duplicate cookie in front of the previous one, instead of directly changing the value. To avoid this, append `domain` & `path` when setting cookie.
+
+```
+document.cookie = cookieName + "=" + newValue + '; domain=' + window.location.hostname + '; path=/';
+```
+<https://stackoverflow.com/a/5671466/15493213>
+
 ## disable/enable style
 jQuery
 ```js
@@ -115,6 +123,33 @@ $('#your_style').get(0).type = '' //enable
 
 vanilla
 <https://stackoverflow.com/questions/54440748/how-to-disable-a-style-element-in-html-js>
+
+## HTTP Request
+
+### Axios
+
+```
+axios({
+  method: 'post',
+  url: '/login',
+  data: {
+    firstName: 'Finn',
+    lastName: 'Williams'
+  }
+});
+```
+
+```
+axios.post('/login', {
+  firstName: 'Finn',
+  lastName: 'Williams'
+})
+.then((response) => {
+  console.log(response);
+}, (error) => {
+  console.log(error);
+});
+```
 
 ## draggable element
 <https://jsfiddle.net/dlccyes/s84thyLn/2/>

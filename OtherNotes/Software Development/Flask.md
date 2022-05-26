@@ -66,6 +66,29 @@ def page_not_found(e):
     return render_template('invalid.html')
 ```
 
+## CORS
+To allow request from another origins, use `flask_cors`.
+
+Install `flask-cors`
+
+```
+pip3 install flask-cors
+```
+
+Apply the `Access-Control-Allow-Origin` header
+
+```
+from flask import Flask
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+```
+That's all.
+
+[ref](https://dev.to/nikhilponnuru/make-a-request-between-frontend-and-backend-locally-running-on-different-ports-without-cors-issue-4oje)  
+[Flask-Cors doc](https://flask-cors.readthedocs.io/)
+
 ## views / templates
 [Full doc](https://flask.palletsprojects.com/en/2.1.x/tutorial/templates/)
 
@@ -78,6 +101,16 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 ```
+
+### select another folder for template & static files
+
+By default, `template_folder`= `./` and `static_folder` = `./static`. To change them, specify them in `Flask()`.
+
+```
+app = Flask(__name__, template_folder="vue/dist", static_folder="vue/dist/assets")
+```
+
+<https://stackoverflow.com/a/55615550/15493213>
 
 ### passing variables
 app.py

@@ -112,6 +112,28 @@ go to `/etc/update-manager/release-upgrades`
 
 <https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today>
 
+## group & user
+### list all groups
+they're in `/etc/group`
+```
+cut -d: -f1 /etc/group | sort
+```
+
+### list groups a user belongs to
+```
+groups <user>
+```
+
+### add user to a group
+```
+sudo usermod -aG <group> <user>
+```
+
+e.g. to add yourself to docker group
+```
+sudo usermod -aG docker $USER
+```
+
 ## networking
 ### show network interfaces
 show all network interfaces
@@ -614,6 +636,28 @@ e.g.
 ## root shell
 - `sudo su` or `su root` to enter
 - different home directory `~`
+
+## remove an unremoveable file
+
+If this don't work
+
+```
+sudo rm -rf <file>
+```
+
+Kill the processes using it, and then execute again.
+
+```
+lsof <file>
+```
+
+```
+kill -9 <pid>
+```
+
+```
+sudo rm -rf <file>
+```
 
 ## default apps
 config file in `~/.config/mimeapps.list`

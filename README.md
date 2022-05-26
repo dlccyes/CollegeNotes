@@ -1,5 +1,5 @@
 # CollegeNotes
-All of my public notes, despite the name. Most of them are about my college courseworks and software development.
+All of my public notes, despite the name. My personal knowledge base. Most of them are about my college courseworks and software development.
 
 Some of them are written on hackmd, some on VsCode, some on Notion, some on Obsidian.
 

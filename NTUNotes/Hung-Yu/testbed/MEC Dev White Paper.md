@@ -86,7 +86,7 @@ parent: Edge Computing
 		- requirements
 		- dependencies
 
-### Phase 1: MEC app packaging & onboarding
+### Phase 1: MEC App Packaging & Onboarding
 - not defined by the standard
 	- have many options
 	- related to contracts
@@ -103,3 +103,127 @@ parent: Edge Computing
 	- store app images
 - ![](https://i.imgur.com/k1IQA3G.png)
 
+### Phase 2: MEC App Instantiation
+- ![](https://i.imgur.com/PrQpPMA.png)
+- triggered from device
+	- developer can interect directly with MEC 
+	- with device application
+		- device with a client supporting Mx2 API
+- triggered from OSS
+	- without device app
+
+#### Client's Perspective
+- need to have subscription to be able to use MEC services
+	- OAuth 2.0 for authentication
+- instantiation options with Mx2 API
+	- application image ready
+		- request it to be instantiated directly
+		- can query all available ones and pick one
+	- application image not ready
+		- give a link to an application package containing the image
+		- system retrieves the image from the link and instantiate it
+- user application = MEC application instantiated from the request of a user
+- any user can attempt to contact applications with their address on user plane
+- developer can't select the location where the app is instantiated
+	- developer provides the requirements -> MEC system Management & Orchestration selects the ideal location
+
+#### MEC Platform's Perspective
+- OSS forward instantiation request to MEO -> MEO select MEC platform (MEP) and forward request to MEC platform manager (MEPM) -> MEPM configures MEP
+- operations available
+	- start
+	- stop
+- do operation -> update state
+
+### Phase 3: Client-Side App & MEC App Communication
+- device app separated from client app
+- client app unaware of MEC app
+- ![](https://i.imgur.com/epaVtfM.png)
+- ways for client app to connect MEC app
+	- developer / service provider makes MEC app address available to potential client apps
+	- client app finds MEC apps with DNS look-up
+
+### Phase 4: MEC Platform & Services Usage
+- ![](https://i.imgur.com/vIInYSu.png)
+- MEC app can consume MEC services
+	- produced by MEC platform or other MEC apps
+- RESTful APIs
+	- REpresentational Sate Transfer (REST)
+- Radio Network Information Service (RNIS)
+	- provides radio network related info to MEC platform & apps
+	- info from Radio Access Network (RAN)
+	- typical info
+		- radio network conditions
+		- layer 2 info
+		- UE info
+		- changes of info
+	- used by MEC platform & apps to
+		- optimize services
+		- provide services based on up-to-date radion conditions info
+- location API
+	- provide location info for 
+		- UEs
+		- radio nodes associated with MEC host
+	- sample services
+		- active device tracking
+		- location-based recommendations
+	- can use anonymous location reporting
+- bandwidth management service (BWMS)
+	- aggregate requests & allocate bandwidth
+- UE identity API
+	- use an external flag, instead of using the UE identity directly
+		- privacy
+	- each tag mapped to an UE
+	- apply traffic filters based on tags
+
+## Sample MEC App
+
+- many tools around OAS (OpenAPI Specification)
+	- swagger editor
+- use YAML
+	- both human & machine readable
+- enable CORS support
+	- for client requests from outside the server domain
+- use postman to test API
+- third party libaries to interact with interface files directly
+
+## Other Aspects
+
+### Security
+
+- prevent illegal access
+- hardware
+	- HSM (Hardware Security Module)
+	- TPM (Trusted Platform Module)
+	- trusted boot
+- software
+	- TLS (Transport Layer Security)
+- zero-trust networking
+- less secure than central cloud in
+	- MEC has limited compute resource -> more vulnerable to DOS
+	- edge device placed in less secured location -> less physical security
+	- more entry points into application
+	- MEC service may have sensitive info -> every request need to be authenticated & authorized
+	- multiple MEC apps may be installed on the same device -> data separation policy
+- more secure in central cloud in
+	- limited reachability -> more difficult for DDOS
+	- each network blocking has smaller impact -> less likely to have wide scale connectivity down
+
+### Mobility
+- mobile user moves -> MEC host changes
+- when switching to new MEC host
+	- app instance need to be available
+	- user context need to be transferred
+- client can be served by MEC host or remote cloud
+	- a MEC host can identify it being a better host and create an app instance to serve the user
+- ![](https://i.imgur.com/LzSBEsF.png)
+- user context
+	- app-specifig runtime data
+	- for stateless app
+		- can be transferred without mobility service
+	- for stateful app
+		- need more support to be transferred
+	- if user context stored in client app
+		- client app send user context to target app instance
+	- if user context stored in MEC app
+		- app need to support user context transferred between MEC app instances
+		- use MEC app mobility service API to subscribe to mobility events -> know when & where to transfer user context

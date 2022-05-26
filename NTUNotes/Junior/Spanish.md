@@ -2324,17 +2324,17 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - autoestop = 搭便車
 - respuestas = response
 - costó = cost
-- no estory segura, pero creo que as falso = I'm not sure, but I think it's false
+- no estoy segura, pero creo que as falso = I'm not sure, but I think it's false
 - ni idea = no idea
 - a los quince años = at 15 yo 
 - publicó = publish
 - escolar = de la escuela
-- aquel mismo año = on that year
+- aquel mismo año = (on) the same year
 - mecenas = sponsor
-- le estimuló = encourage him
+- le estimuló = encouraged him
 - labor artísca = trabajo artísco
 - continuar = continue
-- rechazó = reject
+- rechazó = rejected
 - encargo = order
 - construcción = construction
 - ser atropellado = be run over
@@ -2343,12 +2343,12 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - concurso = contest
 - participar = participate
 - campeonato = championship
-- Reino Unidos = United Kingdom
+- Reino Unido = United Kingdom
 	- Inglaterra = England
 - ganar un premio = get an award
 - además = 而且
 - but = pero = sin embargo
-- when he's 50 yo = a los 50 años = cuando tenía 50 años
+- when he was 50 yo = a los 50 años = cuando tenía 50 años
 - muchos años después = after many years
 - bajar un poco (la televisión) = turn the volume down a little
 - permiso & favor
@@ -2392,7 +2392,6 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - significa = to mean
 	- qué significa = what it means
 - copiar = 抄寫
-- enciénder = turn on
 - cómodo = comfortable
 - casarse = get married
 - algo = something
@@ -2427,14 +2426,14 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - creer = believe
 - oír = listen
 - pesado = heavy; annoying
-- quedé = stay
+- quedé = stayed
 	- quedé en casa
 - rollo = roll
 	- roll de primavera = spring roll
 - genial = great
 - (comida) estar bueno / rico / malo -> about taste
 - (comida) ser bueno / malo -> about healthy or not
-- mochla = backpack
+- mochila = backpack
 - pasta de dientes = toothpaste
 - peine = comb
 - llavero = key ring
@@ -2454,7 +2453,7 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - madera = wood
 - tela = fabric
 - vidrio = glass
-- cristal = crystal
+- cristal = crystal / glass
 - sirve = serve
 - duro = hard
 - redondo = round
@@ -2463,6 +2462,10 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - claro = clear
 - mediano = medium 
 - ligero = light(weight)
+- exacto = exactly
+- puede ser = maybe
+- regalo = gift / present
+- suspendía = failed (不及格)
 
 ### cuando
 - de niño = when I was a kid
@@ -2513,7 +2516,7 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - Sį, soy yo. = Yes, it's me.
 - Di que (tú) le vas a avisar. = I'll tell him.
 
-### tren
+### tren = train
 ![](https://i.imgur.com/q2rGfx3.png)
 
 ### dirección
@@ -2566,9 +2569,49 @@ past tense 第三人稱中間字母會變
 ### posesivos
 - mine = mío
 - ![](https://i.imgur.com/5oYuPhv.png)
-- Es tuya esta agenda? = Is this agenda your?
+- Es tuya esta agenda? = Is this agenda yours?
+
+### no subject
+- not caring about the subject -> use the conjucation of ellos
+- han atropellado mi perro = (they) hit my dog
+- me han atropellado (a mi) = (they) hit me
+- Te han atropellado alguna vez? = Have you ever got run over?
+- ![](https://i.imgur.com/xtMJqax.png)
+
+### direct & indirect pronoun
+- replace indirect object with me / te / le (se) / nos / os / les (se)
+- replace direct object with lo / la / los / las
+- my parent give me a book -> me = indirect, a book = direct
+	- El año pasado mis padres me regalaron un libro.
+	- Por qué te lo regalaron?
+- Mi padre le ragaló un libro a mi hermano el mes pasado.
+	- Mi padre se lo regaló a mi hermano el mes pasado.
+		- 不能 le lo -> 改成 se lo
+- ![](https://i.imgur.com/wvDQZKZ.png)
+
+### imperfect tense
+- was doing 
+- past habit
+- Ayer cuando me duchaba, mi madre me llamó or teléfono
+	- Yesterday when I was showering, my mom called me. 
+- when he was 50 yo = a los 50 años = cuando tenía 50 años
+- ![](https://i.imgur.com/nRwbH5X.png)
+- ![](https://i.imgur.com/8aQctUN.png)
 
 ### practice
+- 5/25
+	- 10
+		- 1
+			- en la clase
+			- no es al lado de la 
+			- de compañero
+			- plastico (puede ser)
+		- 2
+			- es tuyo
+			- en tu casa
+			- en el cuarto de baño
+			- es pequeña
+			- 
 - 5/18
 	- ![](https://i.imgur.com/JtrmVnD.png)
 		- 1.
