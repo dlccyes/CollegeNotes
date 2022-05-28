@@ -36,6 +36,8 @@ has_children: True
 - [File System Implementation 2](https://www.youtube.com/watch?v=AozCyO7tg8E)
 - [File System Internals](https://www.youtube.com/watch?v=ldBWU0jz_RM)
 - [Synchronization Tools](https://www.youtube.com/watch?v=1pkPcrsjwm0)
+- [Synchronization Examples](https://www.youtube.com/watch?v=hHZT4KFmeQc)
+- [Course Summary](https://www.youtube.com/watch?v=e_ha18S1E5M)
 
 ### 施吉昇
 - [Course Info](https://www.youtube.com/watch?v=0QpWM5vYt-g)
@@ -72,7 +74,8 @@ has_children: True
 - [File System Implementation 3](https://www.youtube.com/watch?v=hp0b9zzSb3Y)
 - [File System Internal 1](https://www.youtube.com/watch?v=LkIaVUPSHl4)
 - [File System Internal 2](https://www.youtube.com/watch?v=esn2h2T3n8w)
-- [Synchronization](https://www.youtube.com/watch?v=RvtecR_hkgg)
+- [Synchronization Tools 1](https://www.youtube.com/watch?v=RvtecR_hkgg)
+- [Synchronization Tools 2](https://www.youtube.com/watch?v=XOKAGuMy9TY)
 
 ## intro
 - ![](https://i.imgur.com/C5gjElc.png)
@@ -2110,3 +2113,81 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 #### atomic variables
 - operations on atomic variables are uninterruptable
 - ![](https://i.imgur.com/4PFM53R.png)
+
+### Mutex Locks
+- mutual exclusion locks
+- ensure only 1 process in critical section
+	- prevent race condition
+- `acquire` lock -> critical section -> `release` lock
+	- atomic operation
+		- with `compare_and_swap`
+- busy waiting
+	- spinlock
+	- a process is in critical section -> another one call `acquire` repeatedly
+- ![](https://i.imgur.com/SMkyNYj.png)
+
+### Semaphore
+
+- an integer
+- a signal, indicating if a process can enter critical section
+- ![](https://i.imgur.com/OqrIJDp.png)
+- couting semaphore
+	- allow multiple processes to enter critical section
+- binary semaphore
+	- 0/1
+- e.g.
+	- ![](https://i.imgur.com/Fc5LeFE.png)
+- implementation without busy waiting
+	- unavailable -> suspend itself into waiting state
+		- added into semephore's process list
+	- other process execute `signal` -> `wakeup` the waiting process into ready state
+		- removed from semaphore's process list
+	- ![](https://i.imgur.com/Fst4Kjp.png)
+	- ![](https://i.imgur.com/y3fdEwM.png)
+- semaphore operations need to be atomic
+- use FIFO queue to satisfy bounded waiting
+
+### Monitors
+
+- timing errors can exist even with mutex lock or semaphore in some exec sequence
+	- e.g.
+		- ![](https://i.imgur.com/2TaV0Ti.png)
+- abstract data type, ADT
+	-  a set of function
+- monitor type
+	- a set of programmer-defined function with mutual exclusion
+	- ![](https://i.imgur.com/V07XLpC.png)
+- ![](https://i.imgur.com/ZMXJ2Er.png)
+- condition
+	- `condition x, y`
+	- `x.wait()` -> process suspended
+	- `x.signal()` -> resume a suspended process
+	- if Q has a suspended process and P execute `x.signal()`
+		- option 1: signal and wait
+			- P waits, Q resumes, P resumes once Q leaves
+			- !P -> Q -> P
+		- option 2: signal and continue
+			- P continues, Q resumes once P leaves
+			- P -> Q
+	- ![](https://i.imgur.com/UP5DQhK.png)
+- implement monitor with semaphore
+	- binary
+	- ![](https://i.imgur.com/g90HyBM.png)
+
+### Liveness
+
+- ensure progress
+- deadlock
+	- multiple processes waiting indefinitely for each other
+	- e.g.
+		- ![](https://i.imgur.com/g0gYHYx.png)
+- starvation
+	- a process waiting indefinitely (in a queue)
+- priority inversion
+	- a high priority process blocked by a low priority process 
+		- for an indefinite amount of time
+	- e.g.
+		- ![](https://i.imgur.com/3AAI6B3.png)
+		- ![](https://i.imgur.com/NV1SKvA.png)
+	- solution: priority-inheritance protocol
+		- ![](https://i.imgur.com/y66hIsH.png)

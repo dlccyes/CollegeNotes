@@ -227,3 +227,14 @@ parent: Edge Computing
 	- if user context stored in MEC app
 		- app need to support user context transferred between MEC app instances
 		- use MEC app mobility service API to subscribe to mobility events -> know when & where to transfer user context
+
+## Edgy DevOps
+- DevOps
+	- different teams collaborate to deliver software continiously
+	- modularized services
+		- flexible
+		- scalable
+- MEC suitable for DevOps approach
+	- made up of microservices -> each service easy to develop, in parallel -> facilitate CI/CD
+	- modularized approach
+- ![](https://i.imgur.com/lU1IjSQ.png)

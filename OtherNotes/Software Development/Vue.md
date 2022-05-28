@@ -14,6 +14,8 @@ parent: Software Development
 </details>
 
 ## CLI
+It's succeeded by Vite.
+
 ```
 npm install -g @vue/cli
 # OR
@@ -76,6 +78,125 @@ import Students from '/src/components/Students.vue'
 
 <https://vitejs.dev/guide/env-and-mode.html>
 
+## Pinia
+
+State management tool for Vue, successor of Vuex.
+
+Example  
+<https://codesandbox.io/s/pinia-vue-3-axios-interceptor-6jf11?file=/src/main.js>
+
+### Init
+
+Install pinia.
+
+```
+yarn add pinia
+```
+
+Add `app.use(pinia)` in `main.js`
+
+```
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+import { createPinia } from 'pinia'
+
+const app = createApp(App)
+const pinia = createPinia()
+app.use(router)
+app.use(pinia)
+app.mount('#app')
+```
+
+### Create a store
+
+In `src/stores/useStore.js`
+
+```
+import { defineStore } from 'pinia'
+
+export const useStore = defineStore({
+  state: () => {
+    return {
+      counter: 0,
+      name: 'Eduardo',
+      isAdmin: true,
+    }
+  },
+})
+```
+
+### Use your store
+
+To access & modify the store in a random component
+
+First import it.
+
+```
+import { useStore } from '@/stores/useStore'
+```
+
+Then you can directly use it.
+
+```
+  methods: {
+    test() {
+	  // useStore().counter++
+      const haha = useStore();
+      haha.counter++;
+      console.log(haha.counter);
+    }
+  }
+```
+
+Or you can declare it with
+
+```
+  data() {
+    return {
+      haha: useStore()
+    }
+  },
+```
+
+or
+
+```
+  setup() {
+    const haha = useStore();
+    return {
+      haha,
+    }
+  },
+```
+
+Now you can access it with `this.haha` like a normal component data.
+
+### Watch your store
+
+```vue
+<script>
+export default {
+  computed: {
+    timeRange(){
+      return this.globe.timeRange;
+    },
+  },
+  watch: {
+    timeRange(newVal, oldVal) {
+      // do something
+    }
+  },
+}
+</script>
+```
+
+You can also use is directly as key
+
+```vue
+<Attendance :key="[update, globe.timeRange]"/>
+```
+
 ## routing
 
 [vue-router doc](https://router.vuejs.org/introduction.html)  
@@ -93,8 +214,8 @@ Define routes in `src/main.js`
 
 ```Javascript
 import { createApp } from 'vue'
-import App from './App.vue'
-// import router from './router'
+import App from '@/App.vue'
+// import router from '@/router'
 
 import { createRouter, createWebHistory } from 'vue-router'
 import Students from '@/views/Students_blade.vue'
@@ -117,7 +238,7 @@ app.use(router)
 app.mount('#app')
 ```
 
-You can put the routes in `/src/router/index.js` and import it to make it cleaner.
+You can put the routes in `/src/router.js` and import it to make it cleaner.
 
 To show the html of the routing target
 
@@ -145,6 +266,20 @@ createWebHistory(import.meta.env.BASE_URL)
 const routes = [
   { path: "/:pathMatch(.*)", name: "not-found", component: Invalid },
 ];
+```
+
+### Link to route
+
+To link to this route,
+
+```
+{ path: '/std/:id', name: "student", component: Student },
+```
+
+Do this. It will match to the route with the same `name` and pass the `params`.
+
+```
+<router-link :to="{name: 'student', params: {id: student.student_id}}"> {{ student.student_name }}</router-link>
 ```
 
 ### history mode
@@ -201,6 +336,12 @@ Event listener, shorthand to `@`.
 ```
 
 When `text` is changed, this element will be refreshed.
+
+Can also watch multiple variables.
+
+```vue
+<span :key="[text1, text2]">{{ text1 }}</span>
+```
 
 You can manipulate it and put it on `<router-view />` to refresh the page, or on whatever component to refresh that component, for example.
 
