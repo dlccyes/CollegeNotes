@@ -1,0 +1,11 @@
+<hr>
+<h2 class="text-delta">Mentions</h2> 
+<ul>
+{% for pp in site.pages %}
+	{% if pp.content contains page.title %}
+		{% if pp.title != page.title %}
+			<li><a href="/blog/{{ pp.url }}">{{ pp.title }}</a></li>
+		{% endif %}
+	{% endif %}
+{% endfor %}
+</ul>
