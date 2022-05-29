@@ -1,10 +1,25 @@
+---
+layout: meth
+---
+
 ```ActivityHistory
 /
 ```
 # Game Theory
+{: .no_toc }
 
-## [[Bayesian game]]
-- https://www.youtube.com/watch?v=E0_CA9TwZ8c
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
+## Bayesian game
+
+[Bayesian game](../../../obs_autolink/Bayesian%20game)
+- <https://www.youtube.com/watch?v=E0_CA9TwZ8c>
 - 先把 dominated 刪掉
 在依據機率算出混合 strategic form
 再把 dominated 刪掉
@@ -198,7 +213,8 @@ x > y, y > z → x > z
   - ![Image](https://i.imgur.com/OZO2mNU.png)
   - payment rule
     - depend on others
-- Vickrey-Clarke-Groves, [[VCG]] mechanism
+- Vickrey-Clarke-Groves, VCG mechanism
+  - [VCG](../../../obs_autolink/VCG)
   - pivotal mechanism
   - ![Image](https://i.imgur.com/U9dsU4N.png)
   - payment function = max of everyone else's utility when excluding you - when including you ($i$)

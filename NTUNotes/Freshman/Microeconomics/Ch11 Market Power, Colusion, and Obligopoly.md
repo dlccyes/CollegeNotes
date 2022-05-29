@@ -3,6 +3,8 @@ parent: Microeconomics
 ---
 # Ch11 Market Power, Collusion, and Oligopoly
 
+[Notes](https://hackmd.io/lgE6h18aSzyV4I7PrE0zzg)
+
 ## Merger
 ### horizontal integration
 before merger: competitive (to where D=MC)  
@@ -44,16 +46,24 @@ P=MC=AC
 ![](https://i.imgur.com/BC0CB6y.png)
 
 ### Cournot model
+
+[Cournot Model](../../../obs_autolink/Cournot%20Model)
 ==assumption: the rival has fixed quantity== i.e. take rivals' output as given
 ![](https://i.imgur.com/G4YZgKS.png)
 
 ### Bertrand model
+
+[Bertrand Model](../../../obs_autolink/Bertrand%20Model)
+
 ==assumption: the rival has fixed price== i.e. take rivals' price as given, and assume the rival won't change it → will undercut its price as long as > MC s.t. it can capture the entire market → repeatedly undercut each's price → ==price = MC = competition price==
 
 ### about Cournot & Bertrand model
+
 if the assumptions fail, which is always the case, the models won't work
 
-## [[monopolistic competition]]
+## monopolistic competition
+
+- [monopolistic competition](../../../obs_autolink/monopolistic%20competition)
 - producing a product that **differs sufficiently from the output of other producers** that some consumers will have a distinct preference for it
 - basically same products with different branding
 - demand very elastic
@@ -63,7 +73,6 @@ if the assumptions fail, which is always the case, the models won't work
 	- TR = TC i.e. P = AC
 
 ![](https://i.imgur.com/p1V8kF9.png)
-
 
 ## HW
 [answer by 助教](https://drive.google.com/drive/u/3/folders/1VJ2BcWJKF0M0Glnc-pkwsoHiV6YCBYL0)

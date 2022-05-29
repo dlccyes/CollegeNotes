@@ -20,6 +20,11 @@ for comepetition, 不管產量多少，價格都一樣
 but for monopoly, 產量提高時，價格降低  
 → MR = P - △P×先前Q
 
+Will set price/quantity to where marginal profit = 0 i.e. MR = MC.
+
+**Calculation tips**  
+Remember when calculating equilibrium price/quantity with MR = MC, do the partial derivative of Q instead of P, as the corresponding P on MR curve != the actual P on demand curve. If you want to calculate the equilibrium with P, calculate with marginal profit = 0 instead.
+
 ## Lerner Index
 ![](https://i.imgur.com/qo2ezEl.png)
 the elasticity of the demand curve
@@ -46,12 +51,15 @@ C+D+F+G 必> F+G+H
 如果要求 monopoly 跟 competition 一樣 zero economic profits
 ![](https://i.imgur.com/N4rVtKe.png)
 
-## [[natural monopoly]]
+## natural monopoly
+
+[natural monopoly](../../../obs_autolink/natural%20monopoly)
+
 if AC crosses demand curve when slope < 0
 
 ![](https://i.imgur.com/S2u3eIw.png)
-→ competitive 下的 P  ($P_C$, where MC = D) < AC
-→ earn negative profit if competitive
+→ competitive 下的 P  ($P_C$, where MC = D) < AC  
+→ earn negative profit if competitive  
 → competitive industry 不可能存在
 
 所以會給 limited time 的 patent，兼顧廠商的 profit & 社會福利
@@ -65,7 +73,7 @@ demand curve 交 AC 於 AC 斜向下處
 - 台電花大錢架好供電網路之後的 MC 就很小了
 因此形成 [[natural monopoly]]  
 
-### innovation for [[natural monopoly]]
+### innovation for natural monopoly
 不是一定會造成正向 social gain  
 ```
 e.g. 

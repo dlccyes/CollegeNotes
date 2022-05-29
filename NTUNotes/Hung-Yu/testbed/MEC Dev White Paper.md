@@ -238,3 +238,68 @@ parent: Edge Computing
 	- made up of microservices -> each service easy to develop, in parallel -> facilitate CI/CD
 	- modularized approach
 - ![](https://i.imgur.com/lU1IjSQ.png)
+- actual implementation of DevOps approach depends on the software layer
+- zero-touch provisioning
+	- automate everything
+- FaaS, function as a service
+	- less code to write
+	- build app from may available functions
+	- separation between implementation & consumer
+
+## Example Use Cases
+
+### V2X collision prevention
+
+- vehicles share their data with each other in proximity
+- to take actions to prevent collision
+- latency intensive
+- ![](https://i.imgur.com/iFOsZb3.png)
+- client 1 & 2 served by MEC app 1
+- client N served by MEC app N
+- client 1 wants to connect
+	- client 1 establishes TCP connection to MEC app 1
+		- DNS redirection by MEC platform
+	- client 1 provides credentials to MEC app 1
+	- MEC app 1 forwards request to cloud back-end
+	- cloud back-end verifies & sends single sign on (SSO) token
+- MEC app
+	- accumulates the info of the clients it serves
+	- updates the clients it serves with the locations of other clients in proximity
+	- sends the list of clients close to the territory of other apps to those apps
+		- discovers other apps with MEC platform
+	- updates clients' info to cloud back-end
+		- less frequent than to clients & other apps 
+- client 1 moved to MEC app N's territory
+	- client 1 sends SSO token to MEC app N
+	- MEC app N forwards request to cloud back-end
+	- cloud back-end send requests to MEC app 1 for client 1's context
+	- MEC app 1 responds with client 1's context to MEC app N & cloud back-end
+- client disconnects
+	- MEC app updates cloud back-end with recent context & sends logoff message to drop token & context
+
+### Video Transcoding
+
+- users share media within their groups
+- dataBase component
+	- collects relevant info
+	- info for each group member
+		- to know the required type of service
+	- geo-localization data from device
+- eStore component
+	- local storage for groups
+	- speeds up upload/download
+		- doesn't need access to core network
+	- particularly useful during crowded events
+- Media Processing Unit (MPU) component
+	- converts media between formats
+		- support most codecs
+	- adapts to various user devices
+	- can be accelerated with edge GPU
+	- advanced media processing
+		- multi-sensor camera data -> 360° video
+		- 3D reconstructions of spaces & objects
+		- object recognition
+- core cloud
+	- permanently stores contents temporarily saved in network edge
+	- trains ML model
+	- computation intensive 3D reconstruction

@@ -1585,6 +1585,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ![](https://i.imgur.com/nlWaxmU.png)
 
 ### RAID
+
 - redundant array of independent disks
 - improve reliability with redundancy
 - increase mean time to data loss
@@ -1625,10 +1626,10 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- distributing parity & error detection code to each drive
 	- combinations
 		- RAID 10 (1+0)
-			- striped mirrors
+			- mirror -> stripe
 			- ![](https://i.imgur.com/ZiTVzeZ.png)
 		- RAID 01 (0+1)
-			- mirrored striped
+			- stripe -> mirror
 			- ![](https://i.imgur.com/WuvRFJ3.png)
 		- RAID 01 & 10
 			- similar performance
@@ -2191,3 +2192,71 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- ![](https://i.imgur.com/NV1SKvA.png)
 	- solution: priority-inheritance protocol
 		- ![](https://i.imgur.com/y66hIsH.png)
+
+## Synchronization Examples
+
+### Classic Problems
+
+#### Bounded-Buffer Problem
+- multiple producers & consumers
+- buffer with capacity N
+- 2 producers can't write to the same buffer (slot)
+- ![](https://i.imgur.com/6IdjzWs.png)
+- use 3 semaphores
+	- `mutex`
+		- init = 1
+		- mutual exclusion
+	- `full`
+		- init = 0
+		- num of full buffers
+	- `empty`
+		- init = n
+		- num of empty buffers
+- producer
+	- ![](https://i.imgur.com/EEWq8f8.png)
+- consumer
+	- ![](https://i.imgur.com/PLeyDXV.png)
+
+#### reader-writers problem
+- multiple readers can read at the same time
+- writer has exclusive access to the shared data
+- semaphore `rw_mutex`
+	- init = 1
+	- mutual exclustion for writers
+- semaphore `mutex`
+	- init = 1
+	- mutual exclustion for updating `read_count`
+- int `read_count`
+	- init = 0
+	- num of processes reading the object
+- writer
+	- ![](https://i.imgur.com/JOKAnjQ.png)
+- reader
+	- ![](https://i.imgur.com/KQOn6k1.png)
+- reader-writer lock
+	- mode
+		- read
+		- write
+	- only 1 process can have the write lock
+
+#### dining-philosophers problem
+
+- n philosophers
+	- 2 modes
+		- use a pair of chopsticks to eat the rice
+			- chopstick at the left & chopstick at the right
+		- idle
+- a bowl of rice
+- n chopsticks
+	- each at the middle of 2 philosophers
+	- one's left chopstick is another's right
+- ![](https://i.imgur.com/14e6p5N.png)
+- semaphore solution
+	- ![](https://i.imgur.com/Ps6uvFX.png)
+	- problem
+		- deadlock
+			- all get the left hand chopstick -> all unable to get the right hand chopstick
+		- starvation
+			- can't get the chopsticks
+- monitor solution
+	- ![](https://i.imgur.com/vI1q1tP.png)

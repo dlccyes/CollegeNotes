@@ -13,6 +13,8 @@ has_children: True
 {:toc}
 </details>
 
+## Entry Deterrance
+
 - $\Delta R = (p+\Delta p)(q+\Delta q)-pq$
 - $MR=\dfrac{\Delta R}{\Delta q}=p(1-\dfrac{1}{|e|})$
 - e = elasticity
@@ -29,7 +31,39 @@ has_children: True
 	- cost of getting everyone's preference profile
 	- hard to stop resale
 
+## Oligopoly
+
+see [Obligopoly](../Freshman/Microeconomics/Ch11%20Market%20Power,%20Colusion,%20and%20Obligopoly#oligopoly)
+
+### Bertrand Model
+
+- [Bertrand Model](../../obs_autolink/Bertrand%20Model)
+- firms set price simultaneosly
+- Nash equilibrium of duopoly is both setting competition price -> Bertrand paradox
+
+### Cournot Model
+
+- [Cournot Model](../../obs_autolink/Cournot%20Model)
+- firms set output simultaneosly
+- Nash equilibrium of duopoly
+	- given $MC=c, P(Q)=a-bQ, a>c$
+	- $q_1=q_2=\dfrac{a-c}{3b}, P=\dfrac{a+2c}{3}$
+	- P & Q between monopoly & competition 
+- Nash equilibrium of n firms
+	- given $MC=c, P(Q)=a-bQ, a>c$
+	- $q_1=q_2=\dfrac{a-c}{(n+1)b}, P=\dfrac{a+nc}{n+1}$
+	- $n \rightarrow \infty$ -> competition
+
+### example: linear city with differentiation
+
+- a 1-unit long linear street with evenly distributed customers, and 2 firms at each end
+- transportation cost per unit distance = t
+- equilibrium price = MC+t
+- transportation cost can be translated to product differentiation
+- with product differentiation, products can sell above competition price even in Bertran model
+
 ## collusion
+
 - market power = $\dfrac{p-MC}{p}$
 	- how much is the firm able to sell above MC
 - system profit in Bertrand competition < system profit of monopoly
