@@ -2286,6 +2286,9 @@ layout: meth
 	- el camarero se está duchando (F)
 
 ## Spanish 2-2
+
+<https://quizlet.com/tw/703221152>
+
 ### deberes
 #### deberes 1
 **a trip you like mucho**
@@ -2529,12 +2532,20 @@ cojar/tomar = take
 ![](https://i.imgur.com/kxAuOz5.png)
 
 ### adj. & adv.
+
+adj. + mente -> adv.
+
 - lento (adj.) -> lentamente (adv.)
 - facil (adj.) -> facilmente (adv.)
 - bueno (adj.) -> bien (adv.)
 - estupendo (adj.) -> estupendamente (adv.)
 
 ### past tense irregular 第三人稱
+
+verb + ó
+
+![](https://i.imgur.com/Di1ytFf.png)
+
 ![](https://i.imgur.com/04sMJRM.png)
 
 past tense 第三人稱中間字母會變
@@ -2597,6 +2608,7 @@ past tense 第三人稱中間字母會變
 - when he was 50 yo = a los 50 años = cuando tenía 50 años
 - ![](https://i.imgur.com/nRwbH5X.png)
 - ![](https://i.imgur.com/8aQctUN.png)
+- ![](https://i.imgur.com/vG27Lzn.png)
 
 ### practice
 - 5/25

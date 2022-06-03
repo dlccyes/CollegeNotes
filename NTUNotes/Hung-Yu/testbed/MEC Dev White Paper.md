@@ -156,7 +156,7 @@ parent: Edge Computing
 		- layer 2 info
 		- UE info
 		- changes of info
-	- used by MEC platform & apps to
+	- used by MEC platform & apps to:
 		- optimize services
 		- provide services based on up-to-date radion conditions info
 - location API
@@ -217,7 +217,7 @@ parent: Edge Computing
 	- a MEC host can identify it being a better host and create an app instance to serve the user
 - ![](https://i.imgur.com/LzSBEsF.png)
 - user context
-	- app-specifig runtime data
+	- app-specific runtime data
 	- for stateless app
 		- can be transferred without mobility service
 	- for stateful app

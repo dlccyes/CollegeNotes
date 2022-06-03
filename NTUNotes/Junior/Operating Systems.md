@@ -16,6 +16,8 @@ has_children: True
 ## materials
 - [Operating System Concepts](Operating%20System%20Concepts.pdf)
 - [xv6 textbook](https://pdos.csail.mit.edu/6.828/2020/xv6/book-riscv-rev1.pdf)
+- final exam
+	- [OS Final Phase 2 pdf](os-final-phase2.pdf)
 
 ## videos
 ### 林忠緯
@@ -1118,7 +1120,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- accumulate data into a group -> process at once
 		- efficiency
 		- maximize CPU utilization
-		- maximizep throughput
+		- maximize throughput
 	- Online Mode
 		- process & respond instantly
 		- responsiveness
@@ -1145,7 +1147,6 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - schedulef the process with the minimal CPU burst
 - preemptive version
 	- shortest-remaining-time-first
-		- 
 - e.g.
 	- ![](https://i.imgur.com/sAv9kh3.png)
 - length of next CPU burst prediction
@@ -1318,12 +1319,12 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ![](https://i.imgur.com/sD0Qm57.png)
 		- red is higher-priority process
 		- need to make them finish before deadline
+- ![](https://i.imgur.com/PDWYdcS.png)
 
 #### Rate-Monotonic Scheduling
-- shorter the period, higher the priority
+- shorter the **period**, higher the priority
 - static priority
 	- a process will always have higher priority than the other
-
 - cons
 	- not always efficient
 - e.g.
@@ -1331,6 +1332,8 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- P1 always has higher priority, can always preempt P2
 	- ![](https://i.imgur.com/as2H559.png)
 		- P2 will miss deadline while it doesn't really need to
+- ![](https://i.imgur.com/51ZWjBM.png)
+	- ![](https://i.imgur.com/fvbO9oI.png)
 
 #### Earliest-Deadline-First (EDF) Scheduling
 - the closer the deadline, the higher the priority
@@ -1461,6 +1464,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- SSDs
 		- USB
 		- NVMe
+
 ### HDD scheduling
 - can only approximate head & cylinder location
 	- don't know exact location
@@ -1468,6 +1472,10 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 #### FCFS scheduling
 - e.g.
 	- ![](https://i.imgur.com/AxygfeL.png)
+
+#### SSTF Scheduling
+- shortest seek time first
+- always go to the nearest one
 
 #### SCAN Scheduling
 - elevator algorithm
@@ -1517,7 +1525,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- hamming code example
 			- ![](https://i.imgur.com/RAKJYvU.png)
 			- parity bits being 1, 2, 4
-				- each has exact one 1 bit
+				- each has exact one "1" bit
 			- data bits being 3, 5, 6, 7
 			- 3, 5, 7 has 1 as the least significant bit -> P1 = parity of D3, D5, D7
 			- 3, 6, 7 has 1 as the 2nd least significant bit -> P2 = parity of D3, D6, D7
@@ -1602,6 +1610,8 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- related to [dependable memory hierarchy](Computer%20Architecture#dependable%20memory%20hierarchy)
 - improve performance with parallelism
 	- execute 2 I/O at the same time
+	- mirroring
+		- send read requests to either drive -> faster
 	- data striping
 		- distribute data across devices, improving transfer rate
 		- bit-level
@@ -1609,6 +1619,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- increase throughput
 	- decrease response time
 - RAID levels
+	- <http://www.cs.rpi.edu/academics/courses/fall04/os/c16/index.html>
 	- RAID 0
 		- striping
 	- RAID 1`
@@ -1617,13 +1628,18 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- block-interleaved parity
 		- a parity drive
 			- single point of failure
+		- memory-style ECC (error-correcting-code) organization
 	- RAID 5
 		- block-interleaved distributed parity
 		- distributing parity to each drive
 			- parity redundancy
+		- recovery without reduncancy
+			- with ECC
+		- stripe data
 	- RAID 6
 		- P+Q redundancy
 		- distributing parity & error detection code to each drive
+		- have ECC
 	- combinations
 		- RAID 10 (1+0)
 			- mirror -> stripe
@@ -1658,11 +1674,10 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- add more storage devices to scale
 
 ## File-System Interface
-### access methos
+### access methods
 - sequential access
 	- most common
 	- ![](https://i.imgur.com/8FwhjsN.png)
-
 - direct access
 	- relative access
 	- a file = fixed-size logical record
@@ -1997,13 +2012,17 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - how multiple access a file simulteneously
 - file session
 	- open to close
+- unix semantics
+	- writes immediately visible
+	- can share the pointer of the current location of a file
+		- a user advances -> all users advance
 - session semantics
 	- changes viewable only after session closed
 	- Andrew File Systems (AFS)
 		- disconnected operations
 		- large number of users can access a file simulteneously
 		- ![](https://i.imgur.com/3L4rbge.png)
-- immutable
+- immutable-shared-files semantics
 	- read-only
 	- final result computed from logs
 
@@ -2048,6 +2067,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- only 1 process can execute the critical section at a time
 	- progress
 		- when none is executing critical section, only those not executing remainder section can decide which to execute critical section
+		- the selection can't be postponed indefinitely
 	- bounded waiting
 		- fairness
 		- order of execution has an upper limit
@@ -2068,7 +2088,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- `turn` is a shared variable
 	- progess unsatisfied
 		- e.g. i -> i will never happen
-	- bounded waiting unsatisfied
+	- bounded waiting satisfied
 - software solution 2
 	- ![](https://i.imgur.com/ncp2vgs.png)
 	- mutual exclusion satisfied
@@ -2088,7 +2108,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 #### memory barriers
 
 - an instruction forcing memory modifications to be immediately visible to other processors 
-	- ensure all load/store are completed before next load/store
+	- ensure all load/store completed before next load/store
 		- even with instruction reordering
 - very low level
 - ![](https://i.imgur.com/Cp4hKFf.png)
@@ -2147,6 +2167,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ![](https://i.imgur.com/y3fdEwM.png)
 - semaphore operations need to be atomic
 - use FIFO queue to satisfy bounded waiting
+- ![](https://i.imgur.com/u3plLeK.png)
 
 ### Monitors
 
@@ -2185,6 +2206,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - starvation
 	- a process waiting indefinitely (in a queue)
 - priority inversion
+	- <https://www.digikey.com/en/maker/projects/introduction-to-rtos-solution-to-part-11-priority-inversion/abf4b8f7cd4a4c70bece35678d178321>
 	- a high priority process blocked by a low priority process 
 		- for an indefinite amount of time
 	- e.g.

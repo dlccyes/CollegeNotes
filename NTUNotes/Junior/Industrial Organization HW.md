@@ -107,9 +107,20 @@ underestimated
 It should only be meaningful for people facing volume-based charge. For people facing flat charge, they would not reduce their water consumption at all.
 
 ### Durable Goods
+
+![](https://i.imgur.com/j4iTYAR.png)
+![](https://i.imgur.com/KgMmOkQ.png)
+![](https://i.imgur.com/BMDjwSs.png)
+![](https://i.imgur.com/OdRyP18.png)
+
 ![](https://i.imgur.com/nlzjdnL.png)
 
 #### (1)
+
+![](https://i.imgur.com/O0HzDTB.png)
+![](https://i.imgur.com/UIoIe8h.png)
+![](https://i.imgur.com/h5H2KqQ.png)
+
 - p1 = 450
 - q1 = 400
 - p2 = 150
@@ -120,11 +131,23 @@ It should only be meaningful for people facing volume-based charge. For people f
 - 250000
 
 #### (3)
+
+![](https://i.imgur.com/Y20mGMk.png)
+![](https://i.imgur.com/QwPLv37.png)
+
 賣一次
 500, 250
 
 #### (4)
+
+![](https://i.imgur.com/Ovqy3Nw.png)
+![](https://i.imgur.com/PFIOdcM.png)
+
 sell once
+
+#### (5)
+
+![](https://i.imgur.com/fqaw9Wv.png)
 
 ## HW2
 [submission pdf](Industrial_Organization_Assignment__2.pdf)  
@@ -203,6 +226,9 @@ sell at a price so that total profit = 500M
 open 4 shops, at $0.25-\epsilon$, $0.25+\epsilon$, $0.75-\epsilon$, $0.75+\epsilon$
 
 #### (3)
+
+![](https://i.imgur.com/hyrQgkk.png)
+
 open 3 shops, at 0.2, 0,5, 0.8
 
 #### (4)
@@ -343,6 +369,9 @@ $E = [0.649, 7.5625]$
 $q_1=11-2\sqrt{E}$
 
 $q_1$ vs. E
+
+![](https://i.imgur.com/Sj09e3t.png)
+
 ![](https://i.imgur.com/1g8B9a5.png)
 
 the curve fits when $5.5\leq q_1\leq 9.389$
@@ -447,7 +476,7 @@ No. Established competitors can quickly roll out new products directly competing
 	- Our main strategy was to try to communicate and collude with other teams to avoid oversupply, benefiting everyone, which proven to be quite successful (compared to another group) despite some obstacles.
 	- Our secondary strategy is to buy or sell lands whenever we found the operation to be profitable, according the expected value of each type of land at each round we'd calculated. However, during the game, we found that our calculation was way too optimistic, as we didn't consider the fact that only the lands we decide to supply has value i.e. the lands we decide not to supply to avoid oversupply has zero value, so we almost never buy lands from others even when the price is lower than our previously calculated expected value. Instead, we actively sold our lands to others even when the price was lower than our previously calculated expected value.
 
-## HW7
+## HW7 ByeByeCold
 ![](https://i.imgur.com/SX1S1o0.png)
 - demand elasticity is probably very low
 	- $1.39 is still really cheap compared to cost of going to a doctor (which will still not eliminate cold symptoms)
@@ -526,7 +555,14 @@ JP = 12.3736
 
 ![](https://i.imgur.com/5fDNbkt.png)
 
+![](https://i.imgur.com/Lee60Fp.png)
+![](https://i.imgur.com/CCgHlPt.png)
+
 ![](https://i.imgur.com/YCkotjy.png)
+
+![](https://i.imgur.com/o2PsEEe.png)
+![](https://i.imgur.com/puotq80.png)
+
 
 ## HW9
 ### Multimarket Contract
@@ -555,6 +591,9 @@ JP = 12.3736
 
 ![](https://i.imgur.com/us56L3h.png)
 
+![](https://i.imgur.com/gSeYjYH.png)
+![](https://i.imgur.com/HQxHWRY.png)
+
 - the more the markets, the more loss deviating will cause
 
 ### The Big Four
@@ -563,33 +602,36 @@ JP = 12.3736
 ![](https://i.imgur.com/FIrHiH0.png)
 
 - (1)
+	- ![](https://i.imgur.com/9zx0W90.png)
 	- discounting
 	- collude
 	- e.g.
 		- 零食
 			- Lays & Pringles
 - (2)
-	- 擴展產品線
+	- ![](https://i.imgur.com/yUQbGTU.png)
 	- e.g.
 		- Android phone
 - (3)
+	- ![](https://i.imgur.com/ZebF5iM.png)
+	- ![](https://i.imgur.com/Y0yv0pd.png)
 	- provide discount for large quantity
 	- e.g.
 		- semiconductor
 			- TSMC vs. Samsung
 - (4)
+	- ![](https://i.imgur.com/Nqz5ezO.png)
 	- just do it
 	- e.g.
 		- online sales
 - (5)
-	- use proprietory format
-	- provide distinctive features or qualities
+	- ![](https://i.imgur.com/FM1inR9.png)
 	- e.g.
 		- Ms Office Suite
 		- Adobe Suite
 - (6)
-	- innovate
-	- collaborate with companies focusing on new form factor
+	- ![](https://i.imgur.com/sXSszQl.png)
+	- ![](https://i.imgur.com/cWif75S.png)
 	- e.g.
 		- pre-smartphone phones
 

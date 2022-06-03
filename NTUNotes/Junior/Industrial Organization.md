@@ -13,8 +13,9 @@ has_children: True
 {:toc}
 </details>
 
-## Entry Deterrance
+## Price Elasticity
 
+- ![](https://i.imgur.com/5k5zVKA.png)
 - $\Delta R = (p+\Delta p)(q+\Delta q)-pq$
 - $MR=\dfrac{\Delta R}{\Delta q}=p(1-\dfrac{1}{|e|})$
 - e = elasticity
@@ -33,7 +34,7 @@ has_children: True
 
 ## Oligopoly
 
-see [Obligopoly](../Freshman/Microeconomics/Ch11%20Market%20Power,%20Colusion,%20and%20Obligopoly#oligopoly)
+see [Oligopoly](../Freshman/Microeconomics/Ch11%20Market%20Power,%20Colusion,%20and%20Obligopoly#oligopoly)
 
 ### Bertrand Model
 
@@ -70,7 +71,7 @@ see [Obligopoly](../Freshman/Microeconomics/Ch11%20Market%20Power,%20Colusion,%2
 - repeated game
 	- infinite period
 	- discount factor $\delta$ 
-		- 1 in this period -> $\sigma$ in next period
+		- 1 in this period -> $\delta$ in next period
 
 ### Grim Trigger Strategy
 - algo

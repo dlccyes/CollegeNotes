@@ -397,3 +397,13 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 
 ### Smooth Grade
 - add random noisy and generate saliency map
+
+## Domain Adaptation
+
+- adapt a model into a different domain 
+	- e.g. similar but different form of data
+	- ![](https://i.imgur.com/qEHU2R9.png)
+- use feature extractor to extract the key features
+	- goal: feature extracted from source == from data
+- use label predictor to predict the class from the extracted features
+- ![](https://i.imgur.com/Q9Uyfcp.png)
