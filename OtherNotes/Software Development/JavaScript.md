@@ -151,6 +151,35 @@ axios.post('/login', {
 });
 ```
 
+## change theme
+
+Use [data attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*).
+
+e.g.
+
+```js
+function toggleTheme(){
+  prevTheme = document.documentElement.dataset.theme;
+  document.documentElement.dataset.theme = prevTheme === "night" ? "day" : "night"; 
+}
+```
+
+```css
+:root {
+  --color-bg: #000;
+  --color-txt: #fff;
+}
+:root[data-theme="day"] {
+  --color-bg: #fff;
+  --color-txt: #000;
+}
+body {
+  background: var(--color-bg);
+  color: var(--color-txt);
+}
+```
+
+[ref](https://css-tricks.com/a-complete-guide-to-data-attributes/#styling)
 ## draggable element
 <https://jsfiddle.net/dlccyes/s84thyLn/2/>
 

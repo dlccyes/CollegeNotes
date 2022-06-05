@@ -407,3 +407,21 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- goal: feature extracted from source == from data
 - use label predictor to predict the class from the extracted features
 - ![](https://i.imgur.com/Q9Uyfcp.png)
+
+## Life Long Learning
+
+- learn new tasks continuonsly
+	- can be new sets of data, new domains, etc.
+	- ![](https://i.imgur.com/44IGbvg.png)
+- can't learn multiple tasks sequentially - catastrophic forgetting
+	- ![](https://i.imgur.com/ZXqHLUE.png)
+- but can learn multiple tasks simultaneously - multi-task learning
+	- ![](https://i.imgur.com/FnsL4G8.png)
+	- ![](https://i.imgur.com/55Q1Uik.png)
+	- not practical
+		- need to store all the task data
+		- need extreme computation
+	- upper bound of life long learning
+
+
+

@@ -299,11 +299,71 @@ There's also a memory mode, which doesn't change the url at all.
 
 [doc](https://router.vuejs.org/guide/essentials/history-mode.html)
 
-## data
+### parameters
+
+`$route.params.<key>` to access url variables
+
+`$route.name` to access the route name
+
+e.g.  
+For `{ path: '/std/:id', name: "student", component: Data }`,  
+`$route.params.id` = the id  
+`$route.name` = "student"
+
+## export default
+
+### data
+
 Define values
 
-## methods
+```
+  data() {
+    return {
+      update: 0,
+      globe:  globeStore(),
+    }
+  },
+```
+
+### computed
+
+define values that need to be computed
+
+will automatically be recomputed
+
+```
+  computed: {
+    val1(){
+      // complicated computations
+      // return value
+    },
+  },
+```
+
+### methods
+
 Define functions
+
+```
+  methods: {
+    func1() {
+      // something
+    },
+    func2() {
+      // something
+    },
+  },
+```
+
+### mounted
+
+execute when first load
+
+```
+mounted(){
+  // something
+}
+```
 
 ## directive
 ### v-bind

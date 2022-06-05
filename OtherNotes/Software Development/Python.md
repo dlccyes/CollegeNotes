@@ -163,6 +163,12 @@ ax.xaxis.set_major_formatter(md.DateFormatter('%H:%M'))
 <https://stackoverflow.com/a/69333777/15493213>  
 <https://matplotlib.org/stable/api/dates_api.html#matplotlib.dates.MinuteLocator>
 
+## simple web server
+
+```
+python3 -m http.server
+```
+
 ## exec
 to use in function, use `exec(string, globals())`
 
