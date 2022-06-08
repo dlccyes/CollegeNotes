@@ -17,6 +17,10 @@ parent: Operating Systems
 
 [solution](https://docs.google.com/document/d/1WUwwkT1tdnjiqDtqXxkSzuEXr_HlvL_F5Nk_TEEK4_k/)
 
+average score: 71.48
+
+Questions that aren't marked are correct.
+
 ## Q1
 ![](https://i.imgur.com/AWC8wqB.png)
 paper about using both

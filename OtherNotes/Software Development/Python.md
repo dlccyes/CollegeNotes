@@ -15,7 +15,9 @@ parent: Software Development
 </details>
 
 ## requirements.txt
+
 ### create
+
 - for every libraries you have
 	- `python -m pip freeze > requirements.txt`
 - for a specific directory
@@ -77,11 +79,25 @@ restart shell with `exec $SHELL` or just `source ~/.bashrc`
 - `pyenv global <version>` to select your desired version for you machine
 
 ## import
+
 import everything from `config.py`, including packages, functions, variables, etc. (like `include` in php or `<script></script>` in html/js)
 ```
 from config import *
 ```
 <https://stackoverflow.com/a/17255770/15493213>
+
+### import from relative path
+
+e.g. to import from parent's parent directory
+
+```python
+
+import sys, os
+sys.path.insert(1, os.path.join(sys.path[0], '../..'))
+import <your_file>
+```
+
+<https://stackoverflow.com/questions/714063/#comment23054549_11158224>
 
 ## matplotlib
 ### plot as many on demand

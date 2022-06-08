@@ -100,26 +100,49 @@ You can't change the structure of your table, e.g. your partition key. What you 
 Easy webapp deploying with EC2 (no additional cost). It basically wraps up all the CI/CD into some simple commands.
 
 ### init
+
 Assign `AdministratorAccess-AWSElasticBeanstalk` policy to your user (group) in IAM (May take a while to take effect ??)
 
 ### CLI
+
 Install CLI  
+
 <https://github.com/aws/aws-elastic-beanstalk-cli-setup>
 
 EB CLI docs  
 <https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-cmd-commands.html>
 
 #### eb deploy
+
 Deploy your code. If it's a git repo without `.ebignore`, it will deploy the latest commit code. If it has `.ebignore`, it will deploy everything except the things specified in `.ebignore`.
 
 <https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-deploy.html>
 
+I'll recommend ignoreing everything at first and then append exceptions (and the exceptions for exceptions), as you might only have a few files & directories needed to deploy. See <https://stackoverflow.com/a/43283013/15493213>.
+
+Also, there seems to be a limit on the total file size to deploy.
+
+#### eb printenv
+
+See all your environment variables.
+
+
+#### eb setenv
+
+Set your environment variable
+
+```
+eb setenv <key>=<value>
+```
+
 ### SSH
+
 ```
 eb ssh
 ```
 
 #### SSH-Setup
+
 Add `AmazonEC2FullAccess` policy for your IAM. [ref](https://stackoverflow.com/a/69267204/15493213)
 
 ```
@@ -128,6 +151,7 @@ eb ssh --setup
 and enter to the end
 
 ### Environment Variables
+
 Go to [Elasticbeanstalk](https://console.aws.amazon.com/elasticbeanstalk/) -> Configuration -> software -> modify and set up manually. [Guide](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-cfg-softwaresettings.html)
 
 Or set them up via CLI
@@ -137,6 +161,7 @@ eb setenv <key>=<value>
 see <https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-setenv.html>
 
 ### Deploying a Flask app
+
 Full doc  
 <https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html>
 
@@ -149,9 +174,18 @@ eb init -p python-3.7 <project_name>
 Will generate `.elasticbeanstalk` under your project root.
 
 Create environment for flask, including ECS instance, S3 bucket and others. Will take a couple of minutes.
+
+With CLI (you can also use Elastic Beanstalk console to set up domain name and other things interactively)
+
+See <https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-create.html> for more options.
+
 ```
 eb create flask-env
 ```
+
+You can use another name for your env, e.g. `<app_name>-env`. If your app doesn't work after deploying to the env, go to eb console (web UI) -> your environment -> Configuration -> Software -> Edit -> WSGIPath and make sure the value is `application`. See <https://stackoverflow.com/q/31169260/15493213>.  
+
+(The correct method is setting up `.ebextensions/<env>.config`, but for some reason it doesn't work for me.)
 
 Go into your EC2 instance and set up credentials.  
 See [SSH-Setup](#SSH-Setup) to setup.  
@@ -178,3 +212,89 @@ If you want to delete all your environment, do
 ```
 eb terminate
 ```
+
+### HTTPS certificate
+
+[official doc](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html)
+
+#### Create certificate
+
+(in project root) Go into your EC2 instance
+
+```
+eb ssh
+```
+
+Check OpenSSL is installed
+
+```
+openssl version
+```
+
+Create RSA Key
+
+```
+openssl genrsa 2048 > privatekey.pem
+```
+
+Create CSR file (fill in the prompted questions)
+
+```
+openssl req -new -key privatekey.pem -out csr.pem
+```
+
+Sign the certificate
+
+```
+openssl x509 -req -days 365 -in csr.pem -signkey privatekey.pem -out public.crt
+```
+
+#### Upload certificate
+
+First assign `IAMFullAccess` to your IAM group.
+
+And then upload it with CLI
+
+(in EC2 instance)
+
+```
+aws iam upload-server-certificate --server-certificate-name elastic-beanstalk-x509 --certificate-body file://public.crt --private-key file://privatekey.pem
+```
+
+<https://stackoverflow.com/a/33789231/15493213>
+
+#### Configure HTTPS
+
+Go to Elastic Beanstalk console -> your environment -> Configuration -> Load balancer -> Edit -> Listeners -> Add listener
+
+- Listener port = 443
+- Listener protocol = HTTPS
+	- Instance port = 80 (Classic Load Balancer only)
+- Instance protocol = HTTP (Classic Load Balancer only)
+- SSL certificate = (choose one)
+
+And then hit "Apply"
+
+### Github Action auto deploy
+
+Create a zip file excluding gitignore files with
+
+```
+git archive HEAD -o <your_package>.zip
+```
+
+Additionally, you can remove the files you don't want but not gitignored with
+
+```
+zip -d <your_package>.zip "<bad file>"
+```
+
+<https://stackoverflow.com/a/61301012/15493213>  
+<https://medium.com/seamless-cloud/888757a6eeb0>
+
+
+### Troubleshooting
+
+If you find weird errors when using CLI, use append `--verbose` to the command to see what exactly is happening.
+
+Use `eb logs` to see the logs.

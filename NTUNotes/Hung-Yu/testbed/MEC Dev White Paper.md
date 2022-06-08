@@ -3,6 +3,7 @@ layout: meth
 grand_parent: Hung-Yu
 parent: Edge Computing
 ---
+
 # MEC Dev White Paper
 {: .no_toc }
 
@@ -17,6 +18,7 @@ parent: Edge Computing
 </details>
 
 ## Intro
+
 - remote cloud latency too big -> move closer to source of data with edge computing
 - IoT & V2X(Vehicle to everything) -> amount of data will increase rapidly -> collect & process data close to user
 - traditional distributed software dev model
@@ -40,6 +42,7 @@ parent: Edge Computing
 	- ![](https://i.imgur.com/5JDZd37.png)
 
 ## MEC Advantages
+
 - hour-glass model
 	- traditional
 	- applications & networks agnostic to each other
@@ -69,6 +72,7 @@ parent: Edge Computing
 	- customized ads for local businiesses
 
 ## Deploying
+
 - considerations
 	- DNS-based solution
 		- support DNS-based solution for traffic redirection
@@ -87,6 +91,7 @@ parent: Edge Computing
 		- dependencies
 
 ### Phase 1: MEC App Packaging & Onboarding
+
 - not defined by the standard
 	- have many options
 	- related to contracts
@@ -104,6 +109,7 @@ parent: Edge Computing
 - ![](https://i.imgur.com/k1IQA3G.png)
 
 ### Phase 2: MEC App Instantiation
+
 - ![](https://i.imgur.com/PrQpPMA.png)
 - triggered from device
 	- developer can interect directly with MEC 
@@ -113,6 +119,7 @@ parent: Edge Computing
 	- without device app
 
 #### Client's Perspective
+
 - need to have subscription to be able to use MEC services
 	- OAuth 2.0 for authentication
 - instantiation options with Mx2 API
@@ -128,6 +135,7 @@ parent: Edge Computing
 	- developer provides the requirements -> MEC system Management & Orchestration selects the ideal location
 
 #### MEC Platform's Perspective
+
 - OSS forward instantiation request to MEO -> MEO select MEC platform (MEP) and forward request to MEC platform manager (MEPM) -> MEPM configures MEP
 - operations available
 	- start
@@ -135,6 +143,7 @@ parent: Edge Computing
 - do operation -> update state
 
 ### Phase 3: Client-Side App & MEC App Communication
+
 - device app separated from client app
 - client app unaware of MEC app
 - ![](https://i.imgur.com/epaVtfM.png)
@@ -143,6 +152,7 @@ parent: Edge Computing
 	- client app finds MEC apps with DNS look-up
 
 ### Phase 4: MEC Platform & Services Usage
+
 - ![](https://i.imgur.com/vIInYSu.png)
 - MEC app can consume MEC services
 	- produced by MEC platform or other MEC apps
@@ -209,6 +219,7 @@ parent: Edge Computing
 	- each network blocking has smaller impact -> less likely to have wide scale connectivity down
 
 ### Mobility
+
 - mobile user moves -> MEC host changes
 - when switching to new MEC host
 	- app instance need to be available
@@ -229,6 +240,7 @@ parent: Edge Computing
 		- use MEC app mobility service API to subscribe to mobility events -> know when & where to transfer user context
 
 ## Edgy DevOps
+
 - DevOps
 	- different teams collaborate to deliver software continiously
 	- modularized services

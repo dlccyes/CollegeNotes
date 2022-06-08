@@ -87,3 +87,7 @@ You can feed in variables in script directly. For example,
 Now when your run `npm run dev`, `vite.config.js` will be able to access `process.env.APP_ENV`.
 
 <https://github.com/vitejs/vite/issues/512#issuecomment-656547187>
+
+## with Github Action
+
+<https://blog.logrocket.com/ci-cd-pipelines-react-github-actions-heroku/#git-cicd-strategy>

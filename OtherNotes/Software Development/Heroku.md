@@ -36,3 +36,21 @@ parent: Software Development
 	- `heroku ps`
 - make your app run
 	- `heroku ps:scale web=1`
+
+## deploy
+
+### deploy without git
+
+First install Heroku CLI, and then add the `heroku-builds` plugin
+
+```
+heroku plugins:install heroku-builds
+```
+
+Use it to deploy your current directory
+
+```
+heroku builds:create -a <appname>
+```
+
+<https://github.com/heroku/heroku-builds>.

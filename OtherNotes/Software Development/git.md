@@ -259,6 +259,13 @@ ref:
 		- pasta from <http://jasonkarns.com/blog/2011/11/15/subdirectory-checkouts-with-git-sparse-checkout/>
 
 ## branch related
+
+### create branch
+
+```
+git branch -b <branch_name>
+```
+
 ### delete branch
 delete local branch
 ```
