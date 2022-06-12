@@ -1,12 +1,11 @@
-{% assign posts=site.pages | where: "title", page.title %}
-{% if posts.size > 1 %}
-	<hr>
-	<h2 class="text-delta">Mentions</h2> 
-	<ul>
-	{% for pp in posts %}
+<hr>
+<h2 class="text-delta">Mentions</h2> 
+<ul>
+{% for pp in site.pages %}
+	{% if pp.content contains page.title %}
 		{% if pp.title != page.title %}
 			<li><a href="/CollegeNotes/{{ pp.url }}">{{ pp.title }}</a></li>
 		{% endif %}
-	{% endfor %}
-	</ul>
-{% endif %}
+	{% endif %}
+{% endfor %}
+</ul>
