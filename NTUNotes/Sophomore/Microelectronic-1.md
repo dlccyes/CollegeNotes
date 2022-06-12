@@ -1,3 +1,7 @@
+---
+layout: meth
+---
+
 # 電子學一
 
 ## table 1.1 The Four Amplifier Types

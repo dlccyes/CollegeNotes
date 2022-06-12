@@ -1,5 +1,6 @@
 ---
 parent: Money and Banking
+layout: meth
 ---
 # Ch8 銀行的經營管理
 

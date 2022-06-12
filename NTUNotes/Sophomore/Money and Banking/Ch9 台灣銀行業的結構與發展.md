@@ -1,6 +1,8 @@
 ---
 parent: Money and Banking
+layout: meth
 ---
+
 # Ch9 台灣銀行業的結構與發展
 
 1990s 重生產，輕消費，中長期放款意願低落，過度重視抵押&保證 → 地下金融

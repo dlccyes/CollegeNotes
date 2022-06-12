@@ -1,30 +1,25 @@
 ---
 parent: Money and Banking
+layout: meth
 ---
+
 # Ch2 金融體系概要
 
-limited enforcement
-: to lenders, 不能完全執行債權
-
-
-limited commitment
-: to borrowers
-
-
-
-IPO, Initial Public Offering
-: 首次公開募股
-
-
-
-
+- limited enforcement
+	- to lenders, 不能完全執行債權
+- limited commitment
+	- to borrowers
+- IPO, Initial Public Offering
+	- 首次公開募股
 
 ## 金融體系
 ![Image](https://i.imgur.com/ULnBu3F.png)
+
 ### 直接金融
 - ==資金直接從供給者流到需求者==
   - 證券承銷商－直接金融：提供服務
 - 直接金融金額：證券發行額-金融仲介證券投資
+
 ### 間接金融
 - ==資金間接從供給者流到需求者==
 - 有金融仲介－銀行為最重要的金融仲介機構
@@ -41,9 +36,11 @@ IPO, Initial Public Offering
 ### 基本特性
 #### 風險 risk
 如違約（倒帳）風險
+
 #### 流動性 liquidity
 轉換成現金之容易度  
 參與者多 → 交易容易 → 轉換成現金容易
+
 #### 收益 return
 報酬率
 高收益債券 = 垃圾債券 junk bond （因風險高）
@@ -60,6 +57,7 @@ IPO, Initial Public Offering
 #### 債權市場 devt market
 - 事先約定償還  
 - 固定收益
+
 #### 股權市場 equity market
 - 收入來自股利，隨營運狀況而動  
 - 優先度低於債權：  
@@ -148,6 +146,7 @@ e.g. 10 年期 & 3 個月公債殖利率利差
     - e.g. 20% haircut → 只可借 80% 其價值的錢
     - [[次貸危機]]時 haircut 大漲
       - 用很爛的 collateral → haircut 漲 → 銀行流動性降低 (只能借到很少的錢)
+
 ### 資本市場
 - 股票 stocks
   - 優先股
@@ -209,7 +208,6 @@ e.g. 10 年期 & 3 個月公債殖利率利差
     - 公司、法人存款
     - 企業放款
   - 中國輸出入銀行：協助政府貿易 [ref](https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9C%8B%E8%BC%B8%E5%87%BA%E5%85%A5%E9%8A%80%E8%A1%8C)
-
 - 中央銀行
 ![Image](https://i.imgur.com/NOgiZ7S.png)
 銀行買中央銀行定期存單－台灣特有

@@ -2,6 +2,7 @@
 title: Econometrics
 layout: meth
 ---
+
 # Econometrics
 {: .no_toc }
 
@@ -19,21 +20,25 @@ layout: meth
   - 90%: 1.6449 = 1.645 = 1.65
 - df: degree of freedom
 - ![Image](https://i.imgur.com/Ipt1G1S.png)
+
 ## review of probability
 ### correlation & independence
 - uncorrelated is weaker than independent
   - E(X)(Y)=E(XY) $\iff$ uncorrelated
   - P(X)(Y)=P(XY) $\iff$ independent $\Longrightarrow$ uncorrelated
-  - https://www.themathcitadel.com/uncorrelated-and-independent-related-but-not-equivalent/
+  - <https://www.themathcitadel.com/uncorrelated-and-independent-related-but-not-equivalent/>
+
 ## skewness
 ![Image](https://i.imgur.com/FofAvWw.png)
 The skewness of a symmetric distribution is 0.
+
 ### kurtosis
 ![Image](https://i.imgur.com/hDzO9It.png)
 ![Image](https://i.imgur.com/5q76hMD.png)
 
 ### law of iterated expectations
 ![Image](https://i.imgur.com/Qbz7r9H.png)
+
 ## Ch3 review of statistics
 - unbiasedness
   - bias = $E(\hat{\mu_Y})-\mu_Y$
@@ -49,11 +54,11 @@ The skewness of a symmetric distribution is 0.
   - $\dfrac{\bar{Y}-\mu}{\frac{\sigma}{\sqrt{n}}} →N(0,1)$ as $n → \infty$
   - ![Image](https://i.imgur.com/ba5VwGh.png)
 ![Image](https://i.imgur.com/rgsUJXu.png)
+
 ### null hypothesis & alternate hypothesis
 ![Image](https://i.imgur.com/1uIykec.png)
 $E(Y) = \mu_Y$ → null hypothesis  
 $E(Y) \neq \mu_Y$ → (two-sided) alternate hypothesis
-
 
 ### p-value
 - significance probability  
@@ -84,7 +89,6 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - the probability that a test incorrectly rejects the null hypothesis when the null hypothesis is true
 - power of a test
   - the probability that a test correctly rejects the null hypothesis when the alternative is true
-
 
 ## Ch4 Linear Regression with One Regressor
 - notations
@@ -127,7 +131,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     However, the problem with R-squared is that it will either stay the same or increase with addition of more variables, even if they do not have any relationship with the output variables. This is where “Adjusted R square” comes to help. Adjusted R-square penalizes you for adding variables which do not improve your existing model.
     Hence, if you are building Linear regression on multiple variable, it is always suggested that you use Adjusted R-squared to judge goodness of model. In case you only have one input variable, R-square and Adjusted R squared would be exactly same.
     Typically, the more non-significant variables you add into the model, the gap in R-squared and Adjusted R-squared increases.
-    https://discuss.analyticsvidhya.com/t/difference-between-r-square-and-adjusted-r-square/264/3
+    <https://discuss.analyticsvidhya.com/t/difference-between-r-square-and-adjusted-r-square/264/3>
       - 不懂
       為何加 data 點 R-squared 就一定會不變 or 上升
 - ![Image](https://i.imgur.com/ccjGWE2.png)
@@ -150,6 +154,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     - dummy variable
 - contonious variable
   - 與 binary variable 相對
+
 ### homoskedastic & heterosketasdic
 - homoskedastic
   - if $var(u_i|X_i)$ doesn't depend on $X_i$
@@ -163,8 +168,10 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - treat intercept as a regressor
 ![Image](https://i.imgur.com/MKDfX7o.png)
 ![Image](https://i.imgur.com/KAHJULZ.png)
+
 ### omitted variable bias
 - ![Image](https://i.imgur.com/TQeGcYz.png)
+
 ### least square assumptions
 1. Assumption 1: The Conditional Distribution of ui Given X1i, X2i, . . . , Xki Has a Mean of 0
 2. Assumption 2: (X1i, X2i, . . . , Xki, Yi), i = 1, . . . , n, Are i.i.d.
@@ -214,6 +221,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 ## Ch9 
 ![Image](https://i.imgur.com/NzpKegT.png)
 ![Image](https://i.imgur.com/Tu6snYq.png)
+
 ### simultaneous causality bias
 - x 影響 y，y 也影響 x
   - e.g. 
@@ -286,8 +294,10 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - there are factors that will affect both X & u
 - ![Image](https://i.imgur.com/0QNSbU9.png)
 - ![Image](https://i.imgur.com/wi0hHUB.png)
+
 ### IV regression assumptions
 ![Image](https://i.imgur.com/CQoRsRg.png)
+
 ### 2SLS
 ![Image](https://i.imgur.com/ni4GtGd.png)
 - ![Image](https://i.imgur.com/r5TfSaI.png)
@@ -318,6 +328,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - t=2: after treatment
 
 ![Image](https://i.imgur.com/SBdt2DJ.png)
+
 ## Ch14 big data
 - 原始資料 notation：*
 - OOS out-of-sample

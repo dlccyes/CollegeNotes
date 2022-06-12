@@ -168,12 +168,14 @@ Full doc
 Write your [Flask](Flask) app. Note that the main file need to be `application.py` and the Flask object neet to be named as `application`.
 
 Initialize EB CLI repo.
+
 ```
 eb init -p python-3.7 <project_name>
 ```
-Will generate `.elasticbeanstalk` under your project root.
 
-Create environment for flask, including ECS instance, S3 bucket and others. Will take a couple of minutes.
+This will generate `.elasticbeanstalk` under your project root.
+
+Next, create environment for your project, including EC2 instance, S3 bucket and others. Will take a couple of minutes.
 
 With CLI (you can also use Elastic Beanstalk console to set up domain name and other things interactively)
 

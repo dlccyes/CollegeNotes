@@ -1,6 +1,6 @@
 ---
- title: Data Structure
- layout: meth
+title: Data Structure
+layout: meth
 ---
  
 # Data Structure
@@ -190,7 +190,6 @@ It is should be clear that the execution time for `pop(0)` and `pop()` are `O(n)
 
 Some sources of error occurs due to other processes running on the computer which may slow down our code. That is why loop the experiments many times to make the measurement more statistically reliable.
 
-<!-- ## 2.7 Python Built-in Dictionary Operation Time Complexity -->
 ## Python Built-in Dictionary Operation Time Complexity
 
 If you were the implementor of Python, how do you implement dictionary so that the `contain`, `get item` and `set item` operations all have *average case* time complexity of $O(1)$.?
@@ -377,7 +376,7 @@ Bell (W2)
 	  - 經過的每個 4 node 都要 split
 	  - insert 的目的地是 4 node 時，先 split 再 insert
 	- ![Image](https://i.imgur.com/8HqciLA.png)
-	- https://www.educative.io/page/5689413791121408/80001
+	- <https://www.educative.io/page/5689413791121408/80001>
 	- ![](https://i.imgur.com/ne2Tzd3.png)
 - deletion 
 	- bottom-up
@@ -402,14 +401,14 @@ Bell (W2)
   - 2-3-4 leaf nodes 都同 level
 - ![Image](https://i.imgur.com/qUxfsQI.png)
 - max height $2log(n+1)$
-  - https://www.codesdope.com/course/data-structures-red-black-trees/
-  - https://doctrina.org/maximum-height-of-red-black-tree.html
+  - <https://www.codesdope.com/course/data-structures-red-black-trees/>
+  - <https://doctrina.org/maximum-height-of-red-black-tree.html>
   - W4-2
 - operation：先做 2-3-4 再轉成 Red-Black
 
 #### AA Tree
-- inerative visualization 
-https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html
+- interactive visualization   
+<https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html>
 - Red-Black Tree but left-child can't be red
 - ![Image](https://i.imgur.com/DGFffzI.png)
 - level
@@ -711,6 +710,7 @@ https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html
   - rank block
     - rank_block(x) = $log^*x$
     - ![Image](https://i.imgur.com/ULYys6S.png)
+
 ### Tarjan's analysis of path compression
 - Ackermann's function $A_k(r)$
   - $A_k(r)=A_{k-1}^r(r)$
@@ -752,8 +752,8 @@ https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html
   - bad visits $\in O(n\alpha(n))$
 
 ## leftlist heap
-- interactive visualization
-https://people.ksp.sk/~kuko/gnarley-trees/Leftist.html
+- interactive visualization  
+<https://people.ksp.sk/~kuko/gnarley-trees/Leftist.html>
 - binary heap property
 - minheap property
   - 比兩個 children 大
@@ -804,8 +804,8 @@ https://people.ksp.sk/~kuko/gnarley-trees/Leftist.html
     - merge left & right subheaps
   - so merge, insert, delete 皆 $\in O(logn)$ 
 ## skew heap
-- interactive visualization
-https://people.ksp.sk/~kuko/gnarley-trees/Skew.html
+- interactive visualization  
+<https://people.ksp.sk/~kuko/gnarley-trees/Skew.html>
 - binary heap property
 - minheap or maxheap property
 - no NPL

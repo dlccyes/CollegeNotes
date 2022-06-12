@@ -3,9 +3,9 @@ parent: Money and Banking
 ---
 # Ch5 債券市場與利率的決定
 
-RET：
-- Rate of Return
-- RET^e^：預期報酬率
+- RET
+	- Rate of Return
+	- RET$^e$：預期報酬率
 
 ## 均衡利率的改變
 ### 需求線移動

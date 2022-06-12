@@ -13,6 +13,7 @@ parent: Money and Banking
   - 價值儲藏
     - 貨幣&公債皆能貯存價值，倒帳風險相同，公債報酬率又較高，為何人民多偏好貨幣？
       - 因為貨幣 liquidity 較高
+
 ## 貨幣良好特性
   - 可儲藏性 storability
   - 可攜帶性 portability：不同面額
@@ -22,12 +23,14 @@ parent: Money and Banking
   - 鑄幣利得 seigniorage
     - 商品貨幣時代：面額 - 本身（金屬）價值，繳給鑄幣廠繳給政府
     - 紙鈔時代：央行用貨幣買的 security 的收益 - 貨幣發行成本
+
 ## 可兌換紙幣 convertible paper money
   - 商品貨幣時代，銀行發行銀行券（即銀行本票），人民用貨幣買，銀行拿貨幣去投資
   - 中間商
     - 提供資訊：各銀行所發銀行券，因風險不同，流通價值不等於面額 → 中間商提供資訊
       - 促使銀行更謹慎
     - 買賣銀行券：賺價差，民眾節省交通成本&時間 → 風險降低（對於民眾）
+
 
 ## 信用貨幣本位制度
 - 不可兌換紙幣 inconvertible paper money

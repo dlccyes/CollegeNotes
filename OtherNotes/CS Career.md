@@ -13,8 +13,8 @@ layout: meth
 {:toc}
 </details>
 
-
 ## acronyms
+
 - OA = online assessment
 	- 1st stage in applying
 - HCOL = high cost of living
@@ -40,12 +40,15 @@ layout: meth
 	- what you do as a intern/contractor but full-time
 
 ## resources
+
 ### forums
+
 - Blind
 - r/cscareerquestions
 - r/csmajors
 
 ### websites
+
 - <https://www.levels.fyi/>
 	- company salaries
 - <https://www.glassdoor.com/>
@@ -59,6 +62,7 @@ layout: meth
 	- codewars
 
 ## good posts or threads
+
 - bonus skills
 	- <https://www.reveddit.com/v/csMajors/comments/qsz0wy/five_programming_skills_to_boost_your_resume_that/>
 		- SQL, Jira (agile), Git, Azure & AWS, Docker
@@ -79,7 +83,9 @@ layout: meth
 	- <https://www.teamblind.com/post/pQ43s0TA>
 
 ## building portfolio
+
 ### projects
+
 - solve real problems
 	- a story behind it
 - good code structure
@@ -98,11 +104,13 @@ layout: meth
 		- <https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwz0dx>
 
 ## resume
+
 - [r/cscq resume sharing](https://www.reddit.com/r/cscareerquestions/comments/e8narz/official_excellent_and_exemplary_resume_sharing/)
 - templates
 	- [Software Engineer Resume](https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf)
 
 ## applying preparation
+
 - <https://techinterviewhandbook.org/>
 	- author of Blind 75
 - DSA
@@ -110,6 +118,7 @@ layout: meth
 - system design
 
 ### leetcode
+
 - [Blind 75](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU)
 - patterns
 	- <https://leetcode.com/discuss/career/448285>
@@ -122,6 +131,7 @@ layout: meth
 	- [pdf](http://englishonlineclub.com/pdf/Cracking the Coding Interview - 189 Programming Questions and Solutions (6th Edition) [EnglishOnlineClub.com].pdf)
 
 ### system design
+
 - DDIA
 	- 簡中譯 <https://github.com/Vonng/ddia>
 	- [pdf](<https://github.com/Yang-Yanxiang/Designing-Data-Intensive-Applications/blob/master/Designing%20Data%20Intensive%20Applications.pdf>)
@@ -133,6 +143,7 @@ layout: meth
 	- from <https://leetcode.com/discuss/interview-question/system-design/1205825>
 
 ### devops
+
 - threads
 	- <https://www.reddit.com/r/devops/comments/eo5r1q>
 - question collections
@@ -143,7 +154,9 @@ layout: meth
 		- <https://www.fullstack.cafe/blog/kubernetes-interview-questions>
 
 ## interviews
+
 ### behavioral questions
+
 - resources
 	- <https://www.productmanagementexercises.com/interview-questions>
 - nugget
@@ -156,6 +169,7 @@ layout: meth
 - ![](https://s2.loli.net/2022/01/11/N1g7h4VZbfejpXE.png)
 
 #### Amazon
+
 - Amazon Leadership Principles
 	- resources
 		- [official](https://www.amazon.jobs/en/principles)
@@ -236,6 +250,7 @@ layout: meth
 		- "Customer Obsession"
 
 ### posts & threads
+
 - generic
 	- <https://angelswengineer.medium.com/b9262fccaa2> 
 	- <https://angelswengineer.medium.com/b1a52d97201a>
@@ -286,10 +301,12 @@ layout: meth
 	- <https://www.teamblind.com/post/hLE5CRYQ>
 
 ## linkedin
+
 - skill assessment answers
 	- <https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes>
 
 ## company details
+
 - [FAANG+ WLB](https://www.teamblind.com/post/Data-on-WLB-and-job-security-from-polls-on-FAANG-other-large-tech-companies-[x-post]-74bA5ySP)
 - WLB
 	- good WLB
@@ -309,6 +326,7 @@ layout: meth
 		- Microsoft
 
 ## cover letters
+
 - templates
 	- [Deedy Cover Letter](https://www.overleaf.com/latex/templates/deedy-cover-letter/yhdwrhyvqjwy)
 - <https://resumegenius.com/cover-letter-examples/software-engineer-cover-letter-sample>
