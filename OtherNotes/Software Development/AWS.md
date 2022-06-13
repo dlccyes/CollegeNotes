@@ -300,3 +300,7 @@ zip -d <your_package>.zip "<bad file>"
 If you find weird errors when using CLI, use append `--verbose` to the command to see what exactly is happening.
 
 Use `eb logs` to see the logs.
+
+#### related to venv
+
+If your instance's `var/log/eb-engine.log` said `[ERROR] An error occurred during execution of command [app-deploy] - [StageApplication]. Stop running the command. Error: chown <something>/venv/<something> no such file or directory`, even if your ignore the `venv`, see <https://stackoverflow.com/questions/61805345>.

@@ -5,7 +5,8 @@ parent:
 # Industrial Organization Final
 {: .no_toc }
 
-[Problems](IO-Final-Exam-0530.pdf)
+[Problems](IO-Final-Exam-0530.pdf)  
+[Solution](industrial_org_final_sol.pdf)
 
 <details open markdown="block">
   <summary>
@@ -14,6 +15,8 @@ parent:
 - TOC
 {:toc}
 </details>
+
+
 
 ## 1
 

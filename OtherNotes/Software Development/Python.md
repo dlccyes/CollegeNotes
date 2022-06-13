@@ -91,6 +91,14 @@ from config import *
 e.g. to import from parent's parent directory
 
 ```python
+import sys
+sys.path.append('../')
+import <your_file>
+```
+
+or
+
+```python
 
 import sys, os
 sys.path.insert(1, os.path.join(sys.path[0], '../..'))
@@ -362,9 +370,19 @@ while tiempo_prev != None:
 - return a hash map, counting each element of a list
 
 ## sort
-```py
-# [[10,16],[2,8],[1,6],[7,12]]
-sorted(points, key = lambda section: section[1]) # sort by second value
+
+### sort 2D list
+
+```python
+#x = [[10,16],[2,8],[1,6],[7,12]]
+sorted(x, key = lambda section: section[1]) # sort by second value
+```
+
+### sort dict by value
+
+```python
+# x={1: 1, 2: 2, 3: 0}
+sorted(x.items(), key=lambda item: item[1])
 ```
 
 ## infinity

@@ -24,7 +24,6 @@ parent: Hung-Yu
 	- Orchestrator Level
 	- Controller Level
 	- Computer Level
-- edge & fog is interchangeable
 
 ## Fog vs. MEC
 

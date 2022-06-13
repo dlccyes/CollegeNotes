@@ -76,6 +76,27 @@ https://tex.stackexchange.com/a/460857
 ```
 <https://www.overleaf.com/learn/latex/Tables>
 
+## case
+
+equals to different things in different conditions
+
+```tex
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+  \begin{equation}
+    X=
+    \begin{cases}
+      0, & \text{if}\ a=1 \\
+      1, & \text{otherwise}
+    \end{cases}
+  \end{equation}
+\end{document}
+```
+
+<https://tex.stackexchange.com/a/9068>
+
 ## environment
 ### local
 1. install a LaTeX distro
