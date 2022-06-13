@@ -284,25 +284,68 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- ![](https://i.imgur.com/EUyHR1b.png)
 	- ![](https://i.imgur.com/JgKHmyJ.png)
 		- no swapping
+	- 
 - pareto-based vs. totalitarian
-	- ![](https://i.imgur.com/ndz1Wr3.png)
-	- ![](https://i.imgur.com/OlOuja0.png)
-	- ![](https://i.imgur.com/uGRCq8e.png)
-	- ![](https://i.imgur.com/x4eENko.png)
-	- ![](https://i.imgur.com/uhYsaB0.png)
+	- 100, 6
+		- ![](https://i.imgur.com/ndz1Wr3.png)
+		- ![](https://i.imgur.com/OlOuja0.png)
+		- ![](https://i.imgur.com/uGRCq8e.png)
+	- 100, 10
+		- ![](https://i.imgur.com/ndHr6dP.png)
+		- runtime
+			- totalitarian 3.59s
+			- pareto 1.93s
+	- 100, 20
+		- ![](https://i.imgur.com/G1G4AMp.png)
+		- runtime
+			- totalitarian 4.02s
+			- pareto 2.74s
+	- 500, 6
+		- ![](https://i.imgur.com/x4eENko.png)
+		- ![](https://i.imgur.com/uhYsaB0.png)
+		- runtime
+			- totalitarian 2m+
+			- pareto 7s
+	- 500, 30
+		- ![](https://i.imgur.com/VsiioTN.png)
+		- runtime
+			- totalitarian 182.62s
+			- pareto 45.91s
+	- 500, 50
+		- ![](https://i.imgur.com/B5PsVGg.png)
+		- runtime
+			- totalitarian 142.67s
+			- pareto 148.32s
+- comparison of different mechanisms
+	- 100, 6
+		- ![](https://i.imgur.com/D6jZnOD.png)
+			- runtime
+				- orwellian 3.02s
+				- pareto 1.28s
+				- selfish greedy 1.79s
+		- ![](https://i.imgur.com/SrwY6ov.png)
+			- runtime
+				- orwellian 3.53s
+				- selfish best 2.94s
+				- selfish greedy 1.72s
+		- ![](https://i.imgur.com/tOn3A5w.png)
+			- runtime
+				- orwellian 2.58s
+				- pareto greedy 0.95s
+				- selfish greedy 1.73s
 - comparison of different methods
-	- ![](https://i.imgur.com/vEDL0ZX.png)
-	- ![](https://i.imgur.com/RTSYtK7.png)
-	- runtime
-		- best ~ exhaustive < random < totalitarian
-			- for same iteration
-			- because totalitarian has much more num of successful operations
-			- why random is significantly slower???
-	- system utility
-		- totalitarian > best ~ exhaustive ~ random
-		- coalition game method can reach about 70% of optimal system utility
-	- random increases more quickly at the start because of the implementation of swapping
-		- swap after done switching for the same user, and best & exhaustive will search for every other user to try to swap, which count as an iteration for each attempt, while random will just try swapping with a randomly user and go on
+- ![](https://i.imgur.com/vEDL0ZX.png)
+- ![](https://i.imgur.com/RTSYtK7.png)
+- runtime
+	- best ~ exhaustive < random < totalitarian
+		- for same iteration
+		- because totalitarian has much more num of successful operations
+		- why random is significantly slower???
+- system utility
+	- totalitarian > best ~ exhaustive ~ random
+	- coalition game method can reach about 70% of optimal system utility
+- random increases more quickly at the start because of the implementation of swapping
+	- swap after done switching for the same user, and best & exhaustive will search for every other user to try to swap, which count as an iteration for each attempt, while random will just try swapping with a randomly user and go on
 
 #### findings
 - some user may choose to use a server far away, instead of a nearer one
@@ -316,20 +359,20 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 - as num of users increase, the system utility difference between pareto-based & totalitarian becomes larger
 
 #### TODO
-- convergence proof
+- [x] convergence proof
 	- bound
 	- when will converge
 	- converge to where
-- edge server porpotional to users
+- [x] edge server proportional to users
 	- or open another vm
 - other schemes
-	- greedy select closest
+	- [x] greedy select closest
 	- others
-- fairness 
+- fairness
 	- some get very great utility while making some very bad
-- different random sequence comparison
-- below # user threshold same latency
-- time change of # users of each server (converge)
+- [x] different random sequence comparison
+- [x] below # user threshold same latency
+- [x] time change of # users of each server (converge)
 - real system
 	- update by time sequence
 	- preparation
@@ -337,7 +380,76 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 #### problems
 - definition of iteration?
 
-### multi-level tree
+### tree v2
+
+#### utility function
+
+- utility for user i in server j
+	- $u_{i, j}=\alpha ((L_{i,0}+T_c)-(L_{i,j}+T_E(k_j)))-\dfrac{C}{k_j}$
+- $T_E(k_j)$
+	- if $k_j<5$, $T_E(k_j)=T_e$
+	- else, $T_E(k_j)=\ln(k_jT_e)+1$
+
+#### algorithm
+
+- initialize spacial distribution of cloud, edge servers and users 
+- all users initially on cloud
+- in each iteration
+	- choose the next user following a random sequence
+		- when moved to the final of the sequence, shuffle again
+	- check the servers from the best utility to the worse and switch if possible
+		- or closest to the farthest
+	- randomly select another user, swap the 2 users is possible
+- termination
+	- if partition stable for a certain amount of iterations
+- switch/swap criterion
+	- orwellian
+		- if system will be better off
+	- pareto
+		- if itself will be better off and no one will be worse off
+	- selfish
+		- if itself will be better off
+
+#### results
+- different fixed random seed
+	- ![](https://i.imgur.com/srZK8kE.png)
+- different methods
+	- 100, 6
+		- ![](https://i.imgur.com/beDwB0I.png)
+		- runtime
+			- orwellian 7.58s
+			- pareto greedy utility 5.61s
+			- pareto greedy distance 5.74s
+			- pareto random 7.21s
+			- cloud 0s
+- different mechanisms
+	- 100, 6
+		- random select user
+			- ![](https://i.imgur.com/hVFqYjA.png)
+			- runtime
+				- orwellian 5.64s
+				- pareto 4.84s
+				- selfish 5.3s
+		- random user sequence
+			- ![](https://i.imgur.com/weRjBHU.png)
+			- runtime
+				- orwellian 5.04s
+				- pareto 3.74s
+				- selfish 3.17s
+	- 500, 20
+		- random select user
+			- ![](https://i.imgur.com/A8yJxjy.png)
+			- runtime
+				- orwellian 365.65s
+				- pareto 369.02s
+				- selfish 273.5s
+		- random user sequence
+			- ![](https://i.imgur.com/bsZ71fR.png)
+			- runtime
+				- orwellian 248.68s
+				- pareto 129.81s
+				- selfish 136.64s
+
 
 ### todo
 - convergence proof
