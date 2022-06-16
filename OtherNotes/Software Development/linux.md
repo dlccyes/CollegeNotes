@@ -210,7 +210,7 @@ sudo ifconfig <interface> down
 ```
 
 ### sniffing wireless packets
-[Sniffing Packets from Wireless Networks](Sniffing%20Packets%20from%20Wireless%20Networks.md)
+[Sniffing Packets from Wireless Networks](Sniffing%20Packets%20from%20Wireless%20Networks)
 
 ### tcpdump
 <https://homepage.ntu.edu.tw/~pollyhuang/teach/net-simtest-spring-08/slides.html>
@@ -735,7 +735,7 @@ PS1='\[\033[38;2;108;196;255m\]<archbtw>\[\033[0m\033[38;2;255;189;243m\]\u@\h\[
 w\[\033[0\]m$ '    
 ```
 
-see [ANSI](ANSI.md)  
+see [ANSI](ANSI)  
 
 <https://askubuntu.com/a/123306>
 
@@ -1233,6 +1233,28 @@ to correctly set your `LANG` variable
 see <https://wiki.archlinux.org/title/locale#Setting_the_locale>
 
 if the problem still persist, and only in KDE GUI session, go to system settings -> formats and set to en_US (and then restart session)
+
+### Firefox flatpak some videos laggy (H.264)
+
+Go to `var/lib/flatpak/app/org.mozilla.firefox/current/active/metadata` and search for `ffmpeg-full` and install the corresponding version of `ffmpeg-full`
+
+e.g.
+
+```
+flatpak install flathub org.freedesktop.Platform.ffmpeg-full/x86_64/21.08
+```
+
+if metadata is like this
+
+```
+[Extension org.freedesktop.Platform.ffmpeg-full]
+directory=lib/ffmpeg
+add-ld-path=.
+no-autodownload=true
+version=21.08
+```
+
+<https://bugzilla.mozilla.org/show_bug.cgi?id=1628203>
 
 ## good programs
 ### KDE apps

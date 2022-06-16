@@ -13,7 +13,7 @@ parent: Software Development
 {:toc}
 </details>
 
-easy database interaction and migration for [Python](Python.md)
+easy database interaction and migration for [Python](Python)
 
 ## SQLAlchemy
 You can use its own ORM or directly use SQL queries to interact with database with SQLAlchemy.

@@ -17,6 +17,10 @@ parent:
 </details>
 
 
+## score
+
+- me: 89
+- AVG: 68.64, SD: 15.81, MED: 70
 
 ## 1
 

@@ -64,7 +64,7 @@ sudo apt-get install -y postfix
 ```  
 Internet Site → Ok
 
-install [Gitlab](Gitlab.md)    
+install [Gitlab](Gitlab)    
 official doc: <https://about.gitlab.com/install/#ubuntu>  
 ```
 curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash

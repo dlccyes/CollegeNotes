@@ -13,7 +13,7 @@ parent: Python
 {:toc}
 </details>
 
-easy [Python](Python.md) web framework
+easy [Python](Python) web framework
 
 ## resources
 - official doc

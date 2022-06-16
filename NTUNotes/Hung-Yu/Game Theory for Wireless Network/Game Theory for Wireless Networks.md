@@ -158,7 +158,7 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 - to simplify, only consider join/switch first
 	- no merge, split etc.
 - how to check every user and coalition and do operations?
-	- as in [Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing](Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing.md), select a user, get its coalition, randomly choose another coalition and see if it would change
+	- as in [Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing](Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing), select a user, get its coalition, randomly choose another coalition and see if it would change
 - steps
 	1. randomly select a user
 	2. get its coalition
@@ -284,7 +284,6 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- ![](https://i.imgur.com/EUyHR1b.png)
 	- ![](https://i.imgur.com/JgKHmyJ.png)
 		- no swapping
-	- 
 - pareto-based vs. totalitarian
 	- 100, 6
 		- ![](https://i.imgur.com/ndz1Wr3.png)
@@ -450,6 +449,15 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 				- pareto 129.81s
 				- selfish 136.64s
 
+#### todo
+
+- computation delay
+	- threshold + linear
+	- or see paper
+- difference between users
+	- weight of latency
+	- cost?
+	- other things
 
 ### todo
 - convergence proof
@@ -465,4 +473,4 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 		- poisson
 		- (partially) racalling mechanism
 	- different cloud providers?
-		- [Quality and Profit Assured Trusted Cloud Federation Formation - Game Theory Based Approach](Quality%20and%20Profit%20Assured%20Trusted%20Cloud%20Federation%20Formation%20-%20Game%20Theory%20Based%20Approach.md)
+		- [Quality and Profit Assured Trusted Cloud Federation Formation - Game Theory Based Approach](Quality%20and%20Profit%20Assured%20Trusted%20Cloud%20Federation%20Formation%20-%20Game%20Theory%20Based%20Approach)

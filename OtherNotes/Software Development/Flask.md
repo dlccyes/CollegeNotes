@@ -13,7 +13,7 @@ parent: Software Development
 {:toc}
 </details>
 
-lightweight [Python](Python.md) web framework
+lightweight [Python](Python) web framework
 
 ## sample
 ```
@@ -146,4 +146,4 @@ to link it, do
 ```
 
 ## database
-use [SQLAlchemy](SQLAlchemy.md)
+use [SQLAlchemy](SQLAlchemy)

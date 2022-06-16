@@ -412,11 +412,11 @@ ipython3 -c "% run something.ipynb"
 ```
 
 ## web
-- [Django](Django.md)
-- [Flask](Flask.md)
+- [Django](Django)
+- [Flask](Flask)
 
 ## Database interaction
-see [SQLAlchemy](SQLAlchemy.md)
+see [SQLAlchemy](SQLAlchemy)
 
 ## Troubleshooting
 ### /usr/bin/env: ‘python’: No such file or directory

@@ -24,13 +24,13 @@ has_children: true
 	- [BlameIt - Zooming in on Wide-area Latencies to a Global Cloud Provider](BlameIt%20-%20Zooming%20in%20on%20Wide-area%20Latencies%20to%20a%20Global%20Cloud%20Provider) S1-2
 - 2022.4.11
 	- [BlameIt - Zooming in on Wide-area Latencies to a Global Cloud Provider](BlameIt%20-%20Zooming%20in%20on%20Wide-area%20Latencies%20to%20a%20Global%20Cloud%20Provider) S3-5
-	- [Zmap](Zmap.md) S1-2
+	- [Zmap](Zmap) S1-2
 - 2022.4.18
-	- [Zmap](Zmap.md) S3-6
+	- [Zmap](Zmap) S3-6
 - 2022.4.25
-	- [Pokemon Go Project Poster](Pokemon%20Go%20Project%20Poster.md)
+	- [Pokemon Go Project Poster](Pokemon%20Go%20Project%20Poster)
 - 2022.5.2
-	- [Zmap](Zmap.md) S7
+	- [Zmap](Zmap) S7
 	- tcpdump labs
 - 2022.5.9
 	- set up environment for collecting traces
