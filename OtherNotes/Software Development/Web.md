@@ -31,3 +31,7 @@ parent: Software Development
 - free
 	- <https://my.freenom.com>
 		- tested, muy bueno
+
+## CORS
+
+You need to enable CORS on the server side for cross-origin requests to succeed. Note that **browsers will still block localhost** regardless.

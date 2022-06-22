@@ -34,8 +34,8 @@ Whenever you push code to your gitlab repo, gitlab's CI/CD pipeline would be tri
 		- build image and push to google container registry
 	- <https://ithelp.ithome.com.tw/articles/10266722?sc=iThomeR>
 		- build & push docker image to Gitlab container registry
-	- https://ikala.cloud/tutorials-kubernetes-engine-load-balancer/
-	- https://cloud.google.com/architecture/implementing-deployment-and-testing-strategies-on-gke#perform_a_rolling_update_deployment
+	- <https://ikala.cloud/tutorials-kubernetes-engine-load-balancer/>
+	- <https://cloud.google.com/architecture/implementing-deployment-and-testing-strategies-on-gke#perform_a_rolling_update_deployment>
 - troubleshooting
 	- Cannot connect to the Docker daemon at . Is the docker daemon running?
 		- <https://gitlab.com/gitlab-org/gitlab-runner/-/issues/4566#note_199261985>
@@ -234,57 +234,57 @@ Go to your gitlab repo and add `deployment.yaml`
 apiVersion: v1
 kind: Service
 metadata:
- name: app-service
+  name: app-service
 spec:
- selector:
- app: app-service
- type: LoadBalancer
- ports:
- - protocol: TCP
- name: app-80-80
- port: 80
- targetPort: 80
+  selector:
+    app: app-service
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    name: app-80-80
+    port: 80
+    targetPort: 80
 ---
 # Source: deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: app-deployment
+  name: app-deployment
 spec:
- replicas: 4
- strategy:
- type: RollingUpdate
- rollingUpdate:
- maxSurge: 1
- maxUnavailable: 1
- revisionHistoryLimit: 5
- selector:
- matchLabels:
- app: app-service
- template:
- metadata:
- labels:
- app: app-service
- spec:
- containers:
- - image: asia.gcr.io/<gcp_project_id>/<image_name>:latest
- name: app
- ports:
- - containerPort: 80
- name: app-port
- resources:
- requests:
- cpu: 50m
- memory: 50Mi
+  replicas: 4
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app: app-service
+  template:
+    metadata:
+      labels:
+        app: app-service
+    spec:
+      containers:
+      - image: asia.gcr.io/<gcp_project_id>/<image_name>:latest
+        name: app
+        ports:
+        - containerPort: 80
+          name: app-port
+        resources:
+          requests:
+            cpu: 50m
+            memory: 50Mi
 ```
-learn more about `deployment.yaml` [here](https://www.mirantis.com/blog/introduction-to-yaml-creating-a-kubernetes-deployment)
 
+learn more about `deployment.yaml` [here](https://www.mirantis.com/blog/introduction-to-yaml-creating-a-kubernetes-deployment)
 
 Pull sample codes from <https://github.com/dotnet/dotnet-docker/tree/main/samples/aspnetapp> and delete everything except `aspnetapp` &  `Dockerfile` & `aspnetapp.sln`.  
 (you can partial clone like [this](https://stackoverflow.com/a/43902478/15493213))  
 
 ## Install & register Gitlab Runner on GCP VM
-official doc: https://docs.gitlab.com/runner/install/linux-repository.html
+official doc: <https://docs.gitlab.com/runner/install/linux-repository.html>
 
 (go to your GCP VM)  
 
@@ -310,6 +310,7 @@ sudo gitlab-runner register \
   --tag-list "gke" \
   –-docker-privileged="true"
 ```
+
 - registration token can be found in (your gitlab repo) `Settings` → `CI/CD` → `Runners` → `Specific runners`
 - executor = `docker`
 - default docker image = `docker:19.03.12`

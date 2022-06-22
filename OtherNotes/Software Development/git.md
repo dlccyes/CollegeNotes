@@ -128,6 +128,7 @@ git reset --hard      # Rewrite git's index to pick up all the new line endings.
 	- <https://blog.opasschang.com/confusing-git-autocrlf/>
 
 ## commit related
+
 ### delete all commits
 `git update-ref -d HEAD`
 
@@ -263,7 +264,7 @@ ref:
 ### create branch
 
 ```
-git branch -b <branch_name>
+git checkout -b <branch_name>
 ```
 
 ### delete branch
@@ -289,12 +290,38 @@ git branch -u remote/branch
 ```
 <https://stackoverflow.com/a/23458073/15493213>
 
+
+### merge branch
+
+To merge `branch_1` into `branch_2`
+
+```
+# in branch_2
+git merge banch_1
+```
+
 ### copy everything from another branch to current branch
 ```
 git checkout <other_branch> .
 ```
 
 <https://stackoverflow.com/a/7188232/15493213>
+
+### push to another branch
+
+Say you're on `branch_1` and want to push to `branch_2`
+
+```
+git push <remote> branch_1:branch_2
+```
+
+or
+
+```
+git push <remote> HEAD:branch_2
+```
+
+<https://stackoverflow.com/questions/13897717>
 
 ## remote related
 ### check remote

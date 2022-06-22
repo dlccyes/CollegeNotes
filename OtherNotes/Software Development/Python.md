@@ -1,3 +1,4 @@
+
 ---
 layout: meth
 parent: Software Development
@@ -196,8 +197,7 @@ python3 -m http.server
 ## exec
 to use in function, use `exec(string, globals())`
 
-## function
-### inputs
+## inputs
 - `*args` -> unpack a list/tuple of args
 - `**args` -> unpack a dict of args
 
@@ -249,6 +249,16 @@ with open(inputfile, 'r') as file_in:
 ```py
 cred = f'{clientID}:{clientSecret}'
 b64_cred = base64.b64encode(cred.encode('ascii')).decode('ascii')
+```
+
+## trace exceptions
+
+```python
+import traceback
+try:
+	# something
+except:
+	print(traceback.format_exc())
 ```
 
 ## string

@@ -81,6 +81,8 @@ layout: meth
 - resume
 	- <https://chonyy.medium.com/f1dcb67e4798>
 	- <https://www.teamblind.com/post/pQ43s0TA>
+- salaries of Taiwan & US 
+	- <https://docs.google.com/spreadsheets/d/1woaGveprl4eS-UNUvbt8JD8mSSgqad2tq3JzM9TU_cw/>
 
 ## building portfolio
 

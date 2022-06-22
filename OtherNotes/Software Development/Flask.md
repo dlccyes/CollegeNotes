@@ -67,7 +67,8 @@ def page_not_found(e):
 ```
 
 ## CORS
-To allow request from another origins, use `flask_cors`.
+
+To allow request from another origins, use `flask_cors`. Note that browsers will still block `localhost`. See <https://stackoverflow.com/questions/10883211>.
 
 Install `flask-cors`
 
