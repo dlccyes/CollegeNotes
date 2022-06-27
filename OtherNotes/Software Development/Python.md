@@ -244,9 +244,28 @@ with open(inputfile, 'r') as file_in:
     matrix = file_in.readlines()
 ```
 
+## yaml
+
+For single document:
+
+```python
+import yaml
+with open('deployment.yaml', 'r') as f:
+    deploy = yaml.safe_load(f)
+```
+
+For multiple document combined (with `---` seperator, see [this](https://stackoverflow.com/questions/47593695/)):
+
+```python
+import yaml
+with open('deployment.yaml', 'r') as f:
+    deploy = list(yaml.safe_load_all(f))
+```
+
 ## encode
 ### encode to base 64
-```py
+
+```python
 cred = f'{clientID}:{clientSecret}'
 b64_cred = base64.b64encode(cred.encode('ascii')).decode('ascii')
 ```
@@ -263,7 +282,8 @@ except:
 
 ## string
 ### split
-```
+
+```python
 import re
 old = 'I am, not, you! Fuck!'
 new = re.split('[,\s!]', old)
@@ -274,24 +294,24 @@ new = re.split(', | |!')
 
 ## convert
 ### str to json
-```py
+```python
 import json
 json.loads(str)
 ```
 
 ## datetime
-```
+```python
 from datetime import datetime
 ```
 
 ### to string
 convert date & time now to iso format string
-```
+```python
 datetime.now().isoformat()
 ```
 
 convert iso format string to datetime object
-```
+```python
 datetime.fromisoformat(str)
 ```
 
@@ -317,25 +337,25 @@ datetime.now(timezone(timedelta(hours=8)))
 ```
 
 ### timedelta
-```
+```python
 datetime.timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0)
 ```
 
-```
+```python
 from datetime import timedelta
 ```
 
 subtract 2 datetime objects to get a timedelta object
 
 example
-```
+```python
 haha = datetime.timedelta(days=1, seconds=20, microseconds=610333)
 haha.days # -> 1
 haha.seconds # -> 20
 haha.microseconds # -> 610333
 ```
 to get total passed time
-```
+```python
 # in days
 haha/timedelta(days=1)
 # in seconds
@@ -367,7 +387,7 @@ while tiempo_prev != None:
 
 ### OrderedDict
 - remember the insertion order
-- great for implementing LRU
+- great for implementing LRU, see [Leetcode 146. LRU Cache](https://leetcode.com/problems/lru-cache/)
 
 ### deque
 - a double sided simple queue, O(1) for enqueuing & dequeuing from both sides

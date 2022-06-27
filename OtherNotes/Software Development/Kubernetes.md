@@ -1,6 +1,7 @@
 ---
 layout: meth
 parent: Software Development
+alias: k8s
 ---
 
 # Kubernetes
@@ -42,7 +43,7 @@ test
 kubectl version --client
 ```
 
-## config file
+## apply config file
 
 Write config files in yaml.
 
@@ -67,15 +68,31 @@ kubectl apply -f <config_file>.yaml
 
 [create vs. apply](https://stackoverflow.com/questions/47369351/)
 
+## labels
+
+Labels are key-value pair. You can assign labels via command line or define in yaml. See [the doc](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/).
+
+### roles
+
+Role is just another label with key = `kubernetes.io/role` and value = `<your_role>`.
+
 ## node related
 
 ### show nodes
 
+
 ```
+# show ip
 kubectl get nodes -o wide
+# show labels
+kubectl get nodes --show-labels
 ```
 
-including IPs
+### assign pod to node
+
+<https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/>
+
+label your node -> specify `nodeSelector` in your yaml
 
 ## pod related
 
@@ -254,6 +271,25 @@ kubectl get nodes
 	- `kind get nodes`
 - cluster detals
 	- `kubectl cluster-info --context kind-kind`
+
+### config file
+
+[doc](https://kind.sigs.k8s.io/docs/user/configuration/)
+
+```yaml
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: test
+nodes:
+- role: control-plane
+- role: worker
+  kubeadmConfigPatches:
+  - |
+    kind: JoinConfiguration
+    nodeRegistration:
+      kubeletExtraArgs:
+        node-labels: "name=edge1"
+```
 
 ### create a local container registry
 
