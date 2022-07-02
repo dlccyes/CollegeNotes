@@ -246,6 +246,8 @@ with open(inputfile, 'r') as file_in:
 
 ## yaml
 
+### load
+
 For single document:
 
 ```python
@@ -261,6 +263,65 @@ import yaml
 with open('deployment.yaml', 'r') as f:
     deploy = list(yaml.safe_load_all(f))
 ```
+
+### dump
+
+`sort_keys=False` to preserve insertion order ([related Github issue](https://github.com/yaml/pyyaml/issues/110#issuecomment-500921155))
+
+single document
+
+```python
+import yaml
+deployment_yml = dict()
+with open('deployment.yaml', 'w') as f:
+    yaml.dump(deployment_yml, f, sort_keys=False)
+```
+
+multiple document
+
+```python
+import yaml
+deployment_yml = list() # list of dicts
+with open('deployment.yaml', 'w') as f:
+    yaml.dump_all(deployment_yml, f, sort_keys=False)
+```
+
+### block literals
+
+block literals is multi-line string
+
+e.g.
+
+```yaml
+  - |
+    kind: JoinConfiguration
+    nodeRegistration:
+      kubeletExtraArgs:
+        node-labels: "name=edge1"
+```
+To create a yml containing this:
+
+```python
+import yaml
+
+class folded_unicode(str): pass
+class literal_unicode(str): pass
+
+def folded_unicode_representer(dumper, data):
+    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
+def literal_unicode_representer(dumper, data):
+    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
+
+data = {'literal': literal_unicode(
+		'kind: JoinConfiguration\n'
+		'nodeRegistration:\n'
+		'  kubeletExtraArgs:\n'
+		'    node-labels: "name=edge"\n'
+}
+yaml.dump(data)
+```
+
+<https://stackoverflow.com/a/7445560/15493213>
 
 ## encode
 ### encode to base 64

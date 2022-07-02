@@ -134,6 +134,43 @@ e.g. to add yourself to docker group
 sudo usermod -aG docker $USER
 ```
 
+## disk & storage related
+
+### file/dir size 
+
+current dir size
+
+```
+du . -sh
+```
+
+all dir/file with depth = 1 under current directory sorted
+
+```
+du . -had1 | sort -h
+```
+
+### partition size
+
+all (mounted) partitions
+
+```
+df -h
+```
+
+the partition the directory is at
+
+```
+df . -h
+```
+
+### view all partitions
+
+```
+df -h
+lsblk
+```
+
 ## networking
 ### show network interfaces
 show all network interfaces
@@ -323,6 +360,22 @@ You can install `aa-complain` by
 sudo apt install apparmor-utils
 ```
 <https://blog.karatos.in/a?ID=01100-68ee7a10-9f07-412a-aa93-e67032182326>
+
+## find things
+
+### find text under a directory
+
+```
+grep -rnw  . -e <pattern>
+```
+
+<https://stackoverflow.com/a/16957078/15493213>
+
+### find files under a directory
+
+```
+find .
+```
 
 ## package related
 ### apt

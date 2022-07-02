@@ -290,7 +290,7 @@ layout: meth
 	- Amazon
 		- <https://www.dcard.tw/f/job/p/236316977>
 		- <https://jackkuo.org/post/台灣亞馬遜實習心得/>
-- FAANG
+- FAANG+
 	- <https://reddit.com/eitna9> (removed)
 		- all FAAMG detailed interview process 
 		- [uddit archive](https://www.unddit.com/r/cscareerquestions/comments/eitna9/processes_at_each_company_at_least_what_i_remember/)
@@ -299,6 +299,7 @@ layout: meth
 		- <https://angelswengineer.medium.com/32fe51382005> (幹話)
 	- Amazon behavioral questions (Leadership Principles)
 		- <https://www.reddit.com/r/jobsearchhacks/comments/g2iv42>
+	- <https://www.ptt.cc/bbs/Soft_Job/M.1656312014.A.7C6.html>
 - offers
 	- <https://www.teamblind.com/post/hLE5CRYQ>
 

@@ -60,6 +60,13 @@ start
 sudo systemctl start docker
 ```
 
+## image types
+
+<https://medium.com/swlh/62171ed4531d>
+
+- slim: smaller image
+- alpine: even smaller image
+
 ## init
 
 ### make docker start on boot
@@ -101,7 +108,7 @@ docker exec -it <container_name> /bin/sh
 
 <https://github.com/docker/for-linux/issues/246#issuecomment-455010125>
 
-### run a docker container
+### run a docker container from an image
 
 ```
 docker run --name <container_name> -d  <image_name/id>
@@ -283,7 +290,9 @@ Use `opencv-python-headless` instead of `opencv-python`
 
 <https://stackoverflow.com/a/69655111/15493213>
 
-### flask doesn't print things
+### python app doesn't print things
+
+Use `python3 -u <python-file>` instead of `python3 <python-file>`. If still nothing, add the `PYTHONUNBUFFERED` variable.
 
 **with docker run**
 

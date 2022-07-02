@@ -17,9 +17,9 @@ alias: k8s
 
 ## resources
 
-[Setting up local Kubernetes Cluster with Kind](https://cloudyuga.guru/hands_on_lab/kind-k8s)
-
-<https://cwhu.medium.com/7431c5f96c3e>
+- [Setting up local Kubernetes Cluster with Kind](https://cloudyuga.guru/hands_on_lab/kind-k8s)
+- <https://cwhu.medium.com/7431c5f96c3e>
+- <https://godleon.github.io/blog/Kubernetes/k8s-Deployment-Overview/>
 
 ## install kubectl
 
@@ -76,6 +76,11 @@ Labels are key-value pair. You can assign labels via command line or define in y
 
 Role is just another label with key = `kubernetes.io/role` and value = `<your_role>`.
 
+## commands
+
+- get component status
+	- `kubectl get cs` ([deprecated](https://github.com/kubernetes/kubernetes/issues/93342))
+
 ## node related
 
 ### show nodes
@@ -86,6 +91,9 @@ Role is just another label with key = `kubernetes.io/role` and value = `<your_ro
 kubectl get nodes -o wide
 # show labels
 kubectl get nodes --show-labels
+# show nodes with certain label
+kubectl get nodes -l <key>=<value>
+
 ```
 
 ### assign pod to node
@@ -93,6 +101,8 @@ kubectl get nodes --show-labels
 <https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/>
 
 label your node -> specify `nodeSelector` in your yaml
+
+Note that in Deployment, it should be in `template.spec`
 
 ## pod related
 
@@ -175,13 +185,15 @@ kubectl logs <pod_name>
 kubectl get pod
 ```
 
-more info (like ip)
+more info (like ip & node run on)
 
 ```
 kubectl get pods -o wide
 ```
 
 ## deployment
+
+`spec.template` is the definition of the pod
 
 ### update deployment
 
@@ -276,12 +288,20 @@ kubectl get nodes
 
 [doc](https://kind.sigs.k8s.io/docs/user/configuration/)
 
+Use `InitConfiguration` to label 1st control plane node, `JoinConfiguration` for others. See [Kubeadm Config Patches](https://kind.sigs.k8s.io/docs/user/configuration/#kubeadm-config-patches) ([related Github issue](https://github.com/kubernetes-sigs/kind/issues/1722)).
+
 ```yaml
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 name: test
 nodes:
 - role: control-plane
+  kubeadmConfigPatches:
+  - |
+    kind: InitConfiguration
+    nodeRegistration:
+      kubeletExtraArgs:
+        node-labels: "name=edge1"
 - role: worker
   kubeadmConfigPatches:
   - |
@@ -291,11 +311,29 @@ nodes:
         node-labels: "name=edge1"
 ```
 
+
 ### create a local container registry
 
 create a local docker registry and a kind cluster
 
 <https://kind.sigs.k8s.io/docs/user/local-registry/>
+
+### troubleshooting
+
+#### error when creating a cluster with many nodes
+
+If you can successfully create a cluster with less nodes, then the problem might be [Pod errors due to “too many open files”](https://kind.sigs.k8s.io/docs/user/known-issues/#pod-errors-due-to-too-many-open-files).
+
+To solve it, go to `/etc/sysctl.conf` and add/update the following lines:
+
+```
+fs.inotify.max_user_watches = 524288
+fs.inotify.max_user_instances = 512
+```
+
+In my case, my `fs.inotify.max_user_watches` is already `1048576`, so I only add the second line.
+
+[related github issue](https://github.com/kubernetes-sigs/kind/issues/2744#issuecomment-1127808069)
 
 ## using webcam
 
