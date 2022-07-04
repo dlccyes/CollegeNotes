@@ -127,6 +127,7 @@ git reset --hard      # Rewrite git's index to pick up all the new line endings.
 	- <https://www.edwardthomson.com/blog/advent_day_1_gitattributes_for_text_files.html>
 	- <https://blog.opasschang.com/confusing-git-autocrlf/>
 
+
 ## commit related
 
 ### delete all commits
@@ -345,6 +346,24 @@ git branch --set-upstream-to origin2/master
 ```
 <https://stackoverflow.com/a/32469272/15493213>
 
+### ssh method
+
+You can use the remote starting with `git@` and add the ssh public key to your github repo to use ssh method.
+
+1. generate ssh key ([doc](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key))
+	1. open git bash / linux terminal
+	2. `ssh-keygen -t ed25519 -C <email>`
+	3. press enter to til the end
+	4. `eval ssh-agent -s`
+		- should return `Agent pid <a number>`
+	5. copy the content in `~/.ssh/id_ed25519.pub`
+2. add it your github repo github ([doc](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account))
+	1. go to your repository
+	2. settings
+	3. deploy keys
+	4. add deploy key
+	5. paste your key
+	6. check "allow write"
 
 ## tag
 <https://git-scm.com/book/en/v2/Git-Basics-Tagging>

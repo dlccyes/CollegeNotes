@@ -26,3 +26,13 @@ parent: OtherNotes
 5. restart
 
 <https://www.tomshardware.com/how-to/change-taskbar-icon-size-windows-11>
+
+## good programs
+
+### clipboard manager
+
+Ditto
+
+### screenshot
+
+Snipaste
