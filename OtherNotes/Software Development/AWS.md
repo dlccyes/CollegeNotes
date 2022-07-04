@@ -16,6 +16,10 @@ parent: Software Development
 ## Free Services
 <https://aws.amazon.com/free/>
 
+**view free tier usage**
+
+Cost Management -> Billing Console -> Free Tier
+
 ## Get Credentials
 Create IAM user (& group)  
 <https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html#getting-started_create-admin-group-console>

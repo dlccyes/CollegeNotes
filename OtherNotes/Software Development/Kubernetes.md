@@ -80,6 +80,10 @@ Role is just another label with key = `kubernetes.io/role` and value = `<your_ro
 
 - get component status
 	- `kubectl get cs` ([deprecated](https://github.com/kubernetes/kubernetes/issues/93342))
+- show info about a pod
+	- `kubectl get pod <pod_name>`
+- show info about a node
+	- `kubectl get node <node_name>`
 
 ## node related
 
@@ -353,3 +357,27 @@ In my case, my `fs.inotify.max_user_watches` is already `1048576`, so I only add
 ```
 
 <https://stackoverflow.com/a/59291859/15493213>
+
+## Troubleshooting
+
+use `describe` on the failing node/pod to see more info first
+
+### 1 node(s) had taint {node-role.kubernetes.io/master:  }, that the pod didn't tolerate
+
+Scenario: You make a pod run on a control plane / master node but it keeps pending. When you describe it, `1 node(s) had taint {node-role.kubernetes.io/master: }, that the pod didn't tolerate` is shown.
+
+Solution: Remove the taint on the node
+
+```
+kubectl taint nodes --all node-role.kubernetes.io/master-
+# or
+kubectl taint nodes <node_name> node-role.kubernetes.io/master-
+```
+
+the `-` is for removing
+
+ref:
+
+- <https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/>
+- <https://stackoverflow.com/q/59484509/>
+- <https://stackoverflow.com/a/59491824/15493213>
