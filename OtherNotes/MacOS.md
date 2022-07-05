@@ -15,7 +15,24 @@ parent: Othernotes
 </details>
 
 
-## good programs
+
+## shortcuts
+
+Some keyboard shortcuts can be changed, some can't. Go to Settings -> Keyboard -> Shortcuts to view the changeable ones.
+
+### command+Q
+
+Command + Q is an unchangeable shortcut key which will close an application. You can't remove it, but you can remap it to harmless stuffs (like Show Notification Center).
+
+<https://apple.stackexchange.com/questions/78948/>
+
+## programs
+
+### open VsCode from terminal
+
+<https://stackoverflow.com/a/36882426/15493213>
+
+command pallette -> Shell Command: Install 'code' command in PATH
 
 ### windows snapper
 

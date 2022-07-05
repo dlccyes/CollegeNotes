@@ -348,7 +348,7 @@ git branch --set-upstream-to origin2/master
 
 ### ssh method
 
-You can use the remote starting with `git@` and add the ssh public key to your github repo to use ssh method.
+You can use the remote starting with `git@` and add the ssh public key to your github repo (or account) to use ssh method.
 
 1. generate ssh key ([doc](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key))
 	1. open git bash / linux terminal
@@ -358,11 +358,11 @@ You can use the remote starting with `git@` and add the ssh public key to your g
 		- should return `Agent pid <a number>`
 	5. copy the content in `~/.ssh/id_ed25519.pub`
 2. add it your github repo github ([doc](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account))
-	1. go to your repository
+	1. go to your repository (or account)
 	2. settings
-	3. deploy keys
-	4. add deploy key
-	5. paste your key
+	3. deploy keys (or ssh key)
+	4. add key
+	5. paste your public key
 	6. check "allow write"
 
 ## tag
