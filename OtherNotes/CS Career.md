@@ -161,6 +161,7 @@ layout: meth
 
 - resources
 	- <https://www.productmanagementexercises.com/interview-questions>
+	- <https://www.linkedin.com/interview-prep/>
 - nugget
 	- summary about the event
 - STAR method

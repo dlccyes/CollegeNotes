@@ -768,7 +768,10 @@ xdg-mime query filetype <path/to/file>
 some nice dotfiles
 - <https://github.com/Anomic-cr/i3_dotfiles>
 
-## change user@host color and stuff
+## change user@host path, color and stuff
+
+### bash
+
 settings located in `~/.bashrc`  
 note that enclosing ANSI with `\[` `\]` es necesario for it to behave normally
 
@@ -779,7 +782,7 @@ PS1='\u@\h:\w\$ '
 # 8-bit color
 PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 # 24-bit color
-PS1='\[\033[38;2;255;189;243\]m\u@\h\[\033[0m\]:\[\033[01;34m\]\w\[\033[0m\]$ '
+PS1='\[\033[38;2;255;189;243\]m\u@\h\[\033[0m\]:\[\033[01;34m\]\w\[\eiddcckvribulvvebkvchfcgiidccfdnunkvgnvtingk033[0m\]$ '
 # with archbtw
 PS1='\[\033[48;2;108;196;255m\033[38;2;0;0;0m\] archbtw \[\033[0m\] \[\033[38;2;255;189;243m\]\u@\h\[\033[0  
 m\]:\[\033[01;34m\]\w\[\033[0m\]$ '
@@ -791,6 +794,21 @@ w\[\033[0\]m$ '
 see [ANSI](ANSI)  
 
 <https://askubuntu.com/a/123306>
+
+### zsh
+
+in `.zshrc`
+
+```sh
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+autoload -U colors && colors
+PROMPT="%{$fg_bold[green]%}%n@%m:%{$fg[cyan]%}%d$ "
+```
+
+- <https://stackoverflow.com/a/69537767/15493213>
+- <https://stackoverflow.com/a/2534676/15493213>
 
 ## grub menu customization
 - `sudo apt install grub-customizer` for GUI

@@ -35,3 +35,19 @@ parent: Software Development
 ## CORS
 
 You need to enable CORS on the server side for cross-origin requests to succeed. Note that **browsers will still block localhost** regardless.
+
+## testing API
+
+- [Postman](https://www.postman.com/)
+	- create API request
+- [Webhook.site](https://webhook.site/)
+	- give you an endpoint for request
+	- show the requests details
+
+## CICD
+
+- Github Action
+- Gitlab CI/CD
+- Jenkins
+- Screwdriver
+	- made by Yahoo

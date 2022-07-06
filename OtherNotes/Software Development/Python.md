@@ -19,14 +19,42 @@ parent: Software Development
 
 ### create
 
-- for every libraries you have
-	- `python -m pip freeze > requirements.txt`
-- for a specific directory
-	- `pipreqs /path/to/project`
-		- `pip3 install pipreqs` to install
-			- `export PATH=$PATH:~/.local/bin` if have xxx not found error
-	- <https://stackoverflow.com/a/31684470/15493213>
-	
+for every libraries you have
+
+```
+python -m pip freeze > requirements.txt
+```
+
+Use `pipreqs` for a specific directory
+
+Install
+
+```
+pip3 install pipreqs
+```
+
+Use
+
+```
+pipreqs /path/to/project
+```
+
+If the command is not found, add python package path to your path
+
+```
+export PATH=$PATH:~/.local/bin
+```
+
+<https://github.com/bndr/pipreqs/issues/69#issuecomment-298758892>
+
+If still not found, run with python instead
+
+```
+python3 -m pipreqs.pipreqs
+```
+
+<https://stackoverflow.com/a/68965523/15493213>
+
 ### use
 ```
 pip3 install -r requirements.txt
@@ -188,12 +216,6 @@ ax.xaxis.set_major_formatter(md.DateFormatter('%H:%M'))
 <https://stackoverflow.com/a/69333777/15493213>  
 <https://matplotlib.org/stable/api/dates_api.html#matplotlib.dates.MinuteLocator>
 
-## simple web server
-
-```
-python3 -m http.server
-```
-
 ## exec
 to use in function, use `exec(string, globals())`
 
@@ -238,10 +260,22 @@ print(ans) # output 1+2+5 = 8
 
 <https://stackoverflow.com/a/53973651/15493213>
 
-## read file
-```py
+## file
+
+### read file
+
+```python
 with open(inputfile, 'r') as file_in:
     matrix = file_in.readlines()
+```
+
+### read file to dict
+
+```python
+import json
+
+with open(inputfile, 'r') as f:
+    _json = json.loads(f.read())
 ```
 
 ## yaml
@@ -500,6 +534,76 @@ ipynb-py-convert <in.py> <out.ipynb>
 ### run ipynb
 ```
 ipython3 -c "% run something.ipynb"
+```
+
+## environmental variables
+
+Use python-dotenv.
+
+Intall
+
+```
+pip3 install python-dotenv
+```
+
+Usage
+
+```
+# .env
+PASSWORD=admin
+```
+
+```python
+from dotenv import load_dotenv
+import os
+load_dotenv() # load .env
+password = os.getenv('PASSWORD')
+```
+
+## dealing with URL
+
+use `urllib`
+
+### convert dict to query string
+
+use `urllib.parse.urlencode`
+
+```python
+import urllib.parse
+
+qjson = {'id': 1, 'medium': 'reddit'}
+query = urllib.parse.urlencode(qjson)
+```
+
+## requests
+
+```
+pip3 install requests
+```
+
+### post
+
+```python
+import requests
+import json
+data = dict()
+request.post(<url>, data=json.dumps(data))
+```
+
+### response
+
+```python
+import requests
+import
+res = request.post(<url>, <data>)
+status_code = res.status_code
+res_body = json.loads(res.text)
+```
+
+## simple web server
+
+```
+python3 -m http.server
 ```
 
 ## web
