@@ -5,6 +5,15 @@ parent: Software Development
 
 # VsCode
 ## good settings 
+
+### stop python (pylance) auto imports things
+
+<https://stackoverflow.com/a/71607251/15493213>
+
+```
+"python.analysis.autoImportCompletions": false
+```
+
 ### selection & search highlight
 ```
 "workbench.colorCustomizations": {

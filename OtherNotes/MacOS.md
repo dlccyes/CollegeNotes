@@ -26,6 +26,12 @@ Command + Q is an unchangeable shortcut key which will close an application. You
 
 <https://apple.stackexchange.com/questions/78948/>
 
+## install/remove applications
+
+After installing, move the `.app` to `Applications` directory.
+
+To remove an app, go to `Applications` and move it to trash.
+
 ## programs
 
 ### open VsCode from terminal
@@ -53,3 +59,7 @@ free + search + image + popup with shortcut (sadly no pin)
 ### screenshot
 
 Snipaste
+
+### music player in control center
+
+[MiniPlay for Spotify & iTunes](https://apps.apple.com/us/app/miniplay-for-spotify-itunes/id936243210)

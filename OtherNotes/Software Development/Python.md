@@ -15,6 +15,20 @@ parent: Software Development
 {:toc}
 </details>
 
+## pip
+
+to upgrade all python packages, use `pip-review`
+
+```
+pip3 install pip-review
+```
+
+```
+pip-review --local --auto
+```
+
+<https://stackoverflow.com/a/16269635/15493213>
+
 ## requirements.txt
 
 ### create
@@ -276,6 +290,8 @@ import json
 
 with open(inputfile, 'r') as f:
     _json = json.loads(f.read())
+    # or
+    # _json = json.load(f)
 ```
 
 ## yaml
@@ -376,6 +392,7 @@ except:
 ```
 
 ## string
+
 ### split
 
 ```python

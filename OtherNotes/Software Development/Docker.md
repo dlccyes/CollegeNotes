@@ -111,8 +111,12 @@ docker exec -it <container_name> /bin/sh
 ### run a docker container from an image
 
 ```
-docker run --name <container_name> -d  <image_name/id>
+docker run --name <container_name> -d <image_name/id>
+# if it exit immediately, try
+docker run --name <container_name> -dit <image_name/id>
 ```
+
+<https://stackoverflow.com/a/31143261/15493213>
 
 with port forwarding
 
@@ -318,3 +322,13 @@ refs
 
 - <https://stackoverflow.com/questions/29663459/>
 - <https://stackoverflow.com/questions/59812009/>
+
+### docker: Error response from daemon: No command specified.
+
+supply a command (e.g. `/bin/bash`) after your `docker run` command
+
+### qemu-x86_64: Could not open '/lib64/ld-linux-x86-64.so.2': No such file or directory
+
+add `--platform linux/amd64` when doing `docker run`
+
+<https://stackoverflow.com/a/71611002/15493213>

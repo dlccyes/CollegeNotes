@@ -528,6 +528,20 @@ install
 yay -S <package>
 ```
 
+### yum
+
+#### yum-config-manager
+
+to use `yum-config-manager`
+
+```
+yum install yum-utils
+```
+
+#### see all repos
+
+go to `/etc/yum.repos.d/`
+
 ### where is your file / command
 locate the binary, source, and manual page files for a command
 ```
@@ -804,7 +818,7 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 autoload -U colors && colors
-PROMPT="%{$fg_bold[green]%}%n@%m:%{$fg[cyan]%}%d$ "
+PROMPT="%{$fg_bold[green]%}%n@%m:%{$fg[cyan]%}%d$ %{$fg[white]%}"
 ```
 
 - <https://stackoverflow.com/a/69537767/15493213>
@@ -1607,6 +1621,12 @@ check status
 ```
 tlp-stat -s
 ```
+
+### onlydesktop - office suite
+
+<https://www.onlyoffice.com/download-desktop.aspx>
+
+Not as featureful but looks very alike to Ms Office.
 
 ### alacritty 
 #### install

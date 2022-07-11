@@ -298,7 +298,7 @@ To merge `branch_1` into `branch_2`
 
 ```
 # in branch_2
-git merge banch_1
+git merge branch_1
 ```
 
 ### copy everything from another branch to current branch

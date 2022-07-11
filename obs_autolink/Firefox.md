@@ -20,4 +20,6 @@ parent: OtherNotes
 
 If you have yubikey and you encounter this popup telling you to enter some password, go to settings -> Security Devices -> OpenSC smartcard framework -> Unload
 
+Note that you probably have to do this for every new desktop session.
+
 <https://bugzilla.redhat.com/show_bug.cgi?id=1742881#c23>
