@@ -29,6 +29,12 @@ pip-review --local --auto
 
 <https://stackoverflow.com/a/16269635/15493213>
 
+### remove package
+
+```
+pip3 uninstall <package>
+```
+
 ## requirements.txt
 
 ### create
@@ -188,6 +194,21 @@ ax.plot(x, np.sin(x))
 ax2.plot(x, np.cos(x), 'r:')
 ```
 
+### style
+
+```python
+plt.plot(<x_data>, <y_data>, marker='o', markersize=5, linestyle='None')
+```
+
+### legend
+
+```python
+plt.plot(<x_data>, <y_data>, label="line1")
+plt.plot(<x_data>, <y_data>, labe="line2")
+plt.legend()
+plt.plot()
+```
+
 ### axis
 #### label
 ```
@@ -198,7 +219,7 @@ plt.ylabel("something")
 
 #### axis interval
 y axis 20 intervals
-```
+```python
 import matplotlib.pyplot as plt
 ax = plt.gca()
 y_min, y_max = [int(i) for i in ax.get_ylim()]

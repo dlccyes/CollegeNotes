@@ -19,9 +19,21 @@ parent: Hung-Yu
 use [Game Theory](Game%20Theory) to solve resource allocation problems in wireless networking systems
 
 ## papers
+
+### coalition game papers
 - [Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing](Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing)
+	- coalition tradeoff
+		- more choice but more users in same coalition -> more noise
 - [Opportunistic Data Collection in Cognitive Wireless  Sensor Networks - Air–Ground Collaborative Online Planning](Opportunistic%20Data%20Collection%20in%20Cognitive%20Wireless%20%20Sensor%20Networks%20-%20Air–Ground%20Collaborative%20Online%20Planning)
 - [Quality and Profit Assured Trusted Cloud Federation Formation - Game Theory Based Approach](Quality%20and%20Profit%20Assured%20Trusted%20Cloud%20Federation%20Formation%20-%20Game%20Theory%20Based%20Approach)
+
+### about edge server latency
+
+- [Latency Comparison of Cloud Datacenters and Edge Servers](https://ieeexplore.ieee.org/document/9322406)
+	- ![](https://i.imgur.com/xaoalkx.png)
+		- y-axis: % of requests that can be served under a certain latency
+		- 2 workload scenarios: high & low
+	- ![](https://i.imgur.com/atwCcBI.png)
 
 ## scenario 1
 ![](https://i.imgur.com/1xZKLPT.jpg)
@@ -379,7 +391,7 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 #### problems
 - definition of iteration?
 
-### tree v2
+### tree v2 logarithmic
 
 #### utility function
 
@@ -388,6 +400,16 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 - $T_E(k_j)$
 	- if $k_j<5$, $T_E(k_j)=T_e$
 	- else, $T_E(k_j)=\ln(k_jT_e)+1$
+
+$$
+  \begin{equation}
+    T_E(k_j)=
+    \begin{cases}
+      T_e, & \text{if}\ k_j<5 \\
+      \ln(k_jT_e)+1, & \text{otherwise}
+    \end{cases}
+  \end{equation}
+$$
 
 #### algorithm
 
@@ -449,17 +471,61 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 				- pareto 129.81s
 				- selfish 136.64s
 
+#### testbed
+
+![](https://i.imgur.com/mESHGKb.png)
+
+![](https://i.imgur.com/fcYft2u.png)
+![](https://i.imgur.com/0Et1Ci8.png)
+
+
 #### todo
 
 - computation delay
-	- threshold + linear
+	- [x] threshold + linear
 	- or see paper
 - difference between users
 	- weight of latency
 	- cost?
 	- other things
 
+### tree v2 linear
+
+#### utility function
+
+- utility for user i in server j
+	- $u_{i, j}=\alpha ((L_{i,0}+T_c)-(L_{i,j}+T_E(k_j)))-\dfrac{C}{k_j}$
+- $T_E(k_j)$
+	- if $k_j<5$, $T_E(k_j)=T_e$
+	- else, $T_E(k_j)=k_jT_e$
+
+$$
+  \begin{equation}
+    T_E(k_j)=
+    \begin{cases}
+      T_e, & \text{if}\ k_j<5 \\
+      k_jT_e, & \text{otherwise}
+    \end{cases}
+  \end{equation}
+$$
+
+#### results
+
+- different mechanisms
+	- 100, 6
+		- ![](https://i.imgur.com/6EDdXMI.png)
+			- runtime
+				- orwellian 2.34s
+				- pareto 1.15s
+				- selfish 1.48s
+		- 500, 20
+			- ![](https://i.imgur.com/NlwzKo1.png)
+				- orwellian 118.53s
+				- pareto 28.47s
+				- selfish 64.43s
+
 ### todo
+
 - convergence proof
 - extension
 	- edge server
