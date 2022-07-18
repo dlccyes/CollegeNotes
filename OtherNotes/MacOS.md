@@ -32,6 +32,25 @@ After installing, move the `.app` to `Applications` directory.
 
 To remove an app, go to `Applications` and move it to trash.
 
+
+## Homebrew
+
+package manager for MacOS
+
+### update & upgrade packages
+
+```
+brew update
+brew upgrade
+```
+
+
+### autoremove
+
+```
+brew autoremove
+```
+
 ## programs
 
 ### open VsCode from terminal

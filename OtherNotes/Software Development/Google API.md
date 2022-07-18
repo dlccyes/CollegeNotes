@@ -47,7 +47,6 @@ credentials = service_account.Credentials.from_service_account_file(SERVICE_ACCO
 # to use the json/dict of the key directly
 # credentials = service_account.Credentials.from_service_account_info(<dict of key>, scopes=SCOPES)
 service = build('sheets', 'v4', credentials=credentials)
-service = build('sheets', 'v4', credentials=credentials)
 sheet = service.spreadsheets()
 sheet_id = "<your sheet id>"
 
@@ -91,3 +90,43 @@ print(result)
 	- update
 - `clear`
 	- delete
+	- won't delete the format (e.g. background color) you set, only the data
+
+### batchUpdate
+
+```python
+body = {
+	"requests": [
+		<Request>
+	]
+}
+sheet.batchUpdate(spreadsheetId=sheet_id, body=body).execute()
+```
+
+see <https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/request> for available requests
+
+### insert empty rows
+
+to insert new rows in row 2 ~ 5
+
+```python
+body = {
+	"requests": [
+		{
+			"insertDimension": {
+				"range": {
+					"sheetId": sheet_gid,
+					"dimension": "ROWS",
+					"startIndex": 1,
+					"endIndex": 5
+				},
+			}
+		},
+	],
+}
+sheet.batchUpdate(spreadsheetId=sheet_id, body=body).execute()
+```
+
+see `sheet_gid` by inspecting the url (unique for each tab)
+
+<https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/request#InsertDimensionRequest>

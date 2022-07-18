@@ -416,20 +416,22 @@ json.loads(str)
 from datetime import datetime
 ```
 
-### to string
+### datetime to string
 convert date & time now to iso format string
 ```python
 datetime.now().isoformat()
 ```
 
-convert iso format string to datetime object
-```python
-datetime.fromisoformat(str)
-```
-
 convert to custom format string
 ```python
 datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+```
+
+### string to datetime
+
+convert iso format string to datetime object
+```python
+datetime.fromisoformat(str)
 ```
 
 ### current time

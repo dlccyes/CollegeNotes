@@ -46,7 +46,7 @@ parent: OtherNotes
 	- <https://hn.jeffjadulco.com>
 - lucidcart
 	- <https://lucid.app/lucidchart>
-	- make flow charts
+	- make flow charts / diagrams
 - voicerss
 	- <https://www.voicerss.org/api/>
 	- convert text to voice via api

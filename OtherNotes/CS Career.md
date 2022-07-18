@@ -33,7 +33,7 @@ layout: meth
 - WLB
 	- work life balance
 - FAANG
-	- Facebook Amazon Apple Netflix (Microsoft actually) Google
+	- Facebook Amazon Apple Netflix Google
 - PIP = performance improvement plan
 	- get PIPed = about to get fired
 - FTE = full-time equivalent
@@ -110,6 +110,13 @@ layout: meth
 - [r/cscq resume sharing](https://www.reddit.com/r/cscareerquestions/comments/e8narz/official_excellent_and_exemplary_resume_sharing/)
 - templates
 	- [Software Engineer Resume](https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf)
+
+## cover letters
+
+- templates
+	- [Deedy Cover Letter](https://www.overleaf.com/latex/templates/deedy-cover-letter/yhdwrhyvqjwy)
+- <https://resumegenius.com/cover-letter-examples/software-engineer-cover-letter-sample>
+- <https://www.reddit.com/r/cscareerquestions/comments/2afejd/what_should_my_cover_letters_be_like/>
 
 ## applying preparation
 
@@ -329,9 +336,3 @@ layout: meth
 		- Amazon
 		- Microsoft
 
-## cover letters
-
-- templates
-	- [Deedy Cover Letter](https://www.overleaf.com/latex/templates/deedy-cover-letter/yhdwrhyvqjwy)
-- <https://resumegenius.com/cover-letter-examples/software-engineer-cover-letter-sample>
-- <https://www.reddit.com/r/cscareerquestions/comments/2afejd/what_should_my_cover_letters_be_like/>
