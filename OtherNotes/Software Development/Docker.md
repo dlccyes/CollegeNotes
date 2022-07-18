@@ -108,28 +108,6 @@ docker exec -it <container_name> /bin/sh
 
 <https://github.com/docker/for-linux/issues/246#issuecomment-455010125>
 
-### run a docker container from an image
-
-```
-docker run --name <container_name> -d <image_name/id>
-# if it exit immediately, try
-docker run --name <container_name> -dit <image_name/id>
-```
-
-<https://stackoverflow.com/a/31143261/15493213>
-
-with port forwarding
-
-```
--p <port>:<port>
-```
-
-with webcam
-
-```
---device=/dev/video0:/dev/video0
-```
-
 ### stop a docker container
 
 ```
@@ -147,6 +125,53 @@ docker rm -f <container_id>
 ```
 docker logs <container_id>
 ```
+
+## run a container - docker run
+
+```
+docker run <flags> <image>
+```
+
+### run a docker container from an image
+
+```
+docker run --name <container_name> -d --rm <image_name/id>
+# if it exit immediately, try
+docker run --name <container_name> -dit <image_name/id>
+```
+
+`--rm` for auto remove when exist
+
+<https://stackoverflow.com/a/31143261/15493213>
+
+with port forwarding
+
+```
+-p <port>:<port>
+```
+
+with webcam
+
+```
+--device=/dev/video0:/dev/video0
+```
+
+### container resource control
+
+- assign to specific cpu(s)
+	- `--cpuset-cpus <#cpu>`
+	- e.g.
+		- `--cpuset-cpus 1`
+		- `--cpuset-cpus 1,3`
+- limit cpu usage
+	- `--cpus <max # of cpu>`
+	- e.g.
+		- `--cpus 0.5`
+- check the cpu related config of a container
+	- `docker inspect <container> | grep -i cpu`
+	- set 1 `cpus` -> 10^9 `NanoCpus`
+
+[ref](https://www.thorsten-hans.com/docker-container-cpu-limits-explained/)
 
 ## image related
 

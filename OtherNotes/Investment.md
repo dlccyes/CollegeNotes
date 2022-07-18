@@ -6,6 +6,25 @@
 - ETF
 	- 手續費
 		- 0.1425%
+- long
+    - expect price will ultimately go up
+    - buy and hold
+- short
+    - expect price will go down
+    - covered short
+        - borrow → sell → buy → pay back
+        - borrow from stock loan department
+            - pay borrow rate
+    - naked short
+        - 賣不擁有(也沒有借)的股票
+            - loophole of regulations
+        - illegal after 2008
+- call option
+    - right to buy a specified quantity of security at strike price until expiration
+        - e.g. $2 to buy the right to buy 1 share at $40 within a month
+            - if the price goes up to $50, u can trigger it, and earn $8 net profit
+    - long call
+        - buying call option with the belief that the price will rise
 
 ## resources
 ### websites

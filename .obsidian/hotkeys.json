@@ -121,14 +121,6 @@
       "key": "ArrowUp"
     }
   ],
-  "app:open-settings": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "O"
-    }
-  ],
   "editor:toggle-comments": [],
   "editor:toggle-source": [
     {
@@ -136,15 +128,6 @@
         "Mod"
       ],
       "key": "/"
-    }
-  ],
-  "command-palette:open": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "P"
     }
   ],
   "editor:toggle-highlight": [
@@ -162,6 +145,24 @@
         "Shift"
       ],
       "key": "H"
+    }
+  ],
+  "obsidian-quiet-outline:quiet-outline": [],
+  "app:open-settings": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "O"
+    }
+  ],
+  "command-palette:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
     }
   ]
 }

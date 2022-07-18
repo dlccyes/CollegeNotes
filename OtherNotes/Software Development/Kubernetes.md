@@ -171,6 +171,14 @@ kubectl delete -f <k8s_config_file>
 kubectl delete pods <pod_name>
 ```
 
+### limit resources
+
+cpu & memory
+
+- <https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource>
+- <https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace/>
+- <https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/#before-you-begin>
+
 ### port forwarding
 
 ```
