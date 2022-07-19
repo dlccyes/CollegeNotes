@@ -82,3 +82,13 @@ Snipaste
 ### music player in control center
 
 [MiniPlay for Spotify & iTunes](https://apps.apple.com/us/app/miniplay-for-spotify-itunes/id936243210)
+
+## troubleshooting
+
+### stop desktop order changed itself
+
+System Preferences > Mission Control  -> uncheck "Automatically rearrange Spaces based on most recent use"
+
+![](https://i.imgur.com/HbJWhT1.png)
+
+<https://apple.stackexchange.com/a/214349>
