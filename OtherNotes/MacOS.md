@@ -79,9 +79,27 @@ free + search + image + popup with shortcut (sadly no pin)
 
 Snipaste
 
-### music player in control center
+### music controller in control center
 
 [MiniPlay for Spotify & iTunes](https://apps.apple.com/us/app/miniplay-for-spotify-itunes/id936243210)
+
+### quickly move between displays/monitors
+
+<https://github.com/round/CatchMouse>
+
+and click the link <https://web.archive.org/web/20150502123813/http://ftnew.com:80/catchmouse.html>
+
+[direct downloading link](https://web.archive.org/web/20150502123813/http://ftnew.com/files/CatchMouse.zip)
+
+download -> unzip -> right click on the app -> open -> set your keyboard shortcuts
+
+your cursor will appear right at the middle of the corresponding display after triggering the shortcut key
+
+### use normal scrolling direction
+
+[Scroll Reverser](https://pilotmoon.com/scrollreverser/)
+
+[Scroll Reverser github](https://github.com/pilotmoon/Scroll-Reverser/)
 
 ## troubleshooting
 
@@ -92,3 +110,9 @@ System Preferences > Mission Control  -> uncheck "Automatically rearrange Spaces
 ![](https://i.imgur.com/HbJWhT1.png)
 
 <https://apple.stackexchange.com/a/214349>
+
+### make dock appear on another display
+
+When you're using more than one display, you can only make the dock appears on one of them. To make the dock appears on another display:
+
+hide the dock -> go to another display -> keeps moving your cursor down (bottom screen edge) until the dock appears
