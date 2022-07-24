@@ -68,6 +68,8 @@ if ((batch_idx + 1) % accum_iter == 0) or (batch_idx + 1 == len(data_loader)):
 	- early stopping
 	- regularization
 	- dropout
+	- weight decay
+		- to limit the freedom of your model
 
 ## critical point
 ![](https://i.imgur.com/NE6Wcez.png)

@@ -2,7 +2,7 @@
 layout: meth
 parent: Software Development
 ---
-# bash
+# shell
 {: .no_toc }
 
 <details open markdown="block">
@@ -15,7 +15,9 @@ parent: Software Development
 
 ## variable
 - `$variable_name`
-- no spacing around `=`
+- no space around `=`
+- enclose variable with space with `"`
+	- `echo "$variable"`
 
 ## make as variable output
 - `var=$(git status)`

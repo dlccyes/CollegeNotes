@@ -262,6 +262,20 @@ ref:
 
 ## branch related
 
+### show branch
+
+show all branch
+
+```
+git branch
+```
+
+show all remote/branch
+
+```
+git branch -a
+```
+
 ### create branch
 
 ```
@@ -269,6 +283,7 @@ git checkout -b <branch_name>
 ```
 
 ### delete branch
+
 delete local branch
 ```
 git branch -d <local branch>
@@ -280,17 +295,31 @@ git push <remote> --delete <branch>
 # e.g. git push origin --delete test
 ```
 
+if `git branch -a` still show the deleted branch
+
+```
+git remote prune <remote>
+```
+
+### rename branch
+
+```
+git branch -m <old_name> <new_name>
+```
+
 ### switch branch
 ```
 git checkout <branch>
 ```
 
-### switch tracking remote/branch
+
+### set/switch tracking remote branch
 ```
-git branch -u remote/branch
+git branch -u <remote>/<branch>
+# or
+git branch --set-upstream-to=<remote>/<branch>
 ```
 <https://stackoverflow.com/a/23458073/15493213>
-
 
 ### merge branch
 
