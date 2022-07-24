@@ -27,13 +27,21 @@ use [Game Theory](Game%20Theory) to solve resource allocation problems in wirele
 - [Opportunistic Data Collection in Cognitive Wireless  Sensor Networks - Air–Ground Collaborative Online Planning](Opportunistic%20Data%20Collection%20in%20Cognitive%20Wireless%20%20Sensor%20Networks%20-%20Air–Ground%20Collaborative%20Online%20Planning)
 - [Quality and Profit Assured Trusted Cloud Federation Formation - Game Theory Based Approach](Quality%20and%20Profit%20Assured%20Trusted%20Cloud%20Federation%20Formation%20-%20Game%20Theory%20Based%20Approach)
 
-### about edge server latency
+### others
 
+- Task Offloading and Resource Allocation in Mobile Edge Computing System
+	- each user has different priority
+	- priority is a funciton of local computation resource
+	- local computation resource in uniform distribution
+	- different random sequence comparison
+		- ![](https://i.imgur.com/2kCXvj1.png)
 - [Latency Comparison of Cloud Datacenters and Edge Servers](https://ieeexplore.ieee.org/document/9322406)
+	- about edge server latency
 	- ![](https://i.imgur.com/xaoalkx.png)
 		- y-axis: % of requests that can be served under a certain latency
 		- 2 workload scenarios: high & low
 	- ![](https://i.imgur.com/atwCcBI.png)
+
 
 ## scenario 1
 ![](https://i.imgur.com/1xZKLPT.jpg)
@@ -527,6 +535,9 @@ $$
 ### todo
 
 - convergence proof
+- different random sequence comparison
+	- e.g.
+		- ![](https://i.imgur.com/2kCXvj1.png)
 - extension
 	- edge server
 		- tree
