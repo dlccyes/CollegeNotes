@@ -1,6 +1,7 @@
 ---
 title: Econometrics
 layout: meth
+has_children: true
 ---
 
 # Econometrics
@@ -14,12 +15,24 @@ layout: meth
 {:toc}
 </details>
 
+## resources
+
+- [Econometrics Midterm](Econometrics%20Midterm.pdf)
+- [Econometrics Final](Econometrics%20Final)
+
+## notation and stuff
+
 - CI
   - 99%: 2.5758 = 2.576 = 2.58
   - 95%: 1.9600 = 1.960 = 1.96
   - 90%: 1.6449 = 1.645 = 1.65
 - df: degree of freedom
 - ![Image](https://i.imgur.com/Ipt1G1S.png)
+- coefficient
+	- the slope of each regressor
+- estimate
+	- the estimate value
+	- sum(each regressor x its coefficient)
 
 ## review of probability
 ### correlation & independence
@@ -63,7 +76,7 @@ $E(Y) \neq \mu_Y$ → (two-sided) alternate hypothesis
 ### p-value
 - significance probability  
 - $t^{act}=\frac{\hat{\mu_y}-\mu_y}{\sigma_y}$
-- 抽樣平均之於理論平均的標準差外的機率 → null hypothesis 正確機率
+- 抽樣平均在理論平均的 t 個標準差外的機率 → null hypothesis 正確機率
 i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 ![Image](https://i.imgur.com/mITFI1p.png)
 - 假設抽樣算出的平均，去根據 null hypothesis 的 mean 算出 p-value 很小，i.e. 抽樣平均離理論平均很遠，那麼 null hypothesis 就很有可能是錯誤的，i.e. 理論平均應該不是那樣；  反之，若 p-value 很大，則 null hypothesis i.e. 理論平均很有可能是正確的

@@ -555,6 +555,16 @@ sorted(x.items(), key=lambda item: item[1])
 float('inf')
 ```
 
+## numpy
+
+### save np array to csv
+
+```
+np.savetxt('<path/to.file>.csv', <2d np array>, delimiter=',', fmt='%i')
+```
+
+`fmt='%i'` for saving into all integer
+
 ## ipynb
 ### convert between ipynb & python
 ```
