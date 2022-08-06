@@ -70,6 +70,21 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 - the shapley value is the core
   - → fair & stable
 
+### stability
+
+- Nash stable
+	- with all players being selfish, none will move
+- Individually stable
+	- with all players respecting pareto criterion, none will move
+	- stricter than Nash stable
+	- Nash stable $\in$ Individually stable
+
+> Since agents are assumed to be rational, agents only en-gage in a unilateral deviation if it makes them better off. Any partition in which no such deviation is possible is called Nash stable (NS).
+
+> This type of deviation can be refined by additionally re-quiring that no agent in the welcoming coalition is worseoff when agent i joins. A partition in which no such devia-tion is possible is called individually stable (IS).
+
+ref: Reaching Individually Stable Coalition Structures in Hedonic Games
+
 ## social choice
 ### voting scheme
 - plurality

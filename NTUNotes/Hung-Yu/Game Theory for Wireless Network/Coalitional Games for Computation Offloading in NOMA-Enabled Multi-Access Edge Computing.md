@@ -6,11 +6,9 @@ layout: meth
 ---
 # Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
 
-my part in 2021.10.29 Game Theory Study Group  Presentation: Coalition Game
+my part in 2021.10.29 Game Theory Study Group Presentation: Coalition Game
 
 source: <https://ieeexplore.ieee.org/document/8917566>
- 
-my summary: <https://docs.google.com/presentation/u/2/d/1EhezbDUEwNOG1C-rk7YdQcB8-KnjVoxv>
 
 [pdf with my annotations](Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing.pdf)
 

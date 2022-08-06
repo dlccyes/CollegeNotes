@@ -16,9 +16,12 @@ parent: Software Development
 ## Free Services
 <https://aws.amazon.com/free/>
 
-**view free tier usage**
+### view free tier usage
 
 Cost Management -> Billing Console -> Free Tier
+
+the url looks like  
+`https://<region>.console.aws.amazon.com/billing/home?region=<region>#/freetier`
 
 ## Get Credentials
 Create IAM user (& group)  

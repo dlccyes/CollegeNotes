@@ -532,7 +532,7 @@ $$
 				- pareto 28.47s
 				- selfish 64.43s
 
-## tree v3 - uniform user weight
+## tree v3 - uniform user weight & edge server resource
 
 - the less the $\alpha$, the more close is pareto to optimal
 	- because user values money more, so willing to join a big cluster
