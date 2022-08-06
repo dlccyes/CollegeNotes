@@ -130,12 +130,30 @@ restart shell with `exec $SHELL` or just `source ~/.bashrc`
 ## import
 
 import everything from `config.py`, including packages, functions, variables, etc. (like `include` in php or `<script></script>` in html/js)
+
 ```
 from config import *
 ```
+
 <https://stackoverflow.com/a/17255770/15493213>
 
-### import from relative path
+### import from subdirectory
+
+Assuming
+
+```
+- main.py
+- aa
+	- aaa.py
+```
+
+To import function `haha()` from `aaa.py` in `main.py`
+
+```python
+from aa.aaa import haha
+```
+
+### import from parent
 
 e.g. to import from parent's parent directory
 
@@ -155,6 +173,26 @@ import <your_file>
 ```
 
 <https://stackoverflow.com/questions/714063/#comment23054549_11158224>
+
+## working directory
+
+### show current directory
+
+`ls`
+
+```python
+import os
+os.getcwd()
+```
+
+### change directory
+
+`cd`
+
+```python
+import os
+os.chdir("<path>")
+```
 
 ## matplotlib
 ### plot as many on demand
@@ -565,7 +603,22 @@ np.savetxt('<path/to.file>.csv', <2d np array>, delimiter=',', fmt='%i')
 
 `fmt='%i'` for saving into all integer
 
-## ipynb
+## pandas
+
+### merge csv files
+
+Left join f2 to f1
+
+```python
+import pandas as pd
+f1 = pd.read_csv('filename1.csv')
+f2 = pd.read_csv('filename2.csv')
+f = f1.merge(f2, how='left', on='MergeCol')
+```
+
+<https://stackoverflow.com/a/42583953/15493213>
+
+## ipynb notebook
 ### convert between ipynb & python
 ```
 pip3 install ipynb-py-convert
