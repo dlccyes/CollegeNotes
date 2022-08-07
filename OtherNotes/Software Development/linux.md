@@ -455,7 +455,10 @@ pacman -Si <pkg>
 ```
 
 #### troubleshooting
-do something with pacman but have this error
+
+##### error: GPGME error: No data
+
+Do something with pacman but have this error
 ```
 error: GPGME error: No data
 ```
@@ -466,6 +469,22 @@ sudo rm -R /var/lib/pacman/sync
 ```
 
 <https://stackoverflow.com/a/67850084/15493213>
+
+##### error: failed to commit transaction (invalid or corrupted package)
+
+When upgrading packages
+
+```
+error: failed to commit transaction (invalid or corrupted package)
+```
+
+do
+
+```
+pacman -Sy archlinux-keyring
+```
+
+<https://unix.stackexchange.com/a/574496>
 
 ### yay
 to install (unofficial) AUR packages

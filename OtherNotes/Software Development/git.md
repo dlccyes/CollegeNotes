@@ -263,7 +263,7 @@ ref:
 ### create branch
 
 ```
-git branch -b <branch_name>
+git checkout -b <branch_name>
 ```
 
 ### delete branch
