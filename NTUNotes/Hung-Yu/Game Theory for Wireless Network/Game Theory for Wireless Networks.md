@@ -26,6 +26,7 @@ use [Game Theory](Game%20Theory) to solve resource allocation problems in wirele
 		- more choice but more users in same coalition -> more noise
 - [Opportunistic Data Collection in Cognitive Wireless  Sensor Networks - Air–Ground Collaborative Online Planning](Opportunistic%20Data%20Collection%20in%20Cognitive%20Wireless%20%20Sensor%20Networks%20-%20Air–Ground%20Collaborative%20Online%20Planning)
 - [Quality and Profit Assured Trusted Cloud Federation Formation - Game Theory Based Approach](Quality%20and%20Profit%20Assured%20Trusted%20Cloud%20Federation%20Formation%20-%20Game%20Theory%20Based%20Approach)
+- [Near-Optimal and Collaborative Service Caching in Mobile Edge Clouds](Near-Optimal%20and%20Collaborative%20Service%20Caching%20in%20Mobile%20Edge%20Clouds)
 
 ### others
 
@@ -532,12 +533,68 @@ $$
 				- pareto 28.47s
 				- selfish 64.43s
 
-## tree v3 - uniform user weight & edge server resource
+## tree v3 - uniform user weight & dynamic edge server resource
 
 - the less the $\alpha$, the more close is pareto to optimal
 	- because user values money more, so willing to join a big cluster
 - the less the edger server latency, the more close is pareto to optimal
 	- because user are more willing to move to edge
+
+## VR scenario
+
+### scenario
+
+- 1 cloud server
+- m edge servers
+	- each server has many VMs
+- n network service providers
+	- provide VR services
+- network service provider options
+	- no cache (stay at cloud)
+		- large propagation delay
+	- rent a VM in edge server and cache services
+		- low propagation delay
+		- has resource upper limit
+		- options
+			- don't share VM
+				- cost
+			- share VM with others
+				- queuing delay
+
+### VM sharing details
+
+- players sharing the same VM can add/reduce CPU unit of the VM
+- an edge server has a total amount of CPU unit available, >= sum of CPU unit of its VMs
+
+### rules
+
+-  players originally on cloud (no caching)
+-  a player can choose to 
+	-  do nothing
+	-  rent a VM on an edge server
+		- have an initial value of CPU unit
+		- if edge server's CPU unit left not enough, then no
+	-  share other player's VM
+- players using the same VM can buy/reduce the CPU unit of their VM
+	- sum of CPU units of all VMs in the same edger server capped
+
+### algorithm
+
+1. initialize
+	1. set the positions of edge servers & players
+	2. create a VM for each edge server
+2. players originally on cloud (no caching)
+3. randomly choose a player
+4. randomly choose an edger server
+5. randomly choose a VM/coalition inside the edge server
+6. let the player switch if criterion satisfied
+
+### problems
+
+- there is that much of network service providers???
+	- maybe just the players be the users instead of network service providers
+	- but do users really handle the caching themselves????
+- what about the negotiation or contract or whatever between the network service provider and its users?
 
 ## todo
 
