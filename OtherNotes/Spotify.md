@@ -6,14 +6,13 @@ parent: OtherNotes
 # Spotify
 {: .no_toc }
 
-P{}
-
-## download data
-https://www.spotify.com/ca-en/account/privacy/
+## download your own data
+<https://www.spotify.com/ca-en/account/privacy/>
 - ref
-	- https://towardsdatascience.com/i-wrapped-my-spotify-history-the-hard-way-93dc832d9b47
+	- <https://towardsdatascience.com/i-wrapped-my-spotify-history-the-hard-way-93dc832d9b47>
 
-## controlling commands
+## Linux controlling commands
+
 <https://community.spotify.com/t5/Desktop-Linux/Basic-controls-via-command-line/m-p/4360856/highlight/true#M15590>
 
 Play:
@@ -48,7 +47,7 @@ to refresh, remove & add back the source folder
 <https://community.spotify.com/t5/Desktop-Windows/How-do-I-update-or-reset-my-local-files-list/m-p/922287/highlight/true#M14738>
 
 
-### scrobble a local songd
+### scrobble a local song (last.fm)
 - the scrobble will be added once you've finished, but you can't see it when you're scrobbling it
 - the song need to have the artist tag to be recognized
 	- KDE's [Kid3](https://kid3.kde.org/) can edit mp3 tag

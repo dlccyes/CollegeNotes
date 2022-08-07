@@ -35,8 +35,8 @@ parent: Hung-Yu
 
 ![](https://i.imgur.com/lqFp0vY.png)
 
-MEC system architecture
+MEC system architecture  
 ![](https://i.imgur.com/4xKAjZu.png)
 
-Edge/Fog system architecture
+Edge/Fog system architecture  
 ![](https://i.imgur.com/XeaaK9C.png)

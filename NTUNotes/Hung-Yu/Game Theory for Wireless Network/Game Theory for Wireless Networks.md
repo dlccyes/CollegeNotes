@@ -19,11 +19,31 @@ parent: Hung-Yu
 use [Game Theory](Game%20Theory) to solve resource allocation problems in wireless networking systems
 
 ## papers
+
+### coalition game papers
 - [Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing](Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing)
+	- coalition tradeoff
+		- more choice but more users in same coalition -> more noise
 - [Opportunistic Data Collection in Cognitive Wireless  Sensor Networks - Air–Ground Collaborative Online Planning](Opportunistic%20Data%20Collection%20in%20Cognitive%20Wireless%20%20Sensor%20Networks%20-%20Air–Ground%20Collaborative%20Online%20Planning)
 - [Quality and Profit Assured Trusted Cloud Federation Formation - Game Theory Based Approach](Quality%20and%20Profit%20Assured%20Trusted%20Cloud%20Federation%20Formation%20-%20Game%20Theory%20Based%20Approach)
 
-## scenario 1
+### others
+
+- Task Offloading and Resource Allocation in Mobile Edge Computing System
+	- each user has different priority
+	- priority is a funciton of local computation resource
+	- local computation resource in uniform distribution
+	- different random sequence comparison
+		- ![](https://i.imgur.com/2kCXvj1.png)
+- [Latency Comparison of Cloud Datacenters and Edge Servers](https://ieeexplore.ieee.org/document/9322406)
+	- about edge server latency
+	- ![](https://i.imgur.com/xaoalkx.png)
+		- y-axis: % of requests that can be served under a certain latency
+		- 2 workload scenarios: high & low
+	- ![](https://i.imgur.com/atwCcBI.png)
+
+## base scenario
+
 ![](https://i.imgur.com/1xZKLPT.jpg)
 - participants
 	- n users
@@ -33,7 +53,7 @@ use [Game Theory](Game%20Theory) to solve resource allocation problems in wirele
 - scenario
 	- users originally use the app on cloud, now they can choose to utilize the edge server's resource to host the app to achiever lower latency, at some cost (money)
 
-### 1 VM level
+## 1 VM level
 - assumptions
 	- you can open unlimited (or at least n) VMs on edge server without any performance drop
 	- performance of a VM drops as more users use it
@@ -101,7 +121,7 @@ plt.show()
 ```
 ![](https://i.imgur.com/j6WUFP5.png)
 
-### multiple VM levels
+## multiple VM levels
 - settings
 	- $T$ = intrinsic latency of the app in the cloud
 	- $T_i$ = intrinsic latency of the app in edge server $i$ with only 1 user
@@ -129,7 +149,7 @@ plt.show()
 	- $C_i = \dfrac{c}{T_i}$, $c>0$
 	- $f(C_i)=a(\dfrac{1}{T_i})+b,a>0$
 
-#### simulation
+### simulation
 utility formula & numeric setting
 ```py
 cost = {i:clr*i for i in range(1, lv+1)}    
@@ -186,19 +206,19 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 			- ![](https://i.imgur.com/hoJ0Ziw.png)
 
 
-#### findings
+### findings
 - convergence
 - high cost or low latency -> low VM level(no need chasing latency), big coalitions (to share cost)
 - low cost or high latency -> high VM level (for smaller latency), small coalitions (no need share cost)
 
-#### convergence proof
+### convergence proof
 - finite amount of possible partitions
 - each operation will improve system utility under pareto condition
 - each operation will create a new partition
 - -> gauranteed to reach a final Nash-stable partition
 
-### tree
-#### scenario
+## tree
+### scenario
 - a finite 2D space
 - 1 cloud, placed in the center
 - M edge servers, distributed in some way
@@ -224,12 +244,12 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 			- no VM
 			- allow infinite VMs
 
-#### utility function
+### utility function
 - propagation delays depends both user & server, other than that, same as before
 - utility for user i in server j
 	- $u_{i, j}=\alpha ((L_{i,0}+T_c)-(L_{i,j}+k_jT_e))-\frac{C}{k_j}$
 
-#### algorithm
+### algorithm
 - initialize cloud, edge servers & users spacial distribution
 - in each iteration
 	- randomly select a user
@@ -273,7 +293,7 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 					- avg iterations = 95k
 					- avg time = 7s
 
-#### results
+### results
 - servers & users distribution
 	- ![](https://i.imgur.com/M2SzSAu.png)
 - convergence
@@ -346,7 +366,7 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 - random increases more quickly at the start because of the implementation of swapping
 	- swap after done switching for the same user, and best & exhaustive will search for every other user to try to swap, which count as an iteration for each attempt, while random will just try swapping with a randomly user and go on
 
-#### findings
+### findings
 - some user may choose to use a server far away, instead of a nearer one
 	- ![](https://i.imgur.com/KQ1nZGl.png)
 - if edge servers are farther away from cloud, more users would like to be in edge server
@@ -357,7 +377,7 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- relation between "select best possible" & "select random"
 - as num of users increase, the system utility difference between pareto-based & totalitarian becomes larger
 
-#### TODO
+### TODO
 - [x] convergence proof
 	- bound
 	- when will converge
@@ -376,12 +396,12 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- update by time sequence
 	- preparation
 
-#### problems
+### problems
 - definition of iteration?
 
-### tree v2
+## tree v2 logarithmic
 
-#### utility function
+### utility function
 
 - utility for user i in server j
 	- $u_{i, j}=\alpha ((L_{i,0}+T_c)-(L_{i,j}+T_E(k_j)))-\dfrac{C}{k_j}$
@@ -389,7 +409,17 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- if $k_j<5$, $T_E(k_j)=T_e$
 	- else, $T_E(k_j)=\ln(k_jT_e)+1$
 
-#### algorithm
+$$
+  \begin{equation}
+    T_E(k_j)=
+    \begin{cases}
+      T_e, & \text{if}\ k_j<5 \\
+      \ln(k_jT_e)+1, & \text{otherwise}
+    \end{cases}
+  \end{equation}
+$$
+
+### algorithm
 
 - initialize spacial distribution of cloud, edge servers and users 
 - all users initially on cloud
@@ -409,7 +439,7 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 	- selfish
 		- if itself will be better off
 
-#### results
+### results
 - different fixed random seed
 	- ![](https://i.imgur.com/srZK8kE.png)
 - different methods
@@ -449,18 +479,72 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 				- pareto 129.81s
 				- selfish 136.64s
 
-#### todo
+### testbed
+
+![](https://i.imgur.com/mESHGKb.png)
+
+![](https://i.imgur.com/fcYft2u.png)
+![](https://i.imgur.com/0Et1Ci8.png)
+
+
+### todo
 
 - computation delay
-	- threshold + linear
+	- [x] threshold + linear
 	- or see paper
 - difference between users
 	- weight of latency
 	- cost?
 	- other things
 
-### todo
+## tree v2 linear
+
+### utility function
+
+- utility for user i in server j
+	- $u_{i, j}=\alpha ((L_{i,0}+T_c)-(L_{i,j}+T_E(k_j)))-\dfrac{C}{k_j}$
+- $T_E(k_j)$
+	- if $k_j<5$, $T_E(k_j)=T_e$
+	- else, $T_E(k_j)=k_jT_e$
+
+$$
+  \begin{equation}
+    T_E(k_j)=
+    \begin{cases}
+      T_e, & \text{if}\ k_j<5 \\
+      k_jT_e, & \text{otherwise}
+    \end{cases}
+  \end{equation}
+$$
+
+### results
+
+- different mechanisms
+	- 100, 6
+		- ![](https://i.imgur.com/6EDdXMI.png)
+			- runtime
+				- orwellian 2.34s
+				- pareto 1.15s
+				- selfish 1.48s
+		- 500, 20
+			- ![](https://i.imgur.com/NlwzKo1.png)
+				- orwellian 118.53s
+				- pareto 28.47s
+				- selfish 64.43s
+
+## tree v3 - uniform user weight & edge server resource
+
+- the less the $\alpha$, the more close is pareto to optimal
+	- because user values money more, so willing to join a big cluster
+- the less the edger server latency, the more close is pareto to optimal
+	- because user are more willing to move to edge
+
+## todo
+
 - convergence proof
+- different random sequence comparison
+	- e.g.
+		- ![](https://i.imgur.com/2kCXvj1.png)
 - extension
 	- edge server
 		- tree

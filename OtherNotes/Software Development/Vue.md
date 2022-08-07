@@ -78,6 +78,20 @@ import Students from '/src/components/Students.vue'
 
 <https://vitejs.dev/guide/env-and-mode.html>
 
+It will use `.env`. All keys starting with `VITE_` can be accessed with `import.meta.env.<env_key>`.
+
+e.g.
+
+```
+#.env
+VITE_BACKEND_HOST=http://192.168.156.250:5000
+```
+
+```
+# some vue component
+var url = import.meta.env.VITE_BACKEND_HOST + "/emotion";
+```
+
 ## Pinia
 
 State management tool for Vue, successor of Vuex.
@@ -115,7 +129,7 @@ In `src/stores/useStore.js`
 ```
 import { defineStore } from 'pinia'
 
-export const useStore = defineStore({
+export const useStore = defineStore('<id>', {
   state: () => {
     return {
       counter: 0,
@@ -438,11 +452,35 @@ export default {
 
 ## run locally
 
+### dev
+
 With Vite
 
 ```
 npm run dev
 ```
+
+### run with express
+
+```
+npm install express
+```
+
+```javascript
+var express = require('express');
+var path = require('path');
+var serveStatic = require('serve-static');
+app = express();
+app.use(serveStatic(__dirname + "/dist"));
+var port = process.env.PORT || 7070;
+var hostname = '127.0.0.1';
+
+app.listen(port, hostname, () => {
+   console.log(`Server running at http://${hostname}:${port}/`);
+ });
+```
+
+<https://stackoverflow.com/a/53945050/15493213>
 
 ## build for production
 
@@ -537,3 +575,13 @@ yarn config set ignore-engines true
 ```
 
 <https://github.com/vuejs/vue-cli/issues/7116>
+
+### Uncaught TypeError: store.$id is undefined
+
+or `Uncaught TypeError: Cannot read properties of undefined (reading 'startsWith')`
+
+maybe you didn't give your pinia store a id
+
+```
+export const useStore = defineStore('<id>', {})
+```

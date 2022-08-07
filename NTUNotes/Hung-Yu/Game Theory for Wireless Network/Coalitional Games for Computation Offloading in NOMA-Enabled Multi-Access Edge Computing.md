@@ -6,11 +6,9 @@ layout: meth
 ---
 # Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
 
-my part in 2021.10.29 Game Theory Study Group  Presentation: Coalition Game
+my part in 2021.10.29 Game Theory Study Group Presentation: Coalition Game
 
 source: <https://ieeexplore.ieee.org/document/8917566>
- 
-my summary: <https://docs.google.com/presentation/u/2/d/1EhezbDUEwNOG1C-rk7YdQcB8-KnjVoxv>
 
 [pdf with my annotations](Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing.pdf)
 
@@ -37,9 +35,12 @@ my summary: <https://docs.google.com/presentation/u/2/d/1EhezbDUEwNOG1C-rk7YdQcB
 	- can enable grant-free acess & flexible scheduling  → more UEs served simultneously → reduce latency
 	- better than OMA
 		- can utilize all subcarriers channels
-		- fairness provisioning(?)
+		- fairness provisioning (?)
 		- spectral efficiency
 			- data rate in a bandwidth in a communication
+	- tradeoff of subcarrier sharing
+		- more choice, less waste
+		- will receive noise from other users on the same subcarrier, resulting to bigger transmission latency & computation overhead
 	- e.g.
 		- 1 small but time-sensitive packet & 1 big but latency-tolerant packet, with 2 orthogonal subcarriers → packet 1 & part of packet 2 for UE1, the remaining packet 2 for UE2
 - UE, user equipment
@@ -68,7 +69,7 @@ my summary: <https://docs.google.com/presentation/u/2/d/1EhezbDUEwNOG1C-rk7YdQcB
 - UEs & MeNB has 1 antenna
 - NOMA → the signal MeNB receives contain interference signal from co-sharing UEs
 - each UE can only use 1 subcarrier
-	- ==但 [[#intro]] 的例子裡，big packet 是用兩個？==
+	- ==但 [intro](#intro) 的例子裡，big packet 是用兩個？==
 
 ### communication model
 - offloading decision profile $A=\{a_{ns}|n\in \mathcal{N},s\in S\}$
@@ -79,11 +80,14 @@ my summary: <https://docs.google.com/presentation/u/2/d/1EhezbDUEwNOG1C-rk7YdQcB
 	- ![](https://i.imgur.com/9Q2hrpR.png)
 		- j with $b_s(j)<b_s(n)$ isn't decoded by UE n → noise ==(???)==
 	- uplink channel gain $h_{ns}$
+		- of UE $n$ on subcarrier $s$
 		- sorted in ascending order
 	- transmit power $p_{ns}$
+		- of UE $n$ on subcarrier $s$
 	- noise power $n_0$
-- achievable rate 
+- achievable transmission rate $R_n$
 	- $R_{ns}=Blog_2(1+\Gamma_{ns})$ ==(???)==
+		- for subcarrier $s$
 	- B = bandwidth of an orthogonal carrier
 	- ![](https://i.imgur.com/0iH34Dl.png)
 		- $R_n$ = sum($R_{ns}$)
@@ -116,8 +120,9 @@ my summary: <https://docs.google.com/presentation/u/2/d/1EhezbDUEwNOG1C-rk7YdQcB
 
 #### full offloading
 - completion time = uplink transmission time + execution time<br>$T^r_n=\dfrac{\alpha_n}{R_n}+\dfrac{\beta_n}{f^l_n}$ 
-	- $f_n$ = remote computing resourcess
+	- $f_n$ = remote computing resources
 		- MEC give each UE a fixed amount of $f_n$
+	- data size / transmission rate + CPU cycles / computing resource
 - total energy consumption = task offloading + remote computing + result downloading
 - UE's energy consumption = task offloading<br>$E^r_n=\dfrac{p_n}{\varsigma_n}T^t_n=\dfrac{p_n}{\varsigma_n}\dfrac{\alpha_n}{R_n}$ ==(???)==
 	- $\varsigma_n$ = UE power amplifier efficiency

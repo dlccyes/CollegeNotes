@@ -1,6 +1,6 @@
 ---
 layout: meth
-parent: 
+parent: Industrial Organization
 ---
 # Industrial Organization Final
 {: .no_toc }

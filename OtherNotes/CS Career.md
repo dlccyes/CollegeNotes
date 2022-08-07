@@ -33,7 +33,7 @@ layout: meth
 - WLB
 	- work life balance
 - FAANG
-	- Facebook Amazon Apple Netflix (Microsoft actually) Google
+	- Facebook Amazon Apple Netflix Google
 - PIP = performance improvement plan
 	- get PIPed = about to get fired
 - FTE = full-time equivalent
@@ -81,6 +81,8 @@ layout: meth
 - resume
 	- <https://chonyy.medium.com/f1dcb67e4798>
 	- <https://www.teamblind.com/post/pQ43s0TA>
+- salaries of Taiwan & US 
+	- <https://docs.google.com/spreadsheets/d/1woaGveprl4eS-UNUvbt8JD8mSSgqad2tq3JzM9TU_cw/>
 
 ## building portfolio
 
@@ -108,6 +110,13 @@ layout: meth
 - [r/cscq resume sharing](https://www.reddit.com/r/cscareerquestions/comments/e8narz/official_excellent_and_exemplary_resume_sharing/)
 - templates
 	- [Software Engineer Resume](https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf)
+
+## cover letters
+
+- templates
+	- [Deedy Cover Letter](https://www.overleaf.com/latex/templates/deedy-cover-letter/yhdwrhyvqjwy)
+- <https://resumegenius.com/cover-letter-examples/software-engineer-cover-letter-sample>
+- <https://www.reddit.com/r/cscareerquestions/comments/2afejd/what_should_my_cover_letters_be_like/>
 
 ## applying preparation
 
@@ -159,6 +168,7 @@ layout: meth
 
 - resources
 	- <https://www.productmanagementexercises.com/interview-questions>
+	- <https://www.linkedin.com/interview-prep/>
 - nugget
 	- summary about the event
 - STAR method
@@ -288,7 +298,7 @@ layout: meth
 	- Amazon
 		- <https://www.dcard.tw/f/job/p/236316977>
 		- <https://jackkuo.org/post/台灣亞馬遜實習心得/>
-- FAANG
+- FAANG+
 	- <https://reddit.com/eitna9> (removed)
 		- all FAAMG detailed interview process 
 		- [uddit archive](https://www.unddit.com/r/cscareerquestions/comments/eitna9/processes_at_each_company_at_least_what_i_remember/)
@@ -297,6 +307,7 @@ layout: meth
 		- <https://angelswengineer.medium.com/32fe51382005> (幹話)
 	- Amazon behavioral questions (Leadership Principles)
 		- <https://www.reddit.com/r/jobsearchhacks/comments/g2iv42>
+	- <https://www.ptt.cc/bbs/Soft_Job/M.1656312014.A.7C6.html>
 - offers
 	- <https://www.teamblind.com/post/hLE5CRYQ>
 
@@ -325,9 +336,3 @@ layout: meth
 		- Amazon
 		- Microsoft
 
-## cover letters
-
-- templates
-	- [Deedy Cover Letter](https://www.overleaf.com/latex/templates/deedy-cover-letter/yhdwrhyvqjwy)
-- <https://resumegenius.com/cover-letter-examples/software-engineer-cover-letter-sample>
-- <https://www.reddit.com/r/cscareerquestions/comments/2afejd/what_should_my_cover_letters_be_like/>

@@ -1,3 +1,4 @@
+
 ---
 layout: meth
 parent: Software Development
@@ -14,18 +15,66 @@ parent: Software Development
 {:toc}
 </details>
 
+## pip
+
+to upgrade all python packages, use `pip-review`
+
+```
+pip3 install pip-review
+```
+
+```
+pip-review --local --auto
+```
+
+<https://stackoverflow.com/a/16269635/15493213>
+
+### remove package
+
+```
+pip3 uninstall <package>
+```
+
 ## requirements.txt
 
 ### create
 
-- for every libraries you have
-	- `python -m pip freeze > requirements.txt`
-- for a specific directory
-	- `pipreqs /path/to/project`
-		- `pip3 install pipreqs` to install
-			- `export PATH=$PATH:~/.local/bin` if have xxx not found error
-	- <https://stackoverflow.com/a/31684470/15493213>
-	
+for every libraries you have
+
+```
+python -m pip freeze > requirements.txt
+```
+
+Use `pipreqs` for a specific directory
+
+Install
+
+```
+pip3 install pipreqs
+```
+
+Use
+
+```
+pipreqs /path/to/project
+```
+
+If the command is not found, add python package path to your path
+
+```
+export PATH=$PATH:~/.local/bin
+```
+
+<https://github.com/bndr/pipreqs/issues/69#issuecomment-298758892>
+
+If still not found, run with python instead
+
+```
+python3 -m pipreqs.pipreqs
+```
+
+<https://stackoverflow.com/a/68965523/15493213>
+
 ### use
 ```
 pip3 install -r requirements.txt
@@ -81,12 +130,30 @@ restart shell with `exec $SHELL` or just `source ~/.bashrc`
 ## import
 
 import everything from `config.py`, including packages, functions, variables, etc. (like `include` in php or `<script></script>` in html/js)
+
 ```
 from config import *
 ```
+
 <https://stackoverflow.com/a/17255770/15493213>
 
-### import from relative path
+### import from subdirectory
+
+Assuming
+
+```
+- main.py
+- aa
+	- aaa.py
+```
+
+To import function `haha()` from `aaa.py` in `main.py`
+
+```python
+from aa.aaa import haha
+```
+
+### import from parent
 
 e.g. to import from parent's parent directory
 
@@ -106,6 +173,26 @@ import <your_file>
 ```
 
 <https://stackoverflow.com/questions/714063/#comment23054549_11158224>
+
+## working directory
+
+### show current directory
+
+`ls`
+
+```python
+import os
+os.getcwd()
+```
+
+### change directory
+
+`cd`
+
+```python
+import os
+os.chdir("<path>")
+```
 
 ## matplotlib
 ### plot as many on demand
@@ -145,6 +232,21 @@ ax.plot(x, np.sin(x))
 ax2.plot(x, np.cos(x), 'r:')
 ```
 
+### style
+
+```python
+plt.plot(<x_data>, <y_data>, marker='o', markersize=5, linestyle='None')
+```
+
+### legend
+
+```python
+plt.plot(<x_data>, <y_data>, label="line1")
+plt.plot(<x_data>, <y_data>, labe="line2")
+plt.legend()
+plt.plot()
+```
+
 ### axis
 #### label
 ```
@@ -155,7 +257,7 @@ plt.ylabel("something")
 
 #### axis interval
 y axis 20 intervals
-```
+```python
 import matplotlib.pyplot as plt
 ax = plt.gca()
 y_min, y_max = [int(i) for i in ax.get_ylim()]
@@ -187,17 +289,10 @@ ax.xaxis.set_major_formatter(md.DateFormatter('%H:%M'))
 <https://stackoverflow.com/a/69333777/15493213>  
 <https://matplotlib.org/stable/api/dates_api.html#matplotlib.dates.MinuteLocator>
 
-## simple web server
-
-```
-python3 -m http.server
-```
-
 ## exec
 to use in function, use `exec(string, globals())`
 
-## function
-### inputs
+## inputs
 - `*args` -> unpack a list/tuple of args
 - `**args` -> unpack a dict of args
 
@@ -238,22 +333,128 @@ print(ans) # output 1+2+5 = 8
 
 <https://stackoverflow.com/a/53973651/15493213>
 
-## read file
-```py
+## file
+
+### read file
+
+```python
 with open(inputfile, 'r') as file_in:
     matrix = file_in.readlines()
 ```
 
+### read file to dict
+
+```python
+import json
+
+with open(inputfile, 'r') as f:
+    _json = json.loads(f.read())
+    # or
+    # _json = json.load(f)
+```
+
+## yaml
+
+### load
+
+For single document:
+
+```python
+import yaml
+with open('deployment.yaml', 'r') as f:
+    deploy = yaml.safe_load(f)
+```
+
+For multiple document combined (with `---` seperator, see [this](https://stackoverflow.com/questions/47593695/)):
+
+```python
+import yaml
+with open('deployment.yaml', 'r') as f:
+    deploy = list(yaml.safe_load_all(f))
+```
+
+### dump
+
+`sort_keys=False` to preserve insertion order ([related Github issue](https://github.com/yaml/pyyaml/issues/110#issuecomment-500921155))
+
+single document
+
+```python
+import yaml
+deployment_yml = dict()
+with open('deployment.yaml', 'w') as f:
+    yaml.dump(deployment_yml, f, sort_keys=False)
+```
+
+multiple document
+
+```python
+import yaml
+deployment_yml = list() # list of dicts
+with open('deployment.yaml', 'w') as f:
+    yaml.dump_all(deployment_yml, f, sort_keys=False)
+```
+
+### block literals
+
+block literals is multi-line string
+
+e.g.
+
+```yaml
+  - |
+    kind: JoinConfiguration
+    nodeRegistration:
+      kubeletExtraArgs:
+        node-labels: "name=edge1"
+```
+To create a yml containing this:
+
+```python
+import yaml
+
+class folded_unicode(str): pass
+class literal_unicode(str): pass
+
+def folded_unicode_representer(dumper, data):
+    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='>')
+def literal_unicode_representer(dumper, data):
+    return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
+
+data = {'literal': literal_unicode(
+		'kind: JoinConfiguration\n'
+		'nodeRegistration:\n'
+		'  kubeletExtraArgs:\n'
+		'    node-labels: "name=edge"\n'
+}
+yaml.dump(data)
+```
+
+<https://stackoverflow.com/a/7445560/15493213>
+
 ## encode
 ### encode to base 64
-```py
+
+```python
 cred = f'{clientID}:{clientSecret}'
 b64_cred = base64.b64encode(cred.encode('ascii')).decode('ascii')
 ```
 
-## string
-### split
+## trace exceptions
+
+```python
+import traceback
+try:
+	# something
+except:
+	print(traceback.format_exc())
 ```
+
+## string
+
+### split
+
+```python
 import re
 old = 'I am, not, you! Fuck!'
 new = re.split('[,\s!]', old)
@@ -264,30 +465,32 @@ new = re.split(', | |!')
 
 ## convert
 ### str to json
-```py
+```python
 import json
 json.loads(str)
 ```
 
 ## datetime
-```
+```python
 from datetime import datetime
 ```
 
-### to string
+### datetime to string
 convert date & time now to iso format string
-```
+```python
 datetime.now().isoformat()
-```
-
-convert iso format string to datetime object
-```
-datetime.fromisoformat(str)
 ```
 
 convert to custom format string
 ```python
 datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+```
+
+### string to datetime
+
+convert iso format string to datetime object
+```python
+datetime.fromisoformat(str)
 ```
 
 ### current time
@@ -307,25 +510,25 @@ datetime.now(timezone(timedelta(hours=8)))
 ```
 
 ### timedelta
-```
+```python
 datetime.timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0)
 ```
 
-```
+```python
 from datetime import timedelta
 ```
 
 subtract 2 datetime objects to get a timedelta object
 
 example
-```
+```python
 haha = datetime.timedelta(days=1, seconds=20, microseconds=610333)
 haha.days # -> 1
 haha.seconds # -> 20
 haha.microseconds # -> 610333
 ```
 to get total passed time
-```
+```python
 # in days
 haha/timedelta(days=1)
 # in seconds
@@ -357,7 +560,7 @@ while tiempo_prev != None:
 
 ### OrderedDict
 - remember the insertion order
-- great for implementing LRU
+- great for implementing LRU, see [Leetcode 146. LRU Cache](https://leetcode.com/problems/lru-cache/)
 
 ### deque
 - a double sided simple queue, O(1) for enqueuing & dequeuing from both sides
@@ -390,7 +593,32 @@ sorted(x.items(), key=lambda item: item[1])
 float('inf')
 ```
 
-## ipynb
+## numpy
+
+### save np array to csv
+
+```
+np.savetxt('<path/to.file>.csv', <2d np array>, delimiter=',', fmt='%i')
+```
+
+`fmt='%i'` for saving into all integer
+
+## pandas
+
+### merge csv files
+
+Left join f2 to f1
+
+```python
+import pandas as pd
+f1 = pd.read_csv('filename1.csv')
+f2 = pd.read_csv('filename2.csv')
+f = f1.merge(f2, how='left', on='MergeCol')
+```
+
+<https://stackoverflow.com/a/42583953/15493213>
+
+## ipynb notebook
 ### convert between ipynb & python
 ```
 pip3 install ipynb-py-convert
@@ -409,6 +637,76 @@ ipynb-py-convert <in.py> <out.ipynb>
 ### run ipynb
 ```
 ipython3 -c "% run something.ipynb"
+```
+
+## environmental variables
+
+Use python-dotenv.
+
+Intall
+
+```
+pip3 install python-dotenv
+```
+
+Usage
+
+```
+# .env
+PASSWORD=admin
+```
+
+```python
+from dotenv import load_dotenv
+import os
+load_dotenv() # load .env
+password = os.getenv('PASSWORD')
+```
+
+## dealing with URL
+
+use `urllib`
+
+### convert dict to query string
+
+use `urllib.parse.urlencode`
+
+```python
+import urllib.parse
+
+qjson = {'id': 1, 'medium': 'reddit'}
+query = urllib.parse.urlencode(qjson)
+```
+
+## requests
+
+```
+pip3 install requests
+```
+
+### post
+
+```python
+import requests
+import json
+data = dict()
+request.post(<url>, data=json.dumps(data))
+```
+
+### response
+
+```python
+import requests
+import
+res = request.post(<url>, <data>)
+status_code = res.status_code
+res_body = json.loads(res.text)
+```
+
+## simple web server
+
+```
+python3 -m http.server
 ```
 
 ## web

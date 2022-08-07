@@ -134,6 +134,43 @@ e.g. to add yourself to docker group
 sudo usermod -aG docker $USER
 ```
 
+## disk & storage related
+
+### file/dir size 
+
+current dir size
+
+```
+du . -sh
+```
+
+all dir/file with depth = 1 under current directory sorted
+
+```
+du . -had1 | sort -h
+```
+
+### partition size
+
+all (mounted) partitions
+
+```
+df -h
+```
+
+the partition the directory is at
+
+```
+df . -h
+```
+
+### view all partitions
+
+```
+df -h
+lsblk
+```
+
 ## networking
 ### show network interfaces
 show all network interfaces
@@ -324,6 +361,22 @@ sudo apt install apparmor-utils
 ```
 <https://blog.karatos.in/a?ID=01100-68ee7a10-9f07-412a-aa93-e67032182326>
 
+## find things
+
+### find text under a directory
+
+```
+grep -rnw  . -e <pattern>
+```
+
+<https://stackoverflow.com/a/16957078/15493213>
+
+### find files under a directory
+
+```
+find .
+```
+
 ## package related
 ### apt
 #### find package
@@ -493,6 +546,20 @@ install
 ```
 yay -S <package>
 ```
+
+### yum
+
+#### yum-config-manager
+
+to use `yum-config-manager`
+
+```
+yum install yum-utils
+```
+
+#### see all repos
+
+go to `/etc/yum.repos.d/`
 
 ### where is your file / command
 locate the binary, source, and manual page files for a command
@@ -734,7 +801,10 @@ xdg-mime query filetype <path/to/file>
 some nice dotfiles
 - <https://github.com/Anomic-cr/i3_dotfiles>
 
-## change user@host color and stuff
+## change user@host path, color and stuff
+
+### bash
+
 settings located in `~/.bashrc`  
 note that enclosing ANSI with `\[` `\]` es necesario for it to behave normally
 
@@ -745,7 +815,7 @@ PS1='\u@\h:\w\$ '
 # 8-bit color
 PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 # 24-bit color
-PS1='\[\033[38;2;255;189;243\]m\u@\h\[\033[0m\]:\[\033[01;34m\]\w\[\033[0m\]$ '
+PS1='\[\033[38;2;255;189;243\]m\u@\h\[\033[0m\]:\[\033[01;34m\]\w\[\eiddcckvribulvvebkvchfcgiidccfdnunkvgnvtingk033[0m\]$ '
 # with archbtw
 PS1='\[\033[48;2;108;196;255m\033[38;2;0;0;0m\] archbtw \[\033[0m\] \[\033[38;2;255;189;243m\]\u@\h\[\033[0  
 m\]:\[\033[01;34m\]\w\[\033[0m\]$ '
@@ -758,6 +828,21 @@ see [ANSI](ANSI)
 
 <https://askubuntu.com/a/123306>
 
+### zsh
+
+in `.zshrc`
+
+```sh
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+autoload -U colors && colors
+PROMPT="%{$fg_bold[green]%}%n@%m:%{$fg[cyan]%}%d$ %{$fg[white]%}"
+```
+
+- <https://stackoverflow.com/a/69537767/15493213>
+- <https://stackoverflow.com/a/2534676/15493213>
+
 ## grub menu customization
 - `sudo apt install grub-customizer` for GUI
 - everything in `/boot/grub/grub.cfg`
@@ -766,7 +851,7 @@ see [ANSI](ANSI)
 	- will run `grub-mkconfig -o /boot/grub/grub.cfg`
 	- <https://www.nixcraft.com/t/how-to-update-grub-on-rhel-or-centos-linux/3824/2>
 
-## partition resize
+## resize a partition
 ### principles
 - can't directly resize the os partition you're currently on
 - the relative starting position of the os parition can't be changed
@@ -783,7 +868,7 @@ for windows-linux dual-boot system
 	- you can copy paste your kubuntu partition to the new unallocated space right after Windows -> apply -> delete original kubuntu partition && resize -> apply
 	- [about moving partition](https://superuser.com/a/731672) 
 5. reboot normally into your kubuntu
-	-  may need to `bcdedit /set {bootmgr} path \EFI\kubuntu\grubx64.efi` again to see your grub menu
+	-  may need to `bcdedit /set {bootmgr} path \EFI\kubuntu\grubx64.efi` again to make your grub menu show
 6. success
 
 ## nvidia driver
@@ -1275,6 +1360,16 @@ version=21.08
 
 <https://bugzilla.mozilla.org/show_bug.cgi?id=1628203>
 
+### .fuse_hiddenxxx file
+
+Something is using the file. Kill the program using it then it will disappear. If you don't know what's using it, run this to get the PID using it.
+
+```
+lsof .fuse_hidden<????>
+```
+
+And then `kill -9 <PID>` to kill it.
+
 ## good programs
 ### KDE apps
 essential packages that might not come with arch install  
@@ -1311,7 +1406,9 @@ sudo pacman -S plasma-systemmonitor
 sudo apt install gparted
 ```
 
-use it to do any operation regarding partitions with GUI
+Use it to do any operation regarding partitions with GUI.
+
+Note that you probably need to unmount a partition first to perform an operation (like copy or resize).
 
 ### bluetooth
 (if not preinstalled)
@@ -1353,64 +1450,9 @@ sudo systemctl start cronie.service
 ```
 
 ### ffmpeg
-#### parameters
-- scale
-	- `scale=iw/2:-2` -> x2
-- quality
-	- <https://ffmpeg.org/ffmpeg-codecs.html#Options-30>
-	- `-quality 75`
-		- 0-100
 
-#### speedup video
-to speed up to x2 (including audio)
-```
-ffmpeg -i input.mp4 -filter:v "setpts=PTS/2" -an output.mp4
-```
+See [ffmpeg](ffmpeg)
 
-omit `-an` to have audio in original speed (so the video duration will not change)
-
-<https://superuser.com/a/1261681>
-
-#### mp4 to gif
-minimalist
-```
-ffmpeg -i input.mp4 -quality 75 output.gif
-```
-may have bad results
-
-```
-ffmpeg -y -i input.mp4 -filter_complex "fps=10,scale=1080:-1:flags=lanczos,split[s0][s1  
-];[s0]palettegen=max_colors=256[p];[s1][p]paletteuse=dither=bayer" output.gif
-```
-<https://superuser.com/a/1695537>
-
-the `split` thing will make it not creating any intermediate files during the process, so it consumes high memory
-
-#### mp4 to webp
-minimalist
-```
-ffmpeg -i input.mp4 -quality 75 output.webp
-```
-may have bad results
-
-lossless
-```
-ffmpeg -i input.mp4 -vcodec libwebp -filter:v fps=fps=10 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 1080:720 output_filename.webp
-```
-omit the `-s` flag to use original scale
-
-sample frames to reduce size
-```
-ffmpeg -i input.mp4 -vf "select=not(mod(n\,6))" -vsync vfr -quality 50 output.webp
-```
-`select=not(mod(n\,6))` will select frames with index%6 = 0
-
-<https://stackoverflow.com/a/58188923/15493213>
-
-#### play
-```
-ffplay <video_file>
-```
 
 ### xbacklight 
 #### install
@@ -1598,6 +1640,12 @@ check status
 ```
 tlp-stat -s
 ```
+
+### onlydesktop - office suite
+
+<https://www.onlyoffice.com/download-desktop.aspx>
+
+Not as featureful but looks very alike to Ms Office.
 
 ### alacritty 
 #### install

@@ -1001,6 +1001,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- 供給面經濟學 / 雷根經濟學
 		- 降低稅率 → 刺激景氣&增加總稅收
 	- $R=\tau wn$
+		- overall tax revenue
 	- $\tau$ 上升 → (稅前) w 上升，n 下降
 	- $\ln R=\ln \tau+\ln w+\ln n$
 	- if w 不變，$\frac{d\ln R}{d\ln \tau}=1+\frac{d\ln n}{d\ln \tau}=1-\eta_{\tau}$

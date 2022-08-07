@@ -16,6 +16,13 @@ parent: Software Development
 ## Free Services
 <https://aws.amazon.com/free/>
 
+### view free tier usage
+
+Cost Management -> Billing Console -> Free Tier
+
+the url looks like  
+`https://<region>.console.aws.amazon.com/billing/home?region=<region>#/freetier`
+
 ## Get Credentials
 Create IAM user (& group)  
 <https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html#getting-started_create-admin-group-console>
@@ -46,7 +53,10 @@ dynamodb = session.resource('dynamodb')
 ### Credentials
 see <https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html>
 
-To supply credentials directly
+To supply credentials directly:
+
+**with session**
+
 ```python
 session = boto3.Session(
     aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'),
@@ -56,6 +66,17 @@ session = boto3.Session(
 # dynamodb = session.resource('dynamodb')
 ```
 <https://stackoverflow.com/a/45982075/15493213>
+
+**with client**
+
+```python
+client = boto3.client(
+    's3',
+    aws_access_key_id=ACCESS_KEY,
+    aws_secret_access_key=SECRET_KEY,
+    aws_session_token=SESSION_TOKEN
+)
+```
 
 If nothing specified, it will use the credentials in `~/.aws`
 

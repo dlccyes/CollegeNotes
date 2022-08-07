@@ -127,7 +127,9 @@ git reset --hard      # Rewrite git's index to pick up all the new line endings.
 	- <https://www.edwardthomson.com/blog/advent_day_1_gitattributes_for_text_files.html>
 	- <https://blog.opasschang.com/confusing-git-autocrlf/>
 
+
 ## commit related
+
 ### delete all commits
 `git update-ref -d HEAD`
 
@@ -260,6 +262,20 @@ ref:
 
 ## branch related
 
+### show branch
+
+show all branch
+
+```
+git branch
+```
+
+show all remote/branch
+
+```
+git branch -a
+```
+
 ### create branch
 
 ```
@@ -267,6 +283,7 @@ git checkout -b <branch_name>
 ```
 
 ### delete branch
+
 delete local branch
 ```
 git branch -d <local branch>
@@ -278,16 +295,40 @@ git push <remote> --delete <branch>
 # e.g. git push origin --delete test
 ```
 
+if `git branch -a` still show the deleted branch
+
+```
+git remote prune <remote>
+```
+
+### rename branch
+
+```
+git branch -m <old_name> <new_name>
+```
+
 ### switch branch
 ```
 git checkout <branch>
 ```
 
-### switch tracking remote/branch
+
+### set/switch tracking remote branch
 ```
-git branch -u remote/branch
+git branch -u <remote>/<branch>
+# or
+git branch --set-upstream-to=<remote>/<branch>
 ```
 <https://stackoverflow.com/a/23458073/15493213>
+
+### merge branch
+
+To merge `branch_1` into `branch_2`
+
+```
+# in branch_2
+git merge branch_1
+```
 
 ### copy everything from another branch to current branch
 ```
@@ -295,6 +336,22 @@ git checkout <other_branch> .
 ```
 
 <https://stackoverflow.com/a/7188232/15493213>
+
+### push to another branch
+
+Say you're on `branch_1` and want to push to `branch_2`
+
+```
+git push <remote> branch_1:branch_2
+```
+
+or
+
+```
+git push <remote> HEAD:branch_2
+```
+
+<https://stackoverflow.com/questions/13897717>
 
 ## remote related
 ### check remote
@@ -318,6 +375,24 @@ git branch --set-upstream-to origin2/master
 ```
 <https://stackoverflow.com/a/32469272/15493213>
 
+### ssh method
+
+You can use the remote starting with `git@` and add the ssh public key to your github repo (or account) to use ssh method.
+
+1. generate ssh key ([doc](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key))
+	1. open git bash / linux terminal
+	2. `ssh-keygen -t ed25519 -C <email>`
+	3. press enter to til the end
+	4. `eval ssh-agent -s`
+		- should return `Agent pid <a number>`
+	5. copy the content in `~/.ssh/id_ed25519.pub`
+2. add it your github repo github ([doc](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account))
+	1. go to your repository (or account)
+	2. settings
+	3. deploy keys (or ssh key)
+	4. add key
+	5. paste your public key
+	6. check "allow write"
 
 ## tag
 <https://git-scm.com/book/en/v2/Git-Basics-Tagging>
