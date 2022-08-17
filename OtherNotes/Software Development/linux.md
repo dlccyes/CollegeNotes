@@ -394,12 +394,23 @@ apt-file search <package>
 <https://unix.stackexchange.com/a/330069>
 
 #### The following packages have been kept back
+
+tldr:
+
+- `sudo apt dist_upgrade`
+- `sudo apt full-upgrade`
+- `sudo apt install <kept back packages>`
+
+long:
+
 displayed when doing `apt upgrade`
 
 solved by
+
 ```
 sudo apt dist-upgrade
 ```
+
 according to <https://askubuntu.com/a/602> this is not an ideal solution
 
 about dist-upgrade:  
