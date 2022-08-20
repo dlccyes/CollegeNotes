@@ -132,7 +132,16 @@ My collection of spotify (and other music related) websites
 create Soundcloud playlists from Spotify playlists (or reverse)  
 <http://www.playlist-converter.net/#/>
 
-## last.fm remove duplicates bookmark
+## last.fm remove scrobbles
+
+### batch select & delete
+
+This chrome extension
+
+<https://chrome.google.com/webstore/detail/lastfm-unscrobbler/pjlmjmkpaklofeinjkhhdcggbgjhahek/>
+
+### auto remove duplicates
+
 from [here](https://github.com/shevchenkoartem/lastfm-smart-deduper) I think
 
 ```

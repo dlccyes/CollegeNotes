@@ -274,10 +274,20 @@ plt.ylim([0, y_max])
 ```
 
 #### hide axis
-```
+```python
 import matplotlib.pyplot as plt
 plt.gca().get_xaxis().set_visible(False)
 ```
+
+#### log scale
+
+```python
+plt.yscale('symlog')
+```
+
+Works for both positives & negatives.
+
+<https://stackoverflow.com/a/43372699/15493213>
 
 #### datetime
 auto formate dates on x axis

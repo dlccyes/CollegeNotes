@@ -27,6 +27,11 @@ use [Game Theory](Game%20Theory) to solve resource allocation problems in wirele
 - [Opportunistic Data Collection in Cognitive Wireless  Sensor Networks - Air–Ground Collaborative Online Planning](Opportunistic%20Data%20Collection%20in%20Cognitive%20Wireless%20%20Sensor%20Networks%20-%20Air–Ground%20Collaborative%20Online%20Planning)
 - [Quality and Profit Assured Trusted Cloud Federation Formation - Game Theory Based Approach](Quality%20and%20Profit%20Assured%20Trusted%20Cloud%20Federation%20Formation%20-%20Game%20Theory%20Based%20Approach)
 - [Near-Optimal and Collaborative Service Caching in Mobile Edge Clouds](Near-Optimal%20and%20Collaborative%20Service%20Caching%20in%20Mobile%20Edge%20Clouds)
+	- VR caching with shared VM in edge server
+- [Performance Measurements on a Cloud VR Gaming Platform](Performance%20Measurements%20on%20a%20Cloud%20VR%20Gaming%20Platform)
+	- VR QoE in each aspect vs. bandwidth, propagation delay, packet loss rate
+- A subjective study on QoE of 360 video for VR communication
+	- VR perceptual quality vs. bitrate
 
 ### others
 
@@ -540,6 +545,11 @@ $$
 - the less the edger server latency, the more close is pareto to optimal
 	- because user are more willing to move to edge
 
+### results
+
+- ![](https://i.imgur.com/DZWRCvR.png)
+
+
 ## VR scenario
 
 ### scenario
@@ -563,8 +573,25 @@ $$
 
 ### VM sharing details
 
+- players can only share VMs within an edge server
+- each player has 1 VM originally
+	- can be changed
+- in a coalition, members share their VMs with each other
 - players sharing the same VM can add/reduce CPU unit of the VM
 - an edge server has a total amount of CPU unit available, >= sum of CPU unit of its VMs
+
+### utility function
+
+- utility for user i in server j
+	- $u = QoS - cost$
+	- $QoS = log(bitrate) - e^{latency}$
+	- latency = propagation delay + transmission delay + computation delay + queuing delay
+		- propagation delay = O(distance)
+		- transmission delay = O(1)
+		- queuing delay = f(# VMs in coalition, cpu unit)
+			- [MMc queue](../../../OtherNotes/MMc%20queue) response time
+	- cost = O(CPU unit / # in same coalition)
+		- 0 when in cloud
 
 ### rules
 
@@ -574,7 +601,7 @@ $$
 	-  rent a VM on an edge server
 		- have an initial value of CPU unit
 		- if edge server's CPU unit left not enough, then no
-	-  share other player's VM
+	-  rent a VM and then share it by joining a coalition
 - players using the same VM can buy/reduce the CPU unit of their VM
 	- sum of CPU units of all VMs in the same edger server capped
 

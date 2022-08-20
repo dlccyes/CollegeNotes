@@ -1,6 +1,8 @@
 ---
 layout: meth
+parent: Miscellaneous
 ---
+
 # rdrama
 {: .no_toc }
 
