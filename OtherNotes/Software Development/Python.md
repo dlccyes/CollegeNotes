@@ -242,17 +242,25 @@ plt.plot(<x_data>, <y_data>, marker='o', markersize=5, linestyle='None')
 
 ```python
 plt.plot(<x_data>, <y_data>, label="line1")
-plt.plot(<x_data>, <y_data>, labe="line2")
+plt.plot(<x_data>, <y_data>, label="line2")
 plt.legend()
-plt.plot()
+plt.show()
 ```
 
 ### axis
+
 #### label
-```
+```python
 import matplotlib.pyplot as plt
-plt.xlabel("something")
-plt.ylabel("something")
+plt.xlabel("x axis")
+plt.ylabel("y axis")
+plt.title("title")
+
+# or
+_, ax = plt.subplot()
+ax.set_xlabel("x axis")
+ax.set_ylabel("y axis")
+ax.set_title("title")
 ```
 
 #### axis interval
@@ -604,6 +612,14 @@ np.savetxt('<path/to.file>.csv', <2d np array>, delimiter=',', fmt='%i')
 `fmt='%i'` for saving into all integer
 
 ## pandas
+
+### get column names
+
+```python
+import pandas as pd
+f = pd.read_csv("<your_file>.csv")
+cols = f.columns.tolist()
+```
 
 ### merge csv files
 

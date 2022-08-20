@@ -180,6 +180,13 @@ body {
 ```
 
 [ref](https://css-tricks.com/a-complete-guide-to-data-attributes/#styling)
+
+## Make html directly editable
+
+```
+document.body.contentEditable=true
+```
+
 ## draggable element
 <https://jsfiddle.net/dlccyes/s84thyLn/2/>
 

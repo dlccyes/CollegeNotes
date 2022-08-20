@@ -146,6 +146,7 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 - ![](https://i.imgur.com/l5vBtyK.png)
 
 ## classification
+
 - 希望 model output 接近 class 的值
 	- ![](https://i.imgur.com/B8C22qY.png)
 - represent class as one-hop vector (binary variable)
@@ -164,7 +165,22 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 			- ![](https://i.imgur.com/mbHe0RE.png)
 			- with MSE, when start at left top (y1 small,  y2 big, loss big), slope = 0 -> can't use gradient descent to reach right bottom (y1 big, y2 small, loss small)
 - ![](https://i.imgur.com/MGT1LCH.png)
+- `BCEWithLogitsLoss` with `pos_weight` for imbalanced dataset
 
+### ROC & AUC Curve
+
+- For balanced dataset
+- ROC curve
+	- true positive rate vs. false positive rate under different threshold
+	- ![](https://i.imgur.com/EmT2nsN.png)
+- AUC Curve
+	- Area under ROC curve
+
+### Precision Recall Rate
+
+- For imbalanced dataset
+- Precision vs. Recall Rate under different threshold
+- ![](https://i.imgur.com/cogVDun.png)
 
 ## CNN
 - image classification
