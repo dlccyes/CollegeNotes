@@ -66,3 +66,19 @@ go to google font -> select font -> select style -> go to the link in `<link>` o
 
 ## input range slider
 <https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html>
+
+## Center
+
+### With transform
+
+```css
+.center {
+		position: relative;
+        transform: translate(-50%);
+        left: 50%;
+        /* for text */
+		width: fit-content;
+		width: -moz-fit-content; /* for Firefox */
+		max-width: 500px;
+}
+```

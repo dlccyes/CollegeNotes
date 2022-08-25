@@ -186,6 +186,37 @@ Any custom logo can be passed in a URL parameter by base64 encoding it. e.g:
 	- ftp, x server and more
 	- tree style folders in sidebar
 
+## dotfiles management
+
+### Mackup
+
+[Mackup](https://github.com/lra/mackup)
+
+Install
+
+```
+brew install mackup
+```
+
+Set the backup directory in `~/.mackup.cfg`
+
+```
+[storage]
+engine = file_system
+path = /path/to/dir
+```
+
+Run backup
+
+```
+mackup backup
+```
+
+It will put your dotfiles in `/path/to/dir/Mackup`
+
+![](https://i.imgur.com/kS8rOdr.png)
+
+
 ## git GUI
 - github desktop
 	- simple and elegant
