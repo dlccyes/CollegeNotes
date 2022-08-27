@@ -14,6 +14,19 @@ parent: OtherNotes
 {:toc}
 </details>
 
+## Smooth pinch to zoom for Linux
+
+In `/etc/profile.d/use-xinput2.sh` (create if don't exist)
+
+```
+export MOZ_USE_XINPUT2=1
+```
+Logout & log back in. Now your you should be able to pinch to zoom in Firefox like you can in Mac & Windows.
+
+To make it more smooth, uncheck `Use smooth scrolling` in Firefox settings.
+
+<https://www.reddit.com/r/linux/comments/72mfv8>
+
 ## Troubleshooting
 
 ### Please enter the password for the PKCS#11 token PIV_II
