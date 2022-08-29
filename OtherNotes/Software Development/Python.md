@@ -1,4 +1,3 @@
-
 ---
 layout: meth
 parent: Software Development

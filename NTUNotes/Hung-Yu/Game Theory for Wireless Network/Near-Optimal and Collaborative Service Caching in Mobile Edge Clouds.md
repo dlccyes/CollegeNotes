@@ -23,6 +23,7 @@ parent: Game Theory for Wireless Networks
 - solution: use 5G-enables MEC to reduce the delay
 	- network service provider rent VMs in the edge servers of infra provider for caching
 	- share VM with others to reduce cost -> coalition
+- ![](https://i.imgur.com/BFdwam1.png)
 
 ## With VM Sharing
 
@@ -33,7 +34,7 @@ parent: Game Theory for Wireless Networks
 - delay
 	- ![](https://i.imgur.com/wH4Qokw.png)
 	- = Response time of a [MMc queue](../../../OtherNotes/MMc%20queue)
-	- c = # of coalition members
+	- c = # of VMs in the coalition
 	- $\mu$ = request processing rate
 	- $\rho$ = request rate
 	- $sp$ = service provider

@@ -63,6 +63,8 @@ layout: meth
 
 ## good posts or threads
 
+- everything
+	- <https://resumeworded.com/playbooks/job-search-checklist>
 - bonus skills
 	- <https://www.reveddit.com/v/csMajors/comments/qsz0wy/five_programming_skills_to_boost_your_resume_that/>
 		- SQL, Jira (agile), Git, Azure & AWS, Docker
@@ -107,6 +109,10 @@ layout: meth
 
 ## resume
 
+- <https://resumeworded.com/>
+	- auto resume suggestions
+	- very comprehensive
+	- free
 - [r/cscq resume sharing](https://www.reddit.com/r/cscareerquestions/comments/e8narz/official_excellent_and_exemplary_resume_sharing/)
 - templates
 	- [Software Engineer Resume](https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf)
@@ -115,6 +121,7 @@ layout: meth
 
 - templates
 	- [Deedy Cover Letter](https://www.overleaf.com/latex/templates/deedy-cover-letter/yhdwrhyvqjwy)
+- <https://resumeworded.com/cover-letters/cover-letter-checklist>
 - <https://resumegenius.com/cover-letter-examples/software-engineer-cover-letter-sample>
 - <https://www.reddit.com/r/cscareerquestions/comments/2afejd/what_should_my_cover_letters_be_like/>
 
@@ -258,6 +265,10 @@ layout: meth
 		- do the right thing
 		- care not only about business
 		- "Customer Obsession"
+
+### Q&A
+
+- <https://resumeworded.com/interviews/questions-to-ask-interviewer>
 
 ### posts & threads
 

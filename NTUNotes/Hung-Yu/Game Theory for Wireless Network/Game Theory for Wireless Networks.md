@@ -580,18 +580,49 @@ $$
 - players sharing the same VM can add/reduce CPU unit of the VM
 - an edge server has a total amount of CPU unit available, >= sum of CPU unit of its VMs
 
-### utility function
+### problem formulation
 
-- utility for user i in server j
-	- $u = QoS - cost$
-	- $QoS = log(bitrate) - e^{latency}$
-	- latency = propagation delay + transmission delay + computation delay + queuing delay
-		- propagation delay = O(distance)
-		- transmission delay = O(1)
-		- queuing delay = f(# VMs in coalition, cpu unit)
-			- [MMc queue](../../../OtherNotes/MMc%20queue) response time
-	- cost = O(CPU unit / # in same coalition)
-		- 0 when in cloud
+$$\max \displaystyle{\sum_{i=1}^{N}}R_i -C_i$$
+
+- constraints
+	- cpu unit limit of each edge server
+		- $\displaystyle{\sum_{j\in V_i}}cpu_j\leq cl_i$
+		- $V_i$ = set of VMs of edge server $i$
+		- $cl_i$ = cpu unit limit of edger server $i$
+		- $cpu_j$ = cpu unit of VM $j$
+- profit for service provider i
+	- profit = revenue - cost
+- $P_i=R_i-C_i$
+- $R_i=\displaystyle{\sum_{j\in S_i}}\rho_j \phi_j$
+	- $S_i$ = service provider $i$
+	- $j$ = user $j$
+	- $\rho_j$ = subcription price of user $j$
+	- $\phi_j$ whether user $j$ is satisfied with the service, 0 or 1
+
+$$    
+\phi_j=
+\begin{cases}
+  1, & \text{if}\ D_i>T_j^* \\
+  0, & \text{otherwise}
+\end{cases}
+$$
+- $\phi_j=1$ if 0 if $D_i>T_j^*$, 1 otherwise
+	- $D_i$ = delay of the service provider $i$
+	- $T_j^*$ = requirement delay of service for user $j$, porportional to $\rho_j$
+- $D_i = D_{p,i} + D_{r,i}$
+	- $D_{p,i} = A d_{i}$
+		- $D_{p,i}$ = propagation delay of service provider $i$
+		- $d_i$ = distance between sp $i$ and its server
+		- $A$ = constant
+	- $D_{r,i}$ = response delay of MMc queue
+		- [MMc queue](../../../OtherNotes/MMc%20queue)
+- $C_i=\dfrac{vn_k vc}{pn_k}$
+	- cost of vm for sp $i$
+	- $sp_i \in g_k$
+		- in coalition $k$
+	- $vn_k$ = num of VMs in coalition $k$
+	- $vc$ = cost of a VM
+	- $pn_k$ = num of service providers in coalition $k$
 
 ### rules
 
@@ -613,8 +644,8 @@ $$
 2. players originally on cloud (no caching)
 3. randomly choose a player
 4. randomly choose an edger server
-5. randomly choose a VM/coalition inside the edge server
-6. let the player switch if criterion satisfied
+5. find the best coalition in the server to switch to and switch if all criteria met
+6. let the player's coalition change the number of VMs if criteria met
 
 ### problems
 

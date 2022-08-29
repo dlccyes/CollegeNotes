@@ -1,6 +1,6 @@
 ---
 layout: meth
-parent: OtherNotes
+parent: Miscellaneous
 ---
 
 # Firefox
@@ -16,16 +16,24 @@ parent: OtherNotes
 
 ## Smooth pinch to zoom for Linux
 
-In `/etc/profile.d/use-xinput2.sh` (create if don't exist)
+Set the environmental variable `MOZ_USE_XINPUT2` as `1`.
+
+For exmaple, in `/etc/profile.d/use-xinput2.sh` (create if don't exist)
 
 ```
 export MOZ_USE_XINPUT2=1
 ```
+
 Logout & log back in. Now your you should be able to pinch to zoom in Firefox like you can in Mac & Windows.
 
 To make it more smooth, uncheck `Use smooth scrolling` in Firefox settings.
 
-<https://www.reddit.com/r/linux/comments/72mfv8>
+Works in my Endeavour KDE but not in Ubuntu KDE (both x11)
+
+Ref
+
+- <https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1697122>
+- <https://www.reddit.com/r/linux/comments/72mfv8>
 
 ## Troubleshooting
 

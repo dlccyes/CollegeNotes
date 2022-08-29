@@ -94,7 +94,9 @@ go inside and run
 And then your Ventoy is ready. When booting with this USB, ventoy will search all ISOs in the USB, so you can out your ISO whenever you want (inside the USB). You can also store normal files.
 
 ## Ubuntu
-### system upgrade
+
+### System upgrade
+
 for normal release
 ```
 sudo do-release-upgrade
@@ -112,8 +114,28 @@ go to `/etc/update-manager/release-upgrades`
 
 <https://ubuntu.com/blog/how-to-upgrade-from-ubuntu-18-04-lts-to-20-04-lts-today>
 
+### End of life release
+
+You can't properly update & upgrade your packages if your release is already end of life. You'll see `XXX doesn't have release file`.
+
+To solve it, replace your `/etc/apt/sources.list` with
+
+```
+## EOL upgrade sources.list
+# Required
+deb http://old-releases.ubuntu.com/ubuntu/ CODENAME main restricted universe multiverse
+deb http://old-releases.ubuntu.com/ubuntu/ CODENAME-updates main restricted universe multiverse
+deb http://old-releases.ubuntu.com/ubuntu/ CODENAME-security main restricted universe multiverse
+# Optional
+#deb http://old-releases.ubuntu.com/ubuntu/ CODENAME-backports main restricted universe multiverse
+```
+
+See <https://help.ubuntu.com/community/EOLUpgrades> & <https://askubuntu.com/q/1420077>
+
 ## group & user
+
 ### list all groups
+
 they're in `/etc/group`
 ```
 cut -d: -f1 /etc/group | sort
@@ -422,6 +444,7 @@ can also use `apt full-upgrade` (es el versión nuevo)
 <https://askubuntu.com/a/81594>
 
 ### snap
+
 #### install local
 ```
 snap <xxx.snap> --dangerous
@@ -854,13 +877,56 @@ PROMPT="%{$fg_bold[green]%}%n@%m:%{$fg[cyan]%}%d$ %{$fg[white]%}"
 - <https://stackoverflow.com/a/69537767/15493213>
 - <https://stackoverflow.com/a/2534676/15493213>
 
-## grub menu customization
+## grub menu
+
+### keys to press
+
+- `c` -> command line mode
+	- `normal` to exit
+- `e` -> edit entry
+- `ctrl+x` in edit -> boot 
+
+### grub menu customization
+
 - `sudo apt install grub-customizer` for GUI
 - everything in `/boot/grub/grub.cfg`
 - after modifing `/etc/default/grub`, run `sudo update-grub`
-	- auto scan your system generate `/boot/grub/grub.cfg` based on the settings in `/etc/default/grub`
-	- will run `grub-mkconfig -o /boot/grub/grub.cfg`
+	- will auto scan your system generate `/boot/grub/grub.cfg` based on the settings in `/etc/default/grub`
+	- if you don't have `update-grub`
+		- just run `grub-mkconfig -o /boot/grub/grub.cfg`
+		- `yay -S update-grub`
 	- <https://www.nixcraft.com/t/how-to-update-grub-on-rhel-or-centos-linux/3824/2>
+
+## kernel parameters
+
+<https://wiki.archlinux.org/title/Kernel_parameters>
+
+<https://askubuntu.com/questions/716957/>
+
+## chroot
+
+Treat a directory as your root. Use this to fix your broken distro from another distro or live USB.
+
+Suppose you want to mount it to `/mnt`
+
+1. `df -h` and find your target partition & efi system partition
+2. `mount /dev/sda3 /mnt` suppose your target partition is `/dev/sda3`
+3. `mount /dev/sda1 /mnt/boot/efi` suppose your efi system partition is `/dev/sda1`
+4. `arch-chroot /mnt`
+	- you can also use `chroot /mnt` but you'll have to mount some additional things by yourself
+
+If you use `chroot` instead of `arch-chroot`, you might need to do these also
+
+```sh
+sudo mount --bind /dev /mnt/dev
+sudo mount --bind /proc /mnt/proc 
+sudo mount --bind /sys /mnt/sys
+cp /etc/resolv.conf /mnt/etc/resolv.conf
+```
+
+- <https://wiki.archlinux.org/title/chroot>
+- <https://askubuntu.com/questions/891811>
+- <https://bbs.archlinux.org/viewtopic.php?id=138412>
 
 ## resize a partition
 ### principles
@@ -920,6 +986,30 @@ prime-select query
 ```
 nvidia-smi
 ```
+
+## Display server
+
+Show current display server
+
+```
+echo $XDG_SESSION_TYPE
+```
+
+### Wayland
+
+To use wayland in KDE in Ubuntu:
+
+```
+sudo apt install plasma-workspace-wayland
+```
+
+and in Arch:
+
+```
+sudo pacman -S plasma-wayland-session
+```
+
+Then select Wayland in your display manager.
 
 ## KDE Plasma
 ### config files location
@@ -1229,6 +1319,11 @@ in the `touchpad` entry
 <https://askubuntu.com/a/1122517>
 
 ## troubleshooting
+
+### Tips
+
+- Use [chroot](#chroot) to go into your partition if you can't boot it.
+
 ### Windows time become UTC
 linux will set the hardware time to UTC  
 we can make the hardware time be local time with  
@@ -1254,10 +1349,11 @@ sudo update-grub
 <https://askubuntu.com/a/1182434>
 
 #### no Windows in grub menu
+
 `sudo os-prober` to see if Windows is identified  
 <https://superuser.com/a/1392323>
 
-if there is Windows
+if there is no Windows
 
 ```
 sudo vim /etc/default/grub
@@ -1273,6 +1369,27 @@ sudo update-grub
 ```
 
 <https://forum.manjaro.org/t/warning-os-prober-will-not-be-executed-to-detect-other-bootable-partitions/57849/2>
+
+#### Booted directly into BIOS instead of GRUB
+
+`chroot` into the partition in another distro or live USB or whatever, see [chroot](#chroot)
+
+```
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --recheck
+grub-mkconfig -o boot/grub/grub.cfg
+```
+
+If you have the `update-grub` command, just use that instead of `grub-mkconfig -o boot/grub/grub.cfg`.
+
+Now it should work.
+
+Ref
+
+- <https://bbs.archlinux.org/viewtopic.php?pid=1927585#p1927585>
+- <https://bbs.archlinux.org/viewtopic.php?pid=1931184#p1931184>
+- <https://bbs.archlinux.org/viewtopic.php?id=264750>
+- <https://forum.endeavouros.com/t/rebuilt-pc-now-grub-doesnt-show-up-in-bios/1097>
+- <https://unix.stackexchange.com/a/111924>
 
 ### kwallet
 It is a password manager for KDE plasma, storing your wifi passwords for example. To disable this, go to `~/.config/kwalletrc`
@@ -1380,6 +1497,15 @@ lsof .fuse_hidden<????>
 ```
 
 And then `kill -9 <PID>` to kill it.
+
+### Bluetooth headset A2DP not available
+
+None works for me tho
+
+- <https://wiki.archlinux.org/title/Bluetooth_headset#A2DP_sink_profile_is_unavailable>
+- <https://askubuntu.com/questions/863930/>
+- <https://askubuntu.com/questions/765233/>
+- <https://askubuntu.com/questions/676853/>
 
 ## good programs
 ### KDE apps

@@ -8,7 +8,7 @@ layout: meth
 {: .no_toc }
 
 source: <https://ieeexplore.ieee.org/document/9103004>
-`
+
 <details open markdown="block">
   <summary>
     Outline
@@ -97,8 +97,11 @@ source: <https://ieeexplore.ieee.org/document/9103004>
 
 ## problem formulation
 min 的第一項是 transmission capacity，不可能超過
+
 ### without clustering
+
 ![](https://i.imgur.com/RgwLlzX.png)
+
 - $r_j$ = data generation rate of sensor $j$
 - 2 states of WSN → (9)
 	- active gathering state
