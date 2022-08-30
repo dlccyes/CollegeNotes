@@ -1334,6 +1334,8 @@ in the `touchpad` entry
 ### Tips
 
 - Use [chroot](#chroot) to go into your partition if you can't boot it.
+- for device related
+	- `sudo dmesg -w`
 
 ### Windows time become UTC
 linux will set the hardware time to UTC  
@@ -1511,7 +1513,7 @@ And then `kill -9 <PID>` to kill it.
 
 ### Bluetooth headset A2DP not available
 
-None works for me tho
+None works for my Kubuntu tho
 
 - <https://wiki.archlinux.org/title/Bluetooth_headset#A2DP_sink_profile_is_unavailable>
 - <https://askubuntu.com/questions/863930/>
@@ -1519,6 +1521,7 @@ None works for me tho
 - <https://askubuntu.com/questions/676853/>
 
 ## good programs
+
 ### KDE apps
 essential packages that might not come with arch install  
 
@@ -1568,6 +1571,10 @@ sudo systemctl enable bluetooth.service
 ```
 
 <https://www.jeremymorgan.com/tutorials/linux/how-to-bluetooth-arch-linux/>
+
+### logitech devices
+
+solaar
 
 ### htop
 - to show only 1 line per process (instead of per thread)
