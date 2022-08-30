@@ -400,8 +400,11 @@ find .
 ```
 
 ## package related
+
 ### apt
+
 #### find package
+
 find package
 ```
 apt-cache search <package>
@@ -442,6 +445,14 @@ about dist-upgrade:
 can also use `apt full-upgrade` (es el versión nuevo)
 
 <https://askubuntu.com/a/81594>
+
+### aptitude
+
+Built on apt-get, apt-mark, and apt-cache, super fast.
+
+- `sudo aptitude update`
+- `sudo aptitude fullupgrade`
+- `sudo aptitude autoclean`
 
 ### snap
 
