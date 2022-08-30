@@ -193,6 +193,33 @@ import os
 os.chdir("<path>")
 ```
 
+## random
+
+### seed
+
+You can give a seed for reproduceable results before each random function.
+
+e.g.
+
+```python
+import random
+random.seed(1)
+random.random() # -> 0.13436424411240122
+random.random() # -> 0.8474337369372327
+random.seed(1)
+random.random() # -> 0.13436424411240122
+```
+
+### shuffle
+
+shuffle a list, in place
+
+```python
+import random
+a = [1,2,3,4,5]
+random.shuffle(a)
+```
+
 ## matplotlib
 ### plot as many on demand
 <https://stackoverflow.com/a/39106673/15493213>

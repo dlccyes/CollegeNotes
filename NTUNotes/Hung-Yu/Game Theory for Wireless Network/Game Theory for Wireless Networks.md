@@ -616,14 +616,16 @@ $$
 		- $A$ = constant
 	- $D_{r,i}$ = response delay of MMc queue
 		- [MMc queue](../../../OtherNotes/MMc%20queue)
-- $C_i=\dfrac{vn_k vc}{pn_k}$
+- $C_i=vn_k vc\dfrac{unp_i}{uns_k}$
 	- cost of vm for sp $i$
 	- $sp_i \in g_k$
 		- in coalition $k$
 	- $vn_k$ = num of VMs in coalition $k$
 	- $vc$ = cost of a VM
 	- $pn_k$ = num of service providers in coalition $k$
-
+	- $unp_i$ = num of users in service provider $i$
+	- $uns_k$ = num of users in coalition $k$
+	
 ### rules
 
 -  players originally on cloud (no caching)
