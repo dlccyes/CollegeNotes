@@ -693,6 +693,64 @@ loginctl terminate session <id>
 
 `nmtui` for gui in terminal  
 
+## Bluetooth
+
+Show MAC of connected bluetooth devices
+
+```
+bluetoothctl devices
+```
+
+Connect or disconnect a device via MAC
+
+```
+bluetoothctl
+connect <MAC>
+disconnect <MAC>
+```
+
+## PulseAudio
+
+Show audio devices
+
+```
+pacmd list
+```
+
+Set a card to a2dp_sink
+
+```
+pacmd set-card-profile <card_name> a2dp_sink
+```
+
+e.g. to get the card name of a bluetooth headphone
+
+```
+pacmd list | grep bluez_card
+```
+
+Kill pulseaudio process
+
+```
+pulseaudio -k
+```
+
+Start pulseaudio process
+
+```
+pulseaudio --start
+```
+
+Something's wrong e.g. no input device detected
+
+```
+rm  ~/.config/pulse/*
+pulseaudio -k
+pulseaudio --start
+```
+
+<https://askubuntu.com/a/882222>
+
 ## ssh
 ### install ssh server
 install
@@ -1513,7 +1571,14 @@ And then `kill -9 <PID>` to kill it.
 
 ### Bluetooth headset A2DP not available
 
-None works for my Kubuntu tho
+What works for me:
+
+1. Go into `/var/lib/bluetooth/`
+2. Delete the directory under it
+3. reboot
+4. Reconnect all of your Bluetooth devices
+
+Other methods (none works for my Kubuntu tho): 
 
 - <https://wiki.archlinux.org/title/Bluetooth_headset#A2DP_sink_profile_is_unavailable>
 - <https://askubuntu.com/questions/863930/>

@@ -152,6 +152,16 @@ enttracks&user=<user>&api_key=<api key>&format=json" | python3 -c "import json,s
 - single quote -> evaluate at runtime
 	- ![](https://i.imgur.com/4PDOMd2.png)
 
+## find files
+
+[fzf](https://github.com/junegunn/fzf)
+
+## history
+
+- `history` to show history
+- `!5` to execute 5th commands in history
+- `ctrl+r` to search history command
+
 ## commands
 ### memory
 `free -h`
