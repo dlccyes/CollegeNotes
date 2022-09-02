@@ -399,6 +399,15 @@ grep -rnw  . -e <pattern>
 find .
 ```
 
+## systemd
+
+- `systemctl start <service>`
+	- start right now
+- `systemctl stop <service>`
+- `systemctl enable <service>`
+	- start on boot
+- `systemctl disable <service>`
+
 ## package related
 
 ### apt
