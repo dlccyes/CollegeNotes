@@ -7,6 +7,8 @@ layout: meth
 ---
 # Auction Design and Analysis for SDN-Based Traffic Offloading in Hybrid Satellite-Terrestrial Networks (H-STN)
 
+<https://ieeexplore.ieee.org/document/8463589/>
+
 ## intro
 ### 名詞
 - H-STN

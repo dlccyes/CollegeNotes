@@ -5,7 +5,11 @@ title: Single Controller Stochastic Games for Optimized Moving Target Defense
 layout: meth
 ---
 # Single Controller Stochastic Games for Optimized Moving Target Defense
+
+<https://ieeexplore.ieee.org/document/7510985/>
+
 ## intro
+
 - strategically change its cryptographic techniques & keys
   - deter the acttacker
 - single-controller

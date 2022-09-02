@@ -7,7 +7,7 @@ layout: meth
 
 2021.10.15 Game Theory Study Group  Presentation: Contract Theory
 
-- https://ieeexplore.ieee.org/document/9440722
+- <https://ieeexplore.ieee.org/document/9440722>
 - 電動車電量問題
 - 資源不夠 → task offloading
 	- cloud computing

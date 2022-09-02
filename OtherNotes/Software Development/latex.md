@@ -15,10 +15,14 @@ parent: Software Development
 
 $\LaTeX$
 
-## short syntax
-- stylized letters
-	- `\mathcal{}`
+## letter style
+
+- fancy
+	- `\mathcal{}` $\mathcal{k}$
 	- `\mathfrak{R}` $\mathfrak{R}$
+- normal
+	- `\mathrm{}` $\mathrm{k}$
+		- for multi-letter variable [ref](https://tex.stackexchange.com/a/482988)
 
 ## formatting
 ### line height
