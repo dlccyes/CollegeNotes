@@ -21,6 +21,8 @@ use [Game Theory](Game%20Theory) to solve resource allocation problems in wirele
 ## papers
 
 ### coalition game papers
+
+- [Coalitional game theory for communication networks.pdf](Coalitional_game_theory_for_communication_networks.pdf)
 - [Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing](Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing)
 	- coalition tradeoff
 		- more choice but more users in same coalition -> more noise

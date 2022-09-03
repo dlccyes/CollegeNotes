@@ -221,6 +221,20 @@ random.shuffle(a)
 ```
 
 ## matplotlib
+
+### Auto adjsut your figure layout
+
+`plt.tight_layout()`
+
+Add this if your text is cutoff or whatever.
+
+### save figure
+
+```python
+plt.savefig(f'{fig_name}.pdf', format='pdf', dpi=300)
+
+```
+
 ### plot as many on demand
 <https://stackoverflow.com/a/39106673/15493213>
 
@@ -273,9 +287,12 @@ plt.legend()
 plt.show()
 ```
 
-### axis
+### gridline
 
-#### label
+`plt.grid()` to enable gridline
+
+### axis label
+
 ```python
 import matplotlib.pyplot as plt
 plt.xlabel("x axis")
@@ -289,8 +306,22 @@ ax.set_ylabel("y axis")
 ax.set_title("title")
 ```
 
-#### axis interval
+### axis min max value
+
+Omit -> auto
+
+```python
+plt.xlim(left=0, right=100) 
+plt.ylim(bottom=0, top=100)
+plt.tight_layout() # you may need this
+```
+
+<https://stackoverflow.com/a/32634026/15493213>
+
+### axis interval
+
 y axis 20 intervals
+
 ```python
 import matplotlib.pyplot as plt
 ax = plt.gca()
@@ -299,7 +330,7 @@ plt.yticks(range(y_min, y_max, (y_max-y_min)//20))
 plt.ylim([0, y_max])
 ```
 
-#### hide axis
+### hide axis
 ```python
 import matplotlib.pyplot as plt
 plt.gca().get_xaxis().set_visible(False)

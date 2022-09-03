@@ -101,6 +101,18 @@ equals to different things in different conditions
 
 <https://tex.stackexchange.com/a/9068>
 
+## Algorithm
+
+Comparison of different packages: <https://tex.stackexchange.com/a/230789>
+
+Doc: <https://en.wikibooks.org/wiki/LaTeX/Algorithms>
+
+```tex
+\usepackage{algorithm, algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}} % rename require to input
+\renewcommand{\algorithmicensure}{\textbf{Output:}} % rename ensure to output
+```
+
 ## environment
 ### local
 1. install a LaTeX distro
