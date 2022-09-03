@@ -101,6 +101,18 @@ equals to different things in different conditions
 
 <https://tex.stackexchange.com/a/9068>
 
+## Image
+
+Use pdf or eps for best quality.
+
+```tex
+\begin{figure}[t!]
+\centerline{\includegraphics[width=90mm]{fig/user_sat_m.pdf}}
+\caption{User satisfaction ratio with different numbers of edge servers.}
+\label{fig:6}
+\end{figure}
+```
+
 ## Algorithm
 
 Comparison of different packages: <https://tex.stackexchange.com/a/230789>
@@ -108,9 +120,45 @@ Comparison of different packages: <https://tex.stackexchange.com/a/230789>
 Doc: <https://en.wikibooks.org/wiki/LaTeX/Algorithms>
 
 ```tex
-\usepackage{algorithm, algorithmic}
-\renewcommand{\algorithmicrequire}{\textbf{Input:}} % rename require to input
-\renewcommand{\algorithmicensure}{\textbf{Output:}} % rename ensure to output
+\usepackage{algorithm, algpseudocode, algorithmicx, tabularx}
+
+% create custom commands
+\algnewcommand\Output{\State \textbf{Output: }}
+\algnewcommand\Initialize{\State \textbf{Initialization: }}
+\algnewcommand\Indent{\State \hspace*{\algorithmicindent}}
+\algnewcommand\Continue{\State \textbf{continue}}
+
+\makeatletter
+\algnewcommand{\multiline}[1]{%
+  \begin{tabularx}{\dimexpr\linewidth-\ALG@thistlm}[t]{@{}X@{}}
+    #1
+  \end{tabularx}
+}
+\makeatother
+
+\begin{algorithm}
+\caption{Coalition} \label{algo:1}
+\begin{algorithmic}[1] % number for line number start
+    \Initialize{}
+        \Indent{Set the positions of servers and SPs.}
+        \Indent{Set the users for each SP}
+    \Repeat
+        \State \multiline{%
+        long long long long long long long long long long long long long long long long long long}
+        \State Something
+        \ForAll{something}
+            \If{$\mathcal{F}_{m_1, k_1}=\mathcal{F}_{m_2, k_2}$}
+                \Continue
+            \EndIf
+            \If{no}
+                \State haha
+            \EndIf
+        \EndFor
+        \State Delete empty coalitions
+    \Until{No SP has the incentive to change its strategy}
+    \Output{The stable coalition formation result.}
+\end{algorithmic}
+\end{algorithm}
 ```
 
 ## environment
