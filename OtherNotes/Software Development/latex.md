@@ -113,6 +113,28 @@ Use pdf or eps for best quality.
 \end{figure}
 ```
 
+## Theorem, Definition, Proof
+
+```tex
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+```
+
+```tex
+\begin{definition}
+	def
+\end{definition}
+
+\begin{theorem}
+	theorem
+\end{theorem}
+
+\begin{proof}
+something
+\end{proof}
+```
+
 ## Algorithm
 
 Comparison of different packages: <https://tex.stackexchange.com/a/230789>
