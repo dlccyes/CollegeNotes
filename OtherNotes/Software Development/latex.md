@@ -101,7 +101,7 @@ equals to different things in different conditions
 
 <https://tex.stackexchange.com/a/9068>
 
-## Image
+## Figure
 
 Use pdf or eps for best quality.
 
@@ -112,6 +112,14 @@ Use pdf or eps for best quality.
 \label{fig:6}
 \end{figure}
 ```
+
+### Make 2 column wide in 2 column format
+
+```tex
+\begin{figure*}
+\end{figure*}
+```
+
 
 ## Theorem, Definition, Proof
 
