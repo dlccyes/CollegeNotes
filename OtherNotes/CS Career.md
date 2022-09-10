@@ -113,7 +113,7 @@ layout: meth
 	- auto resume suggestions
 	- very comprehensive
 	- free
-- [r/cscq resume sharing](https://www.reddit.com/r/cscareerquestions/comments/e8narz/official_excellent_and_exemplary_resume_sharing/)
+- [r/cscq resume sharing](https://www.reddit.com/r/cscareerquestions/comments/e8narz)
 - templates
 	- [Software Engineer Resume](https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf)
 
@@ -123,7 +123,7 @@ layout: meth
 	- [Deedy Cover Letter](https://www.overleaf.com/latex/templates/deedy-cover-letter/yhdwrhyvqjwy)
 - <https://resumeworded.com/cover-letters/cover-letter-checklist>
 - <https://resumegenius.com/cover-letter-examples/software-engineer-cover-letter-sample>
-- <https://www.reddit.com/r/cscareerquestions/comments/2afejd/what_should_my_cover_letters_be_like/>
+- <https://www.reddit.com/r/cscareerquestions/comments/2afejd>
 
 ## applying preparation
 
@@ -340,11 +340,4 @@ layout: meth
 		- Amazon
 		- Meta
 		- quant companies
-- hiring bar
-	- high
-		- Google
-		- Meta
-	- low
-		- Amazon
-		- Microsoft
 
