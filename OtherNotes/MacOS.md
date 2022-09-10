@@ -32,7 +32,6 @@ After installing, move the `.app` to `Applications` directory.
 
 To remove an app, go to `Applications` and move it to trash.
 
-
 ## Homebrew
 
 package manager for MacOS
@@ -44,28 +43,49 @@ brew update
 brew upgrade
 ```
 
-
 ### autoremove
 
 ```
 brew autoremove
 ```
 
+## screen edge
+
+`Desktop & Screen Saver` -> `Hot Corners`
+
+## Check CPU temperature
+
+```
+sudo powermetrics|grep -i "CPU die temperature"
+```
+
 ## programs
 
 ### open VsCode from terminal
 
+1. If you haven't, put your vscode into the `Applications` folder
+2. command pallette -> `Shell Command: Install 'code' command in PATH`
+
 <https://stackoverflow.com/a/36882426/15493213>
 
-command pallette -> Shell Command: Install 'code' command in PATH
 
 ### windows snapper
 
-[Rectangle][https://github.com/rxhanson/Rectangle] (the successor of [Spectacle](https://github.com/eczarny/spectacle))
+[Rectangle](https://github.com/rxhanson/Rectangle) (the successor of [Spectacle](https://github.com/eczarny/spectacle))
 
-### alt+tab
+```
+brew install --cask rectangle
+```
+
+### alt+tab with preview thumbnail
 
 [AltTab](https://alt-tab-macos.netlify.app/)
+
+```
+brew install --cask alt-tab
+```
+
+Default key would be `option+tab`
 
 ### clipboard manager
 
@@ -73,7 +93,7 @@ command pallette -> Shell Command: Install 'code' command in PATH
 
 free + search + image + popup with shortcut (sadly no pin)
 
-(it's $330 in App store but free downloading from the website)
+(it's $330 in App store but free downloading from the website, just type $0 and a random fake email for receipt and the download will occur)
 
 ### screenshot
 

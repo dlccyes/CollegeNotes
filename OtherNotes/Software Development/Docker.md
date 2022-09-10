@@ -15,7 +15,13 @@ parent: Software Development
 </details>
 
 ## installation
+
+### MacOS
+
+<https://docs.docker.com/desktop/install/mac-install/>
+
 ### Ubuntu
+
 official doc: <https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository>
 
 update apt and install necessary packages  

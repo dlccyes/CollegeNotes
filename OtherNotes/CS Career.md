@@ -285,6 +285,7 @@ layout: meth
 		- intern
 			- <https://chonyy.medium.com/944c81dca809>
 			- <https://hackmd.io/@lindaya0913/HkekYB1dPO>
+			- <https://medium.com/@garychen0975321741/b0df2937036e>
 		- senior
 			- <https://angelswengineer.medium.com/92d5c6ba384c>
 		- <https://juihsiuhsu.medium.com/68ee9411e4d1>

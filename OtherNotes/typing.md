@@ -15,5 +15,6 @@ parent: OtherNotes
 </details>
 
 ## resources
-- https://www.typingclub.com/
+- <https://www.typingclub.com/>
 	- detailed stats, pretty fun
+- <https://thetypingcat.com/>

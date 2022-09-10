@@ -1,6 +1,7 @@
-openop---
+---
 layout: meth
 ---
+
 # Spanish
 {: .no_toc }
 
@@ -11,6 +12,19 @@ layout: meth
 - TOC
 {:toc}
 </details>
+
+## typing
+
+### mac
+
+-   á — Option + e, a.
+-   Á — Option + e, Shift + a.
+-   é — Option + e, e.
+-   É — Option + e, Shift + e.
+-   í — Option + e, i.
+-   Í — Option + e, Shift + i.
+-   ñ — Option + n, n.
+-   Ñ — Option + n, Shift + n.
 
 ## Spanish 1-1
 ### meta`
@@ -2864,3 +2878,12 @@ past tense 第三人稱中間字母會變
 		- Cuál fue la primera película de Lee Ang?
 		- Qué película mucho éxito tuvo en todo el mundo?
 		- En que ganó premio al mejor director
+
+## Spanish 3-1
+
+### words
+
+- pesadilla = nightmare
+- deprimdo = depressed
+- desconocido = unknown, stranger
+- averiguar = find out 

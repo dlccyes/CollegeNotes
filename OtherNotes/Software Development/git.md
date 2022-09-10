@@ -242,7 +242,9 @@ https://gitbook.tw/chapters/rewrite-history/merge-multiple-commits-to-one-commit
 <https://stackoverflow.com/questions/35942754/how-can-i-save-username-and-password-in-git>
 
 ## clone related
+
 ### partial clone
+
 ```
 git init
 git remote add -f origin <url>

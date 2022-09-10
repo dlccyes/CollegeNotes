@@ -14,6 +14,10 @@ parent: Miscellaneous
 {:toc}
 </details>
 
+## Theme
+
+[Lightrail Epic](https://addons.mozilla.org/en-US/firefox/addon/lightrail-epic/) (mine)
+
 ## Smooth pinch to zoom for Linux
 
 Set the environmental variable `MOZ_USE_XINPUT2` as `1`.

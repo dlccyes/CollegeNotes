@@ -29,3 +29,9 @@ like yaml
 ## hide command
 
 put `@` in front of your command
+
+## Troubleshooting
+
+### Makefile:4: *** missing separator.  Stop.
+
+Make sure a tab precedes your command, instead of spaces. You can convert spaces to tab with vscode.
