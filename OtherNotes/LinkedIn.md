@@ -21,6 +21,8 @@ parent: Miscellaneous
 
 ## Download Connections Data
 
+<https://www.linkedin.com/mypreferences/d/download-my-data>
+
 - Name
 - Company
 - Position
