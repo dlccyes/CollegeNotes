@@ -18,14 +18,27 @@ parent: Software Development
 
 <https://github.com/Pungyeon/clean-go-article>
 
+## Rules
+
+### function name
+
+CamelCase, otherwise might have unexpected results
+
 ## Init
 
 ```
 go mod init <project_name>
-go tidy
 ```
 
 Will generate `go.mod`
+
+## Dependencies
+
+```
+go mod tidy
+```
+
+Will auto check your codes and update `go.mod` to ensure correct dependencies
 
 ## Run
 
@@ -106,6 +119,74 @@ proto file
 
 <https://stackoverflow.com/a/70587449/15493213>
 
+## unit testing
+
+### Writing test files
+
+Your test file should be in `*_test.go` format, in the same directory as your main file.
+
+Functions should be in `Test*` format.
+
+e.g.
+
+```go
+// main.go
+package mul
+
+func Mul(a, b int) int {
+	return a * b
+}
+```
+
+```go
+// main_test.go
+package mul // notice the same name
+
+import (
+	"testing"
+
+	"github.com/stretchr/testify/assert"
+)
+
+func TestMul(t *testing.T) {
+	assert.Equal(t, Mul(1, 2), 2)
+}
+```
+
+
+### Test
+
+To run all test files recursively
+
+```
+go test -v ./...
+```
+
+To run the test file in the current directory
+
+```
+go test -v
+```
+
+To run the test file in a specific package
+
+```
+go test -v <project name/package name>
+```
+
+`-v` for verbose
+
+## mock
+
+### gomock
+
+```
+mockgen -source=doer/doer.go -destination=mocks/mock_doer.go --package mocks
+```
+
+### sqlmock
+
+<https://pkg.go.dev/github.com/DATA-DOG/go-sqlmock>
 
 ## Troubleshooting
 
