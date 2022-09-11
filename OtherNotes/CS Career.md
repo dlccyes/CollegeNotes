@@ -60,11 +60,11 @@ layout: meth
 - grinding
 	- leetcode
 	- codewars
+- every details in the pipeline
+	- <https://resumeworded.com/playbooks/job-search-checklist>
 
 ## good posts or threads
 
-- everything
-	- <https://resumeworded.com/playbooks/job-search-checklist>
 - bonus skills
 	- <https://www.reveddit.com/v/csMajors/comments/qsz0wy/five_programming_skills_to_boost_your_resume_that/>
 		- SQL, Jira (agile), Git, Azure & AWS, Docker
@@ -144,17 +144,21 @@ layout: meth
 	- <https://hn.jeffjadulco.com/29775023>
 	- [every blind 75 explained](https://docs.google.com/spreadsheets/u/0/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/)
 - Cracking the Coding Interview
-	- [pdf](http://englishonlineclub.com/pdf/Cracking the Coding Interview - 189 Programming Questions and Solutions (6th Edition) [EnglishOnlineClub.com].pdf)
+	- [pdf](https://github.com/Avinash987/Coding/blob/master/Cracking-the-Coding-Interview-6th-Edition-189-Programming-Questions-and-Solutions.pdf)
 
 ### system design
 
 - DDIA
 	- 簡中譯 <https://github.com/Vonng/ddia>
-	- [pdf](<https://github.com/Yang-Yanxiang/Designing-Data-Intensive-Applications/blob/master/Designing%20Data%20Intensive%20Applications.pdf>)
+	- [pdf](https://github.com/jeffrey-xiao/papers/blob/master/textbooks/designing-data-intensive-applications.pdf)
 - Grokking the system design interview
 	- <https://akshay-iyangar.github.io/system-design/>
 	- [pdf](https://raw.githubusercontent.com/sharanyaa/grok_sdi_educative/master/grok_system_design_interview.pdf)
 	- [pdf](http://libgen.rs/book/index.php?md5=3CC8A0D02BBB0644A3839F6B621BB86B)
+- Alex Xu
+	- [System Design Interview An Insider’s Guide by Alex Xu (z-lib.org).pdf](https://github.com/G33kzD3n/Catalogue/blob/master/System%20Design%20Interview%20An%20Insider%E2%80%99s%20Guide%20by%20Alex%20Xu%20(z-lib.org).pdf)
+	- [Youtube](https://www.youtube.com/c/ByteByteGo/
+	- [LinkedIn](https://www.linkedin.com/in/alexxubyte/recent-activity/shares/)
 - [master doc](https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view)
 	- from <https://leetcode.com/discuss/interview-question/system-design/1205825>
 
