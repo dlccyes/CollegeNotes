@@ -162,6 +162,7 @@ layout: meth
 	- [LinkedIn](https://www.linkedin.com/in/alexxubyte/recent-activity/shares/)
 - [master doc](https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view)
 	- from <https://leetcode.com/discuss/interview-question/system-design/1205825>
+- [Database Schema Templates](https://drawsql.app/templates/popular)
 
 ### devops
 
@@ -175,6 +176,10 @@ layout: meth
 		- <https://www.fullstack.cafe/blog/kubernetes-interview-questions>
 
 ## interviews
+
+### Getting interviews
+
+<https://www.reddit.com/r/cscareerquestions/comments/uczkay/>
 
 ### behavioral questions
 

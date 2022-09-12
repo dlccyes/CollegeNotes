@@ -1396,6 +1396,72 @@ in the `touchpad` entry
 
 <https://askubuntu.com/a/1122517>
 
+## Google Drive Sync Clients
+
+### KDE network folder
+
+Doesn't download files to your local, but a network folder.
+
+### drive
+
+<https://github.com/odeke-em/drive>
+
+It's very slow! Can't auto sync but have to manually push and pull.
+
+Installation
+
+```
+go get -u github.com/odeke-em/drive/cmd/drive
+```
+
+Go to your google drive directory and 
+
+```
+drive init
+```
+
+Go to the link, give permissions, then copy the code back to the terminal.
+
+To pull
+
+```
+drive pull
+```
+
+To push
+
+
+```
+drive push
+```
+
+### rclone
+
+It's very slow! Can't auto sync but have to manually push and pull.
+
+#### install  
+```
+curl https://rclone.org/install.sh | sudo bash
+```
+and then run `rclone config` to setup your remote
+
+#### sync
+```
+rclone sync source dest
+```
+e.g.
+```
+rclone sync 大學講義筆記 zubar:大學講義筆記
+```
+
+for interative use (ask you to do or not to do each time), use `rclone sync -i`
+
+#### ls
+list top level things  
+```
+rclone lsd remote:<path>
+```
+
 ## troubleshooting
 
 ### Tips
@@ -1766,30 +1832,6 @@ find and download dictionaries [here](http://download.huzheng.org/dict.org/)
 (`mkdir ~/.stardict; mkdir ~/.stardict/dic` first if you haven't)
  
 `sdcv word` to search for word
-
-### rclone
-#### install  
-```
-curl https://rclone.org/install.sh | sudo bash
-```
-and then run `rclone config` to setup your remote
-
-#### sync
-```
-rclone sync source dest
-```
-e.g.
-```
-rclone sync 大學講義筆記 zubar:大學講義筆記
-```
-
-for interative use (ask you to do or not to do each time), use `rclone sync -i`
-
-#### ls
-list top level things  
-```
-rclone lsd remote:<path>
-```
 
 ### drive
 it is very very slow, much slower than network folder, use rclone instead
