@@ -188,6 +188,10 @@ mockgen -source=doer/doer.go -destination=mocks/mock_doer.go --package mocks
 
 <https://pkg.go.dev/github.com/DATA-DOG/go-sqlmock>
 
+<https://github.com/go-gorm/gorm/issues/1525#issuecomment-376164189>
+
+<https://betterprogramming.pub/97ee73e36526>
+
 ## Troubleshooting
 
 ### VsCode: could not import strconv

@@ -38,6 +38,7 @@ layout: meth
 	- get PIPed = about to get fired
 - FTE = full-time equivalent
 	- what you do as a intern/contractor but full-time
+- MTS = member of technical staff = SWE
 
 ## resources
 

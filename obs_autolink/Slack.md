@@ -24,9 +24,11 @@ if no sound
 
 (on Mac)
 
-System Preferences -> Notifications & Focus -> Slack -> make sure "Allow Notifications" is checked
+- System Preferences -> Notifications & Focus -> Slack -> make sure "Allow Notifications" is checked
+- System Preferences -> Sound -> make sure "Play user interface sound effects" is checked
 
-<https://slack.com/help/articles/4405966559507-Troubleshoot-Slack-notifications-on-macOS-Big-Sur>
+<https://slack.com/help/articles/360001559367-Troubleshoot-Slack-notifications#mac-4>
+
 
 ### unread red dot always there
 

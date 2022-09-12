@@ -152,7 +152,7 @@ System Preferences > Mission Control  -> uncheck "Automatically rearrange Spaces
 
 When you're using more than one display, you can only make the dock appears on one of them. To make the dock appears on another display:
 
-hide the dock -> go to another display -> keeps moving your cursor down (bottom screen edge) until the dock appears
+hide the dock (use the shortcut listed in system preferences -> keyboard -> shortcuts) -> go to another display -> keeps moving your cursor down (bottom screen edge) until the dock appears
 
 ### use the normal fullscreen in firefox
 
