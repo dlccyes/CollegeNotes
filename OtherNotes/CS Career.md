@@ -135,6 +135,7 @@ layout: meth
 - complex personal projects
 - system design
 
+
 ### leetcode
 
 - [Blind 75](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU)
@@ -178,6 +179,9 @@ layout: meth
 		- <https://www.fullstack.cafe/blog/kubernetes-interview-questions>
 
 ## interviews
+
+- <https://www.linkedin.com/in/jianbang-xiao/recent-activity/shares/>
+	- lots of posts about interview questions
 
 ### Getting interviews
 
@@ -339,6 +343,11 @@ layout: meth
 
 - skill assessment answers
 	- <https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes>
+
+## TC
+
+- Taiwan SWE
+	- <https://www.levels.fyi/t/software-engineer/locations/taiwan?sortBy=total_compensation&sortOrder=DESC&offset=0&searchText=houzz&currency=TWD>
 
 ## company details
 
