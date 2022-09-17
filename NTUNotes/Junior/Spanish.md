@@ -2617,7 +2617,7 @@ past tense 第三人稱中間字母會變
 ### imperfect tense
 - was doing 
 - past habit
-- Ayer cuando me duchaba, mi madre me llamó or teléfono
+- Ayer cuando me duchaba, mi madre me llamó / teléfone
 	- Yesterday when I was showering, my mom called me. 
 - when he was 50 yo = a los 50 años = cuando tenía 50 años
 - ![](https://i.imgur.com/nRwbH5X.png)
@@ -2887,3 +2887,65 @@ past tense 第三人稱中間字母會變
 - deprimdo = depressed
 - desconocido = unknown, stranger
 - averiguar = find out 
+- testigo = witness
+- robar = steal
+- ladrón = thief
+- inspector / detective
+- lupa = magnifier
+- sospechar = suspect
+	- sospechoso = suspicious
+- pista = road
+- interrogar = interregate
+- policía
+- huellas = step on / tread / trample
+- declarar = declare / state
+- acusar = accuse
+	- acusado = accused
+- fijate = fix
+- detener = arrest
+	- detenido = under arrest
+- charlar = chat (talking)
+- chatear = chat (messaging)
+- gritar = shout
+- vecina = neighbor
+- despertar = wake up
+- asustadado = scared
+- regañar = scold
+- enfadarse = get angry
+- venganza = revenge
+- empezar a ... = start to ...
+- asomar = lean out
+	- me asomé por la ventana
+- seguro = insurance
+- diamente = diamond
+- cobrar = get paid
+	- cobrar el seguro del diamente
+- sería = would be
+- tan = so (+adj.)
+	- tan feo = so ugly
+- estructura = structure
+- obligación = obligation
+- maquillarte = makeup
+- carísimo = expensive
+- entrada = entrance
+- venir = come
+- estilo = style
+- natación = swimming
+- el aire acondicionado = air conditioning
+- relejar = relax
+- pausa = pause
+- olvidar = forget
+- alumno = student
+- por eso = so
+	- Soy feísimo/a, por eso, nadie quiere salir conmigo.
+
+### Porque ..., have to ...
+
+![](https://i.imgur.com/PLjguO8.png)
+
+Porque ... ,
+
+- tener que = have to
+- haber de = have to
+- deber = should
+- hay que = must

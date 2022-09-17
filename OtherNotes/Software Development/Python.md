@@ -626,9 +626,31 @@ while tiempo_prev != None:
 
 <https://www.adamsmith.haus/python/answers/how-to-iterate-through-a-range-of-dates-in-python>
 
-## heap
-- priority queue
-- `import heapq`
+## Heap / Priority Queue
+
+Use `heapq` for min heap.
+
+Transform, push, and pop
+
+```python
+import heapq
+mylist = [1,2,3,4,5]
+# transform into heap
+heapq.heapify(mylist)
+# push into heap
+heapq.heappush(mylist, (5, 'label 5'))
+# pop from heap
+res = heapq.heappop(mylist)
+```
+
+K Smallest
+
+```python
+import heapq
+mylist = [(1,2),(2,3),(1,3),(4,-2)]
+# return a list of k smallest with custom comparison formula
+res = heapq.nsmallest(5, mylist, key = lambda x: x[0]+x[1])
+```
 
 ## collections
 - `import collections`

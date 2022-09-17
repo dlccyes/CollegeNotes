@@ -119,6 +119,17 @@ proto file
 
 <https://stackoverflow.com/a/70587449/15493213>
 
+## GORM
+
+Go's ORM library
+
+### hooks
+
+<https://gorm.io/docs/hooks.html>
+
+- AfterFind
+	- auto execute after querying
+
 ## unit testing
 
 ### Writing test files
