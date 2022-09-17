@@ -220,6 +220,21 @@ a = [1,2,3,4,5]
 random.shuffle(a)
 ```
 
+## Hashing
+
+```python
+from hashlib import sha256
+def get_hash(plain: str) -> str:
+	plain = '123456'
+	plain = plain.encode()
+	S = sha256()
+	S.update(plain)
+	return S.hexdigest()
+
+
+
+```
+
 ## matplotlib
 
 ### Auto adjsut your figure layout
