@@ -1746,7 +1746,8 @@ to move it to bottom and other bar settings
 <https://github.com/polybar/polybar/wiki/Configuration#bar-settings>
 
 ### create_ap
-my comment: I can't find anyway to create a hotspot with password that can be connected by other devices (tried `nmcli`, KDE GUI and others). This tool can create a connectable hotspot, but the it's pretty hard to use. The starting & stopping method is very obscure and don't work most of the time.
+
+My comments: I can't find anyway to create a hotspot with password that can be connected by other devices (tried `nmcli`, KDE GUI and others). This tool can create a connectable hotspot, but it's pretty hard to use. The starting & stopping method is very obscure and don't work most of the time.
 
 see [the GUI of it](#linux-wifi-hotspot)
 
@@ -1763,7 +1764,9 @@ make install
 
 create a hotspot from ethernet connection (if wifi interface is `wlo1`, ethernet
  interface is `enx00e04c360138`)  
-```
+ 
+```shell
+# sudo create_ap <og_interface> <wireless_interface> <hotspot_name> <hotspot_password>
 sudo create_ap wlo1 enx00e04c360138 hh 12345678
 ```
 
@@ -1789,21 +1792,32 @@ stop instance or run in daemon (uesless tho)
 <https://github.com/oblique/create_ap/issues/58#ref-issue-179140687>
 
 ### linux-wifi-hotspot
+
 GUI of [create_ap](#create_ap)
 
 [Github repo](https://github.com/lakinduakash/linux-wifi-hotspot)
 
 [discovery post](https://www.reddit.com/r/kde/comments/co2i1f)
 
-install  
+**Install**  
+
+Ubuntu
+
 ```
 sudo add-apt-repository ppa:lakinduakash/lwh
 sudo apt install linux-wifi-hotspot
 ```
 
+Arch based
+
+```
+yay -S linux-wifi-hotspot
+```
+
 launch GUI
 1. search "Wifi HotSpot"
 2. `wihotspot` in terminal
+	- use this to see the commands & outputs of the GUI actions
 
 ### github desktop
 don't use the AUR `github-desktop` version, but `github-desktop-bin`
