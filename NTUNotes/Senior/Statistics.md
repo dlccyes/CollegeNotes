@@ -63,19 +63,12 @@ How are local maxima distributed?
 
 ![](https://i.imgur.com/2znHHRs.png)
 
-Same mean & variance may stem from very different distrutions
+Same mean & variance may stem from very different distributions
 
 ![](https://i.imgur.com/lftwzdZ.png)
 
 
 ### Box Plot
-
-![](https://i.imgur.com/LRKVF1z.png)
-
-![](https://i.imgur.com/Ig7GgLi.png)
-
-![](https://i.imgur.com/2szm57v.png)
-
 
 - median = middle number
 	- 2 number -> average
@@ -85,7 +78,13 @@ Same mean & variance may stem from very different distrutions
 - IQR = Q3-Q1
 - upper whisker = min(max, Q3 + 1.5 x IQR)
 - lower whisker = max(min, Q1 - 1.5 x IQR)
+- outliers = those ouside of upper & lower whisker
 
+![](https://i.imgur.com/LRKVF1z.png)
+
+![](https://i.imgur.com/Ig7GgLi.png)
+
+![](https://i.imgur.com/2szm57v.png)
 
 ### Problems
 
