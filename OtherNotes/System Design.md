@@ -71,6 +71,30 @@ Partitioning the database
 	- ![](https://i.imgur.com/42d2Ye1.png)
 	- ![](https://i.imgur.com/iLGgUhI.png)
 
+## Database
+
+### Primary Key
+
+- uuid
+	- how to generate
+		- timestampe
+		- random
+	- pros
+		- unique
+		- stateless
+	- cons
+		- not intrinsically sortable
+		- performance issue for MySQL
+- integer
+	- how to generate
+		- auto increment
+	- pros
+		- readable
+	- cons
+		- not unique across distributed systems
+		- stateful
+			- neet to consult db to know the next integer
+
 ## Storing passwords in the database
 
 - db entry
