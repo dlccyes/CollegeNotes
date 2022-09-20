@@ -128,6 +128,20 @@ git reset --hard      # Rewrite git's index to pick up all the new line endings.
 	- <https://blog.opasschang.com/confusing-git-autocrlf/>
 
 
+## Integrate new changes into your dev branch
+
+In your dev branch
+
+```
+git rebase <remote>/<target branch>
+```
+
+e.g.
+
+```
+git rebase origin/master
+```
+
 ## commit related
 
 ### delete all commits
@@ -229,9 +243,10 @@ https://gitbook.tw/chapters/using-git/reset-commit.html about git reset
 5. 完成
 
 ref
-https://gitbook.tw/chapters/rewrite-history/merge-multiple-commits-to-one-commit.html
+<https://gitbook.tw/chapters/rewrite-history/merge-multiple-commits-to-one-commit.html>
 
 ## config related
+
 `git config --global XXX YYY` will add or change XXX's value to YYY in `~/.gitconfig`
 
 ### store credentials

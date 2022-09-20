@@ -46,7 +46,9 @@ Will auto check your codes and update `go.mod` to ensure correct dependencies
 go run <script.go>
 ```
 
-## .env
+## Environmental variables
+
+### Dotenv
 
 <https://towardsdatascience.com/use-environment-variable-in-your-next-golang-project-39e17c3aaa66>
 
@@ -57,6 +59,15 @@ go get github.com/joho/godotenv
 ```
 godotenv.Load()
 os.Getenv(<your_env>)
+```
+
+### Viper
+
+To use `.env`
+
+```
+viper.SetConfigFile(".env")
+viper.ReadInConfig()
 ```
 
 ## Interface

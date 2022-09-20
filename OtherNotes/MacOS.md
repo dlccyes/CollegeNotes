@@ -59,6 +59,54 @@ brew autoremove
 sudo powermetrics|grep -i "CPU die temperature"
 ```
 
+## Wifi Card
+
+`en0`
+
+## Sniffing packets
+
+2 ways
+
+Don't seem to actually work tho, unlike Linux's `airmon-ng`.
+
+You'll be disconnected from the network when you're in monitor mode.
+
+### With Wireless Diagnostics
+
+Wireless Diagnostics -> Window -> Sniffer -> Start
+
+After you stop, the `.pcap` file will be stored in `/var/tmp/`, now you can open the file with `tcpdump -r <file>`.
+
+<https://ask.wireshark.org/question/17812/how-to-enable-monitor-mode-on-mac/?sort=votes#sort-top>
+
+### With airport
+
+`airmon-ng` for MacOS
+
+It's built in but not in system binary path so you can symlink it yourself
+
+```
+sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
+```
+
+<https://stackoverflow.com/a/49000390/15493213>
+
+To show available channels
+
+```
+sudo airport -s
+```
+
+<https://unix.stackexchange.com/a/49317>
+
+Enable monitor mode and sniff
+
+```
+sudo airport en0 sniff <channel>
+```
+
+Open the file with `tcpdump -r <file>` afterwards.
+
 ## programs
 
 ### open VsCode from terminal

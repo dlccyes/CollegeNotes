@@ -223,7 +223,10 @@ ethtool -i wlan0 | grep driver
 
 <https://askubuntu.com/questions/333424>
 
-### turn wireless interface into monitor mode
+### Turn wireless interface into monitor mode
+
+You'll be disconnected from the network when you're in monitor mode.
+
 #### with airmon-ng
 ```
 sudo airmon-ng start <interface>
@@ -239,6 +242,7 @@ sudo airmon-ng stop <interface>mon
 ```
 
 #### with iwconfig
+
 For some reason it doesn't seem to actually work. The mode is changed but it doesn't sniff any packet, unlike [with airmon-ng](#with%20airmon-ng), which works perfectly.
 
 ```
@@ -262,6 +266,7 @@ sudo ifconfig <interface> up
 ```
 
 ### enable and disable interface
+
 enable
 ```
 sudo ifconfig <interface> up
