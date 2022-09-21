@@ -91,3 +91,28 @@ Same mean & variance may stem from very different distributions
 ![](https://i.imgur.com/Qj4svwx.jpg)
 
 ![](https://i.imgur.com/36szGKv.png)
+
+## Probability
+
+### Rules
+- ![](https://i.imgur.com/5a4x3e1.png)
+- ![](https://i.imgur.com/on9uchv.png)
+- ![](https://i.imgur.com/qfuTErf.png)
+- ![](https://i.imgur.com/vwPEhUK.png)
+- ![](https://i.imgur.com/aIqsXcu.png)
+
+### Variance vs. Sample Variance
+
+![](https://i.imgur.com/tMXNIMc.png)
+
+### Correlation
+
+![](https://i.imgur.com/JB5qO1A.png)
+
+![](https://i.imgur.com/YH9daeR.png)
+
+### Problems
+
+![](https://i.imgur.com/nfdpxIS.png)
+
+![](https://i.imgur.com/nxsb9w7.png)
