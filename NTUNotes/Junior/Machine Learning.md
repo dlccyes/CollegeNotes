@@ -441,5 +441,24 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 		- need extreme computation
 	- upper bound of life long learning
 
+## Q Learning
 
+- components
+	- state
+	- action
+	- reward
+- maximize future cummulative expected payoff
 
+### Monte-Carlo (MC)
+
+![](https://i.imgur.com/nXVGB4s.png)
+
+### Temporal-difference (TD)
+
+$V^{\pi}(s_{t+1})$ = 下個 action 之後的 cummulative expected payoff = 現在 action 之後的 cummulative expected payoff - 這次的 reward
+
+![](https://i.imgur.com/RPr19Xu.png)
+
+## MC vs. TD
+
+![](https://i.imgur.com/d59PSIh.png)

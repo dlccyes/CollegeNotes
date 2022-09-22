@@ -86,6 +86,13 @@ Same mean & variance may stem from very different distributions
 
 ![](https://i.imgur.com/2szm57v.png)
 
+### Tables
+
+- Frequency table
+- Contingency table
+- ![](https://i.imgur.com/oK7iZcp.png)
+
+
 ### Problems
 
 ![](https://i.imgur.com/Qj4svwx.jpg)

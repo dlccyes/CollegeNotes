@@ -1434,7 +1434,7 @@ version=21.08
 Something is using the file. Kill the program using it then it will disappear. If you don't know what's using it, run this to get the PID using it.
 
 ```
-lsof .fuse_hidden<????>
+sudo lsof .fuse_hidden<????>
 ```
 
 And then `kill -9 <PID>` to kill it.

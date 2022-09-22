@@ -717,6 +717,16 @@ np.savetxt('<path/to.file>.csv', <2d np array>, delimiter=',', fmt='%i')
 
 ## pandas
 
+### Save 2d array to csv
+
+```python
+import pandas as pd
+arr = [["a", "b", "c"], [1,2,3], [3,4,5]]
+pd.DataFrame(arr).to_csv(output.csv, index=False, header=False)
+```
+
+<https://stackoverflow.com/a/41096943/15493213>
+
 ### get column names
 
 ```python

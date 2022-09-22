@@ -37,6 +37,7 @@ use [Game Theory](Game%20Theory) to solve resource allocation problems in wirele
 
 ### others
 
+- [Distributed Dynamic Resource Management and Pricing in the IoT Systems With Blockchain-as-a-Service and UAV-Enabled Mobile Edge Computing](Distributed%20Dynamic%20Resource%20Management%20and%20Pricing%20in%20the%20IoT%20Systems%20With%20Blockchain-as-a-Service%20and%20UAV-Enabled%20Mobile%20Edge%20Computing)
 - Task Offloading and Resource Allocation in Mobile Edge Computing System
 	- each user has different priority
 	- priority is a funciton of local computation resource
