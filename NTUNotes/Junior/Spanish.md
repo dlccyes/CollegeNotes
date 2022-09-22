@@ -2614,12 +2614,14 @@ past tense 第三人稱中間字母會變
 		- 不能 le lo -> 改成 se lo
 - ![](https://i.imgur.com/wvDQZKZ.png)
 
-### imperfect tense
+### petérito imperfecto
+
 - was doing 
 - past habit
 - Ayer cuando me duchaba, mi madre me llamó / teléfone
 	- Yesterday when I was showering, my mom called me. 
 - when he was 50 yo = a los 50 años = cuando tenía 50 años
+- ![](https://i.imgur.com/uMjk1wn.png)
 - ![](https://i.imgur.com/nRwbH5X.png)
 - ![](https://i.imgur.com/8aQctUN.png)
 - ![](https://i.imgur.com/vG27Lzn.png)
@@ -2938,6 +2940,26 @@ past tense 第三人稱中間字母會變
 - alumno = student
 - por eso = so
 	- Soy feísimo/a, por eso, nadie quiere salir conmigo.
+- intentar = try
+- haber = have
+- llover = rain
+- andar = walk
+- tranducir = translate
+- murar = to wall (enclose with a wall)
+- aunque = even though
+- un rato = a while
+- sentar = sit
+- por suerte= luckliy
+- las escaleras = the stairs
+- entropearse = 使壞掉
+- añadir = add
+- acción = action
+- ocurrido = funny
+- pastel = cake
+- caerse = fall
+- asesino = assassin/murderer
+- golpear = punch
+- coartada = allibi = 不在場證明證明
 
 ### Porque ..., have to ...
 
@@ -2949,3 +2971,11 @@ Porque ... ,
 - haber de = have to
 - deber = should
 - hay que = must
+
+### pretérito perfecto vs. pretérito indefinido
+
+- absolute time -> pretérito indefinido
+
+![](https://i.imgur.com/GlPjwNb.png)
+
+<https://happylanguages.co.uk/lesson/el-preterito-perfecto-in-spanish/>

@@ -21,14 +21,28 @@ parent: Software Development
 like yaml
 
 ```Makefile
-<makefile_command>:
+<makefile_target>:
 	<shell_command>
-<makefile_command>: <another makefile_command>
+<makefile_target>: <another makefile_target>
 ```
+
+Note that when calling another target , that target should be under the current target.
 
 ## hide command
 
 put `@` in front of your command
+
+## Pass arguement
+
+```
+make <command> <var>=<value>
+```
+
+And then use your `${var}` like in regular command
+
+## Target pattern
+
+`%` -> match anything
 
 ## Troubleshooting
 
