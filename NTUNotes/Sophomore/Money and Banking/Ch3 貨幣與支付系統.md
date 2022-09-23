@@ -2,6 +2,15 @@
 parent: Money and Banking
 ---
 # Ch3 貨幣與支付系統
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
 
 ## 貨幣簡介
 - 通貨－通用的貨品

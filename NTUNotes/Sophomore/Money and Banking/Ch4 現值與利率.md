@@ -4,6 +4,15 @@ layout: meth
 ---
 
 # Ch4 現值與利率
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
 
 ### 七二法則
 利率 i %，約 $\frac{72}{i}$ 年後翻倍

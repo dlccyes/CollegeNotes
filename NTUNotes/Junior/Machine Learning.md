@@ -33,7 +33,7 @@ if ((batch_idx + 1) % accum_iter == 0) or (batch_idx + 1 == len(data_loader)):
 <https://kozodoi.me/python/deep%20learning/pytorch/tutorial/2021/02/19/gradient-accumulation.html>
 
 ## intro
-![](https://i.imgur.com/wMKrsjd.gif)
+
 - gradient decsent
 	- ![](https://i.imgur.com/HMfsboA.png)
 	- 微分取斜率
