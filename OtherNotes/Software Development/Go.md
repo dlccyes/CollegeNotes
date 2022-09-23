@@ -134,6 +134,35 @@ proto file
 
 Go's ORM library
 
+### Upsert
+
+<https://gorm.io/docs/create.html#Upsert-x2F-On-Conflict>
+
+But MySQL doesn't support specifying column, instead it always check the primary key for conflict check, so better use `FirstOrCreate` and the `Update` if `RowsAffected` is 0
+
+```go
+res := r.dbClient.DB().
+	WithContext(ctx).
+	Model(&model.Report{}).
+	Where("date = ?", date).
+	FirstOrCreate(report)
+err := res.Error
+if err != nil {
+	return err
+}
+if res.RowsAffected != 0 { // record created
+	return nil
+}
+// update existing record
+if err = r.dbClient.DB().
+	WithContext(ctx).
+	Model(&model.Report{}).
+	Where("date = ?", date).
+	Update("waiting_day", waitingDay).Error; err != nil {
+	return err
+}
+```
+
 ### hooks
 
 <https://gorm.io/docs/hooks.html>
