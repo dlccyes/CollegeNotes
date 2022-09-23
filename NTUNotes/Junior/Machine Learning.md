@@ -449,6 +449,25 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- reward
 - maximize future cummulative expected payoff
 
+### Bellman equation
+
+![](https://i.imgur.com/3kQJVSc.png)
+
+- $\alpha$ = learning rate
+- $\gamma$ = discount rate
+
+### Q Table
+
+If represent each state & each action as an interger  
+
+- row & column = state & action
+- cell value = q value = discounted future total rewards
+- iterate and update cell values (like dp)
+	- given a state -> choose the action resulting to greatest q value -> update cell value & go to new state
+
+![](https://i.imgur.com/li4JBVi.png)
+
+
 ### Monte-Carlo (MC)
 
 ![](https://i.imgur.com/nXVGB4s.png)
@@ -459,6 +478,17 @@ $V^{\pi}(s_{t+1})$ = 下個 action 之後的 cummulative expected payoff = 現�
 
 ![](https://i.imgur.com/RPr19Xu.png)
 
-## MC vs. TD
+### MC vs. TD
 
 ![](https://i.imgur.com/d59PSIh.png)
+
+## Deep Q Learning
+
+<https://towardsdatascience.com/2a4c855abffc>
+
+Q Learning but replace the Q table with neural network
+
+- input: state
+- output: action & reward
+
+Still need to update Q value with Bellman equation

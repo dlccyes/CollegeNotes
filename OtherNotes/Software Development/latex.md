@@ -159,7 +159,7 @@ Doc: <https://en.wikibooks.org/wiki/LaTeX/Algorithms>
 \algnewcommand\Continue{\State \textbf{continue}}
 
 \makeatletter
-\algnewcommand{\multiline}[1]{%
+\algnewcommand{\multiline}[1]{ %
   \begin{tabularx}{\dimexpr\linewidth-\ALG@thistlm}[t]{@{}X@{}}
     #1
   \end{tabularx}
@@ -173,7 +173,7 @@ Doc: <https://en.wikibooks.org/wiki/LaTeX/Algorithms>
         \Indent{Set the positions of servers and SPs.}
         \Indent{Set the users for each SP}
     \Repeat
-        \State \multiline{%
+        \State \multiline{ %
         long long long long long long long long long long long long long long long long long long}
         \State Something
         \ForAll{something}
