@@ -3,7 +3,18 @@
 parent: Microeconomics
 ---
 
-# Ch12 [[Game Theory]]
+# Ch12 Game Theory
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
+Also see [Game Theory](../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Game%20Theory)
 
 dominant strategy
 : don't need to depend on others to decide you best strategy

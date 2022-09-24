@@ -1,7 +1,9 @@
 ---
 title: Obsidian
 layout: meth
+parent: Miscellaneous
 ---
+
 # Obsidian
 {: .no_toc }
 

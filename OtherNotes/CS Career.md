@@ -38,9 +38,9 @@ layout: meth
 	- Facebook Amazon Apple Netflix Google
 - PIP = performance improvement plan
 	- get PIPed = about to get fired
-- FTE = full-time equivalent
-	- what you do as a intern/contractor but full-time
+- FTE = full-time employee
 - MTS = member of technical staff = SWE
+
 ## resources
 
 ### forums
@@ -58,7 +58,7 @@ layout: meth
 - <https://interview.tw/>
 	- glassdoor (a crippled one) of Taiwan
 - rooftopslushie.com
-	- get referral (for some money)
+	- get referral (for some money) (just use Blind)
 - grinding
 	- leetcode
 	- codewars
@@ -73,8 +73,8 @@ layout: meth
 - preparation
 	- <https://www.teamblind.com/post/LZLoXM7t>
 - applying details
-	- <https://www.reddit.com/r/cscareerquestions/comments/qpxbpg/review_of_2022_new_grad_recruiting_process/>
-	- <https://www.reddit.com/r/CSCQSimulator/comments/e0mqjs/how_i_got_7_offers_heres_what_i_learned/>
+	- <https://www.reddit.com/r/cscareerquestions/comments/qpxbpg>
+	- <https://www.reddit.com/r/CSCQSimulator/comments/e0mqjs>
 		- original posts is removed
 - negotiation
 	- <https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/>
@@ -201,92 +201,91 @@ layout: meth
 	- result
 - ![](https://s2.loli.net/2022/01/11/N1g7h4VZbfejpXE.png)
 
-#### Amazon
+### Amazon Leadership Principles
 
-- Amazon Leadership Principles
-	- resources
-		- [official](https://www.amazon.jobs/en/principles)
-		- [explanations](https://www.scarletink.com/interviewing-at-amazon-leadership-principles/)
-			- sign up free to view the full article
-		- questions
-			- <https://www.teamblind.com/post/RiwtSu0o>
-		- questions & answers
-			- <https://www.reddit.com/r/jobsearchhacks/comments/g2iv42>
-				- all related to sales tho
-	- tips
-		- use STAR format
-		- each LP has 2 stories (different LPs may share)
-		- [Good leaders understand which principle to prioritize in what situation.](https://www.teamblind.com/post/u8kPJm15)	
-		- [use one LP to explain another LP](https://www.teamblind.com/post/X7uqnVjG)
-			- > Best method is using one LP to explain the other, like I Dive Deep because I'm Curious and wanna Learn, or I like to Invent and Simplify because I'm Frugal. Or I take Ownership because I'm Obsessed with the Customer.
-	- Customer Obsession
-		- customer is always the most important, even more important than profit
-	- Ownership
-		- everthing is your job, it's your job to keep everything running perfectly, even if it's actually not your job
-	- Invent and Simplify
-		- you need to have infinite ideas, never say never
-		- the simpler the better
-			- remove > add
-	- Are Right, A Lot
-		- learn from many sources to make your decision
-			- past experiences
-			- others' opinions
-			- diverse set of perspectives
-	- Learn and Be Curious
-		- open to new things
-	- Hire and Develop the Best
-		- treat top performers differently
-		- step out of comfort zone
-	- Insist on the Highest Standards
-		- never be satisfied
-		- never enough
-		- fixing the root cause
-		- always seek to improve
-	- Think Big
-		- have impossible & over the top ideas
-		- practical & realistic ideas are never big enough
-	- Bias for Action
-		- take risks
-		- take quick & bold decisions
-	- Frugality
-		- be cheap
-		- deliver with insufficient resources
-		- "Invent and Simplify"
-	- Earn Trust
-		- related to "what mistakes have you made" type of questions
-		- self-critical
-		- admit you're wrong
-		- share the failure
-			- "Ownership"
-		- "Insist on the Highest Standards"
-	- Dive Deep
-		- know every detail
-		- find the root cause
+- resources
+	- [official](https://www.amazon.jobs/en/principles)
+	- [explanations](https://www.scarletink.com/interviewing-at-amazon-leadership-principles/)
+		- sign up free to view the full article
+	- questions
+		- <https://www.teamblind.com/post/RiwtSu0o>
+	- questions & answers
+		- <https://www.reddit.com/r/jobsearchhacks/comments/g2iv42>
+			- all related to sales tho
+- tips
+	- use STAR format
+	- each LP has 2 stories (different LPs may share)
+	- [Good leaders understand which principle to prioritize in what situation.](https://www.teamblind.com/post/u8kPJm15)	
+	- [use one LP to explain another LP](https://www.teamblind.com/post/X7uqnVjG)
+		- > Best method is using one LP to explain the other, like I Dive Deep because I'm Curious and wanna Learn, or I like to Invent and Simplify because I'm Frugal. Or I take Ownership because I'm Obsessed with the Customer.
+- Customer Obsession
+	- customer is always the most important, even more important than profit
+- Ownership
+	- everthing is your job, it's your job to keep everything running perfectly, even if it's actually not your job
+- Invent and Simplify
+	- you need to have infinite ideas, never say never
+	- the simpler the better
+		- remove > add
+- Are Right, A Lot
+	- learn from many sources to make your decision
+		- past experiences
+		- others' opinions
+		- diverse set of perspectives
+- Learn and Be Curious
+	- open to new things
+- Hire and Develop the Best
+	- treat top performers differently
+	- step out of comfort zone
+- Insist on the Highest Standards
+	- never be satisfied
+	- never enough
+	- fixing the root cause
+	- always seek to improve
+- Think Big
+	- have impossible & over the top ideas
+	- practical & realistic ideas are never big enough
+- Bias for Action
+	- take risks
+	- take quick & bold decisions
+- Frugality
+	- be cheap
+	- deliver with insufficient resources
+	- "Invent and Simplify"
+- Earn Trust
+	- related to "what mistakes have you made" type of questions
+	- self-critical
+	- admit you're wrong
+	- share the failure
 		- "Ownership"
-		- "Insist on the Highest Standards"
-	- Have Backbone; Disagree and Commit
-		- "Ownership"
-		- don't do it because your boss said so
-		- use data to support your disagreement
-	- Deliver Results
-		- "Ownership"
-		- "Bias for Action"
-		- "Frugality"
-		- take calculated risk to deliver the right result in time
-	- Strive to be Earth's Best Employer
-		- care about people
-		- invest in people
-		- "Hire and Develop the Best"
-	- Success and Scale Bring Broad Responsibility
-		- do the right thing
-		- care not only about business
-		- "Customer Obsession"
+	- "Insist on the Highest Standards"
+- Dive Deep
+	- know every detail
+	- find the root cause
+	- "Ownership"
+	- "Insist on the Highest Standards"
+- Have Backbone; Disagree and Commit
+	- "Ownership"
+	- don't do it because your boss said so
+	- use data to support your disagreement
+- Deliver Results
+	- "Ownership"
+	- "Bias for Action"
+	- "Frugality"
+	- take calculated risk to deliver the right result in time
+- Strive to be Earth's Best Employer
+	- care about people
+	- invest in people
+	- "Hire and Develop the Best"
+- Success and Scale Bring Broad Responsibility
+	- do the right thing
+	- care not only about business
+	- "Customer Obsession"
 
-### Q&A
+### Q&A Section
 
 - <https://resumeworded.com/interviews/questions-to-ask-interviewer>
 
-### posts & threads
+### Posts & Threads
 
 - generic
 	- <https://angelswengineer.medium.com/b9262fccaa2> 

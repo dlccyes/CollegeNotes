@@ -2,8 +2,18 @@
 parent: Microeconomics
 ---
 # Ch13 Externality
-[[externality]]
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
+
 ### Pigoe & Coase
+
 [Pigoe & Coase | 古慧文](https://drive.google.com/file/d/1Ss6EyNlwzFGXNDW_UbCvMz8HZH7Zotup/view)
 Pigoe (Pigouvian): 課環境稅 (government intervention)
 Coase (Coasean): 指派環境權給廠商/居民  (market method)

@@ -3,7 +3,16 @@ layout: meth
 parent: Software Development
 ---
 
-# git
+# Git
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+- TOC
+{:toc}
+</details>
 
 ## Github CLI
 ### install

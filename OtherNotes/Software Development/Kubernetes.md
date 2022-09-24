@@ -97,7 +97,6 @@ kubectl get nodes -o wide
 kubectl get nodes --show-labels
 # show nodes with certain label
 kubectl get nodes -l <key>=<value>
-
 ```
 
 ### assign pod to node
@@ -322,7 +321,6 @@ nodes:
       kubeletExtraArgs:
         node-labels: "name=edge1"
 ```
-
 
 ### create a local container registry
 
