@@ -16,6 +16,7 @@ parent: Software Development
 ## Turn your wireless interface to monitor mode
 Check your wireless interface.
 ```
+# install aircrack-ng if haven't
 sudo airmon-ng
 ```
 

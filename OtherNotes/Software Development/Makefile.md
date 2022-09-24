@@ -49,3 +49,7 @@ And then use your `${var}` like in regular command
 ### Makefile:4: *** missing separator.  Stop.
 
 Make sure a tab precedes your command, instead of spaces. You can convert spaces to tab with vscode.
+
+### make: `<target>` is up to date.
+
+You have a file/dir with the same name as the target
