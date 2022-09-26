@@ -123,12 +123,13 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
         - 美國儲貸機構類似上圖，1979-1982 利率大漲 → 多家倒閉 
   - 存續期間模型 duration model
     - ![Image](https://i.imgur.com/Ubylgz4.png)
-      - https://www.masterhsiao.com.tw/CatBonds/Duration/Duration.php
+      - <https://www.masterhsiao.com.tw/CatBonds/Duration/Duration.php>
     - 利率上升 1% → 價值下降 D%
 
 ## 資產負債表之外的風險
 資產負債表外營業項目：或有資產 contingent asset、或有負債 contingent liability
   - 某事件發生時，會進入資產負債表
+
 ### 貸款承諾 loan commitment / 約定融資額度
   - 為或有資產
   - 承諾貸款人在一定條件內可隨時向銀行貸款
@@ -161,6 +162,7 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
   - 研究顯示從事貸款承諾較多的銀行，資產負債表風險較低
     - 為了控制風險，對客戶做更嚴格篩選&監督
     - 為了吸引客戶，需讓客戶認為是風險低、經營穩健的銀行
+
 ### 信用狀 letters of credit
   - 為或有負債
   - 保證客戶會支付款項

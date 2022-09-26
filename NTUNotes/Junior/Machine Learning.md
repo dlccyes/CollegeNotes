@@ -486,9 +486,9 @@ $V^{\pi}(s_{t+1})$ = 下個 action 之後的 cummulative expected payoff = 現�
 
 <https://towardsdatascience.com/2a4c855abffc>
 
-Q Learning but replace the Q table with neural network
+Q Learning but replace Q table with neural network
 
 - input: state
-- output: action & reward
+- output: action -> reward
 
 Still need to update Q value with Bellman equation
