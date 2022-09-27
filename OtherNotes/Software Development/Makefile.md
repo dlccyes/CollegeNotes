@@ -44,6 +44,14 @@ And then use your `${var}` like in regular command
 
 `%` -> match anything
 
+## Ignore errors
+
+```
+make -i <target>
+```
+
+See <https://www.gnu.org/software/make/manual/make.html#Errors>
+
 ## Troubleshooting
 
 ### Makefile:4: *** missing separator.  Stop.

@@ -89,7 +89,6 @@ Role is just another label with key = `kubernetes.io/role` and value = `<your_ro
 
 ### show nodes
 
-
 ```
 # show ip
 kubectl get nodes -o wide
@@ -229,7 +228,7 @@ handle port forwarding
 - nodePort
 	- the port of the kubernetes node
 
-go to `http://<node_id>:<nodePort>` to see your app
+go to `http://<node_ip>:<nodePort>` to see your app
 
 ## kind
 
@@ -387,3 +386,11 @@ ref:
 - <https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/>
 - <https://stackoverflow.com/q/59484509/>
 - <https://stackoverflow.com/a/59491824/15493213>
+
+### The connection to the server localhost:8080 was refused - did you specify the right host or port?
+
+Happens when you run any `kubectl <xxx>` command. 
+
+Easy fix: delete your cluster and start again
+
+If you're in local and you use `kind`, `kind get clusters` and `kind delete cluster --name <cluster_name>`.

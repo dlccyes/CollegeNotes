@@ -173,6 +173,10 @@ import <your_file>
 
 <https://stackoverflow.com/questions/714063/#comment23054549_11158224>
 
+## `__name__`
+
+When imported, `__name__` will be the module's name. When executed directly, `__name__` will be `__main__`.
+
 ## working directory
 
 ### show current directory
