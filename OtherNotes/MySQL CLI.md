@@ -43,4 +43,4 @@ Just type it
 - go into a database
 	- `use <db name>`
 - show table schema
-	- `show columns from <table name>`
+- `show columns from <table name>`

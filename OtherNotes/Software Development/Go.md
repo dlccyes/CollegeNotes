@@ -134,6 +134,33 @@ proto file
 
 Go's ORM library
 
+### Enum
+
+<https://threedots.tech/post/safer-enums-in-go/>
+
+e.g.
+
+```go
+type DataScope int
+
+const (
+	UNKNOWN_DATASCOPE DataScope = iota // -> 0
+	NEW_CASE // -> 1
+	PENDING_REVIEW // -> 2
+	USER_REPLY // -> 3
+)
+
+type Report struct {
+	DataScope  DataScope `gorm:"column:data_scope;type:enum('NEW_CASE', 'PENDING_REVIEW', 'USER_REPLY');index:,sort:desc" json:"dataScope"`
+}
+```
+
+Use <https://github.com/dmarkham/enumer> to generate enumer file.
+
+```
+go run github.com/dmarkham/enumer -type=DataScope -sql 
+```
+
 ### Upsert
 
 <https://gorm.io/docs/create.html#Upsert-x2F-On-Conflict>
