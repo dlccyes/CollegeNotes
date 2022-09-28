@@ -101,6 +101,10 @@ Same mean & variance may stem from very different distributions
 
 ## Probability
 
+### Random Variables
+
+- sample space -> number
+
 ### Rules
 - ![](https://i.imgur.com/5a4x3e1.png)
 - ![](https://i.imgur.com/on9uchv.png)
@@ -123,3 +127,50 @@ Same mean & variance may stem from very different distributions
 ![](https://i.imgur.com/nfdpxIS.png)
 
 ![](https://i.imgur.com/nxsb9w7.png)
+
+## Distribution
+
+![](https://i.imgur.com/dOo5U2O.png)
+
+### Normal
+
+![](https://i.imgur.com/hWdrEVk.png)
+
+Use z-score to standardize
+
+![](https://i.imgur.com/ihZT7nX.png)
+
+![](https://i.imgur.com/CKZGxUx.png)
+
+fx-991 es to find probability given z score
+
+<https://www.youtube.com/watch?v=bVdQ7OzGvU0>
+
+- P(z) -> Area less than z value
+- R(z) -> Area greater than z value
+- Q(z) -> Area between 0 and z value
+
+### Bernoulli
+
+[Bernoulli](../Freshman/Probability#Bernoulli)
+
+![](https://i.imgur.com/SO4MoMP.png)
+
+$$Var(X)=E(x-\mu)^2=E(x-p)^2=(1-p)^2p+(0-p)^2(1-p)=p(1-p)$$
+### Binomial
+
+![](https://i.imgur.com/y9yeTJC.png)
+
+### Geometroic
+
+![](https://i.imgur.com/giXrvvc.png)
+
+### Negative Binomial
+
+i.e. Pascal
+
+![](https://i.imgur.com/Nn9dMLY.png)
+
+### Poisson
+
+![](https://i.imgur.com/j47U8qg.png)

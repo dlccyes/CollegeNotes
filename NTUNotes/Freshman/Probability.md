@@ -101,11 +101,14 @@ n 次內成功的次數
 ![](https://i.imgur.com/0DcFMQJ.png)
 
 ### Geometric
+
 until 第一次成功  
 Pascal 在 k=1 的特例  
+
 ![](https://i.imgur.com/ydgsAhg.png)
 
 ### Pascal
+
 Geometric 的 general 版本  
 X, the number of trials until the k^th^ positive occurs  
 In the n trials, there are k positives, and in the first (n - 1) trials, there are (k - 1) positives  

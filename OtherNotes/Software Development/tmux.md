@@ -4,9 +4,11 @@ parent: Software Development
 ---
 
 # tmux
+
 ## guides
 cheatsheet
-https://tmuxcheatsheet.com/
+<https://tmuxcheatsheet.com/>
+
 ## environment
 ### enable color
 ```
@@ -40,7 +42,7 @@ press q to come back to current line
 
 ## plugins
 ### tmux plugin manager
-https://github.com/tmux-plugins/tpm
+<https://github.com/tmux-plugins/tpm>
 
 #### install
 install  
