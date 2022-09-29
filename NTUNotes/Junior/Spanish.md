@@ -17,6 +17,8 @@ layout: meth
 
 ### mac
 
+Long press on a letter and select or press the following key combinations:
+
 -   á — Option + e, a.
 -   Á — Option + e, Shift + a.
 -   é — Option + e, e.
@@ -27,7 +29,7 @@ layout: meth
 -   Ñ — Option + n, Shift + n.
 
 ## Spanish 1-1
-### meta`
+### meta
 - schedule
     - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FnlqI7j4ta7.png?alt=media&token=3ce21802-b2f1-4f5e-9e07-d0281e37137c)
 - lecturer:: 馬德睿
@@ -2483,6 +2485,7 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - puede ser = maybe
 - regalo = gift / present
 - suspendía = failed (不及格)
+- estar **muerta de frío** = be frozen / very cold
 
 ### cuando
 - de niño = when I was a kid
@@ -2938,6 +2941,7 @@ past tense 第三人稱中間字母會變
 - pausa = pause
 - olvidar = forget
 - alumno = student
+- así que = so
 - por eso = so
 	- Soy feísimo/a, por eso, nadie quiere salir conmigo.
 - intentar = try
@@ -2960,6 +2964,14 @@ past tense 第三人稱中間字母會變
 - asesino = assassin/murderer
 - golpear = punch
 - coartada = allibi = 不在場證明證明
+- anoche = last night
+- rebejas = discounts
+- aula = classroom
+	- el aula
+- colegio = school
+- bayar = go down
+	- e.g. bayar por la escalera
+- tatuar = to tattoo
 
 ### Porque ..., have to ...
 
@@ -2979,3 +2991,63 @@ Porque ... ,
 ![](https://i.imgur.com/GlPjwNb.png)
 
 <https://happylanguages.co.uk/lesson/el-preterito-perfecto-in-spanish/>
+
+### Cuando + inperfecto/indefinido
+
+- Cuando fui a la tienda, las rebajas ya habien terminado.
+	- indefinido, pluscuamperfecto
+- Cuando entramos en el aula, los alumnos ya habían empezado el examen.
+	- indefinido, pluscuamperfecto
+- Cuando llegó al restaurante, Juan y Diego ya habían terminado de comer.
+	- indefinido, pluscuamperfecto
+- Cuando entró en el cine, la pelicula ya había empezado.
+	- indefinido, pluscuamperfecto
+- Cuando llegaste al colegio, los niños había salido. (??)
+	- imperfecto, pluscuamperfecto
+- Cuando empezó la película, se durmió.
+	- indefinido, indefinido
+- Cuando ellos llegaron a casa, la comida estaba en la mesa
+- Cuando murió mi abuelo, yo era aún un niño
+- El niño estaba jugando cuando le atropelló el coche
+- Cuando ella bajó/bayaba por la escalera, rompió una pierra.
+- Cuando nosotros seliamos de casa, sóno el teléfono.
+- Nosotros estabamos aún comiendo cuando Carlos vino a visitamos.
+- Cuando ellos estaban en Italia, les hacía/hizo muy buen tiempo
+
+![](https://i.imgur.com/hG9UDus.png)
+
+![](https://i.imgur.com/hugLDh8.png)
+![](https://i.imgur.com/xLgiwkn.png)
+
+![](https://i.imgur.com/GOJwhPM.png)
+
+![](https://i.imgur.com/0J7VeTs.png)
+
+![](https://i.imgur.com/XRylXW4.png)
+
+### Al + base verb
+
+- Al + base verb -> As/Since/Because
+	- for verbs that cannot be used imperatively
+		- Cuando empezó $\to$ Al empezar
+		- terminar
+	- ![](https://i.imgur.com/ZyRpUYB.png)
+- Al + base verb -> Cuando imperfecto/indefinido
+	- for verbs that can be used imperatively (the subject can execute the action by themself)
+		- Cuando empezó $\not\to$ Al empezar
+		- Cuando llegó $\to$ Al llegar
+		- Al irnos (nos ir) a la cama
+
+
+### temp
+
+p.13 - exercise 22
+
+- Un hombre viajó a un pueblo que estado en la sierra de Madrid
+- Cuando llegó al pueblo decidió contarse el pelo.
+- Preguntó en el puelo dónde ==había== una peluqueria buena.
+- Le dijeron que en el pueblo había dos peluqueros que eran hermanos.
+- Así que fue a uno de los peluqueros y vio que la peluquería estaba muy bonita
+- fue, era, tenía
+- se sentó, pensó
+- decidió
