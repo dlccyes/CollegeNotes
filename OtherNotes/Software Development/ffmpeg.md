@@ -14,7 +14,6 @@ parent: Software Development
 {:toc}
 </details>
 
-
 ## parameters
 
 - scale
@@ -34,6 +33,14 @@ ffmpeg -i input.mp4 -filter:v "setpts=PTS/2" -an output.mp4
 omit `-an` to have audio in original speed (so the video duration will not change)
 
 <https://superuser.com/a/1261681>
+
+## Cut video
+
+If we want 5:00 ~ 15:00
+
+```
+ffmpeg -i input.mp4 -ss 00:05:00 -t 00:10:00 -c:v copy -c:a copy output.mp4
+```
 
 ## mp4 to gif
 

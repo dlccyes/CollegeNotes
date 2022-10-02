@@ -2,7 +2,7 @@
 layout: meth
 parent: Software Development
 ---
-# linux
+# Linux
 {: .no_toc }
 
 <details open markdown="block">
@@ -821,6 +821,16 @@ for windows-linux dual-boot system
 5. reboot normally into your kubuntu
 	-  may need to `bcdedit /set {bootmgr} path \EFI\kubuntu\grubx64.efi` again to make your grub menu show
 6. success
+
+## PDF related
+
+### Convert a read-only pdf to an editable one
+
+```
+qpdf -decrypt readonly.pdf editable.pdf
+```
+
+<https://superuser.com/a/676733>
 
 ## nvidia driver
 ### install on Arch
