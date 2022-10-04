@@ -128,6 +128,10 @@ Same mean & variance may stem from very different distributions
 
 ![](https://i.imgur.com/nxsb9w7.png)
 
+![](https://i.imgur.com/KykcPa8.png)
+![](https://i.imgur.com/rS0lhjT.png)
+![](https://i.imgur.com/A7JyzFY.png)
+
 ## Distribution
 
 ![](https://i.imgur.com/dOo5U2O.png)
@@ -165,7 +169,7 @@ $$Var(X)=E(x-\mu)^2=E(x-p)^2=(1-p)^2p+(0-p)^2(1-p)=p(1-p)$$
 
 ![](https://i.imgur.com/giXrvvc.png)
 
-### Negative Binomial
+### Negative Binomial / Pascal
 
 i.e. Pascal
 

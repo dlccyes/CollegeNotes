@@ -110,8 +110,11 @@ Pascal 在 k=1 的特例
 ### Pascal
 
 Geometric 的 general 版本  
-X, the number of trials until the k^th^ positive occurs  
+
+X = the number of trials until the kth positive occurs
+
 In the n trials, there are k positives, and in the first (n - 1) trials, there are (k - 1) positives  
+
 ![](https://i.imgur.com/RXW1eSU.png)
 
 ### Poisson
@@ -282,12 +285,16 @@ continuous
 ![](https://i.imgur.com/yc787Q0.png)
 
 ### MMSE & LMMSE
+
 MMSE
 ![](https://i.imgur.com/lQRgX7U.png)
+
 LMMSE
 ![](https://i.imgur.com/LCVcj35.png)
+
 $\rho_{X,Y}$
 ![](https://i.imgur.com/W96Gvvk.png)
+
 ### correlation efficient
 ![](https://i.imgur.com/Efr7OrZ.png)
 
@@ -302,7 +309,6 @@ $\rho_{X,Y}$
 ![](https://i.imgur.com/lay6pQm.png)
 n 維   
 
-
 ## conditional relations
 ### conditional pdf
 ![](https://i.imgur.com/hCOByLs.png)
@@ -312,6 +318,7 @@ n 維
 
 ### law of total expectation
 ![](https://i.imgur.com/TA5lucY.png)
+
 #### towering property
 ![](https://i.imgur.com/iCy3yON.png)
 

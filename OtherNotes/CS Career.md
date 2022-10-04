@@ -338,7 +338,7 @@ layout: meth
 - offers
 	- <https://www.teamblind.com/post/hLE5CRYQ>
 
-## linkedin
+## LinkedIn
 
 - skill assessment answers
 	- <https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes>
