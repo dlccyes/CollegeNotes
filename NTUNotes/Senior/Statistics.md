@@ -165,7 +165,7 @@ $$Var(X)=E(x-\mu)^2=E(x-p)^2=(1-p)^2p+(0-p)^2(1-p)=p(1-p)$$
 
 ![](https://i.imgur.com/y9yeTJC.png)
 
-### Geometroic
+### Geometric
 
 ![](https://i.imgur.com/giXrvvc.png)
 

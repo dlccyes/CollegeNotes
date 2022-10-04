@@ -120,6 +120,33 @@ func main() {
 
 pipe
 
+## Dealing with Json
+
+### Read json from file
+
+If your json has a clearly defined structure, then define your struct first
+
+```go
+type struct myJsonObject {
+	// my json schema
+}
+
+func getJsonFromFile() []myJsonObject {
+	// read raw json from sample.json
+	jsonFile, err := os.Open("sample.json")
+	if err != nil {
+		fmt.Println(err)
+	}
+	defer jsonFile.Close()
+	var arrayOfJson []myJsonObject
+	byteValue, _ := ioutil.ReadAll(jsonFile)
+	json.Unmarshal(byteValue, &arrayOfJson)
+	return arrayOfJson
+}
+```
+
+<https://tutorialedge.net/golang/parsing-json-with-golang/>
+
 ## grpc
 
 sample
@@ -269,6 +296,66 @@ mockgen -source=doer/doer.go -destination=mocks/mock_doer.go --package mocks
 <https://github.com/go-gorm/gorm/issues/1525#issuecomment-376164189>
 
 <https://betterprogramming.pub/97ee73e36526>
+
+## AWS
+
+### S3
+
+`ls` your bucket & get a file from your bucket
+
+```go
+package main
+
+import (
+	"fmt"
+	"os"
+
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/credentials"
+	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/aws/aws-sdk-go/service/s3"
+	"github.com/joho/godotenv"
+)
+
+func main() {
+	godotenv.Load()
+	vosEndpoint := os.Getenv("VOS_ENDPOINT")
+	vosKey := os.Getenv("VOS_KEY")
+	vosSecret := os.Getenv("VOS_SECRET")
+	sess, err := session.NewSession(&aws.Config{
+		Credentials:      credentials.NewStaticCredentials(vosKey, vosSecret, ""),
+		Endpoint:         aws.String(vosEndpoint),
+		Region:           aws.String("us-east-1"),
+		DisableSSL:       aws.Bool(false),
+		S3ForcePathStyle: aws.Bool(true)},
+	)
+	if err != nil {
+		panic(err)
+	}
+
+	svc := s3.New(sess)
+
+	// ls all your buckets
+	output, err := svc.ListBuckets(nil)
+	if err != nil {
+	    panic(err)
+	}
+	fmt.Println(output)
+	
+	// get file from a bucket
+	bucketName := "mybucket"
+	fileName := "index.html"
+	file, err := svc.GetObject(&s3.GetObjectInput{
+		Bucket: aws.String(bucketName),
+		Key:    aws.String(fileName),
+	})
+	if err != nil {
+		panic(err)
+	}
+	defer file.Body.Close()
+	fmt.Println(file)
+}
+```
 
 ## Troubleshooting
 

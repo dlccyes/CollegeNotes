@@ -22,11 +22,29 @@ parent: Software Development
 brew install redis
 ```
 
-## CLI
+### Check version
 
-<https://lightrun.com/dev-tools/using-the-redis-command-line/>
+```
+redis-server --version
+```
 
-### Connect
+## Start
+
+### Start & connect to local
+
+Start local redis server
+
+```
+redis-server
+```
+
+Connect from another terminal
+
+```
+redis-cli
+```
+
+### Connect to remote
 
 ```
 redis-cli -h <host> -p <port> -a <password>
@@ -38,6 +56,9 @@ Or omit the `-a` flag and then login with
 AUTH <password>
 ```
 
+## CLI
+
+<https://lightrun.com/dev-tools/using-the-redis-command-line/>
 
 ### Select Database
 
@@ -51,10 +72,34 @@ SELECT <index>
 
 <https://redis.io/commands/select/>
 
+### Get all keys
+
+```
+keys *
+```
+
+### Delete all keys
+
+```
+flushall
+```
+
 ### String
 
 ```
 help @string
+```
+
+Set
+
+```
+set <key> <value>
+```
+
+Get
+
+```
+get <key>
 ```
 
 ### List
@@ -90,8 +135,24 @@ hget <hashmap> <key> # <hashmap>[<key>]
 hmget <hashmap> <key1> <key2>
 ```
 
+Get all keys
+
+```
+hkeys <hashmap>
+```
+
 Get all key & values
 
 ```
 hgetall <hashmap>
 ```
+
+## GUI
+
+### RedisInsight
+
+<https://redis.com/redis-enterprise/redis-insight/>
+
+Fill in fake info and your download will start
+
+Have built-in termiinal
