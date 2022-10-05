@@ -143,6 +143,9 @@ layout: meth
 	- <https://leetcode.com/discuss/career/448285>
 	- all questions with various filters (e.g. companies, patterns)
 		- <https://seanprashad.com/leetcode-patterns/>
+	- By company frequency
+		- <https://docs.google.com/spreadsheets/d/1hzP8j7matoUiJ15N-RhsL5Dmig8_E3aP/edit#gid=1377915986>
+			- by <https://www.youtube.com/c/DestinationFAANG>
 	- <https://hackernoon.com/c5bb3357f6ed>
 	- <https://hn.jeffjadulco.com/29775023>
 	- [every blind 75 explained](https://docs.google.com/spreadsheets/u/0/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/)
