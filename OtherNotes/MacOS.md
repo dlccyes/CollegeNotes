@@ -146,15 +146,24 @@ There is no native way to do this (unless you're connected to an external monito
 [ref](https://www.switchingtomac.com/macos/how-to-keep-your-mac-on-even-with-the-lid-closed/)
 
 
-## troubleshooting
+## Troubleshooting
 
-### stop desktop order changed itself
+### Stop desktop order from changing itself
 
 System Preferences > Mission Control  -> uncheck "Automatically rearrange Spaces based on most recent use"
 
 ![](https://i.imgur.com/HbJWhT1.png)
 
 <https://apple.stackexchange.com/a/214349>
+
+### Stop apps pinning itself on dock
+
+System Preferences -> Dock & Menu Bar -> Uncheck "Show recent applications in Dock"
+
+![](https://i.imgur.com/bYez1IB.png)
+
+
+<https://apple.stackexchange.com/a/338004>
 
 ### make dock appears on another display
 

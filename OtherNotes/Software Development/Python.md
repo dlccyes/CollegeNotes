@@ -436,15 +436,20 @@ with open(inputfile, 'r') as file_in:
     matrix = file_in.readlines()
 ```
 
-### read file to dict
+### Read file to dict/json
 
 ```python
 import json
+mydict = json.load(open("myjson.json"))
+```
 
-with open(inputfile, 'r') as f:
-    _json = json.loads(f.read())
-    # or
-    # _json = json.load(f)
+### Save dict/json to file
+
+```python
+import json
+mydict = [1:1, 2:2]
+save
+json.dump(mydict, open("myjson.json", "w"))
 ```
 
 ## yaml

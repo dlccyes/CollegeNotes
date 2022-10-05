@@ -599,19 +599,24 @@ ssh-copy-id -i ~/.ssh/id_rsa <user>@<host>
 ### keep ssh session from freezing
 <https://unix.stackexchange.com/a/200256>
 
-## port
-### see port in use
+## Port
+
+### See port in use
+
 ```
 sudo lsof -i -P -n | grep <port>
 ```
 
-### opening port
+### Open ports
+
 ```
 sudo ufw allow <port num>
 ```
+
 e.g. 
-- `sudo ufw allow 22` -> ssh allowed
-- `sudo ufw allow 80` -> http allowed
+
+- `sudo ufw allow 22` -> allo ssh
+- `sudo ufw allow 80` -> allow http
 
 ## ip
 - view local ip
