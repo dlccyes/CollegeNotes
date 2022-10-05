@@ -2992,7 +2992,7 @@ Porque ... ,
 
 <https://happylanguages.co.uk/lesson/el-preterito-perfecto-in-spanish/>
 
-### Cuando + inperfecto/indefinido
+### Cuando + imperfecto/indefinido
 
 - Cuando fui a la tienda, las rebajas ya habien terminado.
 	- indefinido, pluscuamperfecto

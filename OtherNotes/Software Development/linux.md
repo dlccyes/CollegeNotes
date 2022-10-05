@@ -973,7 +973,8 @@ plasma desktop effects need compositor to work
 
 ### type accent
 1. system settings -> keyboard -> advanced -> Position of Compose key -> select one as your compose key
-2. press compose key -> press ` -> press a -> à
+2. press compose key + ` + a -> à
+2. press compose key + ~ + n -> ñ
 
 <https://askubuntu.com/a/993991>
 
