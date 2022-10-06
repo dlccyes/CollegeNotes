@@ -2942,7 +2942,7 @@ past tense 第三人稱中間字母會變
 - olvidar = forget
 - alumno = student
 - así que = so
-- por eso = so
+- por eso = that's why
 	- Soy feísimo/a, por eso, nadie quiere salir conmigo.
 - intentar = try
 - haber = have
