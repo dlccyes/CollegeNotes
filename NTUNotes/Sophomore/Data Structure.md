@@ -803,6 +803,7 @@ Bell (W2)
   - deletion
     - merge left & right subheaps
   - so merge, insert, delete 皆 $\in O(logn)$ 
+
 ## skew heap
 - interactive visualization  
 <https://people.ksp.sk/~kuko/gnarley-trees/Skew.html>

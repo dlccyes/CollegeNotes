@@ -1865,7 +1865,8 @@ Long press on a letter and select or press the following key combinations:
     - triste = sad
         - está triste
     - hambre = hunger
-        - tiene hambre
+        - tener hambre
+        - tengo un hambre = I'm very very hungry
     - sed = thirst
         - tiene sed
     - sueño = sleepy
@@ -2972,6 +2973,15 @@ past tense 第三人稱中間字母會變
 - bayar = go down
 	- e.g. bayar por la escalera
 - tatuar = to tattoo
+- peluquería = barbershop
+- peluquero = barber
+- sano = healthy
+- fruto secos = nuts
+	- nueces = walnuts
+	- almendras = almonds
+- legumbres = beans
+- Dejame en paz! = Leave me alone!
+- Vete a freír espárragos = Go to hell
 
 ### Porque ..., have to ...
 
@@ -3038,6 +3048,11 @@ Porque ... ,
 		- Cuando llegó $\to$ Al llegar
 		- Al irnos (nos ir) a la cama
 
+### If I were you
+
+- Yo, que tú + imperfect
+- Yo en tu lugar + imperfect
+- Yo si fuera tú les + imperfect
 
 ### temp
 

@@ -40,6 +40,12 @@ go mod tidy
 
 Will auto check your codes and update `go.mod` to ensure correct dependencies
 
+## Import
+
+Go importing 101
+
+<https://stackoverflow.com/a/68710251/15493213>
+
 ## Run
 
 ```
@@ -364,3 +370,40 @@ func main() {
 command palette -> `Go: Install/Update Tools`
 
 <https://stackoverflow.com/a/64921674/15493213>
+
+### VsCode: undeclared name
+
+Scenario: 
+
+VsCode not recognizing functions in the same package
+
+e.g.
+
+`bruh.go`
+```go
+package bruh
+
+func Hello() string {
+	return "Hello"
+}
+```
+
+`bruh_test.go`
+```go
+package bruh
+import (
+	"testing"
+
+	"github.com/stretchr/testify/assert"
+)
+
+func TestHello(t *testing.T) {
+	assert.Equal(t, Hello(), "Hello")
+}
+```
+
+Yet it shows `undeclared name: Hello` on `Hello()`
+
+Solution:
+
+<https://stackoverflow.com/a/59485684/15493213>

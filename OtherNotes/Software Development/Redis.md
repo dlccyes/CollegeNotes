@@ -38,6 +38,12 @@ Start local redis server
 redis-server
 ```
 
+To run as daemon
+
+```
+redis-server --daemonize yes
+```
+
 Connect from another terminal
 
 ```
