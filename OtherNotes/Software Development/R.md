@@ -35,6 +35,10 @@ if your R version is 4.2, then the binary is in
 
 just run it directly (may need `sudo`)
 
+## Usage
+
+`help(thing)`
+
 ## package
 
 ### install package
@@ -43,7 +47,104 @@ just run it directly (may need `sudo`)
 install.packages("<package>")
 ```
 
-### Decision Tree & Random Forest
+### Load package
+
+```
+library(<package>)
+```
+
+### List all objects in a package
+
+```
+ls("package:<package>")
+```
+
+## Array
+
+`c(1, 2, "bruh")` -> `[1, 2, "bruh"]`
+
+## Range
+
+`seq(0, 10, 2)` -> `range(0, 10+2, 2)`
+
+## Levels
+
+Levels = possible values
+
+### Remove unused levels
+
+
+To remove the unused values
+
+```R
+mydata$column <- droplevels(mydata$column)
+```
+
+<https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/droplevels>
+
+## Tables
+
+Summary
+
+```R
+table(mydata$column1)
+```
+
+Contingency Table
+
+```
+table(mydata$column1, mydata$columns2)
+```
+
+Without unused levels
+
+```
+table(droplevels(mydata$column1), droplevels(mydata$columns2))
+```
+
+With sum
+
+```R
+tab <- table(droplevels(mydata$column1), droplevels(mydata$columns2))
+addmargins(tab)
+```
+
+
+## Graph
+
+### ggplot2 remove everything
+
+```R
+theme(
+    axis.line=element_blank(),
+    axis.text.x=element_blank(),
+    axis.text.y=element_blank(),
+    axis.ticks=element_blank(),
+    axis.title.x=element_blank(),
+    axis.title.y=element_blank(),
+    legend.position="none",
+    panel.background=element_blank(),
+    panel.border=element_blank(),
+    panel.grid.major=element_blank(),
+    panel.grid.minor=element_blank(),
+    plot.background=element_blank()
+)
+```
+
+<https://stackoverflow.com/questions/6528180/>
+
+### Multiple graphs side by side
+
+```R
+library(gridExtra)
+plot1 <- qplot(1)
+plot2 <- qplot(1)
+grid.arrange(plot1, plot2, ncol=2)
+```
+
+<https://stackoverflow.com/a/3935554/15493213>
+
+## Decision Tree & Random Forest
 
 Sample code 
 

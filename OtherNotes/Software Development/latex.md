@@ -25,12 +25,15 @@ $\LaTeX$
 		- for multi-letter variable [ref](https://tex.stackexchange.com/a/482988)
 
 ## formatting
+
 ### line height
+
 `\linespread{1.5}`  
 put it before `\begin{document}`
 https://tex.stackexchange.com/a/460857
 
 ### space
+
 - `\;`
 - `\space`
 
