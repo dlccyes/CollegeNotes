@@ -667,16 +667,18 @@ heapq.heappush(mylist, (5, 'label 5'))
 res = heapq.heappop(mylist)
 ```
 
-K Smallest
+K Smallest/Largest
 
 ```python
 import heapq
 mylist = [(1,2),(2,3),(1,3),(4,-2)]
 # return a list of k smallest with custom comparison formula
 res = heapq.nsmallest(5, mylist, key = lambda x: x[0]+x[1])
+res = heapq.nlargest(5, mylist, key = lambda x: x[0]+x[1])
 ```
 
 ## collections
+
 - `import collections`
 
 ### OrderedDict
