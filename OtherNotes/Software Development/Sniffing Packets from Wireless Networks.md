@@ -2,6 +2,7 @@
 layout: meth
 parent: Software Development
 ---
+
 # Sniffing Packets from Wireless Networks
 {: .no_toc }
 
@@ -114,7 +115,7 @@ Open the file with Wireshark or `tcpdump -r <file>` afterwards.
 
 ## (For MacOS) With Wireless Diagnostics
 
-Use `sudo airport -s` to know your target channel (check the previous section)
+Use `airport -s` to know your target channel (check the previous section)
 
 Wireless Diagnostics -> Window -> Sniffer -> Select the target channel -> Start
 

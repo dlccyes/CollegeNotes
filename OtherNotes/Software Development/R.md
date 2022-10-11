@@ -23,17 +23,33 @@ nav_exclude: true
 
 And then run in terminal simply by entering `R`
 
+### Mac
+
+Install from [the cran page](https://cran.r-project.org/bin/macosx/)
+
+You can also install with brew 
+
+```
+brew install r
+```
+
+but it doesn't come with xquartz so you can't use `View()`
+
 ## Run in terminal
 
 ### macos
 
-if your R version is 4.2, then the binary is in
+Just enter `R`, if nothing then try
 
 ```
 /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/bin/R
 ```
 
-just run it directly (may need `sudo`)
+or 
+
+```
+/Library/Frameworks/R.framework/Versions/4.2/Resources/bin/R
+```
 
 ## Usage
 
@@ -57,6 +73,14 @@ library(<package>)
 
 ```
 ls("package:<package>")
+```
+
+<https://stackoverflow.com/a/2615147/15493213>
+
+### Show package path
+
+```
+.libPaths()
 ```
 
 ## Array
