@@ -26,11 +26,19 @@ Command + Q is an unchangeable shortcut key which will close an application. You
 
 <https://apple.stackexchange.com/questions/78948/>
 
-## install/remove applications
+## Applications
+
+### Install/remove applications
 
 After installing, move the `.app` to `Applications` directory.
 
 To remove an app, go to `Applications` and move it to trash.
+
+### Open app from terminal
+
+q```
+open -a <app>
+```
 
 ## Homebrew
 
@@ -49,7 +57,7 @@ brew upgrade
 brew autoremove
 ```
 
-## screen edge
+## Screen edge
 
 `Desktop & Screen Saver` -> `Hot Corners`
 
