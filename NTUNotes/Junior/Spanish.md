@@ -2982,6 +2982,14 @@ past tense 第三人稱中間字母會變
 - legumbres = beans
 - Dejame en paz! = Leave me alone!
 - Vete a freír espárragos = Go to hell
+- avitar = avoid
+- no obstante = however
+- matar = kill
+- anterior = previous
+- siguiente = next
+- coser = sew
+- cada = every
+	- cada día = every day
 
 ### Porque ..., have to ...
 
@@ -3053,6 +3061,61 @@ Porque ... ,
 - Yo, que tú + imperfect
 - Yo en tu lugar + imperfect
 - Yo si fuera tú les + imperfect
+
+### Muy + adjectives
+
+Some adjectives cannot have muy in front (??)
+
+Incorrect examples:
+
+- muy horrible
+- muy deliociosa
+
+### Avoid noun repetition
+
+Omit the subject if you can
+
+### Subjunctive present
+
+#### Regular
+
+![](https://i.imgur.com/6LRAbNl.png)
+
+![](https://i.imgur.com/s75izQD.png)
+
+![](https://i.imgur.com/7WxmOZt.png)
+
+#### Irregular
+
+Often times the same prefix as the indicative present verb
+
+![](https://i.imgur.com/nBKg6AU.png)
+
+![](https://i.imgur.com/teG2Z07.png)
+
+![](https://i.imgur.com/X2eFoKo.png)
+
+![](https://i.imgur.com/p0iyRW7.png)
+
+![](https://i.imgur.com/RON0iCR.png)
+
+![](https://i.imgur.com/eBTg6xj.png)
+
+![](https://i.imgur.com/migWV8n.png)
+
+![](https://i.imgur.com/kTaEltx.png)
+
+#### Examples
+
+Te recomiendo que ...
+
+![](https://i.imgur.com/zgPF8S8.png)
+
+Te sugiero que ...
+
+![](https://i.imgur.com/uZ7l3Ba.png)
+
+![](https://i.imgur.com/BVBc2R5.png)
 
 ### temp
 
