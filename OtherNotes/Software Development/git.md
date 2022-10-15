@@ -380,6 +380,15 @@ git push <remote> HEAD:branch_2
 <https://stackoverflow.com/questions/13897717>
 
 ## remote related
+
+### Check if you have access to a git repo
+
+You can use
+
+```
+git ls-remote <git repo>
+```
+
 ### check remote
 ```
 git remote -v

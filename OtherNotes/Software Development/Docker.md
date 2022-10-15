@@ -143,10 +143,10 @@ docker run <flags> <image>
 ```
 docker run --name <container_name> -d --rm <image_name/id>
 # if it exit immediately, try
-docker run --name <container_name> -dit <image_name/id>
+docker run --name <container_name> -dit --rm <image_name/id>
 ```
 
-`--rm` for auto remove when exist
+`--rm` for auto remove when a container with the same name already exist (but only when it is also created with the `--rm` flag)
 
 <https://stackoverflow.com/a/31143261/15493213>
 

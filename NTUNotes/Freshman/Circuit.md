@@ -24,6 +24,7 @@ x axis : $\omega$
 y axis : $dB = 20\times log_{10}(magnitude)$
 
 ## Ch5
+
 ### Superposition
 
 **step 1**  
@@ -32,6 +33,7 @@ make independent current source 斷路 (i=0)
 make independent voltage source 短路 (v=0)  
 
 ### Thevenin & Norton
+
 打開 terminal → 算 V~OC~ → 算 R~TH~  
 ==算 R~TH~ or 時 independent voltage source 短路 independent current source 斷路==
 
@@ -46,9 +48,13 @@ if have both independent & dependent sources
 
 
 ## Ch6
+
 ### Capacitance
+
 $Q=CV \\i=C\frac{dV_C}{dt}$
+
 ### Inductance
+
 $\phi=Li \\V_L=L\frac{di_L}{dt}$
 
 ## Ch7
@@ -81,6 +87,7 @@ $\tau=R_{TH}C$
 $\tau=\dfrac{L}{R_{TH}}$  
 
 ### second order
+
 $s^2Ke^{st}+2\zeta \omega_0sKe^{st}+{\omega_0}^2Ke^{st}$  
 $s^2+2\zeta \omega_0s+{\omega_0}^2=0$
 
@@ -108,7 +115,9 @@ critically damped
 ## Ch8
 
 ==**注意正負號!!!**==
+
 ### x+jy 公式
+
 if $x+jy=re^{j\theta}$
 $$
 \left\{
@@ -121,8 +130,7 @@ x=rcos\theta ，y=rsin\theta\\
 \right.
 $$
 
-### phasor
-<!-- \usepackage{steinmetz} \phase{a}$ -->
+### Phasor
 
 $Xcos(\omega t+\theta)=X\angle \theta$
 
@@ -133,20 +141,12 @@ $R=\sqrt{Z}cos(\theta_Z)$
 $X=\sqrt{Z}sin(\theta_Z)$
 
 so
-<!-- $$
-\left\{
-\begin{array}{ln}
-j=1\angle 90^{\circ}\\
+$$j=1\angle 90^{\circ}\\
 -j=1\angle -90^{\circ}\\
-1=1\angle 0^{\circ}
-\end{array}
-\right.
-$$ -->
-$j=1\angle 90^{\circ}\\
--j=1\angle -90^{\circ}\\
-1=1\angle 0^{\circ}$
+1=1\angle 0^{\circ}$$
 
 ### Z&Y
+
 ![](https://i.imgur.com/D7ON7T1.png)
 $$
 \left\{

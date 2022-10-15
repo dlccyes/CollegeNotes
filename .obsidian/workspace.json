@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "9e0b6c200c3c1195",
+    "type": "split",
+    "children": [
+      {
+        "id": "01b78f35d92064d8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "251b01723028a796",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OtherNotes/Software Development/latex.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2eab6ef18a6597d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OtherNotes/CS Career.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "05583a13871d6d1c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OtherNotes/Software Development/Redis.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "092c11b9a64986b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NTUNotes/Senior/Power Engineering.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "85e3ff807aa26f72",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NTUNotes/Freshman/Circuit.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c917a831439917a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "fde576365ca39ca3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9348907dc62fbf13",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabeticalReverse"
+              }
+            }
+          },
+          {
+            "id": "b167153c762b3d46",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "radix",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "78bdde9e41758d03",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "14323f7919ccc358",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "70dbcbed7c32aee3",
+    "type": "split",
+    "children": [
+      {
+        "id": "deecf5b43a0f8e23",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "15204e4cb7e56ae5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "NTUNotes/Senior/Power Engineering.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "de41018057277a07",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "NTUNotes/Senior/Power Engineering.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "749db886da1d0de0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "32667095849101f1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "NTUNotes/Senior/Power Engineering.md"
+              }
+            }
+          },
+          {
+            "id": "468cbd38095459fe",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {}
+            }
+          },
+          {
+            "id": "047c5a9913a4d2dd",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "092c11b9a64986b4",
+  "lastOpenFiles": [
+    "NTUNotes/Freshman/Circuit.md",
+    "OtherNotes/Software Development/latex.md",
+    "OtherNotes/Software Development/Makefile.md",
+    "NTUNotes/Senior/Power Engineering.md",
+    "OtherNotes/Software Development/Redis.md",
+    "OtherNotes/CS Career.md",
+    "NTUNotes/Junior/Spanish.md",
+    "OtherNotes/Software Development/Go.md",
+    "OtherNotes/Software Development/SonarQube.md",
+    "obs_autolink/Drone.md"
+  ]
+}

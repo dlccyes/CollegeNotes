@@ -34,11 +34,23 @@ Will generate `go.mod`
 
 ## Dependencies
 
+### Install current project dependencies
+
+Auto check your codes and update `go.mod` and install all required dependecies in `go.mod` to `GOMODACHE` if haven't
+
 ```
 go mod tidy
 ```
 
-Will auto check your codes and update `go.mod` to ensure correct dependencies
+### Change module path
+
+The go modules are stored in Go env `GOMODCACHE` (`go env GOMODCACHE` to check it)
+
+You can change it to store the modules somewhere else
+
+```
+go env -w GOMODCACHE="/bruh"
+```
 
 ### go get from private domain/repo
 
@@ -63,6 +75,26 @@ go run <script.go>
 ```
 
 ## Environmental variables
+
+### Go Env
+
+To see all Go env
+
+```
+go env
+```
+
+To see a specific Go env e.g. `GOPATH`
+
+```
+go env GOPATH
+```
+
+To set a Go env e.g. `GOMODCACHE`
+
+```
+go env -w GOMODCACHE="/bruh"
+```
 
 ### Dotenv
 
@@ -297,9 +329,9 @@ go test -v <project name/package name>
 
 `-v` for verbose
 
-## mock
+## Mock
 
-### gomock
+### GoMock
 
 ```
 mockgen -source=doer/doer.go -destination=mocks/mock_doer.go --package mocks
@@ -313,7 +345,26 @@ mockgen -source=doer/doer.go -destination=mocks/mock_doer.go --package mocks
 
 <https://betterprogramming.pub/97ee73e36526>
 
-## AES
+## Logging with Logrus
+
+`github.com/sirupsen/logrus`
+
+### Write to local file
+
+```go
+logger := logrus.New()
+logFile := "mylog.txt"
+f, err := os.OpenFile(logFile, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0644)
+if err != nil {
+	fmt.Println("Failed to create logfile" + logFile)
+	panic(err)
+}
+logger.SetOutput(f)
+```
+
+<https://www.golinuxcloud.com/golang-logrus/>
+
+## AES Encryption
 
 Best practice: generate random IV each time and prepend it to your encrypted text. When decrypting, extract the IV from the encrypted text. See <https://stackoverflow.com/questions/8041451/> 
 

@@ -6,5 +6,8 @@
     "backimg",
     "test"
   ],
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "accentColor": "",
+  "showViewHeader": true,
+  "nativeMenus": true
 }

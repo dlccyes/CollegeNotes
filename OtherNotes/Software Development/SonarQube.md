@@ -67,6 +67,36 @@ sonar-scanner \
   -Dsonar.login=<token>
 ```
 
+## Config file
+
+`sonar-project.properties`
+
+[Doc](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/)
+
+## Test Coverage
+
+You'll have to generate test report and specify the file path in `sonar-project.properties` for to have test coverage report in SonarQube. 
+
+> SonarQube doesn't run your tests or generate reports. It only imports pre-generated reports. Below you'll find language- and tool-specific analysis parameters for importing coverage and execution reports.
+
+<https://docs.sonarqube.org/8.9/analysis/coverage/>
+
+### Go
+
+Specify file paths in `sonar-project.properties`
+
+```
+sonar.go.tests.reportPaths=report.json
+sonar.go.coverage.reportPaths=coverage.out
+```
+
+Generate go test report
+
+```
+go test -v -cover -covermode=count -coverpkg=./... -coverprofile=coverage.out ./...
+go test -json ./... > report.json
+```
+
 ## Terms
 
 See <https://docs.sonarqube.org/latest/user-guide/concepts/>

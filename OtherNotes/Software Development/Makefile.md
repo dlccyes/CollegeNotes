@@ -16,14 +16,15 @@ parent: Software Development
 
 <https://makefiletutorial.com/>
 
-## format
+## Format
 
 like yaml
 
 ```Makefile
-<makefile_target>:
-	<shell_command>
-<makefile_target>: <another makefile_target>
+<makefile target>:
+	<shell command>
+<makefile target>: <another makefile target>
+	<shell command>
 ```
 
 Note that when calling another target , that target should be under the current target.
@@ -58,6 +59,6 @@ See <https://www.gnu.org/software/make/manual/make.html#Errors>
 
 Make sure a tab precedes your command, instead of spaces. You can convert spaces to tab with vscode.
 
-### make: `<target>` is up to date.
+### make: target is up to date.
 
 You have a file/dir with the same name as the target

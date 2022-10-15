@@ -181,7 +181,7 @@ layout: meth
 	- K8s
 		- <https://www.fullstack.cafe/blog/kubernetes-interview-questions>
 
-## interviews
+## Interviews
 
 - <https://www.linkedin.com/in/jianbang-xiao/recent-activity/shares/>
 	- lots of posts about interview questions
@@ -190,11 +190,13 @@ layout: meth
 
 <https://www.reddit.com/r/cscareerquestions/comments/uczkay/>
 
-### behavioral questions
+### Behavioral Questions
 
 - resources
 	- <https://www.productmanagementexercises.com/interview-questions>
 	- <https://www.linkedin.com/interview-prep/>
+- Posts
+	- <https://leetcode.com/discuss/interview-experience/1532708/tips-for-answering-few-tricky-behavioural-interview-questions>
 - nugget
 	- summary about the event
 - STAR method
@@ -290,7 +292,9 @@ layout: meth
 
 ### Posts & Threads
 
-- generic
+- Aggregation
+	- <https://www.linkedin.com/posts/pratham-kohli_topleetcodeposts-that-you-cannot-miss-activity-6985883736722583553-ucr6>
+- Generic
 	- <https://angelswengineer.medium.com/b9262fccaa2> 
 	- <https://angelswengineer.medium.com/b1a52d97201a>
 - 台灣小公司
@@ -338,6 +342,8 @@ layout: meth
 	- Amazon behavioral questions (Leadership Principles)
 		- <https://www.reddit.com/r/jobsearchhacks/comments/g2iv42>
 	- <https://www.ptt.cc/bbs/Soft_Job/M.1656312014.A.7C6.html>
+	- Microsoft Onsite Questions
+		- <https://leetcode.com/discuss/general-discussion/1893215/>
 - offers
 	- <https://www.teamblind.com/post/hLE5CRYQ>
 
