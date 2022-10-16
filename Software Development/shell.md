@@ -94,13 +94,35 @@ replace every `\n` with `a` `b` `c` in a round robin manner
 	- `echo "My name is Deepak" | awk '{print index($0,"Deepak")}'` → 12
 
 ## find
-find all files in current directory & sub-directories of current directory
 
-`find . -name haha`  
+Find all files under the current directory recursively
 
-`find . -size +50M -100M`  
+List all the files named `haha`
+
+```
+find . -name haha
+```
+
+List all the files > 50MB
+
+```
+find . -size +50M
+```
+
+List all the files < 50MB
+
+```
+find . -size -50M
+```
+
+Delete all the files matching the pattern `*pat*`
+
+```
+find . -name '*pat*' -delete
+```
 
 ## scp
+
 remote to local  
 ```
 scp -P <port> <remote username>@<remote host>:path/to/file path/to/file
@@ -114,6 +136,7 @@ scp -P <port> path/to/file <remote username>@<remote host>:path/to/file
 <https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/>
 
 ## processes
+
 - `ps aux`
 - `top`
 - `htop`
@@ -122,6 +145,7 @@ scp -P <port> path/to/file <remote username>@<remote host>:path/to/file
 - `free -h` for total memory usage
 
 ## output to file
+
 - write to file
 	- `echo haha > file.txt`
 - append to file
