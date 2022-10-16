@@ -844,21 +844,25 @@ status_code = res.status_code
 res_body = json.loads(res.text)
 ```
 
-## simple web server
+## Simple web server
 
 ```
 python3 -m http.server
 ```
 
-## web
+## Web Framework
+
 - [Django](Django)
 - [Flask](Flask)
 
 ## Database interaction
+
 see [SQLAlchemy](SQLAlchemy)
 
 ## Troubleshooting
+
 ### /usr/bin/env: ‘python’: No such file or directory
+
 Assuming you have python3 installed, do
 ```
 sudo ln -s /usr/bin/python3 /usr/bin/python

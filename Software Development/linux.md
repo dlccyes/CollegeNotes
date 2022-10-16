@@ -557,7 +557,8 @@ pulseaudio --start
 <https://askubuntu.com/a/882222>
 
 ## ssh
-### install ssh server
+
+### Install ssh server
 install
 ```
 sudo apt install openssh-server
@@ -581,6 +582,7 @@ sshpass -p <password> ssh <user>@<host>
 but then your password will be visible for other processes or in the shell history
 
 ### ssh without password
+
 if you don't have ssh key on your machine yet
 ```
 ssh-keygen -t rsa -f ~/.ssh/id_rsa
@@ -594,10 +596,18 @@ ssh-copy-id -i ~/.ssh/id_rsa <user>@<host>
 <https://www.ssh.com/academy/ssh/copy-id>
 
 ### ssh session
+
 > SSH sessions will be on a pseudo-terminal slave (pts). But keep in mind that not all pts connections are necessarily SSH connections.
 
 ### keep ssh session from freezing
+
 <https://unix.stackexchange.com/a/200256>
+
+### generate ssh key
+
+1. `ssh-keygen -t ed25519 -C [username]`
+2. press ok til the end (or type something to set password or change saving location)
+3. private key & public key would be in `~/.ssh`
 
 ## Port
 
@@ -1273,205 +1283,7 @@ list top level things
 rclone lsd remote:<path>
 ```
 
-## troubleshooting
-
-### Tips
-
-- Use [chroot](#chroot) to go into your partition if you can't boot it.
-- for device related
-	- `sudo dmesg -w`
-
-### Windows time become UTC
-linux will set the hardware time to UTC  
-we can make the hardware time be local time with  
-(in linux)
-```
-timedatectl set-local-rtc 1
-```
-
-<https://itsfoss.com/wrong-time-dual-boot/>
-
-### grub menu related
-#### no grub menu
-```
-sudo vim /etc/default/grub
-```
-
-set `GRUB_TIMEOUT_STYLE` to `menu`  
-(may be `hidden` originally)
-
-```
-sudo update-grub
-```
-<https://askubuntu.com/a/1182434>
-
-#### no Windows in grub menu
-
-`sudo os-prober` to see if Windows is identified  
-<https://superuser.com/a/1392323>
-
-if there is no Windows
-
-```
-sudo vim /etc/default/grub
-```
-
-add
-```
-GRUB_DISABLE_OS_PROBER=false
-```
-
-```
-sudo update-grub
-```
-
-<https://forum.manjaro.org/t/warning-os-prober-will-not-be-executed-to-detect-other-bootable-partitions/57849/2>
-
-#### Booted directly into BIOS instead of GRUB
-
-`chroot` into the partition in another distro or live USB or whatever, see [chroot](#chroot)
-
-```
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --recheck
-grub-mkconfig -o boot/grub/grub.cfg
-```
-
-If you have the `update-grub` command, just use that instead of `grub-mkconfig -o boot/grub/grub.cfg`.
-
-Now it should work.
-
-Ref
-
-- <https://bbs.archlinux.org/viewtopic.php?pid=1927585#p1927585>
-- <https://bbs.archlinux.org/viewtopic.php?pid=1931184#p1931184>
-- <https://bbs.archlinux.org/viewtopic.php?id=264750>
-- <https://forum.endeavouros.com/t/rebuilt-pc-now-grub-doesnt-show-up-in-bios/1097>
-- <https://unix.stackexchange.com/a/111924>
-
-### kwallet
-It is a password manager for KDE plasma, storing your wifi passwords for example. To disable this, go to `~/.config/kwalletrc`
-
-```
-Enabled=false
-```
-
-Note that this will disable it on statup and you'll have to type the passwords it saved everytime e.g. wifi passwords.
-
-You can also set its password to blank so that you won't be asked for its password even if you've enabled it. To do so, install it
-
-```
-sudo pacman -S kwalletmanager
-```
-
-and change the password via GUI.
-
-references
-- <https://wiki.archlinux.org/title/KDE_Wallet>  
-- <https://www.reddit.com/r/kde/comments/a7n0xx/>
-- <https://unix.stackexchange.com/a/373877>  
-- <https://askubuntu.com/a/1082280>
-
-### keyring
-github desktop & vscode may want your keyring everytime  
-solution:
-```
-sudo apt-get install seahorse
-```
-
-your keyrings would be displayed in searhorse, right click on "default keyring" and change it (may be blank)
-
-<https://askubuntu.com/a/1270021>
-
-### emoji not shown
-#### system
-```
-sudo pacman -S noto-fonts-emoji
-```
-
-#### konsole
-create backup emoji font in `~/.config/fontconfig/fonts.conf`
-
-[example file](https://github.com/AndydeCleyre/dotfiles/blob/master/.config/fontconfig/fonts.conf)
-
-[ref](https://www.reddit.com/r/kde/comments/b3xxcz/comment/ej38wwb)
-
-### perl locale warning
-(arch)  
-warning message:  
-```
-perl: warning: Please check that your locale settings:
-are supported and installed on your system.
-```
-
-fix: 
-```
-sudo locale-gen
-```
-<https://stackoverflow.com/a/9727654/15493213>
-
-and then run  
-```
-locale
-```
-if there are errors, `echo $LANG`, if isn't what you want, run  
-```
-localectl set-locale LANG=en_US.UTF8
-```
-to correctly set your `LANG` variable
-
-see <https://wiki.archlinux.org/title/locale#Setting_the_locale>
-
-if the problem still persist, and only in KDE GUI session, go to system settings -> formats and set to en_US (and then restart session)
-
-### Firefox flatpak some videos laggy (H.264)
-
-Go to `var/lib/flatpak/app/org.mozilla.firefox/current/active/metadata` and search for `ffmpeg-full` and install the corresponding version of `ffmpeg-full`
-
-e.g.
-
-```
-flatpak install flathub org.freedesktop.Platform.ffmpeg-full/x86_64/21.08
-```
-
-if metadata is like this
-
-```
-[Extension org.freedesktop.Platform.ffmpeg-full]
-directory=lib/ffmpeg
-add-ld-path=.
-no-autodownload=true
-version=21.08
-```
-
-<https://bugzilla.mozilla.org/show_bug.cgi?id=1628203>
-
-### .fuse_hiddenxxx file
-
-Something is using the file. Kill the program using it then it will disappear. If you don't know what's using it, run this to get the PID using it.
-
-```
-sudo lsof .fuse_hidden<????>
-```
-
-And then `kill -9 <PID>` to kill it.
-
-### Bluetooth headset A2DP not available
-
-What works for me:
-
-1. Go into `/var/lib/bluetooth/`
-2. Delete the directory under it
-3. reboot
-4. Reconnect all of your Bluetooth devices
-
-Other methods (none works for my Kubuntu tho): 
-
-- <https://wiki.archlinux.org/title/Bluetooth_headset#A2DP_sink_profile_is_unavailable>
-- <https://askubuntu.com/questions/863930/>
-- <https://askubuntu.com/questions/765233/>
-- <https://askubuntu.com/questions/676853/>
-
-## good programs
+## Good Programs
 
 ### KDE apps
 essential packages that might not come with arch install  
@@ -1859,3 +1671,202 @@ sudo apt install pdfarranger
 for arch, use `visual-studio-code-bin` from AUR
 
 the official pacman vscode-oss version has some problems 
+
+## Troubleshooting
+
+### Tips
+
+- Use [chroot](#chroot) to go into your partition if you can't boot it.
+- for device related
+	- `sudo dmesg -w`
+
+### Windows time become UTC
+linux will set the hardware time to UTC  
+we can make the hardware time be local time with  
+(in linux)
+```
+timedatectl set-local-rtc 1
+```
+
+<https://itsfoss.com/wrong-time-dual-boot/>
+
+### grub menu related
+#### no grub menu
+```
+sudo vim /etc/default/grub
+```
+
+set `GRUB_TIMEOUT_STYLE` to `menu`  
+(may be `hidden` originally)
+
+```
+sudo update-grub
+```
+<https://askubuntu.com/a/1182434>
+
+#### no Windows in grub menu
+
+`sudo os-prober` to see if Windows is identified  
+<https://superuser.com/a/1392323>
+
+if there is no Windows
+
+```
+sudo vim /etc/default/grub
+```
+
+add
+```
+GRUB_DISABLE_OS_PROBER=false
+```
+
+```
+sudo update-grub
+```
+
+<https://forum.manjaro.org/t/warning-os-prober-will-not-be-executed-to-detect-other-bootable-partitions/57849/2>
+
+#### Booted directly into BIOS instead of GRUB
+
+`chroot` into the partition in another distro or live USB or whatever, see [chroot](#chroot)
+
+```
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --recheck
+grub-mkconfig -o boot/grub/grub.cfg
+```
+
+If you have the `update-grub` command, just use that instead of `grub-mkconfig -o boot/grub/grub.cfg`.
+
+Now it should work.
+
+Ref
+
+- <https://bbs.archlinux.org/viewtopic.php?pid=1927585#p1927585>
+- <https://bbs.archlinux.org/viewtopic.php?pid=1931184#p1931184>
+- <https://bbs.archlinux.org/viewtopic.php?id=264750>
+- <https://forum.endeavouros.com/t/rebuilt-pc-now-grub-doesnt-show-up-in-bios/1097>
+- <https://unix.stackexchange.com/a/111924>
+
+### kwallet
+It is a password manager for KDE plasma, storing your wifi passwords for example. To disable this, go to `~/.config/kwalletrc`
+
+```
+Enabled=false
+```
+
+Note that this will disable it on statup and you'll have to type the passwords it saved everytime e.g. wifi passwords.
+
+You can also set its password to blank so that you won't be asked for its password even if you've enabled it. To do so, install it
+
+```
+sudo pacman -S kwalletmanager
+```
+
+and change the password via GUI.
+
+references
+- <https://wiki.archlinux.org/title/KDE_Wallet>  
+- <https://www.reddit.com/r/kde/comments/a7n0xx/>
+- <https://unix.stackexchange.com/a/373877>  
+- <https://askubuntu.com/a/1082280>
+
+### keyring
+github desktop & vscode may want your keyring everytime  
+solution:
+```
+sudo apt-get install seahorse
+```
+
+your keyrings would be displayed in searhorse, right click on "default keyring" and change it (may be blank)
+
+<https://askubuntu.com/a/1270021>
+
+### emoji not shown
+#### system
+```
+sudo pacman -S noto-fonts-emoji
+```
+
+#### konsole
+create backup emoji font in `~/.config/fontconfig/fonts.conf`
+
+[example file](https://github.com/AndydeCleyre/dotfiles/blob/master/.config/fontconfig/fonts.conf)
+
+[ref](https://www.reddit.com/r/kde/comments/b3xxcz/comment/ej38wwb)
+
+### perl locale warning
+(arch)  
+warning message:  
+```
+perl: warning: Please check that your locale settings:
+are supported and installed on your system.
+```
+
+fix: 
+```
+sudo locale-gen
+```
+<https://stackoverflow.com/a/9727654/15493213>
+
+and then run  
+```
+locale
+```
+if there are errors, `echo $LANG`, if isn't what you want, run  
+```
+localectl set-locale LANG=en_US.UTF8
+```
+to correctly set your `LANG` variable
+
+see <https://wiki.archlinux.org/title/locale#Setting_the_locale>
+
+if the problem still persist, and only in KDE GUI session, go to system settings -> formats and set to en_US (and then restart session)
+
+### Firefox flatpak some videos laggy (H.264)
+
+Go to `var/lib/flatpak/app/org.mozilla.firefox/current/active/metadata` and search for `ffmpeg-full` and install the corresponding version of `ffmpeg-full`
+
+e.g.
+
+```
+flatpak install flathub org.freedesktop.Platform.ffmpeg-full/x86_64/21.08
+```
+
+if metadata is like this
+
+```
+[Extension org.freedesktop.Platform.ffmpeg-full]
+directory=lib/ffmpeg
+add-ld-path=.
+no-autodownload=true
+version=21.08
+```
+
+<https://bugzilla.mozilla.org/show_bug.cgi?id=1628203>
+
+### .fuse_hiddenxxx file
+
+Something is using the file. Kill the program using it then it will disappear. If you don't know what's using it, run this to get the PID using it.
+
+```
+sudo lsof .fuse_hidden<????>
+```
+
+And then `kill -9 <PID>` to kill it.
+
+### Bluetooth headset A2DP not available
+
+What works for me:
+
+1. Go into `/var/lib/bluetooth/`
+2. Delete the directory under it
+3. reboot
+4. Reconnect all of your Bluetooth devices
+
+Other methods (none works for my Kubuntu tho): 
+
+- <https://wiki.archlinux.org/title/Bluetooth_headset#A2DP_sink_profile_is_unavailable>
+- <https://askubuntu.com/questions/863930/>
+- <https://askubuntu.com/questions/765233/>
+- <https://askubuntu.com/questions/676853/>
+

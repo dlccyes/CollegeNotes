@@ -33,6 +33,7 @@
     --interactive-accent: #b44949;
     --background-modifier-cover: rgb(0 0 0 / 70%);
     --text-highlight-bg: #c9e7aba3;
+    --list-marker-color: #ffd7d7; /* bullets & numbers */
 }
 
 /* preview font */

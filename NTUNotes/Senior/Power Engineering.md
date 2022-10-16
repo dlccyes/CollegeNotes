@@ -23,6 +23,14 @@ because $(a+jb)(a-jb) = a^2+b^2$
 
 ### Complex Power
 
+![](https://i.imgur.com/3o7wQdH.png)
+
+![](https://i.imgur.com/3XbIS85.png)
+
+$$V_{max}=\sqrt{2}|V|$$
+$$v(t)=V_{max}cos(\omega t+\phi)=\dfrac{V_{max}}{\sqrt{2}}\angle{\phi}$$
+$$v(t)=\sqrt{2}|V|cos(\omega t+\phi)=|V|\angle{\phi}$$
+
 ![](https://i.imgur.com/eb18svI.png)
 
 ![](https://i.imgur.com/W03O4DC.png)
@@ -69,11 +77,26 @@ $$S = VI^* = V(\dfrac{V}{Z})^* = \dfrac{|V|^2}{Z^*}$$
 
 ### Three-Phase Power
 
-Each separated by $120^{\circ}$, s.t. at no point there's no power
+Each separated by $120^{\circ}$, s.t. the instantaneous power is constant
 
 ![](https://i.imgur.com/OEv0ZQ1.png)
 
 Power = single phase power x $\sqrt{3}$
+
+### Balanced Network
+
+![](https://i.imgur.com/tBj8TFT.png)
+
+Each of the neutral points has the same voltage.
+
+pf
+
+![](https://i.imgur.com/4X7JX1D.png)
+![](https://i.imgur.com/nqq8NQf.png)
+
+Knowing this, we can simplify the circuit
+
+![](https://i.imgur.com/7WK1aLm.png)
 
 ### Delta Wye Transformation
 

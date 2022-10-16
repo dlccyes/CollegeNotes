@@ -28,10 +28,13 @@ parent: Software Development
 ```
 
 ## string
+
 ### concat
+
 `allmsg="${allmsg}\n${msg1}\n${msg2}\n${msg3}\n"`
 
 ### slice
+
 for `str[1]`  
 ```sh
 echo $str | cut -c2
@@ -79,11 +82,16 @@ replace every `\n` with `a` `b` `c` in a round robin manner
 `echo ${arr[@]/<find>/<replace>}`
 
 ## awk
+
 `awk '{print $1, ":", ($2>=50 && $3>=50 && $4>=50) ? "Pass" : "Fail"}'`
 
 `awk '{print "2 " $2 " 3 " $3}' file.txt`  
 
 `awk '{avg=($2+$3+$4)/3; print $0, ":", (avg>=80)?"A":(avg>=60)?"B":(avg>=50)?"C":"FAIL"}'`
+
+- substring index
+	- `awk 'BEGIN{print index("abcdes","bc")}'` → 2
+	- `echo "My name is Deepak" | awk '{print index($0,"Deepak")}'` → 12
 
 ## find
 find all files in current directory & sub-directories of current directory
@@ -152,6 +160,22 @@ enttracks&user=<user>&api_key=<api key>&format=json" | python3 -c "import json,s
 - single quote -> evaluate at runtime
 	- ![](https://i.imgur.com/4PDOMd2.png)
 
+## tar
+
+- compress
+	- compress `b08901001_pa1` to `b08901001_pa1.tgz`
+		- `tar -zcvf b08901001_pa1.tgz b08901001_pa1`
+- extract
+	- extract `sample.tgz`
+		- `tar zxvf sample.tgz`
+	- extract `sample.tgz` into an existing directory `sample`
+		- `tar zxvf sample.tgz -C sample`
+
+## zip
+
+- zip `haha` to `haha.zip`
+	- `zip -r haha.zip haha`
+
 ## find files
 
 [fzf](https://github.com/junegunn/fzf)
@@ -163,11 +187,20 @@ enttracks&user=<user>&api_key=<api key>&format=json" | python3 -c "import json,s
 - `ctrl+r` to search history command
 
 ## commands
+
 ### memory
+
 `free -h`
 
 ### exec time
 `time command`
+
+### meta
+
+- autocomplete from history
+	- `ctrl+R`
+- cd to previous directory
+	- `cd -`
 
 ## softlink & hardlink
 - softlink

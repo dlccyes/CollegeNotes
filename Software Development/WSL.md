@@ -52,6 +52,18 @@ See <https://hackmd.io/@billsun/SyL3pzzQm>
 
 or just use [wslg](#wslg)
 
+## Meta Commands
+
+### list all running distros
+
+`wsl -l -v` (in command line)
+
+### terminate
+
+`wsl -t DISTRO` to terminate DISTRO
+
+`wsl --shutdown` to terminate all
+
 
 ## troubleshooting
 ### x server
@@ -83,3 +95,15 @@ sudo chattr +i /etc/resolv.conf
 and then restart wsl
 
 <https://github.com/microsoft/WSL/issues/5420#issuecomment-646479747>
+
+### memory problem
+it won't return your memory once it allocated it, until termination
+
+ref
+- <https://blog.simonpeterdebbarma.com/2020-04-memory-and-wsl/>
+- <https://github.com/microsoft/WSL/issues/4166>
+
+or `sudo sh -c 'echo 1 > /proc/sys/vm/drop_caches'`
+
+per <https://medium.com/hungys-blog/clear-linux-memory-cache-manually-90bec95ea003>
+

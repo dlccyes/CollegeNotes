@@ -178,3 +178,9 @@ i.e. Pascal
 ### Poisson
 
 ![](https://i.imgur.com/j47U8qg.png)
+
+### Problems
+
+![](https://i.imgur.com/C1U91Wc.png)
+
+![](https://i.imgur.com/P5F7I0E.png)

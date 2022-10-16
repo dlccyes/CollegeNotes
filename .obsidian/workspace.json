@@ -1,88 +1,39 @@
 {
   "main": {
-    "id": "9e0b6c200c3c1195",
+    "id": "7183098fe67ce350",
     "type": "split",
     "children": [
       {
-        "id": "01b78f35d92064d8",
+        "id": "74a1657b5472927e",
         "type": "tabs",
         "children": [
           {
-            "id": "251b01723028a796",
+            "id": "35fc13a877673278",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OtherNotes/Software Development/latex.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2eab6ef18a6597d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OtherNotes/CS Career.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "05583a13871d6d1c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OtherNotes/Software Development/Redis.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "092c11b9a64986b4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NTUNotes/Senior/Power Engineering.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "85e3ff807aa26f72",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NTUNotes/Freshman/Circuit.md",
+                "file": "Software Development/Python.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "c917a831439917a6",
+    "id": "6b6562ddb0a7b0b0",
     "type": "split",
     "children": [
       {
-        "id": "fde576365ca39ca3",
+        "id": "5b8b592cef46a8cf",
         "type": "tabs",
         "children": [
           {
-            "id": "9348907dc62fbf13",
+            "id": "fb5f40a280dc079f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -92,12 +43,12 @@
             }
           },
           {
-            "id": "b167153c762b3d46",
+            "id": "ed77f7ecc8e417fa",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "radix",
+                "query": "p1935",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -107,7 +58,7 @@
             }
           },
           {
-            "id": "78bdde9e41758d03",
+            "id": "e20c8aaadf9f9b0d",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -115,7 +66,7 @@
             }
           },
           {
-            "id": "14323f7919ccc358",
+            "id": "0081d0a18cc40113",
             "type": "leaf",
             "state": {
               "type": "recent-files",
@@ -131,20 +82,28 @@
     "collapsed": true
   },
   "right": {
-    "id": "70dbcbed7c32aee3",
+    "id": "70d288320a6648e3",
     "type": "split",
     "children": [
       {
-        "id": "deecf5b43a0f8e23",
+        "id": "39695f444b2b07b0",
         "type": "tabs",
         "children": [
           {
-            "id": "15204e4cb7e56ae5",
+            "id": "59a1825284b20111",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "794ef181e9a86ee9",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NTUNotes/Senior/Power Engineering.md",
+                "file": "Software Development/Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,19 +115,19 @@
             }
           },
           {
-            "id": "de41018057277a07",
+            "id": "a3302929252363d7",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NTUNotes/Senior/Power Engineering.md",
+                "file": "Software Development/Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "749db886da1d0de0",
+            "id": "4d2d85da05360d20",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -179,17 +138,17 @@
             }
           },
           {
-            "id": "32667095849101f1",
+            "id": "1b3d20f94fdf265a",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "NTUNotes/Senior/Power Engineering.md"
+                "file": "Software Development/Python.md"
               }
             }
           },
           {
-            "id": "468cbd38095459fe",
+            "id": "651a15300d3cc8c1",
             "type": "leaf",
             "state": {
               "type": "graph-analysis",
@@ -197,15 +156,14 @@
             }
           },
           {
-            "id": "047c5a9913a4d2dd",
+            "id": "de083424e33d6017",
             "type": "leaf",
             "state": {
-              "type": "quiet-outline",
+              "type": "advanced-tables-toolbar",
               "state": {}
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
@@ -214,17 +172,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "092c11b9a64986b4",
+  "active": "35fc13a877673278",
   "lastOpenFiles": [
-    "NTUNotes/Freshman/Circuit.md",
-    "OtherNotes/Software Development/latex.md",
-    "OtherNotes/Software Development/Makefile.md",
-    "NTUNotes/Senior/Power Engineering.md",
-    "OtherNotes/Software Development/Redis.md",
-    "OtherNotes/CS Career.md",
-    "NTUNotes/Junior/Spanish.md",
-    "OtherNotes/Software Development/Go.md",
-    "OtherNotes/Software Development/SonarQube.md",
-    "obs_autolink/Drone.md"
+    "OtherNotes/Software Development/grafana-k6.md",
+    "obs_autolink/P1935 Edge Fog Standard.md",
+    "NTUNotes/Hung-Yu/testbed/Edge Computing.md",
+    "OtherNotes/Obsidian.md",
+    "OtherNotes/Software Development/shell.md",
+    "OtherNotes/Software Development/GCP.md",
+    "OtherNotes/Software Development/terminal.md",
+    "OtherNotes/Software Development/linux.md",
+    "OtherNotes/Software Development/WSL.md",
+    "NTUNotes/Senior/Statistics.md"
   ]
 }
