@@ -329,6 +329,13 @@ go test -v <project name/package name>
 
 `-v` for verbose
 
+Save results to file
+
+```
+go test -v -cover -covermode=count -coverpkg=./... -coverprofile=coverage.out ./...
+go test -json ./... > report.json
+```
+
 ## Mock
 
 ### GoMock
@@ -353,7 +360,9 @@ mockgen -source=doer/doer.go -destination=mocks/mock_doer.go --package mocks
 
 ```go
 logger := logrus.New()
-logFile := "mylog.txt"
+currentTime := time.Now()
+today := currentTime.Format("2006-01-02")
+logFile := fmt.Sprintf("log_%s.txt", today)
 f, err := os.OpenFile(logFile, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0644)
 if err != nil {
 	fmt.Println("Failed to create logfile" + logFile)
