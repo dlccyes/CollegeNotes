@@ -35,7 +35,9 @@ has_children: true
 	- sum(each regressor x its coefficient)
 
 ## review of probability
+
 ### correlation & independence
+
 - uncorrelated is weaker than independent
   - E(X)(Y)=E(XY) $\iff$ uncorrelated
   - P(X)(Y)=P(XY) $\iff$ independent $\Longrightarrow$ uncorrelated
@@ -69,21 +71,31 @@ The skewness of a symmetric distribution is 0.
 ![Image](https://i.imgur.com/rgsUJXu.png)
 
 ### null hypothesis & alternate hypothesis
+
 ![Image](https://i.imgur.com/1uIykec.png)
+
 $E(Y) = \mu_Y$ → null hypothesis  
 $E(Y) \neq \mu_Y$ → (two-sided) alternate hypothesis
 
+**How to describe a testing result**
+
+There is (no) statistically significant evidence that ...... at the 1%/5%/10% level
+ 
 ### p-value
+
 - significance probability  
 - $t^{act}=\frac{\hat{\mu_y}-\mu_y}{\sigma_y}$
 - 抽樣平均在理論平均的 t 個標準差外的機率 → null hypothesis 正確機率
+
 i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
+
 ![Image](https://i.imgur.com/mITFI1p.png)
+
 - 假設抽樣算出的平均，去根據 null hypothesis 的 mean 算出 p-value 很小，i.e. 抽樣平均離理論平均很遠，那麼 null hypothesis 就很有可能是錯誤的，i.e. 理論平均應該不是那樣；  反之，若 p-value 很大，則 null hypothesis i.e. 理論平均很有可能是正確的
 - if p-value < 5% → reject the null hypothesis
   - for two-sided, p-value < 0.05 i.e. $|t^{act}|>1.96$ ($\Phi(1.96)=0.975$)
   - for one-sided, p-value < 0.05 i.e. $|t^{act}|>1.64$ ($\Phi(1.64)=0.95$)
-  - meaning you would incorrectly reject the null hypotheㄅsis once in 20 cases on average
+  - meaning you would incorrectly reject the null hypothesis once in 20 cases on average
 
 - between two means
   - ![Image](https://i.imgur.com/kq5dhmQ.png)

@@ -20,6 +20,11 @@ nav_exclude: true
 - [OpenIntro_Statistics](OpenIntro_Statistics.pdf)
 - [Factfulness](Factfulness.pdf)
 
+## Notation
+
+- $p$ = population
+- $\hat{p}$ = sample
+
 ## Intro
 
 ### Explanatory & Response variable
@@ -184,3 +189,44 @@ i.e. Pascal
 ![](https://i.imgur.com/C1U91Wc.png)
 
 ![](https://i.imgur.com/P5F7I0E.png)
+
+## Foundation of Inference
+
+![](https://i.imgur.com/Vcbgjh5.png)
+
+### Central Limit Theorem
+
+![](https://i.imgur.com/TxDn9Zf.png)
+
+![](https://i.imgur.com/mc3ZuAC.png)
+
+### Confidence Interval
+
+
+- Confidence Interval
+  - 99%: 2.5758 = 2.576 = 2.58
+  - 95%: 1.9600 = 1.960 = 1.96
+  - 90%: 1.6449 = 1.645 = 1.65
+
+![](https://i.imgur.com/xSqDVH6.png)
+
+### Hypothesis Testing
+
+$\alpha$ means the critical p value i.e. significance level
+
+![](https://i.imgur.com/s3YOPoH.png)
+
+- Type 1 Error = False Positive
+	- assuming reject null -> positive
+- Type 2 Error = False Negative
+
+![](https://i.imgur.com/WhK2API.png)
+
+e.g.
+
+![](https://i.imgur.com/M22u3Uz.png)
+
+![](https://i.imgur.com/SrI544h.png)
+![](https://i.imgur.com/5RB5cxN.png)
+
+There is no statistically significant evidence that the fraction of children who are nearsighted is different from 0.08 at the 5% level
