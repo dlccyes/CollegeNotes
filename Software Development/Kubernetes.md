@@ -201,6 +201,14 @@ more info (like ip & node run on)
 kubectl get pods -o wide
 ```
 
+## Cronjob Related
+
+See your cronjob
+
+```
+kubectl get cronjob
+```
+
 ## deployment
 
 `spec.template` is the definition of the pod
@@ -234,9 +242,17 @@ go to `http://<node_ip>:<nodePort>` to see your app
 
 It's an alternative to minikube. Kind uses Docker container while minikube uses VM. See [the official page](https://kubernetes.io/docs/tasks/tools/) and [the comparison](https://shipit.dev/posts/minikube-vs-kind-vs-k3s.html).
 
-### install kind
+### Install
 
 Install Docker if you haven't.
+
+### Mac
+
+```
+brew install kind
+```
+
+### Install with binary
 
 install binary
 
@@ -394,3 +410,13 @@ Happens when you run any `kubectl <xxx>` command.
 Easy fix: delete your cluster and start again
 
 If you're in local and you use `kind`, `kind get clusters` and `kind delete cluster --name <cluster_name>`.
+
+## no matches for kind "CronJob" in version "batch/v1beta1"
+
+Your k8s version >= 1.21, so use this instead
+
+```
+apiVersion: batch/v1
+```
+
+See <https://cloud.google.com/kubernetes-engine/docs/how-to/cronjobs>

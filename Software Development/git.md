@@ -137,7 +137,9 @@ git reset --hard      # Rewrite git's index to pick up all the new line endings.
 	- <https://blog.opasschang.com/confusing-git-autocrlf/>
 
 
-## Integrate new changes into your dev branch
+## Working on a branch
+
+### Integrate new changes into your dev branch
 
 In your dev branch
 
@@ -151,17 +153,56 @@ e.g.
 git rebase origin/master
 ```
 
+### Make your branch identical to a branch
+
+
+```
+git reset --hard <remote>/<target branch>
+```
+
+e.g.
+
+
+```
+git reset --hard origin/master
+```
+
+## Stash
+
+### Stash all changes
+
+```
+git stash -u
+```
+
+`-u` to include untracked files
+
+### Show stashed entries
+
+```
+git stash list
+```
+
+### Retrieve stash files
+
+```
+git stash apply <number>
+```
+
 ## commit related
 
 ### delete all commits
+
 `git update-ref -d HEAD`
 
 <https://stackoverflow.com/a/6637891/15493213>
 
 ### reset
+
 `git reset HEAD~2` to reset to latest_commit.parent.parent
 
 ### revert a certain file to a version
+
 `git checkout <sha> -- <path-to-file>`
 
 ### discard changes
@@ -357,6 +398,7 @@ git merge branch_1
 ```
 
 ### copy everything from another branch to current branch
+
 ```
 git checkout <other_branch> .
 ```
