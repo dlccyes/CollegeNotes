@@ -13,9 +13,33 @@ layout: meth
 {:toc}
 </details>
 
+## Constants
+
+- Planck’s constant $h$ = $6.626\times10^{-34}J\cdot Hz^{-1}$
+- electron volt $eV=1.602\times10^{-19}J$
+- mass
+	- electron's rest mass $m_0$ = $9.11\times10^{-31}$kg
+	- neutron's rest mass = $1.67\times10^{-27}$
+- electron's rest energy $E_0=511keV$
+
 ## Particle properties of wave
 
+$$\gamma=\dfrac{1}{\sqrt{1-\frac{v^2}{c^2}}}$$
+
 ### Energy
+
+![](https://i.imgur.com/7pGwuqi.png)
+
+$$E^2=(mc^2)^2+p^2c^2=E_0^2+(pc)^2$$
+$$m = 0 \rightarrow E=pc$$
+
+$$E=E_0+KE$$
+
+- $E_0$ = rest energy
+- $KE$ = kinetic energy
+
+$$E_0=m_0c^2$$
+$$KE=mc^2-m_0c^2$$
 
 ![](https://i.imgur.com/bX177hk.png)
 
@@ -24,6 +48,7 @@ layout: meth
 ![](https://i.imgur.com/ohV0Xq6.png)
 
 ### X Ray
+
 ![](https://i.imgur.com/a169r5e.png)
 
 ### Compton Effect
@@ -32,4 +57,17 @@ layout: meth
 
 ## Wave properties of particle
 
+![](https://i.imgur.com/lAWpIlw.png)
+
 ![](https://i.imgur.com/qRxVX4P.png)
+
+### Phase Velocity & Group Velocity
+
+$$v_p=\lambda\nu=\dfrac{h}{\gamma mv}\nu=\dfrac{E}{\gamma mv}=\dfrac{\gamma mc^2}{\gamma mv}=\dfrac{c^2}{v}$$
+
+![](https://i.imgur.com/MAx1vhu.png)
+
+![](https://i.imgur.com/41ogptD.png)
+![](https://i.imgur.com/xnzH7rB.png)
+
+![](https://i.imgur.com/3G6eEWp.png)

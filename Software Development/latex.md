@@ -15,7 +15,13 @@ parent: Software Development
 
 $\LaTeX$
 
-## letter style
+## Symbols
+
+Draw here and you'll know
+
+<http://detexify.kirelabs.org/classify.html>
+
+## Character style
 
 - fancy
 	- `\mathcal{}` $\mathcal{k}$
@@ -23,6 +29,43 @@ $\LaTeX$
 - normal
 	- `\mathrm{}` $\mathrm{k}$
 		- for multi-letter variable [ref](https://tex.stackexchange.com/a/482988)
+
+## Modularization
+
+Modularize your files! See [Management in a large project | Overleaf](https://www.overleaf.com/learn/latex/Management_in_a_large_project)
+
+## Create a package
+
+A package defines your styles, commands, etc.
+
+In your `xxx.sty`, put this at the top
+
+```
+\ProvidesPackage{<package_name}
+```
+
+## Use a package
+
+To use a package, whether an external or internal one
+
+```
+\usepackage{<package_name>}
+```
+
+## Import contents
+
+The imported file should not have `\begin{}document`
+
+Various type of importing
+
+- `\include`
+	- insert contents in the new page
+- `\input`
+	- insert contents
+
+Check the [offical example](https://www.overleaf.com/project/635005addee2f35584f56fb6)
+
+You still need the `\documentclass` at the top of each final file (not needed in the imported file)
 
 ## formatting
 

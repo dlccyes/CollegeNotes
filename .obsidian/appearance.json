@@ -8,6 +8,6 @@
   ],
   "theme": "obsidian",
   "accentColor": "",
-  "showViewHeader": false,
+  "showViewHeader": true,
   "nativeMenus": false
 }
