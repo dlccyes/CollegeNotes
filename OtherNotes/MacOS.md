@@ -26,6 +26,12 @@ Command + Q is an unchangeable shortcut key which will close an application. You
 
 <https://apple.stackexchange.com/questions/78948/>
 
+## Menubar
+
+The topmost bar
+
+Command + drag to rearrange the items
+
 ## Applications
 
 ### Install/remove applications

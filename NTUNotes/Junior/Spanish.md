@@ -2991,7 +2991,12 @@ past tense 第三人稱中間字母會變
 - cada = every
 	- cada día = every day
 
-### Porque ..., have to ...
+### Because
+
+- *Porque* soy feo, no tengo novía. -> Incorrect
+- *Como* soy feo, no tengo novía. -> Correct
+
+#### Porque ..., have to ...
 
 ![](https://i.imgur.com/PLjguO8.png)
 
@@ -3129,3 +3134,7 @@ p.13 - exercise 22
 - fue, era, tenía
 - se sentó, pensó
 - decidió
+
+### Midterm Review
+
+![](https://i.imgur.com/7HIX2Bu.png)

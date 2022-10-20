@@ -18,6 +18,8 @@ has_children: true
 ## resources
 
 - [Econometrics Midterm](Econometrics%20Midterm.pdf)
+	- problems & my answer
+- [Econometrics Midterm Solution](Econometrics%20Midterm%20Sol.pdf)
 - [Econometrics Final](Econometrics%20Final)
 
 ## notation and stuff
@@ -101,6 +103,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - ![Image](https://i.imgur.com/kq5dhmQ.png)
 
 ### confidence interval
+
 - $\Phi(1.645)=95\%$
 - $\Phi(1.96)=97.5\%$ → 95% confidence interval for two sided
 - $\Phi(2.576)=99.5\%$ → 99% confidence interval for two sided
@@ -110,12 +113,14 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 ![Image](https://i.imgur.com/wGhdMSF.png)
 
 ### 名詞
+
 - size of a test
   - the probability that a test incorrectly rejects the null hypothesis when the null hypothesis is true
 - power of a test
   - the probability that a test correctly rejects the null hypothesis when the alternative is true
 
 ## Ch4 Linear Regression with One Regressor
+
 - notations
   - $Y$: real sample value
   - $\hat{Y}$: predicted value
@@ -126,6 +131,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - correlation efficient
   - $$r_{XY}=\dfrac{s_{XY}}{s_Xs_Y}=\dfrac{\dfrac{1}{n-1}\displaystyle\sum_{i=1}^n(X_i-\bar{X})(Y_i-\bar{Y})}{\sqrt{\dfrac{1}{n-1}\displaystyle\sum_{i=1}^n(X_i-\bar{X})^2}\sqrt{\dfrac{1}{n-1}\displaystyle\sum_{i=1}^n(Y_i-\bar{Y})^2}}$$
 ### OLS
+
   - $\hat{\beta_0}$、$\hat{\beta_1}$： $\beta_0$、$\beta_1$ minimalizing $\displaystyle\sum_{i=1}^n(Y_i-\beta_0-\beta_1X_i)^2$
   - $\hat{Y}=\hat{\beta_0}+\hat{\beta_1}\bar{X}$
   - $Y_i=\hat{Y_i}+\hat{u_i}=\hat{\beta_0}+\hat{\beta_1}\bar{X}+\hat{u_i}$
@@ -164,6 +170,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - ![Image](https://i.imgur.com/1vfXqkc.png)
 
 ## Ch5 Multiple Regressor
+
 - more regressor → $R^2$ $\uparrow$ as SER $\downarrow$
   - adjusted $R^2$
   $\bar{R}^2=1-\dfrac{n-1}{n-k-1}\dfrac{SSR}{TSS}$
@@ -181,6 +188,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - 與 binary variable 相對
 
 ### homoskedastic & heterosketasdic
+
 - homoskedastic
   - if $var(u_i|X_i)$ doesn't depend on $X_i$
 - heterosketasdic

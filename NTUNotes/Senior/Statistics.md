@@ -200,6 +200,8 @@ i.e. Pascal
 
 ![](https://i.imgur.com/mc3ZuAC.png)
 
+![](https://i.imgur.com/eJofiqq.png)
+
 ### Confidence Interval
 
 
@@ -220,6 +222,8 @@ $\alpha$ means the critical p value i.e. significance level
 	- assuming reject null -> positive
 - Type 2 Error = False Negative
 
+Remember to use the p stated in $H_0$ to calculate SE and do hypothesis testing!
+
 ![](https://i.imgur.com/WhK2API.png)
 
 e.g.
@@ -230,3 +234,21 @@ e.g.
 ![](https://i.imgur.com/5RB5cxN.png)
 
 There is no statistically significant evidence that the fraction of children who are nearsighted is different from 0.08 at the 5% level
+
+## Inference for Categorical Data
+
+### Hypothesis Testing of 2 Porportion
+
+SE of the difference between 2 porportions
+
+![](https://i.imgur.com/bdsBrOx.png)
+
+e.g.
+
+![](https://i.imgur.com/rxm7jDL.png)
+
+Use p = overall p to calculate SE when $H_0$ is that 2 porportions are the same
+
+![](https://i.imgur.com/JNsoHU2.png)
+
+![](https://i.imgur.com/sx8AWQq.png)

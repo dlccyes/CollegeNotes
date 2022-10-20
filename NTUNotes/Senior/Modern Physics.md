@@ -20,6 +20,7 @@ layout: meth
 - mass
 	- electron's rest mass $m_0$ = $9.11\times10^{-31}$kg
 	- neutron's rest mass = $1.67\times10^{-27}$
+	- proton's rest mass = $1.67\times10^{-27}$
 - electron's rest energy $E_0=511keV$
 
 ## Particle properties of wave
@@ -71,3 +72,22 @@ $$v_p=\lambda\nu=\dfrac{h}{\gamma mv}\nu=\dfrac{E}{\gamma mv}=\dfrac{\gamma mc^2
 ![](https://i.imgur.com/xnzH7rB.png)
 
 ![](https://i.imgur.com/3G6eEWp.png)
+
+### Uncertainty Principle
+
+$$\hbar=\dfrac{h}{2\pi}$$
+
+$$\Delta x \Delta p \geq \dfrac{\hbar}{2}$$
+$$\Delta E \Delta t \geq \dfrac{\hbar}{2}$$
+
+
+![](https://i.imgur.com/3idLe5E.png)
+
+![](https://i.imgur.com/WRPExGn.png)
+
+![](https://i.imgur.com/lqEYLku.png)
+
+![](https://i.imgur.com/u9Yoxqe.png)
+![](https://i.imgur.com/J4xGfx7.png)
+
+![](https://i.imgur.com/odP9jgS.png)

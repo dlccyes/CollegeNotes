@@ -98,7 +98,7 @@ Partitioning the database
 ## Storing passwords in the database
 
 - db entry
-	- hash(password + salt) 
+	- hash(password + salt)
 	- salt
 - register flow
 	- randomly generate a salt -> combine with user entered password -> hash -> store hashing result & salt into database
@@ -106,3 +106,7 @@ Partitioning the database
 	- retrieve user's salt from db -> combine with entered password -> hash -> compare with db entry
 - ref
 	- <https://www.youtube.com/watch?v=zt8Cocdy15c>
+
+## URL Shortening
+
+<https://www.educative.io/courses/grokking-the-system-design-interview>

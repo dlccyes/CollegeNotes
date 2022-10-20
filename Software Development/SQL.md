@@ -14,6 +14,7 @@ parent: Software Development
 </details>
 
 ## if
+
 `IF(clause, yes, no)`
 
 ```sql
@@ -31,14 +32,17 @@ FROM BST AS bst_o ORDER BY N
 ```
 
 ## slice
+
 - `RIGHT(COLUMN, 3)` → COLUMN[-3:]
 - `SUBSTRING(COLUMN, -3)` → COLUMN[-3:]
 - `SUBSTRING(COLUMN, 5, 3)` → COLUMN[5:5+3]
 
 ## replace
+
 `REPLACE(COLUMN, <before>, <after>)`
 
 ## regex
+
 ```
 SELECT COLUMN FROM TABLE WHERE COLUMN REGEXP ''
 ```
@@ -49,6 +53,7 @@ SELECT COLUMN FROM TABLE WHERE COLUMN REGEXP ''
 - `<pattern> = 0` negation
 
 ## join
+
 
 ```sql
 SELECT CITY.NAME
@@ -74,8 +79,22 @@ ORDER BY W.power DESC, WP.age DESC
 
 ![](https://i.imgur.com/6j1815K.png)
 
+## Rank
+
+Give ranking number based on the value of a column
+
+`RANK()` vs. `DENSE_RANK()`
+
+e.g.
+
+| val | rank | dense_rank |
+| --- | ---- |:----------:|
+| 90  | 1    |     1      |
+| 90  | 1    |     1      |
+| 88  | 3    |     2      |
 
 ## others
+
 - `DISTINCT`
 - `AVG`
 - `COUNT`
