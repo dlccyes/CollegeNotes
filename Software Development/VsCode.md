@@ -4,7 +4,14 @@ parent: Software Development
 ---
 
 # VsCode
-## good settings 
+
+## Commands
+
+### Maximize/Restore a tab in a split window
+
+`View: Toggle Editor Group Sizes`
+
+## Good settings 
 
 ### stop python (pylance) auto imports things
 

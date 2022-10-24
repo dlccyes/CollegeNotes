@@ -26,6 +26,19 @@ Command + Q is an unchangeable shortcut key which will close an application. You
 
 <https://apple.stackexchange.com/questions/78948/>
 
+
+### Minimize shortcut
+
+The unchangeable shortcut for minimizing a window is `CMD+M`. To disable it
+
+1. System Preferences > Keyboard > Shortcuts > App Shortcuts
+2. Add a shortcut with title = `Minimize` mapping to an obscure shortcut
+3. Close the settings window for it to take effect
+
+See <https://apple.stackexchange.com/a/125628>
+
+Or you can reassign `CMD+M` to another shortcut.
+
 ## Menubar
 
 The topmost bar

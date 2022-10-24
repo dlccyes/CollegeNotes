@@ -189,6 +189,8 @@ git stash list
 git stash apply <number>
 ```
 
+The latest one would be `0`
+
 ## commit related
 
 ### delete all commits
@@ -295,16 +297,23 @@ https://gitbook.tw/chapters/using-git/reset-commit.html about git reset
 ref
 <https://gitbook.tw/chapters/rewrite-history/merge-multiple-commits-to-one-commit.html>
 
-## config related
+## Credential
 
-`git config --global XXX YYY` will add or change XXX's value to YYY in `~/.gitconfig`
+### Store credentials as a text file
 
-### store credentials
 1. `git config --global credential.helper store`
 2. push or pull in your repo, enter your username & passphrase, then they will be saved to `~/.git-credentials`
 3. next time you push or pull, you won't need to enter the credentials
 
-<https://stackoverflow.com/questions/35942754/how-can-i-save-username-and-password-in-git>
+<https://stackoverflow.com/questions/35942754>
+
+### Store credentials in Mac's keychain Access app
+
+Mac will store your credentials there automatically, **even if you use `credentials.helper store`**. So if you want to change your password/token, you'll need to go the the keychain Access app for it to take effect.
+
+## config related
+
+`git config --global XXX YYY` will add or change XXX's value to YYY in `~/.gitconfig`
 
 ## clone related
 
@@ -472,13 +481,16 @@ You can use the remote starting with `git@` and add the ssh public key to your g
 	6. check "allow write"
 
 ## tag
+
 <https://git-scm.com/book/en/v2/Git-Basics-Tagging>
 
 Only point at a specific commit, to indicate version for example.  
 A tag can't be used on multiple commits.
 
 ## troubleshooting
+
 ### unsafe directory
+
 git addressed a security vulnerability and changed something to solve it in April, 2022  
 see <https://github.blog/2022-04-12-git-security-vulnerability-announced/>
 

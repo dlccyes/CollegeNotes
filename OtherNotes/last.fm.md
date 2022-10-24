@@ -32,7 +32,8 @@ javascript:(function(){function a(a){const b=document.createElement("button");re
 
 ## Not scrobbling
 
-1.  [last.fm settings/applications](https://www.last.fm/settings/applications) → disconnect "Spotify Scrobbling"
-2.  [spotify settings/apps](https://www.spotify.com/tw/account/apps/) → revoke access of "Last.fm Scrobbler"
-3.  last.fm settings → connect "Spotify Scrobbling"
-4.  start a new track
+1. [last.fm settings/applications](https://www.last.fm/settings/applications) → disconnect "Spotify Scrobbling"
+2. [spotify settings/apps](https://www.spotify.com/tw/account/apps/) → revoke access of "Last.fm Scrobbler"
+3. last.fm settings → connect "Spotify Scrobbling"
+4. start a new track
+5. expected result: current playback & the missing scrobbles are shown

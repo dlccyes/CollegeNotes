@@ -201,6 +201,32 @@ more info (like ip & node run on)
 kubectl get pods -o wide
 ```
 
+## Namespace
+
+### View all namespace
+
+```
+kubectl get namespace
+```
+
+### View currently used namespace
+
+```
+kubectl config view | grep namespace 
+```
+
+### Set namespace
+
+```
+kubectl config set-context --current --namespace=<your_namespace>
+```
+
+To unset
+
+```
+kubectl config set-context --current --namespace=""
+```
+
 ## Cronjob Related
 
 See your cronjob
@@ -237,6 +263,13 @@ handle port forwarding
 	- the port of the kubernetes node
 
 go to `http://<node_ip>:<nodePort>` to see your app
+
+
+## Ingress
+
+Expose urls for external use.
+
+[Doc](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
 ## kind
 
@@ -281,7 +314,7 @@ docker ps
 ```
 
 ```
-kind get clusters
+kind get clusters1
 ```
 
 ```
