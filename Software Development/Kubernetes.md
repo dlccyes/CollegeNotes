@@ -203,11 +203,15 @@ kubectl get pods -o wide
 
 ## Namespace
 
+For segratating your resources (e.g. different apps)
+
 ### View all namespace
 
 ```
 kubectl get namespace
 ```
+
+`ns` for short
 
 ### View currently used namespace
 
@@ -220,6 +224,8 @@ kubectl config view | grep namespace
 ```
 kubectl config set-context --current --namespace=<your_namespace>
 ```
+
+`-n` for short
 
 To unset
 
