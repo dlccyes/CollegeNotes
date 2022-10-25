@@ -16,7 +16,23 @@ parent: Software Development
 
 ## Sync
 
-Sync objects following the current version of yamls in your github repo
+Sync objects following the current version of yamls in your github repo. Only reapply those with changes in the source yaml. 
+
+### Pulling the latest image
+
+If you use `latest` tag for your images, it won't pull the latest images as your yaml including the code always never changes. 
+
+**Solution**
+
+- Use anabsolute tag and update it manually each time or automatically via a CI job. 
+- Use 3rd party tools
+	- [Keel](https://keel.sh/)
+	- [Argo CD Image Updater](https://argocd-image-updater.readthedocs.io)
+
+**See these discussions**
+
+- <https://github.com/argoproj/argo-cd/issues/2532>.
+- <https://github.com/argoproj/argo-cd/issues/1648>
 
 ### Options
 

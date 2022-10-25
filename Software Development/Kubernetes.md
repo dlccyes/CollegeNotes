@@ -15,11 +15,15 @@ alias: k8s
 {:toc}
 </details>
 
-## resources
+## Resources
 
 - [Setting up local Kubernetes Cluster with Kind](https://cloudyuga.guru/hands_on_lab/kind-k8s)
 - <https://cwhu.medium.com/7431c5f96c3e>
 - <https://godleon.github.io/blog/Kubernetes/k8s-Deployment-Overview/>
+
+## Tools
+
+[ArgoCD](ArgoCD)
 
 ## install kubectl
 
@@ -43,7 +47,7 @@ test
 kubectl version --client
 ```
 
-## apply config file
+## Apply config file
 
 Write config files in yaml.
 
@@ -106,7 +110,7 @@ label your node -> specify `nodeSelector` in your yaml
 
 Note that in Deployment, it should be in `template.spec`
 
-## pod related
+## Pulling image
 
 ### pull image from private docker registry
 
@@ -146,6 +150,8 @@ spec:
   imagePullSecrets:
   - name: <secret_name>
 ```
+
+## pod related
 
 ### create pod
 
@@ -204,6 +210,16 @@ kubectl get pods -o wide
 ## Namespace
 
 For segratating your resources (e.g. different apps)
+
+### Get things from all namespaces
+
+If you don't supply a namespace, the get commands will only show the resources in your current namespace. To get the resources under all namespaces, use the `--all-namespaces` flag.
+
+e.g.
+
+```
+kubectl get pods --all-namespaces
+```
 
 ### View all namespace
 
@@ -273,9 +289,9 @@ go to `http://<node_ip>:<nodePort>` to see your app
 
 ## Ingress
 
-Expose urls for external use.
+[Doc](https://kubernetes.io/docs/concepts/services-networking/ingres`s/)
 
-[Doc](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+Use ingress to map host/path to your service. Note that the host you define must be pointing to an ip pointing to your cluster, e.g. your load balancer or ingress controller
 
 ## kind
 

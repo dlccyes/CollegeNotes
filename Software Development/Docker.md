@@ -95,7 +95,9 @@ sudo systemctl start docker
 ```
 
 ## container related
+
 ### show running containers
+
 ```
 docker ps
 ```
@@ -132,17 +134,17 @@ docker rm -f <container_id>
 docker logs <container_id>
 ```
 
-## run a container - docker run
+## Run a container - docker run
 
 ```
 docker run <flags> <image>
 ```
 
-### run a docker container from an image
+### Run a docker container from an image
 
 ```
 docker run --name <container_name> -d --rm <image_name/id>
-# if it exit immediately, try
+# if it exits immediately, try
 docker run --name <container_name> -dit --rm <image_name/id>
 ```
 
@@ -179,9 +181,15 @@ with webcam
 
 [ref](https://www.thorsten-hans.com/docker-container-cpu-limits-explained/)
 
-## image related
+## Image related
 
-### show all docker images
+### Store images on cloud repo
+
+- Docker Hub
+- [Harbor](https://goharbor.io/)
+
+### Show all docker images
+
 ```
 docker images
 ```

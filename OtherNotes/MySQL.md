@@ -3,7 +3,7 @@ layout: meth
 parent: Software Development
 ---
 
-# MySQL CLI
+# MySQL
 {: .no_toc }
 
 <details open markdown="block">

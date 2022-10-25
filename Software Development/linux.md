@@ -138,6 +138,10 @@ See [Linux Package Management](Linux%20Package%20Management)
 
 ## group & user
 
+### Use as root
+
+- `sudo su` or `su root` to enter
+
 ### list all groups
 
 they're in `/etc/group`
@@ -642,9 +646,14 @@ e.g.
 - usage
 	- `http GET <url>`
 
-## root shell
-- `sudo su` or `su root` to enter
-- different home directory `~`
+## Netrc
+
+`~/.netc` is a plain text file storing server credentials s.t. you don't have to log in manually.
+
+```
+machine <host> username <username> password <password>
+```
+
 
 ## remove an unremoveable file
 
