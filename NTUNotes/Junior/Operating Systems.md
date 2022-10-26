@@ -1513,12 +1513,12 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 
 ### Error Detection & Correction
 - error detection
-	- see [error detection](Computer%20Networks#error%20detection)
+	- see [error detection](Computer%20Networks.md#error%20detection)
 	- parity bit
 		- num of 1s being old or even
 		- too simple
 	- CRC, cyclic reduncancy test
-		- see [CRC cyclic redundancy check](Computer%20Networks#CRC%20cyclic%20redundancy%20check)
+		- see [CRC cyclic redundancy check](Computer%20Networks.md#CRC%20cyclic%20redundancy%20check)
 		- generator polynomial
 - error correction
 	- ECC, error-correction code 

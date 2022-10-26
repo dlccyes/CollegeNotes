@@ -3032,10 +3032,13 @@ adj. + mente -> adv.
 	- e.g. En mi vida comido tofu frito = I've never eaten stinky tofu
 - durante mi vida = in my life
 	- e.g. Durante mi vida he viajado muchos países = I've travelled to a many countried in my life.
-- melacotón = peach
+- melocotón = peach
 - ciruela = plum = 李子
 - ajo = garlic
 - apio = celery = 芹菜
+- cucumber = pepino
+- espárrago = asparagus = 蘆筍
+- pimienta = pepper = X椒
 
 ### Because
 
@@ -3163,15 +3166,14 @@ Often times the same prefix as the indicative present verb
 
 ![](https://i.imgur.com/kTaEltx.png)
 
-#### Examples
+#### Use Case
 
-Te recomiendo que ...
+I suggest that ...
 
-![](https://i.imgur.com/zgPF8S8.png)
-
-Te sugiero que ...
-
-![](https://i.imgur.com/uZ7l3Ba.png)
+- Te recomiendo que + subjunctive
+	- ![](https://i.imgur.com/zgPF8S8.png)
+- Te sugiero que + subjunctive
+	- ![](https://i.imgur.com/uZ7l3Ba.png)
 
 ![](https://i.imgur.com/BVBc2R5.png)
 

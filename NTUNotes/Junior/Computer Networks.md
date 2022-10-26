@@ -16,7 +16,9 @@ has_children: true
 </details>
 
 ## Ch1 Computer Network and the Internet
+
 ### The Network Edge
+
 - end system = host
 	- client
 	- server
@@ -33,8 +35,12 @@ has_children: true
 		-  like 電話
 
 #### access networks
+
+
 ##### residential access networks
+
 ###### DSL, digital subscriber line
+
 - ![](https://i.imgur.com/wuohUfP.png)
 - ![](https://i.imgur.com/ChQ16fd.png)
 - xDSL, x=A, S, H, V etc.
@@ -731,7 +737,9 @@ so there're many security problems now
 		- many LDNSs don't respond to probes
 
 #### case study
+
 ##### Netflix 
+
 - runs on Amazon cloud
 	- ![](https://i.imgur.com/vI5i9Vw.png)
 	- upload original videos to Amazon cloud
@@ -747,6 +755,7 @@ so there're many security problems now
 		- don't need DNS to redirect to CDN server
 
 ##### Youtube
+
 - use pull-caching
 - use DNS redirect
 - select CDN cluster with lowest RTT
@@ -757,6 +766,7 @@ so there're many security problems now
 - Google data center converts to Youtube format & create multiple versions
 
 ##### Kankan
+
 - 迅雷看看 (???)
 - P2P
 	- similar to BitTorrent
@@ -770,7 +780,9 @@ so there're many security problems now
 	- if P2P isn't enough, use hybrid CDN-P2P
 
 ## Ch3 Transport Layer
+
 ### intro
+
 - network laryer: host 2 host
 - transport layer: process 2 process
 - <www.ietf.org>
@@ -887,6 +899,7 @@ so there're many security problems now
 	- ![](https://i.imgur.com/HtGtPqf.png)
 
 ### congestion control
+
 - congestion → packet loss → retransmission → waste resources
 - if a packet has traveled through many routers, but dropped due to congestion, the work done by previous routers is lost
 - multimedia 常是 broadcasting，難做 congestion control
