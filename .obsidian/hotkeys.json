@@ -147,7 +147,6 @@
       "key": "H"
     }
   ],
-  "obsidian-quiet-outline:quiet-outline": [],
   "app:open-settings": [
     {
       "modifiers": [
@@ -171,6 +170,14 @@
         "Mod"
       ],
       "key": "CapsLock"
+    }
+  ],
+  "obsidian-quiet-outline:quiet-outline-focus-input": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Q"
     }
   ]
 }

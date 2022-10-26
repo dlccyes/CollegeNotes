@@ -13,7 +13,7 @@ layout: meth
 {:toc}
 </details>
 
-## typing
+## Typing Spanish
 
 ### mac
 
@@ -28,8 +28,107 @@ Long press on a letter and select or press the following key combinations:
 -   ñ — Option + n, n.
 -   Ñ — Option + n, Shift + n.
 
+## Present Participle / Gerundio
+- e-X-ir → i-X-iendo
+- o-X-ir → u-X-iendo
+- e.g.
+	- bañar → estar bañando
+	- ![](https://i.imgur.com/YDAdvKK.png)
+
+### Present Perfect
+
+pretérito perfecto
+
+![](https://i.imgur.com/3ATkiOm.png)
+
+- he/has/ha/hemos/habéis/han
+- ar → ado
+- er → ido
+- ir → ido
+- irregular
+	- hacer → hecho
+	- escribir → escrito
+	- volver → vuelto
+	- decir → dicho
+	- poner → puesto
+- me he dado un paseo = go for a walk
+	- darse un paseo = pasear
+- no me he duchado
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FCXDJqbA-Dk.png?alt=media&token=d10c8b07-4938-46c0-bcf3-6c7a78617e23)
+- ¿A qué hora te has levantado hoy? ¿Te has duchado esta mañana? ¿A qué hora has desayunado esta mañana? ¿Qué has hecho por la mañana? ¿Has venido a clase en moto? ¿Has llegado tarde a clase de español? ¿Te has puesto una chaqueta? ¿Has abierto la ventana de tu habitación? ¿Has encendido tu ordenador? ¿Te has puesto unos pantalones negros?
+- hace XXX = XXX ago
+	- hace media hora = half an hour ago
+	- hace 10 minutos = 10 minutes ago
+- ya = already
+
+## Past Tense / Pretérito Indefinido
+
+![](https://i.imgur.com/Di1ytFf.png)
+
+### Changes in third person
+
+![](https://i.imgur.com/04sMJRM.png)
+
+past tense 第三人稱中間字母會變
+
+- e->i
+	- divertirse -> se divirtió
+	- sentir -> sintió
+	- seguir -> siguió
+	- preferir -> prefirió
+	- pedir -> pedió
+	- repetir
+	- elegir
+	- servir
+- y
+	- leer -> leyó
+	- creer -> creyó
+	- construir -> construyó
+	- oír -> oyó
+- o->u
+	- morir -> murió
+	- dormir -> durmió
+
+### Irregular
+
+![](https://i.imgur.com/sKvchky.png)
+
+![](https://i.imgur.com/JYxqg0U.png)
+
+## Past Imperfect / Petérito Imperfecto
+
+![](https://i.imgur.com/nRwbH5X.png)
+
+Only 3 irregular verbs - ser, ir, ver
+
+![](https://i.imgur.com/rAmODem.png)
+
+ ![](https://i.imgur.com/vG27Lzn.png)
+ 
+### Use Case
+
+- When the action wasn't over at the present time of the story
+	- ![](https://i.imgur.com/uMjk1wn.png)
+	- when describing the vibe or environment
+		- ![](https://i.imgur.com/2aczYmR.png)
+	- Ayer cuando me duchaba, mi madre me llamó / teléfone
+		- Yesterday when I was showering, my mom called me. 
+	- when he was 50 yo = a los 50 años = cuando tenía 50 años
+- past habit
+	- ![](https://i.imgur.com/ZZmUtvx.png)
+- requesting something
+	- ![](https://i.imgur.com/p1BZel6.png)
+- explaining a dream
+	- ![](https://i.imgur.com/9N1TauX.png)
+- asking something
+	- ![](https://i.imgur.com/8ETqol3.png)
+- if I were you
+	- See [If I were you](#If%20I%20were%20you)
+
 ## Spanish 1-1
+
 ### meta
+
 - schedule
     - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FnlqI7j4ta7.png?alt=media&token=3ce21802-b2f1-4f5e-9e07-d0281e37137c)
 - lecturer:: 馬德睿
@@ -85,6 +184,7 @@ Long press on a letter and select or press the following key combinations:
     - 李恩慈 Ann jee
         - 普正
         - malaysian
+        - csie
     - 張家寧 Heather
         - 普眼鏡
     - 謝雨婷 Sunny
@@ -2031,27 +2131,6 @@ Long press on a letter and select or press the following key combinations:
         - me trae un café? 文法錯但常用
     - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FSg163KpXI3.png?alt=media&token=523134df-05a1-43e9-83d7-e21d251c2b56)
 
- ### present perfect (have/haven't)
-- he/has/ha/hemos/habéis/han
-- ar → ado
-- er → ido
-- ir → ido
-- irregular
-	- hacer → hecho
-	- escribir → escrito
-	- volver → vuelto
-	- decir → dicho
-	- poner → puesto
-- me he dado un paseo = go for a walk
-	- darse un paseo = pasear
-- no me he duchado
-- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FCXDJqbA-Dk.png?alt=media&token=d10c8b07-4938-46c0-bcf3-6c7a78617e23)
-- ¿A qué hora te has levantado hoy? ¿Te has duchado esta mañana? ¿A qué hora has desayunado esta mañana? ¿Qué has hecho por la mañana? ¿Has venido a clase en moto? ¿Has llegado tarde a clase de español? ¿Te has puesto una chaqueta? ¿Has abierto la ventana de tu habitación? ¿Has encendido tu ordenador? ¿Te has puesto unos pantalones negros?
-- hace XXX = XXX ago
-	- hace media hora = half an hour ago
-	- hace 10 minutos = 10 minutes ago
-- ya = already
-
 ### animales = animals
 - caballo = horse
 - camello = camel
@@ -2126,13 +2205,6 @@ Long press on a letter and select or press the following key combinations:
 - Tengo una falda nueva. ¿Dondé la has comprado?
 - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FihbiZJlEpe.png?alt=media&token=3a56241e-705a-4fd1-95f0-108b9629096c)
 - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FkwGT-VKCy4.png?alt=media&token=87ef494e-eb8f-4d55-a4e7-9844b964fa4d)
-
-### gerundio = present participles (verbo+ing)
-- e-X-ir → i-X-iendo
-- o-X-ir → u-X-iendo
-- e.g.
-	- bañar → estar bañando
-	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FsRhBYdVLok.png?alt=media&token=0363eba8-7bd3-4607-8fcc-d8775f437434)
 
 ### practice
 - September 22nd, 2021
@@ -2495,6 +2567,7 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - el semestre pasado
 
 ### preterite
+
 - ser + preterite = be + verb
 - muerte = dead
 	- past: morí/moriste/murió
@@ -2502,6 +2575,7 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 	- fue atropellado por un tranvía = he was run over by a streetcar
 
 ### imperativo
+
 - 命令式
 - 重音變到倒數第二個
 	- ha**blar** -> **ha**bla
@@ -2513,7 +2587,8 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 	- ![](https://i.imgur.com/U9F005m.png)
 	- amame = luv me
 
-### das/dejas
+### das & dejas
+
 - das = give
 	- me das = can you give me
 - dejas = lend
@@ -2558,33 +2633,8 @@ adj. + mente -> adv.
 - bueno (adj.) -> bien (adv.)
 - estupendo (adj.) -> estupendamente (adv.)
 
-### past tense irregular 第三人稱
-
-verb + ó
-
-![](https://i.imgur.com/Di1ytFf.png)
-
-![](https://i.imgur.com/04sMJRM.png)
-
-past tense 第三人稱中間字母會變
-
-- e->i
-	- sentir -> sintió
-	- seguir -> siguió
-	- preferir -> prefirió
-	- repetir
-	- elegir
-	- pedir
-	- servir
-- y
-	- leer -> leyó
-	- creer -> creyó
-	- construir -> construyó
-	- oír -> oyó
-- o->u
-	- morir -> murió
-
 ### superlativo absoluto
+
 - very very something
 - alto -> altísimo
 - inteligente -> inteligentísimo
@@ -2617,18 +2667,6 @@ past tense 第三人稱中間字母會變
 	- Mi padre se lo regaló a mi hermano el mes pasado.
 		- 不能 le lo -> 改成 se lo
 - ![](https://i.imgur.com/wvDQZKZ.png)
-
-### petérito imperfecto
-
-- was doing 
-- past habit
-- Ayer cuando me duchaba, mi madre me llamó / teléfone
-	- Yesterday when I was showering, my mom called me. 
-- when he was 50 yo = a los 50 años = cuando tenía 50 años
-- ![](https://i.imgur.com/uMjk1wn.png)
-- ![](https://i.imgur.com/nRwbH5X.png)
-- ![](https://i.imgur.com/8aQctUN.png)
-- ![](https://i.imgur.com/vG27Lzn.png)
 
 ### practice
 - 5/25
@@ -2990,6 +3028,14 @@ past tense 第三人稱中間字母會變
 - coser = sew
 - cada = every
 	- cada día = every day
+- en mi vida = I've never
+	- e.g. En mi vida comido tofu frito = I've never eaten stinky tofu
+- durante mi vida = in my life
+	- e.g. Durante mi vida he viajado muchos países = I've travelled to a many countried in my life.
+- melacotón = peach
+- ciruela = plum = 李子
+- ajo = garlic
+- apio = celery = 芹菜
 
 ### Because
 
@@ -3010,6 +3056,7 @@ Porque ... ,
 ### pretérito perfecto vs. pretérito indefinido
 
 - absolute time -> pretérito indefinido
+- happened this xxx / within a day -> pretérito perfecto
 
 ![](https://i.imgur.com/GlPjwNb.png)
 
@@ -3063,9 +3110,15 @@ Porque ... ,
 
 ### If I were you
 
-- Yo, que tú + imperfect
-- Yo en tu lugar + imperfect
-- Yo si fuera tú les + imperfect
+- Yo que tú + imperfect
+- Yo, en tu lugar + imperfect
+- Si yo fuera tú + imperfect
+
+![](https://i.imgur.com/LGDibBj.png)
+
+![](https://i.imgur.com/OgRRwbQ.png)
+
+![](https://i.imgur.com/OHUng78.png)
 
 ### Muy + adjectives
 

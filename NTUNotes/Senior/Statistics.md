@@ -252,3 +252,44 @@ Use p = overall p to calculate SE when $H_0$ is that 2 porportions are the same
 ![](https://i.imgur.com/JNsoHU2.png)
 
 ![](https://i.imgur.com/sx8AWQq.png)
+
+#### Problems
+
+![](https://i.imgur.com/gSNWj6k.jpg)
+
+![](https://i.imgur.com/F2OASkY.jpg)
+
+### Chi-Square Test
+
+#### One-Way Table
+
+![](https://i.imgur.com/wYDG1N8.png)
+
+
+![](https://i.imgur.com/4ZaLYOm.png)
+
+![](https://i.imgur.com/jF26QVP.png)
+
+![](https://i.imgur.com/j8bwWiE.png)
+
+e.g.
+
+![](https://i.imgur.com/2ARpVJf.png)
+
+![](https://i.imgur.com/dUQuAnx.png)
+
+![](https://i.imgur.com/4lZua5b.png)
+
+#### Two-Way Table
+
+Each cell is an element, and the caluclate the x square as in one-way table, except df = (# of row - 1)(# of col -1)
+
+![](https://i.imgur.com/waDQmej.png)
+![](https://i.imgur.com/Yfcgj3q.png)
+![](https://i.imgur.com/v0YYTbJ.png)
+
+#### Problems
+
+![](https://i.imgur.com/wMncy25.jpg)
+
+![](https://i.imgur.com/syW7ltW.jpg)
