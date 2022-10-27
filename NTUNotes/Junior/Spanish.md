@@ -3196,4 +3196,3 @@ p.13 - exercise 22
 ### Midterm Review
 
 ![](https://i.imgur.com/7HIX2Bu.png)
-fz

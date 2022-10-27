@@ -147,3 +147,32 @@ $$I_a=\dfrac{V_{an}}{Z}=12\angle{105^\circ}$$
 $$I_b=\dfrac{V_{bn}}{Z}=12\angle{-15^\circ}$$
 $$I_c=\dfrac{V_{bn}}{Z}=12\angle{225^\circ}$$
 $$S_{3\phi}=V_{an}I_a^*+V_{bn}I_b^*+V_{cn}I_c^*=\underline{4320\angle{-15^\circ}}$$
+
+## Ch3 Transmission Line
+
+1 feet = 12 inches
+
+$$\mu_0=4\pi\times10^{-7}$$
+
+![](https://i.imgur.com/kTyb5ho.png)
+
+![](https://i.imgur.com/JcQepmU.png)
+
+$$B=\mu H$$
+
+
+![](https://i.imgur.com/yIQ8uqY.png)
+
+Using length in feet, the resulting inductance is in H/m
+
+### Three-Phase Tranposition
+
+Inductance per meter of three-phase tranposed lines
+
+![](https://i.imgur.com/g0T1oW7.png)
+
+![](https://i.imgur.com/f4x6ja5.png)
+
+![](https://i.imgur.com/GQj1YCj.png)
+
+![](https://i.imgur.com/Yi0podg.png)
