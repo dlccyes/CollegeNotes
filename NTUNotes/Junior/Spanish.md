@@ -29,13 +29,14 @@ Long press on a letter and select or press the following key combinations:
 -   Ñ — Option + n, Shift + n.
 
 ## Present Participle / Gerundio
+
 - e-X-ir → i-X-iendo
 - o-X-ir → u-X-iendo
 - e.g.
 	- bañar → estar bañando
 	- ![](https://i.imgur.com/YDAdvKK.png)
 
-### Present Perfect
+## Present Perfect
 
 pretérito perfecto
 
@@ -3033,12 +3034,15 @@ adj. + mente -> adv.
 - durante mi vida = in my life
 	- e.g. Durante mi vida he viajado muchos países = I've travelled to a many countried in my life.
 - melocotón = peach
+- cereza = cherry
 - ciruela = plum = 李子
 - ajo = garlic
 - apio = celery = 芹菜
 - pepino = cucumber
 - espárrago = asparagus = 蘆筍
-- pimienta = pepper = X椒
+- pimiento = bell pepper = 彩椒
+- pimienta = black pepper = 胡椒
+- espinaca = spinach = 菠菜
 
 ### Because
 
@@ -3174,8 +3178,7 @@ I suggest that ...
 	- ![](https://i.imgur.com/zgPF8S8.png)
 - Te sugiero que + subjunctive
 	- ![](https://i.imgur.com/uZ7l3Ba.png)
-
-![](https://i.imgur.com/BVBc2R5.png)
+	- ![](https://i.imgur.com/BVBc2R5.png)
 
 ### temp
 
