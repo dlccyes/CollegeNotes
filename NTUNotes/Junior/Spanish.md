@@ -3036,7 +3036,7 @@ adj. + mente -> adv.
 - ciruela = plum = 李子
 - ajo = garlic
 - apio = celery = 芹菜
-- cucumber = pepino
+- pepino = cucumber
 - espárrago = asparagus = 蘆筍
 - pimienta = pepper = X椒
 
@@ -3193,3 +3193,4 @@ p.13 - exercise 22
 ### Midterm Review
 
 ![](https://i.imgur.com/7HIX2Bu.png)
+fz
