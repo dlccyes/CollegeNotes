@@ -1,0 +1,53 @@
+extra_css:
+- assets/versions.css
+extra_javascript:
+- assets/versions.js
+google_analytics:
+- UA-105170809-2
+- auto
+markdown_extensions:
+- markdown_include.include
+- codehilite
+- admonition
+- toc:
+    permalink: true
+nav:
+- Overview: README.md
+- Software Development:
+  - Cloud:
+    - software-development/GCP.md
+    - software-development/Heroku.md
+    - software-development/AWS.md
+  - CICD:
+    - software-development/Kubernetes.md
+    - software-development/Kubernetes.md
+    - software-development/Docker.md
+  - Security:
+    - Overview: operator-manual/security.md
+    - snyk/index.md
+    - operator-manual/signed-release-assets.md
+  - operator-manual/tls.md
+  - operator-manual/cluster-bootstrapping.md
+  - operator-manual/secret-management.md
+  - operator-manual/high_availability.md
+  - operator-manual/disaster_recovery.md
+  - operator-manual/webhook.md
+  - operator-manual/health.md
+  - operator-manual/resource_actions.md
+  - operator-manual/custom_tools.md
+  - operator-manual/custom-styles.md
+  - operator-manual/metrics.md
+  - operator-manual/web_based_terminal.md
+- Blog ⧉: https://dlccyes.github.io/blog
+repo_url: https://github.com/dlccyes/dlccyes.github.io
+site_name: El Mundo
+strict: true
+theme:
+  custom_dir: overrides
+  favicon: assets/favicon.png
+  font:
+    text: Montserrat
+  logo: assets/logo.png
+  name: material
+  palette:
+    primary: teal
