@@ -15,7 +15,9 @@ parent: Software Development
 </details>
 
 ## Github CLI
+
 ### install
+
 <https://github.com/cli/cli/blob/trunk/docs/install_linux.md>
 
 ```
@@ -26,17 +28,21 @@ sudo apt install gh
 ```
 
 ## Git GUI
+
 ### Github Desktop
+
 - simple
 - fast
 - intuitive
 
 ### GitKraken
+
 - many features
 - nice UI
 - slow
 
 ### login
+
 ```
 gh auth login
 ```

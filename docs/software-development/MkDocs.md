@@ -1,6 +1,21 @@
 # MkDocs
 
-Use this to easy deploy your markdowns
+Use this to easy generate beautiful static sites from your markdowns
+
+## Meta
+
+[Doc](https://www.mkdocs.org/)
+
+## Install
+
+```
+pip3 install mkdocs
+```
+
+## Structure
+
+- Define everything in `./mkdocs.yml`
+- markdown files in `./docs/`
 
 ## Deploy
 
@@ -18,9 +33,6 @@ Will generate the pages in `./site` and then push to `origin/gh-pages`.
 mkdocs serve
 ```
 
-## Config
-
-Define everything in `./mkdocs.yml`
 
 ## Theme
 
