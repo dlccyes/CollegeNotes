@@ -27,7 +27,7 @@ parent: Software Development
 {:toc}
 </details>
 
-## themes
+## Themes
 
 ### just the doc
 
