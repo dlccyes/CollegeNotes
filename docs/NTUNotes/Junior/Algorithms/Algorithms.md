@@ -18,7 +18,9 @@ layout: meth
 </details>
 
 ## resources
+
 Solutions to Introduction to Algorithms Third Edition
+
 - <https://walkccc.me/CLRS/>
 - <https://github.com/gzc/CLRS>
 

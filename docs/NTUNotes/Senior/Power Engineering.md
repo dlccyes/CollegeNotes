@@ -150,7 +150,9 @@ $$S_{3\phi}=V_{an}I_a^*+V_{bn}I_b^*+V_{cn}I_c^*=\underline{4320\angle{-15^\circ}
 
 ## Ch3 Transmission Line
 
-1 feet = 12 inches
+- 1 feet = 12 inches
+- 1 mile = 1.609 km
+
 
 $$\mu_0=4\pi\times10^{-7}$$
 
@@ -165,6 +167,14 @@ $$B=\mu H$$
 
 Using length in feet, the resulting inductance is in H/m
 
+### Conductor Bundling
+
+![](https://i.imgur.com/Y22ze87.png)
+
+![](https://i.imgur.com/R2ltmNz.png)
+
+![](https://i.imgur.com/zsDBgS9.png)
+
 ### Three-Phase Tranposition
 
 Inductance per meter of three-phase tranposed lines
@@ -176,3 +186,5 @@ Inductance per meter of three-phase tranposed lines
 ![](https://i.imgur.com/GQj1YCj.png)
 
 ![](https://i.imgur.com/Yi0podg.png)
+
+GMR = geometric mean radius 

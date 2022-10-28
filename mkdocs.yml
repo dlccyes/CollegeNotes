@@ -1,3 +1,4 @@
+# strict: true
 theme:
   name: material
   # custom_dir: overrides
@@ -7,32 +8,45 @@ theme:
   # logo: assets/logo.png
   palette:
     primary: teal
-# extra_css:
-# - assets/versions.css
+    # - scheme: thrill
+    #   toggle:
+    #     icon: material/weather-sunny
+    #     name: light mode
+    # - scheme: caliente
+    #   toggle:
+    #     icon: material/weather-night
+    #     name: dark mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+
+extra_css:
+  - assets/style.css
 extra_javascript:
+  - assets/script.js
   - assets/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 markdown_extensions:
-# - markdown_include.include
-- codehilite
-- admonition
-- pymdownx.arithmatex:
-    generic: true
-- toc:
-    permalink: true
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+repo_url: https://github.com/dlccyes/CollegeNotes
+# logo:
+site_name: El Mundo
 nav:
-- Overview: README.md
+- About: README.md
+
 - Software Development:
-  - Cloud:
-    - software-development/AWS.md
-    - software-development/GCP.md
-    - software-development/Heroku.md
-  - CICD:
-    - software-development/Docker.md
-    - software-development/Kubernetes.md
-    - software-development/ArgoCD.md
-    - "software-development/Github Action.md"
   - Languages:
     - "software-development/C++.md"
     - software-development/Python.md
@@ -41,17 +55,77 @@ nav:
     - software-development/JavaScript.md
     - software-development/HTML.md
     - software-development/CSS.md
+    - software-development/prolog.md
+    - software-development/RegEx.md
+    - software-development/RISC-V.md
+    - software-development/Verilog.md
+
+  - Linux:
+    - software-development/linux.md
+    - software-development/Linux Package Management.md
+    - software-development/shell.md
+    - software-development/Makefile.md
+    - software-development/base64.md
+    - software-development/ANSI.md
+
+  - Web Frameworks:
+    - software-development/Flask.md
+    - software-development/Django.md
+    - software-development/Laravel.md
+  - Frontend Frameworks:
+    - software-development/React.md
+    - software-development/Vue.md
+  - Databases:
+    - software-development/Database.md
+    - software-development/MySQL.md
+    - software-development/PostgreSQL.md
+    - software-development/Redis.md
+  - Cloud:
+    - software-development/AWS.md
+    - software-development/GCP.md
+    - software-development/Heroku.md
+  - Containerization:
+    - software-development/Docker.md
+    - software-development/Kubernetes.md
+  - CICD:
+    - "software-development/Github Action.md"
+    - software-development/ArgoCD.md
+
 - Computer Science:
+  - "OtherNotes/CS Career.md"
+  - "software-development/System Design.md"
   - DSA:
     - "NTUNotes/Sophomore/Data Structure.md"
     - "NTUNotes/Junior/Algorithms/Algorithms.md"
+    - software-development/leetcode.md
   - "NTUNotes/Junior/Computer Networks.md"
   - "NTUNotes/Junior/Operating Systems.md"
   - "NTUNotes/Junior/Computer Architecture.md"
+  - "NTUNotes/Junior/Machine Learning.md"
+
 - Electrical Engineering:
+  - "NTUNotes/Freshman/Logic Design.md"
+  - "NTUNotes/Freshman/Circuit.md"
   - "NTUNotes/Sophomore/Electromagnetism.md"
   - "NTUNotes/Senior/Power Engineering.md"
-- Blog ⧉: https://dlccyes.github.io/blog
-repo_url: https://github.com/dlccyes/dlccyes.github.io
-site_name: El Mundo
-# strict: true
+
+- Economics:
+  - "NTUNotes/Freshman/Microeconomics/README.md"
+  - "NTUNotes/Junior/Macroeconomics.md"
+  - "NTUNotes/Sophomore/Econometrics.md"
+  - "NTUNotes/Sophomore/Money and Banking/README.md"
+  - "NTUNotes/Freshman/Eurozone.md"
+  - "NTUNotes/Junior/Industrial Organization.md"
+
+# - Blog ⧉: https://dlccyes.github.io/blog
+
+extra:
+  social:
+    - icon: fontawesome/brands/pied-piper-alt
+      link: https://dlccyes.github.io
+    - icon: fontawesome/brands/medium
+      link: https://dlccyes.github.io/blog
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/derrick-lin
+    - icon: fontawesome/brands/github
+      link: https://github.com/dlccyes

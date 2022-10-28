@@ -17,6 +17,10 @@ pip3 install mkdocs
 - Define everything in `./mkdocs.yml`
 - markdown files in `./docs/`
 
+## Navigation
+
+See <https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation>
+
 ## Deploy
 
 ### Deploy to Github Page
@@ -40,7 +44,7 @@ mkdocs serve
 
 <https://squidfunk.github.io/mkdocs-material/>
 
-#### Use Latex
+#### Mathjax Support
 
 See <https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#arithmatex>
 
