@@ -28,17 +28,20 @@ parent: Software Development
 </details>
 
 ## themes
+
 ### just the doc
+
 [Official Doc](https://just-the-docs.github.io/just-the-docs/)
 
 doesn't support Chinese search
 <https://github.com/pmarsceill/just-the-docs/discussions/437#discussioncomment-85470>
 
 #### build with github page
+
 in `_config.yml` add `remote_theme: pmarsceill/just-the-docs`
 
-
 #### build locally
+
 1. `sudo gem install just-the-docs`
 	- if (ruby related) error, `sudo apt-get install ruby-all-dev` and retry  
 		- <https://github.com/github/pages-gem/issues/133#issuecomment-411918159>
@@ -47,6 +50,7 @@ in `_config.yml` add `remote_theme: pmarsceill/just-the-docs`
 3. `jekyll serve`
 
 #### navigation structure
+
 - it doesn't care about the real folder subfolder relationship, instead, you specify the hierarchy manually
 - say you want `aa.md` & `bb.md` inside folder `A` in the left sidebar
 	- `has_children: true` in yaml and put the title `A` in either
@@ -60,6 +64,7 @@ in `_config.yml` add `remote_theme: pmarsceill/just-the-docs`
 - `nav_exclude: true` to exclude it from left sidebar
 
 #### layouts structure
+
 <https://github.com/pmarsceill/just-the-docs/tree/master/_layouts>
 
 each page use the `page` layout, which is like
