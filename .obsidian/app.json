@@ -1,10 +1,10 @@
 {
   "promptDelete": false,
   "newFileLocation": "folder",
-  "newFileFolderPath": "obs_autolink",
+  "newFileFolderPath": "docs/obs_autolink",
   "useMarkdownLinks": true,
   "showUnsupportedFiles": true,
-  "attachmentFolderPath": "obs_attachment",
+  "attachmentFolderPath": "docs/obs_attachment",
   "foldIndent": true,
   "foldHeading": true,
   "showLineNumber": true,
