@@ -560,59 +560,6 @@ pulseaudio --start
 
 <https://askubuntu.com/a/882222>
 
-## ssh
-
-### Install ssh server
-install
-```
-sudo apt install openssh-server
-```
-
-enable & start
-```
-sudo systemctl enable ssh
-sudo systemctl start ssh
-```
-
-open port 22
-```
-sudo ufw allow 22
-```
-
-### ssh with password in one line
-```
-sshpass -p <password> ssh <user>@<host>
-```
-but then your password will be visible for other processes or in the shell history
-
-### ssh without password
-
-if you don't have ssh key on your machine yet
-```
-ssh-keygen -t rsa -f ~/.ssh/id_rsa
-```
-
-copy your ssh key to the target machine
-```
-ssh-copy-id -i ~/.ssh/id_rsa <user>@<host>
-```
-<https://apple.stackexchange.com/a/285806>  
-<https://www.ssh.com/academy/ssh/copy-id>
-
-### ssh session
-
-> SSH sessions will be on a pseudo-terminal slave (pts). But keep in mind that not all pts connections are necessarily SSH connections.
-
-### keep ssh session from freezing
-
-<https://unix.stackexchange.com/a/200256>
-
-### generate ssh key
-
-1. `ssh-keygen -t ed25519 -C [username]`
-2. press ok til the end (or type something to set password or change saving location)
-3. private key & public key would be in `~/.ssh`
-
 ## Port
 
 ### See port in use

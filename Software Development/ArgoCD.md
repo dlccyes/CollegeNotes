@@ -14,6 +14,12 @@ parent: Software Development
 {:toc}
 </details>
 
+## Meta
+
+[Github](https://github.com/argoproj/argo-cd/)
+
+[Doc](https://argo-cd.readthedocs.io/en/stable/)
+
 ## Sync
 
 Sync objects following the current version of yamls in your github repo. Only reapply those with changes in the source yaml. 
