@@ -5,15 +5,6 @@ alias: k8s
 ---
 
 # Kubernetes
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Resources
 
@@ -285,7 +276,6 @@ handle port forwarding
 	- the port of the kubernetes node
 
 go to `http://<node_ip>:<nodePort>` to see your app
-
 
 ## Ingress
 

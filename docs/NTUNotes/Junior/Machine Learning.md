@@ -2,15 +2,6 @@
 layout: meth
 ---
 # Machine Learning
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## resources
 - [course website](https://speech.ee.ntu.edu.tw/~hylee/ml/2022-spring.php)
@@ -466,7 +457,6 @@ If represent each state & each action as an interger
 	- given a state -> choose the action resulting to greatest q value -> update cell value & go to new state
 
 ![](https://i.imgur.com/li4JBVi.png)
-
 
 ### Monte-Carlo (MC)
 

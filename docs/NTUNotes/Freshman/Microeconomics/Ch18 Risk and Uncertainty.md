@@ -70,7 +70,6 @@ sensitivity to movements in the relevant market
 ![](https://i.imgur.com/h0htARK.png)
 ![](https://i.imgur.com/EK7LQMj.png)
 
-
 ## 期貨
 緣起：  
 農夫知道一個月後會收成 1000 tons 的玉米，  
@@ -100,8 +99,6 @@ so 均衡時 P~5~ = P~6~
 投機人預測正確時，對社會是好的  
 投機人預測錯誤時，對社會是不好的
 
-
-
 ## HW
 
 ### 1.
@@ -111,8 +108,6 @@ so 均衡時 P~5~ = P~6~
 ### 2.
 
 ![image-20200615131729145](https://i.loli.net/2020/06/15/qDyxrmgFTNMwz4a.png)
-
-
 
 ### 3.
 

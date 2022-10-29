@@ -3,18 +3,9 @@ layout: meth
 parent: polly
 ---
 # ZMap - On the Origin of Scanning: The Impact of Location on Internet-Wide Scans
-{: .no_toc }
 
 [pdf link](https://www.dropbox.com/s/17nvnsawlcq18hq/6-zmap-imc20.pdf)  
 [pdf with my annotations](ZMap.pdf)
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Intro
 ### fast ipv4 scannings

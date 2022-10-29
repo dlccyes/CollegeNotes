@@ -4,15 +4,6 @@ layout: meth
 parent: Software Development
 ---
 # Verilog
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## resources
 https://www.youtube.com/watch?v=Y3xzOLp1OsE
@@ -42,7 +33,6 @@ end
 	- `always @ (*)`
 
 https://www.chipverify.com/verilog/verilog-always-block
-
 
 ### print
 `$display("counter%d out=%d", counter, out);` decimal

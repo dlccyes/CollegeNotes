@@ -4,15 +4,6 @@ parent: Operating Systems
 ---
 
 # Operating Systems Final
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Phase 1
 

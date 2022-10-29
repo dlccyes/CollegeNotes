@@ -4,15 +4,6 @@ parent: Miscellaneous
 ---
 
 # Last.fm
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Remove (duplicate) scrobbles
 

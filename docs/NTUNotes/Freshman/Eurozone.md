@@ -4,14 +4,6 @@ layout: meth
 
 # 經濟貨幣整合：歐元區理論與實證
 
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
-
 ## 3/4
 推薦讀德意志三部曲
 
@@ -23,7 +15,6 @@ layout: meth
 ## 3/11
 脫還是不脫？(Ebell 2016；Los 2018；葉國俊 2016，2020):
 >根據歐盟條約第50條，成員國在符合某些條件下可脫離歐盟組織：(1)必須在通知歐盟兩年後；(2)必須獲得歐洲議會及歐盟部長會議同意；(3)僅需獲得適當多數決，無需獲得所有會員國同意。然而目前看來，歐盟未必立即裂解，先裂解可能會是英國。我們將討論英國公投結果，就經濟學角度看是否明智，其實相關理論解釋早已存在超過半世紀。
-
 
 Sir David to Borris Johnson
 >Dear Foreign Secretary,
@@ -91,7 +82,6 @@ $兩國貿易交流 = k\times \dfrac{兩國GDP相乘}{兩國首都距離^2}$
 歐盟一體  
 英：跟日韓先談好，脫歐即談 FTA  
 
-
 ## 3/25
 引力模型仍然成立  
 儘管電子商務流行  
@@ -107,8 +97,6 @@ Treaty of Lisbon : 歐盟根本大法 (原本想要弄成歐盟憲法但被否�
 
 歐元紙鈔：門、橋梁等，generalized version，不表示任一國家  
 歐元硬幣：授權各國家
-
-
 
 ### Trilemma
 
@@ -566,7 +554,6 @@ Maastricht : macroeconomic
 Anglo-Frenc Model
 : 幫政府
 
-
 German Model (Bundesbank)
 : 獨立
 price stability 為上
@@ -605,7 +592,6 @@ output gap
 → 2007 [[次貸危機]]
 :::
 
-
 ![image-20200603000258736](https://i.loli.net/2020/06/03/CXqPS1OhWZ7fEQ6.png)
 
 **accountability**: 問責性（出事找誰負責），相當於透明度  
@@ -625,16 +611,12 @@ ECB：一人一票 with rotational voing rights
 
 ![image-20200603003601979](https://i.loli.net/2020/06/03/xvSqifgZ3BLRuWj.png)
 
-
-
 ![image-20200603000258736](https://i.loli.net/2020/06/03/CXqPS1OhWZ7fEQ6.png)
 **accountability**: 問責性（出事找誰負責），相當於透明度  
 
 US Fed 透明度高，independence 較低因為要幫政府  
 
 但近年 ECB 已漸透明化
-
-
 
 ## 6/3
 
@@ -678,8 +660,6 @@ ECB 可以在特定條件下在二級主權債券市場上購買歐元區成員�
 >
 > [Shadow Banking System | Investopedia](https://www.investopedia.com/terms/s/shadow-banking-system.asp)
 
-
-
 ### 訪問 Mario Draghi (2011-2019 ECB 行長)
 
 > 2019/9/30 德拉吉：歐元的反對者沒有成功- - FT中文網
@@ -708,8 +688,6 @@ ECB 可以在特定條件下在二級主權債券市場上購買歐元區成員�
 > 版權聲明：本文版權歸FT中文網所有，未經允許任何單位或個人不得轉載，複製或以任何其他方式使
 > 用本文全部或部分，侵權必究。
 
-
-
 ## 6/10
 
 ### 歐元區的金融整合
@@ -717,8 +695,6 @@ ECB 可以在特定條件下在二級主權債券市場上購買歐元區成員�
 ![image-20200611005542756](https://i.loli.net/2020/06/11/bp6QWH8ZivOrsL2.png)
 
 banking sector：自己國家得銀行仍對自己國家叫好
-
-
 
 #### money market
 
@@ -728,11 +704,7 @@ banking sector：自己國家得銀行仍對自己國家叫好
 >
 > <https://zh.wikipedia.org/wiki/货币市场>
 
-
-
 California 破產過，但 Fed 立刻去救他，因此沒有引起什麼危機－budgetary union
-
-
 
 ### Target 2
 
@@ -747,12 +719,8 @@ California 破產過，但 Fed 立刻去救他，因此沒有引起什麼危機�
 QE 後很多錢 (liquidity) 流到歐豬們，他們又把錢拿去買德國的資產  
 → 紓困開始後，德國對歐豬五國的債權又大量增加
 
-
-
 finantial integration can be a substitude of fidcal integration
 如國家間支股票買賣 → 均衡 asymetric shock
-
-
 
 ### 國際貨幣條件
 
@@ -777,8 +745,6 @@ finantial integration can be a substitude of fidcal integration
 
 ![image-20200612134126373](https://i.loli.net/2020/06/12/1UQDlwvNtGVz7K5.png)
 
-
-
 以前，美國經濟遙遙領先其他國，但沒有中央銀行 → 不穩定  
 → 國際貨幣仍是英鎊
 
@@ -798,8 +764,6 @@ WW1 → 歐洲動亂 → 資金如英鎊轉往美國 → 美金價值大升
 
 monopoly
 如洛克菲勒、卡內基、摩根
-
-
 
 ## 複習
 

@@ -5,15 +5,6 @@ has_children: true
 ---
 
 # Econometrics
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## resources
 
@@ -196,7 +187,6 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - ![Image](https://i.imgur.com/kVAvxVV.png)
   - heterosketasdic 的 distribution 因 x 而異
 
-
 ## Ch6 Linear Regression with Multiple Regressors
 - treat intercept as a regressor
 ![Image](https://i.imgur.com/MKDfX7o.png)
@@ -215,7 +205,6 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
    - dummy variable trap
      - ![Image](https://i.imgur.com/YNwOx7H.png)
      - ![Image](https://i.imgur.com/hunkfPQ.png)
-
 
 ## Ch7 Hypothesis Tests & Confidence Intervals in Multiple Regression
 - F test

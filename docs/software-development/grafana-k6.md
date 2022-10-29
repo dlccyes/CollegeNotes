@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # grafana-k6
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 A tool to test how your environment behaves under various workload.
 

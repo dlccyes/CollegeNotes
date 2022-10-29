@@ -10,13 +10,6 @@ title: NTU Course Review template
 layout: meth
 ---
 # title
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## meta
 ### lecturer

@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # ArgoCD
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Meta
 

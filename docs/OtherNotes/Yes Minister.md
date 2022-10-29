@@ -4,15 +4,6 @@ layout: meth
 parent: OtherNotes
 ---
 # Yes Minister
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## quotes
 Yes Prime Minister S1E6 - A Victory for Democracy  

@@ -4,15 +4,6 @@ layout: meth
 parent: Computer Architecture
 ---
 # Computer Architecture PA
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## HW1 [[../OtherNotes/Software Development/RISC-V]]
 ### recursion
@@ -113,7 +104,6 @@ result:
     addi a0, x0, 10
     ecall
 ```
-
 
 ### Caesar
 shift characters by 3

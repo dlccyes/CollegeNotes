@@ -4,15 +4,6 @@ title: Macroeconomics
 layout: meth
 ---
 # Macroeconomics
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## resources
 - 影片
@@ -127,7 +118,6 @@ layout: meth
 			- 是 structural relationship 而非統計假象
 	- 分析方法仍須用(新興)古典的方法
 
- 
  ## Ch2 產出與物價的衡量
  ### GDP & GNI
  - GDP, gross domestic product
@@ -403,7 +393,6 @@ $$GDP = C+I+G+NX$$
 ![](https://i.imgur.com/6fj7KzX.png)
 ![](https://i.imgur.com/ybsGYwk.png)
 
-
 ## Ch3 景氣波動的定型特徵
 - business cycle 景氣循環
 	- real GDP 隨著長期趨勢上下波動的 stochastic process
@@ -437,7 +426,6 @@ $$GDP = C+I+G+NX$$
 - HP 循環波動序列 = $\ln y_t-\ln \bar{y_t}$
 	- 台以 HP 循環波動序列做景氣轉折點的認定
 - ![](https://i.imgur.com/P3PlIIv.png)
-
 
 ### 台美景氣波動
 - 台美景氣波動很接近

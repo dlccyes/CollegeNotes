@@ -3,15 +3,6 @@ layout: meth
 parent: Software Development
 ---
 # Flask
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 lightweight [Python](Python) web framework
 

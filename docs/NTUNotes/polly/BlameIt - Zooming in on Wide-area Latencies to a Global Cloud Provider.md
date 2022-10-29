@@ -3,7 +3,6 @@ layout: meth
 parent: polly
 ---
 # BlameIt - Zooming in on Wide-area Latencies to a Global Cloud Provider
-{: .no_toc }
 
 [paper pdf link](https://www.dropbox.com/s/ua0x7krj5tuirrk/2-blameit-sigcomm19.pdf)  
 [paper pdf with my annotations](BlameIt%20-%20Zooming%20in%20on%20Wide-area%20Latencies%20to%20a%20Global%20Cloud%20Provider.pdf)

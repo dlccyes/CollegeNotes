@@ -3,15 +3,6 @@ layout: meth
 parent: Industrial Organization
 ---
 # Industrial Organization HW
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## HW1
 [submission tex](Industrial_Organization_Assignment__1.tex)
@@ -266,8 +257,6 @@ open 3 shops, at 0.2, 0,5, 0.8
 	- conducts a marketing campaign preemptively
 	- declares if A-B or Miller comes, they'll conduct a marketing campaign
 	- does nothing1
-
-
 
 **Analyze the three scenarios using game theory and then recommend an action to Coors management.**
 
@@ -562,7 +551,6 @@ JP = 12.3736
 
 ![](https://i.imgur.com/o2PsEEe.png)
 ![](https://i.imgur.com/puotq80.png)
-
 
 ## HW9
 ### Multimarket Contract

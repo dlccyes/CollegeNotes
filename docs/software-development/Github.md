@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # Github
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## markdown
 ### embed image based on theme

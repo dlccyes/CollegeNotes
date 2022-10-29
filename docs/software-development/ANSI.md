@@ -3,15 +3,6 @@ layout: meth
 parent: Software Development
 ---
 # ANSI Escape Code
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 format
 `\033[<fg/bg>;<color-format>;<color>m<text-to-display>\033[0m`
@@ -80,8 +71,6 @@ The possible integers
 
 >38 is the xterm-256 extended foreground color code; 30-37 are simply 16-color foreground codes (with a brightness controlled by escape code 1 on some systems and the arguably-supported 90-97 non-standard 'bright' codes) that are supported by all vt100/xterm-compliant colored terminals.
 >The ;2 and ;5 indicate the format of the color, ultimately telling the terminal how many more sequences to pull: ;5 specifying an 8-bit format (as Blue Ice mentioned) requiring only 1 more control segment, and ;2 specifying a full 24-bit RGB format requiring 3 control segments
-
-
 
 linux don't support italic & bold
 

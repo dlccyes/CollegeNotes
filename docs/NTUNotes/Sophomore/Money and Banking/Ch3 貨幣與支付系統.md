@@ -2,15 +2,6 @@
 parent: Money and Banking
 ---
 # Ch3 貨幣與支付系統
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## 貨幣簡介
 - 通貨－通用的貨品
@@ -39,7 +30,6 @@ parent: Money and Banking
     - 提供資訊：各銀行所發銀行券，因風險不同，流通價值不等於面額 → 中間商提供資訊
       - 促使銀行更謹慎
     - 買賣銀行券：賺價差，民眾節省交通成本&時間 → 風險降低（對於民眾）
-
 
 ## 信用貨幣本位制度
 - 不可兌換紙幣 inconvertible paper money

@@ -15,7 +15,6 @@ Pareto criterion
 ### Subsidies
 ![](https://i.imgur.com/y9rDVNw.png)
 
-
 ### price ceiling
 
 ![](https://i.imgur.com/BD5P5YH.jpg)
@@ -42,7 +41,6 @@ every point on contract curve is Pareto optimal
 
 <!-- ![](https://i.imgur.com/J6Eg0XL.jpg) -->
 
-
 ![](https://i.imgur.com/pzdkF1s.jpg)
 
 ![](https://i.imgur.com/nKgavbg.jpg)
@@ -50,7 +48,6 @@ without trade: choose B → autartic relative price
 with trade: choose X (trade along the budget line) → world relative price
 
 MRS>MRT then 改善
-
 
 ![](https://i.imgur.com/GIZ9qGe.jpg)
 U、V 為兩人的效用函數
@@ -72,9 +69,6 @@ X<sub>0</sub>、Y<sub>0</sub> 為兩商品總量
 ![](https://i.imgur.com/rHGacqp.jpg)
 ![](https://i.imgur.com/hk0d9cP.jpg)
 
-
-
-
 ![](https://i.imgur.com/sXyvmDr.png)
 
 *maximum criterion / John Rawls*  
@@ -82,7 +76,5 @@ X<sub>0</sub>、Y<sub>0</sub> 為兩商品總量
 e.g. 6.(a)  
 若 u~a~ < u~b~  
 則讓 u~a~ 最大 (< u~b~)
-
-
 
 ![](https://i.imgur.com/m4sMSMB.jpg)

@@ -12,7 +12,6 @@ after merger: MC drops
 ![](https://i.imgur.com/R9Ju2dr.png)
 don't necessarily gain
 
-
 if MC' << MC
 ![](https://i.imgur.com/4aclRyr.png)  
 P' lower than before merger  
@@ -87,7 +86,6 @@ N2(b) N 先根據 $P_M$ 定出 $P_N$ 定出 Q，M 再根據 Q 定出 $P_M$
 ![](https://i.imgur.com/QEt3L1H.png)
 ![](https://i.imgur.com/B0gzeSw.png)
 ![](https://i.imgur.com/Mn9vTYz.png)
-
 
 ### N4
 ![](https://i.imgur.com/ULwB3cj.png)

@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # Python
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## pip
 
@@ -116,7 +107,6 @@ eval "$(pyenv virtualenv-init -)"
 restart shell with `exec $SHELL` or just `source ~/.bashrc`
 
 <https://github.com/pyenv/pyenv-installer>
-
 
 ### commands
 - `pyenv install <version>` to install e.g. 3.9.10
@@ -234,8 +224,6 @@ def get_hash(plain: str) -> str:
 	S = sha256()
 	S.update(plain)
 	return S.hexdigest()
-
-
 
 ```
 

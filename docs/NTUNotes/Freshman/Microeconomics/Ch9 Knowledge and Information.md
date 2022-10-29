@@ -3,15 +3,6 @@
 parent: Microeconomics
 ---
 # Ch9 Knowledge and Information
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ### Adverse Selection
 
@@ -42,7 +33,6 @@ chartist/technical analysts: past price → future price
 predict good buy → many ppl buy → expensive → bot good buy  
 so *wrong*
 > Any publicly available information indicating that a stock will soon go up (or down) will cause an immediate shift in demand and an immediate price adjustment, leaving no opportunity for profit.
-
 
 ## Problems
 #### 1.(P6)

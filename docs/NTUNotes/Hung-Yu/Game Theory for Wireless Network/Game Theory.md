@@ -6,15 +6,6 @@ layout: meth
 /
 ```
 # Game Theory
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Bayesian game
 
@@ -399,7 +390,6 @@ x > y, y > z → x > z
   - not VCG, not efficient
     - can end up not selling
   - virtual valuation makes weak bidders more competitive → higher bidder need to bids higher, increases the competition  
-
 
 ## Ch3 Contract Theory
 - mechanism design for the interactions between employer/seller & employee

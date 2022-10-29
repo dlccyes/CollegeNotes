@@ -3,15 +3,6 @@ layout: meth
 parent: Operating Systems
 ---
 # Operating Systems Midterm
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 2022.04.12 10:20 - 12:10
 
@@ -35,14 +26,12 @@ paper about using both
 ![](https://i.imgur.com/RwiwEJg.png)
 ![](https://i.imgur.com/8sjtERN.png)
 
-
 ## Q4
 ![](https://i.imgur.com/hkCu0C8.png)
 
 ## Q5
 ![](https://i.imgur.com/JRwp8Fy.png)
 ![](https://i.imgur.com/WxlU0u3.png)
-
 
 ## Q6
 ![](https://i.imgur.com/HmQDfOV.png)

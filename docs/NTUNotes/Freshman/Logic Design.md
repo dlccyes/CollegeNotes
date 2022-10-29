@@ -2,17 +2,8 @@
 layout: meth
 ---
 # Logic Design
-{: .no_toc }
 
 see <https://dlcc.notion.site/fd1e2a787b11464896f55d9684337246>
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Ch11 Latches and Flip-flops
 flip-flop: only response to a ==clock input== (but not a data input)
@@ -154,8 +145,6 @@ when Clk=0, S<sub>1</sub>=S, R<sub>1</sub>=R (Master)
 when Clk=1, Q=P
 ![](https://i.imgur.com/2OvQaD2.png)
 
-
-
 Q change when Clk=0→1
 ![](https://i.imgur.com/akvbDLy.png)
 at t<sub>4</sub>, Clk=1→0, so P=S+R'Q=1  
@@ -203,8 +192,6 @@ Q<sup>+</sup> = Q·CE' + D<sub>in</sub>·CE
 
 #### skip 11.9 =))
 
-
-
 ## Ch14 Derivation of State Graphs and Tables
 example: 
 design the circuit so that any input sequence ending in 101 will produce an output Z = 1
@@ -234,7 +221,6 @@ $S_0S_1S_2$ 基本上可以隨便代
 
 initial state = 1  
 → ++01++000 underline part Z=1
-
 
 #### 14.2 More Complex Design Problems
 ######## a Mealy example
@@ -304,7 +290,6 @@ NRZ {→|convert} Manchester
 ![](https://i.imgur.com/Woy2JeW.png)
 ![](https://i.imgur.com/Wpxqdic.png)
 
-
 #### 14.5 Alphanumeric State Graph Notation
 (a) F → forward ; R → reverse  
 (b) 考量到 FR=11,00
@@ -322,8 +307,6 @@ for Mealy：
 X~i~X~j~/Z~p~Z~q~ means if X~i~X~j~ = 11 (other Xs don't care), Z~p~Z~q~ = 11 (others Zs = 0)  
 e.g. X1X4′/Z2Z3 means 1--0/0110  
 
-
-
 #### 14.6 Incompletely Specified State Tables
 ######## BCD (0~9 in binary i.e. 0000-1001)  
 while in last bit:  
@@ -335,7 +318,6 @@ else → 0
 ######## 101 disjoint, output only used in the end
 ![](https://i.imgur.com/MOxSAJG.png)
 ![](https://i.imgur.com/WAVaEKf.png)
-
 
 #### Problems
 ######## 14.16
@@ -366,7 +348,6 @@ ans
 ans  
 ![](https://i.imgur.com/97RWeo5.png)
 ![](https://i.imgur.com/0SGmFJV.png)
-
 
 ######## 14.45
 ![](https://i.imgur.com/tBlGjeg.png)

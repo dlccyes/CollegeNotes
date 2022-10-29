@@ -4,17 +4,8 @@ parent: Game Theory for Wireless Networks
 ---
 
 # Collaborative Social-Aware and QoE-Driven Video Caching and Adaptation in Edge Network
-{: .no_toc }
 
 [paper link]( https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9271894)
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Introduction
 

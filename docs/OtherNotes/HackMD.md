@@ -3,15 +3,6 @@ layout: meth
 parent: OtherNotes
 ---
 # HackMD
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## issues
 bug report or feature request

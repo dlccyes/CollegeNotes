@@ -6,7 +6,6 @@ layout: meth
 ---
  
 # Algorithms
-{: .no_toc }
 
 <details open markdown="block">
   <summary>
@@ -40,7 +39,6 @@ Solutions to Introduction to Algorithms Third Edition
 	- maintenance
 	- termination
 	- ![](https://i.imgur.com/yv9NKzi.png)
-
 
 ## complexity
 - time complexity
@@ -985,7 +983,6 @@ exchange → 數量一樣
 	- ![](https://i.imgur.com/Cpr0f7D.png)
 	- ![](https://i.imgur.com/xr08QYz.png)
 	- ![](https://i.imgur.com/cgCfkUK.png)
-
 
 #### Edmonds-Karp Algorithm
 - <https://brilliant.org/wiki/edmonds-karp-algorithm/>

@@ -3,15 +3,7 @@ layout: meth
 parent: Software Development
 ---
 # JavaScript
-{: .no_toc }
 
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 - comparisons of different libraries & frameworks
 	- https://todomvc.com/
 

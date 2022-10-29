@@ -3,15 +3,6 @@ title: CS Career
 layout: meth
 ---
 # CS Career
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## acronyms
 
@@ -134,7 +125,6 @@ layout: meth
 - DSA
 - complex personal projects
 - system design
-
 
 ### leetcode
 

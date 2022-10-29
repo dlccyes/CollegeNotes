@@ -3,15 +3,6 @@ layout: meth
 parent: Python
 ---
 # Django
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 easy [Python](Python) web framework
 
@@ -30,7 +21,6 @@ easy [Python](Python) web framework
 	- (in root) `python manage.py runserver` then go to http://127.0.0.1:8000/
 - create app
 	- `python manage.py startapp app1`
-
 
 ## routing
 ```py
@@ -97,6 +87,5 @@ why not put in `templates/index.html`?
 	- `python manage.py showmigrations`
 		- eq to [[Laravel]]'s `php artisan migrate:status`
 		- `--plan` to print in list
-
 
 ```

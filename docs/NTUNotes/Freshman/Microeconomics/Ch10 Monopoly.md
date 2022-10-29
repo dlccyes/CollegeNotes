@@ -3,15 +3,6 @@ parent: Microeconomics
 layout: meth
 ---
 # Ch10 Monopoly
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## 核心概念
 for comepetition, 不管產量多少，價格都一樣  
@@ -104,7 +95,6 @@ price depends on quantity, no individual differences
 
 quantity & PS & CS & social welfare increases
 
-
 ### Third-Degree
 different price in different markets
 Man City 的人願意用 \$7 買 whatever quantity → $MR_{city}=\$7$
@@ -114,15 +104,12 @@ Man City 的人願意用 \$7 買 whatever quantity → $MR_{city}=\$7$
 ![](https://i.imgur.com/5Be2cCi.jpg)
 ![](https://i.imgur.com/t3CPAyy.png)
 
-
 黃曜霆的 mail
 ![](https://i.imgur.com/mW5ScCY.jpg) 
-
 
 ## Two-Part Tariff
 e.g. monopoly 入場後商品，再用入場費吸光 consumers' surplus
 ![](https://i.imgur.com/w66QUTK.png)
-
 
 ## Homework
 ### 注意

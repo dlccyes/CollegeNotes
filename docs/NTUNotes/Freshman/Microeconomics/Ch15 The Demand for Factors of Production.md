@@ -16,13 +16,9 @@ parent: Microeconomics
 
 ![image-20200606134042933](https://i.loli.net/2020/06/06/uBRyXfHVSDjKLkU.png)
 
-
-
 ## 2 factor
 
 ![image-20200606134242670](https://i.loli.net/2020/06/06/KUpaiWBQrMyTzm3.png)
-
-
 
 ## not a Giffen good
 
@@ -48,8 +44,6 @@ in oher words, [[Giffen good]] 是 [[inferior good]] (with negative [[income eff
 ### factor isn't a Giggen good
 
 ![image-20200606134421120](https://i.loli.net/2020/06/06/AuvE7Ve9HRXSN6C.png)
-
-
 
 ## producer's surplus
 

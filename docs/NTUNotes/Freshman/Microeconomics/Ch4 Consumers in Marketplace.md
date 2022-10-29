@@ -85,27 +85,7 @@ supply curve 畫起來較陡
 凹向下的 indifference curve 的 compensated demand curve
 (如果凹向下的 indifference curve 的 ordinary demand curve 是凹向下的話)
 
-
-
 <img src="https://i.loli.net/2020/06/06/x9pnlEv6g7e8DCs.jpg" height="404" style="float:left"><img src=https://i.loli.net/2020/06/06/VMdequzl1H4LfbW.jpg height=404 style="float:right">  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 固定一點 P1
 畫出其他價格用 sub effect 會切到的點
@@ -116,8 +96,6 @@ supply curve 畫起來較陡
 設 P1 ~ P4 是等加數列
 X4 - X1 < 3(X2 - X1)
 畫出來就變右圖
-
-
 
 ### Homework
 

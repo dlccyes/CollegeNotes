@@ -3,16 +3,6 @@ layout: meth
 parent: Software Development
 ---
 # C++
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
-
 
 ## compile
 with optimization `g++ -O2 --static`

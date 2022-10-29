@@ -3,15 +3,6 @@ parent: Algorithms
 layout: meth
 ---
 # Algorithms Problems
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## HW1
 ### 1. linear search
@@ -38,7 +29,6 @@ layout: meth
 ### 5. ranking functions
 ![](https://i.imgur.com/lqNMS9W.png)
 ![](https://i.imgur.com/JC8Ljg5.png)
-
 
 ### 6. labeled linear time maximum subarray
 ![](https://i.imgur.com/U13C9Nt.jpg)
@@ -155,7 +145,6 @@ build max heap take O(n) time
 ### 6.
 ![](https://i.imgur.com/YS5hpk6.png)
 
-
 ### 7. dynamic programming
 ![](https://i.imgur.com/BS5TH64.png)
 
@@ -265,7 +254,6 @@ https://github.com/jason88012/Maximum-Planner-Subset
 ![](https://i.imgur.com/CCfLwsw.png)
 ![](https://i.imgur.com/AXAIqOb.png)
 
-
 ## DIY 2
 #### ideas
 - 電路 debug
@@ -327,8 +315,6 @@ e.g.
 
 因此，這個 circuit debugging problem 便是，給定兩 array `Cost` & `Problematic` 以及一個 constraint `MP` （代表小明精神力），求 de 到的原件出問題可能性之 sum 再加上精力 surplus 的最大 subset 乘上精力 surplus 重要程度（因時空而異）。
 
-
-
 solution:
 要做三個 table `C` & `P` & `E`
 - `C[i,mP]` 代表，給定 `MP=mP`， element 1 to i 之中的  subset with max sum of 出問題可能性 的 sum of cost
@@ -336,7 +322,6 @@ solution:
 - `E[i,mP]` 代表，給定 `MP=mP`， element 1 to i 之中的  subset with max sum of 出問題可能性
 
 令 n = 可 debug 元件數目；a = 精神力 surplus 的 weight
-
 
 ```
 Circuit-Debug(n, Cost, Problematic, MP)
@@ -431,7 +416,6 @@ optimal BST
 ![](https://i.imgur.com/p5DULH1.png)
 ![](https://i.imgur.com/z2PRwSJ.png)
 ![](https://i.imgur.com/ZYd7yZN.png)
-
 
 https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiOm6-5u8z0AhXCJKYKHbZDCgkQFnoECAoQAQ&url=http%3A%2F%2Fwww.bowdoin.edu%2F~ltoma%2Fteaching%2Fcs231%2Ffall09%2FHomeworks%2Fold%2FH9-sol%25203.pdf&usg=AOvVaw11Aglt7zTgaartpiheFGjj
 ![](https://i.imgur.com/WBHdwdu.png)
@@ -645,7 +629,6 @@ DFS(node, preorderArr):
 
 ![](https://i.imgur.com/GpmwUpp.png)
 ![](https://i.imgur.com/amAEyEm.png)
-
 
 ### flow network
 ![](https://i.imgur.com/04DlqNu.png)

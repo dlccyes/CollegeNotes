@@ -4,17 +4,8 @@ parent: Hung-Yu
 ---
 
 # Cooperative Service Caching and Workload Scheduling in Mobile Edge Computing
-{: .no_toc }
 
 [pdf with my annotations](Cooperative_Service_Caching_and_Workload_Scheduling_in_Mobile_Edge_Computing.pdf)
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Introduction
 

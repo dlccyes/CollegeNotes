@@ -4,15 +4,6 @@ parent: Microeconomics
 ---
 
 # Ch12 Game Theory
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 Also see [Game Theory](../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Game%20Theory)
 

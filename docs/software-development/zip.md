@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # zip
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## add file to existing zip
 

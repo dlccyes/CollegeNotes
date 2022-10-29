@@ -4,20 +4,10 @@ parent: Miscellaneous
 ---
 
 # LinkedIn
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Change Profile URL
 
 ![](https://i.imgur.com/7T5YszF.png)
-
 
 ## Download Connections Data
 

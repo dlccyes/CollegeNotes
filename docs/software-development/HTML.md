@@ -3,15 +3,6 @@ layout: meth
 parent: Software Development
 ---
 # HTML
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## make all links open in new tab
 ```html

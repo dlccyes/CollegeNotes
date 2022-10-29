@@ -4,15 +4,6 @@ grand_parent: Hung-Yu
 parent: Game Theory for Wireless Networks
 ---
 # Quality and Profit Assured Trusted Cloud Federation Formation: Game Theory Based Approach
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 [paper link](https://ieeexplore.ieee.org/document/8356142)  
 [paper pdf with my annotations](Quality_and_Profit_Assured_Trusted_Cloud_Federation_Formation_Game_Theory_Based_Approach.pdf)

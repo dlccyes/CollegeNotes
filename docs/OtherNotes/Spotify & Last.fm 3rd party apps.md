@@ -3,16 +3,6 @@ layout: meth
 parent: OtherNotes
 ---
 # Spotify & Last.fm 3rd party apps
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
-
 
 ## Spotify stats
 - <https://playlastify.herokuapp.com/> 👍
@@ -125,7 +115,6 @@ Last.fm still working stats tools
 
 My collection of spotify (and other music related) websites  
 <https://www.reddit.com/r/spotify/comments/gu81es/my_collection_of_spotify_and_other_music_related/>
-  
 
 ---
 

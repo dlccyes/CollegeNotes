@@ -5,15 +5,6 @@ title: Computer Networks
 has_children: true
 ---
 # Computer Networks
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Ch1 Computer Network and the Internet
 
@@ -35,7 +26,6 @@ has_children: true
 		-  like 電話
 
 #### access networks
-
 
 ##### residential access networks
 
@@ -487,7 +477,6 @@ has_children: true
 	- ![](https://i.imgur.com/hqoyytD.png)
 	- 加上 header 送到下一層
 	- 除掉 header 送到上一層
-
 
 ### Network Security
 the Internet was originally designed on the concept of 
@@ -1698,7 +1687,6 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - ICMP messages carried as IP payload
 	- 收到 → demultiplex to ICMP
 - ![](https://i.imgur.com/96cZ10A.png)
-
 
 ## Ch6 Link Layer
 ### intro

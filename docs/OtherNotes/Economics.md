@@ -3,15 +3,6 @@ layout: meth
 has_children: true
 ---
 # Economics
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 - [Microeconomics](../NTUNotes/Freshman/Microeconomics/README)
 - [Macroeconomics](../NTUNotes/Junior/Macroeconomics)

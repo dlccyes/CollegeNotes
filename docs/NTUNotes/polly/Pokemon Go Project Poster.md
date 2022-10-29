@@ -3,15 +3,6 @@ layout: meth
 parent: polly
 ---
 # Pokemon Go Project Poster
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 [pdf link](https://www.dropbox.com/s/ekn2wltlhvxycal/mobisys21_camera.pdf)  
 [pdf with my annotation](ar_pokemon_go.pdf)

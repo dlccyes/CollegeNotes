@@ -4,15 +4,6 @@ layout: meth
 ---
 
 # Ch9 台灣銀行業的結構與發展
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 1990s 重生產，輕消費，中長期放款意願低落，過度重視抵押&保證 → 地下金融
 
@@ -46,7 +37,6 @@ layout: meth
     - 2008 金融海嘯 → 下跌
     - 2010 後回升
   - ROE & ROA 都低於國際水準
-
 
 ## 基層金融機構
 - 信用合作社、農漁會信用部

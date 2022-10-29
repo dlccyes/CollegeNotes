@@ -3,15 +3,6 @@ layout: meth
 has_children: True
 ---
 # Operating Systems
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## materials
 - [Operating System Concepts](Operating%20System%20Concepts.pdf)

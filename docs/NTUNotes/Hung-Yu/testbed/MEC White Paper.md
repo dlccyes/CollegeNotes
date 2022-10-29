@@ -4,18 +4,8 @@ grand_parent: Hung-Yu
 parent: Edge Computing
 ---
 # MEC White Paper
-{: .no_toc }
 
 [pdf with my annotations](etsi_wp11_mec_a_key_technology_towards_5g.pdf)
-
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Intro
 - MEC, mobile edge computing

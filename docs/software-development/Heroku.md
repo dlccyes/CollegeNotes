@@ -4,15 +4,6 @@ layout: meth
 parent: Software Development
 ---
 # Heroku
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## installation
 `curl https://cli-assets.heroku.com/install.sh | sh`

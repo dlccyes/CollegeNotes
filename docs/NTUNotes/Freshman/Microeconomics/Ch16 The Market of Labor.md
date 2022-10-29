@@ -21,8 +21,6 @@ at some point, L 下降到 0，表此人不再為"工資"而工作（可為其�
 
 ![image-20200609224618431](https://i.loli.net/2020/06/09/nuxZhrmWlPNQ93Y.png)
 
-
-
 ### an increase in nonlabor income
 
 若是只有一個人 nonlabor income 上升 → individual supply curve 左移(上移) → 工時減少
@@ -33,8 +31,6 @@ at some point, L 下降到 0，表此人不再為"工資"而工作（可為其�
 → individual 工時可能上升可能減少 （但 market labor supply 必減少）
 
 ![image-20200610232026788](https://i.loli.net/2020/06/10/ysuRGWpCFh8b725.png)
-
-
 
 ### Changes in Productivity
 
@@ -63,10 +59,6 @@ at some point, L 下降到 0，表此人不再為"工資"而工作（可為其�
 
 a tempororay increase in productivity has much higher effect then a permanent one
 
-
-
-
-
 ### Unemployment
 
 設政府保證 I' 之收入
@@ -81,7 +73,6 @@ for those whose L* > L' before subsidy
 - choose L=L* → L=L*, c=I\*
 
 - choose L=0 → L=0 < L* ^better^, c=I' < I* ^worse^
-  
 
 may choose the latter i.e. L=0
 
@@ -122,14 +113,10 @@ BUTT, 更多 nurse 進入市場 due to wage of nurse rise
 
 ![image-20200609230545596](https://i.loli.net/2020/06/09/18VBwzy4aSErRKi.png)
 
-
-
 #### 1890 vs. 1990
 
 工業革命初期勞工工時長工資少，而今日則是工時短工資高，符合上面 backward-bending 的現象  
 但也有可能是因為今日的 nonlabor income 增加 → 理想工作的時數變短
-
-
 
 ### 工資差異
 
@@ -172,8 +159,6 @@ so 商人會把 capital 從 capital 較多，勞工邊際產出較高之國，�
 
 <p style="color:blue">此乃經濟學之</p><p style="color:blue;font-size:34px"> unsolved mystery</p>
 
-
-
 ### HW
 
 #### P3
@@ -181,8 +166,6 @@ so 商人會把 capital 從 capital 較多，勞工邊際產出較高之國，�
 ![image-20200611160752892](https://i.loli.net/2020/06/11/IrVOUTlzSEqjsGd.png)
 
 ![image-20200611161732674](https://i.loli.net/2020/06/11/oBeAJZT25E4icp7.png)
-
-
 
 #### P9 !!!
 

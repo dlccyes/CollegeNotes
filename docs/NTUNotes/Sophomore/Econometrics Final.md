@@ -4,15 +4,6 @@ parent: Econometrics
 ---
 
 # Econometrics Final
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## score
 
@@ -49,5 +40,4 @@ parent: Econometrics
 ![](https://i.imgur.com/jjitOs4.png)
 ![](https://i.imgur.com/hOfFLLn.png)
 ![](https://i.imgur.com/XNTz1Bh.png)
-
 

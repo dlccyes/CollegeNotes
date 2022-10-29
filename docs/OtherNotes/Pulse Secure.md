@@ -4,15 +4,6 @@ parent: Miscellaneous
 ---
 
 # Pulse Secure
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Arch
 

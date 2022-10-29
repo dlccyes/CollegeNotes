@@ -17,7 +17,6 @@ parent: Microeconomics
 
 ![](https://i.imgur.com/gNF0oI0.png)
 
-
 max total consumption value → MV=2  
 max total ticket revenue → MR=0  
 

@@ -4,15 +4,6 @@ layout: meth
 ---
 
 # Ch2 金融體系概要
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 - limited enforcement
 	- to lenders, 不能完全執行債權

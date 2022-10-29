@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # Web
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## resources
 - <https://fullstackopen.com/en/>

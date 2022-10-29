@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # Drone
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 Another CICD Tool
 
@@ -26,13 +17,11 @@ Another CICD Tool
 
 <https://docs.drone.io/quickstart/cli/>
 
-
 ### Install
 
 ```
 brew install drone-cli
 ```
-
 
 ### Run 
 

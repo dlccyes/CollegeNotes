@@ -241,7 +241,6 @@ perform close to the optimal scheme
 - fix number of UEs to 6 i.e. $N=6$
 - proposed scheme has smallest computation overhead
 
-
 #### vs. transmit power
 ![](https://i.imgur.com/4WZvSoe.png)
 ![](https://i.imgur.com/olHR7On.png)

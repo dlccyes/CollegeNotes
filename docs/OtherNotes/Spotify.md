@@ -4,7 +4,6 @@ layout: meth
 parent: OtherNotes
 ---
 # Spotify
-{: .no_toc }
 
 ## download your own data
 <https://www.spotify.com/ca-en/account/privacy/>
@@ -45,7 +44,6 @@ dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPl
 to refresh, remove & add back the source folder
 
 <https://community.spotify.com/t5/Desktop-Windows/How-do-I-update-or-reset-my-local-files-list/m-p/922287/highlight/true#M14738>
-
 
 ### scrobble a local song (last.fm)
 - the scrobble will be added once you've finished, but you can't see it when you're scrobbling it

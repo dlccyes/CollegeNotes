@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # GCP
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## SSH to your VM
 

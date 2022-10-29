@@ -106,7 +106,6 @@ same as constant-cost except the shape of LRS
 ![](https://i.imgur.com/grWN56e.png)
 ![](https://i.imgur.com/MhJ0a1L.png)
 
-
 ### applications
 1. apartment rent for $400
 2. new law: $200 max

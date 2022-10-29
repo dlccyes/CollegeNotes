@@ -98,7 +98,6 @@ xnoremap <C-]> :norm x<CR>
 - jump bracket of codes
 	- `ctrl+[` `ctrl+]`
 
-
 ### go to character
 in normal mode, type `fa` to go to the next a, `Fa` to go to previous a
 
@@ -108,7 +107,6 @@ in normal mode, type `18l` to to the 18th character in your current line
 ### go to line
 `:18` to go to line 18
 
-  
 ## comment & uncomment
 https://stackoverflow.com/a/15588798/15493213
 
@@ -130,7 +128,6 @@ https://stackoverflow.com/a/15588798/15493213
 `ctrl-x +`
 - `ctrl-n` → word completion
 - `ctrl-l` → line completion
-
 
 ## commands
 ### toggle commands

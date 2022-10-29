@@ -3,15 +3,6 @@ layout: meth
 parent: Software Development
 ---
 # Database
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## PostgreSQL
 ### web GUI - pgweb

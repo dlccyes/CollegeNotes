@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # SonarQube
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Links
 
@@ -25,7 +16,6 @@ Jira Board
 	- <https://www.sonarqube.org/>
 - Jira board  
 	- <https://sonarsource.atlassian.net/jira/software/c/projects/SLVSCODE/issues/>
-
 
 ## Local
 

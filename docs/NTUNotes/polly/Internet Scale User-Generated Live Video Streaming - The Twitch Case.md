@@ -3,18 +3,9 @@ layout: meth
 parent: polly
 ---
 # Internet Scale User-Generated Live Video Streaming: The Twitch Case
-{: .no_toc }
 
 [paper link](https://www.dropbox.com/s/lepurjink70hdbb/PAM17.pdf)  
 [paper pdf with my annotations](Internet Scale User-Generated Live Video Streaming The Twitch Case.pdf)
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Intro
 - Twitch is in real time, has very tight constraints -> can't cache video

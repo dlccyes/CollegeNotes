@@ -5,15 +5,6 @@ nav_exclude: true
 ---
 
 # R
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Install
 
@@ -97,7 +88,6 @@ Levels = possible values
 
 ### Remove unused levels
 
-
 To remove the unused values
 
 ```R
@@ -132,7 +122,6 @@ With sum
 tab <- table(droplevels(mydata$column1), droplevels(mydata$columns2))
 addmargins(tab)
 ```
-
 
 ## Graph
 

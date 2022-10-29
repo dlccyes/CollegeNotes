@@ -3,18 +3,8 @@ layout: meth
 parent: Operating Systems
 ---
 # Operating Systems MP
-{: .no_toc }
 
 Machine problems (assignments) of Operating Systems
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
-
 
 ## MP0
 recursive

@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # Airtable
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Sync into a PostgreSQL database with Sequin
 

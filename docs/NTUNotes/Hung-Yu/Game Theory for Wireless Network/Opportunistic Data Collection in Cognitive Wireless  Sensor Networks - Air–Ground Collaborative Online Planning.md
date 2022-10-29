@@ -6,7 +6,6 @@ parent: Game Theory for Wireless Networks
 layout: meth
 ---
 # Opportunistic Data Collection in Cognitive Wireless Sensor Networks - Air–Ground Collaborative Online Planning
-{: .no_toc }
 
 source: <https://ieeexplore.ieee.org/document/9103004>
 
@@ -57,7 +56,6 @@ source: <https://ieeexplore.ieee.org/document/9103004>
 		- prevent transmission collision
 	- flight adjustment for UAV with different detection capabilities
 	- can converge
-
 
 ## system model
 - ![](https://i.imgur.com/9WZPB39.png)

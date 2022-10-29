@@ -7,13 +7,6 @@ layout: meth
 nav_exclude: true
 ---
 # title
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## issue
 科學人 2021 年 9 月

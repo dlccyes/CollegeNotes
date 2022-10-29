@@ -3,15 +3,6 @@ layout: meth
 ---
 
 # Modern Physics
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Constants
 
@@ -79,7 +70,6 @@ $$\hbar=\dfrac{h}{2\pi}$$
 
 $$\Delta x \Delta p \geq \dfrac{\hbar}{2}$$
 $$\Delta E \Delta t \geq \dfrac{\hbar}{2}$$
-
 
 ![](https://i.imgur.com/3idLe5E.png)
 

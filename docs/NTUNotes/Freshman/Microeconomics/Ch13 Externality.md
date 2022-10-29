@@ -2,15 +2,6 @@
 parent: Microeconomics
 ---
 # Ch13 Externality
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ### Pigoe & Coase
 

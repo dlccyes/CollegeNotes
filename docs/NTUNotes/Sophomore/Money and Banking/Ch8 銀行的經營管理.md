@@ -92,7 +92,6 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
 - 信用分配
   - 拒絕 or 減少高風險貸款
 
-
 ## 利率風險
 ### 利率變動對淨利息所得（net interest income，利息收入 - 利息支出）影響
   - 重新定價模型 repricing model / 融資缺口模型 funding gap model

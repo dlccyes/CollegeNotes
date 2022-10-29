@@ -3,15 +3,6 @@ layout: meth
 ---
 
 # Power Engineering
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## General
 
@@ -38,7 +29,6 @@ $$v(t)=\sqrt{2}|V|cos(\omega t+\phi)=|V|\angle{\phi}$$
 I lags V $\phi$ -> phasor = $\phi$ 
 
 $$\phi = \angle V - \angle I$$
-
 
 - lagging -> $\phi>0$
 - leading -> $\phi<0$
@@ -153,7 +143,6 @@ $$S_{3\phi}=V_{an}I_a^*+V_{bn}I_b^*+V_{cn}I_c^*=\underline{4320\angle{-15^\circ}
 - 1 feet = 12 inches
 - 1 mile = 1.609 km
 
-
 $$\mu_0=4\pi\times10^{-7}$$
 
 ![](https://i.imgur.com/kTyb5ho.png)
@@ -161,7 +150,6 @@ $$\mu_0=4\pi\times10^{-7}$$
 ![](https://i.imgur.com/JcQepmU.png)
 
 $$B=\mu H$$
-
 
 ![](https://i.imgur.com/yIQ8uqY.png)
 

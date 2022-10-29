@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # Go
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Style
 
@@ -305,7 +296,6 @@ func TestMul(t *testing.T) {
 	assert.Equal(t, Mul(1, 2), 2)
 }
 ```
-
 
 ### Test
 

@@ -3,15 +3,6 @@ layout: meth
 parent: Software Development
 ---
 # Linux
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## installation for newbie
 Kubuntu (Ubuntu with KDE) for example
@@ -471,7 +462,6 @@ would create session with TTY = tty2-6 respectively
 
 `logout` or `exit` to log out
 
-
 ### list sessions
 ```
 loginctl list-sessions
@@ -600,7 +590,6 @@ e.g.
 ```
 machine <host> username <username> password <password>
 ```
-
 
 ## remove an unremoveable file
 
@@ -809,7 +798,6 @@ qpdf -decrypt readonly.pdf editable.pdf
 sudo pacman -S nvidia
 ```
 
-
 ### install on Ubuntu
 <https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-20-04-focal-fossa-linux>
 
@@ -835,7 +823,6 @@ to check what you're using
 ```
 prime-select query
 ```
-
 
 ### check your nvidia GPU info
 ```
@@ -1326,7 +1313,6 @@ sudo systemctl start cronie.service
 ### ffmpeg
 
 See [ffmpeg](ffmpeg)
-
 
 ### xbacklight 
 #### install

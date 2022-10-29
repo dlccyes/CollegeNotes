@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # Git
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Github CLI
 
@@ -142,7 +133,6 @@ git reset --hard      # Rewrite git's index to pick up all the new line endings.
 	- <https://www.edwardthomson.com/blog/advent_day_1_gitattributes_for_text_files.html>
 	- <https://blog.opasschang.com/confusing-git-autocrlf/>
 
-
 ## Working on a branch
 
 ### Integrate new changes into your dev branch
@@ -161,13 +151,11 @@ git rebase origin/master
 
 ### Make your branch identical to a branch
 
-
 ```
 git reset --hard <remote>/<target branch>
 ```
 
 e.g.
-
 
 ```
 git reset --hard origin/master
@@ -393,7 +381,6 @@ git branch -m <old_name> <new_name>
 ```
 git checkout <branch>
 ```
-
 
 ### set/switch tracking remote branch
 ```

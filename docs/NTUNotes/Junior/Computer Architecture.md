@@ -85,7 +85,6 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 - word = 32 bits
 - doubleword = 64 bits
 
-
 ### 2s complement
 - 1s complement: negation
 	- e.g. 0110 → 1001
@@ -97,7 +96,6 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 		- 歷屆 quiz 1 (4.)
 			- ![](https://i.imgur.com/YVKQkpm.png)
 			- ![](https://i.imgur.com/Vly2VUS.png)
-
 
 交電
 ![](https://i.imgur.com/T1hJSQe.png)
@@ -221,7 +219,6 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 		- 往回跳 9 行，每個 instruction 4 bits → imm = -36 = 2s complement of 36，再 shift right i.e. 除 2 i.e. 移掉 0th bit
 		- jal 的 opcode = 1101111
 
-
 #### U-format
 - ![](https://i.imgur.com/MZZRPXV.png)
 - `lui rd constant`
@@ -241,7 +238,6 @@ I-format `LX` 的部分，是 load byte/halfword/word/doubleword，以 funct3 �
 e.g.
 - ![](https://i.imgur.com/gDWS5iV.png)
 	- ![](https://i.imgur.com/0jEcaOb.png)
-
 
 ### [[../../OtherNotes/Software Development/RISC-V]] operations
 ![](https://i.imgur.com/XC0k2XB.png)
@@ -286,7 +282,6 @@ lui
 ![](https://i.imgur.com/uI2GcCJ.png)
 
 ![](https://i.imgur.com/W0bskcu.png)
-
 
 ### dynamic linking
 only link/load library procedure when called
@@ -418,7 +413,6 @@ only link/load library procedure when called
 ### instruction set with multiplication & division
 ![](https://i.imgur.com/QdxrsDH.png)
 
-
 ### float
 - 之前介紹的東西都是 integer 的
 - $\pm 1.xxxxx_2\times 2^{yyyyyyyy}$
@@ -477,7 +471,6 @@ only link/load library procedure when called
 	- exponent = all 1s
 	- fraction != 0
 
-
 #### addition
 ![](https://i.imgur.com/bFgTJBs.png)
 ![](https://i.imgur.com/MPx04i7.png)
@@ -532,7 +525,6 @@ jalr x0, 0(x1) //return
 	- ![](https://i.imgur.com/4hQyzHm.png)
 		- ![](https://i.imgur.com/sRcJ1yX.png)
 	- ![](https://i.imgur.com/F0S39OV.png)
-
 
 ## Ch4 Processor
 ###  CPU
@@ -632,7 +624,6 @@ jalr x0, 0(x1) //return
 		- but load instruction 又很常用
 	- solution: pipelining
 
-
 ### pipelining
 #### RISC-V 5-stage pipeline
 1. IF = instruction fetch
@@ -723,8 +714,6 @@ stage utilization of each type
 	- store
 		- ![](https://i.imgur.com/Qz3bKWr.png)
 
-
-
 #### diagram
 - ![](https://i.imgur.com/Dck03PJ.png)
 - ![](https://i.imgur.com/340jugr.png)
@@ -782,7 +771,6 @@ stage utilization of each type
 - ![](https://i.imgur.com/bLUubxz.png)
 - ![](https://i.imgur.com/z9sIWYY.png)
 - ![](
-
 
 ### control hazards
 - ![](https://i.imgur.com/v88zP4e.png)

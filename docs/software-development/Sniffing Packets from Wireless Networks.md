@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # Sniffing Packets from Wireless Networks
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 To see the full details of the packets, you'll have to connect to an unencrypted network.
 

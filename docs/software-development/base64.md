@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # base64
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Encode
 

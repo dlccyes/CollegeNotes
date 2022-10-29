@@ -4,15 +4,6 @@ parent: OtherNotes
 ---
 
 # Slack
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## troubleshooting
 
@@ -28,7 +19,6 @@ if no sound
 - System Preferences -> Sound -> make sure "Play user interface sound effects" is checked
 
 <https://slack.com/help/articles/360001559367-Troubleshoot-Slack-notifications#mac-4>
-
 
 ### unread red dot always there
 

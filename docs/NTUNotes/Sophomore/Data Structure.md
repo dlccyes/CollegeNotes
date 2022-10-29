@@ -4,15 +4,6 @@ layout: meth
 ---
  
 # Data Structure
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 - inf: greatest lower bound
 - sup: least upper bound
@@ -165,7 +156,6 @@ In Python’s implementation, when an item is taken from the front of the list, 
 
 Though it causes time for pop operation, this allows the index operation to be $O(1)$. This is a tradeoff that the Python implementors makes based on how people most commonly use the list data structure. The implementation is optimized so that the most common operations were very fast, sometimes by sacrificing the performance of less common operations.
 
-
 | Operation        | Big-O Efficiency |
 | ---------------- | ---------------- |
 | index []         | O(1)             |
@@ -184,7 +174,6 @@ Though it causes time for pop operation, this allows the index operation to be $
 | sort             | O(n log n)       |
 | multiply         | O(nk)            |
 - index[]: ** 指到 *0 → 加法到所要位置 → 指到 object
-
 
 It is should be clear that the execution time for `pop(0)` and `pop()` are `O(n)` and `O(1)`, respectively.
 
@@ -212,7 +201,6 @@ The *average case* time complexity of dictionary operations are as follows:
 | `iteration`     | $O(n)$           |
 
 In the following experiment we compare the performance of the `contains` operation between lists and dictionaries.
-
 
 ## Master Theorem
 
@@ -537,7 +525,6 @@ Bell (W2)
 
 ### comparison
 ![Image](https://i.imgur.com/z6O0XZx.png)
-
 
 ### Fibonocci heap
 - roots of trees → circular linked list

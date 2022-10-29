@@ -3,15 +3,6 @@ layout: meth
 parent: Software Development
 ---
 # LaTeX
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 $\LaTeX$
 
@@ -165,7 +156,6 @@ Use pdf or eps for best quality.
 \begin{figure*}
 \end{figure*}
 ```
-
 
 ## Theorem, Definition, Proof
 

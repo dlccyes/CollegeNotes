@@ -4,15 +4,6 @@ layout: meth
 parent: Software Development
 ---
 # Docker
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## installation
 
@@ -355,7 +346,6 @@ in `docker-compose.yml`, add this in your flask service
   environment:
     - PYTHONUNBUFFERED=1
 ```
-
 
 refs
 

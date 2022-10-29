@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # Github Action
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 Create your workflow yml file under `.github/workflow`. The file name would be the name of the workflow.
 

@@ -6,14 +6,6 @@ layout: meth
 # 電路學
 powered by $\LaTeX$
 
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
-
 ## 共同網頁  
 <http://cc.ee.ntu.edu.tw/~ntueecircuit/> 
 
@@ -45,7 +37,6 @@ if have both independent & dependent sources
 
 ### source exchange
 ![](https://i.imgur.com/MRqLp2f.png)
-
 
 ## Ch6
 
@@ -171,11 +162,9 @@ $rms = \dfrac{max}{\sqrt{2}}$
 ### Max average power
 ![](https://i.imgur.com/5JdGAdl.png)
 
-
 ### Power Factor
 $P = V_{rms}I_{rms}cos(\theta_V-\theta_i)$
 $pf=\dfrac{P}{V_{rms}I_{rms}}=cos(\theta_z)$
-
 
 ### Complex Power
 ![](https://i.imgur.com/5mGK9QJ.png)
@@ -212,11 +201,7 @@ e.g.
 
 <img src="https://i.loli.net/2020/06/03/fYrITBm42CP6qS9.png" width=300 style="float:left">
 
-
-
 ![](https://i.imgur.com/TFOWUds.png)
-
-
 
 ### resonant
 
@@ -248,7 +233,6 @@ series：$BW=\dfrac{\omega_0}{Q}=\dfrac{R}{L}$
 parallel：$BW=\dfrac{\omega_0}{Q}=\dfrac{1}{RC}$
 
 ![](https://i.imgur.com/AxdbbMH.png)
-
 
 $\omega_{max}=\omega_0\sqrt{1-\dfrac{1}{2Q^2}}$
 
@@ -302,8 +286,6 @@ $\dfrac{50}{(j\omega)^2(j\omega+0.5)}$
 
 #### phase
 
-
-
 ### 12.5 filter network
 
 ![](https://i.imgur.com/xD9CZed.png)
@@ -319,9 +301,6 @@ $\dfrac{50}{(j\omega)^2(j\omega+0.5)}$
 ![image-20200604120823114](https://i.loli.net/2020/06/04/gZA7wE4ux3KXc2O.png)
 
 <p style="color:red;font-size:44px">背背背</p>
-
-
-
 
 ## Ch13 Laplace Transform
 
@@ -355,8 +334,6 @@ damn
 
 initial value (切換開關前) 還是要用之前的方法算
 
- 
-
 ## Ch14
 
 ### C 之轉換
@@ -370,8 +347,6 @@ initial value (切換開關前) 還是要用之前的方法算
 ![ ](https://i.loli.net/2020/06/13/GUxu2WNyoPw7rsH.png)
 
 ![image-20200613005934031](https://i.loli.net/2020/06/13/7ZhRCzO9IcUnbKe.png)
-
-
 
 ### stable?
 

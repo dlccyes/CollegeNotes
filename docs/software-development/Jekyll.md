@@ -17,15 +17,6 @@ parent: Software Development
 </head>
 
 # Jekyll
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Themes
 
@@ -91,15 +82,9 @@ layout: default
 
 #### TOC
 {% raw %}
-`{: .no_toc }` to not include this header in TOC
+`` to not include this header in TOC
 ```
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
+
 ```
 to see collapsible unnumbered TOC
 
@@ -140,7 +125,6 @@ in `_includes` folder, add a new file, say `mathjax.html`, and add the following
 in the pages you want to use mathjax, `{% raw  %}{% include mathjax.html %}{% endraw %}` before the heading, after the yaml
 
 you should add a `title:` in yaml or your Jekyll theme might not recognize the file name
-
 
 ref
 - <http://csega.github.io/mypost/2017/03/28/how-to-set-up-mathjax-on-jekyll-and-github-properly.html>

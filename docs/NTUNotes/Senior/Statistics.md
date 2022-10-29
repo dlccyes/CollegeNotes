@@ -5,15 +5,6 @@ nav_exclude: true
 ---
 
 # Statistics
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Materials
 
@@ -72,7 +63,6 @@ Same mean & variance may stem from very different distributions
 
 ![](https://i.imgur.com/lftwzdZ.png)
 
-
 ### Box Plot
 
 - median = middle number
@@ -96,7 +86,6 @@ Same mean & variance may stem from very different distributions
 - Frequency table
 - Contingency table
 - ![](https://i.imgur.com/oK7iZcp.png)
-
 
 ### Problems
 
@@ -204,7 +193,6 @@ i.e. Pascal
 
 ### Confidence Interval
 
-
 - Confidence Interval
   - 99%: 2.5758 = 2.576 = 2.58
   - 95%: 1.9600 = 1.960 = 1.96
@@ -264,7 +252,6 @@ Use p = overall p to calculate SE when $H_0$ is that 2 porportions are the same
 #### One-Way Table
 
 ![](https://i.imgur.com/wYDG1N8.png)
-
 
 ![](https://i.imgur.com/4ZaLYOm.png)
 

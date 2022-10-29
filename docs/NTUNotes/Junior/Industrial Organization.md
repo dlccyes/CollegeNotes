@@ -3,15 +3,6 @@ layout: meth
 has_children: True
 ---
 # Industrial Organization
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Price Elasticity
 

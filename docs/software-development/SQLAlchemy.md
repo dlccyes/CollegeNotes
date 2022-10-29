@@ -3,15 +3,6 @@ layout: meth
 parent: Software Development
 ---
 # SQLAlchemy
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 easy database interaction and migration for [Python](Python)
 

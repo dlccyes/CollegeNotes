@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # Testing
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Unit Test
 

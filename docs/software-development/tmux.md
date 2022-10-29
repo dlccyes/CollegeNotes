@@ -139,7 +139,6 @@ tmux source ~/.tmux.conf
 - change focus to another pane
 	- `ctrl+b arrow_key`
 
-
 ### multiple windows
 - new window
 	- `ctrl+b c`

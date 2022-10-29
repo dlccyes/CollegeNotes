@@ -3,15 +3,6 @@ layout: meth
 ---
 
 # Electromagnetism
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 [Electromagetism 1 Notes](https://dlcc.notion.site/2e49bdb9c8d2468caac6e683b3b3c5d2)
 

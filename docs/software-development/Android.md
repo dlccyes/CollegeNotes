@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # Android
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## File System
 

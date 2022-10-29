@@ -4,15 +4,6 @@ has_children: true
 parent: Hung-Yu
 ---
 # Game Theory for Wireless Networks
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 魏宏宇專題
 
@@ -213,7 +204,6 @@ latency = {i:1/(clr*i) for i in range(1, lv+1)}
 		- avg VM level & coalition member counts vs. cost-latency ratio
 			- a = 10, n = 10
 			- ![](https://i.imgur.com/hoJ0Ziw.png)
-
 
 ### findings
 - convergence
@@ -495,7 +485,6 @@ $$
 ![](https://i.imgur.com/fcYft2u.png)
 ![](https://i.imgur.com/0Et1Ci8.png)
 
-
 ### todo
 
 - computation delay
@@ -551,7 +540,6 @@ $$
 ### results
 
 - ![](https://i.imgur.com/DZWRCvR.png)
-
 
 ## VR scenario
 

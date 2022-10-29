@@ -4,15 +4,6 @@ parent: Game Theory for Wireless Networks
 ---
 
 # Near-Optimal and Collaborative Service Caching in Mobile Edge Clouds
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 [paper pdf with my annotations](Near-Optimal_and_Collaborative_Service_Caching_in_Mobile_Edge_Clouds.pdf)
 

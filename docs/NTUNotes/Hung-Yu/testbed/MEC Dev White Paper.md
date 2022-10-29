@@ -5,17 +5,8 @@ parent: Edge Computing
 ---
 
 # MEC Dev White Paper
-{: .no_toc }
 
 [pdf with my annotations](etsi_wp20ed2_MEC_SoftwareDevelopment.pdf)
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Intro
 

@@ -4,15 +4,6 @@ layout: meth
 parent: OtherNotes
 ---
 # Good Tools
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## websites
 - Photopea
@@ -119,7 +110,6 @@ Any custom logo can be passed in a URL parameter by base64 encoding it. e.g:
 ![About me badge](https://img.shields.io/badge/Personal_Page-purple?style=flat-square&logo=About.me&logoColor=white)
 ![resume badge](https://img.shields.io/badge/resume-Derrick_Lin-white?style=flat-square)
 
-
 ## small programs
 
 ### navigation
@@ -215,7 +205,6 @@ mackup backup
 It will put your dotfiles in `/path/to/dir/Mackup`
 
 ![](https://i.imgur.com/kS8rOdr.png)
-
 
 ## git GUI
 - github desktop

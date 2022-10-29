@@ -3,15 +3,6 @@ layout: meth
 parent: OtherNotes
 ---
 # Windows
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## change taskbar size
 (win11)

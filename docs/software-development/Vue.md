@@ -3,15 +3,6 @@ layout: meth
 parent: Software Development
 ---
 # Vue
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## CLI
 It's succeeded by Vite.
@@ -27,7 +18,6 @@ yarn global add @vue/cli-service
 ```
 in `node_modules/.bin/vue-cli-service`
 run with `npx vue-cli-service`
-
 
 ## init
 ### Install Node.js

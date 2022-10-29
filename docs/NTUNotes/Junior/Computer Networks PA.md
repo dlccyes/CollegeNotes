@@ -4,15 +4,6 @@ layout: meth
 parent: Computer Networks
 ---
 # Computer Networks PA
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## HW1 socket programming
 - p2a
@@ -37,7 +28,6 @@ parent: Computer Networks
 `(b) ./[student ID] 20 0.1 0 10 2`
 `(c) ./[student ID] 20 0 0.1 10 2`
 `(d) ./[student ID] 20 0.1 0.1 10 2`
-
 
 - implementations
 	- https://github.com/JordanMontgomery/go-back-n
@@ -122,7 +112,6 @@ Estimated_RTT = 15
 output log 在 `0_100-0-0-10-2.txt`
 ![](https://i.imgur.com/ZbzgUaz.png)
 這是在 estimated RTT 直接設為 15 的情況。可以看到 sample RTT 的鋸齒較多。
-
 
 ## HW3 Dijkstra's Algorithm
 part 1

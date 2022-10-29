@@ -7,24 +7,11 @@ layout: meth
 共同網頁  
 <https://sites.google.com/g.ntu.edu.tw/ntuee-probability-108-2/syllabus>
 
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
-
-
-
 # U1 Foundations
 
 ## Probability Space
 
 *Section 1.1 and 1.2 of YG.*  
-
 
 <!-- ![](https://i.imgur.com/oi1Je9g.png) -->
 
@@ -48,10 +35,8 @@ layout: meth
 #### Exercise
 ![](https://i.imgur.com/Bbw35g6.png)
 
-
 #### Summary
 ![](https://i.imgur.com/7NnBw1w.png)
-
 
 ## Conditional Probability
 ![](https://i.imgur.com/SY503Tk.png)
@@ -75,8 +60,6 @@ if A 由聯集為 B 的 disjoint sets 所組成
 
 ![image-20200616193719354](https://i.loli.net/2020/06/16/ILo5ejdxmTDOzgQ.png)
 
-
-
 ## Independence
 
 ### mutual independence
@@ -92,8 +75,6 @@ $\Phi(\alpha)=F_X(\alpha \sigma)=Pr\{X\leq=\alpha \sigma\}$
 
 ### Borel
 ![](https://i.imgur.com/w8tFOBH.png)
-
-
 
 ## Discrete Random Variables
 ### Bernoulli
@@ -153,7 +134,6 @@ Erlang 在 n=1 的特例
 ### Erlang
 Exponential 的 general 版本
 ![](https://i.imgur.com/vayQLJx.png)
-
 
 ### Transformation
 ![](https://i.imgur.com/XEpCGVz.png)
@@ -369,13 +349,9 @@ use Chebyshev inequality
 
 ![image-20200609021027133](https://i.loli.net/2020/06/09/obl7BdjVExzM3uk.png)
 
-
-
 ### proposition 4
 
 ![Image](https://i.imgur.com/h6FoRU4.png)
-
-
 
 ### $f(n)=o(g(n))$
 
@@ -392,8 +368,6 @@ no matter what distribution $X_i$ follow
 
 ![image-20200610220150058](https://i.loli.net/2020/06/10/hcaeIV9zqXbRKS5.png)
 
-
-
 #### Lindeberg CLT
 
 $\frac{離均差大於一個值的\space row\space 的\space variance\space 加總}{每個\space row\space 的\space variance\space 加總}=0\space as\space n→\infty$ 
@@ -408,19 +382,13 @@ $\frac{離均差大於一個值的\space row\space 的\space variance\space 加�
 
 不用 i.i.d.，但要 mutually independent & 擾動很小
 
-
-
 #### CLT for random vectors
 
 ![image-20200611122440606](https://i.loli.net/2020/06/11/KMI7zuZcToDWGmx.png)
 
-
-
 #### Normal Approximation
 
 ![image-20200611231503435](https://i.loli.net/2020/06/11/Y1idIynFPfhRjrG.png)
-
-
 
 #### De Moivre-Laplace Formula
 
@@ -437,8 +405,6 @@ normal approximation of Binomial
 
 ![image-20200611234554792](https://i.loli.net/2020/06/11/EtlSWGemCzZH1cu.png)
 
-
-
 #### approximation tail
 
 ![image-20200611235257734](https://i.loli.net/2020/06/11/MIlY2ZevnNf6AcJ.png)
@@ -447,14 +413,10 @@ from Unit 2
 
 ![image-20200611235855808](https://i.loli.net/2020/06/11/B7MxwjKfTVn41Z6.png)
 
-
-
 #### CLT vs. Chernoff bond
 
 CLT 在 deviation 大時很不準 (over optimistic)
 Chernoff bond 的 slope 都跟實際值差不多，但都會高估 (因為是 upper bond)
-
-
 
 # Unit 6
 
@@ -475,15 +437,11 @@ Type 2：MISS
 
 ![image-20200613161317319](https://i.loli.net/2020/06/13/yXzB9kvACdr8ZqH.png)
 
-
-
 #### posterior distribution 事後機率
 
 ![image-20200613161903326](https://i.loli.net/2020/06/13/eDK3PZcy2dbhW98.png)
 
 maximum a posteriori rule, MAP rule
-
-
 
 #### MAP Rule
 
@@ -530,17 +488,11 @@ C~10~=cost of FA
 
 ![image-20200613235807440](https://i.loli.net/2020/06/13/yM6EtzQxo9wBkJ2.png)
 
-
-
 #### Neyman-Pearson
 
 $P_{FA}=\epsilon$ 時最好
 
 ![image-20200613235843857](https://i.loli.net/2020/06/13/BiKw1dtyJCxlzjG.png)
-
-
-
-
 
 ---
 
@@ -558,11 +510,7 @@ https://www.probabilitycourse.com/chapter5/5_3_2_bivariate_normal_dist.php
 ![](https://i.imgur.com/XQrW79D.png)
 https://en.wikipedia.org/wiki/Normally_distributed_and_uncorrelated_does_not_imply_independent#A_symmetric_example
 
-
-
 $\int_0^2 x^2 dx$
-
-
 
 # HW5
 
@@ -584,8 +532,6 @@ $\int_0^2 x^2 dx$
 
 ![image-20200614141047982](https://i.loli.net/2020/06/14/MvFX5bzLyWod8YS.png)
 
-
-
 ### 2.
 
 #### 9.4.7 (c)(d)
@@ -595,14 +541,6 @@ $\int_0^2 x^2 dx$
 ![image-20200614112724355](https://i.loli.net/2020/06/14/RGclYU9OkdsMLj1.png)
 
  ![image-20200614112844963](https://i.loli.net/2020/06/14/tjRZQWlFBdkIHYw.png)
-
-
-
-
-
-
-
-
 
 #### 9.4.9
 
@@ -623,8 +561,6 @@ $\int_0^2 x^2 dx$
 ![image-20200614141251151](https://i.loli.net/2020/06/14/Q15SFTPZsBc9IJ7.png)
 
 ![image-20200614141247564](https://i.loli.net/2020/06/14/tlRc8Lepw4zV3GF.png)
-
-
 
 ### 4. 11.1.1
 

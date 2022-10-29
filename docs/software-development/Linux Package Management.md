@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # Linux Package Management
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Where is your package?
 locate the binary, source, and manual page files for a command

@@ -4,15 +4,6 @@ parent: Miscellaneous
 ---
 
 # M/M/c queue
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Intro
 

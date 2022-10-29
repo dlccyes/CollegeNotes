@@ -3,15 +3,6 @@ layout: meth
 parent: Progamming
 ---
 # Obsidian CSS
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## How to apply your own CSS
 Put your CSS file to `.obsidian/snippets` and turn it on in Settings -> Appearance -> CSS snippets

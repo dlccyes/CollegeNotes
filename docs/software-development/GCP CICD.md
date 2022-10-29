@@ -4,15 +4,6 @@ layout: meth
 parent: Software Development
 ---
 # GCP CICD
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 guides followed
 - https://cloud.google.com/kubernetes-engine/docs/tutorials/gitops-cloud-build
@@ -318,7 +309,6 @@ git push google master
 ```
 
 go to build history & artifact registry to see if successful
-
 
 ## test complete pipeline
 go to Kubernetes Engine → Services & Ingress and click on Endpoints

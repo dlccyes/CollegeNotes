@@ -3,15 +3,6 @@ layout: meth
 parent: Software Development
 ---
 # AWS
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Free Services
 <https://aws.amazon.com/free/>
@@ -48,7 +39,6 @@ import boto3
 client = boto3.client('dynamodb')
 dynamodb = session.resource('dynamodb')
 ```
-
 
 ### Credentials
 see <https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html>
@@ -146,7 +136,6 @@ Also, there seems to be a limit on the total file size to deploy.
 #### eb printenv
 
 See all your environment variables.
-
 
 #### eb setenv
 
@@ -314,7 +303,6 @@ zip -d <your_package>.zip "<bad file>"
 
 <https://stackoverflow.com/a/61301012/15493213>  
 <https://medium.com/seamless-cloud/888757a6eeb0>
-
 
 ### Troubleshooting
 

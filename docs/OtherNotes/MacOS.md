@@ -4,15 +4,6 @@ parent: Othernotes
 ---
 
 # MacOS
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 This OS is retarded btw, please use Linux + KDE if you can.
 
@@ -25,7 +16,6 @@ Some keyboard shortcuts can be changed, some can't. Go to Settings -> Keyboard -
 Command + Q is an unchangeable shortcut key which will close an application. You can't remove it, but you can remap it to harmless stuffs (like Show Notification Center).
 
 <https://apple.stackexchange.com/questions/78948/>
-
 
 ### Minimize shortcut
 
@@ -103,7 +93,6 @@ See [Sniffing Packets from Wireless Networks](Software%20Development/Sniffing%20
 
 <https://stackoverflow.com/a/36882426/15493213>
 
-
 ### windows snapper
 
 [Rectangle](https://github.com/rxhanson/Rectangle) (the successor of [Spectacle](https://github.com/eczarny/spectacle))
@@ -172,7 +161,6 @@ There is no native way to do this (unless you're connected to an external monito
 
 [ref](https://www.switchingtomac.com/macos/how-to-keep-your-mac-on-even-with-the-lid-closed/)
 
-
 ## Troubleshooting
 
 ### Stop desktop order from changing itself
@@ -188,7 +176,6 @@ System Preferences > Mission Control  -> uncheck "Automatically rearrange Spaces
 System Preferences -> Dock & Menu Bar -> Uncheck "Show recent applications in Dock"
 
 ![](https://i.imgur.com/bYez1IB.png)
-
 
 <https://apple.stackexchange.com/a/338004>
 

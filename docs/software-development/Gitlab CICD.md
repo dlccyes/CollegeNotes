@@ -4,15 +4,6 @@ layout: meth
 parent: Software Development
 ---
 # Gitlab CICD
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Intro
 ### What does it do?
@@ -105,7 +96,6 @@ Go to  `edit profile`(in avatar dropdown) →  `user settings` → `SSH Keys` an
 Create a new project.
 
 (in local) Clone the repo and try push something.
-
 
 ## Set gitlab CI/CD environmental variables
 (in repo) `Settings` → `CI/CD` → `Variables`
@@ -497,7 +487,6 @@ deploy_job:
   when: manual
 ```
 never run automatically, have to be run manually
-
 
 ### Predefined variables
 <https://docs.gitlab.com/ee/ci/variables/predefined_variables.html>

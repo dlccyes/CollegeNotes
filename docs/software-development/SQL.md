@@ -3,15 +3,6 @@ layout: meth
 parent: Software Development
 ---
 # SQL
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## if
 
@@ -53,7 +44,6 @@ SELECT COLUMN FROM TABLE WHERE COLUMN REGEXP ''
 - `<pattern> = 0` negation
 
 ## join
-
 
 ```sql
 SELECT CITY.NAME

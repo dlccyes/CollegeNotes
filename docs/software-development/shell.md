@@ -3,15 +3,6 @@ layout: meth
 parent: Software Development
 ---
 # shell
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## variable
 - `$variable_name`
@@ -176,7 +167,6 @@ enttracks&user=<user>&api_key=<api key>&format=json" | python3 -c "import json,s
 - `sort -n` for numerial sort
 - `sort -r` for reverse
 - `sort -k 2` to sort with 2nd column
-
 
 ## alias
 - double quote -> evaluate at creation time

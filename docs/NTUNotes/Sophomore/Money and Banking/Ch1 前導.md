@@ -4,15 +4,6 @@ parent: Money and Banking
 ---
 
 # Ch1 前導
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 同業拆款利率
 : - inter bank offered rate

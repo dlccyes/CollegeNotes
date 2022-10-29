@@ -4,15 +4,6 @@ layout: meth
 parent: Software Development
 ---
 # WSL
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## install
 ### doc
@@ -63,7 +54,6 @@ or just use [wslg](#wslg)
 `wsl -t DISTRO` to terminate DISTRO
 
 `wsl --shutdown` to terminate all
-
 
 ## troubleshooting
 ### x server

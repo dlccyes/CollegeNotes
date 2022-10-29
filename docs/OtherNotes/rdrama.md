@@ -4,22 +4,12 @@ parent: Miscellaneous
 ---
 
 # rdrama
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 safe space for marsey enjoyers
 
 ![](https://i.imgur.com/qmATSIk_d.webp?maxwidth=9999&fidelity=high)
 
 ![](https://i.imgur.com/dOlwOEK.png)
-
 
 - custom emoji submission thread
 	- <https://rdrama.net/post/16583>

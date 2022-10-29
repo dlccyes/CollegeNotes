@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # MySQL
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## Install MySQL CLI
 

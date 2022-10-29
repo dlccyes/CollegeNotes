@@ -3,15 +3,6 @@ layout: meth
 parent: OtherNotes
 ---
 # Wallpapers
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ![](https://i.imgur.com/PL0uaEL.jpg)
 

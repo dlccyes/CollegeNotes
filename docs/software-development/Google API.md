@@ -4,20 +4,10 @@ parent: Software Development
 ---
 
 # Google API
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## create service account key
 
 create a project -> IAM -> service account -> create service account -> fill in and then download the key json
-
 
 ## Google Sheet API
 

@@ -4,15 +4,6 @@ parent: Software Development
 ---
 
 # SSH
-{: .no_toc }
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
 
 ## ssh into a machine
 

@@ -37,7 +37,6 @@ case structure
 - to check submission
 	- (in utility) `checkSubmitPA1.sh b08901001_pa1.tgz`
 
-
 ## PA2 dynamic programming
 <https://github.com/jason88012/Maximum-Planner-Subset>
 <https://github.com/blacktomato/Algorithms/blob/master/pa2/b02901001-p2/maxPlanarSubset.cpp>

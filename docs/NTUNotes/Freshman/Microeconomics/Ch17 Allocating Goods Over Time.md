@@ -4,8 +4,6 @@ title: Ch17 Allocating Goods Over Time
 parent: Microeconomics
 ---
 
-
-
 ![](https://i.imgur.com/k4IEAs5.png)
 
 [Interest_Model](https://drive.google.com/file/d/1y45KQl7LSsq-vjJgn__mZnvh7tKrQ0zk/view)
@@ -57,7 +55,6 @@ i.e. 現在的錢對未來的錢的價值比
 so 當現在的錢總量變少，利率就上升
 ```
 
-
 ## HW
 
 ### P6
@@ -69,8 +66,6 @@ so 當現在的錢總量變少，利率就上升
 可轉售
 
 ![image-20200606135302329](https://i.loli.net/2020/06/06/zYTMBJqKvHbyRDk.png)
-
-
 
 ### P15 (You could assume a linear market demand)
 

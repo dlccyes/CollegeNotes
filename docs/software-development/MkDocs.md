@@ -37,7 +37,6 @@ Will generate the pages in `./site` and then push to `origin/gh-pages`.
 mkdocs serve
 ```
 
-
 ## Theme
 
 ### Material
@@ -90,3 +89,4 @@ extra_javascript:
 <https://github.com/argoproj/argo-cd>
 
 Uses [Material](#Material)
+

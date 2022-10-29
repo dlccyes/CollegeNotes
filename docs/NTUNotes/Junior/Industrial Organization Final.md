@@ -3,19 +3,9 @@ layout: meth
 parent: Industrial Organization
 ---
 # Industrial Organization Final
-{: .no_toc }
 
 [Problems](IO-Final-Exam-0530.pdf)  
 [Solution](industrial_org_final_sol.pdf)
-
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-- TOC
-{:toc}
-</details>
-
 
 ## score
 
@@ -86,7 +76,6 @@ Similarly, for firm 2:
 Thus Nash equilibriums are (2,2), (3,3), (4,4)
 
 But when the meet-the-competition gaurantee comes in, when you set a lower price, the opposition will have to set the same price as yours, so you'll not be able to get a better market share by cutting price. Thus the best response is always setting the same price as your opposition.
-
 
 **Intuition**
 
