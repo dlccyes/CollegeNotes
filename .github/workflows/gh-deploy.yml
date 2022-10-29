@@ -3,7 +3,7 @@ name: gh-deploy
 on:
   push:
     branches:
-      - master
+      - never
     paths:
       - 'docs/**'
       - 'mkdocs.yml'
