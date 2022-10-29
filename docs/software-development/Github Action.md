@@ -38,7 +38,7 @@ on:
       - '!jetson-nano/**'
 ```
 
-## Accessin your repo
+## Access your repo
 
 Use [checkout](https://github.com/actions/checkout)
 

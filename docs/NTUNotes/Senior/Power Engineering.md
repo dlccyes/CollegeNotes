@@ -6,9 +6,23 @@ layout: meth
 
 ## General
 
+
 $$II^* = |I|^2$$
 
 because $(a+jb)(a-jb) = a^2+b^2$
+
+### Phasor
+
+$$re^{j\theta}=rcos\theta+rjsin\theta=r\angle\theta$$
+
+### Hyperbolic functions
+
+$$cosh(x)=\dfrac{e^x+e^{-x}}{2}$$
+$$sinh(x)=\dfrac{e^x-e^{-x}}{2}$$
+
+$$tanh^{-1}(x)=\dfrac{1}{2}ln(\dfrac{1+x}{1-x})$$
+
+![](https://i.imgur.com/rEK2ZNm.png)
 
 ## Ch2 Basic Principles
 
@@ -144,6 +158,7 @@ $$S_{3\phi}=V_{an}I_a^*+V_{bn}I_b^*+V_{cn}I_c^*=\underline{4320\angle{-15^\circ}
 - 1 mile = 1.609 km
 
 $$\mu_0=4\pi\times10^{-7}$$
+$$\epsilon_0=8.854\times10^{-12}$$
 
 ![](https://i.imgur.com/kTyb5ho.png)
 
@@ -153,9 +168,9 @@ $$B=\mu H$$
 
 ![](https://i.imgur.com/yIQ8uqY.png)
 
-Using length in feet, the resulting inductance is in H/m
-
 ### Conductor Bundling
+
+GMR = geometric mean radius 
 
 ![](https://i.imgur.com/Y22ze87.png)
 
@@ -175,4 +190,38 @@ Inductance per meter of three-phase tranposed lines
 
 ![](https://i.imgur.com/Yi0podg.png)
 
-GMR = geometric mean radius 
+![](https://i.imgur.com/Hhm6XIx.png)
+
+More problems
+
+<https://eegate.in/inductance-of-transmission-line-solved-numericals/>
+
+### Line Capacitance
+
+phase-neutral capacitance
+
+$$\bar{c}=\dfrac{2\pi\epsilon}{ln\dfrac{D_m}{R^c_b}}$$
+
+![](https://i.imgur.com/BYOpJSo.png)
+
+## Ch4 Transmission-Line Modeling
+
+### Terminal
+
+![](https://i.imgur.com/rskjOQe.png)
+
+$$Z_c=\sqrt{\dfrac{z}{y}}$$
+$$\gamma=\sqrt{zy}$$
+
+$\gamma = \alpha+j\beta$
+
+- $\gamma$  = propagation constant
+- $\beta$ = phase constant
+
+![](https://i.imgur.com/APPQ29m.png)
+
+![](https://i.imgur.com/etpw6KR.png)
+
+
+![](https://i.imgur.com/ZS5X0vA.png)
+![](https://i.imgur.com/IioHRQl.png)

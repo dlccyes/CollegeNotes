@@ -154,21 +154,28 @@ $Y=\dfrac{1}{Z}$（單位： S (siemens)）
 串聯 → 如同電阻並聯  
 
 ## Ch9
+
 $cos(\theta_i)cos(\theta_V)=\frac{1}{2}[cos(\theta_i-\theta_V)-cos(\theta_i+\theta_V)]$
 
 $rms = \dfrac{max}{\sqrt{2}}$  
+
 電器 120V 是 rms  
 
 ### Max average power
+
 ![](https://i.imgur.com/5JdGAdl.png)
 
 ### Power Factor
+
 $P = V_{rms}I_{rms}cos(\theta_V-\theta_i)$
+
 $pf=\dfrac{P}{V_{rms}I_{rms}}=cos(\theta_z)$
 
 ### Complex Power
 ![](https://i.imgur.com/5mGK9QJ.png)
+
 $S=V_{rms}I^*_{rms}\\=V_{rms}\angle\theta_VI_{rms}\angle-\theta_i\\=V_{rms}I_{rms}\angle(\theta_V-\theta_i)\\=P+Qj$
+
 $$
 \left\{
 \begin{array}{ln}
@@ -238,7 +245,9 @@ $\omega_{max}=\omega_0\sqrt{1-\dfrac{1}{2Q^2}}$
 
 ### parallel RLC with winding resistance
 ![](https://i.imgur.com/UKyMBm2.png)
-R~w~ = 電感內電阻
+
+$R_w$ = 電感內電阻
+
 $R_{par} = \dfrac{L}{CR_w}$
 
 ### Bode Plot
