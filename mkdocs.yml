@@ -34,17 +34,27 @@ extra_javascript:
 markdown_extensions:
   - toc:
       permalink: true
+      title: Table of Contents
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
+  - footnotes
 
 repo_url: https://github.com/dlccyes/CollegeNotes
 # logo:
 site_name: El Mundo
 nav:
 - About: README.md
+
+- Posts:
+  - Systems and Networking:
+    - "software-development/Sniffing Packets from Wireless Networks.md"
+    - "software-development/restore usb bootable disk to normal disk.md"
+  - DevOps:
+    - "software-development/Gitlab CICD.md"
+    - "software-development/GCP CICD.md"
 
 - Software Development:
   - Languages:
@@ -55,6 +65,10 @@ nav:
     - software-development/JavaScript.md
     - software-development/HTML.md
     - software-development/CSS.md
+    - software-development/R.md
+    - software-development/SQL.md
+    - software-development/YAML.md
+    - software-development/Liquid.md
     - software-development/prolog.md
     - software-development/RegEx.md
     - software-development/RISC-V.md
@@ -62,24 +76,27 @@ nav:
 
   - Linux:
     - software-development/linux.md
+    - software-development/WSL.md
     - software-development/Linux Package Management.md
     - software-development/shell.md
+    - software-development/SSH.md
     - software-development/Makefile.md
     - software-development/base64.md
     - software-development/ANSI.md
 
+  - software-development/Web.md
   - Web Frameworks:
-    - software-development/Flask.md
     - software-development/Django.md
     - software-development/Laravel.md
   - Frontend Frameworks:
     - software-development/React.md
     - software-development/Vue.md
   - Databases:
-    - software-development/Database.md
     - software-development/MySQL.md
     - software-development/PostgreSQL.md
     - software-development/Redis.md
+    - ORM:
+      - software-development/SQLAlchemy.md
   - Cloud:
     - software-development/AWS.md
     - software-development/GCP.md
@@ -88,6 +105,7 @@ nav:
     - software-development/Docker.md
     - software-development/Kubernetes.md
   - CICD:
+    - software-development/SonarQube.md
     - "software-development/Github Action.md"
     - software-development/ArgoCD.md
 
@@ -116,6 +134,14 @@ nav:
   - "NTUNotes/Sophomore/Money and Banking/README.md"
   - "NTUNotes/Freshman/Eurozone.md"
   - "NTUNotes/Junior/Industrial Organization.md"
+
+- Game Theory:
+  - "NTUNotes/Hung-Yu/Game Theory for Wireless Network/Game Theory.md"
+  - Game Theory for Wireless Networks Papers:
+    - "NTUNotes/Hung-Yu/Game Theory for Wireless Network/Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing.md"
+    - "NTUNotes/Hung-Yu/Game Theory for Wireless Network/Opportunistic Data Collection in Cognitive Wireless  Sensor Networks - Air–Ground Collaborative Online Planning.md"
+    - "NTUNotes/Hung-Yu/Game Theory for Wireless Network/privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL.md"
+
 
 # - Blog ⧉: https://dlccyes.github.io/blog
 

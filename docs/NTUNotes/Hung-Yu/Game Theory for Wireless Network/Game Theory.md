@@ -2,33 +2,35 @@
 layout: meth
 ---
 
-```ActivityHistory
-/
-```
 # Game Theory
 
 ## Bayesian game
 
 [Bayesian game](../../../obs_autolink/Bayesian%20game)
+
 - <https://www.youtube.com/watch?v=E0_CA9TwZ8c>
 - 先把 dominated 刪掉
 在依據機率算出混合 strategic form
 再把 dominated 刪掉
 算 pure strategy & mixed strategy
 
-## coalition game
+## Coalition game
+
 ### transferable utility
+
 - utility can be losslessly transfered between players
 	- have a common currency with absolutely equal value
 		- utility of the currency independent to anything else
 
 ### hedonic game
+
 - non-transferable utility game
 - players don't care ahout the rest of the partition
 - coalitions don't allocate profit for players
 - e.g. stable marriage
 
 ### shapley value
+
 - each player's marginal contribution
 - rules
   - dummy

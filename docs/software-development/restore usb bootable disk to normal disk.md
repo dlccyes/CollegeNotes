@@ -2,8 +2,7 @@
 layout: meth
 parent: Software Development
 ---
-# restore usb bootable disk to normal disk
-win10
+# Restore a usb bootable disk to normal disk in Win10
 
 reference: <https://www.balena.io/blog/did-etcher-break-my-usb-sd-card/>
 

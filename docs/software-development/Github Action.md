@@ -7,12 +7,17 @@ parent: Software Development
 
 Create your workflow yml file under `.github/workflow`. The file name would be the name of the workflow.
 
-## comparison with Gitlab
+## Comparison with Gitlab
 
 - Github Action = Gitlab CICD
 - Github workflow = Gitlab pipeline
 
-## trigger condition
+## Running Environment
+
+- `runs-on` specifies VM type
+- `containera` specify docker image
+
+## Trigger condition
 
 run on push to master when the file/dir in the included paths are changed 
 
@@ -33,7 +38,19 @@ on:
       - '!jetson-nano/**'
 ```
 
-## cache
+## Accessin your repo
+
+Use [checkout](https://github.com/actions/checkout)
+
+```yaml
+jobs:
+  myjob:
+    steps:
+      - uses: actions/checkout@v3
+```
+
+## Cache
+
 [doc](https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows)
 
 To make a directory or file accessible across jobs and workflows, you can use cache.

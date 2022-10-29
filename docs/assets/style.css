@@ -59,7 +59,7 @@
   justify-content: center;
 }
 
-.md-grid {
+.md-footer-meta__inner.md-grid {
   margin-left: inherit;
   margin-right: inherit;
 }

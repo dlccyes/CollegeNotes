@@ -1,23 +1,16 @@
-
 ---
 tags: GT_Papers
 grand_parent: Hung-Yu
 parent: Game Theory for Wireless Networks
 layout: meth
 ---
+
 # Opportunistic Data Collection in Cognitive Wireless Sensor Networks - Air–Ground Collaborative Online Planning
 
 source: <https://ieeexplore.ieee.org/document/9103004>
 
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-1. TOC
-{:toc}
-</details>
-
 ## intro
+
 - UAV: unmanned aerial vehicle
 - WSN: wireless sensor networks
 	- deployed in remote areas for collecting data
@@ -38,7 +31,9 @@ source: <https://ieeexplore.ieee.org/document/9103004>
 		- passive ground networks
 			- UAVs solve problems themselves, sensors just wait there and upload data when needed
 				- UAVs prevent transmission conflict with changing path & collecting data in sequence
+
 ### contribution of this paper
+
 - studies the contrary of above assumptions
 	- oppurtunistic UAV data collection
 		- UAVs aren't specified to collect data, just that if they happen to pass by ground sensors, they can collect data

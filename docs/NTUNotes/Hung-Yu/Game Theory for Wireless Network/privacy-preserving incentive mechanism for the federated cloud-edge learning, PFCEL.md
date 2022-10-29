@@ -4,8 +4,11 @@ parent: Game Theory for Wireless Networks
 layout: meth
 title: Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Learning
 ---
+
 # Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Learning
+
 ## intro
+
 - cloud-edge computing
   - three-layer
     - edge devices, EDs
@@ -31,7 +34,9 @@ title: Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Le
   - add Gaussian noise permuation
     - noice scaler over a threashold → AP unable to revover data
     - large noice scale → hard to converge
+
 ## goal & model
+
 - optimal contract design problem
   - obtain a global model with desired accuracy in a certain time period while preserving EDs' data privacy
   - APs motivate EDs to participate without knowing EDs' privacy senstivitiy
@@ -48,7 +53,9 @@ title: Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Le
     - 3 layer Stackelberg game, TLSG
       - CC 預期 APs & EDs 策略，先手
     - use gradient ascent to update coeff. until winthin threashold → optimized coeff.
+
 ## results
+
 - as noise scale increase, data leakage decrease & test loss increase exponentially
 - APs ↑ $U_{CC}$ ↓；EDs ↑ $U_{CC}$ ↑
 - comparison with DP-FedAvg
