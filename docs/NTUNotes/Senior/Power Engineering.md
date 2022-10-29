@@ -225,3 +225,26 @@ $\gamma = \alpha+j\beta$
 
 ![](https://i.imgur.com/ZS5X0vA.png)
 ![](https://i.imgur.com/IioHRQl.png)
+
+### Complex Power Transmission - Short Line
+
+![](https://i.imgur.com/KYv9OaS.png)
+
+$S_{12}$ = complex power from bus 1 to bus 2
+
+$$S_{12}=P_{12}+jQ_{12}$$
+
+![](https://i.imgur.com/XdZXD2l.png)
+
+$$\begin{align*}
+S_{12} &= V_{1}I_{1}^*\\
+&= V_1(\dfrac{V_1-V_2}{Z})^*\\
+&= \dfrac{|V_1|^2}{Z^*}-\dfrac{V_1V_2^*}{Z^*}\\
+&= \dfrac{|V_1|^2}{|Z|}e^{j\angle Z}-\dfrac{|V_1||V_2|}{|Z|}e^{j\angle Z} e^{j\theta_{12}}
+\end{align*}$$
+
+#### Power Cycle Diagram
+
+![](https://i.imgur.com/n2Japjl.png)
+
+![](https://i.imgur.com/2bs1UqT.png)
