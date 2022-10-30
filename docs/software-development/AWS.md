@@ -312,4 +312,9 @@ Use `eb logs` to see the logs.
 
 #### related to venv
 
-If your instance's `var/log/eb-engine.log` said `[ERROR] An error occurred during execution of command [app-deploy] - [StageApplication]. Stop running the command. Error: chown <something>/venv/<something> no such file or directory`, even if your ignore the `venv`, see <https://stackoverflow.com/questions/61805345>.
+If your instance's `var/log/eb-engine.log` has the below error even if your ignore `venv`, see <https://stackoverflow.com/questions/61805345>
+
+```
+[ERROR] An error occurred during execution of command [app-deploy] - [StageApplication]. Stop running the command. Error: chown <something>/venv/<something> no such file or directory
+```
+

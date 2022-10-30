@@ -6,6 +6,15 @@ layout: meth
 
 ## General
 
+### Constants
+
+- 1 feet = 12 inches
+- 1 mile = 1.609 km
+
+$$\mu_0=4\pi\times10^{-7}$$
+$$\epsilon_0=8.854\times10^{-12}$$
+
+### Formulas
 
 $$II^* = |I|^2$$
 
@@ -28,13 +37,23 @@ $$tanh^{-1}(x)=\dfrac{1}{2}ln(\dfrac{1+x}{1-x})$$
 
 ### Complex Power
 
+![](https://i.imgur.com/7GLW8Ad.png)
+
+let $\phi=\theta_V-\theta_I$
+
+![](https://i.imgur.com/T7rzi4g.png)
+ 
 ![](https://i.imgur.com/3o7wQdH.png)
 
 ![](https://i.imgur.com/3XbIS85.png)
 
 $$V_{max}=\sqrt{2}|V|$$
-$$v(t)=V_{max}cos(\omega t+\phi)=\dfrac{V_{max}}{\sqrt{2}}\angle{\phi}$$
-$$v(t)=\sqrt{2}|V|cos(\omega t+\phi)=|V|\angle{\phi}$$
+
+$$\begin{align*}
+v(t)
+&=V_{max}cos(\omega t+\phi)\\
+&=\sqrt{2}|V|cos(\omega t+\phi)\\
+\end{align*}$$
 
 ![](https://i.imgur.com/eb18svI.png)
 
@@ -85,9 +104,7 @@ Each separated by $120^{\circ}$, s.t. the instantaneous power is constant
 
 ![](https://i.imgur.com/OEv0ZQ1.png)
 
-Power = single phase power x $\sqrt{3}$
-
-### Balanced Network
+### Balanced Three-Phase Power
 
 ![](https://i.imgur.com/tBj8TFT.png)
 
@@ -102,7 +119,9 @@ Knowing this, we can simplify the circuit
 
 ![](https://i.imgur.com/7WK1aLm.png)
 
-### Delta Wye Transformation
+#### Impedance
+
+**Delta Wye Transformation**
 
 ![](https://i.imgur.com/m1sCilU.png)
 
@@ -113,12 +132,20 @@ pf
 ![](https://i.imgur.com/tRAm6jr.png)
 ![](https://i.imgur.com/XCOmo93.png)
 
+#### Voltage
+
 ![](https://i.imgur.com/9GDDNrG.png)
 
 We know $V_{an}$, $V_{bn}$, $V_{cn}$ are in sequence with common difference = $-120^\circ$, 
 now we can get the relationship between $V_{an}$ & $V_{ab}$
 
 $$V_{ab}=\sqrt{3}\angle{30^{\circ}}V_{an}$$
+
+#### Power
+
+Power = single phase power x 3
+
+![](https://i.imgur.com/x9H2lx4.png)
 
 ### Problems
 
@@ -131,7 +158,7 @@ $$V_{ab}=\sqrt{3}\angle{30^{\circ}}V_{an}$$
 ![](https://i.imgur.com/nW7IRkI.png)
 ![](https://i.imgur.com/vArviVt.png)
 
-Probably wrong? $P_{load, 1\phi}$ should be $\dfrac{200k}{\sqrt{3}}$, making the final answer $328.04$ A
+If 440V is $3\phi$, $I$ should be $\dfrac{S_{1\phi}}{\frac{440}{\sqrt{3}}}=328.04$ A
 
 <http://publish.illinois.edu/ece-476-fall-2017/files/2017/08/HW1Sol.pdf>
 
@@ -154,11 +181,6 @@ $$S_{3\phi}=V_{an}I_a^*+V_{bn}I_b^*+V_{cn}I_c^*=\underline{4320\angle{-15^\circ}
 
 ## Ch3 Transmission Line
 
-- 1 feet = 12 inches
-- 1 mile = 1.609 km
-
-$$\mu_0=4\pi\times10^{-7}$$
-$$\epsilon_0=8.854\times10^{-12}$$
 
 ![](https://i.imgur.com/kTyb5ho.png)
 
@@ -170,7 +192,12 @@ $$B=\mu H$$
 
 ### Conductor Bundling
 
-GMR = geometric mean radius 
+GMR = geometric mean radius = goemetric mean of $r'$ & the distance from one point to each of the other points
+
+$$r'=re^{-\frac{1}{4}}=0.78r$$
+
+Inductance per meter $l$
+$$l=\dfrac{\mu_0}{2\pi}ln\dfrac{D_m}{R_b}$$
 
 ![](https://i.imgur.com/Y22ze87.png)
 
@@ -178,7 +205,7 @@ GMR = geometric mean radius
 
 ![](https://i.imgur.com/zsDBgS9.png)
 
-### Three-Phase Tranposition
+### Inductance per meter
 
 Inductance per meter of three-phase tranposed lines
 
@@ -196,7 +223,7 @@ More problems
 
 <https://eegate.in/inductance-of-transmission-line-solved-numericals/>
 
-### Line Capacitance
+### Phase-Neutral capacitance
 
 phase-neutral capacitance
 
@@ -204,9 +231,17 @@ $$\bar{c}=\dfrac{2\pi\epsilon}{ln\dfrac{D_m}{R^c_b}}$$
 
 ![](https://i.imgur.com/BYOpJSo.png)
 
+Note that $R_b^c$ uses $r$ instead of $r'=re^{-\frac{1}{4}}$ !!!!
+
 ## Ch4 Transmission-Line Modeling
 
 ### Terminal
+
+$Z_c$ = surge impedance
+
+$P_\mathrm{SIL}$ = surge impedance loading
+
+$$P_\mathrm{SIL}=\dfrac{|V_1|^2}{Z_c}$$
 
 ![](https://i.imgur.com/rskjOQe.png)
 
@@ -226,7 +261,7 @@ $\gamma = \alpha+j\beta$
 ![](https://i.imgur.com/ZS5X0vA.png)
 ![](https://i.imgur.com/IioHRQl.png)
 
-### Complex Power Transmission - Short Line
+### Short Line
 
 ![](https://i.imgur.com/KYv9OaS.png)
 
@@ -248,3 +283,23 @@ S_{12} &= V_{1}I_{1}^*\\
 ![](https://i.imgur.com/n2Japjl.png)
 
 ![](https://i.imgur.com/2bs1UqT.png)
+
+### Radial Line
+
+Voltage at near, complex load at rear
+
+![](https://i.imgur.com/yqSLrg7.png)
+
+$$\begin{align*}
+S_D
+&=P_D+Q_D\\
+&=P_D+j\beta P_D\\
+\end{align*}$$
+
+$$\beta=\dfrac{Q_D}{P_D}=tan(\phi)$$
+
+![](https://i.imgur.com/cHHEcNp.png)
+
+$$\begin{align*}
+|V_2|^2=\dfrac{|V_1|^2}{2}-\beta P_DX\pm\sqrt{\dfrac{|V_1|^4}{4}-P_D X(P_D X+\beta|V_1|^2)}
+\end{align*}$$
