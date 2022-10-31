@@ -480,9 +480,9 @@ You can use the remote starting with `git@` and add the ssh public key to your g
 Only point at a specific commit, to indicate version for example.  
 A tag can't be used on multiple commits.
 
-## troubleshooting
+## Troubleshooting
 
-### unsafe directory
+### Unsafe directory error
 
 git addressed a security vulnerability and changed something to solve it in April, 2022  
 see <https://github.blog/2022-04-12-git-security-vulnerability-announced/>
@@ -502,3 +502,13 @@ to add all subdiretories
 ```
 for dir in */; do git config --global --add safe.directory $(realpath $dir); done
 ```
+
+### push hung
+
+Restart ssh agent
+
+```
+killall ssh-agent; eval `ssh-agent`
+```
+
+[Ref](https://stackoverflow.com/a/58962127/15493213)
