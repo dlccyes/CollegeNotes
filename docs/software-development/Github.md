@@ -6,9 +6,13 @@ parent: Software Development
 # Github
 
 ## markdown
+
 ### embed image based on theme
+
 <https://github.blog/changelog/2021-11-24-specify-theme-context-for-images-in-markdown/>  
+
 append `#gh-light-mode-only` to your image path for light mode  
+
 append `#gh-dark-mode-only` to your image path for dark mode  
 
 e.g.  

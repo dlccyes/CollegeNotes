@@ -12,6 +12,7 @@ layout: meth
 - 1 mile = 1.609 km
 
 $$\mu_0=4\pi\times10^{-7}$$
+
 $$\epsilon_0=8.854\times10^{-12}$$
 
 ### Formulas
@@ -27,6 +28,7 @@ $$re^{j\theta}=rcos\theta+rjsin\theta=r\angle\theta$$
 ### Hyperbolic functions
 
 $$cosh(x)=\dfrac{e^x+e^{-x}}{2}$$
+
 $$sinh(x)=\dfrac{e^x-e^{-x}}{2}$$
 
 $$tanh^{-1}(x)=\dfrac{1}{2}ln(\dfrac{1+x}{1-x})$$
@@ -101,7 +103,9 @@ $$V = IZ$$
 $$Z = R+jX$$
 
 $$S = VI^* = ZII^* = |I|^2Z = |I|^2(R+jX) = P+jQ$$
+
 $$P = |I|^2R$$
+
 $$Q = |I|^2X$$
 
 $$S = VI^* = V(\dfrac{V}{Z})^* = \dfrac{|V|^2}{Z^*}$$
@@ -280,6 +284,7 @@ $$P_\mathrm{SIL}=\dfrac{|V_1|^2}{Z_c}$$
 ![](https://i.imgur.com/rskjOQe.png)
 
 $$Z_c=\sqrt{\dfrac{z}{y}}$$
+
 $$\gamma=\sqrt{zy}$$
 
 $\gamma = \alpha+j\beta$
@@ -341,7 +346,7 @@ $P_{12}=-P_{21}$
 ![](https://i.imgur.com/cHHEcNp.png)
 
 $$\begin{align*}
-|V_2|^2=\dfrac{|V_1|^2}{2}-\beta P_D X                     \pm \sqrt{(\dfrac{|V_1|^2}{2})^2-P_DX(P_DX+\beta\dfrac{|V_1|^2}{2})}
+|V_2|^2=\dfrac{|V_1|^2}{2}-\beta P_D X\pm \sqrt{(\dfrac{|V_1|^2}{2})^2-P_DX(P_DX+\beta\dfrac{|V_1|^2}{2})}
 \end{align*}$$
 
 ![](https://i.imgur.com/bQ8YcdK.png)
