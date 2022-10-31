@@ -39,10 +39,18 @@ $$tanh^{-1}(x)=\dfrac{1}{2}ln(\dfrac{1+x}{1-x})$$
 
 ![](https://i.imgur.com/7GLW8Ad.png)
 
-let $\phi=\theta_V-\theta_I$
+$$\phi=\theta_V-\theta_I$$
+
+![](https://i.imgur.com/lHpVGP8.jpg)
+
+![](https://i.imgur.com/5SiqMlA.jpg)
+
+![](https://i.imgur.com/ckt150B.jpg)
+
+cos & sin 積起來時被消掉
 
 ![](https://i.imgur.com/T7rzi4g.png)
- 
+
 ![](https://i.imgur.com/3o7wQdH.png)
 
 ![](https://i.imgur.com/3XbIS85.png)
@@ -167,20 +175,35 @@ If 440V is $3\phi$, $I$ should be $\dfrac{S_{1\phi}}{\frac{440}{\sqrt{3}}}=328.0
 ![](https://i.imgur.com/sSKJ1sE.png)
 
 Positive sequence
+
 $$V_{ca}=208\angle{-120^{\circ}}$$
+
 $$V_{bc}=208\angle{0^{\circ}}$$
+
 $$V_{ab}=208\angle{120^{\circ}}$$
+
 $$V_{ab}=\sqrt{3}\angle{30^{\circ}}V_{an}$$
-$$V_{an}=\dfrac{V_{ab}}{\sqrt{3}\angle{30^{\circ}}}=120\angle{90^\circ}$$
+
+$$V_{an}=\dfrac{V_{ab}}
+
+{\sqrt{3}\angle{30^{\circ}}}=120\angle{90^\circ}$$
+
 $$V_{bn}=\dfrac{V_{bc}}{\sqrt{3}\angle{30^{\circ}}}=120\angle{-30^\circ}$$
+
 $$V_{cn}=\dfrac{V_{ca}}{\sqrt{3}\angle{30^{\circ}}}=120\angle{210^\circ}$$
+
 $$I_a=\dfrac{V_{an}}{Z}=12\angle{105^\circ}$$
+
 $$I_b=\dfrac{V_{bn}}{Z}=12\angle{-15^\circ}$$
+
 $$I_c=\dfrac{V_{bn}}{Z}=12\angle{225^\circ}$$
+
 $$S_{3\phi}=V_{an}I_a^*+V_{bn}I_b^*+V_{cn}I_c^*=\underline{4320\angle{-15^\circ}}$$
 
 ## Ch3 Transmission Line
 
+- H = magnetic field intensity
+- B = magnetic field density
 
 ![](https://i.imgur.com/kTyb5ho.png)
 
@@ -189,6 +212,17 @@ $$S_{3\phi}=V_{an}I_a^*+V_{bn}I_b^*+V_{cn}I_c^*=\underline{4320\angle{-15^\circ}
 $$B=\mu H$$
 
 ![](https://i.imgur.com/yIQ8uqY.png)
+
+### Infinite straight wire
+
+$H$ outside the condutor
+
+![](https://i.imgur.com/H73Oq2z.png)
+
+$H$ inside the condutor
+
+![](https://i.imgur.com/XVnU6jP.png)
+
 
 ### Conductor Bundling
 
@@ -290,6 +324,10 @@ Voltage at near, complex load at rear
 
 ![](https://i.imgur.com/yqSLrg7.png)
 
+Use Z=jX in the short line $S_{12}$ formula
+
+![](https://i.imgur.com/bGCa5Jr.png)
+
 $$\begin{align*}
 S_D
 &=P_D+Q_D\\
@@ -298,8 +336,12 @@ S_D
 
 $$\beta=\dfrac{Q_D}{P_D}=tan(\phi)$$
 
+$P_{12}=-P_{21}$
+
 ![](https://i.imgur.com/cHHEcNp.png)
 
 $$\begin{align*}
-|V_2|^2=\dfrac{|V_1|^2}{2}-\beta P_DX\pm\sqrt{\dfrac{|V_1|^4}{4}-P_D X(P_D X+\beta|V_1|^2)}
+|V_2|^2=\dfrac{|V_1|^2}{2}-\beta P_D X                     \pm \sqrt{(\dfrac{|V_1|^2}{2})^2-P_DX(P_DX+\beta\dfrac{|V_1|^2}{2})}
 \end{align*}$$
+
+![](https://i.imgur.com/bQ8YcdK.png)
