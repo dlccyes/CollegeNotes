@@ -3,7 +3,7 @@ layout: meth
 parent: Software Development
 ---
 
-# GRPC
+# gRPC
 
 ## BloomRPC
 

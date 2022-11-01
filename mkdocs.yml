@@ -91,6 +91,10 @@ nav:
   - Frontend Frameworks:
     - software-development/React.md
     - software-development/Vue.md
+  - API:
+    - software-development/gRPC.md
+    - Mocking:
+      - software-development/WireMock.md
   - Databases:
     - software-development/MySQL.md
     - software-development/PostgreSQL.md
@@ -130,6 +134,7 @@ nav:
 - Economics:
   - "NTUNotes/Freshman/Microeconomics/README.md"
   - "NTUNotes/Junior/Macroeconomics.md"
+  - "NTUNotes/Senior/Statisics.md"
   - "NTUNotes/Sophomore/Econometrics.md"
   - "NTUNotes/Sophomore/Money and Banking/README.md"
   - "NTUNotes/Freshman/Eurozone.md"

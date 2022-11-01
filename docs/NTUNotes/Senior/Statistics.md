@@ -207,7 +207,7 @@ $\alpha$ means the critical p value i.e. significance level
 ![](https://i.imgur.com/s3YOPoH.png)
 
 - Type 1 Error = False Positive
-	- assuming reject null -> positive
+	- assuming null -> negative, reject null -> positive
 - Type 2 Error = False Negative
 
 Remember to use the p stated in $H_0$ to calculate SE and do hypothesis testing!
@@ -223,9 +223,26 @@ e.g.
 
 There is no statistically significant evidence that the fraction of children who are nearsighted is different from 0.08 at the 5% level
 
+
 ## Inference for Categorical Data
 
-### Hypothesis Testing of 2 Porportion
+### Hypothesis Testing for 1 Porportion
+
+#### Problems
+
+![](https://i.imgur.com/gJgHnJ6.png)
+
+![](https://i.imgur.com/Rf1kPyF.png)
+
+![](https://i.imgur.com/BGffftJ.png)
+
+![](https://i.imgur.com/uwZ0pw0.png)
+
+![](https://i.imgur.com/vmkgnIG.png)
+
+![](https://i.imgur.com/F42niiZ.png)
+
+### Hypothesis Testing for 2 Porportion
 
 SE of the difference between 2 porportions
 
@@ -246,6 +263,12 @@ Use p = overall p to calculate SE when $H_0$ is that 2 porportions are the same
 ![](https://i.imgur.com/gSNWj6k.jpg)
 
 ![](https://i.imgur.com/F2OASkY.jpg)
+
+![](https://i.imgur.com/eFbpxMw.png)
+
+![](https://i.imgur.com/wgkSbb4.png)
+
+![](https://i.imgur.com/3fYHo33.png)
 
 ### Chi-Square Test
 
@@ -272,7 +295,9 @@ e.g.
 Each cell is an element, and the caluclate the x square as in one-way table, except df = (# of row - 1)(# of col -1)
 
 ![](https://i.imgur.com/waDQmej.png)
+
 ![](https://i.imgur.com/Yfcgj3q.png)
+
 ![](https://i.imgur.com/v0YYTbJ.png)
 
 #### Problems
@@ -280,3 +305,13 @@ Each cell is an element, and the caluclate the x square as in one-way table, exc
 ![](https://i.imgur.com/wMncy25.jpg)
 
 ![](https://i.imgur.com/syW7ltW.jpg)
+
+![](https://i.imgur.com/yWU8G2i.png)
+
+![](https://i.imgur.com/AH57HtV.png)
+
+![](https://i.imgur.com/J5FOQ8y.png)
+
+![](https://i.imgur.com/hra9vfv.png)
+
+![](https://i.imgur.com/nWAcVzo.png)

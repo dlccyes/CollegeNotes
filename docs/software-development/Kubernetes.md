@@ -14,6 +14,35 @@ alias: k8s
 
 ## Tools
 
+### K9s
+
+[Github repo](https://github.com/derailed/k9s)
+
+Kubectl TUI
+
+**Install**
+
+```
+brew install k9s
+```
+
+To go in
+
+```
+k9s
+```
+
+**Commands**
+
+- select namespace
+	- `:ns`
+- see other thing
+	- `:deployment/service/pods/etc.`
+- quit
+	- `:q`
+
+### CD
+
 [ArgoCD](ArgoCD)
 
 ## install kubectl
@@ -198,6 +227,12 @@ more info (like ip & node run on)
 kubectl get pods -o wide
 ```
 
+### Go into a pod
+
+```
+kubectl exec --stdin --tty <pod_name> -- /bin/bash
+```
+
 ## Namespace
 
 For segratating your resources (e.g. different apps)
@@ -276,6 +311,10 @@ handle port forwarding
 	- the port of the kubernetes node
 
 go to `http://<node_ip>:<nodePort>` to see your app
+
+### internal service url
+
+`<service_name>.<namespace>.svc.cluster.local:<service_port>`
 
 ## Ingress
 
