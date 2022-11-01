@@ -6,8 +6,8 @@ Mocking api with self defined responses at localhost
 
 1. Download the standalone JAR
 	- <https://wiremock.org/docs/running-standalone/>
-2. Define the your responses (see the sections below)
-3. run it with `java -jar <the_thing_you_just_downloaded.jar>`
+2. Define your responses (see the sections below)
+3. Run it with `java -jar <the_thing_you_just_downloaded.jar>`
 
 Now you can send http requests to it 
 

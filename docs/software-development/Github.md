@@ -48,8 +48,14 @@ e.g.
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dlccyes&layout=compact)
 
+## Wakatime badges
+
+Not necessarily related to github really
+
 ![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=dlccyes)
 
-## profile readme
+![](https://wakatime.com/share/@dlccyes/6a0c674f-734a-40fc-8307-1f44a59604a6.svg)
+
+## Profile readme
 
 Create a public repo named `<your username>`, the `README.md` of that repo will appear on your github profile page.
