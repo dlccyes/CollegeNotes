@@ -13,6 +13,7 @@ layout: meth
 	- neutron's rest mass = $1.67\times10^{-27}$
 	- proton's rest mass = $1.67\times10^{-27}$
 - electron's rest energy $E_0=511keV$
+- $\dfrac{1}{4\pi\epsilon_0}=9\times10^9$
 
 ## Particle properties of wave
 
@@ -81,3 +82,37 @@ $$\Delta E \Delta t \geq \dfrac{\hbar}{2}$$
 ![](https://i.imgur.com/J4xGfx7.png)
 
 ![](https://i.imgur.com/odP9jgS.png)
+
+## Ch4 Atomic Structure
+
+### Thomson model of atom
+
+![](https://i.imgur.com/qccnLQY.png)
+
+### Distance of closest approach
+
+For an alpha particle (2 proton + 2 neutron)
+
+![](https://i.imgur.com/GYpg8xJ.png)
+
+### Electron orbits
+
+![](https://i.imgur.com/eCsXQK4.png)
+
+### Atomic Spectra
+
+![](https://i.imgur.com/mDLnl42.png)
+
+### Bohr Atom
+
+![](https://i.imgur.com/M6nZGYd.png)
+
+![](https://i.imgur.com/MRn4xae.png)
+
+Energy
+
+![](https://i.imgur.com/igCPJED.png)
+
+### Correspondence principal
+
+![](https://i.imgur.com/gbvJU50.png)
