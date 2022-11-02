@@ -121,7 +121,9 @@ Same mean & variance may stem from very different distributions
 ![](https://i.imgur.com/nxsb9w7.png)
 
 ![](https://i.imgur.com/KykcPa8.png)
+
 ![](https://i.imgur.com/rS0lhjT.png)
+
 ![](https://i.imgur.com/A7JyzFY.png)
 
 ## Distribution
