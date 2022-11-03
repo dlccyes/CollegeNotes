@@ -11,6 +11,7 @@ layout: meth
 - mass
 	- electron's rest mass $m_0$ = $9.11\times10^{-31}$kg
 	- neutron's rest mass = $1.67\times10^{-27}$
+		- $1836m_e$
 	- proton's rest mass = $1.67\times10^{-27}$
 - electron's rest energy $E_0=511keV$
 - $\dfrac{1}{4\pi\epsilon_0}=9\times10^9$
@@ -97,11 +98,27 @@ For an alpha particle (2 proton + 2 neutron)
 
 ### Electron orbits
 
+![](https://i.imgur.com/TV3h1aJ.png)
+
+$$F_c=\dfrac{mv^2}{r}$$
+
+$$F_e=\dfrac{1}{4\pi\epsilon_0}\dfrac{e^2}{r^2}$$
+
+$$F_c=F_e$$
+
 ![](https://i.imgur.com/eCsXQK4.png)
 
 ### Atomic Spectra
 
 ![](https://i.imgur.com/mDLnl42.png)
+
+Rydberg constant $R=1.097\times10^7\mathrm{m}^{-1}$
+
+$$R=-\dfrac{E_1}{ch}$$
+
+![](https://i.imgur.com/riVRjaM.png)
+
+![](https://i.imgur.com/qh9koQQ.png)
 
 ### Bohr Atom
 
@@ -119,8 +136,32 @@ Wavelength of radiation caused by excited electronmidter
 
 $$\lambda=\dfrac{hc}{\Delta E}$$
 
-![](https://i.imgur.com/PZjZUAd.png)
+$$R=-\dfrac{E_1}{ch}$$
+
+![](https://i.imgur.com/TwE9oIP.png)
+
+![](https://i.imgur.com/CrEgmAH.png)
 
 ### Correspondence principal
 
 ![](https://i.imgur.com/gbvJU50.png)
+
+### Nuclear Motion
+
+hydrogen nuclear (a proton)'s mass $M=1836m_e$
+
+![](https://i.imgur.com/X8TJziT.png)
+
+Both the nucleus & the electron orbit around the center. We can use **reduced mass** $m'$ in place of $m$ to simplify the system into single oribit.
+
+![](https://i.imgur.com/tMUzgTk.png)
+
+### Rutherford scattering
+
+![](https://i.imgur.com/qvZZx67.png)
+
+$b$ = impact parameter
+
+![](https://i.imgur.com/eWKO8Ia.png)
+
+![](https://i.imgur.com/158GR38.png)
