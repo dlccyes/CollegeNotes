@@ -3034,6 +3034,9 @@ adj. + mente -> adv.
 - pimiento = bell pepper = 彩椒
 - pimienta = black pepper = 胡椒
 - espinaca = spinach = 菠菜
+- cuadro = paintingq
+- vasco = Basque
+- cenicero = ashtray
 
 ### Because
 

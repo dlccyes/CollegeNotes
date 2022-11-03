@@ -113,6 +113,14 @@ Energy
 
 ![](https://i.imgur.com/igCPJED.png)
 
+### Energy level and spectra
+
+Wavelength of radiation caused by excited electronmidter
+
+$$\lambda=\dfrac{hc}{\Delta E}$$
+
+![](https://i.imgur.com/PZjZUAd.png)
+
 ### Correspondence principal
 
 ![](https://i.imgur.com/gbvJU50.png)
