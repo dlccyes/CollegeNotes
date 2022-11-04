@@ -15,7 +15,7 @@ Create your workflow yml file under `.github/workflow`. The file name would be t
 ## Running Environment
 
 - `runs-on` specifies VM type
-- `containera` specify docker image
+- `container` specify docker image
 
 ## Trigger condition
 

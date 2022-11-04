@@ -11,14 +11,16 @@ easy [Python](Python) web framework
 	- <https://docs.djangoproject.com/en/4.0/>
 
 ## installation
+
 `pip3 install django`
 
 ## basic commands
+
 - `manage.py` is like the `artisan` of [[Laravel]]
 - creation
 	- `django-admin startproject mysite`
 - run server
-	- (in root) `python manage.py runserver` then go to http://127.0.0.1:8000/
+	- (in root) `python manage.py runserver` then go to <http://127.0.0.1:8000/>
 - create app
 	- `python manage.py startapp app1`
 

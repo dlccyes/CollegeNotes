@@ -98,7 +98,9 @@ Create a new project.
 (in local) Clone the repo and try push something.
 
 ## Set gitlab CI/CD environmental variables
+
 (in repo) `Settings` → `CI/CD` → `Variables`
+
 ![](https://i.imgur.com/wiVNpvW.png)
 
 (in GCP) go to the service account you've created, and go to manage keys → add key → create new key → json → download it (used in next step)

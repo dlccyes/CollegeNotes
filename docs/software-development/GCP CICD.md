@@ -5,9 +5,10 @@ parent: Software Development
 ---
 # GCP CICD
 
-guides followed
-- https://cloud.google.com/kubernetes-engine/docs/tutorials/gitops-cloud-build
-- https://blog.cloud-ace.tw/application-modernization/devops/devops-google-cloud-ci-cd/
+Guides followed
+
+- <https://cloud.google.com/kubernetes-engine/docs/tutorials/gitops-cloud-build>
+- <https://blog.cloud-ace.tw/application-modernization/devops/devops-google-cloud-ci-cd/>
 
 tips
 - you can see project ID & number at home page (dashboard)
@@ -76,6 +77,7 @@ go to https://console.cloud.google.com/artifacts to check if succeed
 ![](https://i.imgur.com/zxYqXEp.png)
 
 ## create CI pipeline
+
 go to [triggers](https://console.cloud.google.com/cloud-build/triggers/) and create a trigger  
 ![](https://i.imgur.com/bIfnORr.png)
 so it the trigger would be triggered and run `cloudbuild.yaml` when you push something to a branch  
