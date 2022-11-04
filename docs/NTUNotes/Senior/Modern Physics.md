@@ -164,4 +164,12 @@ $b$ = impact parameter
 
 ![](https://i.imgur.com/eWKO8Ia.png)
 
+$b_{\mathrm{min}}$ = r of nucleus -> $\theta_{\mathrm{max}}$
+
+<http://hyperphysics.phy-astr.gsu.edu/hbase/Nuclear/rutsca3.html>
+
 ![](https://i.imgur.com/158GR38.png)
+
+Fraction of alpha particles scattered by $\theta$ or more
+
+![](https://i.imgur.com/CjqDl3e.png)

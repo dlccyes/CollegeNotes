@@ -60,6 +60,12 @@ You still need the `\documentclass` at the top of each final file (not needed in
 
 ## formatting
 
+### Text Coloring
+
+```tex
+{\color{red}Score: 100}
+```
+
 ### line height
 
 `\linespread{1.5}`  
@@ -72,13 +78,16 @@ https://tex.stackexchange.com/a/460857
 - `\space`
 
 ### line break
+
 - `\smallbreak`  
 - `\bigbreak`
 
 ### align center
+
 `\begin{center} context \end{center}`
 
 ### link color
+
 ```tex
 \hypersetup{
     colorlinks=true,
@@ -91,6 +100,7 @@ https://tex.stackexchange.com/a/460857
 ```
 
 ### hide link blue box
+
 ```
 \usepackage[hidelinks]{hyperref}
 ```
@@ -137,6 +147,18 @@ equals to different things in different conditions
 ```
 
 <https://tex.stackexchange.com/a/9068>
+
+## Chinese
+
+```tex
+\usepackage{fontspec}
+\usepackage{xeCJK}
+
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKmonofont{Noto Serif CJK SC}
+```
+
+See <https://mamenotes.com/latex_xecjk/>
 
 ## Figure
 

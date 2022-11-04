@@ -263,6 +263,57 @@ if err = r.dbClient.DB().
 - AfterFind
 	- auto execute after querying
 
+## Threading
+
+Goroutines
+
+### With WaitGroup
+
+- `wg.Add(n)` -> n threads
+- `wg.Wait()` -> wait for all threads to end and then continue
+- `go myfunction()` -> Start a thread executing `myfunction()`
+
+```go
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+func printStr(str string, wg *sync.WaitGroup) {
+	defer wg.Done()
+	fmt.Println(str)
+}
+
+func main() {
+	var wg sync.WaitGroup
+	strList := []string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"}
+	wg.Add(len(strList))
+	for _, str := range strList {
+		go printStr(str, &wg)
+	}
+	wg.Wait()
+}
+```
+
+## Fx - dependency injection
+
+```go
+fx.New(
+	fx.Provide(),
+	fx.Invoke(),
+).Run()
+```
+
+### Context timeout
+
+Default context timeout is 15s, to change it, specify it under `fx.New()`
+
+```go
+fx.StartTimeout(time.Second*42)
+```
+
 ## Unit testing
 
 ### Writing test files

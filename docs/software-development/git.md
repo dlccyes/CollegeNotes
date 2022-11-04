@@ -512,3 +512,11 @@ killall ssh-agent; eval `ssh-agent`
 ```
 
 [Ref](https://stackoverflow.com/a/58962127/15493213)
+
+### XXX: needs merge
+
+```
+git reset -- <path/to/file>
+```
+
+See <https://stackoverflow.com/a/9749773/154932132>
