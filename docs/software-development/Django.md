@@ -73,10 +73,15 @@ why not put in `templates/index.html`?
 > Now we might be able to get away with putting our templates directly in polls/templates (rather than creating another polls subdirectory), but it would actually be a bad idea. Django will choose the first template it finds whose name matches, and if you had a template with the same name in a different application, Django would be unable to distinguish between them. We need to be able to point Django at the right one, and the best way to ensure this is by namespacing them. That is, by putting those templates inside another directory named for the application itself.
 
 ## settings
+
 ### remove csrf protection
+
 `settings.py` `MIDDLEWARE` comment `'django.middleware.csrf.CsrfViewMiddleware'`
 
 ## migration
+
+Note that there will be several migrations created by django before you've done anything.
+
 - create migration
 	- alter `app1/models.py` and run `python manage.py makemigrations app1`, will generate migration files at `app1/migration` for you
 		- equivalent to [[Laravel]]'s `php artisan migrate` except you only have to alter the database format directly without worrying about the create table drop column syntax
@@ -86,8 +91,8 @@ why not put in `templates/index.html`?
 	- `python manage.py migrate`
 		- equivalent to [[Laravel]]'s `php artisan migrate`
 - migration status
-	- `python manage.py showmigrations`
+	- `python smanage.py showmigrations`
 		- eq to [[Laravel]]'s `php artisan migrate:status`
 		- `--plan` to print in list
-
-```
+- reset your database
+	- `python manage.py flush`

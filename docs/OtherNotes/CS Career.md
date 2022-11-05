@@ -179,6 +179,25 @@ layout: meth
 
 <https://www.reddit.com/r/cscareerquestions/comments/uczkay/>
 
+### Online Assessments
+
+#### Codesignal
+
+<https://github.com/Leader-board/OA-and-Interviews/blob/main/Online%20Assessments.md#codesignal>
+
+
+- 4 questions in 70 min.
+- grading
+	- purely algorithmic & automatic
+	- neet to pass all test cases in a problem to get a meaningful score
+- Q1 & Q2 LC Easy
+	- brute force will pass
+- Q3 implementation style LC Medium
+	- brute force will pass
+- Q4 LC Medium/Hard
+
+![](https://i.imgur.com/G0D5eJ8.png)
+
 ### Behavioral Questions
 
 - resources
