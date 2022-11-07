@@ -263,9 +263,9 @@ if err = r.dbClient.DB().
 - AfterFind
 	- auto execute after querying
 
-## Threading
+## Goroutine
 
-Goroutines
+concurrency
 
 ### With WaitGroup
 
@@ -296,6 +296,29 @@ func main() {
 	wg.Wait()
 }
 ```
+
+### Limit amount of goroutines
+
+```go
+package main
+
+import "fmt"
+
+const MAX = 20
+
+func main() {
+    sem := make(chan struct{}, MAX)
+    for {
+        sem <- struct{}{} // will block if there is MAX ints in sem
+        go func() {
+            fmt.Println("hello again, world")
+            <-sem // removes an int from sem, allowing another to proceed
+        }()
+    }
+}
+```
+
+<https://stackoverflow.com/a/25306439/15493213>
 
 ## Fx - dependency injection
 

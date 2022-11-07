@@ -45,3 +45,8 @@ heroku builds:create -a <appname>
 ```
 
 <https://github.com/heroku/heroku-builds>.
+
+## Redirect to another url
+
+Use this <https://elements.heroku.com/buttons/kenmickles/heroku-redirect>
+
