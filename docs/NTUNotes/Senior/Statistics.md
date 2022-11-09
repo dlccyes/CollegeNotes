@@ -26,6 +26,8 @@ func (explanatory) response
 
 ### Variables
 
+![](https://i.imgur.com/UzVm6QQ.png)
+
 - numeric
 	- discrete
 	- continious
@@ -65,9 +67,9 @@ Same mean & variance may stem from very different distributions
 
 - median = middle number
 	- 2 number -> average
-- Q1 = middle number between min & median
+- Q1 = middle number in upper half
 	- median has 2 number -> middle between min & closest median
-- Q3 = middle number between median & max
+- Q3 = middle number in lower half
 - IQR = Q3-Q1
 - upper whisker = min(max, Q3 + 1.5 x IQR)
 - lower whisker = max(min, Q1 - 1.5 x IQR)
@@ -78,6 +80,8 @@ Same mean & variance may stem from very different distributions
 ![](https://i.imgur.com/Ig7GgLi.png)
 
 ![](https://i.imgur.com/2szm57v.png)
+
+![](https://i.imgur.com/bRkSP59.png)
 
 ### Tables
 
@@ -219,6 +223,7 @@ e.g.
 ![](https://i.imgur.com/M22u3Uz.png)
 
 ![](https://i.imgur.com/SrI544h.png)
+
 ![](https://i.imgur.com/5RB5cxN.png)
 
 There is no statistically significant evidence that the fraction of children who are nearsighted is different from 0.08 at the 5% level
@@ -315,3 +320,9 @@ Each cell is an element, and the caluclate the x square as in one-way table, exc
 ![](https://i.imgur.com/hra9vfv.png)
 
 ![](https://i.imgur.com/nWAcVzo.png)
+
+## T test
+
+![](https://i.imgur.com/q4FdDoP.png)
+
+![](https://i.imgur.com/pZEIm4a.png)
