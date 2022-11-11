@@ -117,6 +117,145 @@ Only 3 irregular verbs - ser, ir, ver
 - if I were you
 	- See [If I were you](#If%20I%20were%20you)
 
+## Futuro imperfecto
+
+![](https://i.imgur.com/DfrebNO.png)
+
+![](https://i.imgur.com/4cH4aa3.png)
+
+## Food
+
+- lasaña = lasagna
+- bocadillo = sandwitch
+	- un bocadillo de atún
+- mantequilla = butter
+- arroz = rice
+	- arroz frito = 炒飯
+- fideo = noodles
+	- fideo con ternera = 牛肉麵
+- firjoles = beans
+- galletas = cookies
+- mani = peanut
+- azúcar = sugar
+- sal = salt
+- vino = wine
+- cebolla = onion
+- queso = cheese
+- aceite = oil
+	- aceite de oliva = olive oil
+- huevos = eggs
+- calabaza = pumpkin
+- lechuga = lettuce
+- zanahorias = carrots
+- tomates = tomatoes
+- patatas = potatoes
+- yogur = yogurt
+- zumo = juice
+	- zumo de narania = orange juice
+- helado = ice cream
+- plato = dishes
+- sopa = soup
+- picante = spicy
+- asado = roasted
+- turrón = 牛軋糖 (nougat)
+- nunca he comido = never have eaten
+
+### Fruit
+
+- manzanas = apples
+- plátanos = bananas
+- naranja = orange
+- fresa = strawberry
+- melocotón = peach
+- cereza = cherry
+- ciruela = plum = 李子
+
+### Vegetables
+
+- ajo = garlic
+- apio = celery = 芹菜
+- pepino = cucumber
+- espárrago = asparagus = 蘆筍
+- pimiento = bell pepper = 彩椒
+- pimienta = black pepper = 胡椒
+- espinaca = spinach = 菠菜
+
+### Meat
+
+- cordero = lamb
+- ternera = beef
+- pollo = chicken
+	- pollo frito = fried chicken
+- cerdo = pork
+- cochinillo = 乳豬
+	- cochinillo asado = 烤乳豬
+- filete = steak
+- chuletas = 肋排
+	- chuletas de cordero = 羊肋排
+- jamón = ham
+- chorizo = sausage
+
+### Seafood
+
+- mariscos = seafood
+- merluza = 鱈魚
+- atún = tuna
+- sardinas = sardine
+- salmón = salmon
+- calamares = squids
+	- calamares a la romana = 炸魷魚圈
+
+## Transportation
+
+- metro
+- tren = train
+	- toma el tren = take the train
+- avión = airplane
+- coche = car
+- bicicleta = bici = bicycle
+	- montar en bicicleta
+- motocicleta = moto = motorcycle
+	- voy a clases en moto
+	- montar en moto
+- a pie = on foot
+	- voy a clases a pie
+- andando = on foot
+	- voy a clases andando
+- facturación = check-in
+- asiento = seat
+- viajero = traveler / passenger
+- equipaje = luggage
+- embarque = boarding
+	- e.g. puertas de embarque = boarding gates
+- barco = ship / boat
+- taquilla = ticket office
+- rivisor = ticket collector
+- sala de espera = waiting room
+- precedente de = coming from
+	- e.g. el tren precedente de Mardrid
+- con destino a = heading for
+	- e.g. el vuelo con destino a Barcelona = a flight heading for Barcelona
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FfhpYTbYeQ-.png?alt=media&token=a7259254-ebe5-43fc-990c-bfaa7a2e4832)
+	- e.g.
+		- ¿Cómo vienes/vas a clases? (Vengo) en moto.
+		- ¿Cuánto (tiempo) tardas en llegar? (Tardo) 20 minutos (en llegar).
+		- ¿Cómo va al trabajo tu padre? (Mi padre va al trabajo) En moto. ¿Y tu madre? / ¿Cómo va al trabajo tu madre? (Mi madre va al trabajo) En metro. ¿Cuánto (tiempo) tarda en llegar tu padre? (Mi padre tarda) unos 30 minutos (en llegar). ¿Y tu madre? / ¿Cuánto (tiempo) tarda en llegar tu madre? (Mi madre tarda) unos 50 minutos (en llegar).
+
+### Train related
+
+- horario = trenes = train schedule
+- vía = railway
+- vagón = car (of a train)
+	- e.g. el vagón F = car F
+- andén = platform (of a train station)
+
+### Airplane related
+
+- piloto = pilot
+- vuelo = flight
+- azafata = flight attendant
+- subir al avión = get on the plane
+
 ## Spanish 1-1
 
 ### meta
@@ -1411,25 +1550,6 @@ Only 3 irregular verbs - ser, ir, ver
 	- en paro = unemployed
 	- sueldo = salary
 	- vacaciones = vacation
-- transportation
-	- metro
-	- tren = train
-		- toma el tren = take the train
-	- avión = airplane
-	- coche = car
-	- bicicleta = bici = bicycle
-		- montar en bicicleta
-	- motocicleta = moto = motorcycle
-		- voy a clases en moto
-		- montar en moto
-	- a pie = on foot
-		- voy a clases a pie
-	- andando = on foot
-		- voy a clases andando
-	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FfhpYTbYeQ-.png?alt=media&token=a7259254-ebe5-43fc-990c-bfaa7a2e4832)
-	- ¿Cómo vienes/vas a clases? (Vengo) en moto.
-	- ¿Cuánto (tiempo) tardas en llegar? (Tardo) 20 minutos (en llegar).
-	- ¿Cómo va al trabajo tu padre? (Mi padre va al trabajo) En moto. ¿Y tu madre? / ¿Cómo va al trabajo tu madre? (Mi madre va al trabajo) En metro. ¿Cuánto (tiempo) tarda en llegar tu padre? (Mi padre tarda) unos 30 minutos (en llegar). ¿Y tu madre? / ¿Cuánto (tiempo) tarda en llegar tu madre? (Mi madre tarda) unos 50 minutos (en llegar).
 - 程度
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FA1LRzM_E3f.png?alt=media&token=254fea13-a0a9-4c77-ba00-b48669f89725)
 - saber & conocer
@@ -2057,66 +2177,6 @@ Only 3 irregular verbs - ser, ir, ver
     - kilo
         - un kilo de zanahorias
     - litro = litter
-- 食物
-    - fruta = fruit
-        - manzanas = apples
-        - plátanos = bananas
-        - naranja = orange
-        - fresa = strawberry
-    - meat
-        - cordero = lamb
-        - ternera = beef
-        - pollo = chicken
-            - pollo frito = fried chicken
-        - cerdo = pork
-        - cochinillo = 乳豬
-            - cochinillo asado = 烤乳豬
-        - filete = steak
-        - chuletas = 肋排
-            - chuletas de cordero = 羊肋排
-        - jamón = ham
-        - chorizo = sausage
-    - mariscos = seafood
-        - merluza = 鱈魚
-        - atún = tuna
-        - sardinas = sardine
-        - salmón = salmon
-        - calamares = squids
-            - calamares a la romana = 炸魷魚圈
-    - lasaña = lasagna
-    - bocadillo = sandwitch
-        - un bocadillo de atún
-    - mantequilla = butter
-    - arroz = rice
-        - arroz frito = 炒飯
-    - fideo = noodles
-        - fideo con ternera = 牛肉麵
-    - firjoles = beans
-    - galletas = cookies
-    - mani = peanut
-    - azúcar = sugar
-    - sal = salt
-    - vino = wine
-    - cebolla = onion
-    - queso = cheese
-    - aceite = oil
-        - aceite de oliva = olive oil
-    - huevos = eggs
-    - calabaza = pumpkin
-    - lechuga = lettuce
-    - zanahorias = carrots
-    - tomates = tomatoes
-    - patatas = potatoes
-    - yogur = yogurt
-    - zumo = juice
-        - zumo de narania = orange juice
-    - helado = ice cream
-    - plato = dishes
-    - sopa = soup
-    - picante = spicy
-    - asado = roasted
-    - turrón = 牛軋糖 (nougat)
-    - nunca he comido = never have eaten
 - 餐廳
     - ¿me trae XXX? = can you bring me XXX?
     - me trae una taza de café?
@@ -2553,6 +2613,7 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - estar **muerta de frío** = be frozen / very cold
 
 ### cuando
+
 - de niño = when I was a kid
 - a los 20 años = when I was 20 yo
 - hace 10 años = 10 years ago
@@ -3024,19 +3085,17 @@ adj. + mente -> adv.
 	- e.g. En mi vida comido tofu frito = I've never eaten stinky tofu
 - durante mi vida = in my life
 	- e.g. Durante mi vida he viajado muchos países = I've travelled to a many countried in my life.
-- melocotón = peach
-- cereza = cherry
-- ciruela = plum = 李子
-- ajo = garlic
-- apio = celery = 芹菜
-- pepino = cucumber
-- espárrago = asparagus = 蘆筍
-- pimiento = bell pepper = 彩椒
-- pimienta = black pepper = 胡椒
-- espinaca = spinach = 菠菜
-- cuadro = paintingq
+- cuadro = painting
 - vasco = Basque
 - cenicero = ashtray
+- en breve = in brief
+- mirar = look
+- viñetas = drawing
+- rellenar = fill
+- antiguamente = in the past
+- estrella = star
+- hueco = hole
+- arreglar = fix
 
 ### Because
 

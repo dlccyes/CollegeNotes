@@ -35,6 +35,14 @@ The topmost bar
 
 Command + drag to rearrange the items
 
+## Restart audio service
+
+```
+sudo pkill coreaudiod
+```
+
+See `https://apple.stackexchange.com/a/366841`
+
 ## Applications
 
 ### Install/remove applications
