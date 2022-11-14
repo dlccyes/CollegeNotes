@@ -8,7 +8,9 @@ parent: Software Development
 	- https://todomvc.com/
 
 ## jQuery
+
 to include jQuery
+
 ```html
 <head>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -16,7 +18,9 @@ to include jQuery
 ```
 
 ## basics
+
 ### declaration
+
 - var
 - let
 	- block scoped
@@ -32,11 +36,15 @@ to include jQuery
 - `for(var key in json)` = `for key in dict` in Python
 
 ### string
+
 #### slice
+
 `str.slice(0,5)`
 
 ## function
+
 ### execute function after another
+
 example
 ```js
 # func1 -> func2
@@ -51,6 +59,7 @@ func1('haha', func2);
 ```
 
 ### pass parameter to callback
+
 example
 ```js
 function funcHandler(callback){

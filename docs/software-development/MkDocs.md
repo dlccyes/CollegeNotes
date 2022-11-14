@@ -22,6 +22,24 @@ pip3 install mkdocs
 
 See <https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation>
 
+## Plugins
+
+Note that the `search` plugin is enabled by default if you don't specify any plugin. But once you specify any plugin, you need to include it to enable it. [ref](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/)
+
+### Links
+
+To use `[[link]]` style link, use the roamlinks plugin
+
+<https://github.com/Jackiexiao/mkdocs-roamlinks-plugin/>
+
+```yaml
+plugins:
+  - search
+  - roamlinks 
+```
+
+
+
 ## Deploy
 
 ### Deploy to Github Page

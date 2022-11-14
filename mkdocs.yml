@@ -23,6 +23,10 @@ theme:
     - toc.follow
     - search.suggest
 
+plugins:
+  - search
+  - roamlinks 
+
 extra_css:
   - assets/style.css
 extra_javascript:
