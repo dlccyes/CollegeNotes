@@ -90,6 +90,9 @@ nav:
 
   - Web:
     - software-development/Web.md
+    - Static Site Generators:
+      - "software-development/Hugo.md"
+      - "software-development/Jekyll.md"
     - Web Frameworks:
       - software-development/Django.md
       - software-development/Flask.md
