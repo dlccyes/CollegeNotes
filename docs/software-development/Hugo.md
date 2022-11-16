@@ -24,7 +24,20 @@ hugo new site <hugo_dir>
 - `contents/` -> where your markdown files are at
 - `themes/` -> where your themes are at
 
+### File Path
+
+See <https://gohugo.io/content-management/organization/#path-breakdown-in-hugo>
+
 **Do not use `index.md` in `contents/**`**, otherwise the posts in the same directory will not be caught by `Paginator` i.e. you can't see your beautiful listed recent posts.
+
+## URL
+
+The auto generated url without any configuration is the path relative to `content`.
+
+You can define permalinks to set the format of the auto generated url. See <https://gohugo.io/content-management/urls/#relative-urls>
+
+You can also use frontmatter `url` to set it manually.
+
 
 ## Themes
 
@@ -62,17 +75,22 @@ Your tags & categories page will be in `./tags` & `./categories`
 
 ## Deploy
 
-### local run
+### Local run
 
 ```
 hugo server
 ```
 
-### gen static html pages
+### Gen static html pages
 
 ```
 hugo
 ```
+
+### Flags
+
+- `-D` include posts with frontmatter `draft: True`
+- `-F` include posts with frontmatter `date` set in the future
 
 ### github action
 
@@ -116,3 +134,14 @@ See <https://gohugo.io/content-management/summaries>
 ### Truncated
 
 Post word count > `summaryLength` or not
+
+## URL
+
+## Base URL
+
+Set your site's base url in `config.toml`
+
+```toml
+baseURL = 'http://localhost:1313/blog'
+```
+

@@ -41,6 +41,8 @@ Command + drag to rearrange the items
 sudo pkill coreaudiod
 ```
 
+Should restart automatically
+
 See `https://apple.stackexchange.com/a/366841`
 
 ## Applications

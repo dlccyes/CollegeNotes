@@ -321,8 +321,36 @@ Each cell is an element, and the caluclate the x square as in one-way table, exc
 
 ![](https://i.imgur.com/nWAcVzo.png)
 
-## T test
+## Inference for Numerical Data
+
+### T test
 
 ![](https://i.imgur.com/q4FdDoP.png)
 
 ![](https://i.imgur.com/pZEIm4a.png)
+
+### Power of Tests
+
+![](https://i.imgur.com/u8VH7GF.png)
+
+![](https://i.imgur.com/GY3hdWV.png)
+
+![](https://i.imgur.com/DYDDKtA.png)
+
+### Comparing Means
+
+![](https://i.imgur.com/K7thRg6.png)
+
+![](https://i.imgur.com/yHu3TKU.png)
+
+### ANOVA & F Test
+
+![](https://i.imgur.com/3Po8mF5.png)
+
+![](https://i.imgur.com/ASTdiOY.png)
+
+ANOVA Table
+
+![](https://i.imgur.com/JLCiA4t.png)
+
+![](https://i.imgur.com/XTlfABn.png)
