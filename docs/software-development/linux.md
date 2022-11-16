@@ -47,11 +47,13 @@ from win10/11
 11. you should see grub menu, now select kubuntu
 
 ### troubleshooting
+
 - stuck on install "Updates and other software" step
 	- reflash the kubuntu iso to your usb
 	- use the LTS version
 
 ### references
+
 - install with partition
 	- <https://medium.com/linuxforeveryone/how-to-install-ubuntu-20-04-and-dual-boot-alongside-windows-10-323a85271a73>
 	- <https://www.tecmint.com/install-ubuntu-alongside-with-windows/>
@@ -488,11 +490,14 @@ loginctl terminate session <id>
 ```
 
 ## network connection
+
 `nmcli` for cli  
 
 `nmtui` for gui in terminal  
 
 ## Bluetooth
+
+`bluetoothctl` for interactive CLI
 
 Show MAC of connected bluetooth devices
 
@@ -503,10 +508,32 @@ bluetoothctl devices
 Connect or disconnect a device via MAC
 
 ```
-bluetoothctl
-connect <MAC>
-disconnect <MAC>
+bluetoothctl connect <MAC>
+bluetoothctl disconnect <MAC>
 ```
+
+Full reconnecting process
+
+```
+bluetoothctl remove <MAC>
+bluetoothctl scan on
+bluetoothctl trust
+bluetoothctl pair <MAC>
+bluetoothctl connect <MAC>
+```
+
+### Failed to connect: org.bluez.Error.Failed br-connection-profile-unavailable
+
+`Failed to connect: org.bluez.Error.Failed br-connection-profile-unavailable` when you want to connect to your bluetooth headset.
+
+**Solution**
+
+```
+sudo apt-get install pulseaudio-module-bluetooth
+sudo pactl load-module module-bluetooth-discover
+```
+
+<https://askubuntu.com/a/1062044>
 
 ## PulseAudio
 
@@ -528,6 +555,12 @@ e.g. to get the card name of a bluetooth headphone
 pacmd list | grep bluez_card
 ```
 
+Restart pulseaudio process
+
+```
+systemctl --user restart pulseaudio
+```
+
 Kill pulseaudio process
 
 ```
@@ -540,6 +573,10 @@ Start pulseaudio process
 pulseaudio --start
 ```
 
+### Troubleshooting
+
+#### General
+
 Something's wrong e.g. no input device detected
 
 ```
@@ -549,6 +586,22 @@ pulseaudio --start
 ```
 
 <https://askubuntu.com/a/882222>
+
+#### Failure: Module initialization failed
+
+` Failure: Module initialization failed` when running 
+
+```
+sudo pactl load-module module-bluetooth-discover
+```
+
+**Solution**
+
+```
+sudo apt install bluetooth pulseaudio-module-bluetooth
+```
+
+<https://askubuntu.com/a/1121417>
 
 ## Port
 
@@ -1106,7 +1159,9 @@ sudo pacman -S fcitx5-chewing
 <https://wiki.archlinux.org/title/Fcitx5>
 
 ## volume control
+
 ### pavucontrol
+
 fully functional GUI  
 
 ```
@@ -1116,6 +1171,7 @@ pavucontrol
 <https://archived.forum.manjaro.org/t/how-to-config-sound-output-by-bluetooth-headset-in-manjaro-i3/144163/7>
 
 ### amixer
+
 can't make it output to my bluetooth earbud tho
 
 TUI  
@@ -1139,10 +1195,12 @@ amixer -q sset Master 3%-
 ```
 ??? strange behavior
 
-### pulsecontrol
+### Pulsecontrol
+
 can't make it output to my bluetooth earbud tho
 
 CLI  
+
 ```
 # list all device
 pactl list sinks
@@ -1153,10 +1211,13 @@ pactl set-sink-volume <sink id>
 ```
 
 ## natural scrolling
+
 to enable natural scrolling for touchpad, in `/usr/share/X11/xorg.conf.d/40-libinput.conf`, add 
+
 ```
 Option "NaturalScrolling" "True"
 ```
+
 in the `touchpad` entry
 
 <https://askubuntu.com/a/1122517>
