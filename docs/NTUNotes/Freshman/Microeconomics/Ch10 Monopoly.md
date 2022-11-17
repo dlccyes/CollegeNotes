@@ -5,6 +5,7 @@ layout: meth
 # Ch10 Monopoly
 
 ## 核心概念
+
 for comepetition, 不管產量多少，價格都一樣  
 → MR = P
 
@@ -17,9 +18,13 @@ Will set price/quantity to where marginal profit = 0 i.e. MR = MC.
 Remember when calculating equilibrium price/quantity with MR = MC, do the partial derivative of Q instead of P, as the corresponding P on MR curve != the actual P on demand curve. If you want to calculate the equilibrium with P, calculate with marginal profit = 0 instead.
 
 ## Lerner Index
+
 ![](https://i.imgur.com/qo2ezEl.png)
+
 the elasticity of the demand curve
+
 ![](https://i.imgur.com/s5x1Kqk.png)
+
 it's negative
 
 ![](https://i.imgur.com/nzQk8PL.png)

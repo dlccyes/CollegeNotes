@@ -52,6 +52,9 @@ site_name: El Mundo
 nav:
 - About: README.md
 
+- Meta:
+  - "OtherNotes/sitemap.md"
+
 - Posts:
   - Systems and Networking:
     - "software-development/Sniffing Packets from Wireless Networks.md"
@@ -144,11 +147,17 @@ nav:
   - "NTUNotes/Senior/Power Engineering.md"
 
 - Economics:
-  - "NTUNotes/Freshman/Microeconomics/README.md"
+  - Microeconomics:
+    - "NTUNotes/Freshman/Microeconomics/README.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch10 Monopoly.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch11 Market Power, Colusion, and Obligopoly.md"
   - "NTUNotes/Junior/Macroeconomics.md"
   - "NTUNotes/Senior/Statistics.md"
   - "NTUNotes/Sophomore/Econometrics.md"
-  - "NTUNotes/Sophomore/Money and Banking/README.md"
+  - "Money and Banking":
+    - "NTUNotes/Sophomore/Money and Banking/README.md"
+    - "NTUNotes/Sophomore/Money and Banking/Ch5 債券市場與利率的決定.md"
+    - "NTUNotes/Sophomore/Money and Banking/Ch13 中央銀行的功能與政策目標.md"
   - "NTUNotes/Freshman/Eurozone.md"
   - "NTUNotes/Junior/Industrial Organization.md"
 

@@ -2,6 +2,8 @@
 
 A makrdown static site generator
 
+{% raw %}
+
 ## Init
 
 See <https://gohugo.io/getting-started/quick-start/>
@@ -145,3 +147,32 @@ Set your site's base url in `config.toml`
 baseURL = 'http://localhost:1313/blog'
 ```
 
+## Query posts
+
+To query all posts except those with tag `myattr` = `true`
+
+```
+{{ $paginator := .Paginator }}
+{{ range where $paginator.Pages "Params.myattr" "!=" true}}
+{{ end }}
+```
+
+See <https://gohugo.io/functions/where/>
+
+{% endraw %}
+
+## Hide posts
+
+If you want to hide some of your posts from the public eye, but still keep them on the site, just drop them from the query list of your index pages. There are 2 ways to use Hugo's built-in functions 2 achieve that.
+
+### Add tags and use where clause
+
+Add a custom variable in the frontmatter of the posts you want to hide, and then use the where clause to skip the posts with the variable on. See [[#Query posts]].
+
+To see your post, you may have to go to the link directly.
+
+### Smuggle in as another language and hide from language switcher
+
+Create a fake language and make the posts you want to hide in that language. If you have a language switcher, use where or if clause to hide it.
+
+To see your post, just head to the index page of that language, just like how you see that in other languages.
