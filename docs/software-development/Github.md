@@ -36,7 +36,7 @@ e.g.
 
 ## Github Action
 
-[Github Action](Github%20Action)
+[[Github Action]]
 
 ## Profile readme
 

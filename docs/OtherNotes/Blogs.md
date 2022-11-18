@@ -6,8 +6,10 @@ Some cool blogs.
 - [Mental Nodes](https://www.mentalnodes.com/about)
 	- tiddlywiki
 - <https://brianlovin.com/>
-- <https://www.gwern.net/>
-	- [about the design](https://www.gwern.net/Design)
+- [Gwern](https://www.gwern.net/)
+	- [About the design](https://www.gwern.net/Design)
+	- [Twitter](https://twitter.com/gwern)
+	- [2012 Q&A on Hackernews](https://news.ycombinator.com/item?id=5653874) ([archive](https://web.archive.org/web/20221028020004/https://news.ycombinator.com/item?id=5653874))
 - <https://blog.dsrkafuu.net/>
 	- cool [widget](https://github.com/dsrkafuu/sakana-widget)
 

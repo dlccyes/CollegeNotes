@@ -10,7 +10,9 @@ parent: Software Development
 - <https://fullstackopen.com/en/>
 	- muy bonita
 
-## Set up DNS record
+## DNS
+
+### Set up DNS record
 
 - for ip
 	- add a record -> `Type` = `A`, `Target` = `<your target ip>`
@@ -18,13 +20,28 @@ parent: Software Development
 		- can leave it blank
 	- e.g.
 		- ![](https://i.imgur.com/nuPiOu1.png)
-	- might need a little time to take effect ??
 
-## Get domain
+ 
+It may need a 24 hours to fully take effect, so don't be worried if you see some errors.
+
+### Buy domain
 
 - free
 	- <https://my.freenom.com>
 		- tested, muy bueno
+- Google Domain
+
+### Check DNS records
+
+```
+dig <host_name>
+```
+
+Check TXT record
+
+```
+dig <host_name> TXT
+```
 
 ## CORS
 

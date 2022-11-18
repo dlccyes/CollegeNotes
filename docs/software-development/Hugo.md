@@ -1,6 +1,6 @@
 # Hugo
 
-A makrdown static site generator
+A markdown static site generator
 
 {% raw %}
 
@@ -40,6 +40,15 @@ You can define permalinks to set the format of the auto generated url. See <http
 
 You can also use frontmatter `url` to set it manually.
 
+## Internal Linking
+
+Hugo does not support `[[wikilinks]]`. See [this open issue](https://github.com/gohugoio/hugo/issues/3606).
+
+Hugo put each of your post in a directory in the generated static site for some reason, so using the relative path in your canonical repo does not work. And if you use `domain/dir` as your `baseURL`, using the absolute path (treating `content` as root) doesnt' work either.
+
+The only non-hacky choice left, is to use Hugo's [shortcode](https://gohugo.io/content-management/shortcodes/#ref-and-relref). But you'll have to type all that yourself, plus it won't work in your Github or Obsidian or whatever you use to write your markdown files.
+
+See [this post](https://gasparri.org/2022-06-10-hugo-wikilinks/) for more info. Spoiler: it does not solve anything.
 
 ## Themes
 

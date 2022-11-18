@@ -3096,6 +3096,15 @@ adj. + mente -> adv.
 - estrella = star
 - hueco = hole
 - arreglar = fix
+- seguramente = probably
+- odiar = hate
+- oraciones = sentences
+- volar = fly
+- tal vez = maybe
+- quizá = maybe
+- píldora = pill
+- descubrir = find out
+- mago = magician
 
 ### Because
 
@@ -3232,6 +3241,22 @@ I suggest that ...
 - Te sugiero que + subjunctive
 	- ![](https://i.imgur.com/uZ7l3Ba.png)
 	- ![](https://i.imgur.com/BVBc2R5.png)
+
+
+### Probably
+
+- very sure -> indicativo
+- not very sure -> subjunctivo
+- Seguramente ...
+	- ![](https://i.imgur.com/d6BKu7X.png)
+- Probablemente ... 
+	- ![](https://i.imgur.com/GTABQrV.png)
+- Posiblemente ...
+	- ![](https://i.imgur.com/1Q0ZzL5.png)
+- Quizá(s) ... 
+	- ![](https://i.imgur.com/eHEFPAO.png)
+- Puede + subjunctivo
+	- ![](https://i.imgur.com/x4hMURQ.png)
 
 ### temp
 

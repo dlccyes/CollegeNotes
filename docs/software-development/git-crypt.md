@@ -50,3 +50,8 @@ base64 path/to/key
 ```
 
 See [base64](base64)
+
+### See your key
+
+After doing the above steps, you should be able to see your symmetric key in `.git/git-crypt/keys/default `
+

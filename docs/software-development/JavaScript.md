@@ -105,15 +105,18 @@ $('#refresh').on('click', function(){
 
 <https://stackoverflow.com/questions/10979865>
 
-## cookie
+## Cookie
+
 When setting a cookie on the child page / subdomain that has been set in root page / main domain, it will create a duplicate cookie in front of the previous one, instead of directly changing the value. To avoid this, append `domain` & `path` when setting cookie.
 
 ```
 document.cookie = cookieName + "=" + newValue + '; domain=' + window.location.hostname + '; path=/';
 ```
+
 <https://stackoverflow.com/a/5671466/15493213>
 
 ## disable/enable style
+
 jQuery
 ```js
 $('#your_style').get(0).type = 'text' //diable
