@@ -8,6 +8,7 @@ parent: Software Development
 Kubuntu (Ubuntu with KDE) for example
 
 ### procedure
+
 from win10/11
 
 1. install kubuntu iso
@@ -46,7 +47,7 @@ from win10/11
 10. if still boot to Windows (no grub menu) -> cmd as admin -> `bcdedit /set {bootmgr} path \EFI\kubuntu\grubx64.efi` -> reboot
 11. you should see grub menu, now select kubuntu
 
-### troubleshooting
+### Troubleshooting
 
 - stuck on install "Updates and other software" step
 	- reflash the kubuntu iso to your usb
@@ -499,7 +500,7 @@ loginctl terminate session <id>
 
 `bluetoothctl` for interactive CLI
 
-Show MAC of connected bluetooth devices
+Show MAC of paired bluetooth devices
 
 ```
 bluetoothctl devices
@@ -517,7 +518,7 @@ Full reconnecting process
 ```
 bluetoothctl remove <MAC>
 bluetoothctl scan on
-bluetoothctl trust
+bluetoothctl trust <MAC>
 bluetoothctl pair <MAC>
 bluetoothctl connect <MAC>
 ```
@@ -526,7 +527,11 @@ bluetoothctl connect <MAC>
 
 `Failed to connect: org.bluez.Error.Failed br-connection-profile-unavailable` when you want to connect to your bluetooth headset.
 
-**Solution**
+`systemctl status bluetooth` may tell you `a2dp-sink profile connect failed` (relevant: [this](https://bbs.archlinux.org/viewtopic.php?pid=1999622#p1999622) & [this](https://askubuntu.com/q/1172000))
+
+It's a problem I still haven't fully figu red out yet, but **here's some solutions that sometimes work**
+
+Try
 
 ```
 sudo apt-get install pulseaudio-module-bluetooth
@@ -534,6 +539,31 @@ sudo pactl load-module module-bluetooth-discover
 ```
 
 <https://askubuntu.com/a/1062044>
+
+If this doesn't work, try edit `/etc/pulse/default.pa` and make sure these lines are **not** commented
+
+```
+load-module module-bluetooth-policy
+load-module module-bluetooth-discover
+```
+
+Now, remove the configs of pulseaudio, and reboot.
+
+```sh
+rm  ~/.config/pulse/*
+pulseaudio -k
+```
+
+After rebooting, restart pulseaudio 
+
+```
+systemctl --user restart pulseaudio
+```
+
+Now try connect your bluetooth headset again.
+
+See <https://askubuntu.com/a/1020601>
+
 
 ## PulseAudio
 

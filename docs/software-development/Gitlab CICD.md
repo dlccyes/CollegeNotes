@@ -34,6 +34,7 @@ Whenever you push code to your gitlab repo, gitlab's CI/CD pipeline would be tri
 		- <https://forum.gitlab.com/t/error-during-connect-post-http-docker-2375-v1-40-auth-dial-tcp-lookup-docker-on-169-254-169-254-no-such-host/28678/4>
 
 ## Create GCP VM and install Gitlab
+
 (Not really necessary, you can just use your own machine and <https://gitlab.com/>. If you're using your local machine, just do all the steps involving GCP VM on your local machine instead.)
 
 Create a computing engine instance
