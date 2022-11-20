@@ -312,6 +312,7 @@ Bell (W2)
     - e.g. Splay tree
 
 ### Splay Tree
+
 - 性質
   - per operation $\in O(N)$
   - amortized time $\in O(logN)$
@@ -337,7 +338,6 @@ Bell (W2)
   - ![Image](https://i.imgur.com/vSWcPPD.png)
   - e.g.
     - ![Image](https://i.imgur.com/gG7JNgk.png)
-
 - amortized cost
   - zig-zig
   ![Image](https://i.imgur.com/g5R5z3J.png)
@@ -354,7 +354,9 @@ Bell (W2)
   - 深度為奇數 → 結果可能跟 bottom-up 不一樣
 
 ### Multi-Way Search Trees
+
 #### 2-3-4 Tree
+
 - all leaf on same level
 - each node has 1/2/3 items
 - k items → k+1 children

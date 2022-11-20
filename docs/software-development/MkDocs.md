@@ -28,9 +28,9 @@ Note that the `search` plugin is enabled by default if you don't specify any plu
 
 ### Links
 
-To use `[[link]]` style link, use the roamlinks plugin
+To use wiki style `[[link]]`, use the roamlinks plugin
 
-<https://github.com/Jackiexiao/mkdocs-roamlinks-plugin/>
+See <https://github.com/Jackiexiao/mkdocs-roamlinks-plugin/>
 
 ```yaml
 plugins:

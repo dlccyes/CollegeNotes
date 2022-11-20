@@ -46,9 +46,11 @@ layout: meth
 - <https://www.levels.fyi/>
 	- company salaries
 - <https://www.glassdoor.com/>
-	- company salaries & reviews
+	- company salaries, reviews, and interviews
 - <https://interview.tw/>
 	- glassdoor (a crippled one) of Taiwan
+- <https://www.libaspace.com/questions/>
+	- real interview questions
 - rooftopslushie.com
 	- get referral (for some money) (just use Blind)
 - grinding

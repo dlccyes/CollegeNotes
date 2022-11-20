@@ -5,16 +5,20 @@ parent: Software Development
 
 # Sniffing Packets from Wireless Networks
 
-To see the full details of the packets, you'll have to connect to an unencrypted network.
+To see the full information of the packets, you'll have to connect to an unencrypted network.
 
-There are multiple methods of achieving this, sadly not all works.
+There are multiple methods of achieving this, not all works unfortunately.
 
 ## With a hotspot created from the Ethernet interface
+
+The easiet method
 
 1. Set up an Ethernet connection on your computer
 2. Create a (unencrypted) wifi hotspot
 3. Connect your phone (the device you want to sniff traces on) with the hotspot
 4. `sudo tcpdump -i <ethernet_interface>`
+
+Refer to [[tcpdump]] to see more of its commands
 
 ## With tcpdump -I flag
 

@@ -179,5 +179,17 @@
       ],
       "key": "Q"
     }
+  ],
+  "cycle-through-panes:cycle-through-panes": [],
+  "cycle-through-panes:cycle-through-panes-reverse": [],
+  "workspace:next-tab": [],
+  "workspace:previous-tab": [],
+  "cycle-through-panes:focus-on-last-active-pane": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Tab"
+    }
   ]
 }

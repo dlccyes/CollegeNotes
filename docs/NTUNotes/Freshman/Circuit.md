@@ -4,9 +4,11 @@ layout: meth
 ---
 
 # 電路學
+
 powered by $\LaTeX$
 
 ## 共同網頁  
+
 <http://cc.ee.ntu.edu.tw/~ntueecircuit/> 
 
 ## Bode Plot
@@ -26,14 +28,14 @@ make independent voltage source 短路 (v=0)
 
 ### Thevenin & Norton
 
-打開 terminal → 算 V~OC~ → 算 R~TH~  
-==算 R~TH~ or 時 independent voltage source 短路 independent current source 斷路==
+打開 terminal → 算 $V_{OC}$ → 算 $R_{TH}$  
+==算 $R_{TH}$  or 時 independent voltage source 短路 independent current source 斷路==
 
 if have only dependent souces
 : 在 terminal 自由接上一個 voltage/current source
 
 if have both independent & dependent sources
-: 打開 terminal → 算 V~OC~ → terminal 接上電線算 I~SC~ → $R_{TH}=\frac{V_{OC}}{I_{SC}}$  
+: 打開 terminal → 算 $V_{OC}$  → terminal 接上電線算 $I_{SC}$  → $R_{TH}=\frac{V_{OC}}{I_{SC}}$  
 
 ### source exchange
 ![](https://i.imgur.com/MRqLp2f.png)
@@ -49,6 +51,7 @@ $Q=CV \\i=C\frac{dV_C}{dt}$
 $\phi=Li \\V_L=L\frac{di_L}{dt}$
 
 ## Ch7
+
 ### first order
 
 **step 1**  
@@ -201,9 +204,8 @@ Q單位：VARs
 
 ## Ch12
 
-==20200529-1 有 3 題習題講解 沒看==
-
 ==注意算 transfer function 時不一定直接是電阻相除，可能有並聯的情況==
+
 e.g.
 
 <img src="https://i.loli.net/2020/06/03/fYrITBm42CP6qS9.png" width=300 style="float:left">
@@ -219,8 +221,11 @@ RLC : $\omega_0=\dfrac{1}{\sqrt{LC}}$
 
 ### quality factor
 ![](https://i.imgur.com/o0BZip2.png)
+
 #### series  
+
 ![	](https://i.imgur.com/LfQocNW.png)
+
 $|V_S|=Q|V_C|\\|V_S|=Q|V_L|$
 
 $BW=\dfrac{\omega_0}{Q}=\dfrac{R}{L}$
@@ -228,6 +233,7 @@ $BW=\dfrac{\omega_0}{Q}=\dfrac{R}{L}$
 #### parallel
 
 ![](https://i.imgur.com/3TaScgq.png)
+
 $|I_S|=Q|I_C|\\|I_S|=Q|I_L|$
 
 $BW=\dfrac{\omega+0}{Q}=\dfrac{1}{RC}$
@@ -244,6 +250,7 @@ parallel：$BW=\dfrac{\omega_0}{Q}=\dfrac{1}{RC}$
 $\omega_{max}=\omega_0\sqrt{1-\dfrac{1}{2Q^2}}$
 
 ### parallel RLC with winding resistance
+
 ![](https://i.imgur.com/UKyMBm2.png)
 
 $R_w$ = 電感內電阻
@@ -280,12 +287,13 @@ $j\omega+x$
 4. 把漸進線疊起來
 5. 在 $0.1W$、$\dfrac{W}{2}$ 、$2W$ 、$10W$ 算出真實的值，做修正
 
-####  二次
+#### 二次
 
 ![image-20200604003630548](https://i.loli.net/2020/06/04/dkZcwy1Y57lUPXJ.png)
 ![image-20200604003656882](https://i.loli.net/2020/06/04/KZOmbtUvnLg8d6W.png)
 
 $\omega=\omega_0 → |H|=Q$
+
 ![image-20200604111258228](https://i.loli.net/2020/06/04/3gP4nGVOJtcNEhz.png)
 
 $\dfrac{50}{(j\omega)^2(j\omega+0.5)}$

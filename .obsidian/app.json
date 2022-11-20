@@ -27,7 +27,7 @@
     "en-US",
     "es"
   ],
-  "newLinkFormat": "relative",
+  "newLinkFormat": "shortest",
   "showInlineTitle": false,
   "showFrontmatter": false
 }

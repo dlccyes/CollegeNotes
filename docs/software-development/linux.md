@@ -2,9 +2,11 @@
 layout: meth
 parent: Software Development
 ---
+
 # Linux
 
 ## installation for newbie
+
 Kubuntu (Ubuntu with KDE) for example
 
 ### procedure
@@ -196,8 +198,11 @@ lsblk
 ```
 
 ## networking
+
 ### show network interfaces
+
 show all network interfaces
+
 ```
 # install net-tools if haven't
 ifconfig
@@ -214,6 +219,7 @@ sudo airmon-ng
 ```
 
 ### see wireless driver
+
 ```
 lspci -nnk | grep -A4 0280
 ethtool -i wlan0 | grep driver
@@ -226,6 +232,7 @@ ethtool -i wlan0 | grep driver
 You'll be disconnected from the network when you're in monitor mode.
 
 #### with airmon-ng
+
 ```
 sudo airmon-ng start <interface>
 ```
@@ -275,120 +282,9 @@ disable
 sudo ifconfig <interface> down
 ```
 
-### sniffing wireless packets
-[Sniffing Packets from Wireless Networks](Sniffing%20Packets%20from%20Wireless%20Networks)
+## Sniffing packets
 
-### tcpdump
-<https://homepage.ntu.edu.tw/~pollyhuang/teach/net-simtest-spring-08/slides.html>
-
-see your interfaces with `ifconfig`
-
-#### flags
-> tcpflags are some combination of S (SYN), F (FIN), P (PUSH), R (RST), U (URG), W (ECN CWR), E (ECN-Echo) or . (ACK), or none if no flags are set.
-
-#### read
-read packets
-```
-sudo tcpdump -i <interface>
-```
-
-read 5 packets
-```
-sudo tcpdump -i <interface> -c 5
-```
-
-read from file
-```
-sudo tcpdump -r output.tr
-```
-
-#### write
-write output to file
-```
-sudo tcpdump -i <interface> -c 5 -w output.tr
-```
-
-write output to file but limit to 1MB
-```
-sudo tcpdump -i <interface> -c 5 -w output.tr -w output.tr -C 1
-```
-over 1MB -> save to output.tr1
-
-#### expressions
-add expression directly
-```
-sudo tcpdump -i <interface> ip src or dst host 140.112.42.162
-```
-
-use expressions in expression.exp
-```
-sudo tcpdump -i <interface> -F expression.exp
-```
-
-get start & end packets
-```
-sudo tcpdump -i <interface> 'tcp[tcpflags] & (tcp-syn|tcp-fin) != 0'
-```
-
-get ACK packets
-```
-sudo tcpdump -i <interface> 'tcp[tcpflags] & (tcp-ack) != 0'
-```
-
-examples
-```
-Expressions:types
-tcpdump -r tmp.tr -c 2 host nslab.ee.ntu.edu.tw
-tcpdump -r tmp.tr -c 2 net 140.112.154
-tcpdump -r tmp.tr -c 2 net 140.112.154.128/25
-tcpdump -r tmp.tr -c 2 net 140.112.154.128 mask 255.255.255.128
-tcpdump -r tmp.tr -c 2 port 80
-tcpdump -r tmp.tr -c 2 port http
-tcpdump -r tmp.tr -c 2 port ssh
-
-Expressions:directions
-tcpdump -r tmp.tr -c 2 src or dst host nslab.ee.ntu.edu.tw
-tcpdump -r tmp.tr -c 2 dst net 140.112.154
-tcpdump -r tmp.tr -c 2 dst port 80
-
-Expressions:protocols
-tcpdump -r tmp.tr -c 2 ip src or dst host nslab.ee.ntu.edu.tw
-tcpdump -r tmp.tr -c 2 arp dst net 140.112.154
-tcpdump -r tmp.tr -c 2 tcp dst port 80
-tcpdump -r tmp.tr -c 2 udp 
-tcpdump -r tmp.tr -c 2 broadcast
-
-Expressions:others
-tcpdump -r tmp.tr -c 2 greater 100
-tcpdump -r tmp.tr -c 2 less 100
-
-Expressions:operands
-tcpdump -r tmp.tr -c 2 dst host nslab.ee.ntu.edu.tw and tcp 
-tcpdump -r tmp.tr -c 2 dst host nslab.ee.ntu.edu.tw \&\& tcp 
-tcpdump -r tmp.tr -c 2 dst host nslab.ee.ntu.edu.tw and \(tcp or udp\)
-
-Expressions:in a separate file
-tcpdump -r tmp.tr -c 2 -F test.exp
-```
-
-#### troubleshooting
-##### permission
-If you run it in Ubuntu, it might say you don't have permission. Do the followings to fix it
-
-```
-grep tcpdump /sys/kernel/security/apparmor/profiles
-```
-If it said `tcpdump (enforce)`, make it in `complain` mode by
-```
-aa-complain /usr/sbin/tcpdump
-# or aa-complain tcpdump
-```
-
-You can install `aa-complain` by 
-```
-sudo apt install apparmor-utils
-```
-<https://blog.karatos.in/a?ID=01100-68ee7a10-9f07-412a-aa93-e67032182326>
+You can use the CLI tool [[tcpdump]] to sniff on your interfaces, or use WireShark for GUI. It's a bit more complicated if you want to [[Sniffing Packets from Wireless Networks|sniff packets from wireless networks]], however.
 
 ## find things
 
@@ -563,75 +459,6 @@ systemctl --user restart pulseaudio
 Now try connect your bluetooth headset again.
 
 See <https://askubuntu.com/a/1020601>
-
-
-## PulseAudio
-
-Show audio devices
-
-```
-pacmd list
-```
-
-Set a card to a2dp_sink
-
-```
-pacmd set-card-profile <card_name> a2dp_sink
-```
-
-e.g. to get the card name of a bluetooth headphone
-
-```
-pacmd list | grep bluez_card
-```
-
-Restart pulseaudio process
-
-```
-systemctl --user restart pulseaudio
-```
-
-Kill pulseaudio process
-
-```
-pulseaudio -k
-```
-
-Start pulseaudio process
-
-```
-pulseaudio --start
-```
-
-### Troubleshooting
-
-#### General
-
-Something's wrong e.g. no input device detected
-
-```
-rm  ~/.config/pulse/*
-pulseaudio -k
-pulseaudio --start
-```
-
-<https://askubuntu.com/a/882222>
-
-#### Failure: Module initialization failed
-
-` Failure: Module initialization failed` when running 
-
-```
-sudo pactl load-module module-bluetooth-discover
-```
-
-**Solution**
-
-```
-sudo apt install bluetooth pulseaudio-module-bluetooth
-```
-
-<https://askubuntu.com/a/1121417>
 
 ## Port
 
@@ -1188,19 +1015,15 @@ sudo pacman -S fcitx5-chewing
 
 <https://wiki.archlinux.org/title/Fcitx5>
 
-## volume control
+## Audio
 
-### pavucontrol
+### Sound Server
 
-fully functional GUI  
+[[PulseAudio]]
 
-```
-pavucontrol
-```
+### Audio Control
 
-<https://archived.forum.manjaro.org/t/how-to-config-sound-output-by-bluetooth-headset-in-manjaro-i3/144163/7>
-
-### amixer
+#### Amixer
 
 can't make it output to my bluetooth earbud tho
 
@@ -1220,25 +1043,28 @@ amixer -q sset Master 3%+
 ```
 
 decrease 3% volume
+
 ```
 amixer -q sset Master 3%-
 ```
+
 ??? strange behavior
 
-### Pulsecontrol
+### Bluetooth headset A2DP not available
 
-can't make it output to my bluetooth earbud tho
+What works for me:
 
-CLI  
+1. Go into `/var/lib/bluetooth/`
+2. Delete the directory under it
+3. reboot
+4. Reconnect all of your Bluetooth devices
 
-```
-# list all device
-pactl list sinks
-# view device volume
-pactl get-sink-volume <sink id>
-# set device volume
-pactl set-sink-volume <sink id>
-```
+Other methods (none works for my Kubuntu tho): 
+
+- <https://wiki.archlinux.org/title/Bluetooth_headset#A2DP_sink_profile_is_unavailable>
+- <https://askubuntu.com/questions/863930/>
+- <https://askubuntu.com/questions/765233/>
+- <https://askubuntu.com/questions/676853/>
 
 ## natural scrolling
 
@@ -1886,20 +1712,3 @@ sudo lsof .fuse_hidden<????>
 ```
 
 And then `kill -9 <PID>` to kill it.
-
-### Bluetooth headset A2DP not available
-
-What works for me:
-
-1. Go into `/var/lib/bluetooth/`
-2. Delete the directory under it
-3. reboot
-4. Reconnect all of your Bluetooth devices
-
-Other methods (none works for my Kubuntu tho): 
-
-- <https://wiki.archlinux.org/title/Bluetooth_headset#A2DP_sink_profile_is_unavailable>
-- <https://askubuntu.com/questions/863930/>
-- <https://askubuntu.com/questions/765233/>
-- <https://askubuntu.com/questions/676853/>
-

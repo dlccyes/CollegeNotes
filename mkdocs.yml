@@ -90,6 +90,8 @@ nav:
     - software-development/Makefile.md
     - software-development/base64.md
     - software-development/ANSI.md
+    - software-development/PulseAudio.md
+    - software-development/tcpdump.md
 
   - Web:
     - software-development/Web.md
@@ -120,6 +122,7 @@ nav:
       - software-development/AWS.md
       - software-development/GCP.md
       - software-development/Heroku.md
+      - software-development/Firebase.md
     - Containerization:
       - software-development/Docker.md
       - software-development/Kubernetes.md
