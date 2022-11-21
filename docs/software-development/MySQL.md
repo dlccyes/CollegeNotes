@@ -7,7 +7,17 @@ parent: Software Development
 
 ## Install MySQL CLI
 
-1. Download <https://dev.mysql.com/downloads/shell/>
+### Debian
+
+```
+apt-get install default-mysql-client
+```
+
+See <https://superuser.com/a/1481211>
+
+### Other
+
+1. Go to  <https://dev.mysql.com/downloads/shell/> and download
 2. `export PATH=/usr/local/mysql/bin:$PATH`
 3. `mysql -u root -p`
 

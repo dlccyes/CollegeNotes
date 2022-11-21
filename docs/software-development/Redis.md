@@ -13,6 +13,12 @@ parent: Software Development
 brew install redis
 ```
 
+### Debian
+
+```
+apt-get install redis-server
+```
+
 ### Check version
 
 ```
@@ -52,6 +58,16 @@ Or omit the `-a` flag and then login with
 ```
 AUTH <password>
 ```
+
+If your data is sharded, you'll have to supply the `-c` flag
+
+```
+redis-cli -c -h <host> -p <port>
+```
+
+Otherwise you'll see some errors like `(error) MOVED 5505` when you're connected and execute a command
+
+See <https://stackoverflow.com/a/53000256/15493213>
 
 ## CLI
 

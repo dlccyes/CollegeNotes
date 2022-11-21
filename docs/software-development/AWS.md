@@ -15,6 +15,7 @@ the url looks like
 `https://<region>.console.aws.amazon.com/billing/home?region=<region>#/freetier`
 
 ## Get Credentials
+
 Create IAM user (& group)  
 <https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html#getting-started_create-admin-group-console>
 
@@ -23,7 +24,18 @@ e.g.``AmazonDynamoDBFullAccess` for accessing DynamoDB
 
 Generate credentials for your user
 
+## S3
+
+### List Object
+
+In S3, there are no actualy heirarchy. When you create a file `file1` under the directory `dir1`, what you did is add an object called `dir1/file1`. 
+
+If you want to get the objects uder a directory, what you can do is specify a `prefix`. Note that an directory is also an object, so it will also be returned. You might want to filter it out as it's not an actual file.
+
+See <https://stackoverflow.com/a/18697988/15493213>
+
 ## boto3
+
 AWS SDK for Python
 
 doc  

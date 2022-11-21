@@ -400,6 +400,18 @@ go test -v -cover -covermode=count -coverpkg=./... -coverprofile=coverage.out ./
 go test -json ./... > report.json
 ```
 
+### VsCode helper
+
+You'll see a snippet allowing you to execute the test directly in VsCode. You can add additional flag in the settings.
+
+For example, if you want it to always run with `-v` (verbose), add this in settings
+
+```
+`"go.testFlags": ["-v"]`
+```
+
+See <https://github.com/Microsoft/vscode-go/issues/1377#issuecomment-347431580>
+
 ## Mock
 
 ### GoMock
