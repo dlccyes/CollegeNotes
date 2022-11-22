@@ -173,3 +173,17 @@ $b_{\mathrm{min}}$ = r of nucleus -> $\theta_{\mathrm{max}}$
 Fraction of alpha particles scattered by $\theta$ or more
 
 ![](https://i.imgur.com/CjqDl3e.png)
+
+## Quantum Physics
+
+### Normalized
+
+![](https://i.imgur.com/x83sZmm.png)
+
+### Well-Behaved Wave Functions
+
+Only those with these properties can yield physically meaningful results.
+
+![](https://i.imgur.com/5pn8kfI.png)
+
+y & dy/dx need to be finite, continuous, and single-valued

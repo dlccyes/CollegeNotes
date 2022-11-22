@@ -29,5 +29,6 @@
   ],
   "newLinkFormat": "shortest",
   "showInlineTitle": false,
-  "showFrontmatter": false
+  "showFrontmatter": false,
+  "strictLineBreaks": true
 }

@@ -9,7 +9,9 @@ layout: meth
 - sup: least upper bound
 
 ## Big-Oh Notation
+
 檢測
+
 - $f(x)=\dfrac{h(x)}{g(x)}$
   - $\lim_{x\to\infty} f(x)$
   - $\lim_{x\to\infty} \frac{f(x+1)}{f(x)}$

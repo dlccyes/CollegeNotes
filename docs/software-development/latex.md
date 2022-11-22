@@ -12,6 +12,12 @@ Draw here and you'll know
 
 <http://detexify.kirelabs.org/classify.html>
 
+### vertical bar
+
+`\big\rvert` -> $\big\rvert$
+
+See <https://tex.stackexchange.com/a/40162>
+
 ## Character style
 
 - fancy
@@ -249,8 +255,10 @@ Doc: <https://en.wikibooks.org/wiki/LaTeX/Algorithms>
 \end{algorithm}
 ```
 
-## environment
+## Environment
+
 ### local
+
 1. install a LaTeX distro
 	- tex live
 		- official https://www.tug.org/texlive/acquire-netinstall.html
@@ -263,4 +271,18 @@ Doc: <https://en.wikibooks.org/wiki/LaTeX/Algorithms>
 		- `xelatex XXX.tex` → generate compiled pdf
 
 ### online
+
 - overleaf
+
+## packages
+
+### mdframed
+
+Enclose your contents with a box
+
+**formatting**
+
+```tex
+\begin{mdframed}[backgroundcolor=red!5!white, fontcolor=red]
+\end{mdframed}
+```
