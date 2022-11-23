@@ -188,3 +188,18 @@ Only those with these properties can yield physically meaningful results.
 
 y & dy/dx need to be finite, continuous, and single-valued
 
+### Expectation Values
+
+![](https://i.imgur.com/30mi4aj.png)
+
+![](https://i.imgur.com/gdobour.png)
+
+![](https://i.imgur.com/Hfwvt1h.png)
+
+### Particle in a box
+
+energy
+
+![](https://i.imgur.com/7WjH6m6.png)
+
+![](https://i.imgur.com/ROkyLQz.png)
