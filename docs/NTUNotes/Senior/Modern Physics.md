@@ -187,3 +187,4 @@ Only those with these properties can yield physically meaningful results.
 ![](https://i.imgur.com/5pn8kfI.png)
 
 y & dy/dx need to be finite, continuous, and single-valued
+

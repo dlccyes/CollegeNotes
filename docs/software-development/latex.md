@@ -14,7 +14,7 @@ Draw here and you'll know
 
 ### vertical bar
 
-`\big\rvert` -> $\big\rvert$
+`\bigg\rvert` -> $\bigg\rvert$
 
 See <https://tex.stackexchange.com/a/40162>
 
