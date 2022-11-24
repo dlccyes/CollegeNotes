@@ -1,6 +1,5 @@
 ---
 title: Jekyll
-alias: Github Page
 parent: Software Development
 ---
 
@@ -61,6 +60,7 @@ in `_config.yml` add `remote_theme: pmarsceill/just-the-docs`
 each page use the `page` layout, which is like
 
 {% raw %}
+
 ```
 ---
 layout: default
@@ -78,24 +78,35 @@ layout: default
 {% include mathjax.html %}
 {{ content }}
 ```
-{% endraw %}
 
 #### TOC
-{% raw %}
-`` to not include this header in TOC
-```
+
+To not include a header in TOC, add this under the header
 
 ```
-to see collapsible unnumbered TOC
+{: .no_toc }
+```
+
+To see collapsible unnumbered TOC
+
+```
+<details open markdown="block">
+	<summary>
+		Outline
+	</summary>
+- TOC
+{:toc}
+</details>
+```
 
 or
+
 ```
 1. TOC
 {:toc}
 ```
 
 for collapsible numbered TOC
-{% endraw %}
 
 #### custom theme
 
@@ -106,6 +117,7 @@ Write your theme as <https://github.com/pmarsceill/just-the-docs/blob/master/_sa
 but **NO IT DOES NOT WORK**
 
 ## latex (mathjax)
+
 in `_includes` folder, add a new file, say `mathjax.html`, and add the following codes into it
 
 ```
@@ -133,9 +145,11 @@ ref
 	- doesn't work
 
 ## Jekyll structure
+
 <https://carpentries-incubator.github.io/jekyll-pages-novice/layouts/index.html>
 
 ### _layouts
+
 - create a `_layouts` folder in the root
 - specify the layout in the yaml of a file, then the file will use that layout
 	- like in Laravel's view blade 
@@ -143,14 +157,18 @@ ref
 ### _includes
 
 ## yaml
+
 #### date
+
 many examples  
 <https://www.alanwsmith.com/posts/20emx2csq8do--jekyll-and-github-pages-liquid-date-formatting-examples>
 
 ## page building
+
 it uses Jekyll & liquid
 
 ### view the CI/CD workflow
+
 go to the `Actions` tab and see all your past & current workflows
 
 to debug, click into the one failed and see the error messages
@@ -158,34 +176,40 @@ to debug, click into the one failed and see the error messages
 ## liquid
 
 ### escaping liquid
+
 `{% raw  %}{% include mathjax.html %}{% endraw %}`
 without the raw & endraw, the include tag will be rendered and the codes in `mathjax.html` will be injected, or if `mathjax.html` doesn't exist, the page built would fail
 
 <https://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags>
 
 ### operators
+
 <https://shopify.github.io/liquid/basics/operators/>
+
 #### if
+
 below will execute if the page has `data` in YAML
+
 ```html
-{% raw  %}
 {% if page.date %}
 	<span class="date-txt"> {{ page.date | date: "%Y-%m-%d" }} </span>
 {% endif %}
-{% endraw %}
 ```
 
 #### for
-reverse
+
+reverse  
 <https://stackoverflow.com/a/12574250/15493213s>
 
 ### variables
+
 <https://jekyllrb.com/docs/variables/>
 
 ### examples
+
 #### backlinks
+
 ```html
-{% raw  %}
 <hr>
 <h2>Backlinks</h2> 
 <ul>
@@ -197,8 +221,10 @@ reverse
 	{% endif %}
 {% endfor %}
 </ul>
-{% endraw %}
 ```
 
 ## language switching tips
+
 <https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/>
+
+{% endraw %}

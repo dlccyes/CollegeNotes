@@ -117,7 +117,12 @@ https://tex.stackexchange.com/a/460857
 }
 ```
 
+## brackets
+
+`$\langle x \rangle$` -> $\langle x \rangle$
+
 ## table
+
 ```tex
 \begin{center}
 \begin{tabular}{|c|c|c|}

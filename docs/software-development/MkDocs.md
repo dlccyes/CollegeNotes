@@ -38,8 +38,6 @@ plugins:
   - roamlinks 
 ```
 
-
-
 ## Deploy
 
 ### Deploy to Github Page
@@ -49,6 +47,12 @@ mkdocs gh-deploy
 ```
 
 Will generate the pages in `./site` and then push to `origin/gh-pages`.
+
+**Github Page custom domain**
+
+To use custom domain, you need to specify it in `CNAME`, and put the file in `docs/` s.t. it will be included in the generated files, which will be deloyed to branch `gh-pages`
+
+See <https://www.mkdocs.org/user-guide/deploying-your-docs/#custom-domains>
 
 ### Deploy on localhost
 

@@ -5,6 +5,7 @@ parent: Software Development
 # Vue
 
 ## CLI
+
 It's succeeded by Vite.
 
 ```
@@ -20,7 +21,9 @@ in `node_modules/.bin/vue-cli-service`
 run with `npx vue-cli-service`
 
 ## init
+
 ### Install Node.js
+
 See [NodeJs](NodeJs)
 
 ```

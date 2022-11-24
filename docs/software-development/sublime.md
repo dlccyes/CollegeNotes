@@ -4,7 +4,9 @@ parent: Software Development
 ---
 
 # Sublime
+
 user settings
+
 ```
 {
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",

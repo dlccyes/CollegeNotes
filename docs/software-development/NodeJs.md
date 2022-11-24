@@ -5,6 +5,7 @@ parent: Software Development
 # Node.js
 
 ## install
+
 ```
 sudo apt install nodejs npm
 ```
@@ -15,6 +16,7 @@ sudo corepack enable
 ```
 
 ## check node version
+
 ```
 node -v
 ```

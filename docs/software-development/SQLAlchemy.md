@@ -7,6 +7,7 @@ parent: Software Development
 easy database interaction and migration for [Python](Python)
 
 ## SQLAlchemy
+
 You can use its own ORM or directly use SQL queries to interact with database with SQLAlchemy.
 
 ```
@@ -15,6 +16,7 @@ pip3 install sqlalchemy psycopg2-binary
 <https://stackoverflow.com/a/49812755/15493213>
 
 ### create a table
+
 please use [alembic](#alembic) to do migration
 
 creating a table example

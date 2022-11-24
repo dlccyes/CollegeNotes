@@ -103,9 +103,48 @@ hugo
 - `-D` include posts with frontmatter `draft: True`
 - `-F` include posts with frontmatter `date` set in the future
 
-### github action
+### Github Action
 
 <https://gohugo.io/hosting-and-deployment/hosting-on-github/>
+
+```yaml
+name: hugo deploy github pages
+
+on:
+  push:
+    branches:
+      - master  # Set a branch to deploy
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+        # with:
+        #   submodules: false  # Fetch Hugo themes (true OR recursive)
+        #   fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+```
+
+**Github Page custom domain**
+
+To use a custom domain for your github page, you need to write it in `CNAME`. To make hugo include the cname in the generated files (which will be pushed to branch `gh-pages`), you need to put `CNAME` in `static/`.
 
 ## Layouts
 

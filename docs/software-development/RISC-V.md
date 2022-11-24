@@ -5,16 +5,18 @@ parent: Software Development
 # RISC-V
 
 ## resources
+
 [[Computer Architecture]]
 
-IDE－Jupiter
-https://github.com/andrescv/Jupiter
+IDE－Jupiter  
+<https://github.com/andrescv/Jupiter>
 
-doc
-https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md
+doc  
+<https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md>
 
-code to assembly
-https://godbolt.org/
+converting languages into assembly  
+<https://godbolt.org/>
+
 C++ can convert to RISC-V
 
 ## RV64I Instruction Sets

@@ -354,3 +354,13 @@ ANOVA Table
 ![](https://i.imgur.com/JLCiA4t.png)
 
 ![](https://i.imgur.com/XTlfABn.png)
+
+## Linear Regression
+
+![](https://i.imgur.com/lTcEDef.png)
+
+![](https://i.imgur.com/5zztUTW.png)
+
+![](https://i.imgur.com/2Kjq4Sv.png)
+
+![](https://i.imgur.com/3lxdYDA.png)

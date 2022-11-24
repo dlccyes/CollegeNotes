@@ -838,6 +838,8 @@ res_body = json.loads(res.text)
 python3 -m http.server
 ```
 
+You can also use VsCode's Live Preview plugin.
+
 ## Web Framework
 
 - [Django](Django)

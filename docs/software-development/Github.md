@@ -34,6 +34,32 @@ e.g.
 <p/> 
 ```
 
+## Github Page
+
+### Generate static site from markdown
+
+Just head to the settings and it will use [[Jekyll]] to do it for you.
+
+### Using other static site generators
+
+Compile your markdown files into a directory or another branch with the static site generator you choose, and specify the directory or branch in the settings so that Github Page can host them.
+
+### Custom Domain
+
+To use custom domain, at a file `CNAME` at your project root specifying your custom domain.
+
+e.g.
+
+`./CNAME`
+
+```
+sub.domain.com
+```
+
+You can also set in the settings, but what it does is also adding a `CNAME` for you.
+
+See <https://github.com/orgs/community/discussions/21549>
+
 ## Github Action
 
 [[Github Action]]

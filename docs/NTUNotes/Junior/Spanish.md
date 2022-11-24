@@ -123,6 +123,48 @@ Only 3 irregular verbs - ser, ir, ver
 
 ![](https://i.imgur.com/4cH4aa3.png)
 
+## Subjunctive present
+
+ser + adj. + que + subjunctivo
+
+### Regular
+
+![](https://i.imgur.com/6LRAbNl.png)
+
+![](https://i.imgur.com/s75izQD.png)
+
+![](https://i.imgur.com/7WxmOZt.png)
+
+### Irregular
+
+Often times the same prefix as the indicative present verb
+
+![](https://i.imgur.com/nBKg6AU.png)
+
+![](https://i.imgur.com/teG2Z07.png)
+
+![](https://i.imgur.com/X2eFoKo.png)
+
+![](https://i.imgur.com/p0iyRW7.png)
+
+![](https://i.imgur.com/RON0iCR.png)
+
+![](https://i.imgur.com/eBTg6xj.png)
+
+![](https://i.imgur.com/migWV8n.png)
+
+![](https://i.imgur.com/kTaEltx.png)
+
+### Use Case
+
+I suggest that ...
+
+- Te recomiendo que + subjunctive
+	- ![](https://i.imgur.com/zgPF8S8.png)
+- Te sugiero que + subjunctive
+	- ![](https://i.imgur.com/uZ7l3Ba.png)
+	- ![](https://i.imgur.com/BVBc2R5.png)
+
 ## Food
 
 - lasaña = lasagna
@@ -3105,6 +3147,7 @@ adj. + mente -> adv.
 - píldora = pill
 - descubrir = find out
 - mago = magician
+- encuentra = find
 
 ### Because
 
@@ -3202,48 +3245,7 @@ Incorrect examples:
 
 Omit the subject if you can
 
-### Subjunctive present
-
-#### Regular
-
-![](https://i.imgur.com/6LRAbNl.png)
-
-![](https://i.imgur.com/s75izQD.png)
-
-![](https://i.imgur.com/7WxmOZt.png)
-
-#### Irregular
-
-Often times the same prefix as the indicative present verb
-
-![](https://i.imgur.com/nBKg6AU.png)
-
-![](https://i.imgur.com/teG2Z07.png)
-
-![](https://i.imgur.com/X2eFoKo.png)
-
-![](https://i.imgur.com/p0iyRW7.png)
-
-![](https://i.imgur.com/RON0iCR.png)
-
-![](https://i.imgur.com/eBTg6xj.png)
-
-![](https://i.imgur.com/migWV8n.png)
-
-![](https://i.imgur.com/kTaEltx.png)
-
-#### Use Case
-
-I suggest that ...
-
-- Te recomiendo que + subjunctive
-	- ![](https://i.imgur.com/zgPF8S8.png)
-- Te sugiero que + subjunctive
-	- ![](https://i.imgur.com/uZ7l3Ba.png)
-	- ![](https://i.imgur.com/BVBc2R5.png)
-
-
-### Probably
+	### Probably
 
 - very sure -> indicativo
 - not very sure -> subjunctivo

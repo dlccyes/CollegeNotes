@@ -25,6 +25,7 @@ $$\gamma=\dfrac{1}{\sqrt{1-\frac{v^2}{c^2}}}$$
 ![](https://i.imgur.com/7pGwuqi.png)
 
 $$E^2=(mc^2)^2+p^2c^2=E_0^2+(pc)^2$$
+
 $$m = 0 \rightarrow E=pc$$
 
 $$E=E_0+KE$$
@@ -33,6 +34,7 @@ $$E=E_0+KE$$
 - $KE$ = kinetic energy
 
 $$E_0=m_0c^2$$
+
 $$KE=mc^2-m_0c^2$$
 
 ![](https://i.imgur.com/bX177hk.png)
@@ -71,6 +73,7 @@ $$v_p=\lambda\nu=\dfrac{h}{\gamma mv}\nu=\dfrac{E}{\gamma mv}=\dfrac{\gamma mc^2
 $$\hbar=\dfrac{h}{2\pi}$$
 
 $$\Delta x \Delta p \geq \dfrac{\hbar}{2}$$
+
 $$\Delta E \Delta t \geq \dfrac{\hbar}{2}$$
 
 ![](https://i.imgur.com/3idLe5E.png)
@@ -174,7 +177,7 @@ Fraction of alpha particles scattered by $\theta$ or more
 
 ![](https://i.imgur.com/CjqDl3e.png)
 
-## Quantum Physics
+## Ch5 Quantum Physics
 
 ### Normalized
 
@@ -187,6 +190,10 @@ Only those with these properties can yield physically meaningful results.
 ![](https://i.imgur.com/5pn8kfI.png)
 
 y & dy/dx need to be finite, continuous, and single-valued
+
+### Schrodinger Equation
+
+![](https://i.imgur.com/uqHQtUZ.png)
 
 ### Expectation Values
 
@@ -203,3 +210,14 @@ energy
 ![](https://i.imgur.com/7WjH6m6.png)
 
 ![](https://i.imgur.com/ROkyLQz.png)
+
+### Tunnel Effect
+
+![](https://i.imgur.com/9RUejbr.png)
+
+probability
+
+![](https://i.imgur.com/zVzKGG1.png)
+
+- $U$ = barrier
+- $E$ = energy of the particle
