@@ -16,7 +16,29 @@ layout: meth
 - electron's rest energy $E_0=511keV$
 - $\dfrac{1}{4\pi\epsilon_0}=9\times10^9$
 
-## Particle properties of wave
+## Ch1 Relativity
+
+### Doppler effect
+
+![](https://i.imgur.com/7ULtUFn.png)
+
+![](https://i.imgur.com/BAke2Oh.png)
+
+**Case 1**
+
+![](https://i.imgur.com/Xwfyt8J.png)
+
+**Case 2**
+
+![](https://i.imgur.com/iIoAjB9.png)
+
+**Case 3**
+	
+![](https://i.imgur.com/OLMqbc7.png)
+
+![](https://i.imgur.com/4O7NHT0.png)
+
+## Ch2 Particle properties of wave
 
 $$\gamma=\dfrac{1}{\sqrt{1-\frac{v^2}{c^2}}}$$
 
@@ -47,11 +69,15 @@ $$KE=mc^2-m_0c^2$$
 
 ![](https://i.imgur.com/a169r5e.png)
 
+![](https://i.imgur.com/aZLahR4.png)
+
+$$2dsin\theta=n\lambda$$
+
 ### Compton Effect
 
 ![](https://i.imgur.com/aPGsqCk.png)
 
-## Wave properties of particle
+## Ch3 Wave properties of particle
 
 ![](https://i.imgur.com/lAWpIlw.png)
 
@@ -166,6 +192,12 @@ Both the nucleus & the electron orbit around the center. We can use **reduced ma
 $b$ = impact parameter
 
 ![](https://i.imgur.com/eWKO8Ia.png)
+
+![](https://i.imgur.com/WdZMutC.png)
+
+Potential change after impact
+
+![](https://i.imgur.com/xT9kkQi.png)
 
 $b_{\mathrm{min}}$ = r of nucleus -> $\theta_{\mathrm{max}}$
 
