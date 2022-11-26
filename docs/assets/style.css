@@ -16,6 +16,18 @@
   color: #fff
 }
 
+/* image limit height*/
+.img {
+  border-radius: 15px;
+  max-height: 700px;
+}
+/* image center */
+.img {
+  position: relative;
+  transform: translate(-50%);
+  left: 50%;
+}
+
 /* header */
 .md-header {
   background-color: var(--md-primary-fg-color);
