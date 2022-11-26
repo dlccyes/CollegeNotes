@@ -55,7 +55,7 @@ To remove an app, go to `Applications` and move it to trash.
 
 ### Open app from terminal
 
-q```
+```
 open -a <app>
 ```
 
