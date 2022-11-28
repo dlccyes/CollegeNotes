@@ -329,6 +329,12 @@ Each cell is an element, and the caluclate the x square as in one-way table, exc
 
 ![](https://i.imgur.com/pZEIm4a.png)
 
+![](https://i.imgur.com/4Qg5Ii6.png)
+
+T Table
+
+![](https://i.imgur.com/8DW7Q2v.png)
+
 ### Power of Tests
 
 ![](https://i.imgur.com/u8VH7GF.png)
