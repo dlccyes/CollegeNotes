@@ -41,7 +41,7 @@ layout: meth
 - r/cscareerquestions
 - r/csmajors
 
-### websites
+### Websites
 
 - <https://www.levels.fyi/>
 	- company salaries
@@ -67,20 +67,18 @@ layout: meth
 - preparation
 	- <https://www.teamblind.com/post/LZLoXM7t>
 - applying details
-	- <https://www.reddit.com/r/cscareerquestions/comments/qpxbpg>
-	- <https://www.reddit.com/r/CSCQSimulator/comments/e0mqjs>
+	- [Review of 2022 New Grad Recruiting Process | r/cscq](https://www.reddit.com/r/cscareerquestions/comments/qpxbpg)
+	- [How I got 7 offers. Here's what I learned. | r/cscq](https://www.reddit.com/r/CSCQSimulator/comments/e0mqjs)
 		- original posts is removed
 - negotiation
 	- <https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/>
 		- haven't read
-		- said to be commonly sited
+		- said to be commonly cited
 - 台灣狀況
 	- <https://forum.gamer.com.tw/C.php?bsn=60076&snA=5444020>
 - resume
 	- <https://chonyy.medium.com/f1dcb67e4798>
 	- <https://www.teamblind.com/post/pQ43s0TA>
-- salaries of Taiwan & US 
-	- <https://docs.google.com/spreadsheets/d/1woaGveprl4eS-UNUvbt8JD8mSSgqad2tq3JzM9TU_cw/>
 
 ## building portfolio
 
@@ -121,9 +119,9 @@ layout: meth
 - <https://resumegenius.com/cover-letter-examples/software-engineer-cover-letter-sample>
 - <https://www.reddit.com/r/cscareerquestions/comments/2afejd>
 
-## applying preparation
+## Applying preparation
 
-- <https://techinterviewhandbook.org/>
+- [Tech Interview Handbook](https://techinterviewhandbook.org/)
 	- author of Blind 75
 - DSA
 - complex personal projects
@@ -187,7 +185,6 @@ layout: meth
 #### Codesignal
 
 <https://github.com/Leader-board/OA-and-Interviews/blob/main/Online%20Assessments.md#codesignal>
-
 
 - 4 questions in 70 min.
 - grading
@@ -365,21 +362,23 @@ layout: meth
 
 ## TC
 
-- Taiwan SWE
-	- <https://www.levels.fyi/t/software-engineer/locations/taiwan?sortBy=total_compensation&sortOrder=DESC&offset=0&searchText=houzz&currency=TWD>
+- [Taiwan SWE | leveyls.fyi](https://www.levels.fyi/t/software-engineer/locations/taiwan?sortBy=total_compensation&sortOrder=DESC&offset=0&searchText=houzz&currency=TWD)
+- [矽谷輕鬆談 Form Responses](https://docs.google.com/spreadsheets/d/1woaGveprl4eS-UNUvbt8JD8mSSgqad2tq3JzM9TU_cw/)
 
 ## company details
 
+- [Prestige Hunt 🤣](https://prestigehunt.com/)
 - [FAANG+ WLB](https://www.teamblind.com/post/Data-on-WLB-and-job-security-from-polls-on-FAANG-other-large-tech-companies-[x-post]-74bA5ySP)
 - WLB
 	- good WLB
 		- Google
 		- Salesforce
 		- Microsoft
+		- Jane Street
 	- not so relaxed environment
 		- Amazon
 		- Meta
-		- quant companies
+		- Citadel
 
 ## Security Engineer
 

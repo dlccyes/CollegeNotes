@@ -270,7 +270,7 @@ I suggest that ...
 - embarque = boarding
 	- e.g. puertas de embarque = boarding gates
 - barco = ship / boat
-- taquilla = ticket office
+- taquilla = ticket office / box office
 - rivisor = ticket collector
 - sala de espera = waiting room
 - precedente de = coming from
@@ -297,6 +297,31 @@ I suggest that ...
 - vuelo = flight
 - azafata = flight attendant
 - subir al avión = get on the plane
+
+## Movies
+
+- cartelera = marquee = 節目表
+- género = genre
+	- película de dibujos animados = cartoon movie
+	- action = acción
+	- comedia = comedy
+	- románcia = romance
+	- guerra = war
+	- terror = horror
+- entrada = ticket
+- subtítulos = subtitles
+- guión = script
+- guionista = scriptor
+- cartel = poster
+- banda sonora = soundtrack
+- sala de cine = movie theater
+- taquilla = ticket / box office
+- proyectar = project
+- rodar = shoot (a film)
+- pantalla = screen
+- estreno = premiere
+- alquilar = rent
+	- alquilar películas en DVD
 
 ## Spanish 1-1
 
@@ -1119,7 +1144,9 @@ I suggest that ...
 	- nadie = nobody
 	- encuesta = survey
 	- ¿cuántos adivinar bien? = how many do you guess right?
-	- dibujar = draw pintar = paint
+	- dibujar = draw
+	- pintar = paint
+	- pintor = painter
 	- páginas web = web page
 	- graciosa = droll
 	- muebles = furnitures
@@ -2500,6 +2527,7 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - Navidad = Christmas
 - conducir = drive
 - alcohol /alcol/
+- alojar = accommodate
 - aloharse = stay
 	- aloharse en un hotel
 - hotel accomodation plan
@@ -2753,6 +2781,7 @@ adj. + mente -> adv.
 - ![](https://i.imgur.com/xtMJqax.png)
 
 ### direct & indirect pronoun
+
 - replace indirect object with me / te / le (se) / nos / os / les (se)
 - replace direct object with lo / la / los / las
 - my parent give me a book -> me = indirect, a book = direct
@@ -2764,6 +2793,7 @@ adj. + mente -> adv.
 - ![](https://i.imgur.com/wvDQZKZ.png)
 
 ### practice
+
 - 5/25
 	- 10
 		- 1
@@ -2924,8 +2954,6 @@ adj. + mente -> adv.
 		- se puede 
 - 3/18
 	- puedes
-	- 
-	- 
 	- puedo
 	- puedes
 	- puedes
@@ -3148,6 +3176,14 @@ adj. + mente -> adv.
 - descubrir = find out
 - mago = magician
 - encuentra = find
+- aprobar = pass (an exam)
+- caballito = pony
+- fecha = date
+- transpordar = transfer (airplane)
+- apetecer = feel like
+- estupendo = great
+- proponer  = propose
+	- propongo/proponges/proponge
 
 ### Because
 

@@ -48,6 +48,7 @@ The skewness of a symmetric distribution is 0.
 ![Image](https://i.imgur.com/Qbz7r9H.png)
 
 ## Ch3 review of statistics
+
 - unbiasedness
   - bias = $E(\hat{\mu_Y})-\mu_Y$
 - consistency
@@ -100,7 +101,9 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - $\Phi(2.576)=99.5\%$ → 99% confidence interval for two sided
 
 (看 inf)
+
 ![Image](https://i.imgur.com/lZc2V6j.png)
+
 ![Image](https://i.imgur.com/wGhdMSF.png)
 
 ### 名詞
@@ -165,6 +168,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - more regressor → $R^2$ $\uparrow$ as SER $\downarrow$
   - adjusted $R^2$
   $\bar{R}^2=1-\dfrac{n-1}{n-k-1}\dfrac{SSR}{TSS}$
+  
   ![Image](https://i.imgur.com/qEdhYSz.png)
     - k: regressor 數量 (對 k=1 的時候 $\bar{R}^2$ 不一樣)
 - omitted variable bias
@@ -196,6 +200,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 - ![Image](https://i.imgur.com/TQeGcYz.png)
 
 ### least square assumptions
+
 1. Assumption 1: The Conditional Distribution of ui Given X1i, X2i, . . . , Xki Has a Mean of 0
 2. Assumption 2: (X1i, X2i, . . . , Xki, Yi), i = 1, . . . , n, Are i.i.d.
 3. Assumption 3: Large Outliers Are Unlikely
@@ -207,6 +212,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
      - ![Image](https://i.imgur.com/hunkfPQ.png)
 
 ## Ch7 Hypothesis Tests & Confidence Intervals in Multiple Regression
+
 - F test
   - for multiple regressors
     - ![Image](https://i.imgur.com/zfTOddH.png)

@@ -28,3 +28,7 @@ javascript:(function(){function a(a){const b=document.createElement("button");re
 3. last.fm settings → connect "Spotify Scrobbling"
 4. start a new track
 5. expected result: current playback & the missing scrobbles are shown
+
+## Artists Photos
+
+The photo of an artist is decided by the `upvote - downvote` of the artists photos.

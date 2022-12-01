@@ -204,3 +204,7 @@ To return to the default retarded MacOS behavior, create a new tab (with your ho
 Note that the fullscreen after you hide the toolbars is still not the same as it is on Windows & Linux. When your cursor move to the top of the screen, only the bookmark bar & the main bar are show, while the tab bar still remains hidden.
 
 [ref](https://apple.stackexchange.com/a/435191)
+
+### Two Finger Pinch Unreliable
+
+<https://discussions.apple.com/thread/253369850>

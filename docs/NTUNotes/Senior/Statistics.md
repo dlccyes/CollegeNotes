@@ -9,6 +9,20 @@ layout: meth
 - [OpenIntro_Statistics](OpenIntro_Statistics.pdf)
 - [Factfulness](Factfulness.pdf)
 
+## Tables
+
+### Z Table
+
+![](https://i.imgur.com/DvDssQa.png)
+
+### T Table
+
+![](https://i.imgur.com/8DW7Q2v.png)
+
+### F Table
+
+![](https://i.imgur.com/XTlfABn.png)
+
 ## Notation
 
 - $p$ = population
@@ -325,6 +339,10 @@ Each cell is an element, and the caluclate the x square as in one-way table, exc
 
 ### T test
 
+![](https://i.imgur.com/bakAKjX.png)
+
+![](https://i.imgur.com/HyEHVDg.png)
+
 ![](https://i.imgur.com/q4FdDoP.png)
 
 ![](https://i.imgur.com/pZEIm4a.png)
@@ -335,13 +353,30 @@ T Table
 
 ![](https://i.imgur.com/8DW7Q2v.png)
 
-### Power of Tests
+**Comparing 2 means**
 
 ![](https://i.imgur.com/u8VH7GF.png)
+
+![](https://i.imgur.com/0nIEbrY.png)
+
+e.g.
+
+![](https://i.imgur.com/AwZT4bN.png)
+![](https://i.imgur.com/IYSiqEa.png)
+
+### Power of Tests
 
 ![](https://i.imgur.com/GY3hdWV.png)
 
 ![](https://i.imgur.com/DYDDKtA.png)
+
+e.g.
+
+![](https://i.imgur.com/UfZOExw.png)
+
+![](https://i.imgur.com/xrHV7qo.png)
+
+![](https://i.imgur.com/4phDyIU.png)
 
 ### Comparing Means
 
@@ -350,6 +385,8 @@ T Table
 ![](https://i.imgur.com/yHu3TKU.png)
 
 ### ANOVA & F Test
+
+![](https://i.imgur.com/TDfDdU5.png)
 
 ![](https://i.imgur.com/3Po8mF5.png)
 
