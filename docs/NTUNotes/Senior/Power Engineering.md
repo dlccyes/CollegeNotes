@@ -300,6 +300,14 @@ $\gamma = \alpha+j\beta$
 ![](https://i.imgur.com/ZS5X0vA.png)
 ![](https://i.imgur.com/IioHRQl.png)
 
+### Transmission Matrix
+
+![](https://i.imgur.com/tlj9gMz.png)
+
+![](https://i.imgur.com/NS7mohO.png)
+
+![](https://i.imgur.com/74kZz8D.png)
+
 ### Short Line
 
 ![](https://i.imgur.com/KYv9OaS.png)
@@ -350,3 +358,29 @@ $$\begin{align*}
 \end{align*}$$
 
 ![](https://i.imgur.com/bQ8YcdK.png)
+
+## Ch5 Transformer
+
+![](https://i.imgur.com/4KrMecs.png)
+
+![](https://i.imgur.com/MudSGIK.png)
+
+- $a=\dfrac{N_1}{N_2}$
+- $V_1=aV_2$
+- $I_1=\dfrac{1}{a}I_2$
+
+![](https://i.imgur.com/XlE3Dpe.png)
+
+### Autotransformer
+
+![](https://i.imgur.com/X6QY07O.png)
+
+![](https://i.imgur.com/hDUd1A4.png)
+
+1. Redraw into 5.28 (b)
+2. Calculate
+	- $V_2=V_1+2V_1=3V_1=360V$
+	- $V_2=I_2(7+j8)=I_2(10.63\angle 48.81^\circ)$
+	- $I_2=33.87\angle(-48.81^\circ)$
+	- $I_1=2I_2+I_2=3I_2=101.61\angle(-48.81^\circ)$
+
