@@ -384,3 +384,18 @@ $$\begin{align*}
 	- $I_2=33.87\angle(-48.81^\circ)$
 	- $I_1=2I_2+I_2=3I_2=101.61\angle(-48.81^\circ)$
 
+
+### Three-Phase Transformer
+
+![](https://i.imgur.com/al8cn7S.png)
+
+![](https://i.imgur.com/km0c8WP.png)
+
+![](https://i.imgur.com/y5pYJDB.png)
+
+### Per-Phase Transformer Analysis
+
+![](https://i.imgur.com/lgL6ZYR.png)
+
+$K_1$ = gain = $\sqrt{3}n\angle(30^\circ)$
+
