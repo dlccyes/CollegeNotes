@@ -399,3 +399,16 @@ $$\begin{align*}
 
 $K_1$ = gain = $\sqrt{3}n\angle(30^\circ)$
 
+![](https://i.imgur.com/ljtDyrH.png)
+
+### Per Unit Normalization
+
+indicated by `p.u.`
+
+![](https://i.imgur.com/joVJ8qL.png)
+
+Changing base
+
+![](https://i.imgur.com/bMZDzoR.png)
+
+![](https://i.imgur.com/FD5GPad.png)
