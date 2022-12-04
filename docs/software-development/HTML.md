@@ -48,3 +48,8 @@ You can't, but you can with jQuery
 </script>
 ```
 
+## Tags
+
+### nbsp
+
+`&nbsp;` is called non-breaking space. Use this to prevent an auto newline.

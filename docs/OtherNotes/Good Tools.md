@@ -89,11 +89,9 @@ parent: OtherNotes
 
 <https://shields.io/>
 
-#### logos
+#### Logos
 
 [doc](https://github.com/badges/shields/blob/master/doc/logos.md)
-
-[ready-made logos](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md)
 
 To use your own logo
 
@@ -110,9 +108,27 @@ Any custom logo can be passed in a URL parameter by base64 encoding it. e.g:
 ![About me badge](https://img.shields.io/badge/Personal_Page-purple?style=flat-square&logo=About.me&logoColor=white)
 ![resume badge](https://img.shields.io/badge/resume-Derrick_Lin-white?style=flat-square)
 
+## Logos
+
+### Simple Icons
+
+<https://github.com/simple-icons/simple-icons>
+
+[Main page](https://simpleicons.org)
+
+[List of logos](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md)
+
+- svg or pdf
+- colorful or not
+
+```
+<img height="32" width="32" src="https://cdn.simpleicons.org/[ICON SLUG]/[COLOR]" />
+```
+
 ## small programs
 
 ### navigation
+
 - QTTabBar
 	- extend windows explorer functionalities
 		- search
@@ -129,6 +145,7 @@ Any custom logo can be passed in a URL parameter by base64 encoding it. e.g:
 		- ![](https://i.imgur.com/jq0lFwM.png)
 
 ### screen recorder
+
 - oCam
 - obs studio
 
@@ -139,6 +156,7 @@ Any custom logo can be passed in a URL parameter by base64 encoding it. e.g:
 	- support rockstar's image format
 
 ### defender and cleaners
+
 - ccleaner
 - adwcleaner
 	- strong malware cleaner
@@ -146,6 +164,7 @@ Any custom logo can be passed in a URL parameter by base64 encoding it. e.g:
 	- uninstall display driver
 
 ### multimedia
+
 - Potplayer
 - FastStone Image Viewer
 - Audacity
@@ -155,6 +174,7 @@ Any custom logo can be passed in a URL parameter by base64 encoding it. e.g:
 	- encode videos to other formats easily
 
 ### others
+
 - Ditto
 	- clipboard management
 	- can pin
@@ -168,6 +188,7 @@ Any custom logo can be passed in a URL parameter by base64 encoding it. e.g:
 	- customize your desktop
 
 ## terminal
+
 - windows terminal
 	- highly customizable appearance
 	- support many shells
@@ -207,6 +228,7 @@ It will put your dotfiles in `/path/to/dir/Mackup`
 ![](https://i.imgur.com/kS8rOdr.png)
 
 ## git GUI
+
 - github desktop
 	- simple and elegant
 	- straightforward
@@ -214,6 +236,7 @@ It will put your dotfiles in `/path/to/dir/Mackup`
 	- powerful
 
 ## markdown editor
+
 - Typora
 	- use the versions before pricing
 	- simple and elegant
@@ -225,9 +248,10 @@ It will put your dotfiles in `/path/to/dir/Mackup`
 	- many good plugins
 
 ## good Rainmeters
+
 - VisBubble
 	- round visualizer
-	- https://visualskins.com/skin/visbubble-round-visualizer
+	- <https://visualskins.com/skin/visbubble-round-visualizer>
 	- with customization settings
 - MonSoon
 	- modern style cpu, ram, disk usages, clock
@@ -240,22 +264,27 @@ It will put your dotfiles in `/path/to/dir/Mackup`
 	- alter .ini yourself
 - Simple Lyrics Display
 	- spotify lyrics overlay
-	- download: https://www.deviantart.com/apu889/art/Simple-Lyrics-Display-678137217
-	- prerequisite: https://github.com/marcopixel/monstercat-visualizer
-	- unusable unless following https://www.reddit.com/r/Rainmeter/comments/ce4jpd/spotify_lyrics_skin/eu0i2eo
+	- download: <https://www.deviantart.com/apu889/art/Simple-Lyrics-Display-678137217>
+	- prerequisite: <https://github.com/marcopixel/monstercat-visualizer>
+	- unusable unless following <https://www.reddit.com/r/Rainmeter/comments/ce4jpd/spotify_lyrics_skin/eu0i2eo>
 	- reddit post
-		- https://www.reddit.com/r/Rainmeter/comments/68lsem/simple_lyrics_display_obtaining_lyrics_from/
-		- https://www.deviantart.com/apu889/art/Simple-Lyrics-Display-678137217?comment=1%3A678137217%3A4941281336
+		- <https://www.reddit.com/r/Rainmeter/comments/68lsem/simple_lyrics_display_obtaining_lyrics_from/>
+		- <https://www.deviantart.com/apu889/art/Simple-Lyrics-Display-678137217?comment=1%3A678137217%3A4941281336>
 - Simply Circles
 
 ## good Obsidian plugins
+
 - image toolkit
 	- make obsidian useable
 - obsidian git
 - tasks
 - Text Snippets
 	- enter certain phrase + hotkey → insert long predefined text
+- quiet outline
+	- search
+	- collapse
 
 ## good Sublime plugins
+
 - NeoVintageous
 	- vim
