@@ -608,7 +608,7 @@ see [ANSI](ANSI)
 
 ### zsh
 
-in `.zshrc`
+in `~/.zshrc`
 
 ```sh
 export CLICOLOR=1

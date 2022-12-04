@@ -5,6 +5,57 @@ parent: Software Development
 
 # System Design
 
+## Resources
+
+- DDIA
+	- 簡中譯 <https://github.com/Vonng/ddia>
+	- [pdf](https://github.com/jeffrey-xiao/papers/blob/master/textbooks/designing-data-intensive-applications.pdf)
+- Grokking the system design interview
+	- [pdf](https://raw.githubusercontent.com/sharanyaa/grok_sdi_educative/master/grok_system_design_interview.pdf)
+	- [pdf](http://libgen.rs/book/index.php?md5=3CC8A0D02BBB0644A3839F6B621BB86B)
+- Alex Xu
+	- [System Design Interview An Insider’s Guide by Alex Xu (z-lib.org).pdf](https://github.com/G33kzD3n/Catalogue/blob/master/System%20Design%20Interview%20An%20Insider%E2%80%99s%20Guide%20by%20Alex%20Xu%20(z-lib.org).pdf)
+	- [Youtube](https://www.youtube.com/c/ByteByteGo/)
+	- [LinkedIn](https://www.linkedin.com/in/alexxubyte/recent-activity/shares/)
+- [Gaurav System Design Playlist | Youtube](https://www.youtube.com/playlist?app=desktop&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX)
+- [Exponent | Youtube](https://www.youtube.com/@tryexponent)
+- [Problems Aggretation](https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view)
+	- from <https://leetcode.com/discuss/interview-question/system-design/1205825>
+- [Database Schema Templates](https://drawsql.app/templates/popular)
+
+## Scaling
+
+### Vertical Scaling
+
+- pros
+	- fast inter-process communication
+	- data consistent
+- cons
+	- single point of failure
+	- hardware limit
+
+### Horizontal Scaling
+
+- pros
+	- scale well
+- cons
+	- slow inter-process communication
+		- need RPC between machines
+	- need load-balancing
+	- data inconsistency
+
+## Load Balancing
+
+request id -> hashed request id -> mod by n (# of servers) -> direct to the server
+
+### Cost of adding new servers
+
+New servers -> some requests will be directed to a different server -> cache miss
+
+### Consistency Hashing
+
+To minimize the cost when adding new servers, we want to as few mapping changed as possible.
+
 ## Sharding
 
 Partitioning the database

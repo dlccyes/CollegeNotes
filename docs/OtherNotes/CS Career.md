@@ -146,19 +146,7 @@ layout: meth
 
 ### system design
 
-- DDIA
-	- 簡中譯 <https://github.com/Vonng/ddia>
-	- [pdf](https://github.com/jeffrey-xiao/papers/blob/master/textbooks/designing-data-intensive-applications.pdf)
-- Grokking the system design interview
-	- [pdf](https://raw.githubusercontent.com/sharanyaa/grok_sdi_educative/master/grok_system_design_interview.pdf)
-	- [pdf](http://libgen.rs/book/index.php?md5=3CC8A0D02BBB0644A3839F6B621BB86B)
-- Alex Xu
-	- [System Design Interview An Insider’s Guide by Alex Xu (z-lib.org).pdf](https://github.com/G33kzD3n/Catalogue/blob/master/System%20Design%20Interview%20An%20Insider%E2%80%99s%20Guide%20by%20Alex%20Xu%20(z-lib.org).pdf)
-	- [Youtube](https://www.youtube.com/c/ByteByteGo/)
-	- [LinkedIn](https://www.linkedin.com/in/alexxubyte/recent-activity/shares/)
-- [Problems Aggretation](https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view)
-	- from <https://leetcode.com/discuss/interview-question/system-design/1205825>
-- [Database Schema Templates](https://drawsql.app/templates/popular)
+[[System Design]]
 
 ### devops
 
@@ -365,16 +353,18 @@ layout: meth
 - [Taiwan SWE | leveyls.fyi](https://www.levels.fyi/t/software-engineer/locations/taiwan?sortBy=total_compensation&sortOrder=DESC&offset=0&searchText=houzz&currency=TWD)
 - [矽谷輕鬆談 Form Responses](https://docs.google.com/spreadsheets/d/1woaGveprl4eS-UNUvbt8JD8mSSgqad2tq3JzM9TU_cw/)
 
-## company details
+## Company details
 
 - [Prestige Hunt 🤣](https://prestigehunt.com/)
 - [FAANG+ WLB](https://www.teamblind.com/post/Data-on-WLB-and-job-security-from-polls-on-FAANG-other-large-tech-companies-[x-post]-74bA5ySP)
 - WLB
+	- [My 2022 WLB company rankings | Blind](https://www.teamblind.com/post/My-2022-WLB-company-rankings-6NiXQBEJ)
 	- good WLB
 		- Google
 		- Salesforce
 		- Microsoft
 		- Jane Street
+		- American Express
 	- not so relaxed environment
 		- Amazon
 		- Meta
