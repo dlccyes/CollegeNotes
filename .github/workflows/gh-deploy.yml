@@ -3,17 +3,30 @@ name: gh-deploy
 on:
   push:
     branches:
-      - never
+      - master
+    paths:
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - '.github/workflows/**'
+  pull_request:
+    branches:
+      - master
     paths:
       - 'docs/**'
       - 'mkdocs.yml'
       - '.github/workflows/**'
 
 jobs:
-  deploy:
-    runs-on: ubuntu-22.04
-    container: squidfunk/mkdocs-material
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: deploy
-        run: mkdocs gh-deploy
+      - name: Checkout main
+        uses: actions/checkout@v3
+
+      - name: Deploy
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONFIG_FILE: ./mkdocs.yml
+          REQUIREMENTS: ./requirements.txt
