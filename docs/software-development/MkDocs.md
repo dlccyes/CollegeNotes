@@ -40,7 +40,7 @@ plugins:
 
 ## Deploy
 
-### Deploy to Github Page
+### Deploy to Github Page with command
 
 ```
 mkdocs gh-deploy
@@ -53,6 +53,41 @@ Will generate the pages in `./site` and then push to `origin/gh-pages`.
 To use custom domain, you need to specify it in `CNAME`, and put the file in `docs/` s.t. it will be included in the generated files, which will be deloyed to branch `gh-pages`
 
 See <https://www.mkdocs.org/user-guide/deploying-your-docs/#custom-domains>
+
+### Deploy to github page with github action
+
+Check out [[Github Action]] if you don't know what it is.
+
+Use [Deploy MkDocs](https://github.com/marketplace/actions/deploy-mkdocs)
+
+`.github/workflows/gh-deploy.yml`
+
+```yaml
+name: gh-deploy
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v3
+
+      - name: Deploy
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONFIG_FILE: ./mkdocs.yml
+          REQUIREMENTS: ./requirements.txt
+```
 
 ### Deploy on localhost
 

@@ -26,6 +26,7 @@ theme:
 plugins:
   - search
   - roamlinks 
+  - jinja
 
 extra_css:
   - assets/style.css
