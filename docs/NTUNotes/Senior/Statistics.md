@@ -400,10 +400,40 @@ ANOVA Table
 
 ## Linear Regression
 
+### Relationship
+
 ![](https://i.imgur.com/lTcEDef.png)
+
+
+![](https://i.imgur.com/yz5i0m1.png)
+
+![](https://i.imgur.com/uRrqtcP.png)
+
+![](https://i.imgur.com/Fl7pvtr.png)
+
+![](https://i.imgur.com/rUBG2Tj.png)
+
+![](https://i.imgur.com/DXrQpGM.png)
+
+![](https://i.imgur.com/PIbmPxv.png)
+
+### Model
+
+Condition of least square line
+
+![](https://i.imgur.com/xmTL4Hb.png)
 
 ![](https://i.imgur.com/5zztUTW.png)
 
 ![](https://i.imgur.com/2Kjq4Sv.png)
 
 ![](https://i.imgur.com/3lxdYDA.png)
+
+![](https://i.imgur.com/xMksLNE.png)
+
+![](https://i.imgur.com/UTq0S47.png)
+
+![](https://i.imgur.com/7czqBlD.png)
+
+![](https://i.imgur.com/VLoadfL.png)
+![](https://i.imgur.com/ssUrtwT.png)
