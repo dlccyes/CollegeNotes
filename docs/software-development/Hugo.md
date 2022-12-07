@@ -1,4 +1,4 @@
-￼how it workshow it workshow it works￼how it workshow it workshow it works￼how it workshow it workshow it works# Hugo
+# Hugo
 
 A markdown static site generator
 

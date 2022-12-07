@@ -13,5 +13,5 @@ Some cool blogs.
 - <https://blog.dsrkafuu.net/>
 	- cool [widget](https://github.com/dsrkafuu/sakana-widget)
 
-Don't forget to check out my own  
+Don't forget to check out mine  
 <https://dlccyes.github.io/blog>
