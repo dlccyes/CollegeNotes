@@ -313,6 +313,8 @@ Mac will store your credentials there automatically, **even if you use `credenti
 
 ### partial clone
 
+Clone only a certain directory
+
 ```
 git init
 git remote add -f origin <url>

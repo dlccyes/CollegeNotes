@@ -1,5 +1,4 @@
-s://fields.sogang.ac.kr/fields/Lecture/Documents/u2013f/documents/solution_4.pdf
-	- # MkDocs
+# MkDocs
 
 Use this to easy generate beautiful static sites from your markdowns
 

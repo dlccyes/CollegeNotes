@@ -277,6 +277,7 @@ I suggest that ...
 	- e.g. el tren precedente de Mardrid
 - con destino a = heading for
 	- e.g. el vuelo con destino a Barcelona = a flight heading for Barcelona
+- atasco = traffic jam
 - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FfhpYTbYeQ-.png?alt=media&token=a7259254-ebe5-43fc-990c-bfaa7a2e4832)
 	- e.g.
 		- ¿Cómo vienes/vas a clases? (Vengo) en moto.
@@ -322,6 +323,41 @@ I suggest that ...
 - estreno = premiere
 - alquilar = rent
 	- alquilar películas en DVD
+
+## Emotion
+
+- triste = sad
+	- está triste
+- hambre = hunger
+	- tener hambre
+	- tengo un hambre = I'm very very hungry
+- sed = thirst
+	- tiene sed
+- sueño = sleepy
+	- tiene sueño
+- preocupado = worried
+- enfadado = angry
+- enfermo = sick
+	- está enfermo
+- cansado = tired
+- feliz = contento = happy
+	- estoy feliz = estoy contento
+- nervioso = nervous
+- miedo = fear
+	- tiene miedo
+- asco = digust
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FbVZaeJF11n.png?alt=media&token=be0ca13e-b547-490f-a8f3-90b4a4c04102)
+- vergüenza = embarassment
+	- a Pablo le da vergüenza que ... (rázon)
+- avergonzar = to embarass
+- tocar la lotería = win the lottery
+- tocar:
+	- to touch
+	- to play (an instrument)
+	- to win (a lottery)
+- soportar = put up with
+- aguantar = put up with
+- ![](https://i.imgur.com/evMW5fF.jpg)
 
 ## Spanish 1-1
 
@@ -2142,27 +2178,6 @@ I suggest that ...
 - ir a + v. infinitivo
 - probability
     - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FCZqF6S_l7j.png?alt=media&token=f9ee299c-4563-4b5d-80b7-6247f02d1015)
-- emotion
-    - triste = sad
-        - está triste
-    - hambre = hunger
-        - tener hambre
-        - tengo un hambre = I'm very very hungry
-    - sed = thirst
-        - tiene sed
-    - sueño = sleepy
-        - tiene sueño
-    - preocupado = worried
-    - enfadado = angry
-    - enfermo = sick
-        - está enfermo
-    - cansado = tired
-    - feliz = contento = happy
-        - estoy feliz = estoy contento
-    - nervioso = nervous
-    - miedo = fear
-        - tiene miedo
-    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FbVZaeJF11n.png?alt=media&token=be0ca13e-b547-490f-a8f3-90b4a4c04102)
 - 身體部位
     - cabeza = head
     - cara = face
@@ -3184,6 +3199,7 @@ adj. + mente -> adv.
 - estupendo = great
 - proponer  = propose
 	- propongo/proponges/proponge
+- de esto = about this
 
 ### Because
 
