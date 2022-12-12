@@ -253,3 +253,17 @@ probability
 
 - $U$ = barrier
 - $E$ = energy of the particle
+
+## Ch6 Hydrogen Atom
+
+![](https://i.imgur.com/kqiceaN.png)
+
+![](https://i.imgur.com/M24jFQ9.png)
+
+$$a_0=r_1=\dfrac{h^2\epsilon_0}{\pi me^2}=\dfrac{4\pi\hbar^2\epsilon_0}{me^2}$$
+
+See [[#Bohr Atom]]
+
+$$E_1=-\dfrac{me^4}{23\pi^2\epsilon_0^2\hbar^2}=-\dfrac{\hbar^2}{2ma_0^2}$$
+
+
