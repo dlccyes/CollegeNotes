@@ -288,4 +288,6 @@ See [[#Bohr Atom]]
 
 $$E_1=-\dfrac{me^4}{32\pi^2\epsilon_0^2\hbar^2}=-\dfrac{\hbar^2}{2ma_0^2}$$
 
+## Quantum Numbers
 
+![](https://i.imgur.com/BvKmZnX.png)
