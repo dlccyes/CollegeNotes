@@ -256,6 +256,28 @@ probability
 
 ## Ch6 Hydrogen Atom
 
+![](https://i.imgur.com/4z1MYxZ.png)
+
+Azimuth angle
+
+![](https://i.imgur.com/qzp0cTF.png)
+
+$$\nabla^2\psi+\dfrac{2m}{\hbar^2}(E-U)\psi=0$$
+
+See [[Laplace Operator]]
+
+in polar (2D)
+
+$$\left(\dfrac{\partial^2 \psi}{\partial r^2}+\dfrac{1}{r}\dfrac{\partial\psi}{\partial r}+\dfrac{1}{r^2}\dfrac{\partial^2\psi}{\partial\phi^2}\right)+\dfrac{2m}{\hbar^2}(E-U)\psi=0$$
+
+In cartesian (3D)
+
+![](https://i.imgur.com/RvrXi4u.png)
+
+In spherical (3D)
+
+![](https://i.imgur.com/kV4rzXD.png)
+
 ![](https://i.imgur.com/kqiceaN.png)
 
 ![](https://i.imgur.com/M24jFQ9.png)
@@ -264,6 +286,6 @@ $$a_0=r_1=\dfrac{h^2\epsilon_0}{\pi me^2}=\dfrac{4\pi\hbar^2\epsilon_0}{me^2}$$
 
 See [[#Bohr Atom]]
 
-$$E_1=-\dfrac{me^4}{23\pi^2\epsilon_0^2\hbar^2}=-\dfrac{\hbar^2}{2ma_0^2}$$
+$$E_1=-\dfrac{me^4}{32\pi^2\epsilon_0^2\hbar^2}=-\dfrac{\hbar^2}{2ma_0^2}$$
 
 

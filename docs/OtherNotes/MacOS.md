@@ -208,3 +208,14 @@ Note that the fullscreen after you hide the toolbars is still not the same as it
 ### Two Finger Pinch Unreliable
 
 <https://discussions.apple.com/thread/253369850>
+
+### No xxx in spotlight result
+
+See <https://support.apple.com/en-us/HT201716>
+
+1. Locate the directory the missing thing is in, e.g. `simulator.app` is from `/Applications/Xcode.app/Contents/Developer/Applications`.
+2. Go to System Preferences -> Spotlight -> Privacy
+3. Drag the directory into it (so the directory will not be indexed)
+4. Remove it (so the directory will be indexed again)
+5. Quit System Preferences
+6. Now it should work
