@@ -412,3 +412,29 @@ Changing base
 ![](https://i.imgur.com/bMZDzoR.png)
 
 ![](https://i.imgur.com/FD5GPad.png)
+
+## Ch6 Generator Modeling 1 - Machine Viewpoint
+
+### Terminal Voltage
+
+**Round-Rotor Machine**
+
+![](https://i.imgur.com/MS4G9fK.png)
+
+$$E_a=V_a+I_a(r+jX_s)$$
+
+![](https://i.imgur.com/tkbGRNF.png)
+
+**With $X_d$ & $X_q$**
+
+![](https://i.imgur.com/6EnirRS.png)
+
+$$a'=V_a+I_a(r+jX_q)$$
+
+![](https://i.imgur.com/SefFTQp.png)
+
+![](https://i.imgur.com/Dre10Cz.png)
+
+![](https://i.imgur.com/iIxzARv.png)
+
+![](https://i.imgur.com/NcdYMKJ.png)
