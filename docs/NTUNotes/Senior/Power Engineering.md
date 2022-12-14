@@ -427,14 +427,35 @@ $$E_a=V_a+I_a(r+jX_s)$$
 
 **With $X_d$ & $X_q$**
 
+![](https://i.imgur.com/T6jgyUs.png)
+
 ![](https://i.imgur.com/6EnirRS.png)
 
 $$a'=V_a+I_a(r+jX_q)$$
+
+$$\begin{align*}
+& E_a=V_a+rI_a+jX_dI_{ad}+jX_qI_{aq}\\
+&= a'+j(X_d-X_q)I_{ad}
+\end{align*}$$
+
+$a'$ has the same angle as $E_a$ & $I_{aq}$
 
 ![](https://i.imgur.com/SefFTQp.png)
 
 ![](https://i.imgur.com/Dre10Cz.png)
 
+To find $E_a$ given everything else
+
+1. find $a'$ to know the angle of $I_{aq}$ & $E_a$
+2. Find $I_{aq}$ & $I_{ad}$ with $|I_a|cos\theta$ with $\theta$ being the angle diff with $I_a$
+3. Find $E_a$
+
 ![](https://i.imgur.com/iIxzARv.png)
 
 ![](https://i.imgur.com/NcdYMKJ.png)
+
+If $3\phi$ short circuit
+
+![](https://i.imgur.com/z9A7BD6.png)
+
+![](https://i.imgur.com/T6jgyUs.png)
