@@ -54,7 +54,18 @@ New servers -> some requests will be directed to a different server -> cache mis
 
 ### Consistency Hashing
 
-To minimize the cost when adding new servers, we want to as few mapping changed as possible.
+Goal: Minimize the cost when adding new servers, we want to as few mapping changed as possible.
+
+Key concept: Randomly assign servers to a position in an arbitrary circle, and each of them serve the requests closest to them (in the counterclockwise direction)
+
+Each object's location = hashed key mod # seats in the ring
+
+![](https://i.imgur.com/GbmxmV8.png)
+
+reference
+
+- <https://www.toptal.com/big-data/consistent-hashing>
+- <https://www.youtube.com/watch?v=zaRkONvyGr8>
 
 ## Sharding
 

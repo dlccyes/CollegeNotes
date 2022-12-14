@@ -288,6 +288,28 @@ See [[#Bohr Atom]]
 
 $$E_1=-\dfrac{me^4}{32\pi^2\epsilon_0^2\hbar^2}=-\dfrac{\hbar^2}{2ma_0^2}$$
 
-## Quantum Numbers
+### Quantum Numbers
 
 ![](https://i.imgur.com/BvKmZnX.png)
+
+![](https://i.imgur.com/VOyD4Pv.png)
+
+### Orbital Quantum Numbers
+
+![](https://i.imgur.com/OqCjm5s.png)
+
+states
+
+![](https://i.imgur.com/eRv6166.png)
+
+### Magnetic Quantum Number
+
+![](https://i.imgur.com/Mqzx8fW.png)
+
+![](https://i.imgur.com/6cxZur0.png)
+
+### Probability Density
+
+![](https://i.imgur.com/jsDA8jv.png)
+
+![](https://i.imgur.com/BRaC7am.png)
