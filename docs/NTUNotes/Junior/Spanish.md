@@ -123,6 +123,12 @@ Only 3 irregular verbs - ser, ir, ver
 
 ![](https://i.imgur.com/4cH4aa3.png)
 
+### Usage
+
+Can be used when guessing what happened (without [[#Probably | probablemente / posiblemente / etc.]] in front)
+
+![](https://i.imgur.com/NxUIVlI.jpg)
+
 ## Subjunctive present
 
 ser + adj. + que + subjunctivo
@@ -3297,20 +3303,29 @@ Incorrect examples:
 
 Omit the subject if you can
 
-	### Probably
+### Probably
 
 - very sure -> indicativo
 - not very sure -> subjunctivo
-- Seguramente ...
+- Seguramente + indicativo/subjuntivo
+	- <seguramente + indicativo> o <seguramente + subjuntivo>
 	- ![](https://i.imgur.com/d6BKu7X.png)
-- Probablemente ... 
+- Probablemente + indicativo/subjuntivo
+	- <probablemente + indicativo> o <probablemente + subjuntivo>
 	- ![](https://i.imgur.com/GTABQrV.png)
-- Posiblemente ...
+- Posiblemente + indicativo/subjuntivo
+	- <posiblemente + indicativo> o <posiblemente + subjuntivo>
 	- ![](https://i.imgur.com/1Q0ZzL5.png)
-- Quizá(s) ... 
+- Quizá(s) + indicativo/subjuntivo
+	- <quizá/s + indicativo> o <quizá/s + subjuntivo>
 	- ![](https://i.imgur.com/eHEFPAO.png)
-- Puede + subjunctivo
+- Puede (ser) que + subjunctivo
+	- <puede que + subjuntivo> o <puede ser que + subjuntivo>
+	- ![](https://i.imgur.com/YjVfzaV.jpg)
 	- ![](https://i.imgur.com/x4hMURQ.png)
+- A loe mejor + indicativo
+	- <a lo mejor + indicativo>
+	- ![](https://i.imgur.com/12PhDrM.png)
 
 ### temp
 
