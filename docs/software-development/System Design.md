@@ -23,6 +23,55 @@ parent: Software Development
 	- from <https://leetcode.com/discuss/interview-question/system-design/1205825>
 - [Database Schema Templates](https://drawsql.app/templates/popular)
 
+## Database
+
+### ACID
+
+The 4 properties that define a **transaction**.
+
+- atomicity
+- consistency
+- isolation
+	- transactions are isolated to each other
+- durability
+
+Typically a trait of RDBMS, and NoSQL DBs typically don't support it.
+
+### CAP
+
+Only 2 of the 3 can be satisfied at the same time for any **distributed** data store. 
+
+- Consistency
+	- the read value is always the most recent
+- Availability
+	- you can read whenever you want
+- Partition tolerance
+	- the must in a distributed data store
+
+Partition tolerance is a must, so the choice is between consistent & availability. Typically, RDBMS chooses consistency over availability, while NoSQL chooses availability over consistency.
+
+### Primary Key
+
+- uuid (universally unique identifier)
+	- how to generate
+		- timestamp
+		- random
+	- pros
+		- unique
+		- stateless
+	- cons
+		- not intrinsically sortable
+		- performance issue for MySQL
+- integer
+	- how to generate
+		- auto increment
+	- pros
+		- readable
+	- cons
+		- not unique across distributed systems
+		- stateful
+			- neet to consult db to know the next integer
+
 ## Scaling
 
 ### Vertical Scaling
@@ -122,30 +171,6 @@ Partitioning the database
 - e.g.
 	- ![](https://i.imgur.com/42d2Ye1.png)
 	- ![](https://i.imgur.com/iLGgUhI.png)
-
-## Database
-
-### Primary Key
-
-- uuid
-	- how to generate
-		- timestampe
-		- random
-	- pros
-		- unique
-		- stateless
-	- cons
-		- not intrinsically sortable
-		- performance issue for MySQL
-- integer
-	- how to generate
-		- auto increment
-	- pros
-		- readable
-	- cons
-		- not unique across distributed systems
-		- stateful
-			- neet to consult db to know the next integer
 
 ## Storing passwords in the database
 
