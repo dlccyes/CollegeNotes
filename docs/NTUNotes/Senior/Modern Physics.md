@@ -4,7 +4,9 @@ layout: meth
 
 # Modern Physics
 
-## Constants
+## General
+
+### Constants
 
 - Planck’s constant $h$ = $6.626\times10^{-34}J\cdot Hz^{-1}$
 - electron volt $eV=1.602\times10^{-19}J$
@@ -15,6 +17,29 @@ layout: meth
 	- proton's rest mass = $1.67\times10^{-27}$
 - electron's rest energy $E_0=511keV$
 - $\dfrac{1}{4\pi\epsilon_0}=9\times10^9$
+
+### Kronecker Delta
+
+$$
+\delta_{ij}=
+    \begin{cases}
+      0, & \text{if}\ i\neq j \\
+      1, & \text{if}\ i=j
+    \end{cases}
+$$
+
+### Orthogonality
+
+$$\int^\infty_{-\infty}\psi^*_n \psi_mdV=0\ \text{if}\ n\neq 
+ m$$
+
+![](https://i.imgur.com/em8G21K.png)
+
+meaning
+
+$$\int^\infty_{-\infty}\psi^*_n \psi_mdV=\delta_{nm}$$
+
+(why will it be 1?)
 
 ## Ch1 Relativity
 
@@ -173,6 +198,8 @@ $$R=-\dfrac{E_1}{ch}$$
 
 ### Correspondence principal
 
+angular momentum $L=mvr=\dfrac{nh}{2\pi}$
+
 ![](https://i.imgur.com/gbvJU50.png)
 
 ### Nuclear Motion
@@ -254,6 +281,14 @@ probability
 - $U$ = barrier
 - $E$ = energy of the particle
 
+### Harmonic Oscillator
+
+![](https://i.imgur.com/DQkbFv5.png)
+
+![](https://i.imgur.com/vcjyquR.png)
+
+See <https://en.wikipedia.org/wiki/Quantum_harmonic_oscillator#Ladder_operator_method>
+
 ## Ch6 Hydrogen Atom
 
 ![](https://i.imgur.com/4z1MYxZ.png)
@@ -292,6 +327,8 @@ $$E_1=-\dfrac{me^4}{32\pi^2\epsilon_0^2\hbar^2}=-\dfrac{\hbar^2}{2ma_0^2}$$
 
 ![](https://i.imgur.com/BvKmZnX.png)
 
+Table 6.1
+
 ![](https://i.imgur.com/VOyD4Pv.png)
 
 ### Orbital Quantum Numbers
@@ -313,3 +350,23 @@ states
 ![](https://i.imgur.com/jsDA8jv.png)
 
 ![](https://i.imgur.com/BRaC7am.png)
+
+### Selection Rule
+
+![](https://i.imgur.com/1p8vXWx.png)
+
+**Allowed transitions**
+
+![](https://i.imgur.com/QuugbEc.png)
+
+The condition for allowed transitions
+
+![](https://i.imgur.com/cnfB2Wl.png)
+
+### Zeeman Effect
+
+![](https://i.imgur.com/Z2pASuD.png)
+
+![](https://i.imgur.com/xZar24m.png)
+
+![](https://i.imgur.com/3uguAdt.png)

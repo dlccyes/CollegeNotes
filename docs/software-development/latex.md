@@ -80,6 +80,7 @@ https://tex.stackexchange.com/a/460857
 
 ### space
 
+- `\`
 - `\;`
 - `\space`
 
