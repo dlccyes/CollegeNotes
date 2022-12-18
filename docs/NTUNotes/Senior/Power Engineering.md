@@ -35,6 +35,12 @@ $$tanh^{-1}(x)=\dfrac{1}{2}ln(\dfrac{1+x}{1-x})$$
 
 ![](https://i.imgur.com/rEK2ZNm.png)
 
+### Generator Rotating Speed
+
+rotating speed of a generator = 120 x frequency / # of poles
+
+e.g. 60Hz, 2 poles -> 3600 rpm
+
 ## Ch2 Basic Principles
 
 ### Complex Power
@@ -425,7 +431,9 @@ $$E_a=V_a+I_a(r+jX_s)$$
 
 ![](https://i.imgur.com/tkbGRNF.png)
 
-**With $X_d$ & $X_q$**
+**Salient-Pole**
+
+With $X_d$ & $X_q$
 
 ![](https://i.imgur.com/T6jgyUs.png)
 
