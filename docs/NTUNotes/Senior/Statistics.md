@@ -271,7 +271,7 @@ e.g.
 
 ![](https://i.imgur.com/rxm7jDL.png)
 
-Use p = overall p to calculate SE when $H_0$ is that 2 porportions are the same
+Use p = overall p of the 2 porportions to calculate SE when $H_0$ is that 2 porportions has the same mean
 
 ![](https://i.imgur.com/JNsoHU2.png)
 
@@ -284,6 +284,8 @@ Use p = overall p to calculate SE when $H_0$ is that 2 porportions are the same
 ![](https://i.imgur.com/F2OASkY.jpg)
 
 ![](https://i.imgur.com/eFbpxMw.png)
+
+$\hat{p}_{pool}=\dfrac{264+299}{318+369}$
 
 ![](https://i.imgur.com/wgkSbb4.png)
 
@@ -347,6 +349,12 @@ Each cell is an element, and the caluclate the x square as in one-way table, exc
 
 ![](https://i.imgur.com/pZEIm4a.png)
 
+T-Distribution is used when sample size < 30 to solve the problem of sample standard deviation being inaccurate in small samples when using normal distribution to model.
+
+The bigger the degree of freedom = n - 1, the closer it gets to normal distribution.
+
+![](https://i.imgur.com/hq7McBT.png)
+
 ![](https://i.imgur.com/4Qg5Ii6.png)
 
 T Table
@@ -357,9 +365,9 @@ T Table
 
 ![](https://i.imgur.com/u8VH7GF.png)
 
-![](https://i.imgur.com/0nIEbrY.png)
+**Problem**
 
-e.g.
+![](https://i.imgur.com/0nIEbrY.png)
 
 ![](https://i.imgur.com/AwZT4bN.png)
 ![](https://i.imgur.com/IYSiqEa.png)
@@ -370,7 +378,25 @@ e.g.
 
 ![](https://i.imgur.com/DYDDKtA.png)
 
+Basically (the Z of power + the Z of the critical value ) x SE = difference of the mean
+
 e.g.
+
+- Given
+	- sample size of both = $n$
+	- $\mu$
+	- SD
+	- difference of mean = 0.5
+	- $\alpha$ = 5%
+		- P(Z<-1.96) = 2.5%
+	- power = 80%
+		- P(Z<0.8416) = 80%
+- Sol
+	- SE=$\sqrt{\dfrac{SD^2}{n}+\dfrac{SD^2}{n}}$
+	- (1.96+0.8416)xSE = 0.5
+	- See graph
+
+**Problem**
 
 ![](https://i.imgur.com/UfZOExw.png)
 
@@ -397,6 +423,12 @@ ANOVA Table
 ![](https://i.imgur.com/JLCiA4t.png)
 
 ![](https://i.imgur.com/XTlfABn.png)
+
+**Problem**
+
+![](https://i.imgur.com/7ahQbBW.png)
+
+![](https://i.imgur.com/YCxBd0W.png)
 
 ## Linear Regression
 
