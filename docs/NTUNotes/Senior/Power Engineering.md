@@ -377,6 +377,14 @@ $$\begin{align*}
 
 ![](https://i.imgur.com/XlE3Dpe.png)
 
+### Inductance
+
+$$R=\dfrac{l}{\mu A}$$
+
+$$L_m'=\dfrac{N^2}{R_m}$$
+
+![](https://i.imgur.com/dDxxHm8.png)
+
 ### Autotransformer
 
 ![](https://i.imgur.com/X6QY07O.png)
@@ -399,6 +407,15 @@ $$\begin{align*}
 
 ![](https://i.imgur.com/y5pYJDB.png)
 
+**Problem**
+
+![](https://i.imgur.com/WfcvTtE.png)
+
+- Wye-Delta connection
+- $n=58$
+- $V_{a'n'}=\dfrac{n}{\sqrt{3}}\angle(-30^\circ)V_{an}$
+- $V_{bn}=V_{an}\angle(-120^\circ)$
+
 ### Per-Phase Transformer Analysis
 
 ![](https://i.imgur.com/lgL6ZYR.png)
@@ -419,11 +436,15 @@ Changing base
 
 ![](https://i.imgur.com/FD5GPad.png)
 
+![](https://i.imgur.com/GbZhNem.png)
+
+![](https://i.imgur.com/3liupFf.png)
+
+![](https://i.imgur.com/Z0uKn40.png)
+
 ## Ch6 Generator Modeling 1 - Machine Viewpoint
 
-### Terminal Voltage
-
-**Round-Rotor Machine**
+### Round-Rotor Machine
 
 ![](https://i.imgur.com/MS4G9fK.png)
 
@@ -431,7 +452,33 @@ $$E_a=V_a+I_a(r+jX_s)$$
 
 ![](https://i.imgur.com/tkbGRNF.png)
 
-**Salient-Pole**
+**Problem**
+
+![](https://i.imgur.com/U5vwx7D.png)
+
+$$P=0.5=|V_a||I_a|cos(\phi)=|I_a|cos\phi$$
+
+$$\begin{align*}
+& E_a=V_a+I_a(j1+j0.5)\\
+&= 1+|I_a|\angle(-\phi)(j1.5)\\
+&= 1+1.5|I_a|cos(-\phi+90^\circ)+j1.5|I_a|sin(-\phi+90^\circ)\\
+&= 1+1.5|I_a|sin(\phi)+j1.5|I_a|cos(\phi)\\
+&= 1+1.5|I_a|sin(\phi)+j0.75
+\end{align*}$$
+
+$$|E_a|=1.5$$
+
+$$1+1.5|I_a|sin\phi=\sqrt{1.5^2-0.75^2}=1.3$$
+
+$$|I_a|sin\phi=0.2$$
+
+$$|I_a|=\sqrt{0.5^2+0.2^2}=0.539$$
+
+$$\phi=tan^{-1}(\dfrac{0.2}{0.5})=21.8^\circ$$
+
+$$I_a=0.539\angle(-21.8^\circ)$$
+
+### Salient-Pole
 
 With $X_d$ & $X_q$
 
