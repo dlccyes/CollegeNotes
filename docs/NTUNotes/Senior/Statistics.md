@@ -283,13 +283,9 @@ Use p = overall p of the 2 porportions to calculate SE when $H_0$ is that 2 porp
 
 ![](https://i.imgur.com/F2OASkY.jpg)
 
-![](https://i.imgur.com/eFbpxMw.png)
+![](https://i.imgur.com/Ledwc33.png)
 
-$\hat{p}_{pool}=\dfrac{264+299}{318+369}$
-
-![](https://i.imgur.com/wgkSbb4.png)
-
-![](https://i.imgur.com/3fYHo33.png)
+![](https://i.imgur.com/Apmy1ic.png)
 
 ### Chi-Square Test
 

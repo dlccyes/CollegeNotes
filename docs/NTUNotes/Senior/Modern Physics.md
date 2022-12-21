@@ -268,6 +268,8 @@ energy
 
 ![](https://i.imgur.com/7WjH6m6.png)
 
+$$E_n=\dfrac{n^2\pi^2\hbar^2}{2mL^2}=\dfrac{n^2h^2}{8mL^2}$$
+
 ![](https://i.imgur.com/ROkyLQz.png)
 
 ### Tunnel Effect
@@ -370,3 +372,18 @@ The condition for allowed transitions
 ![](https://i.imgur.com/xZar24m.png)
 
 ![](https://i.imgur.com/3uguAdt.png)
+
+## Ch7 Many-Electron Atoms
+
+### Exclusion Principle
+
+![](https://i.imgur.com/PORxU9F.png)
+
+### Fermions & Bosons
+
+- Fermions: spin = $\dfrac{1}{2}, \dfrac{3}{2}, ...$
+	- obey [[#Exclusion Principle]]
+	- antisymmetric wave function
+- Bosons: spin = $0, 1, ...$
+	- don't obey [[#Exclusion Principle]]
+	- symmetric wave function

@@ -5,15 +5,18 @@ parent: Software Development
 # shell
 
 ## variable
+
 - `$variable_name`
 - no space around `=`
 - enclose variable with space with `"`
 	- `echo "$variable"`
 
 ## make as variable output
+
 - `var=$(git status)`
 
 ## swallow output
+
 ```
 <some command> &> /dev/null
 ```
@@ -143,6 +146,7 @@ scp -P <port> path/to/file <remote username>@<remote host>:path/to/file
 	- `echo haha >> file.txt`
 
 ## curl
+
 curl + python to extract json
 
 e.g.
@@ -152,12 +156,17 @@ enttracks&user=<user>&api_key=<api key>&format=json" | python3 -c "import json,s
 ```
 
 ## disk
+
 - usage and available space of all partitions
 	- `df -h`
 - size of all top level non-hidden directories or files
 	- `du -sh *`
+	- `du -sh * | sort -h`
+		- sorted
 	- `du -sh * | sort -rh`
-		- with reversedsorting
+		- reversly sorted
+	- `du -sh -I fileprefix* *`
+		- exclude `fileprefix*`
 - size of all top level directories or files
 	- `du -ahd1 . | sort -h`
 - `df -i`

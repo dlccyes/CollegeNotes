@@ -121,6 +121,8 @@ Only 3 irregular verbs - ser, ir, ver
 
 ![](https://i.imgur.com/DfrebNO.png)
 
+irregulars
+
 ![](https://i.imgur.com/4cH4aa3.png)
 
 ### Usage
@@ -143,7 +145,7 @@ ser + adj. + que + subjunctivo
 
 ### Irregular
 
-Often times the same prefix as the indicative present verb
+Often times the same prefix as the indicative present verb, except the below ones
 
 ![](https://i.imgur.com/nBKg6AU.png)
 
@@ -292,11 +294,14 @@ I suggest that ...
 
 ### Train related
 
+- revisor = ticket collector
 - horario = trenes = train schedule
 - vía = railway
 - vagón = car (of a train)
 	- e.g. el vagón F = car F
 - andén = platform (of a train station)
+
+![](https://i.imgur.com/q2rGfx3.png)
 
 ### Airplane related
 
@@ -2756,9 +2761,6 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - Sį, soy yo. = Yes, it's me.
 - Di que (tú) le vas a avisar. = I'll tell him.
 
-### tren = train
-![](https://i.imgur.com/q2rGfx3.png)
-
 ### dirección
 ![](https://i.imgur.com/TqL9ueM.png)
 ![](https://i.imgur.com/kIJfzmJ.png)
@@ -3303,28 +3305,33 @@ Incorrect examples:
 
 Omit the subject if you can
 
+### Recommend
+
+xxx + infinitivo or que subjunctive
+
+![](https://i.imgur.com/gBeUEYs.png)
+
+![](https://i.imgur.com/XNLGYAT.png)
+
+![](https://i.imgur.com/tcQsP4c.jpg)
+
 ### Probably
 
 - very sure -> indicativo
 - not very sure -> subjunctivo
-- Seguramente + indicativo/subjuntivo
-	- <seguramente + indicativo> o <seguramente + subjuntivo>
+- Seguramente + indicativo / subjuntivo
 	- ![](https://i.imgur.com/d6BKu7X.png)
-- Probablemente + indicativo/subjuntivo
-	- <probablemente + indicativo> o <probablemente + subjuntivo>
+- Probablemente + indicativo / subjuntivo
 	- ![](https://i.imgur.com/GTABQrV.png)
-- Posiblemente + indicativo/subjuntivo
-	- <posiblemente + indicativo> o <posiblemente + subjuntivo>
+- Posiblemente + indicativo / subjuntivo
 	- ![](https://i.imgur.com/1Q0ZzL5.png)
-- Quizá(s) + indicativo/subjuntivo
-	- <quizá/s + indicativo> o <quizá/s + subjuntivo>
+- Quizá(s) + indicativo / subjuntivo
 	- ![](https://i.imgur.com/eHEFPAO.png)
 - Puede (ser) que + subjunctivo
-	- <puede que + subjuntivo> o <puede ser que + subjuntivo>
+	- puede que + subjuntivo || puede ser que + subjuntivo
 	- ![](https://i.imgur.com/YjVfzaV.jpg)
 	- ![](https://i.imgur.com/x4hMURQ.png)
-- A loe mejor + indicativo
-	- <a lo mejor + indicativo>
+- A lo mejor + indicativo
 	- ![](https://i.imgur.com/12PhDrM.png)
 
 ### temp
@@ -3343,3 +3350,17 @@ p.13 - exercise 22
 ### Midterm Review
 
 ![](https://i.imgur.com/7HIX2Bu.png)
+
+### Final Review
+
+![](https://i.imgur.com/yEInVP8.png)
+
+![](https://i.imgur.com/FMJKtJq.png)
+
+![](https://i.imgur.com/RVojsde.jpg)
+
+![](https://i.imgur.com/FHO7SSb.png)
+
+![](https://i.imgur.com/WxWPsxX.png)
+
+![](https://i.imgur.com/fpRPRdU.png)
