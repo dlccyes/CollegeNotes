@@ -373,7 +373,14 @@ The condition for allowed transitions
 
 ![](https://i.imgur.com/3uguAdt.png)
 
+
+**Bohr magneton**
+
+![](https://i.imgur.com/TK9BJZp.png)
+
 ## Ch7 Many-Electron Atoms
+
+![](https://i.imgur.com/7ZG1NhH.png)
 
 ### Exclusion Principle
 
@@ -387,3 +394,77 @@ The condition for allowed transitions
 - Bosons: spin = $0, 1, ...$
 	- don't obey [[#Exclusion Principle]]
 	- symmetric wave function
+
+### Atomic Structures
+
+Replacing $e$ with $Z_e$ in [[#Bohr Atom]] -> energy, we get
+
+$$E_n=\dfrac{Z^2}{E_1}$$
+
+Different $n$ -> shells
+
+![](https://i.imgur.com/2OJHi3G.png)
+
+Different $l$ in same $n$ -> sub-shells
+
+![](https://i.imgur.com/eRv6166.png)
+
+![](https://i.imgur.com/Mqzx8fW.png)
+
+![](https://i.imgur.com/lRpka8C.png)
+
+![](https://i.imgur.com/G1hUK6p.png)
+
+![](https://i.imgur.com/uoSwQWx.png)
+
+**Hund's Rule**
+
+Don't pair whenever possible
+
+![](https://i.imgur.com/Mm4YTHZ.png)
+
+### Spin-Orbit Effect
+
+nucleus orbits the electron in the electron's POV, creating magnetic field
+
+![](https://i.imgur.com/wNOtX0h.png)
+
+![](https://i.imgur.com/hk1EmMQ.png)
+
+![](https://i.imgur.com/mb439Kb.png)
+
+
+### Total Angular Moment
+
+- $L$ = orbital angular momentum
+- $S$ = spin angular momentum
+- $J=L+S$ = total angular momentum
+
+![](https://i.imgur.com/WeaUi4K.png)
+
+![](https://i.imgur.com/at0fpIp.png)
+
+![](https://i.imgur.com/0DrFCrh.png)
+
+![](https://i.imgur.com/dFDYgtB.png)
+
+![](https://i.imgur.com/8D2yBNN.png)
+
+### Term Symbols
+
+![](https://i.imgur.com/spp5lfe.png)
+
+$$n^{2S+1}L_J$$
+
+**multiplicity** = # possible values of $J$
+
+- if $L>S$, multiplicity = $2S+1$
+- if $S>L$, multiplicity = $2L+1$
+
+### Hund's Rule
+
+3 rules for identifying the ground state i.e. the one with the lowest energy
+
+1. biggest multiplicity -> lowest energy
+2. for the same multiplicity, biggest $L$ -> lowest energy
+3. if outermost subshell <= half-filled, lowest $J$ -> lowest energy
