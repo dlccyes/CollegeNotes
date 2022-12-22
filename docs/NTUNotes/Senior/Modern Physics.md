@@ -433,6 +433,9 @@ nucleus orbits the electron in the electron's POV, creating magnetic field
 
 ![](https://i.imgur.com/mb439Kb.png)
 
+**LS Coupling**
+
+![](https://i.imgur.com/i8TB8KL.png)
 
 ### Total Angular Moment
 
@@ -441,6 +444,8 @@ nucleus orbits the electron in the electron's POV, creating magnetic field
 - $J=L+S$ = total angular momentum
 
 ![](https://i.imgur.com/WeaUi4K.png)
+
+so for a given $J$, there are $2J+1$ substates
 
 ![](https://i.imgur.com/at0fpIp.png)
 
