@@ -182,7 +182,7 @@ $$R=-\dfrac{E_1}{ch}$$
 
 ![](https://i.imgur.com/M6nZGYd.png)
 
-![](https://i.imgur.com/MRn4xae.png)
+![](https://i.imgur.com/axGUAwn.png)
 
 Energy
 
@@ -423,17 +423,21 @@ $$\begin{align*}
 
 ![](https://i.imgur.com/7ZG1NhH.png)
 
-### Exclusion Principle
+### Pauli's Exclusion Principle
 
 ![](https://i.imgur.com/PORxU9F.png)
 
 ### Fermions & Bosons
 
+![](https://i.imgur.com/8Tspml8.png)
+
+For antisymmetric wavefunction, $a=b\Rightarrow$ $\psi=0$, obeys [[#Pauli's Exclusion Principle]]
+
 - Fermions: spin = $\dfrac{1}{2}, \dfrac{3}{2}, ...$
-	- obey [[#Exclusion Principle]]
+	- obey [[#Pauli's Exclusion Principle]]
 	- antisymmetric wave function
 - Bosons: spin = $0, 1, ...$
-	- don't obey [[#Exclusion Principle]]
+	- don't obey [[#Pauli's Exclusion Principle]]
 	- symmetric wave function
 
 ### Quantum Numbers
@@ -448,7 +452,9 @@ $$E_n=\dfrac{Z^2}{E_1}$$
 
 Different $n$ -> shells
 
-![](https://i.imgur.com/2OJHi3G.png)
+![](https://i.imgur.com/AtcHIau.png)
+
+Max $2n^2$ states for each $n$.
 
 Different $l$ in same $n$ -> sub-shells
 
@@ -462,6 +468,8 @@ Different $l$ in same $n$ -> sub-shells
 
 ![](https://i.imgur.com/uoSwQWx.png)
 
+![](https://i.imgur.com/1dHp9QV.png)
+
 **Hund's Rule**
 
 Don't pair whenever possible
@@ -470,7 +478,7 @@ Don't pair whenever possible
 
 ### Spin-Orbit Effect
 
-nucleus orbits the electron in the electron's POV, creating magnetic field
+nucleus orbits the electron in the electron's POV, creating magnetic field, causing energy difference
 
 ![](https://i.imgur.com/wNOtX0h.png)
 
@@ -478,9 +486,11 @@ nucleus orbits the electron in the electron's POV, creating magnetic field
 
 ![](https://i.imgur.com/mb439Kb.png)
 
-**LS Coupling**
+![](https://i.imgur.com/S0gD4HV.png)
 
-![](https://i.imgur.com/i8TB8KL.png)
+See [[#Zeeman Effect]]
+
+![](https://i.imgur.com/UVCpNbd.png)
 
 ### Total Angular Moment
 
@@ -495,6 +505,10 @@ so for a given $J$, there are $2J+1$ substates
 ![](https://i.imgur.com/at0fpIp.png)
 
 ![](https://i.imgur.com/0DrFCrh.png)
+
+**LS Coupling**
+
+![](https://i.imgur.com/sPGHfjZ.png)
 
 ![](https://i.imgur.com/dFDYgtB.png)
 
@@ -522,6 +536,12 @@ $$n^{2S+1}L_J$$
 1. biggest multiplicity -> lowest energy
 2. for the same multiplicity, biggest $L$ -> lowest energy
 3. if outermost subshell <= half-filled, lowest $J$ -> lowest energy
+
+### Auger Effect
+
+An electon don't emit energy as x-ray when dropping to lower level but give the energy to another electron and make it elecate
+
+![](https://i.imgur.com/ZvIYk4y.png)
 
 ## Ch8
 
