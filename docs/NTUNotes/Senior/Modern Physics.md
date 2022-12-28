@@ -17,6 +17,10 @@ layout: meth
 	- proton's rest mass = $1.67\times10^{-27}$
 - electron's rest energy $E_0=511keV$
 - $\dfrac{1}{4\pi\epsilon_0}=9\times10^9$
+- Boltzmann's constant $k=1.381\times10^{-23}J/K$
+- Stefan's constant $\sigma=5.67\times10^{-8}$
+- 1 mol = $6.022\times10^{23}$
+- $0^{\circ}$C= 273 K
 
 ### Kronecker Delta
 
@@ -285,6 +289,8 @@ probability
 
 ### Harmonic Oscillator
 
+![](https://i.imgur.com/juKXALL.png)
+
 ![](https://i.imgur.com/DQkbFv5.png)
 
 ![](https://i.imgur.com/vcjyquR.png)
@@ -345,13 +351,33 @@ states
 
 ![](https://i.imgur.com/Mqzx8fW.png)
 
+$L=\sqrt{l(l+1)\hbar}$'s shadow on z axis = $L_z=m_l\hbar$ = integral times of $\hbar$
+
 ![](https://i.imgur.com/6cxZur0.png)
 
-### Probability Density
+### Electron Probability Density
 
 ![](https://i.imgur.com/jsDA8jv.png)
 
 ![](https://i.imgur.com/BRaC7am.png)
+
+![](https://i.imgur.com/trTh6X8.png)
+
+### Angular Momentum
+
+![](https://i.imgur.com/fGUrrSR.png)
+
+![](https://i.imgur.com/SLjqLSV.png)
+
+**Commutation** = 交換率
+
+$$[A,B]=AB-BA$$
+
+![](https://i.imgur.com/SPfULMj.png)
+
+**Ladder Operator**
+
+$$L_\pm=L_x\pm iL_y$$
 
 ### Selection Rule
 
@@ -361,24 +387,39 @@ states
 
 ![](https://i.imgur.com/QuugbEc.png)
 
-The condition for allowed transitions
+The conditions for allowed transitions
 
-![](https://i.imgur.com/cnfB2Wl.png)
+![](https://i.imgur.com/xyvTmd0.png)
 
 ### Zeeman Effect
 
-![](https://i.imgur.com/Z2pASuD.png)
+energy level change due do magnetic field
+
+![](https://i.imgur.com/IJB8pcp.png)
+
+![](https://i.imgur.com/JDHIpLb.png)
+
+$$\begin{align*}
+& \Delta E=\mu_BB\\
+&= \dfrac{e\hbar}{2m}B=\dfrac{eh}{4\pi m}B\\
+&= h\dfrac{eB}{4\pi m}\\
+&= h\Delta\nu
+\end{align*}$$
+
 
 ![](https://i.imgur.com/xZar24m.png)
 
 ![](https://i.imgur.com/3uguAdt.png)
-
 
 **Bohr magneton**
 
 ![](https://i.imgur.com/TK9BJZp.png)
 
 ## Ch7 Many-Electron Atoms
+
+### Electron Spin
+
+![](https://i.imgur.com/qUDZJRm.png)
 
 ![](https://i.imgur.com/7ZG1NhH.png)
 
@@ -394,6 +435,10 @@ The condition for allowed transitions
 - Bosons: spin = $0, 1, ...$
 	- don't obey [[#Exclusion Principle]]
 	- symmetric wave function
+
+### Quantum Numbers
+
+![](https://i.imgur.com/QYiNe2m.png)
 
 ### Atomic Structures
 
@@ -455,6 +500,10 @@ so for a given $J$, there are $2J+1$ substates
 
 ![](https://i.imgur.com/8D2yBNN.png)
 
+- $S=\sqrt{s(s+1)}\hbar$
+- $L=\sqrt{l(l+1)}\hbar$
+- $J=\sqrt{j(j+1)}\hbar$
+
 ### Term Symbols
 
 ![](https://i.imgur.com/spp5lfe.png)
@@ -473,3 +522,83 @@ $$n^{2S+1}L_J$$
 1. biggest multiplicity -> lowest energy
 2. for the same multiplicity, biggest $L$ -> lowest energy
 3. if outermost subshell <= half-filled, lowest $J$ -> lowest energy
+
+## Ch8
+
+![](https://i.imgur.com/IPEPTVp.png)
+
+![](https://i.imgur.com/fzKFaJ1.png)
+
+## Ch9 Statistical Mechanics
+
+![](https://i.imgur.com/aeI1HgW.png)
+
+- given $n$, $g(\epsilon)=2n^2$
+- given $J$, $g(\epsilon)=2J+1$
+
+Boltzmann's constant
+
+$$k=1.381\times10^{-23}J/K$$
+
+![](https://i.imgur.com/LVoTsY9.png)
+
+### Molecular Energies in Ideal Gas
+
+**Anverage Molecular Energy**
+
+![](https://i.imgur.com/0g2B1RV.png)
+
+![](https://i.imgur.com/ZjCxe71.png)
+
+Most probable speed appears at $\dfrac{dn(v)}{dv}=\dfrac{d}{dv}4\pi N(\dfrac{m}{2\pi kT})^{3/2}v^2e^{-mv^2/2kT}=0$
+
+![](https://i.imgur.com/8g18JD3.png)
+
+![](https://i.imgur.com/sydM6XW.png)
+
+### Quantum Statistics
+
+![](https://i.imgur.com/tiz5LPp.png)
+
+**Distributions Comparison**
+
+![](https://i.imgur.com/O8bhffw.png)
+
+### Rayleigh-Jeans Formula
+
+**number of standing waves**
+
+![](https://i.imgur.com/LrX0bLv.png)
+
+### Plank Radiation Law
+
+**Wien’s Displacement Law**
+
+![](https://i.imgur.com/stkZ7Zq.png)
+
+**Stefan-Boltzmann Law**
+
+energy density inside a cavity
+
+![](https://i.imgur.com/8LDRUW2.png)
+
+Radiation rate $R=e\sigma T^4$
+
+- emissivity $e=1$ for blackbody
+- Stefan's constant $\sigma=5.67\times10^{-8}$
+
+![](https://i.imgur.com/nK0ujiN.png)
+
+![](https://i.imgur.com/RuVIRNF.png)
+
+### Electron-Energy Distribution
+
+![](https://i.imgur.com/fYsMSi5.png)
+
+at $T=0$ and $\epsilon<\epsilon_F$, $e^{(\epsilon-\epsilon_F)}/kT=0$, $n(\epsilon)\propto\sqrt{\epsilon}$
+
+![](https://i.imgur.com/upXYkIQ.png)
+
+**Average energy**
+
+![](https://i.imgur.com/NFtsfHL.png)

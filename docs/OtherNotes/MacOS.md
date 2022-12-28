@@ -155,7 +155,7 @@ your cursor will appear right at the middle of the corresponding display after t
 
 [Scroll Reverser github](https://github.com/pilotmoon/Scroll-Reverser/)
 
-### prevent sleep when lid closed
+### Prevent sleep when lid closed
 
 There is no native way to do this (unless you're connected to an external monitor). Have to install 3rd party app.
 

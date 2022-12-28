@@ -145,11 +145,13 @@ ser + adj. + que + subjunctivo
 
 ### Irregular
 
-Often times the same prefix as the indicative present verb, except the below ones
+Often times the same prefix as the indicative present verb
 
 ![](https://i.imgur.com/nBKg6AU.png)
 
 ![](https://i.imgur.com/teG2Z07.png)
+
+except the below one
 
 ![](https://i.imgur.com/X2eFoKo.png)
 
