@@ -560,11 +560,11 @@ Boltzmann's constant
 
 $$k=1.381\times10^{-23}J/K$$
 
-![](https://i.imgur.com/LVoTsY9.png)
+![](https://i.imgur.com/TkzCjZW.png)
 
 ### Molecular Energies in Ideal Gas
 
-**Anverage Molecular Energy**
+**Average Molecular Energy**
 
 ![](https://i.imgur.com/0g2B1RV.png)
 
