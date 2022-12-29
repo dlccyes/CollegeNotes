@@ -180,9 +180,7 @@ $$R=-\dfrac{E_1}{ch}$$
 
 ### Bohr Atom
 
-![](https://i.imgur.com/M6nZGYd.png)
-
-![](https://i.imgur.com/axGUAwn.png)
+![](https://i.imgur.com/vCc1JdS.png)
 
 Energy
 
@@ -301,10 +299,6 @@ See <https://en.wikipedia.org/wiki/Quantum_harmonic_oscillator#Ladder_operator_m
 
 ![](https://i.imgur.com/4z1MYxZ.png)
 
-Azimuth angle
-
-![](https://i.imgur.com/qzp0cTF.png)
-
 $$\nabla^2\psi+\dfrac{2m}{\hbar^2}(E-U)\psi=0$$
 
 See [[Laplace Operator]]
@@ -312,6 +306,10 @@ See [[Laplace Operator]]
 in polar (2D)
 
 $$\left(\dfrac{\partial^2 \psi}{\partial r^2}+\dfrac{1}{r}\dfrac{\partial\psi}{\partial r}+\dfrac{1}{r^2}\dfrac{\partial^2\psi}{\partial\phi^2}\right)+\dfrac{2m}{\hbar^2}(E-U)\psi=0$$
+
+Azimuth angle = $\phi$
+
+![](https://i.imgur.com/Zley7rK.png)
 
 In cartesian (3D)
 
