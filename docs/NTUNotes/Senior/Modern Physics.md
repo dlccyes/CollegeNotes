@@ -200,7 +200,7 @@ $$R=-\dfrac{E_1}{ch}$$
 
 ### Correspondence principal
 
-angular momentum $L=mvr=\dfrac{nh}{2\pi}$
+angular momentum $L=mvr=\dfrac{nh}{2\pi}=n\hbar$
 
 ![](https://i.imgur.com/gbvJU50.png)
 
@@ -297,6 +297,8 @@ See <https://en.wikipedia.org/wiki/Quantum_harmonic_oscillator#Ladder_operator_m
 
 ## Ch6 Hydrogen Atom
 
+### Schrodinger's Equation
+
 ![](https://i.imgur.com/4z1MYxZ.png)
 
 $$\nabla^2\psi+\dfrac{2m}{\hbar^2}(E-U)\psi=0$$
@@ -327,7 +329,7 @@ $$a_0=r_1=\dfrac{h^2\epsilon_0}{\pi me^2}=\dfrac{4\pi\hbar^2\epsilon_0}{me^2}$$
 
 See [[#Bohr Atom]]
 
-$$E_1=-\dfrac{me^4}{32\pi^2\epsilon_0^2\hbar^2}=-\dfrac{\hbar^2}{2ma_0^2}$$
+$$E_1=-\dfrac{e^2}{8\pi\epsilon_0r_1}=-\dfrac{e^2}{8\pi\epsilon_0a_0}=-\dfrac{\hbar^2}{2ma_0^2}$$
 
 ### Quantum Numbers
 
