@@ -627,6 +627,35 @@ Radiation rate $R=e\sigma T^4$
 
 ![](https://i.imgur.com/NUKZTIR.png)
 
+![](https://i.imgur.com/f8TqdVK.png)
+
+![](https://i.imgur.com/qifSBvS.png)
+
+![](https://i.imgur.com/raj9rDt.png)
+
+**For 2D**
+
+$$\begin{align*}
+& n=2N/V=2\dfrac{\pi k_F^2}{(\frac{2\pi}{L^2})}/L^2=\dfrac{k_F^2}{2\pi}
+\end{align*}$$
+
+$$\begin{align*}
+& E_{density}=\dfrac{2}{V}\int^{k_F}_0\dfrac{\hbar^2k^2}{2m}\dfrac{d^2k}{(\frac{2\pi}{L})^2}\\
+&= \dfrac{2}{L^2}\int^{k_F}_0\dfrac{\hbar^2k^2}{2m}\dfrac{2\pi kdk}{(\frac{2\pi}{L})^2}\\
+&= \dfrac{\hbar^2k_F^4}{8m\pi}
+\end{align*}$$
+
+$$E_{ave}=\dfrac{E}{n}=\dfrac{\hbar^2k_F^2}{4m}=\dfrac{1}{2}E_F$$
+
+
+![](https://i.imgur.com/9e4ODEt.png)
+
+**For 2D**
+
+$$g(k)dk=\dfrac{2}{V}\dfrac{d^2k}{(\frac{2\pi}{L})^2}=\dfrac{2\pi kdk}{2\pi^2}=\dfrac{\pi dk}{\pi}$$
+
+$$g(E)=\dfrac{m}{\hbar^2\pi}$$
+
 ### Electron-Energy Distribution
 
 ![](https://i.imgur.com/fYsMSi5.png)
