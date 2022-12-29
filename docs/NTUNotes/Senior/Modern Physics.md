@@ -578,7 +578,7 @@ Most probable speed appears at $\dfrac{dn(v)}{dv}=\dfrac{d}{dv}4\pi N(\dfrac{m}{
 
 ### Quantum Statistics
 
-![](https://i.imgur.com/tiz5LPp.png)
+![](https://i.imgur.com/XYXRuRU.png)
 
 **Distributions Comparison**
 
@@ -588,9 +588,13 @@ Most probable speed appears at $\dfrac{dn(v)}{dv}=\dfrac{d}{dv}4\pi N(\dfrac{m}{
 
 **number of standing waves**
 
-![](https://i.imgur.com/LrX0bLv.png)
+![](https://i.imgur.com/qb47tmr.png)
+
+![](https://i.imgur.com/fc4Jwd3.png)
 
 ### Plank Radiation Law
+
+![](https://i.imgur.com/XULvek4.png)
 
 **Wien’s Displacement Law**
 
@@ -610,6 +614,18 @@ Radiation rate $R=e\sigma T^4$
 ![](https://i.imgur.com/nK0ujiN.png)
 
 ![](https://i.imgur.com/RuVIRNF.png)
+
+### Free Electons in a Metal
+
+![](https://i.imgur.com/tB3g9FN.png)
+
+![](https://i.imgur.com/Hr0j9ww.png)
+
+**Fermi Energy**
+
+![](https://i.imgur.com/bk0DCrw.png)
+
+![](https://i.imgur.com/NUKZTIR.png)
 
 ### Electron-Energy Distribution
 
