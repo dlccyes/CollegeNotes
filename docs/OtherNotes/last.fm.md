@@ -32,3 +32,13 @@ javascript:(function(){function a(a){const b=document.createElement("button");re
 ## Artists Photos
 
 The photo of an artist is decided by the `upvote - downvote` of the artists photos.
+
+## Recent Scrobbles Badge
+
+[JeffreyCA/lastfm-recently-played-readme](https://github.com/JeffreyCA/lastfm-recently-played-readme)
+
+Use this url for image
+
+```
+https://lastfm-recently-played.vercel.app/api?user=dlccyes
+```

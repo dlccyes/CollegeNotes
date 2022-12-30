@@ -47,6 +47,29 @@ $$\int^\infty_{-\infty}\psi^*_n \psi_mdV=\delta_{nm}$$
 
 ## Ch1 Relativity
 
+$$\gamma=\dfrac{1}{\sqrt{1-\frac{v^2}{c^2}}}$$
+
+### Energy
+
+![](https://i.imgur.com/7pGwuqi.png)
+
+$$E^2=(mc^2)^2+p^2c^2=E_0^2+(pc)^2$$
+
+$$m = 0 \rightarrow E=pc$$
+
+$$E=E_0+KE$$
+
+- $E_0$ = rest energy
+- $KE$ = kinetic energy
+
+$$E_0=m_0c^2$$
+
+$$KE=mc^2-m_0c^2$$
+
+![](https://i.imgur.com/XrVduzu.png)
+
+![](https://i.imgur.com/ohV0Xq6.png)
+
 ### Doppler effect
 
 ![](https://i.imgur.com/7ULtUFn.png)
@@ -69,30 +92,29 @@ $$\int^\infty_{-\infty}\psi^*_n \psi_mdV=\delta_{nm}$$
 
 ## Ch2 Particle properties of wave
 
-$$\gamma=\dfrac{1}{\sqrt{1-\frac{v^2}{c^2}}}$$
+### Blackbody
 
-### Energy
+![](https://i.imgur.com/9BgY6JN.png)
 
-![](https://i.imgur.com/7pGwuqi.png)
+**Rayleigh-Jeans Formula**
 
-$$E^2=(mc^2)^2+p^2c^2=E_0^2+(pc)^2$$
+![](https://i.imgur.com/ehwjjzJ.png)
 
-$$m = 0 \rightarrow E=pc$$
+but it's wrong at higher frequencies
 
-$$E=E_0+KE$$
+![](https://i.imgur.com/cq9eIjI.png)
 
-- $E_0$ = rest energy
-- $KE$ = kinetic energy
+**Plank Radiation Formula**
 
-$$E_0=m_0c^2$$
+![](https://i.imgur.com/miyWvrX.png)
 
-$$KE=mc^2-m_0c^2$$
+Plank radiation formula becomes Rayleigh-Jeans formula at low frequency $\nu$
+
+![](https://i.imgur.com/nNDAUNr.png)
+
+### Photoelectric Effect
 
 ![](https://i.imgur.com/bX177hk.png)
-
-![](https://i.imgur.com/XrVduzu.png)
-
-![](https://i.imgur.com/ohV0Xq6.png)
 
 ### X Ray
 
@@ -564,6 +586,17 @@ $$k=1.381\times10^{-23}J/K$$
 
 ### Molecular Energies in Ideal Gas
 
+**Equipartition Theorem**
+
+$\dfrac{1}{2}kT$ for each degree of freedom
+
+- $\dfrac{3}{2}kT$ for monatomic
+	- 3 translational (xyz)
+- $\dfrac{5}{2}kT$ for diatomic
+	- 3 translational + 2 rotational
+- $\dfrac{6}{2}kT$ for triatomic
+	- 3 translational + 3 rotational
+
 **Average Molecular Energy**
 
 ![](https://i.imgur.com/0g2B1RV.png)
@@ -655,6 +688,11 @@ $$E_{ave}=\dfrac{E}{n}=\dfrac{\hbar^2k_F^2}{4m}=\dfrac{1}{2}E_F$$
 $$g(k)dk=\dfrac{2}{V}\dfrac{d^2k}{(\frac{2\pi}{L})^2}=\dfrac{2\pi kdk}{2\pi^2}=\dfrac{\pi dk}{\pi}$$
 
 $$g(E)=\dfrac{m}{\hbar^2\pi}$$
+
+**More about 2D**
+
+- <http://pleclair.ua.edu/PH253/Homework/Fall_2013/HW7/HW7_18Nov13_SOLN.pdf>
+- <http://physics.ucsc.edu/~peter/231/magnetic_field/node2.html>
 
 ### Electron-Energy Distribution
 
