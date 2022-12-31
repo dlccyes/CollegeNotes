@@ -260,7 +260,7 @@ Fraction of alpha particles scattered by $\theta$ or more
 
 ![](https://i.imgur.com/CjqDl3e.png)
 
-## Ch5 Quantum Physics
+## Ch5 Quantum Mechanics
 
 ### Normalized
 
@@ -316,6 +316,11 @@ probability
 ![](https://i.imgur.com/vcjyquR.png)
 
 See <https://en.wikipedia.org/wiki/Quantum_harmonic_oscillator#Ladder_operator_method>
+
+### Finite Square Quantum Well
+
+![](https://i.imgur.com/Ry5J7K3.png)
+
 
 ## Ch6 Hydrogen Atom
 
