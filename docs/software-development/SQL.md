@@ -37,6 +37,7 @@ FROM BST AS bst_o ORDER BY N
 ```
 SELECT COLUMN FROM TABLE WHERE COLUMN REGEXP ''
 ```
+
 - `^xx` start with xx
 - `xx$` end with xx
 - `[aeiou]` a or e or i or o or u

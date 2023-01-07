@@ -35,7 +35,7 @@ The 4 properties that define a **transaction**.
 	- transactions are isolated to each other
 - durability
 
-Typically a trait of RDBMS, and NoSQL DBs typically don't support it.
+Typically a trait of RDBMS, while NoSQL DBs typically don't support it.
 
 ### CAP
 
