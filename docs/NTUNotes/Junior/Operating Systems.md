@@ -5,6 +5,7 @@ has_children: True
 # Operating Systems
 
 ## materials
+
 - [Operating System Concepts](Operating%20System%20Concepts.pdf)
 - [xv6 textbook](https://pdos.csail.mit.edu/6.828/2020/xv6/book-riscv-rev1.pdf)
 - Exams
@@ -12,7 +13,9 @@ has_children: True
 	- [Operating Systems Final](Operating%20Systems%20Final)
 
 ## videos
+
 ### 林忠緯
+
 - [Course Intro](https://www.youtube.com/watch?v=JYcRfdkhVGc)
 - [Intro](https://www.youtube.com/watch?v=nk1Lyb3QW1M)
 - [Structures](https://www.youtube.com/watch?v=TaDR2AtN8UU)
@@ -34,6 +37,7 @@ has_children: True
 - [Course Summary](https://www.youtube.com/watch?v=e_ha18S1E5M)
 
 ### 施吉昇
+
 - [Course Info](https://www.youtube.com/watch?v=0QpWM5vYt-g)
 - [Intro](https://www.youtube.com/watch?v=a-1JqW5CjDQ)
 - [Overview 1](https://www.youtube.com/watch?v=Yyuylbmw-iM)
@@ -72,6 +76,7 @@ has_children: True
 - [Synchronization Tools 2](https://www.youtube.com/watch?v=XOKAGuMy9TY)
 
 ## intro
+
 - ![](https://i.imgur.com/C5gjElc.png)
 - GPU
 	- many processing unit, executing in parallel
@@ -1599,7 +1604,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 			- expected time for the 2 disks to fail within a 10 hr window
 			- need to know the distribution tho?
 	- see [this](https://www.servethehome.com/raid-reliability-failure-anthology-part-1-primer/) for more details
-	- related to [dependable memory hierarchy](Computer%20Architecture#dependable%20memory%20hierarchy)
+	- related to [[Computer Architecture#dependable memory hierarchy|dependable memory hierarchy]]
 - improve performance with parallelism
 	- execute 2 I/O at the same time
 	- mirroring

@@ -6,9 +6,11 @@ has_children: true
 # Computer Architecture
 
 ## resources
-https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architecture.html
+
+<https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architecture.html>
 
 ## Ch1 Computer Abstractions & Technology
+
 - chip
 	- 台積電 pricing 較高但良率很高
 	- wafer
@@ -30,6 +32,7 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 - performance = execution time 倒數
 
 ### execution time
+
 - CPU time
 - CPU time = clock cycles x cycle time = cycles / clock rate
 - trade-off: clock rate vs. cycle count 
@@ -55,7 +58,8 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 - instruction set
 	- e.g. x86, ARM, RISC-V
 
-### [[../../OtherNotes/Software Development/RISC-V]] intro
+### [[RISC-V]] Intro
+
 - 較簡單的 instruction set
 - regularity → simpler implementation
 - simplicity → higher performance, lower cost
@@ -80,28 +84,32 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 	- store x9 to A[12]
 
 ### b/h/w/d
+
 - byte  = 8 bits
 - halfword = 16 bits
 - word = 32 bits
 - doubleword = 64 bits
 
 ### 2s complement
+
 - 1s complement: negation
 	- e.g. 0110 → 1001
 - 2s complement: 1s complement +1
 	- e.g. 6 = 0110 → -6 = 1001+1 = 1010
 	- 要算 8-D → 算 8+2s(D) = 8+2s(1101) = 8+0011 = 8+3 = 11 = B
-		- https://quizlet.com/explanations/questions/assume-that-registers-s0-and-s1-hold-the-values-0x80000000-and-0xd0000000-respectively-1-what-is-the-9a341a5d-4e07-4ef8-8471-fd38030f7e4f
+		- <https://quizlet.com/explanations/questions/assume-that-registers-s0-and-s1-hold-the-values-0x80000000-and-0xd0000000-respectively-1-what-is-the-9a341a5d-4e07-4ef8-8471-fd38030f7e4f>
 		- ![](https://i.imgur.com/kj2N40b.png)
 		- 歷屆 quiz 1 (4.)
 			- ![](https://i.imgur.com/YVKQkpm.png)
 			- ![](https://i.imgur.com/Vly2VUS.png)
 
-交電
+[[Logic Design]]
+
 ![](https://i.imgur.com/T1hJSQe.png)
 ![](https://i.imgur.com/q2huzgm.png)
 
 ### signed & unsigned
+
 - signed
 	- 有正負
 	- 表示負數方法
@@ -111,10 +119,13 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 	- 只有正數
 
 ### sign extension
+
 多加幾個 bits
+
 ![](https://i.imgur.com/sQJYKhN.png)
 
 ### offset
+
 ![](https://i.imgur.com/4yMSaoN.png)
 
 ### array
@@ -132,7 +143,9 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 		- 題目中會一直蓋掉 D[0:3] 的值，直到 x7 >= x5 = 4
 
 ### encoding
+
 #### overall
+
 - ![](https://i.imgur.com/NQfNS5U.png)
 - I SB UJ 的 10:5 位置都一樣
 - 都是 32 bits
@@ -140,13 +153,15 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 - destination register in bits 7-11
 - first source register in bits 15-19
 - second source register in bits 20-24
-- https://stackoverflow.com/a/39450410/15493213
+- <https://stackoverflow.com/a/39450410/15493213>
 
 #### binary representation
+
 - 15 → 0xF
 - 整個 32-bit format，4 bits 一單位，寫成 8 個 16 進位數字，前面加 0x
 
 #### R-format
+
 - ![](https://i.imgur.com/0eAXKRU.png)
 - Register-format
 - `add rd, rs1, rs2`
@@ -154,10 +169,11 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 		- e.g.
 			- ![](https://i.imgur.com/LBm5TC1.png)
 				- 51 是查表來的
-			- https://brainly.com/question/14287027
+			- <https://brainly.com/question/14287027>
 			- ![](https://i.imgur.com/SMZm3DK.png)
 
 #### I-format
+
 - Immediate-format
 - `operation rd, imm(rs1)`
 - ![](https://i.imgur.com/frYek0d.png)
@@ -167,7 +183,7 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 	- `jalr rd imm(rs1)` will jump to the address `2imm+rs1` && save the address of next line (i.e. current address + 4) to `rd`
 		- e.g. let x10 = 0x14, and `jalr x10 0(x10)`in address `0x24`, running this line will jump to address `0x14` && set x10 to 0x24+4 = `0x28`
 		- use `x0` as `rd` if don't care about return address
-	- https://electronics.stackexchange.com/a/553160
+	- <https://electronics.stackexchange.com/a/553160>
 - `SLLI` = left logical shift
 	- shift left，補 0
 	- `SLLI x10, x10, 2` → x10 shift left by 2 bits
@@ -178,17 +194,19 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 	- for signed number
 	- e.g. -8 = 11111000, -8/2 = -4 = 11111100, the right arithmetic shift of the former
 	- left arithmetic shift 則等同於 left logical shift, so no SRLI
-		- 應該是 undefined https://stackoverflow.com/questions/4009885/arithmetic-bit-shift-on-a-signed-integer
+		- 應該是 undefined <https://stackoverflow.com/questions/4009885/arithmetic-bit-shift-on-a-signed-integer>
 - `ANDI` = bit-by-bit AND operation
 	- `ANDI x20, x10, 3` → x20 = the result of x10 AND 3 i.e. 只保留最低兩位數 i.e. x10%4
 
 #### S-format
+
 - ![](https://i.imgur.com/aVvWAoF.png)
 - store byte/halfword/word/doubleword
 - immediate: offset for base address (rs1)
 - `sb rs1 rs2`
 
 #### SB-format
+
 - ![](https://i.imgur.com/kleSjvP.png)
 - conditional jump
 	- if xxxx jump to branch xxxx
@@ -204,6 +222,7 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 - `beq rs1, rs2, imm`→ jump to PC+immx2 if rs1=rs2
 
 #### UJ-format (jal)
+
 - ![](https://i.imgur.com/TYpO760.png)
 - unconditional jump
 - only for `jal`, unconditional jump-and-link
@@ -220,43 +239,61 @@ https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architectu
 		- jal 的 opcode = 1101111
 
 #### U-format
+
 - ![](https://i.imgur.com/MZZRPXV.png)
 - `lui rd constant`
 - `imm[31:12]` = constant represented with 20 bits，把這 20 bits 弄到  rd[31:12]
 - ![](https://i.imgur.com/4quFIhS.png)
 
 ####  RV32I Instruction Sets (查表)
+
 ![](https://i.imgur.com/6pitTXl.png)
+
 p.119
 
 ![](https://i.imgur.com/GfmNZRO.png)
-https://book.rvemu.app/instruction-set/01-rv64i.html
+
+<https://book.rvemu.app/instruction-set/01-rv64i.html>
+
 I-format `LX` 的部分，是 load byte/halfword/word/doubleword，以 funct3 值區分
+
 - ![](https://i.imgur.com/KqDEBNf.png)
-	- https://ithelp.ithome.com.tw/articles/10194907
+	- <https://ithelp.ithome.com.tw/articles/10194907>
 
 e.g.
+
 - ![](https://i.imgur.com/gDWS5iV.png)
 	- ![](https://i.imgur.com/0jEcaOb.png)
 
-### [[../../OtherNotes/Software Development/RISC-V]] operations
+### [[RISC-V]] operations
+
 ![](https://i.imgur.com/XC0k2XB.png)
+
 ![](https://i.imgur.com/PX629AE.png)
 
 `slli a, b, 1` → a = b<<1 (=2b)  
 `addi a, b, 1` → a=b+1
+
 #### if
+
 `beq a, b, callback` → if(a\==b){callback()}
 `bne a, b, callback` → if(a!=b){callback()}
 `blt a, b, callback` → if(a<b)
+
 ![](https://i.imgur.com/If15MR8.png)
+
 ![](https://i.imgur.com/GTajnpc.png)
+
 `bge a, b, callback` → if(a>=b)
+
 ![](https://i.imgur.com/KzsbwRQ.png)
+
 #### while
+
 ![](https://i.imgur.com/XAybNUB.png)
 
 #### jump
+
 - leaf procedure
 	- ![](https://i.imgur.com/PA6olYE.png)![](https://i.imgur.com/PEuNYOX.png)
 - non-leaf procedure
@@ -264,13 +301,17 @@ e.g.
 	- ![](https://i.imgur.com/hBfLGMq.png)![](https://i.imgur.com/V5N5pbB.png)
 
 #### load/store
+
 ![](https://i.imgur.com/oDaZ5am.png)
 
 lui
+
 ![](https://i.imgur.com/RNsyU2I.png)
+
 `lui x19, 976` → 放 12 個 0 到 976 後面 
 
 #### example
+
 ![](https://i.imgur.com/vXfjxEW.png)
 ![](https://i.imgur.com/nD2SLNx.png)
 
@@ -284,18 +325,21 @@ lui
 ![](https://i.imgur.com/W0bskcu.png)
 
 ### dynamic linking
+
 only link/load library procedure when called
 
 - Java just in time compiler
 	- 根據執行狀況做優化
 
 ### performance judging
+
 - IC (why?) & CPI alone 不是好的 performance indicators
 - compiler optimizations are sensitive to algorithms
 - Java just-in-time >> Java Virtual Machine
 	- 直逼 C
 
 ### array vs. pointer
+
 - pointer 省略 indexing 的部分
 - e.g.
 	- ![](https://i.imgur.com/D8y8N2C.png)
@@ -305,14 +349,19 @@ only link/load library procedure when called
 			- `add`🔢
 
 ### MIPS
+
 - successor of RISC-V
 - ![](https://i.imgur.com/7nEGnwD.png)
 
 ## Ch3 Arithmetic
+
 - for multipedia
 	- overflow → 留在最大值
+
 ### multiplication
+
 #### basic multiplier
+
 - 每次 cycle 加一次，要很多個 cycle
 	- sol: [[#faster multiplier]]，空間換取時間
 - ![](https://i.imgur.com/UG28Xcy.png)
@@ -333,9 +382,11 @@ only link/load library procedure when called
 			- ... 不是吧
 
 #### signed multiplication
+
 - 先弄成正的，乘完再轉回去
 
 #### faster multiplier
+
 - 用多一點加法器，省下時間
 - more cost, higher performance
 	- cost performance tradeoff
@@ -343,6 +394,7 @@ only link/load library procedure when called
 - 可以 pipeline → 可以很多 in parallel → even faster
 
 #### instructions
+
 - mul
 	- multiply
 	- return lower 64 bits
@@ -358,6 +410,7 @@ only link/load library procedure when called
 	- assume 1 signed other unsigned, return upper 64 bits
 
 ### division
+
 - ![](https://i.imgur.com/XzFB48b.png)
 - long division
 - retoring division
@@ -367,6 +420,7 @@ only link/load library procedure when called
 - division 後面 dependent on 前面結果 → 無法 parallel → time complexity 高
 
 #### divisor
+
 - ![](https://i.imgur.com/g1OFxzb.png)
 - ![](https://i.imgur.com/fRJLg8N.png)
 - 每輪 divisor pointer 右移一格，quotient pointer 左移一格
@@ -389,12 +443,14 @@ only link/load library procedure when called
 			- 最後 remainder = remainder left half；quotient = remainder right half
 
 #### signed division
+
 - 正負號不應影響數字
 	- e.g. 
 		- 7/2 = 3 ... 1
 		- -7/2 = -3 ... -1 NOT 4 ... 1
 
 #### faster division
+
 - 不能 parallel 因為需要先知道 remainder 之正負才能繼續
 	- if negative → remainder 要加回 divisor
 - SRT division
@@ -405,15 +461,18 @@ only link/load library procedure when called
 - nonperforming division
 
 #### instructions
+
 - div, rem
 - divu, remu
 - no overflow for 除以 0 & overflow
 	- return 定義
 
 ### instruction set with multiplication & division
+
 ![](https://i.imgur.com/QdxrsDH.png)
 
 ### float
+
 - 之前介紹的東西都是 integer 的
 - $\pm 1.xxxxx_2\times 2^{yyyyyyyy}$
 - 2 representations
@@ -422,6 +481,7 @@ only link/load library procedure when called
 		- `double` in C
 
 #### format
+
 - IEEE Std 754
 - ![](https://i.imgur.com/h6SNGsY.png)
 - placed this way for sorting purpose
@@ -459,6 +519,7 @@ only link/load library procedure when called
 		- ![](https://i.imgur.com/ClGGYQ5.jpg)
 
 #### number representation
+
 - ![](https://i.imgur.com/SnIXuuf.png)
 - denormalized number
 	- exponent = 0
@@ -472,21 +533,31 @@ only link/load library procedure when called
 	- fraction != 0
 
 #### addition
+
 ![](https://i.imgur.com/bFgTJBs.png)
+
 ![](https://i.imgur.com/MPx04i7.png)
+
 ![](https://i.imgur.com/84xT9Wf.png)
 
 #### multiplication
+
 ![](https://i.imgur.com/YMjRktx.png)
+
 ![](https://i.imgur.com/e9W7yvI.png)
+
 FP multiplier is FP adder but use multiplier for significands
 
 #### instructions
+
 ![](https://i.imgur.com/og6dgKP.png)
+
 - ![](https://i.imgur.com/buhsiTs.png)
 
 #### examples
+
 ##### escaping from barbaric yanks
+
 ![](https://i.imgur.com/n8xMAts.png)
 
 ```
@@ -500,13 +571,18 @@ jalr x0, 0(x1) //return
 ```
 
 ##### array multiplication
+
 ![](https://i.imgur.com/poiyR71.png)
+
 ![](https://i.imgur.com/u6ye4CT.png)
+
 - $a_{2,3}$ in 5x5 → 1x5+3 = 8th item (左到右，上到下)
 - 64-bit → 要再 x8 `slli 3`
+
 ![](https://i.imgur.com/NS7iJfq.png)
 
 #### rounding
+
 - extra bits of precision
 	- guard & round
 		- guard 存目標位數後 1st 位，round 存目標位數後 2nd 位，then round with 這兩位
@@ -527,13 +603,16 @@ jalr x0, 0(x1) //return
 	- ![](https://i.imgur.com/F0S39OV.png)
 
 ## Ch4 Processor
+
 ###  CPU
+
 - implementation of the RISC-V subset
 	- ![](https://i.imgur.com/QJ7rsrQ.png)
 	- ![](https://i.imgur.com/hWQPcIy.png)
 		- with multiplexers & control lines
 
 ### logic design
+
 - 1 wire 1 bit
 - multiple wire → bus
 - multiplexer (mux)
@@ -541,18 +620,22 @@ jalr x0, 0(x1) //return
 - ![](https://i.imgur.com/oJx3GwW.png)
 
 ### building a datapath
+
 #### fetching instruction
+
 - ![](https://i.imgur.com/RrCEyhE.png)
 - 用寫死做 Add 的 ALU，每次 PC +4
 - instruction memory 用 combinational logic
 
 #### R-type instructions
+
 - arithmetic-logical instructions
 - don't use sign extender (P4.3.3)
 - read 2 registers → perform an ALU operation (arithmetic or logical operation) → write result to register
 - ![](https://i.imgur.com/jWMlP3Y.png)
 
 #### load/store
+
 - only load & store use data memory (P4.3.1)
 - immediate generation: convert 成 ALU 所需的格式
 	- 32-bit instruction as input 
@@ -560,6 +643,7 @@ jalr x0, 0(x1) //return
 - ![](https://i.imgur.com/UFB8wsc.png)
 
 #### branch instructions (beq)
+
 - ![](https://i.imgur.com/oFNkbhE.png)
 - shift left 是加 0 到 sign-extended offset field 的後面，丟掉 sign bit
 	- 之前 x2 的部分
@@ -567,15 +651,19 @@ jalr x0, 0(x1) //return
 - 用 ALU 做 rs1-rs2，若為 0 則 PC = branch target，otherwise PC = PC+4
 
 #### 合起來
+
 - ![](https://i.imgur.com/uvu621u.png)
 	- 加上 mux 來連接&控制不同 instruction class
 - ![](https://i.imgur.com/UuZNk6t.png)
 
 ### single-cycle implementation
+
 #### ALU
+
 - ![](https://i.imgur.com/eeWVO9A.png)
 
 #### main control unit
+
 - truth table
 	- ![](https://i.imgur.com/YcsWkxv.png)
 	- 愈多 don't care 愈好
@@ -588,6 +676,7 @@ jalr x0, 0(x1) //return
 	- ![](https://i.imgur.com/RKDbqqY.png)
 
 #### operation of datapath
+
 - ![](https://i.imgur.com/3qLc5gk.png)
 	- 加上 control unit，input 是 7-bit opcode，output 控制各種東西
 - e.g.
@@ -614,9 +703,11 @@ jalr x0, 0(x1) //return
 				- != 0 → PC = PC+4
 
 #### finalizing control
+
 - ![](https://i.imgur.com/Z2U2dNw.png)
 
 #### performance issues
+
 - clock period determined by worst-case delay (longest path)
 	- load instruction 最慢
 		- instruction memory → register file → ALU → data memory register file，5 個 stage 都要跑一遍
@@ -625,7 +716,9 @@ jalr x0, 0(x1) //return
 	- solution: pipelining
 
 ### pipelining
+
 #### RISC-V 5-stage pipeline
+
 1. IF = instruction fetch
 2. ID = instruction decode & register read
 3. EX = execute operation OR calculate address
@@ -633,12 +726,16 @@ jalr x0, 0(x1) //return
 5. WB = write result back to register
 
 stage utilization of each type
+
 ![](https://i.imgur.com/rteeNMM.png)
+
 ![](https://i.imgur.com/uSIBZq0.png)
+
 - jump uses WB
 - only R don't use sign extender
 
 #### performance
+
 - cycle 數較多，cycle period 較短
 - if all stages take the same time, $T_c$ /= num of stages with pipelining
 - e.g.
@@ -646,12 +743,15 @@ stage utilization of each type
 		- 如果每個 stage 都花同樣時間，速度就會是 5 倍而非 4 倍
 
 #### pipeline hazards
+
 ##### structural hazard
+
 - 資源不夠用
 - 一個資源一個時間只能一個人用
 - solution: more resources
 
 ##### data hazard
+
 - current instruction depends on the result of previous instructions → NOP (an operation that does nothing)
 	- NOP is in code, stall is in hardware
 - store won't create hazard
@@ -673,6 +773,7 @@ stage utilization of each type
 		- ![](https://i.imgur.com/hu8AwBa.png)
 
 ##### control hazard
+
 - depends on branch outcome of previous instruction
 - e.g.
 	- ![](https://i.imgur.com/41CXIKw.png)
@@ -685,6 +786,7 @@ stage utilization of each type
 		- assumption based on history
 
 #### datapath
+
 - ![](https://i.imgur.com/3jKRTf0.png)
 - IF
 	- ![](https://i.imgur.com/jKyIoo8.png)
@@ -715,18 +817,22 @@ stage utilization of each type
 		- ![](https://i.imgur.com/Qz3bKWr.png)
 
 #### diagram
+
 - ![](https://i.imgur.com/Dck03PJ.png)
 - ![](https://i.imgur.com/340jugr.png)
 - ![](https://i.imgur.com/a7uh68Z.png)
 	- cycle 5 of previous diagrams
 
 #### control
+
 - ![](https://i.imgur.com/eJYJ5AG.png)
 - ![](https://i.imgur.com/Oq97wu1.png)
 - ![](https://i.imgur.com/mxjIMe1.png)
 
 ### data hazard & forwarding
+
 #### data hazard
+
 - EX hazard & MEM hazard
 	- ![](https://i.imgur.com/F5M1vro.png)
 - destination = 前兩個指令的 register
@@ -740,11 +846,11 @@ stage utilization of each type
 			- 1a & 2a
 
 #### forwarding
+
 - without forwarding
 	- ![](https://i.imgur.com/iYAObPi.png)
 - with forwarding
 	- ![](https://i.imgur.com/x3ckRNn.png)
-	- 
 - need forwarding when
 	- EX/MEM or MEM/WB will write to a register && RD != x0 && RD = RS of ID/EX
 	- EX hazard
@@ -763,6 +869,7 @@ stage utilization of each type
 	- ![](https://i.imgur.com/WYPhqDs.png)
 
 #### stalling
+
 - hazard detection unit
 	- ![](https://i.imgur.com/95HUhsg.png)
 	- operate at ID stage
@@ -770,23 +877,26 @@ stage utilization of each type
 - load-use data hazard 只能 stall → nop i.e. do nothing
 - ![](https://i.imgur.com/bLUubxz.png)
 - ![](https://i.imgur.com/z9sIWYY.png)
-- ![](
 
 ### control hazards
+
 - ![](https://i.imgur.com/v88zP4e.png)
 
 #### dynamic branch prediction
+
 - 1-bit predictor
 - 2-bit predictor
 	- wrong prediction twice → change
 	- ![](https://i.imgur.com/k70qCuV.png)
 
 ### exceptions
+
 - flush instructions
 - handling exception
 	- ![](https://i.imgur.com/rtM3d13.png)
 
 ### instruction level parallelism, ILP
+
 - to increase ILP
 	- deeper pipeline
 		- less work per stage → shorter clock cycle
@@ -796,6 +906,7 @@ stage utilization of each type
 			- CPI < 1, IPC = 1/CPI > 1
 
 #### Static Multiple Issue
+
 - two-issue pipeline
 	- ![](https://i.imgur.com/gLyZuz4.png)
 	- 一邊 ALU/branch 一邊 load/store
@@ -816,6 +927,7 @@ stage utilization of each type
 		- ![](https://i.imgur.com/unJsF56.png)
 
 #### Dynamic Multiple Issue
+
 - dynamic multiple-issue processors = superscalar processors
 - dynamic pipeline scheduling
 	- can execute instructions out of order
@@ -824,13 +936,17 @@ stage utilization of each type
 - ![](https://i.imgur.com/8SJFndu.png)
 
 ### problems
+
 ![](https://s2.loli.net/2021/12/22/bqMuJpVXtgOGr2k.png)
+
 load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的 MEM stage 衝到
 
 ![](https://s2.loli.net/2021/12/22/trKeaQEgcOx9u5f.png)
 
 ## Ch5 Memory Hierarchy
+
 ### intro
+
 - locality
 	- temporal locality
 		- 時間上很近的會很常被用到
@@ -858,6 +974,7 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 - ![](https://s2.loli.net/2021/12/24/1KdxXWrO7DABS82.png)
 
 ### memory
+
 - DRAM
 	- slow
 	- smaller area used per bit → cheaper
@@ -867,6 +984,7 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 	- used in upper levels
 
 ### cache 
+
 - the memory between processor & main memory
 - direct mapped cache
 	- ![](https://i.imgur.com/gVi6Vm9.png)
@@ -911,6 +1029,7 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 - AMAT (average memory access time) = hit time + miss rate x miss penalty
 
 #### associative cache
+
 - fully associative cache
 	- a block can be placed anywhere
 	- need to search all entries to find a block
@@ -930,6 +1049,7 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 	- ![](https://i.imgur.com/RGssgly.png)
 
 #### miss
+
 - compulsory miss
 	- first time access, not in cache yet
 - capacity miss
@@ -940,6 +1060,7 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 - ![](https://s2.loli.net/2021/12/24/cxU9Cn3a5EAXf7B.png)
 
 #### multilevel cache
+
 - not in 1st level cache → search 2nd level cache
 - higher miss penalty if not found in any level of cache
 - 2-level
@@ -949,6 +1070,7 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 		- focus on low miss rate
 
 ### dependable memory hierarchy
+
 - MTTF
 	- mean time to failure
 - AFR
@@ -968,6 +1090,7 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 		- replace before failure
 
 #### Hamming SEC/DED
+
 - SEC, single error correcting
 - DED, double error detecting code
 - hamming distance
