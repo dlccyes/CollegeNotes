@@ -292,3 +292,25 @@ Enclose your contents with a box
 \begin{mdframed}[backgroundcolor=red!5!white, fontcolor=red]
 \end{mdframed}
 ```
+
+## Overleaf
+
+### Generate .dvi file
+
+
+Change compiler to `latex` in `Menu`
+
+![](https://i.imgur.com/HG16aaH.png)
+
+Add a file `latexmkrc` with content `END { system ('dvips -Ppdf output.dvi'); }` in the project root
+
+![](https://i.imgur.com/oxfWsaP.png)
+
+Compile your latex file and then download `output.dvi` in `Logs and output files` -> `Other logs and files`
+
+![](https://i.imgur.com/pk68dZc.png)
+
+References
+
+- [Create .dvi and .ps file with Overleaf | StackOverflow](https://tex.stackexchange.com/a/506962)
+- [View generated files | Overleaf](https://www.overleaf.com/learn/how-to/View_generated_files)

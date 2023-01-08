@@ -147,3 +147,50 @@ extra_javascript:
 
 Uses [Material](#Material)
 
+## Troubleshooting
+
+### Error building page xxx.md: list index out of range
+
+If you face this error and the following traceback when deploying:
+
+```
+Traceback (most recent call last):
+  File "/tmp/mkdocs/test/../bin/mkdocs", line 8, in <module>
+    sys.exit(cli())
+  File "/private/tmp/mkdocs/lib/python3.9/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/private/tmp/mkdocs/lib/python3.9/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/private/tmp/mkdocs/lib/python3.9/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/private/tmp/mkdocs/lib/python3.9/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/private/tmp/mkdocs/lib/python3.9/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/private/tmp/mkdocs/lib/python3.9/site-packages/mkdocs/__main__.py", line 250, in build_command
+    build.build(cfg, dirty=not clean)
+  File "/private/tmp/mkdocs/lib/python3.9/site-packages/mkdocs/commands/build.py", line 329, in build
+    _build_page(file.page, config, doc_files, nav, env, dirty)
+  File "/private/tmp/mkdocs/lib/python3.9/site-packages/mkdocs/commands/build.py", line 226, in _build_page
+    context = config.plugins.run_event(
+  File "/private/tmp/mkdocs/lib/python3.9/site-packages/mkdocs/plugins.py", line 520, in run_event
+    result = method(item, **kwargs)
+  File "/private/tmp/mkdocs/lib/python3.9/site-packages/material/plugins/search/plugin.py", line 90, in on_page_context
+    self.search_index.add_entry_from_context(page)
+  File "/private/tmp/mkdocs/lib/python3.9/site-packages/material/plugins/search/plugin.py", line 143, in add_entry_from_context
+    parser.feed(page.content)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/html/parser.py", line 110, in feed
+    self.goahead(0)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/html/parser.py", line 172, in goahead
+    k = self.parse_endtag(i)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/html/parser.py", line 420, in parse_endtag
+    self.handle_endtag(elem)
+  File "/private/tmp/mkdocs/lib/python3.9/site-packages/material/plugins/search/plugin.py", line 417, in handle_endtag
+    elif data[-1].isspace() and data[-2] == f"<{tag}>":
+IndexError: list index out of range
+```
+
+You may have problematic markdown in `xxx.md`. Fix the syntax and redeploy, and it should work.
+
+Related issue: <https://github.com/squidfunk/mkdocs-material/issues/4824>
+
