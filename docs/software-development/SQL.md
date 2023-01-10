@@ -91,3 +91,27 @@ e.g.
 - `COUNT`
 - `ROUND(A, 2)`
 - `TRUNCATE(A, 2)`
+
+## Recursive Queries
+
+Quering the subtree of id = 9 of a [[System Design#Adjacency List|self-referencing table]] with cte (common table expressions)
+
+```sql
+with recursive cte (id, name, parent_id) as (
+  select     id,
+             name,
+             parent_id
+  from       products
+  where      parent_id = 19
+  union all
+  select     p.id,
+             p.name,
+             p.parent_id
+  from       products p
+  inner join cte
+          on p.parent_id = cte.id
+)
+select * from cte;
+```
+
+<https://stackoverflow.com/a/33737203/15493213>

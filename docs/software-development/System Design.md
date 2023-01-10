@@ -72,6 +72,133 @@ Partition tolerance is a must, so the choice is between consistent & availabilit
 		- stateful
 			- neet to consult db to know the next integer
 
+### Handling Hierarchical Data
+
+If your data is a tree-like structure (undirected graph), you can design your db schema in multiple ways.
+
+#### Multiple Tables
+
+Use multiple tables with each non-root table having a foreign key referencing to the parent.
+
+**Analysis**
+
+- pros
+	- ?
+- cons
+	- may have multiple tables storing the same kinds of information
+		- e.g. managers & SWEs are all employees
+
+#### Adjacency List
+
+Have a column recording to the parents. 
+
+**Minimal schema example**
+
+- id
+- parent_id
+
+See [[SQL#Recursive Queries]] for quering a subtree
+
+**Analysis**
+
+- pros
+	- simple
+- cons
+	- need recursive queries to get a subtree, slow in deep trees
+
+#### Nested Sets
+
+A segment tree. Record left & right values in a row.
+
+**Example table**
+
+id | name            | left  | right
+---|------------------|------|------
+ 1 | Electronics      |   1  |  12
+ 2 | Cell Phones      |   2  |   7
+ 3 | Smartphones      |   3  |   4
+ 4 | Basic Phones     |   5  |   6
+ 5 | Computers        |   8  |  11
+ 6 | Laptops          |   9  |  10
+ 7 | Desktops         |   8  |   9
+ 8 | TV & Home Theater|  11  |  12
+ 9 | Books            |  13  |  18
+10 | Fiction          |  14  |  15
+11 | Non-Fiction      |  16  |  17
+12 | Music            |  19  |  20
+
+Exclusively use `left` & `right` to do queries (i.e. `id` isn't involved when quering)
+
+**Analysis**
+
+- pros
+	- faster to query a deep subtree
+- cons
+	- need to update the `left` & `right` fields of many records when inserting or moving a node
+
+#### Lineage Column / Path Enumeration / Materialized Path
+
+Store the path in a field.
+
+**Example table**
+
+id | name            | path
+--|--|--
+ 1 | Electronics      |   1
+ 2 | Cell Phones      |   1/2
+ 3 | Smartphones      |   1/2/3
+ 4 | Basic Phones     |   1/2/4
+ 5 | Computers        |   1/5
+ 6 | Laptops          |   1/5/6
+ 7 | Desktops         |   1/5/7
+ 8 | TV & Home Theater|   1/8
+ 9 | Books            |   9
+10 | Fiction          |   9/10
+11 | Non-Fiction      |   9/11
+12 | Music            |   12
+
+**Analysis**
+
+- pros
+	- very easy to query a subtree
+		- e.g. `LIKE '1/2/%'`
+- cons
+	- very complex to move a node
+		- need to update the path of itself and all its children
+	- no referential integrity
+
+#### Closure Table / Bridge Table
+
+Have a dedicated table recording the relationship.
+
+**Example relationship table**
+
+For 1 -> 2 -> 3
+
+ancestor_id | node_id
+--|--
+ 1 | 1
+ 1 | 2
+ 1 | 3
+ 2 | 2
+ 2 | 3
+ 3 | 3
+
+(omitting primary key)
+
+**Analysis**
+
+- pros
+	- easy to select a subtree
+- cons
+	- complex to move a node
+	- relationship table $O(n^2)$ space worst case
+
+#### References
+
+- [Hierarchical Data in SQL: The Ultimate Guide](https://www.databasestar.com/hierarchical-data-sql/)
+- [Hierarchical Database, multiple tables or column with parent id? | Stack Overflow](https://stackoverflow.com/a/2341295/15493213)
+
 ## Scaling
 
 ### Vertical Scaling
