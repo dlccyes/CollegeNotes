@@ -221,7 +221,7 @@ type Report struct {
 }
 ```
 
-Use <https://github.com/dmarkham/enumer> to generate enumer file.
+Use <https://github.com/dmarkham/enumer> to generate enumer file for `DataScope`.
 
 ```
 go run github.com/dmarkham/enumer -type=DataScope -sql 
