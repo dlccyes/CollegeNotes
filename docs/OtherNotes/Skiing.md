@@ -5,7 +5,7 @@
 The difficulty of a trial depends on the slope, the terrain and the covering snow. They are decided by the resorts, but if generally, if we only look at the slope, it is like this
 
 - Green
-	- $\angle 5 \sim 10 ^\circ$
+	- $\angle 5 \sim 15 ^\circ$
 - Blue
 	- $\angle 15 \sim 25 ^\circ$
 - Black
@@ -60,7 +60,7 @@ This resort is based on a small mountain. The trials are generally straightforwa
 
 **A1**
 
-大斜面 is a very long slope. The first third is a very steep and icey slope. If you slipped there, you may find it difficult to stop yourself. This trial is very hostile toward begginers.
+大斜面 is a very long slope. The first third is a very steep and icey (depends on many things obviosly but at the time I skiied at least 🥲) slope. If you slipped there, you may find it difficult to stop yourself. This trial is very hostile toward beginners.
 
 **F1 & G3**
 
@@ -76,11 +76,11 @@ The beginner course.
 
 **H2**
 
-The begginer course but with slightly steeper slope.
+The beginner course but with slightly steeper slope.
 
 **E1**
 
-The first third is a pretty steep slope, the next 2/3 is not, but the speed is accumulated from before, plus the whole course is very straight with no natural stopping points, so this one is actually pretty tiring. You'll maintain a pretty high speed for a few consequtive minutes .
+The first third is a pretty steep slope, the next 2/3 is not, but the speed is accumulated from before, plus the whole course is very straight with no natural stopping points, so this one is actually pretty tiring if you're bad.
 
 There isn't much view in this course, so it's rather boring. However, there are some bumps for snowboarder to play some stunts.
 
@@ -98,7 +98,7 @@ Wide trials between the woods.
 
 **D1**
 
-A wide course between the woods. Good view, relatively 豐富 terrains.
+A wide course between the woods. Good view with relatively 豐富 terrains. If you like this kind of trials, go to [[#Tashira Area]].
 
 ### Kagura Ski Resort
 
@@ -114,9 +114,11 @@ A wide course between the woods. Good view, relatively 豐富 terrains.
 
 ![](https://i.imgur.com/rYMG8fq.png)
 
-There are 3 areas in Kagura Ski Resort, Tashira, Kagura, and Mitsumata.
+There are 3 areas in Kagura Ski Resort, Tashira, Kagura, and Mitsumata. You can access this resort with a ropeway from [[#Naeba Ski Resort]], however, the operation time window of the ropeway is fairly narrow, so it' will be quite difficult to access the Mitsumata area or even Kagura if you live at Naeba Prince Hotel.
+ 
+#### Tashira Area
 
-**Tashira (田代)**
+**田代**
 
 The Tashira area can be directly accessed from [[#Naeba Ski Resort]] through a 20 min.  ropeway. The area is consist of a sparse forest and a lake, however, even the nearest trial is a bit far from the lake. The trials in this area are generally long, wide, beginner-friendly, and are in the woods. This area feels much more natural than [[#Naeba Ski Resort]].
 
