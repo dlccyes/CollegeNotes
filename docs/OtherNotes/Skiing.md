@@ -1,50 +1,74 @@
 # Skiing
 
+## Trials Difficulties
+
+The difficulty of a trial depends on the slope, the terrain and the covering snow. They are decided by the resorts, but if generally, if we only look at the slope, it is like this
+
+- Green
+	- $\angle 5 \sim 10 ^\circ$
+- Blue
+	- $\angle 15 \sim 25 ^\circ$
+- Black
+	- $\angle 25 \sim 35 ^\circ$
+
 ## Tips
+
+### Stance
+
+**Always** keep your center of mass at the front, and keep your hands steady at the front even (or especially) when doing turns. Stay low when on steep slopes.
 
 ### Turn
 
-When doing left turn
+When doing a left turn:
 
-- left lean s.t. your body's middle line is on top of the left board, but put the weight on the right foot -> right board will left turn
-- left rotate your left foot i.e. move emphasis for left foot to little toe -> left board will follow the right board i.e. left turn
+- left lean s.t. your body's middle line is on top of the left ski, but put the weight on the right foot -> right ski will left turn
+- left rotate your left foot i.e. move emphasis for left foot to little toe -> left ski will follow the right ski i.e. left turn
 
 vice versa
 
 ### Getting up from the ground
 
-Make your feet i.e. boards toward the valley and head toward the hill, and push the ground with your hands, now you're up on your feet again.
+Make your feet i.e. skis toward the valley and head toward the hill, and push the ground with your hands, now you're up on your feet again.
 
-### Attaching boards on a hill
+### Attaching skis on a hill
 
-Attach bottom board -> attach top board
+Attach bottom ski -> attach top ski
+
+### Getting back your poles and skis when falling down on a steep slope
+
+Stop yourself from slipping and pray for some snowboarders to get them back to you
 
 ## Skiing Resorts
 
-### Naeba Prince Hotel
+### Naeba Ski Resort 
 
-![](https://i.imgur.com/h4yGmh2.jpg)
+**苗場滑雪場**
 
-#### Green line 
+[Information](https://www.princehotels.com/en/ski/naeba/index.html)
 
-**Difficulty (IMO)**
+**Map**
 
-G1 >= E1 > D1 > H2 > H1
+![](https://i.imgur.com/MKHagye.jpg)
 
-**D1**
+**Trials Info**
 
-A wide course between the woods. Good view, relatively 豐富 terrains.
+![](https://i.imgur.com/KyA2OmC.png)
 
-**E1**
+This resort is based on a small mountain. The trials are generally straightforward slopes with not many trees and and little variety., except for the leftmost and rightmost parts. On the trials at the bottom part, you'll see Naeba Prince Hotel.
 
-The first third is a pretty steep slope, the next 2/3 is not, but the speed is accumulated from before, plus the whole course is very straight with no natural stopping points, so this one is actually pretty tiring. You'll maintain a pretty high speed for a few consequtive minutes .
+#### Blue Lines
 
-There isn't much view in this course, so it's rather boring. However, there are some obstacles for snowboarder to play some stunts.
+**A1**
 
-**G1**
+大斜面 is a very long slope. The first third is a very steep and icey slope. If you slipped there, you may find it difficult to stop yourself. This trial is very hostile toward begginers.
 
-A snowy mountain terrain, pretty cool. There is even a short path into the woods (and out). There are some steep slopes in this course tho, but they're optional.
+**F1 & G3**
 
+These 2 trials are very straight slopes, right next to each other. It's fairly steep, but the snow cover is also pretty fluffy, so it's not a hard course even for beginners as long as you know all the basics and be careful.
+
+These 2 trials can be accessed from either lift F or G.
+
+#### Green Lines
 
 **H1**
 
@@ -53,3 +77,47 @@ The beginner course.
 **H2**
 
 The begginer course but with slightly steeper slope.
+
+**E1**
+
+The first third is a pretty steep slope, the next 2/3 is not, but the speed is accumulated from before, plus the whole course is very straight with no natural stopping points, so this one is actually pretty tiring. You'll maintain a pretty high speed for a few consequtive minutes .
+
+There isn't much view in this course, so it's rather boring. However, there are some bumps for snowboarder to play some stunts.
+
+**G1**
+
+A snowy mountain terrain, pretty cool. There is even a short path into the woods (and out). There are some steep slopes in this course tho, but they're optional.
+
+**DG1 / C1**
+
+A pretty narrow trial to connect L1 from lift G. Not too challenging tho.
+
+**L1 & G2**
+
+Wide trials between the woods.
+
+**D1**
+
+A wide course between the woods. Good view, relatively 豐富 terrains.
+
+### Kagura Ski Resort
+
+**神樂滑雪場**
+
+[Information](https://www.princehotels.com/en/ski/kagura/index.html)
+
+**Map**
+
+![](https://i.imgur.com/8uuHNxu.jpg)
+
+**Trials Info**
+
+![](https://i.imgur.com/rYMG8fq.png)
+
+There are 3 areas in Kagura Ski Resort, Tashira, Kagura, and Mitsumata.
+
+**Tashira (田代)**
+
+The Tashira area can be directly accessed from [[#Naeba Ski Resort]] through a 20 min.  ropeway. The area is consist of a sparse forest and a lake, however, even the nearest trial is a bit far from the lake. The trials in this area are generally long, wide, beginner-friendly, and are in the woods. This area feels much more natural than [[#Naeba Ski Resort]].
+
+One need to be aware that many trials interleave with each other, so be sure that the path you take is the one you want.
