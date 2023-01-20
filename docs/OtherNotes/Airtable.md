@@ -5,6 +5,14 @@ parent: Software Development
 
 # Airtable
 
+## Check status
+
+<https://status.airtable.com/>
+
+## View base usage in your workspace
+
+Different plans have different limits. To see your current usage, go to **account -> workspaces**
+
 ## Sync into a PostgreSQL database with Sequin
 
 Follow [this guide](https://docs.retool.com/docs/interact-with-airtable)

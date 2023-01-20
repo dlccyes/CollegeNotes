@@ -10,6 +10,17 @@ parent: Software Development
 - <https://fullstackopen.com/en/>
 	- muy bonita
 
+## REST API
+
+### Methods
+
+- GET
+	- to retrieve data
+	- put data in query parameters
+- POST
+	- to create / update data
+	- put data in request body
+
 ## DNS
 
 ### Set up DNS record

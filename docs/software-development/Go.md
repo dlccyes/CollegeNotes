@@ -109,6 +109,19 @@ viper.SetConfigFile(".env")
 viper.ReadInConfig()
 ```
 
+## Docstring
+
+Comments directly above a function will become docstrings.
+
+```go
+// this is an example function
+// this function will return the result of a + b
+func add(a int, b int) int {
+	c := a + b
+	return c
+}
+```
+
 ## Interface
 
 <https://gobyexample.com/interfaces>
@@ -427,6 +440,33 @@ mockgen -source=doer/doer.go -destination=mocks/mock_doer.go --package mocks
 <https://github.com/go-gorm/gorm/issues/1525#issuecomment-376164189>
 
 <https://betterprogramming.pub/97ee73e36526>
+
+## Gin
+
+### Binding parameters or body
+
+You can bind the query parameters or json body to a struct.
+
+To bind query parameters or form-data, specify `form` in struct tags. To bind json body, specify `json` in struct tags.
+
+```go
+type Filter struct {
+    Product    bool   `json:"product" form:"product"`
+    SubProduct bool   `json:"sub_product" form:"sub_product"`
+    Project    bool   `json:"project" form:"project"`
+}
+
+func (h topHandlers) HandleGetServices(c *gin.Context) {
+	filter := &model.Filter{}
+	// binding query params
+	err := c.ShouldBind(filter)
+	// binding json body
+	err := c.ShouldBindJSON(filter)
+	// rest of the codes
+}	
+```
+
+Don't forget to specify `Content-Type: applicaiton/json` in request header to bind json body.
 
 ## Logging with Logrus
 
