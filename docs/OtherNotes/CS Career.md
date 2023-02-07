@@ -33,9 +33,9 @@ layout: meth
 - FTE = full-time employee
 - MTS = member of technical staff = SWE
 
-## resources
+## Resources
 
-### forums
+### Forums
 
 - Blind
 - r/cscareerquestions
@@ -59,8 +59,16 @@ layout: meth
 - every details in the pipeline
 	- <https://resumeworded.com/playbooks/job-search-checklist>
 
-## good posts or threads
+### Job Searching Websites
 
+- LinkedIn
+- underdog.io
+- triplebyte.com
+
+## Good posts or threads
+
+- the whole process
+	- [How I landed 18 FAANG+ software engineer offers after not interviewing for 5 years | Medium](https://medium.com/@stevenzhang/how-i-landed-18-faang-software-engineer-offers-after-not-interviewing-for-5-years-fc0dfc957a5d)
 - bonus skills
 	- <https://www.reveddit.com/v/csMajors/comments/qsz0wy/five_programming_skills_to_boost_your_resume_that/>
 		- SQL, Jira (agile), Git, Azure & AWS, Docker
@@ -80,7 +88,7 @@ layout: meth
 	- <https://chonyy.medium.com/f1dcb67e4798>
 	- <https://www.teamblind.com/post/pQ43s0TA>
 
-## building portfolio
+## Building portfolio
 
 ### projects
 
@@ -90,7 +98,7 @@ layout: meth
 	- consistent style
 	- reusable codes
 	- maintainable
-- have doc
+- have docs
 	- how to run
 - deployed as a site, can be easily run
 	- ability to deploy and host a site
@@ -101,17 +109,18 @@ layout: meth
 	- build a site yourself
 		- <https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwz0dx>
 
-## resume
+## Resume
 
-- <https://resumeworded.com/>
+- [Resume Worded](https://resumeworded.com/)
 	- auto resume suggestions
 	- very comprehensive
 	- free
 - [r/cscq resume sharing](https://www.reddit.com/r/cscareerquestions/comments/e8narz)
+- [A Good Tech Resume | The Pragmatic Engineer ](https://thetechresume.com/A_Good_Tech_Resume.pdf) ([archive](https://web.archive.org/web/20220520083345/https://thetechresume.com/A_Good_Tech_Resume.pdf))
 - templates
 	- [Software Engineer Resume](https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf)
 
-## cover letters
+## Cover letters
 
 - templates
 	- [Deedy Cover Letter](https://www.overleaf.com/latex/templates/deedy-cover-letter/yhdwrhyvqjwy)
@@ -123,11 +132,11 @@ layout: meth
 
 - [Tech Interview Handbook](https://techinterviewhandbook.org/)
 	- author of Blind 75
-- DSA
+- [[#LeetCode]]
 - complex personal projects
-- system design
+- [[#System Design]]
 
-### leetcode
+### LeetCode
 
 - [Blind 75](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU)
 - patterns
@@ -144,11 +153,11 @@ layout: meth
 	- [pdf link](https://github.com/Avinash987/Coding/blob/master/Cracking-the-Coding-Interview-6th-Edition-189-Programming-Questions-and-Solutions.pdf)
 	- [pdf with my annotations](cracking.pdf)
 
-### system design
+### System Design
 
 [[System Design]]
 
-### devops
+### DevOps
 
 - threads
 	- <https://www.reddit.com/r/devops/comments/eo5r1q>
@@ -170,7 +179,7 @@ layout: meth
 
 ### Online Assessments
 
-#### Codesignal
+#### CodeSignal
 
 <https://github.com/Leader-board/OA-and-Interviews/blob/main/Online%20Assessments.md#codesignal>
 
@@ -204,7 +213,7 @@ layout: meth
 
 ### Amazon Leadership Principles
 
-- resources
+- Resources
 	- [official](https://www.amazon.jobs/en/principles)
 	- [explanations](https://www.scarletink.com/interviewing-at-amazon-leadership-principles/)
 		- sign up free to view the full article
@@ -213,7 +222,7 @@ layout: meth
 	- questions & answers
 		- <https://www.reddit.com/r/jobsearchhacks/comments/g2iv42>
 			- all related to sales tho
-- tips
+- Tips
 	- use STAR format
 	- each LP has 2 stories (different LPs may share)
 	- [Good leaders understand which principle to prioritize in what situation.](https://www.teamblind.com/post/u8kPJm15)	
@@ -289,7 +298,7 @@ layout: meth
 ### Posts & Threads
 
 - Aggregation
-	- <https://www.linkedin.com/posts/pratham-kohli_topleetcodeposts-that-you-cannot-miss-activity-6985883736722583553-ucr6>
+	- [Top LeetCode posts that you cannot miss | LinkedIn](https://www.linkedin.com/posts/pratham-kohli_topleetcodeposts-that-you-cannot-miss-activity-6985883736722583553-ucr6)
 - Generic
 	- <https://angelswengineer.medium.com/b9262fccaa2> 
 	- <https://angelswengineer.medium.com/b1a52d97201a>
@@ -340,12 +349,12 @@ layout: meth
 	- <https://www.ptt.cc/bbs/Soft_Job/M.1656312014.A.7C6.html>
 	- Microsoft Onsite Questions
 		- <https://leetcode.com/discuss/general-discussion/1893215/>
-- offers
+- Offers
 	- <https://www.teamblind.com/post/hLE5CRYQ>
 
 ## LinkedIn
 
-- skill assessment answers
+- Skill assessment answers
 	- <https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes>
 
 ## TC
@@ -355,17 +364,19 @@ layout: meth
 
 ## Company details
 
-- [Prestige Hunt 🤣](https://prestigehunt.com/)
-- [FAANG+ WLB](https://www.teamblind.com/post/Data-on-WLB-and-job-security-from-polls-on-FAANG-other-large-tech-companies-[x-post]-74bA5ySP)
+- ["Prestige Hunt"](https://prestigehunt.com/)
 - WLB
-	- [My 2022 WLB company rankings | Blind](https://www.teamblind.com/post/My-2022-WLB-company-rankings-6NiXQBEJ)
+	- threads
+		- [FAANG+ WLB | Blind](https://www.teamblind.com/post/Data-on-WLB-and-job-security-from-polls-on-FAANG-other-large-tech-companies-[x-post]-74bA5ySP)
+		- [My 2022 WLB company rankings | Blind](https://www.teamblind.com/post/My-2022-WLB-company-rankings-6NiXQBEJ)
+	- team dependent
 	- good WLB
 		- Google
 		- Salesforce
 		- Microsoft
 		- Jane Street
 		- American Express
-	- not so relaxed environment
+	- bad WLB
 		- Amazon
 		- Meta
 		- Citadel

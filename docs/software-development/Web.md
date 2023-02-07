@@ -89,7 +89,7 @@ You need to enable CORS on the server side for cross-origin requests to succeed.
 
 ## Testing API
 
-- [Postman](https://www.postman.com/)
+- [[Postman]]
 	- frontend for curl
 - [Webhook.site](https://webhook.site/)
 	- give you an endpoint for request

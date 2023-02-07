@@ -60,7 +60,7 @@ This resort is based on a small mountain. The trails are generally straightforwa
 
 **A1**
 
-大斜面 is a very long slope. The first third is a very steep and icy (depends on many things obviosly but at the time I skiied at least 🥲) slope. If you slipped there, you may find it difficult to stop yourself. This trail is very hostile toward beginners.
+大斜面 is a very long slope. The first third is a very steep and icy (depends on many things obviosly but at the time I skiied at least 🥲) slope. If you tripped and fell there, you may find it difficult to stop yourself. This trail is very hostile toward beginners.
 
 **F1 & G3**
 

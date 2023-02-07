@@ -5,7 +5,9 @@ parent: Software Development
 # Gitlab
 
 ## self-host gitlab
+
 ### start/stop
+
 <https://docs.gitlab.com/omnibus/maintenance/#starting-and-stopping>
 
 start
@@ -31,10 +33,11 @@ sudo systemctl disable gitlab-runsvdir.service
 <https://stackoverflow.com/a/35902817/15493213>
 
 ### install
-install gitlab  
+
 official doc: <https://about.gitlab.com/install/#ubuntu>  
 
 install required packages
+
 ```
 sudo apt-get update
 sudo apt-get install -y curl openssh-server ca-certificates tzdata perl
@@ -42,25 +45,30 @@ sudo apt-get install -y postfix
 ```
 
 install
+
 ```
 curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash
 ```
 
 setup desired url
+
 ```
 sudo EXTERNAL_URL="<url>" apt-get install gitlab-ee
 ```
 
 if `Unable to locate package gitlab-ce`, do
+
 ```
 curl -L -o gitlab-ee_13.0.6.deb https://packages.gitlab.com/gitlab/gitlab-ee/packages/debian/buster/gitlab-ee_13.0.6-ee.0_amd64.deb/download.deb
 
 sudo EXTERNAL_URL="<url>" apt install ./gitlab-ee_13.0.6.deb
 ```
+
 [ref](https://gitlab.com/gitlab-org/omnibus-gitlab/-/issues/5176#note_352348985)
 
 then go to `<url>`  
 you should see  
+
 ![](https://i.imgur.com/AHK8MCg.png)
 
 - To login as admin, use the username `root` and the password in `/etc/gitlab/initial_root_password`

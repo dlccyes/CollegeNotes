@@ -8,11 +8,11 @@ parent: Software Development
 ## Resources
 
 - DDIA
+	- [pdf | github](https://github.com/jeffrey-xiao/papers/blob/master/textbooks/designing-data-intensive-applications.pdf)
 	- 簡中譯 <https://github.com/Vonng/ddia>
-	- [pdf](https://github.com/jeffrey-xiao/papers/blob/master/textbooks/designing-data-intensive-applications.pdf)
 - Grokking the system design interview
-	- [pdf](https://raw.githubusercontent.com/sharanyaa/grok_sdi_educative/master/grok_system_design_interview.pdf)
-	- [pdf](http://libgen.rs/book/index.php?md5=3CC8A0D02BBB0644A3839F6B621BB86B)
+	- [pdf | github](https://raw.githubusercontent.com/sharanyaa/grok_sdi_educative/master/grok_system_design_interview.pdf)
+	- [pdf | libgen](http://libgen.rs/book/index.php?md5=3CC8A0D02BBB0644A3839F6B621BB86B)
 - Alex Xu
 	- [System Design Interview An Insider’s Guide by Alex Xu (z-lib.org).pdf](https://github.com/G33kzD3n/Catalogue/blob/master/System%20Design%20Interview%20An%20Insider%E2%80%99s%20Guide%20by%20Alex%20Xu%20(z-lib.org).pdf)
 	- [Youtube](https://www.youtube.com/c/ByteByteGo/)
@@ -314,3 +314,34 @@ Partitioning the database
 ## URL Shortening
 
 <https://www.educative.io/courses/grokking-the-system-design-interview>
+
+## Case Study
+
+### Twitter Timeline
+
+source: DDIA
+
+**Approach 1**
+
+- write: post a tweet -> insert into global tweets
+	- simple
+- read: sql join query to select tweets from those who the user follows
+	- complex
+
+Suitable for 
+
+**Approach 2**
+
+- write: post a tweet -> insert into the cache of each of the tweeter's followers
+	- complex
+- read: fetch the cache
+	- simple
+
+Suitable when # read reqs >> # write reqs
+
+**Hybrid**
+
+Approach 2 for tweets from the mass with little followers, and approach 1 for tweets from celebs
+
+i.e. Tweets from celebs are indepedently fetched and then inserted into users' timeline cache
+

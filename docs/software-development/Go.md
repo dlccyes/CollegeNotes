@@ -468,6 +468,13 @@ func (h topHandlers) HandleGetServices(c *gin.Context) {
 
 Don't forget to specify `Content-Type: applicaiton/json` in request header to bind json body.
 
+## mock
+
+```
+	// expected, _ := json.Marshal(expectedDashboard)
+	// assert.Equal(suite.T(), string(expected), w.Body.String())
+```
+
 ## Logging with Logrus
 
 `github.com/sirupsen/logrus`
@@ -633,6 +640,61 @@ func main() {
 	defer file.Body.Close()
 	fmt.Println(file)
 }
+```
+
+## Swaggo
+
+Create API docs with go comments!
+
+```go
+//go:generate swag init --dir=<path/to/apis> --generalInfo=<path/to/swaggo-init-file> --output=<path/to/desired-doc-directory> --parseInternal --pd
+```
+
+In your swaggo init file
+
+```go
+package handler
+
+import (
+	"net/http"
+
+	_ "<path-to-doc-directory>"
+
+	"github.com/gin-gonic/gin"
+	swaggoFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
+)
+
+// @title My API
+// @version 1.0
+// @description This is my API
+
+// @schemes http https
+// @host localhost:8080
+// @BasePath /api/v1
+
+// RegisterSwaggoHandler swaggo
+func RegisterSwaggoHandler(router *gin.Engine) {
+	router.GET("/api/swagger", func(c *gin.Context) { c.Redirect(http.StatusMovedPermanently, "/api/swagger/index.html") })
+	router.GET("/api/swagger/*any", ginSwagger.WrapHandler(swaggoFiles.Handler))
+}
+```
+
+Add comments before your API
+
+```go
+// HandleGetServiceInfo Swagger
+// @Summary      Get info
+// @Description  Get info with id
+// @Accept       json
+// @Produce      json
+// @Param        id      query    string    true    "id"
+// @Success      200  {object}  model.Info
+// @Failure      400  {string}  string ""
+// @Failure      403  {string}  string ""
+// @Failure      404  {string}  string ""
+// @Router       /info [get]
+func HandleGetInfo(){}
 ```
 
 ## Troubleshooting

@@ -93,6 +93,11 @@ nav:
     - software-development/PulseAudio.md
     - software-development/tcpdump.md
 
+  - Git:
+    - software-development/git.md
+    - software-development/Github.md
+    - software-development/Gitlab.md
+
   - Web:
     - software-development/Web.md
     - Static Site Generators:

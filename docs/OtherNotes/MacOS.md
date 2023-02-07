@@ -94,6 +94,39 @@ sudo powermetrics|grep -i "CPU die temperature"
 
 See [Sniffing Packets from Wireless Networks](Software%20Development/Sniffing%20Packets%20from%20Wireless%20Networks)
 
+## Proxy
+
+### Set proxy
+
+<https://www.laptopmag.com/how-to/set-up-a-proxy-on-macos>
+
+### Check your current proxy setting
+
+list services
+
+```
+networksetup -listallnetworkservice
+```
+
+check proxy setting
+
+```
+sudo networksetup -getwebproxy <service>
+```
+
+example response when no proxy
+
+```
+$ sudo networksetup -getwebproxy Wi-Fi
+Password:
+Enabled: No
+Server: 
+Port: 0
+Authenticated Proxy Enabled: 0
+```
+
+<https://superuser.com/a/48562>
+
 ## programs
 
 ### open VsCode from terminal

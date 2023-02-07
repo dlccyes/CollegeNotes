@@ -25,6 +25,7 @@ sudo apt install gh
 - simple
 - fast
 - intuitive
+- only core features
 
 ### GitKraken
 
@@ -39,30 +40,38 @@ gh auth login
 ```
 
 ### repo
+
 #### view all repos
+
 ```
 gh repo list
 ```
 
 #### create repo
+
 ```
 gh repo create
 ```
 
 ## pull related
+
 ### git pull all subdiretories
+
 ```
 for i in */.git; do ( echo $i; git -C $i/.. pull; ); done
 ```
 
 ### commands
+
 - login
 	- `gh auth login`
 - create repo
 	- `gh repo create`
 
 ## history
+
 <https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History>
+
 - `git log`
 - `git reflog`
 	- each commit oneline
@@ -70,6 +79,7 @@ for i in */.git; do ( echo $i; git -C $i/.. pull; ); done
 	- commit details of `abcdef`
 
 ## maintenance
+
 [doc](https://git-scm.com/docs/git-maintenance)
 
 optimize your git repo  
@@ -84,7 +94,9 @@ git maintenance run --task=gc
 ```
 
 ## line endings lf & crlf
+
 ### check the eol of a file
+
 - `cat -A <file>`
 	- CRLF -> end with `^M$`
 	- LF -> end with `$`
@@ -92,7 +104,9 @@ git maintenance run --task=gc
 	- <https://stackoverflow.com/a/3570574/15493213>
 
 ### auto eol translation
+
 #### with gitattributes
+
 auto translation for files when checked out (into LF for Unix, CRLF for Windows)  
 ```
 echo ""* text=auto" >> .gitattributes
@@ -100,6 +114,7 @@ git commit -m "something"
 ```
 
 #### with core.autocrlf
+
 - `git config --global core.autocrlf true` for Windows
 	- convert to LF when commit
 	- convert to CRLF when checkout
@@ -107,6 +122,7 @@ git commit -m "something"
 	- convert to LF when commit
 
 ### convert entire directory to LF
+
 (there might be some redundant steps but idk & idc)
 
 auto translation for files when checked out (into LF for Unix, CRLF for Windows)  
@@ -207,6 +223,7 @@ relevant docs
 - <https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things>
 
 #### for tracked files
+
 - `git reset HEAD --hard`
 - `git restore .`
 - `git checkout -- .`
@@ -214,23 +231,27 @@ relevant docs
 		- unmodify the modified untracked file `haha.txt`
 
 #### for untracked files
+
 - `git clean -df`
 	- clear all untracked files
 - `git clean -f haha.txt`
 	- clear the untracked file `haha.txt`
 
 ### remove remote but keep local
+
 ```
 git rm --cached <file>
 ```
 
 ### how many insertions and deletions for a user
+
 ```
 git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{insertions+=$1; deletions+=$2} END {print NR, "files changed,", insertions, "insertions(+),", deletions, "deletions(+)"}';
 ```
 <https://stackoverflow.com/a/48575013/15493213>
 
 ### all commits
+
 - `git log`
 - `git reflog`
 	- every action
@@ -240,6 +261,7 @@ git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{inser
 	- `git rev-list HEAD --count`
 
 ### diff
+
 - `git diff`
 - git diff with vimdiff
 	- `git config --global diff.tool vimdiff` set git tool to vimdiff
@@ -247,15 +269,18 @@ git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{inser
 	- <https://stackoverflow.com/a/3713803/15493213>
 
 ###  by user
+
 - all commits
 	- `git shortlog`
 - commit counts
 	- `git shortlog -s -n`
 
-https://stackoverflow.com/questions/677436/how-do-i-get-the-git-commit-count
+<https://stackoverflow.com/questions/677436/how-do-i-get-the-git-commit-count>
 
 ## squash
+
 ### using reset & amend
+
 設你有最近 3 個 commit 為
 - 9a7792
 - 9a7791
@@ -263,6 +288,7 @@ https://stackoverflow.com/questions/677436/how-do-i-get-the-git-commit-count
 - 9a7789
 
 想要把三個 commits squash 在一起
+
 1. `git reset --soft 9a7789`
 2. `git commit --amend` OR 直接去 gui 
 	- new commit message
@@ -271,10 +297,12 @@ https://stackoverflow.com/questions/677436/how-do-i-get-the-git-commit-count
 4. 完成
 
 ref
-https://www.burntfen.com/2015-10-30/how-to-amend-a-commit-on-a-github-pull-request option 3
-https://gitbook.tw/chapters/using-git/reset-commit.html about git reset
+
+- <https://www.burntfen.com/2015-10-30/how-to-amend-a-commit-on-a-github-pull-request> option 3
+- <https://gitbook.tw/chapters/using-git/reset-commit.html> about git reset
 
 ### using rebase & squash
+
 設你有最近 4 個 commit 為
 - 9a7792
 - 9a7791
@@ -282,6 +310,7 @@ https://gitbook.tw/chapters/using-git/reset-commit.html about git reset
 - 9a7789
 
 想要把 9a7792 & 9a7791 squash 到 97790
+
 1. `git rebase -i 9a7790`
 2. 出現 editor，把 9a7792 & 9a7791 改成 squash (注意這時較早的 commit 是在上面)
 3. 出現 editor，把 多個 message 改成單一個 message
@@ -289,6 +318,7 @@ https://gitbook.tw/chapters/using-git/reset-commit.html about git reset
 5. 完成
 
 ref
+
 <https://gitbook.tw/chapters/rewrite-history/merge-multiple-commits-to-one-commit.html>
 
 ## Credential
@@ -436,24 +466,29 @@ git ls-remote <git repo>
 ```
 
 ### check remote
+
 ```
 git remote -v
 ```
 
 ### push to another remote
+
 ```
 git push <remote>
 ```
 
 ### add remote
+
 ```
 git remote add origin2 http://gitlab.com/name/repo
 ```
 
-### switch default fetch/pull/push repo
+### switch default tracking repo
+
 ```
 git branch --set-upstream-to origin2/master
 ```
+
 <https://stackoverflow.com/a/32469272/15493213>
 
 ### ssh method
