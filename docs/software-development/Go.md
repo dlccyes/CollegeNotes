@@ -470,9 +470,45 @@ Don't forget to specify `Content-Type: applicaiton/json` in request header to bi
 
 ## mock
 
+A helper function helping you set up a mock context and a recorder recording the reponse of your request
+
+```go
+func MockGin() (*gin.Context, *httptest.ResponseRecorder) {
+    w := httptest.NewRecorder()
+    c, _ := gin.CreateTestContext(w)
+    c.Request = &http.Request{
+        Header: make(http.Header),
+        URL:    &url.URL{},
+        Body:   nil,
+    }   
+    return c, w
+}
 ```
-	// expected, _ := json.Marshal(expectedDashboard)
-	// assert.Equal(suite.T(), string(expected), w.Body.String())
+
+Create your mock request, send the context into your handler function, and see if the response code and data is correct 
+
+```go
+func TestGetService(){
+    c, w := test_helper.MockGin()
+    c.Request.URL.RawQuery = "id=1"
+
+	expectedService := model.Service{}
+    handler.HandleGetService(c) // assuming it will return a http status code and a model.Service struct, which will be recorded by w
+    assert.Equal(suite.T(), http.StatusOK, w.Code)
+	expected, _ := json.Marshal(expectedService)
+	assert.Equal(suite.T(), string(expected), w.Body.String())
+}
+```
+
+To emulate a post request with a json payload
+
+```go
+    c, w := test_helper.MockGin()
+    jsonPayload := `{
+        "hi":  "there"
+    }`
+    c.Request.Body = io.NopCloser(strings.NewReader(jsonPayload))
+    c.Request.Header.Set("Content-Type", "application/json")
 ```
 
 ## Logging with Logrus
@@ -714,6 +750,7 @@ VsCode not recognizing functions in the same package
 e.g.
 
 `bruh.go`
+
 ```go
 package bruh
 
@@ -723,6 +760,7 @@ func Hello() string {
 ```
 
 `bruh_test.go`
+
 ```go
 package bruh
 import (

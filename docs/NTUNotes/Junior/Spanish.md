@@ -2747,6 +2747,7 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - ![](https://i.imgur.com/UO7j7zZ.png)
 
 ### futuro
+
 - yo
 	- verbo infinitivo + (r)é
 	- e.g.

@@ -88,11 +88,13 @@ deactivate
 ```
 
 ## pyenv
+
 python version controller
 
 <https://github.com/pyenv/pyenv>
 
 ### install
+
 ```
 https://pyenv.run
 ```
@@ -109,6 +111,7 @@ restart shell with `exec $SHELL` or just `source ~/.bashrc`
 <https://github.com/pyenv/pyenv-installer>
 
 ### commands
+
 - `pyenv install <version>` to install e.g. 3.9.10
 - `pyenv uninstall <version>` to uninstall version
 - `pyenv versions` to see versions you have & the version you're using (like `git branch`)
@@ -186,6 +189,45 @@ os.getcwd()
 import os
 os.chdir("<path>")
 ```
+
+## Unit testing with `unittest`
+
+Suppose you want to write unit tests for your functions in `main.py`
+
+`main.py`
+
+```python
+def no(query: str) -> bool:
+	return False
+	
+def yes(query: str) -> bool:
+	return True
+```
+
+Put your unit tests in `test_main.py`
+
+```python
+import unittest
+from main import no, yes
+
+Class TestMain(unittest.TestCase):
+	def test_no(self):
+		mock_query = "Me das tu movil?"
+		expected_ans = False
+		actual_ans = no(mock_query)
+		self.assertEqual(expected_ans, actual_ans)
+
+	def test_yes(self):
+		mock_query = "Are you yo mama?"
+		expected_ans = True
+		actual_ans = yes(mock_query)
+		self.assertEqual(expected_ans, actual_ans)
+
+if __name__ == "__main__":
+	unittest.main()
+```
+
+Now just run `test_main.py`, and it will tell you the result. If something's wrong, it will show you the diff.
 
 ## random
 

@@ -64,6 +64,7 @@ nav:
     - "software-development/GCP CICD.md"
 
 - Software Development:
+  - "software-development/Programming 101.md"
   - Languages:
     - "software-development/C++.md"
     - software-development/Python.md
