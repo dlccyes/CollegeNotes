@@ -89,22 +89,6 @@ calculate all your songs' (in playlist) total size (160kbs)
 
 [https://ranked-records.herokuapp.com/](https://ranked-records.herokuapp.com/) search by artist, will display songs sorted by popularity/chonology
 
-## Last.fm stats
-
-[http://www.mymusichabits.com](http://www.mymusichabits.com/) basically the same stats as last.fm
-
-[https://nicholast.fm](https://nicholast.fm/) stats and recommendations
-
-[https://mainstream.ghan.nl](https://mainstream.ghan.nl/) how mainstream you are
-
-[http://explr.fm](http://explr.fm/)(map)
-
-[http://lastfm.dontdrinkandroot.net](http://lastfm.dontdrinkandroot.net/) lit composition of artists
-
-[https://scatterfm.markhansen.co.nz](https://scatterfm.markhansen.co.nz/) scatter graph of every scrobble
-
-[http://www.lastchart.com.s3-website-us-east-1.amazonaws.com](http://www.lastchart.com.s3-website-us-east-1.amazonaws.com/) all kinds of charts of your artists  
-
 ---
 
 List of Spotify stats websites (and not just stats)  

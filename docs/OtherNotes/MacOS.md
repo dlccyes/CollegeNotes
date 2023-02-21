@@ -102,16 +102,24 @@ See [Sniffing Packets from Wireless Networks](Software%20Development/Sniffing%20
 
 ### Check your current proxy setting
 
+[Guide](https://docs.telerik.com/fiddler-everywhere/knowledge-base/test-fiddler-network-access-on-macos#troubleshooting-the-proxy-settings)
+
 list services
 
 ```
-networksetup -listallnetworkservice
+networksetup -listallnetworkservices
 ```
 
-check proxy setting
+check proxy setting for http
 
 ```
 sudo networksetup -getwebproxy <service>
+```
+
+for https
+
+```
+networksetup -getsecurewebproxy <service>
 ```
 
 example response when no proxy

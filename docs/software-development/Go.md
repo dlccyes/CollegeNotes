@@ -5,6 +5,18 @@ parent: Software Development
 
 # Go
 
+## Install
+
+### With HomeBrew (MacOS)
+
+```
+brew update
+brew upgrade
+brew install go
+```
+
+###
+
 ## Style
 
 <https://github.com/Pungyeon/clean-go-article>
@@ -213,9 +225,18 @@ proto file
 
 Go's ORM library
 
+### Execute raw query
+
+```go
+db.EXEC("TRUNCATE TABLE services")
+```
+
 ### Enum
 
-<https://threedots.tech/post/safer-enums-in-go/>
+Note that `AutoMigrate` will not migrate enum changes. You can alter table directly, or drop the table and then let `AutoMigrate` recreate the table.tes
+
+Use <https://threedots.tech/post/safer-enums-in-go/>
+
 
 e.g.
 
@@ -239,6 +260,34 @@ Use <https://github.com/dmarkham/enumer> to generate enumer file for `DataScope`
 ```
 go run github.com/dmarkham/enumer -type=DataScope -sql 
 ```
+
+To map string back to enum
+
+```go
+package alphabets
+
+type Alphabets int
+
+const (
+    A Alphabets = iota
+    B
+    C
+)
+
+var MapEnumStringToAlphabets = func() map[string]Alphabets {
+    m := make(map[string]Alphabets)
+    for i := A; i <= C; i++ {
+        m[i.String()] = i
+    }
+    return m
+}()
+```
+
+<https://stackoverflow.com/a/75205150/15493213>
+
+### Transaction
+
+<https://gorm.io/docs/transactions.html>
 
 ### Upsert
 
@@ -425,6 +474,12 @@ For example, if you want it to always run with `-v` (verbose), add this in setti
 
 See <https://github.com/Microsoft/vscode-go/issues/1377#issuecomment-347431580>
 
+### assert equal of list ignoring order
+
+`assert.ElementsMatch()`
+
+<https://github.com/stretchr/testify/issues/275#issuecomment-480823210>
+
 ## Mock
 
 ### GoMock
@@ -468,7 +523,7 @@ func (h topHandlers) HandleGetServices(c *gin.Context) {
 
 Don't forget to specify `Content-Type: applicaiton/json` in request header to bind json body.
 
-## mock
+### mock
 
 A helper function helping you set up a mock context and a recorder recording the reponse of your request
 
@@ -510,6 +565,24 @@ To emulate a post request with a json payload
     c.Request.Body = io.NopCloser(strings.NewReader(jsonPayload))
     c.Request.Header.Set("Content-Type", "application/json")
 ```
+
+## HTTP Client
+
+### Proxy
+
+```go
+func NewHTTPClientWithProxy(proxyURL string) *resty.Client {
+	client := resty.New()
+	client.SetProxy(proxyURL)
+	return client
+}
+```
+
+proxyURL format: `http://<username>:<password>@<host>:<port>`
+
+or `http://<host>:<port>` without authentication
+
+**Remember to use `http` even for https!**
 
 ## Logging with Logrus
 

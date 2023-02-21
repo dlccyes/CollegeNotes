@@ -80,6 +80,26 @@ git maintenance run
 git maintenance run --task=gc
 ```
 
+## Submodule
+
+Add a submodule
+
+```
+git submodule add <remote url> <local path>
+```
+
+Update all submodule
+
+```
+git submodule update
+```
+
+Remove a submodule
+
+```
+git submodule deinit <local path>
+```
+
 ## line endings lf & crlf
 
 ### check the eol of a file
@@ -113,12 +133,14 @@ git commit -m "something"
 (there might be some redundant steps but idk & idc)
 
 auto translation for files when checked out (into LF for Unix, CRLF for Windows)  
+
 ```
 echo ""* text=auto" >> .gitattributes
 git commit -m "something"
 ```
 
 renormalize current directory
+
 ```
 git add --renormalize .
 git commit -m "something"

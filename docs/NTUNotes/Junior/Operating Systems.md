@@ -741,7 +741,9 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ![](https://i.imgur.com/0l1zkFk.png)
 
 ## Virtual Memory
+
 ### intro
+
 - in old OS with old CPU, virtual memory = logical memory
 - background
 	- no need to load entire program but just part of it
@@ -767,6 +769,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- offset ranges only in the segment
 
 ### demand paging
+
 - bring in a page to memory on demand
 	- like swapping
 	- lazy swapper
@@ -805,6 +808,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- page out to swap space
 
 ### COW, copy-on-write
+
 - copy page only when need to write
 - fork() -> copy parent's page table to child's
 - before writing, parent & child have different page tables but same physical address space
@@ -814,6 +818,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- virtual memory fork()
 
 ### Page Replacement
+
 - over-allocating / over-booking
 	- allocate only 50% of requested memory -> can have double amount of processes
 - when there's no free frame
@@ -831,6 +836,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- page replacement
 
 #### page replacement algo
+
 - procedure
 	- have free frame -> use it
 	- no free frame -> find victim frame and swap -> update page table -> restart the instruction
@@ -904,6 +910,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 			- no I/O
 
 ### Allocation of Frames
+
 - fixed allocation
 	- equal allocation
 		- divide evenly
@@ -911,6 +918,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- proportional to size of process
 
 #### global & local allocation
+
 - local replacement
 	- its own set of frames
 - global replacement
@@ -933,6 +941,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- set `oom_score_adj` to big negative to avoid being killed
 
 #### Non-Uniform Memory Access (NUMA)
+
 - memory not accessed equally
 - some CPU can access some sections of main memory faster
 - architecture
@@ -953,6 +962,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- schedule process to run on its previous CPU -> higher cache hit rate
 
 ### Thrashing
+
 - time spent in paging > time spent in executing
 - sum of size of locality > total memory size -> thrashing
 - accept many processes/requests -> degree of multiprogramming increase -> num of free frames decrease -> keep having page fault at some point
@@ -968,6 +978,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- allocate frames according to locality to avoid thrashing
 
 #### working-set model
+
 - monitors the locality of each process
 - allocates frames according to the needs of each process
 - sum of locality > num of available frames -> suspend a process
@@ -994,6 +1005,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- when paging a different locality, page-fault rate peaks
 
 #### Page-Fault Frequency (PFF)
+
 - more direct than working-set model
 - adjust allocation policy based on page-fault rate
 - page-fault rate > upper bound -> allocate frames for the process
@@ -1001,6 +1013,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - ![](https://i.imgur.com/dphu0bD.png)
 
 #### Allocating Kernel Memory
+
 - different free-frame pool than that of user-mode processes
 	- kernel need memory in various size, instead of a page
 	- some kernel memory needs to be contiguous, while user memory doesn't have to
@@ -1046,12 +1059,15 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- after being released, objects are marked as free and returned to the cache -> can be allocated again immediately
 
 ### Others
+
 #### prepaging
+
 - no prepaging in demand paging -> many page faults at process start
 - cons
 	- many prefetched pages may not be used
 
 #### page size
+
 - many tradeoffs
 - why smaller pages
 	- less internal fragmentation
@@ -1072,6 +1088,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - history trends: toward larger page
 
 ## CPU Scheduling
+
 - alternate between CPU burst & I/O burst
 - difference between CPU burst & I/O burst
 	- CPU can generally be preempted, while I/O can't
@@ -1131,7 +1148,9 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- only consider CPU burst but not I/O burst
 
 ### scheduling algorithms
+
 #### first-come, first-serve (FCFS) scheduling
+
 - e.g.
 	- ![](https://i.imgur.com/00jHzcu.png)
 - convoy effect
@@ -1179,6 +1198,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- more responsive than SJF
 
 #### priority scheduling
+
 - smaller number -> higher priority
 - problems
 	- starvation
@@ -1205,10 +1225,12 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ![](https://i.imgur.com/fP8dYO3.png)
 
 ### Thread Scheduling
+
 - kernel threads are scheduled for modern OS
 	- rather than processes
 
 #### contention scope
+
 - process-contention scope (PCS)
 	- for many-to-many or many-to-one OS
 	- schedule user-level thread to run in LWP
@@ -1220,6 +1242,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- competition among all threads
 
 ### Multi-Processor Scheduling
+
 - symmetric multiprocessing (SMP)
 	- each processor does its own scheduling
 	- ready queue
@@ -1228,7 +1251,9 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 			- load balancing
 		- shared queue
 			- race condition
+
 #### multicore processor
+
 - memory stall
 	- spend large portion of time on memory access
 	- ![](https://i.imgur.com/26WLrj5.png)
@@ -1256,6 +1281,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- select hardware thread
 
 #### Load Balancing
+
 - methods
 	- push migration
 		- task checker moves tasks from overloaded processors to underloaded ones
@@ -1278,6 +1304,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- allocate memory close to the CPU the process is on
 
 ### Real-Time CPU Scheduling
+
 - hard real-time systems
 	- miss deadline -> system fail (no service)
 - soft real-time systems
@@ -1298,6 +1325,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ![](https://i.imgur.com/WX8nHX0.png)
 
 #### Proportional Share Scheduling
+
 - fair-share scheduler
 - each task gets a fixed share of CPU time
 	- fixed proportion of CPU time
@@ -1305,6 +1333,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - lottery scheduling
 
 #### Priority-Based Scheduling
+
 - soft real-time
 - periodic process
 	- rate = 1/p
@@ -1319,6 +1348,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - ![](https://i.imgur.com/PDWYdcS.png)
 
 #### Rate-Monotonic Scheduling
+
 - shorter the **period**, higher the priority
 - static priority
 	- a process will always have higher priority than the other
@@ -1333,6 +1363,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ![](https://i.imgur.com/fvbO9oI.png)
 
 #### Earliest-Deadline-First (EDF) Scheduling
+
 - the closer the deadline, the higher the priority
 - e.g.
 	- ![](https://i.imgur.com/lJwO3q7.png)
@@ -1850,6 +1881,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- need huge space for big disk
 
 #### linked list
+
 - linking all free blocks
 - a pointer to 1st free block
 - pros
@@ -1858,6 +1890,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- big traversal time
 
 #### grouping
+
 - linked list but
 	- 1st free block contains addresses to n free blocks
 	- last of the above blocks contains addresses to another n free blocks
@@ -1865,6 +1898,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- faster to find many free blocks compared to linked list
 
 #### counting
+
 - like extent
 - keep address of 1st free block num of subsequent contiguous free blocks
 - each list entry contains an address & a count
@@ -1873,6 +1907,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- shorter list
 
 #### space maps
+
 - metaslabs
 - ![](https://i.imgur.com/1vUapTC.png)
 

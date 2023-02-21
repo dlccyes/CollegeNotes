@@ -45,3 +45,9 @@ Just type it
 	- `use <db name>`
 - show table schema
 - `show columns from <table name>`
+
+## Upsert
+
+Use the `ON DUPLICATE KEY UPDATE` clause for upserting. 
+
+However, you **cannot specify your own key** to lookup, but only the a UNIQUE index or PRIMARY KEY will be checked.

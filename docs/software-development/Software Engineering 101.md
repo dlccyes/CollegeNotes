@@ -6,6 +6,15 @@
 
 ## Design Patterns
 
+### Service Repository Pattern
+
+- service
+	- api for business logic
+	- control the data with the abstracted repositories provided with [[#Dependency Injection]]
+- repository
+	- the layer that directly touches the data
+	- each db each repository
+
 ### Inversion of Control
 
 It is a very general term. It literally means inversing the traditional flow of control.

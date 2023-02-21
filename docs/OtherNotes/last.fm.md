@@ -5,6 +5,23 @@ parent: Miscellaneous
 
 # Last.fm
 
+## Last.fm stat websites
+
+- [http://www.lastchart.com.s3-website-us-east-1.amazonaws.com](http://www.lastchart.com.s3-website-us-east-1.amazonaws.com/) 
+	- all kinds of charts of your artists 
+- <https://collage.caretas.club/static/collages/>
+	- album & artist collage
+- [https://mainstream.ghan.nl](https://mainstream.ghan.nl/) 
+	- how mainstream you are
+- [https://nicholast.fm](https://nicholast.fm/) 
+	- stats and recommendations
+- [http://lastfm.dontdrinkandroot.net](http://lastfm.dontdrinkandroot.net/) 
+	- cool artists wordcloud
+- [https://scatterfm.markhansen.co.nz](https://scatterfm.markhansen.co.nz/) 
+	- scatter graph of every scrobble
+- [http://www.mymusichabits.com](http://www.mymusichabits.com/) 
+	- basically the same as last.fm
+
 ## Remove (duplicate) scrobbles
 
 ### batch select & delete
