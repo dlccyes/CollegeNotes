@@ -55,3 +55,11 @@ You can specify different tab sizes for each language
 	"editor.tabSize": 2
 },
 ```
+
+## Troubleshooting
+
+### self signed certificate in certificate chain
+
+For Max, install the extension [Mac CA VSCode](https://marketplace.visualstudio.com/items?itemName=linhmtran168.mac-ca-vscode) and then reload VsCode
+
+<https://stackoverflow.com/a/72889953/15493213>

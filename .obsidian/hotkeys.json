@@ -191,5 +191,13 @@
       ],
       "key": "Tab"
     }
+  ],
+  "terminal:open-terminal-current.integrated": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "`"
+    }
   ]
 }

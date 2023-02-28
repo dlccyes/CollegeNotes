@@ -2,6 +2,7 @@
 layout: meth
 parent: Software Development
 ---
+
 # Vue
 
 ## CLI
@@ -17,6 +18,7 @@ yarn global add @vue/cli
 ```
 yarn global add @vue/cli-service
 ```
+
 in `node_modules/.bin/vue-cli-service`
 run with `npx vue-cli-service`
 
@@ -41,6 +43,7 @@ npm create <your project>
 #### With Vite
 
 In your project root, run 
+
 ```
 npm init vue@latest
 ```
@@ -102,7 +105,7 @@ yarn add pinia
 
 Add `app.use(pinia)` in `main.js`
 
-```
+```js
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -119,7 +122,7 @@ app.mount('#app')
 
 In `src/stores/useStore.js`
 
-```
+```js
 import { defineStore } from 'pinia'
 
 export const useStore = defineStore('<id>', {
@@ -139,13 +142,13 @@ To access & modify the store in a random component
 
 First import it.
 
-```
+```js
 import { useStore } from '@/stores/useStore'
 ```
 
 Then you can directly use it.
 
-```
+```js
   methods: {
     test() {
 	  // useStore().counter++
@@ -158,7 +161,7 @@ Then you can directly use it.
 
 Or you can declare it with
 
-```
+```js
   data() {
     return {
       haha: useStore()
@@ -168,7 +171,7 @@ Or you can declare it with
 
 or
 
-```
+```js
   setup() {
     const haha = useStore();
     return {
@@ -269,7 +272,7 @@ createWebHistory(import.meta.env.BASE_URL)
 
 ### fallback route
 
-```
+```js
 const routes = [
   { path: "/:pathMatch(.*)", name: "not-found", component: Invalid },
 ];
@@ -285,7 +288,7 @@ To link to this route,
 
 Do this. It will match to the route with the same `name` and pass the `params`.
 
-```
+```js
 <router-link :to="{name: 'student', params: {id: student.student_id}}"> {{ student.student_name }}</router-link>
 ```
 
@@ -323,7 +326,7 @@ For `{ path: '/std/:id', name: "student", component: Data }`,
 
 Define values
 
-```
+```js
   data() {
     return {
       update: 0,
@@ -338,7 +341,7 @@ define values that need to be computed
 
 will automatically be recomputed
 
-```
+```js
   computed: {
     val1(){
       // complicated computations
@@ -351,7 +354,7 @@ will automatically be recomputed
 
 Define functions
 
-```
+```js
   methods: {
     func1() {
       // something
@@ -366,21 +369,25 @@ Define functions
 
 execute when first load
 
-```
+```js
 mounted(){
   // something
 }
 ```
 
 ## directive
+
 ### v-bind
+
 To access data value in html tag, shorthand to `:`
 
 ### v-on
+
 Event listener, shorthand to `@`.
 
 ### v-model
-<input `v-model:"haha"`> will automatically make `haha` = input value
+
+`<input v-model:"haha">` will automatically make `haha` = input value
 
 ### v-if
 
@@ -503,7 +510,7 @@ or if you use vue-cli, see <https://cli.vuejs.org/config/#filenamehashing>.
 
 Modify Flask's template folder & static folder to vue's.
 
-```
+```python
 app = Flask(__name__, template_folder="vue/dist", static_folder="vue/dist/assets")
 ```
 

@@ -27,18 +27,23 @@ See how big a package is.
 <https://bundlephobia.com/>
 
 ## npm
+
 ### install node's version manager
+
 clear cache
+
 ```
 npm cache clean -f
 ```
 
 install node's version manager
+
 ```
 npm install -g n
 ```
 
 install a version of node
+
 ```
 sudo n <version>
 
@@ -52,11 +57,13 @@ sudo n latest
 <https://phoenixnap.com/kb/update-node-js-version>
 
 ### clear cache
+
 ```
 npm cache clean -f
 ```
 
 ## run locally
+
 ```
 npx serve
 ```
