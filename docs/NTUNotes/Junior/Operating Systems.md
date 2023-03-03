@@ -116,7 +116,9 @@ has_children: True
 		- layer on top of NOS
 
 ## structure
+
 ### monolithic
+
 - no structure
 - one large kernel
 - everything in the same place
@@ -131,6 +133,7 @@ has_children: True
 	- difficult to implement & extend
 
 ### layered
+
 - ring-based 
 - ![](https://i.imgur.com/dD6UIyL.png)
 - Intel & AMD now have hypervisor as Ring -1 
@@ -141,6 +144,7 @@ has_children: True
 	- defining each layer
 
 ### microkernels
+
 - remove nonessential components
 - pros
 	- extensibility
@@ -153,10 +157,12 @@ has_children: True
 	- ![](https://i.imgur.com/GHF3Hw6.png)
 
 ### modules
+
 - a set of core components
 - additional services modularized, linked in at boot time or run time
 
 ### hybrid systems
+
 - linux
 	- monolithtic
 		- for good perfornamce
@@ -255,12 +261,14 @@ has_children: True
 	- ![](https://i.imgur.com/xOy5b7L.png)
 
 #### Multiple OS Multiprocessor 
+
 - each processor has its own OS
 - memory & I/O shared among processors via bus
 - memory separated into blocks for each processor
 - ![](https://i.imgur.com/KvR8ids.png)
 
 #### Master-Slave Multiprocessor
+
 - assymetric multiprocessing
 - run OS on master processor 
 - run processes on slave processors
@@ -268,6 +276,7 @@ has_children: True
 - ![](https://i.imgur.com/Y435y7O.png)
 
 #### Symmetric Multiprocessor (SMP)
+
 - each processor has OS kernel
 - a global OS exists
 - global OS runs global queue, CPU then gets process from global queue and do self-scheduling with its own OS
@@ -427,6 +436,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 ![](https://i.imgur.com/9ORxU3b.png)
 
 ### multithreading model
+
 - user level thread (ULT)
 	- thread libraries
 		- POSIX
@@ -447,6 +457,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - OS only sees processes, not threads
 
 #### mapping from user to kernel threads
+
 - many-to-one
 	- ![](https://i.imgur.com/j2FBqIa.png)
 	- no parallelism
@@ -473,6 +484,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- many-to-many but also allows one-to-one
 
 ### thread libraries
+
 - user-level library
 	- everything in user space
 - kerne-level library
@@ -528,10 +540,12 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- capped by num of cores
 
 #### Grand Central Dispatch (GCD)
+
 - Apple
 - thread pool
 
 ### threading issues
+
 - fork()
 	- some duplicate all threads of the process
 	- some duplicate only the calling thread of the process
@@ -572,6 +586,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- load only main program first
 
 ### contiguous memory allocation
+
 - very early
 - 2 partitions
 	- OS
@@ -582,6 +597,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - dynamic storage-allocation problem
 
 #### external fragmentation
+
 - sum of free partitions > required, but not a single one is enough
 - 50-percent rule
 	- for N allocated blocks, 0.5N blocks would be unusable due to external fragmentation
@@ -594,12 +610,14 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- allow logical address (physical memory) to be noncontiguous
 
 #### internal fragmentation
+
 - allocate memory based on block (paging) -> may have unused memory
 	- e.g. 50b each block, need 148b -> get 50x3=150b -> waste 2b
 	- Why allocate in block?
 		- overhead of keeping track a small hole may be larger than the hole itself
 
 ### paging
+
 - divide physical memory into fixed-size block (frame)
 	- keep track of free frame
 - divide logical memory (process memory) into fixed-size block (page)
@@ -723,6 +741,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - [normal vs. inverted page table](https://www.geeksforgeeks.org/difference-between-page-table-and-inverted-page-table/)
 
 ### swapping
+
 - backing store
 	- fast secondary storage
 	- large enough to store whatever swapped in
@@ -1702,7 +1721,9 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- add more storage devices to scale
 
 ## File-System Interface
+
 ### access methods
+
 - sequential access
 	- most common
 	- ![](https://i.imgur.com/8FwhjsN.png)
@@ -1718,6 +1739,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- multi-level indexing
 
 ### directory structure
+
 - single-level
 - two-level
 - tree-structured
@@ -1971,11 +1993,13 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- ![](https://i.imgur.com/0rEEhKS.png)
 
 ## File System Internals
+
 - volumes & partition
 	- volume can span across partitions
 	- ![](https://i.imgur.com/r2xhHXO.png)
 
 ### Mounting
+
 - file system must be mounted to be available to processes
 - several ways
 	- disallow mounting on unempty directory
@@ -1984,6 +2008,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - verify the device -> do consistency checking (fsck) if invalid -> update mount table in memory
 
 ### Partitions
+
 - partition can be
 	- raw
 		- no file system
@@ -1996,6 +2021,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- mount the root partition and boot time
 
 ### File Sharing
+
 - owner
 	- can change attributes & grant access over the file
 - group
@@ -2003,6 +2029,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - owner & group ID stored in file attributes
 
 ### Virtual File System
+
 - integrate different file-system types
 - 3 layers
 - ![](https://i.imgur.com/bOLQnA8.png)
@@ -2014,6 +2041,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- leave the exact implementation for each file-system to 3rd layer
 
 ### Remote File Systems
+
 - methods
 	- ftp
 	- distributed file system (DFS)
@@ -2041,6 +2069,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- unsecure
 
 ### Consistency Semantics
+
 - how multiple access a file simulteneously
 - file session
 	- open to close
@@ -2059,6 +2088,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- final result computed from logs
 
 ### NFS
+
 - network file systems
 - a set of disconnected workstations
 - sharing based on client-server

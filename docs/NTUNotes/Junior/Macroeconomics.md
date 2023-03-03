@@ -6,22 +6,20 @@ layout: meth
 # Macroeconomics
 
 ## resources
-- 影片
-	- [上學期 playlist](https://www.youtube.com/playlist?list=PLp29FF3ioia0StLO86w_xM0rYq0CKcLd5)
-	- [下學期 playlist](https://www.youtube.com/playlist?list=PLp29FF3ioia1A-6TYff16io6PqnVZgQa1)
-	- W1 intro
-		- https://www.dropbox.com/s/n1usof8hkcrq3b8/macro_intro.mp4
-	- W2 macro measurement
-		- https://www.dropbox.com/s/392h185o12whyye/Macro_Measurement.mp4
-	- W3 macro measurement 2
-		- https://www.dropbox.com/s/3cxs832ipt3vpsb/Macro_Measurement2.mp4
-- slides
-	- http://homepage.ntu.edu.tw/%7Emao/
+
+- videos
+	- [110-1 playlist](https://www.youtube.com/playlist?list=PLp29FF3ioia0StLO86w_xM0rYq0CKcLd5)
+	- [110-2 playlist](https://www.youtube.com/playlist?list=PLp29FF3ioia1A-6TYff16io6PqnVZgQa1)
+	- [111 playlist](https://www.youtube.com/playlist?list=PLyRg6ZBC4rgelbNn5YmsxIKJ7o_aXwBzE)
+- slides and other materials
+	- <http://homepage.ntu.edu.tw/%7Emao/>
 - 考古題
-	- https://sites.google.com/a/ntuecon.co.cc/tai-da-jing-ji-zi-liao-ku/6-zong-ti-jing-ji-xue/6-1-mao-qing-sheng
+	- <https://sites.google.com/a/ntuecon.co.cc/tai-da-jing-ji-zi-liao-ku/6-zong-ti-jing-ji-xue/6-1-mao-qing-sheng>
 
 ## Ch1 intro
+
 ### 總體經濟學主要議題
+
 - 長期的經濟成長
 - 短期的景氣波動
 	- real GDP 變化以其成因
@@ -345,7 +343,9 @@ $$GDP = C+I+G+NX$$
 	- 期末國外資產淨額 = 期初國外資產淨額 + 經常帳盈餘 (CA)
 
 ### 物價指數 price index, general price level
+
 #### GDP 平減指數 (GDP Deflator)
+
 - GDP Deflator = nominal GDP / 固定價格 GDP
 - ![](https://i.imgur.com/WIE29PD.png)
 	- base period: 0 
@@ -359,6 +359,7 @@ $$GDP = C+I+G+NX$$
 			- 無法排除商品相對價格的影響
 
 #### 消費者物價指數 (CPI, consumer price index)
+
 - 用 retail price
 	- 生產者物價指數 WPI 用 wholesale price
 - ![](https://i.imgur.com/B0KChNH.png)
@@ -369,7 +370,9 @@ $$GDP = C+I+G+NX$$
 	- Laspeyres index, 使用 base period 消費量 i.e. 價格改變前的消費量
 		- 會高估 inflation
 			- 忽略人們會少買漲得多的東西 ([[substitution effect]])
+
 #### PCE deflator, personal consumption expenditures deflator
+
 - Fisher Price Index $F^P_t$
 	- 物價上漲率
 	- like [[#連鎖加權 GDP chain-weighting GDP|Fisher Quantity Index]] $F^Q_t$ but 變動項為 price
@@ -390,6 +393,7 @@ $$GDP = C+I+G+NX$$
 	- 1.373*1.260 = 1.730
 
 ### practicar
+
 ![](https://i.imgur.com/6fj7KzX.png)
 ![](https://i.imgur.com/ybsGYwk.png)
 
@@ -722,7 +726,9 @@ i.e. 廠商生產全部被資本&勞動報酬瓜分掉
 		- q 上升 → x 下降  → MPL 下降 → labor demand 左移 → n 下降 → MPX 下降 → 原油 demand 左移 → x 下降
 
 #### Cobb-Douglas 生產函數
+
 $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
+
 - $MPL=w=\beta\dfrac{y}{n}$
 - $MPX=q=(1-\alpha-\beta)\dfrac{y}{x}$
 - 把 x 取代掉 →<br>![](https://i.imgur.com/n8Tkmtb.png)<br>$=A_1k^{\phi}n^{1-\phi}$
@@ -731,7 +737,9 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- q 上升 → $x^d$ & $n^d$ & $y^s$ 下降
 
 ## Ch5 消費者的靜態選擇
+
 ### constraints
+
 - time constraint
 	- l (leisure hours) + n (working hours) = 1
 - income constraint
@@ -1047,8 +1055,21 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- for 較有錢的人 (B → C)，[[substitution effect]] 抵銷 [[income effect]] → labor 下降 i.e. leisure 上升趨勢減緩
 
 ## Ch8 消費與儲蓄
+
+### Notation
+
+- $a_t$ = t 期 endowment
+- $b_t$ = t 期 期初擁有 bonds
+- $c_t$ = t 期 consumption
+- $r_t$ = t 期 利率
+- $s_t$ = t 期 saving
+- $\beta$ = 1 期後的 1 單位的 utility 在今天的價值
+	- see [[#費雪兩期模型#utlity]]
+
 ### 費雪兩期模型
+
 #### budget constraint
+
 - Fisher Two-Period Model
 - $a_1=y_1-T_1$ = 1st 期稅後 endowment
 - $a_2=y_2-T_2$ = 2nd 期稅後 endowment
@@ -1072,6 +1093,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- ![](https://i.imgur.com/w2z9loL.jpg)
 
 #### utlity
+
 - 兩期消費 marginal utility > 0 且遞減
 - MRS 遞減
 	- $MRS_{12}=-\dfrac{d_{c_2}}{d_{c_1}}=\dfrac{U_1(c_1,c_2)}{U_2(c_1,c_2)}$
@@ -1093,6 +1115,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- 45 度線 indifference curve 切線斜率
 
 #### choice
+
 - budget constraint: $c_1+\dfrac{c_2}{1+r}=a_1+\dfrac{a_2}{1+r}=x$
 - utility function: $U(c_1,c_2)=u(c_1)+\beta u(c_2)$
 - 使 saving 的 marginal profit = 0
@@ -1104,7 +1127,9 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- MRS = 1+r → 消費跟儲蓄一樣爽 → 均衡
 
 ### 所得變動 & 消費平滑
-- ![](https://i.imgur.com/u9MDXr1.jpg)
+
+ ![](https://i.imgur.com/u9MDXr1.jpg)
+
 - 當期可支配所得增加
 	- 本期可支配所得上升，未來不變 → lifetime wealth 上升 → 兩期消費同時增加
 		- wealth effect
@@ -1140,6 +1165,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- 金融體系不完備，缺乏借貸工具 → 無法透過信用市場移轉各期所得
 
 ### (跨期) substitution
+
 - intertemporal [[substitution effect]]
 - interest rate 上升
 	- 利率改變後 lifetime wealth 降低，但 utility 不一定
@@ -1163,11 +1189,16 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- c1 下降，c2 上升
 
 ### example
+
 $$c_1+\dfrac{c_2}{1+r}=x=a_1+\dfrac{a_1}{1+r}$$ 
 $$u'(c_1)=\beta u'(c_2)(1+r)$$
+
 $$\beta=\dfrac{1}{1+\rho}$$
+
 $$\ln(1+x)\approx x$$
+
 設 $u(c)=lnc$
+
 - $u'(c)=\dfrac{1}{c}$
 - $c_2=\beta(1+r)c_1$
 - $c_1(1+\beta)=x$
@@ -1201,10 +1232,15 @@ $$\ln(1+x)\approx x$$
 		- a2 decrease
 
 ## Ch9 世代家庭的消費與儲蓄
+
 ### 世代家庭決策模型
+
 #### budget constraint
+
 $$c_t+b_t=a_t+(1+r_{t-1})b_{t-1}\space,\space t=1,2,3,...$$
+
 $$s_t=(a_t+r_{t-1}b_{t-1})-c_t=b_t-b_{t-1}$$
+
 - 儲蓄 = 可支配所得 - 消費支出 = 期末 - 期初債券餘額
 - $c_1+b_1=a_1$
 - $c_2+b_2=a_2+(1+r)b_1$
@@ -1215,6 +1251,7 @@ $$s_t=(a_t+r_{t-1}b_{t-1})-c_t=b_t-b_{t-1}$$
 	- lifetime wealth = 各期消費 & 最終債券餘額折現值
 
 $$\sum_{t=1}^T \dfrac{c_t}{(1+r)^{t-1}}+\dfrac{b_T}{(1+r)^{T-1}}=\sum_{t=1}^T \dfrac{a_t}{(1+r)^{t-1}}$$
+
 - $b_T=0$ if T is not infinite
 - $lim_{T\rightarrow \infty}\dfrac{b_T}{(1+r)^{T-1}}=0$
 	- 不一定要 $b_T\geq 0$
@@ -1227,21 +1264,58 @@ lifetime wealth = $$\sum_{t=1}^\infty\dfrac{c_t}{(1+r)^{t-1}}=\sum_{t=1}^\infty\
 	- ???
 
 #### choice
+
 lifetime utility = 各期 utility 折現加總
+
 $$max \space \sum_{t=1}^\infty\beta^{t-1}u(c_t)$$
-$$c_t+b_t=a_t+(1+r_{t-1})b_{t-1},\space\forall t$$ 
+$$c_t+b_t=a_t+(1+r_{t-1})b_{t-1},\space\forall t$$
+
 $$b_0=0$$
 
 generalization: same choice for any t
+
 $$max \space \sum_{j=0}^\infty\beta^{j}u(c_{t+j})$$
-$$c_{t+j}+b_{t+j}=a_{t+j}+(1+r_{t+j-1})b_{t+j-1},\space\forall t,j$$ 
+
+$$c_{t+j}+b_{t+j}=a_{t+j}+(1+r_{t+j-1})b_{t+j-1},\space\forall t,j$$
+
 marginal cost of savings ($c_t$ decrease) = marginal revenue of savings ($c_{t+1}$ increase)
+
 - $u'(c_t)=\beta u'(c_{t+1})(1+r_t)$
 - $u'(c_{t+1})=\beta u'(c_{t+2})(1+r_{t+1})$
 - $u'(c_t)=\beta^2 u'(c_{t+2})(1+r_t)(1+r_{t+1})$
 
 $$u'(c_t)=\beta^ju'(c_{t+j})(1+r_t)(1+r_{t+1})...(1+r_{t+j-1})$$
-任兩期消費的替代關係
+
+**任兩期消費的替代關係**
+
 $$MRS_{t,t+j}=\dfrac{u'(c_t)}{\beta^ju'(c_{t+j})}=(1+r_t)(1+r_{t+1})...(1+r_{t+j-1})$$
 
-無套利空間條件
+**無套利空間條件** (max lifetime utility)
+
+scenario: t 期 save 1, t+1 期 consume partial saving $r_t$, t+2 期 consume all saving $1+r_{t+1}$
+
+$$u'(c_t)=\beta u'(c_{t+1})r_t+\beta^2u'(c_{t+1})(1+r_{t+1})$$
+
+又
+
+$$u'(c_t)=\beta^2u'(c_{t+2})(1+r_t)(1+r_{t+1})$$
+
+so
+
+$$\beta u'(c_{t+1})r_t+\beta^2u'(c_{t+1})(1+r_{t+1})=\beta^2u'(c_{t+2})(1+r_t)(1+r_{t+1})$$
+
+### 跨期消費型態
+
+$$\dfrac{u'(c_t)}{u'(c_{t+1})}=\beta(1+r)=\dfrac{1+r}{1+\rho}$$
+
+see [[#費雪兩期模型#utlity]]
+
+
+If $r=\rho$, the marginal utility of consumption is the same in every period
+
+If $r>\rho$, $u'(c_{t})>u'(c_{t+1})$, so $c_{t} < c_{t+1}$ at max utility point
+
+If $r<\rho$, $u'(c_{t})<u'(c_{t+1})$, so $c_{t} > c_{t+1}$ at max utility point
+
+
+![](https://i.imgur.com/fbXZOJh.jpg)

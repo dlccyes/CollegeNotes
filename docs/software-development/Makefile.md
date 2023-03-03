@@ -20,11 +20,11 @@ like yaml
 
 Note that when calling another target , that target should be under the current target.
 
-## hide command
+## Disable commands printing
 
 put `@` in front of your command
 
-## Pass arguement
+## Passing arguements
 
 ```
 make <command> <var>=<value>

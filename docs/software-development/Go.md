@@ -261,7 +261,7 @@ Use <https://github.com/dmarkham/enumer> to generate enumer file for `DataScope`
 go run github.com/dmarkham/enumer -type=DataScope -sql 
 ```
 
-To map string back to enum
+To map string back to enum, just use the `URLTypeString` function in the generated enumer file. But if you want to implement it manually,
 
 ```go
 package alphabets
@@ -324,6 +324,26 @@ if err = r.dbClient.DB().
 
 - AfterFind
 	- auto execute after querying
+
+### Error
+
+You can add error manually, which is useful when writing unit tests
+
+```go
+db.AddError(gorm.ErrInvalidTransaction)
+```
+
+or simply
+
+```go
+db.Error = gorm.ErrInvalidTransaction
+```
+
+To revert, just reassign it to null
+
+```go
+db.Error = nil
+```
 
 ## Goroutine
 

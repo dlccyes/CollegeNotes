@@ -220,6 +220,20 @@ ancestor_id | node_id
 	- need load-balancing
 	- data inconsistency
 
+## Performance
+
+-  the performance of the 99.9th percentile is the most important
+	- slow requests -> have many data -> valuable customer
+	- Amazon:
+		- + 100ms -> -1% revenue
+		- + 1s -> -16% revenue
+- service level agreements (SLAs)
+	- service is up when 
+		- median < 200ms
+		- 99th < 1s
+	- service needs to be up > 99.9% of the time
+	- refund if not met
+
 ## Load Balancing
 
 request id -> hashed request id -> mod by n (# of servers) -> direct to the server
