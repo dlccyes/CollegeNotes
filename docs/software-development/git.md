@@ -1,8 +1,3 @@
----
-layout: meth
-parent: Software Development
----
-
 # Git
 
 ## Git GUI
@@ -227,6 +222,7 @@ The latest one would be `0`
 `git checkout <sha> -- <path-to-file>`
 
 ### discard changes
+
 relevant docs
 - <https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository>
 - <https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things>
@@ -291,6 +287,7 @@ git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{inser
 ### using reset & amend
 
 設你有最近 3 個 commit 為
+
 - 9a7792
 - 9a7791
 - 9a7790
@@ -313,6 +310,7 @@ ref
 ### using rebase & squash
 
 設你有最近 4 個 commit 為
+
 - 9a7792
 - 9a7791
 - 9a7790
@@ -419,11 +417,13 @@ git branch -m <old_name> <new_name>
 ```
 
 ### switch branch
+
 ```
 git checkout <branch>
 ```
 
 ### set/switch tracking remote branch
+
 ```
 git branch -u <remote>/<branch>
 # or
@@ -540,11 +540,13 @@ Workarounds:
 1. do git as the owner
 
 2. Add directories to ignore in gitconfig
+
 ```
 git config --global --add safe.directory <your directory>
 ```
 
 to add all subdiretories
+
 ```
 for dir in */; do git config --global --add safe.directory $(realpath $dir); done
 ```

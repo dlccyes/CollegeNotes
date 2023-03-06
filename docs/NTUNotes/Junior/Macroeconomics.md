@@ -116,8 +116,10 @@ layout: meth
 			- 是 structural relationship 而非統計假象
 	- 分析方法仍須用(新興)古典的方法
 
- ## Ch2 產出與物價的衡量
- ### GDP & GNI
+## Ch2 產出與物價的衡量
+ 
+### GDP & GNI
+ 
  - GDP, gross domestic product
 	 - the market value of all final goods and services that an economy produces in a given period **within it boarder**
 - GNI, gross national income / GNP, gross national product
@@ -167,6 +169,7 @@ layout: meth
 - 三個面的計算結果會一致
 
 #### 生產面
+
 - 用聯合國會計準則 SNA08
 - GDP = 境內所有生產者創造的生產價值
 	- 生產價值 / 最終產出 = 生產總值 - 中間投入
@@ -179,8 +182,10 @@ layout: meth
 	- 存料不算中間投入，so 買 20 顆 CPU 生產&賣掉 10 台電腦，中間投入只要減掉 10 顆 CPU 的價格
 
 #### 支出面
+
 $$GDP = C+I+G+NX$$
-- C = 民間消費支出
+
+- C = Consumption = 民間消費支出
 	- 占比最高，60-70%
 	- 波動不大
 	- 依消費屬性
@@ -194,8 +199,8 @@ $$GDP = C+I+G+NX$$
 			- 2011 佔台 52%
 			- 包括自有住宅的設算租金
 				- 估計自有住宅創造的價值
-- I = 國內投資支出/固定資本形成毛額
-	- 生展者購買資本財的支出
+- I = Investment = 國內投資支出/固定資本形成毛額
+	- 生產者購買資本財的支出
 	- 約 20%
 	- 波動幅度大
 	- 依所有主
@@ -212,7 +217,7 @@ $$GDP = C+I+G+NX$$
 			- 企業 copyright fee
 			- SNA93 納入企業軟體支出、礦藏探勘費用
 			- SNA08 納入研究發展 & 專利權支出
-		- 存貨變動
+		- 存貨變動 Inventory accumulations
 			- 期末 - 期初存貨
 			- flow variable
 			- 今年生產但沒有賣掉 → 存貨增加
@@ -224,7 +229,7 @@ $$GDP = C+I+G+NX$$
 		-  NNI = GNI - DEP
 				-  net national income
 	-  期末資本存量 = 期初資本存量 + 淨投資
-- G = 政府消費支出
+- G = Goverment purchases = 政府消費支出
 	- 以實際決算為計價基礎
 		- 有些並未透過市場完成
 	- 2011 佔台 12.4%
@@ -232,9 +237,10 @@ $$GDP = C+I+G+NX$$
 	- 政府預算支出
 		- 消費性支出
 		- 投資性支出
-		- 移轉性支付 & 公債利息
-			- 屬於 transfer payment，不計入 GDP
-- NX = X - M = 淨出口/ trade surplus 貿易盈餘
+		- exclude transfer payments
+			- 公債利息
+			- social welfare benefits
+- NX = Net Exports = X - M = 淨出口/ trade surplus 貿易盈餘
 	- merchanting trade 三角貿易
 		- e.g. 鴻海台灣資，中國生產，美國買 (iphone)
 		- 以銷貨淨額 (output-input) 計入 GDP
@@ -245,6 +251,7 @@ $$GDP = C+I+G+NX$$
 - ![](https://i.imgur.com/kNI1flv.png)
 
 #### 分配面/要素所得面
+
 - 國民所得 National Income (NI)  
 	- = 工資 + ( 利息 + 地租 + 利潤 )
 		- 利息包含地租以外的租金
@@ -268,15 +275,19 @@ $$GDP = C+I+G+NX$$
 	- 受僱人員拿到的份變少
 
 ### real GDP
+
 - nominal GDP / GDP at current price != real output
 	- 需減掉價格波動
+
 #### 固定價格 GDP (GDP at constant prices)
+
 - 選擇一個固定的 base period，以基期價格計算各期 GDP
 - 不同的 base period 選擇會有不同的成長率
 - 忽略了商品間相對價格的變動
 	- 需要定期改變基期
 
 #### 連鎖加權 GDP (chain-weighting GDP)
+
 - Fisher Quantity Index $F^Q_t$
 	- 實質產出成長率
 	- 以兩個基期計算的 GDP 成長率的幾何平均數
@@ -302,11 +313,14 @@ $$GDP = C+I+G+NX$$
 	- 非線性轉換 → GDP=C+I+G+NX 不成立
 
 #### 購買力平價 GDP (purchasing power parity GDP)
+
 - PPP-GDP
 - 以基準商品籃建立國際貨幣單位 international dollar
 
 ### 國民所得&國民儲蓄
+
 #### 民間儲蓄 private saving
+
 - 家計所得 household income<br>= 要素所得 + 政府移轉所得 (TR) + 公債利息 (INT, interest income)
 - 廠商盈餘<br>= GNI - 要素成本<br>= (GDP + NFIA) - 要素成本
 	- 生產者附加價值 = GNI
@@ -316,19 +330,22 @@ $$GDP = C+I+G+NX$$
 		- 家計單位繳直接稅
 		- 廠商繳間接稅淨額
 - 民間儲蓄<br>$S^P$ = 民間可支配所得 ($Y^P$) - 民間消費支出 (C)<br>= (GDP + NFIA + TR + INT) - TAX - C
+
 #### 政府儲蓄 government saving
+
 - 政府儲蓄 <br>$S^G$ = TAX - (G + TR + INT)<br>= 政府投資支出 + 政府預算盈餘 <br>= 政府投資支出 - 政府預算赤字
 	- 政府預算盈餘 budget surplus = 總稅收 - 總支出<br>= TAX - (G + TR + INT + 政府投資支出)
 	- TAX 包含公營事業盈餘等
+
 #### 國民儲蓄 national saving
+
 - ==S (國民儲蓄) = $S^P$ (民間儲蓄) + $S^G$ (政府儲蓄)==<br>=== GNI (國民所得毛額) - ( C (民間消費) + G (政府消費) )==<br>= (GDP + NFIA) - (C + G)<br>= (C + I + G + NX + NFIA) - (C + G)<br>= I + (NX + NFIA)<br>= I (國內投資支出) + CA (經常帳盈餘)
 - 國民儲蓄 - 折舊<br>= 國民儲蓄毛額 gross national saving - 折舊<br>= 國民儲蓄淨額 net national saving
 - 經常帳盈餘 (CA, current account) = 貿易盈餘 (NX) + 國外要素所得淨額 (NFIA)
 	-  國外資產持有 = 對外國住民的求償權
 	-   CA > 0 → 國外資產淨額增加 i.e. 對外國住民求償權增加，資本帳赤字
 	-   current account + 資本帳 (capital account) =  0
-		-   https://www.investopedia.com/ask/answers/031615/whats-difference-between-current-account-and-capital-account.asp
-		-   <iframe src="https://www.investopedia.com/ask/answers/031615/whats-difference-between-current-account-and-capital-account.asp" width=100% height=500px></iframe>
+		-   <https://www.investopedia.com/ask/answers/031615/whats-difference-between-current-account-and-capital-account.asp>
 - ==國民儲蓄 S = I + CA 流向==
 	- 留在國內 → 國內投資支出 (I)
 		- 若也沒有做有形 or 無形投資，則只會讓存貨增加
@@ -346,7 +363,7 @@ $$GDP = C+I+G+NX$$
 
 #### GDP 平減指數 (GDP Deflator)
 
-- GDP Deflator = nominal GDP / 固定價格 GDP
+- GDP Deflator = nominal GDP / 固定價格 GDP x 100
 - ![](https://i.imgur.com/WIE29PD.png)
 	- base period: 0 
 	- 利用當期支出比重做加權平均
@@ -395,18 +412,27 @@ $$GDP = C+I+G+NX$$
 ### practicar
 
 ![](https://i.imgur.com/6fj7KzX.png)
+
 ![](https://i.imgur.com/ybsGYwk.png)
 
+![](https://i.imgur.com/wJ7LwK8.png)
+
+![](https://i.imgur.com/9bADPOr.png)
+
 ## Ch3 景氣波動的定型特徵
+
 - business cycle 景氣循環
 	- real GDP 隨著長期趨勢上下波動的 stochastic process
+
 ### filtering
+
 - 把短期波動獨立濾出來
 - 各期產出 = 長期趨勢 + 短期波動
 - 波動比例 = 實際&趨勢差異 / 趨勢值
 	- ![](https://i.imgur.com/Df89cbe.png)
 	
 #### 產出成長率濾波器
+
 - 產出成長率 = $\dfrac{y_t-y_{t-1}}{y_t}=\ln y_t-\ln y_{t-1}$
 	- $\ln y_t$ vs. t 圖之斜率 = 產出成長率
 		- ![](https://i.imgur.com/rsQtsGR.png)
@@ -420,6 +446,7 @@ $$GDP = C+I+G+NX$$
 	- $\alpha$ 可能包含了長期波動 → under differencing
 
 #### HP 濾波器
+
 - Hodrick-Perscott filter
 - ![](https://i.imgur.com/hEvO67h.png)
 	- 只有第一項 → 長期&實際愈接近愈好
@@ -432,6 +459,7 @@ $$GDP = C+I+G+NX$$
 - ![](https://i.imgur.com/P3PlIIv.png)
 
 ### 台美景氣波動
+
 - 台美景氣波動很接近
 - 1972-2012 台經歷 9 次景氣循環
 - 景氣循環都是跌得快漲得慢
@@ -443,35 +471,43 @@ $$GDP = C+I+G+NX$$
 - ![](https://i.imgur.com/rJY9ctM.png)
 
 #### 第一次能源危機
+
 - 1973 以阿戰爭，阿拉伯向西方實施石油禁運，國際油價大漲
 - 停滯性膨脹
 
 #### 第二次能源危機
+
 - 1979 Iran 回教革命，1980 兩伊戰爭，原油供給受干擾，油價大漲
 
 #### 廣場協議
+
 - 1985 要求日德幣升值
 - 新台幣也受牽連升值，出口導向的台灣陷入衰退
 
 #### 第三次能源危機
+
 - [[#廣場協議]]後，預期新台幣升值 → 國際熱錢湧入台灣 → 股市蓬勃
 - 1990 Iraq 入侵科威特，波斯灣戰爭爆發 → 熱錢流出、預期油價上漲 → 股市崩跌
 
 #### 台海飛彈危機
+
 - 1995-1996 小幅度衰退
 - NBER 未認定有景氣衰退
 
 #### [[亞洲金融風暴]]
+
 - 1997 泰國放棄固定匯率，George Sorus 等炒家突襲外匯市場，泰銖暴跌，一路往北跌到俄羅斯
 - 台灣替手新台幣，讓炒家過門不入，因此受創就輕微 ==???==
 - 經濟衰退 → 原油需求下降 → 國際油價下跌
 
 #### dot-com bubble
+
 - 20th 末
 - 同時台灣 1999 921、2000 政黨輪替 & 美國 911
 - 經濟衰退 → 原油需求下降 → 國際油價下跌
 
 #### [[次貸危機]]
+
 - 2007 年底
 - [[#dot-com bubble]] 後，US 採寬鬆貨幣政策 → 房價大漲 → 高槓桿金融商品
 	- 包很多層的避險衍生性商品
@@ -480,7 +516,9 @@ $$GDP = C+I+G+NX$$
 	- 也對國際油價沒什麼影響
 
 ### 景氣波動 3 面向
+
 #### 波動幅度 volatility
+
 - 經過處理的標準差
 	- ![](https://i.imgur.com/kOs1\ln R.png)
 		- 分母應是 T-1 但沒什麼差
@@ -490,6 +528,7 @@ $$GDP = C+I+G+NX$$
 		- s.t. 標準差是相對於長期趨勢的標準差 i.e. 在長期趨勢上下波動的幅度
 
 #### 變數同步性 co-movement
+
 - 順循環 pro-cyclical
 	- x y covariance > 0
 - 逆循環 counter-cyclical
@@ -501,6 +540,7 @@ $$GDP = C+I+G+NX$$
 	- e.g. y=|x| 相關係數 = 0 但顯然有關係
 
 #### 波動持續性 persistence
+
 - 跨期相關
 - auto-covariance 自我共變異數
 	- 當期跟 j 期以前的 covariance
@@ -516,11 +556,14 @@ $$GDP = C+I+G+NX$$
 		- Granger causality test
 
 ### 台美氣波動定型特徵
+
 - ![](https://i.imgur.com/UXTKwva.png)
 	- 實質利率
 		- 台：一個月平均款利率
 		- 美：三個月國庫券利率
+
 #### 波動幅度
+
 - smooth consumption
 	- 民間消費波動幅度 < 實質產出波動幅度
 	- 凱因斯學派解釋
@@ -551,6 +594,7 @@ $$GDP = C+I+G+NX$$
 		- 除去前兩次能源危機後，也是小於
 
 #### 同期相關
+
 - ![](https://i.imgur.com/R9w6s3o.png)
 - 民間消費&民間投資是順循環
 	- 跟 real  GDP 一起浮動
@@ -568,6 +612,7 @@ $$GDP = C+I+G+NX$$
 - real interest rate 與產出波動負相關
 
 #### 跨期相關
+
 - ![](https://i.imgur.com/R9w6s3o.png)
 - 高度跨期自我相關
 - 傳導機制 propagation mechanism
@@ -580,16 +625,20 @@ $$GDP = C+I+G+NX$$
 - 美政府支出與未來一年 real GDP 負相關，與兩年後 real GDP 正相關
 
 ## Ch4 廠商的靜態選擇
+
 -  static model 
 	-  no tomorrow
 		-  no savings
 		-  no investment
 ### 模型
+
 -  ![](https://i.imgur.com/mu0tRif.png)
 - labor market & goods market are in perfect competition
 	- consumer & firm 都是 price taker
 	- 廠商生產 homogeneous products
+
 #### 角色
+
 - 廠商
 	- 收入
 		- 付工資
@@ -611,7 +660,9 @@ $$GDP = C+I+G+NX$$
 		- 買商品
 	- 課稅量 = 支出
 		- no 借貸 no 公債
+
 #### 特性
+
 - barter economy
 	- 沒有貨幣
 	- 以商品為計價單位 (numeraire)
@@ -619,7 +670,9 @@ $$GDP = C+I+G+NX$$
 	- 無 nominal
 - closed economy
 	- 無貿易
+
 ### 生產函數
+
 - 代表性個人模型  representative agent model
 	- 所有單位都一樣
 
@@ -634,26 +687,35 @@ $$y=AF(k,n)(+B)$$
 		- e.g. 中獎、欠收
 
 #### 特性
+
 ##### 資本勞動缺一不可
+
 - $AF(k,0)=AF(0,n)=0$ if B=0
 
 ##### 投入愈多，產出愈多
+
 - $MPL, MPK>0$
 	- marginal productivity of labor/capital
 - ![](https://i.imgur.com/kHUYNlm.png)
+
 ##### marginal productivity 遞減
+
 - ![](https://i.imgur.com/Lfdj8FU.png)
 - ![](https://i.imgur.com/d4Jzhru.png)
 - 廠商規模未成熟時可能 MP 遞增，但這種情況不會持續存在
+
 ##### 資本勞動互補
+
 - capital 增加 → MPL 增加，反之亦然
 - ![](https://i.imgur.com/zB3jhau.png)
 
 ##### Inada condition
+
 - ![](https://i.imgur.com/B7zwc65.png)
 - 非必要條件
 
 ##### 固定規模報酬 constant return to scale
+
 - 生產效率 independent to  廠商規模
 	- 資本勞動皆 x2 → output x2
 		- 一階齊次函數
@@ -666,7 +728,9 @@ $$y=AF(k,n)(+B)$$
 	- e.g. 精緻餐廳、文創
 
 #### Cobb-Douglas 生產函數
+
 $$y=Ak^{\alpha}n^{1-\alpha},\alpha\in(0,1)$$
+
 - 要素產出彈性 output elasticity factor
 	- output 之於 factor 的彈性
 	- 資本產出彈性 = $\dfrac{dy/y}{dk/k}$<br>$=\dfrac{d\ln y}{d\ln k}$<br>$=\dfrac{dy/dk\cdot k}{y}=\dfrac{MPK\cdot k}{y}=\dfrac{capital \space income}{output}$<br>= 資本份額 capital share
@@ -676,10 +740,12 @@ $$y=Ak^{\alpha}n^{1-\alpha},\alpha\in(0,1)$$
 - 滿足 6 [[#生產函數#特性|特性]]
 
 #### Euler 性質
+
 [[#固定規模報酬 constant return to scale]] <br>→ $ay\equiv AF(ak,an)$<br>→ $\dfrac{d(ay)}{da}=y=AF_k(ak,an)\cdot k+AF_n(ak,an)\cdot n$<br>$=MPK\cdot k+MPL\cdot n$ for $a=1$ (see [[#投入愈多，產出愈多]])<br>= capital income + labor income
 i.e. 廠商生產全部被資本&勞動報酬瓜分掉
 
 ### Decision Problem
+
 - 目標：max dividend
 	- dividend (profit) = revenue - cost
 	- $d(n;A,k,w)=AF(k,n)-wn$
@@ -691,7 +757,9 @@ i.e. 廠商生產全部被資本&勞動報酬瓜分掉
 	- $MPL<w$ → d 遞增
 	- $MPL>w$ → d 遞減
 	- $MPL=w$ → d has max 
+
 ### labor & supply
+
 - wage
 	- w increase → n decrease
 	- ![](https://i.imgur.com/mH9mtW2.png)
@@ -712,7 +780,9 @@ i.e. 廠商生產全部被資本&勞動報酬瓜分掉
 		- A & k: positive
 	- ![](https://i.imgur.com/HtmTUsG.png)
 		- [[Econometrics#Ch8 nonlinear]]
+
 ### 能源危機
+
 - 中間投入價格上升 → → MPL & MPK 下降
 - $y=F(k,n,x)$
 	- x = 原油量
@@ -753,6 +823,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- a 增加 → 向上平移
 
 ### utility function
+
 - assumptions
 	- marginal utility > 0
 		- ![](https://i.imgur.com/yKqw3fo.png)
@@ -784,6 +855,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - ![](https://i.imgur.com/zyp6jz0.png)
 
 ### 勞動所得稅
+
 - 勞動所得稅率 $\tau$
 - real wage w → $(1-\tau)w$ 
 	- leisure 變便宜 → 消費 demand 降低 ([[substitution effect]])
@@ -792,6 +864,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- ![](https://i.imgur.com/hBsytbN.png)
 	
 ### 消費券 consumption voucher
+
 - 為 transfer payment
 - 既是消費也是支出（一定需要花掉） → 左右相消，不影響 budget constraint
 - 會使 $MRS_{l,c}$ 上升，leisure 意願上升，消費&勞動意願下降
@@ -805,21 +878,27 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- 所謂 budget line 不變是在 c 已經剪掉了 $v$ 的情況下，不然其實是 budget line 上移，indifference curve 穿過 $c_1+v$，於是移到新均衡 where indifference curve 切 new budget line
 
 ## Ch6 靜態模型的全面均衡
+
 ### Walras Law of Markets
+
 - ![](https://i.imgur.com/43x7A38.png)
 - ![](https://i.imgur.com/SgZkEbt.png)
 	- 商品市場超額需求 + 勞動市場超額需求 = 0
 	- 薪資水準低 → 消費需求低，勞動供給高 (?)
 
 ### 競爭均衡三面向
+
 #### 第一面向－連立方程解
+
 - ![](https://i.imgur.com/cku8daY.png)
 
 #### 第二面向－市場供需模型
+
 - ![](https://i.imgur.com/scEPptH.png)
 	- w' < w* → 勞動超額需求 → w 上升 直到 E 點
 
 #### 第三面向－通吃型圖形
+
 - 全面均衡
 	- ![](https://i.imgur.com/f4AopCg.png)
 - 生產可能線 PPF
@@ -834,6 +913,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- w' → 超額勞動需求，超額商品供給 → w 上升 to w* → 廠商 & 消費者 converge to E 點，MPS = MPS = w*
 
 ### Crusoe 荒島經濟
+
 - Crusoe 同時為消費者 & 生產者
 	- 生產&消費椰果 all by himself
 - ![](https://i.imgur.com/5Zumf3A.png)
@@ -852,6 +932,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- competitive equilibrium 即為 pareto optimum
 
 #### 福利定理
+
 - first welfare theorem
 	- in perfect competition, equilibrium will be Pareto optimal
 - second welfare theorem
@@ -867,6 +948,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- to achieve a certain point in the contract curve i.e. a certain Pareto optimal solution, just redistribute the endowment points, e.g. all endowment points on line CD will converge to point F → second welfare theorem
 
 ### 市場均衡的不效率性
+
 - irl 使 equilibrium 非 pareto optimal 的因素
 - 存在外部性 → 存在改善空間
 	- marginal private cost < marginal social cost
@@ -882,7 +964,9 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - monopoly power of firms
 
 ## Ch7 靜態模型的均衡分析
+
 ### 政府消費支出增加
+
 - for Crusoe
 	- ![](https://i.imgur.com/BVS48nm.png)
 	- 政府消費增加 → 政府定額稅增加 → 等效於 G 增加
@@ -922,6 +1006,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- 公共工程會刺激民間生產 (?)
 
 ### 供給面衝擊
+
 - A (TFP) 上升
 - for Crusoe
 	- ![](https://i.imgur.com/OmEFHDw.png)
@@ -951,6 +1036,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- A 上升 → production & consumption & wage 上升，labor 不一定
 
 ### 計算實例
+
 - 給定
 	- $u=\ln c+\ln l$
 	- $y=An^{\alpha}, \alpha\in(0,1)$
@@ -973,6 +1059,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- g 上升會使 c 下降
 
 ### 勞動所得稅
+
 - $\tau$ = 所得稅率
 - $G=T+\tau wn$ = 定額稅+所得稅
 - $c=(d-T)+(1-\tau)wn$ = 非勞動所得+勞動所得
@@ -1015,6 +1102,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- $R=\tau wn=\tau\alpha y=\tau\alpha {\left[\dfrac{\alpha (1-\tau)}{1+\alpha(1-\tau)}\right]}^\alpha$
 
 ### 消費券均衡效果
+
 - 消費券會替代部分私人消費 & 使勞動供給下降，but 總消費量仍增加
 	- [[#消費券 consumption voucher]]
 - 均衡條件
@@ -1045,6 +1133,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- so 定額稅融通消費券具中立性質，對整體經濟毫無影響
 
 ### 工時的長期趨勢
+
 - ![](https://s2.loli.net/2021/12/22/q5WU4Erz6fAYl3y.png)
 - ![](https://s2.loli.net/2021/12/22/o6qnNs1khDlBZzp.png)
 - 早期 PPF 較低，indifference curve 較平緩

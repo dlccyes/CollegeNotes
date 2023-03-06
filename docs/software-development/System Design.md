@@ -283,9 +283,65 @@ Partitioning the database
 	- lookup table -> single point of failure
 	- constantly access lookup table -> impact performance
 
+### Problems
+
+- join is expensive
+	- if the target data are located in different shards, than we need to join multiple queries, which is expensive
+- fixed number of shards
+	- solution: [[#Consistency Hashing]]
+		- memcached
+	- solution: hierarchical sharding
+		- each shard partitioned into many mini-shards
+
+## Distributed DB System
+
+### Master-Slave Architecture
+
+- Write to master -> replicate data to slave
+- Read from either of the master or slaves
+- Master dies -> elect a new master among the slaves
+- e.g.
+	- DynamoDB
+
+### Peer to Peer Architecture
+
+- e.g.
+	- Cassandra
+
 ## Caching
 
-- See [Operating Systems](../NTUNotes/Junior/Operating%20Systems)
+- See [[Computer Architecture#cache]]
+
+### Advantages of caching
+
+- reduce network calls
+- reduce repetitive calculations
+- reduce DB load
+
+### In-memory cache vs. global cache
+
+tradeoff: speed vs. accuracy
+
+- in-memory cache
+	- fast
+	- data inconsistency across multiple caches
+- global cache
+	- slower
+	- all clients access the same global cache so no data inconsistency problem
+
+### Data syncing policy
+
+tradeoff: performance vs. accuracy
+
+- write-through cache
+	- write to cache -> write to db
+	- problem: data inconsistency across multiple caches
+- write-back cache
+	- write to db -> write to cache
+	- problem: performance problem since it has to write back to every cache
+- hybrid
+	- uncritical data -> write-through
+	- critical data -> write-back
 
 ## Async
 

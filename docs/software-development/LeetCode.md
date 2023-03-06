@@ -141,6 +141,29 @@ To find if a string is a substring of another string, follow the steps. Assuming
 
 ### KMP Algorithm
 
+Construct a longest-prefix-suffix (lps) array first. If `lps[i]` = k, then in the substring `s[:i+1]`, the first k letters and the last k letters are the sam真真e.
+
+Watch a youtube video or some figures to understand it more easily.
+
+```python
+def get_lps_array(s: str) -> list[int]:
+	n = len(s)
+	lps = [0] * n
+	l = 0
+	r = 1
+	while r < n:
+		if s[l] == s[r]:
+			l += 1
+			lps[r] = l
+			r += 1
+		else:
+			if l == 0:
+				r += 1
+			else:
+				l = lps[l-1]
+	return lps
+```
+
 ### Double Hashing
 
 **Single Hashing**

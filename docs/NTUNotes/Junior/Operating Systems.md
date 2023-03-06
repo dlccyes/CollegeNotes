@@ -244,6 +244,7 @@ has_children: True
 	- ![](https://i.imgur.com/m0dyuOO.png)
 
 ### multi-processor & multi-core
+
 - multi-processor
 	- each processor has its own cache
 	- main memory & I/O shared with other processors via bus
