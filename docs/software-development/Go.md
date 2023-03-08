@@ -125,7 +125,7 @@ viper.ReadInConfig()
 
 ### The internal of slice
 
-[Arrays, slices (and strings): The mechanics of 'append' | Go Blog]([https://go.dev/blog/slices](https://go.dev/blog/slices))
+[Arrays, slices (and strings): The mechanics of 'append' | Go Blog](https://go.dev/blog/slices)
 
 Slice is a slice of a fixed-sized array, with a pointer pointing to the start and a length value specifying the length.
 
@@ -360,7 +360,7 @@ SliceOfPointersOfBigStructs-12            104.0 ± 0%
 geomean                                   20.40                                        20.40
 ```
 
-Please read [Arrays, slices (and strings): The mechanics of 'append' | Go Blog]([https://go.dev/blog/slices](https://go.dev/blog/slices)) if you're confused.
+Please read [Arrays, slices (and strings): The mechanics of 'append' | Go Blog](https://go.dev/blog/slices) if you're confused.
 
 Discussions containing partial truths
 
