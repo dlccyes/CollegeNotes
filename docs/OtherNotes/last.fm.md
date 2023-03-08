@@ -7,6 +7,8 @@ parent: Miscellaneous
 
 ## Last.fm stat websites
 
+- [ChartMyMusic](https://www.chartmymusic.com/lastfm/rainbowcollage/)
+	- beautiful collage SORT BY COLOR!!
 - [http://www.lastchart.com.s3-website-us-east-1.amazonaws.com](http://www.lastchart.com.s3-website-us-east-1.amazonaws.com/) 
 	- all kinds of charts of your artists 
 - <https://collage.caretas.club/static/collages/>

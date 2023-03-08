@@ -121,6 +121,253 @@ viper.SetConfigFile(".env")
 viper.ReadInConfig()
 ```
 
+## Slice
+
+### The internal of slice
+
+[Arrays, slices (and strings): The mechanics of 'append' | Go Blog]([https://go.dev/blog/slices](https://go.dev/blog/slices))
+
+Slice is a slice of a fixed-sized array, with a pointer pointing to the start and a length value specifying the length.
+
+```go
+type sliceHeader struct {
+    Length        int
+    ZerothElement *byte
+}
+
+slice := sliceHeader{
+    Length:        50,
+    ZerothElement: &buffer[100], // pointer to the underlying array
+}
+```
+
+When copied or passed to a function, a change to the length won't apply to the original slice since the length is a value not a pointer.
+
+> Here we see that the contents of a slice argument can be modified by a function, but its header cannot. The length stored in the slice variable is not modified by the call to the function, since the function is passed a copy of the slice header, not the original.
+
+```go
+func SubtractOneFromLength(slice []byte) []byte {
+    slice = slice[0 : len(slice)-1]
+    return slice
+}
+
+func main() {
+    fmt.Println("Before: len(slice) =", len(slice))
+    newSlice := SubtractOneFromLength(slice)
+    fmt.Println("After:  len(slice) =", len(slice))
+    fmt.Println("After:  len(newSlice) =", len(newSlice))
+}
+```
+
+```
+Before: len(slice) = 50
+After:  len(slice) = 50
+After:  len(newSlice) = 49
+```
+
+### How append works
+
+If the new length of slice is greater than the length of the underlying array, it will `append()` will first allocate a new array (length = 1.5 x new slice length), and the copy all the data into the new array. Since it's a different array, the address of the underlying array is obviously changed also. 
+
+If the original array is capable to hold all the new data already, it will simply copy the new data into the array.
+
+```go
+// Append appends the elements to the slice.
+// Efficient version.
+func Append(slice []int, elements ...int) []int {
+    n := len(slice)
+    total := len(slice) + len(elements)
+    if total > cap(slice) {
+        // Reallocate. Grow to 1.5 times the new size, so we can still grow.
+        newSize := total*3/2 + 1
+        newSlice := make([]int, total, newSize)
+        copy(newSlice, slice)
+        slice = newSlice
+    }
+    slice = slice[:total]
+    copy(slice[n:], elements)
+    return slice
+}
+```
+
+### Slice of Values vs. Slice of Pointers
+
+If the underlying array of your slice is big enough for your need, there is no point at using slice of pointers, as it will need to allocate the a new piece of memory for each entry in the slice.
+
+However, if the your your slice will outgrow the underlying array when being appended, a new array with sufficient length will be allocated, copying all the data from the original array to the new one. This is when using slice of pointers is a better option, since only the pointers will need to be copied, not the entire values.
+
+To test the performance difference yourself
+
+`main_test.go`
+
+```go
+package main
+
+import (
+	"testing"
+)
+
+type SmallStruct struct {
+	A int
+	B int
+}
+
+const (
+	SLICE_LEN = 100
+	ARRAY_LEN = 100
+)
+
+func BenchmarkSliceOfSmallStructs(b *testing.B) {
+	b.ReportAllocs()
+	for i := 0; i < b.N; i++ {
+		slice := make([]SmallStruct, 0, ARRAY_LEN)
+		for j := 0; j < SLICE_LEN; j++ {
+			slice = append(slice, SmallStruct{A: j, B: j + 1})
+		}
+	}
+}
+
+func BenchmarkSliceOfPointersOfSmallStructs(b *testing.B) {
+	b.ReportAllocs()
+	for i := 0; i < b.N; i++ { // test count
+		slice := make([]*SmallStruct, 0, ARRAY_LEN)
+		for j := 0; j < SLICE_LEN; j++ {
+			slice = append(slice, &SmallStruct{A: j, B: j + 1})
+		}
+	}
+}
+
+type BigStruct struct {
+	F1, F2, F3, F4, F5, F6, F7                string
+	I1, I2                                    int
+	I3, I4, I5, I6, I7, I8, I9, I10, I11, I12 int
+	A1, A2, A3, A4, A5, A6, A7                SmallStruct
+	A8, A9, A10, A11, A12, A13, A14           SmallStruct
+}
+
+func BenchmarkSliceOfBigStructs(b *testing.B) {
+	b.ReportAllocs()
+	for i := 0; i < b.N; i++ {
+		slice := make([]BigStruct, 0, ARRAY_LEN)
+		for j := 0; j < SLICE_LEN; j++ {
+			slice = append(slice, BigStruct{
+				I1: j,
+				I2: j + 1,
+			})
+		}
+	}
+}
+
+func BenchmarkSliceOfPointersOfBigStructs(b *testing.B) {
+	b.ReportAllocs()
+	for i := 0; i < b.N; i++ {
+		slice := make([]*BigStruct, 0, ARRAY_LEN)
+		for j := 0; j < SLICE_LEN; j++ {
+			slice = append(slice, &BigStruct{
+				I1: j,
+				I2: j + 1,
+			})
+		}
+	}
+}
+
+```
+
+To see direct ouputs
+
+```
+go test -bench . -count 3
+```
+
+To see analyzed outputs, install `benchstat` first
+
+```
+go install golang.org/x/perf/cmd/benchstat@latest
+```
+
+and then
+
+```
+go test -bench . -count 3 -benchmem >> benchmark.txt
+benchstat benchmark.txt 
+```
+
+See [[#Benchmarking]] for more
+
+Output when	`SLICE_LEN` = 100, `ARRAY_LEN` = 100:
+
+```
+goos: darwin
+goarch: amd64
+pkg: gslice
+cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+                                 │ benchmark.txt │
+                                 │    sec/op     │
+SliceOfSmallStructs-12               89.89n ± 4%
+SliceOfPointersOfSmallStructs-12     2.133µ ± 8%
+SliceOfBigStructs-12                 3.363µ ± 7%
+SliceOfPointersOfBigStructs-12       8.597µ ± 3%
+geomean                              1.534µ
+
+                                 │ benchmark.txt  │
+                                 │      B/op      │
+SliceOfSmallStructs-12               0.000 ± 0%
+SliceOfPointersOfSmallStructs-12   1.562Ki ± 0%
+SliceOfBigStructs-12                 0.000 ± 0%
+SliceOfPointersOfBigStructs-12     43.75Ki ± 0%
+geomean                                         ¹
+¹ summaries must be >0 to compute geomean
+
+                                 │ benchmark.txt │
+                                 │   allocs/op   │
+SliceOfSmallStructs-12              0.000 ± 0%
+SliceOfPointersOfSmallStructs-12    100.0 ± 0%
+SliceOfBigStructs-12                0.000 ± 0%
+SliceOfPointersOfBigStructs-12      100.0 ± 0%
+geomean                                        ¹
+¹ summaries must be >0 to compute geomean
+```
+
+Output when `SLICE_LEN` = 100, `ARRAY_LEN` = 10:
+
+```
+goos: darwin
+goarch: amd64
+pkg: gslice
+cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+                                 │ benchmark_raw.txt │
+                                 │      sec/op       │
+SliceOfSmallStructs-12                  880.6n ± 17%
+SliceOfPointersOfSmallStructs-12        2.815µ ±  7%
+SliceOfBigStructs-12                    20.41µ ± 15%
+SliceOfPointersOfBigStructs-12          9.213µ ±  3%
+geomean                                 4.646µ
+
+                                 │ benchmark_raw.txt │
+                                 │       B/op        │
+SliceOfSmallStructs-12                  4.812Ki ± 0%
+SliceOfPointersOfSmallStructs-12        3.906Ki ± 0%
+SliceOfBigStructs-12                    147.2Ki ± 0%
+SliceOfPointersOfBigStructs-12          46.09Ki ± 0%
+geomean                                 18.90Ki
+
+                                 │ benchmark_raw.txt │
+                                 │     allocs/op     │
+SliceOfSmallStructs-12                    4.000 ± 0%
+SliceOfPointersOfSmallStructs-12          104.0 ± 0%
+SliceOfBigStructs-12                      4.000 ± 0%
+SliceOfPointersOfBigStructs-12            104.0 ± 0%
+geomean                                   20.40                                        20.40
+```
+
+Please read [Arrays, slices (and strings): The mechanics of 'append' | Go Blog]([https://go.dev/blog/slices](https://go.dev/blog/slices)) if you're confused.
+
+Discussions containing partial truths
+
+- [Bad Go: slices of pointers | Medium](https://medium.com/@philpearl/bad-go-slices-of-pointers-ed3c06b8bb41)
+- [Slices of structs vs. slices of pointers to structs | Stack Overflow](https://stackoverflow.com/a/37621532/15493213)
+
+
 ## Docstring
 
 Comments directly above a function will become docstrings.
@@ -499,6 +746,13 @@ See <https://github.com/Microsoft/vscode-go/issues/1377#issuecomment-347431580>
 `assert.ElementsMatch()`
 
 <https://github.com/stretchr/testify/issues/275#issuecomment-480823210>
+
+## Benchmarking
+
+- [Benchmarking in Golang: Improving function performance](https://blog.logrocket.com/benchmarking-golang-improve-function-performance/#:~:text=Running%20a%20benchmark%20in%20Go,subset%20of%20your%20benchmark%20functions.)
+- [Chapter 34: Benchmarks | Practical Go Lessons](https://www.practical-go-lessons.com/chap-34-benchmarks)
+
+![](https://i.imgur.com/dAt851z.png)
 
 ## Mock
 

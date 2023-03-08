@@ -5,6 +5,7 @@ parent: OtherNotes
 # Spotify & Last.fm 3rd party apps
 
 ## Spotify stats
+
 - <https://playlastify.herokuapp.com/> 👍
 	- mine
 - [Spotify Statistics](https://spotifystatistics.com/)
@@ -53,6 +54,7 @@ parent: OtherNotes
 <https://everythings-connected.com/> artists graph
 
 ### Spotify Discovery and Others
+
 - <https://songdata.io/>
 	- musical details of a song & similar songs
 - [https://www.kord.app/](https://www.kord.app/) 
