@@ -15,11 +15,11 @@ brew upgrade
 brew install go
 ```
 
-###
-
 ## Style
 
 <https://github.com/Pungyeon/clean-go-article>
+
+Use camel style for variables.
 
 ## Rules
 
@@ -572,6 +572,44 @@ if err = r.dbClient.DB().
 - AfterFind
 	- auto execute after querying
 
+### Select 2 interlinked tables 
+
+Suppose you have 2 tables, `Project` & `Incident`. 1 project can have multiple incidents, but 1 incident only belongs to 1 project.
+
+```go
+type Project struct {
+	ID              uuid.UUID       `json:"id" gorm:"column:id;primary_key;type:varchar(64);not null"`
+
+	Incidents []Incident `gorm:"foreignkey:IncidentID"`
+}
+```
+
+```go
+type Incident struct {
+	ID          uuid.UUID  `json:"id" gorm:"column:id;primary_key;type:varchar(64);not null"`
+	ProjectID  uuid.UUID  `json:"project_id" gorm:"column:incident_id;type:varchar(64);not null"`
+
+	Project Project `gorm:"foreignkey:ProjectID"`
+}
+```
+
+You can query the project alongside its incident in GORM with
+
+```go
+func (r projectRepository) GetProjectID(ctx context.Context, projectID uuid.UUID) (project *model.Project, err error) {
+	if err := r.dbClient.DB().
+		WithContext(ctx).
+		Preload("Incidents").
+		Where("id = ?", projectID).
+		First(&project).Error; err != nil {
+		return nil, err
+	}
+	return
+}
+```
+
+If you look at its raw query, it still makes 2 seperate query for `Project` & `Incident` table, but at least you don't have to handle it youself.
+
 ### Error
 
 You can add error manually, which is useful when writing unit tests
@@ -590,6 +628,31 @@ To revert, just reassign it to null
 
 ```go
 db.Error = nil
+```
+
+### Logging
+
+To print the raw query in your terminal
+
+```go
+
+import (
+    gormLogger "gorm.io/gorm/logger"
+)
+
+db.Config.Logger = gormLogger.Default.LogMode(gormLogger.Info)
+```
+
+### AutoMigrate
+
+You can let gorm migrate the tables for you. It does not migrate your tables completely however, for example it has some problems dealing with enum & foreign key.
+
+```go
+models = []any{
+    &modelA{},
+    &modelB{},
+}
+db.AutoMigrate(models...)
 ```
 
 ## Goroutine
@@ -700,7 +763,13 @@ func TestMul(t *testing.T) {
 }
 ```
 
-### Test
+### Run something after each unit test
+
+Using testify, you can add a `TearDownTest()` function, and it will run the function after each unit test.
+
+For example, if you're using testcontainer and want to truncate your tables after each unit test, write that in the function.
+
+### Run Tests
 
 To run all test files recursively
 
