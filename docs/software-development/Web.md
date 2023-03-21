@@ -87,6 +87,10 @@ Here's mine
 
 You need to enable CORS on the server side for cross-origin requests to succeed. Note that **browsers will still block localhost** regardless.
 
+## REST
+
+See [[RESTful]]
+
 ## Testing API
 
 - [[Postman]]

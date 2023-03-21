@@ -50,6 +50,16 @@ Only 2 of the 3 can be satisfied at the same time for any **distributed** data s
 
 Partition tolerance is a must, so the choice is between consistent & availability. Typically, RDBMS chooses consistency over availability, while NoSQL chooses availability over consistency.
 
+### NoSQL
+
+Some nice properties
+
+- horizontal scaling
+- redundancy
+	- replicas
+- data don't get removed instantly
+	- can undelete
+
 ### Primary Key
 
 - uuid (universally unique identifier)

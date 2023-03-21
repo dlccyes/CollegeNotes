@@ -175,6 +175,19 @@ I suggest that ...
 	- ![](https://i.imgur.com/uZ7l3Ba.png)
 	- ![](https://i.imgur.com/BVBc2R5.png)
 
+## Imperative
+
+### tú & vosotros
+
+- tú -> same as present third person
+- vos -> base + d
+
+### usted & ustedes
+
+Same as usted/ustedes present but replace e/a with a/e
+
+![](https://i.imgur.com/LQJa1uO.png)
+
 ## Food
 
 - lasaña = lasagna
@@ -3367,3 +3380,24 @@ p.13 - exercise 22
 ![](https://i.imgur.com/WxWPsxX.png)
 
 ![](https://i.imgur.com/fpRPRdU.png)
+
+
+## Spanish 3-3
+
+### Palabras
+
+- casco = helmet
+- cinturón de seguridad = seat belt
+	- cinturón = belt
+	- seguridad = safety
+- abrocharse = fasten
+- permitir = permit
+- peatón = padestrian
+- paso de cebra = crosswalk
+	- paso = path
+	- cebra = zebra
+- carril bici = cycle path
+	- carril = lane
+- perder = lose
+- auriculares = headphones
+- envenenar = poison

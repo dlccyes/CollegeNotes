@@ -118,6 +118,7 @@ layout: meth
 - [r/cscq resume sharing](https://www.reddit.com/r/cscareerquestions/comments/e8narz)
 - [A Good Tech Resume | The Pragmatic Engineer ](https://thetechresume.com/A_Good_Tech_Resume.pdf) ([archive](https://web.archive.org/web/20220520083345/https://thetechresume.com/A_Good_Tech_Resume.pdf))
 - templates
+	- [Jake's Resume](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs)
 	- [Software Engineer Resume](https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf)
 
 ## Cover letters

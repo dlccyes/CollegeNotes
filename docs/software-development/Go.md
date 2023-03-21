@@ -610,6 +610,27 @@ func (r projectRepository) GetProjectID(ctx context.Context, projectID uuid.UUID
 
 If you look at its raw query, it still makes 2 seperate query for `Project` & `Incident` table, but at least you don't have to handle it youself.
 
+### Set a nullable field back to null
+
+To set a nullable field of a record from having a value back to null, you can't use a simple pointer type when declaring a model, but a pointer to the corresponding type in the `sql` package.
+
+```go
+type Model struct {
+    Amount *sql.NullFloat64
+}
+
+// amount will not be updated
+gorm.Updates(Model{Amount: nil})
+
+// amount will be updated as a null
+gorm.Updates(Model{Amount: &sql.NullFloat64{}})
+
+// amount will be updated as a 10.50
+gorm.Updates(Model{Amount: &sql.NullFloat64{Float64: 10.50, Valid: true}})
+```
+
+See <https://stackoverflow.com/a/70596488/15493213>
+
 ### Error
 
 You can add error manually, which is useful when writing unit tests
@@ -908,6 +929,14 @@ To emulate a post request with a json payload
     c.Request.Body = io.NopCloser(strings.NewReader(jsonPayload))
     c.Request.Header.Set("Content-Type", "application/json")
 ```
+
+### Troubleshooting
+
+#### problems in binding `bool` field with `binding:"required"` tag
+
+You can only use `*bool`
+
+<https://github.com/gin-gonic/gin/issues/685>
 
 ## HTTP Client
 

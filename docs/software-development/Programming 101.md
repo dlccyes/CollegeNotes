@@ -1,5 +1,19 @@
 # Programming 101
 
+## Naming convention
+
+### camelCase
+
+- Java, Javascript, Go, etc.
+
+### snake_case
+
+- C, C++, Python, etc.
+
+### spinal-case
+
+- [[RESTful]] routes
+
 ## Online Coding Environments
 
 ### Github VsCode

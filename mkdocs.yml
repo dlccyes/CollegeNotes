@@ -101,6 +101,7 @@ nav:
 
   - Web:
     - software-development/Web.md
+    - software-development/RESTful.md
     - Static Site Generators:
       - "software-development/Hugo.md"
       - "software-development/Jekyll.md"

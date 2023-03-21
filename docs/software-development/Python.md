@@ -170,6 +170,27 @@ import <your_file>
 
 When imported, `__name__` will be the module's name. When executed directly, `__name__` will be `__main__`.
 
+## Class
+
+### Inheritance
+
+```python
+class Mom():
+	def __init__(self):
+		self.yes = True
+
+class StepMom():
+	def __init__(self):
+		self.no = True
+
+class Child(Mom, StepMom):
+	def __init__(self):
+		# run the __init__ of the parent classes
+		super().__init__()
+		# now it can access self.yes & self.no
+		print(self.yes, self.no)
+```
+
 ## working directory
 
 ### show current directory
@@ -191,6 +212,8 @@ os.chdir("<path>")
 ```
 
 ## Unit testing with `unittest`
+
+### Basics
 
 Suppose you want to write unit tests for your functions in `main.py`
 
@@ -228,6 +251,100 @@ if __name__ == "__main__":
 ```
 
 Now just run `test_main.py`, and it will tell you the result. If something's wrong, it will show you the diff.
+
+### Mock
+
+You can easily mock a function so you don't have to actually run the function when testing your target function.
+
+`main.py`
+
+```python
+def times_two_add_one(num: int) -> int:
+	res = times_two(num) + 1
+	return res
+```
+
+`test_main.py`
+
+```python
+import unittest
+from unittest.mock import MagicMock
+from main import *
+
+class TestMain(unittest.TestCase):
+	def test_times_two_add_one(self):
+		num = 11
+		times_two = MagicMock(return_value=22)
+		actual = times_two_add_one(num)
+		expected = 23
+		self.assertEqual(expected, actual)
+
+		# optional: ensure that the parameter passed into times_two is correct
+		times_two = assert_called_with(num)
+```
+
+If you know `GoMock`, this is equal to
+
+```go
+num := 11
+times_two.EXPECT(num).RETURN(22)
+```
+
+The great thing about `MagicMock` is that it does not require you to generate a separate mock file beforehand.
+
+### VsCode Extension
+
+Use [Python Test Explorer for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=LittleFoxTeam.vscode-python-test-adapter)
+
+### Coverage
+
+You can see your test coverage stats as well as the lines covered in a web UI!
+
+Install the `coverage` module
+
+```
+pip3 install coverage
+```
+
+Run the test
+
+```
+python3 -m coverage run --source . -m unittest
+```
+
+If you don't add the `--source` flag, all imported internal libraries will also be printed.
+
+See the converate in your terminal
+
+```
+python3 -m coverage report
+```
+
+Generate html files inside `/htmlconv` showing the lines covered
+
+```
+python3 -m coverage html
+```
+
+Open the html file (for Mac)
+
+```
+open htmlcov/index.html
+```
+
+example
+
+![](https://i.imgur.com/x5A2bTt.png)
+
+You can write these all into a make file
+
+```Makefile
+ut:
+	python3 -m coverage run --source . -m unittest
+	python3 -m coverage report
+	python3 -m coverage html  
+	open htmlcov/index.html
+```
 
 ## random
 
@@ -281,10 +398,10 @@ Add this if your text is cutoff or whatever.
 
 ```python
 plt.savefig(f'{fig_name}.pdf', format='pdf', dpi=300)
-
 ```
 
 ### plot as many on demand
+
 <https://stackoverflow.com/a/39106673/15493213>
 
 ```python
@@ -307,6 +424,7 @@ plt.show()
 plot 2 charts, each with 2 lines
 
 ### subplot on demand
+
 <https://stackoverflow.com/a/49100437/15493213>
 
 ```python
