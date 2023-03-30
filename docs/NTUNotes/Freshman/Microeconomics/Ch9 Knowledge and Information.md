@@ -25,9 +25,9 @@ equilibrium 會是 \$90-\$100 for A，\$50-\$60 for B
 
 ### Moral Hazard
 
-[moral hazard](../../../obs_autolink/moral%20hazard)
+[[moral hazard]]
 
-知道自己有保險，就亂搞，讓出事期望值增大，保險費便不夠 (for sellers)，因而提高保費
+知道自己有保險，就亂搞，讓出事期望值增大，保險費變不夠 (for sellers)，因而提高保費
 
 chartist/technical analysts: past price → future price  
 predict good buy → many ppl buy → expensive → bot good buy  

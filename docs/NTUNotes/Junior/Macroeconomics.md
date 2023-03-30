@@ -185,6 +185,7 @@ layout: meth
 
 $$GDP = C+I+G+NX$$
 
+- Y = domestic output = GDP
 - C = Consumption = 民間消費支出
 	- 占比最高，60-70%
 	- 波動不大
@@ -333,6 +334,7 @@ $$GDP = C+I+G+NX$$
 
 #### 政府儲蓄 government saving
 
+- also knows as **public saving**
 - 政府儲蓄 <br>$S^G$ = TAX - (G + TR + INT)<br>= 政府投資支出 + 政府預算盈餘 <br>= 政府投資支出 - 政府預算赤字
 	- 政府預算盈餘 budget surplus = 總稅收 - 總支出<br>= TAX - (G + TR + INT + 政府投資支出)
 	- TAX 包含公營事業盈餘等
