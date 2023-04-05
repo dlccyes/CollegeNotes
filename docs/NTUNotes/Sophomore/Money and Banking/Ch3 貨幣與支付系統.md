@@ -4,6 +4,7 @@ parent: Money and Banking
 # Ch3 貨幣與支付系統
 
 ## 貨幣簡介
+
 - 通貨－通用的貨品
 - 功能
   - 交易媒介
@@ -15,6 +16,7 @@ parent: Money and Banking
       - 因為貨幣 liquidity 較高
 
 ## 貨幣良好特性
+
   - 可儲藏性 storability
   - 可攜帶性 portability：不同面額
   - 可分割性 divisibility
@@ -25,6 +27,7 @@ parent: Money and Banking
     - 紙鈔時代：央行用貨幣買的 security 的收益 - 貨幣發行成本
 
 ## 可兌換紙幣 convertible paper money
+
   - 商品貨幣時代，銀行發行銀行券（即銀行本票），人民用貨幣買，銀行拿貨幣去投資
   - 中間商
     - 提供資訊：各銀行所發銀行券，因風險不同，流通價值不等於面額 → 中間商提供資訊
@@ -32,6 +35,7 @@ parent: Money and Banking
     - 買賣銀行券：賺價差，民眾節省交通成本&時間 → 風險降低（對於民眾）
 
 ## 信用貨幣本位制度
+
 - 不可兌換紙幣 inconvertible paper money
   - 發行量不受黃金限制 → 易實施通膨政策
   - 法幣 fiat money
@@ -46,16 +50,19 @@ parent: Money and Banking
     - 世界動亂時美元多作為避險工具 → 美元需求增加 → 美元升值
 
 ## 支票
+
 - 可分割性&可攜帶性佳
 - 記名 → 可儲存性佳
 - 結清成本高
 - 可辨識性問題：開票人可能帳戶沒錢 → 空頭支票（似偽鈔）
 
 ## 電子貨幣
+
 - VISA 金融卡（轉帳卡, debit card）為全球使用率最高之支付工具
 - 信用卡 (credit card）非貨幣，為借貸性質
 
 ## 貨幣總計數
+
 - $M_1A$ = C + D － liquidity 最高的資產
   - C = 通貨淨額 = 央行發行額 - （貨幣機構庫存現金 + 郵匯局庫存現金）
     - 貨幣機構就包括郵匯局
@@ -85,6 +92,7 @@ parent: Money and Banking
 [ref](https://jackytw0602.pixnet.net/blog/post/207972674)
 
 ## 支付清算系統
+
 - 財金跨行支付結算系統
 - 票據交換結算系統
 - 證券清算系統
