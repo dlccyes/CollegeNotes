@@ -61,7 +61,7 @@ $$Y = C + I + G + NX$$
 - $C$ = consumption
 - $I$ = investment
 	- purchase of new capital
-	- securities are not capital so not investment
+	- securities (e.g. stock & bonds) are not capital so not investment
 - $G$ = government purchases
 - $NX$ = net exports
 

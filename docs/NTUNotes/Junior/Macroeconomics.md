@@ -3,9 +3,10 @@ aliases: 總體經濟學
 title: Macroeconomics
 layout: meth
 ---
+
 # Macroeconomics
 
-## resources
+## Resources
 
 - videos
 	- [110-1 playlist](https://www.youtube.com/playlist?list=PLp29FF3ioia0StLO86w_xM0rYq0CKcLd5)
@@ -341,21 +342,21 @@ $$GDP = C+I+G+NX$$
 
 #### 國民儲蓄 national saving
 
-- ==S (國民儲蓄) = $S^P$ (民間儲蓄) + $S^G$ (政府儲蓄)==<br>=== GNI (國民所得毛額) - ( C (民間消費) + G (政府消費) )==<br>= (GDP + NFIA) - (C + G)<br>= (C + I + G + NX + NFIA) - (C + G)<br>= I + (NX + NFIA)<br>= I (國內投資支出) + CA (經常帳盈餘)
+- S (國民儲蓄) = $S^P$ (民間儲蓄) + $S^G$ (政府儲蓄)<br>= GNI (國民所得毛額) - ( C (民間消費) + G (政府消費) )<br>= (GDP + NFIA) - (C + G)<br>= (C + I + G + NX + NFIA) - (C + G)<br>= I + (NX + NFIA)<br>= I (國內投資支出) + CA (經常帳盈餘)
 - 國民儲蓄 - 折舊<br>= 國民儲蓄毛額 gross national saving - 折舊<br>= 國民儲蓄淨額 net national saving
 - 經常帳盈餘 (CA, current account) = 貿易盈餘 (NX) + 國外要素所得淨額 (NFIA)
 	-  國外資產持有 = 對外國住民的求償權
 	-   CA > 0 → 國外資產淨額增加 i.e. 對外國住民求償權增加，資本帳赤字
 	-   current account + 資本帳 (capital account) =  0
 		-   <https://www.investopedia.com/ask/answers/031615/whats-difference-between-current-account-and-capital-account.asp>
-- ==國民儲蓄 S = I + CA 流向==
+- 國民儲蓄 S = I + CA 流向
 	- 留在國內 → 國內投資支出 (I)
 		- 若也沒有做有形 or 無形投資，則只會讓存貨增加
 			- Keynesian: paradox ot thrift
 				- 儲蓄是一種罪惡，會使均衡產出下降
 				- 你 save  → 別人的 income 減少 → overall saving drop in the long term
 	- 流向國外 → 經常帳盈餘 (CA) i.e. 以商品或要素形式流向國外
-		- e.g. 買 US treasury OR 國外資產 ==(???????????????? 到底是金錢還是商品或要素形式流出)==
+		- e.g. 買 US treasury OR 國外資產 (???????????????? 到底是金錢還是商品或要素形式流出)
 	- CA > 0 → 國民儲蓄 → 國內投資 → 超額儲蓄 excessive saving
 		- 代表賺來的錢沒被消費掉
 	- 期末資本存量 = 期初資本存量 + 淨投資 (I)
@@ -499,7 +500,7 @@ $$GDP = C+I+G+NX$$
 #### [[亞洲金融風暴]]
 
 - 1997 泰國放棄固定匯率，George Sorus 等炒家突襲外匯市場，泰銖暴跌，一路往北跌到俄羅斯
-- 台灣替手新台幣，讓炒家過門不入，因此受創就輕微 ==???==
+- 台灣替手新台幣，讓炒家過門不入，因此受創就輕微 ???
 - 經濟衰退 → 原油需求下降 → 國際油價下跌
 
 #### dot-com bubble
@@ -1400,7 +1401,6 @@ $$\beta u'(c_{t+1})r_t+\beta^2u'(c_{t+1})(1+r_{t+1})=\beta^2u'(c_{t+2})(1+r_t)(1
 $$\dfrac{u'(c_t)}{u'(c_{t+1})}=\beta(1+r)=\dfrac{1+r}{1+\rho}$$
 
 see [[#費雪兩期模型#utlity]]
-
 
 If $r=\rho$, the marginal utility of consumption is the same in every period
 

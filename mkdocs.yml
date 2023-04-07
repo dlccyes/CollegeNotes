@@ -161,22 +161,23 @@ nav:
     - "NTUNotes/Freshman/Microeconomics/README.md"
     - "NTUNotes/Freshman/Microeconomics/Ch10 Monopoly.md"
     - "NTUNotes/Freshman/Microeconomics/Ch11 Market Power, Colusion, and Obligopoly.md"
-  - "NTUNotes/Junior/Macroeconomics.md"
+  - Macroeconomics:
+    - "NTUNotes/Senior/Principle of Macroeconomics.md"
+    - "NTUNotes/Junior/Macroeconomics.md"
   - "NTUNotes/Senior/Statistics.md"
   - "NTUNotes/Sophomore/Econometrics.md"
-  - "Money and Banking":
+  - Money and Banking:
     - "NTUNotes/Sophomore/Money and Banking/README.md"
     - "NTUNotes/Sophomore/Money and Banking/Ch5 債券市場與利率的決定.md"
     - "NTUNotes/Sophomore/Money and Banking/Ch13 中央銀行的功能與政策目標.md"
   - "NTUNotes/Freshman/Eurozone.md"
   - "NTUNotes/Junior/Industrial Organization.md"
-
-- Game Theory:
-  - "NTUNotes/Hung-Yu/Game Theory for Wireless Network/Game Theory.md"
-  - Game Theory for Wireless Networks Papers:
-    - "NTUNotes/Hung-Yu/Game Theory for Wireless Network/Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing.md"
-    - "NTUNotes/Hung-Yu/Game Theory for Wireless Network/Opportunistic Data Collection in Cognitive Wireless  Sensor Networks - Air–Ground Collaborative Online Planning.md"
-    - "NTUNotes/Hung-Yu/Game Theory for Wireless Network/privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL.md"
+  - Game Theory:
+    - "NTUNotes/Hung-Yu/Game Theory for Wireless Network/Game Theory.md"
+    - Game Theory for Wireless Networks Papers:
+      - "NTUNotes/Hung-Yu/Game Theory for Wireless Network/Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing.md"
+      - "NTUNotes/Hung-Yu/Game Theory for Wireless Network/Opportunistic Data Collection in Cognitive Wireless  Sensor Networks - Air–Ground Collaborative Online Planning.md"
+      - "NTUNotes/Hung-Yu/Game Theory for Wireless Network/privacy-preserving incentive mechanism for the federated cloud-edge learning, PFCEL.md"
 
 
 # - Blog ⧉: https://dlccyes.github.io/blog
