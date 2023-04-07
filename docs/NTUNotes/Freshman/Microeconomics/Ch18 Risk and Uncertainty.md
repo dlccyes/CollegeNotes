@@ -3,7 +3,9 @@ title: Ch18 Risk and Uncertainty
 ###### tags: `Microeconomics`
 parent: Microeconomics
 ---
+
 # Ch18 Risk and Uncertainty
+
 ![](https://i.imgur.com/jSXLMk1.png)
 
 [Uncertainty_budget](https://drive.google.com/file/d/1QpBeDmqbnydl0Kf9clRVAXefRWLfDDb9/view)
@@ -28,28 +30,35 @@ parent: Microeconomics
 等同於商品 x = 成功 與 商品 y = 船難 2 之間的抉擇
 
 ## scenario: 光頭葛格的賭局
+
 賭局挑戰者決定 m  
 紅心 A → 失 m  
 非紅心 A → 得 0.4m  
 等同於商品 x = 輸錢 與 商品 y = 贏錢 2 之間的抉擇
 
 ## fair odds 
-公平賭局
-: expectation = 0 i.e. 零和
+
+公平賭局: expectation = 0 i.e. 零和
 
 ## risk premium
+
 <!-- ![](https://i.imgur.com/MftyvLO.png) -->
-fair insurance
-: 讓客戶保前保後預期財富不變  
+
+fair insurance: 讓客戶保前保後預期財富不變  
+
 ![](https://i.imgur.com/Gqq83EZ.png)
+
 ![](https://i.imgur.com/zhAcPVb.png)
 
 如用 fair insurance → 保險公司獲益為零，但又有其他支出  
 → 賠錢
 
 ## risk diversification
+
 找風險負相關的綁在一起，抵銷風險  
+
 ![](https://i.imgur.com/CjEG4TN.png)
+
 ![](https://i.imgur.com/3Sz9w6p.png)
 
 ## [[adverse selection]]
@@ -57,20 +66,29 @@ fair insurance
 ![](https://i.imgur.com/5FXe116.png)
 
 ## CAPM, Capital Assets Pricing Model
+
 ![](https://i.imgur.com/P0Vk3Mw.png)
 
 ### budget constraint
+
 ![](https://i.imgur.com/z4i0Seg.png)
+
 ![](https://i.imgur.com/UcPWtT1.png)
+
 ![](https://i.imgur.com/Fk1rTDL.png)
 
 ### beta
+
 sensitivity to movements in the relevant market
+
 ![](https://i.imgur.com/dl7ib4p.png)
+
 ![](https://i.imgur.com/h0htARK.png)
+
 ![](https://i.imgur.com/EK7LQMj.png)
 
 ## 期貨
+
 緣起：  
 農夫知道一個月後會收成 1000 tons 的玉米，  
 便訂定一個月後成交的 $3.5/ton x 1000 tons 玉米的期貨契約，

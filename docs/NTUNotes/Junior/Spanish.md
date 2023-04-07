@@ -188,6 +188,41 @@ Same as usted/ustedes present but replace e/a with a/e
 
 ![](https://i.imgur.com/LQJa1uO.png)
 
+## Profession
+
+profesión
+
+- cantante: 歌手
+- cocinero: cook
+- camarero: bartender / waiter
+- dependiente: clerk
+- periodista: journalist
+- enfermero: nurse
+- secretario: secretary
+- medico: doctor
+- dentista : dentist
+- estudiante: student
+- abogado: lawyer
+- jubilado: retired
+- ama de case: housewife
+- maestro/a = profesor(a)
+- actor/actriz: actor/actress
+- tenista: tennis player
+- escritora: writer
+- deportista: sportsman
+- azafata = 空姐
+- enfermero = nurse
+- empresario = businessman
+- ingeniero = engineer
+- maestro = teacher
+- bombero = firefighter
+	- trabaja de bombero
+- profesor particular = 家教
+- peluquero = barber
+- carnicero = butcher
+- fontanero = plumber
+- informático = IT
+
 ## Food
 
 - lasaña = lasagna
@@ -738,32 +773,6 @@ Same as usted/ustedes present but replace e/a with a/e
 		- me dedico ^^a^^ estudiar
 		- te dedicas ^^a^^ .......
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FtiHbmChGE-.png?alt=media&token=50263ec6-42a9-4f4a-92c6-78056dcabc39)
-	- cantante: 歌手
-	- cocinero: cook
-	- camarero: bartender / waiter
-	- dependiente: clerk
-	- periodista: journalist
-	- enfermero: nurse
-	- secretario: secretary
-	- medico: doctor
-	- dentista : dentist
-	- estudiante: student
-	- abogado: lawyer
-	- jubilado: retired
-	- ama de case: housewife
-	- maestro/a = profesor(a)
-	- actor/actriz: actor/actress
-	- tenista: tennis player
-	- escritora: writer
-	- deportista: sportsman
-	- azafata = 空姐
-	- enfermero = nurse
-	- empresario = businessman
-	- ingeniero = engineer
-	- maestro = teacher
-	- bombero = firefighter
-		- trabaja de bombero
-	- profesor particular = 家教
 - 地點
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2F4K6aNPRaHW.png?alt=media&token=25282b48-918c-4066-a789-5cb3f41387d4)
 	- escuela: school

@@ -43,8 +43,11 @@ layout: meth
 
 ### Websites
 
-- <https://www.levels.fyi/>
-	- company salaries
+- company salaries
+	- <https://www.levels.fyi/>
+		- submitted by people
+	- <https://www.comprehensive.io/>
+		- scraped from job posts, only base
 - <https://www.glassdoor.com/>
 	- company salaries, reviews, and interviews
 - <https://interview.tw/>
