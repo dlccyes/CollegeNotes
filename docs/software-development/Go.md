@@ -15,6 +15,10 @@ brew upgrade
 brew install go
 ```
 
+**Install multiple versions**
+
+See [[Linux Package Management#Handling multiple versions]]
+
 ## Style
 
 <https://github.com/Pungyeon/clean-go-article>
@@ -1224,3 +1228,16 @@ Yet it shows `undeclared name: Hello` on `Hello()`
 Solution:
 
 <https://stackoverflow.com/a/59485684/15493213>
+
+### /usr/local/Cellar/go/1.19.3/libexec/bin/go: no such file or directory
+
+If you're using Homebrew, then change your  `GOROOT`
+
+```
+export GOROOT=/usr/local/opt/go/libexec
+```
+
+If you have multiple versions installed, replace `go` with `go@version`. You can `ls /usr/local/opt | grep go` to check your versions.
+
+See [this Stack Overflow answer](https://stackoverflow.com/a/53661370/15493213)
+

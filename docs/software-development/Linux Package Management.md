@@ -3,12 +3,35 @@ layout: meth
 parent: Software Development
 ---
 
-# Linux Package Management
+# Linux/Unix Package Management
 
 ## Where is your package?
+
 locate the binary, source, and manual page files for a command
+
 ```
 whereis <something>
+```
+
+## Homebrew
+
+### Handling multiple versions
+
+See [Manage multiple versins of Go on MacOS with Homebrew | Github Gist](https://gist.github.com/BigOokie/d5817e88f01e0d452ed585a1590f5aeb)
+
+**Install a version**
+
+```
+brew install package@version
+```
+
+**Switch a version**
+
+Suppose you have the current version of `go` and `go@1.19` installed and you want to switch from `go` to `go@1.19`
+
+```
+brew unlink go
+brew link go@1.19
 ```
 
 ## apt

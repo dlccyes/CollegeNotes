@@ -44,6 +44,8 @@ Every non-leaf resource should have a trailing slash, because when you're at `/p
 
 ## Status Codes
 
+See [this section in the RC7231 standard](https://www.rfc-editor.org/rfc/rfc7231#section-6)
+
 ### Success
 
 - `200 OK`

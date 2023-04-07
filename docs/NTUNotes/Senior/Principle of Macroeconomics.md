@@ -85,7 +85,9 @@ See this utility vs. wealth diagram, with the green line being the person's util
 
 ![](https://i.imgur.com/522fdp3.png)
 
-Any risk combination of 0 & 1 will have the final utility fall on the red line, which is always lower below green line, whereas a certain holding of the same expected wealth will fall on the green line, which is always above the red line, meaning this person is risk averse.
+Any risk combination of 0 & 1 will have the final utility fall on the red line, whereas a certain holding of the same expected wealth will fall on the green line, which is always above the red line, meaning this person is risk averse.
+
+See also [[Ch18 Risk and Uncertainty]]
 
 ## Ch29 The Monetary System
 

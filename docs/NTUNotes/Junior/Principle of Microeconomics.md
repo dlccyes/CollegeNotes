@@ -1,4 +1,4 @@
-# 經原上
+# Principle of Microeconomics
 
 ## positive & normative
 
@@ -6,7 +6,8 @@
 	- objective
 - normative economics
 	- subjective
-- https://www.investopedia.com/ask/answers/12/difference-between-positive-normative-economics.asp
+- <https://www.investopedia.com/ask/answers/12/difference-between-positive-normative-economics.asp>
+
 <iframe src="https://www.investopedia.com/ask/answers/12/difference-between-positive-normative-economics.asp" width=100% height=500px></iframe>
 
 ## law of demand
@@ -62,7 +63,7 @@ $pq = k$
 
 ## price elasticity
 
-- [price elasticity](../../obs_autolink/price%20elasticity)
+- [[price elasticity]]
 - midpoint method
 	- significance: A→B & B→A 變動比率一樣 $\because$ 分母一樣
 - positive
@@ -93,7 +94,7 @@ $pq = k$
 - Condorcet: 群體 makes better decision than 個體
 - increase in minimum wage on unemployment rate
 	- [[price elasticity]]
-	- https://www.thoughtco.com/increased-minimum-wage-impact-4019618
+	- <https://www.thoughtco.com/increased-minimum-wage-impact-4019618>
 - equity
 	- Horizontal equity
 		- people in the same circumstances should be treated in the same way
