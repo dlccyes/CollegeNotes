@@ -1410,3 +1410,272 @@ If $r<\rho$, $u'(c_{t})<u'(c_{t+1})$, so $c_{t} > c_{t+1}$ at max utility point
 
 
 ![](https://i.imgur.com/fbXZOJh.jpg)
+
+Assume $u(c)=\ln{c}$
+
+$$\dfrac{u'(c_t)}{u'(c_{t+1})}=\dfrac{c_{t+1}}{c_{t}}=\dfrac{1+r}{1+\rho}$$
+
+$$\ln c_{t+1}-\ln c_t=\ln (1+r) - \ln (1+\rho)\approx r-\rho$$
+消費成長率 = interest rate - time preference factor
+
+**Scenario**
+
+As 9.3(a), the expected interest rate will increase in t=10~20 and then drop back down
+
+![](https://i.imgur.com/dp72lov.png)
+
+- At t=1~10, the consumer decreases its consumption to a lower constant
+- At t=10-20, since $r-\rho>0$, 消費成長率為正, so consumption increases in each period
+- At t=20-30, consumption stays as a high constant
+
+The change of interest rate will also cause income effect, up or down shifting the overall curve depending on if the consumer has a positive or negative wealth.
+
+### 恆常所得假說 permanent income
+
+income = permanent income + transitory income
+
+$$y_t=y^P_t+y^T_t$$
+
+- $y$ = total oncome
+- $y^P$ = 恆常所得 permanent income
+- $y^T$ = 暫時所得 transitory income
+
+而 consumption 並非取決於 total income，而是 permanent income
+
+$$c_t=\phi \cdot y^P_t$$
+
+$\phi$ = constant, normally close to 1. When $\phi=1$, a consumer spends all permanent income and save all transitory income
+
+In 兩期模型，permanant income $\bar{y}$ = where $c_1=c_2$ (B 點)
+
+![](https://i.imgur.com/xfIlcbV.png)
+
+A 點為實際所得
+
+$$\bar{y}+\dfrac{\bar{y}}{1+r}=a_1+\dfrac{a_2}{1+r}$$
+
+$$\bar{y}=\dfrac{1+r}{2+r}a_1+\dfrac{1}{2+r}a_2$$
+
+When $r=\rho$, utility function 切 budge constraint at B, $c_1=c_2$, $s_1=y_1^T=a_1-\bar{y}$
+
+**無限期**
+
+$x_t$ = t 期開始的終身財富 = 各期 permanent income 折現總值
+
+$$x_t=\sum_{i=0}^\infty\dfrac{\bar{y_t}}{(1+r)^i}=\dfrac{1+r}{r}\bar{y_t}$$
+
+$$\dfrac{r}{1+r}x_t=\bar{y_t}$$
+
+intuition: 把 $x_t$ 存到銀行，每個月得到的利息折現值 = 該期 permanent income
+
+**Recursion betwen $x_t$ & $x_{t+1}$**
+
+Now we find the recursive relationship between each period of lifetime wealth $x$. Assume we come in with no initial bonds $b_0$:
+
+$$x_1=\sum_{t=0}^\infty\dfrac{a_{t+1}}{(1+r)^{t}}$$
+
+$b_1=a_1-c_1$
+
+
+$$\begin{align*}
+& x_2 = \sum_{t=0}^\infty\dfrac{a_{t+2}}{(1+r)^{t}}+(1+r)(a_1-c_1)\\
+&= (1+r)x_1-(1+r)c_1\\
+&= (1+r)(x_1-c_1)
+\end{align*}$$
+
+intuition: pretty straightforward, save all you've left in this period
+
+If $r=\rho$, then the consumption in each period is the same
+
+$$\dfrac{r}{1+r}x_1=\bar{y_1}=c_1$$
+
+$$x_2=(1+r)(x_1-\dfrac{r}{1+r}x_1)=x_1$$
+
+$$c_2=c_1$$
+
+**Finding $\phi$**
+
+assume $u(c)=\ln{c}$ and $r$ may != $\rho$
+
+$$c_{t}=(\dfrac{1+r}{1+\rho})c_{t-1}=(\dfrac{1+r}{1+\rho})^{t-1}c_{1}$$
+
+$$\begin{align*}
+& x_1=\sum_{t=1}^\infty\dfrac{c_t}{(1+r)^{t-1}}\\
+&= \sum_{t=1}^\infty(\dfrac{1}{1+\rho})^{t-1}c_{1}\\
+&= (\dfrac{1+\rho}{\rho})c_1
+\end{align*}$$
+
+$$\begin{align*}
+& c_1=(\dfrac{\rho}{1+\rho})x_1\\
+&= (\dfrac{\rho}{1+\rho})(\dfrac{1+r}{r})\bar{y_1}\\
+&= \phi \cdot \bar{y_1}
+\end{align*}$$
+
+$$\phi=(\dfrac{\rho}{1+\rho})(\dfrac{1+r}{r})$$
+
+$\phi=1$ when $r=\rho$
+
+$$x_2=(1+r)(x_1-c_1)=(\dfrac{1+r}{1+\rho})x_1$$
+
+the growth rate of lifetime wealth,  consumption & permanent income = $\dfrac{1+r}{1+\rho}$
+
+**所得變動影響**
+
+Assume $r=\rho$
+
+![](https://i.imgur.com/xQk2kXv.png)
+
+$$\Delta x=\Delta a$$
+
+$$\Delta c_t=\Delta \bar{y}=\dfrac{r}{1+r} \Delta x=\dfrac{r}{1+r} \Delta a$$
+
+MPC = $\dfrac{\Delta c_1}{\Delta a_1}=\dfrac{r}{1+r}\approx 0$
+
+MPS = $\dfrac{\Delta s_1}{\Delta a_1}=$ 1 - MPC $=\dfrac{1}{1+r}\approx 1$
+
+![](https://i.imgur.com/5oCRCnw.png)
+
+$$\Delta x=\sum_{i=0}^\infty\dfrac{\Delta a}{(1+r)^i}=\dfrac{1+r}{r}\Delta a$$
+
+$$\Delta c_t=\Delta \bar{y}=\dfrac{r}{1+r} \Delta x=\Delta a$$
+
+MPC = $\dfrac{\Delta c_1}{\Delta a_1}=1$
+
+MPS = $\dfrac{\Delta s_1}{\Delta a_1}=$ 1 - MPC $=0$
+
+直接把多的錢消費掉
+
+### consumption & bonds
+
+![](https://i.imgur.com/s9fEHLB.jpg)
+
+## Ch10 Endowment Economy Equilibrium Analysis
+
+endowment economy: no production, only endowment in each period
+
+### Endowment Economy 全面均衡
+
+政府用 bonds 貼赤字
+
+$$G_t+r_{t-1}B^g_{t-1}=T_t+(B^g_t-B^g_{t-1})$$
+
+- $G$ = government purchase
+- $B^g$ =  government bonds
+- $r$ = bond interest rate
+- $T$ = tax
+
+budget deficit $D$ = expenditure - tax 
+
+$$D_t=G_t+r_{t-1}B^g_{t-1}-T_t=B^g_t-B^g_{t-1}$$
+
+t 期折現 factor $q_t=\Pi_{i=1}^{t-1}(\dfrac{1}{1+r_i})$
+
+$$\sum_{t-1}^\infty q_tG_t+(1+r_0)B^g_0=\sum_{t-1}^\infty q_tT_t+q_\infty B^g_\infty=\sum_{t-1}^\infty q_tT_t$$
+
+**均衡條件**
+
+$$u'(c_t)=\beta u'(c_{t+1})(1+r)$$
+
+$$C_t+B_t=(Y_t-T_t)+(1+r_{t-1})B_{t-1}$$
+
+$$G_t+(1+r_{t-1})B^g_{t-1}=T_t+B^g_t$$
+
+商品市場
+
+$$C^d_t+G_t=Y_t$$
+
+bonds market (d = demand)
+
+$$B^d_t=B^g_t$$
+
+- $T_t=G_t+(1+r_{t-1})B^g_{t-1}-B^g_t$
+- $C^d_t+B^d_t=(Y_t-T_t)+(1+r_{t-1})B_{t-1}$
+- $C^d_t-Y_t+T_t+B^d_t=(1+r_{t-1})B_{t-1}$
+
+$$(C^d_t+G_t-Y_t)+(B^d_t-B^g_t)=(1+r_{t-1})(B_{t-1}-B^g_{t-1})=0$$
+
+since 流通 bonds = 政府發行 bonds
+
+So 商品市場超額需求 + 債券市場超額需求 = 0
+
+![](https://i.imgur.com/YLlLsMC.jpg)
+
+$Y_t$ & $G_t$ are given (exogenous). Reach equilibrium at $r=r^*$
+
+$r<r^*$ -> consumption demand > income -> sell bonds to raise money -> bonds supply > demand -> interest rate rises to attract bonds buyer 
+ 
+### Equilibrium interest rate & growth of income
+
+Assume the growth rate of $Y_t$ = $\mu$
+
+$$Y_t=(1+\mu)Y_{t-1}$$
+
+Assume $G_t=0$. Since $C_t=Y_t-G_t=Y_t$, the growth rate of $C_t$ is $\mu$ as well
+
+Assume $u(C_t)=\ln C_t$
+
+$$\dfrac{u'(C_t)}{u'(C_{t+1})}=\dfrac{C_{t+1}}{C_{t}}=\dfrac{1+r}{1+\rho}=1+\mu$$
+
+So the higher the $\mu$, the higher the $r$
+
+We can also get this from graphical analysis
+
+![](https://i.imgur.com/kToklNp.png)
+
+Original endowment is e. Now $Y_2$ rises to $Y_2'$. Since $r$ isn't changed, the budget constraint simply up shifts, resulting in a new equilibrium point A.
+
+In A, $C^d_1>Y_1$ -> 超額需求 in 商品市場 -> 超額供給 in 債券市場 -> interest rate rises -> budge constraint slope increases -> new equilibrium point f
+
+Conclusion: 成長快的國家 利率應較高
+
+In real life
+
+![](https://i.imgur.com/eQ9zTjh.png)
+
+correlation efficient = 0.08, or 0.44 if excluding 亞洲四小龍
+
+### 外生衝擊均衡效果
+
+**endowment decreases**
+
+![](https://i.imgur.com/Y0beBCf.png)
+
+- 商品市場超額需求
+- 債券市場超額供給
+	- sell bonds to raise money for consumption / decrease savings i.e. buying bonds when income reduced
+	- interest rate rises
+
+**government expenditure increases**
+
+The increase of government expenditure has to come from tax or bonds, so either an increase in current tax or in future tax.
+
+![](https://i.imgur.com/bbrKfUG.png)
+
+E -> A 
+
+- government expenditure increase 直接效果: $C^d_t$ right shifts to 虛線
+- tax increase income effect: $C^d_t$ left shifts a bit
+
+A -> F
+
+- 商品市場超額需求 -> $r$ increases -> consumption decreases
+
+For 債券市場
+
+![](https://i.imgur.com/q6fOjUd.png)
+
+if use 定額稅
+
+- 課稅後所得下降 -> 儲蓄意願下降 -> bonds demand left shifts -> bonds supply > demand -> interest rate increases
+
+if use bonds
+
+- $B^g_t$ right shifts
+- future income decreases due to future tax -> 儲蓄意願上升 -> bonds demand left shifts
+- new $B^g_t$ & $B^d_t$ intersect at a higher $r_t$
+- income unchanged -> consumption decrease = saving / bonds increase
+- $\Delta B^d_t = \Delta C^d_t < \Delta G_t = \Delta B^g_t$
+
+
+
+

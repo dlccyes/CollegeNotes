@@ -1,5 +1,4 @@
 [
-  "obsidian-imgur-plugin",
   "dataview",
   "obsidian-tabs",
   "obsidian-mind-map",
@@ -30,5 +29,6 @@
   "table-editor-obsidian",
   "obsidian-quiet-outline",
   "cycle-through-panes",
-  "terminal"
+  "terminal",
+  "obsidian-imgur-plugin"
 ]

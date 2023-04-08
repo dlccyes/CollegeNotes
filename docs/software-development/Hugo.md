@@ -28,9 +28,7 @@ hugo new site <hugo_dir>
 
 ### File Path
 
-See <https://gohugo.io/content-management/organization/#path-breakdown-in-hugo>
-
-**Do not use `index.md` in `contents/**`**, otherwise the posts in the same directory will not be caught by `Paginator` i.e. you can't see your beautiful listed recent posts.
+See [the doc about how Hugo organize the generated files](https://gohugo.io/content-management/organization/)
 
 ## URL
 
@@ -224,3 +222,57 @@ To see your post, you may have to go to the link directly.
 Create a fake language and make the posts you want to hide in that language. If you have a language switcher, use where or if clause to hide it.
 
 To see your post, just head to the index page of that language, just like how you see that in other languages.
+
+## Embedding local images
+
+Since Hugo will create a new directory for each of your post, it's a bit complicated to properly reference your local images.
+
+It's best to follow the structure of Hugo's generated files, which they call [page bundles](https://gohugo.io/content-management/page-bundles/).
+
+**Local structure**
+
+```
+content/
+├── category1/
+│   ├── post1/
+│   │   ├── image1.jpg
+│   │   ├── image2.png
+│   │   └── index.md
+│   └── post2/
+│       ├── image21.jpg
+│       └── index.md
+```
+
+**Generated structure**
+
+```
+hostname/
+├── post1/
+│   ├── image1.jpg
+│   ├── image2.jpg
+├── post2/
+│   ├── image21.jpg
+```
+
+After using this structure, the images will be correctly rendered either in your local markdown editor or generated static Hugo page. Simply embed `image1.jpg` in `post/index.md` with `![](image.jpg)`, and it will be rendered as `<img src="image1.jpg">` in `hostname/post1`.
+
+However, on the home page where you see the previews of a list of (recent) posts, the image cannot be shown since the relative path to the image is not the same in the home page, which is the parent of the page resource.
+
+To solve this, use [Markdown Render Hooks](https://gohugo.io/templates/render-hooks/).
+
+Have this in `themes/{your-theme}/layouts/_default/_markup/render-image.html` or `layouts/_default/_markup/render-image.html`
+
+```html
+<img class="img-zoomable" src='{{ if not (strings.HasPrefix .Destination "http") }}{{ .Page.RelPermalink }}{{end}}{{ .Destination | safeURL }}' alt="{{ .Text }}" />
+```
+
+`.Page.RelPermalink` is the absolute path to the file (with a trailing `/`), and `.Destination` is the original link of the image. To support both self hosted images & external images (starting with http/https), we use a simple if condition.
+
+Now, `<img src="image1.jpg">` will be automatically replaced by `<img src="/post1/image1.jpg">`, while `<img src="https://i.imgur.com/AAAAA.jpg">` will stay the same.
+
+Relevant discussions:
+
+- <https://github.com/gohugoio/hugo/issues/1240#issuecomment-753077529>
+- <https://discourse.gohugo.io/t/image-path/1721>
+- <https://github.com/gohugoio/hugo/issues/1240>
+- <https://discourse.gohugo.io/t/page-bundle-relative-image-path-in-rss-feed-wrong/>
