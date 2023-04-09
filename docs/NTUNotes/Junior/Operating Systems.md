@@ -9,8 +9,8 @@ has_children: True
 - [Operating System Concepts](Operating%20System%20Concepts.pdf)
 - [xv6 textbook](https://pdos.csail.mit.edu/6.828/2020/xv6/book-riscv-rev1.pdf)
 - Exams
-	- [Operating Systems Midterm](Operating%20Systems%20Midterm)
-	- [Operating Systems Final](Operating%20Systems%20Final)
+	- [[Operating Systems Midterm]]
+	- [[Operating Systems Final]]
 
 ## videos
 
