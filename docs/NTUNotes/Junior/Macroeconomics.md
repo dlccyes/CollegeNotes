@@ -39,7 +39,7 @@ layout: meth
 		- 近幾十年來佔約 US GDP 10%
 		- ![](https://i.imgur.com/uT0cbFj.png)
 		- 政府作為仲介者，左手進右手出
-			- e.g. 健保、消費券、社福
+			- e.g. 健保、消費券、社福`
 - 金融市場的波動
 - 國際貿易與金融
 	- US 貿易依存度
@@ -1327,6 +1327,8 @@ $$\ln(1+x)\approx x$$
 
 ### 世代家庭決策模型
 
+Also see [[Internation Finance#Infinite Horizon Intertemporal Current Account Model]]
+
 #### budget constraint
 
 $$c_t+b_t=a_t+(1+r_{t-1})b_{t-1}\space,\space t=1,2,3,...$$
@@ -1351,9 +1353,6 @@ $$\sum_{t=1}^T \dfrac{c_t}{(1+r)^{t-1}}+\dfrac{b_T}{(1+r)^{T-1}}=\sum_{t=1}^T \d
 	- 無限期債券（只給利息，永遠不還本金）符合條件
 
 lifetime wealth = $$\sum_{t=1}^\infty\dfrac{c_t}{(1+r)^{t-1}}=\sum_{t=1}^\infty\dfrac{a_t}{(1+r)^{t-1}}\equiv x$$
-- no Ponzi
-	- g > r
-	- ???
 
 #### choice
 

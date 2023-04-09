@@ -35,6 +35,8 @@ The topmost bar
 
 Command + drag to rearrange the items
 
+You can make menubar not use the area under notch but below it on a per app basis by going to Applications folder in finder -> Get Info -> check "Scale to fit below built-in camera"
+
 ## Restart audio service
 
 ```
@@ -204,6 +206,12 @@ your cursor will appear right at the middle of the corresponding display after t
 
 ### Prevent sleep when lid closed
 
+**M2**
+
+It does not work
+
+**Before M2**
+
 There is no native way to do this (unless you're connected to an external monitor). Have to install 3rd party app.
 
 1. Install [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704) on App Store.
@@ -217,6 +225,14 @@ There is no native way to do this (unless you're connected to an external monito
 	- you can still make your computer sleep in the normal way
 
 [ref](https://www.switchingtomac.com/macos/how-to-keep-your-mac-on-even-with-the-lid-closed/)
+
+### Only show relevant menubar items
+
+Try [Dozer](https://github.com/Mortennn/Dozer)
+
+Dozer will giver you 2 dots on the menubar. Drag relevant menubar items to the right of the leftmost dot and press it, now all the other items will be gone. Click again and they will reappear.
+
+![](https://github.com/Mortennn/Dozer/raw/master/Stuff/demo.gif)
 
 ## Troubleshooting
 
@@ -272,3 +288,17 @@ See <https://support.apple.com/en-us/HT201716>
 Press with a finger not registered for TouchID
 
 <https://apple.stackexchange.com/a/416422>
+
+### some menubar items hidden
+
+If your screen have a notch and have a ton of items in the menubar, many will get hidden. Only (free) solution is to command+drag to drag the unimportant ones out to make space for relevant ones.
+
+If you want to pay, Bartender seems to be a solution.
+
+Discussions
+
+- <https://apple.stackexchange.com/q/444113>
+
+### Area under notch is not used even if "Scale to fit below built-in camera" option is not checked
+
+Reboot

@@ -81,9 +81,15 @@ $$S=Y-C-G=(Y-T-C)+(T-G)$$
 
 concave utility funcion -> risk averse
 
+$$u(E(X))>E(u(X))$$
+
 See this utility vs. wealth diagram, with the green line being the person's utility funciton.
 
 ![](https://i.imgur.com/522fdp3.png)
+
+$$u(a\cdot C^H+b\cdot C^L)>a\cdot u(C^H)+b\cdot u(C^L)$$
+
+$$a+b=1$$
 
 Any risk combination of 0 & 1 will have the final utility fall on the red line, whereas a certain holding of the same expected wealth will fall on the green line, which is always above the red line, meaning this person is risk averse.
 
@@ -106,6 +112,8 @@ See [[Ch16 傳統與非傳統的貨幣政策工具#16.3 公開市場操作 open 
 ### Bank Reserves
 
 See [[Ch15 準備貨幣與貨幣的創造#15.4 存款貨幣的創造]]
+
+money supply = money / reserve rate
 
 ![](https://i.imgur.com/6o7qq18.png)
 

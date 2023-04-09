@@ -6,7 +6,7 @@ parent: Operating Systems
 
 2022.04.12 10:20 - 12:10
 
-[solution](https://docs.google.com/document/d/1WUwwkT1tdnjiqDtqXxkSzuEXr_HlvL_F5Nk_TEEK4_k/)
+[solution](https://docs.google.com/document/d/1WUwwkT1tdnjiqDtqXxkSzuEXr_HlvL_F5Nk_TEEK4_k/) (access retracted by TA now)
 
 average score: 71.48
 

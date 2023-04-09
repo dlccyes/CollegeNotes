@@ -7,7 +7,7 @@ parent: Operating Systems
 
 ## Phase 1
 
-[solution](https://docs.google.com/document/d/1u12QEnw50j0qf8YGowW8KcdHhZHMTmfM1iIqqNs1IWc)
+[solution](https://docs.google.com/document/d/1o7xWxHXRWQiYI9BRo2M4NVfu81do2Pf3rtUsunVlQZA/)
 
 average score: 35.37/50
 
