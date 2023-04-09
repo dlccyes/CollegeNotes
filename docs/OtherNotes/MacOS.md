@@ -174,7 +174,7 @@ Default key would be `option+tab`
 
 free + search + image + popup with shortcut (sadly no pin)
 
-(it's $330 in App store but free downloading from the website, just type $0 and a random fake email for receipt and the download will occur)
+(it's $330 in App store but free downloading from the website, just type $0 and a random fake email for receipt and the download will start)
 
 ### screenshot
 
@@ -266,3 +266,9 @@ See <https://support.apple.com/en-us/HT201716>
 4. Remove it (so the directory will be indexed again)
 5. Quit System Preferences
 6. Now it should work
+
+### Can't lock by pressing TouchID / power button
+
+Press with a finger not registered for TouchID
+
+<https://apple.stackexchange.com/a/416422>

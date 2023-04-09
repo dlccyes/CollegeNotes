@@ -312,6 +312,7 @@ find .
 - `systemctl disable <service>`
 
 ## host related
+
 - edit `/etc/hosts` to change/add the domain name mapping to 127.0.0.1
 	- [ref](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-to-edit-the-Ubnutu-hosts-file-and-ping-a-domain-name-locally)
 - edit `/etc/hostname` to edit your hostname
@@ -319,10 +320,12 @@ find .
 		- <https://kb.iu.edu/d/afqs>
 
 ## power related
+
 <https://userbase.kde.org/KDE_Connect/Tutorials/Useful_commands>
 <https://www.computernetworkingnotes.com/linux-tutorials/shutdown-reboot-suspend-and-hibernate-a-linux-system.html>
 
 ### shutdown
+1
 ```
 shutdown now
 ```
@@ -344,7 +347,9 @@ xset dpms force off
 ```
 
 ## session
+
 ### session settings
+
 - `/etc/environment`
 	- .env style
 	- set up the variables on session start
@@ -354,6 +359,7 @@ xset dpms force off
 	- .env of KDE plasma's GUI session, run after above so will overide them (bruh)
 
 ### TTY sessions
+
 `ctrl+alt+f2-6`  
 would create session with TTY = tty2-6 respectively
 
