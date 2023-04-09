@@ -16,7 +16,14 @@
 	- $ORA=-(H_{t+1}-H_t)$
 	- $H$ = 央行持有國外資產
 - 經常帳 CA (current account)
-	- $CA_t=X_t-M_t+NFI_t$
+	- sum of
+		- imports and exports of goods and services  $X_t-M_t$
+		- investment income $X_{FS,t}-M_{FS,t}$
+		- unilateral transfers $UT_{IN,t}-UT_{OUT,t}$
+			- directly giving/receiving money to/from foreign citizens
+	- $CA_t=TB_t+NFI_t$
+	- 貿易帳 trade account $TB_t=X_t-M_t$
+	- 國外所得淨額 $NFI_t=(X_{FS,t}-M_{FS,t})+(UT_{IN,t}-UT_{OUT,t})$
 - 資本帳 KA (capital account)
 
 $$CA+FA+KA+ORA=0$$

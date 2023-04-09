@@ -29,6 +29,15 @@ See <https://apple.stackexchange.com/a/125628>
 
 Or you can reassign `CMD+M` to another shortcut.
 
+### Reassign system shortcuts
+
+See [Locking your Mac with Command+L](https://cho.sh/r/6AA962)
+
+1. Press 🍎 icon to see the name of your desired command
+2. Settings -> Keyboard Shortcuts -> App Shortcuts
+	- ![](https://i.imgur.com/ZBM2A3b.png)
+3. click Done -> quit Settings -> success
+
 ## Menubar
 
 The topmost bar
@@ -137,7 +146,15 @@ Authenticated Proxy Enabled: 0
 
 <https://superuser.com/a/48562>
 
-## programs
+## Commands
+
+### sleep
+
+```
+pmset sleepnow
+```
+
+## Toolsma
 
 ### Sync config files
 
@@ -302,3 +319,11 @@ Discussions
 ### Area under notch is not used even if "Scale to fit below built-in camera" option is not checked
 
 Reboot
+
+### Can't connect to ASUS monitor
+
+My Asus monitor will oscillate between connected and not connected when connecting to my MacBook Pro 14" M2 Pro 2023. 
+
+**Solution**
+
+System settings -> Displays -> set "Refresh rate" to 60Hz
