@@ -137,6 +137,12 @@ Authenticated Proxy Enabled: 0
 
 ## programs
 
+### Sync config files
+
+Use Mackup
+
+See [[Good Tools#Mackup]]
+
 ### open VsCode from terminal
 
 1. If you haven't, put your vscode into the `Applications` folder
