@@ -1351,6 +1351,7 @@ $$\sum_{t=1}^T \dfrac{c_t}{(1+r)^{t-1}}+\dfrac{b_T}{(1+r)^{T-1}}=\sum_{t=1}^T \d
 	- 不一定要 $b_T\geq 0$
 	- as long as $b_T$ = constant, it's satisfied
 	- 無限期債券（只給利息，永遠不還本金）符合條件
+	- called **transversality condition**
 
 lifetime wealth = $$\sum_{t=1}^\infty\dfrac{c_t}{(1+r)^{t-1}}=\sum_{t=1}^\infty\dfrac{a_t}{(1+r)^{t-1}}\equiv x$$
 

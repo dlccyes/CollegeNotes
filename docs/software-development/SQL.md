@@ -115,3 +115,25 @@ select * from cte;
 ```
 
 <https://stackoverflow.com/a/33737203/15493213>
+
+## Alter the type of a referenced column
+
+Assume you have a column in a table that is a foreign key referencing a column in another table, but you want to change its type, you cannot directly change the type.
+
+1. drop the foreign key
+2. alter the column type
+3. add back the foreign key
+
+To see your foreign key (along with other field definitions), 
+
+```
+SHOW CREATE TABLE table_name;
+```
+
+Assuming it's column `author_name` in table `authors` referencing column `author_name` in table `books`
+
+```sql
+ALTER TABLE `authors` DROP FOREIGN KEY `fk_authors_books`;
+ALTER TABLE `authors` MODIFY COLUMN `author_name` varchar(16) NOT NULL
+ALTER TABLE `books` ADD FOREIGN KEY (`author_name`) REFERENCES `authors` (`author_name`)
+```

@@ -186,9 +186,9 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/pied-piper-alt
-      link: https://dlccyes.github.io
+      link: https://www.derricklin.net
     - icon: fontawesome/brands/medium
-      link: https://dlccyes.github.io/blog
+      link: https://blog.derricklin.net
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/derrick-lin
     - icon: fontawesome/brands/github

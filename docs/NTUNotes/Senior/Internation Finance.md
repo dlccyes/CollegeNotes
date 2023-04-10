@@ -42,7 +42,7 @@ When $KA=0$
 
 ### Formulas
 
-$$GNDI=GDP+NFI$$
+$$GNI=GDP+NFI$$
 
 $$GDP=Y=C+I+G+(X-M)$$
 
@@ -50,20 +50,27 @@ $$CA=(X-M)+NFI$$
 
 See [[Macroeconomics#支出面]] & [[Macroeconomics#國民儲蓄 national saving]]
 
-- GNDI = gross national disposable income
 - NFI = net foreign income
 - CA = current account
 - fiscal deficit is when $T-G<0$
 
 $$\begin{align*}
-& GNDI\\
+& GNI\\
 &= C+I+G+CA\\
 &= C+I+T+(G-T)+CA
 \end{align*}$$
 
-$$CA=(GNDI-C-I-T)+(T-G)$$
+$$CA=(GNI-C-I-T)+(T-G)$$
 
 So a bigger fiscal deficit leads to smaller current account
+
+### Problems
+
+![](https://i.imgur.com/puXVVJr.jpg)
+
+![](https://i.imgur.com/YiGNgxv.png)
+
+![](https://i.imgur.com/TEaDMMM.png)
 
 ## 經常帳跨期模型
 
@@ -117,7 +124,7 @@ In 2-period model $B_1=B_3=0$
 
 $$CA_1=B_2-B_1=B_2=Y_1-C_1$$
 
-$$CA_2=B_2-B_2=-B_2=Y_2+rB_2-C_2$$
+$$CA_2=B_3-B_2=-B_2=Y_2+rB_2-C_2$$
 
 $$CA_1=-CA_2$$
 
@@ -140,6 +147,23 @@ So
 - $C_2=\dfrac{\beta}{1+\beta}(1+r)(Y_1+\dfrac{Y_2}{1+r})$
 - $CA_1=Y_1-C_1=\dfrac{\beta}{1+\beta}Y_1-\dfrac{1}{(1+\beta)(1+r)}Y_2$
 	- $\dfrac{dCA_1}{dY_1}=\dfrac{\beta}{1+\beta}>0$ meaning CA is pro-cyclical
+
+
+#### Autarky
+
+At $r=r^A$ there's no incentive to borrow oR lend
+
+$$C_1=Y_1$$
+
+$$C_2=Y_12$$
+
+$$\begin{align*}
+& u'(C_1)=\beta u'(C_2)(1+r)\\
+&= u'(Y_1)=\beta u'(Y_2)(1+r^A)
+\end{align*}$$
+
+
+#### $r$ & $\rho$
 
 If $r=\rho$
 
@@ -366,20 +390,31 @@ $$\bar{\gamma}=\dfrac{-1}{r-g}<0$$
 
 ### two-period endowment model with uncertainty
 
-當期確定，下一期不確定
+當期確定
+
+$$C_1+B_2=Y_1$$
+
+下一期不確定
 
 $$C^H_2=Y^H_2+(1+r)B_2$$
 
 $$C^L_2=Y^L_2+(1+r)B_2$$
 
+lifetime
+
+$$C_1+\dfrac{C^{H/L}_2}{1+r}=Y_1+\dfrac{Y^{H/L}}{1+r}$$
+
 according to 當期資訊的 expected 下期 consumption
 
 $$E_1(C_2)=\pi C^H_2+(1-\pi) C^L_2$$
 
-first-order condition
+optimization problem
+
+$$\max_{C_1,C_2}u(C_1)+\beta E_1[u(C_2)]$$
+
+Knowing $C^{H/L}_2=\text{something}-(1+r)C_1$, we can get the first order condition -> stochastic Euler function
 
 $$u'(C_1)=\beta(1+r)E_1[u'(C_2)]$$
-
 
 **謹小慎微 prudence**
 

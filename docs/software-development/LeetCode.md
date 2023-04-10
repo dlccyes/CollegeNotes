@@ -9,7 +9,7 @@ parent: Software Development
 
 ### Power is not constant time
 
-So if you want to do for example substring hashing, better have the maintain the factor in the for loop instead of calling `RADIX**i` each time.
+So if you want to do for example substring hashing, better maintain the factor in the for loop instead of calling `RADIX**i` each time.
 
 ## Sliding window
 
@@ -70,7 +70,7 @@ Given
 
 `nums[i]` = the index of `nums[i]` if the it's sorted
 
-1. make each number at it's sorted position by swaping `nums[nums[i]]` & `nums[i]`
+1. make each number at it's sorted position by swapping `nums[nums[i]]` & `nums[i]`
 2. iterate again and find the out-of-place ones
 
 ### Problems
@@ -88,7 +88,7 @@ Given
 - numbers are not in a certain range
 	- [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
 
-### Reference
+### References
 
 - <https://leetcode.com/discuss/study-guide/1902662/>
 
@@ -100,7 +100,7 @@ There are many ways to check if a string is a substring to another string in lin
 
 In the z array of string `s`, `z[i]` = the length of longest matching prefix between `s` and `s[i:]`
 
-To constuct a z array:
+To construct a z array:
 
 ```python
 def get_z_array(s: str) -> list[int]:
@@ -176,8 +176,8 @@ where `s[l:r+1]` is the substring and `r` is the radix/base. In the case of smal
 
 **Double Hashing**
 
-It is very possible that the calculated hash will overflow, so we need to mod the result after every calculation. However, this also provide the another chance for collision. To make the probability of collision ignorable, we can calculate another hash with a different radix/base and mod.
 
+It is very possible that the calculated hash will overflow, so we need to mod the result after every calculation. However, this also provides another chance for collision. To make the probability of collision ignorable, we can calculate another hash with a different radix/base and mod.
 Be aware that **calculating the power of a number isn't constant time**.
 
 Reference: the editorial of [28. Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
@@ -186,4 +186,4 @@ Reference: the editorial of [28. Find the Index of the First Occurrence in a Str
 
 - [28. Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
 - [1392. Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/description/)
-- [Sum of Scores of Build Strings](https://leetcode.com/problems/sum-of-scores-of-built-strings/)
+- [2223. Sum of Scores of Build Strings](https://leetcode.com/problems/sum-of-scores-of-built-strings/)
