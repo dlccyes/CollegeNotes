@@ -416,6 +416,10 @@ Knowing $C^{H/L}_2=\text{something}-(1+r)C_1$, we can get the first order condit
 
 $$u'(C_1)=\beta(1+r)E_1[u'(C_2)]$$
 
+![](https://i.imgur.com/LP7VU2g.png)
+
+$$Var_1(C_2)=E_1(C_2-E_1(C_2))^2$$
+
 **謹小慎微 prudence**
 
 when $u'(\cdot)$ is convex i.e. $u''<0$ & $u'''>0$
@@ -427,6 +431,57 @@ CE = certainty equivalent i.e. having the same expected value as the risk combin
 A prudent person will have a higher saving i.e. current account when facing uncertainty
 
 $$CA_1=Y_1-C_1>Y_1-C^{CE}_1=CA^{CE}_1$$
+
+
+#### facing normal distribution
+
+Assume 
+
+- $u(C)=-e^{-aC}, a<0$
+	- a prudent utility function
+- $Y_2$ is a normal distribution
+	- $C_2=Y_2+(1+r)(Y_1-C_1)$
+	- $C_2$ is also a normal distribution
+
+stochastic Euler function
+
+$$u'(C_1)=\beta(1+r)E_1[u'(C_2)]$$
+
+$$e^{-aC_1}=\beta(1+r)E_1(e^{-aC_2})$$
+
+Assume $r=\rho$
+
+We know if $X$ is a normal distribution, then $E(e^{bX})=e^{\mu b+\frac{1}{2}\sigma^2b^2}$, so
+
+$$e^{-aC_1}=e^{-aE_1(C_2)+\frac{1}{2}a^2Var_1(C_2)}$$
+
+$$C_1=E_1(C_2)-\frac{a}{2}Var_1(C_2)$$
+
+lifetime budget constraint
+
+$$\begin{align*}
+& C_1+\dfrac{C_2}{1+r}=E_1(C_2)-\frac{a}{2}Var_1(C_2)+\dfrac{C_2}{1+r}\\
+&= Y_1+\dfrac{Y_2}{1+r}
+\end{align*}$$
+
+take expected value
+
+$$E_1(C_2)-\frac{a}{2}Var_1(C_2)+\dfrac{E(C_2)}{1+r}=Y_1+\dfrac{E(Y_2)}{1+r}$$
+
+$$E_1(C_2)=\dfrac{(1+r)Y_1+E_1(Y_2)}{2+r}+\dfrac{a(1+r)}{2(2+r)}Var_1(Y_2)$$
+
+$$\begin{align*}
+& C_1=E_1(C_2)-\frac{a}{2}Var_1(C_2)\\
+&= \dfrac{(1+r)Y_1+E_1(Y_2)}{2+r}-\dfrac{a}{2(2+r)}Var_1(Y_2)
+\end{align*}$$
+
+no variance for certainty equivalent
+
+$$C^{CE}_1=\dfrac{(1+r)Y_1+E_1(Y_2)}{2+r}$$
+
+precautionary saving
+
+$$C^{CE}_1-C_1=\dfrac{a}{2(2+r)}Var_1(Y_2)$$
 
 ### two-period endowment model with production & investment with uncertainty
 

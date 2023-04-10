@@ -203,13 +203,15 @@ Any custom logo can be passed in a URL parameter by base64 encoding it. e.g:
 
 [Mackup](https://github.com/lra/mackup)
 
-Install
+**Setup**
+
+Install 
 
 ```
 brew install mackup
 ```
 
-Set the backup directory in `~/.mackup.cfg`
+Set up the backup directory in `~/.mackup.cfg`
 
 ```
 [storage]
@@ -217,7 +219,7 @@ engine = file_system
 path = /path/to/dir
 ```
 
-Run backup
+**Backup**
 
 ```
 mackup backup
@@ -226,6 +228,12 @@ mackup backup
 It will put your dotfiles in `/path/to/dir/Mackup`
 
 ![](https://i.imgur.com/kS8rOdr.png)
+
+**Restore**
+
+```
+mackup restore
+```
 
 ## git GUI
 

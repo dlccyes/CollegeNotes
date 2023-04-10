@@ -154,7 +154,7 @@ Authenticated Proxy Enabled: 0
 pmset sleepnow
 ```
 
-## Toolsma
+## Tools
 
 ### Sync config files
 
@@ -322,8 +322,12 @@ Reboot
 
 ### Can't connect to ASUS monitor
 
-My Asus monitor will oscillate between connected and not connected when connecting to my MacBook Pro 14" M2 Pro 2023. 
+**Problem**
+
+My Asus monitor will oscillate between connected and not connected when connecting to my MacBook Pro 14" M2 Pro 2023.
 
 **Solution**
 
-System settings -> Displays -> set "Refresh rate" to 60Hz
+First install DisplayLink Manager if you haven't. You can find the files you need to download in [ASUS's download page](https://www.asus.com/us/support/Download-Center/).
+
+Next, go to System settings -> Displays -> set "Refresh rate" to 60Hz
