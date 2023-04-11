@@ -484,7 +484,7 @@ db.EXEC("TRUNCATE TABLE services")
 
 ### Enum
 
-Note that `AutoMigrate` will not migrate enum changes. You can alter table directly, or drop the table and then let `AutoMigrate` recreate the table.tes
+Note that `AutoMigrate` will not migrate enum changes. You can alter table directly, or drop the table and then let `AutoMigrate` recreate the tables (if not in production)
 
 Use <https://threedots.tech/post/safer-enums-in-go/>
 
@@ -679,6 +679,106 @@ models = []any{
 }
 db.AutoMigrate(models...)
 ```
+
+## ORM
+
+### [[#GORM]]
+
+### Ent
+
+From Facebook
+
+<https://entgo.io/>
+
+#### Migration
+
+- have automigration
+- uses [[#Atlas]] for versioned migration
+
+## db migration
+
+### golang-migrate
+
+<https://github.com/golang-migrate/migrate>
+
+Won't auto gen migration files
+
+### goose
+
+<https://github.com/pressly/goose>
+
+Won't auto gen migration files
+
+Multiple reddit comments don't recommend it
+
+### Atlas
+
+<https://atlasgo.io/guides/orms/gorm>
+
+Auto gen migration files by comparing a blank MySQL db to a MySQL db holding your target tables.
+
+#### Setup
+
+Create a blank schema in local.
+
+```
+docker run --rm --name atlas-db-dev -d -p 23306:3306 -e MYSQL_DATABASE=dev -e MYSQL_ROOT_PASSWORD=pass mysql:8
+```
+
+```
+docker run --rm --name atlas-db-dev -d -p 23306:3306 -e MYSQL_DATABASE=dev -e MYSQL_ROOT_PASSWORD=pass mysql:8
+```
+
+Create a blank schema (`migration_target` in this example) in your local mysql and run gorm `AutoMigrate` to fill it with the target schemas.
+
+#### Starting with existing tables
+
+[doc](https://atlasgo.io/versioned/apply#existing-databases)
+
+Generate baseline file
+
+```
+atlas migrate diff baseline \
+  --dev-url "mysql://root:pass@:23306/dev" \
+  --to "mysql://{username}:{password}@:3306/migration_target"
+```
+
+Apply 1st migration
+
+```
+atlas migrate apply \
+  --url "mysql://{username}:{password}@:23306/{real_schema}" \
+  --baseline "{baseline_title}"
+```
+
+#### Auto generate migration file
+
+```
+atlas migrate diff \
+  --dev-url "mysql://root:pass@:23306/dev" \
+  --to "mysql://{username}:{password}@:3306/migration_target"
+```
+
+#### Check migration status
+
+```
+atlas migrate status \
+  --url "mysql://{username}:{password}@:3306/{real_schema}"
+```
+
+#### Run migrations
+
+<https://atlasgo.io/versioned/apply>
+
+```
+atlas migrate apply \
+  --url "mysql://{username}:{password}@:23306/{real_schema}"
+```
+
+#### Problems
+
+- when you want to alter a foreign key column type, you'll need to drop the key first and then add back later, but it won't write it for you in the auto generated migration files
+- no rollback
 
 ## Goroutine
 

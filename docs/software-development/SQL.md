@@ -137,3 +137,5 @@ ALTER TABLE `authors` DROP FOREIGN KEY `fk_authors_books`;
 ALTER TABLE `authors` MODIFY COLUMN `author_name` varchar(16) NOT NULL
 ALTER TABLE `books` ADD FOREIGN KEY (`author_name`) REFERENCES `authors` (`author_name`)
 ```
+
+

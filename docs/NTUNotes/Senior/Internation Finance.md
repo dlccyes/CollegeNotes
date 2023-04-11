@@ -151,11 +151,11 @@ So
 
 #### Autarky
 
-At $r=r^A$ there's no incentive to borrow oR lend
+At $r=r^A$ there's no incentive to borrow or lend
 
 $$C_1=Y_1$$
 
-$$C_2=Y_12$$
+$$C_2=Y_2$$
 
 $$\begin{align*}
 & u'(C_1)=\beta u'(C_2)(1+r)\\

@@ -1570,7 +1570,7 @@ $$D_t=G_t+r_{t-1}B^g_{t-1}-T_t=B^g_t-B^g_{t-1}$$
 
 t 期折現 factor $q_t=\Pi_{i=1}^{t-1}(\dfrac{1}{1+r_i})$
 
-$$\sum_{t-1}^\infty q_tG_t+(1+r_0)B^g_0=\sum_{t-1}^\infty q_tT_t+q_\infty B^g_\infty=\sum_{t-1}^\infty q_tT_t$$
+$$\sum_{t=1}^\infty q_tG_t+(1+r_0)B^g_0=\sum_{t=1}^\infty q_tT_t+q_\infty B^g_\infty=\sum_{t=1}^\infty q_tT_t$$
 
 **均衡條件**
 
@@ -1676,6 +1676,50 @@ if use bonds
 - income unchanged -> consumption decrease = saving / bonds increase
 - $\Delta B^d_t = \Delta C^d_t < \Delta G_t = \Delta B^g_t$
 
+### 李嘉圖等值論 Ricardian Equivalence Theorem
 
+$$B_0=B^g_0$$
 
+$$\sum_{t=1}^\infty q_tC_t=\sum_{t=1}^\infty q_t(Y_t-T_t)+(1+r_0)B_0=\sum_{t=1}^\infty q_tY_t-\sum_{t=1}^\infty q_tG_t$$
 
+#### two-period
+
+![](https://i.imgur.com/PV0sOR2.png)
+
+E is optimal point
+
+- $C_1^*=Y_1-G_1$
+- $C_2^*=Y_2-G_2$
+- $r^*$ is equilibrium interest rate
+
+e is the original endowment
+
+- $C_1=Y_1-T_1$
+- $C_2=Y_2-T_2$
+
+f is the endowment after doing 赤字減稅政策 deficit-financed tax cut
+
+- t=1 減稅但多發公債
+- $\Delta T_1=-\Delta B^g_1$
+- $\Delta T_2=(1+r^*)\Delta B^g_1$
+- $\Delta \text{lifetime wealth}=-\Delta \text{lifetime tax}=\Delta T_1+\dfrac{\Delta T_2}{1+r^*}=0$
+- E is still the optimal point
+
+#### infinite horizon
+
+- t=1 少課稅 $\Delta B^g_1$ 發行 consol (無期限 bond)
+- 之後每期多課稅 $r\Delta B^g_1$ 付息
+- $\Delta \text{lifetime tax}=\sum^\infty_{t=1}\dfrac{\Delta T_t}{(1+r)^{t-1}}=-\Delta B^g_1+\sum^\infty_{t=2}\dfrac{r\Delta B^g_1}{(1+r)^{t-1}}=0$
+
+#### What Ricardian doesn't consider
+
+- tax 對於個體的負擔並非均等
+	- 不同 consumer or 同 consumer 不同世代的 tax 負擔不一樣
+		- e.g. 學生時期減稅沒差，但長大後增稅卻有差
+	- though they're averaged out when looking at a grand/macro scope
+- 政府減增稅期限可能超過個體生命範圍
+	- e.g. 將死老人減稅，增稅時已死，所以還是會增加消費
+	- but 用世代家庭的觀點看，人們會將後代看作自身
+- 借貸市場不完全
+	- 並非所有人都有 full access to the bons market
+	  

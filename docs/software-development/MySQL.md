@@ -51,3 +51,11 @@ Just type it
 Use the `ON DUPLICATE KEY UPDATE` clause for upserting. 
 
 However, you **cannot specify your own key** to lookup, but only the a UNIQUE index or PRIMARY KEY will be checked.
+
+## Alter 
+
+### alter column type
+
+```sql
+ALTER TABLE table_name MODIFY COLUMN column_name ENUM('striker', 'center back');
+```
