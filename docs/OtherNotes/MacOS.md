@@ -5,11 +5,11 @@ parent: Othernotes
 
 # MacOS
 
-This OS is retarded btw, please use Linux + KDE if you can.
+The best overall desktop OS even when compared to Linux + KDE.
 
 ## shortcuts
 
-Some keyboard shortcuts can be changed, some can't. Go to Settings -> Keyboard -> Shortcuts to view the changeable ones.
+Some keyboard shortcuts can be changed, some can't (or are a bit complicated to change). Go to Settings -> Keyboard -> Shortcuts to view the changeable ones.
 
 ### command+Q
 
@@ -24,6 +24,8 @@ The unchangeable shortcut for minimizing a window is `CMD+M`. To disable it
 1. System Preferences > Keyboard > Shortcuts > App Shortcuts
 2. Add a shortcut with title = `Minimize` mapping to an obscure shortcut
 3. Close the settings window for it to take effect
+
+Active apps also need to be reopened otherwise pressing `CMD+M` on them will still minimize them.
 
 See <https://apple.stackexchange.com/a/125628>
 
@@ -55,6 +57,10 @@ sudo pkill coreaudiod
 Should restart automatically
 
 See `https://apple.stackexchange.com/a/366841`
+
+## Adjust brightness or volume in smaller steps on keyboard
+
+Hold `shift+option`
 
 ## Applications
 
@@ -100,10 +106,6 @@ sudo powermetrics|grep -i "CPU die temperature"
 ## Wifi Card
 
 `en0`
-
-## Sniffing packets
-
-See [Sniffing Packets from Wireless Networks](Software%20Development/Sniffing%20Packets%20from%20Wireless%20Networks)
 
 ## Proxy
 
@@ -153,6 +155,10 @@ Authenticated Proxy Enabled: 0
 ```
 pmset sleepnow
 ```
+
+## Sniffing packets
+
+See [Sniffing Packets from Wireless Networks](Software%20Development/Sniffing%20Packets%20from%20Wireless%20Networks)
 
 ## Tools
 
@@ -253,6 +259,10 @@ Dozer will giver you 2 dots on the menubar. Drag relevant menubar items to the r
 
 ## Troubleshooting
 
+### Some settings do not take effect
+
+Close and reopen the app if the new settings aren't working on an app.
+
 ### Stop desktop order from changing itself
 
 System Preferences > Mission Control  -> uncheck "Automatically rearrange Spaces based on most recent use"
@@ -331,3 +341,14 @@ My Asus monitor will oscillate between connected and not connected when connecti
 First install DisplayLink Manager if you haven't. You can find the files you need to download in [ASUS's download page](https://www.asus.com/us/support/Download-Center/).
 
 Next, go to System settings -> Displays -> set "Refresh rate" to 60Hz
+
+### Chinese input laggy
+
+Kill the process an reopen your app if it's still laggy on an app.
+
+2 ways to kill the process
+
+- Activity monitor -> search for `Traditional Chinese Input Method` -> force quit
+- `kill $(pgrep TCIM) `
+
+

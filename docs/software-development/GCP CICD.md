@@ -28,8 +28,6 @@ gcloud services enable container.googleapis.com \
 ```
 
 ```
-```
-```
 gcloud artifacts repositories create my-repository \  --repository-format=docker \  --location=us-central1
 ```
 

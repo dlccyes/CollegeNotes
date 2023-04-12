@@ -140,3 +140,5 @@ higher price level -> lower value of money -> higher money demand
 Unexpected high inflation helps borrowers and harms loaners.
 
 See [[Ch13 中央銀行的功能與政策目標#物價穩定]]
+
+

@@ -1721,5 +1721,116 @@ f is the endowment after doing 赤字減稅政策 deficit-financed tax cut
 	- e.g. 將死老人減稅，增稅時已死，所以還是會增加消費
 	- but 用世代家庭的觀點看，人們會將後代看作自身
 - 借貸市場不完全
-	- 並非所有人都有 full access to the bons market
-	  
+	- 並非所有人都有 full access to the bonds market
+	- look at a person that is forbidden to borrow money
+	- ![](https://i.imgur.com/huQl9HL.png)
+
+	- original endowment = e, since he can't borrow money, his equilibrium point is still e
+	- endowment after deficit-financed tax cut = f, since he can lend money, his equilibrium point = max utility point = E
+	- so after applying deficit-financed tax cut, there is an over demand in the consmpution market, driving the interest rate up, 排擠他人的 consumption
+- other tax methods
+	- as long as there is 定額通融管道 lump-sum resource，Ricardian is correct even if there is 扭曲性租稅
+	- assume a $\phi_t$ consmpution tax in addition of lump-sum tax $T_t$
+		- $\sum^\infty_{t=1}q_tG_t+(1+r_0)B^g_0=\sum_{t=1}^\infty q_t\phi_t+\sum_{t=1}^\infty q_tT_t$
+			- government expenditure = tax income
+		- $u'(C_t)=\beta u'(C_{t+1})(1+r_t)\left(\dfrac{1+\phi_t}{1+\phi_{t+1}}\right)$
+		- using tax to pay for bonds doesn't change anything
+	- but if not use lump-sum tax but consumption tax to pay for bonds
+		- $\phi_t$ decreases while $\phi_{t+1}$ increases -> $C_t$ increases while $C_{t+1}$ decreases
+	- if no bonds & lump-sum tax
+		- recession -> fiscal deficit -> increase tax rate to pay for it -> further recession
+		- boom -> fiscal surplus -> decrease tax rate -> further boom
+
+### 國民年金 National Pension
+
+2 systems
+
+- 隨收隨付 pay-as-you-go PAYG
+	- 所得重分配
+	- 對年輕人課稅，轉給老人
+- 全額提撥 fully-funded
+	- forced saving
+	- for an individual，年輕時與政府共同繳款到帳戶，老了領出來
+
+各國往往 start with fully-funded, but end up hybrid as time goes
+
+#### pay-as-you-go PAYG
+
+**overlapping generations model / consumption loan model**
+
+Assume each person lives for 2 periods, with endowment = $y_1$ when young and $y_2$ when old.
+
+![](https://i.imgur.com/dpVHRF7.png)
+
+Each period consists of 2 generations, one young another old.
+
+Old people don't have access to loan market as they'll be dead in the next period and unable to pay off loans.
+
+PAYG becomes a way for money flow between the young and the old.
+
+Assume PAYG starts at t=1, giving each old man $b$
+
+![](https://i.imgur.com/ASur3yo.png)
+
+For the old (born in t=0)
+
+- endowment without PAYG = e
+	- equilibrium point = E
+- endowment with PAYG = f
+	- equilibrium if not knowing PAYG when young = F
+	- equilibrium if knowing PAYG when young = G
+
+For the young (born in t=1)
+
+- $N_t$ = num of people borning in t=t
+- $N_t=(1+n)N_{t-1}$ i.e. population growth rate = $n$
+- each young needs to pay $a=\dfrac{bN_{0}}{N_1}=\dfrac{b}{1+n}$
+- lifetime wealth = $c_1+\dfrac{c_2}{1+r}=(y_1-a)+\dfrac{y_2+b}{1+r}=y_1+\dfrac{y_2}{1+r}+\dfrac{(n-r)b}{(1+r)(1+n)}$
+- when $n>r$ lifetime wealth increases, E -> G
+	- pareto improvement for the society
+- when $n<r$ lifetime wealth decreases, E -> F
+	- many developed countries
+
+#### fully-funded
+
+In a complete market, forced saving is meaningless as you can just go to the market and cancel it out.
+
+Assume all the money comes from yourself and the interest rate is in the national pension account is the same as the market interest rate.
+
+![](https://i.imgur.com/tpinhSG.png)
+
+If a person doesn't have access to the loan market and the forced saving > the optimal saving, then he will be stuck in point g, decreasing his utility.
+
+## Ch11 資產定價模型
+
+### Lucas Tree Model
+
+An endowment society where all resources come from a tree with a random drop of fruits each period.
+
+- $q_t$ = the total market value of the tree in period $t$
+- $d_t$ = total endowment in period $t$, exogenous
+- $z_{t-1} \in (0,1)$ = a person's share to the tree in period $t-1$
+	- market value of the share in period $t$ = $q_{t}z_{t-1}$
+	- get $d_tz_{t-1}$ in period $t$
+
+$$c_t+b_t+q_tz_t=(1-r_{t-1})b_{t-1}+(q_t+d_t)z_{t-1}$$
+
+$$s_t=(b_t-b_{t-1})+q_t(z_t-z_{t-1})$$
+
+optimization problem
+
+$$max_{\{c_t,b_t,z_t\}^\infty_{t=1}}\sum^\infty_{t=1}\beta^{t-1}u(c_t)$$
+
+first-order conditions (intuition)
+
+$$u'(c_t)=\beta u'(c_{t+1})(1+r_t)$$
+
+$$q_tu'(c_t)=\beta u'(c_{t+1})(q_{t+1}+d_{t+1})$$
+
+$$u'(c_t)=\beta u'(c_{t+1})\left(\dfrac{q_{t+1}+d_{t+1}}{q_t}\right)$$
+
+- $\dfrac{q_{t+1}+d_{t+1}}{q_t}$ = stock 報酬毛率
+	- $\dfrac{q_{t+1}+d_{t+1}}{q_t}>(1+r_t)$ -> buy stocks
+	- otherwise buy bonds
+- $\dfrac{q_{t+1}}{q_t}$ = capital gain
+- $\dfrac{d_{t+1}}{q_t}$ = earnings-price ratio

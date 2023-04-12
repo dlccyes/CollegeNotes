@@ -5,10 +5,14 @@ parent: Software Development
 ---
 # Heroku
 
+Since it isn't free now, I recommend to use [[GCP#Cloud Run]] instead. It's dirt cheap.
+
 ## installation
+
 `curl https://cli-assets.heroku.com/install.sh | sh`
 
 ## command
+
 - login
 	- `heroku login`
 - add `-a` flag to specify the app, otherwise it will be default to the repo you're on

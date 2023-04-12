@@ -82,8 +82,9 @@ nav:
     - software-development/RISC-V.md
     - software-development/Verilog.md
 
-  - Linux:
+  - Linux/Unix:
     - software-development/linux.md
+    - OtherNotes/MacOS.md
     - software-development/WSL.md
     - software-development/Linux Package Management.md
     - software-development/shell.md
