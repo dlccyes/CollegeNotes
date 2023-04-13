@@ -1,18 +1,12 @@
 # CollegeNotes
 
-All of my public notes, despite the name. My personal knowledge base. Most of them are about my college courseworks and software development.
+All of my public notes, despite the name. This is my personal knowledge base. Most of them are about my college courseworks or software development.
 
-Some of them are written on hackmd, some on VsCode, some on Notion, some on Obsidian.
+All of the notes are written in markdown, some with hackmd, some with VsCode, some with Notion, and most with Obsidian.
 
-**Read in Github Page**  
+The static site is generated with mkdocs and deployed on Github page.
 
-<https://dlccyes.github.io/CollegeNotes>  
-
-Some syntax unsupported.
- 
-**Read in Gitbook** (broken by my Jehyll theme lol)
-
-<https://derricken968.gitbook.io/college-notes/> 
+<https://wiki.derricklin.net>
 
 Other NTU notes in Notion
 
