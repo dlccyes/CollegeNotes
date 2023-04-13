@@ -273,6 +273,18 @@ git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{inser
 	- `git difftool` to view
 	- <https://stackoverflow.com/a/3713803/15493213>
 
+### delete a file in all commits
+
+```
+git filter-branch --tree-filter 'rm -f {path/to/file}' HEAD
+```
+
+Note that `git filter-branch` only creates extra commit and then reroute your git commit graph. The original commits are still there.
+
+```
+git log --graph --decorate --oneline $(git rev-list -g --all)
+```
+
 ###  by user
 
 - all commits

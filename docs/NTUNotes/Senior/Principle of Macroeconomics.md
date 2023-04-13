@@ -2,7 +2,8 @@
 
 ## Resources
 
-[Principles of Economics 9e, Mankiw.](https://libgen.is/book/index.php?md5=E4F408FE98ABD6329394D2C9C9DE877F)
+- [Principles of Economics 9e, Mankiw.](https://libgen.is/book/index.php?md5=E4F408FE98ABD6329394D2C9C9DE877F)
+- [[Principle of Macroeconomics Quiz 1.pdf]]
 
 ## Ch23 GDP
 

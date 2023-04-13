@@ -1834,3 +1834,48 @@ $$u'(c_t)=\beta u'(c_{t+1})\left(\dfrac{q_{t+1}+d_{t+1}}{q_t}\right)$$
 	- otherwise buy bonds
 - $\dfrac{q_{t+1}}{q_t}$ = capital gain
 - $\dfrac{d_{t+1}}{q_t}$ = earnings-price ratio
+
+**Analysis**
+
+- effects of real interest rate change
+	- 跨期替代效果: $r$ increases -> $b$ increases
+	- 資產替代效果 porfolio selection effect: $r$ increases -> $z$ decreases
+	- no income effect
+- effects of stock price change
+	- 跨期替代效果: $q$ increases -> $z$ decreases
+	- 資產替代效果: $q$ increases -> $b$ increases
+	- if expected future $q$ increases then opposite effects
+	- no income effect
+- effects of current dividend change
+	- income effect: $d$ increases -> $c$ & $s$ increases, $b$ & $z$ increases
+- effects of expected future dividend change
+	- income effect: expected future $d$ increases -> $c$ & $s$ decreases, $b$ & $z$ decreases
+	- 跨期替代效果: expected future $d$ increases -> $z$ increases
+	- 資產替代效果: expected future $d$ increases -> $b$ decreases
+	- overall movement not definitive
+
+**Equilibrium**
+
+- $c_t=d_t$
+	- demand = supply
+- $b_t=0$
+- $z_t=1$
+	- total share = 1
+
+equilibrium interest rate
+
+- $u'(d_t)=\beta u'(d_{t+1})(1+r_t)$
+- $(1+r_t)=\dfrac{u'(d_t)}{\beta u'(d_{t+1})}$ = MRS of 2 period consumption
+
+equilibrium stock price
+
+- $q_tu'(d_t)=\beta u'(d_{t+1})(q_{t+1}+d_{t+1})$
+- $q_t=\dfrac{\beta u'(d_{t+1})}{u'(d_t)}(q_{t+1}+d_{t+1})=\sum_{j=1}^\infty\dfrac{\beta^j u'(d_{t+j})}{u'(d_t)}d_{t+j}=\sum_{j=1}^\infty d_{t+j}\Pi_{i=t}^{t+j-1}\dfrac{1}{1+r_i}$
+	- stock price = sum of 各期 dividend 折現值
+- if $d_t=d\space$ and $r_t=r\space$ $\forall t$
+	- $q=\dfrac{d}{r}$
+	- $r=\dfrac{d}{q}$ 
+		- interest rate = stock earnings-price ratio
+
+
+

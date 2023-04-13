@@ -48,6 +48,26 @@ Command + drag to rearrange the items
 
 You can make menubar not use the area under notch but below it on a per app basis by going to Applications folder in finder -> Get Info -> check "Scale to fit below built-in camera"
 
+## Sleep
+
+### sleep log
+
+Mac sleeps and wakes from sleep immediately, almost like it's only a screen off.
+
+To check if it really sleeps
+
+```
+pmset -g log | grep -E 'Wake from|Entering Sleep' | tail -n 20
+```
+
+### require password from sleeping or not
+
+In macOS Ventura 13, the settings is tied with display off
+
+System Settings -> Lock Screen -> Require password after screen saver begins or display is turned off
+
+<https://support.apple.com/en-lb/guide/mac-help/mchlp2270/mac>
+
 ## Restart audio service
 
 ```
@@ -182,6 +202,10 @@ See [[Good Tools#Mackup]]
 ```
 brew install --cask rectangle
 ```
+
+### command+number to launch apps on dock
+
+Download [Snap](https://apps.apple.com/us/app/snap/id418073146?). Would work out of the box.
 
 ### alt+tab with preview thumbnail
 
@@ -351,4 +375,22 @@ Kill the process an reopen your app if it's still laggy on an app.
 - Activity monitor -> search for `Traditional Chinese Input Method` -> force quit
 - `kill $(pgrep TCIM) `
 
+### Terminal font size won't change
+
+For some reason changing the font size in my profile won't do anything. The below method works however:
+
+1. `CMD + +`
+2. Shell > Use Settings as default
+
+### Error when opening Docker
+
+error message: `creating root node subnodes ...`
+
+solution
+
+```
+rm -r ~/.docker
+```
+
+<https://github.com/docker/for-mac/issues/6572#issuecomment-1317344599>
 

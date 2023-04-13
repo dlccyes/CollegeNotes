@@ -137,6 +137,8 @@ ser + adj. + que + subjunctivo
 
 ### Regular
 
+a/e/i -> e/a/a, otherwise the same transformation
+
 ![](https://i.imgur.com/6LRAbNl.png)
 
 ![](https://i.imgur.com/s75izQD.png)
@@ -3410,3 +3412,9 @@ p.13 - exercise 22
 - perder = lose
 - auriculares = headphones
 - envenenar = poison
+
+### Midterm Review
+
+![](https://i.imgur.com/y1qQaZb.png)
+
+

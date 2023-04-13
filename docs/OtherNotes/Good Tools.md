@@ -211,6 +211,12 @@ Install
 brew install mackup
 ```
 
+To see available commands
+
+```
+mackup -h
+```
+
 Set up the backup directory in `~/.mackup.cfg`
 
 ```
@@ -225,7 +231,14 @@ path = /path/to/dir
 mackup backup
 ```
 
-It will put your dotfiles in `/path/to/dir/Mackup`
+It will symlink your dotfiles in your home folder to `/path/to/dir/Mackup`.
+
+Run with `--force` to replace all, and `--force-no` to replace none. Otherwise it will ask Yes/No for each existing file.
+
+```
+mackup backup --force
+mackup backup --force-no
+```
 
 ![](https://i.imgur.com/kS8rOdr.png)
 
@@ -234,6 +247,16 @@ It will put your dotfiles in `/path/to/dir/Mackup`
 ```
 mackup restore
 ```
+
+Again, this will symlink your dotfiles in your home folder to `/path/to/dir/Mackup`.
+
+#### Troubleshooting
+
+**Symlink already exists**
+
+If your some of your dotfiles are already a symlink but not pointing to your files in `/path/to/dir/Mackup`, then it will fail, as it does not use the `-f` flag. You'll have to resolve it yourself by removing or correcting those files.
+
+A possible scenario would be renaming your home folder.
 
 ## git GUI
 
