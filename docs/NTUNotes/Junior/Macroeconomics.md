@@ -122,7 +122,7 @@ layout: meth
 ### GDP & GNI
  
  - GDP, gross domestic product
-	 - the market value of all final goods and services that an economy produces in a given period **within it boarder**
+	 - the market value of all final goods and services that an economy produces in a given period **within its boarder**
 - GNI, gross national income / GNP, gross national product
 	 - the market value of all final goods and services that an economy produces in a given period **by its permanent residents**
 		 - 不是看本國籍者，而是看常住居民
@@ -719,7 +719,7 @@ $$y=AF(k,n)(+B)$$
 
 ##### 固定規模報酬 constant return to scale
 
-- 生產效率 independent to  廠商規模
+- 生產效率 independent to 廠商規模
 	- 資本勞動皆 x2 → output x2
 		- 一階齊次函數
 	- 大公司切成 10 個小公司 → 生產效率不變

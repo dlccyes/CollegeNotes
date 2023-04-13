@@ -1,7 +1,7 @@
-# CollegeNotes
+# El Mundo
 
-All of my public notes, despite the name. My personal knowledge base. Most of them are about my college courseworks and software development.
+This is my personal knowledge base. Most of the notes are about my college courseworks or software development.
 
-[Who am I?](https://dlccyes.github.io/)
+[About me](https://www.derricklin.net/)
 
 [Some NTU notes in Notion](https://dlcc.notion.site/dabe97765a554f178fc22c72f8d9e730)

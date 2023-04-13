@@ -6,8 +6,8 @@ All of the notes are written in markdown, some with hackmd, some with VsCode, so
 
 The static site is generated with mkdocs and deployed on Github page.
 
-<https://wiki.derricklin.net>
+<https://wiki.derricklin.net/>
 
 Other NTU notes in Notion
 
-<https://dlcc.notion.site/dabe97765a554f178fc22c72f8d9e730>
+<https://dlcc.notion.site/dabe97765a554f178fc22c72f8d9e730/>

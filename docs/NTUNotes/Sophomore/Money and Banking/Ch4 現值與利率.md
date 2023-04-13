@@ -6,7 +6,8 @@ layout: meth
 # Ch4 現值與利率
 
 ### 七二法則
-利率 i %，約 $\frac{72}{i}$ 年後翻倍
+
+利率 i %，約 $\frac{72}{i}$ 年後翻倍 (there's also rule of 70 which works in the same way)
 
 ```python
 from math import*
@@ -45,6 +46,7 @@ output
 ```
 
 ## 名詞
+
 - 期末價值 FV, Final Value
   - 現在的錢在 n 年後值多少
   - $FV_n = PV\times(1+i)^n$ 
@@ -56,6 +58,7 @@ output
   - 一項投資相當於年利率多少
 
 ## 信用工具
+
 - 簡單借貸 simple loan
   - 借出一筆金額、到期日一次還本利
 - 固定給付 fixed-payment loan
@@ -74,11 +77,13 @@ output
     - e.g. 國庫券
 
 ## 到期殖利率 yield to maturity
+
 - 即內部報酬率
 - 息票債券價格 = 面額時，息票率 = 到期殖利率
   - imagine 把錢存到銀行
 
 ## 其他收益率
+
 - 目前收益率
   - $i=\dfrac{C}{P}$
     - C = 利息
@@ -92,11 +97,13 @@ output
   - 極短期估價用 ~by~ ~me~
 
 ## 持有期報酬率
+
 - 未到期即賣出，持有期間之報酬率
 - 資本利得率 rate of capital gains
   - $g=\dfrac{P_{t+1}-P_t}{P_t}$ 
 
 ## 實質利率&名目利率
+
 - 通貨膨脹率 $\pi=\frac{P_{t+1}-P_t}{P_t}$
 - 實質利率 real interest rate
   - 考慮通貨膨脹
@@ -109,5 +116,7 @@ output
   - 不考慮通貨膨脹
 
 ## 題目
+
 ![Image](https://i.imgur.com/rsHAkRb.png)  
+
 0.135x0.6-0.1 = -0.019
