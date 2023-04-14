@@ -8,8 +8,6 @@
 	- subjective
 - <https://www.investopedia.com/ask/answers/12/difference-between-positive-normative-economics.asp>
 
-<iframe src="https://www.investopedia.com/ask/answers/12/difference-between-positive-normative-economics.asp" width=100% height=500px></iframe>
-
 ## law of demand
 
 $pq = k$
