@@ -1360,6 +1360,7 @@ lifetime wealth = $$\sum_{t=1}^\infty\dfrac{c_t}{(1+r)^{t-1}}=\sum_{t=1}^\infty\
 lifetime utility = 各期 utility 折現加總
 
 $$max \space \sum_{t=1}^\infty\beta^{t-1}u(c_t)$$
+
 $$c_t+b_t=a_t+(1+r_{t-1})b_{t-1},\space\forall t$$
 
 $$b_0=0$$
@@ -1549,6 +1550,14 @@ MPS = $\dfrac{\Delta s_1}{\Delta a_1}=$ 1 - MPC $=0$
 
 ![](https://i.imgur.com/s9fEHLB.jpg)
 
+### Problems
+
+![](https://i.imgur.com/sqdiLsn.jpg)
+
+![](https://i.imgur.com/91rDfBc.png)
+
+![](https://i.imgur.com/FTAEyYO.jpg)
+
 ## Ch10 Endowment Economy Equilibrium Analysis
 
 endowment economy: no production, only endowment in each period
@@ -1634,6 +1643,12 @@ In real life
 
 correlation efficient = 0.08, or 0.44 if excluding 亞洲四小龍
 
+### deficit & GDP growth rate & interest rate
+
+![](https://i.imgur.com/0MyzrNc.jpg)
+
+![](https://i.imgur.com/PTaBmLl.png)
+
 ### 外生衝擊均衡效果
 
 **endowment decreases**
@@ -1645,7 +1660,7 @@ correlation efficient = 0.08, or 0.44 if excluding 亞洲四小龍
 	- sell bonds to raise money for consumption / decrease savings i.e. buying bonds when income reduced
 	- interest rate rises
 
-**government expenditure increases**
+**government expenditure increases to increase consumption**
 
 The increase of government expenditure has to come from tax or bonds, so either an increase in current tax or in future tax.
 
@@ -1678,6 +1693,8 @@ if use bonds
 
 ### 李嘉圖等值論 Ricardian Equivalence Theorem
 
+**赤字減稅政策**
+
 $$B_0=B^g_0$$
 
 $$\sum_{t=1}^\infty q_tC_t=\sum_{t=1}^\infty q_t(Y_t-T_t)+(1+r_0)B_0=\sum_{t=1}^\infty q_tY_t-\sum_{t=1}^\infty q_tG_t$$
@@ -1707,7 +1724,7 @@ f is the endowment after doing 赤字減稅政策 deficit-financed tax cut
 
 #### infinite horizon
 
-- t=1 少課稅 $\Delta B^g_1$ 發行 consol (無期限 bond)
+- t=1 少課稅 $\Delta B^g_1$ 發行 consol (無限期 bond)
 - 之後每期多課稅 $r\Delta B^g_1$ 付息
 - $\Delta \text{lifetime tax}=\sum^\infty_{t=1}\dfrac{\Delta T_t}{(1+r)^{t-1}}=-\Delta B^g_1+\sum^\infty_{t=2}\dfrac{r\Delta B^g_1}{(1+r)^{t-1}}=0$
 
@@ -1724,7 +1741,6 @@ f is the endowment after doing 赤字減稅政策 deficit-financed tax cut
 	- 並非所有人都有 full access to the bonds market
 	- look at a person that is forbidden to borrow money
 	- ![](https://i.imgur.com/huQl9HL.png)
-
 	- original endowment = e, since he can't borrow money, his equilibrium point is still e
 	- endowment after deficit-financed tax cut = f, since he can lend money, his equilibrium point = max utility point = E
 	- so after applying deficit-financed tax cut, there is an over demand in the consmpution market, driving the interest rate up, 排擠他人的 consumption
@@ -1801,6 +1817,18 @@ Assume all the money comes from yourself and the interest rate is in the nationa
 
 If a person doesn't have access to the loan market and the forced saving > the optimal saving, then he will be stuck in point g, decreasing his utility.
 
+### Problems
+
+![](https://i.imgur.com/cXR2rMZ.png)
+
+- $c_2=(1+\mu)c_1$
+- $u'(c_1)=\beta(1+r)u'(c_2)$
+- $c_1^{\gamma}=\beta(1+r)c_1^{-\gamma}(1+\mu)^{-\gamma+1}$
+- $\dfrac{1+r}{1+\rho}=(1+\mu)^{\gamma-1}$
+- $\ln(1+r)-\ln(1+\rho)=(\gamma-1)\ln(1+\mu)$
+- $r-\rho\approx(\gamma-1)\mu$
+- $r=\rho$ when $\mu=0$ or $\gamma=1$
+
 ## Ch11 資產定價模型
 
 ### Lucas Tree Model
@@ -1876,6 +1904,3 @@ equilibrium stock price
 	- $q=\dfrac{d}{r}$
 	- $r=\dfrac{d}{q}$ 
 		- interest rate = stock earnings-price ratio
-
-
-

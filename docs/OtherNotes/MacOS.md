@@ -46,7 +46,7 @@ The topmost bar
 
 Command + drag to rearrange the items
 
-You can make menubar not use the area under notch but below it on a per app basis by going to Applications folder in finder -> Get Info -> check "Scale to fit below built-in camera"
+You can make menubar not use the area under notch but below it on a per app basis by going to Applications folder in finder -> Get Info -> check "Scale to fit below built-in camera". See <https://support.apple.com/en-us/HT212842>/.
 
 ## Sleep
 

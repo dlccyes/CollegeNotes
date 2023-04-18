@@ -27,3 +27,13 @@ sudo openconnect --protocol=pulse https://sslvpn.ntu.edu.tw/
 ```
 
 See <https://wiki.archlinux.org/title/Pulse_Connect_Secure>.
+
+## Mac
+
+If didn't add pulse secure as login items, run this before using it
+
+```
+sudo launchctl load -w /Library/LaunchDaemons/net.pulsesecure.AccessService.plist
+```
+
+<https://community.pulsesecure.net/t5/Pulse-Connect-Secure/Failed-to-connect-to-the-Pulse-Secure-service-on-Mac/td-p/42370>

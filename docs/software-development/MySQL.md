@@ -5,7 +5,13 @@ parent: Software Development
 
 # MySQL
 
-## Install MySQL CLI
+## Install MySQL server
+
+### MacOS
+
+Download MySQL Community Server
+
+<https://dev.mysql.com/downloads/mysql/>
 
 ### Debian
 
@@ -18,10 +24,22 @@ See <https://superuser.com/a/1481211>
 ### Other
 
 1. Go to  <https://dev.mysql.com/downloads/shell/> and download
-2. `export PATH=/usr/local/mysql/bin:$PATH`
-3. `mysql -u root -p`
+2. add to path `export PATH=/usr/local/mysql/bin:$PATH`
+3. to connect `mysql -u root -p`
 
-## Connect to database
+## GUI
+
+### MySQL Workbench
+
+Download
+
+<https://dev.mysql.com/downloads/workbench/>
+
+Try downgrading if there are some weird errors
+
+## Commands
+
+### Connect to database
 
 ```
 mysql -u <username> -p'<pw>' -h <host> -P <port>
@@ -29,7 +47,7 @@ mysql -u <username> -p'<pw>' -h <host> -P <port>
 
 Notice there's no space after `-p` and port is specified with `-P`
 
-## Make output readable
+### Make output readable
 
 ```
 \P less -Sin

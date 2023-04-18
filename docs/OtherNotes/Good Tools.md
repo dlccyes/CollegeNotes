@@ -189,6 +189,8 @@ Any custom logo can be passed in a URL parameter by base64 encoding it. e.g:
 
 ## terminal
 
+### Windows
+
 - windows terminal
 	- highly customizable appearance
 	- support many shells
