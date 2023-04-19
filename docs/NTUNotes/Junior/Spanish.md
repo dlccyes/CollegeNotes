@@ -179,16 +179,49 @@ I suggest that ...
 
 ## Imperative
 
+- 命令式
+- 重音變到倒數第二個
+	- ha**blar** -> **ha**bla
+- ![](https://i.imgur.com/b0GL6mZ.png)
+- ![](https://i.imgur.com/ewqCdEP.png)
+
 ### tú & vosotros
 
 - tú -> same as present third person
+	- with 8 exceptions
+		- ![](https://i.imgur.com/KwJyi2D.png)
 - vos -> base + d
+	- no exceptions
 
 ### usted & ustedes
 
 Same as usted/ustedes present but replace e/a with a/e
 
 ![](https://i.imgur.com/LQJa1uO.png)
+
+Irregulars: similar to the irregular present singular tense
+
+![](https://i.imgur.com/Qia4ytU.png)
+
+Exceptions
+
+![](https://i.imgur.com/c3DDZQv.png)
+
+### negative
+
+same as [[#Subjunctive present]]
+
+![](https://i.imgur.com/tRHOQyx.png)
+
+### reflexive
+
+Same conjucation but append -/te/se/nos/os/se. Remove the d in formal vos.
+
+![](https://i.imgur.com/8ippwMF.png)
+
+### placement of pronouns
+
+![](https://i.imgur.com/ER6vus6.png)
 
 ## Profession
 
@@ -1569,8 +1602,8 @@ profesión
 		- Normalmente (yo) me levanto sobre a las .... ¿y tú? Yo también. Yo me levanto ..... Yo a veces me levanto ....... a veces ..... (A veces = sometimes) (Yo) Me levanto … (Yo) Desayuno.... ¿y tú? (Yo) Voy a clases.... ¿y tú? (Yo) Empiezo las clases.... ¿y tú? (Yo) Como.... ¿y tú? (Yo) Termino las clases.... ¿y tú? (Yo) Vuelvo a casa.... ¿y tú? (Yo) Ceno.... ¿y tú? (Yo) Me lavo los dientes.... ¿y tú? (Yo) Me ducho.... ¿y tú? (Yo) Me acuesto.... ¿y tú?
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FHglmK1tDZl.png?alt=media&token=ffc324c7-e460-4140-985b-2a8e7f1a13fc)
 - 動詞變化
-	- base verb 有 ^^se^^ 者為 reflexive verb
-		- ^^se^^ 拿到前面，再變化
+	- base verb 有 se 者為 reflexive verb
+		- se 拿到前面，再變化
 			- pein^^arse^^ → ^^me^^ pein^^o^^
 			- levantar^^se^^ → yo ^^me^^ levanto las 9:00
 			- lavar^^se^^ → yo ^^me^^ lavo los dientos ...
@@ -2749,19 +2782,6 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - e.g.
 	- fue atropellado por un tranvía = he was run over by a streetcar
 
-### imperativo
-
-- 命令式
-- 重音變到倒數第二個
-	- ha**blar** -> **ha**bla
-- ![](https://i.imgur.com/b0GL6mZ.png)
-- ![](https://i.imgur.com/ewqCdEP.png)
-- without 受詞
-	- ![](https://i.imgur.com/8InMXbV.png)
-- with 受詞
-	- ![](https://i.imgur.com/U9F005m.png)
-	- amame = luv me
-
 ### das & dejas
 
 - das = give
@@ -3393,7 +3413,7 @@ p.13 - exercise 22
 ![](https://i.imgur.com/fpRPRdU.png)
 
 
-## Spanish 3-3
+## Spanish 3-2
 
 ### Palabras
 
@@ -3414,6 +3434,8 @@ p.13 - exercise 22
 - envenenar = poison
 
 ### Midterm Review
+
+[[#Imperative]]
 
 ![](https://i.imgur.com/9cCtZ5B.png)
 

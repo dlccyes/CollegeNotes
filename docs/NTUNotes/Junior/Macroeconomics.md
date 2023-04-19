@@ -1819,6 +1819,8 @@ If a person doesn't have access to the loan market and the forced saving > the o
 
 ### Problems
 
+#### Problem 10.6
+
 ![](https://i.imgur.com/cXR2rMZ.png)
 
 - $c_2=(1+\mu)c_1$
@@ -1904,3 +1906,84 @@ equilibrium stock price
 	- $q=\dfrac{d}{r}$
 	- $r=\dfrac{d}{q}$ 
 		- interest rate = stock earnings-price ratio
+
+### effects of dividend change
+
+#### dividend temporarily increases
+
+- fruits can't be saved
+- save wealth through buying bonds & shares
+	- bonds demand increase -> interest rate decreases
+	- shares demand increase -> stock price increases
+
+#### dividend permanently increases
+
+$d \rightarrow d'$
+
+![](https://i.imgur.com/dePB9pK.png)
+
+- saving demand no change
+	- bonds demand no change -> interest rate no change
+	- expected future stock price increases -> current stock demand increases -> stock price increases
+- stock price $q$ increases by the same ratio, $q'=\dfrac{d'}{r}$
+	- $r=\dfrac{d'}{q'}$ no 套利空間
+
+![](https://i.imgur.com/fTpjGYj.png)
+
+- bonds market
+	- E -> S: expected future stock price increase -> stock demand increases -> bonds demand decreases
+		- S-> E: stock demand > supply -> stock price increases -> bonds demand increases
+
+#### constant dividend growth
+
+dividend growth rate = $\mu$
+
+$$d_{t+j}=(1+\mu)^jd_t$$
+
+utility function (see [[#Problem 10.6]])
+$$u(c_t)=\dfrac{c^{1-\gamma}_t-1}{1-\gamma}$$
+
+assume $\beta(1+\mu)^{1-\gamma}<1$ otherwise lifetime utility is infinite
+
+$$q_tu'(d_t)=\beta u'(d_{t+1})(q_{t+1}+d_{t+1})$$
+
+$$\begin{align*}
+& q_t=\dfrac{\beta u'(d_{t+1})}{u'(d_t)}(q_{t+1}+d_{t+1})\\
+&= \sum_{j=1}^\infty\beta^j\dfrac{u'(d_{t+j})}{u'(d_t)}d_{t+j}\\
+&= \sum_{j=1}^\infty \beta^j(\dfrac{d_t}{d_{t+j}})^\gamma d_{t+j}\\
+&= \sum_{j=1}^\infty \beta^j(1+\mu)^{-j\gamma+j} d_{t}\\
+&= \sum_{j=1}^\infty [\beta(1+\mu)^{1-\gamma}]^j d_{t}\\
+&= \dfrac{\beta(1+\mu)^{1-\gamma}}{1-\beta(1+\mu)^{1-\gamma}}d_t
+\end{align*}$$
+
+$$\dfrac{\ln q_t}{d\mu}=\dfrac{1-\gamma}{(1+\mu)[1-\beta(1+\mu)^{1-\gamma}]}$$
+
+- > 0 when $\gamma<1$
+	- $\gamma$ small -> 跨期 substitution effect 大
+	- income effect < 跨期 substitution effect
+- = 0 when $\gamma=1$
+- < 0 when $\gamma>1$
+	- $\gamma$ big -> 跨期 substitution effect 小
+	- income effect > 跨期 substitution effect
+
+**income effect**
+
+expected future dividend increases -> saving demand decreases -> stock price decreases
+
+**跨期 substitution effect**
+
+expected future dividend increase -> stock demand increases -> stock price increases
+
+![](https://i.imgur.com/JOYdEQv.jpg)
+
+$$r\approx\rho+\gamma\mu$$
+
+- bond market
+	- E -> A: income effect
+	- A -> F/G
+
+![](https://i.imgur.com/dtUdWAi.jpg)
+
+- $q_t$ has the same growth rate as $d_t$
+- $\gamma > 1$ -> $q_t$ smaller -> $\dfrac{d_t}{q_t}$ & $r$ higher
+	- vice versa

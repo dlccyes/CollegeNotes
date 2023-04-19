@@ -5,12 +5,16 @@ parent: Miscellaneous
 
 # Last.fm
 
-## Last.fm stat websites
+## Last.fm stats websites
 
 - [ChartMyMusic](https://www.chartmymusic.com/lastfm/rainbowcollage/)
 	- beautiful collage SORT BY COLOR!!
 - [http://www.lastchart.com.s3-website-us-east-1.amazonaws.com](http://www.lastchart.com.s3-website-us-east-1.amazonaws.com/) 
 	- all kinds of charts of your artists 
+- <http://mold.github.io/explr/>
+	- world heat map of all your artists
+	- disable ublock origin first
+	- <https://github.com/mold/explr>
 - <https://collage.caretas.club/static/collages/>
 	- album & artist collage
 - [https://mainstream.ghan.nl](https://mainstream.ghan.nl/) 
@@ -23,6 +27,8 @@ parent: Miscellaneous
 	- scatter graph of every scrobble
 - [http://www.mymusichabits.com](http://www.mymusichabits.com/) 
 	- basically the same as last.fm
+- last.fm discord
+	- its bot is pretty good
 
 ## Remove (duplicate) scrobbles
 
@@ -75,3 +81,13 @@ Use this url for image
 ```
 https://lastfm-recently-played.vercel.app/api?user=dlccyes
 ```
+
+## Tags
+
+> Pretty sure tags get on artist/album/track pages after a bunch of people tag it the same thing. The tags you see on those pages are the top 6 tags that people attach to them. That’s why the top tags are usually genres, but sometimes you get tags like “awesome” or “5 stars” thrown in there.
+
+> When you tag something, it also adds those tags to your profile. You can click on the tab “Tags” on your profile and it takes you to all of your tags. You can click on the number of times you’ve used each tag to see what exactly you’ve tagged with it, along with the date you tagged it.
+
+> It's not necessary that multiple people tag it to become public tags, it also depends on how often you scrobble your tagged songs. For example, I have tagged some less known and untagged songs with a specific tag that probably no other person has ever used on Last.fm and after a couple of weeks, my tag became public.
+
+<https://www.reddit.com/r/lastfm/comments/9r9vm3/tags_help/>

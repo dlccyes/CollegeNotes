@@ -17,6 +17,8 @@ parent: Software Development
 	- [System Design Interview An Insider’s Guide by Alex Xu (z-lib.org).pdf](https://github.com/G33kzD3n/Catalogue/blob/master/System%20Design%20Interview%20An%20Insider%E2%80%99s%20Guide%20by%20Alex%20Xu%20(z-lib.org).pdf)
 	- [Youtube](https://www.youtube.com/c/ByteByteGo/)
 	- [LinkedIn](https://www.linkedin.com/in/alexxubyte/recent-activity/shares/)
+- [System Design Primer](https://github.com/donnemartin/system-design-primer)
+	- just a markdown file
 - [Gaurav System Design Playlist | Youtube](https://www.youtube.com/playlist?app=desktop&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX)
 - [Exponent | Youtube](https://www.youtube.com/@tryexponent)
 - [Problems Aggretation](https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view)
