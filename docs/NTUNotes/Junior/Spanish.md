@@ -215,11 +215,14 @@ same as [[#Subjunctive present]]
 
 ### reflexive
 
-Same conjucation but append -/te/se/nos/os/se. Remove the d in formal vos.
+Same conjucation append -/te/se/nos/os/se. Remove the d for second person plural.
 
 ![](https://i.imgur.com/8ippwMF.png)
 
 ### placement of pronouns
+
+- positive: {imperativo}{people pronoun}{object pronoun}
+- negative: no {people pronoun} {object pronoun} {imperativo (subjuntivo)}
 
 ![](https://i.imgur.com/ER6vus6.png)
 
@@ -457,126 +460,8 @@ profesión
 
 ## Spanish 1-1
 
-### meta
-
-- schedule
-    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FnlqI7j4ta7.png?alt=media&token=3ce21802-b2f1-4f5e-9e07-d0281e37137c)
-- lecturer:: 馬德睿
-- 成績
-    - A
-    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2Fz4DTl3ftLf.png?alt=media&token=0b7d6bc7-9384-4cda-a2c4-c178b78c924e)
-- 成績算法
-    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FWzU-AKwEYk.png?alt=media&token=cd9284f8-dfde-4b18-b897-7c6bd2d4e8da)
-- 課本
-    - 書名 ELE Actual A1 作者 Virgilio Borobio 出版社 SM ediciones 書店 Caves敦煌書局，上林文化事業有限公司
-    - [https://wiac.info/doc-view](https://wiac.info/doc-view)
-- 上課連結 [https://meet.google.com/qdt-pptw-mhc](https://meet.google.com/qdt-pptw-mhc)
-    - 舊 [https://meet.google.com/vwu-haro-ggd](https://meet.google.com/vwu-haro-ggd)
-- 課程 docs [https://docs.google.com/document/d/1330D9EiIB0npmUuEgtWCBFYJTR1FX-MgM2hh-CVutho/edit](https://docs.google.com/document/d/1330D9EiIB0npmUuEgtWCBFYJTR1FX-MgM2hh-CVutho/edit)
-- 老師
-    - 有 3 兄弟 2 姊妹
-- 期中考 July 12th, 2021 #events
-    - 時程
-        - 10:30 在 Google Meet 點名
-        - 10:40 50 min. NTU Cool
-        - assignment 給 pdf，再上傳你的答案
-            - 打在 word
-            - Goodnotes of course
-    - 題型
-        - 填空 & 翻譯
-        - 打重音
-- 報告 July 23rd, 2021
-    - soy 4th
-    - 介紹家人 or 城市
-        - if 要城市要先講
-    - 3-5 min.
-    - 附照片
-    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FkkIsfNJDCc.png?alt=media&token=018e4547-24b6-4e52-98c0-468d6cd31a99)
-- 期末考 July 29th, 2021 #events
-    - 口試
-        - 二人聊天 7 min.
-        - 9:55
-        - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FEZr3n8ksBi.png?alt=media&token=95e357e1-fb91-44c7-8bcc-2b328336db6d)
-    - 筆試
-        - 1-7
-- 開頭開鏡頭問候
-    - Hola. Me llamo Derrick. Soy de Taichung. Hablo chino, inglés, y un poco español. Soy estudiénte.
-    - Soy Derrick de Taichung. Estudio ingeniería eléctrica.
-- 小組
-    - 李恩慈 Ann jee [https://meet.google.com/axu-ncup-cym](https://meet.google.com/axu-ncup-cym)
-    - 張家寧 Heather [https://meet.google.com/naj-kqzp-tpc](https://meet.google.com/naj-kqzp-tpc)
-    - 謝雨婷 Sunny [https://meet.google.com/xgn-xgso-yzm](https://meet.google.com/xgn-xgso-yzm)
-    - 李晨瑜 Fabiana [https://meet.google.com/qrf-tkzd-rbg](https://meet.google.com/qrf-tkzd-rbg)
-    - 徐亦薇 Leah [https://meet.google.com/usb-udfw-tpm](https://meet.google.com/usb-udfw-tpm)
-    - 謝孟容 Naomi [https://meet.google.com/zkt-fzgc-yvk](https://meet.google.com/zkt-fzgc-yvk)
-    - 林翌歆 Lilian [https://meet.google.com/eet-brxz-pao](https://meet.google.com/eet-brxz-pao)
-- 同學
-    - 李恩慈 Ann jee
-        - 普正
-        - malaysian
-        - csie
-    - 張家寧 Heather
-        - 普眼鏡
-    - 謝雨婷 Sunny
-        - 偏普
-    - 李晨瑜 Fabiana
-        - 普眼鏡
-    - 徐亦薇 Leah
-        - 普
-        - 住在台中崇德路
-        - Law
-    - 謝孟容 Naomi
-        - 不錯 應該是顏值最高的
-    - 陳薇帆 Weifan
-        - bruh
-    - 林翌歆 Lilian
-        - 普
-        - lilian
-    - 毛閎昇 Elvis
-        - 我討厭他
-        - gay 炮
-    - 黃靖芸 Irene
-        - ok
-        - 吸收偏慢
-        - 天天的
-        - 照片滿正的
-        - 中興大學文院
-        - 要畢業但少學分所以到處找可以暑修的
-        - 22yo
-    - 姚子晴 Annie
-        - 不錯
-    - 黃翌庭 Avery
-    - 陳楚蕓 Mae
-    - 龔泓愷 Bourbon
-    - 趙方慈 Connie
-        - 普眼鏡
-        - Canadian
-    - 蕭慶銘 ken
-        - 名字頭貼
-        - Econ
-    - 林雋哲
-    - 羅悅慈 brenda
-        - 眼鏡小小胖 還順眼
-    - 周哲安 agustin
-        - 光頭葛格
-    - 謝采璇 yoko
-        - 普
-    - 時之凱 kai
-        - 好像滿帥的
-    - 崔家菲 Katniss
-        - 有點瘋狂的感覺
-- 到時候會分組 練習
-    - 節省時間
-- 應該不能翹課 QQ
-- English-Internation Keyboard
-    - → ¿
-    - → ¡
-    - → á
-    - → ä
-        - hold → 大寫
-    - shift+`+n → ñ
-
 ### 筆記
+
 - 一些字
 	- adivinar: guess
 	- descansar: take a rest
@@ -1122,66 +1007,9 @@ profesión
 		- es moderna F
 
 ## Spanish 1-2
-### meta
-- lecturer:: 馬德睿
-- 成績
-    - A
-    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FKxcfrvfPmo.png?alt=media&token=86af828f-8c18-46ef-bbf4-026f62ce7f45)
-- schedule
-    - 上到 9/2 每天 3 節
-        - 原有 3 天 4 節
-- 修課名單
-    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FxOZcz5_0Ll.png?alt=media&token=845b0ffd-269f-488b-a527-573b61a829ee)
-- 期中考 August 16th, 2021 10:30 #events
-    - 填空&翻譯
-    - U8-10
-- oral presentation August 31st, 2021 #events
-    - 三選一
-        - 大學生活
-            - tus clases en la universidad (horario, deberes, compañeros, profesores, lo que más/menos te gusta)
-        - 父母的工作
-            - trabajo de tus padres (lección 13)
-        - 你會的東西(?)
-            - cosas que sabes y conoces (lección 14)
-        - 同學的
-            - erin: 學校的課
-                - so bad
-            - augstin: 他&他家人的 hobbies
-            - avery: 學校的課
-                - 課表 → 分日講各個課
-                - 總結
-                    - 課程特性
-                    - 同學
-                    - lo qué más/menos
-            - bourbon: hábitos
-                - 目前的一天 horario & 喜歡做的事
-            - annie: hábitos
-                - 一天 horario
-                - 一週
-                - 各 hobbies
-            - kevin: 會的東西
-            - Satomi Elvis Ann Jee Weifan Derrick Juana
-        - mine: mi hábitos
-            - 一週時間表
-            - estudio
-                - 電機 bad
-                - 經濟 good
-            - 足球
-            - 跆拳道
-            - 柔道
-            - 攝影
-                - 男一照
-            - 書
-                - Oathbringer
-                - Brandon Sanderson
-    - min 3 min.
-- 期末考 September 2nd, 2021 #events
-    - 口試
-        - 10:06 with Kevin 倪楷恩
-    - 筆試 11:00
-    - -U15
 
 ### 筆記
+
 - 一些字
 	- enfadado = angry
 	- muchísima = 超多
@@ -1970,14 +1798,9 @@ profesión
 	- ¿A qué hora se levantó la señora Paca anteayer? 9 ¿A qué hora desayunó? 10 ¿Qué hizo por la mañana? ¿Dónde/Con quién comió? ¿Qué hizo por la tarde? ¿Dónde cenó? ¿Qué hizo por la noche? ¿A qué hora se acostó?
 
 ## Spanish 2-1
-### meta
-- 杰彤 emma
-- 姿穎 anita
-- 黃海 coco
-- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FWZfGKyWEIp.png?alt=media&token=638079ee-aef6-47b7-bca1-37aa6eaec192)
-- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FwsepuhBYgU.png?alt=media&token=fc6ae02d-1648-476b-8f33-a5ace520f025)
-- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FFU0e5rDw1o.png?alt=media&token=c7be96b4-ca05-4e85-b499-72923da68388)
+
 ### deberes
+
 - deberes 5
 	- p.61 上面
 	- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdlcc%2FxFwwv6zOio.png?alt=media&token=8fb024f3-a06e-46f8-9518-b317c65c00b4)
@@ -3439,9 +3262,9 @@ p.13 - exercise 22
 
 ![](https://i.imgur.com/9cCtZ5B.png)
 
-![](https://i.imgur.com/8r7BVei.png)
+![](https://i.imgur.com/WCEIPas.png)
 
-![](https://i.imgur.com/eRgbsRX.png)
+![](https://i.imgur.com/8WdIjTy.png)
 
-![](https://i.imgur.com/RRJ9rI0.png)
+![](https://i.imgur.com/X2HpXfR.png)
 
