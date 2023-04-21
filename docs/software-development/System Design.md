@@ -262,7 +262,7 @@ Key concept: Randomly assign servers to a position in an arbitrary circle, and e
 
 Each object's location = hashed key mod # seats in the ring
 
-![](https://i.imgur.com/GbmxmV8.png)
+![[consistency-hashing.png]]
 
 reference
 
@@ -378,8 +378,8 @@ tradeoff: performance vs. accuracy
 	- input: many (key, value)
 	- output: (key, value)
 - e.g.
-	- ![](https://i.imgur.com/42d2Ye1.png)
-	- ![](https://i.imgur.com/iLGgUhI.png)
+	- ![[sys-des-mr-1.jpg]]
+	- ![[sys-des-mr-2.png]]
 
 ## Storing passwords in the database
 

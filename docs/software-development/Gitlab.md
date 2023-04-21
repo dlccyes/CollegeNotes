@@ -11,25 +11,31 @@ parent: Software Development
 <https://docs.gitlab.com/omnibus/maintenance/#starting-and-stopping>
 
 start
+
 ```
 sudo gitlab-ctl start
 ```
 
 stop
+
 ```
 sudo gitlab-ctl stop
 ```
 
 enable autostart
+
 ```
 systemctl enable gitlab-runsvdir
 ```
+
 <https://stackoverflow.com/a/47891691/15493213>
 
 disable autostart
+
 ```
 sudo systemctl disable gitlab-runsvdir.service
 ```
+
 <https://stackoverflow.com/a/35902817/15493213>
 
 ### install
@@ -69,7 +75,7 @@ sudo EXTERNAL_URL="<url>" apt install ./gitlab-ee_13.0.6.deb
 then go to `<url>`  
 you should see  
 
-![](https://i.imgur.com/AHK8MCg.png)
+![[gitlab-welcome.png]]
 
 - To login as admin, use the username `root` and the password in `/etc/gitlab/initial_root_password`
 - To use a new account, first register and then login.

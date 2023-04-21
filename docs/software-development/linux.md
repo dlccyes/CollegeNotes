@@ -71,6 +71,7 @@ from win10/11
 ### dd
 
 ### ventoy
+
 [tutorial](https://linuxkamarada.com/en/2020/07/29/ventoy-create-a-multiboot-usb-drive-by-simply-copying-iso-images-to-it/)
 
 download ventoy  

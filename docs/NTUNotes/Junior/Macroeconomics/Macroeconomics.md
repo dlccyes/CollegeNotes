@@ -30,29 +30,29 @@ aliases: 總體經濟學
 		- 20th 兩者呈負相關
 		- 21st 關係不明顯
 		- ![[philips-curve.png]]
-		- ![](https://i.imgur.com/GZ7kmuO.png)
 - 政府的政策干預
 	- 政府影響總體經濟 20th 才開始
 		- especially WW2 後
 	- transfer payment 移轉性支付
 		- 近幾十年來佔約 US GDP 10%
-		- ![](https://i.imgur.com/uT0cbFj.png)
+		- ![[transfer-payment.jpg]]
 		- 政府作為仲介者，左手進右手出
 			- e.g. 健保、消費券、社福`
 - 金融市場的波動
 - 國際貿易與金融
 	- US 貿易依存度
 		- 1970 後不斷攀升
-		- ![](https://i.imgur.com/1FeZMNo.png)
+		- ![[us-tw-trade.png]]
 	- 大部分資本移動皆為套利性質，跟貿易無關
 - 財富的集中與分配
 	- Thomas Piketty : Capital in the Twenty First Century (2014)
 	- 資本份額
 		- capital income 佔 national income 比例
 		- 有增加的趨勢 → 財富集中於資本家
-		- ![](https://i.imgur.com/U2GwdCi.png)
+		- ![[capital-income.jpg]]
 
 ### 總體理論發展史
+
 - 古典學派 Classical School
 	- before 1930s
 	- rationality & equilibrium
@@ -151,7 +151,8 @@ aliases: 總體經濟學
 		- 國防司法外交治安
 
 ### GDP 的三個面向
-- ![](https://i.imgur.com/RByM7OH.png)
+
+- ![[gdp.png]]
 	- 供給面
 		- 生產者
 	- 支出面
@@ -249,7 +250,7 @@ $$GDP = C+I+G+NX$$
 		- 出口
 	- M
 		- 進口
-- ![](https://i.imgur.com/kNI1flv.png)
+- ![[gdp-tw.jpg]]
 
 #### 分配面/要素所得面
 
@@ -272,7 +273,7 @@ $$GDP = C+I+G+NX$$
 	- = 受僱人員報酬 + 營業盈餘 (混合所得)
 		- 屬籍
 	- = 國內要素所得 Domestic Factor Income (DI)  + NFIA
-- ![](https://i.imgur.com/rdbXJXy.png)
+- ![[gdp-di.jpg]]
 	- 受僱人員拿到的份變少
 
 ### real GDP
@@ -292,7 +293,7 @@ $$GDP = C+I+G+NX$$
 - Fisher Quantity Index $F^Q_t$
 	- 實質產出成長率
 	- 以兩個基期計算的 GDP 成長率的幾何平均數
-	- ![](https://i.imgur.com/efXNOGO.png)
+	- ![[fqt.png]]
 	- $F_t^Q=\sqrt{(1+g_t^1)(1+g_t^2)}=1+\bar{g_t}$
 		- $\bar{g_t}$ = 費雪成長率
 - chained index
@@ -302,7 +303,7 @@ $$GDP = C+I+G+NX$$
 	- $Y^C_t=I_t\times Y_0=(F^Q_1\times F^Q_2\times ...\times F^Q_t)\times Y_0$
 	- $Y_0$ = base period nominal GDP
 - e.g.
-	- ![](https://i.imgur.com/2Ru9IDC.png)
+	- ![[chain-w-gdp.jpg]]
 		- ((260/200)x(350/280))^0.5=1.275
 		- 200x1.275=255
 		- ((38/35)x(48/44))^0.5=1.088
@@ -366,7 +367,7 @@ $$GDP = C+I+G+NX$$
 #### GDP 平減指數 (GDP Deflator)
 
 - GDP Deflator = nominal GDP / 固定價格 GDP x 100
-- ![](https://i.imgur.com/WIE29PD.png)
+- ![[gdp-deflator.png]]
 	- base period: 0 
 	- 利用當期支出比重做加權平均
 		- sum{ i 商品漲價幅度 x 佔 GDP 的比例} i.e. 商品漲價幅度加權平均
@@ -381,7 +382,7 @@ $$GDP = C+I+G+NX$$
 
 - 用 retail price
 	- 生產者物價指數 WPI 用 wholesale price
-- ![](https://i.imgur.com/B0KChNH.png)
+- ![[cpi.png]]
 	- base period: 0
 	- intuition: 過去的商品拿來現在賣，貴了多少
 		- 分子：過去的商品數量用現在的價格算
@@ -396,30 +397,32 @@ $$GDP = C+I+G+NX$$
 	- 物價上漲率
 	- like [[#連鎖加權 GDP chain-weighting GDP|Fisher Quantity Index]] $F^Q_t$ but 變動項為 price
 	- 現在的數量拿去過去 (Paasche) & 過去的數量拿來現在 (Laspeyres) 的幾何平均
-	- ![](https://i.imgur.com/4J8jmnh.png)
+	- ![[fisher-price-index.png]]
 	- $F^P_t\times F^Q_t=\dfrac{Y_t}{Y_{t-1}}$<br>i.e.物價上漲率 x 實質產出成長率 = 名目 GDP 成長率
 - $P^C_t=F^P_1\times F^P_2\times...\times F^P_t$
 - $P^C_t\times Y^C_t=Y_t$<br>i.e.物價指數 x 實質 GDP = 名目 GDP
 - 介於 Paasche & Laspeyres 之間，考慮了相對價格的影響 → 較能反映 inflation
 - 使用滾動基期 → 較能反映貨幣政策對物價的實際影響
 - Fed 政策主要參考指標
+
 #### e.g.
-- ![](https://i.imgur.com/63ujz23.png)
+
+- ![[chart-2.7.jpg]]
 	- 350/260 = 1.346
 	- 280/200 = 1.400
 	- (1.346*1.4)**0.5 = 1.373
 	-  ((440/350)*(480/380))**0.5 = 1.260
 	- 1.373*1.260 = 1.730
 
-### practicar
+### Problems
 
-![](https://i.imgur.com/6fj7KzX.png)
+![[ch2p10.jpg]]
 
-![](https://i.imgur.com/ybsGYwk.png)
+![[ch2p10-1.jpg]]
 
-![](https://i.imgur.com/wJ7LwK8.png)
+![[ch2-slide-1.jpg]]
 
-![](https://i.imgur.com/9bADPOr.png)
+![[ch2-slide-2.jpg]]
 
 ## Ch3 景氣波動的定型特徵
 
@@ -431,13 +434,13 @@ $$GDP = C+I+G+NX$$
 - 把短期波動獨立濾出來
 - 各期產出 = 長期趨勢 + 短期波動
 - 波動比例 = 實際&趨勢差異 / 趨勢值
-	- ![](https://i.imgur.com/Df89cbe.png)
+	- ![[yct-filter.png]]
 	
 #### 產出成長率濾波器
 
 - 產出成長率 = $\dfrac{y_t-y_{t-1}}{y_t}=\ln y_t-\ln y_{t-1}$
 	- $\ln y_t$ vs. t 圖之斜率 = 產出成長率
-		- ![](https://i.imgur.com/rsQtsGR.png)
+		- ![[hp-gdp-tw.png]]
 - 將上一期視為長期趨勢值
 	- 顯然不合理
 		- 長期趨勢太波動
@@ -450,7 +453,7 @@ $$GDP = C+I+G+NX$$
 #### HP 濾波器
 
 - Hodrick-Perscott filter
-- ![](https://i.imgur.com/hEvO67h.png)
+- ![[hp-filter.png]]
 	- 只有第一項 → 長期&實際愈接近愈好
 	- 只有第二項 → 長期愈 linear 愈好
 	- $\lambda$ 平滑參數控制第二項的 weight
@@ -458,7 +461,7 @@ $$GDP = C+I+G+NX$$
 		- $\lambda=100$ for 年資料
 - HP 循環波動序列 = $\ln y_t-\ln \bar{y_t}$
 	- 台以 HP 循環波動序列做景氣轉折點的認定
-- ![](https://i.imgur.com/P3PlIIv.png)
+- ![[hp-tw.jpg]]
 
 ### 台美景氣波動
 
@@ -468,9 +471,9 @@ $$GDP = C+I+G+NX$$
 	- [[Psychology#注意與意識|睡眠週期]]的相反
 - 台 std 較美大 bc 台灣較小，應對衝擊能力較低
 - 約 2-6 年一次 cycle
-- ![](https://i.imgur.com/VszGQq9.png)
-- ![](https://i.imgur.com/BV7FXhL.png)
-- ![](https://i.imgur.com/rJY9ctM.png)
+- ![[chart3.1.jpg]]
+- ![[fig3.3.jpg]]
+- ![[fig3.4.jpg]]
 
 #### 第一次能源危機
 
@@ -522,8 +525,8 @@ $$GDP = C+I+G+NX$$
 #### 波動幅度 volatility
 
 - 經過處理的標準差
-	- ![](https://i.imgur.com/kOs1\ln R.png)
-		- 分母應是 T-1 但沒什麼差
+	- ![[macro-ch3-1.png]]
+	- 分母應是 T-1 但沒什麼差
 - 處理過後再計算標準差才有意義
 	- 原始資料包含長期趨勢的影響，為 non-stationary 時間序列，因此要先用 [[#filtering]] 濾成 stationary 序列
 		- 可證明 HP 循環波動必為 stationary
@@ -535,7 +538,7 @@ $$GDP = C+I+G+NX$$
 	- x y covariance > 0
 - 逆循環 counter-cyclical
 	- x y covariance < 0
-- ![](https://i.imgur.com/gPhg8Hf.png)
+- ![[ch3-cov.png]]
 - covariance 大小不代表相關強度，bc 受 x or y 單位 or 標準差影響
 - correlation $\centernot{\implies}$ causation
 - 相關係數只說明了 x y 間的線性關係，無法說明非線性關係
@@ -546,11 +549,11 @@ $$GDP = C+I+G+NX$$
 - 跨期相關
 - auto-covariance 自我共變異數
 	- 當期跟 j 期以前的 covariance
-	- ![](https://i.imgur.com/acx9inZ.png)
+	- ![[ch3-auto-cov.png]]
 	- 隨著 j 增加而遞減 (intuitive)
 - cross auto-covariance 
 	- x 跟 j 期外的 y 的 covariance
-	- ![](https://i.imgur.com/8wEvS5B.png)
+	- ![[ch2-cross-auto-cov.png]]
 	- j > 0 → 領先期
 	- j < 0 → 落後期
 	- $p_{xy}(-1)>0$ → 今天消費與昨天所得呈正相關
@@ -559,7 +562,7 @@ $$GDP = C+I+G+NX$$
 
 ### 台美氣波動定型特徵
 
-- ![](https://i.imgur.com/UXTKwva.png)
+- ![[chart3.2.jpg]]
 	- 實質利率
 		- 台：一個月平均款利率
 		- 美：三個月國庫券利率
@@ -597,7 +600,7 @@ $$GDP = C+I+G+NX$$
 
 #### 同期相關
 
-- ![](https://i.imgur.com/R9w6s3o.png)
+- ![[chart3.3.jpg]]
 - 民間消費&民間投資是順循環
 	- 跟 real  GDP 一起浮動
 - 政府購買&產出波動無明顯同期相關
@@ -605,7 +608,7 @@ $$GDP = C+I+G+NX$$
 - 台淨出口&產出波動正相關，美負相關
 	- 景氣繁榮時出口增加 > 進口增加 for 台灣 (before 1992)，相反 for US&others
 	- 1992 後台灣也是負相關
-	- ![](https://i.imgur.com/tYu0u1X.png)
+	- ![[fig3.6.jpg]]
 - 勞動工時&實質工資率為順循環
 - 物價水準與 real GDP 逆循環
 	- 相對於長期趨勢，景氣繁榮時物價較低
@@ -615,11 +618,11 @@ $$GDP = C+I+G+NX$$
 
 #### 跨期相關
 
-- ![](https://i.imgur.com/R9w6s3o.png)
+- ![[chart3.3.jpg]]
 - 高度跨期自我相關
 - 傳導機制 propagation mechanism
 	- smooth consumption & 資本累積
-- ![](https://i.imgur.com/bXkp0h8.png)
+- ![[ch3-tw-us.jpg]]
 - 台 real interest rate 跟前後一年 real GDP 負相關
 - US real interest rate 跟未來一年 real GDP 負相關
 - 台政府支出與過去一年 real GDP 負相關，與未來一年 real GDP 正相關
@@ -628,16 +631,19 @@ $$GDP = C+I+G+NX$$
 
 ## Ch4 廠商的靜態選擇
 
--  static model 
-	-  no tomorrow
-		-  no savings
-		-  no investment
+no tomorrow in static model
+
+-  no savings
+-  no investment
+
 ### 模型
 
--  ![](https://i.imgur.com/mu0tRif.png)
-- labor market & goods market are in perfect competition
-	- consumer & firm 都是 price taker
-	- 廠商生產 homogeneous products
+![[macro-ch4-1.png]]
+
+labor market & goods market are in perfect competition
+
+- consumer & firm 都是 price taker
+- 廠商生產 homogeneous products
 
 #### 角色
 
@@ -698,22 +704,22 @@ $$y=AF(k,n)(+B)$$
 
 - $MPL, MPK>0$
 	- marginal productivity of labor/capital
-- ![](https://i.imgur.com/kHUYNlm.png)
+- ![[ch4-mpl-mpk.png]]
 
 ##### marginal productivity 遞減
 
-- ![](https://i.imgur.com/Lfdj8FU.png)
-- ![](https://i.imgur.com/d4Jzhru.png)
+- ![[ch4-mpl-mpk-partial.png]]
+- ![[ch4-mpl-graph.png]]
 - 廠商規模未成熟時可能 MP 遞增，但這種情況不會持續存在
 
 ##### 資本勞動互補
 
 - capital 增加 → MPL 增加，反之亦然
-- ![](https://i.imgur.com/zB3jhau.png)
+- ![[ch4-afkn.png]]
 
 ##### Inada condition
 
-- ![](https://i.imgur.com/B7zwc65.png)
+- ![[ch4-afkn-limit.png]]
 - 非必要條件
 
 ##### 固定規模報酬 constant return to scale
@@ -722,7 +728,7 @@ $$y=AF(k,n)(+B)$$
 	- 資本勞動皆 x2 → output x2
 		- 一階齊次函數
 	- 大公司切成 10 個小公司 → 生產效率不變
-- ![](https://i.imgur.com/Fi9pedd.png)
+- ![[ch4-return-to-scale.png]]
 - $AF(ak,an)>ay$ → 規模報酬遞增 increasing return to scale
 	- e.g. 台GG
 -  $AF(ak,an)=ay$ → 規模報酬固定 constant return to scale
@@ -755,7 +761,7 @@ i.e. 廠商生產全部被資本&勞動報酬瓜分掉
 	- $AF_n(k,n^*)=w$ i.e. marginal profit = 0
 - 二階充分條件
 	- $AF_{nn}(k,n^*)<0$ i.e. MPL 遞減
-- ![](https://i.imgur.com/2gO92JZ.png)
+- ![[ch4-decision.png]]
 	- $MPL<w$ → d 遞增
 	- $MPL>w$ → d 遞減
 	- $MPL=w$ → d has max 
@@ -764,13 +770,13 @@ i.e. 廠商生產全部被資本&勞動報酬瓜分掉
 
 - wage
 	- w increase → n decrease
-	- ![](https://i.imgur.com/mH9mtW2.png)
+	- ![[ch4-decision-wage.png]]
 - A or k
 	- A or k increase → MPL increase → n increase
-	- ![](https://i.imgur.com/nXdMmYW.png)
+	- ![[ch4-decision-a-k.png]]
 		- B → wage increase → C
 		- B → A or k increase → D
-	- ![](https://i.imgur.com/UqQqrY8.png)
+	- ![[ch4-y-w-a-k.jpg]]
 		- B → wage increase → C
 		- B → A or k increase → D
 - supply & demand
@@ -780,7 +786,7 @@ i.e. 廠商生產全部被資本&勞動報酬瓜分掉
 	- product supply $y^s(k,n^d(w,A,k))$
 		- w: negative
 		- A & k: positive
-	- ![](https://i.imgur.com/HtmTUsG.png)
+	- ![[ch4-cobb-doublas.png]]
 		- [[Econometrics#Ch8 nonlinear]]
 
 ### 能源危機
@@ -793,7 +799,7 @@ i.e. 廠商生產全部被資本&勞動報酬瓜分掉
 - 一階條件
 	- $MPX=F_x(k,n,x)=q$
 	- $MPL=F_n(k,n,x)=w$
-- ![](https://i.imgur.com/Mdhu0lV.png)
+- ![[ch4-oil-labor.png]]
 	- 原油價格上升 → E to F，原油 & 勞動需求下降，商品供給下降, just like A 下降的結果
 		- q 上升 → x 下降  → MPL 下降 → labor demand 左移 → n 下降 → MPX 下降 → 原油 demand 左移 → x 下降
 
@@ -803,9 +809,10 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 
 - $MPL=w=\beta\dfrac{y}{n}$
 - $MPX=q=(1-\alpha-\beta)\dfrac{y}{x}$
-- 把 x 取代掉 →<br>![](https://i.imgur.com/n8Tkmtb.png)<br>$=A_1k^{\phi}n^{1-\phi}$
+- 把 x 取代掉
+	- $y=\left(\dfrac{1-\alpha-\beta}{q}\right)^{\frac{1-\alpha-\beta}{\alpha+\beta}}k^{\frac{\alpha}{\alpha_\beta}}n^{\frac{\beta}{\alpha_\beta}}=A_1k^{\phi}n^{1-\phi}$
 	- q 上升 → $A_1$ 下降 → MPL & MPK 下降
-- ![](https://i.imgur.com/rLG0qWY.png)
+- ![[ch4-oil-labor-goods.png]]
 	- q 上升 → $x^d$ & $n^d$ & $y^s$ 下降
 
 ## Ch5 消費者的靜態選擇
@@ -821,19 +828,19 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- x = c + wl = a + w = full income
 	- wl 相當於花費於 leisure 的錢
 		- w = wage = 每時間單位的 leisure 的 opportunity cost
-	- ![](https://i.imgur.com/w7euRuK.png)
+	- ![[macro-ch5-1.jpg]]
 		- a 增加 → 向上平移
 
 ### utility function
 
 - assumptions
 	- marginal utility > 0
-		- ![](https://i.imgur.com/yKqw3fo.png)
+		- ![[macro-ch5-2.png]]
 	- marginal utility 遞減
-		- ![](https://i.imgur.com/4YLrHFw.png)
+		- ![[macro-ch5-3.jpg]]
 	- concave preference
 		- 凹函數
-		- ![](https://i.imgur.com/C4aSIDW.png)
+		- ![[macro-ch5-4.png]]
 	- c & l $\in$ normal goods
 		- 消費 & leisure 都是 normal goods
 		- sufficient conditions
@@ -850,11 +857,11 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- $u_c(c^*,l^*)w=u_l(c^*,l^*)$ <br> $w=\dfrac{u_l(c^*,l^*)}{u_c(c^*,l^*)}$
 		- 休閒取代消費的邊際效益 (MR) = wage (MC)
 		- work 1 time unit more → lose $u_l$ more utility but get w more money → consume w more money → get $wu_c$ more utility
-	- ![](https://i.imgur.com/2bxid1j.png)
+	- ![[macro-ch5-5.png]]
 - w 上升 → leisure 變貴 → budget line 變陡
-- ![](https://i.imgur.com/LoIt5iz.png)
+- ![[macro-ch5-6.png]]
 	- Hicks
-- ![](https://i.imgur.com/zyp6jz0.png)
+- ![[macro-ch5-7.png]]
 
 ### 勞動所得稅
 
@@ -863,17 +870,17 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- leisure 變便宜 → 消費 demand 降低 ([[substitution effect]])
 	- 非勞動所得 > 0 (rich) → [[substitution effect]] 較大 → 減少工時 ($n^s$)
 	- 非勞動所得 < 0 (poor) → [[income effect]] 較大 → 增加工時
-	- ![](https://i.imgur.com/hBsytbN.png)
+	- ![[macro-ch5-8.jpg]]
 	
 ### 消費券 consumption voucher
 
 - 為 transfer payment
 - 既是消費也是支出（一定需要花掉） → 左右相消，不影響 budget constraint
 - 會使 $MRS_{l,c}$ 上升，leisure 意願上升，消費&勞動意願下降
-	- ![](https://i.imgur.com/EdcqPEn.png)
+	- ![[macro-ch5-9.png]]
 	- $u_{cc}-u_{cl}\dfrac{u_c}{u_l}<0$ 是 normal good 的必要條件
-	- ![](https://i.imgur.com/ISyQ9e7.png)
-- ![](https://i.imgur.com/HXCodFH.png)
+	- ![[macro-ch5-10.png]]
+- ![[macro-ch5-11.png]]
 	- endowment = E
 	- got voucher $v$ → MRC i.e. slope of indifference curve increase, budget line stays the same → new equilibrium F
 	- $c_2<c_1$ but  $c_2+v>c_1$ 
@@ -883,8 +890,8 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 
 ### Walras Law of Markets
 
-- ![](https://i.imgur.com/43x7A38.png)
-- ![](https://i.imgur.com/SgZkEbt.png)
+- ![[macro-ch6-1.png]]
+- ![[macro-ch6-2.png]]
 	- 商品市場超額需求 + 勞動市場超額需求 = 0
 	- 薪資水準低 → 消費需求低，勞動供給高 (?)
 
@@ -892,33 +899,33 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 
 #### 第一面向－連立方程解
 
-- ![](https://i.imgur.com/cku8daY.png)
+- ![[macro-ch6-3.png]]
 
 #### 第二面向－市場供需模型
 
-- ![](https://i.imgur.com/scEPptH.png)
+- ![[macro-ch6-4.png]]
 	- w' < w* → 勞動超額需求 → w 上升 直到 E 點
 
 #### 第三面向－通吃型圖形
 
 - 全面均衡
-	- ![](https://i.imgur.com/f4AopCg.png)
+	- ![[macro-ch6-5.png]]
 - 生產可能線 PPF
-	- ![](https://i.imgur.com/xxqBMCA.png)
+	- ![[macro-ch6-6.png]]
 	- x y 兩產品
 	- 可生產 x or y
 	- 邊際生產力遞減 → y 很多，x 很少時，消耗一些 y 的生產力，減少一點 y，能夠多生產很多 x → 凸
 	- MRT = $\dfrac{\Delta y}{\Delta x}$
 		- MRT 隨 x 遞增
 - 價格調整
-	- ![](https://i.imgur.com/mKTLfjO.png)
+	- ![[macro-ch6-7.png]]
 	- w' → 超額勞動需求，超額商品供給 → w 上升 to w* → 廠商 & 消費者 converge to E 點，MPS = MPS = w*
 
 ### Crusoe 荒島經濟
 
 - Crusoe 同時為消費者 & 生產者
 	- 生產&消費椰果 all by himself
-- ![](https://i.imgur.com/5Zumf3A.png)
+- ![[macro-ch6-8.png]]
 	- G 是 loss of 椰果 for whatever reason
 - $u_l(c^*,l^*)=u_c(c^*,l^*)AF_n$<br>$MRS_{l,c}=\dfrac{u_l}{u_c}=AF_n=MPL$
 	- MPL = $AF_n$ = 設算價格 imputed price / 影子價格 shadow price，即市場的 real wage
@@ -926,7 +933,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - 與市場經濟的不同
 	- 消費者生產量會決定 leisure 的 cost
 	- 這裡的 pareto optimum 是效益最大化那個唯一解，因為只有一個人要考慮
-- ![](https://i.imgur.com/EnUeNoH.png)
+- ![[macro-ch6-9.png]]
 	- A: MPL > MRS
 	- B: MPL < MRS
 	- E: MRS = MPL
@@ -940,12 +947,12 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - second welfare theorem
 	- any Pereto optimum can be achieved as the competitive equilibrium for some endowment distribution
 - pf with [[Edgeworth box]]
-	- ![](https://i.imgur.com/NFdiHLf.png)
+	- ![[macro-ch6-10.png]]
 		- at the optimal solutions of the budget line on endowment point e 
 			- $x^A+x^B>\bar{x}$ → demand > supply
 			- $y^A+y^B<\bar{y}$ → demand < supply
 		- so $p_x$ increase, $p_y$ decrease, $\dfrac{p_x}{p_y}$ increase，until x&y's solutions meet
-	- ![](https://i.imgur.com/s8A03ct.png)
+	- ![[macro-ch6-11.png]]
 		- 在 contract curve 以外的點都存在 mutually advantage area → converge 到 contract curve while maintaining Pareto → first welfare theorem
 		- to achieve a certain point in the contract curve i.e. a certain Pareto optimal solution, just redistribute the endowment points, e.g. all endowment points on line CD will converge to point F → second welfare theorem
 
@@ -970,7 +977,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 ### 政府消費支出增加
 
 - for Crusoe
-	- ![](https://i.imgur.com/BVS48nm.png)
+	- ![[macro-ch7-1.png]]
 	- 政府消費增加 → 政府定額稅增加 → 等效於 G 增加
 	- 不影響 MPL → slope unchanged for any n
 	- E to F
@@ -978,7 +985,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- consumption i.e. 商品需求下降 ([[income effect]])
 		- MPL i.e. real wage 下降
 - for market
-	- ![](https://i.imgur.com/SWqKXVV.png)
+	- ![[macro-ch7-2.png]]
 	- 直接效果
 		- G 上升 → $y^d$ shift right (E to A)
 	- [[income effect]]
@@ -1011,13 +1018,13 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 
 - A (TFP) 上升
 - for Crusoe
-	- ![](https://i.imgur.com/OmEFHDw.png)
+	- ![[macro-ch7-3.png]]
 	- MPL increase → leisure more expensive → E to D ([[substitution effect]])
 	- more coconuts → D to F ([[income effect]])
 	- 消費量&生產量上升
 	- labor amount 方向不一定
 - for market
-	- ![](https://i.imgur.com/ktEgASS.png)
+	- ![[macro-ch7-4.png]]
 	- 直接效果
 		- A increase → MPL increase → labor demand ($n^d$) & goods supply ($y^s$) increase
 		- $\Delta d=F\Delta A$ i.e. dividend increase = A 上升的直接效果
@@ -1066,14 +1073,13 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - $G=T+\tau wn$ = 定額稅+所得稅
 - $c=(d-T)+(1-\tau)wn$ = 非勞動所得+勞動所得
 - $MRS=\frac{u_l}{u_c}=(1-\tau w)$
-- ![](https://i.imgur.com/lYldYzs.png)
+- ![[macro-ch7-5.png]]
 - 稅率 $\tau$ 上升 
 	- [[substitution effect]] → consumption demand ($c^d$) & labor supply ($n^s$) 下降 bc
 	- 廠商最適選擇不變 → $n^d$ & $y^s$ 不動
 	- → 在原 wage，商品市場超額供給，勞動市場超額需求 → 移動到新均衡 F，(稅前) wage 上升
 		- 稅前工資率上升，but 稅後工資率是下降
-			- ![](https://i.imgur.com/RWJ35vL.png)
-
+			- ![[macro-ch7-6.png]]
 - 市場結清條件
 	- $c^d+G=y$
 	- $n^d=n^s$
@@ -1095,7 +1101,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- $\eta_{\tau}>1$ → $\tau$ 上升使 R 下降  
 	- $\tau$ 上升，稅後 w 下降幅度變大
 	- 總稅收 R vs. 稅率 $\tau$ (if w 不變)
-		- ![](https://i.imgur.com/8cSbJpc.png)
+		- ![[macro-ch7-7.png]]
 - 全面均衡 (考慮 w)
 	- 令 $u=\ln l+\ln c$ && $y=n^\alpha$
 	- $MRS=\dfrac{c}{1-n}=(1-\tau)w=(1-\tau)MPL=(1-\tau)\dfrac{\alpha y}{n}$
@@ -1120,7 +1126,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - 消費券有中立性質
 	- 前三項均衡解與 $v$ 無關
 	- $v$ 不影響產出、勞動、市場工資率 → 私人消費完全被排擠
-- ![](https://s2.loli.net/2021/12/22/zZf5IsCkhMUBcNR.png)
+- ![[macro-ch7-8.png]]
 - 直接效果
 	- 商品需求 $y^d$ 右移 E to A
 - [[substitution effect]]
@@ -1136,8 +1142,8 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 
 ### 工時的長期趨勢
 
-- ![](https://s2.loli.net/2021/12/22/q5WU4Erz6fAYl3y.png)
-- ![](https://s2.loli.net/2021/12/22/o6qnNs1khDlBZzp.png)
+- ![[macro-ch7-9.png]]
+- ![[macro-ch7-10.png]]
 - 早期 PPF 較低，indifference curve 較平緩
 - PPF 上升 → [[income effect]] & [[substitution effect]]
 	- [[income effect]] 使 labor 下降
@@ -1326,7 +1332,7 @@ $$\ln(1+x)\approx x$$
 
 ### 世代家庭決策模型
 
-Also see [[Internation Finance#Infinite Horizon Intertemporal Current Account Model]]
+Also see [[International Finance#Infinite Horizon Intertemporal Current Account Model]]
 
 #### budget constraint
 
@@ -1609,7 +1615,7 @@ since 流通 bonds = 政府發行 bonds
 
 So 商品市場超額需求 + 債券市場超額需求 = 0
 
-![](https://i.imgur.com/YLlLsMC.jpg)
+![[macro-fig10.1.jpg]]
 
 $Y_t$ & $G_t$ are given (exogenous). Reach equilibrium at $r=r^*$
 
@@ -1631,7 +1637,7 @@ So the higher the $\mu$, the higher the $r$
 
 We can also get this from graphical analysis
 
-![](https://i.imgur.com/kToklNp.png)
+![[macro-fig10.2.jpg]]
 
 Original endowment is e. Now $Y_2$ rises to $Y_2'$. Since $r$ isn't changed, the budget constraint simply up shifts, resulting in a new equilibrium point A.
 
@@ -1641,21 +1647,21 @@ Conclusion: 成長快的國家 利率應較高
 
 In real life
 
-![](https://i.imgur.com/eQ9zTjh.png)
+![[macro-fig10.3.jpg]]
 
 correlation efficient = 0.08, or 0.44 if excluding 亞洲四小龍
 
 ### deficit & GDP growth rate & interest rate
 
-![](https://i.imgur.com/0MyzrNc.jpg)
+![[macro-ch10-p1-d.jpg]]
 
-![](https://i.imgur.com/PTaBmLl.png)
+![[macro-ch10-p1-d-2.jpg]]
 
 ### 外生衝擊均衡效果
 
 #### endowment temporarily decreases
 
-![](https://i.imgur.com/Y0beBCf.png)
+![[macro-fig10.4.jpg]]
 
 - 商品市場超額需求
 - 債券市場超額供給
@@ -1666,7 +1672,7 @@ correlation efficient = 0.08, or 0.44 if excluding 亞洲四小龍
 
 The increase of government expenditure has to come from tax or bonds, so either an increase in current tax or in future tax.
 
-![](https://i.imgur.com/bbrKfUG.png)
+![[macro-fig10.5.jpg]]
 
 E -> A 
 
@@ -1679,7 +1685,7 @@ A -> F
 
 For 債券市場
 
-![](https://i.imgur.com/q6fOjUd.png)
+![[macro-fig10.6.jpg]]
 
 if use 定額稅
 
@@ -1703,7 +1709,7 @@ $$\sum_{t=1}^\infty q_tC_t=\sum_{t=1}^\infty q_t(Y_t-T_t)+(1+r_0)B_0=\sum_{t=1}^
 
 #### two-period
 
-![](https://i.imgur.com/PV0sOR2.png)
+![[macro-fig10.7.jpg]]
 
 E is optimal point
 
@@ -1742,7 +1748,7 @@ f is the endowment after doing 赤字減稅政策 deficit-financed tax cut
 - 借貸市場不完全
 	- 並非所有人都有 full access to the bonds market
 	- look at a person that is forbidden to borrow money
-	- ![](https://i.imgur.com/huQl9HL.png)
+	- ![[macro-fig10.8.jpg]]
 	- original endowment = e, since he can't borrow money, his equilibrium point is still e
 	- endowment after deficit-financed tax cut = f, since he can lend money, his equilibrium point = max utility point = E
 	- so after applying deficit-financed tax cut, there is an over demand in the consmpution market, driving the interest rate up, 排擠他人的 consumption
@@ -1778,7 +1784,7 @@ f is the endowment after doing 赤字減稅政策 deficit-financed tax cut
 
 Assume each person lives for 2 periods, with endowment = $y_1$ when young and $y_2$ when old.
 
-![](https://i.imgur.com/dpVHRF7.png)
+![[macro-fig10.9.jpg]]
 
 Each period consists of 2 generations, one young another old.
 
@@ -1788,7 +1794,7 @@ PAYG becomes a way for money flow between the young and the old.
 
 Assume PAYG starts at t=1, giving each old man $b$
 
-![](https://i.imgur.com/ASur3yo.png)
+![[macro-fig10.10.jpg]]
 
 For the old (born in t=0)
 
@@ -1815,7 +1821,7 @@ In a complete market, forced saving is meaningless as you can just go to the mar
 
 Assume all the money comes from yourself and the interest rate is in the national pension account is the same as the market interest rate.
 
-![](https://i.imgur.com/tpinhSG.png)
+![[macro-fig10.11.jpg]]
 
 If a person doesn't have access to the loan market and the forced saving > the optimal saving, then he will be stuck in point g, decreasing his utility.
 
@@ -1823,7 +1829,7 @@ If a person doesn't have access to the loan market and the forced saving > the o
 
 #### Problem 10.6
 
-![](https://i.imgur.com/cXR2rMZ.png)
+![[macro-p10.6.jpg]]
 
 - $c_2=(1+\mu)c_1$
 - $u'(c_1)=\beta(1+r)u'(c_2)$
@@ -1923,7 +1929,7 @@ equilibrium stock price
 
 $d \rightarrow d'$
 
-![](https://i.imgur.com/dePB9pK.png)
+![[macro-fig11.1.jpg]]
 
 - saving demand no change
 	- bonds demand no change -> interest rate no change
@@ -1931,7 +1937,7 @@ $d \rightarrow d'$
 - stock price $q$ increases by the same ratio, $q'=\dfrac{d'}{r}$
 	- $r=\dfrac{d'}{q'}$ no 套利空間
 
-![](https://i.imgur.com/fTpjGYj.png)
+![[macro-fig11.2.jpg]]
 
 - bonds market
 	- E -> S: expected future stock price increase -> stock demand increases -> bonds demand decreases
@@ -1978,7 +1984,7 @@ expected future dividend increases -> saving demand decreases -> stock price dec
 
 expected future dividend increase -> stock demand increases -> stock price increases
 
-![](https://i.imgur.com/JOYdEQv.jpg)
+![[macro-fig11.3.jpg]]
 
 $$r\approx\rho+\gamma\mu$$
 
@@ -1986,7 +1992,7 @@ $$r\approx\rho+\gamma\mu$$
 	- E -> A: income effect
 	- A -> F/G
 
-![](https://i.imgur.com/dtUdWAi.jpg)
+![[macro-fig11.4.jpg]]
 
 - $q_t$ has the same growth rate as $d_t$
 - $\gamma > 1$ -> $q_t$ smaller -> $\dfrac{d_t}{q_t}$ & $r$ higher
@@ -2003,13 +2009,13 @@ Adding government purchase $G_t$ to the model
 
 **funding with fixed tax**
 
-![](https://i.imgur.com/yih16b0.png)
+![[macro-fig11.8.jpg]]
 
-![](https://i.imgur.com/J7gABBV.jpg)
+![[macro-fig11.8-2.jpg]]
 
 **funding with bonds**
 
-![](https://i.imgur.com/zcNx242.png)
+![[macro-fig11.9.jpg]]
 
 - income effect: E -> D
 	- future tax increases -> future income decreases -> current consumption decreases a bit -> current savings increases a bit -> bonds & stock demand increase a bit 
@@ -2025,5 +2031,4 @@ Adding government purchase $G_t$ to the model
 
 #### government purchase permanently increases
 
-![](https://i.imgur.com/SdMdK7E.png)
-
+![[macro-fig11.10.jpg]]
