@@ -4,7 +4,7 @@
   "newFileFolderPath": "docs/obs_autolink",
   "useMarkdownLinks": false,
   "showUnsupportedFiles": true,
-  "attachmentFolderPath": "docs/obs_attachment",
+  "attachmentFolderPath": "./",
   "foldIndent": true,
   "foldHeading": true,
   "showLineNumber": true,
