@@ -1,7 +1,5 @@
 ---
 aliases: 總體經濟學
-title: Macroeconomics
-layout: meth
 ---
 
 # Macroeconomics
@@ -1353,7 +1351,9 @@ $$\sum_{t=1}^T \dfrac{c_t}{(1+r)^{t-1}}+\dfrac{b_T}{(1+r)^{T-1}}=\sum_{t=1}^T \d
 	- 無限期債券（只給利息，永遠不還本金）符合條件
 	- called **transversality condition**
 
-lifetime wealth = $$\sum_{t=1}^\infty\dfrac{c_t}{(1+r)^{t-1}}=\sum_{t=1}^\infty\dfrac{a_t}{(1+r)^{t-1}}\equiv x$$
+lifetime wealth
+
+$$\sum_{t=1}^\infty\dfrac{c_t}{(1+r)^{t-1}}=\sum_{t=1}^\infty\dfrac{a_t}{(1+r)^{t-1}}\equiv x$$
 
 #### choice
 
@@ -1417,6 +1417,7 @@ Assume $u(c)=\ln{c}$
 $$\dfrac{u'(c_t)}{u'(c_{t+1})}=\dfrac{c_{t+1}}{c_{t}}=\dfrac{1+r}{1+\rho}$$
 
 $$\ln c_{t+1}-\ln c_t=\ln (1+r) - \ln (1+\rho)\approx r-\rho$$
+
 消費成長率 = interest rate - time preference factor
 
 **Scenario**
@@ -1429,7 +1430,7 @@ As 9.3(a), the expected interest rate will increase in t=10~20 and then drop bac
 - At t=10-20, since $r-\rho>0$, 消費成長率為正, so consumption increases in each period
 - At t=20-30, consumption stays as a high constant
 
-The change of interest rate will also cause income effect, up or down shifting the overall curve depending on if the consumer has a positive or negative wealth.
+The change of interest rate will also trigger income effect, up or down shifting the overall curve depending on if the consumer has a positive or negative wealth.
 
 ### 恆常所得假說 permanent income
 
@@ -1651,7 +1652,7 @@ correlation efficient = 0.08, or 0.44 if excluding 亞洲四小龍
 
 ### 外生衝擊均衡效果
 
-**endowment decreases**
+#### endowment temporarily decreases
 
 ![](https://i.imgur.com/Y0beBCf.png)
 
@@ -1660,7 +1661,7 @@ correlation efficient = 0.08, or 0.44 if excluding 亞洲四小龍
 	- sell bonds to raise money for consumption / decrease savings i.e. buying bonds when income reduced
 	- interest rate rises
 
-**government expenditure increases to increase consumption**
+#### government consumption temporarily increases
 
 The increase of government expenditure has to come from tax or bonds, so either an increase in current tax or in future tax.
 
@@ -1899,7 +1900,8 @@ equilibrium interest rate
 
 equilibrium stock price
 
-- $q_tu'(d_t)=\beta u'(d_{t+1})(q_{t+1}+d_{t+1})$
+- $q_tu'(d_t)=\beta u'(d_{t+1})(q_{t+1}+d_{t+1})=\sum_{j=1}^\infty\beta^j u'(d_{t+j})d_{t+j}$
+	- replace $u'(d_{t+1})q_{t+1}$ and expand to get the summation
 - $q_t=\dfrac{\beta u'(d_{t+1})}{u'(d_t)}(q_{t+1}+d_{t+1})=\sum_{j=1}^\infty\dfrac{\beta^j u'(d_{t+j})}{u'(d_t)}d_{t+j}=\sum_{j=1}^\infty d_{t+j}\Pi_{i=t}^{t+j-1}\dfrac{1}{1+r_i}$
 	- stock price = sum of 各期 dividend 折現值
 - if $d_t=d\space$ and $r_t=r\space$ $\forall t$
@@ -1941,6 +1943,7 @@ dividend growth rate = $\mu$
 $$d_{t+j}=(1+\mu)^jd_t$$
 
 utility function (see [[#Problem 10.6]])
+
 $$u(c_t)=\dfrac{c^{1-\gamma}_t-1}{1-\gamma}$$
 
 assume $\beta(1+\mu)^{1-\gamma}<1$ otherwise lifetime utility is infinite
@@ -1986,4 +1989,40 @@ $$r\approx\rho+\gamma\mu$$
 
 - $q_t$ has the same growth rate as $d_t$
 - $\gamma > 1$ -> $q_t$ smaller -> $\dfrac{d_t}{q_t}$ & $r$ higher
-	- vice versa
+- $\gamma=1$ -> $q_t$ no change -> $\dfrac{d_t}{q_t}$ & $r$ higher
+- $\gamma<1$ -> $q_t$ a bit bigger -> $\dfrac{d_t}{q_t}$ & $r$ higher
+
+### effects of government purchase
+
+(from problem sets not main content)
+
+Adding government purchase $G_t$ to the model
+
+#### government purchase temporarily increases
+
+**funding with fixed tax**
+
+![](https://i.imgur.com/yih16b0.png)
+
+![](https://i.imgur.com/J7gABBV.jpg)
+
+**funding with bonds**
+
+![](https://i.imgur.com/zcNx242.png)
+
+- income effect: E -> D
+	- future tax increases -> future income decreases -> current consumption decreases a bit -> current savings increases a bit -> bonds & stock demand increase a bit 
+	- bonds interest rate increases greatly
+	- saving change < government purchase i.e. bonds supply change due to consumption smoothing
+- 資產 substitution effect: D -> F
+	- bonds interest rate increases greatly -> stock demand decreases greatly
+		- overall stock price decreases moderately
+	- stock price decreases moderately -> bonds demand decreases moderately
+- overall
+	- bonds interest rate rises
+	- stock price falls
+
+#### government purchase permanently increases
+
+![](https://i.imgur.com/SdMdK7E.png)
+
