@@ -123,7 +123,7 @@ has_children: True
 - one large kernel
 - everything in the same place
 - e.g. original UNIX
-	- ![](https://i.imgur.com/VTy7O1U.png)
+	- ![[os-1.jpg]]
 - pros
 	- fast
 		- little latency
@@ -135,7 +135,7 @@ has_children: True
 ### layered
 
 - ring-based 
-- ![](https://i.imgur.com/dD6UIyL.png)
+- ![[os-2.jpg]]
 - Intel & AMD now have hypervisor as Ring -1 
 - computer networks
 - cons
@@ -154,7 +154,7 @@ has_children: True
 - cons
 	- poor performance
 		- non-core things not in kernel -> overhead when communicating with them
-	- ![](https://i.imgur.com/GHF3Hw6.png)
+	- ![[os-3.png]]
 
 ### modules
 
@@ -168,7 +168,7 @@ has_children: True
 		- for good perfornamce
 	- modular
 		- dynamically linked in new functions
-	- ![](https://i.imgur.com/VU6jjqH.png)
+	- ![[os-4.jpg]]
 - Windows
 	- monolithtic
 	- microkernels
@@ -176,6 +176,7 @@ has_children: True
 	- modular
 
 ## process
+
 - program está en file system
 	- a static entity stored on disk
 - process está en CPU & Memory
@@ -186,6 +187,7 @@ has_children: True
 	- parallel only in an operation, each operation executed sequentially
 
 ### parts of a process
+
 - program code i.e. text section
 	- read only
 - program counter, registers, etc.
@@ -202,8 +204,8 @@ has_children: True
 	- function parameters, return addresses, local variables
 	- recursively call function -> stack grows until reaching heap -> stack overflow
 - stack & heap share a space
-- ![](https://i.imgur.com/y2A7pMu.png)
-- ![](https://i.imgur.com/OF0zYlH.png)
+- ![[os-5.jpg]]
+- ![[os-6.jpg]]
 - each process has a virtual memory
 	- won't be accessed by another process
 	- OS converts virtual memory address to physical memory address
@@ -212,6 +214,7 @@ has_children: True
 - Mac OS reserves 4GB of lower memory on 64-bit processor for 32-bit codes
 
 ### requirements of running processes
+
 - multiplexing/time-sharing
 	- scheduling
 	- distribute resources to processes
@@ -220,7 +223,9 @@ has_children: True
 	- share data & code between processes
 
 ### FSM of process
+
 ![](https://i.imgur.com/U26qCqI.png)
+
 - resource not enough -> don't admit
 - running
 	- only this state uses CPU
@@ -229,6 +234,7 @@ has_children: True
 	- system interrupt
 
 ### Process Control Block (PCB)
+
 - record the info & status of process
 - infos
 	- process state 
@@ -1771,6 +1777,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ![](https://i.imgur.com/30X90Bk.png)
 
 ### protection
+
 - memory-mapped files
 	- ![](https://i.imgur.com/YmQ9LkB.png)
 	- ![](https://i.imgur.com/rs7XPKF.png)
@@ -1857,6 +1864,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- allocate & deallocate extents -> external fragmentation
 
 #### linked allocation
+
 - linked list of storage blocks
 - pros
 	- no external fragmentation
@@ -1880,6 +1888,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- just check the table
 
 #### indexed allocation
+
 - linked allocation but all pointers in a index block
 - pros
 	- faster directly access than linked allocation without FAT
@@ -1889,14 +1898,17 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - ![](https://i.imgur.com/fFX8xwP.png)
 
 #### performance
+
 - storage efficiency
 	- external fragmentation
 - data-block access time
 
 ### free-space management
+
 - free-space list
 
 #### bit vector (bitmap)
+
 - ![](https://i.imgur.com/OIOyOp9.png)
 - pros
 	- simple

@@ -1187,7 +1187,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- 否則債券市場會直接關門
 	- $b_0=b_2=0$ → $c_1+\dfrac{c_2}{1+r}=a_1+\dfrac{a_2}{1+r}\equiv x$ = lifetime wealth
 	- lifetime wealth 決定消費者各期消費能力
-	- ![](https://i.imgur.com/w2z9loL.jpg)
+	- ![[macro-fig8.2.jpg]]
 
 #### utlity
 
@@ -1208,7 +1208,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- utility 折現率
 	- 未來比今天爛，爛多少
 	- when $c_1=c_2=c$，$MRS_E=\dfrac{U_1(c,c)}{U_2(c,c)}=\dfrac{u'(c)}{\beta u'(c)}=\dfrac{1}{\beta}=1+\rho$
-		- ![](https://i.imgur.com/rOlQBws.jpg)
+		- ![[macro-fig8.3.jpg]]
 		- 45 度線 indifference curve 切線斜率
 
 #### choice
@@ -1218,14 +1218,14 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - 使 saving 的 marginal profit = 0
 	- $u'(c_1)=\beta u'(c_2)(1+r)$
 	- $MRS_{12}=\dfrac{u'(c_1)}{\beta u'(c_2)}=1+r$
-	- ![](https://i.imgur.com/C3bMpCZ.jpg)
+	- ![[macro-fig8.4.jpg]]
 	- MRS < 1+r → 儲蓄比消費爽 → 增加儲蓄
 	- MRS > 1+r → 消費比儲蓄爽 → 增加消費
 	- MRS = 1+r → 消費跟儲蓄一樣爽 → 均衡
 
 ### 所得變動 & 消費平滑
 
- ![](https://i.imgur.com/u9MDXr1.jpg)
+![[macro-fig8.5.jpg]]
 
 - 當期可支配所得增加
 	- 本期可支配所得上升，未來不變 → lifetime wealth 上升 → 兩期消費同時增加
@@ -1266,7 +1266,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 - intertemporal [[substitution effect]]
 - interest rate 上升
 	- 利率改變後 lifetime wealth 降低，但 utility 不一定
-	- ![](https://i.imgur.com/5fXY93J.jpg)
+	- ![[macro-fig8.8.jpg]]
 	- E 點為原利率的消費點
 	- 貸放者 if endowment e 在 E 右邊 i.e. b1 = a1-c1 > 0
 		- 利率上升使下期利息所得上升
@@ -1281,7 +1281,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 		- 財富效果 → D to F，c1 & c2 下降
 		- c1 必然上升，c2 不一定
 	- 代表性消費者 if b1 = 0
-		- ![](https://i.imgur.com/ZdVVw1X.jpg)
+		- ![[macro-fig8.9.jpg]]
 	- endowment 就在 E，so 只有 [[substitution effect]]
 	- c1 下降，c2 上升
 
@@ -1318,15 +1318,15 @@ $$\ln(1+x)\approx x$$
 		- $\ln c_2-\ln c_1 =\ln\dfrac{c_2}{c_1}=\ln(1+g)\approx g$
 		- r 上升 x % → g 上升 x%
 - 消費 & 債券 demand curve
-	- ![](https://i.imgur.com/bznaATA.jpg)
-	- c1 increase when
-		- r decrease
-		- a1 increase 
-		- a2 increase
-	- b1 increase when
-		- r increase
-		- a1 increase
-		- a2 decrease
+	- ![[macro-fig8.10.jpg]]
+		- c1 increase when
+			- r decrease
+			- a1 increase 
+			- a2 increase
+		- b1 increase when
+			- r increase
+			- a1 increase
+			- a2 decrease
 
 ## Ch9 世代家庭的消費與儲蓄
 
@@ -1416,8 +1416,7 @@ If $r>\rho$, $u'(c_{t})>u'(c_{t+1})$, so $c_{t} < c_{t+1}$ at max utility point
 
 If $r<\rho$, $u'(c_{t})<u'(c_{t+1})$, so $c_{t} > c_{t+1}$ at max utility point
 
-
-![](https://i.imgur.com/fbXZOJh.jpg)
+![[macro-fig9.2.jpg]]
 
 Assume $u(c)=\ln{c}$
 
@@ -1431,7 +1430,7 @@ $$\ln c_{t+1}-\ln c_t=\ln (1+r) - \ln (1+\rho)\approx r-\rho$$
 
 As 9.3(a), the expected interest rate will increase in t=10~20 and then drop back down
 
-![](https://i.imgur.com/dp72lov.png)
+![[macro-fig9.3.jpg]]
 
 - At t=1~10, the consumer decreases its consumption to a lower constant
 - At t=10-20, since $r-\rho>0$, 消費成長率為正, so consumption increases in each period
@@ -1457,7 +1456,7 @@ $\phi$ = constant, normally close to 1. When $\phi=1$, a consumer spends all per
 
 In 兩期模型，permanant income $\bar{y}$ = where $c_1=c_2$ (B 點)
 
-![](https://i.imgur.com/xfIlcbV.png)
+![[macro-fig9.4.jpg]]
 
 A 點為實際所得
 
@@ -1532,7 +1531,7 @@ the growth rate of lifetime wealth,  consumption & permanent income = $\dfrac{1+
 
 Assume $r=\rho$
 
-![](https://i.imgur.com/xQk2kXv.png)
+![[macro-fig9.5.jpg]]
 
 $$\Delta x=\Delta a$$
 
@@ -1542,7 +1541,7 @@ MPC = $\dfrac{\Delta c_1}{\Delta a_1}=\dfrac{r}{1+r}\approx 0$
 
 MPS = $\dfrac{\Delta s_1}{\Delta a_1}=$ 1 - MPC $=\dfrac{1}{1+r}\approx 1$
 
-![](https://i.imgur.com/5oCRCnw.png)
+![[macro-fig9.6.jpg]]
 
 $$\Delta x=\sum_{i=0}^\infty\dfrac{\Delta a}{(1+r)^i}=\dfrac{1+r}{r}\Delta a$$
 
@@ -1556,15 +1555,16 @@ MPS = $\dfrac{\Delta s_1}{\Delta a_1}=$ 1 - MPC $=0$
 
 ### consumption & bonds
 
-![](https://i.imgur.com/s9fEHLB.jpg)
+![[macro-fig9.7.jpg]]
 
 ### Problems
 
-![](https://i.imgur.com/sqdiLsn.jpg)
+![[macro-p9.3.jpg]]
 
-![](https://i.imgur.com/91rDfBc.png)
+![[macro-p9.3-a.jpg]]
 
-![](https://i.imgur.com/FTAEyYO.jpg)
+![[macro-p9.3-b.jpg]]
+
 
 ## Ch10 Endowment Economy Equilibrium Analysis
 

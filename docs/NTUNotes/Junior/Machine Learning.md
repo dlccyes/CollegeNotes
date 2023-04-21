@@ -4,11 +4,14 @@ layout: meth
 # Machine Learning
 
 ## resources
+
 - [course website](https://speech.ee.ntu.edu.tw/~hylee/ml/2022-spring.php)
 - [github](https://github.com/virginiakm1988/ML2022-Spring)
 
 ## training techniques
+
 ### gradient accumulation
+
 to avoid CUDA out of memory problem
 
 e.g. batch size = 8 -> batch size = 2 but accumulate 4 iterations before optimizing

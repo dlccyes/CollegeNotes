@@ -6,10 +6,13 @@ layout: meth
 see <https://dlcc.notion.site/fd1e2a787b11464896f55d9684337246>
 
 ## Ch11 Latches and Flip-flops
+
 flip-flop: only response to a ==clock input== (but not a data input)
+
 <img src="https://i.imgur.com/o0ZQV5r.jpg" height = "300">
-<!-- ![](https://i.imgur.com/o0ZQV5r.jpg) -->
+
 ![](https://i.imgur.com/Iss4GTY.png)
+
 bc propagation
 odd number of inverters → oscillate
 
@@ -20,7 +23,9 @@ odd number of inverters → oscillate
 ![](https://i.imgur.com/NmI2uZP.png)
 
 ![](https://i.imgur.com/hERgCr8.jpg)
+
 if !(S=R=1) then P == Q'
+
 ![](https://i.imgur.com/OXcjVtU.png)
 
 if S=R=1  
@@ -28,7 +33,9 @@ when S,R=1→0
 P,Q oscillate 0→1→0→1→....
 
 ###### time diagram
+
 ![](https://i.imgur.com/DVmVSSP.png)
+
 if S's or R's duration of S < ε  
 then Q won't change
 
@@ -41,40 +48,55 @@ so
 
 ###### ==Q<sup>+</sup>= S + R'Q== 
 <sub>(Q<sup>+</sup>=R'S + R'Q + RS)</sub>
+
 ![](https://i.imgur.com/fY2J7a4.png)
+
 ![](https://i.imgur.com/OULjQsI.png)
+
 Q<sup>+</sup>=1 when
+
 ```
 1. S=1
 2. Q=1 and R=0
 ```
 
 ###### debounce switch
+
 ![](https://i.imgur.com/6mpNfFn.png)
+
 S bounces when switch to b  
 R bounces when switch to a  
+
 ![](https://i.imgur.com/jQfHVyc.png)
+
 Q<sup>+</sup>=S+R'Q  
 Bounce at a: S=Q=0 so always 0  
 Bounce at b: S duration > ε let Q→1, then stays at 1 bc R=0
 
 ###### NAND S-R Latch
+
 ![](https://i.imgur.com/zQW881v.png)
+
 Q<sup>+</sup> = ((QR)'S)' = QR + S'
 → = NOR S'-R' Latch  
 note that ==S, R switch place==
 
 #### 11.3 Gated Latches
+
 ###### NAND-gate gated S-R Latch
+
 ![](https://i.imgur.com/6lHpcLE.jpg)
+
 Q<sup>+</sup> = A' + BQ = SG + (RG)'Q = SG + Q(R' + G')  
 P = (BQ)' = Q' + RG  
 when G=0, Q<sup>+</sup>=Q, P=Q' → stable  
 when G=1, Q<sup>+</sup>=S+QR', P=RG → original NOR S-R Latch  
+
 ![](https://i.imgur.com/SwJaL9H.png)
 
 when S=R=1 and G=1→0  
 propogation time race
+
 ![](https://i.imgur.com/Ry1l2Xg.png)
 
 Q<sup>+</sup>=SG+Q(R'+G'):  
