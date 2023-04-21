@@ -66,11 +66,11 @@ So a bigger fiscal deficit leads to smaller current account
 
 ### Problems
 
-![](https://i.imgur.com/puXVVJr.jpg)
+![[inter-fin-p2-1.jpg]]
 
-![](https://i.imgur.com/YiGNgxv.png)
+![[inter-fin-p2-2.jpg]]
 
-![](https://i.imgur.com/TEaDMMM.png)
+![[inter-fin-p2-3.jpg]]
 
 ## 經常帳跨期模型
 
@@ -227,7 +227,7 @@ $$Y_t=A_tF(K_t)$$
 	- $F''<0$
 - $K$ = capital
 
-![](https://i.imgur.com/z5svTd7.png)
+![[inter-fin-fig2.6.jpg]]
 
 law of motion for capital
 
@@ -293,11 +293,11 @@ since $F''(K_2)<0$, $K_2$ increases when
 - $\delta$ decreases
 - $r$ decreases
 
-![](https://i.imgur.com/NHykM4c.png)
+![[inter-fin-fig2.8.jpg]]
 
 Assume $r=\rho$
 
-![](https://i.imgur.com/GRRWvas.png)
+![[inter-fin-99.jpg]]
 
 Assume $K_1=K_2=K$
 
@@ -416,7 +416,7 @@ Knowing $C^{H/L}_2=\text{something}-(1+r)C_1$, we can get the first order condit
 
 $$u'(C_1)=\beta(1+r)E_1[u'(C_2)]$$
 
-![](https://i.imgur.com/LP7VU2g.png)
+![[inter-fin-100.jpg]]
 
 $$Var_1(C_2)=E_1(C_2-E_1(C_2))^2$$
 
