@@ -29,6 +29,7 @@ aliases: 總體經濟學
 		- CPI vs. unemployment rate
 		- 20th 兩者呈負相關
 		- 21st 關係不明顯
+		- ![[philips-curve.png]]
 		- ![](https://i.imgur.com/GZ7kmuO.png)
 - 政府的政策干預
 	- 政府影響總體經濟 20th 才開始
