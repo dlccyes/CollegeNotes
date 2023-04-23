@@ -73,6 +73,12 @@ You can also set in the settings, but what it does is also adding a `CNAME` for 
 
 See <https://github.com/orgs/community/discussions/21549>
 
+### Verify a domain
+
+<https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages>
+
+Add a TXT record Github gives you to your DNS.
+
 ## Github Action
 
 [[Github Action]]

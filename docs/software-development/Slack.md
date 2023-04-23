@@ -5,6 +5,18 @@ parent: OtherNotes
 
 # Slack
 
+## Great integrations
+
+Called "Apps" in Slack. Need to be added to your target channels to work.
+
+### Jira
+
+Notify you when having new issues.
+
+### Github
+
+Notify you when having commits, Github action workflows run, new issues, etc.
+
 ## troubleshooting
 
 ### no notification sound
