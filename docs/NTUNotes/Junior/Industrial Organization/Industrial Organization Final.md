@@ -14,16 +14,16 @@ parent: Industrial Organization
 
 ## 1
 
-![](https://i.imgur.com/ioBC32M.png)
+![[industrial-organization-final-1.png]]
 
 ### A.
 
-![](https://i.imgur.com/TrTmHCJ.png)
+![[industrial-organization-final-2.png]]
 
 using Cournot model, take each other's output as give
 
-![](https://i.imgur.com/CNMqow9.png)
-![](https://i.imgur.com/ILvwS1h.png)
+![[industrial-organization-final-3.png]]
+![[industrial-organization-final-4.png]]
 
 Profit of firm 2 after fracking > before fracking -> firm 2 will use fracking.
 
@@ -31,7 +31,7 @@ As a result, new P = 92, new Q = 390.
 
 ### B.
 
-![](https://i.imgur.com/VoNz6h1.png)
+![[industrial-organization-final-5.png]]
 
 - before fracking
 	- profit of firm 1 = $(94-77)170=2890$
@@ -43,7 +43,7 @@ As a result, new P = 92, new Q = 390.
 
 ### A. & B.
 
-![](https://i.imgur.com/vi2kFcl.png)
+![[industrial-organization-final-6.png]]
 
 BR function for firm 1:  
 
@@ -85,7 +85,7 @@ The Nash equilibrium is therefor setting the same price as the opposition.
 
 ### C.
 
-![](https://i.imgur.com/JhM1QlU.png)
+![[industrial-organization-final-7.png]]
 
 False.
 
@@ -98,11 +98,11 @@ For the customers without the clause, rivals have incentives to provide a better
 
 ### A.
 
-![](https://i.imgur.com/V1L9xPP.png)
-![](https://i.imgur.com/BYco9fH.png)
-![](https://i.imgur.com/7Wgraau.png)
+![[industrial-organization-final-8.png]]
+![[industrial-organization-final-9.png]]
+![[industrial-organization-final-10.png]]
 
-![](https://i.imgur.com/SEscXGF.png)
+![[industrial-organization-final-11.png]]
 
 - Sony 299 MS 299
 	- Q
@@ -154,8 +154,8 @@ The Nash equilibrium is both setting $299, meaning both will want to cut price b
 
 ### B.
 
-![](https://i.imgur.com/s73ZNKI.png)
-![](https://i.imgur.com/XBXLEyx.png)
+![[industrial-organization-final-12.png]]
+![[industrial-organization-final-13.png]]
 
 - Sony's demand given $P_M=399$
 	- |1/slope| = $\dfrac{11.75M-8.75M}{100}=0.03M$
@@ -181,7 +181,7 @@ The Nash equilibrium is both setting $299, meaning both will want to cut price b
 
 ### C.
 
-![](https://i.imgur.com/j6XsXMt.png)
+![[industrial-organization-final-14.png]]
 
 The elasticity rule is $\dfrac{p-MC}{p}=\dfrac{1}{|e|}$, meaning the price is close to the marginal cost, the more elastic the demand becomes. The major tradeoff behind it is the tradeoff of demand: setting a lower price for more units sold but less profit margin, or setting a hower price for bigger profit margin but less units sold.
 
@@ -189,15 +189,15 @@ The answers from Question B is not exactly consistent with the elasticity rule. 
 
 ### D.
 
-![](https://i.imgur.com/Kd6O3Ft.png)
+![[industrial-organization-final-15.png]]
 
 - As we can see from (A.), the Nash equilibrium is both cutting price.
 - As we can see from (B.), when set a high price, the deman is always pretty elastic (> 1), meaning cutting price will result in big demand increase.
 
 ## 4.
 
-![](https://i.imgur.com/8knwMRm.png)
-![](https://i.imgur.com/SzHoNus.png)
+![[industrial-organization-final-16.png]]
+![[industrial-organization-final-17.png]]
 
 The content spend effectively acts as the entry cost of the streaming market. The content Netflix spends money on, are **exclusive** or **original** content, together with a subscription-based model, it means that those content are available if and only if you become a subscriber of Netflix. Those content aren't available everywhere else, and you can't rent particularly the content you want either.
 
@@ -205,7 +205,7 @@ As a new comer, to make people subscribe to your service instead of Netflix, you
 
 ## 5.
 
-![](https://i.imgur.com/TyOmd7m.png)
+![[industrial-organization-final-18.png]]
 
 The interaction between the univesities are repeated games. Each of them knows very well that once it cuts the tuition, others will follow, resulting to price wars.
 

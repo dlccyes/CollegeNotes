@@ -9,7 +9,7 @@ parent: Industrial Organization
 [submission pdf](Industrial_Organization_Assignment__1.pdf)  
 
 ### Problem 1 - Monsanto's Roundup
-![](https://i.imgur.com/6Avfj50.png)
+![[industrial-organization-hw-1.png]]
 
 #### (1)
 - Conservation tillage gained popularity over time, and it needs a nonselective herbicide like Roundup. As conservation tillage is sensitive to the price of herbicides, cutting price would decently increase sales for Roundup.
@@ -30,8 +30,8 @@ increasing popularity of tillage, which is sensitive to the price of Roundup
 increase the market size, perparing for the competition to come
 
 #### (4)
-![](https://i.imgur.com/1Qb0RT3.png)
-![](https://i.imgur.com/9e8quI6.png)
+![[industrial-organization-hw-2.png]]
+![[industrial-organization-hw-3.png]]
 
 - US e
 	- 1995 = -9.21
@@ -53,8 +53,8 @@ High market share, in turn, allowed Monsanto to exploit economies of scale
 and work its way down the learning curve.
 
 ### Problem 2 - car
-![](https://i.imgur.com/ceAjMqX.png)
-![](https://i.imgur.com/InSTSZo.png)
+![[industrial-organization-hw-4.png]]
+![[industrial-organization-hw-5.png]]
 
 #### (1) 
 the change of price of a car obviously affects the quantity of the car itself the most
@@ -80,7 +80,7 @@ cross elasticity > 0
 - Taurus P down 3% -> Accord Q down 0.3%  
 
 ### Water
-![](https://i.imgur.com/VzDzoHA.png)
+![[industrial-organization-hw-6.png]]
 
 #### (1)
 bigger the total annual consumption, higher the elasticity
@@ -99,18 +99,18 @@ It should only be meaningful for people facing volume-based charge. For people f
 
 ### Durable Goods
 
-![](https://i.imgur.com/j4iTYAR.png)
-![](https://i.imgur.com/KgMmOkQ.png)
-![](https://i.imgur.com/BMDjwSs.png)
-![](https://i.imgur.com/OdRyP18.png)
+![[industrial-organization-hw-7.png]]
+![[industrial-organization-hw-8.png]]
+![[industrial-organization-hw-9.png]]
+![[industrial-organization-hw-10.png]]
 
-![](https://i.imgur.com/nlzjdnL.png)
+![[industrial-organization-hw-11.png]]
 
 #### (1)
 
-![](https://i.imgur.com/O0HzDTB.png)
-![](https://i.imgur.com/UIoIe8h.png)
-![](https://i.imgur.com/h5H2KqQ.png)
+![[industrial-organization-hw-12.png]]
+![[industrial-organization-hw-13.png]]
+![[industrial-organization-hw-14.png]]
 
 - p1 = 450
 - q1 = 400
@@ -123,29 +123,29 @@ It should only be meaningful for people facing volume-based charge. For people f
 
 #### (3)
 
-![](https://i.imgur.com/Y20mGMk.png)
-![](https://i.imgur.com/QwPLv37.png)
+![[industrial-organization-hw-15.png]]
+![[industrial-organization-hw-16.png]]
 
 賣一次
 500, 250
 
 #### (4)
 
-![](https://i.imgur.com/Ovqy3Nw.png)
-![](https://i.imgur.com/PFIOdcM.png)
+![[industrial-organization-hw-17.png]]
+![[industrial-organization-hw-18.png]]
 
 sell once
 
 #### (5)
 
-![](https://i.imgur.com/fqaw9Wv.png)
+![[industrial-organization-hw-19.png]]
 
 ## HW2
 [submission pdf](Industrial_Organization_Assignment__2.pdf)  
 [submission tex](Industrial_Organization_Assignment__2.tex)
 
 ### Problem 1 - Bundling of Office Suites
-![](https://i.imgur.com/EgLxs4o.png)
+![[industrial-organization-hw-20.png]]
 
 #### (1)
 - $300 for Word
@@ -160,8 +160,8 @@ sell once
 	- 500x5 = 2500
 	- 600x3 = 1800
 
-![](https://i.imgur.com/kRQEdof.png)
-![](https://i.imgur.com/pADh6Wm.png)
+![[industrial-organization-hw-21.png]]
+![[industrial-organization-hw-22.png]]
 
 #### (3)
 $profit=(P-MC)(1-\dfrac{P}{400})10M=P(1-\dfrac{P}{400})10M$
@@ -171,14 +171,14 @@ profit maximized when P = 200
 #### (4)
 if sell seperately, total profit = 200x5Mx2 = 2B
 
-![](https://i.imgur.com/RMgHp5Z.png)
-![](https://i.imgur.com/EjEmRo2.png)
+![[industrial-organization-hw-23.png]]
+![[industrial-organization-hw-24.png]]
 
 if sell in a bundle, profit = 2.177B > 2B when P = 326.599
 <https://math.stackexchange.com/a/357842>
 
-![](https://i.imgur.com/ZRrdfhR.png)
-![](https://i.imgur.com/t9We04G.png)
+![[industrial-organization-hw-25.png]]
+![[industrial-organization-hw-26.png]]
 
 #### (5)
 sell at price = $200-\epsilon$ for both
@@ -200,8 +200,8 @@ sell at a price so that total profit = 500M
 	- P = 50.400
 
 ### Problem 2 - location choice 
-![](https://i.imgur.com/sWhHplz.png)
-![](https://i.imgur.com/wYdWNBq.png)
+![[industrial-organization-hw-27.png]]
+![[industrial-organization-hw-28.png]]
 
 #### (1)
 2 shops, at 0.25 & 0.75
@@ -218,7 +218,7 @@ open 4 shops, at $0.25-\epsilon$, $0.25+\epsilon$, $0.75-\epsilon$, $0.75+\epsil
 
 #### (3)
 
-![](https://i.imgur.com/hyrQgkk.png)
+![[industrial-organization-hw-29.png]]
 
 open 3 shops, at 0.2, 0,5, 0.8
 
@@ -260,7 +260,7 @@ open 3 shops, at 0.2, 0,5, 0.8
 
 **Analyze the three scenarios using game theory and then recommend an action to Coors management.**
 
-![](https://i.imgur.com/60iqRy7.png)
+![[industrial-organization-hw-30.png]]
 
 2nd strategy, declares if A-B or Miller comes, they'll conduct a marketing campaign
 
@@ -306,7 +306,7 @@ open 3 shops, at 0.2, 0,5, 0.8
 	- 1992 US patent expires
 	- 1993 Australia patent expires
 
-![](https://i.imgur.com/2rUvi58.png)
+![[industrial-organization-hw-31.png]]
 
 - Monsanto provides “meet-or-release” and “most-favored-nation” clauses, so for the soft drink manufacturers, it's indifferent from embracing real competition instead of the contract cost-wise
 - it has been used for years, so the quality is guaranteed, meaning the risk is smaller
@@ -317,9 +317,9 @@ open 3 shops, at 0.2, 0,5, 0.8
 [submission tex](Industrial_Organization_Assignment__4.tex)
 
 ### Entry Deterrence in Capacity Setting Games
-![](https://i.imgur.com/sXezvbA.png)
+![[industrial-organization-hw-32.png]]
 
-![](https://i.imgur.com/QYz4Ego.png)
+![[industrial-organization-hw-33.png]]
 
 #### (1)
 $R=12Q-Q^2$
@@ -359,9 +359,9 @@ $q_1=11-2\sqrt{E}$
 
 $q_1$ vs. E
 
-![](https://i.imgur.com/Sj09e3t.png)
+![[industrial-organization-hw-34.png]]
 
-![](https://i.imgur.com/1g8B9a5.png)
+![[industrial-organization-hw-35.png]]
 
 the curve fits when $5.5\leq q_1\leq 9.389$
 $q_1 = 5.5$, otherwise
@@ -391,7 +391,7 @@ not an inversed-U shape tho
 		- Honest tea targets at wider audience
 		- Honest tea is more affordable
 
-![](https://i.imgur.com/VQmJwX9.png)
+![[industrial-organization-hw-36.png]]
 
 #### (1)
 By "the optimal amount of sugar in bottled tea", it means the profit maximization amount of sugar. The optimal amount of sugar by profit is less than that by taste is because, while reducing a little amount fo sugar (from the point of optimal taste), the reduction of taste is minimal, but the cost reduction is significant enough to shift the profit maximization amount of sugar toward the lower end. 
@@ -449,7 +449,7 @@ No. Established competitors can quickly roll out new products directly competing
 			- rocky -> meadow
 			- meadow -> fertile
 
-![](https://i.imgur.com/tBqaXK0.png)
+![[industrial-organization-hw-37.png]]
 
 - strategies
 	- always upgrade
@@ -466,7 +466,7 @@ No. Established competitors can quickly roll out new products directly competing
 	- Our secondary strategy is to buy or sell lands whenever we found the operation to be profitable, according the expected value of each type of land at each round we'd calculated. However, during the game, we found that our calculation was way too optimistic, as we didn't consider the fact that only the lands we decide to supply has value i.e. the lands we decide not to supply to avoid oversupply has zero value, so we almost never buy lands from others even when the price is lower than our previously calculated expected value. Instead, we actively sold our lands to others even when the price was lower than our previously calculated expected value.
 
 ## HW7 ByeByeCold
-![](https://i.imgur.com/SX1S1o0.png)
+![[industrial-organization-hw-38.png]]
 - demand elasticity is probably very low
 	- $1.39 is still really cheap compared to cost of going to a doctor (which will still not eliminate cold symptoms)
 - assumptions
@@ -525,36 +525,36 @@ No. Established competitors can quickly roll out new products directly competing
 
 ## HW8
 ### Cement
-![](https://i.imgur.com/AB9jRVw.png)
+![[industrial-organization-hw-39.png]]
 
-![](https://i.imgur.com/BQEsxI8.png)
+![[industrial-organization-hw-40.png]]
 
-![](https://i.imgur.com/09r5KNI.png)
+![[industrial-organization-hw-41.png]]
 
-![](https://i.imgur.com/6ECasE0.png)
+![[industrial-organization-hw-42.png]]
 
 ### Shipbuilding
-![](https://i.imgur.com/4tu57Qh.png)
+![[industrial-organization-hw-43.png]]
 
-![](https://i.imgur.com/j4RlHMR.png)
+![[industrial-organization-hw-44.png]]
 a=25.78
 EU = 17.1616
 CN = 15.8848
 JP = 12.3736
 
-![](https://i.imgur.com/5fDNbkt.png)
+![[industrial-organization-hw-45.png]]
 
-![](https://i.imgur.com/Lee60Fp.png)
-![](https://i.imgur.com/CCgHlPt.png)
+![[industrial-organization-hw-46.png]]
+![[industrial-organization-hw-47.png]]
 
-![](https://i.imgur.com/YCkotjy.png)
+![[industrial-organization-hw-48.png]]
 
-![](https://i.imgur.com/o2PsEEe.png)
-![](https://i.imgur.com/puotq80.png)
+![[industrial-organization-hw-49.png]]
+![[industrial-organization-hw-50.png]]
 
 ## HW9
 ### Multimarket Contract
-![](https://i.imgur.com/35ttIhE.png)
+![[industrial-organization-hw-51.png]]
 
 - collusive agreement
 	- Grim Trigger Strategy
@@ -577,49 +577,49 @@ JP = 12.3736
 	- $(p^M-c^L)<(1-\delta)((p^M-c^H)+(p^M-c^L))+\delta(c^H-c^L)$
 	- $\delta<\dfrac{(p^M-c^L)}{2(p^M-c^L)}=\dfrac{1}{2}$
 
-![](https://i.imgur.com/us56L3h.png)
+![[industrial-organization-hw-52.png]]
 
-![](https://i.imgur.com/gSeYjYH.png)
-![](https://i.imgur.com/HQxHWRY.png)
+![[industrial-organization-hw-53.png]]
+![[industrial-organization-hw-54.png]]
 
 - the more the markets, the more loss deviating will cause
 
 ### The Big Four
-![](https://i.imgur.com/vS441lR.png)
+![[industrial-organization-hw-55.png]]
 
-![](https://i.imgur.com/FIrHiH0.png)
+![[industrial-organization-hw-56.png]]
 
 - (1)
-	- ![](https://i.imgur.com/9zx0W90.png)
+	- ![[industrial-organization-hw-57.png]]
 	- discounting
 	- collude
 	- e.g.
 		- 零食
 			- Lays & Pringles
 - (2)
-	- ![](https://i.imgur.com/yUQbGTU.png)
+	- ![[industrial-organization-hw-58.png]]
 	- e.g.
 		- Android phone
 - (3)
-	- ![](https://i.imgur.com/ZebF5iM.png)
-	- ![](https://i.imgur.com/Y0yv0pd.png)
+	- ![[industrial-organization-hw-59.png]]
+	- ![[industrial-organization-hw-60.png]]
 	- provide discount for large quantity
 	- e.g.
 		- semiconductor
 			- TSMC vs. Samsung
 - (4)
-	- ![](https://i.imgur.com/Nqz5ezO.png)
+	- ![[industrial-organization-hw-61.png]]
 	- just do it
 	- e.g.
 		- online sales
 - (5)
-	- ![](https://i.imgur.com/FM1inR9.png)
+	- ![[industrial-organization-hw-62.png]]
 	- e.g.
 		- Ms Office Suite
 		- Adobe Suite
 - (6)
-	- ![](https://i.imgur.com/sXSszQl.png)
-	- ![](https://i.imgur.com/cWif75S.png)
+	- ![[industrial-organization-hw-63.png]]
+	- ![[industrial-organization-hw-64.png]]
 	- e.g.
 		- pre-smartphone phones
 
@@ -704,7 +704,7 @@ JP = 12.3736
 	- less volume, more profit margin
 	- higher cost for bottlers
 
-![](https://i.imgur.com/tWqi9tg.png)
+![[industrial-organization-hw-65.png]]
 
 ### (1)
 - unlike bottled water, brand loyalty exists in soft drinks
