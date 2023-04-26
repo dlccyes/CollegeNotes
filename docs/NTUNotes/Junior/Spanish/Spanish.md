@@ -25,13 +25,13 @@ Long press on a letter and select or press the following key combinations:
 - o-X-ir → u-X-iendo
 - e.g.
 	- bañar → estar bañando
-	- ![](https://i.imgur.com/YDAdvKK.png)
+	- ![[spanish-1.jpg]]
 
 ## Present Perfect
 
 pretérito perfecto
 
-![](https://i.imgur.com/3ATkiOm.png)
+![[spanish-2.jpg]]
 
 - he/has/ha/hemos/habéis/han
 - ar → ado
@@ -55,11 +55,11 @@ pretérito perfecto
 
 ## Past Tense / Pretérito Indefinido
 
-![](https://i.imgur.com/Di1ytFf.png)
+![[spanish-3.png]]
 
 ### Changes in third person
 
-![](https://i.imgur.com/04sMJRM.png)
+![[spanish-4.png]]
 
 past tense 第三人稱中間字母會變
 
@@ -83,53 +83,53 @@ past tense 第三人稱中間字母會變
 
 ### Irregular
 
-![](https://i.imgur.com/sKvchky.png)
+![[spanish-5.png]]
 
-![](https://i.imgur.com/JYxqg0U.png)
+![[spanish-6.png]]
 
 ## Past Imperfect / Petérito Imperfecto
 
-![](https://i.imgur.com/nRwbH5X.png)
+![[spanish-7.png]]
 
 Only 3 irregular verbs - ser, ir, ver
 
-![](https://i.imgur.com/rAmODem.png)
+![[spanish-8.png]]
 
- ![](https://i.imgur.com/vG27Lzn.png)
+ ![[spanish-9.png]]
  
 ### Use Case
 
 - When the action wasn't over at the present time of the story
-	- ![](https://i.imgur.com/uMjk1wn.png)
+	- ![[spanish-10.png]]
 	- when describing the vibe or environment
-		- ![](https://i.imgur.com/2aczYmR.png)
+		- ![[spanish-11.png]]
 	- Ayer cuando me duchaba, mi madre me llamó / teléfone
 		- Yesterday when I was showering, my mom called me. 
 	- when he was 50 yo = a los 50 años = cuando tenía 50 años
 - past habit
-	- ![](https://i.imgur.com/ZZmUtvx.png)
+	- ![[spanish-12.png]]
 - requesting something
-	- ![](https://i.imgur.com/p1BZel6.png)
+	- ![[spanish-13.png]]
 - explaining a dream
-	- ![](https://i.imgur.com/9N1TauX.png)
+	- ![[spanish-14.png]]
 - asking something
-	- ![](https://i.imgur.com/8ETqol3.png)
+	- ![[spanish-15.jpg]]
 - if I were you
 	- See [If I were you](#If%20I%20were%20you)
 
 ## Futuro imperfecto
 
-![](https://i.imgur.com/DfrebNO.png)
+![[spanish-16.png]]
 
 irregulars
 
-![](https://i.imgur.com/4cH4aa3.png)
+![[spanish-17.jpg]]
 
 ### Usage
 
 Can be used when guessing what happened (without [[#Probably | probablemente / posiblemente / etc.]] in front)
 
-![](https://i.imgur.com/NxUIVlI.jpg)
+![[spanish-18.jpg]]
 
 ## Subjunctive present
 
@@ -139,57 +139,57 @@ ser + adj. + que + subjunctivo
 
 a/e/i -> e/a/a, otherwise the same transformation
 
-![](https://i.imgur.com/6LRAbNl.png)
+![[spanish-19.png]]
 
-![](https://i.imgur.com/s75izQD.png)
+![[spanish-20.png]]
 
-![](https://i.imgur.com/7WxmOZt.png)
+![[spanish-21.png]]
 
 ### Irregular
 
 Often times the same prefix as the indicative present verb
 
-![](https://i.imgur.com/nBKg6AU.png)
+![[spanish-22.png]]
 
-![](https://i.imgur.com/teG2Z07.png)
+![[spanish-23.png]]
 
 except the below one
 
-![](https://i.imgur.com/X2eFoKo.png)
+![[spanish-24.png]]
 
-![](https://i.imgur.com/p0iyRW7.png)
+![[spanish-25.png]]
 
-![](https://i.imgur.com/RON0iCR.png)
+![[spanish-26.png]]
 
-![](https://i.imgur.com/eBTg6xj.png)
+![[spanish-27.png]]
 
-![](https://i.imgur.com/migWV8n.png)
+![[spanish-28.png]]
 
-![](https://i.imgur.com/kTaEltx.png)
+![[spanish-29.png]]
 
 ### Use Case
 
 I suggest that ...
 
 - Te recomiendo que + subjunctive
-	- ![](https://i.imgur.com/zgPF8S8.png)
+	- ![[spanish-30.png]]
 - Te sugiero que + subjunctive
-	- ![](https://i.imgur.com/uZ7l3Ba.png)
-	- ![](https://i.imgur.com/BVBc2R5.png)
+	- ![[spanish-31.png]]
+	- ![[spanish-32.png]]
 
 ## Imperative
 
 - 命令式
 - 重音變到倒數第二個
 	- ha**blar** -> **ha**bla
-- ![](https://i.imgur.com/b0GL6mZ.png)
-- ![](https://i.imgur.com/ewqCdEP.png)
+- ![[spanish-33.png]]
+- ![[spanish-34.png]]
 
 ### tú & vosotros
 
 - tú -> same as present third person
 	- with 8 exceptions
-		- ![](https://i.imgur.com/KwJyi2D.png)
+		- ![[spanish-35.png]]
 - vos -> base + d
 	- no exceptions
 
@@ -197,34 +197,34 @@ I suggest that ...
 
 Same as usted/ustedes present but replace e/a with a/e
 
-![](https://i.imgur.com/LQJa1uO.png)
+![[spanish-36.png]]
 
 Irregulars: similar to the irregular present singular tense
 
-![](https://i.imgur.com/Qia4ytU.png)
+![[spanish-37.png]]
 
 Exceptions
 
-![](https://i.imgur.com/c3DDZQv.png)
+![[spanish-38.png]]
 
 ### negative
 
 same as [[#Subjunctive present]]
 
-![](https://i.imgur.com/tRHOQyx.png)
+![[spanish-39.png]]
 
 ### reflexive
 
 Same conjucation append -/te/se/nos/os/se. Remove the d for second person plural.
 
-![](https://i.imgur.com/8ippwMF.png)
+![[spanish-40.png]]
 
 ### placement of pronouns
 
 - positive: {imperativo}{people pronoun}{object pronoun}
 - negative: no {people pronoun} {object pronoun} {imperativo (subjuntivo)}
 
-![](https://i.imgur.com/ER6vus6.png)
+![[spanish-41.png]]
 
 ## Profession
 
@@ -389,7 +389,7 @@ profesión
 	- e.g. el vagón F = car F
 - andén = platform (of a train station)
 
-![](https://i.imgur.com/q2rGfx3.png)
+![[spanish-42.png]]
 
 ### Airplane related
 
@@ -456,7 +456,7 @@ profesión
 	- to win (a lottery)
 - soportar = put up with
 - aguantar = put up with
-- ![](https://i.imgur.com/evMW5fF.jpg)
+- ![[spanish-43.jpg]]
 
 ## Spanish 1-1
 
@@ -2611,7 +2611,7 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 	- me das = can you give me
 - dejas = lend
 	- me dejas = can you lend me
-- ![](https://i.imgur.com/UO7j7zZ.png)
+- ![[spanish-44.png]]
 
 ### futuro
 
@@ -2632,13 +2632,13 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - Di que (tú) le vas a avisar. = I'll tell him.
 
 ### dirección
-![](https://i.imgur.com/TqL9ueM.png)
-![](https://i.imgur.com/kIJfzmJ.png)
+![[spanish-45.png]]
+![[spanish-46.png]]
 cojar/tomar = take
 
-![](https://i.imgur.com/1EXE0bt.jpg)
+![[spanish-47.jpg]]
 
-![](https://i.imgur.com/kxAuOz5.png)
+![[spanish-48.png]]
 
 ### adj. & adv.
 
@@ -2663,7 +2663,7 @@ adj. + mente -> adv.
 
 ### posesivos
 - mine = mío
-- ![](https://i.imgur.com/5oYuPhv.png)
+- ![[spanish-49.png]]
 - Es tuya esta agenda? = Is this agenda yours?
 
 ### no subject
@@ -2671,7 +2671,7 @@ adj. + mente -> adv.
 - han atropellado mi perro = (they) hit my dog
 - me han atropellado (a mi) = (they) hit me
 - Te han atropellado alguna vez? = Have you ever got run over?
-- ![](https://i.imgur.com/xtMJqax.png)
+- ![[spanish-50.png]]
 
 ### direct & indirect pronoun
 
@@ -2683,7 +2683,7 @@ adj. + mente -> adv.
 - Mi padre le ragaló un libro a mi hermano el mes pasado.
 	- Mi padre se lo regaló a mi hermano el mes pasado.
 		- 不能 le lo -> 改成 se lo
-- ![](https://i.imgur.com/wvDQZKZ.png)
+- ![[spanish-51.png]]
 
 ### practice
 
@@ -2701,7 +2701,7 @@ adj. + mente -> adv.
 			- es pequeña
 			- 
 - 5/18
-	- ![](https://i.imgur.com/JtrmVnD.png)
+	- ![[spanish-52.png]]
 		- 1.
 			- ella
 				- domingo pro la tarde
@@ -2717,7 +2717,7 @@ adj. + mente -> adv.
 			- el
 				- película
 				- no gusto nada
-	- ![](https://i.imgur.com/zWoKess.png)
+	- ![[spanish-53.png]]
 		- gusté
 		- estuve
 		- fue
@@ -2760,10 +2760,10 @@ adj. + mente -> adv.
 		- me reí = I laughed
 		- di varios paseos = paseé varias veces
 		- me quedé en casa
-	- ![](https://i.imgur.com/NE4Vsxb.png)
+	- ![[spanish-54.png]]
 	- p.157
 	- p.156 label names and ask questions
-		- ![](https://i.imgur.com/xY8o47x.jpg)
+		- ![[spanish-55.jpg]]
 		- Qué acaba de hacer Elena?
 		- Elena está caminando.
 		- Gloria acaba de tirarse al agua
@@ -2777,7 +2777,7 @@ adj. + mente -> adv.
 		- Raúl está jugando a castillos de arena
 - 4/29
 	- train
-		- ![](https://i.imgur.com/Qlogk4A.png)
+		- ![[spanish-56.png]]
 		- Bueno días
 		- Bueno días
 		- Hay trenes?
@@ -3086,7 +3086,7 @@ adj. + mente -> adv.
 
 #### Porque ..., have to ...
 
-![](https://i.imgur.com/PLjguO8.png)
+![[spanish-57.png]]
 
 Porque ... ,
 
@@ -3100,7 +3100,7 @@ Porque ... ,
 - absolute time -> pretérito indefinido
 - happened this xxx / within a day -> pretérito perfecto
 
-![](https://i.imgur.com/GlPjwNb.png)
+![[spanish-58.png]]
 
 <https://happylanguages.co.uk/lesson/el-preterito-perfecto-in-spanish/>
 
@@ -3126,16 +3126,16 @@ Porque ... ,
 - Nosotros estabamos aún comiendo cuando Carlos vino a visitamos.
 - Cuando ellos estaban en Italia, les hacía/hizo muy buen tiempo
 
-![](https://i.imgur.com/hG9UDus.png)
+![[spanish-59.png]]
 
-![](https://i.imgur.com/hugLDh8.png)
-![](https://i.imgur.com/xLgiwkn.png)
+![[spanish-60.png]]
+![[spanish-61.png]]
 
-![](https://i.imgur.com/GOJwhPM.png)
+![[spanish-62.png]]
 
-![](https://i.imgur.com/0J7VeTs.png)
+![[spanish-63.png]]
 
-![](https://i.imgur.com/XRylXW4.png)
+![[spanish-64.png]]
 
 ### Al + base verb
 
@@ -3143,7 +3143,7 @@ Porque ... ,
 	- for verbs that cannot be used imperatively
 		- Cuando empezó $\to$ Al empezar
 		- terminar
-	- ![](https://i.imgur.com/ZyRpUYB.png)
+	- ![[spanish-65.png]]
 - Al + base verb -> Cuando imperfecto/indefinido
 	- for verbs that can be used imperatively (the subject can execute the action by themself)
 		- Cuando empezó $\not\to$ Al empezar
@@ -3156,11 +3156,11 @@ Porque ... ,
 - Yo, en tu lugar + imperfect
 - Si yo fuera tú + imperfect
 
-![](https://i.imgur.com/LGDibBj.png)
+![[spanish-66.png]]
 
-![](https://i.imgur.com/OgRRwbQ.png)
+![[spanish-67.png]]
 
-![](https://i.imgur.com/OHUng78.png)
+![[spanish-68.png]]
 
 ### Muy + adjectives
 
@@ -3179,30 +3179,30 @@ Omit the subject if you can
 
 xxx + infinitivo or que subjunctive
 
-![](https://i.imgur.com/gBeUEYs.png)
+![[spanish-69.png]]
 
-![](https://i.imgur.com/XNLGYAT.png)
+![[spanish-70.png]]
 
-![](https://i.imgur.com/tcQsP4c.jpg)
+![[spanish-71.jpg]]
 
 ### Probably
 
 - very sure -> indicativo
 - not very sure -> subjunctivo
 - Seguramente + indicativo / subjuntivo
-	- ![](https://i.imgur.com/d6BKu7X.png)
+	- ![[spanish-72.png]]
 - Probablemente + indicativo / subjuntivo
-	- ![](https://i.imgur.com/GTABQrV.png)
+	- ![[spanish-73.png]]
 - Posiblemente + indicativo / subjuntivo
-	- ![](https://i.imgur.com/1Q0ZzL5.png)
+	- ![[spanish-74.png]]
 - Quizá(s) + indicativo / subjuntivo
-	- ![](https://i.imgur.com/eHEFPAO.png)
+	- ![[spanish-75.png]]
 - Puede (ser) que + subjunctivo
 	- puede que + subjuntivo || puede ser que + subjuntivo
-	- ![](https://i.imgur.com/YjVfzaV.jpg)
-	- ![](https://i.imgur.com/x4hMURQ.png)
+	- ![[spanish-76.jpg]]
+	- ![[spanish-77.png]]
 - A lo mejor + indicativo
-	- ![](https://i.imgur.com/12PhDrM.png)
+	- ![[spanish-78.png]]
 
 ### temp
 
@@ -3219,21 +3219,21 @@ p.13 - exercise 22
 
 ### Midterm Review
 
-![](https://i.imgur.com/7HIX2Bu.png)
+![[spanish-79.png]]
 
 ### Final Review
 
-![](https://i.imgur.com/yEInVP8.png)
+![[spanish-80.jpg]]
 
-![](https://i.imgur.com/FMJKtJq.png)
+![[spanish-81.jpg]]
 
-![](https://i.imgur.com/RVojsde.jpg)
+![[spanish-82.jpg]]
 
-![](https://i.imgur.com/FHO7SSb.png)
+![[spanish-83.png]]
 
-![](https://i.imgur.com/WxWPsxX.png)
+![[spanish-84.png]]
 
-![](https://i.imgur.com/fpRPRdU.png)
+![[spanish-85.png]]
 
 
 ## Spanish 3-2
@@ -3260,11 +3260,11 @@ p.13 - exercise 22
 
 [[#Imperative]]
 
-![](https://i.imgur.com/9cCtZ5B.png)
+![[spanish-86.jpg]]
 
-![](https://i.imgur.com/WCEIPas.png)
+![[spanish-87.png]]
 
-![](https://i.imgur.com/8WdIjTy.png)
+![[spanish-88.png]]
 
-![](https://i.imgur.com/X2HpXfR.png)
+![[spanish-89.png]]
 
