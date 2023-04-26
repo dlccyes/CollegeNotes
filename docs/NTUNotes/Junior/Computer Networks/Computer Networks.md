@@ -31,8 +31,8 @@ has_children: true
 
 ###### DSL, digital subscriber line
 
-- ![](https://i.imgur.com/wuohUfP.png)
-- ![](https://i.imgur.com/ChQ16fd.png)
+- ![[computer-networks-1.png]]
+- ![[computer-networks-2.png]]
 - xDSL, x=A, S, H, V etc.
 - point to point
 - share DSL link with telephone signals at the same time through FDM
@@ -57,8 +57,8 @@ has_children: true
 	- 5-10 miles
 
 ###### HFC, hybrid fiber coax
-- ![](https://i.imgur.com/DOj2gaR.png)
-- ![](https://i.imgur.com/fSAP7MK.png)
+- ![[computer-networks-3.png]]
+- ![[computer-networks-4.png]]
 - use cable TV's existing infrastructure
 - use fiber optics to reach neighborhood-level junctions
 - use coaxial cable to reach individual houses
@@ -75,7 +75,7 @@ has_children: true
 -  download 是 broadcast，upload 是 multiple-access
 
 ###### FTTH/FTTC/FTTB
-- ![](https://i.imgur.com/t5bAxxO.png)
+- ![[computer-networks-5.png]]
 - 用光纖
 - FTTH, fiber to the home
 	- fiber 直接到你家
@@ -93,7 +93,7 @@ has_children: true
 		- connect to the Internet via a telco router
 	- ONT, optical network termination
 		- home user connects a home router to ONT, and access the Internet via the home router
-- ![](https://i.imgur.com/bHhX2An.png)
+- ![[computer-networks-6.png]]
 
 ###### satellite link
 - Starband, HughesNet
@@ -102,14 +102,14 @@ has_children: true
 - LAN, local access networks
 - connect end system to edge router
 - Ethernet
-	- ![](https://i.imgur.com/pRsNJ9k.png)
+	- ![[computer-networks-7.png]]
 	- twisted-pair copper wire
 	- connect to an Ethernet switch
 - Wireless LAN
 	- IEEE 802.11a/b/g (WiFi)
 		- Ethernet wireless version
 	- user exchange packets with an access point connected into enterprise's network through wired Ethernet
-- ![](https://i.imgur.com/gGYmjUr.png)
+- ![[computer-networks-8.png]]
 
 ##### mobile access networks
 - wide-area wireless access
@@ -130,16 +130,16 @@ has_children: true
 	-  telephone networks, LANs, residential Internet access
 	-  兩根纏在一起
 	-  纏愈密愈好
-		-  ![](https://i.imgur.com/JEWBAVi.png)
+		-  ![[computer-networks-9.png]]
 	-  接頭：RH-45 (網路孔)
 	-  UTP, unshielded twisted pair
 		-  LANs
 -  coaxial cable
-	-  ![](https://i.imgur.com/f9XhWMj.png)
+	-  ![[computer-networks-10.png]]
 	-  copper
 	-  cable TV
 -  fiber optics 光纖
-	-  ![](https://i.imgur.com/d9bhTIm.png)
+	-  ![[computer-networks-11.png]]
 	-  conduct pulses of light
 		-  1 pulse = 1 bit
 	-  very high bit rates
@@ -171,7 +171,7 @@ has_children: true
 		-  cellular access
 
 ######  satellite radio channels
--  ![](https://i.imgur.com/yUrgMsp.png)
+-  ![[computer-networks-12.png]]
 -  link between ground stations
 -  receive in one frequency, repeat the signal, transmit in another frequency
 -  GEO, geostationary earth orbit 同步衛星
@@ -222,7 +222,7 @@ has_children: true
 #### circuit switching
 - <https://eng.libretexts.org/Bookshelves/Computer_Science/Networks/Book%3A_An_Introduction_to_Computer_Networks_(Dordal)/03%3A_Other_LANs/3.04%3A_Virtual_Circuits>
 - e.g.
-	- ![](https://i.imgur.com/b3TgdvZ.png)
+	- ![[computer-networks-13.png]]
 		- C comes from port 2 in S1 → port 3 VCI 2 out → S2 get VCI 2 from port 1 → out port 3 VCI 2 → S3 get VCI 2 from port 1 → out port 3 → B
 - resources reserved
 	- in contrast with the queuing method in [[#packet switching]]
@@ -236,7 +236,7 @@ has_children: true
 	- TDM, time-division multiplexing
 		- 1 time slot for each connection
 		- each circuit get all of the bandwidth periodically
-	- ![](https://i.imgur.com/26a2asD.png)
+	- ![[computer-networks-14.png]]
 	- statistical multiplexing
 		- use statistical laws
 
@@ -317,7 +317,7 @@ has_children: true
 				-  settlement free → reduce payment to upper-tier ISPs
 			-  connect to tier-1 ISPs
 				-  pay
-		- ![](https://i.imgur.com/GEm9pHI.png)
+		- ![[computer-networks-15.png]]
 
 ### Delay, Loss & Throughput
 #### reliability
@@ -351,7 +351,7 @@ has_children: true
 	- average rate
 	- determined by the min rate link
 		- 有 common link → 大家平分
-		- ![](https://i.imgur.com/ohQCSVt.png)
+		- ![[computer-networks-16.png]]
 			- $min(R/10,R_1,R_2,....,R_{10})$  
 
 #### delay/latency
@@ -362,7 +362,7 @@ has_children: true
 	- the delay at a single router
 	- $d_{nodal} = d_{proc}+d_{queue}+d_{trans}+d_{prop}$
 	- transmit in → process → queue → transmit out → propagate
-		- ![](https://i.imgur.com/dBUCcIo.png)
+		- ![[computer-networks-17.png]]
 	- processing delay
 		- examine packet's header and determine which link to direct to
 		- check for bit-level errors in the packet
@@ -374,7 +374,7 @@ has_children: true
 			- \> 1 → queue increases → average queuing delay approaches $\infty$
 		- 1 packet every L/R → no delay
 		- N packets every NL/R → significant delay
-		- ![](https://i.imgur.com/Ba1ETtF.png)
+		- ![[computer-networks-18.png]]
 		- packet arrives at full queue → packet poss
 	- transmission delay / store-and-forward delay
 		- L = packet length (bits)
@@ -390,20 +390,20 @@ has_children: true
 	- total delay from source to destination
 	- $d_{end-end}=N(d_{proc}+d_{trans}+d_{prop})$
 - message segmenting
-	- ![](https://i.imgur.com/UQu1tA2.png)
+	- ![[computer-networks-19.png]]
 		- 1 packet 1ms, 接收完就送出，一邊接收下一個
 		- take 1ms x 5001
 
 ### Protocol Layers
 - layered architecture
-	- ![](https://i.imgur.com/50Knl9b.png)
+	- ![[computer-networks-20.png]]
 		- 同一層互相溝通
 
 #### protocol layering
-- ![](https://i.imgur.com/apS8Dld.png)
-- ![](https://i.imgur.com/wEz7EST.png)
+- ![[computer-networks-21.png]]
+- ![[computer-networks-22.png]]
 - 愈上層愈軟，愈下層愈硬
-- ![](https://i.imgur.com/fVHIPOD.png)
+- ![[computer-networks-23.png]]
 
 ##### 5-layer model (the Internet)
 ###### application layer
@@ -453,7 +453,7 @@ has_children: true
 - protocols depend on link & transmission medium of the link
 
 ##### ISO OSI 7-layer model
-- ![](https://i.imgur.com/CSqX8ak.png)
+- ![[computer-networks-24.png]]
 - 2 additional layers (也算 application layer)
 	- presentation layer
 		- provide services for communicating applications to interpret the meaning of data exchanged
@@ -474,7 +474,7 @@ has_children: true
 #### encapsulation
 - PDU, packet data union
 	- header + data/payload
-	- ![](https://i.imgur.com/hqoyytD.png)
+	- ![[computer-networks-25.png]]
 	- 加上 header 送到下一層
 	- 除掉 header 送到上一層
 
@@ -503,7 +503,7 @@ so there're many security problems now
 			- use botnets (many controlled hosts) to send traffic to the target
 			- don't need huge traffic for each source
 			- harder to detect and defend against
-			- ![](https://i.imgur.com/WoJYyXt.png)
+			- ![[computer-networks-26.png]]
 	- connection flooding
 		- establish a lot of half-open or fully open TCP connections at target → connection bogged → target stops accepting legitimate connections
 
@@ -568,12 +568,14 @@ so there're many security problems now
 	- decentralized → security, performance, reliability issues
 	- e.g.
 		- skype, bittorrent
-- ![](https://i.imgur.com/UWe894G.png)
+- ![[computer-networks-27.jpg]]
 - hybrid
 	- e.g. instant messaging apps
 		- server to track user IPs
 		- direct messages with P2P
+
 #### process communicating
+
 - processes in different hosts connect with each other across the computer network
 - browser process initiates contact with web server
 	- browser is the client
@@ -585,7 +587,7 @@ so there're many security problems now
 	- port number for identifying which process in the host to send to
 		- 80 → web server
 		- 25 → mail server
-	- ![](https://i.imgur.com/llzwl5V.png)
+	- ![[computer-networks-28.png]]
 #### transport-layer protocols
 - possible qualities
 	- data integrity
@@ -610,8 +612,8 @@ so there're many security problems now
 	- video 只要前後看起來差不多就可
 	- 2 frames, 後者只要送跟前者不一樣的部分就好了
 	- 隔幾個就取一次全 frame，以免掉一個全掛
-- ![](https://i.imgur.com/i7O8XId.png)
-- ![](https://i.imgur.com/wx0bRpv.png)
+- ![[computer-networks-29.png]]
+- ![[computer-networks-30.png]]
 	- 講義：multimedia 可 UDP
 
 ##### TCP
@@ -705,7 +707,7 @@ so there're many security problems now
 #### CDN operation
 ##### intercept & redirect request
 - suppose content provider NetCinema uses KingCDN to distributes its videos
-	- ![](https://i.imgur.com/6V5Xfgk.png)
+	- ![[computer-networks-31.png]]
 	1. user visit NetCinema.com
 	2. user click video link, user host sends DNS query for NetCinema.com to LDNS
 	3. LDNS passes DNS query to NetCinema authoritative DNS, which returns a hostname in KingCDN domain
@@ -730,7 +732,7 @@ so there're many security problems now
 ##### Netflix 
 
 - runs on Amazon cloud
-	- ![](https://i.imgur.com/vI5i9Vw.png)
+	- ![[computer-networks-32.png]]
 	- upload original videos to Amazon cloud
 	- software on Amazon cloud create different versions of videos
 	- software on Amazon cloud upload versions of videos to CDN
@@ -775,7 +777,7 @@ so there're many security problems now
 - network laryer: host 2 host
 - transport layer: process 2 process
 - <www.ietf.org>
-- ![](https://i.imgur.com/iMPrEhU.png)
+- ![[computer-networks-33.png]]
 - UDP
 	- max 65535 = 2^16-1
 - mss: maximum segment size
@@ -814,12 +816,12 @@ so there're many security problems now
 				- bc 理論上互為 complement
 			- need to carry
 		5. checksum = complement of sum
-	- ![](https://i.imgur.com/2uAiupB.png)
+	- ![[computer-networks-34.png]]
 
 #### Automatic Repeat reQuest (ARQ)
 - states
-	- ![](https://i.imgur.com/dyjvawQ.png)
-	- ![](https://i.imgur.com/1Qj6GYC.png)
+	- ![[computer-networks-35.png]]
+	- ![[computer-networks-36.png]]
 - stop & wait
 	- resend when
 		- timeout 沒收到 ACK
@@ -842,7 +844,7 @@ so there're many security problems now
 		- 重傳 → 用原本的 number
 		- 傳新的 → 用另一個 number
 	- receiver 收到 duplicate → 還是回 ACK but 不把東西往上層送
-- ![](https://i.imgur.com/sZArr7j.png)<br>![](https://i.imgur.com/sDi1rO2.png)
+- ![[computer-networks-37.png]]<br>![[computer-networks-38.png]]
 	- lost packet & lost ACK 對 sender 來說一樣
 
 ##### sliding window protocol
@@ -852,11 +854,11 @@ so there're many security problems now
 - 一樣有 sequence number
 	- 3 bit → 0-7
 - sender
-	- ![](https://i.imgur.com/Lk1S4u3.png)
+	- ![[computer-networks-39.png]]
 	- window size 固定 N，隨著 ACK 回來往右 slides
 	- timeout 沒有 ACK → resend 整個 window
 	- timer 根據 windows 裡最舊者
-	- ![](https://i.imgur.com/CpIzweW.png)
+	- ![[computer-networks-40.png]]
 	- receive 的時候，若 acknum+1 = nextseqnum，則沒有 active 的 packet，so 不用 timer
 - receiver
 	- cumulative ACK
@@ -864,8 +866,8 @@ so there're many security problems now
 		- ACK n 表 n 以前的全部都收到
 	- 收到什麼就 ACK 什麼
 		- 收到 out of order → 丟掉 but ACK
-	- ![](https://i.imgur.com/SAZvT9b.png)
-- ![](https://i.imgur.com/1jeQHRf.png)
+	- ![[computer-networks-41.png]]
+- ![[computer-networks-42.png]]
 - 收到 ACK i → <=i 全部送達
 - problems
 	- 1 傳掉 23456 傳成功 → resend all but 換其他失敗 → 浪費效能
@@ -873,19 +875,19 @@ so there're many security problems now
 
 ###### Selective Repeat (SR)
 - sender & receiver 都有 sliding window
-	- ![](https://i.imgur.com/uTb6mZr.png)
-- ![](https://i.imgur.com/3k5gJBx.png)
+	- ![[computer-networks-43.png]]
+- ![[computer-networks-44.png]]
 - out of order → store
 - in order → slide
 - sender
 	- timeout 是一個 packet 一個 packet 看 (selective repeat)
 - receiver
 	- windows 已經滑走 but 收到之前的 packet → 還是要 ACK
-- ![](https://i.imgur.com/YrZMeSG.png)
+- ![[computer-networks-45.png]]
 - problem
 	- window size 相比於 sequence number 不能太大
 		- 無法 differentiate 是 repeated 還是 new
-	- ![](https://i.imgur.com/HtGtPqf.png)
+	- ![[computer-networks-46.png]]
 
 ### congestion control
 
@@ -917,8 +919,8 @@ so there're many security problems now
 - chrome 在 UDP 上做自己的 protocol 
 - 不用記錄 connection state
 - segment
-	- ![](https://i.imgur.com/QLZm6U4.png)
-		- ![](https://i.imgur.com/CGnQLXN.png)
+	- ![[computer-networks-47.png]]
+		- ![[computer-networks-48.png]]
 	- header size fixed
 	
 ### TCP
@@ -928,8 +930,8 @@ so there're many security problems now
 - header size not fixed
 - window size not fixed
 	- flow control
-- ![](https://i.imgur.com/mFnFg96.png)
-	- ![](https://i.imgur.com/lIio3JT.png)
+- ![[computer-networks-49.png]]
+	- ![[computer-networks-50.png]]
 - UAPRSF
 	- 0 or 1 each
 	- URG = urgent
@@ -968,7 +970,7 @@ so there're many security problems now
 - $DevRTT = (1-\beta)\cdot DevRTT+\beta\cdot |SampleRTT-EstimatedRTT|$
 	- variability of SampleRTT from EstimatedRTT
 	- EWMA of the difference of SampleRTT &  Estimated RTT
-- ![](https://i.imgur.com/esZHebV.png)
+- ![[computer-networks-51.png]]
 
 ##### Timeout
 $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
@@ -1008,12 +1010,12 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - if receive many consecutive segment, send ACK when 500ms without next one
 - receive segment #92 with 8 bytes of data → ACK 100
 - e.g.
-	- ![](https://i.imgur.com/MqoOXDk.png)
+	- ![[computer-networks-52.png]]
 		- B will discard the retransmission
-	- ![](https://i.imgur.com/NjH98KK.png)
+	- ![[computer-networks-53.png]]
 		- (Host A) send #92 → send #100 → #92 timeout → resend #92 & restart timer → ACK for #100 arrive within new timer → accept and don't resend
 		- (Host B) receive duplicate segment → ACK the received newest bytes =  120，表 120 前的所有 bytes 都收到了 including segment #92
-	- ![](https://i.imgur.com/gSOdmia.png)
+	- ![[computer-networks-54.png]]
 		- 收到 ACK 120 就表示 120 以前的所有 bytes 都收到了
 
 ##### exponential backoff
@@ -1025,13 +1027,13 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 ##### fast retransmit
 - sender often sends many segments consecutively → if 1 segment lost, receiver will send many duplicate ACKs (bc it always ACK the last in-order byte received)
 - receive 3 duplicate ACKs → retransmit the segment following the duplicate ACK seq No., without waiting to timeout
-- ![](https://i.imgur.com/QI3MCOv.png)
-- ![](https://i.imgur.com/VqvfPfG.png)
+- ![[computer-networks-55.png]]
+- ![[computer-networks-56.png]]
 
 #### flow control
 - make sending rate <= receiving rate
 - receiver 透過 ACL 告訴 sender 自己剩餘  sliding window (buffer space)  大小
-	- ![](https://i.imgur.com/L9624NA.png)
+	- ![[computer-networks-57.png]]
 	- `rwnd` = how much buffer space left for receiver
 	- receiver places `rwnd` in `receive window` field in segments sending to sender
 	- sender keeps total bytes of unACKed data < `rwnd`<br>i.e. 送出去的 data 量 < receiver 可承受的量
@@ -1064,7 +1066,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 			- ack <- `server_isn+1`
 		- payload
 			- may put data
-	- ![](https://i.imgur.com/gZHvvq5.png)
+	- ![[computer-networks-58.png]]
 - resources
 	- buffers
 	- variables
@@ -1075,10 +1077,10 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	3. server sends a segment with `FIN` = 1
 	4. client ACKs
 	5. deallocates resources on both ends
-	- ![](https://i.imgur.com/j0YPZux.png)
+	- ![[computer-networks-59.png]]
 - TCP states
-	- receiver<br>![](https://i.imgur.com/qQdz3zT.png)
-	- sender<br>![](https://i.imgur.com/7FZrj6q.png)
+	- receiver<br>![[computer-networks-60.png]]
+	- sender<br>![[computer-networks-61.png]]
 - if server receives a packet requesting an unavailable port
 	- if it's a TCP SYN packet, server will send a reset segment with `RST=1`, telling client not to resend the segment
 	- if it's a UDP packet, server will send an ICMP datagram
@@ -1101,7 +1103,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- receive 1 ACK → `cwnd += 1 MSS`
 		- → `cwnd` grows exponentially
 			- send 1 receive 1 → send 1+1 receive 2 → send 2+2 receive 4 etc.
-			- ![](https://i.imgur.com/1cc8aGz.png)
+			- ![[computer-networks-62.png]]
 	- timeout → `ssthresh = cwnd/2` && `cwnd = 1 MSS`
 		- `ssthresh` = slow start threshold
 	- `cwnd == ssthresh` → go to Congestion Avoidance state
@@ -1124,7 +1126,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- a recommended pero no es necesario state
 	- timeout → go to Slow Start
 - FSM state change
-	- ![](https://i.imgur.com/HBiLVxJ.png)
+	- ![[computer-networks-63.png]]
 - versions
 	- TCP Tahoe: no Fast Revcovery State
 	- TCP Reno: has Fast Revcovery State
@@ -1133,9 +1135,9 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- detect congestion before packet loss → lower the rate linearlt
 			- detect with observing RTT
 		- no es fair
-	- ![](https://i.imgur.com/Vcgf6QW.png)
+	- ![[computer-networks-64.png]]
 - additive-increase, multiplicative-decrease, AIMD
-	- ![](https://i.imgur.com/GffxjVr.png)
+	- ![[computer-networks-65.png]]
 
 ##### TCP throughput
 ?
@@ -1143,7 +1145,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 #### TCP fairness
 - TCP Reno es muy muy fair
 - for 2 competing connections
-	- ![](https://i.imgur.com/m8OSzwQ.png)
+	- ![[computer-networks-66.png]]
 
 ## Network Layer
 ### intro
@@ -1174,16 +1176,16 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- guaranteed in-order, bounded delay (一定的 delay 以內), minimal bandwidth 
 	- 送之前先決定好 source to destination path
 	- 服務多
-		- ![](https://i.imgur.com/4PMUB5v.png)
+		- ![[computer-networks-67.png]]
 - datagram vs. virtual circuit
-	- ![](https://i.imgur.com/8nmPnXZ.png)
+	- ![[computer-networks-68.png]]
 
 ### Data Plane
 #### router
-- ![](https://i.imgur.com/uCIPEyC.png)
+- ![[computer-networks-69.png]]
 
 ##### input port
-- ![](https://i.imgur.com/kmA6Xsl.png)
+- ![[computer-networks-70.png]]
 1. terminate incoming physical link
 2. perform necessary link-layer function to interoperate with the link layer at the other side of the incoming link
 3. lookup - use forwarding table to determine output port
@@ -1193,7 +1195,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 			- 根據 prefix 判斷要 forward 到哪裡
 			- 看跟哪個 prefix 相同到最多位 (特別法優於普通法)
 			- e.g.
-				- ![](https://i.imgur.com/nBFE2xU.png)
+				- ![[computer-networks-71.png]]
 			- 可犧牲幾個 bits 當 subnet id
 4. send to switching fabric → send to specified output port 
 -  switching speed not fast enough → input zqueue
@@ -1201,7 +1203,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		-  前一個 packet 因為 destined output port 被搶所以在等，但自己的 output port 是空的
 
 ##### switching fabric
-- ![](https://i.imgur.com/hkbWIOa.png)
+- ![[computer-networks-72.png]]
 - switching via memory
 	- packet copied from input port to routing processor memory → routing processor extract destination address and lookup forwarding table → copy to output port buffers
 	- 1 read/write action at a time (for a bus)
@@ -1220,7 +1222,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- need to wait if more than one packet destined at 1 output port
 
 ##### output port
-- ![](https://i.imgur.com/U2YM1It.png)
+- ![[computer-networks-73.png]]
 - perform necessary link-layer & physical-layer functions
 - if bidirectional → paired with input port
 - switching speed > line speed → output queue
@@ -1254,7 +1256,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- generalized round robin
 	- alternative circularly between classes but each class has weight
 	- guaranteed a fraction of service (the fraction of weight to total weight) in any interval of time
-	- ![](https://i.imgur.com/1hNeK2r.png)
+	- ![[computer-networks-74.png]]
 
 ##### routing processor
 - perform control plane functions
@@ -1269,7 +1271,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 
 #### IPv4
 ##### datagram format
-- ![](https://i.imgur.com/oeiSslz.png)
+- ![[computer-networks-75.png]]
 - version number
 	- IP protocol version
 	- how to interpret this datagram
@@ -1322,7 +1324,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- offset
 		- where the fragment fits in the original datagram
 - e.g.
-	- ![](https://i.imgur.com/gT4Y4Ds.png)
+	- ![[computer-networks-76.png]]
 
 ##### addressing
 - interface
@@ -1335,8 +1337,8 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - subnet
 	- isolated network
 	- interconnecting host interfaces & router interface
-		- ![](https://i.imgur.com/Qjlpmlj.png)
-		- ![](https://i.imgur.com/d3a2vEF.png)
+		- ![[computer-networks-77.png]]
+		- ![[computer-networks-78.png]]
 	- /24 notation i.e. subnet mask
 		- 223.1.1.0/24 表 left 24 bits 都要是 233.1.1
 	- 全 1 (255.255.255.255) 表 broadcast packet
@@ -1387,7 +1389,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- client broadcasts DHCP request message
 			- responds with the selected offer
 	4. DHCP ACK
-	- ![](https://i.imgur.com/XEgSRWn.png)
+	- ![[computer-networks-79.png]]
 
 #### NAT
 - network address translation
@@ -1418,7 +1420,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- successor to IPv6
 - compatibility to IPv4 - tunneling
 	- IPv6 datagram needs to pass through IPv4 router → put into the payload field of a IPv4 datagram → another IPv6 router receive, examine the protocol field = 41, extract the IPv6 datagram, and continue
-	- ![](https://i.imgur.com/XFVZE9k.png)
+	- ![[computer-networks-80.png]]
 
 ##### datagram format
 - differences from IPv4
@@ -1447,7 +1449,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 			- next header field can be TCP heaer or UDP header or options
 			- removed → 40-bit fixed header
 - fields
-	- ![](https://i.imgur.com/legsmRb.png)
+	- ![[computer-networks-81.png]]
 	- version
 		- IP version number
 	- traffic class
@@ -1466,7 +1468,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 #### generalized forwarding
 - match-plus-action
 - Openflow
-- ![](https://i.imgur.com/Og7ebwI.png)
+- ![[computer-networks-82.png]]
 - flow table
 	- headers
 		- to match packet
@@ -1502,7 +1504,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 			- link costs don't reflect congestion
 			- the Internet
 - 網管去設 link cost
-- ![](https://i.imgur.com/XPxvgIm.png)
+- ![[computer-networks-83.png]]
 - 找 least cost path
 - a node
 	- incoming interface
@@ -1512,24 +1514,24 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- outgoing interface 各 copy 一份
 	- 正常 forwarding
 		- 找到要的 outgoing interface 送出去
-- ![](https://i.imgur.com/G9WmL2B.png)
+- ![[computer-networks-84.png]]
 
 ##### link-state routing algorithm
 - centralized
 - broadcast (flood) global information s.t. each node has the same complete information
 - source routing
-- ![](https://i.imgur.com/6gHVg6I.png)
+- ![[computer-networks-85.png]]
 - [[Dijkstra's Algorithm]]
 	- $\in O(n^2)$
 	- oscillation may occur
-	- ![](https://i.imgur.com/c8jA1F0.png)
-	- ![](https://i.imgur.com/m5b1nab.png)
-	- ![](https://i.imgur.com/IjR1OEq.png)
+	- ![[computer-networks-86.png]]
+	- ![[computer-networks-87.png]]
+	- ![[computer-networks-88.png]]
 		- D(x) is x's cost (from source) and its predecessor (how it got the cost)
 - if any node has been changed, run the Dijkstra's algorithm again
 - oscillation
 	- if link costs depend on the amount of traffic, nodes may simultaneously detect a better route, simultaneously change to that route, thus making the route be crowded, so they simultaneously switch back again, and so on and so forth → oscillation
-		- ![](https://i.imgur.com/UkFEjQB.png)
+		- ![[computer-networks-89.png]]
 			- (x,y,z) want to send (1,1,e) to z
 		- solution
 			- ensure not all routers run the algorithm at the same time
@@ -1543,17 +1545,17 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- $d_x(y)=min_v\{c(x,v)+d_v(y)\}$
 		- $d_x(y)$ = least cost from x to y
 		- $c(x,v)$ = direct cost from x to v, with x neighboring v
-	- ![](https://i.imgur.com/YjAqSYK.png)
+	- ![[computer-networks-90.png]]
 - 跟鄰居交換訊息
 	- new info / change → recompute 到達 neighbor 的 least cost path → tell neighbors for any change
-		- ![](https://i.imgur.com/WSTZZFF.png)
+		- ![[computer-networks-91.png]]
 			- x 原本到 z 是 7，拿到 y 的資料後發現 3 就好，update 並告訴 neighbor
 - async
-- ![](https://i.imgur.com/NjrbAFN.png)
+- ![[computer-networks-92.png]]
 - count to infinity problem
 	- when link cost increases
 	- e.g.
-		- ![](https://i.imgur.com/IoCHUzF.png)
+		- ![[computer-networks-93.png]]
 			- cost(y to x) = min(cost(yx),cost(yz)+cost(z to x))
 			- y 知道 cost(z to x) = 5，所以會選擇後者的路徑，因此傳到 z，但 z 為了傳給 x 又會傳給 y，就這樣一直互丟
 			- won't stabilize until 44th iteration in this case
@@ -1595,7 +1597,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - internal BGP (iBGP) connection
 	- BGP session between routers of the same AS
 - e.g.
-	- ![](https://i.imgur.com/LB5VwKR.png)
+	- ![[computer-networks-94.png]]
 		- 3a 跟 2c 說可到 x → 2c 跟 2abc 說可到 x → 2a 跟 1c 說可到 x → 1c 跟 1abd 說可到 x
 - BGP attributes
 	- AS-PATH
@@ -1638,7 +1640,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - programmable network
 - separated entities → open ecosystem with rich innovations
 	- pre-SDN: all vertically integrated
-- ![](https://i.imgur.com/nGoHIjZ.png)
+- ![[computer-networks-95.png]]
 
 ##### controller
 - communication layer
@@ -1673,7 +1675,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- send packet to controller
 
 ##### example
-- ![](https://i.imgur.com/xj70Xz0.png)
+- ![[computer-networks-96.png]]
 	1. link s1 s2 goes down
 	2. s1 notify SDN controller about the link-state change with OpenFlow port-status message
 	3. SDN controller notifies link-state manager → update link-state database
@@ -1686,7 +1688,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - architecturally lies just above IP
 - ICMP messages carried as IP payload
 	- 收到 → demultiplex to ICMP
-- ![](https://i.imgur.com/96cZ10A.png)
+- ![[computer-networks-97.png]]
 
 ## Ch6 Link Layer
 ### intro
@@ -1703,7 +1705,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- implemented in hardware
 		- detect where exactly the errors are (bit-level) and correct them
 - implemented in network adapter / network interface card (NIC)
-	- ![](https://i.imgur.com/NVMUbTo.png)
+	- ![[computer-networks-98.png]]
 
 ### error detection
 #### parity check
@@ -1731,10 +1733,10 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- addition without carry = subtraction without carry = XOR
 	- 長除法 data 除 generator but 相減時用 XOR
 - send bit string of data D 接餘數 R → $D2^R$
-	- ![](https://i.imgur.com/uPVdRbY.png)
+	- ![[computer-networks-99.png]]
 - receiver 把收到的 bit string 長 XOR generator，餘數為 0 → perfecto
 	- R = remainder of $D2^R \div G$
-- ![](https://i.imgur.com/yspDL5m.png)
+- ![[computer-networks-100.png]]
 
 ### multiple access protocols
 - uplink - (多對一) multiple access
@@ -1775,8 +1777,8 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - more than one transmission in a slot → collision
 - collision → retransmit in subsequent slot with probability p
 - efficiency
-	- ![](https://i.imgur.com/fERe5GV.png)
-	- ![](https://i.imgur.com/LpFppKV.png)
+	- ![[computer-networks-101.png]]
+	- ![[computer-networks-102.png]]
 - pros
 	- if only 1 node → utilize 100%
 	- highly decentralized
@@ -1795,8 +1797,8 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - efficiency
 	- for a node
 		- p(transmit) x p(other nodes didn't transmit) x p(other notes won't transmit when I'm transmitting)
-	- ![](https://i.imgur.com/yllFWBH.png)
-	- ![](https://i.imgur.com/DQPs3zp.png)
+	- ![[computer-networks-103.png]]
+	- ![[computer-networks-104.png]]
 	- max 18% (1/2e) utilization if N → infinity
 - fully decentralized
 
@@ -1873,7 +1875,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	2. CMTS grant permission for each time slot
 		- with MAP control message
 	3. if modem didn't get response of its request, it would interpret as collision happened (so its request didn't get to CMTS), and will retransmit with binary exponenetial backoff 
-- ![](https://i.imgur.com/bqiqyUK.png)
+- ![[computer-networks-105.png]]
 
 ### switched local area networks
 #### link layer address
@@ -1910,12 +1912,12 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	4. sender update its ARP table and send to obtained MAC
 - ARP spoofing
 	- fake a ARP reply to pollute the ARP table, make it translates the IP to a wrong MAC, thus the attacker can get the packet they shouldn't get
-	- ![](https://i.imgur.com/2qcrEEy.png)
+	- ![[computer-networks-106.png]]
 
 #### Ethernet
 - IEEE 802.3
 - datagram format
-	- ![](https://i.imgur.com/8D8Lvyo.png)
+	- ![[computer-networks-107.png]]
 	- type
 		- network-layer protocol to use
 	- preamble
@@ -1934,7 +1936,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- if destination MAC is in table → send to corresponding interface, otherwise flood it
 		- not receive from a MAC for a certain time (aging time) → delete entry
 	- e.g.
-		- ![](https://i.imgur.com/FTxfHgg.png)
+		- ![[computer-networks-108.png]]
 - a frame arrives to the switch
 	- no entry in switch table → broadcast
 	- have entry, and the matching interface is already this interface (i.e. the LAN it's coming from contains the dest. MAC) → drop, otherwise → forward to the matching interface
