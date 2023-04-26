@@ -233,7 +233,7 @@ Put your unit tests in `test_main.py`
 import unittest
 from main import no, yes
 
-Class TestMain(unittest.TestCase):
+class TestMain(unittest.TestCase):
 	def test_no(self):
 		mock_query = "Me das tu movil?"
 		expected_ans = False

@@ -6,3 +6,4 @@ desktop.ini
 .vault-stats
 .DS_Store
 .obsidian/core-plugins-migration.json
+*.pyc
