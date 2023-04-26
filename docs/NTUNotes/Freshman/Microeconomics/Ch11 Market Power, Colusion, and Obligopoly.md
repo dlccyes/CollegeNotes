@@ -9,26 +9,26 @@ parent: Microeconomics
 ### horizontal integration
 before merger: competitive (to where D=MC)  
 after merger: MC drops
-![](https://i.imgur.com/R9Ju2dr.png)
+![[ch11-market-power,-colusion,-and-obligopoly-1.png]]
 don't necessarily gain
 
 if MC' << MC
-![](https://i.imgur.com/4aclRyr.png)  
+![[ch11-market-power,-colusion,-and-obligopoly-2.png]]  
 P' lower than before merger  
 and both consumers & producer gain
 
 if MC' = MC  
-![](https://i.imgur.com/Oy73cFc.jpg)
+![[ch11-market-power,-colusion,-and-obligopoly-3.jpg]]
 deadweight loss
 
 ### vertical integration
 Say there's a upstream monopoly and downstream monopoly respectively. Upstream company would sell a monopoly price for downstream company, which is a part of the MC of downstream company. When they merge, Upstream would produces at MC = D, lowering the MC of downstream.
 
-![](https://i.imgur.com/Huinn2K.png)
+![[ch11-market-power,-colusion,-and-obligopoly-4.png]]
 
 ## provide service
 resale price
-![](https://i.imgur.com/pnsIcI5.jpg)
+![[ch11-market-power,-colusion,-and-obligopoly-5.jpg]]
 
 ## Oligopoly
 ### cartel
@@ -38,17 +38,17 @@ will fail due to prison dilemma, unless repeated
 
 ### contestable market
 firm can enter & exit costlessly
-![](https://i.imgur.com/bwxHgDs.png)
+![[ch11-market-power,-colusion,-and-obligopoly-6.png]]
 P=MC=AC
 
 [[natural monopoly]] in a contestable market
-![](https://i.imgur.com/BC0CB6y.png)
+![[ch11-market-power,-colusion,-and-obligopoly-7.png]]
 
 ### Cournot model
 
 [Cournot Model](../../../obs_autolink/Cournot%20Model)
 ==assumption: the rival has fixed quantity== i.e. take rivals' output as given
-![](https://i.imgur.com/G4YZgKS.png)
+![[ch11-market-power,-colusion,-and-obligopoly-8.png]]
 
 ### Bertrand model
 
@@ -71,31 +71,31 @@ if the assumptions fail, which is always the case, the models won't work
 - long run : zero economic profits
 	- TR = TC i.e. P = AC
 
-![](https://i.imgur.com/p1V8kF9.png)
+![[ch11-market-power,-colusion,-and-obligopoly-9.png]]
 
 ## HW
 [answer by 助教](https://drive.google.com/drive/u/3/folders/1VJ2BcWJKF0M0Glnc-pkwsoHiV6YCBYL0)
 ### N1
-![](https://i.imgur.com/6aNWOLj.png)
+![[ch11-market-power,-colusion,-and-obligopoly-10.png]]
 ### N2
-![](https://i.imgur.com/gy7SimL.png)
+![[ch11-market-power,-colusion,-and-obligopoly-11.png]]
 N2(b) N 先根據 $P_M$ 定出 $P_N$ 定出 Q，M 再根據 Q 定出 $P_M$
 ### N3
-![](https://i.imgur.com/SRH0uHi.png)
-![](https://i.imgur.com/HMiwi3W.png)
-![](https://i.imgur.com/QEt3L1H.png)
-![](https://i.imgur.com/B0gzeSw.png)
-![](https://i.imgur.com/Mn9vTYz.png)
+![[ch11-market-power,-colusion,-and-obligopoly-12.png]]
+![[ch11-market-power,-colusion,-and-obligopoly-13.png]]
+![[ch11-market-power,-colusion,-and-obligopoly-14.png]]
+![[ch11-market-power,-colusion,-and-obligopoly-15.png]]
+![[ch11-market-power,-colusion,-and-obligopoly-16.png]]
 
 ### N4
-![](https://i.imgur.com/ULwB3cj.png)
+![[ch11-market-power,-colusion,-and-obligopoly-17.png]]
 橋有先後  
 i.e. 2nd bridge take 1st as given in (b)  
 thus idendical with N2(b)
 ### P15
-![](https://i.imgur.com/fuVIRRS.png)
+![[ch11-market-power,-colusion,-and-obligopoly-18.png]]
 ### P18 (Solve cases of 4 and 5 vendors)
-![](https://i.imgur.com/CUaRtMa.png)
+![[ch11-market-power,-colusion,-and-obligopoly-19.png]]
 http://gametheory101.com/tag/hotellings-game/
 five vendors:
-![](https://i.imgur.com/EToccxq.png)
+![[ch11-market-power,-colusion,-and-obligopoly-20.png]]

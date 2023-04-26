@@ -36,28 +36,28 @@ so *wrong*
 
 ## Problems
 #### 1.(P6)
-![](https://i.imgur.com/UHka90L.png)  
+![[ch9-knowledge-and-information-1.png]]  
 ans  
-![](https://i.imgur.com/swOMOKc.png)
+![[ch9-knowledge-and-information-2.png]]
 
 #### 2.(P15)
-![](https://i.imgur.com/R8hjAON.png)  
+![[ch9-knowledge-and-information-3.png]]  
 ans  
-![](https://i.imgur.com/od0Tj71.png)
+![[ch9-knowledge-and-information-4.png]]
 
 #### 3.
-![](https://i.imgur.com/Dbj3mUV.png)  
+![[ch9-knowledge-and-information-5.png]]  
 ans  
-![](https://i.imgur.com/FbR5v4I.png)  
+![[ch9-knowledge-and-information-6.png]]  
 到最後應該會變 $50000 因為 buyers know there's no good cars for sale
 
 #### 4.
-![](https://i.imgur.com/GPhb91G.png)  
-![](https://i.imgur.com/22lIA9Q.png)  
+![[ch9-knowledge-and-information-7.png]]  
+![[ch9-knowledge-and-information-8.png]]  
 ans  
-![](https://i.imgur.com/haTsOzE.png)
+![[ch9-knowledge-and-information-9.png]]
 
 #### 5.
-![](https://i.imgur.com/99Cdcju.png)  
+![[ch9-knowledge-and-information-10.png]]  
 ans  
-![](https://i.imgur.com/MlIEjkp.png)
+![[ch9-knowledge-and-information-11.png]]

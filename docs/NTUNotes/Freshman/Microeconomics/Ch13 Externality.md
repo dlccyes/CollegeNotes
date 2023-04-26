@@ -24,23 +24,23 @@ only if 行人乖乖
 
 ## HW
 ### P28 簡單，無須知識
-![](https://i.imgur.com/05Uy3UK.png)
-![](https://i.imgur.com/onB0JXU.png)
+![[ch13-externality-1.png]]
+![[ch13-externality-2.png]]
 sol
-![](https://i.imgur.com/wnZ6PRl.png)
+![[ch13-externality-3.png]]
 
 ### #2 簡單
-![](https://i.imgur.com/Oy1Ad8R.png)
-![](https://i.imgur.com/4lS80fS.png)
+![[ch13-externality-4.png]]
+![[ch13-externality-5.png]]
 sol
-![](https://i.imgur.com/7FoMU2L.png)
+![[ch13-externality-6.png]]
 
 ### #3
-![](https://i.imgur.com/rCgaL9l.png)
-![](https://i.imgur.com/Rh7Budx.png)
+![[ch13-externality-7.png]]
+![[ch13-externality-8.png]]
 sol  
-![](https://i.imgur.com/kgMX43a.png)
+![[ch13-externality-9.png]]
 ### #4
-![](https://i.imgur.com/BiUkuld.png)
+![[ch13-externality-10.png]]
 sol
-![](https://i.imgur.com/qEqM1HO.png)
+![[ch13-externality-11.png]]

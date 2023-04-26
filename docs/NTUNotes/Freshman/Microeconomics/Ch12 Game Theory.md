@@ -31,11 +31,11 @@ Also see [Game Theory](../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Ga
 
 ## HW
 
-![](https://i.imgur.com/iiNy03p.png)
-![](https://i.imgur.com/dnBGDka.png)
+![[ch12-game-theory-1.png]]
+![[ch12-game-theory-2.png]]
 [Vickrey auction](https://en.wikipedia.org/wiki/Vickrey_auction#Use_in_network_routing)
-![](https://i.imgur.com/FpuMjwh.png)
-![](https://i.imgur.com/s3NOgY7.png)
-![](https://i.imgur.com/weuA6Yd.png)
-![](https://i.imgur.com/De1N4AE.png)
-![](https://i.imgur.com/UdKskq5.png)
+![[ch12-game-theory-3.png]]
+![[ch12-game-theory-4.png]]
+![[ch12-game-theory-5.png]]
+![[ch12-game-theory-6.png]]
+![[ch12-game-theory-7.png]]

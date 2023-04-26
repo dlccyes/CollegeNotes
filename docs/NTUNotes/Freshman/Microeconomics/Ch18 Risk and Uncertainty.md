@@ -6,7 +6,7 @@ parent: Microeconomics
 
 # Ch18 Risk and Uncertainty
 
-![](https://i.imgur.com/jSXLMk1.png)
+![[ch18-risk-and-uncertainty-1.png]]
 
 [Uncertainty_budget](https://drive.google.com/file/d/1QpBeDmqbnydl0Kf9clRVAXefRWLfDDb9/view)
 [Uncertainty_preferences](https://drive.google.com/file/d/1AipfmmGHra3Ui_pSuG4hNssBbK8J7gvs/view)
@@ -42,13 +42,13 @@ parent: Microeconomics
 
 ## risk premium
 
-<!-- ![](https://i.imgur.com/MftyvLO.png) -->
+<!-- ![[ch18-risk-and-uncertainty-2.png]] -->
 
 fair insurance: 讓客戶保前保後預期財富不變  
 
-![](https://i.imgur.com/Gqq83EZ.png)
+![[ch18-risk-and-uncertainty-3.png]]
 
-![](https://i.imgur.com/zhAcPVb.png)
+![[ch18-risk-and-uncertainty-4.png]]
 
 如用 fair insurance → 保險公司獲益為零，但又有其他支出  
 → 賠錢
@@ -57,35 +57,35 @@ fair insurance: 讓客戶保前保後預期財富不變
 
 找風險負相關的綁在一起，抵銷風險  
 
-![](https://i.imgur.com/CjEG4TN.png)
+![[ch18-risk-and-uncertainty-5.png]]
 
-![](https://i.imgur.com/3Sz9w6p.png)
+![[ch18-risk-and-uncertainty-6.png]]
 
 ## [[adverse selection]]
 
-![](https://i.imgur.com/5FXe116.png)
+![[ch18-risk-and-uncertainty-7.png]]
 
 ## CAPM, Capital Assets Pricing Model
 
-![](https://i.imgur.com/P0Vk3Mw.png)
+![[ch18-risk-and-uncertainty-8.png]]
 
 ### budget constraint
 
-![](https://i.imgur.com/z4i0Seg.png)
+![[ch18-risk-and-uncertainty-9.png]]
 
-![](https://i.imgur.com/UcPWtT1.png)
+![[ch18-risk-and-uncertainty-10.png]]
 
-![](https://i.imgur.com/Fk1rTDL.png)
+![[ch18-risk-and-uncertainty-11.png]]
 
 ### beta
 
 sensitivity to movements in the relevant market
 
-![](https://i.imgur.com/dl7ib4p.png)
+![[ch18-risk-and-uncertainty-12.png]]
 
-![](https://i.imgur.com/h0htARK.png)
+![[ch18-risk-and-uncertainty-13.png]]
 
-![](https://i.imgur.com/EK7LQMj.png)
+![[ch18-risk-and-uncertainty-14.png]]
 
 ## 期貨
 
@@ -110,8 +110,8 @@ P~5~^6^ = 現在訂定六月成交的期貨價格
 因為產出者可以囤貨，選擇在五或六月賣，  
 so 均衡時 P~5~ = P~6~  
 
-![](https://i.imgur.com/vHatNN3.png)
-![](https://i.imgur.com/XJrAmzd.png)
+![[ch18-risk-and-uncertainty-15.png]]
+![[ch18-risk-and-uncertainty-16.png]]
 
 結論：  
 投機人預測正確時，對社會是好的  

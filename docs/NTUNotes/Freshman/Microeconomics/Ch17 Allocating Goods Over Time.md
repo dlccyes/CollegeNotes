@@ -4,7 +4,7 @@ title: Ch17 Allocating Goods Over Time
 parent: Microeconomics
 ---
 
-![](https://i.imgur.com/k4IEAs5.png)
+![[ch17-allocating-goods-over-time-1.png]]
 
 [Interest_Model](https://drive.google.com/file/d/1y45KQl7LSsq-vjJgn__mZnvh7tKrQ0zk/view)
 [Interest_equilibrium](https://drive.google.com/file/d/1RXrx3lrYR8NWF3-M9mUFGUM4HV6_i0no/view)
@@ -30,22 +30,22 @@ if 現在賣 $100*(1+1/r+1/r**2+1/r**3) = $349 以下
 
 ## interest equilibrium
 
-![](https://i.imgur.com/fhLULwx.png)
-![](https://i.imgur.com/G7KOAVF.png)
-![](https://i.imgur.com/EL10lHA.png)
+![[ch17-allocating-goods-over-time-2.png]]
+![[ch17-allocating-goods-over-time-3.png]]
+![[ch17-allocating-goods-over-time-4.png]]
 
 ## Repesentative Agent
-![](https://i.imgur.com/k9j3V1f.png)
+![[ch17-allocating-goods-over-time-5.png]]
 
 ## technology breakthrough
 ### 以傳統模型解釋
-![](https://i.imgur.com/A0pi1kU.png)
+![[ch17-allocating-goods-over-time-6.png]]
 ### 以 Repesentative Agent 解釋
-![](https://i.imgur.com/iJ2LL5y.png)
+![[ch17-allocating-goods-over-time-7.png]]
 
 ## Recardian Equilibrium
 
-![](https://i.imgur.com/TOoZ84H.png)
+![[ch17-allocating-goods-over-time-8.png]]
 政府不論用何種方式（稅 or 公債）籌措財源，  
 對市場造成的利率上漲幅度是一樣的  
 

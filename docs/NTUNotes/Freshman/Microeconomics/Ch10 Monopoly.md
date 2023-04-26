@@ -19,35 +19,35 @@ Remember when calculating equilibrium price/quantity with MR = MC, do the partia
 
 ## Lerner Index
 
-![](https://i.imgur.com/qo2ezEl.png)
+![[ch10-monopoly-1.png]]
 
 the elasticity of the demand curve
 
-![](https://i.imgur.com/s5x1Kqk.png)
+![[ch10-monopoly-2.png]]
 
 it's negative
 
-![](https://i.imgur.com/nzQk8PL.png)
-![](https://i.imgur.com/kHa0QMt.png)
+![[ch10-monopoly-3.png]]
+![[ch10-monopoly-4.png]]
 
 ## Monopoly vs. Competition
-![](https://i.imgur.com/yBipLH4.png)
+![[ch10-monopoly-5.png]]
 
 ## subsidy monopoly
 理論上可以補助 monopoly 使 monopoly 產出到 Q~C~ (最 efficient 產量)  
 使 social gain 跟 competitive 時一樣
-![](https://i.imgur.com/RzocEQS.png)
+![[ch10-monopoly-6.png]]
 C+D+F+G 必> F+G+H  
 否則 monopoly 原本就會選擇產出到 Q~C~ 而非 Q~M~
 
 ## Price Ceiling
-![](https://i.imgur.com/HaFq94M.png)
+![[ch10-monopoly-7.png]]
 
 ## Zero Profit Monopoly
 
 如果要求 monopoly 跟 competition 一樣 zero economic profits
 
-![](https://i.imgur.com/N4rVtKe.png)
+![[ch10-monopoly-8.png]]
 
 ## natural monopoly
 
@@ -55,7 +55,7 @@ C+D+F+G 必> F+G+H
 
 if AC crosses demand curve when slope < 0
 
-![](https://i.imgur.com/S2u3eIw.png)
+![[ch10-monopoly-9.png]]
 
 → competitive 下的 P  ($P_C$, where MC = D) < AC  
 → earn negative profit if competitive  
@@ -88,7 +88,7 @@ charge different price for identical items
 - 完全知道每個人的需求曲線並依此定價，榨光所有 consumers' surplus
 - monopolist 會生產至 competition quantity (D=MC) →** social welfare maximized, no deadweight loss**
 
-![](https://i.imgur.com/FReUCAS.png)
+![[ch10-monopoly-10.png]]
 
 ### Second-Degree
 price depends on quantity, no individual differences
@@ -97,7 +97,7 @@ price depends on quantity, no individual differences
     香腸 1 支 $20，3 支 $50
     等同於前兩支 $20，第三支 $10
     ```
-![](https://i.imgur.com/HnrzsNJ.png)
+![[ch10-monopoly-11.png]]
 前 $Q_0$ 賣 \$10 (where MR=MC)，$Q_0$ 之後賣 \$10 > P > MC  (e.g. $Q_0$ - $Q_1$ 賣 competitive price \$7)
 → 深藍色三角形的 producer's surplus & 淺藍的 consumers' surplus
 
@@ -106,32 +106,32 @@ quantity & PS & CS & social welfare increases
 ### Third-Degree
 different price in different markets
 Man City 的人願意用 \$7 買 whatever quantity → $MR_{city}=\$7$
-![](https://i.imgur.com/7Teaqf4.png)
-![](https://i.imgur.com/rSI6qqj.png)
+![[ch10-monopoly-12.png]]
+![[ch10-monopoly-13.png]]
 
-![](https://i.imgur.com/5Be2cCi.jpg)
-![](https://i.imgur.com/t3CPAyy.png)
+![[ch10-monopoly-14.jpg]]
+![[ch10-monopoly-15.png]]
 
 黃曜霆的 mail
-![](https://i.imgur.com/mW5ScCY.jpg) 
+![[ch10-monopoly-16.jpg]] 
 
 ## Two-Part Tariff
 e.g. monopoly 入場後商品，再用入場費吸光 consumers' surplus
-![](https://i.imgur.com/w66QUTK.png)
+![[ch10-monopoly-17.png]]
 
 ## Homework
 ### 注意
 N~2~ c
 
-![](https://i.imgur.com/Xz7ZKrJ.png)
+![[ch10-monopoly-18.png]]
 <!-- N2 -->
-![](https://i.imgur.com/ZPEVrit.png)
+![[ch10-monopoly-19.png]]
 <!-- N3 -->
-![](https://i.imgur.com/CQFJC4S.png)
+![[ch10-monopoly-20.png]]
 <!-- 18 -->
-![](https://i.imgur.com/GOLoUBD.png)
+![[ch10-monopoly-21.png]]
 
-![](https://i.imgur.com/z4BSnnr.png)
-![](https://i.imgur.com/fIoSwLa.png)
-![](https://i.imgur.com/YzD9PQD.png)
-![](https://i.imgur.com/TxxkBYY.png)
+![[ch10-monopoly-22.png]]
+![[ch10-monopoly-23.png]]
+![[ch10-monopoly-24.png]]
+![[ch10-monopoly-25.png]]

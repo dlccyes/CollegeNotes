@@ -3,7 +3,7 @@ title: Ch14 Common Property and Public Goods
 parent: Microeconomics
 ---
 <!-- # Ch14 Common Property and Public Goods -->
-![](https://i.imgur.com/YJWcKuO.png)
+![[ch14-common-property-and-public-goods-1.png]]
 ---
 居民休閒選項有兩個  
 到公園野餐價值為 $2   
@@ -15,12 +15,12 @@ parent: Microeconomics
 收門票錢 → 居民消費價值不變但多了門票收入  
 → 最適 Pigoe tax 為極大化門票收入
 
-![](https://i.imgur.com/gNF0oI0.png)
+![[ch14-common-property-and-public-goods-2.png]]
 
 max total consumption value → MV=2  
 max total ticket revenue → MR=0  
 
-![](https://i.imgur.com/JbYDgxq.png)
+![[ch14-common-property-and-public-goods-3.png]]
 
 Coase 的解方：將財產權分配給一個人 → 他會追求 max ticket revenue → 成功最大化效益  
 
@@ -42,18 +42,18 @@ $v_i$ 會是真實的價值
 vice versa  
 
 但是 Clarke tax 會造成財政問題  
-![](https://i.imgur.com/KjtquUi.png)
+![[ch14-common-property-and-public-goods-4.png]]
 收到的稅入不敷出  
 
 ## HW
 [ans vids](https://drive.google.com/drive/u/3/folders/1t9OEsLQmywf06btfjtJ5WFFZXe7zUFBh)
 ### 1.
-![](https://i.imgur.com/HFyYVz0.png)
+![[ch14-common-property-and-public-goods-5.png]]
 ### 2. P13.
-![](https://i.imgur.com/bwogDhI.png)
+![[ch14-common-property-and-public-goods-6.png]]
 ### 3.
-![](https://i.imgur.com/YDkYdXF.png)
+![[ch14-common-property-and-public-goods-7.png]]
 ### 4.
-![](https://i.imgur.com/4ld5sDb.png)
-![](https://i.imgur.com/GLiO0UZ.png)
+![[ch14-common-property-and-public-goods-8.png]]
+![[ch14-common-property-and-public-goods-9.png]]
 
