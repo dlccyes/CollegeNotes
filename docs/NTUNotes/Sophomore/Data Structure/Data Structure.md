@@ -16,10 +16,10 @@ layout: meth
   - $\lim_{x\to\infty} f(x)$
   - $\lim_{x\to\infty} \frac{f(x+1)}{f(x)}$
 
-![Image](https://i.imgur.com/ay40yL4.png)
-![Image](https://i.imgur.com/iBumeVf.png)
+![[data-structure-1.png]]
+![[data-structure-2.png]]
 [cheatsheet](https://www.bigocheatsheet.com/)
-![Image](https://i.imgur.com/DD20YyN.png)
+![[data-structure-3.png]]
 
 If $\lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)}$ exists, then
 $$\lim_{n \rightarrow \infty} \inf_{m \geq n} \frac{|T(m)|}{\phi(m)} = \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} = \lim_{n \rightarrow \infty} \sup_{m \geq n} \frac{|T(m)|}{\phi(m)}$$
@@ -61,8 +61,8 @@ Assume all functions are positive.
 The performance of an algorithm may also depend on the exact values of the data, specified by the **best case**, **worst case**, and **average case** performance.
 
 題目
-![Image](https://i.imgur.com/pCpDizk.png)
-![Image](https://i.imgur.com/CJGeC7E.png)
+![[data-structure-4.png]]
+![[data-structure-5.png]]
 
 ## Analyzing an Algorithm
 - Simple statement sequence
@@ -151,10 +151,10 @@ n = len(myArray)
 $O(n^3)$
 
 ## python list actual implementation
-![Image](https://i.imgur.com/qm7KSRD.png)
+![[data-structure-6.png]]
 pop(2) 需要 O(n) at worst case  
 In Python’s implementation, when an item is taken from the front of the list, all the other elements in the list are shifted one position closer to the beginning. For instance, what `pop(2)` does is as follows:
-![Image](https://i.imgur.com/lDlbUcD.png)
+![[data-structure-7.png]]
 
 Though it causes time for pop operation, this allows the index operation to be $O(1)$. This is a tradeoff that the Python implementors makes based on how people most commonly use the list data structure. The implementation is optimized so that the most common operations were very fast, sometimes by sacrificing the performance of less common operations.
 
@@ -187,7 +187,7 @@ If you were the implementor of Python, how do you implement dictionary so that t
 
 Currently, Python dictionaries are implemented as hash tables (Reference: *dictobject.h*). We will get into hash tables later in the course, but the following figure might give you some hints on how it works.
 
-![Image](https://i.imgur.com/1hxUgQL.png)
+![[data-structure-8.png]]
 
 <!-- https://stackoverflow.com/questions/327311/how-are-pythons-built-in-dictionaries-implemented  -->
 
@@ -206,13 +206,13 @@ In the following experiment we compare the performance of the `contains` operati
 
 ## Master Theorem
 
-![Image](https://i.imgur.com/4VxHWnM.png)
+![[data-structure-9.png]]
 
-![](https://i.imgur.com/XywJmrF.png)
+![[data-structure-10.png]]
 
 ## generating function
-![](https://i.imgur.com/zA52xoh.png)
-![](https://i.imgur.com/tTwAMXQ.png)
+![[data-structure-11.png]]
+![[data-structure-12.png]]
 
 ## Dynamic Programming
 - store the solutions
@@ -231,13 +231,13 @@ Bell (W2)
 - order 
   - preorder/prefix
     - 接到任務的先後順序 (左支先)
-    - ![Image](https://i.imgur.com/GjqMv2M.png)
+    - ![[data-structure-13.png]]
   - postorder/postfix
     - 完成任務的先後順序
-    - ![Image](https://i.imgur.com/j0zeake.png)
+    - ![[data-structure-14.png]]
   - inorder/infix
     - 由左往右數
-    - ![Image](https://i.imgur.com/WugYDnI.png)
+    - ![[data-structure-15.png]]
 - classification
   - full/proper/plane
     - 每個 node 有 0 or 2 個分支
@@ -246,11 +246,11 @@ Bell (W2)
     - parent of node i is node i//2, unless i=1
       - left child of node i is 2i, unless 2i > n
       - right child of node i is 2i+1, unless 2i+1 > n
-    - ![Image](https://i.imgur.com/2oVtl4Y.png)
+    - ![[data-structure-16.png]]
   - perfect
     - symmetrical for all branches，同 level 的 node 的分支數都一樣 (balanced)
     - height k → $2^{k+1}-1$ (等比) nodes
-    - ![Image](https://i.imgur.com/Yf5Lg33.png)
+    - ![[data-structure-17.png]]
     - $k\in \Theta(logn)$ (height=k, nodes=n) 
 - insert O(height)
 - search O(height)
@@ -259,22 +259,22 @@ Bell (W2)
     - bypass 掉
   - node with 2 children
     - replace with 右邊 min，並 delete/bypass 掉右邊 min
-    - ![Image](https://i.imgur.com/5yCJtc6.png)
+    - ![[data-structure-18.png]]
 - problem
   - height $\in \Omega(logn)$ ($O(logn)$ if perfect), worst cast O(n)
 
 ### AVL Tree
 <!-- - balanced binary tree -->
 - height of left & right node 之差 <= 1 的 binary search tree
-- ![Image](https://i.imgur.com/8frypfY.png)
+- ![[data-structure-19.png]]
 - height $\in \Theta(logN)$
   - upper bound (兩邊高度差一, smallest)
-  ![Image](https://i.imgur.com/JUt0Do8.png)
+  ![[data-structure-20.png]]
   - lower bound (兩邊等高, biggest)
-  ![Image](https://i.imgur.com/YFilgze.png)
+  ![[data-structure-21.png]]
 - rotation
   - single rotation
-  ![Image](https://i.imgur.com/Fo6iCmq.png)
+  ![[data-structure-22.png]]
     1. 原是一個 AVL Tree，x = h+2
     2. insert C → x = h+1 but unbalanced
     3. 弄成右圖 → y = h+2
@@ -285,7 +285,7 @@ Bell (W2)
        - y < B < x
        - x < C
   - double rotation
-  ![Image](https://i.imgur.com/NHnHvmN.png)
+  ![[data-structure-23.png]]
     - insert B1 B2 後，(由下往上)到 x 才 violate，so B1/B2 = h/h-1
     - 檢查
       - 左右圖看進去的 height 相同 → 整株都符合 AVL property
@@ -298,10 +298,10 @@ Bell (W2)
      - insertion 最多只要 rotate 一次就全 ok 
      - deletion 需要找到 root 才能完全確定，可能 rotate 很多次
        - 上方的 node: h+3 → h+2
-       ![Image](https://i.imgur.com/ZYfFUXR.png)
-       ![Image](https://i.imgur.com/jVlv91X.png)
+       ![[data-structure-24.png]]
+       ![[data-structure-25.png]]
        - 上方的 node: 不變
-       ![Image](https://i.imgur.com/i621RuK.png)
+       ![[data-structure-26.png]]
 - pros
   - search $\in O(logN)$
   - insertion & deletion $\in O(logN)$
@@ -322,35 +322,35 @@ Bell (W2)
     - 常用的會在上面
 - splay
   - x 在外側 → zig-zig
-    - ![Image](https://i.imgur.com/qxmWPC6.png)
+    - ![[data-structure-27.png]]
   - x 在內側 → zig-zag
-    - ![Image](https://i.imgur.com/QGTissZ.png)
+    - ![[data-structure-28.png]]
 - insertion
   1. 把找到的那個 node splay 上去
      - 就是最後一個在的 node
   2. split
   3. 插進去
   - e.g.
-    - ![Image](https://i.imgur.com/55nbiwx.png)
+    - ![[data-structure-29.png]]
 - deletion
   1. 把目標 node splay 上去
   2. delete 目標 node，變成兩個分開的 subtree
   3. 把 left subtree 的 max node splay 上去
   4. 接上 right subtree
-  - ![Image](https://i.imgur.com/vSWcPPD.png)
+  - ![[data-structure-30.png]]
   - e.g.
-    - ![Image](https://i.imgur.com/gG7JNgk.png)
+    - ![[data-structure-31.png]]
 - amortized cost
   - zig-zig
-  ![Image](https://i.imgur.com/g5R5z3J.png)
+  ![[data-structure-32.png]]
   - zig-zag
-  ![Image](https://i.imgur.com/YfMRd57.png)
+  ![[data-structure-33.png]]
   - simple rotation
-  ![Image](https://i.imgur.com/9rWrhMJ.png)
-  - ![Image](https://i.imgur.com/WxYZMeG.png)
+  ![[data-structure-34.png]]
+  - ![[data-structure-35.png]]
   - locality
     - 如果都只對幾個 node 操作 → 很快
-    - ![Image](https://i.imgur.com/0Z5kQYa.png)
+    - ![[data-structure-36.png]]
 - top-down splay
   - 深度為偶數 → 結果跟 bottom-up 一樣
   - 深度為奇數 → 結果可能跟 bottom-up 不一樣
@@ -367,12 +367,12 @@ Bell (W2)
 	- look before you leap
 	  - 經過的每個 4 node 都要 split
 	  - insert 的目的地是 4 node 時，先 split 再 insert
-	- ![Image](https://i.imgur.com/8HqciLA.png)
+	- ![[data-structure-37.png]]
 	- <https://www.educative.io/page/5689413791121408/80001>
-	- ![](https://i.imgur.com/ne2Tzd3.png)
+	- ![[data-structure-38.png]]
 - deletion 
 	- bottom-up
-	  - ![Image](https://i.imgur.com/5GYI7RE.png)
+	  - ![[data-structure-39.png]]
 	- top-down
 	  - look before you leap
 		- 經過的每個 2 node 都要 split
@@ -380,18 +380,18 @@ Bell (W2)
 #### Red-Black Tree
 - [Red-Black Tree](../../obs_autolink/Red-Black%20Tree)
 - represent 2-3-4 tree as binary tree
-- ![Image](https://i.imgur.com/ZZ7lX6d.png)
+- ![[data-structure-40.png]]
   - 兩種表示法
-- ![Image](https://i.imgur.com/v7XVS7o.png)
-- ![Image](https://i.imgur.com/E37PZJS.png)
+- ![[data-structure-41.png]]
+- ![[data-structure-42.png]]
 - properties
-	- ![](https://i.imgur.com/GkrzJ7X.png)
+	- ![[data-structure-43.png]]
 - root 是 black
 - 注意 ==leaf 是指 NIL==，永遠是黑色
 - 不會連續兩個 red
 - 每個 path 黑 node 數都一樣
   - 2-3-4 leaf nodes 都同 level
-- ![Image](https://i.imgur.com/qUxfsQI.png)
+- ![[data-structure-44.png]]
 - max height $2log(n+1)$
   - <https://www.codesdope.com/course/data-structures-red-black-trees/>
   - <https://doctrina.org/maximum-height-of-red-black-tree.html>
@@ -402,22 +402,22 @@ Bell (W2)
 - interactive visualization   
 <https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html>
 - Red-Black Tree but left-child can't be red
-- ![Image](https://i.imgur.com/DGFffzI.png)
+- ![[data-structure-45.png]]
 - level
 - leaf = 1
 - red = parent's level
 - black = parent's level - 1
-- ![Image](https://i.imgur.com/61I4mVh.png)
+- ![[data-structure-46.png]]
   - 水平：同 level (必指到 red)
 - operations
 - skew：
   - remove 1 left horizontal
   - add 1 right horizontal
-  - ![Image](https://i.imgur.com/vqOBj3j.png)
+  - ![[data-structure-47.png]]
 - split
   - remove consecutive right horizontal
   - 把中間堤上去
-  - ![Image](https://i.imgur.com/nljBwPX.png)
+  - ![[data-structure-48.png]]
 - **不會考 deletion**
 
 ## hash
@@ -430,7 +430,7 @@ Bell (W2)
   - 若 key 是 string
     - sum of ASCII
       - len = 8 → 只會用到 127x8 個 slot
-    - ![Image](https://i.imgur.com/YCYWUhH.png)
+    - ![[data-structure-49.png]]
 - seperate chaining 
   - 可每個 slot 存 linked list
     - collision → 加到後面
@@ -473,13 +473,13 @@ Bell (W2)
   - delete root (min) → 把 bottom level 最右的 node 放到 root → percolate down
     - 跟較小的且最小的 children 互換
       - s.t. children 被換上去後也會小於另一個 children
-    - ![Image](https://i.imgur.com/CBDmMRa.png)
-    ![Image](https://i.imgur.com/V0A4cWF.png)
-    ![Image](https://i.imgur.com/YMzmpOq.png)
-    ![Image](https://i.imgur.com/iwx36Dr.png)
+    - ![[data-structure-50.png]]
+    ![[data-structure-51.png]]
+    ![[data-structure-52.png]]
+    ![[data-structure-53.png]]
 - merge
   - 先放到 root 再 percolate down
-    ![Image](https://i.imgur.com/zpSGPpP.png)
+    ![[data-structure-54.png]]
 - bottom-up construction
   - o(n)
 - array representation
@@ -488,11 +488,11 @@ Bell (W2)
   - right child = 2i+2
   - i = odd → left child
   - i = even → right child
-  - ![Image](https://i.imgur.com/fFGZP98.png)
+  - ![[data-structure-55.png]]
 
 ### binomial heap
-- ![Image](https://i.imgur.com/mAF5mZ9.png)
-- ![Image](https://i.imgur.com/BHQ4JXz.png)
+- ![[data-structure-56.png]]
+- ![[data-structure-57.png]]
 - height = k
 - $2^k$ nodes
 - roots 是 singly linked list
@@ -525,10 +525,10 @@ Bell (W2)
 - construction
   - sequence of inserts
   - $\in O(n)$
-  - ![Image](https://i.imgur.com/0L8k3PJ.png)
+  - ![[data-structure-58.png]]
 
 ### comparison
-![Image](https://i.imgur.com/z6O0XZx.png)
+![[data-structure-59.png]]
 
 ### Fibonocci heap
 - roots of trees → circular linked list
@@ -544,7 +544,7 @@ Bell (W2)
     - potential += 1
       - t(H) += 1
       - m(H) += 0
-  - ![Image](https://i.imgur.com/ZAxDhhs.png)
+  - ![[data-structure-60.png]]
 - union
   - 剪開 → 連起來 → update min (among circular linked list roots)
   - amortized cost O(1)
@@ -597,14 +597,14 @@ Bell (W2)
       - c+2(-c+2) = 4-c
   - deletion
   - smallest Fib heap
-    - ![Image](https://i.imgur.com/unmM6oa.png)
-    - ![Image](https://i.imgur.com/YLbKLUf.png)
+    - ![[data-structure-61.png]]
+    - ![[data-structure-62.png]]
   - size n 的 Fib heap 之 max degree
   - degree d 的最小 Fib heap
 
 ## disjoint sets
 - equivalence relation
-  - ![Image](https://i.imgur.com/juDWjAR.png)
+  - ![[data-structure-63.png]]
   - 房間是否連通，是 equilavence relation
     - x 跟自己連通
     - x 連 y → y 連 X
@@ -623,14 +623,14 @@ Bell (W2)
   - 結果
     - 任兩 node 都互通，且只有一條路徑
   - e.g.
-    - ![Image](https://i.imgur.com/aLENyIl.png)
-    - ![Image](https://i.imgur.com/OLdrtrO.png)
+    - ![[data-structure-64.png]]
+    - ![[data-structure-65.png]]
 - up-tree
-  - ![Image](https://i.imgur.com/caa08M9.png)
+  - ![[data-structure-66.png]]
   - root 為這個 disjoint set 的代表
   - implementation
     - array
-    - ![Image](https://i.imgur.com/zGDB53k.png)
+    - ![[data-structure-67.png]]
       - 存 root 的 index
       - 自己是 root → -1
 - weighted union
@@ -638,7 +638,7 @@ Bell (W2)
   - height h → min $2^h$ nodes
     - a tree with h=k+1 must be formed by 2 trees with h=k
       - h=k + h=k-1 → h=k
-    - ![Image](https://i.imgur.com/d0SrOkL.png)
+    - ![[data-structure-68.png]]
     - $h \leq log_2n$
 - find
   - O(max height) = O($log_2n$)
@@ -659,7 +659,7 @@ Bell (W2)
 
 ### path compression
 - 把一路經過的都直接指到 root
-- ![Image](https://i.imgur.com/VsDvNJQ.png)
+- ![[data-structure-69.png]]
 - method
   - use union by rank
   - find-set(x)
@@ -695,12 +695,12 @@ Bell (W2)
           - rank lemma: 最多有 $\frac{n}{2^r}$ 個 rank=r 的 nodes 
 - $log^*n$
   - = $k$ s.t. $log^kn\leq 1$
-  - ![Image](https://i.imgur.com/un0qJ8N.png)
+  - ![[data-structure-70.png]]
     - 指 $log_2()$
   - 成長非常慢
   - rank block
     - rank_block(x) = $log^*x$
-    - ![Image](https://i.imgur.com/ULYys6S.png)
+    - ![[data-structure-71.png]]
 
 ### Tarjan's analysis of path compression
 - Ackermann's function $A_k(r)$
@@ -712,12 +712,12 @@ Bell (W2)
     - $A_2(r)=A_1^r(r)=r2^r\geq2^r$
       - r *= 2 做 r 次
     - $A_3(r)=A_2^r(r)\geq2^{2^{2^{2^{.^{.^{.^{.^{.^{2^{2^r}}}}}}}}}}\geq2^{2^{2^{2^{.^{.^{.^{.^{.^{2^{2}}}}}}}}}}$ (r 個 2 的 tower)
-    - ![Image](https://i.imgur.com/RpbkZOW.png)
+    - ![[data-structure-72.jpg]]
     - e.g.
       - $A_4(2)=A_3(A_3(2))=A_3(A_2(A_2(2)))=A_3(A_2(A_1(A_1(2)))))=A_3(A_2(A_1(4))))=A_3(A_2(8)))=A_3(2048))\geq$ a tower of 2048 個 2
 - inverse Ackermann's function $\alpha(n)$
   - $\alpha(n)$ = min k s.t. $A_k(2)\geq n$
-  - ![Image](https://i.imgur.com/Udf61fh.png)
+  - ![[data-structure-73.png]]
   - $\alpha$(a tower of 2048 2s) = 4 << $log^*$(a tower of 2048 2s) = 2048
 - rank gap $\delta(x)$
   - $\delta(x)$ = max k s.t. $rank(p[x])\geq$ $A_k(rank(x))$
@@ -751,14 +751,14 @@ Bell (W2)
 - leftheap property
   - NPL(leftchild) >= NPL(rightchild)
   - 違反 → swap children
-    - ![Image](https://i.imgur.com/zUvOpNE.png)
-    - ![Image](https://i.imgur.com/YUk5scL.png)
+    - ![[data-structure-74.png]]
+    - ![[data-structure-75.png]]
 - NPL null path length
   - 走到只有 0 or 1 child 的 node 的最短路徑
   - 自己就是 → NPL = 0
   - NPL(Null) = -1
     - → only 1 child 則 left 必不為 Null
-  - ![Image](https://i.imgur.com/zUN7LRt.png)
+  - ![[data-structure-76.png]]
 - right path 最短
   - NPL(x) = NPL(x.rightchild) + 1
     - x has 0 child
@@ -777,13 +777,13 @@ Bell (W2)
     2. 比大小，較小者加進 stack，並往 right child 移動
     3. 重複 2.，直到一個 pointer 指向 null (假設是 y)
     4. y 指向 x 指向的 node
-       1. ![Image](https://i.imgur.com/T1o1iwF.png)
-       2. ![Image](https://i.imgur.com/TtMhW7n.png)
+       1. ![[data-structure-77.png]]
+       2. ![[data-structure-78.png]]
     5. 檢查 leftheap property, swap if needed
-       1. ![Image](https://i.imgur.com/UYpMDnM.png)
+       1. ![[data-structure-79.png]]
     6. 根據 stack，一路往回，把 node 變成上一項的 right child，並檢查 NPL
-       1. ![Image](https://i.imgur.com/KwsdICr.png)
-       2. ![Image](https://i.imgur.com/2hpKo8J.png)
+       1. ![[data-structure-80.png]]
+       2. ![[data-structure-81.png]]
   - cost $\in O(logn)$
     - right path  $\in O(logn)$
       - 一直往 right child 走
@@ -829,5 +829,5 @@ Bell (W2)
 ## Dijkstra's Algorithm
 [Dijkstra's Algorithm](../../obs_autolink/Dijkstra's%20Algorithm)
 
-![](https://i.imgur.com/vAECkKj.png)
-![](https://i.imgur.com/rZnNe0Z.png)
+![[data-structure-82.png]]
+![[data-structure-83.png]]
