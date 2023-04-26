@@ -5,92 +5,145 @@ layout: meth
 # Algorithms Problems
 
 ## HW1
+
 ### 1. linear search
-![](https://i.imgur.com/YnPRYZp.png)
-![](https://i.imgur.com/xdOjjhF.png)
-![](https://i.imgur.com/aTGLUwF.png)
+
+![[algorithms-problems-1.jpg]]
+
+![[algorithms-problems-2.png]]
+
+![[algorithms-problems-3.png]]
 
 ### 2. binary search
-![](https://i.imgur.com/tekzuYF.png)
-![](https://i.imgur.com/9gzSSqL.png)
+
+![[algorithms-problems-4.jpg]]
+
+![[algorithms-problems-5.png]]
+
 - 9-12 怪怪的，應該相反？
 
 ### 3. bubblesort
-![](https://i.imgur.com/lijR14d.png)
-![](https://i.imgur.com/CPshSeo.png)
-![](https://i.imgur.com/GgoFatF.png)
-![](https://i.imgur.com/yLFo8Id.png)
-![](https://i.imgur.com/F7Lf4Dh.png)
+
+![[algorithms-problems-6.jpg]]
+
+![[algorithms-problems-7.jpg]]
+
+![[algorithms-problems-8.jpg]]
+
+![[algorithms-problems-9.png]]
+
+![[algorithms-problems-10.png]]
 
 ### 4. big theta pf
-![](https://i.imgur.com/V18dEh8.png)
-![](https://i.imgur.com/kyhTkVv.png)
+
+![[algorithms-problems-11.png]]
+![[algorithms-problems-12.png]]
 
 ### 5. ranking functions
-![](https://i.imgur.com/lqNMS9W.png)
-![](https://i.imgur.com/JC8Ljg5.png)
+
+![[algorithms-problems-13.png]]
+![[algorithms-problems-14.png]]
 
 ### 6. labeled linear time maximum subarray
-![](https://i.imgur.com/U13C9Nt.jpg)
-https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm
+
+![[algorithms-problems-15.jpg]]
+
+<https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm>
 
 ### 7. recurrence matrix multiplication
-![](https://i.imgur.com/4p2RcAD.png)
-![](https://i.imgur.com/diyBwoe.png)
+
+![[algorithms-problems-16.jpg]]
+
+![[algorithms-problems-17.png]]
 
 ### 8. solve recurrence
-![](https://i.imgur.com/dkDsqog.png)
+
+![[algorithms-problems-18.jpg]]
+
 (b.)
+
 把 lg 換成 $log_3$，最後近似成積分
-![](https://i.imgur.com/C2rprXa.png)
-![](https://i.imgur.com/5RkHVhL.png)
-![](https://i.imgur.com/BCpaJyq.png)
+
+![[algorithms-problems-19.png]]
+
+![[algorithms-problems-20.png]]
+
+![[algorithms-problems-21.png]]
 
 ### 9. polynomial multiplication
-![](https://i.imgur.com/H4N4oao.jpg)
-![](https://i.imgur.com/jufqRYj.jpg)
-http://algorithm.cs.nthu.edu.tw/~course/Extra_Info/Divide%20and%20Conquer_supplement.pdf
+
+![[algorithms-problems-22.jpeg]]
+
+![[algorithms-problems-23.jpg]]
+
+<http://algorithm.cs.nthu.edu.tw/~course/Extra_Info/Divide%20and%20Conquer_supplement.pdf>
 
 ## HW2
+
 ### 1. d-ary heap
-![](https://i.imgur.com/mXbTMUX.png)
-![](https://i.imgur.com/mXt3W3q.png)
+
+![[algorithms-problems-24.png]]
+
+![[algorithms-problems-25.jpg]]
 
 (a.)
+
 課本解答怪怪的
-![](https://i.imgur.com/9NgaiYr.png)
+
+![[algorithms-problems-26.png]]
 https://www.cs.cmu.edu/~eugene/teach/algs03b/works/s6.pdf
+
 (b.)
+
 $log_dn$
+
 (c.)
-![](https://i.imgur.com/iRyHvH8.png)
+
+![[algorithms-problems-27.png]]
 有些地方寫錯了
+
 (d.)
-![](https://i.imgur.com/KqlP2XA.png)
-![](https://i.imgur.com/l9ZzZuk.png)
+
+![[algorithms-problems-28.png]]]
+
+![[algorithms-problems-29.png]]
 不太完整
+
 (e.)
-![](https://i.imgur.com/VlfRhhe.png)
+
+![[algorithms-problems-30.png]]
 
 ### 2. tail recursive quicksort
-![](https://i.imgur.com/dtBqlS9.png)
-![](https://i.imgur.com/vObRscQ.png)
+
+![[algorithms-problems-31.jpg]]
+
+![[algorithms-problems-32.jpg]]
 
 (a.)
-![](https://i.imgur.com/xFNQb7f.png)
+
+![[algorithms-problems-33.png]]
 (b.)
-![](https://i.imgur.com/CCoKYpY.png)
+
+![[algorithms-problems-34.png]]
 
 正解
-![](https://i.imgur.com/0gZeyMV.png)
+
+![[algorithms-problems-35.png]]
 
 ### 3. counting sort
-![](https://i.imgur.com/HzGLTrp.png)
-![](https://i.imgur.com/ch3U4vu.png)
-![](https://i.imgur.com/1sbUDdM.png)
-![](https://i.imgur.com/WzYaHLV.png)
+
+![[algorithms-problems-36.jpg]]
+
+![[algorithms-problems-37.jpg]]
+
+![[algorithms-problems-38.png]]
+
+![[algorithms-problems-39.png]]
+
 (e.)
-https://www.itread01.com/articles/1485928815.html
+
+<https://www.itread01.com/articles/1485928815.html>
+
 ```py
 def countingsort(seq, k): 
     """In-place counting sort. """ 
@@ -115,40 +168,59 @@ def countingsort(seq, k):
             seq[act[elem]-1] = elem 
 	        act[elem] -= 1 
 ```
-==不太懂為何是 while loop 是 O(n)==
+
+不太懂為何是 while loop 是 O(n)
 
 正解
-![](https://i.imgur.com/a46n4Ys.png)
+
+![[algorithms-problems-40.png]]
 
 ### 4. quicksort
-![](https://i.imgur.com/ZcGl76U.png)
-![](https://i.imgur.com/8PCU4pX.png)
+
+![[algorithms-problems-41.jpg]]
+
+![[algorithms-problems-42.jpg]]
+
 like [[Algorithms#Quicksort]]
+
 partition:  
+
 blue 到處跟 red 比，得到比他大的一堆，跟他一樣的一個，比他小的一堆
 
-![](https://i.imgur.com/zK5fz58.png)
-![](https://i.imgur.com/MwKQP2K.png)
-![](https://i.imgur.com/6ZPWi2V.png)
+![[algorithms-problems-43.png]]
 
-https://www.techiedelight.com/water-jugs-problem/
+![[algorithms-problems-44.png]]
+
+![[algorithms-problems-45.png]]
+
+<https://www.techiedelight.com/water-jugs-problem/>
 
 ### 5. 綜合
-![](https://i.imgur.com/Lw3CKHQ.png)
+
+![[algorithms-problems-46.jpg]]
+
 (b.)
+
 build max heap take O(n) time
+
 [[Algorithms#heapsort]]
+
 (c.)
+
 [[Algorithms#order statistics]]
-![](https://i.imgur.com/4rkV4ox.png)
+
+![[algorithms-problems-47.png]]
 
 ### 6.
-![](https://i.imgur.com/YS5hpk6.png)
+
+![[algorithms-problems-48.png]]
 
 ### 7. dynamic programming
-![](https://i.imgur.com/BS5TH64.png)
 
- https://github.com/zain58/DAA_Project_15B-058-SE
+![[algorithms-problems-49.jpg]]
+
+<https://github.com/zain58/DAA_Project_15B-058-SE>
+ 
 先 solve 第 n 個月
 s = 現存 surplus
 for s = 1:D
@@ -203,7 +275,7 @@ def plan(make, n=[], d):
     return;
 ```
 
-![](https://i.imgur.com/u3pNkXP.png)
+![[algorithms-problems-50.png]]
 
 <!--
 解法 1:
@@ -222,40 +294,57 @@ m 為給定
 -->
 
 ### 8. maximum subarray dp !!
-![](https://i.imgur.com/xxiCvHG.png)
-https://www.csie.ntu.edu.tw/~hsinmu/courses/_media/ada_13fall/midterm2013_sol.pdf
+
+![[algorithms-problems-51.png]]
+
+<https://www.csie.ntu.edu.tw/~hsinmu/courses/_media/ada_13fall/midterm2013_sol.pdf>
+
 see my written solution
+
 (a.)
-![](https://i.imgur.com/r77lu7G.png)
-![](https://i.imgur.com/GZJxaoQ.png)
-==不太懂==
+
+![[algorithms-problems-52.png]]
+![[algorithms-problems-53.png]]
+
+不太懂
+
 (b.)
+
 Kandane's algorithm
-https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d
-http://people.cs.bris.ac.uk/~konrad/courses/2019_2020_COMS10007/slides/18-elements-of-dynamic-programming-short.pdf
+
+<https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d
+http://people.cs.bris.ac.uk/~konrad/courses/2019_2020_COMS10007/slides/18-elements-of-dynamic-programming-short.pdf>
 
 正解
-![](https://i.imgur.com/TFmOmiC.png)
+
+![[algorithms-problems-54.png]]
 
 ### 9. dynamic programming
-![](https://i.imgur.com/HMFOqvf.png)
-![](https://i.imgur.com/XOmQt87.png)
 
-https://github.com/jason88012/Maximum-Planner-Subset
+![[algorithms-problems-55.jpg]]
+
+![[algorithms-problems-56.jpg]]
+
+<https://github.com/jason88012/Maximum-Planner-Subset>
+
 有一點點幫助
 
 有沒有 +1 應該是等效的?
 
 正解
-![](https://i.imgur.com/TYJ7ZjU.png)
-![](https://i.imgur.com/kkZPZRJ.png)
+
+![[algorithms-problems-57.png]]
+![[algorithms-problems-58.png]]
 
 類題
-![](https://i.imgur.com/CCfLwsw.png)
-![](https://i.imgur.com/AXAIqOb.png)
+
+![[algorithms-problems-59.png]]
+![[algorithms-problems-60.png]]
 
 ## DIY 2
+
 #### ideas
+
 - 電路 debug
 	- 哪條線有問題
 	- min debug 次數
@@ -285,6 +374,7 @@ https://github.com/jason88012/Maximum-Planner-Subset
 				- low time, low probability
 
 #### 開寫
+
 小明是一個熱愛生物與電路，十選二實驗修生醫工程的電機系學生。為了濾掉雜訊，呈現出清晰的生理電訊號，小明設計了一個複雜的電路，包含了 pre-amplifier、兩個 notch filter、low-pass high-pass filter 各一個、post-amplifier 以及 level shifter，最後再接一個二極體攔截負電，以免燒壞 arduino 板子。經過了漫長的規劃與設計，並實際接完電路後，小明興奮地為自己貼上了電極片，以自己的身體作為 input 輸入到苦心做出的電路，不料在示波器上迎接他的卻是一片雜訊！不過，這可難不倒已經度過了電路學&電子一二實驗之磨難的小明！小明於是開始 debug，電阻電容電線 ua741 電源供應器東丟丟西換換，終於在六個小時後，成功在示波器上呈現出完美的心電圖了！真是可喜可賀！
 不過，在聽了江蕙如老師所講述的 Knapsacks problem 後，聰明的小明發現，用 dynamic programming 的方法 debug，應該會有效率很多！但是要怎麼做呢？
 
@@ -361,8 +451,9 @@ return 的第二項則是演算法跑出的 subset 解 i.e. 實際上該 debug �
 該演算法的 time complexity = MP + n + n x MP $\in O(n(MP))$
 
 ## Midterm Review
-![](https://i.imgur.com/2nGoQvj.png)
-![](https://i.imgur.com/862d2BZ.png)
+
+![[algorithms-problems-61.png]]
+![[algorithms-problems-62.png]]
 
 **Q: Heapsort can be used as the auxiliary sorting routine in radix sort, because it operates in place.
 **A: False because radix sort should be stable, while heapsort isn't stable
@@ -374,200 +465,254 @@ using decistion tree, we have 5!=120 leaves, so the height >= lg(120) = 6.xxxx
 
 **Q: for a binary tree with left & right children pointer but not parent pointer, how to find x & y's lowest common ancestor in O(n)?**
 A: keypoint - x & y 之 lowest common ancestor 在 x & y 之間, so
-![](https://i.imgur.com/zdjn5GQ.png)
+
+![[algorithms-problems-63.png]]
 
 optimal BST
-![](https://i.imgur.com/1bsL5Bb.png)
-![](https://i.imgur.com/2sGmcnm.png)
+
+![[algorithms-problems-64.png]]
+![[algorithms-problems-65.png]]
 
 ### guides
+
 - 建議不要用 limit 去 prove function 關係
 	- limit 太多
 
 ## HW3
+
 ### 1. [[Algorithms#Huffman codes]]
-![](https://i.imgur.com/k8NiQDd.png)
+
+![[algorithms-problems-66.png]]
+
 畫成 binary tree 去 merge 來看
 
-![](https://i.imgur.com/RUoP70b.png)
-![](https://i.imgur.com/NkX82Bs.png)
-![](https://i.imgur.com/ZSo6ZBY.png)
+![[algorithms-problems-67.png]]
+
+![[algorithms-problems-68.png]]
+
+![[algorithms-problems-69.png]]
 
 ### 2. BFS
-![](https://i.imgur.com/R8VeIvW.png)
 
-![](https://i.imgur.com/VHr1ZUu.png)
-![](https://i.imgur.com/hYsPpFK.png)
+![[algorithms-problems-70.jpg]]
+
+![[algorithms-problems-71.png]]
+
+![[algorithms-problems-72.png]]
 
 ### 3. edge types
-![](https://i.imgur.com/59B5DaQ.png)
 
-![](https://i.imgur.com/aJWHHzf.png)
+![[algorithms-problems-73.jpg]]
+
+![[algorithms-problems-74.png]]
 
 ### 4. BFS
-![](https://i.imgur.com/1vmLXy3.png)
-![](https://i.imgur.com/9XZBfgi.png)
-![](https://i.imgur.com/m43qqgV.png)
+
+![[algorithms-problems-75.png]]
+![[algorithms-problems-76.png]]
+![[algorithms-problems-77.png]]
 
 ### 5-6. Euler tour
-![](https://i.imgur.com/irV5KEu.png)
 
-![](https://i.imgur.com/SqFEIEO.png)
-![](https://i.imgur.com/p5DULH1.png)
-![](https://i.imgur.com/z2PRwSJ.png)
-![](https://i.imgur.com/ZYd7yZN.png)
+![[algorithms-problems-78.png]]
 
-https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiOm6-5u8z0AhXCJKYKHbZDCgkQFnoECAoQAQ&url=http%3A%2F%2Fwww.bowdoin.edu%2F~ltoma%2Fteaching%2Fcs231%2Ffall09%2FHomeworks%2Fold%2FH9-sol%25203.pdf&usg=AOvVaw11Aglt7zTgaartpiheFGjj
-![](https://i.imgur.com/WBHdwdu.png)
+![[algorithms-problems-79.png]]
+![[algorithms-problems-80.png]]
+![[algorithms-problems-81.png]]
+![[algorithms-problems-82.png]]
+
+<https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiOm6-5u8z0AhXCJKYKHbZDCgkQFnoECAoQAQ&url=http%3A%2F%2Fwww.bowdoin.edu%2F~ltoma%2Fteaching%2Fcs231%2Ffall09%2FHomeworks%2Fold%2FH9-sol%25203.pdf&usg=AOvVaw11Aglt7zTgaartpiheFGjj>
+
+![[algorithms-problems-83.png]]
 
 ### 7 Shannon code
-![](https://i.imgur.com/yGy1HmT.png)
-![](https://i.imgur.com/XfZVMKf.png)
+
+![[algorithms-problems-84.jpg]]
+
+![[algorithms-problems-85.png]]
 
 ### 8. coin change greedy
-![](https://i.imgur.com/kG3u2S0.png)
-![](https://i.imgur.com/tEb2mAI.png)
-![](https://i.imgur.com/C1o2fsj.png)
-![](https://i.imgur.com/tYuKxg6.png)
-![](https://i.imgur.com/07mpZ9o.png)
-![](https://i.imgur.com/36BpdTI.png)
-![](https://i.imgur.com/mI3qOfB.png)
-![](https://i.imgur.com/OZ1smZz.png)
+
+![[algorithms-problems-86.png]]
+![[algorithms-problems-87.png]]
+![[algorithms-problems-88.png]]
+![[algorithms-problems-89.png]]
+![[algorithms-problems-90.png]]
+![[algorithms-problems-91.png]]
+![[algorithms-problems-92.png]]
+![[algorithms-problems-93.png]]
 
 ## recitation
+
 ### [[Algorithms#Huffman codes]]
-![](https://i.imgur.com/rkMTtLk.png)
+
+![[algorithms-problems-94.png]]
+
 8 個 → 加一個 null 便 9 個，跟 1 2 合
 
 ### semiconnected
-![](https://i.imgur.com/8mhCHk3.png)
-![](https://i.imgur.com/k3KQN9y.png)
+
+![[algorithms-problems-95.png]]
+
+![[algorithms-problems-96.png]]
 
 ### BFS
-![](https://i.imgur.com/GUdTSpo.png)
+
+![[algorithms-problems-97.jpg]]
+
 不停找
 
 ### DFS
-![](https://i.imgur.com/pxTa6Ew.png)
+
+![[algorithms-problems-98.jpg]]
+
 把 G 的 edge 都弄成反邊 s.t. R(u) 都是指到 u
 
 ### topological sort
-![](https://i.imgur.com/35tjUVY.png)
+
+![[algorithms-problems-99.jpg]]
+
 會把所有 out-degree = 1 in-degree=0 者清掉，剩下的都在 cycle 裡，所以找不到 in-degree=0 → queue emptied
 
 ## HW4
+
 ### 1. MST
-![](https://i.imgur.com/1GQQb2F.png)
-![](https://i.imgur.com/GXpPjiA.png)
+
+![[algorithms-problems-100.jpg]]
+
+![[algorithms-problems-101.jpg]]
 
 <http://www.jade-cheng.com/uh/coursework/ics-311/homework/homework-07.pdf>
 
-![](https://i.imgur.com/D884Hyl.png)
-![](https://i.imgur.com/MFCwcry.png)
+![[algorithms-problems-102.png]]
+![[algorithms-problems-103.png]]
 
 ### 2. relax
-![](https://i.imgur.com/phkAJRW.png)
-![](https://i.imgur.com/PyFTPe6.jpg)
 
-![](https://i.imgur.com/36gLYAN.png)
+![[algorithms-problems-104.jpg]]
 
-![](https://i.imgur.com/yybxTyB.png)
+![[algorithms-problems-105.jpg]]
+
+![[algorithms-problems-106.png]]
+
+![[algorithms-problems-107.png]]
+
 <https://github.com/gzc/CLRS/blob/master/C24-Single-Source-Shortest-Paths/24.2.md>
 
 ### 3. graph
-![](https://i.imgur.com/0ZP8cpv.png)
-![](https://i.imgur.com/60NlYzn.png)
 
-![](https://i.imgur.com/4bEx1TC.png)
+![[algorithms-problems-108.jpg]]
+
+![[algorithms-problems-109.jpg]]
+
+![[algorithms-problems-110.png]]
+
 [CSIE HW5 sol](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwj8-r7S14P1AhUZxYsBHY6CCDkQFnoECAIQAQ&url=https%3A%2F%2Fwww.csie.ntu.edu.tw%2F~hsinmu%2Fcourses%2F_media%2Fada_11fall%2Fhw5-sol.pdf&usg=AOvVaw1xN7Q0oDNN_JihDSQJJK0M)
 
-![](https://i.imgur.com/7OwebSS.png)
-![](https://i.imgur.com/mFR0GSh.png)
+![[algorithms-problems-111.png]]
+![[algorithms-problems-112.png]]
 
 ### 4. floyd warshell
-![](https://i.imgur.com/SH1wUdd.png)
+
+![[algorithms-problems-113.jpg]]
 
 https://cs.stackexchange.com/questions/74870/why-can-we-drop-the-superscripts-in-the-floyd-warshall-algorithm
 
-![](https://i.imgur.com/GqanklO.png)
+![[algorithms-problems-114.png]]
 
 ### 5. transitive closure
-![](https://i.imgur.com/bV3BBY9.png)
-![](https://i.imgur.com/iIZLrKR.png)
 
-![](https://i.imgur.com/VCbdEoI.png)
-![](https://i.imgur.com/eemNCje.png)
+![[algorithms-problems-115.jpg]]
+![[algorithms-problems-116.jpg]]
+
+![[algorithms-problems-117.png]]
+![[algorithms-problems-118.png]]
 
 ### 6. flow network
-![](https://i.imgur.com/PMUj9vA.png)
-![](https://i.imgur.com/nqabjxo.png)
-![](https://i.imgur.com/sJya7Fx.png)
 
-![](https://i.imgur.com/fpddJOc.png)
+![[algorithms-problems-119.jpg]]
 
-![](https://i.imgur.com/vk06K99.png)
-![](https://i.imgur.com/zCA1IYX.png)
+![[algorithms-problems-120.jpg]]
+
+![[algorithms-problems-121.jpg]]
+
+![[algorithms-problems-122.png]]
+
+![[algorithms-problems-123.png]]
+
+![[algorithms-problems-124.png]]
+
 [standford](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwja3cT06YX1AhXRrVYBHZUsBQ8QFnoECCMQAQ&url=https%3A%2F%2Fstanford.edu%2F~rezab%2Fclasses%2Fcme305%2FW17%2FMidterm%2Fprobsession2_2017_soln.pdf&usg=AOvVaw3dMlfAnMzmAsC9dDUYYqNR)
 
-![](https://i.imgur.com/2VA8ZAH.png)
-![](https://i.imgur.com/lHSE5RD.png)
-![](https://i.imgur.com/z3eE0mt.png)
+![[algorithms-problems-125.png]]
+![[algorithms-problems-126.png]]
+![[algorithms-problems-127.png]]
 
 ### 7. SCC
-![](https://i.imgur.com/Workt6o.png)
+
+![[algorithms-problems-128.jpg]]
+
 [nice graphical explanation](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi56MXUgIb1AhXWy4sBHdq-DDQQFnoECAsQAQ&url=https%3A%2F%2Fwww.iitg.ac.in%2Fdeepkesh%2FCS301%2Fassignment-2%2F2sat.pdf&usg=AOvVaw3q56uzk8OQP0tZQ_BvoVas)
 
-![](https://i.imgur.com/fJvM5Rf.png)
+![[algorithms-problems-129.png]]
 
-![](https://i.imgur.com/sPltDgb.png)
+![[algorithms-problems-130.png]]
 
 ### 8. graph coloring NP (d.)(e.)(f.)???
-![](https://i.imgur.com/OO2bZCO.png)
-![](https://i.imgur.com/5z3WlzQ.png)
-![](https://i.imgur.com/pbZ4YPJ.png)
-![](https://i.imgur.com/iEibUqX.jpg)
-![](https://i.imgur.com/Yy0YHa5.png)
+
+![[algorithms-problems-131.jpg]]
+![[algorithms-problems-132.jpg]]
+![[algorithms-problems-133.jpg]]
+![[algorithms-problems-134.jpg]]
+![[algorithms-problems-135.png]]
 
 (c.)  
+
 1. 3-COLOR can reduce to decision problem of k=3 → if 3-COLOR is NP-Complete, then the decision problem is NP-Hard
 2. the decision problem can be verified in polynomial time → is NP
 3. is NP-Hard and NP → is NP-Complete
 
-![](https://i.imgur.com/SVA7AZp.png)
-![](https://i.imgur.com/Dh9kKZ3.png)
-![](https://i.imgur.com/e1JTSE0.png)
-![](https://i.imgur.com/OyyHXAm.png)
-![](https://i.imgur.com/Y7bjZTu.png)
-![](https://i.imgur.com/rC6ePcb.png)
+![[algorithms-problems-136.png]]
+![[algorithms-problems-137.png]]
+![[algorithms-problems-138.png]]
+![[algorithms-problems-139.png]]
+![[algorithms-problems-140.png]]
+![[algorithms-problems-141.png]]
 
-![](https://i.imgur.com/sjM3Xvr.png)
-![](https://i.imgur.com/CT2PWYM.png)
-![](https://i.imgur.com/ll4xrxv.png)
-![](https://i.imgur.com/ajePA4R.png)
+![[algorithms-problems-142.png]]
+![[algorithms-problems-143.png]]
+![[algorithms-problems-144.png]]
+![[algorithms-problems-145.png]]
 
 ### 9. amortized
-![](https://i.imgur.com/u9YIVx5.png)
-![](https://i.imgur.com/uP8j1nT.jpg)
+
+![[algorithms-problems-146.jpg]]
+![[algorithms-problems-147.jpg]]
+
 queue → push to S1  
 dequeue → pop from S2, if S2 is empty, push&pop everything from S1 to S2 and then pop
 
-![](https://i.imgur.com/iUug5k6.png)
-![](https://i.imgur.com/JUpKMs2.png)
+![[algorithms-problems-148.png]]
+![[algorithms-problems-149.png]]
 <https://dspace.mit.edu/bitstream/handle/1721.1/37150/6-046JFall-2004/NR/rdonlyres/Electrical-Engineering-and-Computer-Science/6-046JFall-2004/84EBB6F3-2B41-4140-9D39-960EB29423CB/0/ps4sol.pdf>
 
 <https://www.geeksforgeeks.org/queue-using-stacks/>  
 method 2
 
 ## DIY 4
+
 ### ideas
-	- queue round robin game game theory
+
+ - queue round robin game game theory
 	- opputunistic graph
 	- 祖宗十八代 least common ancestor
 	- 時空旅人 same subtree
 
 ### 開寫
+
 小明是個時空旅人。今天他來到了西元三千年，遇到一個很欠打的人，但是他又不想要打到自己的子孫，於是他跑到了西元四千年，買了一個子孫 decendent tree calculator，一個能夠計算出以你為 root 的完整族譜，並 return root (你)。這個 decendent tree calculator 並不會考慮配偶，每個 node 只有指到自己小孩的 pointer。小明於是先用這個 decendent tree calculator 計算自己，得到自己的 node，再跑回西元四千年，對那個很欠打的人進行計算，得到他的 node。但是，要怎麼知道他是不是自己的子孫呢？一個簡單的方法是，直接對自己的 tree 做 DFS，如果遇到了他的 node，就代表他是自己的子孫。但是，受限於個人資料保護法，decendent tree calculator 並無法存取你的每個子孫的一切資訊。事實上，只有星座是被記錄的，因為西元四千年左右的人們很智障，很喜歡星座，喜歡到政府立法規定每個人的姓名裡都要包含自己的星座，星座成為絕對的公開資訊，因此 decendent tree calculator 所記錄的 node value 就是星座，是用來給老年癡呆的老人們回想起自己兒孫的星座用的好工具（過年見到兒孫們卻說不出他們的星座是會頓失失去兒孫們的尊重）。因此單單 traverse 自己的 decendent tree，是無法判斷那個很欠打的人是否在裡面的，因為 node value 就只有星座。小明苦思許久，都不知道該怎麼辦，因此決定跑回西元 2021 年來問我。我告訴他： 
 只檢那個人的星座當然是不夠，但如果檢查了他的所有後代的星座，全部照著順序出現在你的後代裡的話，那麼就可以幾乎確定是他是你的後代了！因此這就是一個檢查一個 tree 是否是另一個 tree 的 subtree 的問題！其實我們只要稍微修一下 DFS 就可以達成了！  
+
 ```
 isSubtree(root, subRoot)
 	preorderArr = []
@@ -594,6 +739,7 @@ DFS(node, preorderArr):
 		for v in children of node
 			DFS(v, preorderArr)
 ```
+
 概念就是，先對兩個 tree 各做一次 preorder traversal，並把經過的 node value 都存到一個 array，之後再進行比較，如果一個的 preorder array 是另一個 preorder array 裡面的一段連續 sequence，那麼這個 tree 就是另一個 tree 的 subtree！  
 這個演算法的 time & space analysis 如下所示
 - time complexity $\in O(V+E)$ ($V$, $E$ are the $|V|$, $|E|$ of the main tree)
@@ -607,12 +753,16 @@ DFS(node, preorderArr):
 	- preorder array for sub tree → $O(V_{sub})$
 
 注意在製作 preorder array 時，如果 node 沒有 children，就加一個 null 進 array，這是為了以下的情況發生：
-![](https://i.imgur.com/3VVAzeT.png)
+
+![[algorithms-problems-150.png]]
+
 如圖，右 tree 並非左 tree 的 subtree，但如果沒有加 null 進 array，兩者的 preorder arrary 會是
+
 - [1,2,4,5,9,3,6,7,8]
 - [2,4,5]
 
 因此會誤判後者為前者的 subtree！但如果加了 null，preorder array 會變成
+
 - [1,2,4,null,5,9,3,6,null,7,null,8,null]
 - [2,4,null,5,null]
 
@@ -621,20 +771,24 @@ DFS(node, preorderArr):
 如此一來，只要發現那個很欠打的人的後代 tree 有出現在自己的後代 tree，就可以幾乎確定那個人是你的後代，那麼你就不應該打他！注意，雖然那個儀器是定位在西元四千年，跟西元三千 年差了一千年，因此那個人的後代 tree 會足夠龐大，但還是有微小機率你的某個後代的所有後代的星座跟那個人的一模一樣，所有你有可能誤判他為你的後代，而不打他。不過他的後代 tree 如果沒有出現在你的後代 tree，那麼他就絕對不是你的後代，你就可以盡情地打他！這符合人本社會的精神：寧可錯放，不可錯懲！
 
 ## Final review
+
 ### MST
+
 1. assume T1 is a MST, T2 is the bottleneck spanning tree
 2. let (u,v) in T1 has weight > weight of each edge in T2
 3. let V1 = nodes in T1 reachable by u without going though v, V2 = V-V1
 4. only edge connecting V1 & V2 in T1 is (u,v), but T2 has edge connecting V1 & V2 with less weight → T1 is not MST
 
-![](https://i.imgur.com/GpmwUpp.png)
-![](https://i.imgur.com/amAEyEm.png)
+![[algorithms-problems-151.png]]
+![[algorithms-problems-152.png]]
 
 ### flow network
-![](https://i.imgur.com/04DlqNu.png)
-![](https://i.imgur.com/DOt75ly.png)
-![](https://i.imgur.com/Jro7xR5.png)
+
+![[algorithms-problems-153.png]]
+![[algorithms-problems-154.png]]
+![[algorithms-problems-155.png]]
 
 ### flow network
-![](https://i.imgur.com/vZ4Y5y1.png)
-![](https://i.imgur.com/MlxUD75.png)
+
+![[algorithms-problems-156.png]]
+![[algorithms-problems-157.png]]

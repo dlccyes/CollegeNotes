@@ -22,13 +22,13 @@ case structure
 `./bin/NTU_sort -IS inputs/1000.case1.in outputs/1000.case1.out`
 
 ### report
-![](https://i.imgur.com/dtXdJWj.png)
-![](https://i.imgur.com/OV2ocET.png)
+![[algorithms-pa-1.png]]
+![[algorithms-pa-2.png]]
 - 實際上 case 2 因為是 sorted 所以 QS 會明顯在其他上面
 
 ### submission
-![](https://i.imgur.com/GQhb0FD.png)
-![](https://i.imgur.com/loZL2eL.png)
+![[algorithms-pa-3.png]]
+![[algorithms-pa-4.png]]
 
 - compress
 	- `tar -zcvf b08901001_pa1.tgz b08901001_pa1`
