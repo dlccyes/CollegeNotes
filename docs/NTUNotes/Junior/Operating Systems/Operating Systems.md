@@ -80,7 +80,7 @@ has_children: True
 - ![[operating-systems-1.png]]
 - GPU
 	- many processing unit, executing in parallel
-	- each unit perform simple task
+	- each unit performs simple task
 - bootstrap
 	- load OS into memory at startup
 - storage-device heirarchy
