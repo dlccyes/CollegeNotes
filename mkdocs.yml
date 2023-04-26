@@ -146,19 +146,19 @@ nav:
   - "OtherNotes/CS Career.md"
   - "software-development/System Design.md"
   - DSA:
-    - "NTUNotes/Sophomore/Data Structure.md"
+    - "NTUNotes/Sophomore/Data Structure/Data Structure.md"
     - "NTUNotes/Junior/Algorithms/Algorithms.md"
     - software-development/leetcode.md
-  - "NTUNotes/Junior/Computer Networks.md"
-  - "NTUNotes/Junior/Operating Systems.md"
-  - "NTUNotes/Junior/Computer Architecture.md"
-  - "NTUNotes/Junior/Machine Learning.md"
+  - "NTUNotes/Junior/Computer Networks/Computer Networks.md"
+  - "NTUNotes/Junior/Operating Systems/Operating Systems.md"
+  - "NTUNotes/Junior/Computer Architecture/Computer Architecture.md"
+  - "NTUNotes/Junior/Machine Learning/Machine Learning.md"
 
 - Electrical Engineering:
-  - "NTUNotes/Freshman/Logic Design.md"
-  - "NTUNotes/Freshman/Circuit.md"
-  - "NTUNotes/Sophomore/Electromagnetism.md"
-  - "NTUNotes/Senior/Power Engineering.md"
+  - "NTUNotes/Freshman/Logic Design/Logic Design.md"
+  - "NTUNotes/Freshman/Circuit/Circuit.md"
+  - "NTUNotes/Sophomore/Electromagnetism/Electromagnetism.md"
+  - "NTUNotes/Senior/Power Engineering/Power Engineering.md"
 
 - Economics:
   - Microeconomics:
@@ -166,10 +166,10 @@ nav:
     - "NTUNotes/Freshman/Microeconomics/Ch10 Monopoly.md"
     - "NTUNotes/Freshman/Microeconomics/Ch11 Market Power, Colusion, and Obligopoly.md"
   - Macroeconomics:
-    - "NTUNotes/Senior/Principle of Macroeconomics.md"
-    - "NTUNotes/Junior/Macroeconomics.md"
-  - "NTUNotes/Senior/Statistics.md"
-  - "NTUNotes/Sophomore/Econometrics.md"
+    - "NTUNotes/Senior/Principle of Macroeconomics/Principle of Macroeconomics.md"
+    - "NTUNotes/Junior/Macroeconomics/Macroeconomics.md"
+  - "NTUNotes/Senior/Statistics/Statistics.md"
+  - "NTUNotes/Sophomore/Econometrics/Econometrics.md"
   - Money and Banking:
     - "NTUNotes/Sophomore/Money and Banking/README.md"
     - "NTUNotes/Sophomore/Money and Banking/Ch2 金融體系概要.md"
@@ -187,9 +187,9 @@ nav:
     - "NTUNotes/Sophomore/Money and Banking/Ch16 傳統與非傳統的貨幣政策工具.md"
     - "NTUNotes/Sophomore/Money and Banking/Ch17 貨幣政策的目標機制.md"
     - "NTUNotes/Sophomore/Money and Banking/Ch18 貨幣政策的傳遞機制.md"
-  - "NTUNotes/Freshman/Eurozone.md"
-  - "NTUNotes/Junior/Industrial Organization.md"
-  - "NTUNotes/Senior/Internation Finance.md"
+  - "NTUNotes/Freshman/Eurozone/Eurozone.md"
+  - "NTUNotes/Junior/Industrial Organization/Industrial Organization.md"
+  - "NTUNotes/Senior/International Finance/International Finance.md"
   - Game Theory:
     - "NTUNotes/Hung-Yu/Game Theory for Wireless Network/Game Theory.md"
     - Game Theory for Wireless Networks Papers:
