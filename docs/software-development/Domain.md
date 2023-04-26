@@ -7,23 +7,29 @@
 		- tested, muy bueno
 - Google Domain
 
-## Transferring a domain to another registrar
+## Changing nameserver
 
-Google -> Cloudfare in this example
-
-See [Transfer your domain to Cloudflare](https://developers.cloudflare.com/registrar/get-started/transfer-domain-to-cloudflare/)
+Assuming your domain is Google domain and you want to use [[Cloudfare]]'s nameserver
 
 1. Add your domain in Cloudfare
 2. Make sure the DNS records are correct
 3. Go to your domain in Google domain
-4. Disabled DNSSEC
+4. Disable DNSSEC and **wait for a few days** until it's truly disabled
 5. Change the nameservers following Cloudfare's prompt
 	- See [Change your nameservers](https://developers.cloudflare.com/dns/zone-setups/full-setup/)
 	- May need to go to your site hosts and reconfigure their custom domains
 6. Unlock domain in "Registration settings
 7. Go to Cloudfare
 8. Enable DNSSEC
-9. Wait for a few hours until it allows you to transfer
+
+## Transferring a domain to another registrar
+
+Google -> Cloudfare in this example
+
+See [Transfer your domain to Cloudflare](https://developers.cloudflare.com/registrar/get-started/transfer-domain-to-cloudflare/)
+
+1. Follow the steps in [[#Changing nameserver]]
+2. Wait for a few hours until it allows you to transfer
 
 ## Checking domain information
 
@@ -37,6 +43,19 @@ Some web tools
 
 - <https://dnssec-analyzer.verisignlabs.com/>
 - <https://dnsviz.net/>
+
+### Propagation
+
+See the propagation status of your A, CNAME, TXT, MX, etc. records
+
+<https://www.whatsmydns.net/>
+
+Note that if you're using [[Cloudfare]]'s DNS and has proxy enabled in your CNAME records, they're actually A records pointing to Cloudfare's proxy server IP under the hood, so no CNAME records published and it will be all red on the web tool.
+
+Related threads
+
+- [CNAME showing all red Xs on whatsmydns.new | Cloudfare community](https://community.cloudflare.com/t/cname-showing-all-red-xs-on-whatsmydns-new/433954) 
+- [CNAME not being seen by tests, but site working | Cloudfare community](https://community.cloudflare.com/t/cname-not-being-seen-by-tests-but-site-working/276960)
 
 ### Only DNS info
 

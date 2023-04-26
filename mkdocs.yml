@@ -126,6 +126,9 @@ nav:
       - software-development/SQLAlchemy.md
 
   - DevOps:
+    - Domain:
+      - software-development/Domain.md
+      - software-development/Cloudfare.md
     - Cloud:
       - software-development/AWS.md
       - software-development/GCP.md

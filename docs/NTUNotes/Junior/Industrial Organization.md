@@ -65,6 +65,7 @@ see [Oligopoly](../Freshman/Microeconomics/Ch11%20Market%20Power,%20Colusion,%20
 		- 1 in this period -> $\delta$ in next period
 
 ### Grim Trigger Strategy
+
 - algo
 	- initially both firms set p = monopoly price
 	- if history price was always the monopoly price, set p = monopoly price
@@ -78,9 +79,11 @@ see [Oligopoly](../Freshman/Microeconomics/Ch11%20Market%20Power,%20Colusion,%20
 		- $\delta \geq \dfrac{1}{2}$
 
 ## final
+
 <https://hackmd.io/lgE6h18aSzyV4I7PrE0zzg>
 
 ## miscellaneous
+
 - gross profit margin vs. operating profit margin
 	- gross profit = revenue - direct cost of the products sold
 	- operating profit = revenue - all cost
