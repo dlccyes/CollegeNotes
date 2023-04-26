@@ -33,7 +33,7 @@ $$sinh(x)=\dfrac{e^x-e^{-x}}{2}$$
 
 $$tanh^{-1}(x)=\dfrac{1}{2}ln(\dfrac{1+x}{1-x})$$
 
-![](https://i.imgur.com/rEK2ZNm.png)
+![[power-engineering-1.png]]
 
 ### Generator Rotating Speed
 
@@ -45,23 +45,23 @@ e.g. 60Hz, 2 poles -> 3600 rpm
 
 ### Complex Power
 
-![](https://i.imgur.com/7GLW8Ad.png)
+![[power-engineering-2.png]]
 
 $$\phi=\theta_V-\theta_I$$
 
-![](https://i.imgur.com/lHpVGP8.jpg)
+![[power-engineering-3.jpg]]
 
-![](https://i.imgur.com/5SiqMlA.jpg)
+![[power-engineering-4.jpg]]
 
-![](https://i.imgur.com/ckt150B.jpg)
+![[power-engineering-5.jpeg]]
 
 cos & sin 積起來時被消掉
 
-![](https://i.imgur.com/T7rzi4g.png)
+![[power-engineering-6.png]]
 
-![](https://i.imgur.com/3o7wQdH.png)
+![[power-engineering-7.png]]
 
-![](https://i.imgur.com/3XbIS85.png)
+![[power-engineering-8.png]]
 
 $$V_{max}=\sqrt{2}|V|$$
 
@@ -71,9 +71,9 @@ v(t)
 &=\sqrt{2}|V|cos(\omega t+\phi)\\
 \end{align*}$$
 
-![](https://i.imgur.com/eb18svI.png)
+![[power-engineering-9.png]]
 
-![](https://i.imgur.com/W03O4DC.png)
+![[power-engineering-10.png]]
 
 I lags V $\phi$ -> phasor = $\phi$ 
 
@@ -86,7 +86,7 @@ power factor (PF)
 
 $$PF = cos(\phi)$$
 
-![](https://i.imgur.com/nknu7Ze.png)
+![[power-engineering-11.png]]
 
 $$S = |S|e^{j\phi} = |V||I|e^{j\phi}$$
 
@@ -102,7 +102,7 @@ $$|I| = \dfrac{|S|}{|V|}$$
 
 ### Impedance
 
-![](https://i.imgur.com/r8TU0bZ.png)
+![[power-engineering-12.png]]
 
 $$V = IZ$$
 
@@ -120,42 +120,41 @@ $$S = VI^* = V(\dfrac{V}{Z})^* = \dfrac{|V|^2}{Z^*}$$
 
 Each separated by $120^{\circ}$, s.t. the instantaneous power is constant
 
-![](https://i.imgur.com/OEv0ZQ1.png)
+![[power-engineering-13.png]]
 
 ### Balanced Three-Phase Power
 
-![](https://i.imgur.com/tBj8TFT.png)
+![[power-engineering-14.png]]
 
 Each of the neutral points has the same voltage.
 
 pf
 
-![](https://i.imgur.com/4X7JX1D.png)
-![](https://i.imgur.com/nqq8NQf.png)
+![[power-engineering-15.png]]
+![[power-engineering-16.png]]
 
 Knowing this, we can simplify the circuit
 
-![](https://i.imgur.com/7WK1aLm.png)
+![[power-engineering-17.png]]
 
 #### Impedance
 
 **Delta Wye Transformation**
 
-![](https://i.imgur.com/m1sCilU.png)
+![[power-engineering-18.png]]
 
 $$Z_\lambda = \dfrac{1}{3}Z_\Delta$$
 
 pf
 
-![](https://i.imgur.com/tRAm6jr.png)
-![](https://i.imgur.com/XCOmo93.png)
+![[power-engineering-19.png]]
+![[power-engineering-20.png]]
 
 #### Voltage
 
-![](https://i.imgur.com/9GDDNrG.png)
+![[power-engineering-21.jpg]]
 
-We know $V_{an}$, $V_{bn}$, $V_{cn}$ are in sequence with common difference = $-120^\circ$, 
-now we can get the relationship between $V_{an}$ & $V_{ab}$
+We know $V_{an}$, $V_{bn}$, $V_{cn}$ are in sequence with common difference = $-120^\circ$, now we can get the relationship between $V_{an}$ & $V_{ab}$
 
 $$V_{ab}=\sqrt{3}\angle{30^{\circ}}V_{an}$$
 
@@ -163,18 +162,18 @@ $$V_{ab}=\sqrt{3}\angle{30^{\circ}}V_{an}$$
 
 Power = single phase power x 3
 
-![](https://i.imgur.com/x9H2lx4.png)
+![[power-engineering-22.png]]
 
 ### Problems
 
 #### Basic Formula
 
-![](https://i.imgur.com/D3I47mk.png)
+![[power-engineering-23.png]]
 
 #### Per phase
 
-![](https://i.imgur.com/nW7IRkI.png)
-![](https://i.imgur.com/vArviVt.png)
+![[power-engineering-24.png]]
+![[power-engineering-25.png]]
 
 If 440V is $3\phi$, $I$ should be $\dfrac{S_{1\phi}}{\frac{440}{\sqrt{3}}}=328.04$ A
 
@@ -182,7 +181,7 @@ If 440V is $3\phi$, $I$ should be $\dfrac{S_{1\phi}}{\frac{440}{\sqrt{3}}}=328.0
 
 #### Delta Wye Formula
 
-![](https://i.imgur.com/sSKJ1sE.png)
+![[power-engineering-26.png]]
 
 Positive sequence
 
@@ -215,23 +214,23 @@ $$S_{3\phi}=V_{an}I_a^*+V_{bn}I_b^*+V_{cn}I_c^*=\underline{4320\angle{-15^\circ}
 - H = magnetic field intensity
 - B = magnetic field density
 
-![](https://i.imgur.com/kTyb5ho.png)
+![[power-engineering-27.png]]
 
-![](https://i.imgur.com/JcQepmU.png)
+![[power-engineering-28.png]]
 
 $$B=\mu H$$
 
-![](https://i.imgur.com/yIQ8uqY.png)
+![[power-engineering-29.png]]
 
 ### Infinite straight wire
 
 $H$ outside the condutor
 
-![](https://i.imgur.com/H73Oq2z.png)
+![[power-engineering-30.png]]
 
 $H$ inside the condutor
 
-![](https://i.imgur.com/XVnU6jP.png)
+![[power-engineering-31.png]]
 
 
 ### Conductor Bundling
@@ -243,25 +242,25 @@ $$r'=re^{-\frac{1}{4}}=0.78r$$
 Inductance per meter $l$
 $$l=\dfrac{\mu_0}{2\pi}ln\dfrac{D_m}{R_b}$$
 
-![](https://i.imgur.com/Y22ze87.png)
+![[power-engineering-32.png]]
 
-![](https://i.imgur.com/R2ltmNz.png)
+![[power-engineering-33.png]]
 
-![](https://i.imgur.com/zsDBgS9.png)
+![[power-engineering-34.png]]
 
 ### Inductance per meter
 
 Inductance per meter of three-phase tranposed lines
 
-![](https://i.imgur.com/g0T1oW7.png)
+![[power-engineering-35.png]]
 
-![](https://i.imgur.com/f4x6ja5.png)
+![[power-engineering-36.png]]
 
-![](https://i.imgur.com/GQj1YCj.png)
+![[power-engineering-37.png]]
 
-![](https://i.imgur.com/Yi0podg.png)
+![[power-engineering-38.png]]
 
-![](https://i.imgur.com/Hhm6XIx.png)
+![[power-engineering-39.png]]
 
 More problems
 
@@ -273,7 +272,7 @@ phase-neutral capacitance
 
 $$\bar{c}=\dfrac{2\pi\epsilon}{ln\dfrac{D_m}{R^c_b}}$$
 
-![](https://i.imgur.com/BYOpJSo.png)
+![[power-engineering-40.png]]
 
 Note that $R_b^c$ uses $r$ instead of $r'=re^{-\frac{1}{4}}$ !!!!
 
@@ -287,7 +286,7 @@ $P_\mathrm{SIL}$ = surge impedance loading
 
 $$P_\mathrm{SIL}=\dfrac{|V_1|^2}{Z_c}$$
 
-![](https://i.imgur.com/rskjOQe.png)
+![[power-engineering-41.png]]
 
 $$Z_c=\sqrt{\dfrac{z}{y}}$$
 
@@ -298,31 +297,31 @@ $\gamma = \alpha+j\beta$
 - $\gamma$  = propagation constant
 - $\beta$ = phase constant
 
-![](https://i.imgur.com/APPQ29m.png)
+![[power-engineering-42.png]]
 
-![](https://i.imgur.com/etpw6KR.png)
+![[power-engineering-43.png]]
 
 
-![](https://i.imgur.com/ZS5X0vA.png)
-![](https://i.imgur.com/IioHRQl.png)
+![[power-engineering-44.png]]
+![[power-engineering-45.png]]
 
 ### Transmission Matrix
 
-![](https://i.imgur.com/tlj9gMz.png)
+![[power-engineering-46.png]]
 
-![](https://i.imgur.com/NS7mohO.png)
+![[power-engineering-47.jpg]]
 
-![](https://i.imgur.com/74kZz8D.png)
+![[power-engineering-48.jpg]]
 
 ### Short Line
 
-![](https://i.imgur.com/KYv9OaS.png)
+![[power-engineering-49.png]]
 
 $S_{12}$ = complex power from bus 1 to bus 2
 
 $$S_{12}=P_{12}+jQ_{12}$$
 
-![](https://i.imgur.com/XdZXD2l.png)
+![[power-engineering-50.png]]
 
 $$\begin{align*}
 S_{12} &= V_{1}I_{1}^*\\
@@ -333,19 +332,19 @@ S_{12} &= V_{1}I_{1}^*\\
 
 #### Power Cycle Diagram
 
-![](https://i.imgur.com/n2Japjl.png)
+![[power-engineering-51.png]]
 
-![](https://i.imgur.com/2bs1UqT.png)
+![[power-engineering-52.png]]
 
 ### Radial Line
 
 Voltage at near, complex load at rear
 
-![](https://i.imgur.com/yqSLrg7.png)
+![[power-engineering-53.png]]
 
 Use Z=jX in the short line $S_{12}$ formula
 
-![](https://i.imgur.com/bGCa5Jr.png)
+![[power-engineering-54.png]]
 
 $$\begin{align*}
 S_D
@@ -357,25 +356,25 @@ $$\beta=\dfrac{Q_D}{P_D}=tan(\phi)$$
 
 $P_{12}=-P_{21}$
 
-![](https://i.imgur.com/cHHEcNp.png)
+![[power-engineering-55.png]]
 
 $$\begin{align*}
 |V_2|^2=\dfrac{|V_1|^2}{2}-\beta P_D X\pm \sqrt{(\dfrac{|V_1|^2}{2})^2-P_DX(P_DX+\beta\dfrac{|V_1|^2}{2})}
 \end{align*}$$
 
-![](https://i.imgur.com/bQ8YcdK.png)
+![[power-engineering-56.png]]
 
 ## Ch5 Transformer
 
-![](https://i.imgur.com/4KrMecs.png)
+![[power-engineering-57.jpg]]
 
-![](https://i.imgur.com/MudSGIK.png)
+![[power-engineering-58.jpg]]
 
 - $a=\dfrac{N_1}{N_2}$
 - $V_1=aV_2$
 - $I_1=\dfrac{1}{a}I_2$
 
-![](https://i.imgur.com/XlE3Dpe.png)
+![[power-engineering-59.jpg]]
 
 ### Inductance
 
@@ -383,13 +382,13 @@ $$R=\dfrac{l}{\mu A}$$
 
 $$L_m'=\dfrac{N^2}{R_m}$$
 
-![](https://i.imgur.com/dDxxHm8.png)
+![[power-engineering-60.png]]
 
 ### Autotransformer
 
-![](https://i.imgur.com/X6QY07O.png)
+![[power-engineering-61.png]]
 
-![](https://i.imgur.com/hDUd1A4.png)
+![[power-engineering-62.jpg]]
 
 1. Redraw into 5.28 (b)
 2. Calculate
@@ -401,15 +400,15 @@ $$L_m'=\dfrac{N^2}{R_m}$$
 
 ### Three-Phase Transformer
 
-![](https://i.imgur.com/al8cn7S.png)
+![[power-engineering-63.png]]
 
-![](https://i.imgur.com/km0c8WP.png)
+![[power-engineering-64.png]]
 
-![](https://i.imgur.com/y5pYJDB.png)
+![[power-engineering-65.png]]
 
 **Problem**
 
-![](https://i.imgur.com/WfcvTtE.png)
+![[power-engineering-66.jpg]]
 
 - Wye-Delta connection
 - $n=58$
@@ -418,43 +417,43 @@ $$L_m'=\dfrac{N^2}{R_m}$$
 
 ### Per-Phase Transformer Analysis
 
-![](https://i.imgur.com/lgL6ZYR.png)
+![[power-engineering-67.png]]
 
 $K_1$ = gain = $\sqrt{3}n\angle(30^\circ)$
 
-![](https://i.imgur.com/ljtDyrH.png)
+![[power-engineering-68.png]]
 
 ### Per Unit Normalization
 
 indicated by `p.u.`
 
-![](https://i.imgur.com/joVJ8qL.png)
+![[power-engineering-69.png]]
 
 Changing base
 
-![](https://i.imgur.com/bMZDzoR.png)
+![[power-engineering-70.png]]
 
-![](https://i.imgur.com/FD5GPad.png)
+![[power-engineering-71.png]]
 
-![](https://i.imgur.com/GbZhNem.png)
+![[power-engineering-72.png]]
 
-![](https://i.imgur.com/3liupFf.png)
+![[power-engineering-73.png]]
 
-![](https://i.imgur.com/Z0uKn40.png)
+![[power-engineering-74.png]]
 
 ## Ch6 Generator Modeling 1 - Machine Viewpoint
 
 ### Round-Rotor Machine
 
-![](https://i.imgur.com/MS4G9fK.png)
+![[power-engineering-75.png]]
 
 $$E_a=V_a+I_a(r+jX_s)$$
 
-![](https://i.imgur.com/tkbGRNF.png)
+![[power-engineering-76.png]]
 
 **Problem**
 
-![](https://i.imgur.com/U5vwx7D.png)
+![[power-engineering-77.png]]
 
 $$P=0.5=|V_a||I_a|cos(\phi)=|I_a|cos\phi$$
 
@@ -482,9 +481,9 @@ $$I_a=0.539\angle(-21.8^\circ)$$
 
 With $X_d$ & $X_q$
 
-![](https://i.imgur.com/T6jgyUs.png)
+![[power-engineering-78.png]]
 
-![](https://i.imgur.com/6EnirRS.png)
+![[power-engineering-79.png]]
 
 $$a'=V_a+I_a(r+jX_q)$$
 
@@ -495,9 +494,9 @@ $$\begin{align*}
 
 $a'$ has the same angle as $E_a$ & $I_{aq}$
 
-![](https://i.imgur.com/SefFTQp.png)
+![[power-engineering-80.png]]
 
-![](https://i.imgur.com/Dre10Cz.png)
+![[power-engineering-81.png]]
 
 To find $E_a$ given everything else
 
@@ -505,12 +504,12 @@ To find $E_a$ given everything else
 2. Find $I_{aq}$ & $I_{ad}$ with $|I_a|cos\theta$ with $\theta$ being the angle diff with $I_a$
 3. Find $E_a$
 
-![](https://i.imgur.com/iIxzARv.png)
+![[power-engineering-82.png]]
 
-![](https://i.imgur.com/NcdYMKJ.png)
+![[power-engineering-83.png]]
 
 If $3\phi$ short circuit
 
-![](https://i.imgur.com/z9A7BD6.png)
+![[power-engineering-84.jpg]]
 
-![](https://i.imgur.com/T6jgyUs.png)
+![[power-engineering-78.png]]
