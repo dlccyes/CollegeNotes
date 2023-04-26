@@ -104,7 +104,7 @@ parent: polly
 	- use multiple paired test
 		- Cochran's Q test produces statistcally significant results in a single origin
 			- while we want to see between different origins
-	- ![](https://i.imgur.com/iKmDzVq.png)
+	- ![[zmap-1.png]]
 - classified into networks (/24) & individual IPs
 - accessiblity classification
 	- accessible
@@ -124,7 +124,7 @@ parent: polly
 			- most are individual hosts
 				- 49.7% of inaccessible hosts are individual
 				- 1.9% of inaccessible hosts are networks
-			- ![](https://i.imgur.com/qW5yrdN.png)
+			- ![[zmap-2.png]]
 	- long-term inaccessible
 		- definition
 			- inaccessible from a scan origin in all 3 trials
@@ -152,10 +152,10 @@ parent: polly
 			- excluding Censys
 			- significant differences between origins
 				- Germany has x3
-			- ![](https://i.imgur.com/Di330gM.png)
+			- ![[zmap-3.png]]
 		- 5-10% hosts are accessible only from 1 origin
 			- Australia & Japan have have x2
-- ![](https://i.imgur.com/enQwOBc.png)
+- ![[zmap-4.png]]
 
 ### Censys
 - most long-term inaccessible ones are from Censys
@@ -173,7 +173,7 @@ parent: polly
 	- 22% consumer businesses
 
 ### Academic Origins
-- ![](https://i.imgur.com/gsC45tw.png)
+- ![[zmap-5.png]]
 - long-term inaccessible hosts more evenly distributed among As'es than in Censys
 - Germany
 	- x1.1-x3.6 HTTP(S) miss rate
@@ -194,21 +194,21 @@ parent: polly
 - 14% networks blocking all non-US origins are from Tegna (US digital media company)
 - ABCDE (large HK cloud provider) blocks US, Brazil & Censys
 - US64
-	- ![](https://i.imgur.com/oGu2K0p.png)
+	- ![[zmap-6.png]]
 	- the most exclusively accessible hosts i.e. lowest num of long-term inaccessible hosts
 		- many networks block all non-US origins
 		- has low scan rate
 			- some networks dynamically detect and block all non-US origins with high scan rates
-- ![](https://i.imgur.com/5Vq02Dn.png)
+- ![[zmap-7.png]]
 
 ### Geographical Biases
 - countries with the most hosts have the most inaccessible hosts
 - countries with few hosts are greatly
 - largely inaccessible countries are mostly due to few major As'es
-- ![](https://i.imgur.com/Ct3UV11.png)
+- ![[zmap-8.png]]
 - origins have better access to hosts from their own countries
-	- ![](https://i.imgur.com/xqyRn4e.png)
-	- ![](https://i.imgur.com/32M0qYA.png)
+	- ![[zmap-9.png]]
+	- ![[zmap-10.png]]
 	- only half of the host exclusively accessible to Australia geolocate there
 		- because of anycast
 - no correlation between countries
@@ -224,7 +224,7 @@ parent: polly
 - big variance in transient loss
 - 2/3 of transiently inaccessible HTTP(S) hosts are only inaccessible by from one origin
 - 25% of transiently inaccessible hosts are from largest 200 networks
-- ![](https://i.imgur.com/5k8nyUV.png)
+- ![[zmap-11.png]]
 - 96% of transient loss is from individual host, rather than entire network
 - Chinese networks have high transient loss
 	- but doesn't affect Japan
@@ -249,7 +249,7 @@ parent: polly
 - packet drop rate 0.44%-1.6%
 	- highest for Australia
 		- worst connectivity
-	- ![](https://i.imgur.com/Ah923SP.png)
+	- ![[zmap-12.png]]
 - no statistically significance relationship between packet loss & transient loss for origins
 	- only have the lower bound estimate on packet drop rates
 	- can't give accurate estimation on fraction of transiently inaccessible hosts caused by packet drop
@@ -274,7 +274,7 @@ parent: polly
 - 10% less coverage than HTTP(S)
 - x5 miss rate
 - less likely to be missed by single origin
-	- ![](https://i.imgur.com/47ZaAdE.png)
+	- ![[zmap-13.png]]
 - big proportion blocked by Alibaba
 	- each Alibaba SSH hosts send RST packet immediate after completing TCP handshake
 - SSH hosts more likely to directly reject connection requests than HTTP(S)
@@ -293,14 +293,14 @@ parent: polly
 		- are only long-term inaccessible by chance
 - not counting Alibaba's blocking & probabilistic blocking, SSH miss rate is lower than HTTP & HTTPS
 - breakdown of missing reasons
-	- ![](https://i.imgur.com/qGVRCsQ.png)
+	- ![[zmap-14.png]]
 
 ## Discussion
 - miss rate higher than expected
 	- not purely due to random packet drop
 - multi-origin scanning helps
 	- transient misses are unpredictable but can be improved with scanning from multiple origins
-	- ![](https://i.imgur.com/JPQ3NQE.png)
+	- ![[zmap-15.png]]
 - hard to say which is the best origin
 - scanning from different geographical area matters
 	- perform 3 scans from 3 tier-1 ISPs in same location
@@ -308,7 +308,7 @@ parent: polly
 - sending more probes achieves higher coverage
 	- but less significant than sending from more origins
 	- sending consecutive probes with delay is more meaningful
-	- ![](https://i.imgur.com/WL0QnNH.png)
+	- ![[zmap-16.png]]
 - blocking more severe than expected
 - regional biases existed
 	- some websites are only accessible from 1 country

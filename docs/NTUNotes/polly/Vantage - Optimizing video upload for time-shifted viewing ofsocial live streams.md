@@ -8,6 +8,7 @@ parent: polly
 [paper pdf with my annotations](Vantage%20-%20Optimizing%20video%20upload%20for%20time-shifted%20viewing%20ofsocial%20live%20streams.pdf)
 
 ## intro
+
 - traditional live video streaming
 	- single viewing delay
 		- tailored for one particular quality latency tradeoff
@@ -31,6 +32,7 @@ parent: polly
 		- 3.3% quality reduction (average)
 
 ## background
+
 - SLVS
 	- encoded by devide -> upload via RTMP or WebRTC to ingestion point (upload endpoint) -> re-encoded at various bitrates -> content delivery network delivers to viewers
 - time-shifted viewing
@@ -43,34 +45,41 @@ parent: polly
 		- so high-bandwidth periods can be exploited to improve the low-bandwidth periods
 
 ## time-shifted viewing
+
 - structural similiarity (SSIM) index
 	- perceptual quality of video frames
-- ![](https://i.imgur.com/p6XfJdn.png)
+- ![[vantage---optimizing-video-upload-for-time-shifted-viewing-ofsocial-live-streams-1.jpg]]
 - assume $SSIM=1-\dfrac{1}{2b+1}$
 
 ### existing techniques
-![](https://i.imgur.com/PpT8Jhr.png)
+
+![[vantage---optimizing-video-upload-for-time-shifted-viewing-ofsocial-live-streams-2.png]]
 
 #### for delayed viewing 
+
 - broadcast e.g. ESPN, CNN
 - anticipate future bandwidth and calculate optimal bitrate (purple SSIM line), buffer frames when current bandwidth < target bitrate, clear buffer when current bandwidth > target bitrate
 - average SSIM = 0.777
 - only tailored for 1 delay, so not suitable for SLVS
 
 #### for real-time viewing
+
 - video chat e.g. Skype, Hangouts
 - can't buffer frames as it should be real-time
 - orange SSIM line
 - average SSIM = 0.679
 
 #### current SLVS
+
 - e.g. Facebook Live, Youtube Live, Twitch, Periscope
 - doesn't cater to time-shifted viewing
 	- video frames in real-time & archived ones are identical, with same SSIM
 	- -> huge space for improvement
 
 ### proposed approach
+
 #### reupload high-quality version
+
 - naive approach
 - upload high-quality version after live-streaming ends
 - only improve archived version
@@ -78,6 +87,7 @@ parent: polly
 - require big bandwidth
 
 #### quality-enhancing restransmissions (Vantage)
+
 - restransmit previous low-quality frames during high-bandwidth periods
 - improvement for time-shifted viewers
 - bitrate-SSIM curve is concave <br>-> quality drop for reducing bitrate for high-quality frame < quality enhancement for adding bitrate for low-quality frame<br>(red arrow vs. green arrow in Figure 1)
@@ -85,8 +95,8 @@ parent: polly
 	- sending redundant bits
 	- additional computation
 - results
-	- ![](https://i.imgur.com/uM0Mas2.png)
-	- ![](https://i.imgur.com/lKXQaFT.png)
+	- ![[vantage---optimizing-video-upload-for-time-shifted-viewing-ofsocial-live-streams-3.png]]
+	- ![[vantage---optimizing-video-upload-for-time-shifted-viewing-ofsocial-live-streams-4.png]]
 		- "real-time optimized" & "delay optimized" utilizes all bandwidth, while "quality enhancing retransmissions" wastes some
 		- Vantage vs. real-time by SSIM
 			- delayed viewing improved by 9.4%
@@ -100,7 +110,9 @@ parent: polly
 		- need future bandwidth to calculate optimal bandwidth allocation -> need to estimate
 
 ## Vantage design
+
 ### design overview
+
 - current live video upload systems
 	- client captures raw video frames -> encoder compresses and transmits to upload endpoint
 	- system's network transport mechanism estimates available bandwidth -> knows how much compressesion needed for encoding
@@ -114,10 +126,12 @@ parent: polly
 	- transport layer
 		- provides bandwidth estimates
 		- dequeue packets
-	- ![](https://i.imgur.com/JYyV9nC.png)
+	- ![[vantage---optimizing-video-upload-for-time-shifted-viewing-ofsocial-live-streams-5.png]]
 
 ### scheduler design
+
 #### problem formulation
+
 - mixed-integer optimization problem
 - goal: quality optimization for time-shifted viewers
 - time constraint
@@ -125,6 +139,7 @@ parent: polly
 	- omit if the optimization takes over P seconds i.e. use whatever is ready at $T=t+nP$
 
 #### notations 
+
 for $T$ $|$ $t+P < T < t+2P$
 - $B$ = max num of bytes that can be transmitted
 - $F$ = a set of real-time frames that will be sent
@@ -143,14 +158,15 @@ for $T$ $|$ $t+P < T < t+2P$
 - weight $w_0$ for real-time frame
 
 #### functions
+
 - bandwidth contraints
-	- ![](https://i.imgur.com/Tq1dLnY.png)
+	- ![[vantage---optimizing-video-upload-for-time-shifted-viewing-ofsocial-live-streams-6.png]]
 - goal: maximize the objective function
-	- ![](https://i.imgur.com/KKeuLYK.png)
+	- ![[vantage---optimizing-video-upload-for-time-shifted-viewing-ofsocial-live-streams-7.png]]
 	- weighted sum of SSIM from real-time frames & past/retransmitted frames
 	- if higher SSIM can be achieved, then retransmit
 - weight settings
-	- ![](https://i.imgur.com/5PydOiM.png)
+	- ![[vantage---optimizing-video-upload-for-time-shifted-viewing-ofsocial-live-streams-8.png]]
 	- retransmission of real-time frames could benefit viewers with all delays
 	- retransmission of frame $g$ with delay = $d_g$ could benefit viewers with delay > $d_g$
 - retransmission contraint
@@ -164,6 +180,7 @@ for $T$ $|$ $t+P < T < t+2P$
 	- use EWMA to estimate future curve
 
 #### performance
+
 - can't find the optimal solution within $P=2$s with large $|G|$
 - solution
 	- larger $P$ -> older bandwidth estimates -> worse performance

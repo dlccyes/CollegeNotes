@@ -44,7 +44,7 @@ parent: polly
 - current method
 	- randomly select some incidents from the pervious day
 - existing solutions
-	- ![](https://i.imgur.com/gk1UQ8z.png)
+	- ![[blameit---zooming-in-on-wide-area-latencies-to-a-global-cloud-provider-1.png]]
 	- passive
 		- analyze end-to-end RTT
 		- insufficient coverage
@@ -90,18 +90,18 @@ parent: polly
 - in all region
 - USA has the most bad quadrets
 	- stricter threshold
-- ![](https://i.imgur.com/w7xmq0X.png)
+- ![[blameit---zooming-in-on-wide-area-latencies-to-a-global-cloud-provider-2.png]]
 
 ### temporal distribution
 - more bad quadrets ar night
 	- use home ISPs when not working
 		- home ISPs weaker than enterprise ones
 	- not that significant during weekends
-- ![](https://i.imgur.com/6dx9LtV.png)
+- ![[blameit---zooming-in-on-wide-area-latencies-to-a-global-cloud-provider-3.png]]
 
 ### badness duration distribution
 - long-tailed
-- ![](https://i.imgur.com/vgURvKA.png)
+- ![[blameit---zooming-in-on-wide-area-latencies-to-a-global-cloud-provider-4.png]]
 - 60% < 5 min.
 - 8% > 2 hr
 - most latency issues are temporary
@@ -109,9 +109,9 @@ parent: polly
 
 ### impact distribution
 - impact = num of affected users x duration of badness
-- ![](https://i.imgur.com/FTFPtIQ.png)
+- ![[blameit---zooming-in-on-wide-area-latencies-to-a-global-cloud-provider-5.png]]
 - CDF of problem impact vs. portion of `<cloud location, BGP path>` tuples, ranked by num of affected IP prefixes or impact
-	- ![](https://i.imgur.com/zQMMkbI.png)
+	- ![[blameit---zooming-in-on-wide-area-latencies-to-a-global-cloud-provider-6.png]]
 	- 20% of tuples can cover 80% problem impact when ranked by impact
 	- 20% of tuples can cover 60% problem impact when ranked by num of affected IP prefixes
 	- meaning, impact isn't evenly distributed among IP prefixes, but skewed toward a small fraction
@@ -164,7 +164,7 @@ lack some topological properties -> cannot use standard network tomography techn
 ### coarse-grained fault localization algo
 characterize quadret to cloud, middle or client segment
 
-![](https://i.imgur.com/IVmByKB.png)
+![[blameit---zooming-in-on-wide-area-latencies-to-a-global-cloud-provider-7.png]]
 
 - too few RTT samples -> insufficient
 - fraction of bad quadrets associating with cloud > threshold -> cloud's fault
@@ -180,7 +180,7 @@ characterize quadret to cloud, middle or client segment
 	- grouping with client AS & metro area is too coarse-grained
 		- only 47% with same <AS, Metro> has a single consistent path from cloud to client within 5 minutes
 	-  grouping by same AS'es instead of cloud to client prefix provides more RTT samples -> higher confidence
-		- ![](https://i.imgur.com/2e1yYP3.png)
+		- ![[blameit---zooming-in-on-wide-area-latencies-to-a-global-cloud-provider-8.png]]
 - else if client has good RTT to another cloud location -> ambiguous
 - else -> blame the client
 
@@ -231,6 +231,6 @@ blaming middle segment doesn't tell you which AS is at fault -> need finer fault
 - traceroute once every 12 hours for each BGP path from each cloud location
 	- sweetspot of accuracy vs. overhead tradeoff
 	- 93% accuracy
-	- ![](https://i.imgur.com/QZFkKKc.png)
+	- ![[blameit---zooming-in-on-wide-area-latencies-to-a-global-cloud-provider-9.png]]
 - traceroute when BGP path changes
 	- 2/3 of BGP paths don't change in an entire day -> overhead not big

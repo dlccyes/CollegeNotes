@@ -52,7 +52,7 @@ parent: polly
 			- difference between startup & steady state for RTT < 200ms = 7.983%
 			- traffic concentration may be the cause
 				- data collecters play in a group
-	- ![](https://i.imgur.com/jZp2tCp.png)
+	- ![[pokemon-go-project-poster-1.png]]
 
 ## Findings
 - network delay varies significantly
