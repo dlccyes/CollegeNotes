@@ -19,7 +19,7 @@ has_children: true
 		- wafer 切出來的一小片一小片
 		- 晶粒/裸晶
 	- cost
-		- ![](https://i.imgur.com/P7SEjQB.png)
+		- ![[computer-architecture-1.png]]
 			- 經驗公式
 			- 台積電工程師提出的
 		- wafer cost & area
@@ -38,8 +38,8 @@ has_children: true
 - trade-off: clock rate vs. cycle count 
 - clock cycles = instruction count (IC) x cycles per instruction (CPI)
 - CPU time = IC x CPI x cycle time = IC x CPI / clock rate
-- ![](https://i.imgur.com/BAsRV5S.png)
-- ![](https://i.imgur.com/KUOEDDI.png)
+- ![[computer-architecture-2.png]]
+- ![[computer-architecture-3.png]]
 - 愈高階的語言 CPI 愈高
 - $T_c$, clock period = seconds/cycle-
 - ISA, instruction set architecture
@@ -49,7 +49,7 @@ has_children: true
 - power
 	- $power\propto CV^2\propto f$ 
 - MIPS: millions of instruction per second
-	- ![](https://i.imgur.com/j793d9Q.png)
+	- ![[computer-architecture-4.png]]
 	- doesn't account for
 		- different ISAs between computers
 		- different complexity between instructions
@@ -68,14 +68,14 @@ has_children: true
 - 32x64-bit register file
 	- 32-bit data: word
 	- 64-bit data: doubleword
-	- ![](https://i.imgur.com/5bxfy2N.png)
+	- ![[computer-architecture-5.png]]
 - Instructions are word-aligned
 	- address 一次跳 4 bytes
 - little endian
 	- least-significant byte @ least address
 - bytes 不一定要 4 or 8 or whatever 的倍數
 - 一個 instruction 是 8 bytes
-- ![](https://i.imgur.com/53tWD5q.png)
+- ![[computer-architecture-6.png]]
 	- 8x8=64
 	- 12x8=96
 	- load A[8] to x9
@@ -98,15 +98,15 @@ has_children: true
 	- e.g. 6 = 0110 → -6 = 1001+1 = 1010
 	- 要算 8-D → 算 8+2s(D) = 8+2s(1101) = 8+0011 = 8+3 = 11 = B
 		- <https://quizlet.com/explanations/questions/assume-that-registers-s0-and-s1-hold-the-values-0x80000000-and-0xd0000000-respectively-1-what-is-the-9a341a5d-4e07-4ef8-8471-fd38030f7e4f>
-		- ![](https://i.imgur.com/kj2N40b.png)
+		- ![[computer-architecture-7.png]]
 		- 歷屆 quiz 1 (4.)
-			- ![](https://i.imgur.com/YVKQkpm.png)
-			- ![](https://i.imgur.com/Vly2VUS.png)
+			- ![[computer-architecture-8.png]]
+			- ![[computer-architecture-9.png]]
 
 [[Logic Design]]
 
-![](https://i.imgur.com/T1hJSQe.png)
-![](https://i.imgur.com/q2huzgm.png)
+![[computer-architecture-10.png]]
+![[computer-architecture-11.png]]
 
 ### signed & unsigned
 
@@ -122,23 +122,23 @@ has_children: true
 
 多加幾個 bits
 
-![](https://i.imgur.com/sQJYKhN.png)
+![[computer-architecture-12.png]]
 
 ### offset
 
-![](https://i.imgur.com/4yMSaoN.png)
+![[computer-architecture-13.png]]
 
 ### array
-- ![](https://i.imgur.com/2sMipzq.png)
+- ![[computer-architecture-14.png]]
 
 - e.g.
-	- ![](https://i.imgur.com/97JnRYn.png)
-		- ![](https://i.imgur.com/ErUYFDm.png)
+	- ![[computer-architecture-15.png]]
+		- ![[computer-architecture-16.png]]
 		- x30 = x10 是 array D 的指標
 		- addi x30, x30, 32 代表跳 32 bytes i.e. 跳 4 doublewords → array index +4
 		- 若 x30 = 8，0(x30) 代表 D[2]，4(x30) 代表 D[3]
 			- 前面是 offset，加上括號 除以 8 (for doubleword) → array 的 index
-				- 像這個是 word = 4 bytes<br>![](https://i.imgur.com/wn6rMIH.png)
+				- 像這個是 word = 4 bytes<br>![[computer-architecture-17.png]]
 			- see [[#array vs pointer]]
 		- 題目中會一直蓋掉 D[0:3] 的值，直到 x7 >= x5 = 4
 
@@ -146,7 +146,7 @@ has_children: true
 
 #### overall
 
-- ![](https://i.imgur.com/NQfNS5U.png)
+- ![[computer-architecture-18.png]]
 - I SB UJ 的 10:5 位置都一樣
 - 都是 32 bits
 - major opcode in bits 0-6
@@ -162,21 +162,21 @@ has_children: true
 
 #### R-format
 
-- ![](https://i.imgur.com/0eAXKRU.png)
+- ![[computer-architecture-19.png]]
 - Register-format
 - `add rd, rs1, rs2`
 	- funct7 & funct3 & opcode 決定哪一個 operation
 		- e.g.
-			- ![](https://i.imgur.com/LBm5TC1.png)
+			- ![[computer-architecture-20.png]]
 				- 51 是查表來的
 			- <https://brainly.com/question/14287027>
-			- ![](https://i.imgur.com/SMZm3DK.png)
+			- ![[computer-architecture-21.png]]
 
 #### I-format
 
 - Immediate-format
 - `operation rd, imm(rs1)`
-- ![](https://i.imgur.com/frYek0d.png)
+- ![[computer-architecture-22.png]]
 - opcode & func3 告訴電腦要做什麼 instruction (arithmetic OR load)
 - immediate: constant OR offset for base address 
 - `jalr`
@@ -200,14 +200,14 @@ has_children: true
 
 #### S-format
 
-- ![](https://i.imgur.com/aVvWAoF.png)
+- ![[computer-architecture-23.png]]
 - store byte/halfword/word/doubleword
 - immediate: offset for base address (rs1)
 - `sb rs1 rs2`
 
 #### SB-format
 
-- ![](https://i.imgur.com/kleSjvP.png)
+- ![[computer-architecture-24.png]]
 - conditional jump
 	- if xxxx jump to branch xxxx
 - branch addressing
@@ -216,60 +216,60 @@ has_children: true
 - immediate 表示要跳多少
 - take the branch → go to PC + immediate x 2 (i.e. immediate 後面補回一個 0)
 	- bc imm omit 第 0 位 i.e. shift right
-	- ![](https://i.imgur.com/KEFpELt.png)
+	- ![[computer-architecture-25.png]]
 - skip → go to PC + 4 i.e. next line
 - 1 instruction 4 bytes
 - `beq rs1, rs2, imm`→ jump to PC+immx2 if rs1=rs2
 
 #### UJ-format (jal)
 
-- ![](https://i.imgur.com/TYpO760.png)
+- ![[computer-architecture-26.png]]
 - unconditional jump
 - only for `jal`, unconditional jump-and-link
-- ![](https://i.imgur.com/GSrCM7V.png)
+- ![[computer-architecture-27.png]]
 - 20-bit immediate，表示要從目前位置跳多少
 	- 往回跳 → 負數 (2s complement)
 	- 1 instruction 4 bytes
 	- 往後跳 x 行 → immediate = 4x/2 (4x 去掉最後一位的 0)
 - jump to address = PC+imm i.e. 目前位置 + imm/4 行 
 - e.g.
-	- ![](https://i.imgur.com/asAhCpn.png)
-		- ![](https://i.imgur.com/q12ffzy.png)
+	- ![[computer-architecture-28.png]]
+		- ![[computer-architecture-29.png]]
 		- 往回跳 9 行，每個 instruction 4 bits → imm = -36 = 2s complement of 36，再 shift right i.e. 除 2 i.e. 移掉 0th bit
 		- jal 的 opcode = 1101111
 
 #### U-format
 
-- ![](https://i.imgur.com/MZZRPXV.png)
+- ![[computer-architecture-30.png]]
 - `lui rd constant`
 - `imm[31:12]` = constant represented with 20 bits，把這 20 bits 弄到  rd[31:12]
-- ![](https://i.imgur.com/4quFIhS.png)
+- ![[computer-architecture-31.png]]
 
 ####  RV32I Instruction Sets (查表)
 
-![](https://i.imgur.com/6pitTXl.png)
+![[computer-architecture-32.png]]
 
 p.119
 
-![](https://i.imgur.com/GfmNZRO.png)
+![[computer-architecture-33.png]]
 
 <https://book.rvemu.app/instruction-set/01-rv64i.html>
 
 I-format `LX` 的部分，是 load byte/halfword/word/doubleword，以 funct3 值區分
 
-- ![](https://i.imgur.com/KqDEBNf.png)
+- ![[computer-architecture-34.png]]
 	- <https://ithelp.ithome.com.tw/articles/10194907>
 
 e.g.
 
-- ![](https://i.imgur.com/gDWS5iV.png)
-	- ![](https://i.imgur.com/0jEcaOb.png)
+- ![[computer-architecture-35.png]]
+	- ![[computer-architecture-36.png]]
 
 ### [[RISC-V]] operations
 
-![](https://i.imgur.com/XC0k2XB.png)
+![[computer-architecture-37.png]]
 
-![](https://i.imgur.com/PX629AE.png)
+![[computer-architecture-38.png]]
 
 `slli a, b, 1` → a = b<<1 (=2b)  
 `addi a, b, 1` → a=b+1
@@ -280,49 +280,49 @@ e.g.
 `bne a, b, callback` → if(a!=b){callback()}
 `blt a, b, callback` → if(a<b)
 
-![](https://i.imgur.com/If15MR8.png)
+![[computer-architecture-39.png]]
 
-![](https://i.imgur.com/GTajnpc.png)
+![[computer-architecture-40.png]]
 
 `bge a, b, callback` → if(a>=b)
 
-![](https://i.imgur.com/KzsbwRQ.png)
+![[computer-architecture-41.png]]
 
 #### while
 
-![](https://i.imgur.com/XAybNUB.png)
+![[computer-architecture-42.png]]
 
 #### jump
 
 - leaf procedure
-	- ![](https://i.imgur.com/PA6olYE.png)![](https://i.imgur.com/PEuNYOX.png)
+	- ![[computer-architecture-43.png]]![[computer-architecture-44.png]]
 - non-leaf procedure
 	- recursive?
-	- ![](https://i.imgur.com/hBfLGMq.png)![](https://i.imgur.com/V5N5pbB.png)
+	- ![[computer-architecture-45.png]]![[computer-architecture-46.png]]
 
 #### load/store
 
-![](https://i.imgur.com/oDaZ5am.png)
+![[computer-architecture-47.png]]
 
 lui
 
-![](https://i.imgur.com/RNsyU2I.png)
+![[computer-architecture-48.png]]
 
 `lui x19, 976` → 放 12 個 0 到 976 後面 
 
 #### example
 
-![](https://i.imgur.com/vXfjxEW.png)
-![](https://i.imgur.com/nD2SLNx.png)
+![[computer-architecture-49.png]]
+![[computer-architecture-50.png]]
 
-![](https://i.imgur.com/VTMg82Q.png)
-![](https://i.imgur.com/nvB3V8L.png)
-![](https://i.imgur.com/hnQl3Zq.png)
-![](https://i.imgur.com/kMbiMGJ.png)
-![](https://i.imgur.com/3VIvzZh.png)
-![](https://i.imgur.com/uI2GcCJ.png)
+![[computer-architecture-51.png]]
+![[computer-architecture-52.png]]
+![[computer-architecture-53.png]]
+![[computer-architecture-54.png]]
+![[computer-architecture-55.png]]
+![[computer-architecture-56.png]]
 
-![](https://i.imgur.com/W0bskcu.png)
+![[computer-architecture-57.png]]
 
 ### dynamic linking
 
@@ -342,7 +342,7 @@ only link/load library procedure when called
 
 - pointer 省略 indexing 的部分
 - e.g.
-	- ![](https://i.imgur.com/D8y8N2C.png)
+	- ![[computer-architecture-58.png]]
 		- x7 = size-1
 		- array 每次 loop 都要 `slli` & `add`
 			- `slli`: 算 i 的實際 index
@@ -351,7 +351,7 @@ only link/load library procedure when called
 ### MIPS
 
 - successor of RISC-V
-- ![](https://i.imgur.com/7nEGnwD.png)
+- ![[computer-architecture-59.png]]
 
 ## Ch3 Arithmetic
 
@@ -364,21 +364,21 @@ only link/load library procedure when called
 
 - 每次 cycle 加一次，要很多個 cycle
 	- sol: [[#faster multiplier]]，空間換取時間
-- ![](https://i.imgur.com/UG28Xcy.png)
+- ![[computer-architecture-60.png]]
 - length of product = sum of multiplicand & multiplier length, ignoring the sign bit
-- ![](https://i.imgur.com/r4vUwwN.png)
+- ![[computer-architecture-61.png]]
 - 每輪都上面 pointer 都左移一格
 - 每輪下面 pointer 都右移一格
 	- 指到 1 → 相加
 - e.g.
-	- ![](https://i.imgur.com/FVmWzJt.png)
+	- ![[computer-architecture-62.png]]
 - optimized
-	- ![](https://i.imgur.com/S6NL0BB.png)
+	- ![[computer-architecture-63.png]]
 	- multiplicand & ALU reduced to 64 bits
 		- unused portion of registers & adders
 	- multiplier placed in the right half of product
 	- e.g.
-		- ![](https://i.imgur.com/eR3p3Vu.png)
+		- ![[computer-architecture-64.png]]
 			- ... 不是吧
 
 #### signed multiplication
@@ -390,7 +390,7 @@ only link/load library procedure when called
 - 用多一點加法器，省下時間
 - more cost, higher performance
 	- cost performance tradeoff
-- ![](https://i.imgur.com/XxyrRy2.png)
+- ![[computer-architecture-65.png]]
 - 可以 pipeline → 可以很多 in parallel → even faster
 
 #### instructions
@@ -411,7 +411,7 @@ only link/load library procedure when called
 
 ### division
 
-- ![](https://i.imgur.com/XzFB48b.png)
+- ![[computer-architecture-66.png]]
 - long division
 - retoring division
 	- 先剪，小於 0 再加回來
@@ -421,24 +421,24 @@ only link/load library procedure when called
 
 #### divisor
 
-- ![](https://i.imgur.com/g1OFxzb.png)
-- ![](https://i.imgur.com/fRJLg8N.png)
+- ![[computer-architecture-67.png]]
+- ![[computer-architecture-68.png]]
 - 每輪 divisor pointer 右移一格，quotient pointer 左移一格
 - e.g.
 	- 4-bit ver. of 7/2
-		- ![](https://i.imgur.com/HrGvEdK.png)
+		- ![[computer-architecture-69.png]]
 - 每次 cycle 減一次，要很多個 cycle
 - optimized divider
-	- ![](https://i.imgur.com/aLtn0IG.png)
+	- ![[computer-architecture-70.png]]
 		- simultaneously, subtract & shift the operands & shift the quotient
 		- quotient 放在 remainder 的 right half
 			- bc remainder 減完會 shift left，右邊會多出一格 → 給新生出的 quotient 用
 	- divisor register & ALU halved 
 	- like optimized multiplier
-		- ![](https://i.imgur.com/Sip3DHI.png)
+		- ![[computer-architecture-71.png]]
 	- e.g.
-		- ![](https://i.imgur.com/HlRLQql.png)
-		- ![](https://i.imgur.com/Ih2qk3o.png)
+		- ![[computer-architecture-72.png]]
+		- ![[computer-architecture-73.png]]
 			- 4-bit → shift 4 次完就終止，然後 remainder left half shift right (at 5th operation)
 			- 最後 remainder = remainder left half；quotient = remainder right half
 
@@ -469,7 +469,7 @@ only link/load library procedure when called
 
 ### instruction set with multiplication & division
 
-![](https://i.imgur.com/QdxrsDH.png)
+![[computer-architecture-74.png]]
 
 ### float
 
@@ -483,7 +483,7 @@ only link/load library procedure when called
 #### format
 
 - IEEE Std 754
-- ![](https://i.imgur.com/h6SNGsY.png)
+- ![[computer-architecture-75.png]]
 - placed this way for sorting purpose
 	- sign → exponent → fraction
 - exponent
@@ -511,16 +511,16 @@ only link/load library procedure when called
 	- min 00000000001
 	- max 11111111110
 - e.g.
-	- ![](https://i.imgur.com/6DoZ7tn.png)
-	- ![](https://i.imgur.com/7NmpchQ.png)
+	- ![[computer-architecture-76.png]]
+	- ![[computer-architecture-77.png]]
 	- 1.6875 to hexadicimal representation
-		- ![](https://i.imgur.com/4jkKpWc.png)
+		- ![[computer-architecture-78.jpg]]
 	- single encode to double
-		- ![](https://i.imgur.com/ClGGYQ5.jpg)
+		- ![[computer-architecture-79.jpg]]
 
 #### number representation
 
-- ![](https://i.imgur.com/SnIXuuf.png)
+- ![[computer-architecture-80.png]]
 - denormalized number
 	- exponent = 0
 		- so $fraction\times 2^{-Bias}$
@@ -534,31 +534,31 @@ only link/load library procedure when called
 
 #### addition
 
-![](https://i.imgur.com/bFgTJBs.png)
+![[computer-architecture-81.png]]
 
-![](https://i.imgur.com/MPx04i7.png)
+![[computer-architecture-82.png]]
 
-![](https://i.imgur.com/84xT9Wf.png)
+![[computer-architecture-83.png]]
 
 #### multiplication
 
-![](https://i.imgur.com/YMjRktx.png)
+![[computer-architecture-84.png]]
 
-![](https://i.imgur.com/e9W7yvI.png)
+![[computer-architecture-85.png]]
 
 FP multiplier is FP adder but use multiplier for significands
 
 #### instructions
 
-![](https://i.imgur.com/og6dgKP.png)
+![[computer-architecture-86.png]]
 
-- ![](https://i.imgur.com/buhsiTs.png)
+- ![[computer-architecture-87.png]]
 
 #### examples
 
 ##### escaping from barbaric yanks
 
-![](https://i.imgur.com/n8xMAts.png)
+![[computer-architecture-88.png]]
 
 ```
 flw f0, const5(x3) //f0 = 5
@@ -572,14 +572,14 @@ jalr x0, 0(x1) //return
 
 ##### array multiplication
 
-![](https://i.imgur.com/poiyR71.png)
+![[computer-architecture-89.png]]
 
-![](https://i.imgur.com/u6ye4CT.png)
+![[computer-architecture-90.png]]
 
 - $a_{2,3}$ in 5x5 → 1x5+3 = 8th item (左到右，上到下)
 - 64-bit → 要再 x8 `slli 3`
 
-![](https://i.imgur.com/NS7iJfq.png)
+![[computer-architecture-91.png]]
 
 #### rounding
 
@@ -588,27 +588,27 @@ jalr x0, 0(x1) //return
 		- guard 存目標位數後 1st 位，round 存目標位數後 2nd 位，then round with 這兩位
 			- e.g. (round to 小數點後第二位) 1.5252 → 1.53 bc $52\in [51,99]$
 		- without these 2，則永遠只保留目標位數
-		- ![](https://i.imgur.com/cQfcxqf.png)
+		- ![[computer-architecture-92.png]]
 	- sticky
 		- guard & round bit 右邊有非 0 位數 → set to 1，append as 3rd bit
 		- 0.500000...000001 → 0.501
-- ![](https://i.imgur.com/tPo5qeq.png)
+- ![[computer-architecture-93.png]]
 	- nearest even
 		- tie (剛好一半) → round to even
 		- tie 時 round 完 last bit 絕對是 0
-		- ![](https://i.imgur.com/3V7aXS1.png)
+		- ![[computer-architecture-94.png]]
 - e.g.
-	- ![](https://i.imgur.com/4hQyzHm.png)
-		- ![](https://i.imgur.com/sRcJ1yX.png)
-	- ![](https://i.imgur.com/F0S39OV.png)
+	- ![[computer-architecture-95.png]]
+		- ![[computer-architecture-96.png]]
+	- ![[computer-architecture-97.png]]
 
 ## Ch4 Processor
 
 ###  CPU
 
 - implementation of the RISC-V subset
-	- ![](https://i.imgur.com/QJ7rsrQ.png)
-	- ![](https://i.imgur.com/hWQPcIy.png)
+	- ![[computer-architecture-98.png]]
+	- ![[computer-architecture-99.png]]
 		- with multiplexers & control lines
 
 ### logic design
@@ -617,13 +617,13 @@ jalr x0, 0(x1) //return
 - multiple wire → bus
 - multiplexer (mux)
 	- 多個 input，選擇一個 output
-- ![](https://i.imgur.com/oJx3GwW.png)
+- ![[computer-architecture-100.png]]
 
 ### building a datapath
 
 #### fetching instruction
 
-- ![](https://i.imgur.com/RrCEyhE.png)
+- ![[computer-architecture-101.png]]
 - 用寫死做 Add 的 ALU，每次 PC +4
 - instruction memory 用 combinational logic
 
@@ -632,7 +632,7 @@ jalr x0, 0(x1) //return
 - arithmetic-logical instructions
 - don't use sign extender (P4.3.3)
 - read 2 registers → perform an ALU operation (arithmetic or logical operation) → write result to register
-- ![](https://i.imgur.com/jWMlP3Y.png)
+- ![[computer-architecture-102.png]]
 
 #### load/store
 
@@ -640,11 +640,11 @@ jalr x0, 0(x1) //return
 - immediate generation: convert 成 ALU 所需的格式
 	- 32-bit instruction as input 
 	- selects a 12-bit field for load, store, and branch if equal that is sign-extended into a 64-bit result appearing on the output (?)
-- ![](https://i.imgur.com/UFB8wsc.png)
+- ![[computer-architecture-103.png]]
 
 #### branch instructions (beq)
 
-- ![](https://i.imgur.com/oFNkbhE.png)
+- ![[computer-architecture-104.png]]
 - shift left 是加 0 到 sign-extended offset field 的後面，丟掉 sign bit
 	- 之前 x2 的部分
 - branch target = PC + imm slli 1
@@ -652,36 +652,36 @@ jalr x0, 0(x1) //return
 
 #### 合起來
 
-- ![](https://i.imgur.com/uvu621u.png)
+- ![[computer-architecture-105.png]]
 	- 加上 mux 來連接&控制不同 instruction class
-- ![](https://i.imgur.com/UuZNk6t.png)
+- ![[computer-architecture-106.png]]
 
 ### single-cycle implementation
 
 #### ALU
 
-- ![](https://i.imgur.com/eeWVO9A.png)
+- ![[computer-architecture-107.png]]
 
 #### main control unit
 
 - truth table
-	- ![](https://i.imgur.com/YcsWkxv.png)
+	- ![[computer-architecture-108.png]]
 	- 愈多 don't care 愈好
-- ![](https://i.imgur.com/Wlx7GlL.png)
-- ![](https://i.imgur.com/Ico4Mx7.png)
+- ![[computer-architecture-109.png]]
+- ![[computer-architecture-110.png]]
 	- rs1 = read register 1
 	- rs2 = read register 2
 	- rd = write register
 - control signals
-	- ![](https://i.imgur.com/RKDbqqY.png)
+	- ![[computer-architecture-111.png]]
 
 #### operation of datapath
 
-- ![](https://i.imgur.com/3qLc5gk.png)
+- ![[computer-architecture-112.png]]
 	- 加上 control unit，input 是 7-bit opcode，output 控制各種東西
 - e.g.
 	- add
-		- ![](https://i.imgur.com/35Gd9fv.png)
+		- ![[computer-architecture-113.png]]
 			1. read address && pc+=4
 			2. instruction decode
 			- read register 等等
@@ -690,11 +690,11 @@ jalr x0, 0(x1) //return
 			4. write data back (to destination register)
 			- R-type 不用處理到 data memory
 	- load
-		- ![](https://i.imgur.com/kAw4f4u.png)
+		- ![[computer-architecture-114.png]]
 			1. ALU 算 sum of register 1 & offset → address of data memory
 			2. data from the memory unity write into register file
 	- beq
-		- ![](https://i.imgur.com/ILz81Zn.png)
+		- ![[computer-architecture-115.png]]
 			- imm gen 找 offset
 				- offset slli 1
 			- imm slli 1 + pc → branch target
@@ -704,14 +704,14 @@ jalr x0, 0(x1) //return
 
 #### finalizing control
 
-- ![](https://i.imgur.com/Z2U2dNw.png)
+- ![[computer-architecture-116.png]]
 
 #### performance issues
 
 - clock period determined by worst-case delay (longest path)
 	- load instruction 最慢
 		- instruction memory → register file → ALU → data memory register file，5 個 stage 都要跑一遍
-			- ![](https://i.imgur.com/uSIBZq0.png)
+			- ![[computer-architecture-117.png]]
 		- but load instruction 又很常用
 	- solution: pipelining
 
@@ -727,9 +727,9 @@ jalr x0, 0(x1) //return
 
 stage utilization of each type
 
-![](https://i.imgur.com/rteeNMM.png)
+![[computer-architecture-118.png]]
 
-![](https://i.imgur.com/uSIBZq0.png)
+![[computer-architecture-117.png]]
 
 - jump uses WB
 - only R don't use sign extender
@@ -739,7 +739,7 @@ stage utilization of each type
 - cycle 數較多，cycle period 較短
 - if all stages take the same time, $T_c$ /= num of stages with pipelining
 - e.g.
-	- ![](https://i.imgur.com/W32S6D3.png)
+	- ![[computer-architecture-120.png]]
 		- 如果每個 stage 都花同樣時間，速度就會是 5 倍而非 4 倍
 
 #### pipeline hazards
@@ -757,143 +757,143 @@ stage utilization of each type
 - store won't create hazard
 - e.g.
 	- add x19, x0, x1<br>sub x2, x19, x3
-		- ![](https://i.imgur.com/qNl157r.png)
+		- ![[computer-architecture-121.png]]
 		- 要等上一個 WB 才能 ID → 要多等 2 個 cycle 
 - solution: forwarding/bypassing
 	- 不等 write back，一生出答案就直接拿
 	- need extra connection
 	- e.g.
-		- ![](https://i.imgur.com/FnLRhwt.png)
+		- ![[computer-architecture-122.png]]
 - load-use data hazard
 	- 用到的 variable 來自上一個 instruction 的 load
 	- load 要到 MEM 後才能被使用，while ALU 計算需要在 EX 前拿到值
 	- need to wait 1 more cycle even with forwarding
-		- ![](https://i.imgur.com/3fzSYYN.png)
+		- ![[computer-architecture-123.png]]
 	-  schedule codes to avoid it
-		- ![](https://i.imgur.com/hu8AwBa.png)
+		- ![[computer-architecture-124.png]]
 
 ##### control hazard
 
 - depends on branch outcome of previous instruction
 - e.g.
-	- ![](https://i.imgur.com/41CXIKw.png)
+	- ![[computer-architecture-125.png]]
 		- 要等 beq 判斷（要不要跳）之後才能執行下一個 instruction
 - sol: branch prediction
 	- static branch prediction
 		- assume branch not taken and do the next instruction immediately, if the branch is taken (assumption incorrect), cancel the instruction
-		- ![](https://i.imgur.com/iWX0bW5.png) 
+		- ![[computer-architecture-126.png]] 
 	- dynamic
 		- assumption based on history
 
 #### datapath
 
-- ![](https://i.imgur.com/3jKRTf0.png)
+- ![[computer-architecture-127.png]]
 - IF
-	- ![](https://i.imgur.com/jKyIoo8.png)
+	- ![[computer-architecture-128.png]]
 - ID
-	- ![](https://i.imgur.com/7FRJQH7.png)
+	- ![[computer-architecture-129.png]]
 - EX
 	- load
-		- ![](https://i.imgur.com/2VmZ0eW.png)
+		- ![[computer-architecture-130.png]]
 	- store
-		- ![](https://i.imgur.com/o6llAj8.png)
+		- ![[computer-architecture-131.png]]
 		- 2nd register value loaded into EX/MEM 
 		- ???
 - MEM
 	- load
-		- ![](https://i.imgur.com/H78RUS5.png)
+		- ![[computer-architecture-132.png]]
 	- store
-		- ![](https://i.imgur.com/GNIg099.png)
+		- ![[computer-architecture-133.png]]
 
 - WB
 	- load
-		- ![](https://i.imgur.com/D1AGz6h.png)
+		- ![[computer-architecture-134.png]]
 			- would be the wrong register number
-		- ![](https://i.imgur.com/G0HnxYa.png)
+		- ![[computer-architecture-135.png]]
 			- correct ver.
 			- register number passed from ID stage
 			- 有之後需要用到的 information → 需要 pass along with the datapath
 	- store
-		- ![](https://i.imgur.com/Qz3bKWr.png)
+		- ![[computer-architecture-136.png]]
 
 #### diagram
 
-- ![](https://i.imgur.com/Dck03PJ.png)
-- ![](https://i.imgur.com/340jugr.png)
-- ![](https://i.imgur.com/a7uh68Z.png)
+- ![[computer-architecture-137.png]]
+- ![[computer-architecture-138.png]]
+- ![[computer-architecture-139.png]]
 	- cycle 5 of previous diagrams
 
 #### control
 
-- ![](https://i.imgur.com/eJYJ5AG.png)
-- ![](https://i.imgur.com/Oq97wu1.png)
-- ![](https://i.imgur.com/mxjIMe1.png)
+- ![[computer-architecture-140.png]]
+- ![[computer-architecture-141.png]]
+- ![[computer-architecture-142.png]]
 
 ### data hazard & forwarding
 
 #### data hazard
 
 - EX hazard & MEM hazard
-	- ![](https://i.imgur.com/F5M1vro.png)
+	- ![[computer-architecture-143.png]]
 - destination = 前兩個指令的 register
 - e.g.
-	- ![](https://i.imgur.com/LadFQF0.png)
-	- ![](https://i.imgur.com/uuKu2yz.png)
+	- ![[computer-architecture-144.png]]
+	- ![[computer-architecture-145.png]]
 - double hazard
 	- EX hazard & MEM hazard both happen
 	- e.g.
-		- ![](https://i.imgur.com/FvmlX1m.png)
+		- ![[computer-architecture-146.png]]
 			- 1a & 2a
 
 #### forwarding
 
 - without forwarding
-	- ![](https://i.imgur.com/iYAObPi.png)
+	- ![[computer-architecture-147.png]]
 - with forwarding
-	- ![](https://i.imgur.com/x3ckRNn.png)
+	- ![[computer-architecture-148.png]]
 - need forwarding when
 	- EX/MEM or MEM/WB will write to a register && RD != x0 && RD = RS of ID/EX
 	- EX hazard
-		- ![](https://i.imgur.com/9uv7vcd.png)
+		- ![[computer-architecture-149.png]]
 	- MEM hazard
-		- ![](https://i.imgur.com/8Bfm5dU.png)
+		- ![[computer-architecture-150.png]]
 		- blue part: only forward this type when no EX hazard to avoid double hazard
 - control
 	- 哪一種 hazard → mux control
-	- ![](https://i.imgur.com/hFHNbpn.png)
+	- ![[computer-architecture-151.png]]
 	- 1a → ForwardA = 10
 	- 2a → ForwardA = 01
 	- 1b → ForwardB = 10
 	- 2b → ForwardB = 01
 - datapath
-	- ![](https://i.imgur.com/WYPhqDs.png)
+	- ![[computer-architecture-152.png]]
 
 #### stalling
 
 - hazard detection unit
-	- ![](https://i.imgur.com/95HUhsg.png)
+	- ![[computer-architecture-153.png]]
 	- operate at ID stage
 	- have hazard → stall
 - load-use data hazard 只能 stall → nop i.e. do nothing
-- ![](https://i.imgur.com/bLUubxz.png)
-- ![](https://i.imgur.com/z9sIWYY.png)
+- ![[computer-architecture-154.png]]
+- ![[computer-architecture-155.png]]
 
 ### control hazards
 
-- ![](https://i.imgur.com/v88zP4e.png)
+- ![[computer-architecture-156.png]]
 
 #### dynamic branch prediction
 
 - 1-bit predictor
 - 2-bit predictor
 	- wrong prediction twice → change
-	- ![](https://i.imgur.com/k70qCuV.png)
+	- ![[computer-architecture-157.png]]
 
 ### exceptions
 
 - flush instructions
 - handling exception
-	- ![](https://i.imgur.com/rtM3d13.png)
+	- ![[computer-architecture-158.png]]
 
 ### instruction level parallelism, ILP
 
@@ -908,9 +908,9 @@ stage utilization of each type
 #### Static Multiple Issue
 
 - two-issue pipeline
-	- ![](https://i.imgur.com/gLyZuz4.png)
+	- ![[computer-architecture-159.png]]
 	- 一邊 ALU/branch 一邊 load/store
-	- ![](https://i.imgur.com/h6IOHS1.png)
+	- ![[computer-architecture-160.png]]
 - need extra hardware
 - more instructions executing in parallel to avoid hazard
 	- EX data hazard
@@ -918,13 +918,13 @@ stage utilization of each type
 	- load-use data hazard
 		- load result can't be used at next cycle (?)
 - scheduling
-	- ![](https://i.imgur.com/1RpWIrz.png)
+	- ![[computer-architecture-161.png]]
 - loop unrolling
 	- replicate loop body multiple times → more things to fill in the blanks, and can 化減
-	- ![](https://i.imgur.com/CoabQ0O.png)
+	- ![[computer-architecture-162.png]]
 	- e.g.
-		- ![](https://i.imgur.com/AdBiVOF.png)
-		- ![](https://i.imgur.com/unJsF56.png)
+		- ![[computer-architecture-163.png]]
+		- ![[computer-architecture-164.png]]
 
 #### Dynamic Multiple Issue
 
@@ -932,8 +932,8 @@ stage utilization of each type
 - dynamic pipeline scheduling
 	- can execute instructions out of order
 	- e.g.
-		- ![](https://i.imgur.com/StlZC0O.png)
-- ![](https://i.imgur.com/8SJFndu.png)
+		- ![[computer-architecture-165.png]]
+- ![[computer-architecture-166.png]]
 
 ### problems
 
@@ -955,7 +955,7 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 		- 空間上很近的會很常被用到
 		- sequential instructions
 - memory hierarchy
-	- ![](https://i.imgur.com/RloQTF7.png)
+	- ![[computer-architecture-167.png]]
 	- faster → more expensive → smaller
 	- upper level
 		- closer to processor
@@ -987,7 +987,7 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 
 - the memory between processor & main memory
 - direct mapped cache
-	- ![](https://i.imgur.com/gVi6Vm9.png)
+	- ![[computer-architecture-168.png]]
 	- map with block address % num of blocks<br>i.e. n entries/blocks → map with lower $log_2n$ bits 
 - tag
 	- contain upper portion of block address (block address = {tag}{index})
@@ -1012,12 +1012,12 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 		- every block need original + tag & valid bits
 		- i.e. 原本的 cache size 加上 tag & valid 總共所需的 bits
 	- e.g.
-		- ![](https://i.imgur.com/zv7Ya9d.png)
-		- ![](https://i.imgur.com/ZX4Lwa9.png)
+		- ![[computer-architecture-169.png]]
+		- ![[computer-architecture-170.png]]
 - cache miss = search for a data in cache but find nothing
 	- miss rate = # miss / # all access
 - e.g.
-	- ![](https://i.imgur.com/AGF42dS.png)
+	- ![[computer-architecture-171.png]]
 - block size vs. miss rate
 	- ![](https://s2.loli.net/2021/12/24/8z9ji5sVMHDoYcC.png)
 	- larger block size → spatial locality → lower miss rate
@@ -1025,7 +1025,7 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 	- larger block size → hit time increases → slower
 	- larger block size → transfer time increase → bigger miss penalty
 - miss → CPU pipeline stall → fetch block from lower level
-- ![](https://i.imgur.com/e8MMiAl.png)
+- ![[computer-architecture-172.png]]
 - AMAT (average memory access time) = hit time + miss rate x miss penalty
 
 #### associative cache
@@ -1046,7 +1046,7 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 		- same performance for whatever n
 - high associative → low miss rate
 - e.g.
-	- ![](https://i.imgur.com/RGssgly.png)
+	- ![[computer-architecture-173.png]]
 
 #### miss
 
@@ -1101,5 +1101,5 @@ load & store 會用到 data memory，so 其他的 IF stage 不能跟 ld & sd 的
 	- bit 0001 → check bits ending with 1
 	- bit 0010 → check bits ending with 01
 	- etc.
-	- ![](https://i.imgur.com/TWmuncD.png)
+	- ![[computer-architecture-174.png]]
 	- parity (p8p4p2p1) is (1010)$_2$ = 10 → bit 10 has error → invert bit 10 to correct it
