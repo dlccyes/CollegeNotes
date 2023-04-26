@@ -9,7 +9,7 @@ see <https://dlcc.notion.site/fd1e2a787b11464896f55d9684337246>
 
 flip-flop: only response to a ==clock input== (but not a data input)
 
-<img src="https://i.imgur.com/o0ZQV5r.jpg" height = "300">
+![[logic-design-1.jpg]]
 
 ![[logic-design-2.png]]
 
@@ -132,21 +132,29 @@ so we restrict the flip-flop to only change on the edge of the clock (input chan
 → edge-triggered flip-flop
 
 #### 11.4 Edge-Triggered D Flip-Flop
+
 **rising-edge trigger**(left): output change when Clk=0→1
+
 **falling-edge trigger**(right, *has bubble*): output change when Clk=1→0
-<img src="https://i.imgur.com/lNNwAB7.png" height="150"><img src="https://i.imgur.com/H7LN1ox.png" height="150">
-<img src="https://i.imgur.com/nIeiX72.png" height="150">
+
+![[logic-design-5.png]]
+
+![[logic-design-8.png]]
 
 falling-edge triggered D flip-flop time diagram  
+
 ![[logic-design-26.png]]
 when Clk=1→0, Q = D the moment Clk change→
 
 ###### rising edge triggered D flip-flop 
+
 ![[logic-design-27.png]]
+
 when Clk=0, D pass to P, Q<sup>+</sup>=Q  
 when Clk=0→1, D pass to P pass to Q  
 when Clk=1, Q hold the D when Clk 0→1, D now doesn't affect anything  
 when Clk=0→1, nothing happens
+
 ![[logic-design-28.png]]
 
 t<sub>su</sub> (setup time) = D's must-stable time before Clk 0→1  
@@ -159,7 +167,9 @@ an example of minumum clock period
 
 #### 11.5 S-R Flip-Flop
 
-<img src="https://i.imgur.com/tPfFuvU.png" height="120">(rising-edge)  
+![[logic-design-14.png]]
+
+(rising-edge)  
 
 ![[logic-design-32.png]]
 NOR-gate S-R latch: Q<sup>+</sup>=S+R'Q  
@@ -175,7 +185,10 @@ but S=R=0 then, Q shoudln't change
 so we ==only allow inputs change when clock is high==
 
 #### 11.6 J-K Flip-Flop
-<img src="https://i.imgur.com/jn4qAMr.png" height="120"> (rising-edge)
+
+![[logic-design-23.png]]
+
+(rising-edge)
 
 ![[logic-design-36.png]]
 when Clk=1, ==P=JQ'+K'Q==  
@@ -185,7 +198,8 @@ so ==J=K=1 is illegal==
 ![[logic-design-38.png]]
 
 #### 11.7 T Flip-Flop
-<img src="https://i.imgur.com/Z285AZB.png" height="120"> (falling-edge)
+
+![[logic-design-24.png]]
 
 ![[logic-design-40.png]]
 J-K flip-flop: Q<sup>+</sup>=JQ'+K'Q
@@ -222,7 +236,8 @@ coincident with the last 1
 *the symbol before the slash is the input and the symbol after the slash is the corresponding output*
 
 ######## Mealy machine
-<img src="https://i.imgur.com/ZW6bi06.png" height="160">
+
+![[logic-design-25.png]]
 
 target: $S_0S_1S_2$ = 101
 $S_0$: get 1 →store it ; get 0 → again
