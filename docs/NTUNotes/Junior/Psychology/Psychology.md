@@ -6,6 +6,7 @@
 # Psychology
 
 ## intro
+
 - social media to emotions
 	- 社會比較 → 負面情緒
 		- 滑一滑看到別人很勝利
@@ -53,34 +54,37 @@
 		- actively 操作 variables
 
 ## 生理心理學
+
 - 神經傳導素 neurotransmitter
 	- ==考==
-	- ![](https://i.imgur.com/ip2DMki.png)
-	- ![](https://i.imgur.com/CgDAiUB.png)
+	- ![[psychology-1.png]]
+	- ![[psychology-2.png]]
 	- comparison
 		- 多巴胺跟預期有關
 		- 腦內啡止痛
 		- 血清素 開心
 - 大腦結構
 	- ==考==
-	- ![](https://i.imgur.com/WJUwUwh.jpg)
-	- ![](https://i.imgur.com/HaJIpGg.png)
-	- ![](https://i.imgur.com/2uZjFrn.jpg)
+	- ![[psychology-3.jpg]]
+	- ![[psychology-4.jpg]]
+	- ![[psychology-5.jpg]]
 	- 左右腦
 		- 左腦
 			- sequential processing
 		- 右腦
 			- parallel processing
-		- ![](https://i.imgur.com/2KbxiE8.png)
+		- ![[psychology-6.jpg]]
 - nature & nurture
 	- twins' IQ
-		- ![](https://i.imgur.com/ZgLwk4m.png)
+		- ![[psychology-7.png]]
 	- children's performance vs. mother's responsiveness
-		- ![](https://i.imgur.com/Er8iZcO.png)
+		- ![[psychology-8.png]]
 		- 對於某一種基因型，mother's responsiveness 沒什麼影響，對於另一種基因型，則是影響非常大
 	- 表關遺傳學 epigenetics
 		- 環境引發遺傳性的基因
+
 ## 感覺與知覺
+
 - bottom-up processing
 	- 慢想
 - top-down processing
@@ -96,12 +100,12 @@
 	- 一直盯著同一點，視野其他地方都會不見
 		- 有用 VR 實驗過，會 eye-tracking 主動抵銷掉眼睛的動，讓視野完全不動，結果沒多久視野就全灰了
 - 完形定律
-	- ![](https://i.imgur.com/WtyjFat.png)
-		- ![](https://i.imgur.com/D9PlDgh.png) 因為連續性
+	- ![[psychology-9.jpg]]
+		- ![[psychology-10.png]] 因為連續性
 	- neon color spreading
-		- ![](https://i.imgur.com/t77TrHq.png)
+		- ![[psychology-11.png]]
 		- 連續性包起來 → 顏色擴散到裡面
-- ![](https://i.imgur.com/voT6JRA.png)
+- ![[psychology-12.jpg]]
 	- 處理外白中黑的神經元較多
 - what vs. where
 	- 處理 where 比較強
@@ -113,6 +117,7 @@
 			- <iframe width="426" height="552" src="https://www.youtube.com/embed/4Aye9FWgxUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 注意與意識
+
 - 體型愈小，睡眠時間愈多
 - 睡眠周期
 	- NREM
@@ -120,7 +125,7 @@
 		- stage 2
 		- stage 3/4
 	- REM
-	- ![](https://i.imgur.com/ouaZ21v.png)
+	- ![[psychology-13.png]]
 		- 會慢慢進入深層睡眠 bc 怕環境有狀況
 		- NREM 變 REM 是非常快入的 bc 瞬間回復可以應對外在狀況的情況
 	- 剝奪 REM，補眠時是補 REM；剝奪 NREM，補眠時是補 NREM
@@ -135,7 +140,7 @@
 		- 被催眠時假戲真做
 - caffeine 長得跟 adenosine 很像 → 卡住作用位置，生產出來的 adenosine 無法作用，就在那邊飄，人因此不會想睡 → caffeine 代謝掉後，在那邊飄的一堆 adenosine 終於發生作用，加深睡意
 	- adenosine: 會讓人想睡
-	- ![](https://i.imgur.com/EJBOQZa.png)
+	- ![[psychology-14.jpg]]
 - 心理作用藥
 	- 抑制劑
 		- 酒精
@@ -166,6 +171,7 @@
 	- 一日三省吾身
 
 ## 學習
+
 - 制約（考）
 	- 古典制約
 	- 操作制約
@@ -180,10 +186,10 @@
 	- UR：unconditioned response
 		- 看到食物 → 流口水
 			- 真的不是制約結果嗎
-	- ![](https://i.imgur.com/7ROViqG.png)
-	- ![](https://i.imgur.com/V1B6T8m.png)
+	- ![[psychology-15.png]]
+	- ![[psychology-16.png]]
 	- US 不再隨著 CS 而來 → 制約逐漸削弱
-		- ![](https://i.imgur.com/Av3RETj.png)
+		- ![[psychology-17.png]]
 	- 有因果關係的制約最有效
 		- CS → US > CS = US > US → CS
 - generalization
@@ -196,12 +202,13 @@
 		- e.g.
 			- 賭博
 			- social media
-	- ![](https://i.imgur.com/bOOLRKn.png)
+	- ![[psychology-18.jpg]]
 - 會學別人，制約自己
 
 ## 記憶
+
 - 視覺記憶 capacity 大 but decay fast
-	- ![](https://i.imgur.com/riGWQBT.png)
+	- ![[psychology-19.jpg]]
 		- partial report: 一樣先看所有字母一秒，根據聽到的去寫下對應的一行 → 記得比較清楚，表示視覺記憶 capacity 是大的
 - 超憶者抽象思考能力較弱
 	- 只注意到細微的差異處，而非背後的 concept（這種感覺）
@@ -218,7 +225,7 @@
 		- 最近的東西記得較清楚
 		- decay 較少
 - 語音迴路
-	- ![](https://i.imgur.com/LuCsfX2.png)
+	- ![[psychology-20.jpg]]
 		- primary & recency effect
 - interference
 	- 順向干擾 proactive interference
@@ -229,7 +236,7 @@
 		- 思考較有彈性
 - 深度學習 deep learning
 	- 內化
-	- ![](https://i.imgur.com/MVgcC7n.png)
+	- ![[psychology-21.png]]
 - false memory
 	- 你對於各個人事物的知識有連結，據此創造假意義
 		- 可能發生於 encoding or retrieval
