@@ -37,7 +37,7 @@ $$
 $$\int^\infty_{-\infty}\psi^*_n \psi_mdV=0\ \text{if}\ n\neq 
  m$$
 
-![](https://i.imgur.com/em8G21K.png)
+![[modern-physics-1.png]]
 
 meaning
 
@@ -51,7 +51,7 @@ $$\gamma=\dfrac{1}{\sqrt{1-\frac{v^2}{c^2}}}$$
 
 ### Energy
 
-![](https://i.imgur.com/7pGwuqi.png)
+![[modern-physics-2.png]]
 
 $$E^2=(mc^2)^2+p^2c^2=E_0^2+(pc)^2$$
 
@@ -66,84 +66,85 @@ $$E_0=m_0c^2$$
 
 $$KE=mc^2-m_0c^2$$
 
-![](https://i.imgur.com/XrVduzu.png)
+![[modern-physics-3.jpg]]
 
-![](https://i.imgur.com/ohV0Xq6.png)
+![[modern-physics-4.jpg]]
 
 ### Doppler effect
 
-![](https://i.imgur.com/7ULtUFn.png)
+![[modern-physics-5.png]]
 
-![](https://i.imgur.com/BAke2Oh.png)
+![[modern-physics-6.png]]
 
 **Case 1**
 
-![](https://i.imgur.com/Xwfyt8J.png)
+![[modern-physics-7.png]]
 
 **Case 2**
 
-![](https://i.imgur.com/iIoAjB9.png)
+![[modern-physics-8.png]]
 
 **Case 3**
 	
-![](https://i.imgur.com/OLMqbc7.png)
+![[modern-physics-9.png]]
 
-![](https://i.imgur.com/4O7NHT0.png)
+![[modern-physics-10.png]]
 
 ## Ch2 Particle properties of wave
 
 ### Blackbody
 
-![](https://i.imgur.com/9BgY6JN.png)
+![[modern-physics-11.jpg]]
 
 **Rayleigh-Jeans Formula**
 
-![](https://i.imgur.com/ehwjjzJ.png)
+![[modern-physics-12.png]]
 
 but it's wrong at higher frequencies
 
-![](https://i.imgur.com/cq9eIjI.png)
+![[modern-physics-13.png]]
 
 **Plank Radiation Formula**
 
-![](https://i.imgur.com/miyWvrX.png)
+![[modern-physics-14.png]]
 
 Plank radiation formula becomes Rayleigh-Jeans formula at low frequency $\nu$
 
-![](https://i.imgur.com/nNDAUNr.png)
+![[modern-physics-15.png]]
 
 ### Photoelectric Effect
 
-![](https://i.imgur.com/bX177hk.png)
+![[modern-physics-16.png]]
 
 ### X Ray
 
-![](https://i.imgur.com/a169r5e.png)
+![[modern-physics-17.png]]
 
-![](https://i.imgur.com/aZLahR4.png)
+![[modern-physics-18.png]]
 
 $$2dsin\theta=n\lambda$$
 
 ### Compton Effect
 
-![](https://i.imgur.com/aPGsqCk.png)
+![[modern-physics-19.png]]
 
 ## Ch3 Wave properties of particle
 
-![](https://i.imgur.com/lAWpIlw.png)
+![[modern-physics-20.png]]
 
-![](https://i.imgur.com/qRxVX4P.png)
+![[modern-physics-21.png]]
 
 ### Phase Velocity & Group Velocity
 
 $$v_p=\lambda\nu=\dfrac{h}{\gamma mv}\nu=\dfrac{E}{\gamma mv}=\dfrac{\gamma mc^2}{\gamma mv}=\dfrac{c^2}{v}$$
 
-![](https://i.imgur.com/MAx1vhu.png)
+![[modern-physics-22.png]]
 
-![](https://i.imgur.com/41ogptD.png)
-![](https://i.imgur.com/xnzH7rB.png)
+![[modern-physics-23.png]]
 
-![](https://i.imgur.com/3G6eEWp.png)
+![[modern-physics-24.png]]
+
+![[modern-physics-25.png]]
 
 ### Uncertainty Principle
 
@@ -153,32 +154,32 @@ $$\Delta x \Delta p \geq \dfrac{\hbar}{2}$$
 
 $$\Delta E \Delta t \geq \dfrac{\hbar}{2}$$
 
-![](https://i.imgur.com/3idLe5E.png)
+![[modern-physics-26.png]]
 
-![](https://i.imgur.com/WRPExGn.png)
+![[modern-physics-27.png]]
 
-![](https://i.imgur.com/lqEYLku.png)
+![[modern-physics-28.png]]
 
-![](https://i.imgur.com/u9Yoxqe.png)
-![](https://i.imgur.com/J4xGfx7.png)
+![[modern-physics-29.png]]
+![[modern-physics-30.png]]
 
-![](https://i.imgur.com/odP9jgS.png)
+![[modern-physics-31.png]]
 
 ## Ch4 Atomic Structure
 
 ### Thomson model of atom
 
-![](https://i.imgur.com/qccnLQY.png)
+![[modern-physics-32.png]]
 
 ### Distance of closest approach
 
 For an alpha particle (2 proton + 2 neutron)
 
-![](https://i.imgur.com/GYpg8xJ.png)
+![[modern-physics-33.png]]
 
 ### Electron orbits
 
-![](https://i.imgur.com/TV3h1aJ.png)
+![[modern-physics-34.png]]
 
 $$F_c=\dfrac{mv^2}{r}$$
 
@@ -186,27 +187,27 @@ $$F_e=\dfrac{1}{4\pi\epsilon_0}\dfrac{e^2}{r^2}$$
 
 $$F_c=F_e$$
 
-![](https://i.imgur.com/eCsXQK4.png)
+![[modern-physics-35.png]]
 
 ### Atomic Spectra
 
-![](https://i.imgur.com/mDLnl42.png)
+![[modern-physics-36.png]]
 
 Rydberg constant $R=1.097\times10^7\mathrm{m}^{-1}$
 
 $$R=-\dfrac{E_1}{ch}$$
 
-![](https://i.imgur.com/riVRjaM.png)
+![[modern-physics-37.png]]
 
-![](https://i.imgur.com/qh9koQQ.png)
+![[modern-physics-38.png]]
 
 ### Bohr Atom
 
-![](https://i.imgur.com/vCc1JdS.png)
+![[modern-physics-39.png]]
 
 Energy
 
-![](https://i.imgur.com/igCPJED.png)
+![[modern-physics-40.png]]
 
 ### Energy level and spectra
 
@@ -216,117 +217,117 @@ $$\lambda=\dfrac{hc}{\Delta E}$$
 
 $$R=-\dfrac{E_1}{ch}$$
 
-![](https://i.imgur.com/TwE9oIP.png)
+![[modern-physics-41.png]]
 
-![](https://i.imgur.com/CrEgmAH.png)
+![[modern-physics-42.png]]
 
 ### Correspondence principal
 
 angular momentum $L=mvr=\dfrac{nh}{2\pi}=n\hbar$
 
-![](https://i.imgur.com/gbvJU50.png)
+![[modern-physics-43.png]]
 
 ### Nuclear Motion
 
 hydrogen nuclear (a proton)'s mass $M=1836m_e$
 
-![](https://i.imgur.com/X8TJziT.png)
+![[modern-physics-44.png]]
 
 Both the nucleus & the electron orbit around the center. We can use **reduced mass** $m'$ in place of $m$ to simplify the system into single oribit.
 
-![](https://i.imgur.com/tMUzgTk.png)
+![[modern-physics-45.png]]
 
 ### Rutherford scattering
 
-![](https://i.imgur.com/qvZZx67.png)
+![[modern-physics-46.png]]
 
 $b$ = impact parameter
 
-![](https://i.imgur.com/eWKO8Ia.png)
+![[modern-physics-47.png]]
 
-![](https://i.imgur.com/WdZMutC.png)
+![[modern-physics-48.png]]
 
 Potential change after impact
 
-![](https://i.imgur.com/xT9kkQi.png)
+![[modern-physics-49.png]]
 
 $b_{\mathrm{min}}$ = r of nucleus -> $\theta_{\mathrm{max}}$
 
 <http://hyperphysics.phy-astr.gsu.edu/hbase/Nuclear/rutsca3.html>
 
-![](https://i.imgur.com/158GR38.png)
+![[modern-physics-50.png]]
 
 Fraction of alpha particles scattered by $\theta$ or more
 
-![](https://i.imgur.com/CjqDl3e.png)
+![[modern-physics-51.png]]
 
 ## Ch5 Quantum Mechanics
 
 ### Normalized
 
-![](https://i.imgur.com/x83sZmm.png)
+![[modern-physics-52.png]]
 
 ### Well-Behaved Wave Functions
 
 Only those with these properties can yield physically meaningful results.
 
-![](https://i.imgur.com/5pn8kfI.png)
+![[modern-physics-53.png]]
 
 y & dy/dx need to be finite, continuous, and single-valued
 
 ### Schrodinger Equation
 
-![](https://i.imgur.com/uqHQtUZ.png)
+![[modern-physics-54.png]]
 
 ### Expectation Values
 
-![](https://i.imgur.com/30mi4aj.png)
+![[modern-physics-55.png]]
 
-![](https://i.imgur.com/gdobour.png)
+![[modern-physics-56.png]]
 
-![](https://i.imgur.com/Hfwvt1h.png)
+![[modern-physics-57.png]]
 
 ### Particle in a box
 
 energy
 
-![](https://i.imgur.com/7WjH6m6.png)
+![[modern-physics-58.png]]
 
 $$E_n=\dfrac{n^2\pi^2\hbar^2}{2mL^2}=\dfrac{n^2h^2}{8mL^2}$$
 
-![](https://i.imgur.com/ROkyLQz.png)
+![[modern-physics-59.png]]
 
 ### Tunnel Effect
 
-![](https://i.imgur.com/9RUejbr.png)
+![[modern-physics-60.png]]
 
 probability
 
-![](https://i.imgur.com/zVzKGG1.png)
+![[modern-physics-61.png]]
 
 - $U$ = barrier
 - $E$ = energy of the particle
 
 ### Harmonic Oscillator
 
-![](https://i.imgur.com/juKXALL.png)
+![[modern-physics-62.png]]
 
-![](https://i.imgur.com/DQkbFv5.png)
+![[modern-physics-63.png]]
 
-![](https://i.imgur.com/vcjyquR.png)
+![[modern-physics-64.png]]
 
 See <https://en.wikipedia.org/wiki/Quantum_harmonic_oscillator#Ladder_operator_method>
 
 ### Finite Square Quantum Well
 
-![](https://i.imgur.com/Ry5J7K3.png)
+![[modern-physics-65.png]]
 
 
 ## Ch6 Hydrogen Atom
 
 ### Schrodinger's Equation
 
-![](https://i.imgur.com/4z1MYxZ.png)
+![[modern-physics-66.png]]
 
 $$\nabla^2\psi+\dfrac{2m}{\hbar^2}(E-U)\psi=0$$
 
@@ -338,19 +339,19 @@ $$\left(\dfrac{\partial^2 \psi}{\partial r^2}+\dfrac{1}{r}\dfrac{\partial\psi}{\
 
 Azimuth angle = $\phi$
 
-![](https://i.imgur.com/Zley7rK.png)
+![[modern-physics-67.jpg]]
 
 In cartesian (3D)
 
-![](https://i.imgur.com/RvrXi4u.png)
+![[modern-physics-68.png]]
 
 In spherical (3D)
 
-![](https://i.imgur.com/kV4rzXD.png)
+![[modern-physics-69.png]]
 
-![](https://i.imgur.com/kqiceaN.png)
+![[modern-physics-70.png]]
 
-![](https://i.imgur.com/M24jFQ9.png)
+![[modern-physics-71.png]]
 
 $$a_0=r_1=\dfrac{h^2\epsilon_0}{\pi me^2}=\dfrac{4\pi\hbar^2\epsilon_0}{me^2}$$
 
@@ -360,47 +361,47 @@ $$E_1=-\dfrac{e^2}{8\pi\epsilon_0r_1}=-\dfrac{e^2}{8\pi\epsilon_0a_0}=-\dfrac{\h
 
 ### Quantum Numbers
 
-![](https://i.imgur.com/BvKmZnX.png)
+![[modern-physics-72.png]]
 
 Table 6.1
 
-![](https://i.imgur.com/VOyD4Pv.png)
+![[modern-physics-73.png]]
 
 ### Orbital Quantum Numbers
 
-![](https://i.imgur.com/OqCjm5s.png)
+![[modern-physics-74.png]]
 
 states
 
-![](https://i.imgur.com/eRv6166.png)
+![[modern-physics-75.png]]
 
 ### Magnetic Quantum Number
 
-![](https://i.imgur.com/Mqzx8fW.png)
+![[modern-physics-76.png]]
 
 $L=\sqrt{l(l+1)\hbar}$'s shadow on z axis = $L_z=m_l\hbar$ = integral times of $\hbar$
 
-![](https://i.imgur.com/6cxZur0.png)
+![[modern-physics-77.png]]
 
 ### Electron Probability Density
 
-![](https://i.imgur.com/jsDA8jv.png)
+![[modern-physics-78.png]]
 
-![](https://i.imgur.com/BRaC7am.png)
+![[modern-physics-79.png]]
 
-![](https://i.imgur.com/trTh6X8.png)
+![[modern-physics-80.png]]
 
 ### Angular Momentum
 
-![](https://i.imgur.com/fGUrrSR.png)
+![[modern-physics-81.png]]
 
-![](https://i.imgur.com/SLjqLSV.png)
+![[modern-physics-82.png]]
 
 **Commutation** = 交換率
 
 $$[A,B]=AB-BA$$
 
-![](https://i.imgur.com/SPfULMj.png)
+![[modern-physics-83.png]]
 
 **Ladder Operator**
 
@@ -408,23 +409,23 @@ $$L_\pm=L_x\pm iL_y$$
 
 ### Selection Rule
 
-![](https://i.imgur.com/1p8vXWx.png)
+![[modern-physics-84.png]]
 
 **Allowed transitions**
 
-![](https://i.imgur.com/QuugbEc.png)
+![[modern-physics-85.png]]
 
 The conditions for allowed transitions
 
-![](https://i.imgur.com/xyvTmd0.png)
+![[modern-physics-86.png]]
 
 ### Zeeman Effect
 
 energy level change due do magnetic field
 
-![](https://i.imgur.com/IJB8pcp.png)
+![[modern-physics-87.jpg]]
 
-![](https://i.imgur.com/JDHIpLb.png)
+![[modern-physics-88.jpg]]
 
 $$\begin{align*}
 & \Delta E=\mu_BB\\
@@ -434,29 +435,29 @@ $$\begin{align*}
 \end{align*}$$
 
 
-![](https://i.imgur.com/xZar24m.png)
+![[modern-physics-89.png]]
 
-![](https://i.imgur.com/3uguAdt.png)
+![[modern-physics-90.png]]
 
 **Bohr magneton**
 
-![](https://i.imgur.com/TK9BJZp.png)
+![[modern-physics-91.png]]
 
 ## Ch7 Many-Electron Atoms
 
 ### Electron Spin
 
-![](https://i.imgur.com/qUDZJRm.png)
+![[modern-physics-92.png]]
 
-![](https://i.imgur.com/7ZG1NhH.png)
+![[modern-physics-93.png]]
 
 ### Pauli's Exclusion Principle
 
-![](https://i.imgur.com/PORxU9F.png)
+![[modern-physics-94.png]]
 
 ### Fermions & Bosons
 
-![](https://i.imgur.com/8Tspml8.png)
+![[modern-physics-95.png]]
 
 For antisymmetric wavefunction, $a=b\Rightarrow$ $\psi=0$, obeys [[#Pauli's Exclusion Principle]]
 
@@ -469,7 +470,7 @@ For antisymmetric wavefunction, $a=b\Rightarrow$ $\psi=0$, obeys [[#Pauli's Excl
 
 ### Quantum Numbers
 
-![](https://i.imgur.com/QYiNe2m.png)
+![[modern-physics-96.png]]
 
 ### Atomic Structures
 
@@ -479,45 +480,45 @@ $$E_n=\dfrac{Z^2}{E_1}$$
 
 Different $n$ -> shells
 
-![](https://i.imgur.com/AtcHIau.png)
+![[modern-physics-97.png]]
 
 Max $2n^2$ states for each $n$.
 
 Different $l$ in same $n$ -> sub-shells
 
-![](https://i.imgur.com/eRv6166.png)
+![[modern-physics-75.png]]
 
-![](https://i.imgur.com/Mqzx8fW.png)
+![[modern-physics-76.png]]
 
-![](https://i.imgur.com/lRpka8C.png)
+![[modern-physics-100.png]]
 
-![](https://i.imgur.com/G1hUK6p.png)
+![[modern-physics-101.png]]
 
-![](https://i.imgur.com/uoSwQWx.png)
+![[modern-physics-102.png]]
 
-![](https://i.imgur.com/1dHp9QV.png)
+![[modern-physics-103.png]]
 
 **Hund's Rule**
 
 Don't pair whenever possible
 
-![](https://i.imgur.com/Mm4YTHZ.png)
+![[modern-physics-104.png]]
 
 ### Spin-Orbit Effect
 
 nucleus orbits the electron in the electron's POV, creating magnetic field, causing energy difference
 
-![](https://i.imgur.com/wNOtX0h.png)
+![[modern-physics-105.png]]
 
-![](https://i.imgur.com/hk1EmMQ.png)
+![[modern-physics-106.png]]
 
-![](https://i.imgur.com/mb439Kb.png)
+![[modern-physics-107.png]]
 
-![](https://i.imgur.com/S0gD4HV.png)
+![[modern-physics-108.png]]
 
 See [[#Zeeman Effect]]
 
-![](https://i.imgur.com/UVCpNbd.png)
+![[modern-physics-109.png]]
 
 ### Total Angular Moment
 
@@ -525,21 +526,21 @@ See [[#Zeeman Effect]]
 - $S$ = spin angular momentum
 - $J=L+S$ = total angular momentum
 
-![](https://i.imgur.com/WeaUi4K.png)
+![[modern-physics-110.png]]
 
 so for a given $J$, there are $2J+1$ substates
 
-![](https://i.imgur.com/at0fpIp.png)
+![[modern-physics-111.png]]
 
-![](https://i.imgur.com/0DrFCrh.png)
+![[modern-physics-112.png]]
 
 **LS Coupling**
 
-![](https://i.imgur.com/sPGHfjZ.png)
+![[modern-physics-113.png]]
 
-![](https://i.imgur.com/dFDYgtB.png)
+![[modern-physics-114.png]]
 
-![](https://i.imgur.com/8D2yBNN.png)
+![[modern-physics-115.png]]
 
 - $S=\sqrt{s(s+1)}\hbar$
 - $L=\sqrt{l(l+1)}\hbar$
@@ -547,7 +548,7 @@ so for a given $J$, there are $2J+1$ substates
 
 ### Term Symbols
 
-![](https://i.imgur.com/spp5lfe.png)
+![[modern-physics-116.png]]
 
 $$n^{2S+1}L_J$$
 
@@ -568,17 +569,17 @@ $$n^{2S+1}L_J$$
 
 An electon don't emit energy as x-ray when dropping to lower level but give the energy to another electron and make it elecate
 
-![](https://i.imgur.com/ZvIYk4y.png)
+![[modern-physics-117.png]]
 
 ## Ch8
 
-![](https://i.imgur.com/IPEPTVp.png)
+![[modern-physics-118.png]]
 
-![](https://i.imgur.com/fzKFaJ1.png)
+![[modern-physics-119.png]]
 
 ## Ch9 Statistical Mechanics
 
-![](https://i.imgur.com/aeI1HgW.png)
+![[modern-physics-120.png]]
 
 - given $n$, $g(\epsilon)=2n^2$
 - given $J$, $g(\epsilon)=2J+1$
@@ -587,7 +588,7 @@ Boltzmann's constant
 
 $$k=1.381\times10^{-23}J/K$$
 
-![](https://i.imgur.com/TkzCjZW.png)
+![[modern-physics-121.png]]
 
 ### Molecular Energies in Ideal Gas
 
@@ -604,72 +605,72 @@ $\dfrac{1}{2}kT$ for each degree of freedom
 
 **Average Molecular Energy**
 
-![](https://i.imgur.com/0g2B1RV.png)
+![[modern-physics-122.png]]
 
-![](https://i.imgur.com/ZjCxe71.png)
+![[modern-physics-123.png]]
 
 Most probable speed appears at $\dfrac{dn(v)}{dv}=\dfrac{d}{dv}4\pi N(\dfrac{m}{2\pi kT})^{3/2}v^2e^{-mv^2/2kT}=0$
 
-![](https://i.imgur.com/8g18JD3.png)
+![[modern-physics-124.png]]
 
-![](https://i.imgur.com/sydM6XW.png)
+![[modern-physics-125.png]]
 
 ### Quantum Statistics
 
-![](https://i.imgur.com/XYXRuRU.png)
+![[modern-physics-126.jpg]]
 
 **Distributions Comparison**
 
-![](https://i.imgur.com/O8bhffw.png)
+![[modern-physics-127.png]]
 
 ### Rayleigh-Jeans Formula
 
 **number of standing waves**
 
-![](https://i.imgur.com/qb47tmr.png)
+![[modern-physics-128.jpg]]
 
-![](https://i.imgur.com/fc4Jwd3.png)
+![[modern-physics-129.png]]
 
 ### Plank Radiation Law
 
-![](https://i.imgur.com/XULvek4.png)
+![[modern-physics-130.png]]
 
 **Wien’s Displacement Law**
 
-![](https://i.imgur.com/stkZ7Zq.png)
+![[modern-physics-131.png]]
 
 **Stefan-Boltzmann Law**
 
 energy density inside a cavity
 
-![](https://i.imgur.com/8LDRUW2.png)
+![[modern-physics-132.png]]
 
 Radiation rate $R=e\sigma T^4$
 
 - emissivity $e=1$ for blackbody
 - Stefan's constant $\sigma=5.67\times10^{-8}$
 
-![](https://i.imgur.com/nK0ujiN.png)
+![[modern-physics-133.png]]
 
-![](https://i.imgur.com/RuVIRNF.png)
+![[modern-physics-134.jpg]]
 
 ### Free Electons in a Metal
 
-![](https://i.imgur.com/tB3g9FN.png)
+![[modern-physics-135.png]]
 
-![](https://i.imgur.com/Hr0j9ww.png)
+![[modern-physics-136.png]]
 
 **Fermi Energy**
 
-![](https://i.imgur.com/bk0DCrw.png)
+![[modern-physics-137.png]]
 
-![](https://i.imgur.com/NUKZTIR.png)
+![[modern-physics-138.png]]
 
-![](https://i.imgur.com/f8TqdVK.png)
+![[modern-physics-139.png]]
 
-![](https://i.imgur.com/qifSBvS.png)
+![[modern-physics-140.jpg]]
 
-![](https://i.imgur.com/raj9rDt.png)
+![[modern-physics-141.png]]
 
 **For 2D**
 
@@ -686,7 +687,7 @@ $$\begin{align*}
 $$E_{ave}=\dfrac{E}{n}=\dfrac{\hbar^2k_F^2}{4m}=\dfrac{1}{2}E_F$$
 
 
-![](https://i.imgur.com/9e4ODEt.png)
+![[modern-physics-142.png]]
 
 **For 2D**
 
@@ -701,12 +702,12 @@ $$g(E)=\dfrac{m}{\hbar^2\pi}$$
 
 ### Electron-Energy Distribution
 
-![](https://i.imgur.com/fYsMSi5.png)
+![[modern-physics-143.png]]
 
 at $T=0$ and $\epsilon<\epsilon_F$, $e^{(\epsilon-\epsilon_F)}/kT=0$, $n(\epsilon)\propto\sqrt{\epsilon}$
 
-![](https://i.imgur.com/upXYkIQ.png)
+![[modern-physics-144.png]]
 
 **Average energy**
 
-![](https://i.imgur.com/NFtsfHL.png)
+![[modern-physics-145.png]]
