@@ -60,7 +60,7 @@ source: <https://ieeexplore.ieee.org/document/8917566>
 
 ## system model
 ### network model
-![](https://i.imgur.com/PivTF7t.png)
+![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-1.png]]
 - N UEs
 	- $\mathcal{N}=\{1,...,N\}$
 - 1 MEC
@@ -78,7 +78,7 @@ source: <https://ieeexplore.ieee.org/document/8917566>
 	- UE n don't use subcarrier s → $a_{ns}=0$
 - 1 UE use 0 or 1 subcarrier → $\displaystyle{\sum_{s\in S}\leq1,\forall n\in \mathcal{N}}$
 - signal-to-interference-plus-noise ratio (SINR)
-	- ![](https://i.imgur.com/9Q2hrpR.png)
+	- ![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-2.png]]
 		- j with $b_s(j)<b_s(n)$ isn't decoded by UE n → noise ==(???)==
 	- uplink channel gain $h_{ns}$
 		- of UE $n$ on subcarrier $s$
@@ -90,7 +90,7 @@ source: <https://ieeexplore.ieee.org/document/8917566>
 	- $R_{ns}=Blog_2(1+\Gamma_{ns})$ ==(???)==
 		- for subcarrier $s$
 	- B = bandwidth of an orthogonal carrier
-	- ![](https://i.imgur.com/0iH34Dl.png)
+	- ![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-3.png]]
 		- $R_n$ = sum($R_{ns}$)
 
 ### computation model
@@ -132,7 +132,7 @@ source: <https://ieeexplore.ieee.org/document/8917566>
 ### problem formulation
 - goal: minimize total computation overhead
 - total computation overhead $Z(A)=\displaystyle{\sum_{n\in \mathcal{N}}(x_nZ^r_n+(1-x_n)Z^l_n)}$
-- ![](https://i.imgur.com/QnQsInf.png)
+- ![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-4.png]]
 	- mixed-integer programming (MIP) problem
 		- binary & integer variables ==(???)==
 		- [[NP-hard]] → limited applications
@@ -147,24 +147,24 @@ source: <https://ieeexplore.ieee.org/document/8917566>
 - more UEs using 1 subcarrier → more complex to cancel interference → transmission latency & computation overhead increase → SINR reduces, lower channel gains
 - $\mathfrak{R}$ = real-valued coalition payoff function
 - coalition $\mathcal{F}_k$ with $1\leq k\leq S$
-	- total computation overhead by all UEs<br>![](https://i.imgur.com/ypzFTYK.png)
+	- total computation overhead by all UEs<br>![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-5.png]]
 		- $Z^r_n =\lambda^t_nT^r_n+\lambda^e_nE^r_n$ <br>$=\lambda^t_n(\dfrac{\alpha_n}{R_n}+\dfrac{\beta_n}{f^l_n})+\lambda^e_n\dfrac{p_n}{\varsigma_n}\dfrac{\alpha_n}{R_n}$
 		- $R_n =R_{nk}=Blog_2(1+\Gamma_{ns})$
 	- utility $\mathfrak{R}(\mathcal{F}_k)$ = computation if executed locally - computation if in coalition
-		- ![](https://i.imgur.com/IxHTY48.png)
+		- ![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-6.png]]
 - coalition $\mathcal{F}_k$ with $S+1\leq k\leq S+N$
 	- utility $\mathfrak{R}(\mathcal{F}_k)=0$ 
 		- utility = how much computation overhead you save comparing to local execution
 - $\mathcal{F}_s$ is strictly preferred to $\mathcal{F}_k$ $\iff$ utility of $\mathcal{F}_s$ with UE n + utility of $\mathcal{F}_k$ without UE n is greater than the reverse situation for all n && no other UE j  in $\mathcal{F}_s$ and $\mathcal{F}_k$ is negatively affected by UE n joining
 	- ==???只看得出來不是負的而無法看出 not negatively affected???==
-	- ![](https://i.imgur.com/3cW4NUl.png)
+	- ![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-7.png]]
 - switch from k to s
-	- ![](https://i.imgur.com/0a98lpz.png)
+	- ![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-8.png]]
 - $I_n$ executed locally → $\mathcal{F_{S+n}}=\{n\}$ i.e. the UE executing locally in n is n && $\mathcal{F_{S+n}}\cap \mathcal{F_k}=\emptyset$ $\forall k\neq (S+n)$
 - $I_n$ executed in subcarrier s → $\mathcal{F_{S+n}}=\emptyset$ i.e. the UE executing locally in n is nothing && $n\in\mathcal{F_{s}}$ i.e. the UEs executed in subcarrier s includes n
 
 ### algorithm
-- ![](https://i.imgur.com/RHREfn4.png)
+- ![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-9.png]]
 - keep switching until stable
 - num = unsuccessful consecutive switch operations i.e. how many iterations since last switch
 	- algorithm terminates when num = 10 x amount of UEs
@@ -173,7 +173,7 @@ source: <https://ieeexplore.ieee.org/document/8917566>
 - convergence: a final Nash-stable partition $\mathcal{F}_{fin}$ is guaranteed
 	- $\because$ each switch creates a new partition and the number of partitions is finite
 - stability: $\mathcal{F}_{fin}$ is Nash-stable
-	- ![](https://i.imgur.com/IOmHZAB.png)
+	- ![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-10.png]]
 	- trivial
 - complexity $\in O($number of iterations$)$
 	- at most 1 switch in each iteration
@@ -204,53 +204,53 @@ source: <https://ieeexplore.ieee.org/document/8917566>
 		- each UE has S+1 options → $\in O(N^{S+1})$ → only simulate N=4~9 in this paper
 
 ### vs. optimal scheme
-![](https://i.imgur.com/VNh3sqI.png)
+![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-11.png]]
 perform close to the optimal scheme
 
 ### % of offloading UEs
 #### vs. number of UEs
-![](https://i.imgur.com/3FO6Bbv.png)
+![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-12.png]]
 - fix number of coalitions/subcarriers to 3 i.e. $S=3$
 - more UEs → more competition for subcarriers → less favorable offloading is
 - NOMA (proposed) enables more UEs to benefit from offloading than OMA (HOO) does
 
 #### vs. number of coalitions
-![](https://i.imgur.com/cdn1a9H.png)
+![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-13.png]]
 - fix number of UEs to 10 i.e. $N=10$
 - more subcarriers → more choice for UEs → more favorable offloading is
 - NOMA (proposed) enables more UEs to benefit from offloading than OMA (HOO) does
 
 ### total computation overhead
 #### vs. number of UEs
-![](https://i.imgur.com/9AOhPiL.png)
+![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-14.png]]
 - fix number of coalitions/subcarriers to 3 i.e. $S=3$
 - proposed scheme has smallest computation overhead
 - more UEs → more computation overhead
 - in COO (100% offloading),<br>more UEs<br>→ more UEs sharing the same subcarrier<br>→ more intra-coalition interference<br>→ total computation overhead increases more dramatically with UE increasing than in other schemes<br>→ LCO (100% local) better than COO with large number of UEs
 
 #### vs. number of coalitions
-![](https://i.imgur.com/z9oS0iL.png)
+![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-15.png]]
 - fix number of UEs to 10 i.e. $N=10$
 - proposed scheme has smallest computation overhead
 - if offloading is available, more subcarriers → better chance for an UE to choose the preferred subcarrier → less computation overhead
 - more subcarriers → less difference between the three offloading-available schemes
 
 #### vs. remote computing resources
-![](https://i.imgur.com/p8etcxU.png)
+![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-16.png]]
 - fix number of coalitions/subcarriers to 3 i.e. $S=3$
 - fix number of UEs to 6 i.e. $N=6$
 - proposed scheme has smallest computation overhead
 
 #### vs. transmit power
-![](https://i.imgur.com/4WZvSoe.png)
-![](https://i.imgur.com/olHR7On.png)
+![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-17.png]]
+![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-18.png]]
 - proposed scheme has smallest computation overhead
 - more transmit power → higher transmission rate → uplink transmission time & remote computation overhead reduce
 - when transmit power is sufficiently large, inter-coalition interference is severe → transmission rate drops → computation overhead increases (0.2W-0.3W in Fig. 9) ==???==
 - computation gain = how much computation you save from choosing offloading over local execution so LCO's computation gain = 0
 
 #### convergence rate
-![](https://i.imgur.com/RyxS5yK.png)
+![[coalitional-games-for-computation-offloading-in-noma-enabled-multi-access-edge-computing-19.png]]
 - more subcarriers → more options for subcarriers with good channel condition to reduce uplink transmission rate → converges slower
 - converges rapidly
 

@@ -8,7 +8,7 @@ parent: Game Theory for Wireless Networks
 [paper link](https://ieeexplore.ieee.org/document/8941139)  
 [paper pdf with my annotations](Distributed_Dynamic_Resource_Management_and_Pricing_in_the_IoT_Systems_With_Blockchain-as-a-Service_and_UAV-Enabled_Mobile_Edge_Computing.pdf)
 
-- ![](https://i.imgur.com/hf6azF7.png)
+- ![[distributed-dynamic-resource-management-and-pricing-in-the-iot-systems-with-blockchain-as-a-service-and-uav-enabled-mobile-edge-computing-1.jpg]]
 - blockchain peer
 	- main player
 	- have mining tasks to do

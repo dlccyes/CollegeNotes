@@ -51,7 +51,7 @@ layout: meth
 - find the unique optimal offloading threshold for the MNO to achieve max utility
 
 ## SDN architecture
-![](https://i.imgur.com/MX5vvzM.png)
+![[auction-design-and-analysis-for-sdn-based-traffic-offloading-in-hybrid-satellite-terrestrial-networks-1.png]]
 - a network framework separating control & data plane
 	- 電網導會教
 - the MNO has many BSs

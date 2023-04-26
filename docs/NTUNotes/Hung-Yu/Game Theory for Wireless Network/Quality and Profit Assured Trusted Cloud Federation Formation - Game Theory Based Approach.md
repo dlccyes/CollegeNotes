@@ -83,10 +83,10 @@ parent: Game Theory for Wireless Networks
 	- sends FM periodic update about the state of the federation
 	- group similar resources
 		- by types
-- ![](https://i.imgur.com/4xYWdxx.png)
+- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-1.png]]
 
 ### Notations
-- ![](https://i.imgur.com/X9oXeva.png)
+- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-2.png]]
 - x.u = probability of x being unavailable
 - x.a = probability of x being available
 - QoF = quality of federation
@@ -98,40 +98,40 @@ parent: Game Theory for Wireless Networks
 	- FC receives user request  -> find $S^{id}_i$ to fulfill it, by preference $i=1:N$  
 		- i = k not available -> find i = k+1
 - probability of a federation being unavailable = probability of all resources in the federation being unavailable
-	- ![](https://i.imgur.com/uKNx38d.png)
-	- ![](https://i.imgur.com/1H8lITw.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-3.png]]
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-4.png]]
 	- assuming CSPs are independent to each other
-	- ![](https://i.imgur.com/Um99Q7m.png)
-	- ![](https://i.imgur.com/aTPLi8u.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-5.png]]
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-6.png]]
 
 ### Cost 
 - $S^{id}.CO_{R_\mathscr{T}}$ = num of cores of type $R_\mathscr{T}$ of service provider $S^{id}$
 - $S^{id}.Me_{R_\mathscr{T}}$ = memory used by type $R_\mathscr{T}$ of service provider $S^{id}$
 - $S^{id}.S_{R_\mathscr{T}}$ = storage used by type $R_\mathscr{T}$ of service provider $S^{id}$
 - cost of $S^{id}$ providing resource type $R_\mathscr{T}$ 
-	- ![](https://i.imgur.com/nBFNOO9.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-7.png]]
 - cost of a federation providing resource type $R_\mathscr{T}$  = sum of cost of each service providing resource type $R_\mathscr{T}$ times the probability of the service being used
-	- ![](https://i.imgur.com/YvT4GHa.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-8.png]]
 - cost of a federation = sum of cost of the federation providing each type of resources
-	- ![](https://i.imgur.com/MQ4ShOH.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-9.png]]
 - Theorem 1
 	- $f_j.Cost_{R_\mathscr{T}}$ has min when service providers are sort by cost (increasing) providing resource $R_\mathscr{T}$
 	- pf
 		- assume $S^{id}_i.C_{R_\mathscr{T}}$ for i=1:n is increasing except $S^{id}_k.C_{R_\mathscr{T}}>S^{id}_{k+1}.C_{R_\mathscr{T}}$
-		- ![](https://i.imgur.com/evegQq1.png)
+		- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-10.png]]
 
 ### Price
 - $\rho_{R_\mathscr{T}}$ = price of resource $R_\mathscr{T}$ with availability 1
 - price of a federation providing resource $R_\mathscr{T}$
-	- ![](https://i.imgur.com/JoRTaeU.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-11.png]]
 - profit of a federation providing resource $R_\mathscr{T}$
-	- ![](https://i.imgur.com/CU2usiw.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-12.png]]
 
 ### Profit Distribution
 - total profit of federation $fj$ using all resources
-	- ![](https://i.imgur.com/h1gNF1K.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-13.png]]
 - profit obtained by service provider $S^{id}$ from federation $f_j$
-	- ![](https://i.imgur.com/iaATENE.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-14.png]]
 	- $\omega_{S^{id}}$ = ratio of total resources contributed by $S^{id}$
 	- profit({$S^{id}$}) = profit $S^{id}$ would gain without being in any federation
 	- CSP won't worse off joining a federation
@@ -147,30 +147,30 @@ parent: Game Theory for Wireless Networks
 		- able to dynamically scale-up
 		- increasing overall availability will also increase invididual availability
 - satisfication from profit
-	- ![](https://i.imgur.com/GupTqXS.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-15.png]]
 		- $sl_{min}$ = min satisfication level = 0.01
 		- $sl_{max}$ = max satisfication level = 1
-	- ![](https://i.imgur.com/OeH6xgP.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-16.png]]
 	- just a slant line, not a triangle (the vertical & horizontal line are just for indication)
 - satisfication from availability
 	- similar to above
 - overall satisfication = weighted sum of satisfication get from profit & availability 
 	- satisfication of a CSP
-		- ![](https://i.imgur.com/nMlszXH.png)
+		- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-17.png]]
 	- satisfication of a federation
-		- ![](https://i.imgur.com/oNjLT42.png)
+		- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-18.png]]
 
 ## Quality & Trust
 ### Quality
 - hierarchical quality
-	- ![](https://i.imgur.com/5hHA8jf.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-19.png]]
 	- QoF = quality of federation
 	- QoP = quality of provider
 - ????????
 
 ### Trust
 - the trustworthy level of a service provider
-	- ![](https://i.imgur.com/a0ThfDn.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-20.png]]
 	- $S^{id}.QoP_{committed}$ = promised Qos
 	- $S^{id}.QoP_{delivered}$ = originally delivered Qos
 	- $\in[0,1]$
@@ -243,13 +243,13 @@ parent: Game Theory for Wireless Networks
 			- why???
 	- if a CSP's utility in identity federation more than in its federation -> move to splitlist
 - algos
-	- ![](https://i.imgur.com/CrKt5Eo.png)
-	- ![](https://i.imgur.com/8XHLuBD.png)
-	- ![](https://i.imgur.com/SofvzQd.png)
-	- ![](https://i.imgur.com/X09ZjVc.png)
-	- ![](https://i.imgur.com/A8SnnLG.png)
-	- ![](https://i.imgur.com/pSuis9w.png)
-	- ![](https://i.imgur.com/b6sJD4R.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-21.png]]
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-22.png]]
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-23.png]]
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-24.png]]
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-25.png]]
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-26.png]]
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-27.png]]
 - CGCFF algorithm properties
 	- converges
 		- every switch operation leads to new partition, and the num of possible partitions is finite 
@@ -287,48 +287,48 @@ parent: Game Theory for Wireless Networks
 - 3 types of VMs
 	- each CSP contributes at least 5 instances for each type
 - parameters
-	- ![](https://i.imgur.com/pGOu7p0.png)
-	- ![](https://i.imgur.com/h5S3xJW.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-28.png]]
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-29.png]]
 
 ### Results
 #### 100% trusted CSPs
 - average federation satisfication
-	- ![](https://i.imgur.com/fTOUvVc.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-30.png]]
 - average federation profit
-	- ![](https://i.imgur.com/86cYo8t.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-31.png]]
 	- in CFFM, profit of federation always decreases after a successful partition
 		- ???
 - average federation availability 
-	- ![](https://i.imgur.com/XHfj31p.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-32.png]]
 - average federation quality 
-	- ![](https://i.imgur.com/htCwMFV.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-33.png]]
 	- QCFM uses greedy to maximize QoS -> stuck at local minimum 
 	- CFFM selects CSPs with low QoS to minimize cost to maximize profit
 - MHCF is always the worst in above measures as it's focusing on minimizing num of malicious CSPs
 - average CSP satisfication
-	- ![](https://i.imgur.com/bva912U.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-34.png]]
 - average federation size
-	- ![](https://i.imgur.com/YVq0135.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-35.png]]
 	- MHCF aims to minimize malicious members -> smaller federation size
 	- CFFM aims to maximize federation profit -> bigger federation size
 - average CSP profit
-	- ![](https://i.imgur.com/HofIqzu.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-36.png]]
 	- MHCF has smaller federation -> more profit for each CSP
 	- CFFM has bigger federation -> less profit for each CSP
 - average execution time
-	- ![](https://i.imgur.com/fdgLaMB.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-37.png]]
 	- CFFM uses exhaustive search
 
 #### with untrusted CSPs
 - average federation satisfication
-	- ![](https://i.imgur.com/nGo8qKj.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-38.png]]
 - average federation profit
-	- ![](https://i.imgur.com/xn2Bl4d.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-39.png]]
 	- for CFFM, more untrusted CSPs -> form bigger federation -> more profit
 - average federation availability
-	- ![](https://i.imgur.com/zT8J7Tk.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-40.png]]
 - average federation quality
-	- ![](https://i.imgur.com/4NEd83m.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-41.png]]
 - CGCFF is always steady bc only considers trusted CSPs when forming federation
 - all other mechanisms don't consider trusted or not at all (untrusted <- big difference between promised & delivered QoP) -> availability & quality decreases with the increase of percentage of untrusted CSPs
 	- profit not so much as trusted or not is unrelated to profit
@@ -337,21 +337,21 @@ parent: Game Theory for Wireless Networks
 - only CGCFF
 - trust threshold = percentage of trusted CSPs
 - average federation size
-	- ![](https://i.imgur.com/tgC1qJJ.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-42.png]]
 - average federation profit
-	- ![](https://i.imgur.com/zXPjl7q.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-43.png]]
 	- depends on federation size
 	- more trusted CSPs -> higher QoS -> higher cost
 - average federation availability
-	- ![](https://i.imgur.com/sFljDtI.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-44.png]]
 	- depends on federation size
 - average federation quality
-	- ![](https://i.imgur.com/h82nZc7.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-45.png]]
 	- depends on availability
 	- more trusted CSPs -> better QoS
 - average federation satisfication
-	- ![](https://i.imgur.com/Zgw9nl4.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-46.png]]
 	- depends on federation profit & availability
 - average CSP profit
-	- ![](https://i.imgur.com/SN9WGB0.png)
+	- ![[quality-and-profit-assured-trusted-cloud-federation-formation---game-theory-based-approach-47.png]]
 	- depends on federation size

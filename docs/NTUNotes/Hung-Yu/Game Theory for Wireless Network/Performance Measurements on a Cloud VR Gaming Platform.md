@@ -13,4 +13,4 @@ parent: Game Theory for Wireless Networks
 
 latency vs. bandwidth, propagation delay, packet loss rate
 
-![](https://i.imgur.com/WuloTCk.png)
+![[performance-measurements-on-a-cloud-vr-gaming-platform-1.png]]

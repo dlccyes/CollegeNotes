@@ -6,7 +6,7 @@ layout: meth
 
 ## Bayesian game
 
-[Bayesian game](../../../obs_autolink/Bayesian%20game)
+[[Bayesian game]]
 
 - <https://www.youtube.com/watch?v=E0_CA9TwZ8c>
 - 先把 dominated 刪掉
@@ -36,15 +36,15 @@ layout: meth
   - dummy
   - additive
     - union of any 2 set >= sum 
-- ![Image](https://i.imgur.com/1kF1Alr.png)
+- ![[game-theory-1.jpg]]
 - 算各個成員的貢獻
 - e.g.
   - $v(\{1\})=1$, $v(\{2\})=2$, $v(\{1,2\})=4$
 if {1} → {1,2}, $\phi_1=1$, $\phi_2=3$
 if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 → $\phi_1=1.5$ $\phi_2=2.5$
-  - ![Image](https://i.imgur.com/P8KBGHO.png)
-    - ![Image](https://i.imgur.com/FtiY8iC.png)
+  - ![[game-theory-2.jpg]]
+    - ![[game-theory-3.png]]
   - 3 player in majority vote, 1 can veto
     - core
       - $x_1+x_2\geq1$, $x_1+x_3\geq1$, $x_1+x_2+x_3=1$, $x_i\geq0$
@@ -54,10 +54,12 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
       - $x_1=\frac{2}{3}$, $x_2=x_3=\frac{1}{6}$
 
 ### core
+
 - stable 的 coalition (s.t. none has the incentive to deviate and form a new coalition)
 - each coalition get at least what they can generate alone
 
 ### convex
+
 - $v(S\cup T)\geq v(S)+v(T)-v(S\cap T)$
 - nonempty core
 - the shapley value is the core
@@ -134,18 +136,21 @@ ref: Reaching Individually Stable Coalition Structures in Hedonic Games
 - Muller-Satterthwaite Theorem
   - any social choice function that is weakly pareto efficient & monotonic, is dictorial
   - plurality satisfies weak PE & non-dictorial, so it's not monotonic
-    - ![Image](https://i.imgur.com/cefUeEK.png)
+    - ![[game-theory-4.jpg]]
 
 ### [[single-peaked preference]]
+
 - median voting
   - Condorcet winner exist whenever odd voters
-    - ![Image](https://i.imgur.com/h6JOmLI.png)
+    - ![[game-theory-5.jpg]]
   - no incentive to lie
 
 ### transitivity
+
 x > y, y > z → x > z
 
 ## mechanism design
+
 - inverse game theory
 - design a game
 - bayes-nash implementation
@@ -187,21 +192,22 @@ x > y, y > z → x > z
     - decide to buy/sell at that price 
 
 ### transferable utility mechanism
+
 - strictly pareto efficient
-  - ![Image](https://i.imgur.com/uJGjhMg.png)
+  - ![[game-theory-6.png]]
   - mechanism itself is also an agent
 - budget balance
-  - ![Image](https://i.imgur.com/CKAB5k7.png)
+  - ![[game-theory-7.png]]
   - 拿的錢跟給的錢一樣多
   - weak budge balance
     - \>=
     - 不虧就好
 - [[individual rationality]]
   - ex interim [[individual rationality]]
-    - ![Image](https://i.imgur.com/vBBKqRS.png)
+    - ![[game-theory-8.png]]
     - 參加這個 mechanism，average over the possible valuations for other agents 時，淨效益 >= 0
   - ex post [[individual rationality]]
-    - ![Image](https://i.imgur.com/wdDp8P3.png)
+    - ![[game-theory-9.png]]
     - equilibrium 時淨效益 >= 0
     - stronger than ex interim
 - tractability
@@ -210,21 +216,22 @@ x > y, y > z → x > z
 - maximum fairness
   - maximize the happiniess of the least happy person i.e. maximize the min utility
 - price-of-anarchy minimization
-  - ![Image](https://i.imgur.com/247smHh.png)
+  - ![[game-theory-10.jpg]]
   - minimize {best social welfare} $\div$ {welfare of the worst equilibrium} 
     - iterate through all equilibrium, select the max ratio of best social welfare & real equilibrium, and minimize it
 
 ## VCG mechanism
+
 - has truth as a dominant strategy
 - make efficient choices
 - Groves mechanisms
-  - ![Image](https://i.imgur.com/OZO2mNU.png)
+  - ![[game-theory-11.png]]
   - payment rule
     - depend on others
 - Vickrey-Clarke-Groves, VCG mechanism
-  - [VCG](../../../obs_autolink/VCG)
+  - [[VCG]]
   - pivotal mechanism
-  - ![Image](https://i.imgur.com/U9dsU4N.png)
+  - ![[game-theory-12.jpg]]
   - payment function = max of everyone else's utility when excluding you - when including you ($i$)
     - so if you're not pivotal, you don't pay anything (as you don't change anything)
     - can be interpreted as, you get paid the sum of others' utility when you exist, and you pay the sum of others' utility when you don't
@@ -235,61 +242,63 @@ x > y, y > z → x > z
     - internalize the externality of your choice
       - how your choice affect others will impact your payment
 - Green-Laffont Theorem
-	- ![Image](https://i.imgur.com/Wai3Fq1.png)
+	- ![[game-theory-13.jpg]]
   - truthful reporting is a dominant strategy only if it's Groves mechanism
 - e.g.
   - selfish routing
-  ![Image](https://i.imgur.com/hNzuEfO.png)
+  ![[game-theory-14.jpg]]
     - 要走 A → F
       - without AB, min sum of others' cost = 6 (max utility = -6)
       - with AB, min sum of others' cost = 2 (max utility = -2)
       - so $p_{AB} = -6-(-2) = -4$, AB get 4
 
 ### limitations of VCG
+
 - require full disclosure
   - but in repeated games, agents may want to disclose their information, and VCG isn't a good mechanism in this case
 - susceptible to collusion
-![Image](https://i.imgur.com/m7diahn.png)
+![[game-theory-15.jpg]]
   - if 1&2 collude
-  ![Image](https://i.imgur.com/YGBfPxj.png)
+  ![[game-theory-16.jpg]]
     - choice is unchanged, but they're better off
     - so VCG is susceptible to collusion
 - not frugal
   - payment is unbounded, might be more than what an agent's willing to accept
     - → violate [[individual rationality]]
-  - ![Image](https://i.imgur.com/lk57Unw.png)
+  - ![[game-theory-17.jpg]]
 - revenue monotonicity violated
-  - ![Image](https://i.imgur.com/lbTfQ17.png)
-  ![Image](https://i.imgur.com/jKGfXEt.png)
+  - ![[game-theory-18.png]]
+  ![[game-theory-19.png]]
   - agent 2 can eliminate it's payment by submitting another vote
 - couldn't return all revenue to agents
   - if VCG return the money collected from agents, it might change agents' incentives 
     - even if you do something else with the money, if some agents can somehow benefits from it, incentives are changed
 - Mayernon-Satterthwaite Theorem
-  - ![Image](https://i.imgur.com/2vZX4Dq.png)
+  - ![[game-theory-20.png]]
   - exist distributions s.t. no Bayesian incentive-compatibile mechanism is simultaneously efficient, weakly budget balanced & interim individual rational
-  - ![Image](https://i.imgur.com/4V8YTve.png)
+  - ![[game-theory-21.jpg]]
     - p(1, 0) 的情況，若要 sller & buyer 都不說謊，則結果矛盾
   - significance: there exist inefficient trades
 
 ### breaking limitations
+
 - to satisfy [[individual rationality]]
   - choice-set monotonicity
     - the set of choices with one agent removed is a subset of when the agent is involved
-    - ![Image](https://i.imgur.com/Er6jXd3.png)
+    - ![[game-theory-22.png]]
   - no negative externalities
     - when an agents is excluded, the mechanism won't do negative utitlity on the agent
-    - ![Image](https://i.imgur.com/yrvMD6R.png)
+    - ![[game-theory-23.png]]
   - scenarios that satisfy both
     - road building
-      - ![Image](https://i.imgur.com/SSl0DJY.png)
+      - ![[game-theory-24.jpg]]
       - the choices is independent of the numbers of agent → satisfy choice-set monotonicity
       - none would have negative utility under any choice → satisfy no negative externalities
     - trading
-      - ![Image](https://i.imgur.com/gCBiBXt.png)
+      - ![[game-theory-25.jpg]]
   - VCG is ex-post individual rational when the choice-set monotonicity & no negative externalities are both satisfied
-    - ![Image](https://i.imgur.com/u6OXneC.png)
-    ![Image](https://i.imgur.com/kkGRYgJ.png)
+    - ![[game-theory-26.png]]
+    ![[game-theory-27.png]]
       - $x(v)$ = choice of the mechanism
       - $u_i$ = utility under VCG's choice - payment
       - $_{-i}$ = when exclude i
@@ -297,14 +306,15 @@ x > y, y > z → x > z
   - no single-agent effect
     - the welfare of agents other than $i$ is weakly increased when dropping i
     - e.g. 
-    ![Image](https://i.imgur.com/UkfNrsU.png) 
+    ![[game-theory-28.png]] 
   - VCG is weakly budget-balanced when the no single-agent effect is satisfied
-    - ![Image](https://i.imgur.com/JEFwWXu.png)
-- ![Image](https://i.imgur.com/pW2439C.png)
+    - ![[game-theory-29.png]]
+- ![[game-theory-30.png]]
   - VCG is as budget-balanced as any efficient mechanism can be if it's ex post individually rational
     - satisfies weak budget balance in any case where any dominant strategy, efficient & ex interim (weaker than ex post) is able to
 
 ## auctions
+
 - types of auctions
   - English auction
     - ordinary one
@@ -322,10 +332,10 @@ x > y, y > z → x > z
       - bid less than valuation
       - tradeoff between probability of winning & amount you pay
       - no dominant strategy
-      - ![Image](https://i.imgur.com/WU7zzgN.png)
-        - ![Image](https://i.imgur.com/GMlRvrG.png)
-        ![Image](https://i.imgur.com/JfGjJh0.png)
-      - ![Image](https://i.imgur.com/pUDM8fZ.png)
+      - ![[game-theory-31.png]]
+        - ![[game-theory-32.jpg]]
+        ![[game-theory-33.jpg]]
+      - ![[game-theory-34.png]]
         - more people, you bid closer to your valuation
     - async = True
   - [[second-price auction]]
@@ -351,7 +361,8 @@ x > y, y > z → x > z
   - you see other bidders in English & Japanese, but under IPV, it makes no difference
 
 ### revenue equivalence
-- ![Image](https://i.imgur.com/Noa5lCa.png)
+
+- ![[game-theory-35.jpg]]
 - kth order stastistics
   - expected value of kth largest draw = $\dfrac{n+1-k}{n+1}v_{max}$
     - $\dfrac{n-1}{n+1}v_{max}$ in [[second-price auction]]
@@ -374,21 +385,21 @@ x > y, y > z → x > z
     - both < R, $p=R^2$ → revenue = 0
     - 1 above 1 below R, $p=(1-R)(R)$, revenue = R (2nd-highest bid)
     - both >= R, $p=(1-R)^2$, revenue $\dfrac{1+R}{3}$
-      - ![Image](https://i.imgur.com/bZ3APDy.png)
+      - ![[game-theory-36.png]]
     - expected revenue = $\dfrac{1+3R^2-4R^3}{3}$
       - max when R=$\dfrac{1}{2}$
-    - https://math.stackexchange.com/a/2213498 
+    - <https://math.stackexchange.com/a/2213498>
 - virutal valuation
-  - ![Image](https://i.imgur.com/RHYmXp3.png)
+  - ![[game-theory-37.png]]
     - your valuation, adjusted
-  - ![Image](https://i.imgur.com/KP1I3E2.png)
+  - ![[game-theory-38.png]]
 - Mayerson's optimal auction
-  - ![Image](https://i.imgur.com/9NBveBk.png)
-  ![Image](https://i.imgur.com/Rpy1eEz.png)
+  - ![[game-theory-39.jpg]]
+  ![[game-theory-40.png]]
   - sell to the agent with the highest virtual valuation
     - the winner pay the critical valuation of being the winner
   - the optimal is a second-price aunction
-    - ![Image](https://i.imgur.com/5ce1JHg.png)
+    - ![[game-theory-41.png]]
   - not VCG, not efficient
     - can end up not selling
   - virtual valuation makes weak bidders more competitive → higher bidder need to bids higher, increases the competition  
@@ -518,10 +529,10 @@ x > y, y > z → x > z
     - $\theta_L$: low capability
   - results
     - installment payment $r_H=0$ regardless of cost coeff. c, revenue R or probability $\beta$
-      - ![Image](https://i.imgur.com/NsphZca.png)
+      - ![[game-theory-42.png]]
       - $\theta_H$ 多金
   - low down payment for $\theta_L$
-    ![Image](https://i.imgur.com/DKgRPtI.png)  
+    ![[game-theory-43.png]]  
     - $\theta_L$ 窮 → 大部分 payment 在拿到 revenue 後收
 - system performance
   - only [[moral hazard]] & only [[adverse selection]] 的情況都把 SU payoff 壓成 0 bc SU 其中一項資訊透明
@@ -529,12 +540,12 @@ x > y, y > z → x > z
     - [[moral hazard]] only → upper bound
     - [[adverse selection]] only → lower bound
   - cost coeff. ↑ payoff & social welfare ↓
-    - ![Image](https://i.imgur.com/loruMSN.png)
+    - ![[game-theory-44.png]]
   - revenue ↑ payoff & social welfare ↑
-    - ![Image](https://i.imgur.com/mMuElAI.png)
+    - ![[game-theory-45.png]]
   - distribution ↑ PU's payoff & social welfare ↑
     - PU will ask more money if SU is belived to be a highly capable one → $\beta$  has a negative effect on SU'spayoff
-    - ![Image](https://i.imgur.com/10MgfM6.png)
+    - ![[game-theory-46.png]]
 
 ## Ch4 [[stochastic game]]
 - absorbing state
@@ -595,8 +606,8 @@ x > y, y > z → x > z
   - 每個 block 的機率
     - 相對於 NE mixed 是 player 的策略機率
   - coarse-correlated equilibrium 包含了 mixed & pure 的 NE
-  - ![Image](https://i.imgur.com/c7njqNB.png)
-  - ![Image](https://i.imgur.com/BLWKFyU.png)
+  - ![[game-theory-47.png]]
+  - ![[game-theory-48.png]]
     - $|a_i$ 表知道在哪個 block
   - https://www.youtube.com/watch?v=sQOrIpARr5E
 - reinforcement
