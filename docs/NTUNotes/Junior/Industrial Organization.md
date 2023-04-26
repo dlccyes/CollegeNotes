@@ -6,7 +6,7 @@ has_children: True
 
 ## Price Elasticity
 
-- ![](https://i.imgur.com/5k5zVKA.png)
+- ![[industrial-organization-1.png]]
 - $\Delta R = (p+\Delta p)(q+\Delta q)-pq$
 - $MR=\dfrac{\Delta R}{\Delta q}=p(1-\dfrac{1}{|e|})$
 - e = elasticity
@@ -74,8 +74,8 @@ see [Oligopoly](../Freshman/Microeconomics/Ch11%20Market%20Power,%20Colusion,%20
 	- don't deviate -> share monopoly profit
 	- deviate -> get all the profit this period
 	- to deviate
-		- ![](https://i.imgur.com/uExqlSr.png)
-		- ![](https://i.imgur.com/KQ4RNMx.png)
+		- ![[industrial-organization-2.png]]
+		- ![[industrial-organization-3.png]]
 		- $\delta \geq \dfrac{1}{2}$
 
 ## final
