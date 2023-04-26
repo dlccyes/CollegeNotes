@@ -2,15 +2,15 @@
 
 [[Factfulness.pdf]]
 
-![](https://i.imgur.com/Crbj7HW.png)
+![[factfulness-1.png]]
 
 ## Gap Instinct
 
 See distributions instead of numbers
 
-![](https://i.imgur.com/ySIseCS.png)
+![[factfulness-2.png]]
 
-![](https://i.imgur.com/JQjObYF.png)
+![[factfulness-3.png]]
 
 ## Straight Line Instinct
 
