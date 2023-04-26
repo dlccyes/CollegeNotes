@@ -20,7 +20,7 @@ has_children: true
   - 95%: 1.9600 = 1.960 = 1.96
   - 90%: 1.6449 = 1.645 = 1.65
 - df: degree of freedom
-- ![Image](https://i.imgur.com/Ipt1G1S.png)
+- ![[econometrics-1.png]]
 - coefficient
 	- the slope of each regressor
 - estimate
@@ -37,15 +37,15 @@ has_children: true
   - <https://www.themathcitadel.com/uncorrelated-and-independent-related-but-not-equivalent/>
 
 ## skewness
-![Image](https://i.imgur.com/FofAvWw.png)
+![[econometrics-2.png]]
 The skewness of a symmetric distribution is 0.
 
 ### kurtosis
-![Image](https://i.imgur.com/hDzO9It.png)
-![Image](https://i.imgur.com/5q76hMD.png)
+![[econometrics-3.png]]
+![[econometrics-4.png]]
 
 ### law of iterated expectations
-![Image](https://i.imgur.com/Qbz7r9H.png)
+![[econometrics-5.png]]
 
 ## Ch3 review of statistics
 
@@ -61,12 +61,12 @@ The skewness of a symmetric distribution is 0.
   - p for sample
 - central limit theoreom
   - $\dfrac{\bar{Y}-\mu}{\frac{\sigma}{\sqrt{n}}} →N(0,1)$ as $n → \infty$
-  - ![Image](https://i.imgur.com/ba5VwGh.png)
-![Image](https://i.imgur.com/rgsUJXu.png)
+  - ![[econometrics-6.png]]
+![[econometrics-7.png]]
 
 ### null hypothesis & alternate hypothesis
 
-![Image](https://i.imgur.com/1uIykec.png)
+![[econometrics-8.png]]
 
 $E(Y) = \mu_Y$ → null hypothesis  
 $E(Y) \neq \mu_Y$ → (two-sided) alternate hypothesis
@@ -83,7 +83,7 @@ There is (no) statistically significant evidence that ...... at the 1%/5%/10% le
 
 i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 
-![Image](https://i.imgur.com/mITFI1p.png)
+![[econometrics-9.png]]
 
 - 假設抽樣算出的平均，去根據 null hypothesis 的 mean 算出 p-value 很小，i.e. 抽樣平均離理論平均很遠，那麼 null hypothesis 就很有可能是錯誤的，i.e. 理論平均應該不是那樣；  反之，若 p-value 很大，則 null hypothesis i.e. 理論平均很有可能是正確的
 - if p-value < 5% → reject the null hypothesis
@@ -92,7 +92,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - meaning you would incorrectly reject the null hypothesis once in 20 cases on average
 
 - between two means
-  - ![Image](https://i.imgur.com/kq5dhmQ.png)
+  - ![[econometrics-10.png]]
 
 ### confidence interval
 
@@ -102,9 +102,9 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 
 (看 inf)
 
-![Image](https://i.imgur.com/lZc2V6j.png)
+![[econometrics-11.png]]
 
-![Image](https://i.imgur.com/wGhdMSF.png)
+![[econometrics-12.png]]
 
 ### 名詞
 
@@ -129,7 +129,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - $\hat{\beta_0}$、$\hat{\beta_1}$： $\beta_0$、$\beta_1$ minimalizing $\displaystyle\sum_{i=1}^n(Y_i-\beta_0-\beta_1X_i)^2$
   - $\hat{Y}=\hat{\beta_0}+\hat{\beta_1}\bar{X}$
   - $Y_i=\hat{Y_i}+\hat{u_i}=\hat{\beta_0}+\hat{\beta_1}\bar{X}+\hat{u_i}$
-  - ![Image](https://i.imgur.com/hJgFDT1.png)
+  - ![[econometrics-13.png]]
 - formulas
   - total sum of squares $TSS=\displaystyle\sum_{i=1}^n(Y_i-\bar{Y})^2$
   - explained sum of squares $ESS=\displaystyle\sum_{i=1}^n(\hat{Y_i}-\bar{Y})^2$
@@ -140,12 +140,12 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     - $s_{\hat{u}}$: standard error of $u_i$
   - $TSS=ESS+SSR$
   - $R^2=\frac{ESS}{TSS}=\frac{TSS-SSR}{TSS}=1-\frac{SSR}{TSS}$
-  - ![Image](https://i.imgur.com/Pcm6SBU.png)
+  - ![[econometrics-14.png]]
 - degree of freedom
   - variance degree of freedom is n-1 as the sample mean is decided → only n-1 sample values is free
 - SER, standard error of the regression
   - standard error of $u_i$
-  - ![Image](https://i.imgur.com/Oh17JUf.png)
+  - ![[econometrics-15.png]]
 - $R^2$
   - correlation efficient $^2$
   - fraction of Var(Y) explained by X
@@ -159,9 +159,9 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     <https://discuss.analyticsvidhya.com/t/difference-between-r-square-and-adjusted-r-square/264/3>
       - 不懂
       為何加 data 點 R-squared 就一定會不變 or 上升
-- ![Image](https://i.imgur.com/ccjGWE2.png)
+- ![[econometrics-16.png]]
 - least square assumptions
-  - ![Image](https://i.imgur.com/1vfXqkc.png)
+  - ![[econometrics-17.png]]
 
 ## Ch5 Multiple Regressor
 
@@ -169,12 +169,12 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - adjusted $R^2$
   $\bar{R}^2=1-\dfrac{n-1}{n-k-1}\dfrac{SSR}{TSS}$
   
-  ![Image](https://i.imgur.com/qEdhYSz.png)
+  ![[econometrics-18.png]]
     - k: regressor 數量 (對 k=1 的時候 $\bar{R}^2$ 不一樣)
 - omitted variable bias
    -  影響的眾多因素之間可能非 independent → 用較少 regressor 的話會 overestimate 那個 regressor 的影響
 - standard error of $\hat{\beta}$
-  - ![Image](https://i.imgur.com/2eB2BnL.png)
+  - ![[econometrics-19.png]]
 - binary variable
   - alias
     - indicator variable
@@ -188,16 +188,16 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - if $var(u_i|X_i)$ doesn't depend on $X_i$
 - heterosketasdic
   - if $var(u_i|X_i)$ depends on $X_i$
-- ![Image](https://i.imgur.com/kVAvxVV.png)
+- ![[econometrics-20.png]]
   - heterosketasdic 的 distribution 因 x 而異
 
 ## Ch6 Linear Regression with Multiple Regressors
 - treat intercept as a regressor
-![Image](https://i.imgur.com/MKDfX7o.png)
-![Image](https://i.imgur.com/KAHJULZ.png)
+![[econometrics-21.png]]
+![[econometrics-22.png]]
 
 ### omitted variable bias
-- ![Image](https://i.imgur.com/TQeGcYz.png)
+- ![[econometrics-23.png]]
 
 ### least square assumptions
 
@@ -208,49 +208,53 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
    - if one of the regressors is a perfect linear function of the other regressors → perfect multicollinearity
      - multiple regression: 其他 regressor 不動，只動這一個 → 不合理 when one variable is a linear function to another
    - dummy variable trap
-     - ![Image](https://i.imgur.com/YNwOx7H.png)
-     - ![Image](https://i.imgur.com/hunkfPQ.png)
+     - ![[econometrics-24.png]]
+     - ![[econometrics-25.png]]
 
 ## Ch7 Hypothesis Tests & Confidence Intervals in Multiple Regression
 
 - F test
   - for multiple regressors
-    - ![Image](https://i.imgur.com/zfTOddH.png)
-  - ![Image](https://i.imgur.com/BGOZ1mH.png)
+    - ![[econometrics-26.png]]
+  - ![[econometrics-27.png]]
   - table
-  ![Image](https://i.imgur.com/jnBHUoO.png)
-  ![Image](https://i.imgur.com/YavV3xS.png)
+  ![[econometrics-28.png]]
+  ![[econometrics-29.png]]
     - e.g. $f_{2,\infty}$=3
     for 2 regressors, $F^{act}$ for 5% is 3
   - F-stat restricted & unrestricted
-    - ![Image](https://i.imgur.com/4BX7KdG.png)
+    - ![[econometrics-30.png]]
     - q = num of restrictions under the null
       - k = num of regressor of the unrestricted one
-    - ![Image](https://i.imgur.com/iNUB8bw.png)
-    ![Image](https://i.imgur.com/nJeOber.png)
+    - ![[econometrics-31.png]]
+    ![[econometrics-32.png]]
     - Homoskedasticity
-      - ![Image](https://i.imgur.com/ofPa18q.png)
+      - ![[econometrics-33.png]]
   - turn multiple into singular
-    - ![Image](https://i.imgur.com/ZKMfJe0.png)
-    ![Image](https://i.imgur.com/uYKtePD.png)
+    - ![[econometrics-34.png]]
+    ![[econometrics-35.jpg]]
   
 ## Ch8 nonlinear
-### log
-- ![Image](https://i.imgur.com/2O38Qsd.png)
-  - - bc $\frac{ln(X+\Delta X)-ln(X)}{(X+\Delta X)-X}=\frac{dln(X)}{dX}=\frac{1}{X}$
-→ $ln(X+\Delta X)-ln(X)=\frac{\Delta X}{X}$
 
-- ![Image](https://i.imgur.com/aORKKkQ.png) 
-- ![Image](https://i.imgur.com/geMT0Lc.png)
+### log
+
+- ![[econometrics-36.png]]
+  - bc $\frac{ln(X+\Delta X)-ln(X)}{(X+\Delta X)-X}=\frac{dln(X)}{dX}=\frac{1}{X}$ → $ln(X+\Delta X)-ln(X)=\frac{\Delta X}{X}$
+- ![[econometrics-37.png]] 
+- ![[econometrics-38.png]]
 
 ### interaction variable
-![Image](https://i.imgur.com/R3SUnog.png)
+
+![[econometrics-39.png]]
 
 ## Ch9 
-![Image](https://i.imgur.com/NzpKegT.png)
-![Image](https://i.imgur.com/Tu6snYq.png)
+
+![[econometrics-40.png]]
+
+![[econometrics-41.png]]
 
 ### simultaneous causality bias
+
 - x 影響 y，y 也影響 x
   - e.g. 
     - 有錢 → 吃得好用得好 → 正 → 機會比較多，也較可能嫁有錢人 → 有錢
@@ -258,7 +262,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
     - 資源多 → 學生程度好 but 同時 學生程度差 → 政府給資源
 - 造成 corr(regressor, error term) != 0
   - error term 影響 y， y 影響 x → error term 影響 x
-  - ![Image](https://i.imgur.com/BWfTcLh.png)
+  - ![[econometrics-42.png]]
     - (9.3) X cause Y
     - (9.4) Y cause X
 - solution
@@ -266,7 +270,8 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - design and implement a randomized controlled experiment in which the reverse causality channel is nullified (Ch13)
 
 ## Ch10 panel data
-![Image](https://i.imgur.com/beQqHkO.png)
+
+![[econometrics-43.png]]
 - panel data
   - each observational unit, or entity, is observed at two or more time periods
 - cross-sectional data
@@ -275,9 +280,9 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - one subject different time
 - Standard errors should be clustered into groups within which the values of the dependent variable are likely to be correlated with one another.
 - fixed effects regression model
-  - ![Image](https://i.imgur.com/qSY8ZTb.png)
-![Image](https://i.imgur.com/CmX7yLn.png)
-![Image](https://i.imgur.com/S7JnnjW.png)
+  - ![[econometrics-44.png]]
+![[econometrics-45.png]]
+![[econometrics-46.png]]
   - omit $D_1$ to avoid perfect multicollinearity
   - $\alpha_1$, $\alpha_2$, ..., $\alpha_n$：entity fixed effects
     - comes from omitted variables, vary across entities (i) but not time (t)
@@ -285,34 +290,36 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - $Dx_i=\delta(x)$
     - $\alpha_1=\beta_0$
     - $\alpha_i=\beta_0+\gamma_i$ for i >= 2
-  <!-- - ![Image](https://i.imgur.com/BUc7yqM.png)
-  ![Image](https://i.imgur.com/VPG4Pq6.png) -->
+  <!-- - ![[econometrics-47.png]]
+  ![[econometrics-48.png]] -->
 - time fixed effects regression model
-  - ![Image](https://i.imgur.com/zTMgylz.png)
-  ![Image](https://i.imgur.com/pfltMSx.png)
+  - ![[econometrics-49.png]]
+  ![[econometrics-50.png]]
   - omit $B1_t$ to avoid perfect multicollinearity
   - $\lambda_1, ... \lambda_T$：time fixed effects
     - comes from omitted variables, vary over time (t) but not entities (i) 
 - entity and time effects regression model
-  - ![Image](https://i.imgur.com/vyNIHmQ.png)
-![Image](https://i.imgur.com/Ek6ZOk8.png)
+  - ![[econometrics-51.png]]
+![[econometrics-52.png]]
 
 ## Ch11 binary
-![Image](https://i.imgur.com/IGa9eaR.png)
+
+![[econometrics-53.png]]
 - LPM linear
-![Image](https://i.imgur.com/1HKN9gZ.png)
+![[econometrics-54.png]]
 - probit
-![Image](https://i.imgur.com/YtWF9Yj.png)
+![[econometrics-55.png]]
 - logit
-![Image](https://i.imgur.com/oz2aw35.png)
+![[econometrics-56.png]]
 - MLE maximum likelihood estimator
-  - ![Image](https://i.imgur.com/u2N603t.png)
+  - ![[econometrics-57.png]]
     - y1=1 → 1-y1=0
   - likelihood function
-    - ![Image](https://i.imgur.com/RJqsTPy.png)
+    - ![[econometrics-58.png]]
 
 ## C12 Instrumental
-![Image](https://i.imgur.com/0O5w3qX.png)
+
+![[econometrics-59.png]]
 - exogenous: $cov(X_i,u_i)=0$
 - endogenous: $cov(X_i,u_i)\neq0$
 - X is correlated to u → find an instrument Z that is 
@@ -320,15 +327,17 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - uncorrelated to u (exogeneity)
     - Z 跟 Y 不直接相關，只是透過 X 影響 Y
 - there are factors that will affect both X & u
-- ![Image](https://i.imgur.com/0QNSbU9.png)
-- ![Image](https://i.imgur.com/wi0hHUB.png)
+- ![[econometrics-60.png]]
+- ![[econometrics-61.png]]
 
 ### IV regression assumptions
-![Image](https://i.imgur.com/CQoRsRg.png)
+
+![[econometrics-62.png]]
 
 ### 2SLS
-![Image](https://i.imgur.com/ni4GtGd.png)
-- ![Image](https://i.imgur.com/r5TfSaI.png)
+
+![[econometrics-63.png]]
+- ![[econometrics-64.png]]
 - overidentify & underidentify
   - m = instrument 數
   - k = endogenous regressor 數
@@ -338,49 +347,51 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - need m >= k for estimation of IV regression model
     - 白話：有幾個跟 error term 有關的 variable，就需要有幾個 instrument
 - weak
-  - ![Image](https://i.imgur.com/Ma0mClr.png)
+  - ![[econometrics-65.png]]
 - overidentification test (J stat)
   - test if if instrument is exogenous
   - only possible to test this if overidentified
-  - ![Image](https://i.imgur.com/qxmwzsy.png)
-  - ![Image](https://i.imgur.com/otITLuN.png)
+  - ![[econometrics-66.png]]
+  - ![[econometrics-67.png]]
 
-![Image](https://i.imgur.com/eyjg7x0.png)
+![[econometrics-68.png]]
 
 ## Ch13 Experiments & Quasi-Experiments
-- ![Image](https://i.imgur.com/um9yykm.png)
+
+- ![[econometrics-69.png]]
 - differences-in-differences estimator
   - treatment group 的平均改變 - control group 的平均改變
-  - ![Image](https://i.imgur.com/0ijXays.png)
+  - ![[econometrics-70.png]]
   - t=1: before treatment
   - t=2: after treatment
 
-![Image](https://i.imgur.com/SBdt2DJ.png)
+![[econometrics-71.png]]
 
 ## Ch14 big data
+
 - 原始資料 notation：*
 - OOS out-of-sample
 - standardization
 - prediction error = 實際 - 預測
 - MSPE min square prediction error
   - expected prediction error when predicting for an observation out of the sample set
-  - ![Image](https://i.imgur.com/9ATYVrU.png)
+  - ![[econometrics-72.png]]
   - oracle prediction
     - prediction with smallest MSPE is conditional means
     - no estimation error, only prediction error
       - estimation error $\sigma_\mu$
       - prediction error $\sigma_u$ = variance of error term
-    - ![Image](https://i.imgur.com/TOLQvED.png)
+    - ![[econometrics-73.png]]
 - sparse model  
   - most predictors except some are 0
 - shrinkage estimators
   - Ridge
-    - ![Image](https://i.imgur.com/JLUvyBH.png)
+    - ![[econometrics-74.png]]
   - Lasso
     - least absolute shrinkage and selection operator
     - set many estimators to be 0
-    - ![Image](https://i.imgur.com/UyeFd5q.png)
+    - ![[econometrics-75.png]]
       - $\lambda_{Lasso}$: Lasso shrinkage parameter
       - $\hat{\beta}^{Lasso}$ Lasso estimator = value of $b$ to minimize $S^{Lasso}(b;\lambda_{Lasso})$
       - penalty term (second term): penalize large $b$, shrinking Lasso estimate toward 0
-      - ![Image](https://i.imgur.com/eaJs5o5.png)
+      - ![[econometrics-76.png]]
