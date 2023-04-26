@@ -77,14 +77,14 @@ has_children: True
 
 ## intro
 
-- ![](https://i.imgur.com/C5gjElc.png)
+- ![[operating-systems-1.png]]
 - GPU
 	- many processing unit, executing in parallel
 	- each unit perform simple task
 - bootstrap
 	- load OS into memory at startup
 - storage-device heirarchy
-	- ![](https://i.imgur.com/wcccVuH.png)
+	- ![[operating-systems-2.png]]
 - interrupt
 	- hardware interrupt
 		- I/O
@@ -224,7 +224,7 @@ has_children: True
 
 ### FSM of process
 
-![](https://i.imgur.com/U26qCqI.png)
+![[operating-systems-3.png]]
 
 - resource not enough -> don't admit
 - running
@@ -245,9 +245,9 @@ has_children: True
 	- Accounting info
 	- I/O status info
 		- open file table
-	- ![](https://i.imgur.com/y1Eg7ek.png)
+	- ![[operating-systems-4.png]]
 - `task_struct` in linux
-	- ![](https://i.imgur.com/m0dyuOO.png)
+	- ![[operating-systems-5.png]]
 
 ### multi-processor & multi-core
 
@@ -260,19 +260,19 @@ has_children: True
 	- other caches shared between cores
 	- pros
 		- cache is faster
-- ![](https://i.imgur.com/RArGv9W.png)
+- ![[operating-systems-6.png]]
 
 ### multiple processor OS
 - one process for a processor at a time
 - schedule multiple processes to run on multiple processors simulteneously
-	- ![](https://i.imgur.com/xOy5b7L.png)
+	- ![[operating-systems-7.png]]
 
 #### Multiple OS Multiprocessor 
 
 - each processor has its own OS
 - memory & I/O shared among processors via bus
 - memory separated into blocks for each processor
-- ![](https://i.imgur.com/KvR8ids.png)
+- ![[operating-systems-8.png]]
 
 #### Master-Slave Multiprocessor
 
@@ -280,17 +280,17 @@ has_children: True
 - run OS on master processor 
 - run processes on slave processors
 - memory & I/O shared among processors via bus
-- ![](https://i.imgur.com/Y435y7O.png)
+- ![[operating-systems-9.png]]
 
 #### Symmetric Multiprocessor (SMP)
 
 - each processor has OS kernel
 - a global OS exists
 - global OS runs global queue, CPU then gets process from global queue and do self-scheduling with its own OS
-- ![](https://i.imgur.com/N0Qjobj.png)
+- ![[operating-systems-10.png]]
 
 #### Heterogeneous Multiprocessor
-- ![](https://i.imgur.com/4ZRSqn0.png)
+- ![[operating-systems-11.png]]
 - big little architecture
 - big processors
 	- CPU intensive
@@ -306,9 +306,9 @@ has_children: True
 - ready queue
 	- multiple queue, priority queue
 	- single queue
-		- ![](https://i.imgur.com/ALSrwzW.png)
+		- ![[operating-systems-12.png]]
 - wait queue
-	- ![](https://i.imgur.com/S6fLR74.png)
+	- ![[operating-systems-13.png]]
 - I/O-bound process
 	- more I/O, less computation (time)
 - CPU-bound process
@@ -316,12 +316,12 @@ has_children: True
 - lock
 	- spin lock
 		- try locking the resource endlessly -> CPU 100% -> be treated as CPU-bound process
-		- ![](https://i.imgur.com/M2WqA5V.png)
+		- ![[operating-systems-14.png]]
 	- mutex lock
 		- run only when resource is avaiable
-		- ![](https://i.imgur.com/tvuAPto.png)
+		- ![[operating-systems-15.png]]
 - queueing diagram
-	- ![](https://i.imgur.com/RYGOciC.png)
+	- ![[operating-systems-16.png]]
 - context switch
 	- context stored in PCB
 	- load the context (state, memory, code, etc.) of the new process when switching process
@@ -334,7 +334,7 @@ has_children: True
 				- can happen even if some codes are prefetched, e.g. wrong branch prediction
 			- COLD cache
 				- cache blank
-	- ![](https://i.imgur.com/wj0nsV0.png)
+	- ![[operating-systems-17.png]]
 	- voluntarily & involuntarily context switch
 		- voluntarily context switch
 			- explicit request
@@ -360,18 +360,18 @@ has_children: True
 	- locate server, packed up parameters (marshalling/serialization) and send
 - server-side stub
 	- receive message, unpacked parameters (unmarshalling/deserialization), perform procedures
-- ![](https://i.imgur.com/z1IylM9.png)
-- ![](https://i.imgur.com/92PDhLh.png)
-- ![](https://i.imgur.com/p50VMY6.png)
+- ![[operating-systems-18.png]]
+- ![[operating-systems-19.png]]
+- ![[operating-systems-20.png]]
 
 ## threads & concurrency
 - explicit threading
 	- manually create and terminate (join) threads
-	- ![](https://i.imgur.com/TE4YKgw.png)
+	- ![[operating-systems-21.png]]
 - implicit threading
 	- OS deals with most of the things
-- ![](https://i.imgur.com/vjZ4JYC.png)
-- ![](https://i.imgur.com/m4Crgo6.png)
+- ![[operating-systems-22.png]]
+- ![[operating-systems-23.png]]
 - for CPU
 	- register for each thread
 	- cache for each thread
@@ -389,7 +389,7 @@ has_children: True
 	- different program, same data on each core
 	- may be sequential or not
 	- for sequential, separate different stage/task of a program, do pipeline
-- ![](https://i.imgur.com/ReNpmHi.png)
+- ![[operating-systems-24.png]]
 
 ### concurrency programming
 - multiple process single core
@@ -416,7 +416,7 @@ has_children: True
 	- status
 	- program counter
 	- stack
-- ![](https://i.imgur.com/XnZasZD.png)
+- ![[operating-systems-25.png]]
 
 ### benefits
 - more responsive
@@ -438,9 +438,9 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - S = portion not able to be parallelized
 - N = num of cores
 
-![](https://i.imgur.com/Os0BO5h.png)
+![[operating-systems-26.png]]
 
-![](https://i.imgur.com/9ORxU3b.png)
+![[operating-systems-27.png]]
 
 ### multithreading model
 
@@ -454,10 +454,10 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- each OS has its own
 - mode switch
 	- switching between ULT & KLT
-- ![](https://i.imgur.com/lOp9nxN.png)
+- ![[operating-systems-28.png]]
 	- kernel scheduler will schedule the black arrow processes
 - mapping from ULT to KLT
-	- ![](https://i.imgur.com/PGfP9Qg.png)
+	- ![[operating-systems-29.png]]
 	- not one-to-one
 	- if program doesn't need to use kernel mode -> no need KLT, use core directly
 		- e.g. simple math
@@ -466,11 +466,11 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 #### mapping from user to kernel threads
 
 - many-to-one
-	- ![](https://i.imgur.com/j2FBqIa.png)
+	- ![[operating-systems-30.png]]
 	- no parallelism
 	- can't utilize multiple processing cores
 - one-to-one
-	- ![](https://i.imgur.com/QZi22LU.png)
+	- ![[operating-systems-31.png]]
 	- easy
 	- create 1 kernel thread for each user thread
 	- no user scheduling
@@ -480,13 +480,13 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- Linux
 		- Windows
 - many-to-many
-	- ![](https://i.imgur.com/wFuYDC9.png)
+	- ![[operating-systems-32.png]]
 	- security issue
 		- a kernel thread may be used by multiple user threads -> need careful data protection
 	- most flexible
 	- diffucult to implement
 - two-level model
-	- ![](https://i.imgur.com/crSs2hU.png)
+	- ![[operating-systems-33.png]]
 	- popular
 	- many-to-many but also allows one-to-one
 
@@ -528,7 +528,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- compared to creating a new thread
 	- limited amount of threads
 	- resources used by app is limited
-- ![](https://i.imgur.com/w0jyf7X.png)
+- ![[operating-systems-34.png]]
 - worker threads
 	- threads created before requested
 	- idle before assignment -> not wasting resources
@@ -536,14 +536,14 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- need to be explicitly free & shutdown
 
 #### fork join
-- ![](https://i.imgur.com/LjrsNxU.png)
+- ![[operating-systems-35.png]]
 - divide and conquer
-- ![](https://i.imgur.com/hddFgUM.png)
+- ![[operating-systems-36.png]]
 
 #### OpenMP
 - create as many threads (as num of cores)
 - speedup
-	- ![](https://i.imgur.com/7rg5GdY.png)
+	- ![[operating-systems-37.png]]
 	- capped by num of cores
 
 #### Grand Central Dispatch (GCD)
@@ -559,13 +559,13 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - lightweight process (LWP)
 	- intermediate data structure between user & kernel thread
 	- LWP & kernel thread está one-to-one
-	- ![](https://i.imgur.com/VqXUNnR.png)
+	- ![[operating-systems-38.png]]
 
 ## main memory
 - memory protection
 	- base & limit register defining the available address space
-	- ![](https://i.imgur.com/4vGdy88.png)
-	- ![](https://i.imgur.com/FiTqrpD.png)
+	- ![[operating-systems-39.png]]
+	- ![[operating-systems-40.png]]
 - address binding
 	- ccompile time
 		- absolute code with known memory location
@@ -575,11 +575,11 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- relative address
 	- execution time (run time)
 		- physical address binding
-	- ![](https://i.imgur.com/YZ4daTc.png)
+	- ![[operating-systems-41.png]]
 - physical & logical address
 	- logical address is relative
 		- logical address + base -> physical address (translated by MMU)
-	- ![](https://i.imgur.com/Q5T16sG.png)
+	- ![[operating-systems-42.png]]
 - linking
 	- static linking
 	- dynamic linking
@@ -599,7 +599,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- OS
 	- user processes
 		- each process has a single contiguous memory section
-- ![](https://i.imgur.com/9j98hdw.png)
+- ![[operating-systems-43.png]]
 	- process terminated -> memory partition freed (blue section)
 - dynamic storage-allocation problem
 
@@ -636,17 +636,17 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- page offset
 		- n-bit page offset -> page size = $2^n$ bytes
 	- m-bit logical address space -> logical address space = $2^m$ bytes
-	- ![](https://i.imgur.com/nXBl1ld.png)
+	- ![[operating-systems-44.png]]
 - page table
 	- mapping of logical address page -> physical address frame
 	- each process has its own page table
 	- size
-		- ![](https://i.imgur.com/ctImTFn.png)
-		- ![](https://i.imgur.com/Wd3OCfC.png)
+		- ![[operating-systems-45.png]]
+		- ![[operating-systems-46.png]]
 	- e.g.
-		- ![](https://i.imgur.com/IXl0a6b.png)
+		- ![[operating-systems-47.png]]
 - paging translation example
-	- ![](https://i.imgur.com/LwopC1M.png)
+	- ![[operating-systems-48.png]]
 		- page x in logical -> page y in physical
 		- 2-bit page number, 2-bit page offset
 		- $2^2=4$ bytes per page
@@ -684,12 +684,12 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- TLB hit -> get frame number -> access physical memory
 	- TLB miss -> access page table, get frame number -> access physical memory & add <page num, frame num> to TLB
 	- TLB full -> replace with some policies
-	- ![](https://i.imgur.com/aXk88IK.png)
+	- ![[operating-systems-49.png]]
 - hit ratio
 	- instruction has locality -> would be fairly high
 	- replacement policy largely affects it
 - e.g.
-	- ![](https://i.imgur.com/VZj3fMP.png)
+	- ![[operating-systems-50.png]]
 
 ### structure of page table
 - contiguous page table -> too large ($2^{20}>>2(2^{10})$) -> need to split
@@ -697,19 +697,19 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 #### hierarchy page table
 - multilevel page table
 - page the page tables
-	- ![](https://i.imgur.com/DZRzUVk.png)
-	- ![](https://i.imgur.com/CRKSA8M.png)
+	- ![[operating-systems-51.png]]
+	- ![[operating-systems-52.png]]
 - 64-bit processor will need many layer of paging -> big memory access overhead -> inappropiate
 - e.g.
-	- ![](https://i.imgur.com/mBOEtUC.png)
+	- ![[operating-systems-53.png]]
 - xv6
 	- virtual address
 		- EXT = 0
 		- index = concat of 3 level page table idx
 		- offset = 0
-	- ![](https://i.imgur.com/VZ0fGnI.png)
-	- ![](https://i.imgur.com/CploN8D.png)
-	- ![](https://i.imgur.com/0vAhiKX.png)
+	- ![[operating-systems-54.png]]
+	- ![[operating-systems-55.png]]
+	- ![[operating-systems-56.png]]
 
 #### hashed page table
 - hash table
@@ -719,7 +719,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- virtual page num
 	- hashed virtual page num (mapping target physical frame)
 	- pointer to next element (for collision)
-- ![](https://i.imgur.com/uNVlNvx.png)
+- ![[operating-systems-57.png]]
 - clustered page table
 	- each entry mapped to several pages
 	- useful for sparse address space
@@ -731,7 +731,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- identify which process in use
 	- provide address-space protection for that process
 - given value = <pid, page num>, find key (physical page num & offset)
-- ![](https://i.imgur.com/dH76Ngm.png)
+- ![[operating-systems-58.png]]
 - lower space complexity
 	- only one inverted table in whole system
 		- normally, each process has one page table 
@@ -755,7 +755,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- have direct access to memory image (???)
 - standard swapping
 	- memory requirements > physical memory -> temporarily swap processes out to backing store 
-	- ![](https://i.imgur.com/EpoHBu8.png)
+	- ![[operating-systems-59.png]]
 	- time moving between memory is huge
 - roll out, roll in
 	- priority-based swapping
@@ -764,7 +764,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- move a page to backing store
 	- page in
 		- move a page back from backing store
-	- ![](https://i.imgur.com/0l1zkFk.png)
+	- ![[operating-systems-60.png]]
 
 ## Virtual Memory
 
@@ -814,12 +814,12 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	3. swap page into free frame
 	4. update table
 	5. restart instruction causing page fault
-	- ![](https://i.imgur.com/kqB2vCZ.png)
+	- ![[operating-systems-61.png]]
 - locality
 	- some pages access many new pages each instruction -> bad performance
 	- prefetch
 - free-frame list
-	- ![](https://i.imgur.com/IJ7N1Oh.png)
+	- ![[operating-systems-62.png]]
 	- maintain a linked list of free frames
 	- zero fill-on-demand
 		- when allocated, clear the frame data
@@ -839,7 +839,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - fork() -> copy parent's page table to child's
 - before writing, parent & child have different page tables but same physical address space
 - need to write -> page fault -> child copy parent's actual page -> continue the instruction
-- ![](https://i.imgur.com/vuFE9Ql.png)
+- ![[operating-systems-63.png]]
 - vfork()
 	- virtual memory fork()
 
@@ -856,7 +856,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- goal
 		- min num of page faults 
 - no free frame
-	- ![](https://i.imgur.com/cW9dfaC.png)
+	- ![[operating-systems-64.png]]
 - frame-allocation algo
 	- frames for each process
 	- page replacement
@@ -869,13 +869,13 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- max 2 page transfers
 	- if victim frame isn't modified (modify/dirty bit = 0) -> no need transfer back to backing store
 	- e.g.
-		- ![](https://i.imgur.com/zhAn75w.png)
+		- ![[operating-systems-65.png]]
 			- B invalid; C valid ->  swap out C; swap in B -> B valid; C invalid
 - Belady's Anomaly
 	- page-fault rate may increase on page frames increase for some algo
 	- e.g.
-		- ![](https://i.imgur.com/o0WUO5N.png)
-		- ![](https://i.imgur.com/dhJrlW1.png)
+		- ![[operating-systems-66.png]]
+		- ![[operating-systems-67.png]]
 - optimal algo
 	- find victim frame that would not be used again
 	- would not suffer from Belady's Anomaly
@@ -883,7 +883,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - FIFO algo
 	- suffers from Belady's Anomaly
 		- frame priority dependent of num of frames
-	- ![](https://i.imgur.com/4cvZN8L.png)
+	- ![[operating-systems-68.png]]
 - LRU algo
 	- find least recently used frame
 	- would not suffer from Belady's Anomaly
@@ -956,7 +956,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- depends on other processes 
 	- commonly used
 	- reclaiming pages
-		- ![](https://i.imgur.com/YVarh9b.png)
+		- ![[operating-systems-69.png]]
 		- num of free frames < min threshold -> start reclaim
 		- num of free frames > max threshold -> stop reclaiming
 		- ensure there's always free frames available
@@ -974,7 +974,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- multiple CPUs
 		- each has its own local memory
 		- can access its own local memory faster
-	- ![](https://i.imgur.com/OG0Xf07.png)
+	- ![[operating-systems-70.png]]
 - cons
 	- slower than systems with equal memory accessibility
 - pros
@@ -992,14 +992,14 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - time spent in paging > time spent in executing
 - sum of size of locality > total memory size -> thrashing
 - accept many processes/requests -> degree of multiprogramming increase -> num of free frames decrease -> keep having page fault at some point
-	- ![](https://i.imgur.com/mdbKdlb.png)
+	- ![[operating-systems-71.png]]
 - when doing page replacement
 	- memory & I/O busy
 	- CPU free
 - locality
 	- a set of pages that are actively used together
 	- may overlap
-	- ![](https://i.imgur.com/6wVQdxS.png)
+	- ![[operating-systems-72.png]]
 - when process executes, it moves from one locality to another
 	- allocate frames according to locality to avoid thrashing
 
@@ -1014,7 +1014,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- fixed num of page references
 	- sliding window
 - $WS(t_j)$ = working set = set of pages in $\Delta$
-	- ![](https://i.imgur.com/tsGh1vT.png)
+	- ![[operating-systems-73.png]]
 - $WSS_i(t_j)$ = size of working set of process $i$
 - $D = \sum WSS_i(t)$ = num of demanded frames at time $t$
 - $m$ = total memory size
@@ -1022,12 +1022,12 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - 2 in-memory reference bit & 1 reference bit
 - fixed-interval timer interrupt
 	- clear reference bit & update in-memory reference bit
-	- ![](https://i.imgur.com/Qe0Z6ua.png)
+	- ![[operating-systems-74.png]]
 - unaccurate
 	- don't know when it's referenced within the interval
 	- may have many references uncovered if interval too big or window too small
 - page fault rate
-	- ![](https://i.imgur.com/HJULyug.png)
+	- ![[operating-systems-75.png]]
 	- when paging a different locality, page-fault rate peaks
 
 #### Page-Fault Frequency (PFF)
@@ -1036,7 +1036,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - adjust allocation policy based on page-fault rate
 - page-fault rate > upper bound -> allocate frames for the process
 - page-fault rate < lower bound -> remove frames for the process
-- ![](https://i.imgur.com/dphu0bD.png)
+- ![[operating-systems-76.png]]
 
 #### Allocating Kernel Memory
 
@@ -1054,9 +1054,9 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- adjacent buddies become bigger buddy
 	- cons
 		- internal fragmentation
-	- ![](https://i.imgur.com/6LdV42S.png)
+	- ![[operating-systems-77.png]]
 - slab allocator
-	- ![](https://i.imgur.com/tztkNeW.png)
+	- ![[operating-systems-78.png]]
 	- slab
 		- one or more physically contiguous pages
 		- 3 states
@@ -1123,7 +1123,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - CPU burst
 	- long tail distribution
 		- many short CPU bursts with a few long ones
-		- ![](https://i.imgur.com/WzyiauU.png)
+		- ![[operating-systems-79.png]]
 	- CPU-bound processes have longer CPU burst than I/O-bound ones
 - preemptive & nonpreemptive
 	- nonpreemptive
@@ -1178,7 +1178,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 #### first-come, first-serve (FCFS) scheduling
 
 - e.g.
-	- ![](https://i.imgur.com/00jHzcu.png)
+	- ![[operating-systems-80.png]]
 - convoy effect
 	- all other processes wait for one big process to finish
 		- e.g. 1 CPU-bound process & many I/O-bound processes
@@ -1190,7 +1190,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - preemptive version
 	- shortest-remaining-time-first
 - e.g.
-	- ![](https://i.imgur.com/sAv9kh3.png)
+	- ![[operating-systems-81.png]]
 - length of next CPU burst prediction
 	- exponential average
 		- EWMA
@@ -1215,12 +1215,12 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- each process gets a chunk
 	- each process wait at most (n-1)q time units
 - e.g.
-	- ![](https://i.imgur.com/2hkzKZy.png)
+	- ![[operating-systems-82.png]]
 - average performance
 	- bigger turnaround time than SJFpriority
 		- e.g.
-			- ![](https://i.imgur.com/DFzLe93.png)
-			- ![](https://i.imgur.com/zEk9a0H.png)
+			- ![[operating-systems-83.png]]
+			- ![[operating-systems-84.png]]
 	- more responsive than SJF
 
 #### priority scheduling
@@ -1239,16 +1239,16 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 			- round-robin for processes with same priority
 				- implement with multilevel queue
 					- e.g.
-						- ![](https://i.imgur.com/chywjaP.png)
-						- ![](https://i.imgur.com/jDj5KjF.png)
+						- ![[operating-systems-85.png]]
+						- ![[operating-systems-86.png]]
 							- 3 queues
 							- RR with q=8 -> process unfinished -> RR with q=16 ->  still unfinished -> FCFS
 				- e.g.
-					- ![](https://i.imgur.com/5xRRnUW.png)
+					- ![[operating-systems-87.png]]
 - e.g.
-	- ![](https://i.imgur.com/yLx97Eh.png)
+	- ![[operating-systems-88.png]]
 - priority
-	- ![](https://i.imgur.com/fP8dYO3.png)
+	- ![[operating-systems-89.png]]
 
 ### Thread Scheduling
 
@@ -1272,7 +1272,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - symmetric multiprocessing (SMP)
 	- each processor does its own scheduling
 	- ready queue
-		- ![](https://i.imgur.com/uNnZfiz.png)
+		- ![[operating-systems-90.png]]
 		- separate queue
 			- load balancing
 		- shared queue
@@ -1282,13 +1282,13 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 
 - memory stall
 	- spend large portion of time on memory access
-	- ![](https://i.imgur.com/26WLrj5.png)
+	- ![[operating-systems-91.png]]
 	- solution
 		- multithreaded processing cores
 - multithreaded processing cores
 	- each core has multiple hardware thread
 	- 1 thread wait for memory -> execute another thread
-	- ![](https://i.imgur.com/d6lPISA.png)
+	- ![[operating-systems-92.png]]
 - granularity
 	- coarse-grained multithreading
 		- switch on thread level
@@ -1300,7 +1300,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- special architecture to support it
 		- small overhead
 - level
-	- ![](https://i.imgur.com/Ksi1zAb.png)
+	- ![[operating-systems-93.png]]
 	- 1st level
 		- select software thread
 	- 2nd level
@@ -1342,13 +1342,13 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- resulted from
 		- determining interrupt type
 		- context switch
-	- ![](https://i.imgur.com/GUuS6Eq.png)
+	- ![[operating-systems-94.png]]
 - dispatch latency
 	- time needed for scheduling dispatcher to stop a process & start another one
 	- conflict phase
 		- prempting running processes
 		- make low-priority processes release locked resources that is needed
-	- ![](https://i.imgur.com/WX8nHX0.png)
+	- ![[operating-systems-95.png]]
 
 #### Proportional Share Scheduling
 
@@ -1367,11 +1367,11 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- deadline = d
 	- period = p
 	- $0\leq t\leq d\leq p$
-	- ![](https://i.imgur.com/MUin1vI.png)
-	- ![](https://i.imgur.com/sD0Qm57.png)
+	- ![[operating-systems-96.png]]
+	- ![[operating-systems-97.png]]
 		- red is higher-priority process
 		- need to make them finish before deadline
-- ![](https://i.imgur.com/PDWYdcS.png)
+- ![[operating-systems-98.png]]
 
 #### Rate-Monotonic Scheduling
 
@@ -1381,18 +1381,18 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - cons
 	- not always efficient
 - e.g.
-	- ![](https://i.imgur.com/G7Bqatp.png)
+	- ![[operating-systems-99.png]]
 		- P1 always has higher priority, can always preempt P2
-	- ![](https://i.imgur.com/as2H559.png)
+	- ![[operating-systems-100.png]]
 		- P2 will miss deadline while it doesn't really need to
-- ![](https://i.imgur.com/51ZWjBM.png)
-	- ![](https://i.imgur.com/fvbO9oI.png)
+- ![[operating-systems-101.png]]
+	- ![[operating-systems-102.png]]
 
 #### Earliest-Deadline-First (EDF) Scheduling
 
 - the closer the deadline, the higher the priority
 - e.g.
-	- ![](https://i.imgur.com/lJwO3q7.png)
+	- ![[operating-systems-103.png]]
 
 #### POSIX Scheduling
 - `SCHED_FIFO`
@@ -1453,8 +1453,8 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - take a predeterminied static workoad and calculate the performance under each algo
 - unrealistic
 - e.g.
-	- ![](https://i.imgur.com/HztAlq5.png)
-	- ![](https://i.imgur.com/guLKNmF.png)
+	- ![[operating-systems-104.png]]
+	- ![[operating-systems-105.png]]
 
 #### Queueing Models
 - given probability distribution of CPU & I/O bursts
@@ -1480,9 +1480,9 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 
 ## Mass-Storage Systems
 - heirarchy
-	- ![](https://i.imgur.com/mpg9k9u.png)
+	- ![[operating-systems-106.png]]
 - hard-disk drive (HDD)
-	- ![](https://i.imgur.com/beO7GqR.png)
+	- ![[operating-systems-107.png]]
 	- positioning latency
 		- time to move disk arm to desired cylinder, mechanically
 		- seek time
@@ -1525,7 +1525,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 
 #### FCFS scheduling
 - e.g.
-	- ![](https://i.imgur.com/AxygfeL.png)
+	- ![[operating-systems-108.png]]
 
 #### SSTF Scheduling
 - shortest seek time first
@@ -1537,7 +1537,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - font -> end -> front -> end -> front -> ....
 	- serve the requests along the way
 - e.g.
-	- ![](https://i.imgur.com/rX1NJE4.png)
+	- ![[operating-systems-109.png]]
 
 #### C-SCAN Scheduling
 - front -> end ; front -> end ; ...
@@ -1545,7 +1545,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - more uniform waiting time than [SCAN Scheduling](#SCAN%20Scheduling)
 - treat the cylinder as cirlular list
 - e.g.
-	- ![](https://i.imgur.com/7RyaQi1.png)
+	- ![[operating-systems-110.png]]
 
 #### Algo Comparison
 - SSTF (shortest seek time first)
@@ -1577,7 +1577,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ECC, error-correction code 
 		- in unreliable or noisy communication channels
 		- hamming code example
-			- ![](https://i.imgur.com/RAKJYvU.png)
+			- ![[operating-systems-111.png]]
 			- parity bits being 1, 2, 4
 				- each has exact one "1" bit
 			- data bits being 3, 5, 6, 7
@@ -1585,7 +1585,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 			- 3, 6, 7 has 1 as the 2nd least significant bit -> P2 = parity of D3, D6, D7
 			- 5, 6, 7 has 1 as the 3nd least significant bit -> P4 = parity of D5, D6, D7
 			- for data string 1101, the correct bit string to send & receive is 1100110
-			- ![](https://i.imgur.com/srvr2Vr.png)
+			- ![[operating-systems-112.png]]
 			- receive bit string -> detect error and their position -> correct them 
 
 ### storage device management
@@ -1608,7 +1608,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- database
 	- swap space
 - boot block
-	- ![](https://i.imgur.com/P0RXetn.png)
+	- ![[operating-systems-113.png]]
 	- MBR, master boot record
 		- 1st logical block / page
 		- contains boot code
@@ -1637,14 +1637,14 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- CIFS
 	- implemented with RPCs, remote procedure calls
 		- over TCP/UDP
-	- ![](https://i.imgur.com/TzaCFtf.png)
+	- ![[operating-systems-114.png]]
 - cloud
 	- over the Internet or WAN to remote data center
 	- access with API
 - storage-area network (SAN) & storage arrays
 	- high bandwidth
 	- SAN interconnects with fiber channel
-	- ![](https://i.imgur.com/nlWaxmU.png)
+	- ![[operating-systems-115.png]]
 
 ### RAID
 
@@ -1697,24 +1697,24 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- combinations
 		- RAID 10 (1+0)
 			- mirror -> stripe
-			- ![](https://i.imgur.com/ZiTVzeZ.png)
+			- ![[operating-systems-116.png]]
 		- RAID 01 (0+1)
 			- stripe -> mirror
-			- ![](https://i.imgur.com/WuvRFJ3.png)
+			- ![[operating-systems-117.png]]
 		- RAID 01 & 10
 			- similar performance
 			- RAID 10 has better reliability
 			- need 4 drives
-			- ![](https://i.imgur.com/lq24wl4.png)
-	- ![](https://i.imgur.com/supyI4h.png)
-	- ![](https://i.imgur.com/vbhDjRF.png)
+			- ![[operating-systems-118.png]]
+	- ![[operating-systems-119.png]]
+	- ![[operating-systems-120.png]]
 - cons
 	- data not always avaiable
 	- not flexible
 - ZFS
 	- pools of storage
 	- improve flexibiity
-	- ![](https://i.imgur.com/OyAEm89.png)
+	- ![[operating-systems-121.png]]
 - object storage
 	- computer-oriented
 		- rather than user-oriented
@@ -1733,7 +1733,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 
 - sequential access
 	- most common
-	- ![](https://i.imgur.com/8FwhjsN.png)
+	- ![[operating-systems-122.png]]
 - direct access
 	- relative access
 	- a file = fixed-size logical record
@@ -1750,11 +1750,11 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - single-level
 - two-level
 - tree-structured
-	- ![](https://i.imgur.com/B3zoR3m.png)
+	- ![[operating-systems-123.png]]
 	- absolute path name
 	- relative path name
 - acyclic-graph
-	- ![](https://i.imgur.com/hVcH6Tk.png)
+	- ![[operating-systems-124.png]]
 	- symbolic link
 		- soft link
 	- hard link
@@ -1763,29 +1763,29 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- find cycle
 			- use i-node number
 				- real file ID
-		- ![](https://i.imgur.com/vxlNfPB.png)
+		- ![[operating-systems-125.png]]
 		- flagging i-nodes not practical
 			- can't modify i-node irl
 		- Floyd
 			- fast slow pointers
-			- ![](https://i.imgur.com/wee6dV5.png)
+			- ![[operating-systems-126.png]]
 		- external marking
 			- while 1; previous->next = temp;
 			- move to temp -> have cycle
-			- ![](https://i.imgur.com/GeV7u20.png)
+			- ![[operating-systems-127.png]]
 - general graph
-	- ![](https://i.imgur.com/30X90Bk.png)
+	- ![[operating-systems-128.png]]
 
 ### protection
 
 - memory-mapped files
-	- ![](https://i.imgur.com/YmQ9LkB.png)
-	- ![](https://i.imgur.com/rs7XPKF.png)
+	- ![[operating-systems-129.png]]
+	- ![[operating-systems-130.png]]
 
 ## File-System Implementation
 ### File-System Structure
 - layered file-system
-	- ![](https://i.imgur.com/kJpNur6.png)
+	- ![[operating-systems-131.png]]
 - logical file system
 	- control blocks
 - file-organization module
@@ -1830,7 +1830,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- with a type field to indicate
 	- Windows treat a directory & a file as different entities
 	- open & read a file
-		- ![](https://i.imgur.com/IG6r6hk.png)
+		- ![[operating-systems-132.png]]
 
 ### Directory Implementation
 - linear list
@@ -1849,7 +1849,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- minimal head movement for HDD
 - cons
 	- external fragmentation
-- ![](https://i.imgur.com/Yirbx3U.png)
+- ![[operating-systems-133.png]]
 - compaction
 	- move all free space into contiguous blocks
 	- off-line
@@ -1879,9 +1879,9 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 			- doubly linked list
 			- store filename & logical block num in metadata
 				- s.t. the linked list can be reconstructed
-- ![](https://i.imgur.com/dcH4Pim.png)
+- ![[operating-systems-134.png]]
 - file-allocation table, FAT
-	- ![](https://i.imgur.com/uk3PXat.png)
+	- ![[operating-systems-135.png]]
 - table at start of volime
 - huge seek time
 - low random access time
@@ -1894,8 +1894,8 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- faster directly access than linked allocation without FAT
 - cons
 	- need extra space for index block
-- ![](https://i.imgur.com/9N3Yr0A.png)
-- ![](https://i.imgur.com/fFX8xwP.png)
+- ![[operating-systems-136.png]]
+- ![[operating-systems-137.png]]
 
 #### performance
 
@@ -1909,7 +1909,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 
 #### bit vector (bitmap)
 
-- ![](https://i.imgur.com/OIOyOp9.png)
+- ![[operating-systems-138.png]]
 - pros
 	- simple
 - cons
@@ -1944,7 +1944,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 #### space maps
 
 - metaslabs
-- ![](https://i.imgur.com/1vUapTC.png)
+- ![[operating-systems-139.png]]
 
 #### TRIMing used blocks
 - some device need blocks to be erased before being allocated again
@@ -1961,8 +1961,8 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - unified buffer cache
 	- same page cache for memory-mapped I/O & file system I/O
 	- avoid double caching
-	- ![](https://i.imgur.com/2PxgG1v.png)
-	- ![](https://i.imgur.com/yK5rvoz.png)
+	- ![[operating-systems-140.png]]
+	- ![[operating-systems-141.png]]
 - asynchronus write
 	- writes stored in cache
 	- calling routing doesn't have to wait for writing
@@ -1998,18 +1998,18 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - WAFL File System
 	- write-anywhere file layout
 	- optimized for random writes
-	- ![](https://i.imgur.com/KUYZn1Q.png)
+	- ![[operating-systems-142.png]]
 	- snapshots
 		- take a snapshot -> block updates go to new blocks instead of overwriting old blocks
 		- take very little space
 			- extra space a snapshot needs is only from the blocks that have been updated
-		- ![](https://i.imgur.com/0rEEhKS.png)
+		- ![[operating-systems-143.png]]
 
 ## File System Internals
 
 - volumes & partition
 	- volume can span across partitions
-	- ![](https://i.imgur.com/r2xhHXO.png)
+	- ![[operating-systems-144.png]]
 
 ### Mounting
 
@@ -2017,7 +2017,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - several ways
 	- disallow mounting on unempty directory
 	- hide the original files when mounted
-		- ![](https://i.imgur.com/j9rZmoA.png)
+		- ![[operating-systems-145.png]]
 - verify the device -> do consistency checking (fsck) if invalid -> update mount table in memory
 
 ### Partitions
@@ -2045,7 +2045,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 
 - integrate different file-system types
 - 3 layers
-- ![](https://i.imgur.com/bOLQnA8.png)
+- ![[operating-systems-146.png]]
 - virtual file system (VFS) layer
 	- vnode
 		- unique within VFS (network-wide)
@@ -2095,7 +2095,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- Andrew File Systems (AFS)
 		- disconnected operations
 		- large number of users can access a file simulteneously
-		- ![](https://i.imgur.com/3L4rbge.png)
+		- ![[operating-systems-147.png]]
 - immutable-shared-files semantics
 	- read-only
 	- final result computed from logs
@@ -2106,10 +2106,10 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - a set of disconnected workstations
 - sharing based on client-server
 - mounting
-	- ![](https://i.imgur.com/TV9UNUT.png)
+	- ![[operating-systems-148.png]]
 - operate in heterogeneous environment
 - stateful & stateless
-	- ![](https://i.imgur.com/kaoV7Ti.png)
+	- ![[operating-systems-149.png]]
 	- stateless
 		- operations need to be indempotent (等冪)
 			- f(f(x)) = f(x)
@@ -2121,7 +2121,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 			- request message longer
 			- processing time longer
 - schematic view
-	- ![](https://i.imgur.com/LaFCwk3.png)
+	- ![[operating-systems-150.png]]
 - buffer & cache
 	- cache triggered by client
 	- buffer triggered by server
@@ -2130,13 +2130,13 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 
 - 2 processes interleaved -> incorrect result
 	- e.g. count++ & count-- interleaved
-		- ![](https://i.imgur.com/aQzedri.png)
+		- ![[operating-systems-151.png]]
 
 ### Critical-Section Problem
 
 - segment shared with other process
 - structure
-	- ![](https://i.imgur.com/Rkz4DNe.png)
+	- ![[operating-systems-152.png]]
 - solution requirements
 	- mutual exclusion
 		- only 1 process can execute the critical section at a time
@@ -2157,7 +2157,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- exit -> enable interrupt
 - software solution 1
 	- assume `load` & `store` can't possibly be interrupted
-	- ![](https://i.imgur.com/76QPB7O.png)
+	- ![[operating-systems-153.png]]
 		- left is i, right is j
 	- mutual exclusion satisfied
 		- `turn` is a shared variable
@@ -2165,14 +2165,14 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- e.g. i -> i will never happen
 	- bounded waiting satisfied
 - software solution 2
-	- ![](https://i.imgur.com/ncp2vgs.png)
+	- ![[operating-systems-154.png]]
 	- mutual exclusion satisfied
 	- progess satisfied
 		- decide next in entry section
 	- bounded waiting unsatisfied
 		- deadlock if `flag[i]` = `flag[j]` = true
 - Peterson's solution
-	- ![](https://i.imgur.com/RM25Ssw.png)
+	- ![[operating-systems-155.png]]
 	- all requirements satisfied
 	- not gauranteed to work on modern computer architectures
 		- multi-threaded app with shared data may reorder instructions -> incorrect result
@@ -2186,7 +2186,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ensure all load/store completed before next load/store
 		- even with instruction reordering
 - very low level
-- ![](https://i.imgur.com/Cp4hKFf.png)
+- ![[operating-systems-156.png]]
 - memory models
 	- strongly ordered
 		- memory modifications immediately visible to other processors
@@ -2196,19 +2196,19 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 #### atomic hardware instructions
 - can't possibly be interrupted
 - `test_and_set`
-	- ![](https://i.imgur.com/0t97u4U.png)
-	- ![](https://i.imgur.com/zmC9PzD.png)
+	- ![[operating-systems-157.png]]
+	- ![[operating-systems-158.png]]
 		- bounded waiting unsatisfied
 - `compare_and_swap`
-	- ![](https://i.imgur.com/PRFKRR8.png)
-	- ![](https://i.imgur.com/PQDz5Cn.png)
+	- ![[operating-systems-159.png]]
+	- ![[operating-systems-160.png]]
 		- bounded waiting unsatisfied
-	- ![](https://i.imgur.com/1TlABVM.png)
+	- ![[operating-systems-161.png]]
 		- bounded waiting satisfied
 
 #### atomic variables
 - operations on atomic variables are uninterruptable
-- ![](https://i.imgur.com/4PFM53R.png)
+- ![[operating-systems-162.png]]
 
 ### Mutex Locks
 - mutual exclusion locks
@@ -2220,41 +2220,41 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - busy waiting
 	- spinlock
 	- a process is in critical section -> another one call `acquire` repeatedly
-- ![](https://i.imgur.com/SMkyNYj.png)
+- ![[operating-systems-163.png]]
 
 ### Semaphore
 
 - an integer
 - a signal, indicating if a process can enter critical section
-- ![](https://i.imgur.com/OqrIJDp.png)
+- ![[operating-systems-164.png]]
 - couting semaphore
 	- allow multiple processes to enter critical section
 - binary semaphore
 	- 0/1
 - e.g.
-	- ![](https://i.imgur.com/Fc5LeFE.png)
+	- ![[operating-systems-165.png]]
 - implementation without busy waiting
 	- unavailable -> suspend itself into waiting state
 		- added into semephore's process list
 	- other process execute `signal` -> `wakeup` the waiting process into ready state
 		- removed from semaphore's process list
-	- ![](https://i.imgur.com/Fst4Kjp.png)
-	- ![](https://i.imgur.com/y3fdEwM.png)
+	- ![[operating-systems-166.png]]
+	- ![[operating-systems-167.png]]
 - semaphore operations need to be atomic
 - use FIFO queue to satisfy bounded waiting
-- ![](https://i.imgur.com/u3plLeK.png)
+- ![[operating-systems-168.png]]
 
 ### Monitors
 
 - timing errors can exist even with mutex lock or semaphore in some exec sequence
 	- e.g.
-		- ![](https://i.imgur.com/2TaV0Ti.png)
+		- ![[operating-systems-169.png]]
 - abstract data type, ADT
 	-  a set of function
 - monitor type
 	- a set of programmer-defined function with mutual exclusion
-	- ![](https://i.imgur.com/V07XLpC.png)
-- ![](https://i.imgur.com/ZMXJ2Er.png)
+	- ![[operating-systems-170.png]]
+- ![[operating-systems-171.png]]
 - condition
 	- `condition x, y`
 	- `x.wait()` -> process suspended
@@ -2266,10 +2266,10 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- option 2: signal and continue
 			- P continues, Q resumes once P leaves
 			- P -> Q
-	- ![](https://i.imgur.com/UP5DQhK.png)
+	- ![[operating-systems-172.png]]
 - implement monitor with semaphore
 	- binary
-	- ![](https://i.imgur.com/g90HyBM.png)
+	- ![[operating-systems-173.png]]
 
 ### Liveness
 
@@ -2277,7 +2277,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - deadlock
 	- multiple processes waiting indefinitely for each other
 	- e.g.
-		- ![](https://i.imgur.com/g0gYHYx.png)
+		- ![[operating-systems-174.png]]
 - starvation
 	- a process waiting indefinitely (in a queue)
 - priority inversion
@@ -2285,10 +2285,10 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- a high priority process blocked by a low priority process 
 		- for an indefinite amount of time
 	- e.g.
-		- ![](https://i.imgur.com/3AAI6B3.png)
-		- ![](https://i.imgur.com/NV1SKvA.png)
+		- ![[operating-systems-175.png]]
+		- ![[operating-systems-176.png]]
 	- solution: priority-inheritance protocol
-		- ![](https://i.imgur.com/y66hIsH.png)
+		- ![[operating-systems-177.png]]
 
 ## Synchronization Examples
 
@@ -2298,7 +2298,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - multiple producers & consumers
 - buffer with capacity N
 - 2 producers can't write to the same buffer (slot)
-- ![](https://i.imgur.com/6IdjzWs.png)
+- ![[operating-systems-178.png]]
 - use 3 semaphores
 	- `mutex`
 		- init = 1
@@ -2310,9 +2310,9 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- init = n
 		- num of empty buffers
 - producer
-	- ![](https://i.imgur.com/EEWq8f8.png)
+	- ![[operating-systems-179.png]]
 - consumer
-	- ![](https://i.imgur.com/PLeyDXV.png)
+	- ![[operating-systems-180.png]]
 
 #### reader-writers problem
 - multiple readers can read at the same time
@@ -2327,9 +2327,9 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- init = 0
 	- num of processes reading the object
 - writer
-	- ![](https://i.imgur.com/JOKAnjQ.png)
+	- ![[operating-systems-181.png]]
 - reader
-	- ![](https://i.imgur.com/KQOn6k1.png)
+	- ![[operating-systems-182.png]]
 - reader-writer lock
 	- mode
 		- read
@@ -2347,13 +2347,13 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - n chopsticks
 	- each at the middle of 2 philosophers
 	- one's left chopstick is another's right
-- ![](https://i.imgur.com/14e6p5N.png)
+- ![[operating-systems-183.png]]
 - semaphore solution
-	- ![](https://i.imgur.com/Ps6uvFX.png)
+	- ![[operating-systems-184.png]]
 	- problem
 		- deadlock
 			- all get the left hand chopstick -> all unable to get the right hand chopstick
 		- starvation
 			- can't get the chopsticks
 - monitor solution
-	- ![](https://i.imgur.com/vI1q1tP.png)
+	- ![[operating-systems-185.png]]
