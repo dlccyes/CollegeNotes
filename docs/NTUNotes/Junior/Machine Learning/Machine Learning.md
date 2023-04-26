@@ -29,14 +29,14 @@ if ((batch_idx + 1) % accum_iter == 0) or (batch_idx + 1 == len(data_loader)):
 ## intro
 
 - gradient decsent
-	- ![](https://i.imgur.com/HMfsboA.png)
+	- ![[machine-learning-1.png]]
 	- 微分取斜率
 	- 往左/右走多少 depends on 斜率
 	- 卡在 critical point (微分 = 0)
 		- local minima or saddle point
 - sigmoid function
 	- sigmoid(f(x)) = $e^{f(x)}$
-	- ![](https://i.imgur.com/QeRzyVt.png)
+	- ![[machine-learning-2.png]]
 	- 疊加一堆 sigmoid 逼近 function
 - hyperparameter
 	- 你自己設的 parameter
@@ -55,7 +55,7 @@ if ((batch_idx + 1) % accum_iter == 0) or (batch_idx + 1 == len(data_loader)):
 		- overfitting
 
 ### overfitting
-- ![](https://i.imgur.com/NK8JTCW.png)
+- ![[machine-learning-3.png]]
 - to solve
 	- less parameters
 	- less features
@@ -66,17 +66,17 @@ if ((batch_idx + 1) % accum_iter == 0) or (batch_idx + 1 == len(data_loader)):
 		- to limit the freedom of your model
 
 ## critical point
-![](https://i.imgur.com/NE6Wcez.png)
+![[machine-learning-4.png]]
 
 - eigen value all positive -> local minima
 - eigen value all negatuve -> local maxima
 - eigen value 有正有負 -> saddle points
 
-![](https://i.imgur.com/wnrUU3t.png)
+![[machine-learning-5.png]]
 表示大部分時候都不是卡在 local minima，而是 saddle point
 
 gradient descent 事實上很少卡在 critical point，而是在附近震盪
-![](https://i.imgur.com/jH8vIg4.png)
+![[machine-learning-6.png]]
 要達到 critical point 要用特殊的方法
 
 ### batch
@@ -88,10 +88,10 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- can use parallel computing in a batch -> not necessarily bigger epoch time
 	- updates more noisy
 		- loss function different for each batch -> more noisy -> less likely to fall into local minima -> better training accuracy
-			- ![](https://i.imgur.com/GgC9im3.png)
+			- ![[machine-learning-7.png]]
 		- tends to fall more in flat local minima than in sharp local minima -> better testing accuracy
 			- flat local minima is better than sharp local minima
-			- ![](https://i.imgur.com/IiItSju.png)
+			- ![[machine-learning-8.png]]
 - big batch
 	- see many data in a batch
 	- less batch in an epoch
@@ -99,34 +99,34 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- less training accuracy
 	- less testing accuracy
 - big batch size -> less epoch time
-	- ![](https://i.imgur.com/ZbAi63M.png)
+	- ![[machine-learning-9.png]]
 - big batch size -> less training accuracy
-	- ![](https://i.imgur.com/RXzhcyp.png)
-- ![](https://i.imgur.com/I3bQKCe.png)
+	- ![[machine-learning-10.png]]
+- ![[machine-learning-11.png]]
 
 ### momemtum
-- ![](https://i.imgur.com/Grevsn6.png)
-- ![](https://i.imgur.com/L27WjWS.png)
+- ![[machine-learning-12.png]]
+- ![[machine-learning-13.png]]
 - momemtum = weighted sum of all previous gradients
-	- ![](https://i.imgur.com/cizrrVC.png)
-- ![](https://i.imgur.com/WTaR1DU.png)
+	- ![[machine-learning-14.png]]
+- ![[machine-learning-15.png]]
 
 ## adaptive learning rate (optimization)
 - learning rate = 步伐大小
 - small slope -> big learning rate
 - big slope -> small learning rate
-- ![](https://i.imgur.com/BSLTNVM.png)
+- ![[machine-learning-16.png]]
  - using RMS 
   - Adagrad
   - g small -> $\sigma$ small -> learning rate big
   - 把過去所有 gradient 拿來取 RMS
   - calculation
-   - ![](https://i.imgur.com/MRW1JSo.png)
-   - ![](https://i.imgur.com/G4l49oe.png)
+   - ![[machine-learning-17.png]]
+   - ![[machine-learning-18.png]]
  - gradient 很小 -> $\sigma$ 很小 -> 在平坦的地方爆出去
-  - ![](https://i.imgur.com/gQielZS.png)
+  - ![[machine-learning-19.png]]
   - to improve
-   - ![](https://i.imgur.com/ubg1Zup.png)
+   - ![[machine-learning-20.png]]
    - warm up
     - 先用小 learning rate 探索 error surface
 - using RMSProp
@@ -135,30 +135,31 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- set, $\alpha$, weight of current gradient, by yourself
 	- current gradient is more important (like EWMA)
 	- calculation
-		- ![](https://i.imgur.com/0xl0LGa.png)
-		- ![](https://i.imgur.com/5OeAaf3.png)
-- ![](https://i.imgur.com/l5vBtyK.png)
+		- ![[machine-learning-21.png]]
+		- ![[machine-learning-22.png]]
+- ![[machine-learning-23.png]]
 
 ## classification
 
 - 希望 model output 接近 class 的值
-	- ![](https://i.imgur.com/B8C22qY.png)
+	- ![[machine-learning-24.png]]
 - represent class as one-hop vector (binary variable)
-	- ![](https://i.imgur.com/SnEsx9n.png)
+	- ![[machine-learning-25.png]]
 - softmax 
 	- nomalize to 0-1
-	- ![](https://i.imgur.com/fZxSonW.png)
+	- ![[machine-learning-26.png]]
 
 ### loss
+
 - MSE
 - cross entropy
 	- minimize cross entropy = maximize likelihood
 	- pytorch cross entropy includes softmax already
 	- better than MSE
 		- easier for optimization
-			- ![](https://i.imgur.com/mbHe0RE.png)
+			- ![[machine-learning-27.jpg]]]
 			- with MSE, when start at left top (y1 small,  y2 big, loss big), slope = 0 -> can't use gradient descent to reach right bottom (y1 big, y2 small, loss small)
-- ![](https://i.imgur.com/MGT1LCH.png)
+- ![[machine-learning-28.png]]
 - `BCEWithLogitsLoss` with `pos_weight` for imbalanced dataset
 
 ### ROC & AUC Curve
@@ -166,7 +167,7 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 - For balanced dataset
 - ROC curve
 	- true positive rate vs. false positive rate under different threshold
-	- ![](https://i.imgur.com/EmT2nsN.png)
+	- ![[machine-learning-29.png]]
 - AUC Curve
 	- Area under ROC curve
 
@@ -174,7 +175,7 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 
 - For imbalanced dataset
 - Precision vs. Recall Rate under different threshold
-- ![](https://i.imgur.com/cogVDun.png)
+- ![[machine-learning-30.png]]
 
 ## CNN
 - image classification
@@ -184,7 +185,7 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 		- channels
 			- RGB
 	- convert 3D tensor to 1D vector as input
-- ![](https://i.imgur.com/LB6yKi1.png)
+- ![[machine-learning-31.png]]
 - alpha go
 	- 下圍棋: 19x19 (棋盤格子數) classification problem
 	- treat 棋盤 as an image and use CNN
@@ -201,7 +202,7 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 
 ### receptive field
 - each neuron has a part as input, instead of giving in the whole image
-- ![](https://i.imgur.com/HH7094C.png)
+- ![[machine-learning-32.png]]
 - typical settings
 	- kernel size = 3x3 (length x width)
 	- each receptive field has a set of neurons
@@ -209,7 +210,7 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 		- s.t. otherwise things at the border can't be detected
 	- stride = the step, the distance between 2 receptive field
 	- when receptive field is over the image border, do padding i.e. filling values e.g. 0s -> zero padding
-	- ![](https://i.imgur.com/YAxnvFY.png)
+	- ![[machine-learning-33.png]]
 
 ### filter
 - parameter sharing
@@ -219,11 +220,11 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- a set of weight
 	- used to identify certain patterns
 	- do inner product with receptive field -> feature map, then find fields giving big numbers
-		- ![](https://i.imgur.com/3saRWjG.png)
-		- ![](https://i.imgur.com/duxG4h8.png)
-- ![](https://i.imgur.com/0AqkWR4.png)
+		- ![[machine-learning-34.png]]
+		- ![[machine-learning-35.png]]
+- ![[machine-learning-36.png]]
 - typical settings
-	- ![](https://i.imgur.com/03gpCu9.png)
+	- ![[machine-learning-37.png]]
 
 ### convolution layer
 - fully connected
@@ -238,7 +239,7 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- convolution layer
 	- bigger bias
 		- good for specific tasks e.g. image classification
-- ![](https://i.imgur.com/H8vynPQ.png)
+- ![[machine-learning-38.png]]
 - neural network using convolutional layer -> CNN
 
 ### pooling
@@ -247,11 +248,11 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- have enought compulation resource -> can omit pooling
 - max-pooling
 	- only select the larger number after applying filter
-	- ![](https://i.imgur.com/1a7nHw8.png)
+	- ![[machine-learning-39.png]]
 
 ## self attention
 - input a (set of) vector(s)
-	- ![](https://i.imgur.com/moAtsBl.png)
+	- ![[machine-learning-40.png]]
 	- one-hot vector cons
 		- treat each as independent, but there may be some correlations for some
 	- graph -> a set of vectors
@@ -262,29 +263,29 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- can consider neighbor wil fully-connected network
 	- to consider the whole input sequence -> self-attention
 - can use self-attention multiple times
-	- ![](https://i.imgur.com/wtMQzsZ.png)
+	- ![[machine-learning-41.png]]
 	- FC = fully-connected
 	- use fully-connected to focus, use self-attention to consider the whole
 - computation
-	- ![](https://i.imgur.com/PKUO4so.png)
+	- ![[machine-learning-42.png]]
 	- $\alpha$ = attention score
 		- the correlation between 2 vectors
-			- ![](https://i.imgur.com/bcicrjz.png)
+			- ![[machine-learning-43.png]]
 		- 2 methods to compute
-			- ![](https://i.imgur.com/APFgzCt.png)
+			- ![[machine-learning-44.png]]
 			- left is more common
 - get all $\alpha$ and calculated weighted sum -> b1
-	- ![](https://i.imgur.com/AsUfGJJ.png)
+	- ![[machine-learning-45.png]]
 - full calculation
-	- ![](https://i.imgur.com/XZp8Ae6.png)
-	- ![](https://i.imgur.com/JvbptC8.png)
-	- ![](https://i.imgur.com/yCO691y.png)
+	- ![[machine-learning-46.png]]
+	- ![[machine-learning-47.png]]
+	- ![[machine-learning-48.png]]
 - multi-head
-	- ![](https://i.imgur.com/WqxjoZz.png)
-	- ![](https://i.imgur.com/xG9i6xJ.png)
+	- ![[machine-learning-49.png]]
+	- ![[machine-learning-50.png]]
 - positional
 	- normal self-attention is indifferent to position -> add positional vector yourselfof 
-	- ![](https://i.imgur.com/TA28g2o.png)
+	- ![[machine-learning-51.png]]
 - truncated self-attention
 	- not seeing the whole 
 	- speech
@@ -294,50 +295,50 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- recurrent neural network
 	- largely replaced by self-attention
 	- RNN is sequential -> slow
-	- ![](https://i.imgur.com/C1iOGz4.png)
+	- ![[machine-learning-52.png]]
 
 ## batch normalization
 - feature normalization
 	- normalize to mean = 0, variance = 1
-		- ![](https://i.imgur.com/hdX881l.png)
+		- ![[machine-learning-53.png]]
 	- gradient descent converges faster after normalization
 	- error surface changed
-		- ![](https://i.imgur.com/9zszuQm.png)
+		- ![[machine-learning-54.png]]
 - batch normalization
 	- 只對一個 batch 做 feature normalization
-		- ![](https://i.imgur.com/R60MLCH.png)
+		- ![[machine-learning-55.png]]
 	- at testing, mean and std are calculated on a moving average basis
 		- otherwise will need to wait for enought data to be able to calculate
-		- ![](https://i.imgur.com/nPGDwJC.png)
+		- ![[machine-learning-56.png]]
 	- faster to converge (to the same accuracy)
-		- ![](https://i.imgur.com/e9SUpjL.png)
+		- ![[machine-learning-57.png]]
 - batch normalization is one of the many normalization methods
-	- ![](https://i.imgur.com/sagKNLY.png)
+	- ![[machine-learning-58.png]]
 
 ## transformer
 - seq2seq
 	- input sequence, output sequence
 	- decide size of output sequence itself
 	- architecture
-		- ![](https://i.imgur.com/3P2v5Xl.png)
-		- ![](https://i.imgur.com/elg5Ik8.png)
+		- ![[machine-learning-59.png]]
+		- ![[machine-learning-60.png]]
 	- encoder
-		- ![](https://i.imgur.com/t7rkj9i.png)
+		- ![[machine-learning-61.png]]
 	- decoder
 		- minimize cross entropy
 		- teacher forcing
 			- give decoder correct value to teach it
 		- a "Begin of Sentence" one-hot vector
 		- output a stop one-hot vector -> terminate
-			- ![](https://i.imgur.com/oE1U2Lj.png)
+			- ![[machine-learning-62.png]]
 		- AT, autoregressive
 			- take previous output as input (like RNN)
 			- error may propagates
-			- ![](https://i.imgur.com/ZfS9gkR.png)
+			- ![[machine-learning-63.png]]
 		- NAT, non-autoregressive
 			- parallel
 			- decoder performance worse than AT
-			- ![](https://i.imgur.com/xSRX3ZT.png)
+			- ![[machine-learning-64.png]]
 - seq2seq usage
 	- multi-label classification
 		- decide hoe many class itself
@@ -345,7 +346,7 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 - copy mechanism
 	- pointer network
 	- able to copy a sequence from input and output
-	- ![](https://i.imgur.com/cW9FNjb.png)
+	- ![[machine-learning-65.png]]
 - summarization
 - guided attention
 	- force training in certain way
@@ -371,14 +372,14 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 		- fix generator, train discriminator
 		- fix discriminator, train generator
 			- concat generator & discriminator but only update the parameters of generator
-			- ![](https://i.imgur.com/7HG2jCU.png)
+			- ![[machine-learning-66.png]]
 - theory
 	- minimize the divergence
-		- ![](https://i.imgur.com/NB3tjPH.png)
+		- ![[machine-learning-67.png]]
 	- difficult to train
 	- Wasserstein distance
 		- min overhead needed to transform a distribution to another
-		- ![](https://i.imgur.com/53o8PGi.png)
+		- ![[machine-learning-68.png]]
 
 ## Auto-Encoder
 - autoencoder & variational autoencoder
@@ -386,7 +387,7 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- <https://towardsdatascience.com/f70510919f73>
 - self-supervised
 	- no need label
-- ![](https://i.imgur.com/FsfL08t.png)
+- ![[machine-learning-69.png]]
 - encode high dim thing into low dim -> bottleneck
 - decide low dim back to high dim
 
@@ -408,28 +409,29 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 	- <https://medium.datadriveninvestor.com/visualizing-neural-networks-using-saliency-maps-in-pytorch-289d8e244ab4>
 
 ### Smooth Grade
+
 - add random noisy and generate saliency map
 
 ## Domain Adaptation
 
 - adapt a model into a different domain 
 	- e.g. similar but different form of data
-	- ![](https://i.imgur.com/qEHU2R9.png)
+	- ![[machine-learning-70.png]]
 - use feature extractor to extract the key features
 	- goal: feature extracted from source == from data
 - use label predictor to predict the class from the extracted features
-- ![](https://i.imgur.com/Q9Uyfcp.png)
+- ![[machine-learning-71.jpg]]
 
 ## Life Long Learning
 
 - learn new tasks continuonsly
 	- can be new sets of data, new domains, etc.
-	- ![](https://i.imgur.com/44IGbvg.png)
+	- ![[machine-learning-72.png]]
 - can't learn multiple tasks sequentially - catastrophic forgetting
-	- ![](https://i.imgur.com/ZXqHLUE.png)
+	- ![[machine-learning-73.png]]
 - but can learn multiple tasks simultaneously - multi-task learning
-	- ![](https://i.imgur.com/FnsL4G8.png)
-	- ![](https://i.imgur.com/55Q1Uik.png)
+	- ![[machine-learning-74.png]]
+	- ![[machine-learning-75.png]]
 	- not practical
 		- need to store all the task data
 		- need extreme computation
@@ -445,7 +447,7 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 
 ### Bellman equation
 
-![](https://i.imgur.com/3kQJVSc.png)
+![[machine-learning-76.png]]
 
 - $\alpha$ = learning rate
 - $\gamma$ = discount rate
@@ -459,21 +461,21 @@ If represent each state & each action as an interger
 - iterate and update cell values (like dp)
 	- given a state -> choose the action resulting to greatest q value -> update cell value & go to new state
 
-![](https://i.imgur.com/li4JBVi.png)
+![[machine-learning-77.png]]
 
 ### Monte-Carlo (MC)
 
-![](https://i.imgur.com/nXVGB4s.png)
+![[machine-learning-78.png]]
 
 ### Temporal-difference (TD)
 
 $V^{\pi}(s_{t+1})$ = 下個 action 之後的 cummulative expected payoff = 現在 action 之後的 cummulative expected payoff - 這次的 reward
 
-![](https://i.imgur.com/RPr19Xu.png)
+![[machine-learning-79.png]]
 
 ### MC vs. TD
 
-![](https://i.imgur.com/d59PSIh.png)
+![[machine-learning-80.png]]
 
 ## Deep Q Learning
 
