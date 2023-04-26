@@ -13,7 +13,7 @@ See [[Macroeconomics#Ch2 產出與物價的衡量]]
 
 simplified diagram
 
-![](https://i.imgur.com/ZFzGNR2.png)
+![[principle-of-macroeconomics-1.png]]
 
 ### GDP Deflator
 
@@ -26,11 +26,11 @@ GDP deflator = $\dfrac{\text{target year nominal GDP}}{\text{real GDP} = \text{b
 
 ### problems
 
-![](https://i.imgur.com/chDM6Iu.png)
+![[principle-of-macroeconomics-2.png]]
 
-![](https://i.imgur.com/Y4MIB7m.png)
+![[principle-of-macroeconomics-3.png]]
 
-![](https://i.imgur.com/fHkyq5E.png)
+![[principle-of-macroeconomics-4.png]]
 
 ## Ch24 Cost of Living
 
@@ -46,7 +46,7 @@ CPI = $\dfrac{\text{target year basket price}}{\text{base year basket price}}$
 	- new goods introduced in the market -> more alternatives -> less consmption on original goods -> original goods' prices rise -> overstate cost of living
 	- quality of goods increases -> price increases -> overstate cost of living
 
-![](https://i.imgur.com/grwo2h9.png)
+![[principle-of-macroeconomics-5.png]]
 
 ### Interest Rate
 
@@ -69,13 +69,13 @@ $$Y=A\times f(L,K,H,N)$$
 	- price natural resources are stable or falling
 	- meaning technology improvement mitigates the depletion of natural resources
 
-![](https://i.imgur.com/B1HKgEJ.png)
+![[principle-of-macroeconomics-6.png]]
 
 ### Constant return to scale
 
 If all inputs change by x%, then the output will also change by x%
 
-![](https://i.imgur.com/1G1QfwV.png)
+![[principle-of-macroeconomics-7.png]]
 
 ### Things that help the economy
 
@@ -120,7 +120,7 @@ $$S=Y-C-G=(Y-T-C)+(T-G)$$
 - supply = savings
 - demand = investment
 
-![](https://i.imgur.com/QVlNRcy.png)
+![[principle-of-macroeconomics-8.png]]
 
 ## Ch27 Finance 101
 
@@ -132,7 +132,7 @@ $$u(E(X))>E(u(X))$$
 
 See this utility vs. wealth diagram, with the green line being the person's utility funciton.
 
-![](https://i.imgur.com/522fdp3.png)
+![[principle-of-macroeconomics-9.png]]
 
 $$u(a\cdot C^H+b\cdot C^L)>a\cdot u(C^H)+b\cdot u(C^L)$$
 
@@ -153,7 +153,7 @@ See also [[Ch18 Risk and Uncertainty]]
 
 About M1 & M2, see [[Ch3 貨幣與支付系統#貨幣總計數]]
 
-![](https://i.imgur.com/2UKdoox.png)
+![[principle-of-macroeconomics-10.png]]
 
 ### Bank Reserves
 
@@ -165,19 +165,19 @@ Suppose total currency = $1 and reserve rate = R, and there is an infinite numbe
 
 A deposits 1 to bank A -> B borrows 1-R from bank A and deposits it to bank B -> C borrows (1-R)(1-R) from bank B and deposits it to bank C -> ... -> 1/R of deposits in the system
 
-![](https://i.imgur.com/i8os3KE.png)
+![[principle-of-macroeconomics-11.png]]
 
-![](https://i.imgur.com/LezWFLT.png)
+![[principle-of-macroeconomics-12.png]]
 
-![](https://i.imgur.com/2H5xt8G.png)
+![[principle-of-macroeconomics-13.png]]
 
-![](https://i.imgur.com/HcJLhEV.png)
+![[principle-of-macroeconomics-14.png]]
 
 ### Balance Sheet
 
 leverage = assets / capital = assets / assets - liabilities
 
-![](https://i.imgur.com/BIqY9RO.png)
+![[principle-of-macroeconomics-15.png]]
 
 ### Fed
 
@@ -186,7 +186,7 @@ See also [[Ch16 傳統與非傳統的貨幣政策工具]]
 - Open Market Operations
 	- See [[Ch16 傳統與非傳統的貨幣政策工具#16.3 公開市場操作 open market operation]]
 	- buy & sell government bonds to change money supply
-	- ![](https://i.imgur.com/ku6WHXc.png)
+	- ![[principle-of-macroeconomics-16.png]]
 - discount window
 	- bank can borrow money from Fed's discount window
 	- interest rate of discount window = discount rate
@@ -201,13 +201,13 @@ See also [[Ch16 傳統與非傳統的貨幣政策工具]]
 - price level $P$ = the price of a basket of goods
 - value of money = $1/P$
 
-![](https://i.imgur.com/ZrGnxlv.png)
+![[principle-of-macroeconomics-17.png]]
 
 ### Money Demand
 
 higher price level -> lower value of money -> higher money demand
 
-![](https://i.imgur.com/qDVWzhQ.png)
+![[principle-of-macroeconomics-18.png]]
 
 ### Nominal & Real
 
@@ -219,7 +219,7 @@ higher price level -> lower value of money -> higher money demand
 - price level $P$ = nominal GDP / real GDP
 - velocity of money $V$ = nominal GDP / money supply
 
-![](https://i.imgur.com/Mo9bmrB.png)
+![[principle-of-macroeconomics-19.png]]
 
 **Quantity Theory of Money**
 
@@ -236,3 +236,22 @@ Unexpected high inflation helps borrowers and harms loaners.
 See [[Ch13 中央銀行的功能與政策目標#物價穩定]]
 
 
+## Ch28 Unemployment
+
+### terminology
+
+- employed = paid employees || self-employed || unpaid workers in a family business
+- unemployed = not employed but have looked for a job within the last 4 weeks
+- not in labor force = else
+
+### measurements
+
+- population = employed + unemployed + not in labor force
+- labor force = employed + unemployed
+- unemployment rate (u-rate) = unemployed / labor force
+	- does not distinguish between full-time & part-time 
+- labor-force participation rate (LFPR) = labor force / adult population
+
+### structural unemployment
+
+![[pmacro-wage-labor.png]]

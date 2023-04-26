@@ -106,12 +106,12 @@ $pq = k$
 	- human capital
 		- pay more for employee's information & skill (human capital)
 - in long run, a competitive firm supply at price = min AC
-- ![](https://i.imgur.com/CMKqUZi.png)
+- ![[principle-of-microeconomics-1.png]]
 - binding = 強制性
 
 ## 題目
 
-- ![](https://i.imgur.com/A8R51mJ.png)
+- ![[principle-of-microeconomics-2.png]]
 	- 舊款主要客群是對 demand 彈性較大者，so price reduction 不需太大就能達到顯著 quantity increase
-- ![](https://i.imgur.com/BqzOFei.png)
+- ![[principle-of-microeconomics-3.png]]
 	- 很多廠商 exit → market supply 下降 → market price i.e. short run price 上升 > min AC → firm earns positive economic profits → 廠商進駐，提高 market supply → market price 降低，直到 market price = firm's min AC → long run equilibrium
