@@ -13,7 +13,7 @@ parent: Money and Banking
 
 yield curve inversion 收益曲線反轉／倒掛 
 : 短期利率 > 長期利率
-  ![Image](https://i.imgur.com/oDX1zQy.png)
+  ![[ch1-前導-1.png]]
   > 美國多次經濟衰退前曾發生殖利率曲線反轉的現象，因此許多人將其視為衰退的預兆。殖利率曲線反轉，意昧著長債殖利率因需求強勁而下滑，預示未來利率將下跌。
 
 St. Louis Fed
@@ -41,7 +41,7 @@ St. Louis Fed
 <br>
 
 ## [[殭屍企業]]
-![Image](https://i.imgur.com/qDBStgB.png)
+![[ch1-前導-2.png]]
 成立10年以上，連續3年利息覆蓋率(稅前息前淨利/利息支出)小於1
 
 ```dataview

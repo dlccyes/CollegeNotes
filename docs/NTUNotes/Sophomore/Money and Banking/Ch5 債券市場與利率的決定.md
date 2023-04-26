@@ -30,12 +30,12 @@ parent: Money and Banking
 ### 需求&供給線同時移動
 - 費雪效果 Fisher Effect：預期物價膨脹
   - 需求線向右，供給線向左 → 均衡時名目利率 ↑
-![Image](https://i.imgur.com/VKEtGIY.png)
+![[ch5-債券市場與利率的決定-1.png]]
 - 經濟景氣
   - 需求現向右，供給線向右 → 均衡時名目利率不一定較高 or 低
     - 以歷史經驗來說，景氣好 → 均衡利率 ↑
       - 代表供給增加幅度 > 需求增加幅度
-![Image](https://i.imgur.com/HweJj1c.png)
+![[ch5-債券市場與利率的決定-2.png]]
 
 ## 風險風散
 - 系統性風險 systematic risk 

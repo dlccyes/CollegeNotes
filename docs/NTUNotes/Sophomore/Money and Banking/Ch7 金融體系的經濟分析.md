@@ -4,7 +4,9 @@ layout: meth
 ---
 
 # Ch7 金融體系的經濟分析
+
 ## 金融體系概況
+
 - 金融體系
   - 金融中介主導型體系 financial-intermediary-based system
     - 資金主要由銀行引導
@@ -25,13 +27,14 @@ layout: meth
       - 提供風險管理工具
     - 缺
       - 可能妨礙投資者獲取資訊誘因 (?)
-  - ![Image](https://i.imgur.com/TiSSls1.png)
+  - ![[ch7-金融體系的經濟分析-1.png]]
   - 但若是算入所有金融中介（含 shadow bank），美國也有 50 % 左右
 - 企業外部融資主要來源為銀行
   - 即使美國
   - 發行 security 非企業取得資金主要管道
 
 ## 交易成本與金融中介的重要性
+
 - 規模經濟 → 成本降低
 - 提供支付工具
   - 還有記錄 record keeping 功能
@@ -42,6 +45,7 @@ layout: meth
 - 減少資訊不對稱問題
 
 ## 資訊不對稱 → [[adverse selection]]
+
 - 解決
   - signaling
     - 擁有資訊方 signal 給資訊不足方
@@ -63,6 +67,7 @@ layout: meth
 [^1]:聯合徵信中心：個人信用資訊，會員金融機後有契約時可 access，紀錄有期限
 
 ## 道德風險
+
 - 股權契約
   - 代理問題
     - 也是資訊不對稱問題
@@ -95,7 +100,11 @@ layout: meth
   - 銀行貸款為企業重要資金來源
 
 ## 題目
-https://www.evernote.com/l/ApD4GvUpbwtHk4F2fkQonELJMsAfdL7bt3I/
-![Image](https://i.imgur.com/gDdSRNz.png)
-![Image](https://i.imgur.com/Hk9iXWr.png)
-![Image](https://i.imgur.com/iqELJkH.png)
+
+<https://www.evernote.com/l/ApD4GvUpbwtHk4F2fkQonELJMsAfdL7bt3I/>
+
+![[ch7-金融體系的經濟分析-2.jpg]]
+
+![[ch7-金融體系的經濟分析-3.jpg]]
+
+![[ch7-金融體系的經濟分析-4.jpg]]

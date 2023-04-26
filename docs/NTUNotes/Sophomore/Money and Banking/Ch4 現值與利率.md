@@ -117,6 +117,6 @@ output
 
 ## 題目
 
-![Image](https://i.imgur.com/rsHAkRb.png)  
+![[ch4-現值與利率-1.png]]  
 
 0.135x0.6-0.1 = -0.019

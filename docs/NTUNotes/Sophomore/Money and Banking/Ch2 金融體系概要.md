@@ -14,7 +14,7 @@ layout: meth
 
 ## 金融體系
 
-![Image](https://i.imgur.com/ULnBu3F.png)
+![[ch2-金融體系概要-1.png]]
 
 ### 直接金融
 
@@ -34,9 +34,9 @@ layout: meth
 
 ### 定義
 
-![Image](https://i.imgur.com/nBqBQSj.png)
+![[ch2-金融體系概要-2.png]]
 
-![Image](https://i.imgur.com/0aeLOjV.png)
+![[ch2-金融體系概要-3.png]]
 
 ### 基本特性
 
@@ -113,7 +113,7 @@ layout: meth
 - 資本市場 capital market
   - \> 1y or 無期限
 
-![Image](https://i.imgur.com/CZ0j6Q1.png)
+![[ch2-金融體系概要-4.png]]
 
 期限利差
 : 長期利率 & 短期利率之差
@@ -146,7 +146,7 @@ e.g. 10 年期 & 3 個月公債殖利率利差
 - 商業本票 commercial paper：企業所發行的本票 
   - 本票：支票 but 無銀行為仲介，peer to peer
   - 台灣最主要貨幣市場工具
-- ![Image](https://i.imgur.com/jbJtAIz.png)
+- ![[ch2-金融體系概要-5.png]]
     - 美國則是國庫券&可轉讓定期存單佔比較大
 - 國庫券 Treasury bills：短期債券
 - 可轉讓定期存單 negotiable certificates of deposit
@@ -199,7 +199,7 @@ e.g. 10 年期 & 3 個月公債殖利率利差
   - MBS liquidity < 公債
   - [[次貸危機]]：fed 買 MBS 賣公債，注入流動性到市場
 
-![Image](https://i.imgur.com/vgH9F5h.png)
+![[ch2-金融體系概要-6.png]]
 
 ## 金融仲介機構
 
@@ -211,7 +211,7 @@ e.g. 10 年期 & 3 個月公債殖利率利差
 
 ### 中央銀行分類
 
-![Image](https://i.imgur.com/huSqOfS.png)
+![[ch2-金融體系概要-7.png]]
 
 ### 各機構
 
@@ -224,7 +224,7 @@ e.g. 10 年期 & 3 個月公債殖利率利差
     - 定存
     - 活存
   
-  ![Image](https://i.imgur.com/pXmnxFP.png)
+  ![[ch2-金融體系概要-8.png]]
 
 [^2]:貼現：匯票到期前，付點錢給銀行讓銀行馬上把錢給你，把權力轉給銀行，到期時銀行再向承兌人收款 [ref](https://wiki.mbalib.com/zh-tw/%E7%A5%A8%E6%8D%AE%E8%B4%B4%E7%8E%B0)
 
@@ -235,16 +235,16 @@ e.g. 10 年期 & 3 個月公債殖利率利差
     - 企業放款
   - 中國輸出入銀行：協助政府貿易 [ref](https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9C%8B%E8%BC%B8%E5%87%BA%E5%85%A5%E9%8A%80%E8%A1%8C)
 - 中央銀行
-	- ![Image](https://i.imgur.com/NOgiZ7S.png)
+	- ![[ch2-金融體系概要-9.png]]
 	- 銀行買中央銀行定期存單－台灣特有
 - 基層金融機構：限會員
   - 信用合作社
-	  - ![Image](https://i.imgur.com/pb8bHAF.png)
+	  - ![[ch2-金融體系概要-10.png]]
   - 農漁會信用部
-	  - ![Image](https://i.imgur.com/TYjxGms.png)
+	  - ![[ch2-金融體系概要-11.png]]
 - 中華郵政公司儲匯處
   - 郵政儲金轉存央行(?)
-  - ![Image](https://i.imgur.com/fqzHvgu.png)
+  - ![[ch2-金融體系概要-12.png]]
 - 保險公司
   - 人壽保險公司：跟人有關
   - 產物保險公司：跟財產有關
@@ -299,11 +299,11 @@ e.g. 10 年期 & 3 個月公債殖利率利差
 
 ## 題目
 
-![Image](https://i.imgur.com/CoHp0kK.png)  
+![[ch2-金融體系概要-13.png]]  
 
 ?
 
-![Image](https://i.imgur.com/qpmDc9a.png)  
+![[ch2-金融體系概要-14.png]]  
 
 $(1.08^{\frac{2}{12}}-1)\times 0.9+100000$  
 貼現率：利息收取比率

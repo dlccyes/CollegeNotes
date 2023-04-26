@@ -5,7 +5,9 @@ layout: meth
 # Ch8 銀行的經營管理
 
 ## 商業銀行的資產負債表
+
 ### 資產
+
 - 庫存現金
   - 庫存新台幣、運送中新台幣、週轉金
   - 法定準備金：庫存現金 vault cash + 準備金 reserves （放在央行，為對中央銀行債權）
@@ -15,6 +17,7 @@ layout: meth
 - 證券投資
 
 ### 資金來源
+
 - 負債
   - 活期性存款
     - 支票存款、活期存款、活期儲蓄存款
@@ -37,6 +40,7 @@ layout: meth
 e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2B、受捐贈 \$1M
 
 ## 銀行管理原則
+
 - 流動性管理 liquidity management
   - 減少放款
     - 召回放款
@@ -49,7 +53,7 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
     - 若抵銷呆帳後資本變為負值 → 表資產（放款+準備金） < 負債（存款） → 結清後無法賠清存款人
     - 銀行倒閉後，債權人每一元可拿回 $\frac{資產}{負債}$ 元
     e.g.
-    ![Image](https://i.imgur.com/NrSt6ZV.png)
+    ![[ch8-銀行的經營管理-1.png]]
     可拿回 \$95/96 per \$1 債權
   - 資本太高 → 股東報酬低
     - 淨值報酬率 / 股東權益報酬率 return on equity, ROE
@@ -102,7 +106,7 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
     - 未來一年內會被利率波動影響 → interest-rate sensitive
     - GAP = 對利率敏感資產 - 對利率敏感負債
       - 利潤變動 = 利率變動 x GAP    
-    - ![Image](https://i.imgur.com/7LOXOwr.png)
+    - ![[ch8-銀行的經營管理-2.png]]
       - 活存因為利率太低，所以算非利率敏感
     - 降低利率風險方法
       - 利率交換 interest rate swap
@@ -110,7 +114,9 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
       - 機動利率房債 adjustable-rate mortgage, ARM
         - 浮動利率
         - 可能增加信用風險（客戶因利率大漲而倒帳）
+
 ### 利率變動對銀行資產&負債影響
+
   - 到期期限模型 maturity model
     - 銀行資產負債表是用帳面價值會計法（book value accounting），但用市價會計法（mark to market）才有實質意義
       - 清算時是看市值而非帳面價值
@@ -118,18 +124,20 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
     - 銀行貸長借短，資產期限 >> 負債期限
       - 利率上升 → 資產跌幅 >> 負債跌幅
       e.g. if 利率 10% → 11%
-      ![Image](https://i.imgur.com/Yv571XZ.png)
+      ![[ch8-銀行的經營管理-3.png]]
         - 美國儲貸機構類似上圖，1979-1982 利率大漲 → 多家倒閉 
   - 存續期間模型 duration model
-    - ![Image](https://i.imgur.com/Ubylgz4.png)
+    - ![[ch8-銀行的經營管理-4.png]]
       - <https://www.masterhsiao.com.tw/CatBonds/Duration/Duration.php>
     - 利率上升 1% → 價值下降 D%
 
 ## 資產負債表之外的風險
+
 資產負債表外營業項目：或有資產 contingent asset、或有負債 contingent liability
   - 某事件發生時，會進入資產負債表
 
 ### 貸款承諾 loan commitment / 約定融資額度
+
   - 為或有資產
   - 承諾貸款人在一定條件內可隨時向銀行貸款
     - 客戶來貸款 → 上資產負債表
@@ -163,6 +171,7 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
     - 為了吸引客戶，需讓客戶認為是風險低、經營穩健的銀行
 
 ### 信用狀 letters of credit
+
   - 為或有負債
   - 保證客戶會支付款項
     - 客戶有付款 → 不影響資產負債表
@@ -177,6 +186,7 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
       - 銀行擔保 → 信用評等上升 → 可用較好的利率籌資
 
 ### 放款出售 loan sale
+
 - 賣放款給其他金融機構
 - 賣方會是較會發掘客戶、判斷客戶風險的銀行
 - 賣出的利率為初始放款利率 - 0.5 → 現值較高 → 賺價差
@@ -192,6 +202,7 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
     - → 或有負債
 
 ### 其他風險
+
 - 信譽風險
 - 作業風險
   - 法律風險
@@ -199,10 +210,12 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
 - 策略風險
 
 ## 資產證券化與金融機構的風險
+
 ### 資產證券化 securitization
+
 - 將資產如債權包一包發行成證券售出
 - 單位
-![Image](https://i.imgur.com/8MRdNEj.png)
+![[ch8-銀行的經營管理-5.png]]
   - 創始機構 originator
     - 放款者
   - 特殊目的機構 special purpose vehicle, SPV
@@ -220,6 +233,7 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
   - 錯綜複雜，風險不清
 
 ### 影子銀行體系 shadow banking system
+
 - 業務如金融中介，但未受金融監理&管制的機構
 - 美國
   - 投資銀行 investment bank
@@ -249,11 +263,17 @@ e.g. 股票發行 \$50 but 面額 \$10、大樓 \$1B 購入 but 現在估值 \$2
         - 中長期債券 & 房貸保證券
 
 ## 題目
-![](https://i.imgur.com/Rp9CKtY.jpg)
-![](https://i.imgur.com/exqw7Zj.jpg)
-![](https://i.imgur.com/ihRewWw.jpg)
-![](https://i.imgur.com/fhOUps5.jpg)
+
+![[ch8-銀行的經營管理-6.jpg]]
+
+![[ch8-銀行的經營管理-7.jpg]]
+
+![[ch8-銀行的經營管理-8.jpg]]
+
+![[ch8-銀行的經營管理-9.jpg]]
 
 ### 詳解
-![](https://i.imgur.com/SJqW3Xm.jpg)
-![](https://i.imgur.com/fauGWr9.jpg)
+
+![[ch8-銀行的經營管理-10.jpg]]
+
+![[ch8-銀行的經營管理-11.jpg]]
