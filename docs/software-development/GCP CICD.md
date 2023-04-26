@@ -72,12 +72,12 @@ gcloud builds submit --tag="us-central1-docker.pkg.dev/${PROJECT_ID}/my-reposito
 ```
 
 go to https://console.cloud.google.com/artifacts to check if succeed  
-![](https://i.imgur.com/zxYqXEp.png)
+![[gcp-cicd-1.png]]
 
 ## create CI pipeline
 
 go to [triggers](https://console.cloud.google.com/cloud-build/triggers/) and create a trigger  
-![](https://i.imgur.com/bIfnORr.png)
+![[gcp-cicd-2.png]]
 so it the trigger would be triggered and run `cloudbuild.yaml` when you push something to a branch  
 ```yaml
 # [START cloudbuild]
@@ -121,7 +121,7 @@ go to [build history](https://console.cloud.google.com/cloud-build/builds) to ch
 you can click the build to see log
 
 go to [artifact registry](https://console.cloud.google.com/artifacts/docker/) to see if image is up
-![](https://i.imgur.com/iJobrkb.png)
+![[gcp-cicd-3.png]]
 
 ## create CD pipeline
 - candidate branch
@@ -220,7 +220,7 @@ gcloud source repos set-iam-policy \
 ### create CD trigger
 go to triggers and create a trigger  
 <!--⚠️Imgur upload failed, check dev console-->
-![](https://i.imgur.com/i0MUZuf.png)
+![[gcp-cicd-4.png]]
 
 #### modify CI to trigger CD
 
@@ -312,10 +312,10 @@ go to build history & artifact registry to see if successful
 
 ## test complete pipeline
 go to Kubernetes Engine → Services & Ingress and click on Endpoints
-![](https://i.imgur.com/dvoKmM6.png)
+![[gcp-cicd-5.png]]
 
 should see Hello World!
-![](https://i.imgur.com/YYbd1Cg.png)
+![[gcp-cicd-6.png]]
 
 go to `hello-cloudbuild-app` and change something, commit push and it should trigger the CI/CD pipeline
 ```
@@ -330,6 +330,6 @@ git push google master
 go to the endpoint again and see if the changes are applied (may took some time)
 
 go to build history
-![](https://i.imgur.com/rRQ7f6Y.png)
+![[gcp-cicd-7.png]]
 
 go to https://source.cloud.google.com/repos to see your repos 

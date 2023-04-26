@@ -946,7 +946,7 @@ See <https://github.com/Microsoft/vscode-go/issues/1377#issuecomment-347431580>
 - [Benchmarking in Golang: Improving function performance](https://blog.logrocket.com/benchmarking-golang-improve-function-performance/#:~:text=Running%20a%20benchmark%20in%20Go,subset%20of%20your%20benchmark%20functions.)
 - [Chapter 34: Benchmarks | Practical Go Lessons](https://www.practical-go-lessons.com/chap-34-benchmarks)
 
-![](https://i.imgur.com/dAt851z.png)
+![[go-1.png]]
 
 ## Mock
 

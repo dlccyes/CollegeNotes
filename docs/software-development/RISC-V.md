@@ -20,9 +20,9 @@ converting languages into assembly
 C++ can convert to RISC-V
 
 ## RV64I Instruction Sets
-![](https://i.imgur.com/QitoPQd.png)
+![[risc-v-1.png]]
 
-![](https://i.imgur.com/v5eQayh.png)
+![[risc-v-2.png]]
 https://book.rvemu.app/instruction-set/01-rv64i.html
 
 https://programmermedia.org/root/陳鍾誠/課程/系統程式/10-riscv/_doc/RISC-V編碼表.md
@@ -31,13 +31,13 @@ https://programmermedia.org/root/陳鍾誠/課程/系統程式/10-riscv/_doc/RIS
 - https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md#general-registers
 - https://riscv.org/wp-content/uploads/2015/01/riscv-calling.pdf
 - > Values are returned from functions in integer registers a0 and a1 and floating-point registers fa0 and fa1.
-- ![](https://i.imgur.com/xpNQn5r.png)
-	- ![](https://i.imgur.com/0clQgx7.png)
+- ![[risc-v-3.png]]
+	- ![[risc-v-4.png]]
 
 ## syntax
 ### operations
-![](https://i.imgur.com/XC0k2XB.png)
-![](https://i.imgur.com/PX629AE.png)
+![[risc-v-5.png]]
+![[risc-v-6.png]]
 `add` for register + register, `addi` for register + number
 
 - `add a, b, c` → a=b+c
@@ -120,7 +120,7 @@ __start:
     ecall       # and exit
 ```
 
-![](https://i.imgur.com/zd27zIq.png)
+![[risc-v-7.png]]
 
 #### bubble sort
 https://github.com/Shengyuu/Assignment_computer_arch/blob/master/Lab1_bubble_sort/bubble.s
@@ -197,4 +197,4 @@ exit: lw   $ra, 0($sp)        # Exit code
 ### iterative
 #### Fibonacci
 <https://my.ece.utah.edu/~kstevens/5710/mips.pdf>
-![](https://i.imgur.com/5dEPF2f.png)
+![[risc-v-8.png]]

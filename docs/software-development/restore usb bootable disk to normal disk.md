@@ -16,4 +16,4 @@ reference: <https://www.balena.io/blog/did-etcher-break-my-usb-sd-card/>
 7.  `select partition 1`
 8.  `format quick`
 
-![](https://i.imgur.com/bx7Urae.png)
+![[restore-usb-bootable-disk-to-normal-disk-1.png]]

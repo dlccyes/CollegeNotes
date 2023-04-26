@@ -43,7 +43,7 @@ https://www.chipverify.com/verilog/verilog-always-block
 
 ## intro
 
-![](https://i.imgur.com/7ytJc9s.png)
+![[verilog-1.png]]
 
 - levels of modeling
 	- behavioral level
@@ -104,7 +104,7 @@ https://www.chipverify.com/verilog/verilog-always-block
 		- `h` = hexadecimal
 	- only number → 32-bit binary (不建議)
 	- e.g.
-		- ![](https://i.imgur.com/0KdXdyH.png)
+		- ![[verilog-2.png]]
 - parameter
 	- 就是 variable
 
@@ -133,7 +133,7 @@ https://www.chipverify.com/verilog/verilog-always-block
 - sensitivity list
 	- always block, variable 有變 → 執行
 - blocking & nonblocking
-	- ![](https://i.imgur.com/s7tkR3K.png)
+	- ![[verilog-3.png]]
 	- blocking
 		- 計算完馬上更新
 		- `x = a + b`
@@ -143,11 +143,11 @@ https://www.chipverify.com/verilog/verilog-always-block
 		- 所有指令都 parallel 進行 without interfering each other
 		- `x <= a + b`
 - 東西都要寫滿，每個 variable 都要 specify
-	- ![](https://i.imgur.com/AiY9jZM.png)
+	- ![[verilog-4.png]]
 	- not full case → latch
 	- 用 `<=` 時，沒被走道的就被默認為原值
 - switch case
-	- ![](https://i.imgur.com/RQeo9Mb.png)
+	- ![[verilog-5.png]]
 - combinational circuit
 	- memoryless
 	- use blocking
@@ -182,4 +182,4 @@ https://www.chipverify.com/verilog/verilog-always-block
 
 ## examples
 ### ALU
-![](https://i.imgur.com/X34nm9I.png)
+![[verilog-6.png]]

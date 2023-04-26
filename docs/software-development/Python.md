@@ -334,7 +334,7 @@ open htmlcov/index.html
 
 example
 
-![](https://i.imgur.com/x5A2bTt.png)
+![[python-1.png]]
 
 You can write these all into a make file
 

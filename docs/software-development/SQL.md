@@ -68,7 +68,7 @@ ORDER BY W.power DESC, WP.age DESC
 
 `JOIN` = `INNER JOIN`  
 
-![](https://i.imgur.com/6j1815K.png)
+![[sql-1.png]]
 
 ## Rank
 

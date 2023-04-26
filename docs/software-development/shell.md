@@ -179,9 +179,9 @@ enttracks&user=<user>&api_key=<api key>&format=json" | python3 -c "import json,s
 
 ## alias
 - double quote -> evaluate at creation time
-	- ![](https://i.imgur.com/lYxsveB.png)
+	- ![[shell-1.png]]
 - single quote -> evaluate at runtime
-	- ![](https://i.imgur.com/4PDOMd2.png)
+	- ![[shell-2.png]]
 
 ## tar
 

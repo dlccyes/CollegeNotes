@@ -86,7 +86,7 @@ dig www.example.com TXT
 	- `Name` = whatever, it's your subdomain name<br>e.g. `Name` = `www` -> `www.<domain name>` points to `Target`
 		- can leave it blank
 	- e.g.
-		- ![](https://i.imgur.com/nuPiOu1.png)
+		- ![[domain-1.png]]
 
  
 It may need a couple of hours to fully take effect, and you may see some weird erros in the process, so please be patient. (took about 3 hours for my Google domain to fully work)

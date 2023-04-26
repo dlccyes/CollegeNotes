@@ -300,15 +300,15 @@ Enclose your contents with a box
 
 Change compiler to `latex` in `Menu`
 
-![](https://i.imgur.com/HG16aaH.png)
+![[latex-1.png]]
 
 Add a file `latexmkrc` with content `END { system ('dvips -Ppdf output.dvi'); }` in the project root
 
-![](https://i.imgur.com/oxfWsaP.png)
+![[latex-2.png]]
 
 Compile your latex file and then download `output.dvi` in `Logs and output files` -> `Other logs and files`
 
-![](https://i.imgur.com/pk68dZc.png)
+![[latex-3.png]]
 
 References
 

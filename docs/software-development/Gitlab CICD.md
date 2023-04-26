@@ -75,7 +75,7 @@ sudo EXTERNAL_URL="http://EXTERNAL_IP" apt install ./gitlab-ee_13.0.6.deb
 
 then go to `http://external_ip`  
 you should see  
-![](https://i.imgur.com/AHK8MCg.png)
+![[gitlab-cicd-1.png]]
 
 - To login as admin, use the username `root` and the password in `/etc/gitlab/initial_root_password`
 - To use a new account, first register and then login.
@@ -102,34 +102,34 @@ Create a new project.
 
 (in repo) `Settings` → `CI/CD` → `Variables`
 
-![](https://i.imgur.com/wiVNpvW.png)
+![[gitlab-cicd-2.png]]
 
 (in GCP) go to the service account you've created, and go to manage keys → add key → create new key → json → download it (used in next step)
 
 (back to Gitlab)  
 Add `GCP_SERVICE_KEY`, the value is the key json file you've just downloaded. Uncheck `Protect variable` also.
-![](https://i.imgur.com/MfXI2kA.png)
+![[gitlab-cicd-3.png]]
 
 Add `GCP_PROJECT`, the value is your GCP project ID.  
-![](https://i.imgur.com/TkEzmts.png)
+![[gitlab-cicd-4.png]]
 
 Add `GCP_ZONE`, the value is the zone your VM's in (I think)  
-![](https://i.imgur.com/OhhOTv0.png)
+![[gitlab-cicd-5.png]]
 
 go to GCP shell and create a GKE cluster  
 `gcloud container clusters create [cluster_name] --num-nodes=2 --machine-type=n1-standard-1 --zone=us-east1-b`  
 It would take a few minutes, but you can just leave it and carry on.
 
 Back to Gitlab and add `GCP_CLUSTER_NAME`, the value is the name of the cluster you've just created.  
-![](https://i.imgur.com/W7mMI42.png)
+![[gitlab-cicd-6.png]]
 
 Add `GCP_GCR`, the value is `gcr.io/[GCP_project_ID]/[Gitlab_repo_name]`  
 (if the region you use isn't US, you probably should use `asia.gcr.io` `eu.gcr.io` etc. instead)
-![](https://i.imgur.com/tsAw5Zv.png)
+![[gitlab-cicd-7.png]]
 GCR means Google Container Registry, set this up so that later on your docker images would be pushed to GCR also.
 
 Now you have 5 variables set.  
-![](https://i.imgur.com/iuLqolO.png)
+![[gitlab-cicd-8.png]]
 
 ## Install docker on GCP VM
 Go to GCP VM terminal and install docker.  
@@ -329,7 +329,7 @@ change original values to this
 privileged = true
 ```
 (if you've set up your gitlab runner properly it's probably already like this)  
-![](https://i.imgur.com/bkK5hhy.png)
+![[gitlab-cicd-9.png]]
 
 ref:  
 <https://forum.gitlab.com/t/error-during-connect-post-http-docker-2375-v1-40-auth-dial-tcp-lookup-docker-on-169-254-169-254-no-such-host/28678/4>
@@ -342,14 +342,14 @@ push codes
 
 In your repo, go to `CI/CD` → `Jobs` to see what happened.
 
-![](https://i.imgur.com/awhlYSX.png)
+![[gitlab-cicd-10.png]]
 
 Go to [GCR](https://console.cloud.google.com/gcr/imagess), a repo containing your docker images should appear.
 
 If succeed, go to  [GKE/workload](https://console.cloud.google.com/kubernetes/workload) to see if your image is up.
 
 Go to [GKE/Services & Ingress](https://console.cloud.google.com/kubernetes/discovery) and click the endpoint, you should see this  
-![](https://i.imgur.com/tPcX7yy.png)
+![[gitlab-cicd-11.png]]
 you can also get the endpoint by  
 ```
 SERVICE_IP=$(kubectl get svc app-service \
@@ -419,7 +419,7 @@ In `test.php`, write your tests.
 - `exit(1)` will indicate the test has failed
 - <https://stackoverflow.com/a/54025268/15493213>
 
-![](https://i.imgur.com/ymbF1FD.png)
+![[gitlab-cicd-12.png]]
 
 ### Continue after failure
 <https://docs.gitlab.com/ee/ci/yaml/#allow_failure>
