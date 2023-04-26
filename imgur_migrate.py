@@ -53,12 +53,21 @@ def file_imgur_migrate(working_dir: str, file_name: str) -> None:
         response = requests.get(url)
         # use a snake-case file name
         safe_file_name = file_name.replace('.md', '').lower().replace(' ', '-')
-        image_name = f'{safe_file_name}-{i+1}{link_ext}'
+        ind = i + 1
+        image_name = f'{safe_file_name}-{ind}{link_ext}'
         image_path = os.path.join(working_dir, image_name)
+        # check if the image already exists
+        while os.path.exists(image_path):
+            ind += 1
+            image_name = f'{safe_file_name}-{ind}{link_ext}'
+            image_path = os.path.join(working_dir, image_name)
+        replaced_text = replace_external_url_link_with_internal_wiki_link(url, image_name, text)
+        if text == replaced_text:
+            continue
         # save image
+        text = replaced_text
         with open(image_path, 'wb') as f:
             f.write(response.content)
-        text = replace_external_url_link_with_internal_wiki_link(url, image_name, text)
         
     print(f"All {len(imgur_links)} images downloaded to {working_dir}")
         
