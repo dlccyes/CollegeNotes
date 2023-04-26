@@ -30,7 +30,7 @@ parent: Edge Computing
 		- small computing power
 		- little global reachability
 	- e,g, AWS Greengrass
-	- ![](https://i.imgur.com/5JDZd37.png)
+	- ![[mec-dev-white-paper-1.png]]
 
 ## MEC Advantages
 
@@ -55,7 +55,7 @@ parent: Edge Computing
 		- offload high bandwidth load from remote
 	- remote components
 		- remote cloud
-	- ![](https://i.imgur.com/SavF5b8.png)
+	- ![[mec-dev-white-paper-2.png]]
 	- distributed computing to increase performance
 	- can distribute computation across all components
 - exploiting geographical info
@@ -97,11 +97,11 @@ parent: Edge Computing
 	- provide configs & app images to selected VIM
 - VIM, Virtualized Infrastructure Manager
 	- store app images
-- ![](https://i.imgur.com/k1IQA3G.png)
+- ![[mec-dev-white-paper-3.png]]
 
 ### Phase 2: MEC App Instantiation
 
-- ![](https://i.imgur.com/PrQpPMA.png)
+- ![[mec-dev-white-paper-4.png]]
 - triggered from device
 	- developer can interect directly with MEC 
 	- with device application
@@ -137,14 +137,14 @@ parent: Edge Computing
 
 - device app separated from client app
 - client app unaware of MEC app
-- ![](https://i.imgur.com/epaVtfM.png)
+- ![[mec-dev-white-paper-5.png]]
 - ways for client app to connect MEC app
 	- developer / service provider makes MEC app address available to potential client apps
 	- client app finds MEC apps with DNS look-up
 
 ### Phase 4: MEC Platform & Services Usage
 
-- ![](https://i.imgur.com/vIInYSu.png)
+- ![[mec-dev-white-paper-6.png]]
 - MEC app can consume MEC services
 	- produced by MEC platform or other MEC apps
 - RESTful APIs
@@ -217,7 +217,7 @@ parent: Edge Computing
 	- user context need to be transferred
 - client can be served by MEC host or remote cloud
 	- a MEC host can identify it being a better host and create an app instance to serve the user
-- ![](https://i.imgur.com/LzSBEsF.png)
+- ![[mec-dev-white-paper-7.png]]
 - user context
 	- app-specific runtime data
 	- for stateless app
@@ -240,7 +240,7 @@ parent: Edge Computing
 - MEC suitable for DevOps approach
 	- made up of microservices -> each service easy to develop, in parallel -> facilitate CI/CD
 	- modularized approach
-- ![](https://i.imgur.com/lU1IjSQ.png)
+- ![[mec-dev-white-paper-8.png]]
 - actual implementation of DevOps approach depends on the software layer
 - zero-touch provisioning
 	- automate everything
@@ -256,7 +256,7 @@ parent: Edge Computing
 - vehicles share their data with each other in proximity
 - to take actions to prevent collision
 - latency intensive
-- ![](https://i.imgur.com/iFOsZb3.png)
+- ![[mec-dev-white-paper-9.png]]
 - client 1 & 2 served by MEC app 1
 - client N served by MEC app N
 - client 1 wants to connect

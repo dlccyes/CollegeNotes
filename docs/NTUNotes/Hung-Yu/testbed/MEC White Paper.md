@@ -18,13 +18,15 @@ parent: Edge Computing
 	- Network Functions Virtualization
 
 ## Market Drivers
+
 - increase the quality of experience of end users
 	- more efficient
 	- more secure
 	- less latency
-- ![](https://i.imgur.com/BODTSaG.png)
+- ![[mec-white-paper-1.jpg]]
 
 ## Business Value
+
 - Radio Access Network (RAN) edge
 	- characteristics
 		- proximity
@@ -34,29 +36,33 @@ parent: Edge Computing
 		- localized cloud computing
 		- real-time services
 - allow services to be efficently integrated across various platforms
-- ![](https://i.imgur.com/08y6FBz.png)
+- ![[mec-white-paper-2.jpg]]
 
 ## Service Scenarios
+
 - increase performance
 - utilize unique characteristics of MEC
 	- proximity
 
 ### AR
+
 - need high data rate & low latency
 - need highly localized data
-- ![](https://i.imgur.com/x8YnZcM.png)
+- ![[mec-white-paper-3.png]]
 - process on MEC
 
 ### Intelligent Video Acceleration
+
 - videos are streamed with HTTP over TCP
 - TCP can't quickly adopt to varying conditions
 	- resource under utilized
 	- sub-optimal user experience
 - radio analytics application on MEC
 	- estimate throughput available -> assist TCP congestion control
-	- ![](https://i.imgur.com/WEDSJyi.png)
+	- ![[mec-white-paper-4.png]]
 
 ### Connected Cars
+
 - num of connected cars continues grows rapidly -> more data
 - need low latency
 	- centralized data processing may be unreliable & slow
@@ -67,9 +73,10 @@ parent: Edge Computing
 	- roadside MEC application
 		- MEC servers depoyed on LTE base station site
 		- can send data to connected car cloud for further centralized data processing
-		- ![](https://i.imgur.com/SPnbeTc.png)
+		- ![[mec-white-paper-5.png]]
 
 ### IoT Gateway
+
 - IoT
 	- need low latency & high security
 	- resource constrained
@@ -80,9 +87,10 @@ parent: Edge Computing
 	- aggregate & distribute
 - IoT apps run on MEC server
 	- deployed at LTE base station site
-- ![](https://i.imgur.com/z8ANKcu.png)
+- ![[mec-white-paper-6.png]]
 
 ## Deployment Scenarios
+
 - possible locations
 	- LTE macro base station (eNodeB) site
 	- 3G Radio Network Controller (RNC) site
@@ -92,10 +100,12 @@ parent: Edge Computing
 - utilize NFV
 
 ## ETSI Industry Specification Group
+
 - setting global standard
-- ![](https://i.imgur.com/q3S8Tmu.png)
+- ![[mec-white-paper-7.png]]
 
 ## Conclusions
+
 - new value-chain
 - all players can benefit
 - mobile operators play a pivotal role
