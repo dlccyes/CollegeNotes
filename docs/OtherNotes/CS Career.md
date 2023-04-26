@@ -197,7 +197,7 @@ layout: meth
 	- brute force will pass
 - Q4 LC Medium/Hard
 
-![](https://i.imgur.com/G0D5eJ8.png)
+![[cs-career-1.png]]
 
 ### Behavioral Questions
 

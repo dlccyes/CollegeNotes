@@ -142,7 +142,7 @@ Any custom logo can be passed in a URL parameter by base64 encoding it. e.g:
 	- Mac's spotlight
 	- can customize appearance
 	- Win 11 can customize indexing location too
-		- ![](https://i.imgur.com/jq0lFwM.png)
+		- ![[good-tools-1.png]]
 
 ### screen recorder
 
@@ -242,7 +242,7 @@ mackup backup --force
 mackup backup --force-no
 ```
 
-![](https://i.imgur.com/kS8rOdr.png)
+![[good-tools-2.png]]
 
 **Restore**
 

@@ -37,7 +37,7 @@ See [Locking your Mac with Command+L](https://cho.sh/r/6AA962)
 
 1. Press 🍎 icon to see the name of your desired command
 2. Settings -> Keyboard Shortcuts -> App Shortcuts
-	- ![](https://i.imgur.com/ZBM2A3b.png)
+	- ![[macos-1.png]]
 3. click Done -> quit Settings -> success
 
 ## Menubar
@@ -291,7 +291,7 @@ Close and reopen the app if the new settings aren't working on an app.
 
 System Preferences > Mission Control  -> uncheck "Automatically rearrange Spaces based on most recent use"
 
-![](https://i.imgur.com/HbJWhT1.png)
+![[macos-2.png]]
 
 <https://apple.stackexchange.com/a/214349>
 
@@ -299,7 +299,7 @@ System Preferences > Mission Control  -> uncheck "Automatically rearrange Spaces
 
 System Preferences -> Dock & Menu Bar -> Uncheck "Show recent applications in Dock"
 
-![](https://i.imgur.com/bYez1IB.png)
+![[macos-3.png]]
 
 <https://apple.stackexchange.com/a/338004>
 

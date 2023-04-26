@@ -6,8 +6,8 @@ $\nabla^2=\Delta$
 
 ## 2D
 
-![](https://i.imgur.com/aYENbAX.png)
+![[laplace-operator-1.png]]
 
 ## 3D
 
-![](https://i.imgur.com/u9DjgdY.png)
+![[laplace-operator-2.png]]

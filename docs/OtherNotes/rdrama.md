@@ -9,7 +9,7 @@ safe space for marsey enjoyers
 
 ![](https://i.imgur.com/qmATSIk_d.webp?maxwidth=9999&fidelity=high)
 
-![](https://i.imgur.com/dOlwOEK.png)
+![[rdrama-2.png]]
 
 - custom emoji submission thread
 	- <https://rdrama.net/post/16583>

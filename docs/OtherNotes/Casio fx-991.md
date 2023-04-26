@@ -2,7 +2,7 @@
 
 ## Solve equation
 
-![](https://i.imgur.com/rQKfWya.gif)
+![[casio-fx-991-1.gif]]
 
 1. Enter the left expression using X. An X is inserted for variable that you wish to solve.
 2. Use = accessible through ALPHA CALC. This inserts an equals sign.

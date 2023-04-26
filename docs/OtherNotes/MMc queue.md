@@ -21,7 +21,7 @@ $$\dfrac{C(c, \lambda/\mu)}{c\mu-\lambda}+\dfrac{1}{\mu}$$
 - $\mu$ = processing rate
 - $\lambda$ = arrival rate
 
-![](https://i.imgur.com/8QxXFIk.png)
+![[mmc-queue-1.png]]
 
 ## Probability of waiting
 
@@ -29,7 +29,7 @@ Erlang's C formula
 
 Probability for a job to be sent into queue (instead of being served immediately).
 
-![](https://i.imgur.com/jtOrN7w.png)
+![[mmc-queue-2.png]]
 
 server utilization $\rho=\dfrac{\lambda}{c\mu}$ (arrival rate / processing rate)
 

@@ -48,11 +48,11 @@ Stop yourself from slipping and pray for some snowboarders to get them back to y
 
 **Map**
 
-![](https://i.imgur.com/MKHagye.jpg)
+![[skiing-1.jpg]]
 
 **trails Info**
 
-![](https://i.imgur.com/KyA2OmC.png)
+![[skiing-2.png]]
 
 This resort is based on a small mountain. The trails are generally straightforward slopes with not many trees and and little variety., except for the leftmost and rightmost parts. On the trails at the bottom part, you'll see Naeba Prince Hotel.
 
@@ -108,11 +108,11 @@ A wide course between the woods. Good view with relatively 豐富 terrains. If y
 
 **Map**
 
-![](https://i.imgur.com/8uuHNxu.jpg)
+![[skiing-3.jpg]]
 
 **trails Info**
 
-![](https://i.imgur.com/rYMG8fq.png)
+![[skiing-4.png]]
 
 There are 3 areas in Kagura Ski Resort, Tashira, Kagura, and Mitsumata. You can access this resort with a ropeway from [[#Naeba Ski Resort]], however, the operation time window of the ropeway is fairly narrow, so it' will be quite difficult to access the Mitsumata area or even Kagura if you live at Naeba Prince Hotel.
  

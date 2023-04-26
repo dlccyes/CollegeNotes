@@ -53,7 +53,7 @@
 - 官方介紹<br><https://www.ezmoney.com.tw/events/2018fang/>
 - 追蹤 FANG+
 	- 形狀跟 SP500 NASDAQ 差不多但幅度較大
-	- ![](https://i.imgur.com/8p3HHK5.png)
+	- ![[investment-1.png]]
 	- 成分股
 		- Tesla Nvidia Apple Google Alibaba Facebook Netflix Baidu Amazon Twitter
 
