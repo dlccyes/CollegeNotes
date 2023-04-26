@@ -563,7 +563,7 @@ to add all subdiretories
 for dir in */; do git config --global --add safe.directory $(realpath $dir); done
 ```
 
-### push hung
+### git push hung
 
 Restart ssh agent
 
