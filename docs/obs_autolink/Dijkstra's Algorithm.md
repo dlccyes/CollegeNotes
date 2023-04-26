@@ -4,7 +4,7 @@ layout: meth
 parent: Algorithms
 ---
 # Dijkstra's Algorithm
-![](https://i.imgur.com/vlpyyvk.jpg)
+![[dijkstra's-algorithm-1.jpg]]
 
 1. initialize the starting node to 0, every other node to $\infty$
 2. color first node to red

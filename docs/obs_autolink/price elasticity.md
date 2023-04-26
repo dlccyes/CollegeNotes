@@ -13,6 +13,6 @@ $$\dfrac{\frac{\Delta Q}{Q}}{\frac{\Delta P}{P}} = \dfrac{\partial Q}{\partial P
 - < 1 → inelastic
 - \> 1 → elastic
 
-![](https://i.imgur.com/aTxiuAr.png)
+![[price-elasticity-1.png]]
 
 the labor demand curve will be steep (i.e. more inelastic) if the marginal product of labor drops off quickly as more workers are added
