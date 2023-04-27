@@ -67,6 +67,7 @@ layout: meth
 - LinkedIn
 - underdog.io
 - triplebyte.com
+- Jobot
 
 ## Good posts or threads
 

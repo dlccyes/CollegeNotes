@@ -276,7 +276,7 @@ git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{inser
 ### delete a file in all commits
 
 ```
-git filter-branch --tree-filter 'rm -f {path/to/file}' HEAD
+git filter-branch --tree-filter 'rm -f <path/to/file>' --prune-empty HEAD
 ```
 
 Note that `git filter-branch` only creates extra commit and then reroute your git commit graph. The original commits are still there.

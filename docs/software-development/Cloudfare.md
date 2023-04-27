@@ -39,4 +39,14 @@ See [GitHub Pages require disabling CF’s HTTP Proxy | Cloudfare community](htt
 
 - [Cloudfare doc](https://developers.cloudflare.com/dns/cname-flattening/)
 - [Cloudfare blog](https://blog.cloudflare.com/introducing-cname-flattening-rfc-compliant-cnames-at-a-domains-root/)
-- [HackNews discussion](https://news.ycombinator.com/item?id=7522065)
+- [HackerNews discussion](https://news.ycombinator.com/item?id=7522065)
+
+## Analytics
+
+[About Cloudflare Analytics](https://developers.cloudflare.com/fundamentals/data-products/about-analytics/)
+
+Cloudfare counts all requests as it doesn't use JS to track visitors, so crawler requests are counted.
+
+As a result, you'll see a lot more "unique visitors" in Cloudfare's stats than in say Google Analytics.
+
+[How accurate is cloudfare analytics | Cloudfare community](https://community.cloudflare.com/t/how-accurate-is-cloudflare-analytics/294857)

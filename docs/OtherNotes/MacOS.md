@@ -50,6 +50,14 @@ You can make menubar not use the area under notch but below it on a per app basi
 
 ## Sleep
 
+### display sleep command
+
+display sleep = display off
+
+```
+pmset displaysleepnow
+```
+
 ### sleep log
 
 Mac sleeps and wakes from sleep immediately, almost like it's only a screen off.

@@ -3268,3 +3268,10 @@ p.13 - exercise 22
 
 ![[spanish-89.png]]
 
+- deber a que = because
+- peligros = perilous
+- vigente = current 
+- hasta = until
+- sentar -> siento/sientas/sienta
+- acostar -> acuesto/acuestas/acuesta
+- dormir -> duermo/duermas/duerma
