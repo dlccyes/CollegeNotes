@@ -141,6 +141,8 @@ nav:
       - software-development/SonarQube.md
       - "software-development/Github Action.md"
       - software-development/ArgoCD.md
+    - Monitoring:
+      - software-development/Grafana.md
 
 - Computer Science:
   - "OtherNotes/CS Career.md"
@@ -163,8 +165,17 @@ nav:
 - Economics:
   - Microeconomics:
     - "NTUNotes/Freshman/Microeconomics/README.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch7 Competition.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch8 Welfare Economics and the Gains from Trade.md"
     - "NTUNotes/Freshman/Microeconomics/Ch10 Monopoly.md"
     - "NTUNotes/Freshman/Microeconomics/Ch11 Market Power, Colusion, and Obligopoly.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch12 Game Theory.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch13 Externality.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch14 Common Property and Public Goods.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch15 The Demand for Factors of Production.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch16 The Market of Labor.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch17 Allocating Goods Over Time.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch18 Risk and Uncertainty.md"
   - Macroeconomics:
     - "NTUNotes/Senior/Principle of Macroeconomics/Principle of Macroeconomics.md"
     - "NTUNotes/Junior/Macroeconomics/Macroeconomics.md"
