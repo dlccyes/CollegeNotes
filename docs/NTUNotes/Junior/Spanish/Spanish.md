@@ -3227,8 +3227,6 @@ p.13 - exercise 22
 
 ![[spanish-81.jpg]]
 
-![[spanish-82.jpg]]
-
 ![[spanish-83.png]]
 
 ![[spanish-84.png]]

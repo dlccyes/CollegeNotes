@@ -25,3 +25,38 @@ Follow [this guide](https://docs.retool.com/docs/interact-with-airtable)
 ## Connect with Retool
 
 Retool can't directly connect withh Airtable, so connect it to a db synced with Airtable instead.
+
+## Vega-Lite
+
+See <https://vega.github.io/vega-lite/docs/>
+
+**example**
+
+count vs. date for a datetime field "Application Date", filtering out null values
+
+```json
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Job Application",
+  "width": "container",
+  "height": "container",
+  "mark": {
+    "type": "area",
+    "interpolate": "monotone"
+  },
+  "transform": [
+    {"filter": {"field": "Application Date", "range": [{"year": 2000, "month": "jan", "date": 1}, {"year": 2999, "month": "feb", "date": 20}]}}
+  ],
+  "encoding": {
+    "x": {
+      "field": "Application Date",
+      "type": "temporal",
+      "timeUnit": "yearmonth"
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative"
+    }
+  }
+}
+```

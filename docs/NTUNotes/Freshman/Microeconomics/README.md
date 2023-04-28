@@ -1,6 +1,3 @@
----
-has_children: true
----
 # Microeconomics
 
 Read in Hackmd book mode  

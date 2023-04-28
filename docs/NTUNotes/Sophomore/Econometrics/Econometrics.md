@@ -290,8 +290,6 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
   - $Dx_i=\delta(x)$
     - $\alpha_1=\beta_0$
     - $\alpha_i=\beta_0+\gamma_i$ for i >= 2
-  <!-- - ![[econometrics-47.png]]
-  ![[econometrics-48.png]] -->
 - time fixed effects regression model
   - ![[econometrics-49.png]]
   ![[econometrics-50.png]]

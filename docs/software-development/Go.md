@@ -953,6 +953,10 @@ See <https://github.com/Microsoft/vscode-go/issues/1377#issuecomment-347431580>
 ### GoMock
 
 ```
+go install github.com/golang/mock/mockgen 
+```
+
+```
 mockgen -source=doer/doer.go -destination=mocks/mock_doer.go --package mocks
 ```
 
@@ -1229,7 +1233,17 @@ func main() {
 
 ## Swaggo
 
+<https://github.com/swaggo/swag>
+
 Create API docs with go comments!
+
+### Install
+
+```
+go install github.com/swaggo/swag/cmd/swag@latest
+```
+
+### Usage
 
 ```go
 //go:generate swag init --dir=<path/to/apis> --generalInfo=<path/to/swaggo-init-file> --output=<path/to/desired-doc-directory> --parseInternal --pd

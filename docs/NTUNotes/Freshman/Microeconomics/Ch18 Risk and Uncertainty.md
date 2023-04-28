@@ -42,8 +42,6 @@ parent: Microeconomics
 
 ## risk premium
 
-<!-- ![[ch18-risk-and-uncertainty-2.png]] -->
-
 fair insurance: 讓客戶保前保後預期財富不變  
 
 ![[ch18-risk-and-uncertainty-3.png]]

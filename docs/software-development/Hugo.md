@@ -11,7 +11,11 @@ See <https://gohugo.io/getting-started/quick-start/>
 Install
 
 ```
+# debian / ubuntu
 sudo apt install hugo
+
+# mac
+brew install hugo
 ```
 
 Auto gen necessary files in `<hugo_dir>`

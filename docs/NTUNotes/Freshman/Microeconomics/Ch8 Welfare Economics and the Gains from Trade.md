@@ -28,18 +28,22 @@ after tariff, seller 賺到 Q~0~'處，實際成交到 Q~1~' 處，so  tariff re
 ![[ch8-welfare-economics-and-the-gains-from-trade-4.png]]
 
 ### general equilibrium
+
 #### [[Edgeworth box]]
+
 endowment point: 初始位置(情況)
 Bob’s endowment point (measured along his axes) is the same as Aline’s endowment point (measured along her axes)
 ![[ch8-welfare-economics-and-the-gains-from-trade-5.png]]
+
 D：region of mutual advantage
+
 ![[ch8-welfare-economics-and-the-gains-from-trade-6.png]]
+
 P is Pareto optimal
 
 every point on contract curve is Pareto optimal 
-![[ch8-welfare-economics-and-the-gains-from-trade-7.png]]
 
-<!-- ![[ch8-welfare-economics-and-the-gains-from-trade-8.jpg]] -->
+![[ch8-welfare-economics-and-the-gains-from-trade-7.png]]
 
 ![[ch8-welfare-economics-and-the-gains-from-trade-9.jpg]]
 

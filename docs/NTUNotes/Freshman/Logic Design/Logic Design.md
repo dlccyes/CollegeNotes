@@ -260,7 +260,8 @@ initial state = 1
 → ++01++000 underline part Z=1
 
 #### 14.2 More Complex Design Problems
-######## a Mealy example
+
+##### a Mealy example
 The output Z should be 1 if the input sequence ends in either 010 or 1001, and Z should be 0 otherwise.
 ![[logic-design-57.png]]
 
@@ -271,18 +272,21 @@ _10|01
 __ 01|0
 
 "|": 接在一起處
+
 ![[logic-design-58.png]]
 
-######## a Moore example
+##### a Moore example
+
 The output Z is to be 1 if the total number of 1’s received is ++odd++ and at least ++two consecutive 0s++ have been received.  
+
 ![[logic-design-59.png]]
+
 ![[logic-design-60.png]]
-<!-- partial -->
-<!-- ![[logic-design-61.png]] -->
-<!-- complete -->
+
 ![[logic-design-62.png]]
 
 #### 14.3 Guidelines for Construction of State Graphs
+
 The circuit examines groups of four consecutive inputs and produces an output Z = 1 if the input sequence 0101 or 1001 occurs. The circuit resets after every four inputs.  
 【Mealy】  
 ![[logic-design-63.png]]
