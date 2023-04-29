@@ -30,5 +30,9 @@
   "newLinkFormat": "shortest",
   "showInlineTitle": false,
   "showFrontmatter": false,
-  "strictLineBreaks": true
+  "strictLineBreaks": true,
+  "userIgnoreFilters": [
+    "/\\.png$/",
+    "/\\.jpg$/"
+  ]
 }
