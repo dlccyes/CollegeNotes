@@ -5,7 +5,8 @@ theme:
   # favicon: assets/favicon.png
   font:
     text: Montserrat
-  # logo: assets/logo.png
+  logo: assets/roshar-white.png
+  favicon: assets/roshar-green-trans.png
   palette:
     primary: teal
     # - scheme: thrill
