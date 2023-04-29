@@ -51,7 +51,8 @@ count vs. date for a datetime field "Application Date", filtering out null value
     "x": {
       "field": "Application Date",
       "type": "temporal",
-      "timeUnit": "yearmonth"
+      "timeUnit": "yearmonth",
+	  "axis": {"format": "%b. %Y"}
     },
     "y": {
       "aggregate": "count",

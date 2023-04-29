@@ -41,7 +41,15 @@ Will generate `go.mod`
 
 ## Dependencies
 
-### Install current project dependencies
+### Install a specific module
+
+```
+go install <module_url>
+```
+
+You may see a lot of older Internet guides using `go get`, but it's deprecated. See <https://go.dev/doc/go-get-install-deprecation>.
+
+### Install current project's dependencies
 
 Auto check your codes and update `go.mod` and install all required dependecies in `go.mod` to `GOMODACHE` if haven't
 
@@ -80,6 +88,54 @@ Go importing 101
 ```
 go run <script.go>
 ```
+
+## Garbage Collection
+
+[Why Discord is switching from Go to Rust (2020) | Discord Blog](https://discord.com/blog/why-discord-is-switching-from-go-to-rust)
+
+According to the blog, Go (at least v1.10 and before) will do garbage collection every 2 minutes, which may cause latency spikes.
+
+This is allegedly fixed in v1.14. See [Go runtime: 4 years later (2022) | Go Blog](https:/go.dev/blog/go119runtime).
+
+## Internal Documentations
+
+See <https://tip.golang.org/doc/comment>
+
+### Documenting your codes
+
+To write a docstring for a package / function / everything, just comment before it.
+
+```go
+// ankara mesi
+// goooaallll
+package mesi
+```
+
+This will be recognized by your IDE as well as the following tools.
+
+### CLI doc
+
+To see the docstring of a package, external or internal
+
+```
+go doc <package name>
+```
+
+### Web doc
+
+Install `godoc`
+
+```
+go install golang.org/x/tools/cmd/godoc
+```
+
+In your project root, run
+
+```
+godoc -http=:6060 -v
+```
+
+Then go to <http://localhost:6060/pkg/?m=all>. Without `m=all` it will hide `internal/`. [Related issue](https://github.com/golang/go/issues/12092).
 
 ## Environmental variables
 

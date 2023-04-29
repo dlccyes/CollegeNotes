@@ -2032,3 +2032,64 @@ Adding government purchase $G_t$ to the model
 #### government purchase permanently increases
 
 ![[macro-fig11.10.jpg]]
+
+## Ch12 消費與勞動的跨奇選擇
+
+### 消費者的跨期選擇
+
+consumers don't have endowment but work to earn
+
+$$l_t+n_t=1$$
+
+- $l_t$ = time spend at leisure
+- $n_t$ = time spend at labor
+- $w_t$ = wage (earnings per unit time of labor)
+- $d_t$ = dividends
+- $T_t$ = fixed tax, exogenous
+- $b_t$ = bonds at the end of period t
+- $r_t$ = interest rate of bonds
+
+$$a_t=d_t-T_t$$
+
+2-period budget constraint
+
+$$c_t+b_t=a_t+w_tn_t+(1+r_{t-1}b_{t-1})$$
+
+savings
+
+$$s_t=(a_t+w_tn_t+r_{t-1}b_{t-1})-c_t=b_t-b_{t-1}$$
+
+- $b_0=0$
+- $\lim_{t\rightarrow\infty}q_tb_t=0$
+- $q_t=\Pi_{i=1}^{t-1}(\dfrac{1}{1+r_i})$
+
+lifetime budget constraint
+
+$$\sum^\infty_{t=1}q_tc_t=\sum^\infty_{t=1}q_t(a_t+w_tn_t)$$
+
+full wealth (if WLB = 0)
+
+$$\sum^\infty_{t=1}q_t(c_t+w_tl_t)=\sum^\infty_{t=1}q_t(a_t+w_t)$$
+
+**optimization problem**
+
+
+$$\max_{\{c_t,l_t,n_t,b_t\}^\infty_{t=1}}=\sum^\infty_{t=1}\beta^{t-1}u(c_t,l_t)$$
+
+**first-order conditions**
+
+MRS of consumption & leisure = $\dfrac{u_l}{u_c}=w_t$
+
+$$u_l(c_t,l_t)=u_c(c_t,l_t)w_t$$
+
+work 1 more unit time -> earn $w_t$ more unit
+
+consumption vs. future consumption
+
+$$u_c(c_t,l_t)=\beta u_c(c_{t+1},l_{t+1})(1+r_t)$$
+
+leisure vs. future consumption
+
+$$u_l(c_t,l_t)=\beta u_c(c_{t+1},l_{t+1})w_t(1+r_t)$$
+
+work 1 more unit time -> earn $w_t$ more unit -> buy bonds with them

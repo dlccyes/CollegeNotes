@@ -13,6 +13,7 @@ Some cool blogs.
 - <https://cho.sh/>
 - <https://blog.dsrkafuu.net/>
 	- cool [widget](https://github.com/dsrkafuu/sakana-widget)
+- <https://seankhliao.com/>
 
 Don't forget to check out mine  
 <https://blog.derricklin.net>
