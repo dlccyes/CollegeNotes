@@ -61,3 +61,92 @@ count vs. date for a datetime field "Application Date", filtering out null value
   }
 }
 ```
+
+**2 lines example**
+
+Just put your json into `layer: []`. You can create as many lines as you want.
+
+```json
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Job Application",
+  "width": "container",
+  "height": "container",
+  "layer":[
+    {
+      "mark": {
+        "type": "area",
+        "interpolate": "monotone",
+        "color": "#3e78e681"
+      },
+      "transform": [
+        {
+          "filter": {
+            "field": "Application Date",
+            "range": [
+              {
+                "year": 2000,
+                "month": "jan",
+                "date": 1
+              },
+              {
+                "year": 2999,
+                "month": "feb",
+                "date": 20
+              }
+            ]
+          }
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Application Date",
+          "type": "temporal",
+          "timeUnit": "yearmonth"
+        },
+        "y": {
+          "aggregate": "count",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "area",
+        "interpolate": "monotone",
+        "color": "#ff3c3ca1"
+      },
+      "transform": [
+        {
+          "filter": {
+            "field": "Last Progress Update Date",
+            "range": [
+              {
+                "year": 2000,
+                "month": "jan",
+                "date": 1
+              },
+              {
+                "year": 2999,
+                "month": "feb",
+                "date": 20
+              }
+            ]
+          }
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Last Progress Update Date",
+          "type": "temporal",
+          "timeUnit": "yearmonth"
+        },
+        "y": {
+          "aggregate": "count",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}
+```

@@ -376,7 +376,7 @@ Next, go to System settings -> Displays -> set "Refresh rate" to 60Hz
 
 ### Chinese input laggy
 
-Kill the process an reopen your app if it's still laggy on an app.
+Kill the process and **reopen your app** if it's still laggy on an app.
 
 2 ways to kill the process
 

@@ -125,9 +125,11 @@ document$.subscribe(() => {
 })
 ```
 
-Include this in `mkdocs.yml`
+In `mkdocs.yml`
 
 ```yml
+theme:
+  name: material
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
@@ -135,6 +137,17 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+```
+
+#### Icon & Favicon
+
+In `mkdocs.yml`
+
+```yml
+theme:
+  name: material
+  logo: assets/roshar-white.png
+  favicon: assets/roshar-green-trans.png
 ```
 
 ## Examples
