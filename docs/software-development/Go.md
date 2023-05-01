@@ -592,6 +592,10 @@ var MapEnumStringToAlphabets = func() map[string]Alphabets {
 
 <https://stackoverflow.com/a/75205150/15493213>
 
+### JSON
+
+<https://github.com/go-gorm/datatypes#json>
+
 ### Transaction
 
 <https://gorm.io/docs/transactions.html>

@@ -15,6 +15,7 @@ safe space for marsey enjoyers
 	- <https://rdrama.net/post/16583>
 
 ## lore
+
 - [official lore](https://reddit.com/r/Drama/comments/dxwr34)
 - [rdrama controversy](https://www.reddit.com/r/OutOfTheLoop/comments/tydvgz/whats_going_on_with_rplace_reddits_mod_team_and/i3stccs)
 - [rdrama lore](https://www.reddit.com/r/SubredditDrama/comments/i4f48j)

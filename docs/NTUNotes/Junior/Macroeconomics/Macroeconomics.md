@@ -2043,13 +2043,12 @@ $$l_t+n_t=1$$
 
 - $l_t$ = time spend at leisure
 - $n_t$ = time spend at labor
-- $w_t$ = wage (earnings per unit time of labor)
+- $w_t$ = real wage (earnings per unit time of labor)
 - $d_t$ = dividends
 - $T_t$ = fixed tax, exogenous
 - $b_t$ = bonds at the end of period t
-- $r_t$ = interest rate of bonds
-
-$$a_t=d_t-T_t$$
+- $r_t$ = real interest rate of bonds
+- $a_t$ = non-labor income = $d_t-T_t$
 
 2-period budget constraint
 
@@ -2067,7 +2066,7 @@ lifetime budget constraint
 
 $$\sum^\infty_{t=1}q_tc_t=\sum^\infty_{t=1}q_t(a_t+w_tn_t)$$
 
-full wealth (if WLB = 0)
+full wealth (if WLB = 0), treaing both consumption & leisure as commodities
 
 $$\sum^\infty_{t=1}q_t(c_t+w_tl_t)=\sum^\infty_{t=1}q_t(a_t+w_t)$$
 
@@ -2093,3 +2092,50 @@ leisure vs. future consumption
 $$u_l(c_t,l_t)=\beta u_c(c_{t+1},l_{t+1})w_t(1+r_t)$$
 
 work 1 more unit time -> earn $w_t$ more unit -> buy bonds with them
+
+consumption vs. future leisure
+
+$$u_c(c_t,l_t)=\beta u_l(c_{t+1},l_{t+1})\dfrac{1+r_t}{w_t+1}$$
+
+consume 1 less unit -> get $1+r_t$ more future consumption, which translates to $\dfrac{1+r_t}{w_t}$ of leisure
+
+leisure vs. future leisure
+
+$$u_c(c_t,l_t)=\beta u_l(c_{t+1},l_{t+1})\dfrac{w_t(1+r_t)}{w_t}$$
+
+work 1 more unit -> get $w_t(1+r_t)$ more future consumption, which translates to $\dfrac{w_t(1+r_t)}{w_t}$ of leisure
+
+### effects of exogenous variable changes
+
+exogenous variables
+
+- $a_t$ non-labor income
+- $r_t$ real interest rate
+- $w_t$ real wage
+
+#### effects of non-labor income change
+
+$a_t$ up -> lifetime wealth up -> consumption & leisure demands up, labor demand down for $\forall t$
+
+Assume $r_t=r$
+
+For temporary changes, income effect is weak
+
+- $\Delta y_t=\dfrac{r}{1+r}\Delta a_t$
+- $\Delta c_t+w_t\Delta l_t\approx \Delta \bar{y_t}<\Delta a_t$
+- $\Delta s_t=(\Delta a_t+w_t+r_{t-1}b_{t-1})-(\Delta c_t+w_tl_t)>0$
+
+For permanent changes, income effect is strong
+
+- $\Delta a_t=\Delta a \ \forall t$
+- $\Delta y_t=\dfrac{r}{1+r}\Delta a$
+- $\Delta c_t+w_t\Delta l_t\approx \Delta \bar{y_t}=\Delta a$
+- $\Delta s_t=(\Delta a+w_t+r_{t-1}b_{t-1})-(\Delta c_t+w_tl_t)=0$
+
+#### effects of real interest rate change
+
+$\Delta r_t$ has no income effect but intertemporal substitution effect
+
+when current real interest rate goes up
+
+- 
