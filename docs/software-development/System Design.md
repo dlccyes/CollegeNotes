@@ -7,8 +7,8 @@ parent: Software Development
 
 ## Resources
 
-- DDIA
-	- [pdf | github](https://github.com/jeffrey-xiao/papers/blob/master/textbooks/designing-data-intensive-applications.pdf)
+- DDIA (2017)
+	- [DDIA pdf | github](https://github.com/jeffrey-xiao/papers/blob/master/textbooks/designing-data-intensive-applications.pdf)
 	- 簡中譯 <https://github.com/Vonng/ddia>
 - Grokking the system design interview
 	- [pdf | github](https://raw.githubusercontent.com/sharanyaa/grok_sdi_educative/master/grok_system_design_interview.pdf)
@@ -25,7 +25,122 @@ parent: Software Development
 	- from <https://leetcode.com/discuss/interview-question/system-design/1205825>
 - [Database Schema Templates](https://drawsql.app/templates/popular)
 
+## Scaling
+
+### Vertical Scaling
+
+- pros
+	- fast inter-process communication
+	- data consistent
+- cons
+	- single point of failure
+	- hardware limit
+
+### Horizontal Scaling
+
+- pros
+	- scale well
+- cons
+	- slow inter-process communication
+		- need RPC between machines
+	- need load-balancing
+	- data inconsistency
+
+## Performance
+
+-  the performance of the 99.9th percentile is the most important
+	- slow requests -> have many data -> valuable customer
+	- Amazon:
+		- + 100ms -> -1% revenue
+		- + 1s -> -16% revenue
+- service level agreements (SLAs)
+	- service is up when 
+		- median < 200ms
+		- 99th < 1s
+	- service needs to be up > 99.9% of the time
+	- refund if not met
+
+## Maintenability
+
+- Operability
+	- easy to operate
+- Simplicity
+	- easy to understand
+- Evolvability
+	- easy to make changes
+
+### Operability
+
+To make things easier to operate
+
+- provide observability
+- avoid single point of failure
+	- -> no down time when updating a machine
+- good documentation
+	- finite state machine of all the things that may happen
+
+### Simplicity
+
+- complex -> bad operability & evolvability
+- abstraction reduces accidental complexity
+	- accidental complexity = complexity rising not from design but implementation
+	- pros of abstraction
+		- hides implementation details
+		- can be reused
+		- benefits all apps using it when improved
+	- e.g. SQL
+
 ## Database
+
+### One-to-Many Relationship
+
+**Object-Relational Mismatch Problem**
+
+Many real life data has **one-to-many** relationship e.g. a person may have several work experience, but relational tables aren't like that, so a translation layer between database model & application code is needed.
+
+![[ddia-fig2-2.png]]
+
+**Solutions**
+
+- traditional SQL model: creating multiple tables with foreign keys to the common table
+	- cons
+		- bad locality: needs to perform multiple queries or multi-way join to get all data
+	- ![[ddia-fig2-1.png]]
+- later SQL versions
+	- use JSON datatype
+	- pros
+		- good locality
+			- everything in one place
+			- only need one query
+- encode those as JSON and store as text
+	- cons
+		- can't query the keys in the text json
+
+### Many-to-One & Many-to-Many Relationship
+
+**Problems of document model**
+
+> Data has a tendency of becoming more interconnected as features are added to applications.
+
+Many tree-like one-to-many data actually become graph-like many-to-many relationship when scaling and adding new features. 
+
+e.g. a person has 2 schools in his profile page, but the schools should also have the person in their profile page
+
+Document databases e.g. MongoDB, which excel at tree-like structures, have weak or no support for joins as one-to-many relationships don't need joins. This makes them not suitable for many-to-many relationships.
+
+![[ddia-fig2-4.png]]
+
+**Problems of network model**
+
+Network model stores hierarchical as a graph. Each record can have multiple parents.
+
+To query or update a record, the application code has to go through the graph from the root, making it complicated and inflexible.
+
+**Relational model the solution**
+
+- query optimizer does the heavy-lifting, not the application code
+- declare a new index to query data in a new way
+	- query optimizer will automatically choose the best index
 
 ### ACID
 
@@ -210,41 +325,6 @@ ancestor_id | node_id
 
 - [Hierarchical Data in SQL: The Ultimate Guide](https://www.databasestar.com/hierarchical-data-sql/)
 - [Hierarchical Database, multiple tables or column with parent id? | Stack Overflow](https://stackoverflow.com/a/2341295/15493213)
-
-## Scaling
-
-### Vertical Scaling
-
-- pros
-	- fast inter-process communication
-	- data consistent
-- cons
-	- single point of failure
-	- hardware limit
-
-### Horizontal Scaling
-
-- pros
-	- scale well
-- cons
-	- slow inter-process communication
-		- need RPC between machines
-	- need load-balancing
-	- data inconsistency
-
-## Performance
-
--  the performance of the 99.9th percentile is the most important
-	- slow requests -> have many data -> valuable customer
-	- Amazon:
-		- + 100ms -> -1% revenue
-		- + 1s -> -16% revenue
-- service level agreements (SLAs)
-	- service is up when 
-		- median < 200ms
-		- 99th < 1s
-	- service needs to be up > 99.9% of the time
-	- refund if not met
 
 ## Load Balancing
 
