@@ -51,3 +51,7 @@ As the error message said, you'll need a upsert flag. However, the web ui does n
 Open dev tool -> Network tab, click "edit and resend" on your failed request, and append `?upsert=true` the the api endpoint
 
 See <https://github.com/argoproj/argo-cd/issues/3464>
+
+### Resource usage over limit
+
+Try deleting the resource and pressing sync to recreate.

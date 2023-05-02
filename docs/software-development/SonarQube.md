@@ -35,15 +35,21 @@ docker pull sonarqube
 docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
 ```
 
-Open in `http://localhost:9000`
+Open in `http://localhost:9000`.
 
-Create a project
+Initial username & password are `admin`. Log in, change the password, and then create a project.
 
 ### Scan
 
 Download SonarScaner zip file from <https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/>
 
 Symlink the `sonar-scanner` binary file to `/usr/local/bin/sonar/sonar-scanner` or whatever.
+
+e.g.
+
+```
+ln -s /Users/<username>/Downloads/sonar-scanner-4.8.0.2856-macosx/bin/sonar-scanner sonar-scanner
+```
 
 Run the scanner in your local project root with the commands provided in the web page. After the scan is over, your web page will be auto refreshed.
 

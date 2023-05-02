@@ -196,7 +196,7 @@ Use Mackup
 
 See [[Good Tools#Mackup]]
 
-### open VsCode from terminal
+### Open VsCode from terminal
 
 1. If you haven't, put your vscode into the `Applications` folder
 2. command pallette -> `Shell Command: Install 'code' command in PATH`
@@ -348,7 +348,7 @@ Press with a finger not registered for TouchID
 
 <https://apple.stackexchange.com/a/416422>
 
-### some menubar items hidden
+### Some menubar items hidden
 
 If your screen have a notch and have a ton of items in the menubar, many will get hidden. Only (free) solution is to command+drag to drag the unimportant ones out to make space for relevant ones.
 

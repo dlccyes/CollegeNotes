@@ -1356,6 +1356,25 @@ Add comments before your API
 func HandleGetInfo(){}
 ```
 
+### Add example values
+
+```go
+type Product struct {
+	ID       string            `json:"id" example:"1"`
+	Name     string            `json:"name" example:"Product Name"`
+}
+```
+
+### Define enums
+
+```go
+type Product struct {
+	ID       string            `json:"id" example:"1"`
+	Name     string            `json:"name" example:"Product Name"`
+	Type     string            `json:"name" enums:"TypeA,TypeB,TypeC" example:"TypeA"`
+}
+```
+
 ## Troubleshooting
 
 ### VsCode: could not import strconv
