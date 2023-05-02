@@ -3,6 +3,7 @@
 ## Setup
 
 Intall
+
 ```
 brew install grafana
 ```
@@ -32,3 +33,7 @@ Integration = webhook
 response schema
 
 <https://grafana.com/docs/grafana/latest/alerting/manage-notifications/webhook-notifier/>
+
+## API
+
+<https://grafana.com/docs/grafana-cloud/api-reference/http-api/org/>

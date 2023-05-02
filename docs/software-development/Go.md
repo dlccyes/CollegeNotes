@@ -1362,8 +1362,11 @@ func HandleGetInfo(){}
 type Product struct {
 	ID       string            `json:"id" example:"1"`
 	Name     string            `json:"name" example:"Product Name"`
+	MiMappa  map[string]string `json:"mi_mappa" example:"key1:val1,key2:val2"`
 }
 ```
+
+See <https://github.com/swaggo/swag/blob/master/example/object-map-example/controller/response.go>
 
 ### Define enums
 
