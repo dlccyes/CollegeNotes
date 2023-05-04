@@ -194,19 +194,30 @@ chernoff bond
 # 期中公式統整
 
 ![[probability-45.png]]
+
 ![[probability-46.png]]
 
 *discrete PDF*
+
 ![[probability-30.png]]
+
 *continuous PDF*
+
 ![[probability-31.png]]
+
 *discrete E*
+
 ![[probability-32.png]]
+
 *continuous E*
+
 ![[probability-33.png]]
+
 *discrete Var*
+
 ![[probability-51.png]]
 *continuous Var*
+
 ![[probability-52.png]]
 
 # 期末公式統整

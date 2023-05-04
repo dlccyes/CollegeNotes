@@ -24,7 +24,7 @@ parent: Game Theory for Wireless Networks
 	- delay saved x weight - cost
 - delay
 	- ![[near-optimal-and-collaborative-service-caching-in-mobile-edge-clouds-3.png]]
-	- = Response time of a [MMc queue](../../../OtherNotes/MMc%20queue)
+	- = Response time of a [[Queueing Theory#M/M/c queue]]
 	- c = # of VMs in the coalition
 	- $\mu$ = request processing rate
 	- $\rho$ = request rate
