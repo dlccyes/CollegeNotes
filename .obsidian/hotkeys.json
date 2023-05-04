@@ -208,5 +208,30 @@
       ],
       "key": "Tab"
     }
+  ],
+  "file-explorer:new-file": [],
+  "obsidian-rapid-notes:new-prefixed-note-new-tab": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "N"
+    }
+  ],
+  "app:go-back": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowLeft"
+    }
+  ],
+  "app:go-forward": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowRight"
+    }
   ]
 }

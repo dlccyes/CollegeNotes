@@ -125,24 +125,35 @@ complementary of F~X~
 ![Untitled](https://i.loli.net/2020/06/16/eB3urDpRjmw7PH4.png)
 
 ### Exponential
-<!-- $f_X(x)=\lambda e^{-\lambda x}$ if x >= 0 -->
+
+$f_X(x)=\lambda e^{-\lambda x}$ if x >= 0
+
 Erlang 在 n=1 的特例
+
 ![[probability-27.png]]
 
 ### Erlang
+
 Exponential 的 general 版本
+
 ![[probability-28.png]]
 
 ### Transformation
+
 ![[probability-29.png]]
 
 ## RV PDF 統整
+
 *discrete*
+
 ![[probability-30.png]]
+
 *continuous*
+
 ![[probability-31.png]]
 
 # U3 Expectation
+
 ## Expected Value
 
 ### E[X] = complementary CDF

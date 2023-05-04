@@ -860,8 +860,54 @@ sorted(x.items(), key=lambda item: item[1])
 ```
 
 ## infinity
+
 ```py
 float('inf')
+```
+
+## Symbolic Math
+
+Use `sympy`
+
+```
+pip3 install sympy
+```
+
+### Integral
+
+e.g. to calculate the mean of a hyperexponential distribution
+
+```python
+import sympy as sp
+
+t = sp.symbols('t')
+f = 1-0.01*sp.exp(-18*t)-0.82*sp.exp(-0.015*t)
+mean = sp.integrate((1-f), (t, 0, sp.oo))
+print(f"mean = {mean.simplify()}")
+```
+
+### Laplace Transform
+
+e.g. calculate laplace transform (t -> s)
+
+```python
+import sympy as sp
+
+s, t = sp.symbols('s t')
+f1 = 2/12*sp.exp(t/12)
+F1 = sp.laplace_transform(f1, t, s)
+print(F1)
+```
+
+e.g. calculate inverse laplace transform (s -> t)
+
+```python
+from sympy.integrals.transforms import inverse_laplace_transform
+
+s, t = sp.symbols('s t')
+F = (2/(1-12*s))/((1/(1-12*s))*((1/(3+15*s))+(4/(6+75*s)))-1)
+f = inverse_laplace_transform(F, s, t)
+print(f)
 ```
 
 ## numpy

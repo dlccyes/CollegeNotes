@@ -7,6 +7,8 @@ parent: Miscellaneous
 
 ## Notations
 
+![[queue-8.png]]
+
 - M = markov process i.e. poisson distribution
 	- memoryless
 - D = deterministic i.e. constant
@@ -19,6 +21,17 @@ parent: Miscellaneous
 
 - poisson arrival rate i.e. exponential interarrival time
 - constant service time
+
+## M/M/1 queue
+
+- $W$ = mean time spending in the system
+- $W_q$ = mean time spending in the queue
+- $L$ = mean number in the system
+- $L_q$ = mean number in the queue
+
+![[queue-9.png]]
+
+![[queue-10.png]]
 
 ## M/M/c queue
 
@@ -64,7 +77,13 @@ Hyperexponential service time
 
 ![[queue-6.png]]
 
-### Waiting time 
+![[queue-11.png]]
+
+![[queue-12.png]]
+
+![[queue-13.png]]
+
+### Waiting time
 
 Assume there are k kinds of customers in the queue, each with $p_i$ of probability and an exponential distributed service time with mean $\mu_i$, where $i = 1,2,...,k$. The arrival rate for both is the same, a exponential distribution with mean $\lambda$.
 
@@ -74,7 +93,13 @@ $$\bar{\mu}=\dfrac{1}{p_1(1/\mu_1)+p_2(1/\mu_2)}$$
 
 $$\rho=\dfrac{\lambda}{\bar{\mu}}$$
 
+$$A(t)=1-e^{\lambda t}$$
+
+$$A^*(-s)=\dfrac{1}{\lambda-s}$$
+
 $$B(t)=1-\sum_{i=1}^k p_ie^{-\mu_it}$$
+
+$$B^*(s)=\sum_{i=1}^k\dfrac{p_i}{s+\mu_i}$$
 
 $$k_0=\int^\infty_0 e^{-\lambda t}dB(t)=\sum_{i=1}^k\dfrac{p_i\mu_i}{\lambda+\mu_i}$$
 
@@ -86,16 +111,33 @@ $$\pi_1=\pi_0\dfrac{1-k_0}{k_0}$$
 
 $$\pi^q_0=\pi_0+\pi_1=\dfrac{1-\rho}{k_0}=\dfrac{\bar{\mu}-\lambda}{k_0\bar{\mu}}$$
 
-mean waiting time
+This is not the mean queuing time!!!!!
 
-$$\bar{W_q}(\lambda)=\dfrac{\pi_0^q}{\lambda}=\dfrac{1-\rho}{k_0\lambda}=\dfrac{\bar{\mu}-\lambda}{k_0\bar{\mu}\lambda}$$
+$$\overline{W}_q(\lambda)=\dfrac{\pi_0^q}{\lambda}=\dfrac{1-\rho}{k_0\lambda}=\dfrac{\bar{\mu}-\lambda}{k_0\bar{\mu}\lambda}$$
+
+when k = 1, $\pi_0^q=1+\rho$, $\bar{W_q}(\lambda)=\dfrac{(1+\rho)(1-\rho)}{\lambda}=\dfrac{(\mu+\lambda)(\mu-\lambda)}{\mu^2\lambda}=\dfrac{1}{\lambda}-\dfrac{\lambda}{\mu^2}$
+
+$$W^-_q(t)=\lambda\left(1-\lambda\sum^k_{i=1}\dfrac{p_i}{\mu_i+\lambda}\right)\bar{W_q}(\lambda)e^{\lambda t}=Fe^{\lambda t}$$
+
+$$\overline{W}_q^-(s)=\dfrac{F}{\lambda-s}$$
+
+where $F=\lambda\left(1-\lambda\sum^k_{i=1}\dfrac{p_i}{\mu_i+\lambda}\right)\dfrac{\bar{\mu}-\lambda}{k_0\bar{\mu}\lambda}$
+
+$$\begin{align*}
+& \overline{W}_q(s)=\dfrac{\overline{W}^-_q}{A^*(-s)B^*(s)-1}\\
+&= \dfrac{\dfrac{F}{\lambda-s}}{\dfrac{1}{\lambda-s}\sum_{i=1}^k\dfrac{p_i}{s+\mu_i}-1}
+\end{align*}$$
 
 ### Example
 
 ![[queue-1.png]]
 
-![[queue-2.png]]
+![[queue-14.png]]
+
+![[queue-15.png]]
 
 ![[queue-3.png]]
 
 ![[queue-4.png]]
+
+![[queue-7.png]]
