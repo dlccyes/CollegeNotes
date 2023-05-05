@@ -1437,3 +1437,12 @@ If you have multiple versions installed, replace `go` with `go@version`. You can
 
 See [this Stack Overflow answer](https://stackoverflow.com/a/53661370/15493213)
 
+### VsCode: inline go generate not recognizing  your go path
+
+error:
+
+```
+executable file not found in $PATH
+```
+
+Just close the window and reopen. Reloading won't work!

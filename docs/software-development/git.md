@@ -538,6 +538,14 @@ You can use the remote starting with `git@` and add the ssh public key to your g
 Only point at a specific commit, to indicate version for example.  
 A tag can't be used on multiple commits.
 
+### Delete a tag
+
+from remote
+
+```
+git push --delete origin <tagname>
+```
+
 ## Troubleshooting
 
 ### Unsafe directory error
