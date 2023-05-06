@@ -6,6 +6,7 @@ parent: Software Development
 # Vim
 
 ## my ~/.vimrc
+
 `export TERM=xterm-256color` for color theme to take effect
 
 ```vim
@@ -91,26 +92,53 @@ nnoremap <C-]> I<Del><Esc>
 xnoremap <C-]> :norm x<CR>
 ```
 
-## syntax
+## Install plugins
+
+### Vim-Plug
+
+<https://github.com/junegunn/vim-plug>
+
+Put this in your `~/.vimrc`
+
+```vim
+call plug#begin('~/.vim/plugged')
+Plug '<repo/plugin>'
+call plug#end()
+```
+
+Run this in terminal to install the plugins you specified in `~/.vimrc`
+
+```
+vim +PlugInstall
+```
+
+## keyboard shortcuts
+
 ## navigation
+
 - page up/down
 	- `ctrl+f` `ctrl+b`
 - jump bracket of codes
 	- `ctrl+[` `ctrl+]`
 
 ### go to character
+
 in normal mode, type `fa` to go to the next a, `Fa` to go to previous a
 
 ### go to position
+
 in normal mode, type `18l` to to the 18th character in your current line
 
 ### go to line
+
 `:18` to go to line 18
 
 ## comment & uncomment
-https://stackoverflow.com/a/15588798/15493213
+
+<https://stackoverflow.com/a/15588798/15493213>
 
 ### comment
+
 1.  go to start of line
 2.  ctrl+v (visual block)
 3.  select
@@ -119,25 +147,32 @@ https://stackoverflow.com/a/15588798/15493213
 6.  Esc → automatically inject the same thing to each line you select
     
 ### uncomment
+
 1.  go to start of line
 2.  ctrl+v (visual block)
 3.  select
 4.  d
 
 ## autocomplete
+
 `ctrl-x +`
 - `ctrl-n` → word completion
 - `ctrl-l` → line completion
 
 ## commands
+
 ### toggle commands
+
 `set commands!`
 
 ### ignore case
+
 - `set ignorecase`
 - `set smartcase` to ignore case at all lowercase but sensitive otherwise
 	- need to have ignorecase on
 
 ## other tips
+
 ### open man page of current word
+
 `shift+k`
