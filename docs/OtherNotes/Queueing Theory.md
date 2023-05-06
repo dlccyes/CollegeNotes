@@ -14,6 +14,10 @@ parent: Miscellaneous
 - D = deterministic i.e. constant
 - G = general i.e. any distribution
 - A/B/1 = queue with arrival rate in A distribution, processing rate in B distribution, and 1 server
+- a(t) = PDF of interarrival times
+- A(t) = CDF of interarrival times
+- b(t) = PDF of service times
+- B(t) = CDF of service times
 
 ![[queuing-notation.png]]
 
@@ -93,13 +97,13 @@ $$\bar{\mu}=\dfrac{1}{p_1(1/\mu_1)+p_2(1/\mu_2)}$$
 
 $$\rho=\dfrac{\lambda}{\bar{\mu}}$$
 
-$$A(t)=1-e^{\lambda t}$$
+$$a(t)=\lambda e^{-\lambda t}$$
 
-$$A^*(-s)=\dfrac{1}{\lambda-s}$$
+$$A^*(-s)=\dfrac{\lambda}{\lambda-s}$$
 
-$$B(t)=1-\sum_{i=1}^k p_ie^{-\mu_it}$$
+$$b(t)=\sum_{i=1}^k p_i\mu_ie^{-\mu_it}$$
 
-$$B^*(s)=\sum_{i=1}^k\dfrac{p_i}{s+\mu_i}$$
+$$B^*(s)=\sum_{i=1}^k\dfrac{p_i\mu_i}{s+\mu_i}$$
 
 $$k_0=\int^\infty_0 e^{-\lambda t}dB(t)=\sum_{i=1}^k\dfrac{p_i\mu_i}{\lambda+\mu_i}$$
 
@@ -111,7 +115,7 @@ $$\pi_1=\pi_0\dfrac{1-k_0}{k_0}$$
 
 $$\pi^q_0=\pi_0+\pi_1=\dfrac{1-\rho}{k_0}=\dfrac{\bar{\mu}-\lambda}{k_0\bar{\mu}}$$
 
-This is not the mean queuing time!!!!!
+$\overline{W}_q(\lambda)$ is not the mean queuing time!!!!!
 
 $$\overline{W}_q(\lambda)=\dfrac{\pi_0^q}{\lambda}=\dfrac{1-\rho}{k_0\lambda}=\dfrac{\bar{\mu}-\lambda}{k_0\bar{\mu}\lambda}$$
 
@@ -125,8 +129,12 @@ where $F=\lambda\left(1-\lambda\sum^k_{i=1}\dfrac{p_i}{\mu_i+\lambda}\right)\dfr
 
 $$\begin{align*}
 & \overline{W}_q(s)=\dfrac{\overline{W}^-_q}{A^*(-s)B^*(s)-1}\\
-&= \dfrac{\dfrac{F}{\lambda-s}}{\dfrac{1}{\lambda-s}\sum_{i=1}^k\dfrac{p_i}{s+\mu_i}-1}
+&= \dfrac{\dfrac{F}{\lambda-s}}{\dfrac{\lambda}{\lambda-s}\sum_{i=1}^k\dfrac{p_i\mu_i}{s+\mu_i}-1}
 \end{align*}$$
+
+Do inverse laplace transform on $\overline{W}_q$ to get $W_q(t)$.
+
+Integrate on $W_q(t)$ to get the mean waiting time in queue.
 
 ### Example
 
