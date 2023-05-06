@@ -281,6 +281,8 @@ class TestMain(unittest.TestCase):
 
 		# optional: ensure that the parameter passed into times_two is correct
 		times_two = assert_called_with(num)
+		# or
+		times_two.assert_called_with(num)
 ```
 
 If you know `GoMock`, this is equal to
