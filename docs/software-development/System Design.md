@@ -435,6 +435,20 @@ tradeoff: performance vs. accuracy
 	- uncritical data -> write-through
 	- critical data -> write-back
 
+## Microservices vs. Monolith
+
+You probably don't need to use microservices.
+
+[Microservice Story - A collection of technical blog ahout microservice & monolith](https://www.microservice-stories.com/)
+
+### Bad microservices design examples
+
+[Scaling up the Prime Video audio/video monitoring service and reducing costs by 90%](https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90)
+
+[HackerNews dicussion](https://news.ycombinator.com/item?id=35811741)
+
+> This is not a discussion of monolith vs serverless. This is some terrible engineering all over that was "fixed". - [LASR](https://news.ycombinator.com/user?id=LASR)
+
 ## Async
 
 - slow operations should be done asyncly
@@ -473,11 +487,11 @@ tradeoff: performance vs. accuracy
 - ref
 	- <https://www.youtube.com/watch?v=zt8Cocdy15c>
 
-## URL Shortening
+## Case Study
+
+### URL Shortening
 
 <https://www.educative.io/courses/grokking-the-system-design-interview>
-
-## Case Study
 
 ### Twitter Timeline
 
