@@ -1378,6 +1378,16 @@ type Product struct {
 }
 ```
 
+## Workspace
+
+See <https://earthly.dev/blog/go-workspaces/>
+
+Basically only use it when you want to use some local modules.
+
+e.g. You're using a module `github.com/alpha/beta`, but you're also developing that module. Without workspace or `replace` in `go.mod`, you can only use what is on the web, but with workspace or `replace` in `go.mod`, you can use the local version.
+
+With workspace, there will be a `go.work` file which you'll need to ignore in your repo before checking out, and with `replace`, you'll need to remove those lines in `go.mod` before checking out. The former saves more hassle when dealing with a lot of local modules.
+
 ## Troubleshooting
 
 ### VsCode: could not import strconv
