@@ -703,6 +703,7 @@ Bell (W2)
     - ![[data-structure-71.png]]
 
 ### Tarjan's analysis of path compression
+
 - Ackermann's function $A_k(r)$
   - $A_k(r)=A_{k-1}^r(r)$
     - apply $A_{k-1}$ r times to r

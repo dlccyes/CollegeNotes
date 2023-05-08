@@ -69,16 +69,21 @@ pairwise independence
     ![[probability-18.png]]
 
 # U2 Random Variables
+
 $\Phi(\alpha)=F_X(\alpha \sigma)=Pr\{X\leq=\alpha \sigma\}$
 
 ### Borel
+
 ![[probability-19.png]]
 
 ## Discrete Random Variables
+
 ### Bernoulli
+
 ![[probability-20.png]]
 
 ### Binomial
+
 n 次內成功的次數
 
 ![[probability-21.png]]
@@ -165,11 +170,15 @@ Exponential 的 general 版本
 ![image-20200617230200730](https://i.loli.net/2020/06/17/4Bic8L63oYlVXq7.png)
 
 ### discrete
+
 ![[probability-32.png]]
+
 ### continuous
+
 ![[probability-33.png]]
 
 ### Jensen's inequality
+
 ![[probability-34.png]]
 
 ### Markov inequality

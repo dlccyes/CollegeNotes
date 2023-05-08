@@ -388,6 +388,12 @@ $$\bar{\gamma}=\dfrac{-1}{r-g}<0$$
 
 ## Uncertainty and Current Account
 
+### risk aversion
+
+absolute risk aversion = $-\dfrac{u''(C)}{u'(C)}$
+
+relative risk aversion = $-\dfrac{u''(C)C}{u'(C)}$
+
 ### two-period endowment model with uncertainty
 
 當期確定
@@ -402,7 +408,7 @@ $$C^L_2=Y^L_2+(1+r)B_2$$
 
 lifetime
 
-$$C_1+\dfrac{C^{H/L}_2}{1+r}=Y_1+\dfrac{Y^{H/L}}{1+r}$$
+$$C_1+\dfrac{C^{H/L}_2}{1+r}=Y_1+\dfrac{Y_2^{H/L}}{1+r}$$
 
 according to 當期資訊的 expected 下期 consumption
 
@@ -412,7 +418,7 @@ optimization problem
 
 $$\max_{C_1,C_2}u(C_1)+\beta E_1[u(C_2)]$$
 
-Knowing $C^{H/L}_2=\text{something}-(1+r)C_1$, we can get the first order condition -> stochastic Euler function
+Knowing $C^{H/L}_2=\text{something}-(1+r)C_1$, we can get the first order condition -> **stochastic Euler function**
 
 $$u'(C_1)=\beta(1+r)E_1[u'(C_2)]$$
 

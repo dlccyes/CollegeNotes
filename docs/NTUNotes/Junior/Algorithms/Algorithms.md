@@ -756,11 +756,12 @@ exchange → 數量一樣
 	- time complexity $\in O(V+E)$
 
 ### connectivity in directed graph
+
 - every node is mutually reachable → the graph is strongly connected
 - every node is mutually reachable ignoring the direction of edge → the graph is weakly connected
 
-#### SCC
-- strongly connected component
+#### SCC strongly connected component
+
 - SCC of s = maximal set of v s.t. s & v are mutually reachable
 - for any 2 nodes s & v in a directed graph, their strongly connected components are
 	- identical if s & v are mutually reachable
