@@ -438,7 +438,6 @@ A prudent person will have a higher saving i.e. current account when facing unce
 
 $$CA_1=Y_1-C_1>Y_1-C^{CE}_1=CA^{CE}_1$$
 
-
 #### facing normal distribution
 
 Assume 
@@ -506,3 +505,57 @@ When there is uncertainty in period 2, $C_1<C^{CE}_1$ & $K_2<K^{CE}_2$, meaning 
 
 $$CA_1>CA^{CE}_1$$
 
+
+## 外匯市場簡介
+
+### 匯率報價 quotes
+
+**direct quotes**
+
+1 unit of foreign currency -> ? units of home currency
+
+$$S^{H/F}=\dfrac{\text{Home Currency}}{\text{Foreign Currency}}$$
+
+American quotes $S^{US/F}$ = direct quotes for USD
+
+**indirect quotes**
+
+1 unit of home currency -> ? units of foreign currency
+
+$$S^{F/H}=\dfrac{\text{Foreign Currency}}{\text{Home Currency}}$$
+
+European quotes $S^{F/US}$ = indirect quotes for USD
+
+**cross rate**
+
+cross rate = a quote not involving USD but 2 other currencies
+
+**triangular arbitrage**
+
+if A/C = A/B x B/C then there's not triangular arbitrage
+
+### 外匯交易類型
+
+market type
+
+- spot market 現貨市場
+	- <= 2d 交割
+	- uses spot rate 即期匯率
+	- normally 匯率 refers to spot rate
+- forward market 遠期外匯市場
+	- at a specific future date
+
+price
+
+- bid price 買價
+	- the price the bank buys at
+- ask price 賣價
+	- the price the bank sells at
+- bid-ask spread = ask price - bid price
+- factors affecting bid-ask spread
+	- cost
+		- smaller 交易 cost -> smaller bid-ask spread 
+	- risk
+		- higher risk -> larger bid-ask spread
+	- market thickness
+		- smaller market -> less liquidity -> higher risk -> larger bid-ask spread

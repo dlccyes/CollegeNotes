@@ -289,6 +289,10 @@ Dozer will giver you 2 dots on the menubar. Drag relevant menubar items to the r
 
 ![](https://github.com/Mortennn/Dozer/raw/master/Stuff/demo.gif)
 
+### Show ethernet status in menubar
+
+Use <https://apps.apple.com/us/app/ethernet-status-missing-lan/id1186187538>
+
 ## Troubleshooting
 
 ### Some settings do not take effect
