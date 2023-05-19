@@ -5,6 +5,7 @@ parent: Software Development
 # AWS
 
 ## Free Services
+
 <https://aws.amazon.com/free/>
 
 ### view free tier usage
@@ -12,7 +13,12 @@ parent: Software Development
 Cost Management -> Billing Console -> Free Tier
 
 the url looks like  
+
 `https://<region>.console.aws.amazon.com/billing/home?region=<region>#/freetier`
+
+## List all of your resources
+
+<https://us-east-2.console.aws.amazon.com/resource-groups/tag-editor/find-resources>
 
 ## Get Credentials
 
@@ -24,6 +30,7 @@ e.g.``AmazonDynamoDBFullAccess` for accessing DynamoDB
 
 Generate credentials for your user
 
+
 ## S3
 
 ### List Object
@@ -34,6 +41,18 @@ If you want to get the objects uder a directory, what you can do is specify a `p
 
 See <https://stackoverflow.com/a/18697988/15493213>
 
+### Toubleshooting
+
+#### Can't delete a bucket because of s3:DeleteBucket permission
+
+<https://stackoverflow.com/a/61610519/15493213>
+
+1.  Login as **root user**. (Not as any IAM user you might have specified)
+2.  Go to the S3 console.
+3.  Click on the bucket you want to delete.
+4.  Under the "Permissions" tab click on "Bucket Policy"
+5.  Click on "Delete"
+
 ## boto3
 
 AWS SDK for Python
@@ -42,6 +61,7 @@ doc
 <https://boto3.amazonaws.com/v1/documentation/api/latest/index.html>
 
 ### client & resource
+
 <https://stackoverflow.com/a/48867829/15493213>
 
 `client` has all the APIs, while `resource` is newer and is more object-oriented, but doesn't have all the APIs
@@ -67,6 +87,7 @@ session = boto3.Session(
 )
 # dynamodb = session.resource('dynamodb')
 ```
+
 <https://stackoverflow.com/a/45982075/15493213>
 
 **with client**
@@ -83,14 +104,19 @@ client = boto3.client(
 If nothing specified, it will use the credentials in `~/.aws`
 
 ### DynamoDB
+
 boto3 dynamo sample code (written with `resource`)  
+
 <https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html>
 
 full boto3 dynamo doc (written with `client`)  
+
 <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html>
 
 #### query between range
+
 between times
+
 ```python
 import boto3
 from boto3.dynamodb.conditions import Key, Attr
@@ -107,19 +133,23 @@ response = table.scan(
 <https://stackoverflow.com/a/49352557/15493213>
 
 ## DynamoDB
+
 NoSQL database
 
 see your table
+
 ```
 aws dynamodb scan --table-name <table-name>
 ```
 
 ### Cautions
+
 It has no auto-incrementing primary key. Instead, it has a partition key, a key that you must supply value with for every entry.
 
 You can't change the structure of your table, e.g. your partition key. What you can do is migrate and delete your table.
 
 ## Elastic Beanstalk
+
 Easy webapp deploying with EC2 (no additional cost). It basically wraps up all the CI/CD into some simple commands.
 
 ### init
@@ -185,6 +215,7 @@ see <https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-setenv.html>
 ### Deploying a Flask app
 
 Full doc  
+
 <https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html>
 
 Write your [Flask](Flask) app. Note that the main file need to be `application.py` and the Flask object neet to be named as `application`.
@@ -213,26 +244,33 @@ You can use another name for your env, e.g. `<app_name>-env`. If your app doesn'
 
 Go into your EC2 instance and set up credentials.  
 See [SSH-Setup](#SSH-Setup) to setup.  
+
 ```
 eb ssh
 ```
+
 and then run  
+
 ```
 aws configure
 ```
+
 with your credentials supplied
 
 Go to your project url.
+
 ```
 eb open
 ```
 
 If you've modified your code and want to deploy again, do
+
 ```
 eb deploy
 ```
 
 If you want to delete all your environment, do
+
 ```
 eb terminate
 ```
@@ -322,7 +360,7 @@ If you find weird errors when using CLI, use append `--verbose` to the command t
 
 Use `eb logs` to see the logs.
 
-#### related to venv
+### related to venv
 
 If your instance's `var/log/eb-engine.log` has the below error even if your ignore `venv`, see <https://stackoverflow.com/questions/61805345>
 

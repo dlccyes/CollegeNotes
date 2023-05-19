@@ -209,7 +209,7 @@ higher price level -> lower value of money -> higher money demand
 
 ![[principle-of-macroeconomics-18.png]]
 
-### Nominal & Real
+### Classical Economics Assumptions
 
 - classical dichotomy: nominal doesn't affect real
 - neutrality of money: money supply doesn't affect real
@@ -255,3 +255,93 @@ See [[Ch13 中央銀行的功能與政策目標#物價穩定]]
 ### structural unemployment
 
 ![[pmacro-wage-labor.png]]
+
+## Ch32
+
+NCO = net capital outflow
+
+### loanable funds market
+
+$$S=I+NCO$$
+
+- supply = national saving $S$
+- demand = domestic investment $I$ + net capital outflow $NCO$
+
+![[macro-88.png]]
+
+### foreign-currency exchange market
+
+$$NCO=NX$$
+
+- supply = $NCO$ net capital outflow
+- demand = $NX$ net export
+
+![[macro-ex.png]]
+
+![[macro-exchange.png]]
+
+## Ch33 Aggregate Demand and Supply
+
+### Economic Flunctations
+
+- economic flunctuations are irregular and unpredictable
+- most macroeconomic quantities flunctuate together
+- when output falls, unemployment rises
+
+### Aggregated Demand
+
+We know $Y = C + I + G + NX$, assuming $G$ no change, $P$ has a negative effect on $Y$
+
+- P down -> value of money up, wealth up -> $C$ up, $I$ up -> interest rate down -> $NX$ up
+- vice versa
+
+### Aggrega Short Run Supply
+
+In the short run, [[#Classical Economics Assumptions]] don't apply. Changes in nominal variables may affect real ones.
+
+![[p-macro-1.png]]
+
+### Aggregated Long Run Supply
+
+$Y_N$ = natural rate of output = potential output = full-employment output
+
+Long-run aggregate-supply curve is vertical since the natural rate of output $Y_N$ is determined by labor, capital, natural resources, and the level of technology, which are not dependent on the price level. It's the **classical dichotomy**.
+
+$P_E$ = the expected price to prevail in the long run
+
+![[p-macro-long-run.png]]
+
+inflation
+
+![[p-macro-inflation.png]]
+
+![[p-macro-eq.png]]
+
+### Theories for Short Run Supply being upward
+
+short-run aggregate-supply curve
+
+$$Y=Y_N+a(P-P_E)$$
+
+- $Y_N$ = long run output
+- $P$ = actualy price level
+- $P_E$ = expected price level
+
+#### Sticky-Wage Theory
+
+- nominal wages is contant in the short run, based on $P_E$
+- $P$ up but wage stays the same -> more revenue -> increase $Y$ & employment
+
+#### Stick-Price Theory
+
+- many price is constant in the short run
+- $P$ up but product price stays the same -> product becomes relatively cheaper -> more demand -> increase $Y$ and employment
+
+#### Misperceptions Theory
+
+- $P$ up -> firm thinks its relative price rises -> increase $Y$ and employment
+
+
+
+
+

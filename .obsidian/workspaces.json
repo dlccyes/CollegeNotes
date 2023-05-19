@@ -191,48 +191,12 @@
             "type": "tabs",
             "children": [
               {
-                "id": "ff600f8bf81e8277",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "docs/NTUNotes/Senior/Principle of Macroeconomics.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "5b475b02babb9b62",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "docs/NTUNotes/Junior/Spanish.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              },
-              {
                 "id": "f396189f1068f27b",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "docs/NTUNotes/Freshman/Microeconomics/Ch18 Risk and Uncertainty.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "03e5df9b4e3444c3",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "docs/NTUNotes/Junior/Macroeconomics.md",
+                    "file": "docs/NTUNotes/Senior/International Finance/International Finance.md",
                     "mode": "source",
                     "source": false
                   }
@@ -244,14 +208,26 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "docs/NTUNotes/Senior/Internation Finance.md",
+                    "file": "docs/NTUNotes/Junior/Principle of Microeconomics/Principle of Microeconomics.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "a3d8e7de79bf3474",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "docs/NTUNotes/Junior/Macroeconomics/Macroeconomics.md",
                     "mode": "source",
                     "source": false
                   }
                 }
               }
             ],
-            "currentTab": 1
+            "currentTab": 2
           }
         ],
         "direction": "vertical"
@@ -326,7 +302,7 @@
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "docs/NTUNotes/Junior/Spanish.md",
+                    "file": "docs/NTUNotes/Junior/Macroeconomics/Macroeconomics.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -343,7 +319,7 @@
                 "state": {
                   "type": "outgoing-link",
                   "state": {
-                    "file": "docs/NTUNotes/Junior/Spanish.md",
+                    "file": "docs/NTUNotes/Junior/Macroeconomics/Macroeconomics.md",
                     "linksCollapsed": false,
                     "unlinkedCollapsed": true
                   }
@@ -366,7 +342,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "docs/NTUNotes/Junior/Spanish.md"
+                    "file": "docs/NTUNotes/Junior/Macroeconomics/Macroeconomics.md"
                   }
                 }
               },
@@ -406,7 +382,7 @@
           "terminal:Open terminal": false
         }
       },
-      "active": "5b475b02babb9b62"
+      "active": "a3d8e7de79bf3474"
     }
   },
   "active": "ntu"

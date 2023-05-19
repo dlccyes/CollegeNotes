@@ -184,6 +184,20 @@ Authenticated Proxy Enabled: 0
 pmset sleepnow
 ```
 
+### Get computer name
+
+Get the one displayed in Settings -> General -> About -> Name
+
+```
+scutil --get ComputerName
+```
+
+Normally `hostname` should work too but MacOS decides that it should be changed to some random name when you're both connected to ethernet and wifi.
+
+## Create wifi hotspot from ethernet connection
+
+Settings -> Sharing -> information symbol to edit (can only edit when off) -> turn it on
+
 ## Sniffing packets
 
 See [Sniffing Packets from Wireless Networks](Software%20Development/Sniffing%20Packets%20from%20Wireless%20Networks)

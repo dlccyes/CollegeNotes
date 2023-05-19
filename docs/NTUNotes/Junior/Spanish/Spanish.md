@@ -117,6 +117,11 @@ Only 3 irregular verbs - ser, ir, ver
 - if I were you
 	- See [If I were you](#If%20I%20were%20you)
 
+## Subjuntivo Imperfect
+
+- indicativo + a/as/a/amos/ais/an
+- present 3rd person + se/ses/se/semos/seis/sen
+
 ## Futuro imperfecto
 
 ![[spanish-16.png]]
@@ -3253,6 +3258,7 @@ p.13 - exercise 22
 - perder = lose
 - auriculares = headphones
 - envenenar = poison
+- medio ambiente = the environment
 
 ### Midterm Review
 

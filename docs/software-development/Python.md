@@ -170,6 +170,64 @@ import <your_file>
 
 When imported, `__name__` will be the module's name. When executed directly, `__name__` will be `__main__`.
 
+## working directory
+
+### show current directory
+
+`ls`
+
+```python
+import os
+os.getcwd()
+```
+
+### change directory
+
+`cd`
+
+```python
+import os
+os.chdir("<path>")
+```
+
+## Typing
+
+Python can be a pain in the ass work with for bigger scale code due to it being not statistically type, but you can type hint and let your linter like `Pylance` pick it up to imitate static typing.
+
+### Format
+
+```python
+var_name: type_name = init_val
+```
+
+For example, this Go code
+
+```go
+myStr := []string{1,2,3}
+```
+
+should be like this in Python
+
+```python
+my_str: list[str] = [1, 2, 3]
+```
+
+For tuple, you should include the type of each slot. 
+
+e.g. for a len = 3 (integer, float, string) tuple
+
+```python
+my_tup: tuple[int, float, str] = (3, 1.35, "4.05")
+```
+
+### Type hinting opencv Mat
+
+```python
+import numpy as np
+import numpy.typing
+Mat = numpy.typing.NDArray[np.uint8]
+```
+
 ## Class
 
 ### Inheritance
@@ -189,26 +247,6 @@ class Child(Mom, StepMom):
 		super().__init__()
 		# now it can access self.yes & self.no
 		print(self.yes, self.no)
-```
-
-## working directory
-
-### show current directory
-
-`ls`
-
-```python
-import os
-os.getcwd()
-```
-
-### change directory
-
-`cd`
-
-```python
-import os
-os.chdir("<path>")
 ```
 
 ## Unit testing with `unittest`
@@ -789,6 +827,7 @@ haha/timedelta(microseconds=1)
 <https://docs.python.org/3/library/datetime.html#datetime.timedelta.total_seconds>
 
 ### iterate time with timedelta
+
 e.g. iterate from tiempo_prev to tiempo with 1 second as unit
 ```python
 while tiempo_prev != None:
@@ -1038,6 +1077,19 @@ import
 res = request.post(<url>, <data>)
 status_code = res.status_code
 res_body = json.loads(res.text)
+```
+
+## Rounding numbers
+
+To round but keep leading zeros, see <https://stackoverflow.com/a/56776787/15493213>
+
+```python
+def fround(num: float, digits: int = 2) -> str:
+    regex = r"0[1-9]"
+    float_part = str(num).split(".")[1]
+    float_limiter = re.search(regex,float_part).start() if float_part.startswith("0") else -1
+    rounded = f'{num:2.{float_limiter+1+digits}f}'
+    return rounded
 ```
 
 ## Simple web server

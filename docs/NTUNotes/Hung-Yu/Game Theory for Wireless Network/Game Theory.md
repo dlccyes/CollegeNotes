@@ -71,17 +71,18 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 	- with all players being selfish, none will move
 - Individually stable
 	- with all players respecting pareto criterion, none will move
-	- stricter than Nash stable
 	- Nash stable $\in$ Individually stable
 
-> Since agents are assumed to be rational, agents only en-gage in a unilateral deviation if it makes them better off. Any partition in which no such deviation is possible is called Nash stable (NS).
+> Since agents are assumed to be rational, agents only engage in a unilateral deviation if it makes them better off. Any partition in which no such deviation is possible is called Nash stable (NS).
 
-> This type of deviation can be refined by additionally re-quiring that no agent in the welcoming coalition is worseoff when agent i joins. A partition in which no such devia-tion is possible is called individually stable (IS).
+> This type of deviation can be refined by additionally requiring that no agent in the welcoming coalition is worseoff when agent i joins. A partition in which no such deviation is possible is called individually stable (IS).
 
 ref: Reaching Individually Stable Coalition Structures in Hedonic Games
 
 ## social choice
+
 ### voting scheme
+
 - plurality
   - most-preferred by most people
   - 最普通的那種
@@ -371,14 +372,14 @@ x > y, y > z → x > z
   - in a symmetric equilibrium, higher bid iff higher valuation
     - person with highest valuation wins
   - a 1st-price auction bidder bids his expected payment as he's the winner of a 2nd-price auction
-    - other n-1 values are uninformly drawn from [0, $v_i$]
-    - E[2nd-highest bid] = $\dfrac{(n-1)+1-1}{(n-1)+1}v_{i}=\dfrac{n-1}{n}v_i$
-    - 
+    - other n-1 values are uninformly drawn from $[0, v_i]$
+    - $E[\text{2nd-highest bid}] = \dfrac{(n-1)+1-1}{(n-1)+1}v_{i}=\dfrac{n-1}{n}v_i$
 - proof
   - 沒看
-  - https://www.coursera.org/learn/game-theory-2/lecture/ZfHhY/4-5-revenue-equivalence 8:40
+  - <https://www.coursera.org/learn/game-theory-2/lecture/ZfHhY/4-5-revenue-equivalence> 8:40
 
 ### optimal auctions
+
 - optimal reserve price in a [[second-price auction]]
   - reserve price also acts as another bidder
   - if 2 bids are uniformly drawn from [0,1], with reserve price = R
@@ -405,6 +406,7 @@ x > y, y > z → x > z
   - virtual valuation makes weak bidders more competitive → higher bidder need to bids higher, increases the competition  
 
 ## Ch3 Contract Theory
+
 - mechanism design for the interactions between employer/seller & employee
 - solve assymetric
 - give incentive to self-reveal
@@ -418,7 +420,7 @@ x > y, y > z → x > z
   - mobile crowdsourcing example
     - multidimensional, [[moral hazard]]
 - employee's contraints
-  - [ incentive compatibility]], IC
+  - [[incentive compatibility]], IC
     - contract maximize utility
     - local downward incentive constraints (LDIC) (?)
   - [[individual rationality]], IR
@@ -447,7 +449,9 @@ x > y, y > z → x > z
     - more complex
       - renegotiation & designing long-term contract
     - equivalent to market equilibrium
+
 ### CRN spectrum scheme
+
 - one dimensional, bilateral, static, [[adverse selection]]
 - cooperative spectrum sharing
 - PU 跟 SU 買不用的資源
@@ -548,6 +552,7 @@ x > y, y > z → x > z
     - ![[game-theory-46.png]]
 
 ## Ch4 [[stochastic game]]
+
 - absorbing state
   - 不會再變的 state
   - have a absorbing state → finite stages
@@ -579,6 +584,7 @@ x > y, y > z → x > z
 - every stochastic game with finite state and action space admits a $\delta$-discounted Nash equilibrium in stationary strategies
 
 ## Ch6 Learning in Games
+
 - sequential
   - 不同 player 等上一個 player 算完再算 response, 再傳給下一個
   - 快速 converge
@@ -609,7 +615,7 @@ x > y, y > z → x > z
   - ![[game-theory-47.png]]
   - ![[game-theory-48.png]]
     - $|a_i$ 表知道在哪個 block
-  - https://www.youtube.com/watch?v=sQOrIpARr5E
+  - <https://www.youtube.com/watch?v=sQOrIpARr5E>
 - reinforcement
   - decentralized, 不用管他人的 mixed
   - iterate update strategy & utitlity

@@ -6,11 +6,27 @@ A Linux/Unix tool for sniffing packets
 
 See your interfaces with `ifconfig`
 
-## flags
+## output format
+
+```
+22:27:09.121959 IP video-edge-65e942.hkg06.justin.tv.https > b162.m5.ntu.edu.tw.57341: Flags [.], seq 14518649:14520097, ack 194005, win 1687, options [nop,nop,TS val 3701151147 ecr 3117567374], length 1448
+```
+
+`win` & `length` in bytes
+
+### packet flags
 
 > tcpflags are some combination of S (SYN), F (FIN), P (PUSH), R (RST), U (URG), W (ECN CWR), E (ECN-Echo) or . (ACK), or none if no flags are set.
 
-### read
+## command flags
+
+- `-i en0` select interface `en0`
+- `-r` read
+- `-w traces.tr` write to `traces.tr`
+- `-c 5` capture only 5 packets
+- `-n` show ip instead of domain name
+
+## read
 
 read packets
 
@@ -19,11 +35,13 @@ sudo tcpdump -i <interface>
 ```
 
 read 5 packets
+
 ```
 sudo tcpdump -i <interface> -c 5
 ```
 
 read from file
+
 ```
 sudo tcpdump -r output.tr
 ```
@@ -31,11 +49,13 @@ sudo tcpdump -r output.tr
 ## write
 
 write output to file
+
 ```
 sudo tcpdump -i <interface> -c 5 -w output.tr
 ```
 
 write output to file but limit to 1MB
+
 ```
 sudo tcpdump -i <interface> -c 5 -w output.tr -w output.tr -C 1
 ```

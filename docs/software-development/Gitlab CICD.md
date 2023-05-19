@@ -379,7 +379,9 @@ sudo gitlab-runner start
 ```
 
 ### Is the docker daemon running?
+
 Docker isn't running on where your gitlab runner is at. Start your docker  
+
 ```
 sudo service docker start
 ```

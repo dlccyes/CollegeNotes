@@ -2136,6 +2136,216 @@ For permanent changes, income effect is strong
 
 $\Delta r_t$ has no income effect but intertemporal substitution effect
 
-when current real interest rate goes up
+real interest rate = cost of consumption
 
-- 
+current real interest rate goes up ->
+
+- current consumption down, future consumption up
+- current leisure down, labor up
+
+#### effects of real wage change
+
+a change of wage has no income effect since it's zero sum among consumers and firms (wage up -> firm revenue/dividend down)
+
+wage = cost of leisure
+
+**同期替代效果 contemporaneous substitution effect**
+
+current / forever wage up -> 
+
+- current / forever leisure down, labor up
+- current / forever consumption up
+
+**intertemporal substitution effect**
+
+current wage up ->
+
+- current leisure down, labor up
+- future leisure up, labor down
+
+future wage up ->
+
+- current leisure up, labor down
+- current consumption up
+
+not existent when all periods are changed
+
+**effects on savings**
+
+$$s_t=(a_t+w_tn_t+r_{t-1}b_t)-c_t$$
+
+$w_t$ up -> 
+
+- $n_t$ up, $c_t$ up
+- if intertemporal effect is very strong, then $s_t$ up
+
+$w_{t+1}$ up -> $n_t$ down, $c_t$ up -> $s_t$ down
+
+if $\Delta w_t = \Delta w \ \forall t$, the change on $s$ can be ignored
+
+### equilibrium
+
+**government's budget constraint**
+
+$$G_t=T_t+b^g_t-(1+r_{t-1}b^g_{t-1})$$
+
+**firm's optimization problem**
+
+$$\max_{n_t}d_t=A_tf(n_t)-w_tn_t$$
+
+first-order
+
+$$\mathrm{MPL}_t=A_tf'(n_t)=w_t$$
+
+**consumer's budget constraint**
+
+$$c^d_t+b^d_t=(d_t-T_t)+w_tn^s_t+(1+r_{t-1})b_{t-1}$$
+
+- $d_t=y^s_t-w_tn^d_t$
+- $T_t=G_t-b^g_t+(1+r_{t-1})b^g_{t-1}$
+- $b_{t-1}=b^g_{t-1}$
+
+$$(c^d_t+G_t-y^s_t)+w_t(n^d_t-n^s_t)+(b^d_t-b^g_t)=0$$
+
+satisfies [[#Walras Law of Markets]]
+
+MRS of consumption & leisure = wage = marginal productivity of labor
+
+$$\dfrac{u_l(c_t,l_t)}{u_c(c_t,l_t)}=w_t$$
+
+$$\dfrac{u_l(c_t,1-n_t)}{u_c(c_t,1-n_t)}=A_tf'(n_t)$$
+
+商品市場結清條件
+
+$$c_t+G_t=A_tf(n_t)$$
+
+**National Savings*
+
+private saving
+
+$$s^p_t=(y_t-T_t+r_{t-1}b_{t-1})-c_t=b_t-b_{t-1}$$
+
+government saving
+
+$$s^g_t=T_t-(G_t+r_{t-1}b^g_{t-1})=b^g_{t-1}-b^g_t$$
+
+in a closed economy $b^g_t=b_t$
+
+national saving
+
+$$s_t=s^p_t+s^g_t=y_t-(c_t+G_t)=0$$
+
+$S=I+CA$ but in this economy there's no investment nor international trades so $S=I=CA=0$
+
+So the economy cannot save anything, everything have to be consumed immediately.
+
+Compared to 靜態模型, there's a loan market. Compared to the endowment model, there's a labor market. The additional variables, however, are all endogeneous.
+
+**Simplification**
+
+labor market 結清條件
+
+$$n^d_t(w_t,A_t)=n^s_t(w_t,r_t,a_t)$$
+
+consumption market 結清條件
+
+$$c^d_t(r_t,w_t,a_t)+G_t=y^s_t(w_t,A_t)$$
+
+![[macro-fig12.3.jpg]]
+
+$r$ up -> labor supply $n^s_t$ right shift -> $w$ down $n$ up -> $y$ up
+
+$$w_t=\phi(r_t), \phi'<0$$
+
+so $y^s_t$ up when
+
+- $r_t$ up
+- $A_t$ up
+- $a_t$ down
+
+$$c^d_t(\underset{-}{r_t},\underset{+}{a_t})+G_t=y^s_t(\underset{+}{r_t},\underset{+}{A_t},\underset{-}{a_t})$$
+
+[[#Walras Law of Markets]]
+
+![[macro-fig12.4.jpg]]
+
+as long as consumption & labor market are in equilibrium, bond market will also be
+
+### short-term equilibrium
+
+The model in this chapter is like the super-short term scenario in real life, where firms cannot change its capital i.e. invest
+
+**temporary supply shock**
+
+![[macro-fig12.5.jpg]]
+
+$A_t$ down ->
+
+- consumption market
+	- direct effect: $y^s_t$ left shifts
+	- income effect: $a_t$ down -> consumption down, leisure down, labor up -> $y^d_t$ left shifts a bit, $y^s_t$ right shifts a bit (consumption smoothing)
+	- demand > supply in consumption market due to consumption smoothing
+	- supply > demand in bond market -> interest rate up
+	- intertemporal substitution effect: $r$ up -> consumption demand down B to F, commodity supply up A to F
+- labor market
+	- $n^d_t$ left shifts
+	- income effect: $n^s_t$ right shifts
+	- equilibrium 
+		- $w$ down
+		- $n$ depends
+			- if consumers are very sensitive to wage, then labor down
+
+No investment so the shock is consumed entirely in this period. Future periods are not affected.
+
+**expected future shock**
+
+![[macro-fig12.6.jpg]]
+
+$A_{t+1}$ down ->
+
+- labor market
+	- $A_t$ unchanged so $n^d_t$ unchanged
+	- income effect: consumption down, leisure down, labor up -> $n^s_t$ right shifts
+	- intertemporal substitution effect: $w_{t+1}$ down -> $n^s_t$ right shifts
+- consumption market
+	- income effect & intertemporal substitution effect: $y^d_t$ left shifts
+	- supply > demand
+
+demand > supply in bond market -> interest rate down
+
+intertemporal substitution effect:
+
+- commodity market: $r$ down -> consumption demand up B to F, commodity supply down A to F
+- labor market: $r$ down -> $n^s_t$ left shifts, may or may not exceed E
+
+**temporary demand shock**
+
+government increases expenditure during recession
+
+![[macro-fig12.7.jpg]]
+
+$G_t$ up
+
+- commodity market
+	- direct effect: $y^d_t$ left shifts
+	- income effect: tax up -> consumption down, leisure down, labor up -> $y^d_t$ left shifts a bit, $y^s_t$ right shifts a bit (consumption smoothing)
+	- demand > supply
+- labor market
+	- income effect: $n^d_t$ right shifts
+
+supply > demand in bond market -> interest rate up
+
+intertemporal substitution effect:
+
+- commodity market
+	- $r$ up -> $y^s_t$ right shifts A to F, $y^d_t$ left shifts B to F
+- labor market
+	- $r$ up -> $n^d_t$ right shifts
+
+equilibrium
+
+- consumer lifetime wealth down
+- wage down
+- interest rate up
+- private consumption down - 排擠效果
+- consumer lifetime utility down

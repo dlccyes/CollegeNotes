@@ -187,6 +187,7 @@ docker images
 ```
 
 ### remove a docker image
+
 ```
 docker image rm -f <image_id>
 ```
@@ -362,3 +363,25 @@ supply a command (e.g. `/bin/bash`) after your `docker run` command
 add `--platform linux/amd64` when doing `docker run`
 
 <https://stackoverflow.com/a/71611002/15493213>
+
+### cannot connect to docker daemon when using testcontainer in Mac
+
+error message
+
+```
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock.
+```
+
+fix
+
+```
+sudo ln -s $HOME/.docker/run/docker.sock /var/run/docker.sock
+```
+
+You may need to run this everytime you start docker.
+
+See
+
+- <https://www.testcontainers.org/supported_docker_environment/>
+- <https://github.com/testcontainers/testcontainers-go/issues/1046#issuecomment-1508108342>
+- <https://github.com/testcontainers/testcontainers-java/discussions/6045#discussioncomment-3983224>
