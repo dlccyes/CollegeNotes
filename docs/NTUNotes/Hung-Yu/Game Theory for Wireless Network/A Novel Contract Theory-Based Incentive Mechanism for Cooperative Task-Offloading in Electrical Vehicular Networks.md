@@ -41,6 +41,7 @@ layout: meth
 	- computation resource depends on relative acceleration
 
 ## contract
+
 - feasibility condition
 	- [[individual rationality]]
 	- [[incentive compatibility]]

@@ -23,11 +23,13 @@ sudo apt-get install -y ca-certificates curl gnupg lsb-release
 ```
 
 add Docker’s official GPG key
+
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
 
 set up the stable repository
+
 ```
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
@@ -35,25 +37,31 @@ echo \
 ```
 
 install docker engine  
+
 ```
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
 test if is installed correctly  
+
 ```
 sudo docker run hello-world
 ```
+
 will download the image `hello-world` and pring some messages  
 `sudo docker ps -a` to check if it's running
 
 ### Arch
+
 install
+
 ```
 sudo pacman -S docker
 ```
 
 start
+
 ```
 sudo systemctl start docker
 ```
@@ -68,6 +76,7 @@ sudo systemctl start docker
 ## init
 
 ### make docker start on boot
+
 ```
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
@@ -76,6 +85,7 @@ sudo systemctl enable containerd.service
 <https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot>
 
 ### start docker
+
 ```
 sudo service docker start
 ```
