@@ -5,6 +5,14 @@ parent: Software Development
 
 # VsCode
 
+## Install
+
+for mac
+
+```
+brew install visual-studio-code
+```
+
 ## Commands
 
 ### Maximize/Restore a tab in a split window

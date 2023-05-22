@@ -43,6 +43,7 @@ parent: OtherNotes
 	- convert text to voice via api
 
 ## browser extensions
+
 - tab manager (firefox)
 	- Tab Session Manager
 		- save and restore tab session
@@ -78,6 +79,9 @@ parent: OtherNotes
 		- can sync
 	- Dark Reader
 		- one-click darkify websites
+- reddit and hackernews posts for current page
+	- [newsit](https://chrome.google.com/webstore/detail/newsit-hacker-news-and-re/nngjdplpkehilhcinpccdbkjaknkkifl)
+	- [voat](https://chrome.google.com/webstore/detail/voat-reddit-comments-on-y/amlfbbehleledmbphnielafhieceggal) for reddit
 
 ## badge generation
 

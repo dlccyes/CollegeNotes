@@ -565,7 +565,11 @@ type Report struct {
 Use <https://github.com/dmarkham/enumer> to generate enumer file for `DataScope`.
 
 ```
-go run github.com/dmarkham/enumer -type=DataScope -sql 
+go install github.com/dmarkham/enumer@latest
+```
+
+```
+go run enumer -type=DataScope -sql 
 ```
 
 To map string back to enum, just use the `URLTypeString` function in the generated enumer file. But if you want to implement it manually,
@@ -1013,7 +1017,7 @@ See <https://github.com/Microsoft/vscode-go/issues/1377#issuecomment-347431580>
 ### GoMock
 
 ```
-go install github.com/golang/mock/mockgen 
+go install github.com/golang/mock/mockgen@latest
 ```
 
 ```

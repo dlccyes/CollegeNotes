@@ -9,6 +9,10 @@ parent: Software Development
 
 ### MacOS
 
+```
+brew install mysql
+```
+
 Download MySQL Community Server
 
 <https://dev.mysql.com/downloads/mysql/>
@@ -31,7 +35,13 @@ See <https://superuser.com/a/1481211>
 
 ### MySQL Workbench
 
-Download
+for mac
+
+```
+brew install --cask mysqlworkbench
+```
+
+for others, go to webpage and download
 
 <https://dev.mysql.com/downloads/workbench/>
 
@@ -77,3 +87,11 @@ However, you **cannot specify your own key** to lookup, but only the a UNIQUE in
 ```sql
 ALTER TABLE table_name MODIFY COLUMN column_name ENUM('striker', 'center back');
 ```
+
+## Troubleshooting
+
+### mysql workbench keeps crashing
+
+Try downgrading
+
+See <https://developer.apple.com/forums/thread/724378>

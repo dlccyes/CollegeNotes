@@ -251,6 +251,10 @@ free + search + image + popup with shortcut (sadly no pin)
 
 Snipaste
 
+```
+brew install snipaste
+```
+
 ### music controller in control center
 
 [MiniPlay for Spotify & iTunes](https://apps.apple.com/us/app/miniplay-for-spotify-itunes/id936243210)
