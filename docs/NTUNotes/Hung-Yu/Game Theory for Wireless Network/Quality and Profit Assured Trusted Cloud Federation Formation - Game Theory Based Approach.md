@@ -9,6 +9,7 @@ parent: Game Theory for Wireless Networks
 [paper pdf with my annotations](Quality_and_Profit_Assured_Trusted_Cloud_Federation_Formation_Game_Theory_Based_Approach.pdf)
 
 ## Intro
+
 - CSP = cloud service providers
 - demand of cloud IaaS increases
 - current problems

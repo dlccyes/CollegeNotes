@@ -34,6 +34,7 @@ layout: meth
 	- separate control & data plane
 
 ### past researches
+
 - 注重
 	- traffic offloading mechanism for HetNets (heterogeneous networks)
 		- auction modeling
@@ -46,12 +47,15 @@ layout: meth
 		- uncooperative beam groups of the satellite can benefit from the cooperation between BSs of the MNO & beam group performing offloading
 
 ### contributions of this paper
+
 - [[second-price auction]] based traffic offloading & spectrum sharing mechanism for the SDN-based H-STN
 	- common channels & spectrums shared can be managed efficiently
 - find the unique optimal offloading threshold for the MNO to achieve max utility
 
 ## SDN architecture
+
 ![[auction-design-and-analysis-for-sdn-based-traffic-offloading-in-hybrid-satellite-terrestrial-networks-1.png]]
+
 - a network framework separating control & data plane
 	- 電網導會教
 - the MNO has many BSs

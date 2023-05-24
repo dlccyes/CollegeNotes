@@ -14,6 +14,7 @@ source: <https://ieeexplore.ieee.org/document/8917566>
 [pdf with my annotations](Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing.pdf)
 
 ## intro
+
 - MEC, multi-access edge computing
 	- aka MeNB ==???==
 	- provide computing capabilities within the radio access network at the network edge
