@@ -46,6 +46,12 @@ The topmost bar
 
 Command + drag to rearrange the items
 
+### Set what to appear and what not
+
+Settings -> Control Center
+
+### Some items hidden by notch
+
 You can make menubar not use the area under notch but below it on a per app basis by going to Applications folder in finder -> Get Info -> check "Scale to fit below built-in camera". See <https://support.apple.com/en-us/HT212842>/.
 
 ## Sleep
@@ -204,7 +210,7 @@ See [Sniffing Packets from Wireless Networks](Software%20Development/Sniffing%20
 
 ## Tools
 
-### Sync config files
+### Sync config files - Mackup
 
 Use Mackup
 
@@ -217,7 +223,7 @@ See [[Good Tools#Mackup]]
 
 <https://stackoverflow.com/a/36882426/15493213>
 
-### windows snapper
+### windows snapper - Rectangle
 
 [Rectangle](https://github.com/rxhanson/Rectangle) (the successor of [Spectacle](https://github.com/eczarny/spectacle))
 
@@ -239,7 +245,7 @@ brew install --cask alt-tab
 
 Default key would be `option+tab`
 
-### clipboard manager
+### clipboard manager - Maccy
 
 [Maccy](https://maccy.app/)
 
@@ -247,7 +253,7 @@ free + search + image + popup with shortcut (sadly no pin)
 
 (it's $330 in App store but free downloading from the website, just type $0 and a random fake email for receipt and the download will start)
 
-### screenshot
+### screenshot - Snipaste
 
 Snipaste
 
@@ -277,7 +283,7 @@ your cursor will appear right at the middle of the corresponding display after t
 
 [Scroll Reverser github](https://github.com/pilotmoon/Scroll-Reverser/)
 
-### Prevent sleep when lid closed
+### Prevent sleep when lid closed - Amphetamine
 
 **M2**
 
