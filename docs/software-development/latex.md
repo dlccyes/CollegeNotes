@@ -191,6 +191,37 @@ Use pdf or eps for best quality.
 \end{figure*}
 ```
 
+### Make subfigures side by side
+
+Adjust the number in `\begin{subfigure}[t]{0.3\linewidth}` depending on how many figures you have.
+
+```latex
+\begin{figure*}[t!]
+    \centering
+    \begin{subfigure}[t]{0.3\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/sys_util_vs_N.eps}
+        \caption{System utility}
+        \label{fig:sys_util_n}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.3\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/avg_sp_pro_vs_N.eps}
+        \caption{Average SP profit}
+        \label{fig:avg_sp_pro_n}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.3\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/avg_user_util_vs_N.eps}
+        \caption{Average user utility}
+        \label{fig:avg_user_util_n}
+    \end{subfigure}
+    \caption{Performance with different numbers of SPs in computer-based simulation.}
+    \label{fig:sys_pro_n}
+\end{figure*}
+```
+
+
 ## Theorem, Definition, Proof
 
 ```tex
