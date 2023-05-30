@@ -1382,6 +1382,14 @@ type Product struct {
 }
 ```
 
+### Troubleshooting
+
+#### Some weird fake error
+
+You may have internal packages of the same name. Please change one of them, even if you alias when importing.
+
+See <https://github.com/swaggo/swag/issues/817#issuecomment-1001845616>.
+
 ## Workspace
 
 See <https://earthly.dev/blog/go-workspaces/>

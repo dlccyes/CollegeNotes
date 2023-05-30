@@ -884,7 +884,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- endowment = E
 	- got voucher $v$ → MRC i.e. slope of indifference curve increase, budget line stays the same → new equilibrium F
 	- $c_2<c_1$ but  $c_2+v>c_1$ 
-	- 所謂 budget line 不變是在 c 已經剪掉了 $v$ 的情況下，不然其實是 budget line 上移，indifference curve 穿過 $c_1+v$，於是移到新均衡 where indifference curve 切 new budget line
+	- 所謂 budget line 不變是在 c 已經減掉了 $v$ 的情況下，不然其實是 budget line 上移，indifference curve 穿過 $c_1+v$，於是移到新均衡 where indifference curve 切 new budget line
 
 ## Ch6 靜態模型的全面均衡
 
@@ -2033,7 +2033,7 @@ Adding government purchase $G_t$ to the model
 
 ![[macro-fig11.10.jpg]]
 
-## Ch12 消費與勞動的跨奇選擇
+## Ch12 消費與勞動的跨期選擇
 
 ### 消費者的跨期選擇
 
@@ -2349,3 +2349,246 @@ equilibrium
 - interest rate up
 - private consumption down - 排擠效果
 - consumer lifetime utility down
+
+## Ch13 廠商的投資決策 Ramsey Model
+
+![[macro-ramsey.jpg]]
+
+- aliases
+	- Ramsey-Cass-Koopmans Model
+	- optimal growth model
+- similar to [[#Ch12 消費與勞動的跨期選擇]] except
+	- Ch12: consumers can decide labor supply, firms can't invest
+	- Ch13: consumers can't decide labor supply, firms can invest i.e. accumulate capitals
+- goods can be consumed or accumulated i.e. served as investment
+
+### consumer
+
+**Budget constraint**
+
+$$c_t+b_t=a_t+(1+r_{t-1})b_{t-1} \ \forall t$$
+
+lifetime
+
+$$\sum^\infty_{t=1}q_tc_t=\sum^\infty_{t=1}q_ta_t=x$$
+
+**utility optimization**
+
+$$\max_{\{c_t,b_t\}^\infty_{t=1}}\sum^\infty_{t=1}\beta_{t-1}u(c_t)$$
+
+first order
+
+$$u'(c_t)=\beta u'(c_{t+1})(1+r_{t})$$
+
+### government
+
+**government budge constraint**
+
+$$G_t+(1+r_{t-1})b^g_{t-1}=T_t+b^g_t \ \forall t$$
+
+lifetime
+
+$$\sum^\infty_{t=1}q_tG_t=\sum^\infty_{t=1}q_tT_t$$
+
+
+
+### firm
+
+$$y_t=A_tF(k_{t-1},n_t)$$
+
+- $k_{t-1}$ = capital @ beginning of the period
+- $n_t$ = labor 
+- $A_t$ = total factor productivity 要素生產力 or 供給面衝擊
+	- exogenous
+- $F$ satisfied 古典假設
+	- constant return to scale
+	- individual firm's behaviour can represent the whole society's production
+
+**law of motion of capital**
+
+$$k_t=i_t+(1-\delta)k_{t-1}$$
+
+- $i_t$ = firm's investment
+- $\delta$ = depreciation rate of capital
+
+(gross) investment = net investment + depreciation
+
+$$i_t=k_t-(1-\delta)k_{t-1}=(k_t-k_{t-1})+\delta k_{t-1}$$
+
+**value of firm**
+
+As dividends will fall into shareholders' pockets eventually, the **lifetime value of total dividends** is what consumers care about
+
+$$\sum^\infty_{t=1}q_td_t=\sum^\infty_{t=1}\left[\dfrac{d_t}{\Pi_{i=1}^{t-1}(1+r_i)}\right]$$
+
+cash flow = revenue - labor cost - investment
+
+$$d_t=y_t-w_tn_t-i_t$$
+
+**lifetime dividends optimization**
+
+$$\max_{\{n_t,k_t\}^\infty_{t=1}}\sum^\infty_{t=1}q_td_t$$
+
+**first-order condition**
+
+marginal productivity of labor = wage
+
+$$\mathrm{MPL}_t=A_tF_n(k_{t-1},n_t)=w_t$$
+
+effect of one unit of additional investment
+
+- change of current cash flow = -1
+- change of future cash flow = future marginal productivity of capital MPK + residual or liquidation value of capital
+
+$$\Delta d_t = -1$$
+
+$$\Delta d_{t+1}=A_{t+1}F_k(k_t,n_{t+1})+(1-\delta)$$
+
+$$1=\dfrac{\Delta d_{t+1}}{1+r_t}=\dfrac{\mathrm{MPK}_{t+1}+(1-\delta)}{1+r_t}$$
+
+fuure MPK = opportunity cost of investment
+
+$$\mathrm{MPK}_{t+1}=A_{t+1}F_k(k_t,n_{t+1})=r_t+\delta$$
+
+bond gain = capital investment net gain
+
+$$r_t=\mathrm{MPK}_{t+1}-\delta$$
+
+cost of external financing = cost of internal financing
+
+![[macro-table13.1.png]]
+
+one unit of investment = change of lifetime dividents
+
+$$\begin{align*}
+& 1=\sum^\infty_{j=0}\dfrac{(1-\delta)^j\mathrm{MPK}_{t+j+1}}{\Pi_{i=t}^{t+j}(1+r_i)}\\
+&= \dfrac{\mathrm{MPK}_{t+1}}{1+r_t}+\dfrac{1-\delta}{1+r_t}\sum^\infty_{j=1}\dfrac{(1-\delta)^j\mathrm{MPK}_{t+j+1}}{\Pi_{i=t+1}^{t+j}(1+r_i)}\\
+&= \dfrac{\mathrm{MPK}_{t+1}+(1-\delta)}{1+r_t}
+\end{align*}$$
+
+meaning either the firm continues to operate forever or shuts down at next period, it's the same
+
+### investment demand
+
+![[macro-fig-13.2.png]]
+
+#### real interest rate up
+
+E->B: $r$ up -> cost of investment up -> desired capital stock $k^*_t$ down -> investment down
+
+investment elasticity against real interest rate irl is very high
+
+- capital-investment ratio is very low (about 15:1 irl)
+- -> a tiny change in capital is a huge change in investment
+
+#### depreciation ratio up
+
+$\delta$ up -> desired capital stock $k^*_t$ net investment down -> gross investment = net investment + depreciation not definitively up or down
+
+#### expected 要素生產力 up
+
+$\mathrm{MPK}_t=A_tF_k(k_{t-1},n_t)$ does not affect today's investment demand as it's not related to 期末 capital $k_t$, but $\mathrm{MPK}_{t+1}=A_{t+1}F_k(k_{t},n_{t+1})$ does
+
+E -> C: $A_{t+1}$ up -> $\mathrm{MPK}_{t+1}$ up -> desired capital stock up -> investment up
+
+#### 期初 capital down
+
+$k_{t-1}$ down -> 
+
+- $i_t=k^*_t-(1-\delta)k_{t-1}$ up
+	- intuition: buy more to fill the hole
+- $\mathrm{MPK}_t=A_tF_k(k_{t-1},n_t)$ up
+- $\mathrm{MPK}_{t+1}=A_{t+1}F_k(k_{t},n_{t+1})$ no change -> $k^*_t$ no change
+
+#### overall investment demand curve
+
+![[macro-fig13.3.png]]
+
+investment demand $i^d_t$ up when
+
+- $r_t$ down
+- $A_{t+1}$ up
+- $k_{t-1}$ down
+- $\delta$ depends
+
+### investment tax credit
+
+simplify the production function by ignoring labor & factor productivity
+
+$$y_t=f(k_{t-1})$$
+
+assume tax credit i.e. deduction = $\phi_t\in(0,1)$
+
+actual investment expenditure = $(1-\phi_t)i_t$
+
+cash flow = production - investment expenditure
+
+$$d_t=f(k_{t-1})-(1-\phi_t)i_t$$
+
+so tax deduction increases cash flow
+
+**optimization problem**
+
+$$\max_{\{k_t\}^\infty_{t=1}}\sum^\infty_{t=1}q_t[f(k_{t-1})-(1-\phi_t)i_t]$$
+
+1 unit of capital at period $t$ can be sold $1-\phi_t$ (residual value)
+
+marginal cost of investment = marginal profit
+
+$$1-\phi_t=\dfrac{f'(k_t)+(1-\phi_{t+1})(1-\delta)}{1+r_t}$$
+
+MPK = opportunity cost of investment - residual value
+
+$$f'(k_t)=(1-\phi_t)(1+r_t)-(1-\phi_{t+1})(1-\delta)$$
+
+when $\phi_t=\phi \ \forall t$
+
+$$f'(k_t)=(1-\phi)(r_t+\delta)$$
+
+$\phi$ permanently up -> capital & investment demand up
+
+#### effect of tax deduction rate change
+
+![[macro-fig13.6.png]]
+
+- E -> $\phi_t$ up -> cost of investment shifts down -> C
+- E -> $\phi_{t+1}$ up -> cost of investment shifts up -> B
+	- residual value of today's investment $(1-\phi_{t+1})(1-\delta)$ down
+- E -> $\phi$ permanently up -> D
+	- $\Delta\phi(1+r_t)>\Delta\phi(\delta+r_t)$
+
+#### Example
+
+Assuming $r_t=r$, $f(k)=k^\alpha$, $\alpha\in(0,1)$
+
+when $\phi_t=\phi$
+
+$$f'(k_t)=\alpha k^{\alpha-1}=(1-\phi)(r_t+\delta)$$
+
+$$\ln(\alpha)-(1-\alpha)\ln k=\ln(1-\phi)+\ln(r_t+\delta)$$
+
+$$\ln k=\dfrac{1}{1-\alpha}[\ln\alpha-\ln(1-\phi)-\ln(r+\delta)]$$
+
+elasticity for permanent investment deduction
+
+$$\dfrac{d\ln k}{d\phi}=\dfrac{1}{(1-\alpha)(1-\phi)}$$
+
+if originally there's no investment deduction i.e. $\phi=0$
+
+$$\dfrac{d\ln k}{d\phi}=\dfrac{1}{(1-\alpha)(1-\phi)}\bigg\vert_{\phi=0}=\dfrac{1}{1-\alpha}$$
+
+when $\phi_t$ is differencing for each $t$
+
+$$f'(k_t)=\alpha k_t^{\alpha-1}=(1-\phi_t)(1+r)-(1-\phi_{t+1})(1-\delta)$$
+
+$$\ln(\alpha)-(1-\alpha)\ln k_t=\ln[(1-\phi_t)(1+r)-(1-\phi_{t+1})(1-\delta)]$$
+
+$$\ln k_t=\dfrac{1}{1-\alpha}\left(\ln\alpha-\ln[(1-\phi_t)(1+r)-(1-\phi_{t+1})(1-\delta)]\right)$$
+
+$$\dfrac{d\ln k_t}{d\phi_t}=\dfrac{1}{1-\alpha}\dfrac{1+r}{(1-\phi_t)(1+r)-(1-\phi_{t+1})(1-\delta)}$$
+
+if originally there's no investment deduction i.e. $\phi_t=\phi_{t+1}=0$
+
+$$\dfrac{d\ln k_t}{d\phi_t}\bigg\vert_{\phi_t=\phi_{t+1}=0}=\dfrac{1}{1-\alpha}\dfrac{1+r}{r+\delta}$$
+
+
