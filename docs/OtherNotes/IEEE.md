@@ -7,6 +7,8 @@ parent: Miscellaneous
 
 - [Writing a paper](Tips_on_Scientific_Writing_and_Manuscript_Preparation_Continuing_Education.pdf)
 	- [src](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6955926)
+- Author tools
+	- <http://www.ieee.org/authortools>
 - IEEE templates
 	- conference
 		- <https://www.ieee.org/conferences/publishing/templates.html>

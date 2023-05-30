@@ -2361,6 +2361,19 @@ equilibrium
 	- Ch12: consumers can decide labor supply, firms can't invest
 	- Ch13: consumers can't decide labor supply, firms can invest i.e. accumulate capitals
 - goods can be consumed or accumulated i.e. served as investment
+- exogenous variables
+	- total factor productivity $A_t$
+	- government policy $G_t$ & $T_t$
+- endogeneous variables
+	- wage $w_t$
+	- interest rate $r_t$
+	- consumption $c_t$
+	- investment $i_t$
+	- production $y_t$
+	- capital $k_t$
+	- labor $n_t$
+		- equilibrium number, not supply
+	- bonds $b_t$
 
 ### consumer
 
@@ -2590,5 +2603,82 @@ $$\dfrac{d\ln k_t}{d\phi_t}=\dfrac{1}{1-\alpha}\dfrac{1+r}{(1-\phi_t)(1+r)-(1-\p
 if originally there's no investment deduction i.e. $\phi_t=\phi_{t+1}=0$
 
 $$\dfrac{d\ln k_t}{d\phi_t}\bigg\vert_{\phi_t=\phi_{t+1}=0}=\dfrac{1}{1-\alpha}\dfrac{1+r}{r+\delta}$$
+
+### general equilibrium 全面均衡
+
+#### solving endogeneous variables
+
+deriving $w_t,y_t,n_t,b_t$
+
+- max consumer utility
+	- $u'(c_t)=\beta u'(c_{t+1})(1+r_t)$
+	- $c_t+b_t=(d_t+w_t-T_t)+(1+r_{t-1})b_{t-1}$
+- max firm value
+	- $\mathrm{MPL}_t=A_tF_n(k_{t-1},n_t)=w_t$
+		- $=A_tF_n(k_{t-1},1)$, which is dependent on exogenous variables only
+			- $k_{t-1}$ is exogenous since it's from the past, you can do nothing to change it
+	- $\mathrm{MPK}_{t+1}=A_{t+1}F_k(k_{t},n_{t+1})=r_t+\delta$
+- government budget constraint
+	- $G_t+(1+r_{t-1})b^g_{t-1}=T_t+b^g_t$
+- market demand = supply
+	- $n^d_t=n^s_t=1$
+	- $b^d_t=b^s_t=1$
+	- $c^d_t+i^d_t+G_t=y^s_t$
+- $y_t=A_tF(k_{t-1},n_t)=A_tF(k_{t-1},1)=A_tf(k_{t-1})$
+
+[[#Walras Law of Markets]]
+
+$$[(c^d_t+i^d_t+G_t)-y^s_t]+w_t(n^d_t-1)+(b^d_t-b^g_t)=0$$
+
+deriving $r_t,c_t,i_t,k_t$
+
+- $u'(c_t)=\beta u'(c_{t+1})[A_{t+1}f'(k_t)+(1-\delta)]$
+- $c_t+[k_t-(1-\delta)k_{t-1}]+G_t=A_tf(k_{t-1})$
+
+![[macro-fig13.7.png]]
+
+#### national saving
+
+private budge constraint
+
+$$c_t+(b_t-b_{t-1})+i_t=(y_t+r_{t-1}b_{t-1})-T_t$$
+
+private saving
+
+$$s^P_t=(y_t+r_{t-1}b_{t-1}-T_t)-c_t=(b_t-b_{t-1})+i_t$$
+
+public saving
+
+$$s^G_t=T_t-(G_t+r^g_{t-1})=b^g_{t-1}-b^g_t$$
+
+$b_t=b^g_t \ \forall t$ in a closed economy
+
+national saving
+
+$$s_t=s^P_t+s^G_t=i_t$$
+
+In a closed economy, investment solely comes from national saving
+
+
+#### Crusoe
+
+Ramsey-Crusoe mapoing
+
+- spend a fixed time collecting fruits each day $y_t=A_tf(k_{t-1})$
+- $A_t$ is the mother nature factor
+- $k_{t-1}$ is the seeds you planted yesterday, which will grow to fruits in a day
+	- a fruit can either be eaten xor be planted as a seed
+	- grown fruits still need to be collected to be utilized
+- $\delta$ of seeds are eaten
+- $G_t$ fruits are stolen
+- $k_t=i_t+(1-\delta)k_{t-1}$
+- $y_t=c_t+i_t+G_t$
+
+utility optimization problem
+
+$$\max_{\{c_t,k_t\}^\infty_{t=1}}=\sum^\infty_{t=1}\beta^{t-1}u(c_t)$$
+first-order
+
+$$u'(c_t)=\beta u'(c_{t+1})[A_{t+1}f'(k_t)+(1-\delta)]$$
 
 
