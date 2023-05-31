@@ -267,7 +267,7 @@ $$S=I+NCO$$
 - supply = national saving $S$
 - demand = domestic investment $I$ + net capital outflow $NCO$
 
-![[macro-88.png]]
+![[p-macro-88.png]]
 
 ### foreign-currency exchange market
 
@@ -276,9 +276,9 @@ $$NCO=NX$$
 - supply = $NCO$ net capital outflow
 - demand = $NX$ net export
 
-![[macro-ex.png]]
+![[p-macro-ex.png]]
 
-![[macro-exchange.png]]
+![[pmacro-exchange.png]]
 
 ## Ch33 Aggregate Demand and Supply
 

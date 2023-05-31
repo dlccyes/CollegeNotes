@@ -1395,13 +1395,15 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ![[operating-systems-103.png]]
 
 #### POSIX Scheduling
+
 - `SCHED_FIFO`
-	- [first-come first-serve FCFS scheduling](#first-come%20first-serve%20FCFS%20scheduling)
-- `SCHED_RR`
-	- [round-robin RR scheduling](#round-robin%20RR%20scheduling)
+	- [[#first-come, first-serve (FCFS) scheduling]]
+	- [[#round-robin (RR) scheduling]]
 
 ### Operating Systems Examples
+
 #### Linux
+
 - pre-2.5
 	- traditional UNIX scheduling
 - 2.5
@@ -1414,7 +1416,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- steps
 			1. time interrupt
 			2. choose task with min vruntime
-				- RB tree
+				- [[Red-Black Tree]]
 			3. compute dynamic time slice
 				- when to do next scheduling decision
 			4. set timer for time slice
@@ -1433,22 +1435,26 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- weight
 
 #### Windows
+
 - priority-based, preemptive scheduling
 - execute idle thread if no ready queue empty
 - Win7 added user-mode scheduling
 
 #### Solaris
+
 - priority-based scheduling
 	- 6 classes
 	- different scheduling algo for each class
 
 ### Algorithm Evaluation
+
 - critiria
 	- efficiency
 	- responsiveness
 	- predictability
 
 #### Deterministic Modeling
+
 - a type of analytic evaluation
 - take a predeterminied static workoad and calculate the performance under each algo
 - unrealistic
@@ -1457,6 +1463,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ![[operating-systems-105.png]]
 
 #### Queueing Models
+
 - given probability distribution of CPU & I/O bursts
 	- measured or estimated
 - calculate average throughput, utilization, waiting time etc. for each algorithms
@@ -1469,9 +1476,11 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- pretty intuitive actually
 
 #### Simulations
+
 - simulate and get algo performance
 
 #### Implementation
+
 - implement and measure irl
 - cons
 	- high cost
@@ -1479,6 +1488,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- environment vary
 
 ## Mass-Storage Systems
+
 - heirarchy
 	- ![[operating-systems-106.png]]
 - hard-disk drive (HDD)
@@ -1520,18 +1530,22 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- NVMe
 
 ### HDD scheduling
+
 - can only approximate head & cylinder location
-	- don't know exact location
+	- don't know the exact location
 
 #### FCFS scheduling
+
 - e.g.
 	- ![[operating-systems-108.png]]
 
 #### SSTF Scheduling
+
 - shortest seek time first
 - always go to the nearest one
 
 #### SCAN Scheduling
+
 - elevator algorithm
 - to reduce redundant movement
 - font -> end -> front -> end -> front -> ....
@@ -1548,6 +1562,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- ![[operating-systems-110.png]]
 
 #### Algo Comparison
+
 - SSTF (shortest seek time first)
 	- greedy
 	- starvation
@@ -1589,6 +1604,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 			- receive bit string -> detect error and their position -> correct them 
 
 ### storage device management
+
 - bottom to top
 	- partition
 		- os treat each as a separate device
@@ -1618,6 +1634,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- scan -> flag bad blocks -> avoid them while doing allocation
 
 ### swap-space
+
 - used when DRAM not enough space
 - raw disk access
 	- no need formatting
@@ -1626,6 +1643,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- like page table
 
 ### storage attachment
+
 - host-attached
 	- through local I/O port
 	- fiber channel (FC)
@@ -2194,6 +2212,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- memory modifications may not be immediately visible to other processors
 
 #### atomic hardware instructions
+
 - can't possibly be interrupted
 - `test_and_set`
 	- ![[operating-systems-157.png]]

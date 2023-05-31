@@ -735,7 +735,7 @@ $$y=AF(k,n)(+B)$$
 - $AF(ak,an)<ay$ → 規模報酬遞減 decreasing return to scale
 	- e.g. 精緻餐廳、文創
 
-#### Cobb-Douglas 生產函數
+#### [[Cobb-Douglas]] 生產函數
 
 $$y=Ak^{\alpha}n^{1-\alpha},\alpha\in(0,1)$$
 
@@ -803,7 +803,7 @@ i.e. 廠商生產全部被資本&勞動報酬瓜分掉
 	- 原油價格上升 → E to F，原油 & 勞動需求下降，商品供給下降, just like A 下降的結果
 		- q 上升 → x 下降  → MPL 下降 → labor demand 左移 → n 下降 → MPX 下降 → 原油 demand 左移 → x 下降
 
-#### Cobb-Douglas 生產函數
+#### [[Cobb-Douglas]] 生產函數
 
 $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 
@@ -1585,7 +1585,7 @@ budget deficit $D$ = expenditure - tax
 
 $$D_t=G_t+r_{t-1}B^g_{t-1}-T_t=B^g_t-B^g_{t-1}$$
 
-t 期折現 factor $q_t=\Pi_{i=1}^{t-1}(\dfrac{1}{1+r_i})$
+t 期折現 factor $q_t=\prod_{i=1}^{t-1}(\dfrac{1}{1+r_i})$
 
 $$\sum_{t=1}^\infty q_tG_t+(1+r_0)B^g_0=\sum_{t=1}^\infty q_tT_t+q_\infty B^g_\infty=\sum_{t=1}^\infty q_tT_t$$
 
@@ -1909,7 +1909,7 @@ equilibrium stock price
 
 - $q_tu'(d_t)=\beta u'(d_{t+1})(q_{t+1}+d_{t+1})=\sum_{j=1}^\infty\beta^j u'(d_{t+j})d_{t+j}$
 	- replace $u'(d_{t+1})q_{t+1}$ and expand to get the summation
-- $q_t=\dfrac{\beta u'(d_{t+1})}{u'(d_t)}(q_{t+1}+d_{t+1})=\sum_{j=1}^\infty\dfrac{\beta^j u'(d_{t+j})}{u'(d_t)}d_{t+j}=\sum_{j=1}^\infty d_{t+j}\Pi_{i=t}^{t+j-1}\dfrac{1}{1+r_i}$
+- $q_t=\dfrac{\beta u'(d_{t+1})}{u'(d_t)}(q_{t+1}+d_{t+1})=\sum_{j=1}^\infty\dfrac{\beta^j u'(d_{t+j})}{u'(d_t)}d_{t+j}=\sum_{j=1}^\infty d_{t+j}\prod_{i=t}^{t+j-1}\dfrac{1}{1+r_i}$
 	- stock price = sum of 各期 dividend 折現值
 - if $d_t=d\space$ and $r_t=r\space$ $\forall t$
 	- $q=\dfrac{d}{r}$
@@ -2060,7 +2060,7 @@ $$s_t=(a_t+w_tn_t+r_{t-1}b_{t-1})-c_t=b_t-b_{t-1}$$
 
 - $b_0=0$
 - $\lim_{t\rightarrow\infty}q_tb_t=0$
-- $q_t=\Pi_{i=1}^{t-1}(\dfrac{1}{1+r_i})$
+- $q_t=\prod_{i=1}^{t-1}(\dfrac{1}{1+r_i})$
 
 lifetime budget constraint
 
@@ -2095,9 +2095,9 @@ work 1 more unit time -> earn $w_t$ more unit -> buy bonds with them
 
 consumption vs. future leisure
 
-$$u_c(c_t,l_t)=\beta u_l(c_{t+1},l_{t+1})\dfrac{1+r_t}{w_t+1}$$
+$$u_c(c_t,l_t)=\beta u_l(c_{t+1},l_{t+1})\dfrac{1+r_t}{w_{t+1}}$$
 
-consume 1 less unit -> get $1+r_t$ more future consumption, which translates to $\dfrac{1+r_t}{w_t}$ of leisure
+consume 1 less unit -> get $1+r_t$ more future consumption, which translates to $\dfrac{1+r_t}{w_{t+1}}$ of leisure
 
 leisure vs. future leisure
 
@@ -2381,6 +2381,8 @@ equilibrium
 
 $$c_t+b_t=a_t+(1+r_{t-1})b_{t-1} \ \forall t$$
 
+where $a_t=d_t+w_t-T_t$ = exogenous income
+
 lifetime
 
 $$\sum^\infty_{t=1}q_tc_t=\sum^\infty_{t=1}q_ta_t=x$$
@@ -2432,7 +2434,7 @@ $$i_t=k_t-(1-\delta)k_{t-1}=(k_t-k_{t-1})+\delta k_{t-1}$$
 
 As dividends will fall into shareholders' pockets eventually, the **lifetime value of total dividends** is what consumers care about
 
-$$\sum^\infty_{t=1}q_td_t=\sum^\infty_{t=1}\left[\dfrac{d_t}{\Pi_{i=1}^{t-1}(1+r_i)}\right]$$
+$$\sum^\infty_{t=1}q_td_t=\sum^\infty_{t=1}\left[\dfrac{d_t}{\prod_{i=1}^{t-1}(1+r_i)}\right]$$
 
 cash flow = revenue - labor cost - investment
 
@@ -2474,8 +2476,8 @@ cost of external financing = cost of internal financing
 one unit of investment = change of lifetime dividents
 
 $$\begin{align*}
-& 1=\sum^\infty_{j=0}\dfrac{(1-\delta)^j\mathrm{MPK}_{t+j+1}}{\Pi_{i=t}^{t+j}(1+r_i)}\\
-&= \dfrac{\mathrm{MPK}_{t+1}}{1+r_t}+\dfrac{1-\delta}{1+r_t}\sum^\infty_{j=1}\dfrac{(1-\delta)^j\mathrm{MPK}_{t+j+1}}{\Pi_{i=t+1}^{t+j}(1+r_i)}\\
+& 1=\sum^\infty_{j=0}\dfrac{(1-\delta)^j\mathrm{MPK}_{t+j+1}}{\prod_{i=t}^{t+j}(1+r_i)}\\
+&= \dfrac{\mathrm{MPK}_{t+1}}{1+r_t}+\dfrac{1-\delta}{1+r_t}\sum^\infty_{j=1}\dfrac{(1-\delta)^j\mathrm{MPK}_{t+j+1}}{\prod_{i=t+1}^{t+j}(1+r_i)}\\
 &= \dfrac{\mathrm{MPK}_{t+1}+(1-\delta)}{1+r_t}
 \end{align*}$$
 
@@ -2681,4 +2683,189 @@ first-order
 
 $$u'(c_t)=\beta u'(c_{t+1})[A_{t+1}f'(k_t)+(1-\delta)]$$
 
+### limitations of Ramsey Model
 
+Production this period is decided by the previous period, so it won't be affected by future perturbations, which is unrealistic.
+
+## Ch17 實質循環模型 Real Business Cycle Model
+
+Real Business Cycle (RBC) Model = Ramsey Model + endogenous labor supply
+
+### consumer
+
+[[#Ch13 廠商的投資決策 Ramsey Model#consumer]] but with wage & labor as endogenous variables
+
+**Budget constraint**
+
+$$c_t+b_t=a_t+w_tn_t+(1+r_{t-1})b_{t-1} \ \forall t$$
+
+where 
+
+- $a_t=d_t-T_t$ = exogenous non-labor income
+- $n_t+l_t=1$
+
+lifetime
+
+$$\sum^\infty_{t=1}q_tc_t=\sum^\infty_{t=1}q_t(a_t+w_tn_t)=x$$
+
+完全財富
+
+$$\sum^\infty_{t=1}q_t(c_t+w_tl_t)=\sum^\infty_{t=1}q_t(a_t+w_t)=\bar{x}$$
+
+**utility optimization**
+
+$$\max_{\{c_t,b_t,n_t\}^\infty_{t=1}}\sum^\infty_{t=1}\beta_{t-1}u(c_t, 1-n_t)$$
+
+first order
+
+See also [[#Ch12 消費與勞動的跨期選擇#消費者的跨期選擇]]
+
+$$u_l(c_t,l_t)=u_c(c_{t},l_t)w_t$$
+
+$$u_l(c_t,l_t)=\beta u_c(c_{t+1},l_{t+1})w_t(1+r_t)$$
+
+$$u_c(c_t,l_t)=\beta u_c(c_{t+1},l_{t+1})(1+r_t)$$
+
+$$u_l(c_t,l_t)=\beta u_l(c_{t+1},l_{t+1})\dfrac{w_t(1+r_t)}{w_{t+1}}$$
+
+**effect of exogenous variable changes**
+
+- non labor income up
+	- income effect: consumption demand up, leisure demand up, labor supply down
+	- $a_t$ up -> savings up -> $b^d_t$ up
+	- $a_{t+1}$ up -> savings down -> $b^d_t$ down
+	- $a$ permanently up -> savings & bonds demand no change
+- real interest rate up
+	- no income effect but intertemporal substitution effect
+	- $r$ up -> consumption & leisure's opportunity cost up -> $c^d_t$ & $l^d_t$ down, $n^d_t$ up
+- real wage up
+	- no income effect
+		- zero sum between consumer & firm
+	- contemporaneous substitution effect: $w_t$ up -> $n_t$ & $c_t$ up
+	- intertemporal substitution effect
+		- $w_t$ up -> $n_t$ up
+		- $w_{t+1}$ up -> $n_t$ down, $c_t$ up
+		- $w$ permanently up -> no change
+
+![[macro-87.png]]
+
+### firm
+
+same as [[#Ch13 廠商的投資決策 Ramsey Model#firm]]
+
+$$\max_{\{n_t,k_t\}^\infty_{t=1}}\sum^\infty_{t=1}q_t[A_tF(k_{t-1},n_t)-w_tn_t-i_t]$$
+
+$$\mathrm{MPL}_t=A_tF_n(k_{t-1},n_t)=w_t$$
+
+$$\mathrm{MPK}_{t+1}=A_{t+1}F_k(k_t,n_{t+1})=r_t+\delta$$
+
+![[macro-57.png]]
+
+### government
+
+same as [[#Ch13 廠商的投資決策 Ramsey Model#government]]
+
+**government budge constraint**
+
+$$G_t+(1+r_{t-1})b^g_{t-1}=T_t+b^g_t \ \forall t$$
+
+lifetime
+
+$$\sum^\infty_{t=1}q_tG_t=\sum^\infty_{t=1}q_tT_t$$
+
+
+### general equilibrium
+
+[[#Ch13 廠商的投資決策 Ramsey Model#general equilibrium 全面均衡]] but with wage & labor as endogenous variables
+
+Deciding $w_t,r_t,c_t,n_t,k_t$
+
+- market clearing conditions
+	- $n^d_t=n^s_t$
+	- $b^d_t=b^s_t$
+	- $c^d_t+i^d_t+G_t=y^s_t$
+
+simplify
+
+- $\dfrac{u_l(c_t,l_t)}{u_c(c_t,l_t)}=A_tF_n(k_{t-1},n_t)$
+	- $\mathrm{MPL}_t=A_tF_n(k_{t-1},n_t)=w_t$
+- $u_c(c_t,l_t)=\beta u_c(c_{t+1},l_{t+1})[A_{t+1}F_k(k_{t},n_{t+1})+(1-\delta)]$
+	- $u_c(c_t,l_t)=\beta u_c(c_{t+1},l_{t+1})(1+r_t)$
+	- $\mathrm{MPK}_{t+1}=A_{t+1}F_k(k_t,n_{t+1})=r_t+\delta$
+- $c_t+[k_t-(1-\delta)k_{t-1}]+G_t=A_tf(k_{t-1}, n_t)$
+	- $i_t=k_t-(1-\delta)k_{t-1}$
+
+### Crusoe
+
+[[#Ch13 廠商的投資決策 Ramsey Model#Crusoe]] but with he can decide his labor time
+
+utility optimization problem
+
+$$\max_{\{c_t,k_t,n_t\}^\infty_{t=1}}=\sum^\infty_{t=1}\beta^{t-1}u(c_t,1-n_t)$$
+
+first-order
+
+$$u'(c_t)=\beta u'(c_{t+1})[A_{t+1}f'(k_t)+(1-\delta)]$$
+
+### consumer & labor market
+
+![[macro-fig17.1.png]]
+
+![[macro-77.png]]
+
+![[macro-fig17.2.png]]
+
+since it's wage vs. labor in the labor market, interest rate change causes the curve to move not just the point as in consumer market
+
+### steady-state
+
+every endogenous variables in each period stays the same
+
+$$\beta(1+r^*)=1, r^*=\rho$$
+
+$$\dfrac{u_l(c^*,1-n^*)}{u_c(c^*,1-n^*)}=\mathrm{MPL}=AF_n(k^*,n^*)=w^*$$
+
+$$AF_k(k^*,n^*)=r^*+\delta=\rho+\delta$$
+
+$$c^*+\delta k^*+G=y^*=AF(k^*,n^*)$$
+
+#### example
+
+Given
+
+- $u(c,l)=\ln c+\ln l$
+- $y=Ak^\alpha n^{1-\alpha}, \alpha\in(0,1)$
+	- [[Cobb-Douglas]]
+- $G=gy, g\in(0,1)$
+
+$$\mathrm{MPK}=\dfrac{\alpha y^*}{k^*}=\rho+\delta$$
+
+$$k^*=\dfrac{\alpha}{\rho+\delta}y^*=\phi y^*$$
+
+capital-production ratio $\phi=\dfrac{\alpha}{\rho+\delta}$ is a constant
+
+substitute into $c^*+\delta k^*+G=y^*$
+
+$$c^*=y^*(1-\delta\phi-g), \delta\phi+g<1$$
+
+MRS = MPL
+
+$$\mathrm{MRS}=\dfrac{u_l}{u_c}=\dfrac{c}{l}=\dfrac{c}{1-n}$$
+
+$$\mathrm{MPL}=(1-\alpha)\dfrac{y^*}{n^*}$$
+
+$$\dfrac{c^*}{1-n^*}=\dfrac{y^*(1-\delta\phi-g)}{1-n^*}=(1-\alpha)\dfrac{y^*}{n^*}$$
+
+solving $n^*,y^*,k^*,c^*,w^*$
+
+$$n^*=\dfrac{1-\alpha}{(1-\alpha)+(1-\delta\phi-g)}$$
+
+$$y^*=A{k^*}^\alpha {n^*}^{1-\alpha}=A(\phi y^*)^\alpha{n^*}^{1-\alpha}$$
+
+$$y^*=(A\phi^\alpha)^{1/(1-\alpha)}n^*$$
+
+$$k^*=\phi y^*$$
+
+$$c^*=y^*(1-\delta\phi-g)$$
+
+$$w^*=\mathrm{MPL}=(1-\alpha)\dfrac{y^*}{n^*}=(1-\alpha)(A\phi^\alpha)^{1/(1-\alpha)}n^*$$

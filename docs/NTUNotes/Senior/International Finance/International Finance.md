@@ -559,3 +559,146 @@ price
 		- higher risk -> larger bid-ask spread
 	- market thickness
 		- smaller market -> less liquidity -> higher risk -> larger bid-ask spread
+
+### 匯率變動
+
+匯率
+
+$$S_t=S^{H/F}=\dfrac{\text{Home Currency}}{\text{Foreign Currency}}$$
+
+foreign currency appreciates -> $S_t$ up 
+
+匯率變動
+
+$$\dfrac{S_{t+1}-S_t}{S_t}=\dfrac{\Delta S_{t+1}}{S_t}$$
+
+e.g. 1 foreign = 20 home -> 1 foreign = 30 home, then foreign currency appreciation rate = 50%
+
+Note that foreign currency appreciation rate != home currency depreciation rate. We can use log-difference to solve this problem.
+
+$$\begin{align*}
+& \Delta \log S_{t+1}=\log S_{t+1}-\log S_{t}\\
+&= -\left(\log \dfrac{1}{S_{t+1}}-\log\dfrac{1}{S_t}\right)
+\end{align*}$$
+
+**first-order Taylor approximiation**
+
+given $\log(1+g_t)\approx g_t$
+
+$$\dfrac{S_{t+1}-S_t}{S_t}\approx\log\left(1+\dfrac{S_{t+1}-S_t}{S_t}\right)=\log S_{t+1}-\log S_t$$
+
+**continuously compounded rate**
+
+$g_{t+1}$ = foreign currency appreciation rate in a year, $d_{t+1}$ = continuously compounded rate in a year
+
+If we divide a year into $n$ period for compounded rate
+
+$S_{t+1}=S_t\left[1+\left(\dfrac{d_{t+1}}{n}\right)^n\right]$
+
+We know $\lim_{n\rightarrow\infty}\left[1+\left(\dfrac{d_{t+1}}{n}\right)^n\right]=e^{d_{t+1}}$
+
+So 
+
+$$S_{t+1}=S_te^{d_{t+1}}$$
+
+$$d_{t+1}=\log S_{t+1}-\log S_t$$
+
+### multilateral exchange rate 
+
+geometric weighted average of exchange rate to multiple currencies, with weight = trade amount
+
+EER effective exchange rate i.e. multilateral exchange rate 
+
+$$EER=\prod_{i=1}^n\left(\dfrac{1}{S_i}\right)^{w_i}, \sum_i^nw_i=1$$
+
+$$\dfrac{1}{EER}=\prod_{i=1}^n\left(S_i\right)^{w_i}$$
+
+- $\dfrac{1}{S_i}$ = indirect quote to country $i$
+- $w_i$ = ratio of trade to country $i$ to total trade amount
+
+average change rate
+
+$$\Delta\log EER=\sum_{i=1}^n w_i\Delta \log\dfrac{1}{S_i}$$
+
+有效匯率指數=$\dfrac{EER_t}{EER_0}\times 100$
+
+- EER at period t / EER at base period
+- up when NTD appreciates against a basket
+
+### foreign exchange derivatives
+
+- forwards 遠期外匯
+	- trade in the future
+	- can't be traded in secondary market
+- swaps 換匯交易
+	- a contract to trade now and trade back later
+- futures 外匯期貨
+	- trade in the future
+	- can be traded in secondary market
+- options 外匯選擇權
+	- an option to trade in the future
+
+### foreign exchange reserves
+
+official international reserves includes
+
+- foreign exchange reserves
+- gold reserves
+- IMF-related reserve assets
+	- Taiwan's not in IMF so not for Taiwan
+
+optimal foreign exchange reserves
+
+- 3-6 months of import
+- 100% short term debt
+- 20% M2
+
+However, Taiwan's foreign exchange reserves >> the optimal point
+
+Before 1987, Taiwan's private banks are forbidden to have foreign exchange, so they're all sold to the central bank.
+
+## Exchange rate
+
+### exchange rate regime
+
+[[Ch17 貨幣政策的目標機制]]
+
+how central banks control the exchange rate
+
+#### theoretical
+
+- free floating
+	- zero intervention
+- managed floating
+	- dirty floating
+	- central bank intervenes frequently
+- fixed rate
+	- fixed to a big currency e.g. USD EUR or a basket of currencies
+
+#### de facto
+
+IMF's report
+
+- hard pegs
+	- no separate legal tender
+		- use a major currency as its own
+		- called Dollarization if use USD
+	- currency board
+		- fixed exchange rate to a major currency
+- soft pegs
+	- conventional peg
+		- target at a currency or a basket
+	- stabilized arrangement
+		- within 2% of change within 6 months 
+		- TW probably this
+	- crawling peg
+		- constant rate of change
+	- crawl-like arrangement
+		- within 2% of change in the rate of change
+	- pegged exchange rate within horizontal bamds
+		- target at a zone
+- floating regime
+	- floating
+		- intervene only to slow down the rate of change
+	- free floating
+		- almost never intervene
