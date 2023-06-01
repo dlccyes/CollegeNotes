@@ -235,13 +235,12 @@ Unexpected high inflation helps borrowers and harms loaners.
 
 See [[Ch13 中央銀行的功能與政策目標#物價穩定]]
 
-
 ## Ch28 Unemployment
 
 ### terminology
 
 - employed = paid employees || self-employed || unpaid workers in a family business
-- unemployed = not employed but have looked for a job within the last 4 weeks
+- unemployed = not employed && have looked for a job within the last 4 weeks
 - not in labor force = else
 
 ### measurements
@@ -256,7 +255,46 @@ See [[Ch13 中央銀行的功能與政策目標#物價穩定]]
 
 ![[pmacro-wage-labor.png]]
 
-## Ch32
+## Ch31 Open Economy Basics
+
+### saving
+
+- NX = net export
+- NCO = net capital outflow i.e. net foreign investment
+	- foreign assets purchased by citizens - domestic assets purchased by foreigners
+
+$$NX=NCO$$
+
+$$Y=C+I+G+NX$$
+
+$$S=Y-C-G=I+NX=I+NCO$$
+
+saving = domestic investment + net capital outflow
+
+### real exchange rate
+
+real exchange rate = $e\dfrac{P}{P^*}$
+
+- $P$ = domestic price (in home currency)
+- $P^*$ = foreign price (in foreign currency)
+- $e$ = nonimal exchange rate (foreign/home)
+
+![[pmacro-33.png]]
+
+### purchasing-power parity PPP
+
+**theory** 
+
+- a good has the same price everywhere i.e. a currency has the same purchasing power everywhere, otherwise there will be opportunity for arbitrage (套利空間)
+- the price level difference of two countries should be reflected in the exchange rate.
+	- price level changes -> nominal exchange rate changes
+
+**limitations**
+
+- many goods can't be easily traded i.e. arbitraged
+- same good not the same in different countries i.e. preferences are not universal
+
+## Ch32 Open Economy Theories
 
 NCO = net capital outflow
 
