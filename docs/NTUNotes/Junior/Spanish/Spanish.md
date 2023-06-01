@@ -3279,3 +3279,17 @@ p.13 - exercise 22
 - sentar -> siento/sientas/sienta
 - acostar -> acuesto/acuestas/acuesta
 - dormir -> duermo/duermas/duerma
+
+## Final Review
+
+![[Pasted image 20230601170912.png]]
+
+![[Pasted image 20230601170646.png]]
+
+![[Pasted image 20230601170656.png]]
+
+![[Pasted image 20230601170716.png]]
+
+![[Pasted image 20230601170723.png]]
+
+![[Pasted image 20230601170733.png]]

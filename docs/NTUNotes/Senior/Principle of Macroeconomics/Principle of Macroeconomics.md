@@ -341,7 +341,188 @@ $$Y=Y_N+a(P-P_E)$$
 
 - $P$ up -> firm thinks its relative price rises -> increase $Y$ and employment
 
+## Ch34 The Influence of Monetary and Fiscal Policy on Aggregate Demand
 
+### fed monetary policy
 
+money supply MS is fixed by the Fed
+
+interest rate of bonds vs. quantity of money 
+
+![[pmacro-99.png]]
+
+![[pmacro-98.png]]
+
+Fed can influence AD by changing MS
+
+![[pmacro-88.png]]
+
+### zero lower bond
+
+[[Ch16 傳統與非傳統的貨幣政策工具#16.6 名目利率零下限問題&負利率政策]]
+
+nominal interest rate 0 -> can't be lowered any more, need to use other ways to affect aggregate demand, production, employment etc.
+
+- raise inflation expectation
+- quantitative easing
+
+### fiscal policy
+
+$G$ up or $T$ down -> AD shifts right
+
+#### multiplier effect
+
+government purchase from firm -> 
+
+- direct effect: AD shifts right
+- income effect: firm revenue up -> worker income up -> consumption up -> AD shifts right
+
+![[pmacro-97.png]]
+
+the magnitude of multiplier effect depends on [[marginal propensity to consume]] MPC = $\dfrac{\Delta C}{\Delta Y}$
+
+$$\Delta Y=\Delta C +\Delta G=\mathrm{MPC}\Delta Y+\Delta G$$
+
+$$\Delta Y=\dfrac{1}{1-\mathrm{MPC}}\Delta G$$
+
+#### crowding-out effect
+
+**government spending**
+
+basically government spending reduces private consumption, see [[Macroeconomics#Ch7 靜態模型的均衡分析#政府消費支出增加]]
+
+$G$ up ->
+
+- AD shifts right
+- $Y$ up -> MD shift right -> $r$ up -> AD shifts left
+- spend on infrastructure -> increase business productivity -> AS shifts right
+
+![[pmacro-55.png]]
+
+**tax**
+
+tax rate down -> more incentive to work -> labor up -> AS shifts right
+
+### policy effectiveness
+
+- active policy
+	- investment takes time to affect interest rate
+	- takes 6 months for monetary policies to affect output & employment
+	- a change in government spending & tax requires congress approval, which takes time
+	- since active policies take time to take effect, they're not suitable to be used for short-term goals
+- automatic policy
+	- tax reduces in recession naturally -> AD shifts right
+	- more people use social welfare system in recession, increasing government spending naturally -> AD shits right
+
+## Ch35 [[Philips curve]]
+
+- in the long run, inflation & unemployment rate is unrelated
+- in the short run, they are correlated
+
+[[Philips curve]]: inflation vs. unemployment rate
+
+### short-run
+
+![[pmacro-76.png]]
+
+expected inflation & SRAS given in the short run
+
+$$u=\mathrm{NRU}-a(P-P_E)$$
+
+### long-run
+
+![[pmacro-887.png]]
+
+expected inflation is adjusted to the reality in the long run
+
+![[pmacro-78.png]]
+
+monetary policy does not affect natural rate of X
+
+### supply shock
+
+supply shock affects AS & PC (philips curve)
+
+![[pmacro-999.png]]
+
+### disinflation
+
+a reduction in inflation rate
+
+sacrifice ratio = $\dfrac{\Delta \text{output}}{\Delta \text{inflation}}$ = 5 typically
+
+reduce 5x% output to reduce x% inflation rate
+
+if everyone's rational, expected inflation falls when the Fed accounces to reduce inflation -> PC shifts downward -> smaller unemployment rate
+
+## Ch36 Macroeconomic Policies
+
+See [[Ch13 中央銀行的功能與政策目標#13.4 央行制度]]
+
+### active stabilization
+
+- pros
+	- help stablize the economy
+- cons
+	- policies have long delay, making them ineffective
+
+### government spending
+
+- aggregate demand directly boosted
+- give money to the states to maintain the employment of their workers
+
+### tax cut
+
+- increase consumer income -> increase consumption
+- higher wage -> increase the incentive to work -> increase aggregate supply
+- may increase aggregate demand with investment tax credit etc.
+
+### policy discretion
+
+- pros
+	- flexible
+	- hard to specify rules
+- cons
+	- abuse
+	- political business cycle
+	- time-inconsistency
+
+### zero inflation
+
+- pros
+	- temporary costs but permanent benefits
+		- cost i.e. unemployment rate can be reduced if Fed's credible -> expected inflation rate reflects policy
+- cons
+	- small benefits big cost i.e. unemployment rate
+		- sacrifice ratio = 5
+	- investment reduced
+
+### balanced budget i.e. no deficits
+
+- why deficits bad
+	- debt places burden on future generations
+	- deficits crowd out investment
+		- sell government bonds for funding -> soak up money otherwise used for investment on business
+- why deficits not so bad
+	- burden placed on a person from government debt is tiny
+	- harm of cutting deficits
+		- social welfare reduced
+		- tax increased
+	- what important is debt/income ratio not the absolute debt amount
+
+### tax reform to encourage saving
+
+- why Murica needs tax reform to encourage saving
+	- current Murica tax system descourages saving
+		- high marginal tax rate (of income) -> less incentive to save
+		- some saving is taxed twice
+		- high tax rate on bequests
+	- can replace income tax with consumption tax to incentivize saving
+		- should exempt on necessities, otherwise it's just eating the poor
+- why Murica doesn't need tax reform to encourage saving
+	- tax reform encouraging saving just benefits the rich
+	- elasticity of saving on rate of return is low, so tax reform won't do much
+	- may increase government budge deficits -> lower public saving, cancelling out the increase of private saving
+	- can increase national saving simply by reducing budge deficit
 
 

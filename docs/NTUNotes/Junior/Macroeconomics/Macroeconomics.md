@@ -1242,7 +1242,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- E 直接移到 F
 	- 儲蓄不變
 - 邊際消費&儲蓄傾向
-	- 邊際消費傾向 MPC, marginal propensity to consume
+	- 邊際消費傾向 MPC, [[marginal propensity to consume]]
 		- 1st 期可支配所得增加 $\Delta a_1$ → $MPC=\dfrac{\Delta c_1}{\Delta a_1}$
 	- 邊際儲蓄傾向 MPS, marginal propensity to save
 		- $MPS=\dfrac{\Delta s_1}{\Delta a_1}=\dfrac{\Delta a_1-\Delta c_1}{\Delta a_1}=1-MPC$
@@ -2869,3 +2869,36 @@ $$k^*=\phi y^*$$
 $$c^*=y^*(1-\delta\phi-g)$$
 
 $$w^*=\mathrm{MPL}=(1-\alpha)\dfrac{y^*}{n^*}=(1-\alpha)(A\phi^\alpha)^{1/(1-\alpha)}n^*$$
+
+### effect of exogenous variable changes 
+
+**total factor productivity change**
+
+when total factor productivity $A$ is up
+
+- substitution effect: $A$ up -> MPL up -> labor more expensive -> $c$ up & $l$ down, $n$ up
+- income effect: $A$ up -> $c$ & $l$ up, $n$ down
+- no intertemporal substitution effect as $r=\rho$
+
+effects
+
+- the change of $n$ depends
+	- it is generally small as SE & IE work against each other
+	- it is cancelled out under logrithmic utility function & [[Cobb-Douglas]] production function in [[#Ch17 實質循環模型 Real Business Cycle Model#example]]
+- $c$ up
+
+**government consumption change**
+
+- income effect: $g$ up -> lifetime wealth down -> $c$ & $l$ down, $n^s$ up
+- $n$ up -> MPK shifts up -> 
+
+MPK vs. $k$
+
+![[macro-fig17.3.png]]
+
+- E -> F:
+	- $A$ up -> MPK shifts up -> $k$ up
+	- $g$ up -> $n$ up -> MPK shifts up -> $k$ up
+- $k$ up -> MPL = $w$ up
+
+
