@@ -2890,7 +2890,8 @@ effects
 **government consumption change**
 
 - income effect: $g$ up -> lifetime wealth down -> $c$ & $l$ down, $n^s$ up
-- $n$ up -> MPK shifts up -> 
+- $n$ up -> MPK shifts up
+- $n$ & $k$ up -> $y$ up
 
 MPK vs. $k$
 
@@ -2900,5 +2901,97 @@ MPK vs. $k$
 	- $A$ up -> MPK shifts up -> $k$ up
 	- $g$ up -> $n$ up -> MPK shifts up -> $k$ up
 - $k$ up -> MPL = $w$ up
+
+$$\dfrac{d \ln y^*}{dg}=\dfrac{d \ln n^*}{dg}=\dfrac{1}{(1-\alpha)+(1-\delta\phi-g)}>0$$
+
+when $g > 1-\delta\phi - \alpha$, $\dfrac{d \ln y^*}{dg}>0$, a multiplier effect
+
+$$\dfrac{d \ln c^*}{dg}=\dfrac{-(1-\alpha)}{[(1-\alpha)+(1-\delta\phi-g)](1-\delta\phi-g)}<0$$
+
+meaning tax increase > output increase -> consumption down
+
+wage is independent of $g$
+
+- $n$ up -> MPL down
+- $k$ up -> MPL up
+- they cancel out each other since constant return to scale
+
+### total factor productivity short-term down
+
+#### during the shock
+
+![[macro-33.png]]
+
+direct effect: $y^s$ E -> D under the same interest rate & $n^d$ shifts left
+
+- output down -> non-labor income down, but only in that period, so the income effect i.e. the change in $c^d$ & $n^s$ can be ignored
+- future $A$ no change -> investment no change
+- overall consumption demand no change
+
+$y^s$ D -> F & $n^s$ shifts right
+
+- short-term income down -> saving down (consumption smoothing) -> bonds market supply > demand -> interest rate up
+- intertemporal substitution effect: $r$ up -> $n^s$ shifts right -> $y^s$ upxz
+
+$c^d$ E -> F: $r$ up -> $c^d$ down
+
+If it's [[#Ch13 廠商的投資決策 Ramsey Model]], since the labor supply curve is static, $A_t$ down will make the new equilibrium be B, a much bigger increase in $r$ and decrease in $c^d$. Meaning the dynamic labor supply smoothes the effect of shocks.
+
+In theory, the overall change of labor depends, but in empirical studies, it will decrease.
+
+- intertemporal substitution effect from interest rate increase is small -> $n^s$ only shifts right a little
+- the elasticity of labor supply to wage is high -> $n^s$ is relatively flat
+
+#### after the shock
+
+total productivity factor back up -> 
+
+- product market supply > demand i.e. bonds market demand > supply -> interest rate down -> labor supply down (intertemporal SE)
+- wage = MPL up -> labor supply up (SE)
+- intertemporal SE > SE -> black curve
+- SE > intertemporal SE -> blue curve
+
+![[macro-fig17.6.png]]
+
+### total factor productivity permanently down
+
+![[macro-fig17.7.png]]
+
+$y^s$ E -> S
+
+- direct effect: $y^s$ & $n^d$ shifts left
+- income effect: $y^s$ & $n^s$ shifts right
+	- direct effect > income effect on $y^s$ so overall still shifts left
+- smaller overall product supply reduction due to more significant income effect
+
+$c^d$ shifts left a lot
+
+- future MPK down -> desired capital stock down -> firm investment demand down
+- future capital down -> future output down -> lifetime wealth down even more -> consumption demand down hugely
+- future income reduction > current income reduction -> savings up for consumption smoothing
+- $|\Delta c^d_t|>|\Delta y^s_t|=ES$ -> product market supply > demand, bonds market demand > supply -> interest rate down
+
+interest rate down -> (intertemporal SE)
+
+- product supply down S -> F
+- consumption demand up D -> 
+- $n^s$ shifts left
+
+### product supply surve shifts left
+
+product supply surve shifts left horizontally
+
+$y=F(k,n)+B$, B down
+
+#### steady-state
+
+- direct effect: output down
+- income effect: steady-state labor up, consumption down -> MPL down
+- steady-state labor up -> MPK up -> desired capital stock up -> MPL up
+- output is constant return to scale -> MPL changes cancelled -> MPL no change
+- labor & capital up -> output up
+- overall output depends
+
+#### short-term
 
 

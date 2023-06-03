@@ -6,6 +6,57 @@ parent: Software Development
 
 $\LaTeX$
 
+## Environment
+
+In local
+
+1. install a LaTeX distro
+2. run with an IDE or something else
+
+### Install LaTeX distro
+
+#### Mac
+
+Install mactex which installs texlive
+
+```
+brew install --cask mactex-no-gui
+sudo tlmgr update --self && sudo tlmgr update --all
+```
+
+Add texlive's binary directory to path
+
+```
+export PATH=/usr/local/texlive/2023/bin/universal-darwin:$PATH
+```
+
+check what's in `/usr/local/texlive` yourself
+
+#### Others
+
+Install texlive
+
+- official <https://www.tug.org/texlive/acquire-netinstall.html>
+- <https://www.ibm.com/docs/en/strategicsm/10.1.1?topic=analysis-installing-tex-live-windows>
+
+### Run on VsCode
+
+1. Install LaTeX Workshop extension
+2. command palette: `LaTeX Workshop: View LaTeX PDF File`
+
+### Run with other things
+
+- editors
+	- <https://tex.stackexchange.com/questions/339/latex-editors-ides>
+- xelatex
+	- `xelatex XXX.tex` → generate compiled pdf
+
+### Online - Overleaf
+
+[[#Overleaf]]
+
+Simplest solution.
+
 ## Symbols
 
 Draw here and you'll know
@@ -292,25 +343,6 @@ Doc: <https://en.wikibooks.org/wiki/LaTeX/Algorithms>
 \end{algorithm}
 ```
 
-## Environment
-
-### local
-
-1. install a LaTeX distro
-	- tex live
-		- official https://www.tug.org/texlive/acquire-netinstall.html
-		- https://www.ibm.com/docs/en/strategicsm/10.1.1?topic=analysis-installing-tex-live-windows
-2. run with editor or something else
-	- editors
-		- https://tex.stackexchange.com/questions/339/latex-editors-ides
-	- latex workshop (vscode)
-	- xelatex
-		- `xelatex XXX.tex` → generate compiled pdf
-
-### online
-
-- overleaf
-
 ## packages
 
 ### mdframed
@@ -324,10 +356,10 @@ Enclose your contents with a box
 \end{mdframed}
 ```
 
+
 ## Overleaf
 
 ### Generate .dvi file
-
 
 Change compiler to `latex` in `Menu`
 

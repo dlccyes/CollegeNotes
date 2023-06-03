@@ -695,10 +695,11 @@ IMF's report
 		- constant rate of change
 	- crawl-like arrangement
 		- within 2% of change in the rate of change
-	- pegged exchange rate within horizontal bamds
+	- pegged exchange rate within horizontal bands
 		- target at a zone
 - floating regime
 	- floating
 		- intervene only to slow down the rate of change
 	- free floating
 		- almost never intervene
+

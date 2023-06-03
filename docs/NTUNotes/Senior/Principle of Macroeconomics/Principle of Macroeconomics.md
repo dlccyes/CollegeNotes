@@ -333,13 +333,13 @@ We know $Y = C + I + G + NX$, assuming $G$ no change, $P$ has a negative effect 
 - P down -> value of money up, wealth up -> $C$ up, $I$ up -> interest rate down -> $NX$ up
 - vice versa
 
-### Aggrega Short Run Supply
+### Short-Run Aggregate Supply
 
 In the short run, [[#Classical Economics Assumptions]] don't apply. Changes in nominal variables may affect real ones.
 
 ![[p-macro-1.png]]
 
-### Aggregated Long Run Supply
+### Long-Run Aggregate Supply
 
 $Y_N$ = natural rate of output = potential output = full-employment output
 
@@ -355,7 +355,7 @@ inflation
 
 ![[p-macro-eq.png]]
 
-### Theories for Short Run Supply being upward
+### Theories for Short-Run facing upward
 
 short-run aggregate-supply curve
 
@@ -383,7 +383,7 @@ $$Y=Y_N+a(P-P_E)$$
 
 ### fed monetary policy
 
-money supply MS is fixed by the Fed
+money supply MS is decided by the Fed
 
 interest rate of bonds vs. quantity of money 
 
@@ -391,7 +391,7 @@ interest rate of bonds vs. quantity of money
 
 ![[pmacro-98.png]]
 
-Fed can influence AD by changing MS
+**Fed can influence AD by changing MS**
 
 ![[pmacro-88.png]]
 
@@ -410,7 +410,7 @@ $G$ up or $T$ down -> AD shifts right
 
 #### multiplier effect
 
-government purchase from firm -> 
+government purchases from firm -> 
 
 - direct effect: AD shifts right
 - income effect: firm revenue up -> worker income up -> consumption up -> AD shifts right
