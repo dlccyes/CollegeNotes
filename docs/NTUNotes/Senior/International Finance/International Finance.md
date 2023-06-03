@@ -581,7 +581,7 @@ $$\begin{align*}
 &= -\left(\log \dfrac{1}{S_{t+1}}-\log\dfrac{1}{S_t}\right)
 \end{align*}$$
 
-**first-order Taylor approximiation**
+**first-order [[Taylor approximiation]]**
 
 given $\log(1+g_t)\approx g_t$
 
@@ -703,3 +703,81 @@ IMF's report
 	- free floating
 		- almost never intervene
 
+### equilibrium
+
+the foreign exchange market of USD, direct quote (TWD/USD) vs. quantity
+
+- supply from exporters
+	- sell and get USD
+- demand from importers
+	- need USD to pay
+
+![[interf-fig5.2.jpg]]
+
+#### free floating
+
+export up -> supply shifts right -> S down i.e. TWD appreciates
+
+![[interf-fig5.3.jpg]]
+
+#### fixed rate
+
+export up -> supply shifts right -> central bank intercepts by buying $(Q^{***}-Q^*)$ of USD -> demand shifts right -> S unchanged
+
+![[interf-fig5.4.jpg]]
+
+#### managed floating
+
+export up -> supply shifts right -> central bank buys some USD -> demand shifts right a bit -> S reduced a bit
+
+![[interf-fig5.5.jpg]]
+
+### risk of exchange rate
+
+Since exchange rate is a random walk, there is risk in transactions involving different currencies.
+
+without random shocks
+
+$$S_t=f(D_t,S_t)$$
+
+with random shocks
+
+$$S_t=f(D_t+\epsilon_{1t},S_t+\epsilon_{2t})+\epsilon_{3t}$$
+
+where $\epsilon_{jt}=\rho_j\epsilon_{jt-1}+v_{jt}$, $\rho_j$ is a constant, $v_{jt}\sim^{i.i.d.}(0,\sigma_j^2)$, $j=1,2,3$
+
+$\epsilon_{1t}$, $\epsilon_{2t}$, and $\epsilon_{3t}$ are random processes, making $S_t$ a random process as well
+
+#### time series analytics
+
+**logrithmic difference**
+
+Given [[Taylor approximation]], when $\Delta y_t$ is small
+
+$$\dfrac{y_{t}-y_{t-1}}{y_{t-1}}\approx\log\left(1+\dfrac{y_{t}-y_{t-1}}{y_{t-1}}\right)=\log(y_t)-\log(y_{t-1})=\Delta y_t$$
+
+**base period normalization**
+
+Set a base period and normalize all values with base period being 100 for ease of comparison.
+
+![[interf-tab5.3.jpg]]
+
+2009-2010 means using mean of 2009 & 2010 as 100
+
+![[interf-tab5.4.jpg]]
+
+#### empirical analysis
+
+exchange rate change $r_t$
+
+$$r_t=\dfrac{S_t-S_{t-1}}{S_t}\times 100\sim N(0,\sigma^2)$$
+
+PDF of $r_t$ of GBP vs. USD
+
+![[interf-fig5.8.jpg]]
+
+In emerging market countries, however, $r_t$ is not a normal distribution.
+ 
+PDF of $r_t$ of MXN vs. USD is right-skewed, meaning the probability of depreciation is higher.
+
+![[interf-fig5.9.jpg]]

@@ -7,7 +7,6 @@
   "recent-files-obsidian",
   "cm-show-whitespace-obsidian",
   "text-snippets-obsidian",
-  "darlal-switcher-plus",
   "file-explorer-note-count",
   "obsidian-activity-history",
   "templater-obsidian",
@@ -31,5 +30,6 @@
   "obsidian-vault-statistics-plugin",
   "obsidian-wakatime",
   "obsidian-rapid-notes",
-  "obsidian-version-history-diff"
+  "obsidian-version-history-diff",
+  "darlal-switcher-plus"
 ]

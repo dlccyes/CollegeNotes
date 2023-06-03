@@ -33,14 +33,7 @@
       "key": "C"
     }
   ],
-  "switcher:open": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "P"
-    }
-  ],
+  "switcher:open": [],
   "editor:swap-line-up": [
     {
       "modifiers": [
@@ -75,14 +68,6 @@
         "Shift"
       ],
       "key": "K"
-    }
-  ],
-  "darlal-switcher-plus:switcher-plus:open": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Q"
     }
   ],
   "obsidian-fullscreen-plugin:fullscreen-focus": [
@@ -232,6 +217,14 @@
         "Mod"
       ],
       "key": "ArrowRight"
+    }
+  ],
+  "darlal-switcher-plus:switcher-plus:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "P"
     }
   ]
 }
