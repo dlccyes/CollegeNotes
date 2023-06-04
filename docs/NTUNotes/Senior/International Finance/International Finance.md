@@ -657,7 +657,7 @@ However, Taiwan's foreign exchange reserves >> the optimal point
 
 Before 1987, Taiwan's private banks are forbidden to have foreign exchange, so they're all sold to the central bank.
 
-## Exchange rate
+## Ch5 Exchange rate
 
 ### exchange rate regime
 
@@ -898,6 +898,12 @@ $$E_t(\dfrac{1}{S_{t+1}})>\dfrac{1}{E_t(S_{t+1})}=\dfrac{1}{F_t}$$
 
 so FRU can't be true for both home & foreign currency at the same time
 
+However, the disparity isn't very significant. With [[Taylor approximation#first-order]], it still holds.
+
+$$\dfrac{1}{S_{t+1}}\approx\dfrac{1}{F_t}+\dfrac{S_{t+1}-F_t}{F_t^2}$$
+
+$$E_t\left[\dfrac{1}{S_{t+1}}\right]\approx\dfrac{1}{F_t}$$
+
 **uncovered interest rate parity, UIP**
 
 $$1+i_t=\dfrac{1+i_t^*}{S_t}F_{t,k}=\dfrac{1+i_t^*}{S_t}E_t(S_{t+1})$$
@@ -1036,6 +1042,36 @@ $$i+\rho=i^*+E_1[\log S_2]-\log(S_1)$$
 	- investors also consider the possibility of black swan events, which the real data we run regression on do not contain these kind of events
 - foreign exchange market is not efficient
 	- big investors are efficient but small ones are not
+
+### problems
+
+![[interf-p4-1.jpg]]
+
+![[interf-p4-2.jpg]]
+
+(a)
+
+- $A=i_t-i^*_t$
+- $B=u_{t+1}$
+- $s_{t+1}-s_t=A+B$
+- $Cov(x,y)=E[xy]-E[x]E[y]$
+- $Var(x)=E[x^2]-E[x]^2$
+
+For $b=1$, $Cov(A+B,B)=Var(A)$
+
+$$\begin{align*}
+& Cov(A+B,A)=E[(A+B)A]-E[A+B]E[A]\\
+&= E[A^2]-E[A]^2+E[AB]-E[A]E[B]\\
+&= Var(A)+Cov(A,B)
+\end{align*}$$
+
+So if $Cov(A,B)=Cov(i_t-i^*_t,u_{t+1})=0$, $b=1$
+
+(b)
+
+For $b<0$, $Cov(A+B,B)=Var(A)+Cov(A,B)<0$
+
+So $Cov(A,B)=Cov(i_t-i^*_t,u_{t+1})<-Var(a)=-Var(i_t-i^*_t)$
 
 ## Ch8 Purchasing Power Parity, PPP
 

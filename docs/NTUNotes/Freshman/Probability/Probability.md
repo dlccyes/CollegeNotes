@@ -22,32 +22,44 @@ layout: meth
 ![[probability-5.png]]
 
 #### Example 1
+
 ![[probability-6.png]]
+
 ![[probability-7.png]]
+
 ![[probability-8.png]]
 
 #### Example 2
+
 ![[probability-9.png]]
+
 ![[probability-10.png]]
 
 #### Exercise
+
 ![[probability-11.png]]
 
 #### Summary
+
 ![[probability-12.png]]
 
 ## Conditional Probability
+
 ![[probability-13.png]]
+
 如果知道 ε 必發生
+
 ![[probability-14.jpg]]
 
 ### Partition
-disjoint
-: 交集為空集合
+
+disjoint: 交集為空集合
 
 A is a partition(分割) of B   
 if A 由聯集為 B 的 disjoint sets 所組成
+
 ![[probability-15.png]]
+
 ![[probability-16.png]]
 
 ### Law of Total Probability
@@ -61,12 +73,14 @@ if A 由聯集為 B 的 disjoint sets 所組成
 ## Independence
 
 ### mutual independence
+
 for 所有的配對數，交集 = 各自的乘積
+
 ![[probability-17.png]]
 
-pairwise independence
-: 倆倆獨立
-    ![[probability-18.png]]
+pairwise independence : 倆倆獨立
+
+![[probability-18.png]]
 
 # U2 Random Variables
 
@@ -182,17 +196,21 @@ Exponential 的 general 版本
 ![[probability-34.png]]
 
 ### Markov inequality
+
 ![[probability-35.png]]
-不懂
 
 ### law of total expectation
 
 ![[probability-36.png]]
 
 ## Variance and Moments
+
 ### discrete Var
+
 ![[probability-37.png]]
+
 ### continuous Var
+
 ![[probability-38.png]]
 
 ![[probability-39.png]]
@@ -200,9 +218,13 @@ Exponential 的 general 版本
 ![[probability-40.png]]
 
 ### MGF
+
 $M_X(t):=E[e^{tX}]$
+
 ![[probability-41.png]]
+
 ![[probability-42.png]]
+
 ![[probability-43.png]]
 
 chernoff bond
@@ -292,47 +314,62 @@ continuous
 ![[probability-56.png]]
 
 ### i.i.d.
+
 ![[probability-57.png]]
 
 ### independent → Cov=0
+
 ![[probability-58.png]]
 
 ### MMSE & LMMSE
 
 MMSE
+
 ![[probability-59.png]]
 
 LMMSE
+
 ![[probability-60.png]]
 
 $\rho_{X,Y}$
+
 ![[probability-61.png]]
 
 ### correlation efficient
+
 ![[probability-62.png]]
 
 ### covariance matrix
+
 ![[probability-63.png]]
+
 ![[probability-64.png]]
 
 ### correlation
+
 ![[probability-65.png]]
 
 ### jointly Gaussian
+
 ![[probability-66.png]]
 n 維   
 
 ## conditional relations
+
 ### conditional pdf
+
 ![[probability-67.png]]
 
 ### a general law of probability
+
 ![[probability-68.png]]
 
 ### law of total expectation
+
 ![[probability-69.png]]
 
 #### towering property
+
 ![[probability-70.png]]
 
 ### law of total variance
