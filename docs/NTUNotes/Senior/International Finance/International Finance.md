@@ -1,6 +1,6 @@
 # International Finance
 
-## 國際收支
+## Ch1 Balance of Payment
 
 ### 國際收支表
 
@@ -72,7 +72,7 @@ So a bigger fiscal deficit leads to smaller current account
 
 ![[inter-fin-p2-3.jpg]]
 
-## 經常帳跨期模型
+## Ch2 Intertemporal Models of Current Account Dynamics
 
 ### two-period endowment model
 
@@ -386,7 +386,7 @@ Assume $\gamma_t=\gamma_{t+1}=\bar{\gamma}$
 
 $$\bar{\gamma}=\dfrac{-1}{r-g}<0$$
 
-## Uncertainty and Current Account
+## Ch3 Uncertainty and Current Account
 
 ### risk aversion
 
@@ -506,7 +506,7 @@ When there is uncertainty in period 2, $C_1<C^{CE}_1$ & $K_2<K^{CE}_2$, meaning 
 $$CA_1>CA^{CE}_1$$
 
 
-## 外匯市場簡介
+## Ch4 Foreign Exchange Market Intro
 
 ### 匯率報價 quotes
 
@@ -781,3 +781,260 @@ In emerging market countries, however, $r_t$ is not a normal distribution.
 PDF of $r_t$ of MXN vs. USD is right-skewed, meaning the probability of depreciation is higher.
 
 ![[interf-fig5.9.jpg]]
+
+#### expected exchange rate
+
+$$\mu_t=E_t(r_{t+1})$$
+
+$$E_t(S_{t+1})=E_t((1+r_{t+1})S_t)=S_t(1+\mu_t)$$
+
+$X_{jt}$ are variables effecting the foreign exchange market
+
+$$\hat{\mu}_t=\hat{\alpha}+\sum\hat{\beta_j}X_{jt}$$
+
+$$\hat{S}_{t+1}={S}_t(1+\hat{\mu}_t)$$
+
+#### hedge
+
+Can use **forward exchange contract** to eliminate risk: a contract to buy/sell X foreign currency at the exchange rate $F$ in the future. See [[#Ch6 Covered Interest Rate Parity]] for in depth analysis.
+
+**Example**
+
+A TW form will get 1M USD a year later. Given current exchange rate = 29.5 TWD/USD, USD interest rate = 6%, TWD interest rate = 10%, what will the forward exchange contract be?
+
+$$1.1=1.06\times\dfrac{F}{29.5}$$
+
+$$F=30.61$$
+
+So the firm should have a contract to sell 1M USD at 30.61 TWD/USD a year later.
+
+If the actual exchange rate turns out to be 31 TWD/USD, then the firm loses.
+
+## Ch6 Covered Interest Rate Parity
+
+### forward premium
+
+forward premium = how much forward exchange rate stray away from current one 
+
+$$\begin{align*}
+& fp_{t,k}=\dfrac{F_{t,k}-S_t}{S_t}\\
+& = \dfrac{F_{t,k}}{S_t}-1 \approx \log\dfrac{F_{t,k}}{S_t} = \log F_{t,k}-\log S_t
+\end{align*}$$
+
+annualized percentage of forward premium of k days = $fp_{t,k}\dfrac{360}{k}$ (most use 360 days as a year)
+
+### covered interest rate parity, CIP
+
+the equilibrium price of forward exchange rate
+
+$$1+i_t=\dfrac{1+i_t^*}{S_t}F_{t,k}$$
+
+- $i_t$ = k-day interest rate of home country
+- $i_t^*$ = k-day interest rate of foreign country
+- $S_t$ current exchange rate H/F
+- $F_{t,k}$ = k-day forward exchange rate H/F
+
+otherwise there will be opportunity for arbitrage
+
+$$\log F_{t,k}-\log S_t=\log(1+i_t)-\log(1+i^*_t)\approx i_t-i^*_t$$
+
+$$fp_{t,k}\approx \log F_{t,k}-\log S_t\approx i_t-i^*_t$$
+
+i.e. forward premium = interest rate spread between the the home & foreign country
+
+There will be forward premium when foreign country has a lower interest rate and discount if higher.
+
+### empirical study
+
+If CIP is correct, then $\alpha=0$ & $\beta=1$
+
+$$f_{t,k}-s_t=\alpha+\beta(i_t-i_t^*)+\epsilon_t$$
+
+Regression result:
+
+- null hypothesis of $\alpha=0$ is rejected
+- null hypothesis of $\beta=1$ can't be rejected
+
+$\alpha \neq 0$ can be explained by
+
+- transaction costs of arbitrage
+- default risk
+	- contract may turn out to be unfulfilled
+- exchange controls
+	- cannot freely do arbitrage
+- political risk
+	- same as exchange controls
+
+### forward exchange rate
+
+$$F_t(n)=S_t\left(\dfrac{1+i_t(n)}{1+i^*_t(n)}\right)^n$$
+
+- $F_t(n)$ = n-year foward exchange rate H/F
+- $i_t$ = 1-year interest rate of home country
+- $i_t^*$ = 1-year interest rate of foreign country
+- $S_t$ current exchange rate H/F
+
+home n-year bonds & exchange -> foreign n-year bonds -> exchange back should have the same reward
+
+## Ch7 Foreign Exchange Market Risk
+
+### FRU & UIP
+
+**forward rate unbiasedness (FRU) hypothesis**
+
+$$F_t=E_t(S_{t+1})=E(S_{t+1}|\Omega_t)$$
+
+foward exchange rate = expected future exchange rate
+
+the mean of prediction error  = 0
+
+$$u_{t+1}=S_{t+1}-F_t$$
+
+$$E_tu_{t+1}=E(u_{t+1}|\Omega_t)=E(S_{t+1}|\Omega_t)-F_t=0$$
+
+**Siegel paradox**
+
+$$E_t(\dfrac{1}{S_{t+1}})>\dfrac{1}{E_t(S_{t+1})}=\dfrac{1}{F_t}$$
+
+so FRU can't be true for both home & foreign currency at the same time
+
+**uncovered interest rate parity, UIP**
+
+$$1+i_t=\dfrac{1+i_t^*}{S_t}F_{t,k}=\dfrac{1+i_t^*}{S_t}E_t(S_{t+1})$$
+
+$$E_t(1+i_t)=E_t\left(\dfrac{S_{t+1}}{S_t}(1+i_t^*)\right)$$
+
+expected return of home asset = that of foreign asset
+
+Didn't actually buy/sell in forward exchange market to avoid risk so it's "uncovered".
+
+$$E_t\left(\dfrac{S_{t+1}}{S_t}\right)=\dfrac{1+i_t}{1+i_t^*}$$
+
+if home interest rate > foreign interest rate, then foreign currency is expected to appreciate
+
+### empirical study of FRU & UIP
+
+They are not true according to empirical data.
+
+It's because foreign investment involves future exchange rate which contains risk, and investors are not risk-neutral, while home investment is risk-free.
+
+### CAPM
+
+capital asset pricing model, CAPM
+
+$$E(R_i)-r_f=\beta(E(R_m)-r_f)$$
+
+$$\beta=\dfrac{Cov(R_i,R_m)}{Var(R_m)}$$
+
+- $R_m$ = rate of return of market portfolio, a combination of large and well-diversified investment
+- $R_i$ = rate of return of an individual asset
+- $r_f$ = risk-free rate of return i.e. rate of return on risk-free assets
+
+The higher the $\beta$, the higher the risk premium
+
+For UIP
+
+$$\begin{align*}
+& E(R^*_{t+1})-r_{f,t+1}=\beta(E_t(R_{m,t+1})-r_{f,t+1})\\
+&= \Lambda_tCov(S_{t+1},R_{m,t+1})
+\end{align*}$$
+
+the risk premium of foreign asset is dependent on the covariance of future exchange rate & market rate of return
+
+### CCAPM
+
+consumption capital asset pricing model, CCAPM
+
+Assuming
+
+- 2 periods
+- small open economy
+	- home bonds $B$ of interest rate $i$
+	- foreign bonds of interest rate $i^*$ (in foreign currency)
+		- $B^*$ with forward exchange contract to exchange back to home currency at $F$
+		- $\tilde{B^*}$ w/o forward exchange contract
+	- $B_1=B^*_1=\tilde{B}^*_1=0$
+	- $B_3=B^*_3=\tilde{B}^*_3=0$
+- product
+	- consumption quantity $C_t$
+	- price $P_t$
+- endowment $Y_t$
+	- $Y_1$ at period 1
+	- 2 possibilities in period 2
+		- $Y^H_2$ with probability $\pi$
+		- $Y^L_2$ with probability $1-\pi$
+
+**budget constraint**
+
+$$P_1C_1+B_2+S_1B^*_2+S_1\tilde{B^*_2}=Y_1$$
+
+$$P^H_2C^H_2=Y^H_2+(1+i)B_2+F_1(1+i^*)B^*_2+S^H_2(1+i^*)\tilde{B^*_2}$$
+
+$$P^L_2C^L_2=Y^L_2+(1+i)B_2+F_1(1+i^*)B^*_2+S^L_2(1+i^*)\tilde{B^*_2}$$
+
+we can rewrite them to make $C_1,C^H_2,C^L_2$ dependent on $B_2,B^*_2,\tilde{B}^*_2$
+
+**lifetime utility optimization problem**
+
+$$\begin{align*}
+& \max_{\{B_2,B^*_2,\tilde{B}^*_2\}}U=u(C_1)+\beta E_1[u(C_2)]\\
+&= u(C_1)+\beta (\pi u(C^H_2)+(1-\pi)u(C^L_2))
+\end{align*}$$
+
+Can get 3 first-order equations by partial against $B_2,B^*_2,\tilde{B}^*_2$
+
+![[interf-99.jpg]]
+
+from (7)
+
+$$1=(1+i)E_1\left[\dfrac{\beta u'(C_2)}{u'(C_1)}\dfrac{P_1}{P_2}\right]=(1+i)E_1[M_2]$$
+
+where $M_2$ is **pricing kernel**
+
+$$M_2\equiv\dfrac{\beta u'(C_2)}{u'(C_1)}\dfrac{P_1}{P_2}$$
+
+from (8)
+
+$$1=(1+i^*)\dfrac{F_1}{S_1}E_1\left[\dfrac{\beta u'(C_2)}{u'(C_1)}\dfrac{P_1}{P_2}\right]=(1+i^*)\dfrac{F_1}{S_1}E_1[M_2]$$
+
+meaning 
+
+$$1+i=\dfrac{F_1}{S_1}(1+i^*)$$
+
+which is [[#covered interest rate parity, CIP]]
+
+from (9)
+
+$$1=(1+i^*)E_1\left[\dfrac{S_2}{S_1}\dfrac{\beta u'(C_2)}{u'(C_1)}\dfrac{P_1}{P_2}\right]=(1+i^*)E_1\left[\dfrac{S_2}{S_1}M_2\right]$$
+
+meaning
+
+$$F_1=\dfrac{E_1[S_2M_2]}{E_1[M_2]}=\dfrac{E_1[S_2]E_1[M_2]+Cov_1(S_2,M_2)}{E_1[M_2]}$$
+
+$$1+i=\dfrac{(1+i^*)}{S_1}\dfrac{E_1[S_2M_2]}{E_1[M_2]}=\dfrac{(1+i^*)}{S_1}\dfrac{E_1[S_2]E_1[M_2]+Cov_1(S_2,M_2)}{E_1[M_2]}$$
+
+when $Cov_1(S_2,M_2)$ = 0, $F_1=E_1[S_2]$ and $(1+i)=(1+i^*)\dfrac{E_1[S_2]}{S_1}$  i.e. [[#FRU & UIP]] is true
+
+$$\dfrac{(1+i)S_1}{(1+i^*)E_1[S_2]}=\dfrac{Cov_1(S_2,M_2)}{E_1[M_2]E_1[S_2]}+1$$
+
+$$\log(1+i)+\log(S_1)-\log(1+i^*)-\log(E_1[S_2])=\log\left(\dfrac{Cov_1(S_2,M_2)}{E_1[M_2]E_1[S_2]}+1\right)$$
+
+$$i+\log(S_1)-i^*-E_1[\log S_2]=\dfrac{Cov_1(S_2,M_2)}{E_1[M_2]E_1[S_2]}$$
+
+risk premium of foreign asset $\rho$
+
+$$\rho=i^*+E_1[\log S_2]-\log(S_1)-i=-\dfrac{Cov_1(S_2,M_2)}{E_1[M_2]E_1[S_2]}$$
+
+if $Cov_1(S_2,M_2)<0$: $C_2$ down -> $u'(C_2)$ up -> $M_2$ up -> $S_2$ down i.e. home currency appreciates -> foreign asset return down, so risk premium $\rho>0$ naturally as it contains higher risk
+
+$$i+\rho=i^*+E_1[\log S_2]-\log(S_1)$$
+
+### other explanations of UIP being wrong
+
+- investors are not rational
+- Peso problem
+	- investors also consider the possibility of black swan events, which the real data we run regression on do not contain these kind of events
+- foreign exchange market is not efficient
+	- big investors are efficient but small ones are not
+
+
