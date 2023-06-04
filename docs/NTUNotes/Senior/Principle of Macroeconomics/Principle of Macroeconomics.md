@@ -370,7 +370,7 @@ $$Y=Y_N+a(P-P_E)$$
 - nominal wages is contant in the short run, based on $P_E$
 - $P$ up but wage stays the same -> more revenue -> increase $Y$ & employment
 
-#### Stick-Price Theory
+#### Sticky-Price Theory
 
 - many price is constant in the short run
 - $P$ up but product price stays the same -> product becomes relatively cheaper -> more demand -> increase $Y$ and employment

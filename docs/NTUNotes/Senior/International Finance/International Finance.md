@@ -1037,4 +1037,80 @@ $$i+\rho=i^*+E_1[\log S_2]-\log(S_1)$$
 - foreign exchange market is not efficient
 	- big investors are efficient but small ones are not
 
+## Ch8 Purchasing Power Parity, PPP
 
+### absolute PPP
+
+weighted sum of price of a typical bundle of consumption goods
+
+$$P=\sum w_iP_{i}$$
+
+- purchasing power of home currency = $\dfrac{1}{P_t}$
+- purchasing power of foreign currency = $\dfrac{1}{P^*_t}$
+- purchasing power of home currency at foreign country = $\dfrac{1}{S_t}\dfrac{1}{P^*_t}$
+
+PPP exchange rate = exchange rate to make home currency having the same purchasing power in home & foreign country
+
+$$\dfrac{1}{P_t}=\dfrac{1}{S^{PPP}_t}\dfrac{1}{P^*_t}$$
+
+$$S^{PPP}_t=\dfrac{P_t}{P^*_t}$$
+
+under absolute PPP, $S_t=S^{PPP}_t=\dfrac{P_t}{P^*_t}$
+
+if they're not equal, then there is opportunity for arbitrage
+
+### law of one price
+
+a product should have the same price in a currency in every country
+
+$$P_{it}=S_tP^*_{it}$$
+
+This typically holds for precious metal, raw materials, luxury goods, etc., but not for general goods & services. Some reasons:
+
+- tariffs
+- international transaction cost
+	- transportation cost
+- long-term contracts
+- pricing to market
+	- some firms have some extents of monopoly power
+- [[Principle of Macroeconomics#Sticky-Price Theory]]
+- border effect
+
+### empirical study of absolute PPP
+
+- it holds for developing countries with big inflations, but not for developed countries with low inflations
+- in free floating regimes, the general trends follow absolute PPP
+
+**Why does it not hold**
+
+- same reasons as why [[#law of one price]] doesn't hold
+- the bundle in different countries may not be the same
+- the weight of the goods in the bundle in different countries may not be the same
+
+### relative PPP
+
+there's a constant ratio between the purchasing power of two countries
+
+$$\dfrac{S_tP^*_t}{P_t}=k$$
+
+$$\dfrac{S_{t+1}P^*_{t+1}}{P_{t+1}}=\dfrac{S_{t}P^*_{t}}{P_{t}}$$
+
+$$\log S_{t+1}-\log S_t=(\log P_{t+1}-\log P_t)-(\log P^*_{t+1}-\log P^*_t)=\pi_{t+1}-\pi^*_{t+1}$$
+
+meaning the change of foreign exchange rate = the difference of inflation rate
+
+It does not hold in short term, but do in long term.
+
+### PPP application
+
+how much a currency is overvalued of undervalued
+
+$$\dfrac{S_{PPP}-S}{S}\times100$$
+
+**Big Mac Index**
+
+It's good because
+
+- big mac is a homogeneous product
+- it uses local ingredient providers, reduces transportation cost
+- it's sold in 120 countries
