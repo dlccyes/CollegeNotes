@@ -508,7 +508,7 @@ $$CA_1>CA^{CE}_1$$
 
 ## Ch4 Foreign Exchange Market Intro
 
-### 匯率報價 quotes
+### quotes
 
 **direct quotes**
 
@@ -844,7 +844,7 @@ i.e. forward premium = interest rate spread between the the home & foreign count
 
 There will be forward premium when foreign country has a lower interest rate and discount if higher.
 
-### empirical study
+### empirical study of CIP
 
 If CIP is correct, then $\alpha=0$ & $\beta=1$
 
@@ -875,6 +875,10 @@ $$F_t(n)=S_t\left(\dfrac{1+i_t(n)}{1+i^*_t(n)}\right)^n$$
 - $S_t$ current exchange rate H/F
 
 home n-year bonds & exchange -> foreign n-year bonds -> exchange back should have the same reward
+
+### problems
+
+![[interf-334.jpg]]
 
 ## Ch7 Foreign Exchange Market Risk
 
@@ -1049,7 +1053,7 @@ $$i+\rho=i^*+E_1[\log S_2]-\log(S_1)$$
 
 ![[interf-p4-2.jpg]]
 
-(a)
+**(a)**
 
 - $A=i_t-i^*_t$
 - $B=u_{t+1}$
@@ -1067,13 +1071,27 @@ $$\begin{align*}
 
 So if $Cov(A,B)=Cov(i_t-i^*_t,u_{t+1})=0$, $b=1$
 
-(b)
+**(b)**
 
 For $b<0$, $Cov(A+B,B)=Var(A)+Cov(A,B)<0$
 
 So $Cov(A,B)=Cov(i_t-i^*_t,u_{t+1})<-Var(a)=-Var(i_t-i^*_t)$
 
+**2019-P4**
+
+![[interf-44.png]]
+
+![[interf-32.png]]
+
 ## Ch8 Purchasing Power Parity, PPP
+
+### real exchange rate
+
+real exchange rate $Q_t$ = the ratio between the purchasing power of home & foreign country
+
+$$Q_t=S_t\dfrac{P^*_t}{P_t}$$
+
+If you can buy $1$ big mac in the foreign country, you can $Q_t$ big mac in the home country.
 
 ### absolute PPP
 
@@ -1135,7 +1153,7 @@ $$\log S_{t+1}-\log S_t=(\log P_{t+1}-\log P_t)-(\log P^*_{t+1}-\log P^*_t)=\pi_
 
 meaning the change of foreign exchange rate = the difference of inflation rate
 
-It does not hold in short term, but do in long term.
+It does not hold in short term, but does in long term.
 
 ### PPP application
 

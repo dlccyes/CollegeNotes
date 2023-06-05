@@ -27,6 +27,22 @@ average score: 35.37/50
 
 ![[operating-systems-final-4.png]]
 
+- computation non-premtive
+- I/O can't overlap
+- shortest "computing" time
+- 10
+	- 3 -> 5 c -> 2
+- 20
+	- 6 -> 10 c -> 4
+- 30
+	- 9 -> 15 c -> 6
+- CPU & I/O in parallel
+- finishing time
+	- total 41
+	- p1 11
+	- p2 24
+	- p3 41
+
 ### Q5
 
 ![[operating-systems-final-5.png]]
@@ -34,6 +50,14 @@ average score: 35.37/50
 ### Q6
 
 ![[operating-systems-final-6.png]]
+
+- non-preemptive
+- turnaround time
+	- 2, 6, 11, 19, 29
+	- (2+6+11+19+29)/5 = 13.4
+- waiting time
+	- 0, 2, 6, 11, 19
+	- (0+2+6+11+19)/5 = 7.6
 
 ### Q7
 

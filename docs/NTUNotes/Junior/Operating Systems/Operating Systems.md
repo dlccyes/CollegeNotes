@@ -1185,8 +1185,9 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- -> low CPU & devide utilization
 
 #### shortest-job-first (SJF) scheduling
+
 - optimal for average waiting time minimization
-- schedulef the process with the minimal CPU burst
+- schedule the process with the minimal CPU burst
 - preemptive version
 	- shortest-remaining-time-first
 - e.g.
@@ -1198,6 +1199,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 		- $\alpha=1$ -> memoryless
 
 #### round-robin (RR) scheduling
+
 - to solve convoy effect
 	- avoid one big process taking all CPU time
 - each process gets a small period of time
@@ -1971,6 +1973,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 	- `unallocate` for NVME-based storage
 
 ### efficiency & performance
+
 - factors
 	- allocation & directory algos
 	- data type

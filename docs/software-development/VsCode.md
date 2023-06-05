@@ -64,6 +64,23 @@ You can specify different tab sizes for each language
 },
 ```
 
+### python docstring color
+
+```json
+"editor.tokenColorCustomizations": {
+	"textMateRules": [
+		{
+			"scope":"string.quoted.docstring.multi.python",
+			"settings": {
+				"foreground": "#fff199" //change to your preference
+			}
+		}
+	]
+}
+```
+
+<https://stackoverflow.com/a/47935166/15493213>
+
 ## Troubleshooting
 
 ### self signed certificate in certificate chain
