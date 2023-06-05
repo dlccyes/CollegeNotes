@@ -932,6 +932,8 @@ It's because foreign investment involves future exchange rate which contains ris
 
 capital asset pricing model, CAPM
 
+risk premium of risky assets
+
 $$E(R_i)-r_f=\beta(E(R_m)-r_f)$$
 
 $$\beta=\dfrac{Cov(R_i,R_m)}{Var(R_m)}$$
@@ -949,7 +951,30 @@ $$\begin{align*}
 &= \Lambda_tCov(S_{t+1},R_{m,t+1})
 \end{align*}$$
 
+![[interf-31.jpg]]
+
 the risk premium of foreign asset is dependent on the covariance of future exchange rate & market rate of return
+
+![[interf-324.jpg]]
+
+$$\begin{align*}
+& E(R^*_{t+1})-r_{f,t+1}\\
+&= i^*_t+E_t(\log S_{t+1} - \log S_t)-i_t+\dfrac{1}{2}Var_t(\log S_{t+1})\\
+&= \Lambda_tCov(S_{t+1},R_{m,t+1})
+\end{align*}$$
+
+UIP with risk premium
+
+$$\begin{align*}
+& \rho_t=i^*_t+E_t(\log S_{t+1}-\log S_t)-i_t\\
+&= i^*_t+(E_t\log S_{t+1}-\log S_t)-i_t\\
+&= -\dfrac{1}{2}Var_t(\log S_{t+1})+ \Lambda_tCov(S_{t+1},R_{m,t+1})
+\end{align*}$$
+
+- $\Lambda_tCov(S_{t+1},R_{m,t+1})$ = marginal risk of CAPM
+- $-\dfrac{1}{2}Var_t(\log S_{t+1})$ = Jensen's Inequality adjustment
+
+$$i^*_t-i_t=\rho_t-(E_t\log S_{t+1}-\log S_t)$$
 
 ### CCAPM
 
@@ -1049,6 +1074,8 @@ $$i+\rho=i^*+E_1[\log S_2]-\log(S_1)$$
 
 ### problems
 
+#### P4
+
 ![[interf-p4-1.jpg]]
 
 ![[interf-p4-2.jpg]]
@@ -1077,11 +1104,15 @@ For $b<0$, $Cov(A+B,B)=Var(A)+Cov(A,B)<0$
 
 So $Cov(A,B)=Cov(i_t-i^*_t,u_{t+1})<-Var(a)=-Var(i_t-i^*_t)$
 
-**2019-P4**
+#### 2019-P4
 
 ![[interf-44.png]]
 
 ![[interf-32.png]]
+
+#### 2021-P11
+
+![[interf-331.png]]
 
 ## Ch8 Purchasing Power Parity, PPP
 
