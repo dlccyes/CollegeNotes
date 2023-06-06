@@ -2942,7 +2942,7 @@ In theory, the overall change of labor depends, but in empirical studies, it wil
 - intertemporal substitution effect from interest rate increase is small -> $n^s$ only shifts right a little
 - the elasticity of labor supply to wage is high -> $n^s$ is relatively flat
 
-#### after the shock
+#### the entire curve
 
 total productivity factor back up -> 
 
@@ -2977,7 +2977,7 @@ interest rate down -> (intertemporal SE)
 - consumption demand up D -> 
 - $n^s$ shifts left
 
-### product supply surve shifts left
+### production surve shifts left
 
 product supply surve shifts left horizontally
 
@@ -2994,4 +2994,84 @@ $y=F(k,n)+B$, B down
 
 #### short-term
 
+![[macro-fig17.10.jpg]]
 
+E -> S
+
+- direct effect: commodity supply shifts left
+- income effect
+	- steady-state labor up -> MPK up -> desired capital stock up -> lifetime wealth not down by too much
+	- labor supply shifts right a bit -> commodity supply shifts right a bit
+	- consumption demand shifts left a bit E -> D < E -> S
+
+for firm
+
+- steady-state labor up -> MPK up -> desired capital stock up -> investment up -> commodity demand shifts right from D
+
+commodity market demand > supply, bonds market supply > demand -> interest rate up
+
+labor market
+
+- labor demand not affected
+- lifetime wealth down -> labor supply shifts right
+- interest rate up -> labor supply shifts right
+- labor market supply > demand -> wage down 
+
+overall
+
+- output down
+- consumption down
+- investment up
+- labor up
+- interest rate up
+- wage down
+
+#### the entire curve
+
+![[macro-fig17.11.png]]
+
+**Crusoe**
+
+available fruits permanently down ->
+
+- working hour permanently up
+	- MPL (shadow wage) down
+	- MPK (shadow interest rate) up
+- MPK up -> investment up
+- consumption permanently down
+- since capital hasn't changed in the short term, consmpution magnificently down in the short term
+	- can view as the intertemporal SE of shadow interest rate up
+- lifetime utility down
+
+#### holding labor or capital constant
+
+![[macro-17.12.jpg]]
+
+**(a) capital is constant**
+
+capital can't be changed -> national saving = 0, each period is independent to another, all the external shocks are consumed in the same period
+
+B -> down
+
+- direct effect: output down -> commodity supply shifts left 
+- income effect: wealth down -> labor supply shifts right, consumption demand shifts left -> commodity supply shifts right
+
+commodity supply & consumption demand shifts left by the same magnitude
+
+- output & consumption down by the same magnitude
+- interest rate unchanged
+- wage down
+
+**(b) labor is constant** [[#Ch13 廠商的投資決策 Ramsey Model]]
+
+labor can't be changed -> commodity supply not affected by interest rate -> vertical curve
+
+B -> down
+
+- direct effect: output down -> commodity supply shifts left 
+- income effect: wealth down -> consumption demand shifts left
+
+labor constant -> MPK won't be changed -> desired capital stock unchanged -> investment unchanged
+
+- output & consumption down by the same magnitude
+- interest rate unchanged

@@ -438,6 +438,13 @@ A prudent person will have a higher saving i.e. current account when facing unce
 
 $$CA_1=Y_1-C_1>Y_1-C^{CE}_1=CA^{CE}_1$$
 
+Simplistic example
+
+- $u(C)=ln C$
+- $E(C_2)=\dfrac{1}{2}((C_1-a)+(C_1+a))=C_1$
+- $u'(C_1)=\dfrac{1}{C_1}<\dfrac{1}{2}(u'(C_1-a)+u'(C_1+a))=\dfrac{C_1}{(C_1-a)(C_1+a)}$
+- so by moving a bit of $C_1$ to $C_2$, your utility will increase, meaning there is an incentive for precautionary saving
+
 #### facing normal distribution
 
 Assume 
@@ -581,7 +588,7 @@ $$\begin{align*}
 &= -\left(\log \dfrac{1}{S_{t+1}}-\log\dfrac{1}{S_t}\right)
 \end{align*}$$
 
-**first-order [[Taylor approximiation]]**
+**first-order [[Taylor approximation]]**
 
 given $\log(1+g_t)\approx g_t$
 
@@ -902,7 +909,7 @@ $$E_t(\dfrac{1}{S_{t+1}})>\dfrac{1}{E_t(S_{t+1})}=\dfrac{1}{F_t}$$
 
 so FRU can't be true for both home & foreign currency at the same time
 
-However, the disparity isn't very significant. With [[Taylor approximation#first-order]], it still holds.
+However, the disparity isn't very significant, as it still holds [[Taylor approximation#first-order]].
 
 $$\dfrac{1}{S_{t+1}}\approx\dfrac{1}{F_t}+\dfrac{S_{t+1}-F_t}{F_t^2}$$
 
@@ -1174,9 +1181,9 @@ This typically holds for precious metal, raw materials, luxury goods, etc., but 
 
 ### relative PPP
 
-there's a constant ratio between the purchasing power of two countries
+there's a constant ratio between the purchasing power of two countries, which is the [[#real exchange rate]]
 
-$$\dfrac{S_tP^*_t}{P_t}=k$$
+$$Q_t=\dfrac{S_tP^*_t}{P_t}=k$$
 
 $$\dfrac{S_{t+1}P^*_{t+1}}{P_{t+1}}=\dfrac{S_{t}P^*_{t}}{P_{t}}$$
 

@@ -273,7 +273,7 @@ git log --pretty=format:'' --numstat --author 'dlccyes' | awk 'NF' | awk '{inser
 	- `git difftool` to view
 	- <https://stackoverflow.com/a/3713803/15493213>
 
-### delete a file in all commits
+### filter-branch - delete a file in all commits
 
 ```
 git filter-branch --tree-filter 'rm -f <path/to/file>' --prune-empty HEAD
