@@ -408,7 +408,7 @@ nominal interest rate 0 -> can't be lowered any more, need to use other ways to 
 
 $G$ up or $T$ down -> AD shifts right
 
-#### multiplier effect
+#### [[multiplier effect]]
 
 government purchases from firm -> 
 

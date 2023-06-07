@@ -750,6 +750,7 @@ $$y=Ak^{\alpha}n^{1-\alpha},\alpha\in(0,1)$$
 #### Euler 性質
 
 [[#固定規模報酬 constant return to scale]] <br>→ $ay\equiv AF(ak,an)$<br>→ $\dfrac{d(ay)}{da}=y=AF_k(ak,an)\cdot k+AF_n(ak,an)\cdot n$<br>$=MPK\cdot k+MPL\cdot n$ for $a=1$ (see [[#投入愈多，產出愈多]])<br>= capital income + labor income
+
 i.e. 廠商生產全部被資本&勞動報酬瓜分掉
 
 ### Decision Problem
@@ -1005,7 +1006,7 @@ $$y=k^{\alpha}n^{\beta}x^{1-\alpha-\beta},\alpha,\beta,\alpha+\beta\in(0,1)$$
 	- 排擠效果
 		- 政府支出使消費者均衡消費量下降 i.e. 政府消費排擠民間消費
 	- y = c + G → $\Delta y=\Delta c+\Delta G$，又 G 上升會使 c 減少 → $\Delta y<\Delta G$
-		- 不存在 multiplier effect
+		- 不存在 [[multiplier effect]]
 	- 政府消費性支出使消費者 utility 下降
 		- 勞動增加、消費減少、工資減少
 	- 政府支出會使產出&就業增加，但會使消費&實質工資下降，so 政府支出不是造成景氣波動的主因
@@ -1751,10 +1752,10 @@ f is the endowment after doing 赤字減稅政策 deficit-financed tax cut
 	- ![[macro-fig10.8.jpg]]
 	- original endowment = e, since he can't borrow money, his equilibrium point is still e
 	- endowment after deficit-financed tax cut = f, since he can lend money, his equilibrium point = max utility point = E
-	- so after applying deficit-financed tax cut, there is an over demand in the consmpution market, driving the interest rate up, 排擠他人的 consumption
+	- so after applying deficit-financed tax cut, there is an over demand in the consumption market, driving the interest rate up, 排擠他人的 consumption
 - other tax methods
 	- as long as there is 定額通融管道 lump-sum resource，Ricardian is correct even if there is 扭曲性租稅
-	- assume a $\phi_t$ consmpution tax in addition of lump-sum tax $T_t$
+	- assume a $\phi_t$ consumption tax in addition of lump-sum tax $T_t$
 		- $\sum^\infty_{t=1}q_tG_t+(1+r_0)B^g_0=\sum_{t=1}^\infty q_t\phi_t+\sum_{t=1}^\infty q_tT_t$
 			- government expenditure = tax income
 		- $u'(C_t)=\beta u'(C_{t+1})(1+r_t)\left(\dfrac{1+\phi_t}{1+\phi_{t+1}}\right)$
@@ -2687,7 +2688,7 @@ $$u'(c_t)=\beta u'(c_{t+1})[A_{t+1}f'(k_t)+(1-\delta)]$$
 
 Production this period is decided by the previous period, so it won't be affected by future perturbations, which is unrealistic.
 
-## Ch17 實質循環模型 Real Business Cycle Model
+## Ch17 Real Business Cycle RBC Model
 
 Real Business Cycle (RBC) Model = Ramsey Model + endogenous labor supply
 
@@ -2870,9 +2871,7 @@ $$c^*=y^*(1-\delta\phi-g)$$
 
 $$w^*=\mathrm{MPL}=(1-\alpha)\dfrac{y^*}{n^*}=(1-\alpha)(A\phi^\alpha)^{1/(1-\alpha)}n^*$$
 
-### effect of exogenous variable changes 
-
-**total factor productivity change**
+### effect of total factor productivity change
 
 when total factor productivity $A$ is up
 
@@ -2887,7 +2886,7 @@ effects
 	- it is cancelled out under logrithmic utility function & [[Cobb-Douglas]] production function in [[#Ch17 實質循環模型 Real Business Cycle Model#example]]
 - $c$ up
 
-**government consumption change**
+### effect of government consumption change
 
 - income effect: $g$ up -> lifetime wealth down -> $c$ & $l$ down, $n^s$ up
 - $n$ up -> MPK shifts up
@@ -2925,7 +2924,7 @@ wage is independent of $g$
 direct effect: $y^s$ E -> D under the same interest rate & $n^d$ shifts left
 
 - output down -> non-labor income down, but only in that period, so the income effect i.e. the change in $c^d$ & $n^s$ can be ignored
-- future $A$ no change -> investment no change
+- (under original interest rate) future $A$ no change -> investment no change
 - overall consumption demand no change
 
 $y^s$ D -> F & $n^s$ shifts right
@@ -3039,7 +3038,7 @@ available fruits permanently down ->
 	- MPK (shadow interest rate) up
 - MPK up -> investment up
 - consumption permanently down
-- since capital hasn't changed in the short term, consmpution magnificently down in the short term
+- since capital hasn't changed in the short term, consumption magnificently down in the short term
 	- can view as the intertemporal SE of shadow interest rate up
 - lifetime utility down
 
@@ -3075,3 +3074,244 @@ labor constant -> MPK won't be changed -> desired capital stock unchanged -> inv
 
 - output & consumption down by the same magnitude
 - interest rate unchanged
+
+## Ch18 Monetary Policy Analysis of RBC Model
+
+### effect of government purchase short-term increase
+
+commodity market & labor market
+
+![[macro-fig18.1.png]]
+
+bonds market
+
+![[macro-fig18.2.png]]
+
+- direct effect: commodity demand E -> B
+- income effect: labor supply shifts right a bit, consumption demand shifts left a bit B -> b-> commodity supply shifts right a bit E -> a
+	- the change to lifetime wealth is very small, so the income effect is very small, basically negligible
+
+commodity market supply > demand, bonds market demand > supply -> interest rate up -> intertemporal SE:
+
+- private consumption & firm investment down -> $c^d$ b -> F
+- labor supply up -> $y^s$ a -> F
+
+overall
+
+- real interest rate up
+- output up
+- private consumption down
+- firm investment down
+
+same as [[#Ch13 廠商的投資決策 Ramsey Model]] except output change as labor supply is fixed in Ramsey Model
+
+The result is the same whether the government funds the purchase through lump-sum tax or bonds.
+
+- lump-sum tax
+	- current wealth down -> saving demand down -> bonds market supply > demand -> interest rate up
+- bonds
+	- future wealth down -> saving demand up, but government bonds supply up more -> bonds market supply > demand -> interest rate up
+
+![[macro-fig18.3.png]]
+
+**analysis**
+
+- crowding effect
+	- private consumption & firm investment down
+	- output increase EF < government purchase increase EB i.e. $\dfrac{\Delta y_t}{\Delta G_t}<1$
+	- the [[multiplier effect ]] is non-existent
+	- $\Delta y_t$ is bigger in [[#Ch7 靜態模型的均衡分析#政府消費支出增加]] since there's no consumption smoothing when bonds can't be buy (ref: Bruno Fernandez)
+	- $\Delta y_t=0$ in [[#Ch13 廠商的投資決策 Ramsey Model]] since labor supply if fixed, meaning government purchase crowds out all private consumption & investment
+- social welfare
+	- increasing government purchase will make output i.e. GDP increase, but at the cost of social welfare i.e. private utility
+	- consumption down, labor up, wage down -> current utility down
+	- firm investment down -> future output down -> future consumption down -> future utility down
+	- however, the model leaves out the fact that government purchases have externality irl
+- government purchase is not the determining force to economic flunctuations
+	- empirical data: GDP $\propto$ $1/r$, GDP $\propto C, I, w$ 
+	- RBC analysis of government purchase up:  GDP $\propto$ $r$, GDP $\propto 1/C, 1/I, 1/w$ 
+
+### effect of government purchase permanently increase
+
+**Steady-state**
+
+See [[#Ch17 Real Business Cycle RBC Model#effect of government consumption change]]
+
+**Short-term**
+
+Similar to [[#Ch17 Real Business Cycle RBC Model#production surve shifts left]]
+
+assumge government purchase up EB, funded with lump-sum tax
+
+![[macro-fig18.4.png]]
+
+under original interest rate
+
+- direct effect
+	- commodity demand E -> B
+	- current wealth down EB
+- income effect: labor supply shifts right, consumption demand shifts left from B -> production shifts right E -> a -> current wealth up Ea
+- current wealth down aB
+- steady-state output up -> future income up -> $\Delta$ lifetime wealth < aB -> consumption demand shifts B -> b < B -> a
+- commodity market demand - supply = ab
+- steady-state labor up -> MPL up -> desired capital stock up -> firm investment demand up -> commodity demand shifts right b -> d
+- commodity market demand - supply = ad -> interest rate up
+
+interest rate up
+
+- private consumption & firm investment demand down -> $c^d$ d -> F
+	- does not cancel out the previous firm investment up
+- labor supply up -> $y^s$ a -> F
+
+overall
+
+- output up
+- interest rate up
+- private consumption down
+- firm investment up
+	- $\mathrm{MPK}_{t+1}-\delta=r_t$
+	- $r_t$MPK_{t+1}$ up -> money flow from bonds to capital -> $r_t$ up
+	- so the capital decrease from $r_t$ up will not cancel out the capital increase
+- wage down
+
+![[macro-fig18.5.png]]
+
+### tax
+
+government expenditure & total factor productivity is irrelevant so let $G_t=0$, $A_t=1$
+
+#### government budget constraint
+
+- tax $\tau^c$ of private consumption
+- tax $\tau^n$ of consumer labor income
+- tax $\tau^k$ of firm profit
+- transfer payment $v_t$ to consumer
+
+$$v_t=\tau^cc_t+\tau^nw_tn_t+\tau^k(y_t-w_tn_t)$$
+
+since all the tax are transferred back to consumers ultimately, there's no income effect but only substitution effect
+
+**firm profit tax = tax from income from capital**
+
+[[#Ch4 廠商的靜態選擇#Euler 性質]]
+
+$$y_t=F_k(k_{t-1}, n_t)k_{t-1}+F_n(k_{t-1}, n_t)n_{t}$$
+
+$$\begin{align*}
+& \pi_t=y_t-w_tn_t\\
+&= [F_k(k_{t-1}, n_t)k_{t-1}+F_n(k_{t-1}, n_t)n_{t}]-w_tn_t\\
+&= F_k(k_{t-1}, n_t)k_{t-1}+w_tn_{t}-w_tn_t\\
+&= F_k(k_{t-1}, n_t)k_{t-1}
+\end{align*}$$
+
+so firm's profit = the income from capital
+
+#### consumer budget constraint
+
+$$(1+\tau^c)c_t+b_t=a_t+(1-\tau^n)w_tn_t+(1+r_{t-1})b_{t-1}$$
+
+where $a_t=d_t+v_t$
+
+#### consumer optimization problem
+
+$$\max_{\{c_t,b_t,n_t\}^\infty_{t=1}}=\sum^\infty_{t=1}\beta^{t-1}u(c_t,1-n_t)$$
+
+ccontemporaneous SE
+
+$$\dfrac{u_l(c_t,l_t)}{u_c(c_t,l_t)}=\dfrac{(1-\tau^n)w_t}{1+\tau^c}$$
+
+intertemporal SE
+
+$$\dfrac{u_c(c_t,l_t)}{\beta u_c(c_{t+1},l_{t+1})}=1+r_t$$
+
+no $\tau^c$
+
+#### firm optimization problem
+
+$$\max_{\{n_t,k_t\}^\infty_{t=1}}=\sum^\infty_{t=1}q_t[(1-\tau^k)(y_t-w_tn_t)-i_t]$$
+
+- $y_t=F(k_{t-1},n_t)$
+- $i_t=k_t-(1-\delta)k_{t-1}$
+
+$$f_n(k_{t-1}, n_t)=w_t$$
+
+$$(1-\tau^k)F_k(k_t, n_{t+1})=r_t+\delta$$
+
+#### general equilibrium
+
+$$\dfrac{u_l(c_t,1-n_t)}{u_c(c_t,1-n_t)}=\dfrac{1-\tau^n}{1+\tau^c}F_n(k_{t-1},n_t)$$
+
+$$\dfrac{u_c(c_t,1-n_t)}{\beta u_c(c_{t+1},1-n_{t+1})}=(1-\tau^k)F_k(k_{t},n_{t+1})+(1-\delta)$$
+
+$$c_t+[k_t-(1-\delta)k_{t-1}]=y_t=F(k_{t-1},n_t)$$
+
+#### steady-state
+
+$$r^*=\rho$$
+
+$$\dfrac{u_l(c^*,1-n^*)}{u_c(c^*,1-n^*)}=\dfrac{1-\tau^n}{1+\tau^c}F_n(k^*,n^*)$$
+
+$$(1-\tau^k)F_k(k^*,n^*)=\rho+\delta$$
+
+$$c^*+\delta k^*=y^*=F(k^*,n^*)$$
+
+**example**
+
+- $u(c,l)=\ln c+\ln l$
+- $y=k^\alpha n^{1-\alpha}$
+
+$$\begin{align*}
+& (1-\tau^k)F_k(k^*,n^*)\\
+&= (1-\tau^k)\alpha\dfrac{y^*}{k^*}\\
+&=\rho+\delta
+\end{align*}$$
+
+$$k^*=(1-\tau^k)\dfrac{\alpha}{\rho+\delta} y^*=(1-\tau^k)\phi y^*$$
+
+where $\phi=\dfrac{\alpha}{\rho+\delta}$
+
+there's a ratio $(1-\tau^k)\phi\in(0,1)$ between $k^*$ & $y^*$
+
+with $c^*+\delta k^*=y^*$
+
+$$c^*=[1-\delta(1-\tau^k)\phi]y^*>0$$
+
+$$\begin{align*}
+& \dfrac{u_l(c^*,1-n^*)}{u_c(c^*,1-n^*)}\\
+&= \dfrac{[1-\delta(1-\tau^k)\phi]y^*}{1-n^*}\\
+&= \dfrac{1-\tau^n}{1+\tau^c}F_n(k^*,n^*)\\
+&= \dfrac{1-\tau^n}{1+\tau^c}(1-\alpha)\dfrac{y^*}{n^*}
+\end{align*}$$
+
+$$n^*=\dfrac{1-\alpha}{(1-\alpha)+[1-(1-\tau^k)\phi\delta](1+\tau^c)/(1-\tau^n)}$$
+
+$$\begin{align*}
+& y^*={k^*}^\alpha {n^*}^{1-\alpha}\\
+&= [(1-\tau^k)\phi y^*]^\alpha {n^*}^{1-\alpha}
+\end{align*}$$
+
+$$y^*=[(1-\tau^k)\phi]^{\alpha/(1-\alpha)}n^*$$
+
+$$w^*=y_n=(1-\alpha)\dfrac{y^*}{n^*}=(1-\alpha)[(1-\tau^k)\phi]^{\alpha/(1-\alpha)}$$
+
+be aware not to directly $w^*=\dfrac{\partial y^*}{\partial n^*}$ because it makes no sense, they are numerical values
+
+**effect of $\tau^n$ or $\tau^c$ up**
+
+-  $\tau^n$ or $\tau^c$ up -> $n^*$ down -> $y^*$ & $k^*$ down
+	- lifetime wealth not changed but steady-state income is still changed
+- $\dfrac{y^*}{n^*}$ = constant (since $\tau^k$ unchanged) so MPL & $w^*$ unchanged
+- post-tax wage down
+
+![[macro-fig18.6.png]]
+
+**effect of $\tau^k$ up**
+
+-  $\tau^k$ up -> $n^*$ down -> $y^*$ down -> $k^*$ down -> MPL & $w^*$ down
+- $\dfrac{y^*}{n^*}=[(1-\tau^k)\phi]^{\alpha/(1-\alpha)}$ down, meaning $y^*$ down more than $n^*$
+- $\dfrac{k^*}{y^*}=(1-\tau^k)\phi$ down, meaning $k^*$ down more than $y^*$
+- $\dfrac{d\ln c^*}{d \tau^k}<0$ -> $c^*$ down
+	- can't be derived with intuition since $c^*+\delta k^*=y^*$ and $\Delta k^*>\Delta y^*>\Delta n^*$
+
+![[macro-fig18.7.png]]
+

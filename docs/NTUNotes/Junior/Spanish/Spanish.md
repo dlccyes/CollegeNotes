@@ -117,11 +117,6 @@ Only 3 irregular verbs - ser, ir, ver
 - if I were you
 	- See [If I were you](#If%20I%20were%20you)
 
-## Subjuntivo Imperfect
-
-- indicativo + a/as/a/amos/ais/an
-- present 3rd person + se/ses/se/semos/seis/sen
-
 ## Futuro imperfecto
 
 ![[spanish-16.png]]
@@ -181,6 +176,11 @@ I suggest that ...
 - Te sugiero que + subjunctive
 	- ![[spanish-31.png]]
 	- ![[spanish-32.png]]
+
+## Subjuntivo Imperfect
+
+- indicativo + a/as/a/amos/ais/an
+- present 3rd person + se/ses/se/semos/seis/sen
 
 ## Imperative
 
@@ -3280,16 +3280,20 @@ p.13 - exercise 22
 - acostar -> acuesto/acuestas/acuesta
 - dormir -> duermo/duermas/duerma
 
-## Final Review
+### Final Review
 
-![[Pasted image 20230601170912.png]]
+actividad 17
 
-![[Pasted image 20230601170646.png]]
+![[spanish-334.png]]
 
-![[Pasted image 20230601170656.png]]
+![[spanish-331.png]]
+
+al + indefinido -> como + imperfect to mean porque
+
+![[spanish-123.png]]
 
 ![[Pasted image 20230601170716.png]]
 
-![[Pasted image 20230601170723.png]]
+![[spanish-1234.png]]
 
-![[Pasted image 20230601170733.png]]
+![[spanish-132.png]]
