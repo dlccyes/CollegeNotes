@@ -3315,3 +3315,40 @@ be aware not to directly $w^*=\dfrac{\partial y^*}{\partial n^*}$ because it mak
 
 ![[macro-fig18.7.png]]
 
+### 一例一休
+
+set HUGE overtime pay i.e. wage higher when labor hour > max labor hours
+
+**output & profit curve**
+
+![[macro-fig18.8.png]]
+
+wage higher when $n_t>\bar{n}$ -> profit vs. labor curve of $n_t>\bar{n}$ changes 
+
+- moderate overtime pay -> dotted blue line -> $\bar{n}<n^D<n^E$ optimal point
+- huge overtime pay -> blue line -> $\bar{n}$ optimal point
+
+**labor demand curve**
+
+![[macro-fig18.9.png]]
+
+- moderate overtime pay -> dotted blue line, labor demand steeper, smaller elasticity to wage
+- huge overtime pay -> blue line -> $\bar{n}$ optimal point, labor demand vertical, independent of wage
+	- which is the case in 一例一休
+
+**labor supply curve**
+
+no income effect to the whole economy
+
+![[macro-fig18.10.png]]
+
+- SE: overtime pay up -> labor supply flatter in $n_t>\bar{n}$, more elastic to wage
+- labor demand vertical -> equilibrium labor down -> output & income down
+- IE: income down -> labor supply shifts right
+- output inelastic to interest rate in $y_t>\bar{y}$ due to vertical labor demand in $n_t>\bar{n}$
+
+**steady-state**
+
+- labor down -> MPK down -> desired capital down -> future output down, MPL down, labor further down
+- labor market supply > demand -> wage down
+- firm labor demand inelastic to wage -> labor absorbs 100% of the wage reduction
