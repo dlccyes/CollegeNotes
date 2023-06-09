@@ -235,7 +235,7 @@ brew install --cask rectangle
 
 Download [Snap](https://apps.apple.com/us/app/snap/id418073146?). Would work out of the box.
 
-### alt+tab with preview thumbnail
+### alt+tab with thumbnail
 
 [AltTab](https://alt-tab-macos.netlify.app/)
 

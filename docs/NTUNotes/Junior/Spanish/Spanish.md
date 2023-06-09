@@ -3284,7 +3284,9 @@ p.13 - exercise 22
 
 actividad 17
 
-![[spanish-334.png]]
+![[spanish-334.jpg]]
+
+mientras + imperfect, for actions continuing for somet time, not instantaneous ones
 
 ![[spanish-331.png]]
 

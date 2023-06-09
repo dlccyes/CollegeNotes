@@ -283,6 +283,8 @@ real exchange rate = $e\dfrac{P}{P^*}$
 
 ### purchasing-power parity PPP
 
+See [[International Finance#absolute PPP]]
+
 **theory** 
 
 - a good has the same price everywhere i.e. a currency has the same purchasing power everywhere, otherwise there will be opportunity for arbitrage (套利空間)
@@ -413,7 +415,7 @@ $G$ up or $T$ down -> AD shifts right
 government purchases from firm -> 
 
 - direct effect: AD shifts right
-- income effect: firm revenue up -> worker income up -> consumption up -> AD shifts right
+- [[income effect]]: firm revenue up -> worker income up -> consumption up -> AD shifts right
 
 ![[pmacro-97.png]]
 
@@ -450,12 +452,12 @@ tax rate down -> more incentive to work -> labor up -> AS shifts right
 	- since active policies take time to take effect, they're not suitable to be used for short-term goals
 - automatic policy
 	- tax reduces in recession naturally -> AD shifts right
-	- more people use social welfare system in recession, increasing government spending naturally -> AD shits right
+	- more people use social welfare system in recession, increasing government spending naturally -> AD shifts right
 
 ## Ch35 [[Philips curve]]
 
-- in the long run, inflation & unemployment rate is unrelated
-- in the short run, they are correlated
+- in the long run, unemployment rate is independent of inflation rate
+- in the short run, inflation rate can affect unemployment rate
 
 [[Philips curve]]: inflation vs. unemployment rate
 
@@ -489,9 +491,13 @@ a reduction in inflation rate
 
 sacrifice ratio = $\dfrac{\Delta \text{output}}{\Delta \text{inflation}}$ = 5 typically
 
-reduce 5x% output to reduce x% inflation rate
+to reduce x% inflation rate, you need to reduce 5x% output
 
 if everyone's rational, expected inflation falls when the Fed accounces to reduce inflation -> PC shifts downward -> smaller unemployment rate
+
+### 2008 financial crisis data
+
+![[pmacro-998.png]]
 
 ## Ch36 Macroeconomic Policies
 
@@ -551,7 +557,7 @@ See [[Ch13 中央銀行的功能與政策目標#13.4 央行制度]]
 ### tax reform to encourage saving
 
 - why Murica needs tax reform to encourage saving
-	- current Murica tax system descourages saving
+	- current Murican tax system descourages saving
 		- high marginal tax rate (of income) -> less incentive to save
 		- some saving is taxed twice
 		- high tax rate on bequests

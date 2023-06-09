@@ -2688,6 +2688,58 @@ $$u'(c_t)=\beta u'(c_{t+1})[A_{t+1}f'(k_t)+(1-\delta)]$$
 
 Production this period is decided by the previous period, so it won't be affected by future perturbations, which is unrealistic.
 
+### Problems
+
+#### P3
+
+![[macro-1234.png]]
+
+![[macro-46.png]]
+
+![[macro13-3a.png]]
+
+![[macro-p13-3c.png]]
+
+![[macro-13-3d.png]]
+
+![[macro-p13-3e.png]]
+
+#### P5 Lucas' Critique
+
+![[macro-13-p5.png]]
+
+![[macro-13-p5a.png]]
+
+![[macro-13-p5b1.png]]
+
+![[macro-13-p5b2.png]]
+
+![[macro-13-p5d.jpg]]
+
+![[macro-13-p5d2.png]]
+
+![[macro-13-p5e.jpg]]
+
+![[macro-13-p5e2.png]]
+
+#### P6
+
+![[macro-13-p6.png]]
+
+![[macro-13-p6a.png]]
+
+![[macro-13-p6c.png]]
+
+#### P7 time-to-build
+
+![[macro-13-p7.jpg]]
+
+![[macro-13-p7-2.jpg]]
+
+![[macro-13-p7a.jpg]]
+
+![[macro-13-p7a2.png]]
+
 ## Ch17 Real Business Cycle RBC Model
 
 Real Business Cycle (RBC) Model = Ramsey Model + endogenous labor supply
@@ -2788,12 +2840,12 @@ Deciding $w_t,r_t,c_t,n_t,k_t$
 
 simplify
 
-- $\dfrac{u_l(c_t,l_t)}{u_c(c_t,l_t)}=A_tF_n(k_{t-1},n_t)$
+- contemporaneous SE: $\dfrac{u_l(c_t,l_t)}{u_c(c_t,l_t)}=A_tF_n(k_{t-1},n_t)$
 	- $\mathrm{MPL}_t=A_tF_n(k_{t-1},n_t)=w_t$
-- $u_c(c_t,l_t)=\beta u_c(c_{t+1},l_{t+1})[A_{t+1}F_k(k_{t},n_{t+1})+(1-\delta)]$
+- intertemporal SE: $u_c(c_t,l_t)=\beta u_c(c_{t+1},l_{t+1})[A_{t+1}F_k(k_{t},n_{t+1})+(1-\delta)]$
 	- $u_c(c_t,l_t)=\beta u_c(c_{t+1},l_{t+1})(1+r_t)$
 	- $\mathrm{MPK}_{t+1}=A_{t+1}F_k(k_t,n_{t+1})=r_t+\delta$
-- $c_t+[k_t-(1-\delta)k_{t-1}]+G_t=A_tf(k_{t-1}, n_t)$
+- budget: $c_t+[k_t-(1-\delta)k_{t-1}]+G_t=A_tf(k_{t-1}, n_t)$
 	- $i_t=k_t-(1-\delta)k_{t-1}$
 
 ### Crusoe
@@ -2913,7 +2965,7 @@ wage is independent of $g$
 
 - $n$ up -> MPL down
 - $k$ up -> MPL up
-- they cancel out each other since constant return to scale
+- they cancel out each other since constant return to scale [[#Euler 性質]]
 
 ### total factor productivity short-term down
 
@@ -2968,7 +3020,7 @@ $c^d$ shifts left a lot
 - future MPK down -> desired capital stock down -> firm investment demand down
 - future capital down -> future output down -> lifetime wealth down even more -> consumption demand down hugely
 - future income reduction > current income reduction -> savings up for consumption smoothing
-- $|\Delta c^d_t|>|\Delta y^s_t|=ES$ -> product market supply > demand, bonds market demand > supply -> interest rate down
+- $|\Delta c^d_t|>|\Delta y^s_t|=ES$ -> commodity market supply > demand, bonds market demand > supply -> interest rate down
 
 interest rate down -> (intertemporal SE)
 
@@ -3131,7 +3183,7 @@ The result is the same whether the government funds the purchase through lump-su
 	- empirical data: GDP $\propto$ $1/r$, GDP $\propto C, I, w$ 
 	- RBC analysis of government purchase up:  GDP $\propto$ $r$, GDP $\propto 1/C, 1/I, 1/w$ 
 
-### effect of government purchase permanently increase
+### effect of government purchase permanent increase
 
 **Steady-state**
 

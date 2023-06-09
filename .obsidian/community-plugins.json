@@ -1,7 +1,5 @@
 [
-  "dataview",
   "obsidian-tabs",
-  "obsidian-mind-map",
   "obsidian-dictionary-plugin",
   "markdown-prettifier",
   "recent-files-obsidian",
@@ -20,7 +18,6 @@
   "emoji-shortcodes",
   "obsidian-auto-pair-chinese-symbol",
   "obsidian-outliner",
-  "graph-analysis",
   "various-complements",
   "table-editor-obsidian",
   "obsidian-quiet-outline",
