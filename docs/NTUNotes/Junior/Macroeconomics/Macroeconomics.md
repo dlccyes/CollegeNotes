@@ -2850,7 +2850,7 @@ simplify
 
 ### Crusoe
 
-[[#Ch13 廠商的投資決策 Ramsey Model#Crusoe]] but with he can decide his labor time
+[[#Ch13 廠商的投資決策 Ramsey Model#Crusoe]] but he can decide his labor time
 
 utility optimization problem
 
@@ -2927,7 +2927,7 @@ $$w^*=\mathrm{MPL}=(1-\alpha)\dfrac{y^*}{n^*}=(1-\alpha)(A\phi^\alpha)^{1/(1-\al
 
 when total factor productivity $A$ is up
 
-- substitution effect: $A$ up -> MPL up -> labor more expensive -> $c$ up & $l$ down, $n$ up
+- substitution effect: $A$ up -> MPL up -> $c$ up & $l$ down, $n$ up
 - income effect: $A$ up -> $c$ & $l$ up, $n$ down
 - no intertemporal substitution effect as $r=\rho$
 
@@ -2955,7 +2955,7 @@ MPK vs. $k$
 
 $$\dfrac{d \ln y^*}{dg}=\dfrac{d \ln n^*}{dg}=\dfrac{1}{(1-\alpha)+(1-\delta\phi-g)}>0$$
 
-when $g > 1-\delta\phi - \alpha$, $\dfrac{d \ln y^*}{dg}>0$, a multiplier effect
+when $g > 1-\delta\phi - \alpha$, $\dfrac{d \ln y^*}{dg}>0$, [[multiplier effect]]
 
 $$\dfrac{d \ln c^*}{dg}=\dfrac{-(1-\alpha)}{[(1-\alpha)+(1-\delta\phi-g)](1-\delta\phi-g)}<0$$
 
@@ -3104,10 +3104,10 @@ capital can't be changed -> national saving = 0, each period is independent to a
 
 B -> down
 
-- direct effect: output down -> commodity supply shifts left 
-- income effect: wealth down -> labor supply shifts right, consumption demand shifts left -> commodity supply shifts right
+- direct effect: output down -> $y^s$ shifts left 
+- income effect: wealth down -> $n^s$ shifts right, $c^d$ shifts left -> $y^s$ shifts right
 
-commodity supply & consumption demand shifts left by the same magnitude
+$y^s$ & $c^d$ shifts left by the same magnitude
 
 - output & consumption down by the same magnitude
 - interest rate unchanged
@@ -3115,12 +3115,12 @@ commodity supply & consumption demand shifts left by the same magnitude
 
 **(b) labor is constant** [[#Ch13 廠商的投資決策 Ramsey Model]]
 
-labor can't be changed -> commodity supply not affected by interest rate -> vertical curve
+labor can't be changed -> $n^s$ not affected by $r$ -> vertical curve
 
 B -> down
 
-- direct effect: output down -> commodity supply shifts left 
-- income effect: wealth down -> consumption demand shifts left
+- direct effect: output down -> $y^s$ shifts left 
+- income effect: wealth down -> $c^d$ shifts left
 
 labor constant -> MPK won't be changed -> desired capital stock unchanged -> investment unchanged
 
@@ -3200,13 +3200,13 @@ assumge government purchase up EB, funded with lump-sum tax
 under original interest rate
 
 - direct effect
-	- commodity demand E -> B
+	- $c^d$ E -> B
 	- current wealth down EB
-- income effect: labor supply shifts right, consumption demand shifts left from B -> production shifts right E -> a -> current wealth up Ea
+- income effect: $n^s$ shifts right, $c^d$ shifts left from B -> $y^s$ shifts right E -> a -> current wealth up Ea
 - current wealth down aB
-- steady-state output up -> future income up -> $\Delta$ lifetime wealth < aB -> consumption demand shifts B -> b < B -> a
+- steady-state output up -> future income up -> $\Delta$ lifetime wealth < aB -> $c^d$ shifts left B -> b < B -> a
 - commodity market demand - supply = ab
-- steady-state labor up -> MPL up -> desired capital stock up -> firm investment demand up -> commodity demand shifts right b -> d
+- steady-state labor up -> MPL up -> desired capital stock up -> firm investment demand up -> $c^d$ shifts right b -> d
 - commodity market demand - supply = ad -> interest rate up
 
 interest rate up
