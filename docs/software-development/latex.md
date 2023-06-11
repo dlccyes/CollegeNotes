@@ -169,6 +169,23 @@ https://tex.stackexchange.com/a/460857
 }
 ```
 
+## Reference
+
+Essential packages for the best quality of life.
+
+```tex
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+```
+
+`cite` is the core. `hyperref` makes all your references a hyperlink. `cleveref` makes your references extinguishable by prepending its type.
+
+- `\ref{sec:related}` -> `II`
+- `\cref{sec:related}` -> `Section II`
+
+See more about cleveref [here](https://texblog.org/2013/05/06/cleveref-a-clever-way-to-reference-in-latex/).
+
 ## brackets
 
 `$\langle x \rangle$` -> $\langle x \rangle$
