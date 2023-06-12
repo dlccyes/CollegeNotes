@@ -21,6 +21,11 @@ Install mactex which installs texlive
 
 ```
 brew install --cask mactex-no-gui
+```
+
+optional updates
+
+```
 sudo tlmgr update --self && sudo tlmgr update --all
 ```
 
