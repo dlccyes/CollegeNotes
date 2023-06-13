@@ -22,7 +22,7 @@ layout: meth
 	- have a common currency with absolutely equal value
 		- utility of the currency independent to anything else
 
-### hedonic game
+### [[hedonic game]]
 
 - non-transferable utility game
 - players don't care ahout the rest of the partition
