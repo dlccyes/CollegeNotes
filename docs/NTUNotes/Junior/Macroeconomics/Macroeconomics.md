@@ -37,7 +37,7 @@ aliases: 總體經濟學
 		- 近幾十年來佔約 US GDP 10%
 		- ![[transfer-payment.jpg]]
 		- 政府作為仲介者，左手進右手出
-			- e.g. 健保、消費券、社福`
+			- e.g. 健保、消費券、社福
 - 金融市場的波動
 - 國際貿易與金融
 	- US 貿易依存度
@@ -104,7 +104,7 @@ aliases: 總體經濟學
 	- SDGE, Stochastic Dynamic General Equilibrium Model 隨機動態均衡模型
 	- 支持市場機制，所有市場隨時都是處於均衡狀態
 	- 較關心政策的長期效果
-		- Keynes: In the long run, we are all dead.
+		- Keynes: "In the long run, we are all dead."
 		- 被批為脫離現實，不知民間疾苦
 	- 貨幣學派、芝加哥學派
 	- 這堂課
@@ -685,6 +685,7 @@ labor market & goods market are in perfect competition
 	- 所有單位都一樣
 
 $$y=AF(k,n)(+B)$$
+
 - y = 產出
 - k = capital
 - n = labor
@@ -3222,7 +3223,7 @@ overall
 - private consumption down
 - firm investment up
 	- $\mathrm{MPK}_{t+1}-\delta=r_t$
-	- $r_t$MPK_{t+1}$ up -> money flow from bonds to capital -> $r_t$ up
+	- $MPK_{t+1}$ up -> money flow from bonds to capital -> $r_t$ up
 	- so the capital decrease from $r_t$ up will not cancel out the capital increase
 - wage down
 

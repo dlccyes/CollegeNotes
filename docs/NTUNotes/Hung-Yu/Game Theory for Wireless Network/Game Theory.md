@@ -29,6 +29,14 @@ layout: meth
 - coalitions don't allocate profit for players
 - e.g. stable marriage
 
+> The top coalition property of Banerjee et al. (2001) and the common ranking property of Farrell and Scotchmer (1988) are sufficient conditions for core stability in hedonic games. 
+
+### top coalition
+
+![[gt-88.png]]
+
+defined in [Core in a simple coalition formation game](https://www.jstor.org/stable/41106401)
+
 ### shapley value
 
 - each player's marginal contribution
@@ -78,6 +86,19 @@ if {2} → {1,2}, $\phi_1=2$, $\phi_2=2$
 > This type of deviation can be refined by additionally requiring that no agent in the welcoming coalition is worseoff when agent i joins. A partition in which no such deviation is possible is called individually stable (IS).
 
 ref: Reaching Individually Stable Coalition Structures in Hedonic Games
+
+#### rules
+
+- coalition unanimity
+	- all members need to agree
+- equilibrium binding agreements
+	- coalitions can only break into smaller coalitions
+- open membership
+	- no rules
+
+### externality
+
+an equilibrium coalition structure has **positive externalities** if forming a coalition or merging into a big coalition will **make other coalitions worse off**
 
 ## social choice
 
