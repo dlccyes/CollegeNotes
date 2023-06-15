@@ -3281,7 +3281,7 @@ no $\tau^c$
 
 #### firm optimization problem
 
-$$\max_{\{n_t,k_t\}^\infty_{t=1}}=\sum^\infty_{t=1}q_t[(1-\tau^k)(y_t-w_tn_t)-i_t]$$
+$$\max_{\{n_t,k_t\}^\infty_{t=1}}\sum^\infty_{t=1}q_t[(1-\tau^k)(y_t-w_tn_t)-i_t]$$
 
 - $y_t=F(k_{t-1},n_t)$
 - $i_t=k_t-(1-\delta)k_{t-1}$

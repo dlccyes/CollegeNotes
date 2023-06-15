@@ -1,6 +1,7 @@
-{
-    "name": "Nebula",
-    "version": "0.0.0",
-    "minAppVersion": "0.16.0",
-    "author": "dlccyes"
+{  
+   "name": "Nebula",  
+   "version": "1.0.0",  
+   "minAppVersion": "1.0.0",  
+   "author": "dlccyes",  
+   "authorUrl": "https://github.com/dlccyes"  
 }

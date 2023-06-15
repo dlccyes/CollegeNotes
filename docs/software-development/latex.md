@@ -199,6 +199,10 @@ See more about cleveref [here](https://texblog.org/2013/05/06/cleveref-a-clever-
 
 ```tex
 \begin{center}
+\caption{\textbf{My Table}}
+\label{tab:mi-mesa}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.2}
 \begin{tabular}{|c|c|c|}
 	\hline
 	Firm 1 \textbackslash \; Firm 2 & innovate & don't innovate \\
@@ -210,6 +214,10 @@ See more about cleveref [here](https://texblog.org/2013/05/06/cleveref-a-clever-
 \end{tabular}
 \end{center}
 ```
+
+- `\setlength{\tabcolsep}{3pt}` for horizontal spacing
+- `\renewcommand{\arraystretch}{1.5}` for vertical spacing
+
 <https://www.overleaf.com/learn/latex/Tables>
 
 ## case
@@ -245,7 +253,7 @@ equals to different things in different conditions
 
 See <https://mamenotes.com/latex_xecjk/>
 
-## Figure
+## Figures
 
 Use pdf or eps for best quality.
 
@@ -257,10 +265,27 @@ Use pdf or eps for best quality.
 \end{figure}
 ```
 
-### Make 2 column wide in 2 column format
+### Span across columns in a multi column format
 
 ```tex
 \begin{figure*}
+\end{figure*}
+```
+
+### 2 figures in 2-column format side-by-side
+
+```tex
+\begin{figure*}[t!]
+\begin{minipage}[t]{0.5\linewidth}
+    \centerline{\includegraphics[width=90mm]{fig/sys_arch.eps}}
+    \caption{System model.}
+    \label{fig:sys_mod}
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+    \centerline{\includegraphics[width=90mm]{fig/sys_flow.eps}}
+    \caption{System workflow.}
+    \label{fig:sys_flow}
+\end{minipage}
 \end{figure*}
 ```
 
@@ -293,7 +318,6 @@ Adjust the number in `\begin{subfigure}[t]{0.3\linewidth}` depending on how many
     \label{fig:sys_pro_n}
 \end{figure*}
 ```
-
 
 ## Theorem, Definition, Proof
 

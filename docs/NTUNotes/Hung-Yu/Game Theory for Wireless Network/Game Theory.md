@@ -9,10 +9,7 @@ layout: meth
 [[Bayesian game]]
 
 - <https://www.youtube.com/watch?v=E0_CA9TwZ8c>
-- 先把 dominated 刪掉
-在依據機率算出混合 strategic form
-再把 dominated 刪掉
-算 pure strategy & mixed strategy
+- 把 dominated 刪掉 -> 依據機率算出混合 strategic form -> 把 dominated 刪掉 -> 算 pure strategy & mixed strategy
 
 ## Coalition game
 

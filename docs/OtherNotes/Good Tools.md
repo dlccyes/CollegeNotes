@@ -6,6 +6,7 @@ parent: OtherNotes
 # Good Tools
 
 ## websites
+
 - Photopea
 	- Photoshop clone
 - <https://12ft.io/>
@@ -283,6 +284,22 @@ A possible scenario would be renaming your home folder.
 - Obsidian
 	- customization king
 	- many good plugins
+
+## Image Converter
+
+### ImageMagick
+
+```
+brew install imagemagick
+```
+
+xxx to eps
+
+```
+convert image.jpg eps3:image.eps
+```
+
+<https://stackoverflow.com/questions/5350246/convert-jpg-to-eps-format>
 
 ## good Rainmeters
 
