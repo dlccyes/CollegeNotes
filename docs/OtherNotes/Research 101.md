@@ -1,6 +1,10 @@
 # Research 101
 
-## Paper Writing Flow
+## Writing a paper
+
+[IEEE Author Guide](https://s3-us-west-2.amazonaws.com/clarivate-scholarone-prod-us-west-2-s1m-public/wwwRoot/prod1/societyimages/tgrs/author_guide_interactive%20English.pdf)
+
+### Paper Writing Flow
 
 1. Complete your research and obtain your results
 2. Decide on a conference or journal to submit to
@@ -9,7 +13,7 @@
 5. Find the latex template of the conference/journal with this [template selector](https://template-selector.ieee.org/secure/templateSelector/publicationType)  (for IEEE ones)
 6. Fill your contents into the template. You can use Overleaf or VsCode to deal with latex. See [[latex#Environment]].
 
-### Why write outline
+### Why write an outline
 
 When you're actually writing the contents, it's very easy to stray away from what you've planned. So you should write a detailed but not-so-detailed outline to serve as the guideline, the architecture, of your paper.
 
