@@ -26,3 +26,14 @@ When you're actually writing the contents, it's very easy to stray away from wha
 Enter link or DOI
 
 (made by a tankie)
+
+## IEEE manucript format
+
+See [IEEE Editorial Style Manual](https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/style_references_manual.pdf)
+
+### References
+
+> In all references, the given name of the author or editor is abbreviated to the initial only and precedes the last name.
+
+> If there are many names, use them all; use et al. only if names are not given.
+

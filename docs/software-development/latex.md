@@ -319,6 +319,14 @@ Adjust the number in `\begin{subfigure}[t]{0.3\linewidth}` depending on how many
 \end{figure*}
 ```
 
+### Set caption margin
+
+```latex
+\usepackage[margin=1cm]{caption}
+```
+
+<https://tex.stackexchange.com/a/29040>
+
 ## Theorem, Definition, Proof
 
 ```tex
