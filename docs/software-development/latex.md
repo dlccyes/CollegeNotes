@@ -49,6 +49,10 @@ Install texlive
 1. Install LaTeX Workshop extension
 2. command palette: `LaTeX Workshop: View LaTeX PDF File`
 
+To go to the corresponding line from the rendered pdf, `cmd` + click the pdf.
+
+To do to the corresponding area from the code, command palette -> `synctex from cursor`.
+
 ### Run with other things
 
 - editors
