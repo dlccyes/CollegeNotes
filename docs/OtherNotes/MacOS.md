@@ -402,6 +402,8 @@ First install DisplayLink Manager if you haven't. You can find the files you nee
 
 Next, go to System settings -> Displays -> set "Refresh rate" to 60Hz
 
+It works for me in Macbook Pros with Intel chips but not M2. For M2, I tried a few type C to type C cables and only one of them can make the connection work consistently.
+
 ### Chinese input laggy
 
 Kill the process and **reopen your app** if it's still laggy on an app.
