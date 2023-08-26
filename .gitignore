@@ -7,3 +7,4 @@ desktop.ini
 .DS_Store
 .obsidian/core-plugins-migration.json
 *.pyc
+.obsidian/plugins/remember-cursor-position/cursor-positions.json

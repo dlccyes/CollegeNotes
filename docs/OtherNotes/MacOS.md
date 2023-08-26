@@ -319,6 +319,12 @@ Use <https://apps.apple.com/us/app/ethernet-status-missing-lan/id1186187538>
 
 ## Troubleshooting
 
+### Show hidden files in Finder
+
+```
+defaults write com.apple.finder AppleShowAllFiles -boolean true; killall Finder;
+```
+
 ### Some settings do not take effect
 
 Close and reopen the app if the new settings aren't working on an app.
