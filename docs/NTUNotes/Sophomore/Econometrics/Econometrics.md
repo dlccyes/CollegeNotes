@@ -1,7 +1,5 @@
 ---
 title: Econometrics
-layout: meth
-has_children: true
 ---
 
 # Econometrics
@@ -37,14 +35,19 @@ has_children: true
 	- <https://www.themathcitadel.com/uncorrelated-and-independent-related-but-not-equivalent/>
 
 ## skewness
+
 ![[econometrics-2.png]]
+
 The skewness of a symmetric distribution is 0.
 
 ### kurtosis
+
 ![[econometrics-3.png]]
+
 ![[econometrics-4.png]]
 
 ### law of iterated expectations
+
 ![[econometrics-5.png]]
 
 ## Ch3 review of statistics
@@ -130,7 +133,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 
 - $\hat{\beta_0}$、$\hat{\beta_1}$： $\beta_0$、$\beta_1$ minimalizing $\displaystyle\sum_{i=1}^n(Y_i-\beta_0-\beta_1X_i)^2$
 - $\hat{Y}=\hat{\beta_0}+\hat{\beta_1}\bar{X}$
-	- $Y_i=\hat{Y_$Y_ihat{u_i}=\hat{\beta_0}+\hat{\beta_1}\bar{X}+\hat{u_i}$
+	- $Y_i=\hat{Y_i}+\hat{u_i}=\hat{\beta_0}+\hat{\beta_1}\bar{X}+\hat{u_i}$
 	  - ![[econometrics-13.png]]
 - formulas
 	- total sum of squares $TSS=\displaystyle\sum_{i=1}^n(Y_i-\bar{Y})^2$
@@ -239,7 +242,7 @@ treat intercept as a regressor
 	- q = num of restrictions under the null
 	- k = num of regressor of the unrestricted one
 	- ![[econometrics-31.png]]
-    ![[econometrics-32.png]]
+	- ![[econometrics-32.png]]
 	- Homoskedasticity
 		- ![[econometrics-33.png]]
   - turn multiple into singular
@@ -284,6 +287,7 @@ treat intercept as a regressor
 ## Ch10 panel data
 
 ![[econometrics-43.png]]
+
 - panel data
 	- each observational unit, or entity, is observed at two or more time periods
 - cross-sectional data
@@ -359,7 +363,9 @@ likelihood function
 ### 2SLS
 
 ![[econometrics-63.png]]
-- ![[econometrics-64.png]]
+
+![[econometrics-64.png]]
+
 - overidentify & underidentify
 	- m = instrument 數
 	- k = endogenous regressor 數
@@ -380,7 +386,8 @@ likelihood function
 
 ## Ch13 Experiments & Quasi-Experiments
 
-- ![[econometrics-69.png]]
+![[econometrics-69.png]]
+
 - differences-in-differences estimator
 	- treatment group 的平均改變 - control group 的平均改變
 	- ![[econometrics-70.png]]
