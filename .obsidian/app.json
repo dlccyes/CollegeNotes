@@ -19,7 +19,7 @@
     "downscalePercent": 100
   },
   "vimMode": false,
-  "autoPairMarkdown": false,
+  "autoPairMarkdown": true,
   "autoPairBrackets": true,
   "legacyEditor": false,
   "livePreview": true,
