@@ -194,8 +194,7 @@
       "key": "Tab"
     }
   ],
-  "file-explorer:new-file": [],
-  "obsidian-rapid-notes:new-prefixed-note-new-tab": [
+  "file-explorer:new-file": [
     {
       "modifiers": [
         "Mod"
@@ -226,5 +225,6 @@
       ],
       "key": "P"
     }
-  ]
+  ],
+  "templater-obsidian:create-new-note-from-template": []
 }

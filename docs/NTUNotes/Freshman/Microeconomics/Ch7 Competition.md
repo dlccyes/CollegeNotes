@@ -5,6 +5,7 @@ parent: Microeconomics
 # Ch7 Competition
 
 ## 7.1 The Competitive Firm
+
 marginal revenue = price
 a firm's output: where price = MC (marginal cost)
 
@@ -18,6 +19,7 @@ else → shut down
 **long run**: can exit
 
 ### shut down or not ?
+
 operate profit: TR(total revenue) - TC(total cost)  
 shut down profit: -FC (fixed cost)  
 TC = FC + VC (variable cost)  
@@ -32,9 +34,11 @@ bold part = supply curve
 produce nothing at price < P<sub>0</sub>
 
 MC intersect AVC & AC at min point
-- 原因：marginal < average 時，會讓 average 減少；> average 時，會讓 average 增加，又 fixed cost 不變
+
+原因：marginal < average 時，會讓 average 減少；> average 時，會讓 average 增加，又 fixed cost 不變
 
 ### elasticity of supply
+
 <!-- elasticity = $$\frac{\frac{△Q}{Q}}{\frac{△P}{P}}$$ -->
 elasticity = $$\frac{△Q/Q}{△P/P}$$
 (the flatter the higher)
@@ -52,20 +56,27 @@ industry supply curve
 ![[ch7-competition-4.png]]
 
 ### changes in variable costs
+
 ![[ch7-competition-5.png]]
+
 a firm:  
+
 - marginal cost rises → supply curve shifts upward/leftward
 - in industry, price = P<sub>0</sub> → P<sub>2</sub>, so d→d' in a firm, q<sub>2</sub> not necessarily < q<sub>0</sub>  
 
 an industry:  
+
 - the sum of firms' supply curves → shifts upward/leftward  
 - Q<sub>2</sub> < Q<sub>0</sub>
 
 ### a change in demand
+
 ![[ch7-competition-6.png]]
 
 ## 7.3 The Competitive Firm in the Long Run
+
 min AC point = equilibrium quantity q&p (horizontal demand i.e. price is the tangent of min AC)
+
 - if p > AC, the firm is earning positive economic profits, so more firms will come in, making p decreases
 - if p < AC, the firm is earning negative economic profits, so it will quit
 
@@ -80,20 +91,30 @@ p.183
 ## 7.4 The Competitive Industry in the Long Run
 
 ### change in demand 
+
 #### constant-cost
+
 long run: price don't change
+
 ![[ch7-competition-8.png]]
+
 short run: price goes up
+
 ![[ch7-competition-9.png]]
 
 ### change in cost
+
 #### constant-cost
+
 changes in variable cost
+
 ![[ch7-competition-10.png]]
+
 如果每單位 output 上升相同的 marginal cost，AC 就會垂直上升，讓均衡 output 不變  
 但若是 variable cost 按比例上升，output 愈大 marginal cost 上升愈多
 
 suppose a lecense fee is charged
+
 ![[ch7-competition-11.jpg]]
 
 ![[ch7-competition-12.jpg]]
@@ -102,17 +123,22 @@ suppose a lecense fee is charged
 長期而言都是 0 profit
 
 #### increasing-cost
+
 same as constant-cost except the shape of LRS
+
 ![[ch7-competition-13.png]]
+
 ![[ch7-competition-14.png]]
 
 ### applications
+
 1. apartment rent for $400
 2. new law: $200 max
 3. change to $20p
 4. remove law
 5. change to $500
 6. change back to $400 ultimately
+
 ![[ch7-competition-15.jpg]]
 
 ## 7.5 XXXX-Cost Industries
@@ -144,16 +170,17 @@ costs ↓ as q ↑ → break-even price ↓ as q ↑ e.g. 3C industry
 
 ![[ch7-competition-18.png]]
 
-![[ch7-competition-19.png]]
+![[ch7-competition-19.png]]  
 ![[ch7-competition-20.png]]
 
 ![[ch7-competition-21.png]]
 
-![[ch7-competition-22.jpg]]
-![[ch7-competition-23.jpg]]
+![[ch7-competition-22.jpg]]  
+![[ch7-competition-23.jpg]]  
 ![[ch7-competition-24.jpg]]
 
 ![[ch7-competition-25.jpg]]
+
 - a. short(no change in long)
 - b. long  
 - c. short  

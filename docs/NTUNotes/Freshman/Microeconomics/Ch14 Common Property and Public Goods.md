@@ -28,6 +28,7 @@ Coase 的解方：將財產權分配給一個人 → 他會追求 max ticket rev
 實際解方：North England 草原有 stints (=許可證)  
 
 ## Clarke tax 路燈
+
 居民 $i$ 提出願付的稅 $v_i$
 政府有一個未知數字 $x_i$  
 $v_i\geq x_i$  則建路燈且課稅 $x_i$ 
@@ -46,14 +47,22 @@ vice versa
 收到的稅入不敷出  
 
 ## HW
+
 [ans vids](https://drive.google.com/drive/u/3/folders/1t9OEsLQmywf06btfjtJ5WFFZXe7zUFBh)
 ### 1.
+
 ![[ch14-common-property-and-public-goods-5.png]]
+
 ### 2. P13.
+
 ![[ch14-common-property-and-public-goods-6.png]]
+
 ### 3.
+
 ![[ch14-common-property-and-public-goods-7.png]]
+
 ### 4.
-![[ch14-common-property-and-public-goods-8.png]]
+
+![[ch14-common-property-and-public-goods-8.png]]  
 ![[ch14-common-property-and-public-goods-9.png]]
 
