@@ -166,6 +166,12 @@ nav:
 - Economics:
   - Microeconomics:
     - "NTUNotes/Freshman/Microeconomics/README.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch1 Supply, Demand, and Equilibrium.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch2 Prices, Costs, and the Gains from Trade.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch3 The Behavior of Consumers.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch4 Consumers in Marketplace.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch5 The Behavior of Firms.md"
+    - "NTUNotes/Freshman/Microeconomics/Ch6 Production and Costs.md"
     - "NTUNotes/Freshman/Microeconomics/Ch7 Competition.md"
     - "NTUNotes/Freshman/Microeconomics/Ch8 Welfare Economics and the Gains from Trade.md"
     - "NTUNotes/Freshman/Microeconomics/Ch10 Monopoly.md"
@@ -184,10 +190,12 @@ nav:
   - "NTUNotes/Sophomore/Econometrics/Econometrics.md"
   - Money and Banking:
     - "NTUNotes/Sophomore/Money and Banking/README.md"
+    - "NTUNotes/Sophomore/Money and Banking/Ch1 前導.md"
     - "NTUNotes/Sophomore/Money and Banking/Ch2 金融體系概要.md"
     - "NTUNotes/Sophomore/Money and Banking/Ch3 貨幣與支付系統.md"
     - "NTUNotes/Sophomore/Money and Banking/Ch4 現值與利率.md"
     - "NTUNotes/Sophomore/Money and Banking/Ch5 債券市場與利率的決定.md"
+    - "NTUNotes/Sophomore/Money and Banking/Ch6 利率風險結構和期限結構.md"
     - "NTUNotes/Sophomore/Money and Banking/Ch7 金融體系的經濟分析.md"
     - "NTUNotes/Sophomore/Money and Banking/Ch8 銀行的經營管理.md"
     - "NTUNotes/Sophomore/Money and Banking/Ch9 台灣銀行業的結構與發展.md"

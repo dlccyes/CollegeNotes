@@ -1,6 +1,6 @@
 # Ch6 Production and Costs
 
-## 6.1  in short run
+## 6.1 in the short run
 
 marginal X of Y = total X 對 Y 微分
 
