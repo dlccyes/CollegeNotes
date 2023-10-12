@@ -1,8 +1,7 @@
 ---
-aliases: [電網導]
-layout: meth
+aliases:
+  - 電網導
 title: Computer Networks
-has_children: true
 ---
 # Computer Networks
 
@@ -57,6 +56,7 @@ has_children: true
 	- 5-10 miles
 
 ###### HFC, hybrid fiber coax
+
 - ![[computer-networks-3.png]]
 - ![[computer-networks-4.png]]
 - use cable TV's existing infrastructure
@@ -75,6 +75,7 @@ has_children: true
 -  download 是 broadcast，upload 是 multiple-access
 
 ###### FTTH/FTTC/FTTB
+
 - ![[computer-networks-5.png]]
 - 用光纖
 - FTTH, fiber to the home
@@ -96,9 +97,11 @@ has_children: true
 - ![[computer-networks-6.png]]
 
 ###### satellite link
-- Starband, HughesNet
+
+Starband, HughesNet
 
 ##### company access networks
+
 - LAN, local access networks
 - connect end system to edge router
 - Ethernet
@@ -112,6 +115,7 @@ has_children: true
 - ![[computer-networks-8.png]]
 
 ##### mobile access networks
+
 - wide-area wireless access
 	- kms
 - same wireless infrastructure as cellular telephony
@@ -122,7 +126,9 @@ has_children: true
 - wireless local loop (?)
 
 ####  physical media
+
 #####  guided media
+
 -  solid medium, physically wired
 -  installation cost >> material cost
 -  twisted-pair copper wire
@@ -155,10 +161,12 @@ has_children: true
 		-  optical devices
 
 #####  unguided media
+
 -  in atmosphere & outer space, with antenna
 -  download 是 broadcast，upload 是 multiple-access
 
 ######  terrestrial radio channels
+
 -  via electromagnetic spectrum
 -  penetrate walls, long distance
 -  greatly dependent on environment & distance
@@ -171,6 +179,7 @@ has_children: true
 		-  cellular access
 
 ######  satellite radio channels
+
 -  ![[computer-networks-12.png]]
 -  link between ground stations
 -  receive in one frequency, repeat the signal, transmit in another frequency
@@ -189,6 +198,7 @@ has_children: true
 
 ### The Network Core
 #### packet switching
+
 - long messages → small packets → through communication links & packet switching
 - middleman
 	- routers
@@ -220,6 +230,7 @@ has_children: true
 	- round robin
 
 #### circuit switching
+
 - <https://eng.libretexts.org/Bookshelves/Computer_Science/Networks/Book%3A_An_Introduction_to_Computer_Networks_(Dordal)/03%3A_Other_LANs/3.04%3A_Virtual_Circuits>
 - e.g.
 	- ![[computer-networks-13.png]]
@@ -241,6 +252,7 @@ has_children: true
 		- use statistical laws
 
 #### packet switching vs. circuit switching
+
 - trend: packet switching
 - packet switching
 	- pros
@@ -321,6 +333,7 @@ has_children: true
 
 ### Delay, Loss & Throughput
 #### reliability
+
 - 原汁原味
 	- error-free
 		- 測不出 error
@@ -339,6 +352,7 @@ has_children: true
 		- virus
 
 #### QoS, quality of service
+
 - error rate
 - delay
 	- delay jitter
@@ -355,6 +369,7 @@ has_children: true
 			- $min(R/10,R_1,R_2,....,R_{10})$  
 
 #### delay/latency
+
 - one-way delay
 - RTT, round trip time
 	- 送出 to 收到回覆 (ack)
@@ -395,11 +410,13 @@ has_children: true
 		- take 1ms x 5001
 
 ### Protocol Layers
+
 - layered architecture
 	- ![[computer-networks-20.png]]
 		- 同一層互相溝通
 
 #### protocol layering
+
 - ![[computer-networks-21.png]]
 - ![[computer-networks-22.png]]
 - 愈上層愈軟，愈下層愈硬
@@ -407,11 +424,13 @@ has_children: true
 
 ##### 5-layer model (the Internet)
 ###### application layer
+
 - e.g. HTTP(web documents), SMTP(emails), FTP(files), DNS
 - **message** - application-layer packet
 - exchange message with the application in another end system
 
 ###### transport layer
+
 - layer 4
 - transport messages between application endpoints
 - 2 protocols in the Internet
@@ -429,6 +448,7 @@ has_children: true
 - **segment** - transport-layer packet
 
 ###### network layer 
+
 - layer 3
 - IP layer
 -  **datagrams** -  network-layer packet
@@ -448,11 +468,13 @@ has_children: true
 -  **frame** - link-layer packet
 
 ######  physical layer 
+
 - layer 1
 - move the individual bits in the frame from one node to another
 - protocols depend on link & transmission medium of the link
 
 ##### ISO OSI 7-layer model
+
 - ![[computer-networks-24.png]]
 - 2 additional layers (也算 application layer)
 	- presentation layer
@@ -472,6 +494,7 @@ has_children: true
 - IETF TCP/IP protocol stack/suite
 
 #### encapsulation
+
 - PDU, packet data union
 	- header + data/payload
 	- ![[computer-networks-25.png]]
@@ -479,12 +502,15 @@ has_children: true
 	- 除掉 header 送到上一層
 
 ### Network Security
+
 the Internet was originally designed on the concept of 
+
 > a group of mutually trusting users attached to a transparent netowrk
 
 so there're many security problems now
 
 #### malware
+
 - self-replicating
 	- 感染 host → 複製 → 透過該 host 感染其他 host
 - virus
@@ -493,6 +519,7 @@ so there're many security problems now
 	- infect user's device without explicit user interaction
 
 #### DOS, denial-of-service attack
+
 - make things unusable
 - methods
 	- vulnerability attack
@@ -508,6 +535,7 @@ so there're many security problems now
 		- establish a lot of half-open or fully open TCP connections at target → connection bogged → target stops accepting legitimate connections
 
 #### packet sniffer
+
 - a passive receiver copying every packet transmitted
 	- wireless or wired environment
 - passive, don't inject packets → hard to detect
@@ -515,12 +543,14 @@ so there're many security problems now
 	- cryptography (Ch8)
 
 #### IP spoofing
+
 - send packet with fake source address with malicious contents
 - solution
 	- end-point authentication (Ch8)
 		- check if the source address is correct
 
 ### miscellaneous
+
 - connections
 	- link, node, cloud
 	- direct link
@@ -549,8 +579,11 @@ so there're many security problems now
 		- 海納百川
 
 ## Ch2 Application Layer
+
 ### principles
+
 #### architectures
+
 - client-server
 	- single server
 		- may be overwhelmed
@@ -617,6 +650,7 @@ so there're many security problems now
 	- 講義：multimedia 可 UDP
 
 ##### TCP
+
 - provide
 	- connection-oriented
 		- handshaking before communicating
@@ -651,6 +685,7 @@ so there're many security problems now
 ### video streaming
 #### streaming types
 ##### HTTP streaming
+
 - one version of video, stored in an URL
 - TCP connection 
 - client GET for the video URL
@@ -660,6 +695,7 @@ so there're many security problems now
 	- only one version, clients with different bandwidths still use the same video
 
 ##### DASH streaming
+
 - Dynamic Adaptive Streaming over HTTP
 - many versions of videos
 	- differnt bit rates i.e. different quality
@@ -783,6 +819,7 @@ so there're many security problems now
 - mss: maximum segment size
 
 ### reliable data transfer
+
 - difficulties
 	- the layer below may be unreliable
 - assumption
@@ -798,6 +835,7 @@ so there're many security problems now
 		- → retransmission
 
 #### error detection (brief)
+
 - see [error detection](#error%20detection)
 - parity check
 	- even or odd number of 1s
@@ -819,6 +857,7 @@ so there're many security problems now
 	- ![[computer-networks-34.png]]
 
 #### Automatic Repeat reQuest (ARQ)
+
 - states
 	- ![[computer-networks-35.png]]
 	- ![[computer-networks-36.png]]
@@ -1693,6 +1732,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 
 ## Ch6 Link Layer
 ### intro
+
 - services
 	- framing
 		- encapsulate network-layer datagram to link-layer frame
@@ -1710,6 +1750,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 
 ### error detection
 #### parity check
+
 - even or odd number of 1s
 - single-bit
 	- even number of bit errors → can't detect
@@ -1718,6 +1759,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- parity check for every row and column
 
 #### checksum 
+
 - low overhead but weak
 - used in transport layer
 	- implemented in software → need to be simple & fast
@@ -1725,6 +1767,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- implemented in hardware → can perform complex operations quickly
 
 #### CRC, cyclic redundancy check
+
 - generator G
 	- sender & receiver agree on before hand
 	- r+1 個 bits
@@ -1740,6 +1783,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - ![[computer-networks-100.png]]
 
 ### multiple access protocols
+
 - uplink - (多對一) multiple access
 - downlink - (一對多) broadcast or scheduling
 - cellular network
@@ -1757,6 +1801,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- decentralizedno single point of failure
 
 #### channel partitioning
+
 - TDMA
 	- time division multiple access
 	- divide bandwidth fairly by time slots
@@ -1773,6 +1818,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 
 #### random access
 ##### slotted ALOHA
+
 - time slots
 - can only send at the start of a slot
 - more than one transmission in a slot → collision
@@ -1791,6 +1837,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- max 37% (1/e) utilization if N → infinity
 
 ##### ALOHA
+
 - no time slots
 - transmit immediately after receiving
 - collision when transmission time overlaps with others' transmission time
@@ -1804,6 +1851,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - fully decentralized
 
 ##### CSMA
+
 - carrier sense multiple access
 - get the state of current carrier
 	- idle → transmit
@@ -1814,6 +1862,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - once start transmitting, won't stop even if detect collision
 
 ##### CSMA/CD
+
 - CSMA with collision detection (CD)
 - detect collision while transmitting (for a short time) → abort → wait for some time and resend
 - binary exponential backoff
@@ -1829,10 +1878,13 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- 1 → efficiency = 1
 
 ##### CSMA/CA - collision avoidance
+
 -  for wireless → can't detect collision
 
 #### taking turns
+
 ##### polling
+
 - centralized, one node is the master node
 - master node polls and allow if slave nodes wants to transmit
 - polls in a cyclic manner
@@ -1852,6 +1904,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- Bluetooth
 
 ##### token passing
+
 - 繞圈圈傳 token，持有者可傳 data，傳完 or 沒要傳就 pass 給下個 node
 - pros
 	- decentralized
@@ -1862,6 +1915,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- token maintenance problem
 
 #### DOCSIS
+
 - DOCSIS, data-over-cable service interface specifications
 - for cable access network
 - CMTS, cable modem termination system
@@ -1880,11 +1934,13 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 
 ### switched local area networks
 #### link layer address
+
 - each host has 1 IP & 1 adapter
 - each router interface has 1 IP, 1 ARP module, 1 adapter
 - each adapter has 1 MAC
 
 ##### MAC address
+
 - LAN / physical / MAC address
 - 6-byte (48-bit) long
 - don't change as you move
@@ -1894,6 +1950,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - all 1s → broadcast address
 
 ##### ARP, address resolution protocol
+
 - translate IP address to MAC address
 - only for hosts and router interfaces on the same subnet
 - ARP table
@@ -1916,6 +1973,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- ![[computer-networks-106.png]]
 
 #### Ethernet
+
 - IEEE 802.3
 - datagram format
 	- ![[computer-networks-107.png]]
@@ -1925,6 +1983,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- sync clock rates
 
 #### switches
+
 - filtering
 	- forward or drop
 - forwarding
