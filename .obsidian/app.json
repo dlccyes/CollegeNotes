@@ -34,5 +34,6 @@
   "userIgnoreFilters": [
     "/\\.png$/",
     "/\\.jpg$/"
-  ]
+  ],
+  "useTab": false
 }

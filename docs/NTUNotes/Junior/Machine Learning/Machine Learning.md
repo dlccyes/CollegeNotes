@@ -178,6 +178,7 @@ gradient descent 事實上很少卡在 critical point，而是在附近震盪
 - ![[machine-learning-30.png]]
 
 ## CNN
+
 - image classification
 	- 3D tensor
 		- length

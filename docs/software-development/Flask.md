@@ -7,7 +7,8 @@ parent: Software Development
 lightweight [Python](Python) web framework
 
 ## sample
-```
+
+```python
 from flask import Flask, render_template
 app = Flask(__name__)
 
@@ -82,10 +83,12 @@ That's all.
 [Flask-Cors doc](https://flask-cors.readthedocs.io/)
 
 ## views / templates
+
 [Full doc](https://flask.palletsprojects.com/en/2.1.x/tutorial/templates/)
 
 Put all your views (html files) in `/templates`
-```
+
+```python
 from flask import Flask, render_template
 app = Flask(__name__)
 
@@ -96,17 +99,19 @@ def index():
 
 ### select another folder for template & static files
 
-By default, `template_folder`= `./` and `static_folder` = `./static`. To change them, specify them in `Flask()`.
+By default, `template_folder`= `./templates` and `static_folder` = `./static`. To change them, specify them in `Flask()`.
 
-```
+```python
 app = Flask(__name__, template_folder="vue/dist", static_folder="vue/dist/assets")
 ```
 
 <https://stackoverflow.com/a/55615550/15493213>
 
 ### passing variables
+
 app.py
-```
+
+```python
 @app.route("/haha")
 def index():
     return render_template('haha.html', data='haha')
@@ -127,15 +132,18 @@ haha,html
 ```
 
 ## static files
+
 put static files in `/static`
 
 use `url_for` to reference it
 
 e.g. you have `/static/style.css`  
 to link it, do  
-```
+
+```html
  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 ```
 
-## database
+## Relational Database ORM
+
 use [SQLAlchemy](SQLAlchemy)

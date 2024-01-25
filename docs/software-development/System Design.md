@@ -326,6 +326,31 @@ ancestor_id | node_id
 - [Hierarchical Data in SQL: The Ultimate Guide](https://www.databasestar.com/hierarchical-data-sql/)
 - [Hierarchical Database, multiple tables or column with parent id? | Stack Overflow](https://stackoverflow.com/a/2341295/15493213)
 
+## Replication
+
+### Leader-Based Replication
+
+- 1 replica leader/master, others followers/slaves
+- client only writes to leader, changes later replicated to followers (sync or async)
+- followers are read-only to client
+- built-in for relational databases & message queues of high availability (e.g. Kafka & RabbitMQ)
+
+#### replication methods
+
+- sync
+	- leader wait for response
+	- -> high durability
+- async
+	- leader don't wait for response
+	- -> high avaibility
+
+Leader-Based Replication often uses async replication
+
+#### adding a new follower
+
+1. set up a follower node with a snapshot of the leader
+2. sync with the leader with leader's log 
+
 ## Load Balancing
 
 request id -> hashed request id -> mod by n (# of servers) -> direct to the server

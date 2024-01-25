@@ -29,6 +29,7 @@ to include jQuery
 	- can't change value
 
 ### for loop
+
 - `for(let i=0; i<=s.length; i++)`
 	- 千萬要加 `let`
 - `for(var item of array)` = `for item in array` in Python
@@ -132,7 +133,7 @@ vanilla
 
 ### Axios
 
-```
+```javascript
 axios({
   method: 'post',
   url: '/login',
@@ -143,7 +144,7 @@ axios({
 });
 ```
 
-```
+```javascript
 axios.post('/login', {
   firstName: 'Finn',
   lastName: 'Williams'

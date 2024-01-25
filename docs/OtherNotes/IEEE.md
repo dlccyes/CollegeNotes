@@ -9,7 +9,11 @@ parent: Miscellaneous
 	- [src](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6955926)
 - Author tools
 	- <http://www.ieee.org/authortools>
+- Style guides
+	- <https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-the-text-of-your-article/ieee-editorial-style-manual/>
 - IEEE templates
+	- template selector
+		- <https://template-selector.ieee.org/secure/templateSelector/publicationType>
 	- conference
 		- <https://www.ieee.org/conferences/publishing/templates.html>
 		- conference latex

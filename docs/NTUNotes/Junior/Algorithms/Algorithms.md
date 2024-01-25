@@ -396,6 +396,7 @@ void insertion_sort(int x[],int length)//define function
 radix & bucket sort use other sorters to do the actual sorting
 
 #### counting sort
+
 - 有 m 個數字 <= k → 把 k 放在位置 m
 - ![[algorithms-68.png]]
 - stable

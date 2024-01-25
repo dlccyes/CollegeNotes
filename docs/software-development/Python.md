@@ -494,6 +494,18 @@ plt.legend()
 plt.show()
 ```
 
+### display Chinese character
+
+Simply add this
+
+```python
+matplotlib.rcParams['font.family'] = ['Heiti TC']
+```
+
+Replace `Heiti TC` with other fonts if you're not using MacOS.
+
+[ref](https://stackoverflow.com/a/69658444/15493213)
+
 ### gridline
 
 `plt.grid()` to enable gridline
@@ -727,6 +739,22 @@ cred = f'{clientID}:{clientSecret}'
 b64_cred = base64.b64encode(cred.encode('ascii')).decode('ascii')
 ```
 
+## decode
+
+### decoding utf-8 encoded characters represented in unicode escaped sequence
+
+You can get text like `\u00e5\u0093\u00ad\u00e5\u0093\u00ad` if you use `json.dump()` without `ensure_ascii=False`.
+
+```python
+encoded_text = "\u00e5\u0093\u00ad\u00e5\u0093\u00ad"
+decoded_text = encoded_text.encode("latin-1").decode('utf-8')
+print(decoded_text)
+```
+
+output: `哭哭`
+
+[source](https://stackoverflow.com/a/52461149/15493213)
+
 ## trace exceptions
 
 ```python
@@ -953,6 +981,10 @@ print(f)
 
 ## numpy
 
+### matrix multiplication
+
+use operator `@`
+
 ### save np array to csv
 
 ```
@@ -1108,6 +1140,12 @@ You can also use VsCode's Live Preview plugin.
 ## Database interaction
 
 see [SQLAlchemy](SQLAlchemy)
+
+## Floating Points
+
+Floating points can only be approximated due to the binary nature of machines, so it's easy to create unexpected results when dealing with floating points.
+
+<https://docs.python.org/3/tutorial/floatingpoint.html>
 
 ## Troubleshooting
 

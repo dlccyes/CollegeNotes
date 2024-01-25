@@ -51,7 +51,7 @@ Install texlive
 
 To go to the corresponding line from the rendered pdf, `cmd` + click the pdf.
 
-To do to the corresponding area from the code, command palette -> `synctex from cursor`.
+To go to the corresponding area from the code, command palette -> `synctex from cursor`.
 
 ### Run with other things
 
@@ -180,6 +180,8 @@ https://tex.stackexchange.com/a/460857
 
 ## Reference
 
+### inline references
+
 Essential packages for the best quality of life.
 
 ```tex
@@ -194,6 +196,30 @@ Essential packages for the best quality of life.
 - `\cref{sec:related}` -> `Section II`
 
 See more about cleveref [here](https://texblog.org/2013/05/06/cleveref-a-clever-way-to-reference-in-latex/).
+
+### reference section
+
+Write your references in a `.bib` file and insert it with `bibliography{<reference file name>}` in your main tex.
+
+#### capitalizing the whole word in title
+
+By default, when you write this
+
+```bib
+@ARTICLE{p1935,
+  title={IEEE Standard for Edge/Fog Manageability and Orchestration}, 
+}
+```
+
+the `IEEE` would be rendered as `Ieee`. To make it displayed as `IEEE`, put curly braces around it, like this
+
+```bib
+@ARTICLE{p1935,
+  title={{IEEE} Standard for Edge/Fog Manageability and Orchestration}, 
+}
+```
+
+<https://tex.stackexchange.com/a/10775>
 
 ## brackets
 

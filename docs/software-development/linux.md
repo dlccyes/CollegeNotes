@@ -630,8 +630,11 @@ PROMPT="%{$fg_bold[green]%}%n@%m:%{$fg[cyan]%}%d$ %{$fg[white]%}"
 
 ## grub menu
 
-### keys to press
+### keys
 
+- `ctrl+e` -> to the bottom 
+- up and down arrow keys -> move selection up and down
+- enter -> select
 - `c` -> command line mode
 	- `normal` to exit
 - `e` -> edit entry
@@ -1614,6 +1617,7 @@ Ref
 - <https://unix.stackexchange.com/a/111924>
 
 ### kwallet
+
 It is a password manager for KDE plasma, storing your wifi passwords for example. To disable this, go to `~/.config/kwalletrc`
 
 ```

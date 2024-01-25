@@ -2044,7 +2044,7 @@ consumers don't have endowment but work to earn
 $$l_t+n_t=1$$
 
 - $l_t$ = time spend at leisure
-- $n_t$ = time spend at labor
+- $n_t$ = time spend at labore
 - $w_t$ = real wage (earnings per unit time of labor)
 - $d_t$ = dividends
 - $T_t$ = fixed tax, exogenous
@@ -2073,7 +2073,6 @@ full wealth (if WLB = 0), treaing both consumption & leisure as commodities
 $$\sum^\infty_{t=1}q_t(c_t+w_tl_t)=\sum^\infty_{t=1}q_t(a_t+w_t)$$
 
 **optimization problem**
-
 
 $$\max_{\{c_t,l_t,n_t,b_t\}^\infty_{t=1}}=\sum^\infty_{t=1}\beta^{t-1}u(c_t,l_t)$$
 

@@ -99,7 +99,6 @@ title: Computer Networks
 ###### satellite link
 
 Starband, HughesNet
-
 ##### company access networks
 
 - LAN, local access networks
@@ -197,6 +196,7 @@ Starband, HughesNet
 	-  SpaceX Starlink
 
 ### The Network Core
+
 #### packet switching
 
 - long messages → small packets → through communication links & packet switching
@@ -846,7 +846,7 @@ so there're many security problems now
 - Internet checksum
 	- procedure
 		1. 2 條 16 bits 相加
-		2.  overflow → 加到 least significant bit
+		2. overflow → 加到 least significant bit
 		3. sum 做 1's complement → checksum
 			- 0 1 互換
 		4. sum = receiver 的 sum 加上 sender 的 checksum
@@ -877,13 +877,15 @@ so there're many security problems now
 				- 還沒 transmit 完已經 propagate 到了
 			- sol: [[#sliding window protocol]]
 ##### alternating-bit protocol
+
 - stop & wait but 多一個 bit 標示 sequence number
 	- 0 or 1
 	- 可判斷是重傳 or 新 packet
 		- 重傳 → 用原本的 number
 		- 傳新的 → 用另一個 number
 	- receiver 收到 duplicate → 還是回 ACK but 不把東西往上層送
-- ![[computer-networks-37.png]]<br>![[computer-networks-38.png]]
+- ![[computer-networks-37.png]]
+- ![[computer-networks-38.png]]
 	- lost packet & lost ACK 對 sender 來說一樣
 
 ##### sliding window protocol
@@ -1012,6 +1014,7 @@ so there're many security problems now
 - ![[computer-networks-51.png]]
 
 ##### Timeout
+
 $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - timeout interval should > Estimated RTT, and the more fluntuating RTT is, the bigger the margin
 - TimeoutInterval will double after timeout, follow the formula again after receiving next segment
@@ -1577,6 +1580,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 			- the Internet can self-sync → randomized the broadcasting time
 
 ##### distance-vector routing algorithm
+
 - iterative, async, distributed, self-terminating
 - decentralized
 - hop-by-hop routing
@@ -1771,15 +1775,15 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 - generator G
 	- sender & receiver agree on before hand
 	- r+1 個 bits
-- data 補 r 個 0 i.e. slli r
+- data 補 r 個 0 i.e. `slli` r
 	- size of r = size of G - 1 e.g. 4-bit G → 3-bit r
 - modulo-2 arithmetic
 	- addition without carry = subtraction without carry = XOR
-	- 長除法 data 除 generator but 相減時用 XOR
+		- 長除法 data 除以 generator but 相減時用 XOR
 - send bit string of data D 接餘數 R → $D2^R$
 	- ![[computer-networks-99.png]]
 - receiver 把收到的 bit string 長 XOR generator，餘數為 0 → perfecto
-	- R = remainder of $D2^R \div G$
+	- R = remainder of $D2^R \div G$ but with XOR
 - ![[computer-networks-100.png]]
 
 ### multiple access protocols

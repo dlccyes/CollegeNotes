@@ -21,11 +21,10 @@ When you're actually writing the contents, it's very easy to stray away from wha
 
 ### Access inaccessible papers
 
-<https://sci-hub.se/>
-
-Enter link or DOI
-
-(made by a tankie)
+- <https://sci-hub.se/>
+	- Enter link, title, or DOI
+	- (made by a tankie)
+- ResearchGate
 
 ## IEEE manucript format
 

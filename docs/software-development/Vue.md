@@ -19,7 +19,7 @@ yarn global add @vue/cli
 yarn global add @vue/cli-service
 ```
 
-in `node_modules/.bin/vue-cli-service`
+in `node_modules/.bin/vue-cli-service`  
 run with `npx vue-cli-service`
 
 ## init

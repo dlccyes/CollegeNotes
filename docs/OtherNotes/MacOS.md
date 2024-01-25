@@ -210,6 +210,10 @@ See [Sniffing Packets from Wireless Networks](Software%20Development/Sniffing%20
 
 ## Tools
 
+### Preventing overcharging - Aldente
+
+[Aldente](https://github.com/AppHouseKitchen/AlDente-Charge-Limiter) helps you maintain the battery level at a certain point even when your MacBook is always plugged in, so that you can maintain the state of charge between 20% and 80% to extend battery life.
+
 ### Sync config files - Mackup
 
 Use Mackup
@@ -269,7 +273,8 @@ brew install snipaste
 
 <https://github.com/round/CatchMouse>
 
-and click the link <https://web.archive.org/web/20150502123813/http://ftnew.com:80/catchmouse.html>
+home page  
+<https://web.archive.org/web/20150502123813/http://ftnew.com:80/catchmouse.html>
 
 [direct downloading link](https://web.archive.org/web/20150502123813/http://ftnew.com/files/CatchMouse.zip)
 
@@ -307,7 +312,9 @@ There is no native way to do this (unless you're connected to an external monito
 
 ### Only show relevant menubar items
 
-Try [Dozer](https://github.com/Mortennn/Dozer)
+Use [Bartender](https://www.macbartender.com/). It's not free but after the free trial it only pops up to tell you to buy it from time to time while still letting you access full features, like WinRAR.
+
+You can also try [Dozer](https://github.com/Mortennn/Dozer)
 
 Dozer will giver you 2 dots on the menubar. Drag relevant menubar items to the right of the leftmost dot and press it, now all the other items will be gone. Click again and they will reappear.
 
@@ -361,9 +368,17 @@ Note that the fullscreen after you hide the toolbars is still not the same as it
 
 [ref](https://apple.stackexchange.com/a/435191)
 
-### Two Finger Pinch Unreliable
+### Two Finger Pinch Zoom Unreliable
+
+sol1:  spread wide open on trackpad (doesn't work)
 
 <https://discussions.apple.com/thread/253369850>
+
+sol2: 
+
+```
+killall Dock
+```
 
 ### No xxx in spotlight result
 

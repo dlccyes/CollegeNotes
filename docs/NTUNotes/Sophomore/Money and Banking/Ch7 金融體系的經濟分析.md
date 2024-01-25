@@ -46,23 +46,24 @@ layout: meth
 
 ## 資訊不對稱 → [[adverse selection]]
 
-- 解決
-    - signaling
-        - 擁有資訊方 signal 給資訊不足方
-            - 中古車：賣家 signal 給買家
-            - 保險：買家 signal 給賣家
-            - 借貸：  
-                - 抵押品
-                - 淨值
-        - 夠大的公司才能發行 security，因為資訊為人所知，[[adverse selection]] 較不嚴重
-        - 政府規範公布資訊
-    - 中間商
-        - 私部門販售資訊
-            -  free-ride 問題
-     -  金融中介
-            -  借貸資訊不公開 → 無 free-ride 問題 [^1]
-            -  investmant bank 幫忙籌資，承銷 → 表這家值得信任
-            -  有代理問題 agency problem/principal-agent problem （[[moral hazard]]）
+解決
+
+- signaling
+    - 擁有資訊方 signal 給資訊不足方
+        - 中古車：賣家 signal 給買家
+        - 保險：買家 signal 給賣家
+        - 借貸：  
+            - 抵押品
+            - 淨值
+    - 夠大的公司才能發行 security，因為資訊為人所知，[[adverse selection]] 較不嚴重
+    - 政府規範公布資訊
+- 中間商
+    - 私部門販售資訊
+        -  free-ride 問題
+-  金融中介
+    -  借貸資訊不公開 → 無 free-ride 問題 [^1]
+    -  investmant bank 幫忙籌資，承銷 → 表這家值得信任
+    -  有代理問題 [[agency problem]]/principal-agent problem （[[moral hazard]]）
 
 [^1]:聯合徵信中心：個人信用資訊，會員金融機後有契約時可 access，紀錄有期限
 
