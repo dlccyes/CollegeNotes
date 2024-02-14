@@ -1,0 +1,7035 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../../Sophomore/Data%20Structure/Data%20Structure/">
+      
+      
+        <link rel="next" href="../../../../software-development/leetcode/">
+      
+      <link rel="icon" href="../../../../assets/roshar-green-trans.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Algorithms - El Mundo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#algorithms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="El Mundo" class="md-header__button md-logo" aria-label="El Mundo" data-md-component="logo">
+      
+  <img src="../../../../assets/roshar-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            El Mundo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Algorithms
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dlccyes/CollegeNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../.." class="md-tabs__link">
+      About
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../OtherNotes/sitemap/" class="md-tabs__link">
+        Meta
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../software-development/Sniffing%20Packets%20from%20Wireless%20Networks/" class="md-tabs__link">
+        Posts
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../software-development/Programming%20101/" class="md-tabs__link">
+        Software Development
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../OtherNotes/CS%20Career/" class="md-tabs__link md-tabs__link--active">
+        Computer Science
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Freshman/Logic%20Design/Logic%20Design/" class="md-tabs__link">
+        Electrical Engineering
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Freshman/Microeconomics/" class="md-tabs__link">
+        Economics
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="El Mundo" class="md-nav__button md-logo" aria-label="El Mundo" data-md-component="logo">
+      
+  <img src="../../../../assets/roshar-white.png" alt="logo">
+
+    </a>
+    El Mundo
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dlccyes/CollegeNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          Meta
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Meta" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Meta
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../OtherNotes/sitemap/" class="md-nav__link">
+        Sitemap
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          Posts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Posts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Posts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" tabindex="0" aria-expanded="false">
+          Systems and Networking
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Systems and Networking" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Systems and Networking
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Sniffing%20Packets%20from%20Wireless%20Networks/" class="md-nav__link">
+        Sniffing Packets from Wireless Networks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/restore%20usb%20bootable%20disk%20to%20normal%20disk/" class="md-nav__link">
+        Restore a usb bootable disk to normal disk in Win10
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" tabindex="0" aria-expanded="false">
+          DevOps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DevOps" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          DevOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Gitlab%20CICD/" class="md-nav__link">
+        Gitlab CICD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/GCP%20CICD/" class="md-nav__link">
+        GCP CICD
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          Software Development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software Development" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Software Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Programming%20101/" class="md-nav__link">
+        Programming 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" tabindex="0" aria-expanded="false">
+          Languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Languages" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/C%2B%2B/" class="md-nav__link">
+        C++
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Go/" class="md-nav__link">
+        Go
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/PHP/" class="md-nav__link">
+        PHP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/JavaScript/" class="md-nav__link">
+        JavaScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/HTML/" class="md-nav__link">
+        HTML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/CSS/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/R/" class="md-nav__link">
+        R
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/SQL/" class="md-nav__link">
+        SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/YAML/" class="md-nav__link">
+        YAML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Liquid/" class="md-nav__link">
+        Liquid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/prolog/" class="md-nav__link">
+        prolog
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/RegEx/" class="md-nav__link">
+        RegEx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/RISC-V/" class="md-nav__link">
+        RISC-V
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Verilog/" class="md-nav__link">
+        Verilog
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3" tabindex="0" aria-expanded="false">
+          Linux/Unix
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux/Unix" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux/Unix
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../OtherNotes/MacOS/" class="md-nav__link">
+        MacOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/WSL/" class="md-nav__link">
+        WSL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Linux%20Package%20Management/" class="md-nav__link">
+        Linux/Unix Package Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/shell/" class="md-nav__link">
+        shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/SSH/" class="md-nav__link">
+        SSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Makefile/" class="md-nav__link">
+        Makefile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/base64/" class="md-nav__link">
+        base64
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/ANSI/" class="md-nav__link">
+        ANSI Escape Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/PulseAudio/" class="md-nav__link">
+        PulseAudio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/tcpdump/" class="md-nav__link">
+        tcpdump
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" tabindex="0" aria-expanded="false">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Github/" class="md-nav__link">
+        Github
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Gitlab/" class="md-nav__link">
+        Gitlab
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5" tabindex="0" aria-expanded="false">
+          Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Web/" class="md-nav__link">
+        Web 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/RESTful/" class="md-nav__link">
+        RESTful
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_5_3" type="checkbox" id="__nav_4_5_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_3" tabindex="0" aria-expanded="false">
+          Static Site Generators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Static Site Generators" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Static Site Generators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Hugo/" class="md-nav__link">
+        Hugo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Jekyll/" class="md-nav__link">
+        Jekyll
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_5_4" type="checkbox" id="__nav_4_5_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_4" tabindex="0" aria-expanded="false">
+          Web Frameworks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web Frameworks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Web Frameworks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Django/" class="md-nav__link">
+        Django
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Flask/" class="md-nav__link">
+        Flask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Laravel/" class="md-nav__link">
+        Laravel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_5_5" type="checkbox" id="__nav_4_5_5" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_5" tabindex="0" aria-expanded="false">
+          Frontend Frameworks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Frontend Frameworks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Frontend Frameworks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/React/" class="md-nav__link">
+        React
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Vue/" class="md-nav__link">
+        Vue
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_5_6" type="checkbox" id="__nav_4_5_6" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_6" tabindex="0" aria-expanded="false">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/gRPC/" class="md-nav__link">
+        gRPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_5_6_2" type="checkbox" id="__nav_4_5_6_2" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_6_2" tabindex="0" aria-expanded="false">
+          Mocking
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mocking" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_5_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Mocking
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/WireMock/" class="md-nav__link">
+        WireMock
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_6" tabindex="0" aria-expanded="false">
+          Databases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Databases" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Databases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/MySQL/" class="md-nav__link">
+        MySQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/PostgreSQL/" class="md-nav__link">
+        PostgreSQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Redis/" class="md-nav__link">
+        Redis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_6_4" type="checkbox" id="__nav_4_6_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_6_4" tabindex="0" aria-expanded="false">
+          ORM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ORM" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          ORM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/SQLAlchemy/" class="md-nav__link">
+        SQLAlchemy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_7" tabindex="0" aria-expanded="false">
+          DevOps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DevOps" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          DevOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_7_1" type="checkbox" id="__nav_4_7_1" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_7_1" tabindex="0" aria-expanded="false">
+          Domain
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Domain" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Domain
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Domain/" class="md-nav__link">
+        Domain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Cloudfare/" class="md-nav__link">
+        Cloudfare
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_7_2" type="checkbox" id="__nav_4_7_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_7_2" tabindex="0" aria-expanded="false">
+          Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cloud" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/AWS/" class="md-nav__link">
+        AWS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/GCP/" class="md-nav__link">
+        GCP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Heroku/" class="md-nav__link">
+        Heroku
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Firebase/" class="md-nav__link">
+        Firebase
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_7_3" type="checkbox" id="__nav_4_7_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_7_3" tabindex="0" aria-expanded="false">
+          Containerization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Containerization" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          Containerization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Kubernetes/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_7_4" type="checkbox" id="__nav_4_7_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_7_4" tabindex="0" aria-expanded="false">
+          CICD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CICD" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          CICD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/SonarQube/" class="md-nav__link">
+        SonarQube
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Github%20Action/" class="md-nav__link">
+        Github Action
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/ArgoCD/" class="md-nav__link">
+        ArgoCD
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_7_5" type="checkbox" id="__nav_4_7_5" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_7_5" tabindex="0" aria-expanded="false">
+          Monitoring
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Monitoring" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Monitoring
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Grafana/" class="md-nav__link">
+        Grafana
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
+          Computer Science
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computer Science" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Computer Science
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../OtherNotes/CS%20Career/" class="md-nav__link">
+        CS Career
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/System%20Design/" class="md-nav__link">
+        System Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" tabindex="0" aria-expanded="true">
+          DSA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DSA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          DSA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Data%20Structure/Data%20Structure/" class="md-nav__link">
+        Data Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Algorithms
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudocode" class="md-nav__link">
+    pseudocode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-invariant" class="md-nav__link">
+    loop invariant
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complexity" class="md-nav__link">
+    complexity
+  </a>
+  
+    <nav class="md-nav" aria-label="complexity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notation" class="md-nav__link">
+    notation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#others" class="md-nav__link">
+    others
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#growth-of-function-examples" class="md-nav__link">
+    growth of function examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#divide-and-conquer" class="md-nav__link">
+    Divide and Conquer
+  </a>
+  
+    <nav class="md-nav" aria-label="Divide and Conquer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematical-induction" class="md-nav__link">
+    mathematical induction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solve-recurence" class="md-nav__link">
+    solve recurence
+  </a>
+  
+    <nav class="md-nav" aria-label="solve recurence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unrolling" class="md-nav__link">
+    unrolling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#substitution" class="md-nav__link">
+    substitution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#master-theorem" class="md-nav__link">
+    Master theorem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-sort" class="md-nav__link">
+    merge sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-subarray" class="md-nav__link">
+    maximum subarray
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strassens-method" class="md-nav__link">
+    Strassen's method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting" class="md-nav__link">
+    Sorting
+  </a>
+  
+    <nav class="md-nav" aria-label="Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sorting-comparisons" class="md-nav__link">
+    sorting comparisons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertion-sort" class="md-nav__link">
+    insertion sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quicksort" class="md-nav__link">
+    Quicksort
+  </a>
+  
+    <nav class="md-nav" aria-label="Quicksort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#randomized-partition" class="md-nav__link">
+    randomized partition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hoarse-partition" class="md-nav__link">
+    Hoarse partition
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heapsort" class="md-nav__link">
+    heapsort
+  </a>
+  
+    <nav class="md-nav" aria-label="heapsort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#heap-priority-queue" class="md-nav__link">
+    heap (priority queue)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heapsort_1" class="md-nav__link">
+    heapsort
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-based-sorters" class="md-nav__link">
+    comparison-based sorters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorting-in-linear-time" class="md-nav__link">
+    sorting in linear time
+  </a>
+  
+    <nav class="md-nav" aria-label="sorting in linear time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#counting-sort" class="md-nav__link">
+    counting sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radix-sort" class="md-nav__link">
+    radix sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bucket-sort" class="md-nav__link">
+    bucket sort
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-statistics" class="md-nav__link">
+    order statistics
+  </a>
+  
+    <nav class="md-nav" aria-label="order statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection" class="md-nav__link">
+    selection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trees" class="md-nav__link">
+    Trees
+  </a>
+  
+    <nav class="md-nav" aria-label="Trees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-tree" class="md-nav__link">
+    Binary Tree
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operations" class="md-nav__link">
+    operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-black-tree" class="md-nav__link">
+    Red-Black Tree
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-programming" class="md-nav__link">
+    Dynamic Programming
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memoization" class="md-nav__link">
+    memoization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iteration" class="md-nav__link">
+    iteration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keys" class="md-nav__link">
+    keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weighted-interval-scheduling" class="md-nav__link">
+    weighted interval scheduling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rod-cutting" class="md-nav__link">
+    Rod Cutting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrix-chain-multiplication" class="md-nav__link">
+    Matrix-Chain Multiplication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longest-common-subsequence" class="md-nav__link">
+    longest common subsequence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimal-binary-tree" class="md-nav__link">
+    optimal Binary Tree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subset-sums" class="md-nav__link">
+    Subset Sums
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knapsacks" class="md-nav__link">
+    Knapsacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traveling-salesman-problem" class="md-nav__link">
+    Traveling Salesman Problem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy" class="md-nav__link">
+    Greedy
+  </a>
+  
+    <nav class="md-nav" aria-label="Greedy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interval-scheduling" class="md-nav__link">
+    interval scheduling
+  </a>
+  
+    <nav class="md-nav" aria-label="interval scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pf" class="md-nav__link">
+    pf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-to-dynamic-programming" class="md-nav__link">
+    comparison to #Dynamic Programming
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#huffman-codes" class="md-nav__link">
+    Huffman codes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-scheduling" class="md-nav__link">
+    task scheduling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph" class="md-nav__link">
+    Graph
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notations" class="md-nav__link">
+    notations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-representation" class="md-nav__link">
+    graph representation
+  </a>
+  
+    <nav class="md-nav" aria-label="graph representation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjacency-matrix" class="md-nav__link">
+    adjacency matrix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjacency-list" class="md-nav__link">
+    adjacency list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-traversal" class="md-nav__link">
+    graph traversal
+  </a>
+  
+    <nav class="md-nav" aria-label="graph traversal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bfs" class="md-nav__link">
+    BFS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfs" class="md-nav__link">
+    DFS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dag" class="md-nav__link">
+    DAG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectivity-in-directed-graph" class="md-nav__link">
+    connectivity in directed graph
+  </a>
+  
+    <nav class="md-nav" aria-label="connectivity in directed graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scc-strongly-connected-component" class="md-nav__link">
+    SCC strongly connected component
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-spanning-tree-mst" class="md-nav__link">
+    minimum spanning tree, MST
+  </a>
+  
+    <nav class="md-nav" aria-label="minimum spanning tree, MST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solutions" class="md-nav__link">
+    solutions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties_2" class="md-nav__link">
+    properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimal-substructure" class="md-nav__link">
+    optimal substructure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sssp" class="md-nav__link">
+    SSSP
+  </a>
+  
+    <nav class="md-nav" aria-label="SSSP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dijkstras-algorithm" class="md-nav__link">
+    Dijkstra's Algorithm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-dags" class="md-nav__link">
+    in DAGs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bellman-ford-algorithm" class="md-nav__link">
+    Bellman-Ford Algorithm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apsp" class="md-nav__link">
+    APSP
+  </a>
+  
+    <nav class="md-nav" aria-label="APSP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#floyd-warshells-apsp-algorithm" class="md-nav__link">
+    Floyd-Warshell's APSP Algorithm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#johnsons-algorithm" class="md-nav__link">
+    Johnson's Algorithm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-network" class="md-nav__link">
+    Flow Network
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#max-flow-min-cut-theorem" class="md-nav__link">
+    max-flow min-cut theorem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ford-fulkerson-algorithm" class="md-nav__link">
+    Ford-Fulkerson Algorithm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edmonds-karp-algorithm" class="md-nav__link">
+    Edmonds-Karp Algorithm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bipartite-matching" class="md-nav__link">
+    Bipartite Matching
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#np-completeness" class="md-nav__link">
+    NP-completeness
+  </a>
+  
+    <nav class="md-nav" aria-label="NP-completeness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-problem" class="md-nav__link">
+    decision problem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turing-machine" class="md-nav__link">
+    turing machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-p" class="md-nav__link">
+    class P
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-np" class="md-nav__link">
+    class NP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polynomial-time-reduction" class="md-nav__link">
+    polynomial-time reduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-np-complete" class="md-nav__link">
+    class NP-complete
+  </a>
+  
+    <nav class="md-nav" aria-label="class NP-complete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sat" class="md-nav__link">
+    SAT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clique" class="md-nav__link">
+    clique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertex-cover" class="md-nav__link">
+    vertex cover
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#independent-set" class="md-nav__link">
+    independent set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hitting-set" class="md-nav__link">
+    hitting set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approx-tsp" class="md-nav__link">
+    approx TSP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/leetcode/" class="md-nav__link">
+        LeetCode Engineering
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Networks/Computer%20Networks/" class="md-nav__link">
+        Computer Networks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operating%20Systems/Operating%20Systems/" class="md-nav__link">
+        Operating Systems
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Computer%20Architecture/" class="md-nav__link">
+        Computer Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Machine%20Learning/" class="md-nav__link">
+        Machine Learning
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="false">
+          Electrical Engineering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Electrical Engineering" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Electrical Engineering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Logic%20Design/Logic%20Design/" class="md-nav__link">
+        Logic Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Circuit/Circuit/" class="md-nav__link">
+        電路學
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Electromagnetism/Electromagnetism/" class="md-nav__link">
+        Electromagnetism
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Senior/Power%20Engineering/Power%20Engineering/" class="md-nav__link">
+        Power Engineering
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="false">
+          Economics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Economics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Economics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../Freshman/Microeconomics/">Microeconomics</a>
+          
+            <label for="__nav_7_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Microeconomics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Microeconomics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch1%20Supply%2C%20Demand%2C%20and%20Equilibrium/" class="md-nav__link">
+        Ch1 Supply, Demand, and Equilibrium
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch2%20Prices%2C%20Costs%2C%20and%20the%20Gains%20from%20Trade/" class="md-nav__link">
+        Ch2 Prices, Costs, and the Gains from Trade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch3%20The%20Behavior%20of%20Consumers/" class="md-nav__link">
+        Ch3 The Behavior of Consumers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch4%20Consumers%20in%20Marketplace/" class="md-nav__link">
+        Chap 4 Consumers in Marketplace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch5%20The%20Behavior%20of%20Firms/" class="md-nav__link">
+        Ch5 The Behavior of Firms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch6%20Production%20and%20Costs/" class="md-nav__link">
+        Ch6 Production and Costs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch7%20Competition/" class="md-nav__link">
+        Ch7 Competition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch8%20Welfare%20Economics%20and%20the%20Gains%20from%20Trade/" class="md-nav__link">
+        Ch8 Welfare Economics and the Gains from Trade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch10%20Monopoly/" class="md-nav__link">
+        Ch10 Monopoly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch11%20Market%20Power%2C%20Colusion%2C%20and%20Obligopoly/" class="md-nav__link">
+        Ch11 Market Power, Collusion, and Oligopoly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch12%20Game%20Theory/" class="md-nav__link">
+        Ch12 Game Theory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch13%20Externality/" class="md-nav__link">
+        Ch13 Externality
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch14%20Common%20Property%20and%20Public%20Goods/" class="md-nav__link">
+        Ch14 Common Property and Public Goods
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch15%20The%20Demand%20for%20Factors%20of%20Production/" class="md-nav__link">
+        Ch15 The Demand for Factors of Production
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch16%20The%20Market%20of%20Labor/" class="md-nav__link">
+        Ch16 The Market of Labor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch17%20Allocating%20Goods%20Over%20Time/" class="md-nav__link">
+        Ch17 Allocating Goods Over Time
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch18%20Risk%20and%20Uncertainty/" class="md-nav__link">
+        Ch18 Risk and Uncertainty
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_2" tabindex="0" aria-expanded="false">
+          Macroeconomics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Macroeconomics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Macroeconomics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Senior/Principle%20of%20Macroeconomics/Principle%20of%20Macroeconomics/" class="md-nav__link">
+        Principle of Macroeconomics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Macroeconomics/Macroeconomics/" class="md-nav__link">
+        Macroeconomics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Senior/Statistics/Statistics/" class="md-nav__link">
+        Statistics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Econometrics/Econometrics/" class="md-nav__link">
+        Econometrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7_5" type="checkbox" id="__nav_7_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../Sophomore/Money%20and%20Banking/">Money and Banking</a>
+          
+            <label for="__nav_7_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Money and Banking" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Money and Banking
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch1%20%E5%89%8D%E5%B0%8E/" class="md-nav__link">
+        Ch1 前導
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch2%20%E9%87%91%E8%9E%8D%E9%AB%94%E7%B3%BB%E6%A6%82%E8%A6%81/" class="md-nav__link">
+        Ch2 金融體系概要
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch3%20%E8%B2%A8%E5%B9%A3%E8%88%87%E6%94%AF%E4%BB%98%E7%B3%BB%E7%B5%B1/" class="md-nav__link">
+        Ch3 貨幣與支付系統
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch4%20%E7%8F%BE%E5%80%BC%E8%88%87%E5%88%A9%E7%8E%87/" class="md-nav__link">
+        Ch4 現值與利率
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch5%20%E5%82%B5%E5%88%B8%E5%B8%82%E5%A0%B4%E8%88%87%E5%88%A9%E7%8E%87%E7%9A%84%E6%B1%BA%E5%AE%9A/" class="md-nav__link">
+        Ch5 債券市場與利率的決定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch6%20%E5%88%A9%E7%8E%87%E9%A2%A8%E9%9A%AA%E7%B5%90%E6%A7%8B%E5%92%8C%E6%9C%9F%E9%99%90%E7%B5%90%E6%A7%8B/" class="md-nav__link">
+        Ch6 利率風險結構和期限結構
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch7%20%E9%87%91%E8%9E%8D%E9%AB%94%E7%B3%BB%E7%9A%84%E7%B6%93%E6%BF%9F%E5%88%86%E6%9E%90/" class="md-nav__link">
+        Ch7 金融體系的經濟分析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch8%20%E9%8A%80%E8%A1%8C%E7%9A%84%E7%B6%93%E7%87%9F%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        Ch8 銀行的經營管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch9%20%E5%8F%B0%E7%81%A3%E9%8A%80%E8%A1%8C%E6%A5%AD%E7%9A%84%E7%B5%90%E6%A7%8B%E8%88%87%E7%99%BC%E5%B1%95/" class="md-nav__link">
+        Ch9 台灣銀行業的結構與發展
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch11%20%E9%87%91%E8%9E%8D%E5%AE%89%E5%85%A8%E7%B6%B2%20%E6%9C%80%E7%B5%82%E5%80%9F%E8%B2%B8%E8%80%85%E8%88%87%E5%AD%98%E6%AC%BE%E4%BF%9D%E9%9A%AA/" class="md-nav__link">
+        Ch11 金融安全網 最終借貸者與存款保險
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch12%20%E9%87%91%E8%9E%8D%E5%AE%89%E5%85%A8%E7%B6%B2%20%E9%87%91%E8%9E%8D%E6%A9%9F%E6%A7%8B%E7%9A%84%E7%AE%A1%E5%88%B6%E8%88%87%E5%AF%A9%E6%85%8E%E7%9B%A3%E7%90%86/" class="md-nav__link">
+        Ch12 金融安全網 金融機構的管制與審慎監理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch13%20%E4%B8%AD%E5%A4%AE%E9%8A%80%E8%A1%8C%E7%9A%84%E5%8A%9F%E8%83%BD%E8%88%87%E6%94%BF%E7%AD%96%E7%9B%AE%E6%A8%99/" class="md-nav__link">
+        Ch13 中央銀行的功能與政策目標
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch14%20%E9%87%91%E8%9E%8D%E7%A9%A9%E5%AE%9A%E8%88%87%E7%B8%BD%E9%AB%94%E5%AF%A9%E6%85%8E%E6%94%BF%E7%AD%96/" class="md-nav__link">
+        Ch14 金融穩定與總體審慎政策
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch15%20%E6%BA%96%E5%82%99%E8%B2%A8%E5%B9%A3%E8%88%87%E8%B2%A8%E5%B9%A3%E7%9A%84%E5%89%B5%E9%80%A0/" class="md-nav__link">
+        Ch15 準備貨幣與貨幣的創造
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch16%20%E5%82%B3%E7%B5%B1%E8%88%87%E9%9D%9E%E5%82%B3%E7%B5%B1%E7%9A%84%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        Ch16 傳統與非傳統的貨幣政策工具
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch17%20%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E7%9A%84%E7%9B%AE%E6%A8%99%E6%A9%9F%E5%88%B6/" class="md-nav__link">
+        Ch17 貨幣政策的目標機制
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch18%20%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E7%9A%84%E5%82%B3%E9%81%9E%E6%A9%9F%E5%88%B6/" class="md-nav__link">
+        Ch18 貨幣政策的傳遞機制
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Eurozone/Eurozone/" class="md-nav__link">
+        經濟貨幣整合：歐元區理論與實證
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Industrial%20Organization/Industrial%20Organization/" class="md-nav__link">
+        Industrial Organization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Senior/International%20Finance/International%20Finance/" class="md-nav__link">
+        International Finance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7_9" type="checkbox" id="__nav_7_9" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_9" tabindex="0" aria-expanded="false">
+          Game Theory
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Game Theory" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_9">
+          <span class="md-nav__icon md-icon"></span>
+          Game Theory
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Game%20Theory/" class="md-nav__link">
+        Game Theory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7_9_2" type="checkbox" id="__nav_7_9_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_9_2" tabindex="0" aria-expanded="false">
+          Game Theory for Wireless Networks Papers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Game Theory for Wireless Networks Papers" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Game Theory for Wireless Networks Papers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing/" class="md-nav__link">
+        Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Opportunistic%20Data%20Collection%20in%20Cognitive%20Wireless%20%20Sensor%20Networks%20-%20Air%E2%80%93Ground%20Collaborative%20Online%20Planning/" class="md-nav__link">
+        Opportunistic Data Collection in Cognitive Wireless Sensor Networks - Air–Ground Collaborative Online Planning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/privacy-preserving%20incentive%20mechanism%20for%20the%20federated%20cloud-edge%20learning%2C%20PFCEL/" class="md-nav__link">
+        Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Learning
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudocode" class="md-nav__link">
+    pseudocode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-invariant" class="md-nav__link">
+    loop invariant
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complexity" class="md-nav__link">
+    complexity
+  </a>
+  
+    <nav class="md-nav" aria-label="complexity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notation" class="md-nav__link">
+    notation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#others" class="md-nav__link">
+    others
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#growth-of-function-examples" class="md-nav__link">
+    growth of function examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#divide-and-conquer" class="md-nav__link">
+    Divide and Conquer
+  </a>
+  
+    <nav class="md-nav" aria-label="Divide and Conquer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematical-induction" class="md-nav__link">
+    mathematical induction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solve-recurence" class="md-nav__link">
+    solve recurence
+  </a>
+  
+    <nav class="md-nav" aria-label="solve recurence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unrolling" class="md-nav__link">
+    unrolling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#substitution" class="md-nav__link">
+    substitution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#master-theorem" class="md-nav__link">
+    Master theorem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-sort" class="md-nav__link">
+    merge sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-subarray" class="md-nav__link">
+    maximum subarray
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strassens-method" class="md-nav__link">
+    Strassen's method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting" class="md-nav__link">
+    Sorting
+  </a>
+  
+    <nav class="md-nav" aria-label="Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sorting-comparisons" class="md-nav__link">
+    sorting comparisons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertion-sort" class="md-nav__link">
+    insertion sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quicksort" class="md-nav__link">
+    Quicksort
+  </a>
+  
+    <nav class="md-nav" aria-label="Quicksort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#randomized-partition" class="md-nav__link">
+    randomized partition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hoarse-partition" class="md-nav__link">
+    Hoarse partition
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heapsort" class="md-nav__link">
+    heapsort
+  </a>
+  
+    <nav class="md-nav" aria-label="heapsort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#heap-priority-queue" class="md-nav__link">
+    heap (priority queue)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heapsort_1" class="md-nav__link">
+    heapsort
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-based-sorters" class="md-nav__link">
+    comparison-based sorters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorting-in-linear-time" class="md-nav__link">
+    sorting in linear time
+  </a>
+  
+    <nav class="md-nav" aria-label="sorting in linear time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#counting-sort" class="md-nav__link">
+    counting sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radix-sort" class="md-nav__link">
+    radix sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bucket-sort" class="md-nav__link">
+    bucket sort
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-statistics" class="md-nav__link">
+    order statistics
+  </a>
+  
+    <nav class="md-nav" aria-label="order statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection" class="md-nav__link">
+    selection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trees" class="md-nav__link">
+    Trees
+  </a>
+  
+    <nav class="md-nav" aria-label="Trees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-tree" class="md-nav__link">
+    Binary Tree
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operations" class="md-nav__link">
+    operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-black-tree" class="md-nav__link">
+    Red-Black Tree
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-programming" class="md-nav__link">
+    Dynamic Programming
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memoization" class="md-nav__link">
+    memoization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iteration" class="md-nav__link">
+    iteration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keys" class="md-nav__link">
+    keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weighted-interval-scheduling" class="md-nav__link">
+    weighted interval scheduling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rod-cutting" class="md-nav__link">
+    Rod Cutting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrix-chain-multiplication" class="md-nav__link">
+    Matrix-Chain Multiplication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longest-common-subsequence" class="md-nav__link">
+    longest common subsequence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimal-binary-tree" class="md-nav__link">
+    optimal Binary Tree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subset-sums" class="md-nav__link">
+    Subset Sums
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knapsacks" class="md-nav__link">
+    Knapsacks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traveling-salesman-problem" class="md-nav__link">
+    Traveling Salesman Problem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy" class="md-nav__link">
+    Greedy
+  </a>
+  
+    <nav class="md-nav" aria-label="Greedy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interval-scheduling" class="md-nav__link">
+    interval scheduling
+  </a>
+  
+    <nav class="md-nav" aria-label="interval scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pf" class="md-nav__link">
+    pf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-to-dynamic-programming" class="md-nav__link">
+    comparison to #Dynamic Programming
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#huffman-codes" class="md-nav__link">
+    Huffman codes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-scheduling" class="md-nav__link">
+    task scheduling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph" class="md-nav__link">
+    Graph
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notations" class="md-nav__link">
+    notations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-representation" class="md-nav__link">
+    graph representation
+  </a>
+  
+    <nav class="md-nav" aria-label="graph representation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjacency-matrix" class="md-nav__link">
+    adjacency matrix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjacency-list" class="md-nav__link">
+    adjacency list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-traversal" class="md-nav__link">
+    graph traversal
+  </a>
+  
+    <nav class="md-nav" aria-label="graph traversal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bfs" class="md-nav__link">
+    BFS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfs" class="md-nav__link">
+    DFS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dag" class="md-nav__link">
+    DAG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectivity-in-directed-graph" class="md-nav__link">
+    connectivity in directed graph
+  </a>
+  
+    <nav class="md-nav" aria-label="connectivity in directed graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scc-strongly-connected-component" class="md-nav__link">
+    SCC strongly connected component
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-spanning-tree-mst" class="md-nav__link">
+    minimum spanning tree, MST
+  </a>
+  
+    <nav class="md-nav" aria-label="minimum spanning tree, MST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solutions" class="md-nav__link">
+    solutions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties_2" class="md-nav__link">
+    properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimal-substructure" class="md-nav__link">
+    optimal substructure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sssp" class="md-nav__link">
+    SSSP
+  </a>
+  
+    <nav class="md-nav" aria-label="SSSP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dijkstras-algorithm" class="md-nav__link">
+    Dijkstra's Algorithm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-dags" class="md-nav__link">
+    in DAGs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bellman-ford-algorithm" class="md-nav__link">
+    Bellman-Ford Algorithm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apsp" class="md-nav__link">
+    APSP
+  </a>
+  
+    <nav class="md-nav" aria-label="APSP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#floyd-warshells-apsp-algorithm" class="md-nav__link">
+    Floyd-Warshell's APSP Algorithm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#johnsons-algorithm" class="md-nav__link">
+    Johnson's Algorithm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-network" class="md-nav__link">
+    Flow Network
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#max-flow-min-cut-theorem" class="md-nav__link">
+    max-flow min-cut theorem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ford-fulkerson-algorithm" class="md-nav__link">
+    Ford-Fulkerson Algorithm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edmonds-karp-algorithm" class="md-nav__link">
+    Edmonds-Karp Algorithm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bipartite-matching" class="md-nav__link">
+    Bipartite Matching
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#np-completeness" class="md-nav__link">
+    NP-completeness
+  </a>
+  
+    <nav class="md-nav" aria-label="NP-completeness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-problem" class="md-nav__link">
+    decision problem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turing-machine" class="md-nav__link">
+    turing machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-p" class="md-nav__link">
+    class P
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-np" class="md-nav__link">
+    class NP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polynomial-time-reduction" class="md-nav__link">
+    polynomial-time reduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-np-complete" class="md-nav__link">
+    class NP-complete
+  </a>
+  
+    <nav class="md-nav" aria-label="class NP-complete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sat" class="md-nav__link">
+    SAT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clique" class="md-nav__link">
+    clique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertex-cover" class="md-nav__link">
+    vertex cover
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#independent-set" class="md-nav__link">
+    independent set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hitting-set" class="md-nav__link">
+    hitting set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approx-tsp" class="md-nav__link">
+    approx TSP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="algorithms">Algorithms<a class="headerlink" href="#algorithms" title="Permanent link">&para;</a></h1>
+<details open markdown="block">
+  <summary>
+    Outline
+  </summary>
+
+- TOC
+{:toc}
+</details>
+
+<h2 id="resources">resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<p>Solutions to Introduction to Algorithms Third Edition</p>
+<ul>
+<li><a href="https://walkccc.me/CLRS/">https://walkccc.me/CLRS/</a></li>
+<li><a href="https://github.com/gzc/CLRS">https://github.com/gzc/CLRS</a></li>
+</ul>
+<h2 id="pseudocode">pseudocode<a class="headerlink" href="#pseudocode" title="Permanent link">&para;</a></h2>
+<ul>
+<li>array position 1-A.length</li>
+<li>for<ul>
+<li><code>for i = 1 to A.length</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="loop-invariant">loop invariant<a class="headerlink" href="#loop-invariant" title="Permanent link">&para;</a></h2>
+<ul>
+<li>está verda siempre<ul>
+<li>pre, peri &amp; post loop iteration</li>
+</ul>
+</li>
+<li>like math induction</li>
+<li>3 properties<ul>
+<li>initialization<ul>
+<li>in for loop, just after the assignment of i, before the boolean test</li>
+<li><img alt="algorithms-1.png" src="../algorithms-1.png" /></li>
+</ul>
+</li>
+<li>maintenance</li>
+<li>termination</li>
+<li><img alt="algorithms-2.png" src="../algorithms-2.png" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="complexity">complexity<a class="headerlink" href="#complexity" title="Permanent link">&para;</a></h2>
+<ul>
+<li>time complexity<ul>
+<li>steps</li>
+</ul>
+</li>
+<li>space complexity<ul>
+<li>memory requirement</li>
+</ul>
+</li>
+</ul>
+<h3 id="functions">functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>f(n)<ul>
+<li><span class="arithmatex">\(f(n) \geq 0\)</span> nonnegative</li>
+<li><span class="arithmatex">\(n \in N\)</span></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(f(n)=O(g(n))\)</span><ul>
+<li>upper bound</li>
+<li><span class="arithmatex">\(\exists c&gt;0\)</span> and <span class="arithmatex">\(n_0&gt;0\)</span> s.t. <span class="arithmatex">\(0\leq  f(n)\leq cg(n)\)</span> <span class="arithmatex">\(\forall n \geq n_0\)</span> </li>
+<li><span class="arithmatex">\(\lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} \in [0,\infty)(i.e. &lt;\infty)\)</span>  if the limit exists</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(f(n)= \Omega(g(n))\)</span><ul>
+<li>lower bound</li>
+<li><span class="arithmatex">\(\exists c&gt;0\)</span>  and <span class="arithmatex">\(n_0&gt;0\)</span> s.t. <span class="arithmatex">\(0\leq cg(n)\leq f(n)\)</span> <span class="arithmatex">\(\forall n \geq n_0\)</span></li>
+<li><span class="arithmatex">\(\lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} \in (0,\infty](i.e. &gt;0)\)</span>  if the limit exists</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(f(n)=\Theta(g(n))\)</span><ul>
+<li>tight bound, bounded by <span class="arithmatex">\(O\)</span> &amp; <span class="arithmatex">\(\Omega\)</span></li>
+<li><span class="arithmatex">\(f(n)=O(g(n))\)</span> and <span class="arithmatex">\(f(n)= \Omega(g(n))\)</span></li>
+<li><span class="arithmatex">\(\exists c_1,c_2&gt;0\)</span> and <span class="arithmatex">\(n_0&gt;0\)</span> s.t. <span class="arithmatex">\(0\leq  c_1g(n) \leq f(n)\leq c_2g(n)\)</span> <span class="arithmatex">\(\forall n \geq n_0\)</span> </li>
+<li><span class="arithmatex">\(\lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} \in (0,\infty)\)</span>  if the limit exists</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(f(n)=o(g(n))\)</span><ul>
+<li>untightly upper bound</li>
+<li><span class="arithmatex">\(\forall c&gt;0\)</span> , <span class="arithmatex">\(\exists n_0&gt;0\)</span> s.t. <span class="arithmatex">\(0\leq  f(n)&lt; cg(n)\)</span> <span class="arithmatex">\(\forall n \geq n_0\)</span> </li>
+<li><span class="arithmatex">\(\lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} = 0\)</span>  if the limit exists</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(f(n)= \omega(g(n))\)</span><ul>
+<li>untightly lower bound</li>
+<li><span class="arithmatex">\(\forall c&gt;0\)</span> , <span class="arithmatex">\(\exists n_0&gt;0\)</span> s.t. <span class="arithmatex">\(0\leq cg(n)&lt; f(n)\)</span> <span class="arithmatex">\(\forall n \geq n_0\)</span></li>
+<li><span class="arithmatex">\(\lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} = \infty\)</span>  if the limit exists</li>
+</ul>
+</li>
+</ul>
+<h3 id="properties">properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
+<ul>
+<li>transitivity<ul>
+<li><span class="arithmatex">\(f(n)=\Pi(g(n))\)</span> and <span class="arithmatex">\(g(n)=\Pi(h(n))\)</span> → <span class="arithmatex">\(f(n)=\Pi(h(n))\)</span> for <span class="arithmatex">\(\Pi=everything\)</span></li>
+</ul>
+</li>
+<li>rule of sums<ul>
+<li><span class="arithmatex">\(f(n)+g(n)=\Pi(max\{f(n),g(n)\})\)</span>  for <span class="arithmatex">\(\Pi=big\)</span></li>
+</ul>
+</li>
+<li>rule of products<ul>
+<li><span class="arithmatex">\(f_1(n)=\Pi(g_1(n))\)</span> and <span class="arithmatex">\(f_2(n)=\Pi(g_2(n))\)</span> → <span class="arithmatex">\(f_1(n)f_2(n)=\Pi(g_1(n)g_2(n))\)</span> for <span class="arithmatex">\(\Pi=everything\)</span></li>
+</ul>
+</li>
+<li>transpose symmetry<ul>
+<li><span class="arithmatex">\(f(n)=O(g(n))\iff g(n)=\Omega(f(n))\)</span></li>
+<li><span class="arithmatex">\(f(n)=o(g(n))\iff g(n)=\omega(f(n))\)</span></li>
+</ul>
+</li>
+<li>reflexivity<ul>
+<li><span class="arithmatex">\(f(n)=\Pi(f(n))\)</span> for <span class="arithmatex">\(\Pi=big\)</span></li>
+</ul>
+</li>
+<li>symmetry<ul>
+<li><span class="arithmatex">\(f(n)=\Theta(g(n))\iff g(n)=\Theta(f(n))\)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="notation">notation<a class="headerlink" href="#notation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(lgn = log_2n\)</span></li>
+<li><span class="arithmatex">\(lg^{(i)}n = lglglglg....lgn\)</span></li>
+<li><span class="arithmatex">\(lg^*n=min\{i\geq0:lg^in\leq1\}\)</span></li>
+<li>polynomial-time<ul>
+<li><span class="arithmatex">\(O(p(n))\)</span>, <span class="arithmatex">\(p(n)=n^{O(1)}\)</span></li>
+</ul>
+</li>
+<li><img alt="algorithms-3.png" src="../algorithms-3.png" /></li>
+</ul>
+<h3 id="others">others<a class="headerlink" href="#others" title="Permanent link">&para;</a></h3>
+<ul>
+<li>input size: size of encoded binary string<ul>
+<li>integer n → input size = lgn</li>
+</ul>
+</li>
+<li>BIPS<ul>
+<li>billion instruction/operation per second</li>
+</ul>
+</li>
+<li><img alt="algorithms-4.png" src="../algorithms-4.png" /></li>
+</ul>
+<h3 id="growth-of-function-examples">growth of function examples<a class="headerlink" href="#growth-of-function-examples" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ratio limit doesn't exist<ul>
+<li><span class="arithmatex">\(f(n)=2^n\)</span></li>
+<li><span class="arithmatex">\(g(n)=2^n\)</span> if n is even, <span class="arithmatex">\(g(n)=2^{n-1}\)</span> otherwise</li>
+</ul>
+</li>
+<li><img alt="algorithms-5.png" src="../algorithms-5.png" /></li>
+<li>Stirling's approximation<ul>
+<li><img alt="algorithms-6.png" src="../algorithms-6.png" /></li>
+<li>can use it to approximate <span class="arithmatex">\((lgn)!\in\Theta(n^{lg(lgn)})&gt;n^k\)</span></li>
+</ul>
+</li>
+<li><img alt="algorithms-7.png" src="../algorithms-7.png" /></li>
+<li><span class="arithmatex">\(ln(n!)\in \Theta(nlnn)\)</span><ul>
+<li><img alt="algorithms-8.png" src="../algorithms-8.png" /></li>
+<li><img alt="algorithms-9.png" src="../algorithms-9.png" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="divide-and-conquer">Divide and Conquer<a class="headerlink" href="#divide-and-conquer" title="Permanent link">&para;</a></h2>
+<ul>
+<li>divide into subproblems</li>
+<li>conquer subproblems recursively</li>
+<li>combine the subsolutions into an overall solution</li>
+</ul>
+<h3 id="mathematical-induction">mathematical induction<a class="headerlink" href="#mathematical-induction" title="Permanent link">&para;</a></h3>
+<ul>
+<li>weak induction<ul>
+<li>basis step</li>
+<li>inductive step<ul>
+<li><span class="arithmatex">\(P(K) → P(K+1)\)</span> <span class="arithmatex">\(\forall k\in N\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>strong induction<ul>
+<li>basis step</li>
+<li>inductive step<ul>
+<li><span class="arithmatex">\(P(0)\land P(1)\land .... \land P(K) → P(K+1)\)</span> <span class="arithmatex">\(\forall k\in N\)</span></li>
+</ul>
+</li>
+<li>跟 weak induction 一樣強</li>
+<li>比較好證</li>
+</ul>
+</li>
+<li>defective chessboard<ul>
+<li><span class="arithmatex">\(2^n\times2^n\)</span> 缺一塊的 chessboard 可被 triominoes 拼完</li>
+<li>basis step<ul>
+<li><img alt="algorithms-10.png" src="../algorithms-10.png" /></li>
+</ul>
+</li>
+<li>inductive step<ul>
+<li><img alt="algorithms-11.png" src="../algorithms-11.png" /></li>
+<li>中間挖一個 triomonoe 洞，變成四塊缺一角的 <span class="arithmatex">\(2^{k-1}\times 2^{k-1}\)</span> 的 chessboard<ul>
+<li>so 假設 k-1 成立，則 k 必成立</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="solve-recurence">solve recurence<a class="headerlink" href="#solve-recurence" title="Permanent link">&para;</a></h3>
+<h4 id="unrolling">unrolling<a class="headerlink" href="#unrolling" title="Permanent link">&para;</a></h4>
+<ul>
+<li>iteration<ul>
+<li><img alt="algorithms-12.png" src="../algorithms-12.png" /></li>
+</ul>
+</li>
+<li>recursion tree<ul>
+<li><img alt="algorithms-13.png" src="../algorithms-13.png" /><ul>
+<li>do n work and call n/2 4 times at level n</li>
+</ul>
+</li>
+<li><img alt="algorithms-14.png" src="../algorithms-14.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="substitution">substitution<a class="headerlink" href="#substitution" title="Permanent link">&para;</a></h4>
+<ul>
+<li>guess and proof (with strong induction)</li>
+<li>不太需要管 n/2 是不是整數之類的的問題</li>
+<li>猜答案方法<ul>
+<li>隨便畫個 recursion tree</li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li><img alt="algorithms-15.png" src="../algorithms-15.png" /><ul>
+<li>strong induction</li>
+</ul>
+</li>
+<li><img alt="algorithms-16.png" src="../algorithms-16.png" /><ul>
+<li>>cn → wrong</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>減掉一個 lower order term<ul>
+<li><img alt="algorithms-17.png" src="../algorithms-17.png" /></li>
+</ul>
+</li>
+<li>考法<ul>
+<li>跟你說要證什麼 (不用猜)</li>
+</ul>
+</li>
+</ul>
+<h4 id="master-theorem">Master theorem<a class="headerlink" href="#master-theorem" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="../../../Sophomore/Data%20Structure/Data%20Structure/#master-theorem">Data Structure#Master Theorem</a></li>
+<li><img alt="algorithms-18.png" src="../algorithms-18.png" /></li>
+<li><img alt="algorithms-19.png" src="../algorithms-19.png" /><ul>
+<li>最下層最好用 k or c 代替，之後再 asymptotic</li>
+</ul>
+</li>
+</ul>
+<h4 id="examples">examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<ul>
+<li><span class="arithmatex">\(T(n)=T(n/2)+T(n/4)+n\in\Theta(n)\)</span><ul>
+<li>substitution</li>
+<li><img alt="algorithms-20.png" src="../algorithms-20.png" /><ul>
+<li>最後分母是 1-(p+q) </li>
+<li>if p+q&gt;1 &amp;&amp; p,q&gt;1<ul>
+<li><span class="arithmatex">\(2^{log_{1/q} (n)} &lt;= leaves &lt;= 2^{log_{1/p} (n)}\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><img alt="algorithms-21.png" src="../algorithms-21.png" /></li>
+</ul>
+<h3 id="merge-sort">merge sort<a class="headerlink" href="#merge-sort" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>MergeSort(A,p,r) //T(n)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    if (p&lt;r) then //1
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        q=Math.floor((p+r)/2) //1
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        MergeSort(A,p,q) //T(n/2)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        MergeSort(A,q+1,r) //T(n/2)
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        Merge(A,p,q,r) //n
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>MergeSort(A,1,A.length)
+</code></pre></div>
+- 不停分兩半，直到只剩一個 → 合回去時 sort
+- <img alt="algorithms-22.png" src="../algorithms-22.png" />
+- <code>Merge()</code> 
+    - <span class="arithmatex">\(\in \Theta(n)\)</span>
+        - 兩個已經 sort 好的 n/2 array，做 sorting → n 次比較
+    - 需要額外 memory
+        - 兩半各一個 auxiliary array
+    - pseudo code
+        - <img alt="algorithms-23.png" src="../algorithms-23.png" />
+        - <img alt="algorithms-24.png" src="../algorithms-24.png" />
+            - 4-5: L = 左半 array
+            - 6-7: R = 右半 array
+            - 8-9: L &amp; R 的最後一項設成無限
+            - 10-17: 從小到大，一個一個比對 L &amp; R，較小者填進 main array
+    - time complexity <span class="arithmatex">\(\in \Theta(nlgn)\)</span>
+        - <img alt="algorithms-25.png" src="../algorithms-25.png" />
+            - 其實是 <span class="arithmatex">\(T(n)=T(\lfloor n/2\rfloor)+T(\lceil n/2\rceil)+cn\)</span> <span class="arithmatex">\(\because\)</span>左右數量非 n/2，但可忽略
+        - using unrolling - recursion tree
+            - <img alt="algorithms-26.png" src="../algorithms-26.png" />
+            - <span class="arithmatex">\(cn(lgn+1)\)</span>
+        - using substitution
+            - 猜 <span class="arithmatex">\(O(nlgn)\)</span>
+                - basis &amp; inductive
+        - beats <a href="#insertion-sort">#insertion sort</a>
+- properties
+    - stable
+    - not in-place</p>
+<h3 id="maximum-subarray">maximum subarray<a class="headerlink" href="#maximum-subarray" title="Permanent link">&para;</a></h3>
+<ul>
+<li>leetcode maximum subarray 四部曲</li>
+<li>分成左&amp;右&amp;橫跨部分<ul>
+<li><img alt="algorithms-27.png" src="../algorithms-27.png" /></li>
+<li>橫跨部分<ul>
+<li><img alt="algorithms-28.jpg" src="../algorithms-28.jpg" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><img alt="algorithms-29.jpg" src="../algorithms-29.jpg" /></li>
+<li><span class="arithmatex">\(\Theta(nlgn)\)</span><ul>
+<li><img alt="algorithms-30.png" src="../algorithms-30.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="strassens-method">Strassen's method<a class="headerlink" href="#strassens-method" title="Permanent link">&para;</a></h3>
+<p>matrix multiplication 
+- normal <span class="arithmatex">\(\in O(n^3)\)</span>
+    - <span class="arithmatex">\(n^2\)</span> elements, each is the sum of <span class="arithmatex">\(n\)</span> values
+- divide into 4 n/2xn/2 
+    - <span class="arithmatex">\(\in \Theta(n^{lg8})=\Theta(n^3)\)</span>
+        - <img alt="algorithms-31.png" src="../algorithms-31.png" />
+            - Master theorem
+        - 只要 T(n/2) 係數是 7，就會 <span class="arithmatex">\(\in o(n^3)\)</span>
+    - Strassen's method <span class="arithmatex">\(\in \Theta(n^{lg7}) \in o(n^3)\)</span>
+        - <img alt="algorithms-32.png" src="../algorithms-32.png" /></p>
+<h2 id="sorting">Sorting<a class="headerlink" href="#sorting" title="Permanent link">&para;</a></h2>
+<h3 id="sorting-comparisons">sorting comparisons<a class="headerlink" href="#sorting-comparisons" title="Permanent link">&para;</a></h3>
+<ul>
+<li>time complexity<ul>
+<li><img alt="algorithms-33.png" src="../algorithms-33.png" /></li>
+</ul>
+</li>
+<li>stable<ul>
+<li><img alt="algorithms-34.png" src="../algorithms-34.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="insertion-sort">insertion sort<a class="headerlink" href="#insertion-sort" title="Permanent link">&para;</a></h3>
+<p><img alt="algorithms-35.png" src="../algorithms-35.png" />
+<img alt="algorithms-36.png" src="../algorithms-36.png" />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">insertion_sort</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">[],</span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="c1">//define function</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">     </span><span class="n">key</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">     </span><span class="n">i</span><span class="o">=</span><span class="n">j</span><span class="mi">-1</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">     </span><span class="k">while</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span><span class="n">key</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">     </span><span class="p">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">         </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">         </span><span class="n">i</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">     </span><span class="p">}</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">     </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">key</span><span class="p">;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
+</code></pre></div>
+- 排撲克牌時的排法
+- n 很小時表現很好
+- properties
+    - incremental approach
+    - in place
+        - 直接在原 array 做，不須額外 space
+    - stable
+        - 數值相同時，sorting 前後順序一致
+- time complexity
+    - worst case
+        - reverse sorted, while loop iterate j
+    - best case
+        - already sorted
+    - average case
+        - while loop iterate j/2</p>
+<h3 id="quicksort">Quicksort<a class="headerlink" href="#quicksort" title="Permanent link">&para;</a></h3>
+<ul>
+<li>use divide-and-conquer</li>
+<li><img alt="algorithms-37.png" src="../algorithms-37.png" /><ul>
+<li>partition 後基準的位置的左右再各執行</li>
+</ul>
+</li>
+<li>partition<ul>
+<li>選基準點 (e.g. rightmost)</li>
+<li>掃過 array，把小於基準的放在前面，大於基準的放在後面，最後基準放前後之間</li>
+<li><img alt="algorithms-38.png" src="../algorithms-38.png" /><ul>
+<li>return 最後基準點在的位置<ul>
+<li><span class="arithmatex">\(\Delta i=\)</span> 小於基準者的數目</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><img alt="algorithms-39.png" src="../algorithms-39.png" /></li>
+<li>loop invariant <ul>
+<li><img alt="algorithms-40.png" src="../algorithms-40.png" /></li>
+<li>unrestricted: 還沒掃到的</li>
+</ul>
+</li>
+<li><img alt="algorithms-41.png" src="../algorithms-41.png" /><ul>
+<li>用 swap 的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>time complexity<ul>
+<li>best case <span class="arithmatex">\(\in\Theta(nlgn)\)</span><ul>
+<li>每個都均勻分</li>
+<li><img alt="algorithms-42.png" src="../algorithms-42.png" /></li>
+</ul>
+</li>
+<li>worst case <span class="arithmatex">\(\in\Theta(n^2)\)</span><ul>
+<li>sorted OR reversely sorted</li>
+<li><img alt="algorithms-43.png" src="../algorithms-43.png" /></li>
+</ul>
+</li>
+<li>practically very good, but asymptotically bad</li>
+</ul>
+</li>
+</ul>
+<h4 id="randomized-partition">randomized partition<a class="headerlink" href="#randomized-partition" title="Permanent link">&para;</a></h4>
+<ul>
+<li>random 選一個 element 跟最後一位交換</li>
+<li><img alt="algorithms-44.png" src="../algorithms-44.png" /></li>
+<li>time complexity<ul>
+<li>worst case<ul>
+<li><img alt="algorithms-45.png" src="../algorithms-45.png" /></li>
+</ul>
+</li>
+<li>expected <span class="arithmatex">\(\in O(nlgn)\)</span><ul>
+<li>method 1<ul>
+<li><img alt="algorithms-46.png" src="../algorithms-46.png" /><br><img alt="algorithms-47.png" src="../algorithms-47.png" /><ul>
+<li><span class="arithmatex">\(X_q=1/n\)</span></li>
+<li>sum(T(q-1))=sum(T(n-q))</li>
+<li>忽略 q=0, 1</li>
+<li>猜 nlgn</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>method 2<ul>
+<li>runtime <span class="arithmatex">\(\in O(n+X)\)</span></li>
+<li>n elements → max n partitions</li>
+<li>X comparisons<ul>
+<li>只有 pivot 需要跟別人比較</li>
+<li>兩 elements 至多比較一次</li>
+<li><img alt="algorithms-48.png" src="../algorithms-48.png" /><ul>
+<li>E[X] = expected X</li>
+</ul>
+</li>
+<li><img alt="algorithms-49.png" src="../algorithms-49.png" /><ul>
+<li><span class="arithmatex">\(E[X_{ij}] = z_i\)</span> or <span class="arithmatex">\(z_j\)</span> 為 pivot 的機率</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="hoarse-partition">Hoarse partition<a class="headerlink" href="#hoarse-partition" title="Permanent link">&para;</a></h4>
+<ul>
+<li>原始提出版本</li>
+<li>==很愛考==</li>
+<li><img alt="algorithms-50.png" src="../algorithms-50.png" /></li>
+<li>i &amp; j 交疊 → 完成</li>
+<li>pseudo code<ul>
+<li><img alt="algorithms-51.png" src="../algorithms-51.png" /></li>
+</ul>
+</li>
+<li><img alt="algorithms-52.png" src="../algorithms-52.png" /></li>
+<li>loop invariant<ul>
+<li><img alt="algorithms-53.png" src="../algorithms-53.png" /></li>
+</ul>
+</li>
+<li>好處壞處 complexity 都跟課本版本一樣</li>
+</ul>
+<h3 id="heapsort">heapsort<a class="headerlink" href="#heapsort" title="Permanent link">&para;</a></h3>
+<h4 id="heap-priority-queue">heap (priority queue)<a class="headerlink" href="#heap-priority-queue" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="algorithms-54.png" src="../algorithms-54.png" /></li>
+<li><a href="../../../Sophomore/Data%20Structure/Data%20Structure/#bineary-heap">Data Structure#bineary heap</a></li>
+<li>heapify<ul>
+<li>percolate down</li>
+<li><img alt="algorithms-55.png" src="../algorithms-55.png" /></li>
+<li>worst case<ul>
+<li><img alt="algorithms-56.png" src="../algorithms-56.png" /></li>
+<li>最下層 half full → 左邊 size &lt;= 2n/3</li>
+</ul>
+</li>
+<li>time complexity<ul>
+<li><img alt="algorithms-57.png" src="../algorithms-57.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>depth vs. height<ul>
+<li><img alt="algorithms-58.png" src="../algorithms-58.png" /></li>
+</ul>
+</li>
+<li>binary tree to max-heap<ul>
+<li><img alt="algorithms-59.png" src="../algorithms-59.png" /></li>
+<li>bottom-up, percolate up</li>
+</ul>
+</li>
+<li>build max heap <span class="arithmatex">\(\in O(n)\)</span><ul>
+<li>bottom-up heapify</li>
+<li><img alt="algorithms-60.png" src="../algorithms-60.png" /><ul>
+<li>taylor series</li>
+<li><img alt="algorithms-61.jpg" src="../algorithms-61.jpg" /></li>
+</ul>
+</li>
+<li>https://stackoverflow.com/a/18742428/15493213</li>
+</ul>
+</li>
+</ul>
+<h4 id="heapsort_1">heapsort<a class="headerlink" href="#heapsort_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>用 max-heap 做 selection sort</li>
+<li><img alt="algorithms-62.png" src="../algorithms-62.png" /><ul>
+<li>存成 max-heap → 重複把 delete min i.e. 把 max (第一項) 跟 bottom-level 最右 (第二項) 交換 → 成功排序</li>
+</ul>
+</li>
+<li><img alt="algorithms-63.png" src="../algorithms-63.png" /></li>
+<li>time complexity <span class="arithmatex">\(\in O(nlgn)\)</span><ul>
+<li>heapify O(lgn)</li>
+<li>iterate n 次</li>
+</ul>
+</li>
+<li>in-place<ul>
+<li>都在原本的 array 上面做</li>
+</ul>
+</li>
+</ul>
+<h3 id="comparison-based-sorters">comparison-based sorters<a class="headerlink" href="#comparison-based-sorters" title="Permanent link">&para;</a></h3>
+<ul>
+<li>decision tree<ul>
+<li>leaf 代表 n 個數字排序可能的結果 → n! leaves</li>
+<li><img alt="algorithms-64.png" src="../algorithms-64.png" /></li>
+</ul>
+</li>
+<li><img alt="algorithms-65.png" src="../algorithms-65.png" /></li>
+</ul>
+<h3 id="sorting-in-linear-time">sorting in linear time<a class="headerlink" href="#sorting-in-linear-time" title="Permanent link">&para;</a></h3>
+<p><img alt="algorithms-66.png" src="../algorithms-66.png" />
+<img alt="algorithms-67.png" src="../algorithms-67.png" />
+radix &amp; bucket sort use other sorters to do the actual sorting</p>
+<h4 id="counting-sort">counting sort<a class="headerlink" href="#counting-sort" title="Permanent link">&para;</a></h4>
+<ul>
+<li>有 m 個數字 &lt;= k → 把 k 放在位置 m</li>
+<li><img alt="algorithms-68.png" src="../algorithms-68.png" /></li>
+<li>stable</li>
+<li>time complexity <span class="arithmatex">\(\in O(n+k)\)</span><ul>
+<li><span class="arithmatex">\(\in O(n)\)</span> if <span class="arithmatex">\(k\in O(n)\)</span></li>
+<li>pseudo-linear time otherwise</li>
+</ul>
+</li>
+</ul>
+<h4 id="radix-sort">radix sort<a class="headerlink" href="#radix-sort" title="Permanent link">&para;</a></h4>
+<ul>
+<li>一個位數一個位數 sort，從最小位數開始<ul>
+<li><img alt="algorithms-69.png" src="../algorithms-69.png" /></li>
+</ul>
+</li>
+<li>需 stable sorter<ul>
+<li>counting sort<ul>
+<li>not in-place → need more memory</li>
+</ul>
+</li>
+<li>insertion sort<ul>
+<li>fast when size small</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>time complexity <span class="arithmatex">\(\in O(d(n+k))\)</span><ul>
+<li>n d-digit numbers</li>
+<li>each digit has k possible values</li>
+<li><span class="arithmatex">\(\in O(n)\)</span> if <span class="arithmatex">\(d\in O(1)\)</span> &amp; <span class="arithmatex">\(k\in O(n)\)</span></li>
+<li>如果用 <span class="arithmatex">\(O(nlgn)\)</span> sorter 就是 <span class="arithmatex">\(O(dnlgn)\)</span></li>
+</ul>
+</li>
+<li>stable, in-place or not depends on what sorter used (to sort each digit)</li>
+</ul>
+<h4 id="bucket-sort">bucket sort<a class="headerlink" href="#bucket-sort" title="Permanent link">&para;</a></h4>
+<ul>
+<li>分成很多個同樣區間的 bucket，先把各數字放進各自的 bucket，在各 bucket 裡 sort，最後 combine<ul>
+<li><img alt="algorithms-70.png" src="../algorithms-70.png" /></li>
+</ul>
+</li>
+<li>k buckets<ul>
+<li>區間為 1 → <a href="#counting-sort">#counting sort</a></li>
+</ul>
+</li>
+<li>space complexity <span class="arithmatex">\(\in O(n+k)\)</span></li>
+<li>time complexity<ul>
+<li>iterate all elements, in each bucket, but will iterate n elements at most</li>
+<li>expected &amp; best case <span class="arithmatex">\(\in O(n+k)\)</span></li>
+<li>worst case <span class="arithmatex">\(\in O(n^2)\)</span><ul>
+<li>when all elements go to 1 bucket → runtime depends on what sorter used → worst case <span class="arithmatex">\(\in O(n^2)\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="order-statistics">order statistics<a class="headerlink" href="#order-statistics" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ith order statistic = ith smallest element</li>
+</ul>
+<h4 id="selection">selection<a class="headerlink" href="#selection" title="Permanent link">&para;</a></h4>
+<ul>
+<li>pseudo code<ul>
+<li><img alt="algorithms-71.png" src="../algorithms-71.png" /><ul>
+<li>q = random 找的這個 element 排序後排在的位置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>time complexity<ul>
+<li><img alt="algorithms-72.png" src="../algorithms-72.png" /></li>
+<li>expected linear time<ul>
+<li><img alt="algorithms-73.png" src="../algorithms-73.png" /></li>
+<li><img alt="algorithms-74.png" src="../algorithms-74.png" /></li>
+<li>猜 linear time<br><img alt="algorithms-75.png" src="../algorithms-75.png" /></li>
+</ul>
+</li>
+<li>worst case linear time<ul>
+<li>五五一組，找到各組 median，再找這些 median 的 median</li>
+<li><img alt="algorithms-76.png" src="../algorithms-76.png" /></li>
+<li>可用這個 procedure 去幫 <a href="#quicksort">#Quicksort</a> 找 median → guarantee O(nlogn)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="trees">Trees<a class="headerlink" href="#trees" title="Permanent link">&para;</a></h2>
+<h3 id="binary-tree"><a href="../../../../obs_autolink/Binary%20Tree/">Binary Tree</a><a class="headerlink" href="#binary-tree" title="Permanent link">&para;</a></h3>
+<ul>
+<li>see <a href="../../../Sophomore/Data%20Structure/Data%20Structure/#binary-tree">Data Structure#Binary Tree</a></li>
+<li>tree construction<ul>
+<li>worst case <span class="arithmatex">\(O(n^2)\)</span></li>
+<li>average case <span class="arithmatex">\(O(nlgn)\)</span></li>
+</ul>
+</li>
+<li>height<ul>
+<li>worst case <span class="arithmatex">\(h\in O(n)\)</span><ul>
+<li>skewed</li>
+</ul>
+</li>
+<li>best case <span class="arithmatex">\(h\in O(lgn)\)</span><ul>
+<li>balanced</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>most operations <span class="arithmatex">\(O(h)\)</span></li>
+</ul>
+<h4 id="operations">operations<a class="headerlink" href="#operations" title="Permanent link">&para;</a></h4>
+<ul>
+<li>traversal<ul>
+<li>inorder/infix<ul>
+<li><img alt="algorithms-77.png" src="../algorithms-77.png" /></li>
+</ul>
+</li>
+<li>preorder/prefix</li>
+<li>postorder/postfix</li>
+</ul>
+</li>
+<li>search<ul>
+<li><img alt="algorithms-78.png" src="../algorithms-78.png" /></li>
+</ul>
+</li>
+<li>successor<ul>
+<li>比我大的最小的 node<ul>
+<li>有 right subtree →  right subtree 的 min </li>
+<li>沒 right subtree → 找我是誰的 predecessor<ul>
+<li>irl operation: 往左上走直到轉折 as in line 3-6</li>
+</ul>
+</li>
+<li><img alt="algorithms-79.png" src="../algorithms-79.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>predecessor<ul>
+<li>比我小的最大的 node<ul>
+<li>有 left subtree → left subtree 的 max</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>insertion<ul>
+<li><img alt="algorithms-80.png" src="../algorithms-80.png" /></li>
+</ul>
+</li>
+<li>deletion<ul>
+<li>no children → just die</li>
+<li>1 child → 小孩給媽媽養</li>
+<li>2 children → 找 successor 取代</li>
+<li><img alt="algorithms-81.png" src="../algorithms-81.png" /></li>
+<li><img alt="algorithms-82.png" src="../algorithms-82.png" /></li>
+<li><img alt="algorithms-83.png" src="../algorithms-83.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="red-black-tree"><a href="../../../../obs_autolink/Red-Black%20Tree/">Red-Black Tree</a><a class="headerlink" href="#red-black-tree" title="Permanent link">&para;</a></h3>
+<ul>
+<li>see <a href="../../../Sophomore/Data%20Structure/Data%20Structure/#red-black-tree">Data Structure#Red-Black Tree</a></li>
+<li>black height of node x = num of blacks on path to leaf - 1 (not counting x)</li>
+<li><img alt="algorithms-84.png" src="../algorithms-84.png" /></li>
+<li>rotation<ul>
+<li>inorder preservation</li>
+<li><img alt="algorithms-85.png" src="../algorithms-85.png" /></li>
+</ul>
+</li>
+<li>doubly black 指的是 deletion 後 2-3-4 一個 node 空掉的狀況</li>
+</ul>
+<h2 id="dynamic-programming">Dynamic Programming<a class="headerlink" href="#dynamic-programming" title="Permanent link">&para;</a></h2>
+<h3 id="memoization">memoization<a class="headerlink" href="#memoization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>top-down</li>
+<li>recursive but 記錄那些被執行過了，if 執行過則 skip</li>
+<li><img alt="algorithms-86.png" src="../algorithms-86.png" /></li>
+<li><img alt="algorithms-87.png" src="../algorithms-87.png" /><ul>
+<li>其實是走右邊的 3</li>
+</ul>
+</li>
+<li>pros<ul>
+<li>不一定沒個 subproblem 都要算</li>
+</ul>
+</li>
+</ul>
+<h3 id="iteration">iteration<a class="headerlink" href="#iteration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>bottom-up</li>
+<li><a href="../../../Sophomore/Data%20Structure/Data%20Structure/#dynamic-programming">Data Structure#Dynamic Programming</a></li>
+<li><img alt="algorithms-88.png" src="../algorithms-88.png" /></li>
+<li>pros<ul>
+<li>less overhead</li>
+</ul>
+</li>
+</ul>
+<h3 id="keys">keys<a class="headerlink" href="#keys" title="Permanent link">&para;</a></h3>
+<ul>
+<li>適合用在 optimization problem<ul>
+<li>有目標的 problem</li>
+</ul>
+</li>
+<li>distinct subs (table size) <span class="arithmatex">\(\in\)</span> polynomial</li>
+<li>optimal substructure<ul>
+<li>optimal subs → optimal overall solution</li>
+</ul>
+</li>
+<li>overlapping subproblem<ul>
+<li>很多 overlap 的 subproblems</li>
+</ul>
+</li>
+</ul>
+<h3 id="weighted-interval-scheduling">weighted interval scheduling<a class="headerlink" href="#weighted-interval-scheduling" title="Permanent link">&para;</a></h3>
+<ul>
+<li><img alt="algorithms-89.png" src="../algorithms-89.png" /><ul>
+<li>p(j) = largest i &lt; j s.t. i &amp; j are disjoint </li>
+<li>sort by finished time</li>
+<li>jth 的最佳解 = max{包含 j 時的最佳解, 不包含 j 時的最佳解 i.e. j-1 的最佳解}</li>
+</ul>
+</li>
+<li><img alt="algorithms-90.png" src="../algorithms-90.png" /> </li>
+<li>time complexity <span class="arithmatex">\(\in O(n)\)</span></li>
+</ul>
+<h3 id="rod-cutting">Rod Cutting<a class="headerlink" href="#rod-cutting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>鋼條長度 vs. 價格非線性，求 max revenue 切法</li>
+<li><img alt="algorithms-91.png" src="../algorithms-91.png" /></li>
+<li>top-down<ul>
+<li><span class="arithmatex">\(\in O(n^2)\)</span></li>
+<li><img alt="algorithms-92.png" src="../algorithms-92.png" /></li>
+</ul>
+</li>
+<li>bottom-up<ul>
+<li><span class="arithmatex">\(\in O(n^2)\)</span></li>
+<li><img alt="algorithms-93.png" src="../algorithms-93.png" /></li>
+<li>record choice<ul>
+<li><img alt="algorithms-94.png" src="../algorithms-94.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="matrix-chain-multiplication">Matrix-Chain Multiplication<a class="headerlink" href="#matrix-chain-multiplication" title="Permanent link">&para;</a></h3>
+<ul>
+<li>minimize multiplications</li>
+<li>(axb) x (bxc) → ac multiplications</li>
+<li>建立 table m，m[i, j] 記錄 <span class="arithmatex">\(A_i\)</span> 乘到 <span class="arithmatex">\(A_j\)</span> 的 min multiplication</li>
+<li>m[i, j+1] 就是 loop over 各種之間連乘對到的格子 + the rest 連乘的 cost 的 min</li>
+<li><img alt="algorithms-95.png" src="../algorithms-95.png" /></li>
+<li>time <span class="arithmatex">\(\in O(n^3)\)</span></li>
+<li>space <span class="arithmatex">\(\in O(n^2)\)</span></li>
+<li>bottom-up<ul>
+<li><img alt="algorithms-96.png" src="../algorithms-96.png" /></li>
+</ul>
+</li>
+<li>top-down<ul>
+<li><img alt="algorithms-97.png" src="../algorithms-97.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="longest-common-subsequence">longest common subsequence<a class="headerlink" href="#longest-common-subsequence" title="Permanent link">&para;</a></h3>
+<ul>
+<li><img alt="algorithms-98.png" src="../algorithms-98.png" /></li>
+<li>table<ul>
+<li>c[i,j] 表 X[1:i] &amp; Y[1:j] 的 LCS 長度</li>
+<li>X.length = m, Y.length = n → c[m,n] = X Y overall LCS 長度</li>
+</ul>
+</li>
+<li>top-down<ul>
+<li><img alt="algorithms-99.png" src="../algorithms-99.png" /></li>
+</ul>
+</li>
+<li>bottom-up<ul>
+<li><img alt="algorithms-100.png" src="../algorithms-100.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="optimal-binary-tree">optimal <a href="../../../../obs_autolink/Binary%20Tree/">Binary Tree</a><a class="headerlink" href="#optimal-binary-tree" title="Permanent link">&para;</a></h3>
+<ul>
+<li>binary tree with minimum expeceted search cost</li>
+<li>table<ul>
+<li>p[i] probability<ul>
+<li>probability of node i to be searched</li>
+</ul>
+</li>
+<li>q[i] ==???==</li>
+<li>e[i,j] ==???==<ul>
+<li><img alt="algorithms-101.png" src="../algorithms-101.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><img alt="algorithms-102.png" src="../algorithms-102.png" /></li>
+<li><img alt="algorithms-103.png" src="../algorithms-103.png" /></li>
+</ul>
+<h3 id="subset-sums">Subset Sums<a class="headerlink" href="#subset-sums" title="Permanent link">&para;</a></h3>
+<ul>
+<li>NP-Complete</li>
+<li>包包限重 W，給定各種不同重量的物品，怎麼塞能夠 maximize 塞的重量？</li>
+<li>給定一個 set &amp; 一個 constraint W，求 max subset 的 sum &lt;= W</li>
+<li>table m = n x W</li>
+<li><img alt="algorithms-104.png" src="../algorithms-104.png" /><ul>
+<li>max(沒自己, 有自己)</li>
+<li>w 剩餘可用的 weight</li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li><img alt="algorithms-105.png" src="../algorithms-105.png" /></li>
+</ul>
+</li>
+<li>time complexity <span class="arithmatex">\(\in O(nW)\)</span><ul>
+<li>pseudo-polynomial<ul>
+<li>W may not be polynomial to n</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="knapsacks">Knapsacks<a class="headerlink" href="#knapsacks" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#subset-sums">#Subset Sums</a> problem but each item has a value and the goal is to maximize the total value</li>
+<li><img alt="algorithms-106.png" src="../algorithms-106.png" /></li>
+</ul>
+<h3 id="traveling-salesman-problem">Traveling Salesman Problem<a class="headerlink" href="#traveling-salesman-problem" title="Permanent link">&para;</a></h3>
+<ul>
+<li><img alt="algorithms-107.png" src="../algorithms-107.png" /></li>
+<li>space <span class="arithmatex">\(\in O(2^nn^2)\)</span></li>
+<li>runtime <span class="arithmatex">\(\in O(2^nn^3)\)</span></li>
+</ul>
+<h2 id="greedy">Greedy<a class="headerlink" href="#greedy" title="Permanent link">&para;</a></h2>
+<h3 id="properties_1">properties<a class="headerlink" href="#properties_1" title="Permanent link">&para;</a></h3>
+<p><img alt="algorithms-108.png" src="../algorithms-108.png" /></p>
+<h3 id="interval-scheduling">interval scheduling<a class="headerlink" href="#interval-scheduling" title="Permanent link">&para;</a></h3>
+<ul>
+<li>solution<ol>
+<li>sort by finished time</li>
+<li>select the 1st one</li>
+<li>if the current one overlaps the last selected one, then omit it</li>
+</ol>
+</li>
+<li>e.g.<ul>
+<li><img alt="algorithms-109.png" src="../algorithms-109.png" /></li>
+<li><img alt="algorithms-110.png" src="../algorithms-110.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="pf">pf<a class="headerlink" href="#pf" title="Permanent link">&para;</a></h4>
+<p><img alt="algorithms-111.png" src="../algorithms-111.png" />
+exchange → 數量一樣</p>
+<h3 id="comparison-to-dynamic-programming">comparison to <a href="#dynamic-programming">#Dynamic Programming</a><a class="headerlink" href="#comparison-to-dynamic-programming" title="Permanent link">&para;</a></h3>
+<ul>
+<li>greedy<ul>
+<li>top-down</li>
+<li>1 subproblem</li>
+<li>一定也能用 dynamic programming 解</li>
+</ul>
+</li>
+<li>dynamic programming<ul>
+<li>bottom-up</li>
+<li>several subproblems</li>
+</ul>
+</li>
+</ul>
+<h3 id="huffman-codes">Huffman codes<a class="headerlink" href="#huffman-codes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>https://iq.opengenus.org/huffman-coding-vs-fano-shannon-algorithm/</li>
+<li>characters represented by binary string</li>
+<li>fixed-length code (block code)<ul>
+<li>3 bits a character</li>
+<li>a-f</li>
+</ul>
+</li>
+<li>variable-length code<ul>
+<li>less bits for more frequent ones</li>
+</ul>
+</li>
+<li>prefix code<ul>
+<li>no code is a prefix of some other codes</li>
+</ul>
+</li>
+<li>binary search tree<ul>
+<li>每輪把 frequency 最低者 pair 在一起 → 最後 frequency 最低者會沉在最下面</li>
+<li><img alt="algorithms-112.png" src="../algorithms-112.png" /></li>
+</ul>
+</li>
+<li><img alt="algorithms-113.png" src="../algorithms-113.png" /></li>
+<li>time complexity <span class="arithmatex">\(\in O(nlgn)\)</span></li>
+<li>greedy properties<ul>
+<li><img alt="algorithms-114.png" src="../algorithms-114.png" /></li>
+<li><img alt="algorithms-115.png" src="../algorithms-115.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="task-scheduling">task scheduling<a class="headerlink" href="#task-scheduling" title="Permanent link">&para;</a></h3>
+<ul>
+<li>n 個需要花時間 1 單位時間完成的 tasks</li>
+<li><span class="arithmatex">\(N_t(A)&lt;=t\)</span> <ul>
+<li>在 t 時間內能夠完成的 tasks 數不超過 t</li>
+</ul>
+</li>
+</ul>
+<h2 id="graph">Graph<a class="headerlink" href="#graph" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="arithmatex">\(V\)</span> nodes (vertexes)<ul>
+<li>n nodes</li>
+<li>node.d = discovery time of node</li>
+<li>node.f = finishing time of node</li>
+<li>node.<span class="arithmatex">\(\pi\)</span> = parent of node</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(E\)</span> edges<ul>
+<li>m edges</li>
+</ul>
+</li>
+<li>undirected<ul>
+<li><code>{u,v}</code></li>
+</ul>
+</li>
+<li>directed<ul>
+<li><code>(u,v)</code></li>
+</ul>
+</li>
+<li>path<ul>
+<li>simple path<ul>
+<li>all nodes are distinct</li>
+</ul>
+</li>
+<li>cycle</li>
+</ul>
+</li>
+<li>connectivity<ul>
+<li>there is a path for every pair of nodes in this graph → connected</li>
+</ul>
+</li>
+</ul>
+<h3 id="notations">notations<a class="headerlink" href="#notations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>node.d = distance from source node</li>
+<li>node.<span class="arithmatex">\(\pi\)</span> = parent of node</li>
+</ul>
+<h3 id="graph-representation">graph representation<a class="headerlink" href="#graph-representation" title="Permanent link">&para;</a></h3>
+<p><img alt="algorithms-116.png" src="../algorithms-116.png" /></p>
+<h4 id="adjacency-matrix">adjacency matrix<a class="headerlink" href="#adjacency-matrix" title="Permanent link">&para;</a></h4>
+<ul>
+<li>存 edge</li>
+<li>查看任兩點有沒有相連 → 一格 → constant time</li>
+<li>找一點有幾個 neighbor → 1 row → O(n)</li>
+<li>space <span class="arithmatex">\(\in O(n^2)\)</span></li>
+<li><img alt="algorithms-117.png" src="../algorithms-117.png" /></li>
+</ul>
+<h4 id="adjacency-list">adjacency list<a class="headerlink" href="#adjacency-list" title="Permanent link">&para;</a></h4>
+<ul>
+<li>存 node</li>
+<li>放該 node 的 neighbors</li>
+<li><span class="arithmatex">\(O(deg(u))\)</span> for 檢查是否為 neighbor<ul>
+<li>deg(u) = amount of u's neighbors</li>
+</ul>
+</li>
+<li>space <span class="arithmatex">\(\in O(n+m)\)</span></li>
+<li><img alt="algorithms-118.png" src="../algorithms-118.png" /></li>
+</ul>
+<h3 id="graph-traversal">graph traversal<a class="headerlink" href="#graph-traversal" title="Permanent link">&para;</a></h3>
+<h4 id="bfs">BFS<a class="headerlink" href="#bfs" title="Permanent link">&para;</a></h4>
+<ul>
+<li>breadth-first-search</li>
+<li>先走完所有 neighbor 再往下走</li>
+<li><img alt="algorithms-119.png" src="../algorithms-119.png" /></li>
+<li>e.g.<ul>
+<li><img alt="algorithms-120.png" src="../algorithms-120.png" /></li>
+</ul>
+</li>
+<li>time complexity <span class="arithmatex">\(\in O(V+E)\)</span><ul>
+<li>each vertex enqueued &amp; dequeued once</li>
+<li>each edge considered once</li>
+</ul>
+</li>
+</ul>
+<h4 id="dfs">DFS<a class="headerlink" href="#dfs" title="Permanent link">&para;</a></h4>
+<ul>
+<li>depth-first search</li>
+<li>先走到底再走鄰居</li>
+<li><img alt="algorithms-121.png" src="../algorithms-121.png" /></li>
+<li>經過 → grey</li>
+<li>retreat → black</li>
+<li>e.g.<ul>
+<li><img alt="algorithms-122.png" src="../algorithms-122.png" /><ul>
+<li>圖中有標示 edge type</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>parenthesis property<ul>
+<li>if u is v's descendant，經過順序會是 v → u → u → v</li>
+<li><img alt="algorithms-123.png" src="../algorithms-123.png" /></li>
+<li>因為會 retreat</li>
+</ul>
+</li>
+<li>edge type<ul>
+<li>directed graph<ul>
+<li>tree edge<ul>
+<li>DFS 後的一般 edge</li>
+<li>if 指到 white (not discovered)</li>
+</ul>
+</li>
+<li>back edge<ul>
+<li>descendant 指到 ancestor</li>
+<li>出現 cycle</li>
+<li>if 指到 grey (already discovered)</li>
+</ul>
+</li>
+<li>forward edge<ul>
+<li>ancestor 指到 indirect descendant (為 nontree edge)</li>
+<li>if 指到晚輩 black (already completed)</li>
+</ul>
+</li>
+<li>cross edge<ul>
+<li>非直系血親 (為 nontree edge)</li>
+<li>if 指到非晚輩 black (already completed)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>undirected graph<ul>
+<li>tree edge</li>
+<li>back edge</li>
+<li>no forward edge<ul>
+<li>forward edge = back edge in undirected graph</li>
+</ul>
+</li>
+<li>no cross edge<ul>
+<li>沒有 ancestor or descendant 關係 → 無法判斷是否為旁系</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="dag">DAG<a class="headerlink" href="#dag" title="Permanent link">&para;</a></h3>
+<ul>
+<li>directed acyclic graphs, directed graphs without cycles</li>
+<li>undirected graph without cycle → tree / forest</li>
+<li>topological ordering<ul>
+<li>nodes 排成一條線，edge 的方向一致</li>
+<li>找法：從沒有 incoming edge 者開始</li>
+<li><img alt="algorithms-124.png" src="../algorithms-124.png" /></li>
+<li>time complexity <span class="arithmatex">\(\in O(n^2)\)</span> to <span class="arithmatex">\(O(m+n)\)</span></li>
+<li>e.g.<ul>
+<li><img alt="algorithms-125.png" src="../algorithms-125.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>has topological ordering iff is DAG</li>
+<li>topological sort<ul>
+<li>sort nodes in decreasing finishing time</li>
+<li><img alt="algorithms-126.png" src="../algorithms-126.png" /></li>
+<li>time complexity <span class="arithmatex">\(\in O(V+E)\)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="connectivity-in-directed-graph">connectivity in directed graph<a class="headerlink" href="#connectivity-in-directed-graph" title="Permanent link">&para;</a></h3>
+<ul>
+<li>every node is mutually reachable → the graph is strongly connected</li>
+<li>every node is mutually reachable ignoring the direction of edge → the graph is weakly connected</li>
+</ul>
+<h4 id="scc-strongly-connected-component">SCC strongly connected component<a class="headerlink" href="#scc-strongly-connected-component" title="Permanent link">&para;</a></h4>
+<ul>
+<li>SCC of s = maximal set of v s.t. s &amp; v are mutually reachable</li>
+<li>for any 2 nodes s &amp; v in a directed graph, their strongly connected components are<ul>
+<li>identical if s &amp; v are mutually reachable</li>
+<li>disjoint if s &amp; v aren't mutually reachable</li>
+</ul>
+</li>
+<li>SCC of a directed graph G=(V, E) = maximal set of node <span class="arithmatex">\(U\in V\)</span> s.t. u→v &amp; v→u<ul>
+<li><a href="https://www.geeksforgeeks.org/strongly-connected-components/">https://www.geeksforgeeks.org/strongly-connected-components/</a></li>
+<li><img alt="algorithms-127.png" src="../algorithms-127.png" /></li>
+<li>time complexity <span class="arithmatex">\(\in O(V+E)\)</span></li>
+</ul>
+</li>
+<li>SCC graph is a <a href="#dag">#DAG</a></li>
+</ul>
+<h3 id="minimum-spanning-tree-mst">minimum spanning tree, MST<a class="headerlink" href="#minimum-spanning-tree-mst" title="Permanent link">&para;</a></h3>
+<ul>
+<li>find edges that connect all nodes with min cost</li>
+<li>不會有 cycle<ul>
+<li>有 cycle → 去掉連回去的那個 edge 還是會是 connected graph</li>
+</ul>
+</li>
+<li>use greedy to solve</li>
+</ul>
+<h4 id="solutions">solutions<a class="headerlink" href="#solutions" title="Permanent link">&para;</a></h4>
+<ul>
+<li>generic<ul>
+<li><img alt="algorithms-128.png" src="../algorithms-128.png" /></li>
+<li>add a safe edge every time</li>
+<li>找 cut 裡最便宜的 edge</li>
+</ul>
+</li>
+<li>Kruskal's algorithm<ul>
+<li>start with no selected edge, sort edge by cost，每次都選剩下的最便宜的 edge，會 cycle 則 discard</li>
+<li>每多一個 edge 就會 merge 兩個 tree</li>
+<li>implementation<ul>
+<li>每個小 tree 都是一個 disjoint set<ul>
+<li><a href="../../../Sophomore/Data%20Structure/Data%20Structure/#disjoint-sets">Data Structure#disjoint sets</a></li>
+</ul>
+</li>
+<li>新的 edge 屬於同 disjoint set → cycle</li>
+<li><img alt="algorithms-129.png" src="../algorithms-129.png" /></li>
+<li>time complexity <span class="arithmatex">\(\in O(ElgE+V)=O(ElgV+V)\)</span><ul>
+<li>find-set for a set of V nodes = <span class="arithmatex">\(\alpha(V)\)</span></li>
+<li>for each edge → <span class="arithmatex">\(O(E\alpha(V))\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Prim's algorithm<ul>
+<li>start with root node, greedily expands outward from the current tree</li>
+<li>implementation<ul>
+<li>用 heap 找最便宜的 cut</li>
+<li><img alt="algorithms-130.png" src="../algorithms-130.png" /><ul>
+<li>先把所有 key 設 infty</li>
+<li>root 的 key 為 0</li>
+<li>heap 存所有 nodes</li>
+<li>更新 min node 連到的所有 node 的 key</li>
+<li><span class="arithmatex">\(\pi\)</span>  for 路徑</li>
+</ul>
+</li>
+<li>time complexity <ul>
+<li><span class="arithmatex">\(O(ElgV)\)</span> with binary heap</li>
+<li><span class="arithmatex">\(O(E+VlgV)\)</span> with Fibonacci heap</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><img alt="algorithms-131.png" src="../algorithms-131.png" /></li>
+</ul>
+</li>
+<li>reverse-delete algorithm<ul>
+<li>reverse of Kruskal's algorithm</li>
+<li>start with all edges selected, sort edge by cost, delete the max cost edge, skip if it would disconnect the graph</li>
+</ul>
+</li>
+</ul>
+<h4 id="properties_2">properties<a class="headerlink" href="#properties_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>cut property<ul>
+<li>a MST must contain the min cost edge than connects S &amp; V-S for all subset S</li>
+<li>pf<ul>
+<li>assume spanning tree T doesn't have the min cost edge (u,v) that connect S &amp; V-S, if we replace the edge connecting S &amp; V-S with (u,v), we'll have a smaller cost</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>cycle property<ul>
+<li>for any cycle，cycle 裡最貴的 edge 不屬於任何 MST</li>
+</ul>
+</li>
+</ul>
+<h3 id="optimal-substructure">optimal substructure<a class="headerlink" href="#optimal-substructure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>unweighted shortest path<ul>
+<li>have optimal substructure</li>
+</ul>
+</li>
+<li>unweighted longest path<ul>
+<li>don't have optimal substructure</li>
+<li>e.g.<ul>
+<li><img alt="algorithms-132.png" src="../algorithms-132.png" /><ul>
+<li>longest path simple path of q → t is q → r → t</li>
+<li>longest path simple path of q → r is q → s → t → r</li>
+<li>longest path simple path of r → t is r → q → s → t</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>shortest path<ul>
+<li>subpaths of shortest paths are shortest paths</li>
+</ul>
+</li>
+</ul>
+<h3 id="sssp">SSSP<a class="headerlink" href="#sssp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>single-source shortest path</li>
+<li>shortest path from source node s to every other nodes</li>
+<li>if have negative edges<ul>
+<li>negative cycle → 使 node cost 變成 -infty<ul>
+<li><img alt="algorithms-133.png" src="../algorithms-133.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>triangular inequality<ul>
+<li>s to u <span class="arithmatex">\(\leq\)</span> s to v to u</li>
+</ul>
+</li>
+<li>relaxation<ul>
+<li><img alt="algorithms-134.png" src="../algorithms-134.png" /></li>
+</ul>
+</li>
+<li>更新 node cost</li>
+</ul>
+<h4 id="dijkstras-algorithm"><a href="../../../../obs_autolink/Dijkstra%27s%20Algorithm/">Dijkstra's Algorithm</a><a class="headerlink" href="#dijkstras-algorithm" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="algorithms-135.png" src="../algorithms-135.png" /></li>
+<li><img alt="algorithms-136.png" src="../algorithms-136.png" /></li>
+<li>all edge weights <span class="arithmatex">\(\geq 0\)</span></li>
+<li>Prim's algorithm</li>
+<li>time complexity<ul>
+<li>Q = linear array → <span class="arithmatex">\(O(V^2)\)</span></li>
+<li>Q = binary heap → <span class="arithmatex">\(O(VlgV)\)</span></li>
+<li>Q = fibonacci heap → <span class="arithmatex">\(O(E+VlgV)\)</span></li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li><img alt="algorithms-137.png" src="../algorithms-137.png" /></li>
+</ul>
+</li>
+<li>correctness (?)<ul>
+<li><img alt="algorithms-138.png" src="../algorithms-138.png" /></li>
+</ul>
+</li>
+<li>不接受 negative edges，因為有 nagative edge 則現在找到的 min path might not be min path<ul>
+<li><img alt="algorithms-139.png" src="../algorithms-139.png" /></li>
+<li>solution: <a href="#johnsons-algorithm">#Johnson's Algorithm</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="in-dags">in DAGs<a class="headerlink" href="#in-dags" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="algorithms-140.png" src="../algorithms-140.png" /></li>
+<li>time complexity <span class="arithmatex">\(\in O(V+E)\)</span></li>
+<li>e.g.<ul>
+<li><img alt="algorithms-141.png" src="../algorithms-141.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="bellman-ford-algorithm"><a href="../../../../obs_autolink/Bellman-Ford%20Algorithm/">Bellman-Ford Algorithm</a><a class="headerlink" href="#bellman-ford-algorithm" title="Permanent link">&para;</a></h4>
+<ul>
+<li>接受 negative weight edge</li>
+<li>detect negative cycle</li>
+<li><img alt="algorithms-142.png" src="../algorithms-142.png" /><ul>
+<li>5.-7. - if detect negative cycle then return False</li>
+</ul>
+</li>
+<li>time complexity <span class="arithmatex">\(\in O(VE)\)</span></li>
+<li>e.g.<ul>
+<li><img alt="algorithms-143.png" src="../algorithms-143.png" /></li>
+</ul>
+</li>
+<li>correction<ul>
+<li><img alt="algorithms-144.png" src="../algorithms-144.png" /></li>
+</ul>
+</li>
+<li>negative cycle detection<ul>
+<li>bellman-ford 做完後，多 run 一個 iteration 數值會下降 → 有 negative cycle</li>
+<li><img alt="algorithms-145.png" src="../algorithms-145.png" /></li>
+<li>find negative cycle for a graph<ul>
+<li><img alt="algorithms-146.png" src="../algorithms-146.png" /></li>
+<li>做一個 new source S 連到所有 node with 0-cost edge，原本 graph 存在 negative cycle iff 從 S 開始 bellman-ford 找得到 negative cycle</li>
+<li><img alt="algorithms-147.png" src="../algorithms-147.png" /></li>
+<li>?? 為什麼不要直接在原本的 graph 做 bellman-ford ??</li>
+</ul>
+</li>
+<li>linear programming<ul>
+<li>線性規劃</li>
+<li>constraint graph<ul>
+<li><img alt="algorithms-148.png" src="../algorithms-148.png" /></li>
+<li>???</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="apsp">APSP<a class="headerlink" href="#apsp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>all-pairs shortest paths</li>
+<li>use adjacency matrix<ul>
+<li>most use adjacency list</li>
+</ul>
+</li>
+<li>extened shortest paths<ul>
+<li><img alt="algorithms-149.png" src="../algorithms-149.png" /></li>
+</ul>
+</li>
+<li>show all-pairs shortest path<ul>
+<li>for <span class="arithmatex">\(n^2\)</span> 個 entries，算所有可能的 k 到所有可能的 m → <span class="arithmatex">\(\in O(n^4)\)</span><ul>
+<li><img alt="algorithms-150.png" src="../algorithms-150.png" /></li>
+</ul>
+</li>
+<li>可優化<ul>
+<li><img alt="algorithms-151.png" src="../algorithms-151.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="floyd-warshells-apsp-algorithm">Floyd-Warshell's APSP Algorithm<a class="headerlink" href="#floyd-warshells-apsp-algorithm" title="Permanent link">&para;</a></h4>
+<ul>
+<li>i to j subproblem to i to k + k to j</li>
+<li><img alt="algorithms-152.png" src="../algorithms-152.png" /><ul>
+<li>k 為中繼點</li>
+</ul>
+</li>
+<li>time complexity <span class="arithmatex">\(\in O(V^3)\)</span></li>
+<li>執行完對角線上有 &lt; 0 數字 → negative cycle</li>
+<li><img alt="algorithms-153.png" src="../algorithms-153.png" /></li>
+<li>e.g.<ul>
+<li><img alt="algorithms-154.png" src="../algorithms-154.png" /></li>
+</ul>
+</li>
+<li>transitive closure<ul>
+<li>i to k AND k to j → i to j</li>
+<li><img alt="algorithms-155.png" src="../algorithms-155.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="johnsons-algorithm">Johnson's Algorithm<a class="headerlink" href="#johnsons-algorithm" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/johnsons-algorithm/">https://www.geeksforgeeks.org/johnsons-algorithm/</a></li>
+<li>can't have negative cycle (use <a href="../../../../obs_autolink/Bellman-Ford%20Algorithm/">Bellman-Ford Algorithm</a> to verify)</li>
+<li>reweight s.t. all edges are nonnegative without changing the shortest path solution → <a href="../../../../obs_autolink/Dijkstra%27s%20Algorithm/">Dijkstra's Algorithm</a></li>
+<li>移動 node 的位置</li>
+<li><span class="arithmatex">\(h(u)\)</span> = 把 node u 往前移動多少</li>
+<li><span class="arithmatex">\(\hat{w}(u,v)=w(u,v)+h(u)-h(v)\)</span><ul>
+<li>經過很多點，各點會互相 cancel，只留起終點的淨移動量，so 兩點間的每個 path 改變相同，shortest path 不變</li>
+</ul>
+</li>
+<li>shortest path 不變<ul>
+<li><img alt="algorithms-156.png" src="../algorithms-156.png" /></li>
+</ul>
+</li>
+<li>create new node connecting to every node with edge weight 0，shortest distance → h i.e. node 移動的量<ul>
+<li>e.g. h(u) = -3, h(v) = -5 → w(u,v) -= -2</li>
+</ul>
+</li>
+<li>cycle preserving<ul>
+<li>cycle 位置都跟原本一樣</li>
+</ul>
+</li>
+<li><img alt="algorithms-157.png" src="../algorithms-157.png" /></li>
+<li>e.g.<ul>
+<li><img alt="algorithms-158.png" src="../algorithms-158.png" /></li>
+<li><img alt="algorithms-159.png" src="../algorithms-159.png" /></li>
+<li><img alt="algorithms-160.png" src="../algorithms-160.png" /></li>
+</ul>
+</li>
+<li>yellow: 原本 graph</li>
+<li>create new node 接上所有 node with weight 0</li>
+<li>run <a href="../../../../obs_autolink/Bellman-Ford%20Algorithm/">Bellman-Ford Algorithm</a></li>
+<li>red edge 的起點提前 0，終點提前 -1 → new weight = 3+1 = 4</li>
+<li>下面是 node 表示法：altered cost / 反推回的 original cost</li>
+</ul>
+<h3 id="flow-network">Flow Network<a class="headerlink" href="#flow-network" title="Permanent link">&para;</a></h3>
+<ul>
+<li>directed graph</li>
+<li>求 max flow</li>
+<li>e.g.<ul>
+<li><img alt="algorithms-161.png" src="../algorithms-161.png" /><ul>
+<li>s → a → b 後，推 1 回 a → t ，其餘 2 繼續 b → t</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>flow out  = flow in</li>
+<li>augmentating path = 可灌更多 flow 的 path</li>
+</ul>
+<h4 id="max-flow-min-cut-theorem">max-flow min-cut theorem<a class="headerlink" href="#max-flow-min-cut-theorem" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://brilliant.org/wiki/max-flow-min-cut-algorithm/">https://brilliant.org/wiki/max-flow-min-cut-algorithm/</a></li>
+<li>每個 cut 都是一個 upper bound → min cut is the min upper bound i.e. the real upper bound</li>
+<li>只算 toward destination 的 edge</li>
+<li><img alt="algorithms-162.png" src="../algorithms-162.png" /></li>
+<li><img alt="" src="https://s2.loli.net/2021/12/25/Ict1jYOXg864nuC.png" /></li>
+<li>proof<ul>
+<li><img alt="" src="https://s2.loli.net/2021/12/26/wjPGi4SK1ml5nfJ.png" /></li>
+<li><img alt="" src="https://s2.loli.net/2021/12/26/YS4WRT9uHhJmVpD.png" /><ul>
+<li>有 augmentation path → 可以灌更多 → not max flow</li>
+</ul>
+</li>
+<li><img alt="algorithms-163.png" src="../algorithms-163.png" /></li>
+<li><img alt="algorithms-164.png" src="../algorithms-164.png" /><ul>
+<li>一定會用盡 capacity，否則還會有路出去</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="ford-fulkerson-algorithm">Ford-Fulkerson Algorithm<a class="headerlink" href="#ford-fulkerson-algorithm" title="Permanent link">&para;</a></h4>
+<ul>
+<li>residual network</li>
+<li>在 flow network，s to t 找到 path → 更新 flow network 各 edge 的 capacity，更新 residual network，把 path 都弄成 backward edge → repeat</li>
+<li><img alt="" src="https://s2.loli.net/2021/12/25/JZavDWYRGgNs5H8.png" /></li>
+<li><img alt="" src="https://s2.loli.net/2021/12/25/dBoenztJY4gk9uG.png" /></li>
+<li>legal flow pf<ul>
+<li><img alt="" src="https://s2.loli.net/2021/12/25/uPKXT7zEDtFbSZe.png" /></li>
+</ul>
+</li>
+<li>flow will increase after applying augmentation<ul>
+<li><img alt="" src="https://s2.loli.net/2021/12/25/ZDV4NMbUfckOpts.png" /></li>
+</ul>
+</li>
+<li>time complexity <span class="arithmatex">\(\in O(EC)\)</span><ul>
+<li>not polynomial to input size (but capacity)</li>
+<li>at most C iterations<ul>
+<li>C = flow upper bound</li>
+<li>each aumentation increase flow by at least 1 → at most C iterations</li>
+<li><img alt="" src="https://s2.loli.net/2021/12/25/FXfG9JzVtykRo3u.png" /></li>
+<li>e.g.<ul>
+<li><img alt="" src="https://s2.loli.net/2021/12/25/StHPZKo1cgvVODC.png" /><ul>
+<li>worst case 200 interations</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>each augmentation <span class="arithmatex">\(O(V+2E)=O(E)\)</span></li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li><img alt="algorithms-165.png" src="../algorithms-165.png" /></li>
+<li><img alt="algorithms-166.png" src="../algorithms-166.png" /></li>
+<li><img alt="algorithms-167.png" src="../algorithms-167.png" /></li>
+<li><img alt="algorithms-168.png" src="../algorithms-168.png" /></li>
+<li><img alt="algorithms-169.png" src="../algorithms-169.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="edmonds-karp-algorithm">Edmonds-Karp Algorithm<a class="headerlink" href="#edmonds-karp-algorithm" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://brilliant.org/wiki/edmonds-karp-algorithm/">https://brilliant.org/wiki/edmonds-karp-algorithm/</a></li>
+<li><a href="#ford-fulkerson-algorithm">#Ford-Fulkerson Algorithm</a> but find the shortest augmentation path (min edges) in residual network with BFS</li>
+<li>time complexity <span class="arithmatex">\(\in O(VE(V+E))=O(VE^2)\)</span><ul>
+<li><span class="arithmatex">\(\dfrac{VE}{2}\)</span> iterations<ul>
+<li>an edge is critical when it's filled → edge reversed</li>
+<li>distance from source would increase at least 2 at the next time it become critical</li>
+<li>max distance = V → max iteration = V/2 for each node</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(V+E\)</span> each iteration (path finding)<ul>
+<li>BFS</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="bipartite-matching">Bipartite Matching<a class="headerlink" href="#bipartite-matching" title="Permanent link">&para;</a></h4>
+<ul>
+<li>no 2 edges share same endpoints</li>
+<li>build a flow network and find the max flow<ul>
+<li>only 1 direction</li>
+<li>create source &amp; destination</li>
+<li>each edge's capacity = 1</li>
+<li><img alt="" src="https://s2.loli.net/2021/12/25/2y3Ys6UVcLMAIZl.png" /></li>
+<li><img alt="" src="https://s2.loli.net/2021/12/25/fd9q1iFowtuLTUX.png" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="np-completeness"><a href="../../../../obs_autolink/NP-completeness/">NP-completeness</a><a class="headerlink" href="#np-completeness" title="Permanent link">&para;</a></h2>
+<h3 id="decision-problem">decision problem<a class="headerlink" href="#decision-problem" title="Permanent link">&para;</a></h3>
+<ul>
+<li>output True/False</li>
+</ul>
+<h3 id="turing-machine">turing machine<a class="headerlink" href="#turing-machine" title="Permanent link">&para;</a></h3>
+<ul>
+<li>DTM, deterministic turing machine<ul>
+<li>1 outgoing edge</li>
+</ul>
+</li>
+<li>NTP, nondeterministic turing machine<ul>
+<li>multiple outgoing edges</li>
+</ul>
+</li>
+<li><img alt="algorithms-170.png" src="../algorithms-170.png" /></li>
+</ul>
+<h3 id="class-p">class P<a class="headerlink" href="#class-p" title="Permanent link">&para;</a></h3>
+<ul>
+<li>polynomial-time solvable</li>
+</ul>
+<h3 id="class-np">class NP<a class="headerlink" href="#class-np" title="Permanent link">&para;</a></h3>
+<ul>
+<li>polynomial-time verifiable by NTM</li>
+<li>for decision problem</li>
+<li><span class="arithmatex">\(P\in NP\)</span><ul>
+<li><img alt="algorithms-171.png" src="../algorithms-171.png" /></li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li>set cover problem<ul>
+<li>Are there k subsets of set U s.t. their union is U?</li>
+<li>procedure (polynomial-time)<ul>
+<li>for each subset, if an element of U isn't presented, indicate with 0, otherwise 1</li>
+<li><img alt="algorithms-172.png" src="../algorithms-172.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="polynomial-time-reduction">polynomial-time reduction<a class="headerlink" href="#polynomial-time-reduction" title="Permanent link">&para;</a></h3>
+<ul>
+<li>algo A can solve Y, then we'll do some mapping in polynomial-time and solve X with A</li>
+<li><span class="arithmatex">\(X\leq_P Y\)</span> (polynomial-time reduction function f from  X to Y)<ul>
+<li>f(x)=y <span class="arithmatex">\(\in Y\)</span> for any x</li>
+<li>x is true iff f(x)=y is true</li>
+<li>mapping function is polynomial-time</li>
+</ul>
+</li>
+<li>hardness of Y &gt;= X</li>
+<li><img alt="algorithms-173.png" src="../algorithms-173.png" /></li>
+</ul>
+<h3 id="class-np-complete">class NP-complete<a class="headerlink" href="#class-np-complete" title="Permanent link">&para;</a></h3>
+<ul>
+<li>hardest problems in NP</li>
+<li>if any NP-complete problem <span class="arithmatex">\(\in P\)</span>, then <span class="arithmatex">\(P=NP\)</span> (???????)</li>
+<li>both NP &amp; NP-Hard<ul>
+<li>NP &lt;- 猜一個 答案，可以在 polynomial-time 被驗證</li>
+<li>NP-Hard &lt;- exist an NP-Complete problem that can do polynomial-time reduction into it</li>
+<li><img alt="algorithms-174.png" src="../algorithms-174.png" /></li>
+<li><img alt="algorithms-175.png" src="../algorithms-175.png" /></li>
+</ul>
+</li>
+<li>e.g. Hamiltonian path/cycle, set cover, Tetris, Sudoku</li>
+<li><img alt="algorithms-176.png" src="../algorithms-176.png" /><ul>
+<li><img alt="algorithms-177.png" src="../algorithms-177.png" /></li>
+</ul>
+</li>
+<li><img alt="algorithms-178.png" src="../algorithms-178.png" /></li>
+</ul>
+<h4 id="sat">SAT<a class="headerlink" href="#sat" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Satisfiability Problem</li>
+<li>CNF = conjuntive normal form<ul>
+<li>(a+b)x(c+d)</li>
+</ul>
+</li>
+<li>literal = variable</li>
+<li>clause = (a+b)</li>
+<li>Circuit-SAT <span class="arithmatex">\(\in\)</span> NP<ul>
+<li><img alt="algorithms-179.png" src="../algorithms-179.png" /></li>
+</ul>
+</li>
+<li>NP-Complete<ul>
+<li>SAT <span class="arithmatex">\(\in\)</span> NP</li>
+<li>SAT <span class="arithmatex">\(\in\)</span> NP-Hard<ul>
+<li>bc Circuit-SAT <span class="arithmatex">\(\leq_p\)</span> SAT</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>set cover</li>
+<li>nSAT = 每個 set 最多 n 個</li>
+<li>3SAT<ul>
+<li>3SAT <span class="arithmatex">\(\in\)</span> NP</li>
+<li>3SAT <span class="arithmatex">\(\in\)</span> NP-Hard<ul>
+<li>bc SAT <span class="arithmatex">\(\leq_p\)</span> 3SAT</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="clique">clique<a class="headerlink" href="#clique" title="Permanent link">&para;</a></h4>
+<ul>
+<li>a subgraph that every 2 distinct elements is adjacent</li>
+<li>clique problem (Clique) <span class="arithmatex">\(\in\)</span> NP-Complete<ul>
+<li>problem: Is there a clique of size <span class="arithmatex">\(\geq\)</span> k ?</li>
+<li>Clique <span class="arithmatex">\(\in\)</span> NP</li>
+<li>Clique <span class="arithmatex">\(\in\)</span> NP-hard<ul>
+<li>3SAT <span class="arithmatex">\(\leq_p\)</span> Clique</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="vertex-cover">vertex cover<a class="headerlink" href="#vertex-cover" title="Permanent link">&para;</a></h4>
+<ul>
+<li>problem: Is there <span class="arithmatex">\(V'\subseteq V\)</span> s.t. every edge has an endpoint in <span class="arithmatex">\(V'\)</span></li>
+<li>vertex cover is a complete subgraph</li>
+<li>vertex cover <span class="arithmatex">\(\in\)</span> NP</li>
+<li>vertex cover <span class="arithmatex">\(\in\)</span> NP-hard<ul>
+<li>Clique <span class="arithmatex">\(\leq_p\)</span> vertex cover<ul>
+<li>有 clique → 有 vertex cover<ul>
+<li>若有 clique，則剩下的 nodes + 不存在的 edge (<span class="arithmatex">\(\bar{E}\)</span>) 就會形成 vertex cover<ul>
+<li>右邊的 edge (<span class="arithmatex">\(\bar{E}\)</span>) 至少有 1 個 endpoint 不在 clique 裡面<ul>
+<li>2 個 endpoints 都在 clique → 會是左邊的 edge (E) → 右邊 (<span class="arithmatex">\(\bar{E}\)</span>) 不會有這條 edge</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><img alt="algorithms-180.png" src="../algorithms-180.png" /></li>
+<li><img alt="algorithms-181.png" src="../algorithms-181.png" /></li>
+</ul>
+</li>
+<li>有 vertex cover → 有 clique<ul>
+<li><img alt="algorithms-182.png" src="../algorithms-182.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>approx vertex cover algo<ul>
+<li><img alt="algorithms-183.png" src="../algorithms-183.png" /></li>
+<li>找到的解會是最佳解的兩倍以內<ul>
+<li><img alt="algorithms-184.png" src="../algorithms-184.png" /></li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li><img alt="algorithms-185.png" src="../algorithms-185.png" /><ul>
+<li>得到 {b,c,e,f,d,g}，but 最佳解是 {a,c,f,g}</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3SAT → vertex cover<ul>
+<li><a href="http://cgm.cs.mcgill.ca/~athens/cs507/Projects/2001/CW/npproof.html">http://cgm.cs.mcgill.ca/~athens/cs507/Projects/2001/CW/npproof.html</a></li>
+<li><img alt="algorithms-186.png" src="../algorithms-186.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="independent-set">independent set<a class="headerlink" href="#independent-set" title="Permanent link">&para;</a></h4>
+<ul>
+<li>a subset <span class="arithmatex">\(V'\subseteq V\)</span> s.t. no edge between any nodes in <span class="arithmatex">\(V'\)</span></li>
+<li>independent-set problem<ul>
+<li>problem: Is there an independent set of size <span class="arithmatex">\(\geq\)</span> k?</li>
+<li><img alt="algorithms-187.png" src="../algorithms-187.png" /></li>
+</ul>
+</li>
+<li>3SAT to independent-set decision problem<ul>
+<li><img alt="algorithms-188.png" src="../algorithms-188.png" /><ul>
+<li>https://courses.engr.illinois.edu/cs374/fa2020/lec_prerec/23/23_2_0_0.pdf</li>
+</ul>
+</li>
+<li>每個三角形選一個 node 作為 true，選到的 node 就是 independent set<ul>
+<li>不可能同時選 x &amp; x' → 把 x &amp; x' 連在一起 s.t. independent set 不會有 conflict 的 nodes</li>
+</ul>
+</li>
+<li><img alt="algorithms-189.png" src="../algorithms-189.png" /></li>
+<li><img alt="algorithms-190.png" src="../algorithms-190.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="hitting-set">hitting set<a class="headerlink" href="#hitting-set" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="algorithms-191.png" src="../algorithms-191.png" /><ul>
+<li>for all <span class="arithmatex">\(c\in C\)</span>, <span class="arithmatex">\(c\)</span> 的元素至少有一個在 <span class="arithmatex">\(S'\)</span></li>
+</ul>
+</li>
+<li>hitting-set problem<ul>
+<li>Does S contain a hitting set for C of size <span class="arithmatex">\(\leq\)</span> k?</li>
+</ul>
+</li>
+<li>reduction to vertex cover<ul>
+<li>restrict each <span class="arithmatex">\(c\in C\)</span> to have size of 2</li>
+<li>each <span class="arithmatex">\(c\)</span> is an edge in clique</li>
+<li><span class="arithmatex">\(S'\)</span> 是 vertex cover 的 node 指到的每個 node</li>
+<li>restricted 版本是 NP-Complete → unrestricted 版本是 NP-Complete</li>
+</ul>
+</li>
+</ul>
+<h4 id="approx-tsp">approx TSP<a class="headerlink" href="#approx-tsp" title="Permanent link">&para;</a></h4>
+<ul>
+<li>NP</li>
+<li><img alt="algorithms-192.png" src="../algorithms-192.png" /></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://www.derricklin.net" target="_blank" rel="noopener" title="www.derricklin.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M244 246c-3.2-2-6.3-2.9-10.1-2.9-6.6 0-12.6 3.2-19.3 3.7l1.7 4.9zm135.9 197.9c-19 0-64.1 9.5-79.9 19.8l6.9 45.1c35.7 6.1 70.1 3.6 106-9.8-4.8-10-23.5-55.1-33-55.1zM340.8 177c6.6 2.8 11.5 9.2 22.7 22.1 2-1.4 7.5-5.2 7.5-8.6 0-4.9-11.8-13.2-13.2-23 11.2-5.7 25.2-6 37.6-8.9 68.1-16.4 116.3-52.9 146.8-116.7C548.3 29.3 554 16.1 554.6 2l-2 2.6c-28.4 50-33 63.2-81.3 100-31.9 24.4-69.2 40.2-106.6 54.6l-6.3-.3v-21.8c-19.6 1.6-19.7-14.6-31.6-23-18.7 20.6-31.6 40.8-58.9 51.1-12.7 4.8-19.6 10-25.9 21.8 34.9-16.4 91.2-13.5 98.8-10zM555.5 0l-.6 1.1-.3.9.6-.6zm-59.2 382.1c-33.9-56.9-75.3-118.4-150-115.5l-.3-6c-1.1-13.5 32.8 3.2 35.1-31l-14.4 7.2c-19.8-45.7-8.6-54.3-65.5-54.3-14.7 0-26.7 1.7-41.4 4.6 2.9 18.6 2.2 36.7-10.9 50.3l19.5 5.5c-1.7 3.2-2.9 6.3-2.9 9.8 0 21 42.8 2.9 42.8 33.6 0 18.4-36.8 60.1-54.9 60.1-8 0-53.7-50-53.4-60.1l.3-4.6 52.3-11.5c13-2.6 12.3-22.7-2.9-22.7-3.7 0-43.1 9.2-49.4 10.6-2-5.2-7.5-14.1-13.8-14.1-3.2 0-6.3 3.2-9.5 4-9.2 2.6-31 2.9-21.5 20.1L15.9 298.5c-5.5 1.1-8.9 6.3-8.9 11.8 0 6 5.5 10.9 11.5 10.9 8 0 131.3-28.4 147.4-32.2 2.6 3.2 4.6 6.3 7.8 8.6 20.1 14.4 59.8 85.9 76.4 85.9 24.1 0 58-22.4 71.3-41.9 3.2-4.3 6.9-7.5 12.4-6.9.6 13.8-31.6 34.2-33 43.7-1.4 10.2-1 35.2-.3 41.1 26.7 8.1 52-3.6 77.9-2.9 4.3-21 10.6-41.9 9.8-63.5l-.3-9.5c-1.4-34.2-10.9-38.5-34.8-58.6-1.1-1.1-2.6-2.6-3.7-4 2.2-1.4 1.1-1 4.6-1.7 88.5 0 56.3 183.6 111.5 229.9 33.1-15 72.5-27.9 103.5-47.2-29-25.6-52.6-45.7-72.7-79.9zm-196.2 46.1v27.2l11.8-3.4-2.9-23.8zm-68.7-150.4 24.1 61.2 21-13.8-31.3-50.9zm84.4 154.9 2 12.4c9-1.5 58.4-6.6 58.4-14.1 0-1.4-.6-3.2-.9-4.6-26.8 0-36.9 3.8-59.5 6.3z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://blog.derricklin.net" target="_blank" rel="noopener" title="blog.derricklin.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/derrick-lin" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/dlccyes" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.indexes", "toc.follow", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="../../../../assets/script.js"></script>
+      
+        <script src="../../../../assets/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
