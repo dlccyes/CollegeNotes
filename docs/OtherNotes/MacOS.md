@@ -280,7 +280,9 @@ home page
 
 download -> unzip -> right click on the app -> open -> set your keyboard shortcuts
 
-your cursor will appear right at the middle of the corresponding display after triggering the shortcut key
+You can also just `git clone` or download the zip from the github repo and you'll find a `.app` inside. Simply drag it to `/Applications/` and open it.
+
+Your cursor will appear right at the middle of the corresponding display after triggering the shortcut key.
 
 ### use normal scrolling direction
 

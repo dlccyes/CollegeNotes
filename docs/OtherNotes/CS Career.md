@@ -361,6 +361,8 @@ layout: meth
 
 - Skill assessment answers
 	- <https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes>
+- chrome extension for displaying YoE needed for jobs
+    - <https://chromewebstore.google.com/detail/add-exp-for-linkedin/kjjmadhfcibknloppnmaaaeoccdgdfha>
 
 ## TC
 

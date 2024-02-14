@@ -33,14 +33,14 @@ Always use plural, even if you're only interacting with a single resource
 
 If you want to get a resource belonging to another
 
-- `GET /report/12/subreports` -> get a list of subreports belonging to report 12
-- `GET /report/12/subreports/42` -> get subreport 42 of report 12
+- `GET /reports/12/subreports` -> get a list of subreports belonging to report 12
+- `GET /reports/12/subreports/42` -> get subreport 42 of report 12
 
 ### Trailing slash
 
 [Why trailing slashes on URIs are important | cdivilly](https://cdivilly.wordpress.com/2014/03/11/why-trailing-slashes-on-uris-are-important/)
 
-Every non-leaf resource should have a trailing slash, because when you're at `/parent`, going to a relative link `child` will lead you to `child`, but `/parent/child` if you're at `/parent/`.
+Every non-leaf resource should have a trailing slash, because when you're at `/parent`, going to a relative link `child` will lead you to `/child`, but `/parent/child` if you're at `/parent/`.
 
 ## Status Codes
 

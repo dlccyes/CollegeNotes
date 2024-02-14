@@ -109,7 +109,7 @@ call plug#end()
 Run this in terminal to install the plugins you specified in `~/.vimrc`
 
 ```
-vim +PlugInstall
+:PlugInstall
 ```
 
 ## keyboard shortcuts

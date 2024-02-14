@@ -194,14 +194,7 @@
       "key": "Tab"
     }
   ],
-  "file-explorer:new-file": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "N"
-    }
-  ],
+  "file-explorer:new-file": [],
   "app:go-back": [
     {
       "modifiers": [
@@ -226,5 +219,13 @@
       "key": "P"
     }
   ],
-  "templater-obsidian:create-new-note-from-template": []
+  "templater-obsidian:create-new-note-from-template": [],
+  "obsidian-rapid-notes:new-prefixed-note-new-tab": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "N"
+    }
+  ]
 }

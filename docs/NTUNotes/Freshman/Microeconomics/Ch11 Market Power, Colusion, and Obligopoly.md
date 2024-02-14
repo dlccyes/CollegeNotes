@@ -46,13 +46,13 @@ P=MC=AC
 
 ### Cournot model
 
-[Cournot Model](../../../obs_autolink/Cournot%20Model)
+[[Cournot Model]]
 ==assumption: the rival has fixed quantity== i.e. take rivals' output as given
 ![[ch11-market-power,-colusion,-and-obligopoly-8.png]]
 
 ### Bertrand model
 
-[Bertrand Model](../../../obs_autolink/Bertrand%20Model)
+[[Bertrand Model]]
 
 ==assumption: the rival has fixed price== i.e. take rivals' price as given, and assume the rival won't change it → will undercut its price as long as > MC s.t. it can capture the entire market → repeatedly undercut each's price → ==price = MC = competition price==
 
