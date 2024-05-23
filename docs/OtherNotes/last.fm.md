@@ -7,7 +7,9 @@ parent: Miscellaneous
 
 ## Last.fm stats websites
 
-- [ChartMyMusic](https://www.chartmymusic.com/lastfm/rainbowcollage/)
+- [Last.fm Labs](https://www.last.fm/labs)
+    - [Artist Velocity](https://www.last.fm/labs/artist-velocity)
+- [ChartMyMusic](https://www.chartmymusic.com/lastfm/ra inbowcollage/)
 	- beautiful collage SORT BY COLOR!!
 - [http://www.lastchart.com.s3-website-us-east-1.amazonaws.com](http://www.lastchart.com.s3-website-us-east-1.amazonaws.com/) 
 	- all kinds of charts of your artists 

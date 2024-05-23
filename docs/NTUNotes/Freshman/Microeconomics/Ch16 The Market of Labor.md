@@ -35,12 +35,12 @@ at some point, L 下降到 0，表此人不再為"工資"而工作（可為其�
 ### Changes in Productivity
 
 若 individual$MP_L$ 上升  
-→ MRP~L~ 上升 → demand 上升  
+→ $\text{MRP}_L$ 上升 → demand 上升  
 → wage 上升 & quantity of labor supply 上升
 
 ![image-20200611130954524](https://i.loli.net/2020/06/11/OdCGHXYI1sAWgyw.png)
 
-但若是整個 market 的 MRP~L~ 上升  
+但若是整個 market 的 $\text{MRP}_L$ 上升  
 → 資產價值上升（因為資產跟人的價值有關） → labor's nonlabor income 上升  
 → individual supply curve 左移 → market supply curve 左移  
 → wage 上升但 quantity of labor supply 不一定  
@@ -57,7 +57,7 @@ at some point, L 下降到 0，表此人不再為"工資"而工作（可為其�
 
 ![image-20200611132159886](https://i.loli.net/2020/06/11/bnFVYmNG7E69MAJ.png)
 
-a tempororay increase in productivity has much higher effect then a permanent one
+a temporary increase in productivity has much higher effect then a permanent one
 
 ### Unemployment
 
@@ -100,12 +100,12 @@ while ppl with high wages experience great [[income effect]]
 → 上圖
 見 HW P9.
 
-實例：
-US implement medical insurance
-→ 醫療變便宜
-→ 醫療 demand 增加
-→ nurse demand 增加
-→ wage of nurse 增加
+實例： 
+US implement medical insurance  
+→ 醫療變便宜  
+→ 醫療 demand 增加  
+→ nurse demand 增加  
+→ wage of nurse 增加  
 → avg nurse's working hours 減少
 
 BUTT, 更多 nurse 進入市場 due to wage of nurse rise  
@@ -129,7 +129,7 @@ BUTT, 更多 nurse 進入市場 due to wage of nurse rise
 投資自己  
 如進修 → 增加自己的 human capital
 
-### $MP_L$ and capital goods
+### $MP_L$ and capital gooㄕㄨㄕㄨds
 
 #### labor move
 

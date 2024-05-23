@@ -28,6 +28,8 @@ import <absolute path to package>.<filename>
 
 ## Gradle
 
+Gradle is a dependency manager for Java.
+
 ### install
 
 ```
@@ -85,4 +87,42 @@ To run your file
 
 ```
 java -jar build/libs/<project name>.jar
+```
+
+## Java Version Manager - SDKMAN
+
+### install
+
+<https://github.com/sdkman/homebrew-tap>
+
+```
+brew tap sdkman/tap
+brew install sdkman-cli
+```
+
+add below to `~/.zshrc` (if you use zsh)
+
+```
+export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
+```
+
+### install java versions
+
+See list of java versions
+
+```
+sdk list java
+```
+
+Install a version
+
+```
+sdk install java <identifier>
+```
+
+See current version
+
+```
+sdk current
 ```

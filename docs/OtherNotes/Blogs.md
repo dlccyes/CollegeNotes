@@ -15,5 +15,14 @@ Some cool blogs.
 	- cool [widget](https://github.com/dsrkafuu/sakana-widget)
 - <https://seankhliao.com/>
 
+
 Don't forget to check out mine  
 <https://blog.derricklin.net>
+
+## Tech Blogs and Newsletters
+
+- Techmemes
+- The Pragmatic Engineer
+- [The Developing Dev](https://www.developing.dev/)
+
+

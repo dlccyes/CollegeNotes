@@ -1,8 +1,3 @@
----
-title: Computer Architecture
-layout: meth
-has_children: true
----
 # Computer Architecture
 
 ## resources
@@ -55,6 +50,7 @@ has_children: true
 		- different complexity between instructions
 
 ## Ch2 Instructions
+
 - instruction set
 	- e.g. x86, ARM, RISC-V
 

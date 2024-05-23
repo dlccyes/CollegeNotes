@@ -94,7 +94,7 @@ estimate missing values form other samples in the branch
 - binary linear classifier (-1 & 1)
 - create a linear line as a boundary between two classes
 
-![[Pasted image 20240127171313.png]]
+![[Pasted image 20240127171313.jpg]]
 
 #### hinge loss
 
@@ -163,7 +163,7 @@ $$\hat{\beta}=\left[\dfrac{1}{N}\left(\mathcal{X}^T\mathcal{X}+\lambda \mathcal{
 - use $L_1$ norm $||\beta||_1=\sum_k|\beta_k|$
 - stochastic descent not suitable
 - higher $\lambda$ -> less explanatory variables -> less degree of freedom
-- ![[Pasted image 20240204191531.png]]
+- ![[Pasted image 20240204191531.jpg]]
 - tends to remove correlated explanatory variables, leaving only one left, but this may result in worse results
 
 #### elastic net
@@ -171,3 +171,11 @@ $$\hat{\beta}=\left[\dfrac{1}{N}\left(\mathcal{X}^T\mathcal{X}+\lambda \mathcal{
 - Ridge + Lasso
 - weighted regularization with $L_1$ and $L_2$
 - will keep some correlated explanatory variables 
+
+## High Dimensional Data
+
+
+### Principal Component Analysis
+
+- transform high-dimensional dataset into low-dimensional representation
+    - for visualizations
