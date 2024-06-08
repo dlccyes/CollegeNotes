@@ -94,6 +94,12 @@ Your tags & categories page will be in `./tags` & `./categories`
 hugo server
 ```
 
+for more reliable results
+
+```
+hugo server --disableFastRender
+```
+
 ### Gen static html pages
 
 ```
@@ -167,9 +173,11 @@ Lookup order: `layouts/` -> `themes/<your_theme>/layouts`
 {{ end }}
 ```
 
-## Variables
+## Page Parameters
 
 access with `.<variable name>`
+
+See <https://gohugo.io/methods/page/>.
 
 ### Title
 
@@ -280,3 +288,60 @@ Relevant discussions:
 - <https://discourse.gohugo.io/t/image-path/1721>
 - <https://github.com/gohugoio/hugo/issues/1240>
 - <https://discourse.gohugo.io/t/page-bundle-relative-image-path-in-rss-feed-wrong/>
+
+### Multilanguage Problem
+
+The above solution only works before Hugo v0.123.0, see <https://gohugo.io/content-management/page-resources/#multilingual>. After v0.123.0, you need to add this to `config.toml`
+
+```toml
+[markup]
+[markup.goldmark]
+duplicateResourceFiles = true # maintain pre-0.123.0 page bundle image behavior
+```
+
+
+
+```text
+content/
+└── my-bundle/
+    ├── a.jpg     <-- shared page resource
+    ├── b.jpg     <-- shared page resource
+    ├── c.zh.jpg
+    ├── index.md
+    └── index.zh.md
+```
+
+With v0.122.0 and earlier, Hugo duplicated the shared page resources, creating copies for each language, which is what makes our solution work
+
+```text
+public/
+├── my-bundle/
+│   ├── a.jpg     <-- shared page resource
+│   ├── b.jpg     <-- shared page resource
+│   └── index.html
+├── zh/
+│   ├── my-bundle/
+│   │   ├── a.jpg     <-- shared page resource (duplicate)
+│   │   ├── b.jpg     <-- shared page resource (duplicate)
+│   │   ├── c.zh.jpg
+│   │   └── index.html
+│   └── index.html
+└── index.html
+```
+
+With v0.123.0 and later, Hugo places the shared resources in the page bundle for the default content language:
+
+```text
+public/
+├── my-bundle/
+│   ├── a.jpg     <-- shared page resource
+│   ├── b.jpg     <-- shared page resource
+│   └── index.html
+├── zh/
+│   ├── my-bundle/
+│   │   ├── c.zh.jpg
+│   │   └── index.html
+│   └── index.html
+└── index.html
+```
+

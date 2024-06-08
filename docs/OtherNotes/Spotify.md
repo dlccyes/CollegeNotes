@@ -7,8 +7,11 @@ parent: OtherNotes
 
 ## Spotify stats
 
-- <https://playlastify.herokuapp.com/> 👍
-	- mine
+- <https://songstats.com/> 👍
+    - See artist stats
+        - montly listeners / followers over time
+- <https://playlastify.web.app/> 👍
+	- See your playlist's stats, with [[last.fm]] integration
 - [Spotify Statistics](https://spotifystatistics.com/)
 - [Obscurify](https://obscurifymusic.com/) 
 - <https://favoritemusic.guru/>

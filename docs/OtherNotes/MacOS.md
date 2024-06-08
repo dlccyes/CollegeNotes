@@ -455,3 +455,6 @@ rm -r ~/.docker
 
 <https://github.com/docker/for-mac/issues/6572#issuecomment-1317344599>
 
+### "App" cannot be opened because the developer cannot be verified.**
+
+Control + click the app in finder -> open (1st attempt may fail)

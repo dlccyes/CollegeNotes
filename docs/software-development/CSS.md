@@ -22,11 +22,14 @@ head elements can also has class or id
 <https://developer.mozilla.org/en-US/docs/Web/CSS/:not>
 
 ## responsive
+
 use 
-```
+
+```css
 @media (max-width){
 }
 ```
+
 to write css for different width
 
 add

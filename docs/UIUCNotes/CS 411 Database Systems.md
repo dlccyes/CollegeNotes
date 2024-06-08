@@ -64,7 +64,21 @@ Unified Modeling Language
 ![[Pasted image 20240510162930.png]]
 
 - 0..1 = 0 to 1
-- 0..* = any nuber
+- 0..* = any number
+
+means 
+
+- "Studios" is associated with 0 or more "Movies"
+- "Movies" is associated with 0 or 1 "Studios"
+- "Movies" is associated with 0 or more "Stars"
+- "Stars" is associated with 0 or more "Movies"
+
+![[Pasted image 20240607175209.png]]
+
+![[Pasted image 20240607175226.png]]
+
+![[Pasted image 20240607180914.png]]
+
 
 ## Physical Models
 
@@ -185,8 +199,197 @@ new reqs due to new settings
 - not necessarily have schemas (schema-on-read)
     - can enforce schemas or validation rules if you want 
 
+![[Pasted image 20240528005712.jpg]]
 
+## Computing on Data
 
+### Data Computing Frameworks
 
+- relational data
+    - relational algebra
+        - -> SQL
+    - Datalog
+- graph data
+    - a bunch of graph algos
+- key-value data
+    - MapReduce
 
+### Relational Algebra
+
+- relations -> new relation
+- basic operators
+    - reduction
+        - selection $\sigma$: reduce rows
+        - projection $\pi$: reduce columns
+    - combination
+        - set operations
+            - e.g. union $\cup$, difference $-$
+        - cartesian product $\times$
+            - each record of the new table = a record of one table + a record of another table
+            - 5-row 2-col table $\times$ 6-row 3-rol table -> 30-row 5-col new table
+    - renaming $\rho$
+- cartesian product of tables -> reduce -> get useful data
+- derived operators
+    - theta join $\bowtie_\theta$ -> cartesian product filtered by $\theta$ (selection)
+        - $\theta$ is a condition
+    - natural join $\bowtie$
+        - combining rows of 2 tables with matching common attribute
+        - e.g. a regular SQL join on same id
+
+### MapReduce
+
+- created at Google in 2004
+- Apache Hadoop
+- inspired by map & reduce in functional programming
+- map M: apply function to each element of the input list
+- group G: group into (key, a list of the values of the key)
+- reduce R: apply function to the key-value pair
+- e.g. word cloud
+    - M(k, v): for each word w in v -> (w, 1)
+    - R(k, values) -> (k, sum(values))
+
+![[Pasted image 20240528005532.jpg]]
+
+## Designing Schemas
+
+- to resolve redundancy, use regularized form
+
+### Functional Dependencies
+
+- constraints of the fields of a schema
+- A functionally determines B: $A_1, ..., A_m \rightarrow B_1, ..., B_m$ similar to $f(A)=B$
+- means the many-to-one mapping similar to a function, not that B can be computed from A
+- depends on the domain knowledge
+- e.g. 
+    - id -> birthday
+    - id, course -> grade
+
+### Keys
+
+- key = a minimal set of attributes that uniquely determine all attributes
+- superkey = a superset of a key
+    - e.g. {SSN} is a key while {SSN, BOD} is a superkey
+
+### Rules
+
+**Basic Rules: Armstrong's Axioms**
+
+$A\rightarrow B$ = A functionally determines B
+
+- reflexivity rule: if $B\subseteq A$, then $A\rightarrow B$
+    - e.g. id, name -> name
+- augmentation rule: if $A\rightarrow B$, then $AC\rightarrow BC$
+    - e.g. id -> major; id, name -> major, name
+- transitivity rule: if $A\rightarrow B$ and $B \rightarrow C$, then $A\rightarrow C$
+
+**Derived Rules**
+
+- splitting rule: if $A\rightarrow BC$, then $A\rightarrow B$ and $B \rightarrow C$
+    - pf
+        - given $A\rightarrow BC$
+        - $BC \rightarrow B$ by reflexivity
+        - $A \rightarrow B$ by transitivity
+        - similarly $A \rightarrow C$ by transitivity
+    - e.g. id -> name, major; id -> name && id -> major 
+- combining rule: if $A\rightarrow B$ and $A\rightarrow C$, then $A \rightarrow BC$
+    - pf
+        - given $A\rightarrow B$ and $A\rightarrow C$
+        - $A \rightarrow AB$ and $AB \rightarrow BC$ by augmentation
+        - $A \rightarrow BC$ by transitivity
+    - e.g. id -> name && id -> major; id -> name, major
+
+![[Pasted image 20240531141320.jpg]]
+
+to prove drinker, bar -> price
+
+- drinker, bar -> bar by reflexivity
+- drinker, bar -> bar, beer by combination
+- drinker, bar -> price by transitivity
+
+### Attributes Closure
+
+- the closure of a set of attributes = the set of attributes it can functionally determine, denoted by $^+$
+- $\{A_1, ..., A_n\}^+=\{B_1, ..., B_n\}$ denotes the closure of A is B
+
+![[Pasted image 20240531143704.jpg]]
+
+### Normal Forms
+
+- desired properties
+    - minimize redundancy
+    - avoid info loss
+    - preserve dependency
+    - ensure good query performance
+- 1NF First Normal Form
+    - each attribute contains only atomic values (simple values, not list, set, etc.)C
+
+### BCNF Boyce-Codd Normal Form
+
+- Codd invented the relational model
+    - start of declarative data management (as opposed to procedural)
+- bad FD: $A\rightarrow B$ in relation R but A isn't a superkey
+    - e.g. id determines birthday but not course taken
+- a relation R is in BCNF $\iff$ whenever there's a nontrivial FS for R, $A\rightarrow B$, A is a superkey for R
+    - $A\rightarrow B$ is trivial if $B\subseteq A$
+    - i.e. if an attribute determines something in a row then it determines everything in the row
+    - i.e. no bad FDs
+
+![[Pasted image 20240603125655.jpg]]
+
+- BCNF Decomposition
+    - convert a relation not satisfying BCNF to one that does
+    - algo $BCNF(R, F)$
+        1. if exists a bad FD $A\rightarrow B$ in $F$ (FDs of relation $R(A, B, C)$)
+            1. decompose $R(A, B, C)$ into $R_1(A, B)$ and $R_2(A, C)$
+            2. compute FDs for $R_1$ and $R_2$ as $F_1$ and $F_2$
+            3. return $BCNF(R_1, F_1)\cup BCNF(R_2, F_2)$ 
+        2. else return $R$
+    - ![[Pasted image 20240603131116.jpg]]
+        - no FDs in $R_2$ -> no bad BDs -> $R_2$ is in BCNF
+
+![[Pasted image 20240604003215.jpg]]
+
+### Lossless Decomposition
+
+- decomposition may be lossy
+    - ![[Pasted image 20240603201109.jpg]]
+        - decompose -> natural join -> got extra tuples, meaning some info was lossed during decomposition
+- BCNF is a lossless decomposition
+    - if we decompose $R(A, B, C)$ into $R_1(A,B)$ and $R_2(A,C)$ due to $A\rightarrow B$, then $R=R_1\bowtie R_2$
+    - ![[Pasted image 20240603201312.jpg]]
+
+### Dependency-Preserving Decomposition
+
+- a decomposition is dependency-preserving if after the decomposition all the FDs can still be found (directly checked or implied) 
+- BCNF may not preserve dependency
+- ![[Pasted image 20240603230114.jpg]]
+- ![[Pasted image 20240604002601.png]]
+
+### 3NF 3rd Normal Form
+
+- lossless decomposition (like BCNF)
+- dependency-preserving decomposition (unlike BCNF)
+- a relation $R$ is in 3NF $\iff$ for each nontrivial FD $A\rightarrow B$ in $R$, either:
+    - $A$ is a superkey for $R$ (same as the BCNF condition)
+    - $B$ is a prime attribute (a member of a key) for $R$
+        - s.t. a key won't be splitted 
+
+![[Pasted image 20240603231425.jpg]]
+
+### Multivalued Dependencies
+
+- dependencies other than FDs
+    - multivalued dependencies (MVD)
+    - inclusion dependencies (IND)
+    - join dependencies (JD)
+- MVD Multivalued Dependencies  $A\twoheadrightarrow B$
+    - like FD but $B$ is a set of values instead of a unique value
+    - FD is a special case of MVD
+    - e.g. Rajesh's majors are {EE, Econ}
+    - ![[Pasted image 20240603234256.jpg]]
+    - use 4NF to reduce tables with MVDs
+
+![[Pasted image 20240604002313.png]]
+
+![[Pasted image 20240604002537.png]]
 

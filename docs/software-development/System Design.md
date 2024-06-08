@@ -9,7 +9,7 @@ parent: Software Development
 
 - DDIA (2017)
 	- [DDIA pdf | github](https://github.com/jeffrey-xiao/papers/blob/master/textbooks/designing-data-intensive-applications.pdf)
-	- 簡中譯 <https://github.com/Vonng/ddia>
+	- [DDIA pdf | libgen](http://library.lol/main/FB796AE8FD912C78AA1A34870ACA6BE8)
 - Grokking the system design interview
 	- [pdf | github](https://raw.githubusercontent.com/sharanyaa/grok_sdi_educative/master/grok_system_design_interview.pdf)
 	- [pdf | libgen](http://libgen.rs/book/index.php?md5=3CC8A0D02BBB0644A3839F6B621BB86B)
