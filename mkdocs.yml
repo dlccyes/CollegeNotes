@@ -230,3 +230,6 @@ extra:
       link: https://www.linkedin.com/in/derrick-lin
     - icon: fontawesome/brands/github
       link: https://github.com/dlccyes
+  analytics: # Google Analytics
+    provider: google
+    property: G-GC9K2DFK9F
