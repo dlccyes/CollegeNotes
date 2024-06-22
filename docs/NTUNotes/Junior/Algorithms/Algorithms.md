@@ -7,15 +7,6 @@ layout: meth
  
 # Algorithms
 
-<details open markdown="block">
-  <summary>
-    Outline
-  </summary>
-
-- TOC
-{:toc}
-</details>
-
 ## resources
 
 Solutions to Introduction to Algorithms Third Edition

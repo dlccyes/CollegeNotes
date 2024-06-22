@@ -5,6 +5,11 @@ parent: Software Development
 
 # System Design
 
+## Tools
+
+- Draw charts: [Miro](https://miro.com/)
+- Draw relational schemas: [Draw.sql](https://drawsql.app/)
+
 ## Resources
 
 - DDIA (2017)

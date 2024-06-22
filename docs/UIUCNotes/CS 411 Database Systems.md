@@ -16,7 +16,8 @@ Corresponds well to relational model.
 ### attributes
 
 - represented by ovals
-- each entity may have a few attributes
+- an entity has one or more attributes
+- a relationship has zero ore more attributes
 
 ### relationships
 
@@ -392,4 +393,120 @@ to prove drinker, bar -> price
 ![[Pasted image 20240604002313.png]]
 
 ![[Pasted image 20240604002537.png]]
+
+## SQL Queries
+
+### SQL Basics
+
+- created at IBM in 1970s
+- standardized in 1986
+- vendors support various subsets of it
+- high-level declarative language
+    - let the system optimize itself
+- basic form: SELECT ... FROM ... WHERE
+    - ![[Pasted image 20240609161004.jpg]]
+- closure property: input: one or more relations; output: a relation
+    - -> can use it in query directly
+- FROM
+    - cartesian product
+    - tuple variable: alias
+        - e.g. FROM Favorites F
+- WHERE
+    - LIKE
+        - e.g. LIKE '%GREEN%'
+    - return the TRUE (not (FALSE or UNKNOWN)) records
+- NULL
+    - missing value or inapplicable
+    - when compared it with a real value it returns UNKNOWN
+- 3-Valued Logic: TRUE/FALSE/UNKNOWN
+    - UNKNOWN AND TRUE = UNKNOWN
+    - UNKNOWN AND FALSE = FALSE
+    - UNKNOWN OR TRUE = TRUE
+    - UNKNOWN OR FALSE = UNKNOWN
+    - ![[Pasted image 20240609162743.png]]
+- subquery: nested query, query inside a query
+
+### SQL Aggregation
+
+- FROM-WHERE: generate tuples
+    - use attributes of tuples
+- GROUP-BY: orgnize groups
+    - use attributes of tuples
+    - optional
+- Functions: aggregate each group
+    - `f(attributes)` e.g. `SUM()`, `AVG()`, `COUNT()`, `MIN()`, `MAX()`
+    - `f(tuples)` e.g. `COUNT()`
+    - doesn't consider Null values
+    - if only null values, output Null or 0 (for count)
+    - `DISTINCT` eliminates duplicates before aggregation 
+        - e.g. `SELECT COUNT(DISTINCT price)`
+- HAVING: filter groups
+    - use attributes of groups
+- SELECT attributes to output
+    - use attributes of groups
+
+![[Pasted image 20240611213033.jpg]]
+
+![[Pasted image 20240611214654.png]]
+
+![[Pasted image 20240611214700.png]]
+
+![[Pasted image 20240611214855.png]]
+
+![[Pasted image 20240611214955.jpg]]
+
+![[Pasted image 20240611215608.png]]
+
+![[Pasted image 20240611215657.png]]
+
+## MongoDB Queries
+
+### lookup
+
+like left join in sql
+
+![[Pasted image 20240616174922.jpg]]
+
+## Neo4j Queries
+
+- basic queries
+    - MATCH
+        - like FROM in sql
+        - specify a pattern for graph traversal
+        - `MATCH (:Drinker)-[drinks:Drinks]->(beer:Beer)`
+            - `drinker` & `beer` are the variables
+    - WHERE
+        - like WHERE in sql
+    - RETURN
+        - like SELECT in sql 
+- a table of an entity in sql -> a node
+- a table of a relationship -> a relationship
+    - ![[Pasted image 20240622141159.jpg]]
+- field of a table -> property of a node/relationship
+    - ![[Pasted image 20240622142852.jpg]]
+- sql join -> traverse pattern
+    - ![[Pasted image 20240622143105.jpg]]
+-  aggregate
+    - no separate GROUP BY clause 
+        - SELECT $A_1, ..., A_n, F_1, ..., F_m$ GROUP BY $A_1, ..., A_n$ in sql -> RETURN $A_1, ..., A_n, F_1, ..., F_m$
+        - or use WITH
+    - no separate HAVING clause
+    - collect & unwind
+        - opposite
+- chaining 
+    - like in sql
+    - ![[cs411-chaining.jpg]]
+
+
+![[Pasted image 20240622152518.png]]
+
+![[Pasted image 20240622152531.png]]
+
+![[Pasted image 20240622152541.png]]
+
+![[Pasted image 20240622152600.png]]
+
+![[Pasted image 20240622152611.png]]
+
+![[Pasted image 20240622152858.jpg]]
 

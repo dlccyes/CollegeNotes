@@ -1152,7 +1152,17 @@ Floating points can only be approximated due to the binary nature of machines, s
 ### /usr/bin/env: ‘python’: No such file or directory
 
 Assuming you have python3 installed, do
+
 ```
 sudo ln -s /usr/bin/python3 /usr/bin/python
 ```
+
 <https://askubuntu.com/a/1235537>
+
+### pip install `error: externally-managed-environment`
+
+```
+python3 -m pip config set global.break-system-packages true
+```
+
+<https://stackoverflow.com/a/75722775>

@@ -229,3 +229,9 @@ $('#night-btn').mouseup(function(e){
 	onmousemove = function(){};
 });
 ```
+
+## Fuzzy Sort Libraries
+
+- [[FuseJS]]
+- [[LunrJs]]
+
