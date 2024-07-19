@@ -95,3 +95,9 @@ ALTER TABLE table_name MODIFY COLUMN column_name ENUM('striker', 'center back');
 Try downgrading
 
 See <https://developer.apple.com/forums/thread/724378>
+
+### Failed to open file error: 2
+
+If you use `source path/to/file.sql` please do not enclose the file name with `"`
+
+[ref](https://stackoverflow.com/a/21508631)

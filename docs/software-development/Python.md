@@ -71,6 +71,7 @@ pip3 install -r requirements.txt
 ```
 
 ## venv (virtual environment)
+
 create
 ```
 python3 -m venv venv
@@ -78,13 +79,22 @@ python3 -m venv venv
 ```
 
 go into
+
 ```
 source venv/bin/activate
 ```
 
 leave
+
 ```
 deactivate
+```
+
+To rebuild, just remove (or rename) it and then rererun.
+
+```
+rm -r venv
+python3 -m venv venv
 ```
 
 ## pyenv

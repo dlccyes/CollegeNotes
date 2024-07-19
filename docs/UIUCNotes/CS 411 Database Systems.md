@@ -467,7 +467,7 @@ like left join in sql
 
 ![[Pasted image 20240616174922.jpg]]
 
-## Neo4j Queries
+## Neo4j Cypher Queries
 
 - basic queries
     - MATCH
@@ -509,4 +509,127 @@ like left join in sql
 ![[Pasted image 20240622152611.png]]
 
 ![[Pasted image 20240622152858.jpg]]
+
+## Database Manipulation
+
+- manipulation by purposes
+    - organizing
+        - create/delete database/schema/table
+    - modifying
+        - insert/delete/update tuples to a table
+    - agumenting
+        - create indexes and views
+    - regulating
+        - create constraints
+- tools
+    - system
+        - console
+        - client
+    - language
+
+### Organizing
+
+- Database -> (Schema ->) Table
+    - some Database -> Schema -> Table
+        - e.g. Oracle, [[PostgreSQL]]
+    - some Database -> Table
+        - e.g. [[MySQL]]
+
+### Augmenting - Views
+
+View = a virtual table created using a query i.e. saved query result
+
+```sql
+CREATE VIEW <name> AS <query>;
+```
+
+It's just a virtual table so you can't do updates/inserts directly on it but via the underlying table(s). Therefor, for a view to be updateable, it needs to have sufficient attributes from the base table
+
+- join multiple tables -> not updateable
+- too few attributes -> not updateable
+
+### Regulation
+
+-  Key Constraints
+    - primary key
+    - unique key
+    - foreign key
+        - can declare action
+            - e.g. on delete cascade, on update set null
+        - if no declaration then reject
+        - ![[cs411-fk-example.png]]
+- General Constraints - checks & assertions
+    - checks
+        - attribute-based
+        - tuple-based
+        - during insertion/update
+    - assertions
+        - database-based i.e. a check over the table
+        - during insertion/update
+    - not uniformy supported in RDBMS
+        - [[MySQL]] doesn't support checks & assertions
+        - [[PostgreSQL]] support checks without subqueries but not assertions
+        - no major RDBMS supports assertions
+- triggers
+    - limitations of checks & assertions
+        - timing: do checks on each insertion/update -> expensive
+        - flexibility: checks are limited to attributes or tuple-based constraints
+        - handling: can't control what to do when voilated
+    - event-condition-action
+        - event: timing
+            - e.g. insert on Sells
+        - condition: flexibility
+            - any sql boolean-valued expression
+        - action: handling
+            - any sql statement
+    - widely implemented
+        - functionality & syntax may not be uniform
+    - ![[sql-trigger.jpg]]
+    - ![[sql-trigger-2.jpg]]
+
+## Accessing & Indexing Data
+
+![[cs411-query-to-data.jpg]]
+
+- main memory (volatile)
+    - query parser
+    - query optimizer
+    - query processor
+    - indexes
+- disk
+    - buffer manager
+    - storage manager
+    - storage
+
+### indexing data
+
+- provide a map for locating data
+    - s.t. don't need to scan the whole db for a small fraction of the data
+- type
+    - dense index
+        - pointer to every key 
+    - others: to every block etc.
+
+### accessing data
+
+- data is big, cannot be fit into main memory
+
+![[cs411-memory-hierarchy.png]]
+
+See [[Operating Systems#paging]]
+
+
+### ISAM
+
+- Indexed Sequential Access Method
+- kind of like a segment tree (but not really)
+- each node has $F$ values providing $F+1$ segments/pointers for $F+1$ children
+- static tree structure: insertion/deletion only affect the leaf nodes, so the num of levels before a leaf node never changes
+- ![[cs411-isam-tree-sample.jpg]]
+- search cost: num of hops to reach a leaf = tree height $h=log_FN$
+    - num of random accesses / disk pointers
+    - $F$ fanout = num of children for each node
+- each leaf node/page only has $F$ values, so when inserting a value within the range of a leaf node then we add an overflow page underneath (kind of like how hash tables work)
+    - ![[cs411-isam-insert-65.png]]
+    - ![[cs411-isam-insert-72.png]]
 
