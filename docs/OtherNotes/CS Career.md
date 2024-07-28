@@ -141,6 +141,14 @@ layout: meth
 - complex personal projects
 - [[#System Design]]
 
+### Mock Interviews
+
+- [Interviewing.io](https://interviewing.io/)
+    - $225 per interview with pro
+    - free with peer
+- [IGotAnOffer](https://igotanoffer.com/)
+    - $100-$150 per interview with pro
+
 ### LeetCode
 
 - [Blind 75](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU)

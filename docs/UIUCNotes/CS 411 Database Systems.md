@@ -632,4 +632,108 @@ See [[Operating Systems#paging]]
 - each leaf node/page only has $F$ values, so when inserting a value within the range of a leaf node then we add an overflow page underneath (kind of like how hash tables work)
     - ![[cs411-isam-insert-65.png]]
     - ![[cs411-isam-insert-72.png]]
+- cons
+    - can become uneven
+        - long & short paths in different parts of the tree
+        - making search time unpredictable
+    - nodes can become full or empty
+        - full -> insertion requires overflow
+        - empty -> waste disk storage space
 
+### B\+ Tree
+
+- B Tree
+    - self-balancing for indexing dymanic data
+        - uniform accesses in $O(log(n))$
+    - optimized for block-oriented access 
+        - external memory
+- B+ tree: small enhancedment of B Tree
+
+![[cs411-bplus-isam.png]]
+
+#### Structure
+
+- $d$ degree
+- each node has $n$ keys & $n+1$ pointers
+    - max $n=2d$
+    - min $n\approx d$ = 50% of the max
+        - leaf node $n=\lceil d \rceil$
+        - internal node $n=\lfloor d \rfloor$
+- each node is a block
+- max $d=170$
+    - assuming
+        - key size 4 bytes
+        - pointer size 8 bytes
+        - block size 4096 bytes
+    - $4n+8(n+1)=12n+8<=4096$
+    - $n<=340$
+    - max $d$ = $0.5n=170$ 
+    - max fanout $F=n+1=341$ 
+- typical $d=100$
+    - typical fill-factor $67\%$
+    - average fanout $F=(2d+1)\times 67\%=133$
+    - ![[cs411-bplushierarchy.png]]
+    - top few levels can be stored in memory
+        - ![[cs411-bplus-top-level-memory.png]]
+
+#### Lookup
+
+- `WHERE grade > 80` 
+    - ![[cs411-bplus-over80.png]]
+    - locate key -> sequentially traverse through next-leaf pointers
+- ![[cs-411-bplus-search.png]]
+
+#### Maintenance
+
+- perform local changes when a node becomes too full or empty
+    - involves only siblings
+    - solutions not unique
+    - make sure
+        - node capacity in 50% ~ 100% (except root)
+        - every node has $n+1$ pointers if has $n$ keys
+        - each key = min of key of the right-pointer subtree
+        - each key > any key in the left-pointer subtree
+    - may trigger more local changes recursively upstream i.e. propagate up
+
+#### Insertion
+
+example
+
+1. ![[cs411-insertion-0.png]]
+2. insert 98, but leaf full -> split
+3. ![[cs411-insertion-1.png]]
+4. insert 75, but leaf full, and parent pointers also full -> split leaf & parent
+5. ![[cs411-insertion-2.png]]
+6. insert 72
+7. ![[cs411-insertion-3.png]]
+
+rules
+
+1. insert key to leaf node $N$ with pointer $P$
+2. if node becomes too full, split node $N$ into node $N$ & $N'$ with pointer $P'$
+3. insert $P'$ to parent recursively, or redistribute pointers to neighbors
+4. adjust keys s.t. each key = min of keys of its right-pointer subtree
+5. the tree adds one level if the root splits
+    - new root will have only 1 key (root can have less than $d$ keys)
+
+#### Deletion
+
+rules
+
+1. delete key
+2. if node becomes too empty
+    - redistribute pointers from siblings
+    - merge with sibling
+    - delete pointer from parent recursively
+3. adjust keys s.t. each key = min of keys of its right-pointer subtree
+4. the tree reduces one level if root's only key was deleted
+
+example
+
+1. ![[cs411-bplus-delete-90.png]]
+2. delete 90 -> redistribute
+3. ![[cs411-bplus-delete-90-after.png]]
+4. delete 92 -> get a pointer from left sibling to balance and update root values
+5. ![[cs411-bplus-delete-92-after.png]]
+6. delete 65
+7. ![[cs411-bplus-delete-65-after.png]] 
