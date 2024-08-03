@@ -737,3 +737,84 @@ example
 5. ![[cs411-bplus-delete-92-after.png]]
 6. delete 65
 7. ![[cs411-bplus-delete-65-after.png]] 
+### Static Hash Table
+
+- hash function map key to k-bit code -> $2^k$ buckets
+    - req: uniform distribution of keys
+- bucket $h(K)$ stores pointers for records of key $K$
+    - in external storage
+    - a bucket = a block
+    - use overflow blocks when needed
+- ![[cs411-static-hm.png]]
+- see [[Data Structure#hash]]
+- good for static data
+    - arrange hash functions & bucket sizes s.t. no overflow
+    - very good lookup performance
+- bad for dynamic data
+    - may over allocate for growth leading to low block utilization
+    - lookup performance degrades heavily when too many overflow blocks
+
+### Dynamic Hash Table
+
+ - allocate codes to buckets dynamically, depending on how many buckets needed
+ - allocate a lot of bits but only use a number of bits, depending on the need
+ - ![[cs411-dynamic-hash-buckets.jpg]]
+     - bucket number changes dynamically
+ 
+#### extensive hash table
+
+ - order bucket by $i$ MSB (most significant $i$ bits)
+     - the most significant $i$ bits across all the codes in each bucket are the same
+     - num of buckets $n=2^i$
+ - ![[cs411-extensivehash.jpg]]
+ - can merge buckets sharing MSB i.e. neighboring buckets
+ - store $i$ value in the nub for each bucket
+     - ![[cs411-hashnub.png]]
+ - directory: stores pointers for each bucket
+ - insertion
+     - if a bucket using $j<i$ bits is too full, split into 2 buckets using $j+1$ bits and distribute the keys
+         - ![[cs411-xhash-insert-split.png]]
+     - if a bucket using $i$ bits is too full, split into 2 buckets using $i+1$ bits and distribute the keys
+
+#### linear hash table
+ 
+ - order bucket by $i$ LSB (least significant $i$ bits)
+     - the least significant $i$ bits across all the codes in each bucket are the same
+ - ![[cs411-linearhash.jpg]]
+ - can merge buckets sharing LSB i.e. buckets $2^{i-1}$ buckets apart
+ - no directory
+ - has overflow blocks
+ - maintains a max avg bucket capacity $u$
+     - $u$ = num of keys / num of buckets
+ - lookup
+     - get hash code -> find $i$ LSB of the hash codes $m$ -> 
+         - if $m\leq n$ then find the bucket numbered $m$
+         - if $m>n$ then flip the highest bit of $m$ and go to the corresponding bucket
+     - ![[cs411-linearhash-lookup.png]]
+ - insertion
+     - use overflow blocks if necessary
+     - if hash table too full i.e. capacity over defined max $u$, add a new block $n+1$ and redistribute
+     - ![[cs411-linearhash-insertion.png]]
+
+### Different Indexes
+
+- clustered vs. unclustered
+    - clustered index
+        - basically sort
+        - data is sorted according to the index
+        - only one per table
+    - unclustered index
+        - stored separately 
+        - cam have multiple on a table
+- dense vs. sparse
+    - dense index
+        - each record is in the index
+        - unclustered index is always dense
+            - because data isn't sorted from the unclustered index, so need to point to all record to be able to find
+    - sparse index
+        - only some records are in the index
+- primary vs. secondary
+    - primary index
+        - index on primary key
+    - secondary index
+        - all others 

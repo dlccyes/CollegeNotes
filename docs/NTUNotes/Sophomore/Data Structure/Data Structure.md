@@ -421,9 +421,10 @@ Bell (W2)
 - **不會考 deletion**
 
 ## hash
+
 - hash function
-  - h(k) = k%m
-  - 避免是 m≒2^n bc [二進位數]/[2^n] 就是後 n 個 digit 而已
+  - $h(k)=k\%m$
+  - 避免是 m≒2^n bc 二進位數/2^n 就是後 n 個 digit 而已
   - 設 m = 質數
     - 若 k = m 的因數的倍數，則只會用到某幾格
       - e.g. key%3=0，m=18 → 只會用到 6 格

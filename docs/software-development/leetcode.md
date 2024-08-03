@@ -11,6 +11,39 @@ parent: Software Development
 
 So if you want to do for example substring hashing, better maintain the factor in the for loop instead of calling `RADIX**i` each time.
 
+## Python Libaries
+
+### queue
+
+```python
+from collections import deque
+q = deque()
+q.append(1)
+_ = q.popleft()
+```
+
+### priority queue
+
+min heap, to use max heap just store negative
+
+```python
+import heapq
+arr = [[10, "a"], [13, "b"], [2, "c"]]
+hp = heapq.heapify(arr)
+heapq.heappush(pq, [20, "d"])
+_ = heapq.heappop(pq)
+```
+
+### counter hashmap
+
+returns a hashmap of key -> appearance count in an array
+
+```python
+from collections import Counter
+arr = [1,4,2,5,7,4,5,1,1]
+cmap = Counter(arr)
+```
+
 ## Sliding window
 
 <https://leetcode.com/problems/subarrays-with-k-different-integers/discuss/523136/JavaC++Python-Slilegding-Window/556706>
