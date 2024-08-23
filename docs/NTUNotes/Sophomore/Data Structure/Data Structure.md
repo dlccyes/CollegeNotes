@@ -65,6 +65,7 @@ The performance of an algorithm may also depend on the exact values of the data,
 ![[data-structure-5.png]]
 
 ## Analyzing an Algorithm
+
 - Simple statement sequence
   ```python
       Statement_1  # O(1)
@@ -225,6 +226,7 @@ Bell (W2)
 
 ## Tree
 ### Binary Tree
+
 - [Binary Tree](../../obs_autolink/Binary%20Tree)
 - 每個 node 有 0-2 個分支 → binary tree
   - inorder 順序正確(小→大 or 大→小) → binary search tree
@@ -399,8 +401,8 @@ Bell (W2)
 - operation：先做 2-3-4 再轉成 Red-Black
 
 #### AA Tree
-- interactive visualization   
-<https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html>
+- interactive visualization 
+    - <https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html>
 - Red-Black Tree but left-child can't be red
 - ![[data-structure-45.png]]
 - level
@@ -529,6 +531,7 @@ Bell (W2)
   - ![[data-structure-58.png]]
 
 ### comparison
+
 ![[data-structure-59.png]]
 
 ### Fibonocci heap
@@ -603,7 +606,117 @@ Bell (W2)
   - size n 的 Fib heap 之 max degree
   - degree d 的最小 Fib heap
 
-## disjoint sets
+## Disjoint Set
+
+also called Union-Find
+
+<https://leetcode.com/explore/learn/card/graph/618/disjoint-set/3881/>
+
+### Implementation
+
+methods:
+
+- find: find the root of a key
+- union: unite the sets of the 2 keys
+
+implementations:
+
+- quick find: in the array, store each's root node
+    - ![[ds-djs-f.png]]
+    - $O(N)$ find
+    - $O(N)$ union
+- quick union: in the array, store each's parent node
+    - ![[ds-djs-u.png]]
+    - $O(N)$ find
+    - $O(N)$ union
+- union by rank: always move short tree under tall tree when doing union
+    - ![[Pasted image 20240806005352.png]]
+    - $O(\log N)$ find
+    - $O(\log N)$ union
+
+Quick Find:
+
+```python
+class UnionFind:
+    def __init__(self, size):
+        self.root = [i for i in range(size)]
+
+    def find(self, x): # O(1)
+        return self.root[x]
+		
+    def union(self, x, y): # O(N)
+        rootX = self.find(x)
+        rootY = self.find(y)
+        if rootX != rootY:
+            for i in range(len(self.root)):
+                if self.root[i] == rootY:
+                    self.root[i] = rootX
+
+    def connected(self, x, y):
+        return self.find(x) == self.find(y)
+```
+
+Quick Union:
+
+```python
+class UnionFind:
+    def __init__(self, size):
+        self.parent = [i for i in range(size)]
+
+    def find(self, x): # O(N)
+        while x != self.parent[x]:
+            x = self.parent[x]
+        return x
+
+    def find(self, x): # recursive version with path compression
+        if x != self.parent[x]:
+            self.parent[x] = self.find(self.parent[x])
+        return self.parent[x]
+		
+    def union(self, x, y): # O(N)
+        rootX = self.find(x)
+        rootY = self.find(y)
+        if rootX != rootY:
+            self.parent[rootY] = rootX
+
+    def connected(self, x, y):
+        return self.find(x) == self.find(y)
+```
+
+
+
+Union by Rank:
+
+```python
+class UnionFind:
+    def __init__(self, size):
+        self.parent = [i for i in range(size)]
+        self.rank = [1] * size
+
+    def find(self, x):
+        if x == self.parent[x]:
+            return x
+        self.parent[x] = self.find(self.parent[x])
+        return self.parent[x]
+		
+    def union(self, x, y):
+        rootX = self.find(x)
+        rootY = self.find(y)
+        if rootX != rootY:
+            if self.rank[rootX] > self.rank[rootY]:
+                self.parent[rootY] = rootX
+            elif self.rank[rootX] < self.rank[rootY]:
+                self.parent[rootX] = rootY
+            else:
+                self.parent[rootY] = rootX
+                self.rank[rootX] += 1
+
+    def connected(self, x, y):
+        return self.find(x) == self.find(y)
+```
+
+### Introduction
+
 - equivalence relation
   - ![[data-structure-63.png]]
   - 房間是否連通，是 equilavence relation
@@ -649,7 +762,7 @@ Bell (W2)
   - initial rank = 0
   - union 時比 root 的 rank
     - rank 小者接到大者下，大者 root rank 不變
-    - rank 相同 → p[x] = y, r(y) += 1
+    - rank 相同 → `p[x] = y`, `r(y) += 1`
   - 要創造 rank=k+1 的 root，需要 2 個 rank=k 的
   - rank r → 底下 min $2^r$ nodes
     - $rank \leq log_2r$

@@ -4,6 +4,12 @@ parent: Software Development
 ---
 # SQL
 
+## designing schema
+
+- use `CHAR` instead of `VARCHAR` for fixed-length fields
+    - `CHAR` allows fast random access since each string is fixed length
+    - for `VARCHAR`, you must find the end of a string before moving onto the next one
+
 ## if
 
 `IF(clause, yes, no)`

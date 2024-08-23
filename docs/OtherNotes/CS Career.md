@@ -71,21 +71,13 @@ layout: meth
 
 ## Good posts or threads
 
-- the whole process
+- interview preparation & process
 	- [How I landed 18 FAANG+ software engineer offers after not interviewing for 5 years | Medium](https://medium.com/@stevenzhang/how-i-landed-18-faang-software-engineer-offers-after-not-interviewing-for-5-years-fc0dfc957a5d)
-- bonus skills
-	- <https://www.reveddit.com/v/csMajors/comments/qsz0wy/five_programming_skills_to_boost_your_resume_that/>
-		- SQL, Jira (agile), Git, Azure & AWS, Docker
-- preparation
-	- <https://www.teamblind.com/post/LZLoXM7t>
-- applying details
+	- [Cracked 7 Offers. 4 of them are Principal/Staff and 3 Senior. Doubled my TC. (2021) | Blind](https://www.teamblind.com/post/LZLoXM7t)
+	- [5 interviews, 5 offers (2021) | Blind](https://www.teamblind.com/post/5-interviews-5-offers-zvRTcqoP)
 	- [Review of 2022 New Grad Recruiting Process | r/cscq](https://www.reddit.com/r/cscareerquestions/comments/qpxbpg)
-	- [How I got 7 offers. Here's what I learned. | r/cscq](https://www.reddit.com/r/CSCQSimulator/comments/e0mqjs)
-		- original posts is removed
-- negotiation
-	- <https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/>
-		- haven't read
-		- said to be commonly cited
+- TC negotiation
+	- [Ten Rules for Negotiating a Job Offer](https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/)
 - 台灣狀況
 	- <https://forum.gamer.com.tw/C.php?bsn=60076&snA=5444020>
 - resume
@@ -133,7 +125,7 @@ layout: meth
 - <https://resumegenius.com/cover-letter-examples/software-engineer-cover-letter-sample>
 - <https://www.reddit.com/r/cscareerquestions/comments/2afejd>
 
-## Applying preparation
+## Interview preparation
 
 - [Tech Interview Handbook](https://techinterviewhandbook.org/)
 	- author of Blind 75
@@ -168,7 +160,7 @@ layout: meth
 
 ### System Design
 
-[[System Design]]
+See [[System Design]]
 
 ### DevOps
 
@@ -177,7 +169,7 @@ layout: meth
 - question collections
 	- <https://github.com/bregman-arie/devops-exercises>
 	- CICD
-		- <https://www.fullstack.cafe/blog/15-continuous-integration-interview-questions-in-2018>
+		 <https://www.fullstack.cafe/blog/15-continuous-integration-interview-questions-in-2018>
 	- K8s
 		- <https://www.fullstack.cafe/blog/kubernetes-interview-questions>
 

@@ -328,6 +328,7 @@ void insertion_sort(int x[],int length)//define function
 					- $E[X_{ij}] = z_i$ or $z_j$ 為 pivot 的機率
 
 #### Hoarse partition
+
 - 原始提出版本
 - ==很愛考==
 - ![[algorithms-50.png]]
@@ -423,9 +424,11 @@ radix & bucket sort use other sorters to do the actual sorting
 		- when all elements go to 1 bucket → runtime depends on what sorter used → worst case $\in O(n^2)$
 
 ### order statistics
-- ith order statistic = ith smallest element
+
+ith order statistic = ith smallest element
 
 #### selection
+
 - pseudo code
 	- ![[algorithms-71.png]]
 		- q = random 找的這個 element 排序後排在的位置
@@ -549,6 +552,7 @@ radix & bucket sort use other sorters to do the actual sorting
 	- ![[algorithms-97.png]]
 
 ### longest common subsequence
+
 - ![[algorithms-98.png]]
 - table
 	- c[i,j] 表 X[1:i] & Y[1:j] 的 LCS 長度
@@ -559,6 +563,7 @@ radix & bucket sort use other sorters to do the actual sorting
 	- ![[algorithms-100.png]]
 
 ### optimal [[Binary Tree]]
+
 - binary tree with minimum expeceted search cost
 - table
 	- p[i] probability
@@ -732,6 +737,7 @@ exchange → 數量一樣
 			- 沒有 ancestor or descendant 關係 → 無法判斷是否為旁系
 
 ### DAG
+
 - directed acyclic graphs, directed graphs without cycles
 - undirected graph without cycle → tree / forest
 - topological ordering

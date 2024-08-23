@@ -647,6 +647,7 @@ See [[Operating Systems#paging]]
         - uniform accesses in $O(log(n))$
     - optimized for block-oriented access 
         - external memory
+    - <https://kubokovac.eu/gnarley-trees/Btree.html>
 - B+ tree: small enhancedment of B Tree
 
 ![[cs411-bplus-isam.png]]
@@ -742,7 +743,7 @@ example
 - hash function map key to k-bit code -> $2^k$ buckets
     - req: uniform distribution of keys
 - bucket $h(K)$ stores pointers for records of key $K$
-    - in external storage
+    - in external storagex
     - a bucket = a block
     - use overflow blocks when needed
 - ![[cs411-static-hm.png]]

@@ -11,6 +11,23 @@ parent: Software Development
 
 So if you want to do for example substring hashing, better maintain the factor in the for loop instead of calling `RADIX**i` each time.
 
+## Patterns
+
+- array
+    - sliding window
+    - (non-decreasing) stack
+    - prefix sum
+    - backtracking
+    - DP
+- matrix
+    - DP
+    - DFS
+    - BFS
+- shortest path
+    - BFS
+    - DP
+
+
 ## Python Libaries
 
 ### queue
@@ -174,7 +191,7 @@ To find if a string is a substring of another string, follow the steps. Assuming
 
 ### KMP Algorithm
 
-Construct a longest-prefix-suffix (lps) array first. If `lps[i]` = k, then in the substring `s[:i+1]`, the first k letters and the last k letters are the sam真真e.
+Construct a longest-prefix-suffix (lps) array first. If `lps[i]` = k, then in the substring `s[:i+1]`, the first k letters and the last k letters are the same.
 
 Watch a youtube video or some figures to understand it more easily.
 
@@ -195,6 +212,26 @@ def get_lps_array(s: str) -> list[int]:
 			else:
 				l = lps[l-1]
 	return lps
+```
+
+or
+
+```python
+def get_kmp_table(s: str) -> list[int]:
+    # build kmp table
+    kmp_table = [0] * n_new
+    # 2 pointers
+    # l on the end of the current longest prefix
+    # r on the end of the current longest suffix
+    l = 0
+    for r in range(1, n_new):
+        # go back to the end of earlier longest prefix if not match
+        while l > 0 and s_new[l] != s_new[r]:
+            l = kmp_table[l-1]
+        if s_new[l] == s_new[r]:
+            l += 1
+        kmp_table[r] = l
+    return kmp_table
 ```
 
 ### Double Hashing
@@ -220,3 +257,12 @@ Reference: the editorial of [28. Find the Index of the First Occurrence in a Str
 - [28. Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
 - [1392. Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/description/)
 - [2223. Sum of Scores of Build Strings](https://leetcode.com/problems/sum-of-scores-of-built-strings/)
+
+## Linked List Problems
+
+It often helps to have a dummy head pointing to the actual head.
+
+### Problems
+
+- [146. LRU Cache](https://leetcode.com/problems/lru-cache/)
+

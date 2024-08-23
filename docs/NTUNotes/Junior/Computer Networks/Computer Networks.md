@@ -1061,10 +1061,11 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 		- 收到 ACK 120 就表示 120 以前的所有 bytes 都收到了
 
 ##### exponential backoff
+
 - timeout → double timeout interval
-- receive data from application above OR receive ACK → use [[#Timeout|formula]] again to set timeout inteval
+- receive data from application above OR receive ACK → use [[#Timeout|the timeout formula]] again to set timeout inteval
 - provide some congestion control
-	- congestion → packet dropped or long queue → many timeout, and retransmitting will worsen the congestion → set timeout interval longer, retransmit in a lower rate
+	- congestion → packet dropped or long queue → the timeout many timeout, and retransmitting will worsen the congestion → set timeout interval longer, retransmit in a lower rate
 
 ##### fast retransmit
 - sender often sends many segments consecutively → if 1 segment lost, receiver will send many duplicate ACKs (bc it always ACK the last in-order byte received)

@@ -172,16 +172,6 @@ Only 2 of the 3 can be satisfied at the same time for any **distributed** data s
 
 Partition tolerance is a must, so the choice is between consistent & availability. Typically, RDBMS chooses consistency over availability, while NoSQL chooses availability over consistency.
 
-### NoSQL
-
-Some nice properties
-
-- horizontal scaling
-- redundancy
-	- replicas
-- data don't get removed instantly
-	- can undelete
-
 ### Primary Key
 
 - uuid (universally unique identifier)
@@ -203,6 +193,10 @@ Some nice properties
 		- not unique across distributed systems
 		- stateful
 			- neet to consult db to know the next integer
+
+### Index
+
+- lookup time with [[CS 411 Database Systems#B + Tree|B Tree]] is $O(\log n)$
 
 ### Handling Hierarchical Data
 
@@ -331,6 +325,61 @@ ancestor_id | node_id
 - [Hierarchical Data in SQL: The Ultimate Guide](https://www.databasestar.com/hierarchical-data-sql/)
 - [Hierarchical Database, multiple tables or column with parent id? | Stack Overflow](https://stackoverflow.com/a/2341295/15493213)
 
+### Federation
+
+- split db by functions
+- similar pros & cons to [[#Sharding]]
+- pros
+    - less traffic for each db
+    - smaller db -> more fit into memory -> less cache misses
+    - can write to different dbs in parallel
+- cons
+    - joining data from 2 dbs is complex
+
+### Denormalization
+
+- normalization reduced data duplication, while denormalization increases it
+- good for read-heavy applications
+- pros
+    - reduce needs of complex joins
+        - especially if data is distributed with [[#Federation]] or [[#Sharding]]
+- cons
+    - duplicated data
+    - expensive writes
+    - more complicated to enure that redundant copies of data is consistent
+
+## NoSQL
+
+Some nice properties
+
+- horizontal scaling
+- redundancy
+	- replicas
+- data don't get removed instantly
+	- can undelete
+
+
+### BASE
+
+properties of [[#NoSQL]]
+
+- Basically Available
+    - guarantees availability
+- Soft state
+    - the state of the system may change over time even without input
+- Eventual consistency
+
+### Wide Column Store
+
+![[Pasted image 20240823064002.png]]
+
+- good for
+    - time series data
+    - large scale data
+    - write-heavy scenario
+    - e.g. logging & real time analytics
+- e.g. HBase & Casandra
+
 ## Replication
 
 ### Leader-Based Replication
@@ -359,6 +408,21 @@ Leader-Based Replication often uses async replication
 ## Load Balancing
 
 request id -> hashed request id -> mod by n (# of servers) -> direct to the server
+
+### load balancer features
+
+- distribute loads across backend servers
+- SSL termination
+    - decrypt requests & encrypt responses s.t. backend servers don't need to do it
+- can act as a reverse proxy
+
+### load balancing layers
+
+- layer 4 - transport layer
+    - distribute loads based on ip address
+    - faster & less computation needed
+- layer 7 - applicaton layer
+    - distribute loads based on contents
 
 ### Cost of adding new servers
 
@@ -455,12 +519,21 @@ tradeoff: speed vs. accuracy
 
 tradeoff: performance vs. accuracy
 
-- write-through cache
-	- write to cache -> write to db
+- cache aside
+    - cache miss -> application fetch data from db -> application write to cache
+- read-through
+    - cache miss -> cache fetch data from db -> write to cache
+    - application doesn't communicate with db directly
+- refresh-ahead
+    - when cache entry is fetched, fetch latest data from db if close to expiration
+    - performance depends on prediction accuracy
+- write-through
+	- write to cache -> write to db, SYNCHRONOUSLY
+	- reduce cache miss
 	- problem: data inconsistency across multiple caches
-- write-back cache
-	- write to db -> write to cache
-	- problem: performance problem since it has to write back to every cache
+- write-behind/write-back
+	- write to cache -> write to db, ASYNCHRONOUSLY
+		- with a queue
 - hybrid
 	- uncritical data -> write-through
 	- critical data -> write-back
@@ -484,6 +557,15 @@ You probably don't need to use microservices.
 - slow operations should be done asyncly
 - pre-process
 	- have the thing ready before user access if being out-of-date is acceptable
+
+### Message Queues
+
+### Task Queues
+
+### Back Pressure
+
+- stop accepting requests when queue is full
+- can be used with [[Computer Networks#exponential backoff|exponential backoff]]
 
 ## Networking Metrics
 
@@ -521,7 +603,29 @@ You probably don't need to use microservices.
 
 ### URL Shortening
 
-<https://www.educative.io/courses/grokking-the-system-design-interview>
+[Educative.io solution](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-tinyurl)  
+[System Design Primer solution](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/pastebin/README.md)
+
+- schema
+    - short url 7 chars -> 7B
+        - is use bae62 -> $62^7$ = 3.5T unqiue urls
+    - expired_at 5 chars -> 5B
+    - created_at 5 chars -> 5B
+    - original url 255 chars -> 255B
+    - 270B for a record -> 2.7B for 10M records
+- to generate unique urls
+    - counter
+        - complicated with horizontal scaling
+    - random -> base62
+        - may have collision
+    - ip address + timestamp or the long url -> md5 -> base62
+        - very low chance of collision
+        - md5
+        - base62
+            - 26+26 english letters & 10 numbers
+        - base64
+            - base62 with `+` & `/`
+            - not suitable for a url
 
 ### Twitter Timeline
 
