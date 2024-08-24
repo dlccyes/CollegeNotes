@@ -12,18 +12,22 @@ parent: Software Development
 
 ## Resources
 
+- [System Design Cheatsheet](https://gist.github.com/vasanthk/485d1c25737e8e72759f)
+    - study guide
+- [System Design Primer](https://github.com/donnemartin/system-design-primer)
+	- more detailed study guide
 - DDIA (2017)
 	- [DDIA pdf | github](https://github.com/jeffrey-xiao/papers/blob/master/textbooks/designing-data-intensive-applications.pdf)
 	- [DDIA pdf | libgen](http://library.lol/main/FB796AE8FD912C78AA1A34870ACA6BE8)
-- Grokking the system design interview
+- Grokking the System Design Interview
 	- [pdf | github](https://raw.githubusercontent.com/sharanyaa/grok_sdi_educative/master/grok_system_design_interview.pdf)
 	- [pdf | libgen](http://libgen.rs/book/index.php?md5=3CC8A0D02BBB0644A3839F6B621BB86B)
+	- [Design Guru paid course](https://www.designgurus.io/course/grokking-the-system-design-interview)
+	- [Educative.io paid course](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers)
 - Alex Xu
-	- [System Design Interview An Insider’s Guide by Alex Xu (z-lib.org).pdf](https://github.com/G33kzD3n/Catalogue/blob/master/System%20Design%20Interview%20An%20Insider%E2%80%99s%20Guide%20by%20Alex%20Xu%20(z-lib.org).pdf)
+	- [System Design Interview An Insider’s Guide by Alex Xu.pdf](https://github.com/mukul96/System-Design-AlexXu/blob/master/System%20Design%20Interview%20An%20Insider%E2%80%99s%20Guide%20by%20Alex%20Xu%20(z-lib.org).pdf)
 	- [Youtube](https://www.youtube.com/c/ByteByteGo/)
 	- [LinkedIn](https://www.linkedin.com/in/alexxubyte/recent-activity/shares/)
-- [System Design Primer](https://github.com/donnemartin/system-design-primer)
-	- just a markdown file
 - [Gaurav System Design Playlist | Youtube](https://www.youtube.com/playlist?app=desktop&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX)
 - [Exponent | Youtube](https://www.youtube.com/@tryexponent)
 - [Problems Aggretation](https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view)
@@ -445,7 +449,14 @@ reference
 
 ## Sharding
 
-Partitioning the database
+Partitioning/splitting the database accross nodes/servers.
+
+- pros
+    - lower traffic per server
+    - failure more localized
+    - less data in a server -> more data in cache -> less cache misses
+- cons
+    - complicated joins across different shards
 
 ### Vertical Partitioning
 
@@ -560,8 +571,6 @@ You probably don't need to use microservices.
 
 ### Message Queues
 
-### Task Queues
-
 ### Back Pressure
 
 - stop accepting requests when queue is full
@@ -601,18 +610,42 @@ You probably don't need to use microservices.
 
 ## Case Study
 
+### template
+
+- requirements
+    - expected traffic
+    - consistency vs. availability
+        - do we need ACID or just eventual consistency
+        - do we need high availability
+    - acceptable latency
+    - read-to-write ratio
+        - for a social network, users who don't react/post vs. users who do
+    - content size
+        - video platform - how long is the video?
+- implementation
+    - What kinds of data do we need to store? What's the best db for each? 
+        - big files like image/video -> S3
+    - if low latency is required, we can use a queue
+
 ### URL Shortening
 
 [Educative.io solution](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-tinyurl)  
 [System Design Primer solution](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/pastebin/README.md)
 
 - schema
-    - short url 7 chars -> 7B
-        - is use bae62 -> $62^7$ = 3.5T unqiue urls
-    - expired_at 5 chars -> 5B
-    - created_at 5 chars -> 5B
-    - original url 255 chars -> 255B
-    - 270B for a record -> 2.7B for 10M records
+    - link table
+        - short link 7 chars -> 7B
+            - is use bae62 -> $62^7$ = 3.5T unqiue urls
+        - expired_at 5 chars -> 5B
+        - created_at 5 chars -> 5B
+        - original url 512 chars -> 512B
+        - 530B for a record -> 5.3B for 10M records
+    - user table
+- database
+    - selecting a db
+        - since we don'e need relationships and are expecting high traffic, we can use a NoSQL db for the scalability & availability
+    - scaling
+        - [[#Sharding]]
 - to generate unique urls
     - counter
         - complicated with horizontal scaling
@@ -626,6 +659,16 @@ You probably don't need to use microservices.
         - base64
             - base62 with `+` & `/`
             - not suitable for a url
+    - a dedicated key generation service
+        - generate keys and store in db
+        - when we need a new url just fetch a generated one from db
+        - pros
+            - fast
+            - don't need to worry about collisions
+        - cons
+            - complexity for dealing with concurrency
+                - e.g. 2 servers trying to fetch the same key
+            - single point of failure, or additional complexity of [[#replication]]
 
 ### Twitter Timeline
 

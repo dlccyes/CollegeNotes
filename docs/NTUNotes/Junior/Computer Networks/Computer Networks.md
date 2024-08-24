@@ -1403,6 +1403,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- manages DNS root servers
 
 #### DHCP
+
 - dynamic host configuration protocol
 - alias: plug-and-play / zeroconf protocol
 - a client-server protocol
@@ -1416,11 +1417,11 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	1. DHCP server discovery
 		- newly arriving host want to find the DHCP server
 		- client broadcasts DHCP discover message
-			- destination IP address 255.255.255.255 → broadcast
-			- source IP address 0.0.0.0
+			- destination IP address `255.255.255.255` → broadcast
+			- source IP address `0.0.0.0`
 	2. DHCP server offer
 		- DHCP server broadcasts DHCP offer message
-			- destination IP address 255.255.255.255 → broadcast
+			- destination IP address `255.255.255.255` → broadcast
 			- contents
 				- transaction ID
 				- proposed IP address
@@ -1435,8 +1436,9 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 	- ![[computer-networks-79.png]]
 
 #### NAT
+
 - network address translation
-- IPv4 address 不夠解法之一
+- one of the solutions for running out of IPv4 addresses
 - acts like a single device with a single IP address to the outside
 	- hide home network
 - private IP address

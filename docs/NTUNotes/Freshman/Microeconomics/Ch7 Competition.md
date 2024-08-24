@@ -53,6 +53,24 @@ $$\frac{3}{4}$$ -->
 industry supply curve
 ![[ch7-competition-3.png]]
 
+### changes in variable costs
+
+![[ch7-competition-5.png]]
+
+a firm:  
+
+- marginal cost rises → supply curve shifts upward/leftward
+- in industry, price = P<sub>0</sub> → P<sub>2</sub>, so d→d' in a firm, q<sub>2</sub> not necessarily < q<sub>0</sub>  
+
+an industry:  
+
+- the sum of firms' supply curves → shifts upward/leftward  
+- Q<sub>2</sub> < Q<sub>0</sub>
+
+### a change in demand
+
+![[ch7-competition-6.png]]
+
 ![[ch7-competition-4.png]]
 
 ### changes in variable costs

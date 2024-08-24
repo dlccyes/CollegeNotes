@@ -19,6 +19,12 @@
 - `DELETE`
 	- no need response body
 
+### Idempotency
+
+If you execute X 1 time vs. execute it 5 times, the results are the same, then X is idempotent.
+
+`GET`, `PUT`, and `DELETE` are idempotent.
+
 ## Routes
 
 See 
@@ -131,3 +137,8 @@ e.g. (from ChatGPT)
   ]
 }
 ```
+
+## Security
+
+[API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)
+

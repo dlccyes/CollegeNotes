@@ -1471,9 +1471,9 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 - calculate average throughput, utilization, waiting time etc. for each algorithms
 - Little's Formula
 	- $n=\lambda\times W$
-	- n = average queue length
-	- $\lambda$ = average arrival rate
-	- W = average waiting time in queue
+    	- $n$ = average queue length
+    	- $\lambda$ = average arrival rate
+    	- $W$ = average waiting time in queue
 	- 1 arrival 1 exit in steady state
 	- pretty intuitive actually
 
