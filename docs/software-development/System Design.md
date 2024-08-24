@@ -354,13 +354,11 @@ ancestor_id | node_id
 
 ## NoSQL
 
-Some nice properties
 
-- horizontal scaling
-- redundancy
-	- replicas
-- data don't get removed instantly
-	- can undelete
+- high scalability with horizontal scaling
+- high availability with redundancy
+    - replicas
+- data don't get removed instantly -> can undelete
 
 
 ### BASE
@@ -442,6 +440,12 @@ Each object's location = hashed key mod # seats in the ring
 
 ![[consistency-hashing.png]]
 
+To make it more balanced, we'll have multiple angles for each server scattered around the pseudo hash circle.
+
+![[sys-des-consis-hash-2.png]]
+
+When 1 server is added, only $k/N$ keys would be reassigned, where there are $k$ keys & $N$ servers.
+
 reference
 
 - <https://www.toptal.com/big-data/consistent-hashing>
@@ -521,38 +525,52 @@ Partitioning/splitting the database accross nodes/servers.
 
 ### In-memory cache vs. global cache
 
-tradeoff: speed vs. accuracy
-
 - in-memory cache
 	- fast
 	- data inconsistency across multiple caches
+	- if requests are randomly load balanced across servers, there would be a lot of cache misses
+	- e.g. Memcached, Redis
 - global cache
 	- slower
 	- all clients access the same global cache so no data inconsistency problem
+	- e.g. CDN
 
-### Data syncing policy
+### Cache Population Policy
 
-tradeoff: performance vs. accuracy
+- read strategies
+    - cache aside
+        - cache miss -> application fetch data from db -> application write to cache
+        - application manages all the stuff
+    - read-through
+        - cache miss -> cache fetch data from db -> write to cache
+        - cache handles everything, application doesn't communicate with db directly
+    - refresh-ahead
+        - when cache entry is fetched, fetch latest data from db if close to expiration
+        - performance depends on prediction accuracy
+- write strategies
+    - write-around
+        - directly write to db, bypassing cache
+    - write-through
+        - write to cache -> write to db, SYNCHRONOUSLY
+        - pros
+            - consistent data
+            - no data loss
+        - cons
+            - high latency
+    - write-behind/write-back
+        - write to cache -> write to db, ASYNCHRONOUSLY
+            - with a queue
+        - pros
+            - low latency
+        - cons
+            - low consistency
+            - may have data loss
 
-- cache aside
-    - cache miss -> application fetch data from db -> application write to cache
-    - application manages all the stuff
-- read-through
-    - cache miss -> cache fetch data from db -> write to cache
-    - application doesn't communicate with db directly, cache acts as the middleman
-- refresh-ahead
-    - when cache entry is fetched, fetch latest data from db if close to expiration
-    - performance depends on prediction accuracy
-- write-through
-	- write to cache -> write to db, SYNCHRONOUSLY
-	- reduce cache miss
-	- problem: data inconsistency across multiple caches
-- write-behind/write-back
-	- write to cache -> write to db, ASYNCHRONOUSLY
-		- with a queue
-- hybrid
-	- uncritical data -> write-through
-	- critical data -> write-back
+### Cache Eviction Policy
+
+- first in first out
+- least recently used
+- least frequently used
 
 ## Microservices vs. Monolith
 
