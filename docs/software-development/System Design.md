@@ -434,7 +434,7 @@ New servers -> some requests will be directed to a different server -> cache mis
 
 ### Consistency Hashing
 
-Goal: Minimize the cost when adding new servers, we want to as few mapping changed as possible.
+Goal: Minimize the cost when adding new servers. To do that we want to have as few mappings changed as possible.
 
 Key concept: Randomly assign servers to a position in an arbitrary circle, and each of them serve the requests closest to them (in the counterclockwise direction)
 
@@ -458,6 +458,12 @@ Partitioning/splitting the database accross nodes/servers.
 - cons
     - complicated joins across different shards
 
+### Range Based Sharding
+
+- distribute based on the 1st letter of the key
+- cons
+    - may have unbalanced servers
+
 ### Vertical Partitioning
 
 - partition by different features
@@ -467,9 +473,9 @@ Partitioning/splitting the database accross nodes/servers.
 
 ### Key/Hash-Based Partitioning
 
-- N servers -> mod by N
+- hash -> mod by N to distribute to N servers
 - cons
-	- add servers -> need reallocate all the data -> very expensive
+	- add servers -> need to reallocate all the data -> very expensive
 
 ### Directory-Based Partitioning
 
@@ -482,8 +488,6 @@ Partitioning/splitting the database accross nodes/servers.
 
 ### Problems
 
-- join is expensive
-	- if the target data are located in different shards, than we need to join multiple queries, which is expensive
 - fixed number of shards
 	- solution: [[#Consistency Hashing]]
 		- memcached
@@ -532,9 +536,10 @@ tradeoff: performance vs. accuracy
 
 - cache aside
     - cache miss -> application fetch data from db -> application write to cache
+    - application manages all the stuff
 - read-through
     - cache miss -> cache fetch data from db -> write to cache
-    - application doesn't communicate with db directly
+    - application doesn't communicate with db directly, cache acts as the middleman
 - refresh-ahead
     - when cache entry is fetched, fetch latest data from db if close to expiration
     - performance depends on prediction accuracy
@@ -626,12 +631,24 @@ You probably don't need to use microservices.
     - What kinds of data do we need to store? What's the best db for each? 
         - big files like image/video -> S3
     - if low latency is required, we can use a queue
+    - [[#Load Balancing|load balancer]] placements
+        - between clients & applicaton servers
+        - between applicaton servers & db servers
+        - between applicaton & cache servers
 
-### URL Shortening
+### URL Shortener
 
 [Educative.io solution](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-tinyurl)  
 [System Design Primer solution](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/pastebin/README.md)
 
+![[tinyurl-grokking-arch.png]]
+
+- requirements
+    - custom link?
+    - private links?
+    - default expiration time?
+    - remove long unused links?
+    - telemetry/analytics?
 - schema
     - link table
         - short link 7 chars -> 7B
@@ -659,8 +676,8 @@ You probably don't need to use microservices.
         - base64
             - base62 with `+` & `/`
             - not suitable for a url
-    - a dedicated key generation service
-        - generate keys and store in db
+    - a dedicated key generation service & db
+        - generate keys and store in key db
         - when we need a new url just fetch a generated one from db
         - pros
             - fast
@@ -669,6 +686,12 @@ You probably don't need to use microservices.
             - complexity for dealing with concurrency
                 - e.g. 2 servers trying to fetch the same key
             - single point of failure, or additional complexity of [[#replication]]
+- expired links cleanup
+    - options
+        - on-demand
+            - check expiration when accessed, if expired then delete and return error
+        - cronjob to remove expired links
+    - if using a key generation service & key db, recycle the key by putting it back to the db after link is deleted
 
 ### Twitter Timeline
 
