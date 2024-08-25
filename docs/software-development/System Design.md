@@ -34,18 +34,32 @@ parent: Software Development
 	- from <https://leetcode.com/discuss/interview-question/system-design/1205825>
 - [Database Schema Templates](https://drawsql.app/templates/popular)
 
+## Key Characteristics
+
+- [[#Scaling|Scalability]]
+- Reliability
+- Availability
+- Efficiency
+- [[#Maintenability]]
+
 ## Scaling
 
 ### Vertical Scaling
+
+make a server bigger & stronger
 
 - pros
 	- fast inter-process communication
 	- data consistent
 - cons
 	- single point of failure
+		- only 1 server -> no failover & redundancy
 	- hardware limit
+	- expensive
 
 ### Horizontal Scaling
+
+add more servers
 
 - pros
 	- scale well
@@ -54,6 +68,19 @@ parent: Software Development
 		- need RPC between machines
 	- need load-balancing
 	- data inconsistency
+
+### Multi Data Centers
+
+To scale internationally, we can have data centers across the globe.
+
+![[sys-des-geo-dc.jpg]]
+
+challenges
+
+- traffic redirection
+    - use geoDNS to resolve domain names -> IP addresses based on the user's location to point to the best data center
+- data sync
+    - [[#Multi-Leader Replication]]
 
 ## Performance
 
@@ -68,6 +95,13 @@ parent: Software Development
 		- 99th < 1s
 	- service needs to be up > 99.9% of the time
 	- refund if not met
+
+### Networking Metrics
+
+- bandwidth
+	- max throughput
+- throughput
+- latency
 
 ## Maintenability
 
@@ -360,6 +394,13 @@ ancestor_id | node_id
     - replicas
 - data don't get removed instantly -> can undelete
 
+choose it over RDBMS if
+
+- needs very low latency
+- no relationship between data
+- unstructured / schema always changing
+- huge amount of data
+
 
 ### BASE
 
@@ -387,8 +428,9 @@ properties of [[#NoSQL]]
 ### Leader-Based Replication
 
 - 1 replica leader/master, others followers/slaves
-- client only writes to leader, changes later replicated to followers (sync or async)
-- followers are read-only to client
+- write to leader, read from any
+- leader replicates changes to followers (sync or async)
+    - with replication logs
 - built-in for relational databases & message queues of high availability (e.g. Kafka & RabbitMQ)
 
 #### replication methods
@@ -407,53 +449,41 @@ Leader-Based Replication often uses async replication
 1. set up a follower node with a snapshot of the leader
 2. sync with the leader with leader's log 
 
-## Load Balancing
+#### failover
 
-request id -> hashed request id -> mod by n (# of servers) -> direct to the server
+- only 1 follower and it dies -> read from leader
+- multiple followers and one dies -> redirect its traffic to other followers
+- leader dies -> promote a follower to leader
+    - possible data loss since it may not be up to date with the leader if using async
 
-### load balancer features
+#### Some Properties
 
-- distribute loads across backend servers
-- SSL termination
-    - decrypt requests & encrypt responses s.t. backend servers don't need to do it
-- can act as a reverse proxy
+- eventual consistency
+    - if no input, followers will eventually catch up with the leader
+- read-your-writes consistency
+    - after a user updating its own stuff, it should be able to see the updates
+    - can be achieve by reading the user's profile from leader and other stuff from followers
+- monotonic reads
+    - read$_t$ should retrieves a later state than read$_{t-1}$
+    - can be achieved by each user always reads from the same replica
+        - can be achieved by ranged based [[#load balancing]]
 
-### load balancing layers
+### Multi-Leader Replication
 
-- layer 4 - transport layer
-    - distribute loads based on ip address
-    - faster & less computation needed
-- layer 7 - applicaton layer
-    - distribute loads based on contents
+- only for across data centers, while still using [[#Leader-Based Replication]] inside each data center
+- needs to resolve write conflicts
 
-### Cost of adding new servers
+### Leaderless Replication
 
-New servers -> some requests will be directed to a different server -> cache miss
-
-### Consistency Hashing
-
-Goal: Minimize the cost when adding new servers. To do that we want to have as few mappings changed as possible.
-
-Key concept: Randomly assign servers to a position in an arbitrary circle, and each of them serve the requests closest to them (in the counterclockwise direction)
-
-Each object's location = hashed key mod # seats in the ring
-
-![[consistency-hashing.png]]
-
-To make it more balanced, we'll have multiple angles for each server scattered around the pseudo hash circle.
-
-![[sys-des-consis-hash-2.png]]
-
-When 1 server is added, only $k/N$ keys would be reassigned, where there are $k$ keys & $N$ servers.
-
-reference
-
-- <https://www.toptal.com/big-data/consistent-hashing>
-- <https://www.youtube.com/watch?v=zaRkONvyGr8>
+- writes to several replicas in parallel
+    - defined as success if x out of n is successful
+- read from several replicas in parallel, and use version number to decide which is newer
+- no failover
+- e.g. DynamoDB
 
 ## Sharding
 
-Partitioning/splitting the database accross nodes/servers.
+Partitioning/splitting the database accross nodes/servers. [[#Horizontal Scaling]] for database.
 
 - pros
     - lower traffic per server
@@ -464,7 +494,8 @@ Partitioning/splitting the database accross nodes/servers.
 
 ### Range Based Sharding
 
-- distribute based on the 1st letter of the key
+- distribute based on the key
+    - e.g. 1st letter of a string key, modded id
 - cons
     - may have unbalanced servers
 
@@ -492,11 +523,54 @@ Partitioning/splitting the database accross nodes/servers.
 
 ### Problems
 
-- fixed number of shards
+- needs to reshard when changing the number of shards, which can be expensive
 	- solution: [[#Consistency Hashing]]
-		- memcached
+		- MemeCached uses this
 	- solution: hierarchical sharding
 		- each shard partitioned into many mini-shards
+
+## Load Balancing
+
+request id -> hashed request id -> mod by n (# of servers) -> direct to the server
+
+### load balancer features
+
+- distribute loads across backend servers
+- SSL termination
+    - decrypt requests & encrypt responses s.t. backend servers don't need to do it
+- can act as a reverse proxy
+
+### load balancing layers
+
+- layer 4 - transport layer
+    - distribute loads based on ip address
+    - faster & less computation needed
+- layer 7 - applicaton layer
+    - distribute loads based on contents
+
+### Cost of adding new servers
+
+New servers -> some requests will be directed to a different server -> cache miss
+### Consistency Hashing
+
+Goal: Minimize the cost when adding new servers. To do that we want to have as few mappings changed as possible.
+
+Key concept: Randomly assign servers to a position in an arbitrary circle, and each of them serve the requests closest to them (in the counterclockwise direction)
+
+Each object's location = hashed key mod # seats in the ring
+
+![[consistency-hashing.png]]
+
+To make it more balanced, we'll have multiple angles for each server scattered around the pseudo hash circle.
+
+![[sys-des-consis-hash-2.png]]
+
+When 1 server is added, only $k/N$ keys would be reassigned, where there are $k$ keys & $N$ servers.
+
+reference
+
+- <https://www.toptal.com/big-data/consistent-hashing>
+- <https://www.youtube.com/watch?v=zaRkONvyGr8>
 
 ## Distributed DB System
 
@@ -572,6 +646,35 @@ Partitioning/splitting the database accross nodes/servers.
 - least recently used
 - least frequently used
 
+### CDN
+
+mostly static files
+
+![[sys-design-cdn.png]]
+
+## Async
+
+- slow operations should be done asyncly
+- pre-process
+	- have the thing ready before user access if being out-of-date is acceptable
+
+### Message Queues
+
+![[sys-des-mq.png]]
+
+- a queue for requests
+- in memory
+
+#### scaling
+
+- can scale producer & consumer independently
+- queue to big -> add more workers in consumer
+
+#### Back Pressure
+
+- stop accepting requests when queue is full
+- can be used with [[Computer Networks#exponential backoff|exponential backoff]]
+
 ## Microservices vs. Monolith
 
 You probably don't need to use microservices.
@@ -585,26 +688,6 @@ You probably don't need to use microservices.
 [HackerNews dicussion](https://news.ycombinator.com/item?id=35811741)
 
 > This is not a discussion of monolith vs serverless. This is some terrible engineering all over that was "fixed". - [LASR](https://news.ycombinator.com/user?id=LASR)
-
-## Async
-
-- slow operations should be done asyncly
-- pre-process
-	- have the thing ready before user access if being out-of-date is acceptable
-
-### Message Queues
-
-### Back Pressure
-
-- stop accepting requests when queue is full
-- can be used with [[Computer Networks#exponential backoff|exponential backoff]]
-
-## Networking Metrics
-
-- bandwidth
-	- max throughput
-- throughput
-- latency
 
 ## MapReduce
 
@@ -738,4 +821,10 @@ Suitable when # read reqs >> # write reqs
 Approach 2 for tweets from the mass with little followers, and approach 1 for tweets from celebs
 
 i.e. Tweets from celebs are indepedently fetched and then inserted into users' timeline cache
+
+### TikTok
+
+- worker for generating versions of videos in different formats & resolutions
+- store videos in S3
+- have CDN
 

@@ -710,6 +710,7 @@ so there're many security problems now
 		- important for mobile users
 
 #### Content Distribution Networks (CDN)
+
 - if use a single massive data center
 	- more likely to have lower throughputs
 		- end-to-end throughput depends on bottleneck link
@@ -742,6 +743,7 @@ so there're many security problems now
 
 #### CDN operation
 ##### intercept & redirect request
+
 - suppose content provider NetCinema uses KingCDN to distributes its videos
 	- ![[computer-networks-31.png]]
 	1. user visit NetCinema.com
