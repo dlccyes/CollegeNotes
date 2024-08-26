@@ -16,7 +16,11 @@ parent: Software Development
     - study guide
 - [System Design Primer](https://github.com/donnemartin/system-design-primer)
 	- more detailed study guide
+- [System Design Interview An Insider’s Guide by Alex Xu.pdf](https://github.com/mukul96/System-Design-AlexXu/blob/master/System%20Design%20Interview%20An%20Insider%E2%80%99s%20Guide%20by%20Alex%20Xu%20(z-lib.org).pdf)
+    - a tutorial on system design interviews
+    - 13 problems
 - DDIA (2017)
+	- a textbook for system design
 	- [DDIA pdf | github](https://github.com/jeffrey-xiao/papers/blob/master/textbooks/designing-data-intensive-applications.pdf)
 	- [DDIA pdf | libgen](http://library.lol/main/FB796AE8FD912C78AA1A34870ACA6BE8)
 - Grokking the System Design Interview
@@ -24,17 +28,18 @@ parent: Software Development
 	- [pdf | libgen](http://libgen.rs/book/index.php?md5=3CC8A0D02BBB0644A3839F6B621BB86B)
 	- [Design Guru paid course](https://www.designgurus.io/course/grokking-the-system-design-interview)
 	- [Educative.io paid course](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers)
-- Alex Xu
-	- [System Design Interview An Insider’s Guide by Alex Xu.pdf](https://github.com/mukul96/System-Design-AlexXu/blob/master/System%20Design%20Interview%20An%20Insider%E2%80%99s%20Guide%20by%20Alex%20Xu%20(z-lib.org).pdf)
-	- [Youtube](https://www.youtube.com/c/ByteByteGo/)
-	- [LinkedIn](https://www.linkedin.com/in/alexxubyte/recent-activity/shares/)
 - [Gaurav System Design Playlist | Youtube](https://www.youtube.com/playlist?app=desktop&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX)
 - [Exponent | Youtube](https://www.youtube.com/@tryexponent)
 - [Problems Aggretation](https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view)
 	- from <https://leetcode.com/discuss/interview-question/system-design/1205825>
 - [Database Schema Templates](https://drawsql.app/templates/popular)
 
-## Key Characteristics
+ ### newsletters / blogs
+ 
+- The Pragmatic Engineer
+- Quastor
+
+## Key Characteristics of a Distributed System
 
 - [[#Scaling|Scalability]]
 - Reliability
@@ -199,16 +204,22 @@ Typically a trait of RDBMS, while NoSQL DBs typically don't support it.
 
 ### CAP
 
-Only 2 of the 3 can be satisfied at the same time for any **distributed** data store. 
+A distributed system will either be consistent or available when partitioned (a part is down).
 
 - Consistency
 	- the read value is always the most recent
 - Availability
 	- you can read whenever you want
 - Partition tolerance
-	- the must in a distributed data store
+	- misleading because partition will happen
 
-Partition tolerance is a must, so the choice is between consistent & availability. Typically, RDBMS chooses consistency over availability, while NoSQL chooses availability over consistency.
+Partition / network failure is unaviodable in a distributed system, so the choice is whether we want consistency or availability when it happens. Typically, RDBMS chooses consistency over availability, while NoSQL chooses availability over consistency.
+
+If we have 3 servers, and one of them is down i.e. the network is partitioned
+
+![[sys-des-cap-ex.png]]
+
+If we choose consistency, we will block all writes to the other servers (n1 & n2), thus making the system unavailable. If we choose availability, we will accept writes to n1 & n2 and sync them to n3 when it's back up.
 
 ### Primary Key
 
@@ -494,8 +505,8 @@ Partitioning/splitting the database accross nodes/servers. [[#Horizontal Scaling
 
 ### Range Based Sharding
 
-- distribute based on the key
-    - e.g. 1st letter of a string key, modded id
+- distribute based on the 1st letter of the key
+    - e.g. A-C at shard 1, D-F at shart 2, ...
 - cons
     - may have unbalanced servers
 
@@ -509,8 +520,12 @@ Partitioning/splitting the database accross nodes/servers. [[#Horizontal Scaling
 ### Key/Hash-Based Partitioning
 
 - hash -> mod by N to distribute to N servers
-- cons
-	- add servers -> need to reallocate all the data -> very expensive
+- problems
+	- add servers -> need to redistribute all the data -> very expensive
+		- solution: [[#Consistency Hashing]]
+			- MemeCached uses this
+	- some keys are more popular than the others
+		- solution: dedicated shards for celebrities
 
 ### Directory-Based Partitioning
 
@@ -520,14 +535,6 @@ Partitioning/splitting the database accross nodes/servers. [[#Horizontal Scaling
 - cons
 	- lookup table -> single point of failure
 	- constantly access lookup table -> impact performance
-
-### Problems
-
-- needs to reshard when changing the number of shards, which can be expensive
-	- solution: [[#Consistency Hashing]]
-		- MemeCached uses this
-	- solution: hierarchical sharding
-		- each shard partitioned into many mini-shards
 
 ## Load Balancing
 
@@ -718,7 +725,11 @@ You probably don't need to use microservices.
 
 ### template
 
-- requirements
+- basic calculations
+    - 1 byte / 1B = 8 bits
+    - an ASCII character uses 1B
+- clarify requirements
+    - features
     - expected traffic
     - consistency vs. availability
         - do we need ACID or just eventual consistency
@@ -726,9 +737,12 @@ You probably don't need to use microservices.
     - acceptable latency
     - read-to-write ratio
         - for a social network, users who don't react/post vs. users who do
-    - content size
+    - content type & size
         - video platform - how long is the video?
+- estimations
+    - on storage
 - implementation
+    - design high level architecture -> discuss with the interviewer, ask for feedbacks -> dive into the specifics of each components
     - What kinds of data do we need to store? What's the best db for each? 
         - big files like image/video -> S3
     - if low latency is required, we can use a queue
@@ -736,6 +750,171 @@ You probably don't need to use microservices.
         - between clients & applicaton servers
         - between applicaton servers & db servers
         - between applicaton & cache servers
+    - operations
+        - monitoring 
+            - metrics
+            - logging
+        - deployments
+    - telemetry
+
+### Rate Limiter
+
+#### motivation
+
+- prevent DoS attacks
+- reduce cost / resource used
+    - if using paid 3rd party APIs
+
+#### requirements
+
+- client-side or server-side (assuming server-side)
+- rate limit based on IP? User ID? etc.
+- Work in a distributed environment?
+    - shared across servers / processes or not
+- separate service or in application code
+- Do we inform the user?
+
+#### placement
+
+- at server side
+- between client & server, as a middleware
+    - normally supported by API gateway (a kind of reverse proxy)
+
+#### algorithm
+
+- token bucket
+    - a bucket of tokens, indicating capacity
+    - each accepted request consumes a token
+    - if no token in the bucket, drop the request
+    - bucket refill tokens periodically
+    - parameters
+        - bucket size
+        - refill rate 
+            - how many tokens per second
+- leaking bucket
+    - a fixed sized FIFO queue
+    - request processed at  rate 
+    - parameters
+        - bucket size
+        - process rate 
+- fixed window counter
+    - a max amount of requests per time slot
+    - parameters
+    - parameters: $n$ requests per $p$ seconds window
+    - memory needed
+        - assuming rate limit based on user ID
+        - user ID 8B
+        - timestamp 4B (32-bit)
+            - 2B if only store minutes & seconds
+        - counter 2B
+        - each user 12B, excluding overheads
+        - 1M users -> 12MB
+    - cons
+        - burst requests around the split of 2 time windows can cause more requests than the quota to go through
+- sliding window log
+    - keep track of request timestamps
+    - window = $[t-p, t]$, where $t$ = timestamp of the latest request, $p$ = window size in time
+    - when a new request comes in, remove the timestamps in window smaller than $t-p$, and set window start time as $t-p$
+    - if window size smaller than max, accept the request and add the timestamp in the window
+    - parameters: $n$ requests per $p$ seconds
+    - memory needed
+        - assuming rate limited based on user ID, max requests an hour
+        - user ID 8B
+        - each timestamp 4B
+        - each user 8B + 4B x 500 = 2kB, excluding overheads
+        - 1M users -> 2GB
+    - pros
+        - accurate rate limiting
+    - cons
+        - requires a lot of memory since we're storin timestamps instead of counters
+- sliding window of tiny fixed window counters
+    - fixed window counter + sliding window
+    - rate limit: $n$ requests in 1 hour
+    - use fixed windows of size $\dfrac{1}{k}$ hr, aggregate the counters of the past $k$ windows, and compare with $n$
+    - set counter TTL to 1 hr
+    - memory usage much smaller than "sliding window log" since we store counters instead of timestamps
+        - roughly $k$ times the usage of "fixed window counter" since we use $k$x more windows
+- sliding window counter
+    - if a request comes in at $x\%$ of the current window, window size = $(1-x\%)$ x number of requests in previous window +  number of requests in current window
+    - accept if window size < max
+    - parameters: $n$ requests per $p$ seconds
+    - ![[sys-des-sliding-window-counter.png]]
+    - pros
+        - solve the spike problem in fixed window counter
+    - cons
+        - it assumes the requests in the previous window is evenly distributed
+
+#### design
+
+- Use in-memory cache like Redis to store the counters.
+- high level architecture
+    - ![[rate-limiter-high-arch.png]]
+- save rules as config files on disk
+    - have workers to pull and store in cache
+- response headers
+    - `X-Ratelimit-Remaining`
+    - `X-Ratelimit-Limit`
+- when exceeds rate limit
+    - return 429 too many requests
+    - return `X-Ratelimit-Retry-After` in header
+    - can choose to drop it or send it in a queue
+- detailed architecture
+    - ![[sys-des-rate-limiter-detailed-arch.png]]
+- challenges in a distributed environment
+    - race condition
+        - when 2 requests read the same counter at the same time
+            - solution: lock
+                - slow
+            - solution: atomic operation with Redis
+                - read count -> write new count, as an atomic operation
+    - synchronization across rate limiters
+        - solution: sticky session - a client always use a specific rate limiter
+            - neither scalable nor flexible
+        - solution: use the same Redis as data store
+- performance optimization
+    - [[#Multi Data Centers]] (or edge servers) setup s.t. rate limiters can be close to users
+        - sync with eventual consistency
+- monitoring
+    - gather data to understand if the rules or algorithms are working well
+
+### Key-Value Store
+
+#### requirements
+
+- operations
+    - `put(key, value)`
+    - `get(key)`
+- small key-value pair, < 10kB
+- high availability
+- high scalability
+- automatic scaling
+    - add/remove servers automatically based on traffic
+- low latency
+
+#### single server
+
+- store as a hash table in memory
+- to fit more data
+    - data compression
+    - store frequenty used data in memory, the rest on disk
+- reaches capacity easily
+
+#### distributed server
+
+- [[#CAP]] - do we want consistency or availability during network failures?
+- data partition
+    - for a large applicaton with a lot of data, it's not possible to fit all data inside a single server, so we would want to partition it
+    - challenges
+        - distribute data evenly
+        - minimize data movement when add/remove nodes
+    - [[#Consistency Hashing]]
+        - auto scaling - add/remove servers based on loads with minimal cost of data movement
+        - allocate virtual nodes based on server capacity 
+- data replication
+    - replicate data to $k$ servers 
+        - to closest $k$ servers on the hash ring clockwise
+            - physical servers not virtual nodes since a physical server may have multiple virtual nodes
+    - replicas are placed across data centers for better reliability
 
 ### URL Shortener
 
