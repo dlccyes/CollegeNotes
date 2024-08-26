@@ -47,6 +47,22 @@ parent: Software Development
 - Efficiency
 - [[#Maintenability]]
 
+### Consistency
+
+- strong consistency
+    - guaranteed to read the latest data
+- weak consistency
+    - not guaranteed to read the latest data
+- eventual consistency
+    - if no new input, all replicas will eventually have the latest data
+- read-your-writes consistency
+    - after a user updating its own stuff, it should be able to see the updates
+    - can be achieve by reading the user's profile from leader and other stuff from followers
+- monotonic reads
+    - read$_t$ should retrieves a later state than read$_{t-1}$
+    - can be achieved by each user always reads from the same replica
+        - can be achieved by ranged based [[#load balancing]]
+
 ## Scaling
 
 ### Vertical Scaling
@@ -467,18 +483,6 @@ Leader-Based Replication often uses async replication
 - leader dies -> promote a follower to leader
     - possible data loss since it may not be up to date with the leader if using async
 
-#### Some Properties
-
-- eventual consistency
-    - if no input, followers will eventually catch up with the leader
-- read-your-writes consistency
-    - after a user updating its own stuff, it should be able to see the updates
-    - can be achieve by reading the user's profile from leader and other stuff from followers
-- monotonic reads
-    - read$_t$ should retrieves a later state than read$_{t-1}$
-    - can be achieved by each user always reads from the same replica
-        - can be achieved by ranged based [[#load balancing]]
-
 ### Multi-Leader Replication
 
 - only for across data centers, while still using [[#Leader-Based Replication]] inside each data center
@@ -491,6 +495,15 @@ Leader-Based Replication often uses async replication
 - read from several replicas in parallel, and use version number to decide which is newer
 - no failover
 - e.g. DynamoDB
+
+#### Quorums
+
+- $n$ relicas
+- $w$ confirmations required for each write
+- $r$ confirmations required for each read
+- if $w+r>n$, we're gauranteed to read the latest data -> strong consistency
+    - for fast read, $r=1, w=n$
+    - for fast write, $w=1, r=n$
 
 ## Sharding
 
@@ -910,11 +923,16 @@ You probably don't need to use microservices.
     - [[#Consistency Hashing]]
         - auto scaling - add/remove servers based on loads with minimal cost of data movement
         - allocate virtual nodes based on server capacity 
-- data replication
+- data [[#replication]]
     - replicate data to $k$ servers 
         - to closest $k$ servers on the hash ring clockwise
             - physical servers not virtual nodes since a physical server may have multiple virtual nodes
     - replicas are placed across data centers for better reliability
+        - since nodes at the same data center often go down together
+    - we can achieve strong consistency or not by setting [[#Quorums]] parameters
+    - eventual consistency is usually selected for highly available systems
+- resolving inconsistency with versioning
+    - 1
 
 ### URL Shortener
 
