@@ -494,6 +494,7 @@ Leader-Based Replication often uses async replication
     - defined as success if x out of n is successful
 - read from several replicas in parallel, and use version number to decide which is newer
 - no failover
+- used by key-value stores to support high availability
 - e.g. DynamoDB
 
 #### Quorums
@@ -504,6 +505,43 @@ Leader-Based Replication often uses async replication
 - if $w+r>n$, we're gauranteed to read the latest data -> strong consistency
     - for fast read, $r=1, w=n$
     - for fast write, $w=1, r=n$
+    - data loss may still happen if there are 2 concurrent conflicting writes, which need to be resolved
+- sloppy quorums
+    - when some of the replicas fails, we can activate some backup nodes, which will result in a different set of nodes
+    - if we still accept the writes as long as there are $w$ nodes available, it's called a sloppy quorum, where $w+r>n$ don't guaranteed strong consistency
+    - hinted handoff - when a node is back up, the backup node will push the changes to the node
+    - improve availability at the cost of consistency
+
+#### Resolving conflicts
+
+##### version vector / vector clocks
+
+- a way to detect conflicts
+- maintain a vector of tuple `(Server No., write counter of this server / version)`
+- compare 2 vectors to check if there's a conflict
+    - ancestor-descendant -> no conflict
+    - siblings -> have conflict
+- ![[sys-des-vector-lock.png]]
+- cons
+    - vector can grow rapidly
+
+##### last write wins
+
+- a way to resolve conflicts
+- have a timestamp for each write
+- when resolving write conflicts, use the one with the biggest timestamp
+- supported by Cassandra & Redis
+- achieves eventual consistency
+- sacrifice durability, may have data loss
+    - concurrent writes to the same key all appear as successfuly, but only one of them is used
+    - we can minimize data loss by update each field based on primary key independently (Cassandra's approach)
+        - ![[sys-des-cass-res.png]]
+
+### Handling failures
+
+- for [[#Leaderless Replication]], handle temporary failure with using sloppy quorum
+- use merkle tree to sync data
+    - tree with each node being the hash of its subtree
 
 ## Sharding
 
@@ -535,7 +573,7 @@ Partitioning/splitting the database accross nodes/servers. [[#Horizontal Scaling
 - hash -> mod by N to distribute to N servers
 - problems
 	- add servers -> need to redistribute all the data -> very expensive
-		- solution: [[#Consistency Hashing]]
+		- solution: [[#Consistent Hashing]]
 			- MemeCached uses this
 	- some keys are more popular than the others
 		- solution: dedicated shards for celebrities
@@ -571,7 +609,7 @@ request id -> hashed request id -> mod by n (# of servers) -> direct to the serv
 ### Cost of adding new servers
 
 New servers -> some requests will be directed to a different server -> cache miss
-### Consistency Hashing
+### Consistent Hashing
 
 Goal: Minimize the cost when adding new servers. To do that we want to have as few mappings changed as possible.
 
@@ -592,20 +630,249 @@ reference
 - <https://www.toptal.com/big-data/consistent-hashing>
 - <https://www.youtube.com/watch?v=zaRkONvyGr8>
 
-## Distributed DB System
+## Distributed Systems
 
-### Master-Slave Architecture
+### Rate Limiter
 
-- Write to master -> replicate data to slave
-- Read from either of the master or slaves
-- Master dies -> elect a new master among the slaves
-- e.g.
-	- DynamoDB
+#### motivation
 
-### Peer to Peer Architecture
+- prevent DoS attacks
+- reduce cost / resource used
+    - if using paid 3rd party APIs
 
-- e.g.
-	- Cassandra
+#### requirements
+
+- client-side or server-side (assuming server-side)
+- rate limit based on IP? User ID? etc.
+- Work in a distributed environment?
+    - shared across servers / processes or not
+- separate service or in application code
+- Do we inform the user?
+
+#### placement
+
+- at server side
+- between client & server, as a middleware
+    - normally supported by API gateway (a kind of reverse proxy)
+
+#### algorithm
+
+- token bucket
+    - a bucket of tokens, indicating capacity
+    - each accepted request consumes a token
+    - if no token in the bucket, drop the request
+    - bucket refill tokens periodically
+    - parameters
+        - bucket size
+        - refill rate 
+            - how many tokens per second
+- leaking bucket
+    - a fixed sized FIFO queue
+    - request processed at  rate 
+    - parameters
+        - bucket size
+        - process rate 
+- fixed window counter
+    - a max amount of requests per time slot
+    - parameters
+    - parameters: $n$ requests per $p$ seconds window
+    - memory needed
+        - assuming rate limit based on user ID
+        - user ID 8B
+        - timestamp 4B (32-bit)
+            - 2B if only store minutes & seconds
+        - counter 2B
+        - each user 12B, excluding overheads
+        - 1M users -> 12MB
+    - cons
+        - burst requests around the split of 2 time windows can cause more requests than the quota to go through
+- sliding window log
+    - keep track of request timestamps
+    - window = $[t-p, t]$, where $t$ = timestamp of the latest request, $p$ = window size in time
+    - when a new request comes in, remove the timestamps in window smaller than $t-p$, and set window start time as $t-p$
+    - if window size smaller than max, accept the request and add the timestamp in the window
+    - parameters: $n$ requests per $p$ seconds
+    - memory needed
+        - assuming rate limited based on user ID, max requests an hour
+        - user ID 8B
+        - each timestamp 4B
+        - each user 8B + 4B x 500 = 2kB, excluding overheads
+        - 1M users -> 2GB
+    - pros
+        - accurate rate limiting
+    - cons
+        - requires a lot of memory since we're storin timestamps instead of counters
+- sliding window of tiny fixed window counters
+    - fixed window counter + sliding window
+    - rate limit: $n$ requests in 1 hour
+    - use fixed windows of size $\dfrac{1}{k}$ hr, aggregate the counters of the past $k$ windows, and compare with $n$
+    - set counter TTL to 1 hr
+    - memory usage much smaller than "sliding window log" since we store counters instead of timestamps
+        - roughly $k$ times the usage of "fixed window counter" since we use $k$x more windows
+- sliding window counter
+    - if a request comes in at $x\%$ of the current window, window size = $(1-x\%)$ x number of requests in previous window +  number of requests in current window
+    - accept if window size < max
+    - parameters: $n$ requests per $p$ seconds
+    - ![[sys-des-sliding-window-counter.png]]
+    - pros
+        - solve the spike problem in fixed window counter
+    - cons
+        - it assumes the requests in the previous window is evenly distributed
+
+#### design
+
+- Use in-memory cache like Redis to store the counters.
+- high level architecture
+    - ![[rate-limiter-high-arch.png]]
+- save rules as config files on disk
+    - have workers to pull and store in cache
+- response headers
+    - `X-Ratelimit-Remaining`
+    - `X-Ratelimit-Limit`
+- when exceeds rate limit
+    - return 429 too many requests
+    - return `X-Ratelimit-Retry-After` in header
+    - can choose to drop it or send it in a queue
+- detailed architecture
+    - ![[sys-des-rate-limiter-detailed-arch.png]]
+- challenges in a distributed environment
+    - race condition
+        - when 2 requests read the same counter at the same time
+            - solution: lock
+                - slow
+            - solution: atomic operation with Redis
+                - read count -> write new count, as an atomic operation
+    - synchronization across rate limiters
+        - solution: sticky session - a client always use a specific rate limiter
+            - neither scalable nor flexible
+        - solution: use the same Redis as data store
+- performance optimization
+    - [[#Multi Data Centers]] (or edge servers) setup s.t. rate limiters can be close to users
+        - sync with eventual consistency
+- monitoring
+    - gather data to understand if the rules or algorithms are working well
+
+### Unique ID Generator
+
+- requirements
+    - unique & sortable
+    - ID increments by time but not necessarily by 1
+    - numerical
+    - within 64-bit
+    - generate 10k IDs per second
+- approaches
+    - [[#Multi-Leader Replication]]
+        - auto increment but by $k$ where there are $k$ db servers
+        - cons
+            - hard to scale with [[#Multi Data Centers]]
+            - no time consistency (later time -> bigger number) across servers
+            - problems when servers are added/removed
+    - UUID
+        - 128-bit
+        - low probablity of collision
+            - 1B per second x 100 years -> P = 50% for having 1 collision
+        - pros
+            - each server generate their own UUID independently
+            - easy to scale
+        - cons
+            - 128-bit long
+            - no time consistency
+            - non-numeric
+    - ticket server (Flickr)
+        - central server in charge of auto increment
+        - pros
+            - work well with medium-scale apps
+        - cons
+            - single point of failure
+    - snowflake (Twitter)
+        - ![[sys-des-snowflake-id.png]]
+        - 64-bit
+            - sign bit - 1 bit
+                - always 0
+            - timestamp - 41 bits
+                - epoch time
+                - 69 years
+            - datacenter ID - 5 bits
+                - max 32 datacenters
+            - machine ID - 5 bits
+                - max 32 machines each data center
+            - sequence number - 12 bits
+                - auto increment by 1, reset to 0 every ms
+                - max 4096 IDs per ms for a machine
+        - pros
+            - satisfies all the requirements
+- important problems / tradeoffs
+    - clock synchronization problem
+        - sol: Network Time Protocol
+    - we can allocate the timestamp & sequence number bits to fit our needs
+        - more timestamp bits & less sequence number bits -> for low concurrency long-term applications
+    - needs high availability
+
+### Key-Value Store
+
+#### requirements
+
+- operations
+    - `put(key, value)`
+    - `get(key)`
+- small key-value pair, < 10kB
+- high availability
+- high scalability
+- automatic scaling
+    - add/remove servers automatically based on traffic
+- low latency
+
+#### single server
+
+- store as a hash table in memory
+- to fit more data
+    - data compression
+    - store frequenty used data in memory, the rest on disk
+- reaches capacity easily
+
+#### distributed server
+
+- [[#CAP]] - do we want consistency or availability during network failures?
+- data partition
+    - for a large applicaton with a lot of data, it's not possible to fit all data inside a single server, so we would want to partition it
+    - challenges
+        - distribute data evenly
+        - minimize data movement when add/remove nodes
+    - [[#Consistent Hashing]]
+        - auto scaling - add/remove servers based on loads with minimal cost of data movement
+        - allocate virtual nodes based on server capacity 
+- data [[#replication]]
+    - replicate data to $k$ servers 
+        - to closest $k$ servers on the hash ring clockwise
+            - physical servers not virtual nodes since a physical server may have multiple virtual nodes
+    - replicas are placed across data centers for better reliability
+        - since nodes at the same data center often go down together
+    - we can achieve strong consistency or not by setting [[#Quorums]] parameters
+    - eventual consistency is usually selected for highly available systems
+- resolving inconsistency - see [[#Leaderless Replication#Resolving conflicts]]
+- handling failures
+    - detecting failures - gossip protocol
+        - we need multiple sources to confirm a server is down, but all-to-all multicasting (each tells everyone else) is inefficient
+        - instead, each node pings its status to some random nodes periodically, if one node hasn't been updated for a long while, it's considered online
+    - [[#Handling failures]]
+
+#### architecture
+
+-  main features
+    - `get(key)` & `put(key, value)` APIs
+    - a coordinator node between client and nodes
+    - nodes distributed using [[#Consistent Hashing]]
+    - data is replicated to multiple nodes
+    - ![[sys-arch-kv-store-techniques.png]]
+- ![[sys-des-cassandra-arch.png]]
+    - Cassandra architecture
+- write operation
+    - log the write request in commit log
+    - save to memory cache
+    - flush the data to SSTable (sorted-strong table) when memory cache is full
+- read operation
+    - return data if key is in memory cache
+    - read from SSTable with bloom filter if not in memory cache
 
 ## Caching
 
@@ -770,170 +1037,6 @@ You probably don't need to use microservices.
         - deployments
     - telemetry
 
-### Rate Limiter
-
-#### motivation
-
-- prevent DoS attacks
-- reduce cost / resource used
-    - if using paid 3rd party APIs
-
-#### requirements
-
-- client-side or server-side (assuming server-side)
-- rate limit based on IP? User ID? etc.
-- Work in a distributed environment?
-    - shared across servers / processes or not
-- separate service or in application code
-- Do we inform the user?
-
-#### placement
-
-- at server side
-- between client & server, as a middleware
-    - normally supported by API gateway (a kind of reverse proxy)
-
-#### algorithm
-
-- token bucket
-    - a bucket of tokens, indicating capacity
-    - each accepted request consumes a token
-    - if no token in the bucket, drop the request
-    - bucket refill tokens periodically
-    - parameters
-        - bucket size
-        - refill rate 
-            - how many tokens per second
-- leaking bucket
-    - a fixed sized FIFO queue
-    - request processed at  rate 
-    - parameters
-        - bucket size
-        - process rate 
-- fixed window counter
-    - a max amount of requests per time slot
-    - parameters
-    - parameters: $n$ requests per $p$ seconds window
-    - memory needed
-        - assuming rate limit based on user ID
-        - user ID 8B
-        - timestamp 4B (32-bit)
-            - 2B if only store minutes & seconds
-        - counter 2B
-        - each user 12B, excluding overheads
-        - 1M users -> 12MB
-    - cons
-        - burst requests around the split of 2 time windows can cause more requests than the quota to go through
-- sliding window log
-    - keep track of request timestamps
-    - window = $[t-p, t]$, where $t$ = timestamp of the latest request, $p$ = window size in time
-    - when a new request comes in, remove the timestamps in window smaller than $t-p$, and set window start time as $t-p$
-    - if window size smaller than max, accept the request and add the timestamp in the window
-    - parameters: $n$ requests per $p$ seconds
-    - memory needed
-        - assuming rate limited based on user ID, max requests an hour
-        - user ID 8B
-        - each timestamp 4B
-        - each user 8B + 4B x 500 = 2kB, excluding overheads
-        - 1M users -> 2GB
-    - pros
-        - accurate rate limiting
-    - cons
-        - requires a lot of memory since we're storin timestamps instead of counters
-- sliding window of tiny fixed window counters
-    - fixed window counter + sliding window
-    - rate limit: $n$ requests in 1 hour
-    - use fixed windows of size $\dfrac{1}{k}$ hr, aggregate the counters of the past $k$ windows, and compare with $n$
-    - set counter TTL to 1 hr
-    - memory usage much smaller than "sliding window log" since we store counters instead of timestamps
-        - roughly $k$ times the usage of "fixed window counter" since we use $k$x more windows
-- sliding window counter
-    - if a request comes in at $x\%$ of the current window, window size = $(1-x\%)$ x number of requests in previous window +  number of requests in current window
-    - accept if window size < max
-    - parameters: $n$ requests per $p$ seconds
-    - ![[sys-des-sliding-window-counter.png]]
-    - pros
-        - solve the spike problem in fixed window counter
-    - cons
-        - it assumes the requests in the previous window is evenly distributed
-
-#### design
-
-- Use in-memory cache like Redis to store the counters.
-- high level architecture
-    - ![[rate-limiter-high-arch.png]]
-- save rules as config files on disk
-    - have workers to pull and store in cache
-- response headers
-    - `X-Ratelimit-Remaining`
-    - `X-Ratelimit-Limit`
-- when exceeds rate limit
-    - return 429 too many requests
-    - return `X-Ratelimit-Retry-After` in header
-    - can choose to drop it or send it in a queue
-- detailed architecture
-    - ![[sys-des-rate-limiter-detailed-arch.png]]
-- challenges in a distributed environment
-    - race condition
-        - when 2 requests read the same counter at the same time
-            - solution: lock
-                - slow
-            - solution: atomic operation with Redis
-                - read count -> write new count, as an atomic operation
-    - synchronization across rate limiters
-        - solution: sticky session - a client always use a specific rate limiter
-            - neither scalable nor flexible
-        - solution: use the same Redis as data store
-- performance optimization
-    - [[#Multi Data Centers]] (or edge servers) setup s.t. rate limiters can be close to users
-        - sync with eventual consistency
-- monitoring
-    - gather data to understand if the rules or algorithms are working well
-
-### Key-Value Store
-
-#### requirements
-
-- operations
-    - `put(key, value)`
-    - `get(key)`
-- small key-value pair, < 10kB
-- high availability
-- high scalability
-- automatic scaling
-    - add/remove servers automatically based on traffic
-- low latency
-
-#### single server
-
-- store as a hash table in memory
-- to fit more data
-    - data compression
-    - store frequenty used data in memory, the rest on disk
-- reaches capacity easily
-
-#### distributed server
-
-- [[#CAP]] - do we want consistency or availability during network failures?
-- data partition
-    - for a large applicaton with a lot of data, it's not possible to fit all data inside a single server, so we would want to partition it
-    - challenges
-        - distribute data evenly
-        - minimize data movement when add/remove nodes
-    - [[#Consistency Hashing]]
-        - auto scaling - add/remove servers based on loads with minimal cost of data movement
-        - allocate virtual nodes based on server capacity 
-- data [[#replication]]
-    - replicate data to $k$ servers 
-        - to closest $k$ servers on the hash ring clockwise
-            - physical servers not virtual nodes since a physical server may have multiple virtual nodes
-    - replicas are placed across data centers for better reliability
-        - since nodes at the same data center often go down together
-    - we can achieve strong consistency or not by setting [[#Quorums]] parameters
-    - eventual consistency is usually selected for highly available systems
-- resolving inconsistency with versioning
-    - 1
-
 ### URL Shortener
 
 [Educative.io solution](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-tinyurl)  
@@ -944,9 +1047,20 @@ You probably don't need to use microservices.
 - requirements
     - custom link?
     - private links?
+    - update/delete by users?
+    - traffic?
+        - 100M new URLs a day -> 365B for 10 years
+    - multiple short links for a long url? 
     - default expiration time?
     - remove long unused links?
     - telemetry/analytics?
+- APIs
+    - `POST api/v1/shorten`
+        - return short url
+    - `GET api/v1/<shortUrl>`
+        - return long url for redirection
+            - `301 redirect` - permant redirection, so subsequent requests to the short url will be redirected immediately without calling the short url service
+            - `302 redirect` - temporary redirection, so subsequent requests to the short url will be still call the short url service
 - schema
     - link table
         - short link 7 chars -> 7B
@@ -968,13 +1082,16 @@ You probably don't need to use microservices.
         - may have collision
     - ip address + timestamp or the long url -> md5 -> base62
         - very low chance of collision
+            - check if collision exists with bloom filter
         - md5
         - base62
             - 26+26 english letters & 10 numbers
+            - make a number into 62-based
         - base64
             - base62 with `+` & `/`
             - not suitable for a url
     - a dedicated key generation service & db
+        - see [[#Unique ID Generator]]
         - generate keys and store in key db
         - when we need a new url just fetch a generated one from db
         - pros
