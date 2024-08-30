@@ -1,8 +1,3 @@
----
-layout: meth
-parent: Software Development
----
-
 # System Design
 
 ## Tools
@@ -530,11 +525,11 @@ Leader-Based Replication often uses async replication
 - a way to resolve conflicts
 - have a timestamp for each write
 - when resolving write conflicts, use the one with the biggest timestamp
-- supported by Cassandra & Redis
+- supported by [[Cassandra]] & Redis
 - achieves eventual consistency
 - sacrifice durability, may have data loss
     - concurrent writes to the same key all appear as successfuly, but only one of them is used
-    - we can minimize data loss by update each field based on primary key independently (Cassandra's approach)
+    - we can minimize data loss by update each field based on primary key independently ([[Cassandra]]'s approach)
         - ![[sys-des-cass-res.png]]
 
 ### Handling failures
@@ -851,7 +846,7 @@ reference
     - eventual consistency is usually selected for highly available systems
 - resolving inconsistency - see [[#Leaderless Replication#Resolving conflicts]]
 - handling failures
-    - detecting failures - gossip protocol
+    - detecting failures - [[CS425 Distributed Systems#Epidemic Multicast / Gossip Protocol|gossip protocol]]
         - we need multiple sources to confirm a server is down, but all-to-all multicasting (each tells everyone else) is inefficient
         - instead, each node pings its status to some random nodes periodically, if one node hasn't been updated for a long while, it's considered online
     - [[#Handling failures]]
@@ -865,7 +860,7 @@ reference
     - data is replicated to multiple nodes
     - ![[sys-arch-kv-store-techniques.png]]
 - ![[sys-des-cassandra-arch.png]]
-    - Cassandra architecture
+    - [[Cassandra]] architecture
 - write operation
     - log the write request in commit log
     - save to memory cache
@@ -1107,6 +1102,112 @@ You probably don't need to use microservices.
             - check expiration when accessed, if expired then delete and return error
         - cronjob to remove expired links
     - if using a key generation service & key db, recycle the key by putting it back to the db after link is deleted
+
+### Web Crawler
+
+![[sys-des-web-crawler.jpg]]
+
+- usages
+    - search engine indexing
+    - web archiving
+    - data mining
+    - web monitoring
+        - e.g. discover piracy
+- requirements
+    - purpose: search engine indexing
+    - traffic: 1B we pages a month
+    - HTML only
+    - only consider newly added or edited web pages
+    - store HTML up to 5 years
+    - ignore duplicate content
+    - characteristics
+        - scalability
+        - robustness
+            - handle bad HTML, unresponsive servers, malicious links, etc.
+        - politeness
+            - reasonable request rate on a host
+        - extensibility
+            - flexible for new requirements
+                - e.g. store image as well
+- estimation
+    - 1B per month -> 400 QPS
+    - peak QPS = 400x2 = 800
+    - assume average web page size 500KB
+    - 50KB x 1B = 500TB of storage per month
+    - 500TB x 12 x 5 = 30PB for 5 years
+
+#### design
+
+- ![[sys-dis-web-crawler-high.png]]
+- select seed URLs
+    - select it based on
+        - locality
+        - topics
+    - e.g. the seed URL of a university is its domain name
+- URL frontier
+    - a FIFO queue for URLs to be downloaded
+    - BFS
+    - ensure politeness - only download 1 page at a time from a host
+        - map each host to a download thread
+        - ![[sys-des-url-frontier.png]]
+    - proiritizer - determine URL priority
+        - use PageRank, traffic etc.
+        - assign URLs into queues of different priorities
+        - queues with higher priority would have a better change of being selected
+        - ![[sys-es-web–crwler-prioritizer.png]]
+    - ensure freshness - keep updated
+        - recrawl based on web pages' update history
+        - recrawl important pages more frequently
+- HTML downloader
+    - download HTML
+    - check `Robots.txt` (Robot Exclusion Protocol) to check pages allowed to be downloaded
+        - cache it
+- DNS Resolver
+    - URL -> IP addres
+- content parser
+    - parse HTML
+- content seen
+    - 26% of web page are duplicated contents
+    - compare hash values of 2 web pages
+- content storage
+    - most on disk
+    - popular content in memory
+- URL extractor
+    - extract links from HTML
+- URL filter
+    - ignore some URLs based on content types, extensions, blacklist etc.
+- URL seen
+    - keep track of visited URLs
+    - hash table or bloom filter
+- URL storage
+    - store visited URLs
+
+#### performance optimization
+
+- distributed crawl
+    - ![[sys-web-crawler-distributed-crawl.png]]
+- cache DNS Resolver
+    - DNS requests are often synchronous, so can be a bottleneck
+    - cache the domain -> IP mapping, update periodically with cronjob
+- locality
+    - distribute crawl servers close to the hosts
+- short timeout
+
+#### Robustness
+
+- [[#Consistent Hashing]] for [[#Load Balancing]]
+- save crawl states and data
+    - restart a crawl by loading the states and data
+- exception handling
+- data validation
+    - avoid spider traps
+    - exclude noise
+
+#### Extensibility
+
+We can easily add new features by plugging in new modules
+
+![[sys-des-web-crawler-9.png]]
 
 ### Twitter Timeline
 

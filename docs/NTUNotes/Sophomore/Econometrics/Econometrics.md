@@ -168,7 +168,7 @@ i.e. $2(1-\Phi(\frac{\hat{\mu_y}-\mu_y}{\sigma_y}))$ if N(0,1)
 > Hence, if you are building Linear regression on multiple variable, it is always suggested that you use Adjusted R-squared to judge goodness of model. In case you only have one input variable, R-square and Adjusted R squared would be exactly same.
     Typically, the more non-significant variables you add into the model, the gap in R-squared and Adjusted R-squared increases.
     <https://discuss.analyticsvidhya.com/t/difference-between-r-square-and-adjusted-r-square/264/3>
-    
+
 不懂, 為何加 data 點 R-squared 就一定會不變 or 上升
 
 - ![[econometrics-16.png]]
