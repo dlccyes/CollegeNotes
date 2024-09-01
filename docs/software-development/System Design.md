@@ -1166,6 +1166,7 @@ You probably don't need to use microservices.
     - URL -> IP addres
 - content parser
     - parse HTML
+    - we need server-side rendering / dynamic rendering before parsing because many links are dynamically generated with JS
 - content seen
     - 26% of web page are duplicated contents
     - compare hash values of 2 web pages
@@ -1208,6 +1209,25 @@ You probably don't need to use microservices.
 We can easily add new features by plugging in new modules
 
 ![[sys-des-web-crawler-9.png]]
+
+### Notification System
+
+- requirements
+    - notifications to support
+        - push notification
+        - SMS message
+        - email
+    - soft real time, accepting slight delay
+    - supporting devices
+        - iOS, andriod, laptop, desktop computer
+    - trigger
+        - client app
+        - server-side
+    - user can opt-out
+    - traffic
+        - 10M push notifications
+        - 1M SMS
+        - 5M emails
 
 ### Twitter Timeline
 
