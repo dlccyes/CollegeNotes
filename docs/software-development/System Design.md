@@ -1229,6 +1229,81 @@ We can easily add new features by plugging in new modules
         - 1M SMS
         - 5M emails
 
+#### different types of notifications
+
+- iOS push notification
+    - provider builds and sends request to APNS (Apple Push Notification Service)
+        - request contains device token & payload
+- Android push notification
+    - sends request to FCM (Firebase Cloud Messaging) instead of APNS
+- SMS message
+    - use 3rd party services e.g. Twilio, Nexmo
+- email
+    - use 3rd party services e.g. Mailchimp, SendGrid
+    - or set up own email server
+
+#### gathering contact info
+
+- save user contact info when the user first downloads the app or signs up
+    - `user` table & `device` table
+        - a user can have multiple devices
+        - ![[sys-des-not-tables.png]]
+
+#### design
+
+**initial version**
+
+![[sys-des-not-des.png]]
+
+- notification system
+    - provide APIs to services
+    - basic validations
+    - build and send requests to third party notification services
+- third-party services
+    - note that some may be unavailable in some space and time
+
+**scaled version**
+
+![[sys-des-not-des-2.jpg]]
+
+- notification servers
+    - fetch data from cache or DB
+    - push notification data to message queues
+- cache
+    - user info, device info, notification templates
+- message queues
+    - a message queue for each notification type
+- workers
+    - pull notification events from message queue, build the requests, and send to third-party service
+
+#### Reliability
+
+- cannot have data loss
+- retry if failed
+    - worker fails to send -> put back to message queue
+- to prevent duplicates, check event ID first and ignore already processed ones
+
+#### additional considerations
+
+- notification template
+    - many notifications follow a similar format
+    - use preformatted notification template with customizable parameters to avoid building every notification from scratch
+    - improve consistency & efficiency
+- notification setting
+    - respect users' notification settings
+    - `(user_id bigInt, channel varchar, opt_in boolean)`
+    - check if user is opted in for this notification type (channel) before sending
+- rate limiting
+    - limit the number of notifications a user can receive
+- security
+    - our APIs requires authentication
+- monitor message queues
+    - if too many in the queue, add more workers
+- events tracking
+    - tracking open rate, click rate, and engagement for notifications sent
+
+![[sys-des-not-44.png]]
+
 ### Twitter Timeline
 
 source: DDIA
