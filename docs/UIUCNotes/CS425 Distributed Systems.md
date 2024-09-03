@@ -100,7 +100,7 @@
 ## Memebership
 
 - suppose machine fails once every 10 years
-    - 120 servers -> MTTF (mean time to failure) = 1 month
+    - 120 servers -> MTTF (mean time to failure) = 10y x 12m / 120 = 1 month
     - 12k servers -> MTTF = 7.2hr
 - use memebership protocol to auto detect failures
 
@@ -159,7 +159,7 @@
         - if a node is having longer delay at receiving packets, it may mark all other nodes as failed -> low accuracy
 - gossip-style heartbeating
     - nodes periodic gossip their memebership list
-        - `(member ID, heartbeart counter, time)` 
+        - `(member ID, heartbeart counter, timestamp)` 
     - update local memebership list with the info received
     - if a heartbeart hasn't been increased within the timeout, mark the member as failed
     - to prevent gossipping dead info, remember the deleted member for another timeout, and ignore any info about it if received
@@ -183,6 +183,11 @@
     - constant detection time & load
     - tune false alarm rate with $K$ 
     - ![[cs425-swim-comparison.jpg]]
+- misc
+    - ![[sys-des-fail-ex.png]]
+    - decrease hearteating frequency -> increase false alarm rate if timeout stays the same
+    - ![[sys-des-cs425-q2-3.png]]
+        - in Alice's protocol, each node pings 3 other nodes, while in Bob's protocol, there may be leaves (no outgoing edge) that can't be detected
 
 #### Dissemination
 
@@ -211,3 +216,36 @@
             - marked as failed forever once marked as failed by a node
         - if not failed, higher incarnation overrides lower ones
             - if the same, suspect overrides alive
+
+## Grid
+
+- using geographically distributed computing resources
+- use APIs to communicate with the protocols of each site
+- e.g. Globus
+- security challenges: it's federated so there may be different protocols & mechanisms for each site
+    - single sign-on
+        - s.t. user don't have to log in to each site
+    - mapping to local security mechanisms
+    - credentials inheritance
+        - children should have access to the resources of its parent
+
+## P2P Systems
+
+### Napster
+
+- server maintain `(filename, ip address, port)` tuples
+- servers don't store files but pointers for all file
+- search
+    - ![[cs425-napster-search.jpg]]
+    - flow
+        1. client send search query to server
+        2. server returns the list of host tuples relevant to the query
+        3. client pings each host to find transfer rates
+        4. client requests file from the best host
+- use TCP
+- cons
+    - no security: plain text messages & passwords
+    - indirect infringement of copyright
+- centralized server
+    - may have congestion
+    - single point of failure

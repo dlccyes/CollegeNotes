@@ -486,7 +486,7 @@ Leader-Based Replication often uses async replication
 ### Leaderless Replication
 
 - writes to several replicas in parallel
-    - defined as success if x out of n is successful
+    - defined as success if $x$ out of $n$ is successful
 - read from several replicas in parallel, and use version number to decide which is newer
 - no failover
 - used by key-value stores to support high availability
@@ -749,53 +749,61 @@ reference
 
 ### Unique ID Generator
 
-- requirements
-    - unique & sortable
-    - ID increments by time but not necessarily by 1
-    - numerical
-    - within 64-bit
-    - generate 10k IDs per second
-- approaches
-    - [[#Multi-Leader Replication]]
-        - auto increment but by $k$ where there are $k$ db servers
-        - cons
-            - hard to scale with [[#Multi Data Centers]]
-            - no time consistency (later time -> bigger number) across servers
-            - problems when servers are added/removed
-    - UUID
-        - 128-bit
-        - low probablity of collision
-            - 1B per second x 100 years -> P = 50% for having 1 collision
-        - pros
-            - each server generate their own UUID independently
-            - easy to scale
-        - cons
-            - 128-bit long
-            - no time consistency
-            - non-numeric
-    - ticket server (Flickr)
-        - central server in charge of auto increment
-        - pros
-            - work well with medium-scale apps
-        - cons
-            - single point of failure
-    - snowflake (Twitter)
-        - ![[sys-des-snowflake-id.png]]
-        - 64-bit
-            - sign bit - 1 bit
-                - always 0
-            - timestamp - 41 bits
-                - epoch time
-                - 69 years
-            - datacenter ID - 5 bits
-                - max 32 datacenters
-            - machine ID - 5 bits
-                - max 32 machines each data center
-            - sequence number - 12 bits
-                - auto increment by 1, reset to 0 every ms
-                - max 4096 IDs per ms for a machine
-        - pros
-            - satisfies all the requirements
+**Requirements**
+
+- unique & sortable
+- ID increments by time but not necessarily by 1
+- numerical
+- within 64-bit
+- generate 10k IDs per second
+
+#### [[#Multi-Leader Replication]] auto increment
+
+- auto increment but by $k$ where there are $k$ db servers
+- cons
+    - hard to scale with [[#Multi Data Centers]]
+    - no time consistency (later time -> bigger number) across servers
+    - problems when servers are added/removed
+
+#### UUID
+
+- 128-bit
+- low probablity of collision
+    - 1B per second x 100 years -> P = 50% for having 1 collision
+- pros
+    - each server generate their own UUID independently
+    - easy to scale
+- cons
+    - 128-bit long
+    - no time consistency
+    - non-numeric
+
+#### ticket server (Flickr)
+
+- central server in charge of auto increment
+- pros
+    - works well with medium-scale apps
+- cons
+    - single point of failure
+
+#### Snowflake (Twitter)
+
+- ![[sys-des-snowflake-id.png]]
+- 64-bit
+    - sign bit - 1 bit
+        - always 0
+    - timestamp - 41 bits
+        - epoch time
+        - 69 years
+    - datacenter ID - 5 bits
+        - max 32 datacenters
+    - machine ID - 5 bits
+        - max 32 machines each data center
+    - sequence number - 12 bits
+        - auto increment by 1, reset to 0 every ms
+        - max 4096 IDs per ms for a machine
+- pros
+    - satisfies all the requirements
 - important problems / tradeoffs
     - clock synchronization problem
         - sol: Network Time Protocol
@@ -1028,6 +1036,8 @@ You probably don't need to use microservices.
     - operations
         - monitoring 
             - metrics
+                - QPS
+                - latency
             - logging
         - deployments
     - telemetry
@@ -1050,9 +1060,9 @@ You probably don't need to use microservices.
     - remove long unused links?
     - telemetry/analytics?
 - APIs
-    - `POST api/v1/shorten`
+    - `POST /api/v1/shorten`
         - return short url
-    - `GET api/v1/<shortUrl>`
+    - `GET /api/v1/<shortUrl>`
         - return long url for redirection
             - `301 redirect` - permant redirection, so subsequent requests to the short url will be redirected immediately without calling the short url service
             - `302 redirect` - temporary redirection, so subsequent requests to the short url will be still call the short url service
@@ -1304,37 +1314,241 @@ We can easily add new features by plugging in new modules
 
 ![[sys-des-not-44.png]]
 
-### Twitter Timeline
+### News Feed / Twitter Timeline
 
-source: DDIA
+#### requirements
 
-**Approach 1**
+- both mobile & web
+- features
+    - publish a post
+    - see followers' posts
+- sorting
+    - by reverse chronological order
+- friends limit
+    - 5k a user
+- traffic
+    - 10M DAU (daily active users)
+- types
+    - text, images, and videos
 
-- write: post a tweet -> insert into global tweets
-	- simple
-- read: sql join query to select tweets from those who the user follows
-	- complex
+#### APIs
 
-Suitable for 
+- publish API
+    - `POST /v1/me/feed`
+    - params
+        - `content`
+        - `auth_token`
+- retrieve API
+    - `GET /v1/me/feed`
+    - params
+        - `auth_token`
 
-**Approach 2**
+#### Design
 
-- write: post a tweet -> insert into the cache of each of the tweeter's followers
-	- complex
-- read: fetch the cache
-	- simple
+**publishing a post**
 
-Suitable when # read reqs >> # write reqs
+high level
 
-**Hybrid**
+![[sys-des-newsfeed-design.png]]
 
-Approach 2 for tweets from the mass with little followers, and approach 1 for tweets from celebs
+detailed
 
-i.e. Tweets from celebs are indepedently fetched and then inserted into users' timeline cache
+![[sys-des-newsfeed-design-deep.jpg]]
+
+- web servers
+    - enforce authentication & rate-limiting
+-  fanout service
+    - for building news feed
+- notification service
+    - send notifications to followers
+
+**building newsfeed**
+
+high level
+
+![[sys-des-newsfeed-des-high.png]]
+
+detailed
+
+![[sys-des-newsfeed-retrieve-deep.jpg]]
+
+- news feed service
+    - fetch post IDs & user IDs from news feed cache
+    - fetch post & user details from post & user cache
+    - construct news feed and return
+- cache
+    - ![[sys-des-newsfeed-cache.png]]
+
+#### Fanout Service
+
+**Fanout Approaches**
+
+- fanout on write (push)
+    - publish a post -> insert into the cache of each of the follower's cache (build news feed)
+    - pros
+        - fetching news feed (read) is fast
+    - cons
+        - hotkey problem: if the user has a lot of followers, fetching followers list and building news feed for all is time consuming
+        - resource wasting to build news feed for inactive followers
+- fanout on read (pull)
+    - build news feed on read (on-demand)
+    - pros
+        - on-demand so won't waste resource on inactive users
+    - cons
+        - slow to fetch news feed
+            - may need complex join
+- hybrid
+    - use push for normal users, pull for celebrities
+    - read -> fetch the prebuilt news feed and pull contents from celebrities
+
+**Fanout Flow**
+
+![[sys-des-newsfeed-fanout-design.jpg]]
+
+1. fetch follower IDs from graph db
+2. fetch followers info from user cache, and filter out muted ones (or those the user doesn't wish to share this post with)
+3. send followers list & new post ID to message queue
+4. fanout workers fetch data from message queue
+5. insert news feed data `(post_id, user_id)` to news feed cache
+    - store only IDs to prevent large memory consumption
+    - won't have cache miss unless user scroll through thousands of posts 
+
+### Chat System
+
+#### requirements
+
+- type: 1v1 & group chat
+- platform: mobile & web
+- traffic: 50M DAU
+- group member limit: 100
+- features
+    - 1v1 chat
+    - group chat
+    - online indicator
+    - only text
+- message limit: 100k characters
+- no end-to-end encryption
+- chat history: forever
+
+#### communication protocol
+
+- polling
+    - client periodically asks server if there's message
+    - cons
+        - costly
+        - resource wasting
+- long polling
+    - client holds the connection open until there's new message or timeout reached
+    - cons
+        - if using load balancing the server receiving a message from the sender may not have the long polling connection with the intended receiver
+        - server doesn't know if the client is still there
+        - still inefficient
+- websocket
+    - bi-directional
+    - persistent
+    - use websocket for both sender - server & server - receiver
+    - the most used
+
+#### design
+
+![[sys-des-chat-design-sv.jpg]]
+
+- chat service is stateful because each client has a persistent websocket with a chat server
+- use 3rd party service for push notification
+
+![[sys-des-chat-design.png]]
+
+- chat servers
+    - send/receive messages
+- presence servers
+    - online/offline status
+- API servers
+    - login, signup, profile settings, etc.
+- notifications servers
+- key-value stores
+    - chat history
+
+#### data storage
+
+- user data in RDBMS
+    - use [[#Replication]] ([[#Leader-Based Replication]]) & [[#Sharding]] to satisfy availability & scalability
+- chat history in [[#Key-Value Store]]
+    - requirements
+        - chat data is enormous
+        - only recent chats are accessed frequently
+        - support searching (random access of data)
+        - read-to-write ratio about 1:1
+    - why [[#Key-Value Store]]
+        - horizontal scaling
+        - low latency
+        - RDBMS doesn't handle long tail of data well, random access is expensive once index grows large
+        - used by other chat systems 
+            - e.g. Facebook Messenger users HBase, Discord uses Cassandra
+    - 1v1 chat schema
+        - ![[sys-des-chat-design-chat-schema.png]]
+        - use `message_id` to decide message order because `created_at` may collide
+    - group chat schema
+        - ![[sys-des-chat-design-group-schema.png]]
+        - composite pk of `(channel_id, message_id)`
+        - use `channel_id` (group id) as the partition key
+    - `message_id` generation
+        - see [[#Unique ID Generator]]
+        - properties
+            - unique
+            - newer one has bigger value
+        - approaches
+            - [[#Snowflake (Twitter)]]
+            - local auto increment within a group
+
+#### deep dive
+
+- service discovery
+    - find the best chat server for a client
+        - based on location, capacity, etc.
+    - e.g. Apache Zookeeper
+- 1v1 message flow
+    - ![[sys-des-chat-1v1-msg-flow.png]]
+    - flow
+        1. user A sends a message to chat server 1 with websocket
+        2. chat server 1 obtains a message ID from the ID generator
+        3. chat server sends the message to the message queue
+        4. message stored in key-value store
+        5. if user B is online, sends the message to its server, chat server 2
+        6. if user B is offline, push notification servers send a push notification to user B
+        7. chat server 2 sends the message to user B with websocket
+- message sync across devices for the same user
+    - ![[sys-des-chat-msg-sync-flow.png]]
+    - each device has a websocket to the same server
+    - each device maintains the last message id on the device
+    - if the incoming message's id is bigger, it's a new message
+- small group chat message flow
+    - ![[sys-des-chat-sgroup-msg-flow.png]]
+    - ![[sys-des-chat-sgroup-msg-flow-2.png]]
+    - new message is sent to the message queue of every other group members
+    - becomes expensive once group is large
+- online presence
+    - websocket between client & presence server 
+    - login/logout -> presence server saves status & timestamp to key-value store
+    - disconnection
+        - client sends heartbeat to presence server periodically
+        - timeout -> mark as offline
+    - fanout
+        - ![[sys-des-chat-presense-fanout.png]]
+        - when online status change, publish even to the channel for each group member
+            - websocket
+        - expensive for large group
+            - use on-demand fetch instead
+
+#### extension
+
+- media files
+    - compression, cloud storage, thumbnails
+- end-to-end encryption
+- client-side caching
+- message resent
 
 ### TikTok
 
 - worker for generating versions of videos in different formats & resolutions
 - store videos in S3
 - have CDN
-
