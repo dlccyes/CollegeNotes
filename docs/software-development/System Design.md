@@ -1547,6 +1547,114 @@ detailed
 - client-side caching
 - message resent
 
+### Search Autocomplete System
+
+- requirements
+    - position: only at beginning
+    - suggestions to return: 5
+    - ordering: historical query frequency
+    - spell check?
+        - no spell check or autocorrect
+- estimation
+    - 10M DAU
+    - average 10 searches each person
+    - 20B per query (5char x 4w)
+    - 20 requests per query (each char input results in a query)
+    - 10M x 10 x 20 = 2B queries a day = 24k QPS
+    - peak QPS = 24k x 2 = 48k
+    - assume 20% queries are new -> 10M x 10 x 20B x 20% = 400MB new data added to storage daily
+
+#### Small Scale Design
+
+- data gathering service
+    - gather user input and aggregate in real time
+    - store as a frequency table `(query, search frequency)`
+- query service
+    - return most frequently searched terms from a prefix
+    - use [[SQL]] `LIKE prefix% ORDER BY frequency`
+        - inefficient in big scale
+
+#### Scalable Design
+
+- trie
+    - add frequency info into a regular trie
+    - ![[sys-des-google-trie.png]]
+    - $O(p+c\log c)$ time to get top k most searched queries from a prefix 
+        - $p$ = length of prefix
+        - $c$ = num of the decendents / subtree nodes of the prefix
+        - $O(p)$ to traverse the prefix
+        - $O(c)$ to get all the subtree nodes and their frequency
+        - $O(c\log c)$ to sort by frequency and get the top $k$
+            - you can probably do it in $O(k\log k)$ with a heap tho
+        - ![[sys-des-google-trie-ex.png]]
+    - $O(1)$ read time with optimizations
+        - set prefix max length
+            - set as a small constant like 50 -> reduce $O(p)$ to $O(1)$
+        - cache top search querie at each node
+            - trading space for time
+            - ![[sys-des-google-trie-cache.jpg]]
+            - $O(1)$ to retrieve top k in subtree if cache hit
+- data gathering service
+    - update trie in real time is impractical
+        - high latency if traffic is high
+        - top k may not change much over time, so it's inefficient to update trie frequently
+    - how up to date depends on use case
+        - Twitter requires up to date suggestions
+        - Google not so much
+    - ![[sys-des-google-trie-data-gat.png]]
+    - analytics logs
+        - `(query, timestamp)`
+        - append-only
+        - not indexed
+    - aggregators
+        - high aggregate frequency -> more up to date
+        - aggregate logs into frequency table for each time period
+        - `(query, frequency, timestamp)`
+    - workers
+        - build the trie from the aggregated data and save to trie DB periodically
+        - async
+    - trie cache
+        - distributed cache for fast read
+        - periodic snapshot of trie DB
+    - trie DB
+        - option - key-value store
+            - hashmap representation of trie
+        - option - document store
+            - serialized periodic snapshot of trie
+- query service
+    - ![[sys-des-google-trie-query-svc.png]]
+    - to optimize query speed
+        - AJAX
+        - browser caching
+            - save autocomplete suggestions to browser cache with some TTL
+        - data sampling
+            - only log 1 out of $N$ request to save resource
+- trie management
+    - create/update from aggregated data
+    - update
+        - option - update trie directly
+            - slow if big
+        - option - build new trie periodically and replace old trie
+    - delete bad suggestions
+        - add a filter layer between API servers & trie cache
+        - ![[sys-des-google-trie-filter.png]]
+        - bad suggestions are removed from trie DB async as well
+    - sharding 
+        - shard the trie if too big
+        - option - range-based
+            - may have uneven distribution
+        - option - shard map
+            - analyze historical data distribution
+            - ![[sys-des-google-trie-shardmap.jpg]]
+
+#### extension
+
+- multi-language support
+    - use unicode for trie
+- locality
+    - build different tries for different countries, storing in CDNs
+- trending search queries (real-time)
+
 ### TikTok
 
 - worker for generating versions of videos in different formats & resolutions
