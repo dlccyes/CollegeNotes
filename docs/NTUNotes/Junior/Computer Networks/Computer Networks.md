@@ -683,7 +683,7 @@ so there're many security problems now
 - many firewalls block UDP
 
 ### video streaming
-#### streaming types
+#### streaming protocols
 ##### HTTP streaming
 
 - one version of video, stored in an URL
@@ -698,7 +698,7 @@ so there're many security problems now
 
 - Dynamic Adaptive Streaming over HTTP
 - many versions of videos
-	- differnt bit rates i.e. different quality
+	- different bit rates i.e. different quality
 	- stored in different URL
 	- manifest file
 		- URL for each version of video

@@ -260,7 +260,7 @@ If we choose consistency, we will block all writes to the other servers (n1 & n2
 
 ### Handling Hierarchical Data
 
-If your data is a tree-like structure (undirected graph), you can design your db schema in multiple ways.
+If your data is a tree-like structure (undirected graph), you can design your relational db schema in multiple ways.
 
 #### Multiple Tables
 
@@ -320,7 +320,7 @@ Exclusively use `left` & `right` to do queries (i.e. `id` isn't involved when qu
 - pros
 	- faster to query a deep subtree
 - cons
-	- need to update the `left` & `right` fields of many records when inserting or moving a node
+	- slow insertion: need to update the `left` & `right` fields of many records when inserting or moving a node
 
 #### Lineage Column / Path Enumeration / Materialized Path
 
@@ -1655,8 +1655,192 @@ detailed
     - build different tries for different countries, storing in CDNs
 - trending search queries (real-time)
 
-### TikTok
+### YouTube
 
-- worker for generating versions of videos in different formats & resolutions
-- store videos in S3
-- have CDN
+- requirements
+    - features: upload & watch videos
+    - clients: mobile apps, browsers, smart TV
+    - traffic: 5M DAU
+    - average daily time spent for a user: 30min.
+    - a lot of international users
+    - accept most video resolutions & formats
+    - needs encryption
+    - file size max: 1GB
+    - can use public cloud
+- estimation
+    - 5M DAU
+    - average video size 300MB
+    - storage
+        - 10% of users upload 1 video per day
+        - storage needed 5M x 10% x 300MB = 150TB
+    - CDN cost
+        - users watch 5 videos a day on average
+        - $0.02 per GB transferred
+        - 5M x 5 x 0.3GB x $0.02 per GB = $150K per day
+
+#### design
+
+See [[Computer Networks#video streaming]] also
+
+![[sys-des-youtube-high.png]]
+
+- CDN
+    - store and stream videos to users
+- API servers
+    - handle everything except streaming video
+    - feed recommendation
+    - generate video upload URL
+    - update metadata DB & cache
+    - user signup
+    - etc.
+
+#### video uploading
+
+![[sys-des-yt-video-upload-flow.jpg]]
+
+- metadata DB
+    - stores video metadata
+    - [[#Sharding]] & [[#Replication]] for performance & availability
+- metadata cache
+    - caches video metadata for better performance
+- original storage
+    - stores the original videos
+    - blob storage
+    - S3
+- transcoding servers
+    - convert to various formats for various devices & bandwith
+- transcoded storage
+    - stores transcoded video files
+    - blob storage
+    - S3
+- CDN
+    - caches videos
+- completion queue
+    - message queue for video metadata
+- completion handler\
+    - workers for pulling metadata from completion queue and update to metadata cache & DB
+- API servers
+    - notify user that the video is uploaded
+    - update metadata
+
+#### video streaming
+
+- stream from closest CDN edge server
+- streamin protocols (see [[Computer Networks#video streaming#streaming protocols]])
+    - MPEG-DASH
+    - Apple HLS
+    - Microsoft Smooth Streaming
+    - Adobe HTTP Dynamic Streaming
+
+#### video transcoding
+
+- transcode into different bitrates for users with different bandwidths & network conditions
+- transcode into different formats for compatibility
+    - container
+        - e.g. `.mp4` `.mov` `.avi`
+    - codecs
+        - compression/decompression algo
+        - e.g. `H.264` `HEVC` `VP9`
+- DAG (directed acyclic graph) model for transcoding pipelines
+    - like a CICD pipeline
+    - ![[sys-des-youtube-transcode-dag.png]]
+    - tasks
+        - inspection
+            - validation
+        - video encoding
+            - into different resolutions / codecs / bitrates
+        - adding thumbmail
+            - user uploaded or system generated
+        - adding watermark
+- architecture
+    - ![[sys-des-youtube-transcode-arch.png]]
+    - preprocessor
+        - split video
+            - split into GOP (Group of Pictures) i.e. small chunks of frames
+        - generate DAG
+            - generate DAG pipeline from config files
+        - cache data
+            - cache GOPs & metadata
+            - retry with cache when encoding fails
+    - DAG scheduler
+        - split DAG pipeline into stages of tasks and put them into task queue
+        - ![[sys-des-youtube-dag-sch.jpg]]
+    - resource manager
+        - ![[sys-des-youtube-resource-m.jpg]]
+        - task scheduler
+            1. pick the most important task from task queue
+            2. pick the best worker from worker priority queue
+            3. dispatch the chosen task to the chosen worker
+            4. put the task & worker into running queue
+            5. remove the task & worker info from running queue when done
+        - task queue
+            - priority queue with TODO tasks
+        - worker queue
+            - priority queue with worker utilization info
+        - running queue
+            - info about currently running tasks & worker
+    - task workers
+        - run the assigned tasks
+    - temporary storage
+        - cache metadata in memory
+            - frequently accessed my workers
+            - small
+        - put video & audio in blob storage
+        - data removed once video done
+
+#### optimizations
+
+- parallel video uploading
+    - client splits video into GOPs / small chunks and upload in parallel
+    - ![[sys-des-youtube-opt-split.png]]
+- place upload server close to users
+- async with message queues
+    - ![[sys-des-youtube-async-mq.jpg]]
+    - s.t. each module not dependent on each other, can execute tasks in parallel
+- cost optimization from historical patterns
+    - only cache popular videos on CDN
+        - serve normal videos from video servers
+        - Youtube videos have a long-tail distribution i.e. a lot of videos have almost no viewers
+    - fewer versions encoded for non-popular videos  
+    - short videos encoded on-demand
+    - locality
+        - no need to distribute regionally popular videos to the world
+    - build your own CDN and partner with ISPs
+
+#### security
+
+- presigned URL
+    - ![[sys-des-youtube-presign.png]]
+    - API servers give user a dedicated URL to upload to S3
+    - called "Shared Access Signature" for Azure Blob Storage
+- copyright protection
+    - DRM (digital rights management) systems
+        - e.g. Apple FairPlay, Google Widevne, Microsoft PlayReady
+    - AES encryption
+        - can authorized users can decrypt
+    - visual watermark
+
+#### error handling
+
+- recoverable error
+    - retry a few times before returning proper error code
+    - e.g. encode failures
+- non-recoverable error
+    - return proper error code
+    - e.g. malformed video format
+- common error handlings
+    - upload error: retry
+    - split video error
+        - if old clients can't split videos, pass the entire video to server and split server-side
+    - transcoding error: tretry
+    - preprocessor error: regenerate DAG pipeline
+    - DAG scheduler error: reschedule
+    - resource manager queue down: use replica
+    - task worker down: retry task on another worker
+    - API server down: redirect request to another server
+    - metadata cache server down: read from another
+        - [[#Leaderless Replication]]
+    - metadata DB server down
+        - [[#Leader-Based Replication]]
+        - leader down -> promote a follower to leader
+        - follower down -> read from another
