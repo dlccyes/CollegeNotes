@@ -8,16 +8,16 @@
 ## Methods
 
 - `GET`
-- `CREATE`
-	- should have the created data in the response body
+- `POST`
+	- response: `200` with the created data as body
 - `PUT`
 	- overwrite a resource
-	- should have the whole updated data in the response body
+	- response: `200` with the whole updated data as body
 - `PATCH`
 	- partially update a resource
 	- only needs relevant parts in the request body
 - `DELETE`
-	- no need response body
+	- response: `204` with no body
 
 ### Idempotency
 
@@ -41,6 +41,11 @@ If you want to get a resource belonging to another
 
 - `GET /reports/12/subreports` -> get a list of subreports belonging to report 12
 - `GET /reports/12/subreports/42` -> get subreport 42 of report 12
+
+### Case
+
+- for the path part, use spinal-case (lowercase separated by hyphen)
+- for the query part, use camelCase or snake_case
 
 ### Trailing slash
 

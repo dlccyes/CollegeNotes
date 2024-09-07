@@ -44,19 +44,28 @@
 
 ### Consistency
 
-- strong consistency
-    - guaranteed to read the latest data
-- weak consistency
-    - not guaranteed to read the latest data
-- eventual consistency
-    - if no new input, all replicas will eventually have the latest data
-- read-your-writes consistency
-    - after a user updating its own stuff, it should be able to see the updates
-    - can be achieve by reading the user's profile from leader and other stuff from followers
-- monotonic reads
-    - read$_t$ should retrieves a later state than read$_{t-1}$
-    - can be achieved by each user always reads from the same replica
-        - can be achieved by ranged based [[#load balancing]]
+#### strong consistency
+
+guaranteed to read the latest data
+
+#### weak consistency
+
+not guaranteed to read the latest data
+
+#### eventual consistency
+
+if no new input, all replicas will eventually have the latest data
+
+#### read-your-writes consistency
+
+- after a user updating its own stuff, it should be able to see the updates
+- can be achieve by reading the user's profile from leader and other stuff from followers
+
+#### monotonic reads
+
+- read$_t$ should retrieves a later state than read$_{t-1}$
+- can be achieved by each user always reads from the same replica
+    - can be achieved by ranged based [[#load balancing]]
 
 ## Scaling
 
@@ -497,13 +506,13 @@ Leader-Based Replication often uses async replication
 - $n$ relicas
 - $w$ confirmations required for each write
 - $r$ confirmations required for each read
-- if $w+r>n$, we're gauranteed to read the latest data -> strong consistency
+- if $w+r>n$, we're gauranteed to read the latest data -> [[#strong consistency]]
     - for fast read, $r=1, w=n$
     - for fast write, $w=1, r=n$
     - data loss may still happen if there are 2 concurrent conflicting writes, which need to be resolved
 - sloppy quorums
     - when some of the replicas fails, we can activate some backup nodes, which will result in a different set of nodes
-    - if we still accept the writes as long as there are $w$ nodes available, it's called a sloppy quorum, where $w+r>n$ don't guaranteed strong consistency
+    - if we still accept the writes as long as there are $w$ nodes available, it's called a sloppy quorum, where $w+r>n$ don't guaranteed [[#strong consistency]]
     - hinted handoff - when a node is back up, the backup node will push the changes to the node
     - improve availability at the cost of consistency
 
@@ -850,7 +859,7 @@ reference
             - physical servers not virtual nodes since a physical server may have multiple virtual nodes
     - replicas are placed across data centers for better reliability
         - since nodes at the same data center often go down together
-    - we can achieve strong consistency or not by setting [[#Quorums]] parameters
+    - we can achieve [[#strong consistency]] or not by setting [[#Quorums]] parameters
     - eventual consistency is usually selected for highly available systems
 - resolving inconsistency - see [[#Leaderless Replication#Resolving conflicts]]
 - handling failures
@@ -1314,7 +1323,9 @@ We can easily add new features by plugging in new modules
 
 ![[sys-des-not-44.png]]
 
-### News Feed / Twitter Timeline
+### News Feed
+
+alt: Twitter Timeline
 
 #### requirements
 
@@ -1438,14 +1449,15 @@ detailed
         - costly
         - resource wasting
 - long polling
-    - client holds the connection open until there's new message or timeout reached
+    - client sends a long polling request -> server holds the connection open until there's a new update -> server responds with the update and the connection is closed (customary for HTTP) -> client sends a new long polling request
+        - if server timeout and close the connections, client will immediately sends a new long polling request as well
     - cons
         - if using load balancing the server receiving a message from the sender may not have the long polling connection with the intended receiver
         - server doesn't know if the client is still there
         - still inefficient
 - websocket
     - bi-directional
-    - persistent
+    - persistent (unlike HTTP)
     - use websocket for both sender - server & server - receiver
     - the most used
 
@@ -1657,6 +1669,8 @@ detailed
 
 ### YouTube
 
+alt: TikTok
+
 - requirements
     - features: upload & watch videos
     - clients: mobile apps, browsers, smart TV
@@ -1844,3 +1858,173 @@ See [[Computer Networks#video streaming]] also
         - [[#Leader-Based Replication]]
         - leader down -> promote a follower to leader
         - follower down -> read from another
+
+### Google Drive
+
+alt: DropBox, OneDrive
+
+- functional requirements
+    - features: upload, download, sync, notifications
+    - platforms: mobile & web
+    - file formats: all
+    - encryption: files need to be encrypted
+    - file size limit: 10GB
+    - traffic: 10M DAU
+- non-functional requirements
+    - reliability: no data loss
+    - latency: fast sync speed
+    - bandwidth: low bandwidth used, especially for mobile users
+    - scalability
+    - availability: available when some servers down, slowed down, or have network errors
+- estimation
+    - 50M users, 10M DAU
+    - each user has 10GB free space
+    - average user upload 2 files a day
+    - average file size 500KB
+    - read-to-write 1:1
+    - storage needed = 50M x 10GB = 500PB
+    - upload QPS = 10M x 2 / 86400 = 240
+    - peak QPS = 240 x 2 = 280
+
+#### simple design
+
+- storage system
+    - store files under `/drive`
+- web server
+    - upload API
+        - simple upload
+        - resumable upload
+            - `POST /files/upload?uploadType=resumable`
+    - download API
+        - `GET /files/download`
+        - params: `{"path": <download file path>}`
+    - get file revisions API
+        - `GET /files/list-revisions`
+        - params: `{"path": <download file path>, "limit": 20}`
+- metadata DB
+    - user data, login info, files info, etc.
+
+scaling
+
+- load balancer with dynamic web servers
+- metadata DB with replication & sharding
+- file storage using S3
+    - replication
+        - same-regions
+        - cross-region
+
+![[sys-des-google-drive-simple-design.png]]
+
+[[#Resolving conflicts]]: first-to-write wins, the later one receives a conflict, to be resolved manually by user
+
+#### scalable design
+
+![[sys-des-gdrive-high-design.jpg]]
+
+- block servers
+    - split files into blocks and upload to cloud storage
+    - compress & encrypt the blocks before uploading
+    - each block has a hash value stored in metadata DB
+    - recontruct a file by joining blocks
+- cloud storage
+- cold storage
+    - store inactive files
+- load balancer
+- API servers
+- metadata DB
+    - metadata for users, files, blocks, versions, etc.
+- metadata cache
+- notification service
+    - notify when a file is added/edited/removed
+    - uses long polling
+        - websocket also works but it's more suitable for bi-directional real-time communications
+- offline backup queue
+    - store and sync the changes when client is back online
+
+#### block servers
+
+**flow**
+
+![[sys-des-gdrive-block-server.png]]
+
+**optimizations**
+
+- delta sync
+    - when a file is modified, only sync the modified blocks to cloud storage
+    - ![[sys-des-gdrive-block-sync.png]]
+- compression
+    - each block is compressed
+    - different compression algo for different file types
+        - e.g. gzip & bzip2 for text files
+
+**tradeoffs of skipping the block server** (client directly uploads to cloud storage)
+
+- pros
+    - faster as a files is only transferred once
+- cons
+    - compression & encryption need to be done in the client, which is platform-dependent
+    - client-side encryption is not safe
+
+#### Metadata DB
+
+- requires [[#strong consistency]]: every client sees the latest data
+- use a relational database
+- schema
+    - ![[sys-des-gdrive-metadatadb-schema.jpg]]
+    - user: user info
+    - device: device info
+    - workspace/namespace: root dir of a user
+    - file: file into
+    - file_version: version history of a file
+        - rows are read-only
+    - block: blocks of a file
+        - construct a file of a version with the correct order
+
+#### upload flow
+
+adding file metadata request & uploading file request sent & processed in parallel
+
+![[sys-des-gdrive-upload-flow.png]]
+
+#### download flow
+
+when a file is modified by another client, notification service notifies the client
+
+![[sys-des-gdrive-download-flow.png]]
+
+1. retrieves the changes from metadata DB
+2. request the actual blocks from cloud storage
+3. recontruct the file from the downloaded blocks
+
+#### handling file revisions
+
+file revisions can easily take up tons of space, here are some strategies to save space
+
+- no redundant blocks
+    - blocks are identical if the hash value is the same
+- file revision limit
+    - replace oldest version with the latest version when limit reached
+- keep valuable versions only
+    - files can have a ton of revisions within a short period
+- move inactive data to cold storage
+    - e.g. Amazon S3 Glacier is much cheaper than S3
+
+#### handling failure
+
+- load balancer failure
+    - another load balancer picks up the traffic of a failed one
+    - load balancers heartbeat each other
+- block server failure
+    - another server picks up the jobs of the failed one
+- cloud storage failure
+    - S3 buckets are replicated across regions
+    - try another region if one region dies
+- API server failure
+    - load balancer redirect traffic to another 
+- metadata DB failure
+    - [[#Leader-Based Replication]]
+- notification service failure
+    - all the long polling connections of the failed server need to be reconnect to another server
+- offline backup queue server
+    - they're replicated
+    - consumer of the failed leader queue resub to the newly promoted leader queue

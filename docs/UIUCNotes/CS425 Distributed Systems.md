@@ -249,3 +249,59 @@
 - centralized server
     - may have congestion
     - single point of failure
+
+### Gnutella
+
+[Gnetella Doc](https://courses.cs.washington.edu/courses/cse522/05au/gnutella_protocol_0.4.pdf)
+
+- no servers, clients (servents) do all the work
+- clients / servants / peers form a graph (overlay graph)
+- message types
+    - Query: search
+    - QueryHit: query response
+    - Ping: ping a peer
+    - Pong: ping response
+    - Push: initiate file transfer
+- header format
+    - ![[cs425-nutella-header.png]]
+    - use TTL to prevent query from circulating forever
+- use HTTP
+- search
+    - BFS query out (flood)
+        - ![[cs425-nutella-payload.png]]
+        - use Descriptor ID to prevent duplicate visits
+    - when a node has it, return QueryHit back to the path
+        - ![[cs425-nutella-queryhit.png]]
+- file transfer
+    - requestor choose the best info received from search
+    - request file with HTTP
+    - if blocked because of firewall, send Push message, responder then establish a TCP connection with the requester and sends a GIV HTTP message, requester then do `GET` request
+        - ![[cs425-nutella-push.png]]
+        - `GIV <file index>:<server id>/<file name>`
+        - if requester is also behind the firewall, then not possible
+- ping-pong
+    - ping has no payload
+    - ![[cs425-pong-payload.png]]
+    - to maintain active neighbor list
+- problems
+    - 50% traffic from ping/pong
+        - sol
+            - multiplex
+                - receives multiple pings -> aggregate and send out one pong
+            - cache
+                - memoization pong (return value) of ping (key)
+            - reduce ping frequency
+    - repeated searches
+        - sol: cache Query & QueryHit
+    - some peers don't have enough bandwidth
+        - sol
+            - use central server as proxies for them
+            - FastTrack: leverage more powerful peers
+    - many freeloaders
+        - 70% in 2000
+        - only download, never upload
+        - not Gnetella-specific
+    - flooding causes excessive traffic
+        - sol: structured p2p system e.g. Chord
+
+
