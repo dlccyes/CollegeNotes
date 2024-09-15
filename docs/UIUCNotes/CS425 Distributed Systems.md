@@ -306,6 +306,39 @@
 
 ### FastTrack
 
+- hybrid of [[#Napster]] & [[#Gnutella]]
+- some nodes become supernode, acting like [[#Gnutella]] servers
+    - based on reputation
+
 ### BitTorrent
 
+- split files into blocks
+    - seed: node with all blocks of a file
+    - leecher: node with some blocks of a file
+- local rarest block first: download least replicated block first
+- incentive to share: provide blocks to neighbors providing best download rate in the past
+- choking: limit number of concurrent uploads
+
 ### Chord
+
+- DHT (distributed hash table)
+    - operations: insert/lookup/delete keys
+    - challenges
+        - load balancing
+        - fault tolerance
+        - operation efficiency
+        - locality: transmit with shortest path of the underlying network topology
+    - [[#Napster]], [[#Gnutella]], and [[#FastTrack]] are unoptimized DHTs
+- ![[dht-p2p-compare.jpg]]
+- use consistent hashing to map peers to hash ring
+    - `(ip address, port)` -> SHA-1 -> 160-bit binary string (often represented as 40-bit hex string) -> pick $m$ bits and map to a number in $[0, 2^m-1]$ as peer ID
+    - finger table
+        - for each peer, has pointer to + $2^0, 2^1, 2^2,\cdots$ (mod $2^m$)
+- map filename to peers using consistent hashing
+    - filename -> SHA-1 -> 160-bit binary string -> mod $2^m$ -> find closest greater peer ID
+- searching for a filename in $O(\log N)$
+    - hash filename and mod to get a number $k$
+    - at each peer, send query to largest finger table entry $\leq k$, or its successor (next peer clockwise) if all entries $> k$
+- insertion $O(\log N)$
+
+
