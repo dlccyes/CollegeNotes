@@ -366,8 +366,10 @@ See [[System Design]]
 
 ## TC
 
-- [Taiwan SWE | leveyls.fyi](https://www.levels.fyi/t/software-engineer/locations/taiwan?sortBy=total_compensation&sortOrder=DESC&offset=0&searchText=houzz&currency=TWD)
-- [矽谷輕鬆談 Form Responses](https://docs.google.com/spreadsheets/d/1woaGveprl4eS-UNUvbt8JD8mSSgqad2tq3JzM9TU_cw/)
+### offer negotiation
+
+- [Ten Rules for Negotiating a Job Offer | Haseeb](https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/)
+- [How to Negotiate Your Tech Salary Simulation ft. Levels.fyi | YouTube](https://www.youtube.com/watch?v=fyn0CKPuPlA)
 
 ## Company details
 
