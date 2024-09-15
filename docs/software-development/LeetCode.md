@@ -2,7 +2,6 @@
 layout: meth
 parent: Software Development
 ---
-
 # LeetCode Engineering
 
 ## Important
@@ -137,10 +136,6 @@ Given
 		- [2471. Minimum Number of Operations to Sort a Binary Tree by Level](https://leetcode.com/problems/minimum-number-of-operations-to-sort-a-binary-tree-by-level/)
 - numbers are not in a certain range
 	- [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
-
-### References
-
-- <https://leetcode.com/discuss/study-guide/1902662/>
 
 ## String Pattern Matching
 
