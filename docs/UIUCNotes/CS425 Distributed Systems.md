@@ -305,6 +305,8 @@
     - flooding causes excessive traffic
         - sol: structured p2p system e.g. Chord
 
+![[cs425-gnutella-q9.png]]
+
 ### FastTrack
 
 - hybrid of [[#Napster]] & [[#Gnutella]]
@@ -339,7 +341,7 @@
     - filename -> SHA-1 -> 160-bit binary string -> mod $2^m$ -> find closest greater peer ID
 - searching for a filename in $O(\log N)$ (same for insertion)
     - hash filename and mod to get a number $k$
-    - at each peer, send query to largest finger table entry $\leq k$, or its successor (next peer clockwise) if all entries $> k$
+    - at each peer, send query to furthest finger table entry before $k$ (clockwise), if the 1st entry (successor) is after $k$, send to successor
 - fault tolerance 
     - maintain $r=2\ln N$ successor entries and use successor during failure
         - if 50% failure, probability of at least 1 successor is alive for a node = $1-0.5^{2\ln N}=1-\dfrac{1}{2^{\ln N^2}}=1-\dfrac{1}{N^2}$
@@ -355,7 +357,15 @@
     - stabilization protocol: each node periodically ask immediate neighbors for their finger table & successors
         - fix loops occur during concurrent joins/leaves/failures
         - $O(N^2)$ stabilization rounds to reach strong stability
- 
+
+![[cs425-chord-q13.png]]
+
+1. `45`'s finger table: `[46 (99), 47 (99), 49 (99), 53 (99), 61 (99), 77 (99), 109 (132), 173 (199)]`, so choose `199`
+2. `199`'s finger table: `[200 (234), 201 (234), 203 (234), 207 (234), 215 (234), 231 (234), 8 (32), 72 (99)]`, so choose `234`
+3. `234`'s finger table: `[235 (32), 236 (32), 238 (32), 242 (32), 250 (32), 11 (32), 43 (45), 107 (132)`, no entry is before `12`, so send to successor `32`
+4. `12` found in `32` 
+
+
 ### Pastry
 
 - hash to a hash ring like [[#Chord]] 
