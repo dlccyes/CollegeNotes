@@ -265,6 +265,7 @@
 - header format
     - ![[cs425-nutella-header.png]]
     - use TTL to prevent query from circulating forever
+    - TTL = number of hops
 - use HTTP
 - search
     - BFS query out (flood)
@@ -336,9 +337,38 @@
         - for each peer, has pointer to + $2^0, 2^1, 2^2,\cdots$ (mod $2^m$)
 - map filename to peers using consistent hashing
     - filename -> SHA-1 -> 160-bit binary string -> mod $2^m$ -> find closest greater peer ID
-- searching for a filename in $O(\log N)$
+- searching for a filename in $O(\log N)$ (same for insertion)
     - hash filename and mod to get a number $k$
     - at each peer, send query to largest finger table entry $\leq k$, or its successor (next peer clockwise) if all entries $> k$
-- insertion $O(\log N)$
+- fault tolerance 
+    - maintain $r=2\ln N$ successor entries and use successor during failure
+        - if 50% failure, probability of at least 1 successor is alive for a node = $1-0.5^{2\ln N}=1-\dfrac{1}{2^{\ln N^2}}=1-\dfrac{1}{N^2}$
+        - if 50% failure, probability of at least 1 successor is alive for ALL ALIVE node = $(1-\dfrac{1}{N^2})^{\frac{N}{2}}=e^{-\frac{1}{2N}}\approx 1$ with big $N$
+            - because $\ln (1-x)\approx -x$ if $x<<1$
+    - replicate key/file to $r$ successors & predecessors
+- join/leave/fail
+    - update successors & finger tables
+        - fail -> affect all finger tables with the failed node inside
+    - join
+        - affects $O(\log N)$ finger table entries
+        - $O(\log N)\times O(\log N)$ messages
+    - stabilization protocol: each node periodically ask immediate neighbors for their finger table & successors
+        - fix loops occur during concurrent joins/leaves/failures
+        - $O(N^2)$ stabilization rounds to reach strong stability
+ 
+### Pastry
 
-
+- hash to a hash ring like [[#Chord]] 
+- routing with prefix matching $O(\log N)$
+- maintain pointers to peer for each matched prefix
+    - for peer with id `010101`:
+        - `*`
+        - `0*`
+        - `01*`
+        - `010*`
+        - `0101*`
+        - `01010*`
+    - when routing a message, send to the entry with the largest matching prefix
+        - tie breaker: shortest round-trip-time
+        - shorter early hops, longer late hops
+- use stabilization protocol 
