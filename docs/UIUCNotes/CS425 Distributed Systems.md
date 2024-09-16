@@ -382,3 +382,25 @@
         - tie breaker: shortest round-trip-time
         - shorter early hops, longer late hops
 - use stabilization protocol 
+
+### Kelips
+
+- $k \approx \sqrt{N}$ affinity groups
+- each node is hashed to an affinity group
+- a node points to all other nodes in the same group and one for each other group
+    - ~ $2\sqrt{N}$ neighbors
+    - for contacts in other groups, use the ones with the shortest underlying path (round-trip-time)
+    - ![[cs425-p2p-kelips.jpg]]
+- hash filename to affinity group -> all nodes inside store the filename and the file metadata (address)
+    - they don't store files but only info
+- search for a filename $O(1)$
+    - hash filename to group -> ask its contact in that group for file info
+        - if the contact is down, route via a node in the same group
+- memory $O(\log N)$, but still small
+    - 1.93MB for 100k nodes, 10M files 
+- use gossip to maintain membership lists
+    - $O(\log N)$ dissemination time
+- file metadata maintenance
+    - gossip-style heartbeating, timeout delete
+- compared to [[#Chord]] & [[#Pastry]]
+    - shorter lookup time, more memory used, more background bandwidth used
