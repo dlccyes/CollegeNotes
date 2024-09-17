@@ -97,16 +97,16 @@
 - AWS EC2 & S3
 - [[Cassandra]]
 
-## Memebership
+## Membership
 
 - suppose machine fails once every 10 years
     - 120 servers -> MTTF (mean time to failure) = 10y x 12m / 120 = 1 month
     - 12k servers -> MTTF = 7.2hr
-- use memebership protocol to auto detect failures
+- use membership protocol to auto detect failures
 
 ### Group Memebership Protocol
 
-- maintain a memebership list of working nodes
+- maintain a membership list of working nodes
     - dealing with join/fail/leave
     - different implementations of the list
         - complete list
@@ -404,3 +404,99 @@
     - gossip-style heartbeating, timeout delete
 - compared to [[#Chord]] & [[#Pastry]]
     - shorter lookup time, more memory used, more background bandwidth used
+
+## NoSQL
+
+- column-oriented store
+    - more efficient range query
+    - reduce scan on query on specific field
+
+### [[Cassandra]]
+
+- distribute key-value store, designed to run in a datacenter (and across)
+- from Facebook
+- routing with a coordinator to servers on a hash ring in each data center
+    - no finger tables
+
+#### key replication strategy
+
+-  simple strategy
+    - random partitioner: hash based assignment
+    - byte ordered partitioner: range based assignment
+- network topology strategy: for muti data centers
+    - $k$ replicas for each key per data center
+    - assign each replica to a different rack (search clockwise)
+
+#### snitches
+
+mapping IPs to racks & data centers
+
+- simple snitch: rack-unaware
+- rack inferring: deduct topology from ip address
+    - e.g. `101.102.103.104` -> `x.<data center>.<rack>.<node>`
+- property file snitch: store the mapping in a config file
+- EC2 snitch: if using EC2
+    - EC2 region -> data center
+    - availability zone -> rack
+
+#### writes
+
+- send write to coordinator
+    - coordinator can be per key / client / query
+    - per key coordinator will ensure serialized writes
+- coordinator uses partitioner to send query to all responsible replicas
+    - ACK after receiving $w$ confirmations
+- uses sloppy quorum & hinted handoff, see [[System Design#Quorums]]
+- elect data center coordinator with Apache Zookeeper
+    - variant of Paxos
+
+steps
+
+1. log the write request in commit log
+2. save to memtable i.e. memory cache as a write-back cache
+3. when memtable is full or old, flush the data to disk
+    - an SSTable (sorted-string table) for data (key-value pairs)
+    - an SSTable for index (key-location pairs)
+        - $O(\log N)$ lookup
+    - bloom filter for efficient search
+
+#### bloom filter
+
+- check if a key exists in a probabilistic way
+- may have false alarms, never a miss
+- a large bitmap
+    - initially all 0
+    - insert a key -> hash with $k$ hash functions -> mark all $k$ numbers as 1
+    - check a key's existence: if all hashed $k$ numbers are 1, return True, if any is 0 then False
+        - false alarm scenario: the 1s are set by other keys
+    - ![[cs425-bloom-filter.png]]
+- low false alarm rate
+    - e.g. $k=4$, 100 keys, 3200 bits, false alarm rate = 0.02%
+
+#### compaction
+
+- periodically merging SSTables i.e. merging updates for a key
+- when deleting a key, the key isn't removed but a tombstone is placed, and later removed by the compaction algo
+
+#### reads
+
+- coordinator sends read query to $r$ replicas that respond the fastest in the past, and return the one with the latest timestamp
+- do read repair if conflict
+- a row may be split across multiple SSTables (like before the compaction algo cleans them up) -> a read may need to fetch from multiple SSTables -> read is slower than write 
+
+#### membership
+
+- every server can be a coordinator, so every server needs to maintain a list of all other servers
+- use [[#Gossip]]-style heartbeating 
+- use a suspicion mechanism to dynamically adjust the timeout
+    - different from the one in [[#Group Memebership Protocol]]
+    - failure detector outputs a PHI value indicating suspicion level
+        - looks at historical heartbeat inter-arrival times and determines timeout
+        - PHI = 5 -> 10-15s timeout
+
+#### latency
+
+- orders of magnitudes faster than RDBMS
+- for 50GB data
+    - [[MySQL]] writes 300ms, read 350ms
+    - [[Cassandra]] writes 0.12ms, read 15ms

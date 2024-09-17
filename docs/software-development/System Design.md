@@ -881,7 +881,7 @@ reference
 - write operation
     - log the write request in commit log
     - save to memory cache
-    - flush the data to SSTable (sorted-strong table) when memory cache is full
+    - flush the data to SSTable (sorted-string table) when memory cache is full
 - read operation
     - return data if key is in memory cache
     - read from SSTable with bloom filter if not in memory cache
