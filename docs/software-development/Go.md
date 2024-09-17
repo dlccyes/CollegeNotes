@@ -252,7 +252,7 @@ func Append(slice []int, elements ...int) []int {
 
 ### Slice of Values vs. Slice of Pointers
 
-If the underlying array of your slice is big enough for your need, there is no point at using slice of pointers, as it will need to allocate the a new piece of memory for each entry in the slice.
+If the underlying array of your slice is big enough for your need, there is no point at using slice of pointers, as it will need to allocate a new piece of memory for the pointer for each entry in the slice.
 
 However, if the your your slice will outgrow the underlying array when being appended, a new array with sufficient length will be allocated, copying all the data from the original array to the new one. This is when using slice of pointers is a better option, since only the pointers will need to be copied, not the entire values.
 

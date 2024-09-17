@@ -370,14 +370,14 @@ Have a dedicated table recording the relationship.
 
 For 1 -> 2 -> 3
 
-ancestor_id | node_id
---|--
- 1 | 1
- 1 | 2
- 1 | 3
- 2 | 2
- 2 | 3
- 3 | 3
+| ancestor_id | node_id |
+| ----------- | ------- |
+| 1           | 1       |
+| 1           | 2       |
+| 1           | 3       |
+| 2           | 2       |
+| 2           | 3       |
+| 3           | 3       |
 
 (omitting primary key)
 
@@ -417,21 +417,32 @@ ancestor_id | node_id
     - expensive writes
     - more complicated to enure that redundant copies of data is consistent
 
+### Storing passwords in the database
+
+- db entry
+	- hash(password + salt)
+	- salt
+- register flow
+	- randomly generate a salt -> combine with user entered password -> hash -> store hashing result & salt into database
+- auth flow
+	- retrieve user's salt from db -> combine with entered password -> hash -> compare with db entry
+- ref
+	- <https://www.youtube.com/watch?v=zt8Cocdy15c>
+
 ## NoSQL
 
 
 - high scalability with horizontal scaling
-- high availability with redundancy
-    - replicas
+- high availability with [[#Replication]]
 - data don't get removed instantly -> can undelete
 
 choose it over RDBMS if
 
 - needs very low latency
+- values availability over consistency
 - no relationship between data
 - unstructured / schema always changing
-- huge amount of data
-
+- huge amount of data (large scale)
 
 ### BASE
 
@@ -499,7 +510,7 @@ Leader-Based Replication often uses async replication
 - read from several replicas in parallel, and use version number to decide which is newer
 - no failover
 - used by key-value stores to support high availability
-- e.g. DynamoDB
+    - e.g. DynamoDB
 
 #### Quorums
 
@@ -578,7 +589,7 @@ Partitioning/splitting the database accross nodes/servers. [[#Horizontal Scaling
 - problems
 	- add servers -> need to redistribute all the data -> very expensive
 		- solution: [[#Consistent Hashing]]
-			- MemeCached uses this
+			- MemCached uses this
 	- some keys are more popular than the others
 		- solution: dedicated shards for celebrities
 
@@ -1001,18 +1012,6 @@ You probably don't need to use microservices.
 	- ![[sys-des-mr-1.jpg]]
 	- ![[sys-des-mr-2.png]]
 
-## Storing passwords in the database
-
-- db entry
-	- hash(password + salt)
-	- salt
-- register flow
-	- randomly generate a salt -> combine with user entered password -> hash -> store hashing result & salt into database
-- auth flow
-	- retrieve user's salt from db -> combine with entered password -> hash -> compare with db entry
-- ref
-	- <https://www.youtube.com/watch?v=zt8Cocdy15c>
-
 ## Case Study
 
 ### template
@@ -1248,7 +1247,7 @@ We can easily add new features by plugging in new modules
         - 1M SMS
         - 5M emails
 
-#### different types of notifications
+#### types of notifications
 
 - iOS push notification
     - provider builds and sends request to APNS (Apple Push Notification Service)

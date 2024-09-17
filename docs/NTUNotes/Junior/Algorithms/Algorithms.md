@@ -107,6 +107,7 @@ Solutions to Introduction to Algorithms Third Edition
 	- ![[algorithms-9.png]]
 
 ## Divide and Conquer
+
 - divide into subproblems
 - conquer subproblems recursively
 - combine the subsolutions into an overall solution
@@ -844,6 +845,7 @@ exchange → 數量一樣
 - 更新 node cost
 
 #### [[Dijkstra's Algorithm]]
+
 - ![[algorithms-135.png]]
 - ![[algorithms-136.png]]
 - all edge weights $\geq 0$
@@ -891,6 +893,7 @@ exchange → 數量一樣
 			- ???
 
 ### APSP
+
 - all-pairs shortest paths
 - use adjacency matrix
 	- most use adjacency list
@@ -903,6 +906,7 @@ exchange → 數量一樣
 		- ![[algorithms-151.png]]
 
 #### Floyd-Warshell's APSP Algorithm
+
 - i to j subproblem to i to k + k to j
 - ![[algorithms-152.png]]
 	-  k 為中繼點

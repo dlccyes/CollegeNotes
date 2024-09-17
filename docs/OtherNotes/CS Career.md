@@ -141,7 +141,7 @@ layout: meth
 - [IGotAnOffer](https://igotanoffer.com/)
     - $100-$150 per interview with pro
 
-### LeetCode
+### [[LeetCode]]
 
 - [Blind 75](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU)
 - patterns
@@ -356,6 +356,30 @@ See [[System Design]]
 		- <https://leetcode.com/discuss/general-discussion/1893215/>
 - Offers
 	- <https://www.teamblind.com/post/hLE5CRYQ>
+
+## TC
+
+Check <https://www.levels.fyi/>
+
+### Offer Negotiation
+
+**knowledge**
+
+- they have already invested thousands of dollars on you during the whole process
+- they will never walk away because of you asking too high or asking to delay the deadline
+- recruiters don't get rewarded from lowballing you
+
+**tips**
+
+- deflect during call and do actual negotiations in email
+- ask for written offer, or write down discussed numbers and ask for confirmation in email
+
+**resources**
+
+- [Ten Rules for Negotiating a Job Offer | haseeb qureshi](https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/)
+- [How to Negotiate Your Tech Salary Simulation ft. Levels.fyi | YouTube](https://www.youtube.com/watch?v=fyn0CKPuPlA)
+- [Everything I Learned to Negotiate Your Salary 💸💸 | YouTube](https://www.youtube.com/watch?v=sJ5Shzq68Ac)
+- [42 Minutes of $10m Salary Negotiation Advice (From A Sr. Director In Tech) | YouTube](https://www.youtube.com/watch?v=5pNZw92CCAo)
 
 ## LinkedIn
 

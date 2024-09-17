@@ -1,5 +1,27 @@
 # CS425 Distributed Systems
 
+## MapReduce
+
+- reduce doesn't start until all map is done
+- map -> shuffling -> reduce
+- shuffling
+    - transfer map output to reduce
+- distributed file system
+    - e.g. GFS (Google File System), HDFS (Hadoop Distributed File System)
+- map
+    - input: distributed file system
+    - output: local file system
+- reduce
+    - input: local file system
+    - output: distributed file system
+- output sorted for easy distribution & partitioning (range-based)
+- YARN (Yet Another Resource Manager) scheduler
+    - global resource manager (RM)
+        - scheduling
+    - per-server node manager (NM)
+        - daemon
+    - per-application (job) application master (AM)
+
 ## Gossip
 
 ### Multicast Protocols
@@ -310,7 +332,7 @@
 ### FastTrack
 
 - hybrid of [[#Napster]] & [[#Gnutella]]
-- some nodes become supernode, acting like [[#Gnutella]] servers
+- some nodes become supernode, acting like [[#Napster]] servers
     - based on reputation
 
 ### BitTorrent
@@ -319,7 +341,9 @@
     - seed: node with all blocks of a file
     - leecher: node with some blocks of a file
 - local rarest block first: download least replicated block first
-- incentive to share: provide blocks to neighbors providing best download rate in the past
+- incentive sharing - tit for tat bandwidth usage
+    - provide blocks to neighbors providing best download rate in the past
+    - incentivize nodes to provide good download rates
 - choking: limit number of concurrent uploads
 
 ### Chord
@@ -333,6 +357,8 @@
         - locality: transmit with shortest path of the underlying network topology
     - [[#Napster]], [[#Gnutella]], and [[#FastTrack]] are unoptimized DHTs
 - ![[dht-p2p-compare.jpg]]
+    - [[#Napster]] client store $O(1)$, server stores $O(N)$
+    - [[#Gnutella]] $O(N)$ lookup when the graph is a straight line
 - use consistent hashing to map peers to hash ring
     - `(ip address, port)` -> SHA-1 -> 160-bit binary string (often represented as 40-bit hex string) -> pick $m$ bits and map to a number in $[0, 2^m-1]$ as peer ID
     - finger table

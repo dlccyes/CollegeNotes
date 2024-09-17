@@ -4,6 +4,7 @@ layout: meth
 parent: Algorithms
 ---
 # Dijkstra's Algorithm
+
 ![[dijkstra's-algorithm-1.jpg]]
 
 1. initialize the starting node to 0, every other node to $\infty$

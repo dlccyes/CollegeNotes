@@ -169,7 +169,8 @@ will download the image `hello-world` and pring some messages
 ## Add necessary files in gitlab repo
 Go to your gitlab repo and add `.gitlab-ci.yml`  
 Whenever you push code, Gitlab runner would run your CI/CD pipeline according to this file.  
-```yml
+
+```yaml
 variables:
   DOCKER_DRIVER: overlay2
   DOCKER_HOST: tcp://docker:2375
@@ -218,9 +219,11 @@ gke-deploy:
     - kubectl set image deployment/app-deployment app=$GCP_GCR:$CI_COMMIT_SHA
     - kubectl rollout status deployment/app-deployment
 ```
+
 As defined in `stages`, it will first execute `docker-build`, then (if successful) `gke-deploy`.
 
 Go to your gitlab repo and add `deployment.yaml`  
+
 ```yaml
 ---
 # Source: service.yaml
