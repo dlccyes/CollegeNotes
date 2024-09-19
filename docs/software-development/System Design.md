@@ -429,6 +429,19 @@ For 1 -> 2 -> 3
 - ref
 	- <https://www.youtube.com/watch?v=zt8Cocdy15c>
 
+### CQRS
+
+Command and Query Responsibility Segregation, separating read and write layer s.t. we can optimize & scale each side separately
+
+motivation: a model optimized for read may be very unoptimized for write, vice versa
+
+You can separate read & write mode virtually, or physically. If you use different DB for read & write, you'll need to implement syncing from write DB to read DB.
+
+articles
+
+- [CQRS pattern | Azure](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs)
+- <https://www.reddit.com/r/node/comments/12bi4c5/comment/jewvnaj>
+
 ## NoSQL
 
 
