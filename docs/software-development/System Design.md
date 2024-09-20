@@ -233,7 +233,7 @@ A distributed system will either be consistent or available when partitioned (a 
 - Partition tolerance
 	- misleading because partition will happen
 
-Partition / network failure is unaviodable in a distributed system, so the choice is whether we want consistency or availability when it happens. Typically, RDBMS chooses consistency over availability, while NoSQL chooses availability over consistency.
+Partition / network failure is unavoidable in a distributed system, so the choice is whether we want consistency or availability when it happens. Typically, RDBMS chooses consistency over availability, while NoSQL chooses availability over consistency.
 
 If we have 3 servers, and one of them is down i.e. the network is partitioned
 

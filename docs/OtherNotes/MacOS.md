@@ -269,7 +269,7 @@ brew install snipaste
 
 [MiniPlay for Spotify & iTunes](https://apps.apple.com/us/app/miniplay-for-spotify-itunes/id936243210)
 
-### quickly move between displays/monitors
+### quickly move between displays/monitors - CatchMouse
 
 <https://github.com/round/CatchMouse>
 
@@ -283,6 +283,8 @@ download -> unzip -> right click on the app -> open -> set your keyboard shortcu
 You can also just `git clone` or download the zip from the github repo and you'll find a `.app` inside. Simply drag it to `/Applications/` and open it.
 
 Your cursor will appear right at the middle of the corresponding display after triggering the shortcut key.
+
+If it doesn't work, go to Settings -> Privacy & Security -> Accessibility -> remove it -> readd it
 
 ### use normal scrolling direction
 

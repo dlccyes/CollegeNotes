@@ -285,7 +285,7 @@
     - Pong: ping response
     - Push: initiate file transfer
 - header format
-    - ![[cs425-nutella-header.png]]
+    - ![[cs425-nutella-header.jpg]]
     - use TTL to prevent query from circulating forever
     - TTL = number of hops
 - use HTTP
@@ -437,14 +437,14 @@
     - more efficient range query
     - reduce scan on query on specific field
 
-### [[Cassandra]]
+## [[Cassandra]]
 
 - distribute key-value store, designed to run in a datacenter (and across)
 - from Facebook
 - routing with a coordinator to servers on a hash ring in each data center
     - no finger tables
 
-#### key replication strategy
+### key replication strategy
 
 -  simple strategy
     - random partitioner: hash based assignment
@@ -453,7 +453,7 @@
     - $k$ replicas for each key per data center
     - assign each replica to a different rack (search clockwise)
 
-#### snitches
+### snitches
 
 mapping IPs to racks & data centers
 
@@ -465,7 +465,7 @@ mapping IPs to racks & data centers
     - EC2 region -> data center
     - availability zone -> rack
 
-#### writes
+### writes
 
 - send write to coordinator
     - coordinator can be per key / client / query
@@ -486,7 +486,7 @@ steps
         - $O(\log N)$ lookup
     - bloom filter for efficient search
 
-#### bloom filter
+### bloom filter
 
 - check if a key exists in a probabilistic way
 - may have false alarms, never a miss
@@ -499,18 +499,18 @@ steps
 - low false alarm rate
     - e.g. $k=4$, 100 keys, 3200 bits, false alarm rate = 0.02%
 
-#### compaction
+### compaction
 
 - periodically merging SSTables i.e. merging updates for a key
 - when deleting a key, the key isn't removed but a tombstone is placed, and later removed by the compaction algo
 
-#### reads
+### reads
 
 - coordinator sends read query to $r$ replicas that respond the fastest in the past, and return the one with the latest timestamp
 - do read repair if conflict
 - a row may be split across multiple SSTables (like before the compaction algo cleans them up) -> a read may need to fetch from multiple SSTables -> read is slower than write 
 
-#### membership
+### membership
 
 - every server can be a coordinator, so every server needs to maintain a list of all other servers
 - use [[#Gossip]]-style heartbeating 
@@ -520,9 +520,62 @@ steps
         - looks at historical heartbeat inter-arrival times and determines timeout
         - PHI = 5 -> 10-15s timeout
 
-#### latency
+### latency
 
 - orders of magnitudes faster than RDBMS
 - for 50GB data
     - [[MySQL]] writes 300ms, read 350ms
     - [[Cassandra]] writes 0.12ms, read 15ms
+
+### consistency levels
+
+a client can specify the consistency level for each read/write operation
+
+- ANY: ACK from anyone (even the coordinator)
+    - fastest
+- ALL: ACK from all replicas
+    - strong consistency
+    - slowest
+- ONE: ACK from at least 1 replica
+- quorum: $k$ ACKs, see [[System Design#Quorums]]
+    - global quorum: quorum across data centers
+    - local quorum: quorum in the coordinator's data center
+    - each quorum: quorum in each data center
+
+## Consistency
+
+![[cs425-consistency.png]]
+
+- per-key sequential
+- CRDTs (commutative replicated data types)
+    - order of operations don't matter
+    - e.g. in a counter, A do +1 -> B do +1 == B do +1 -> A do +1 
+- red-blue consistency
+    - blue: CRDTs
+    - red: sequential operations
+- causal consistency
+    - ![[cs425-causal-con.jpg]]
+    - return one of the causal results
+- strong consistency
+    - linearizability
+        - every write is instantly visible to all other clients
+    - sequential consistency
+        - all operations act like they're executed sequentially on a processor
+
+## HBase
+
+- origin
+    - Google's BigTable - 1st blob-based storage
+    - HBase - Yahoo's open source version of BigTable
+    - now part of Apache
+- functions
+    - get/put row
+    - scan (range queries) 
+    - multiput
+- CAP: consistency over availability
+- ![[cs425-hbase-arch.png]]
+- replicated across regions
+- ColumnFamily = a set of columns
+- each ColumnFamily in a region has a Store
+- MemStore: memtable / memory cache, store updates, flush to disk when full
+- StoreFile: on-disk storage, like SSTable
