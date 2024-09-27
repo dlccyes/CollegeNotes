@@ -684,7 +684,18 @@ The goal is to maintain causality, the order of the events. The absolute timesta
 each process maintains a local counter treated as timestamp
 
 - init = 0
-- increment counter on any event / instruction, including sending a message (with counter attached)  
+- increment counter on each process instruction
+- increment counter on sending a message (with counter attached)
 - receive a message -> update counter with `max(local counter, message counter) + 1`
+- an event = process instruction / send / receive
 
 Lamport timestamp can't order concurrent events i.e. events without a causal relationship
+
+**examples**
+
+![[cs425-lamport-e1.png]]
+
+vector timestamp version  
+
+![[cs425-lamport-vector-e1.png]]
+
