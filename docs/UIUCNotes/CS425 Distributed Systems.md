@@ -3,9 +3,11 @@
 ## MapReduce
 
 - reduce doesn't start until all map is done
-- map -> shuffling -> reduce
+- map -> shuffle -> reduce
+- cannot concat map or reduce, only map - reduce - map - reduce - ...
 - shuffling
-    - transfer map output to reduce
+    - map jobs output -> shuffle them -> distribute to reduce jobs
+    - so if MapReduce is running across 20 machines, 1/20 of the data would not need to be transferred across networks but since it's local
 - distributed file system
     - e.g. GFS (Google File System), HDFS (Hadoop Distributed File System)
 - map
@@ -573,9 +575,116 @@ a client can specify the consistency level for each read/write operation
     - scan (range queries) 
     - multiput
 - CAP: consistency over availability
-- ![[cs425-hbase-arch.png]]
+- ![[cs425-hbase-arch.jpg]]
 - replicated across regions
 - ColumnFamily = a set of columns
 - each ColumnFamily in a region has a Store
 - MemStore: memtable / memory cache, store updates, flush to disk when full
 - StoreFile: on-disk storage, like SSTable
+
+### HFile
+
+![[cs425-hfile.jpg]]
+
+- magic: unique data id
+
+### HLog
+
+![[cs425-hlog.jpg]]
+
+- maintain strong consistency with HLog, a write-ahead log
+    - write to append only log -> write to MemStore
+- log replay
+    - after failure recovery or reboot
+    - replay stale logs (check with timestamp)
+    - add edit to MemStore
+- cross-datacenter replication
+    - leader-based
+    - leader cluster sends HLogs to follower clusters synchronously -> update respective MemStores
+    - use Zookeeper for coordination
+
+## Clock Synchronization
+
+we want to order events across processes in a distributed system
+
+- each process has a local clock
+- clock difference
+    - clock skew
+        - offset
+    - clock drift
+        - clock speed difference
+        - causes clock skew
+- clock sync period = $\dfrac{M}{2\times\text{MDR}}$ 
+    - $M$ = max acceptable skew
+    - MDR = maximum drift rate of each clock compared to UTC
+    - max drift rate between 2 clocks 2 x MDR
+- sync of a group of processes
+    - external sync
+        - make sure each local process clock is within bound with an external source
+        - $|C_i-S|<D$
+            - $C_i$ = clock of process $i$
+            - $S$ = external clock
+            - $D$ = bound
+    - internal sync
+        - make sure the max skew between any 2 local process clock is within bound
+        - $|C_i-C_j|<D \ \forall i,j$
+    - external sync guarantees internal sync, but not vice versa
+        - external sync with bound $D$ -> internal sync bound of $2D$
+
+### Cristian's Algorithm
+
+We want to the actual time based on external sync clock time with a bounded error
+
+- ![[cs425-cristian.png]]
+- we assume
+    - min1 = min latency from process P to external source S
+    - min2 = min latency from S to P
+- we know
+    - RTT > min1 + min2
+    - t = clock time received from S
+- actual time at P when receiving t = `[t + min2, t + (RTT - min1)]`
+- set the time to halfway of the interval = $t+\dfrac{RTT+min2-min1}{2}$
+    - max error = $\dfrac{RTT-min2-min1}{2}$
+- rules
+    - never decrease clock value, or may violate event ordering within the same process
+    - can increase or decrease the clock speed
+    - error is too high -> average multiple readings 
+
+### NTP Network Time Protocol
+
+![[cs425-ntp-tree.png]]
+
+- hierarchical, a tree
+- non-leaf -> server
+- leaf -> client
+- each node sync with parent
+
+![[cs425-ntp-flow.jpg]]
+
+- parent sends message 1 to child -> child sends message 2 to parent
+- offset = difference between the 2 latency / 2
+    - $o=\dfrac{(tr_1-ts_2)-(tr_2-ts_2)}{2}$
+- the error between calculated offset and the real offset is bounded by RTT
+    - real offset = $o_r$ = child time - parent time
+    - $L_1$ = latency of message 1
+    - $L_2$ = latency of message 2
+    - $tr_1=ts_1+L_1+o_r$
+    - $tr_2=ts_2+L_2-o_r$
+    - $o=\dfrac{(tr_1-ts_2)-(tr_2-ts_2)}{2}=\dfrac{L_1-L_2}{2}+o_r$
+    - error = $|o-o_r|=|\dfrac{L_1-L_2}{2}|<|\dfrac{L_1+L_2}{2}|=|\dfrac{\text{RTT}}{2}|$
+
+### Lamport Timestamp
+
+The goal is to maintain causality, the order of the events. The absolute timestamp doesn't necessarily matter.
+
+- same process: a -> b if $t_a<t_b$
+- message between 2 processes: send -> receive
+- transitivity: a -> b & b -> c then a -> c
+
+each process maintains a local counter treated as timestamp
+
+- init = 0
+- increment counter on any event / instruction, including sending a message (with counter attached)  
+- receive a message -> update counter with `max(local counter, message counter) + 1`
+
+Lamport timestamp can't order concurrent events i.e. events without a causal relationship
