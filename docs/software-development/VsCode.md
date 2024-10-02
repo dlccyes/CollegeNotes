@@ -88,3 +88,12 @@ You can specify different tab sizes for each language
 For Max, install the extension [Mac CA VSCode](https://marketplace.visualstudio.com/items?itemName=linhmtran168.mac-ca-vscode) and then reload VsCode
 
 <https://stackoverflow.com/a/72889953/15493213>
+
+### java language server not working
+
+use command
+
+```
+Clean up the Java Language Server Workspace
+```
+
