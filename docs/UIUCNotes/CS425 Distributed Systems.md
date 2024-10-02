@@ -560,9 +560,11 @@ a client can specify the consistency level for each read/write operation
     - return one of the causal results
 - strong consistency
     - linearizability
-        - every write is instantly visible to all other clients
+        - maintain a global order
+        - all operations across clients are ordered based on time
     - sequential consistency
-        - all operations act like they're executed sequentially on a processor
+        - maintain a global order
+        - operations in each client are ordered, but can be interleaved across clients
 
 ## HBase
 
