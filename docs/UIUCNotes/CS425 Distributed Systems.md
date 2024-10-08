@@ -448,7 +448,7 @@
 
 ### key replication strategy
 
--  simple strategy
+- simple strategy
     - random partitioner: hash based assignment
     - byte ordered partitioner: range based assignment
 - network topology strategy: for muti data centers
@@ -490,8 +490,9 @@ steps
 
 ### bloom filter
 
+- stored in off-heap memory
 - check if a key exists in a probabilistic way
-- may have false alarms, never a miss
+- may have false alarms / false positives, but never a miss
 - a large bitmap
     - initially all 0
     - insert a key -> hash with $k$ hash functions -> mark all $k$ numbers as 1
@@ -501,16 +502,22 @@ steps
 - low false alarm rate
     - e.g. $k=4$, 100 keys, 3200 bits, false alarm rate = 0.02%
 
-### compaction
-
-- periodically merging SSTables i.e. merging updates for a key
-- when deleting a key, the key isn't removed but a tombstone is placed, and later removed by the compaction algo
-
 ### reads
 
 - coordinator sends read query to $r$ replicas that respond the fastest in the past, and return the one with the latest timestamp
 - do read repair if conflict
 - a row may be split across multiple SSTables (like before the compaction algo cleans them up) -> a read may need to fetch from multiple SSTables -> read is slower than write 
+
+### deletion
+
+When deleting a key, it inserted a timestamp deletion marker called a [tombstone](https://cassandra.apache.org/doc/latest/cassandra/managing/operating/compaction/tombstones.html) rather than removing it.
+
+> If a node receives a delete command for data it stores locally, the node tombstones the specified object and tries to pass the tombstone to other nodes containing replicas of that object. But if one replica node is unresponsive at that time, it does not receive the tombstone immediately, so it still contains the pre-delete version of the object. If the tombstoned object has already been deleted from the rest of the cluster before that node recovers, Cassandra treats the object on the recovered node as new data, and propagates it to the rest of the cluster. This kind of deleted but persistent object is called a zombie.
+
+### compaction
+
+- periodically merging SSTables i.e. merging updates for a key
+- remove keys with a tombstone though the compaction algo
 
 ### membership
 
@@ -701,3 +708,47 @@ vector timestamp version
 
 ![[cs425-lamport-vector-e1.png]]
 
+## Global Snapshot
+
+### Overview
+
+We want to capture the global state, the state of each process & each communication channel.
+
+purpose:
+
+- recovery checkpoint
+- garbage collection of unused objects (without pointers)
+- deadlock detection
+- termination of computations
+
+approach: synchronize all clocks (sufficient condition: state 1 -> state 2 obeys causality) -> ask processes to record state at a specific time
+
+- problems
+    - time sync error
+    - no channel states, the states of messages in the channels
+
+### Global Snapshot Algorithm
+
+- requirements
+    - not interfering the normal processes
+    - each process records its own state
+        - process state
+        - heap, registers, program counter, code, etc. (coredump)
+    - global state collected distributedly
+    - any process can initiate the snapshot
+- Candy-Lamport Global Snapshot Algorithm
+    - init: $P_i$ initiate the snapshot
+        - records its own state
+        - creates a marker message
+        - sends a marker message to all of its outgoing channels
+        - starts recording all the incoming messages from the incoming channels
+    - spread: when a process $P_j$ receives a marker message from the incoming channel $C_{ij}$
+        - if first time receiving the marker message
+            - records its own state
+            - mark the state of the channel $C_{ij}$ as "empty"
+            - sends a marker message to all of its outgoing channels
+            - starts recording all the incoming messages from the incoming channels (except $C_{ij}$)
+        - if not the first time
+            - mark the state of the channel $C_{ij}$ as all the messages since it starts recording i.e. first receive the marker message
+    - termination: when all processes have received a marker on all of their incoming channels
+    - optional: a central server collects all the individual snapshots and assemble them into a global snapshot
