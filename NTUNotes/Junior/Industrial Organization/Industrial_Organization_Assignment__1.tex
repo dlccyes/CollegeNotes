@@ -1,0 +1,277 @@
+\documentclass[a4paper]{article}
+\usepackage{student}
+\usepackage{fontspec}
+\newfontfamily\cjkfont{Noto Serif CJK TC}
+%\setmainfont{Noto Serif CJK SC}
+%\setsansfont{Noto Sans CJK SC}
+
+
+% Metadata
+\date{\today}
+\setmodule{ECON5107: Industrial Organization Assignment \#1}
+\setterm{Feb, 2022}
+
+%-------------------------------%
+% Other details
+% TODO: Fill these
+%-------------------------------%
+\title{Assignment 1}
+\setmembername{{\cjkfont 魏珈民、羅啟帆、李嘉芸、黃耀霆、林雋哲}}  % Fill group member names
+\setmemberuid{b07303025, b07902047, b07303087, b08902136, b08901064}  % Fill group member uids (same order)
+
+%-------------------------------%
+% Add / Delete commands and packages
+% TODO: Add / Delete here as you need
+%-------------------------------%
+\usepackage{amsmath,amssymb,bm}
+
+\newcommand{\KL}{\mathrm{KL}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\T}{\top}
+
+\newcommand{\expdist}[2]{%
+        \normalfont{\textsc{Exp}}(#1, #2)%
+    }
+\newcommand{\expparam}{\bm \lambda}
+\newcommand{\Expparam}{\bm \Lambda}
+\newcommand{\natparam}{\bm \eta}
+\newcommand{\Natparam}{\bm H}
+\newcommand{\sufstat}{\bm u}
+
+% Main document
+\begin{document}
+    % Add header
+    \header{}
+
+    % Use `answer` environment to add solutions
+    % \begin{answer}[Question 1.1] for example starts an environment formatted
+    % for Question 1.1
+    %\begin{answer}[Question 1.1]
+    %    Your answer here.
+
+    %    An equation with numbering:
+    %    \begin{equation}
+    %        \expdist{\sufstat}{\natparam}.
+    %    \end{equation}
+
+    %    An equation without numbering (notice the $*$):
+    %    \begin{equation*}
+    %        \expparam^{\T} \sufstat(x).
+    %    \end{equation*}
+    %\end{answer}
+    
+    \section{Monsanto's Roundup}
+    \begin{answer}[Q1]
+    Reason 1: Conservation tillage gained popularity over time, and it needs a nonselective herbicide like Roundup. As conservation tillage is sensitive to the price of herbicides, cutting price would well increase the sales of Roundup.
+    
+    Reason 2: Patent protection gave Monsanto an effective monopoly, thus Monsanto was able to cut the price as well as retain the market share. 
+    \end{answer}
+    
+    \begin{answer}[Q2]
+    Suppose the demand curve did not change much during 1995 to 1996.
+    Let $p_1 =$ price in 1995, $p_2 =$price in 1996, $q_1 =$ quantity in 1995, $q_2 = $ quantity in 1996. 
+    We may estimate the elasticity using the formula:
+    \begin{equation*}
+        \frac{(q_2-q_1)/(q_1+q_2)}{(p_1-p_2)/(p_1+p_2)}
+    \end{equation*}
+    The estimated elasticity ($|e_A|$) in 1995 for the US market is $9.207$ (when $p= 45, q = 13$), while the one for the international market ($|e_I|$) is 3.727 (when $p = 21, q = 25$). 
+    
+    The profit is maximized when $MR = MC$. 
+    The if and only if condition:
+    \begin{equation}
+        \frac{p-MC}{p} = \frac{1}{|e|}
+    \end{equation}
+    If we assume that the elasticity does not change much along the demand curve, namely, 
+       $\left| \frac{d}{dp} \left(\frac{dq}{dp}\frac{p}{q}\right) \right|$
+    is very small, 
+    then we could take the elasticity estimated above as the elasticity along the whole demand curve.
+    We further assume that $MC$ function is time-invariant and $MC(q)$ differs a little across $q$.
+    Let $p*_A, p*_I$ be the profit-maximizing price in the US market and the international market, respectively in 1995. 
+    From equation (1) and the elasticity estimated, 
+    \begin{equation*}
+        {p*}_A = \frac{|e_A|}{|e_A|-1}MC = 1.122 MC \\
+    \end{equation*}
+    The formula applies since Monsanto is a monopolist in the US in 1995. Observe that the price in the international market is 14 in 2002. This implies that the marginal cost is equal to or lower than 14. Moreover, the patent had expired in many countries, and entering the market was not as difficult. So we further deduce that the price 14 is close to the marginal cost. By our assumption that MC is space and time invariant and that $MC(q)$ differs a little across $q$, we take $14$, the price in the international market in 2002 as the marginal cost. Hence we estimate that 
+    \begin{equation*}
+        p_A = 1.122 * 14 = 15.708
+    \end{equation*}
+    We thus conclude that Monsanto set the price too high in the US in 1995. This can be shown in another way. Suppose that Monsanto set the right price, namely, $45$ is the optimal price. Then we shall have:
+    \begin{equation*}
+        MC = 45 / 1.122 = 40.106
+    \end{equation*}
+    But note that the price in the international market in the same year is $21$. It is way lower than the marginal cost derived, which is impossible. 
+    
+    As for the optimal price for the international market in 1995, if assume Monsanto still had monopolistic power and apply the same method, we will estimate the optimal price to be:
+    \begin{equation*}
+        p_I = \frac{|e_I|}{|e_I|-1} MC = 1.368 * 14 = 19.452
+    \end{equation*}
+    However, the assumption that Monsanto had monopolistic power may fail to hold since the patent had already expired in many nations. Therefore, the optimal price shall be lower than 19.452. We also conclude that the price in the international market 21 was set too high in 1995.
+    
+    \end{answer}
+    \begin{answer}[Q3]
+    Demand becomes more elastic in the long run. \\
+    As conservation tillage gained more popularity, cutting price became more effective because conservation tillage is sensitive to the price of herbicides like Roundup.
+    \end{answer}
+    \begin{answer}[Q4]
+    %Yes. As we can see in Exhibit 1 and Exhibit 2, the change of increasing domestic and international volume is greater than that of decreasing domestic and international price from 1995 to 2000. Therefore, this comparison is consistent with the elasticity rule.
+    
+    No. Observe the following table where $e_A, e_I$/ $p_A, p_I$ stand for the elasticity of demand/ price in the US and international market, respectively. 
+    \begin{center}
+    \begin{tabular}{||c c c c c||} 
+     \hline
+     year & $|e_A|$ & $|e_I|$ & $p_A$ & $p_I$ \\ [0.8 ex] 
+     \hline\hline
+     1995 & 9.207 & 3.727 & 45 & 21 \\ 
+     \hline
+     1996 & 2.333 & 2.714 & 44 & 20 \\
+     \hline
+     1997 & 2.5 & 2.531 & 40 & 18 \\
+     \hline
+     1998 & 2.787 & 2.627 & 35 & 16 \\
+     \hline
+     1999 & 1.170 & 1.905 & 33 & 15 \\ 
+     \hline
+     2000 & 1.039 & 0.2 & 28 & 14 \\ 
+     \hline
+    \end{tabular}
+    \end{center}
+    One can see that in year 1995, 1998, and 2000, $|e_A| > |e_I|$ but $p_A > p_I$. This violates the elasticity rule. The possible reasons are as follows:
+    \begin{enumerate}
+        \item The prices in the table are not profit-maximizing prices. 
+        \item Since the patent had expired in many countries outside the US before 1995, the international market during 1995 to 2000 is not a monopolistic market. (The reason for its high market share is the low price.)
+        \item The cost function is different in the international market and the US market. (We assumed that the cost function is identical for the two markets in Q2 to estimate the profit-maximizing price in 1995 but the assumption may fail. )
+    \end{enumerate}
+    \end{answer}
+    
+    \begin{answer}[Q5]
+    Due to the increasing popularity of conservation tillage (which is sensitive to the price of Roundup) and the progressive development of herbicide-tolerant crops (which is complementary product of Roundup), there will be continuously high market demand for Monsanto's Roundup in the market. Also, high market share allowed Monsanto to exploit economies of scale, thus it still kept itself as a dominant firm in the market. The reputation of Roundup also contributes to its dominance in the market. It takes risks to try out new herbicides as they may cause unexpected damage (sometimes irreversible) to farmlands and crops. The infamous Roundup is a relative safe option for the farmers. 
+    \end{answer}
+    \begin{remarks}[courses]
+    The reason for decreasing prices
+    \begin{itemize}
+        \item Raise the sales of complements (seeds to come in 1998): As price for roundup goes down, quantity of roundup goes up and so do the seeds
+        \item To gain market size early (before patent expiration), get more users and make them loyal to the brand. Also, by intuition, demand is quite elastic. Thus, a price cut is essential.
+        \item price cut might be a entry-deterrence strategy. Since by cutting the price, the profit margin decreases, and new incomers can profit less per unit. 
+    \end{itemize}
+    Also, we should view these cases in \textbf{ex ante} view i.e. from the perspective of the firm. Finally, we should use data that are close (ex. 1995-1996, not 1995-2000) to estimate elasticity.
+    \end{remarks}
+    
+    \section{Cars}
+    \begin{answer}[Q1]
+    The change of price of a car obviously affects the quantity of the car itself the most.
+    \end{answer}
+    \begin{answer}[Q2]
+    Sales of Taurus increases as price of Accord increases, so they're substitutes.
+    \end{answer}
+    \begin{answer}[Q3]
+    From the cross elasticities given, we can see that if P of Taurus increases 1\%, Q of Accord will increases the most (0.2\%) compared to other cars. If P of Mazda 323,  Cavalier, Accord or Century increases 1\%, Q of Taurus will increase 0.1\%. Judging from the 2 perspectives, we can see that Accord is the closest substitute i.e. the closest competitor of Taurus.
+    
+    \end{answer}
+    \begin{answer}[Q4]
+    cross elasticity > 0 $\rightarrow$ Century's sells goes down when Cavalier's price decrease
+    \end{answer}
+    \begin{answer}[Q5]
+    1. consumers with lower budget are more price sensitive
+    
+    2. there are more competitors in the lower-end market
+    \end{answer}
+    \begin{answer}[Q6]
+    Accord P decreased 2\% $\rightarrow$ Accord Q increases 9.6\%\\  
+    Taurus P decreased 3\% -> Accord Q decreased 0.3\%\\  
+    $\therefore$ Accord Q increased about 9.3\%, which is about 27.9k  
+
+    \end{answer}
+    
+    \section{Water}
+    \begin{answer}[Q1]
+    Households with lower annual consumption of water should have a lower price-elasticity of demand for water, as these households' water usage are usually essential, which means that they probably can not adjust the usage a lot.
+    \end{answer}
+    \begin{answer}[Q2]
+    Rich households benefit relatively more from a flat fee, since a flat fee implies that households can not adjust their budget by adjusting their water usage.
+    \end{answer}
+    \begin{answer}[Q3]
+    Under-estimated. Under a flat-charge or decreasing unit price, the amount of water used is not strongly positively related to the total bill they pay. For example, it is reasonable to expect that most households will not change their usage when the price of the flat-charge is raises. Thus the underlying demand curve should be more elastic when all residential users face metering pricing.
+    %???
+    \end{answer}
+    \begin{answer}[Q4]
+    1. This implies that the raising prices might not be a conservation policy. To make raising prices a good policy, the government should adjust the pricing mechanism first i.e. make the demand curve more elastic.
+    
+    2. It should only be meaningful for people facing volume-based charge. For people facing flat charge, they would not reduce their water consumption at all.
+    \end{answer}
+    
+    \section{Pricing Durable Goods}
+    \begin{answer}[Q1]
+    Let $p_1$ be the price at January and $p_2$ be the price at July. Suppose the monopolist set the price at $p_1=x$. Then $1000-x$ buyers will buy at January if they are not farsighted. As a result, only $x$ buyers is left in July, and their willingness-to-pay ranges from $0 \sim x/2$. Then, to maximize the profit at July (note that the profit at January is fixed):
+    \[
+        p_2(x - 2p_2)
+    \]
+    , the monopolist will set the price as $\frac{x}{4}$.
+    \newline\newline
+    However, since buyers are farsighted, they know that if $p_1=x$ and $1000-x$ buyers (buyers with willingness-to-pay $ge x$) bought at January $p_2$ will be $\frac{x}{4}$. With this information, only buyers that can gain more consumer surplus from buying in January will buy. This implies that if a buyer with willingness-to-pay $y$, he will buy in January if
+    \[
+        y - x < \frac{y}{2}-\frac{x}{4}
+    \]
+    This implies not all buyers with willingness-to-pay greater than $x$ will buy; Only buyers with willingness-to-pay greater than$\frac{3}{2}x$ will buy ($\frac{3}{2}$ is obtained by solving the inequality above).
+    \newline\newline
+    However, this implies that $p_2\neq\frac{x}{4}$ but should be set as $p_2=\frac{3}{8}x$ (since the users left in July increases). Using the same reasoning, with this new $p_2$, only buyers with willingness-to-pay greater than $\frac{5}{4}x$ will buy.
+    \newline\newline
+    We may observe that the price that the monopolist set at July ($p_2$) will influence the numbers of buyer in January, and will further influence the price that the monopolist set at July. By repeating this reasoning for a many times, we may observe that the they will converge: at the end only buyers with willingness-to-pay greater than $\frac{4}{3}x$ will buy, and the monopolist will set $p_2=\frac{1}{3}x$.
+    \newline\newline
+    With this insight, we know that we should maximize the following (revenue)
+    \[
+        p_1\left(1000-\frac{4}{3}p_1\right) + \frac{p_1}{3}\left(\frac{4}{3}p_1 - \frac{2p_1}{3}\right)
+    \]
+    we can get $p_1=450, p_2=150, revenue=225000$.
+    
+    \end{answer}
+    \begin{remarks}[Q1]
+    Examples in real world: pricing of new books and old books.
+    \end{remarks}
+    \begin{answer}[Q2]
+    \begin{itemize}
+        \item[(1)] Sell once:
+        By maximizing
+        \[
+            p_1(1000-p_1) \text{ subject to } 0 \le p_1 \le 1000
+        \]
+        we can get maximum revenue $250000$ with $p_1=500$.
+        \item[(2)] Sell twice:
+        By maximizing
+        \[
+            p_1(1000-p_1) + p_2(p_1-2p_2) \text{ subject to } 0 \le 2p_2\le p_1\le 1000
+        \]
+        we can get maximum revenue $\approx 285713$ with $p_1=4000/7\approx571$ and $p_2=1000/7\approx 142$.
+    \end{itemize}
+    \end{answer}
+    \begin{answer}[Q3]
+        Using the logic in Q1, we should optimize the following
+        \[
+            p_1(1000-2(p_1-p_2))+p_2(2(p_1-p_2)-2p_2) \text{ subject to } 2p_2 \ge p_1 \ge p_2
+        \]
+        and we can get the maximum revenue $200000$  with price $p_1=400,p_2=100$. Note that this revenue is less that selling only in the first period ($250000$)
+    \end{answer}
+    \begin{answer}[Q4]
+    If we add the "rebate" constraint into our target in Q2 and Q3, we may observe that the $p_1$ will disappear from the target:
+    \begin{itemize}
+        \item[Q2]
+        \[
+            p_1(1000-p_1)+p_2(p_1-2p_2)-(1000-p_1)(p_1-p_2) = p_2(1000-2p_2)
+        \]
+        \item[Q3]
+        \[
+            p_1(1000-2(p_1-p_2))+p_2(2(p_1-p_2)-2p_2)-(1000-2(p_1-p_2))(p_1-p_2) = p_2(1000-2p_2)
+        \]
+    \end{itemize}
+    This implies that in both cases (have/do not have foresight), the company should sell only in one period (or set the same price in the second period). By selling in the January only, the company can maximize its revenue which equals to $250000$. 
+    \end{answer}
+    \begin{answer}[Q5]
+    Since the lease expires in six-month, two periods are independent. However the willingness-to-pay in both period should be divided by two ($0\sim 1000 \rightarrow 0\sim 500$). So we should optimize the following:
+    \[
+        p_1(1000-2p_1)+p_2(1000-2p_2)
+    \]
+    and we can get maximum revenue $250000$ with $p_1=p_2=250$.
+    \end{answer}
+    
+\end{document}
+
