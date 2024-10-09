@@ -708,6 +708,10 @@ vector timestamp version
 
 ![[cs425-lamport-vector-e1.png]]
 
+![[cs425-hw2-lamport.jpg]]
+
+![[cs425-hw2-lamport-ans.png]]
+
 ## Global Snapshot
 
 ### Overview
@@ -752,3 +756,63 @@ approach: synchronize all clocks (sufficient condition: state 1 -> state 2 obeys
             - mark the state of the channel $C_{ij}$ as all the messages since it starts recording i.e. first receive the marker message
     - termination: when all processes have received a marker on all of their incoming channels
     - optional: a central server collects all the individual snapshots and assemble them into a global snapshot
+    - the snapshot would be causally correct
+    - ![[cs425-candy-algo.jpg]]
+
+### Consistent Cuts
+
+- cut = a line (snapshot) cutting off all processes on a certain time
+    - events before the cut -> in the cut
+    - after -> out of the cut
+- consistent cut = cut that preserves causality
+    - for every event $e_j$ in the cut, if $e_i\rightarrow e_j$, then event $e_i$ is also in the cut
+    - ![[cs425-consistent-cut.jpg]]
+- Candy-Lamport Global Snapshot Algorithm always creates a consistent cut
+    - pf: if event $e_j$ in process $P_j$ happens before $P_j$ records its state ($e_j$ is in the cut) and $e_i\rightarrow e_j$, then $e_i$ happens before $P_i$ records its state s.t. both are in the cut
+        - suppose $P_i$ snaps -> $e_i$ -> $e_j$ -> $P_j$ snaps
+        - $P_i$ snaps -> $e_i$ -> $e_j$ means that $P_j$ will receive marker and snap before $e_j$, meaning $e_j$ won't be in the cut -> contradiction
+
+## Correctness
+
+### liveness
+
+guarantee a certain good thing will happen eventually
+
+e.g. 
+
+- distributed computation: will terminate
+- [[#Failure Detector]]: completeness
+- consensus: all processes will decide on a value
+
+### safety
+
+guarantee that a certain bad thing will never happen
+
+e.g.
+
+- no deadlock in a distributed transaction system
+- no orphan in a distributed object system
+- [[#Failure Detector]]: accuracy
+- consensus: no conflict
+
+### dilemma
+
+it's difficult to satisfy both liveness & safety in a distributed system, in many cases it's the tradeoff between no miss & no false alarm
+
+- [[#Failure Detector]]: completeness (liveness) vs. accuracy (safety)
+- consensus: decision (liveness) vs . correct decisions (safety)
+- legal system: jails all criminals (liveness) vs. jails no innocents (safety)
+
+### Global Properties
+
+- for a state $S$ to achieve [[#liveness]] about a property $Pr$
+    - $S$ satisfies $Pr$ || $\exists$ $S\rightarrow S'$ where $S'$ satisfies $Pr$
+- for a state $S$ to achieve [[#safety]] about a property $Pr$
+    - $S$ satisfies $Pr$ && $\forall$ $S\rightarrow S'$ $S'$ satisfies $Pr$
+- stable = once true, stays true forever
+    - stable liveness
+        - e.g. computation has terminated
+    - stable non-safety
+        - e.g. there's a dead lock
+        - an object is orphaned
+- Candy-Lamport algo can detect stable global properties
