@@ -2,7 +2,7 @@
 
 ## MapReduce
 
-- reduce doesn't start until all map is done
+- reduce doesn't start until all map is done, generally speaking
 - map -> shuffle -> reduce
 - cannot concat map or reduce, only map - reduce - map - reduce - ...
 - shuffling
@@ -364,7 +364,7 @@
 - use consistent hashing to map peers to hash ring
     - `(ip address, port)` -> SHA-1 -> 160-bit binary string (often represented as 40-bit hex string) -> pick $m$ bits and map to a number in $[0, 2^m-1]$ as peer ID
     - finger table
-        - for each peer, has pointer to + $2^0, 2^1, 2^2,\cdots$ (mod $2^m$)
+        - for each peer, has pointer to the closest bigger entry to + $2^0, 2^1, 2^2,\cdots$ (mod $2^m$)
 - map filename to peers using consistent hashing
     - filename -> SHA-1 -> 160-bit binary string -> mod $2^m$ -> find closest greater peer ID
 - searching for a filename in $O(\log N)$ (same for insertion)
@@ -451,7 +451,7 @@
 - simple strategy
     - random partitioner: hash based assignment
     - byte ordered partitioner: range based assignment
-- network topology strategy: for muti data centers
+- network topology strategy: for multi data centers
     - $k$ replicas for each key per data center
     - assign each replica to a different rack (search clockwise)
 
@@ -816,3 +816,53 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
         - e.g. there's a dead lock
         - an object is orphaned
 - Candy-Lamport algo can detect stable global properties
+
+## Multicast
+
+- definitions
+     - multicast: send to a group of processes
+     - broadcast: send to all processes
+     - unicast: send to a process
+- usages
+    - [[#Cassandra]] & other db
+        - replication: multicast read/write to a replica group
+        - membership info (e.g. heartbeats)
+    - online scoreboards
+        - multicast to a group of interested clients
+    - stock exchange
+        - multicast trade info to other broker computers in the same set
+        - HFT
+    - air traffic control system
+        - multicast to other controllers
+        - all controllers need to receive same updates in the same order
+
+### ordering types
+
+- FIFO ordering
+    - from the same sender, order of messages received = order of messages sent
+    - doesn't care about messages from different senders
+- causal ordering
+    - events received obeys the originally causal relationship
+    - systems with causal ordering
+        - social networks
+        - bulletin boards
+        - website comments
+    - causal $\rightarrow$ FIFO
+        - assume process $P$ sends message $M$ and then $M'$, to satisfy causal ordering, it needs to send $M$ before $M'$, which also satisfied FIFO ordering
+        - NOT vice versa
+- total ordering / atomic broadcast
+    - doesn't care about send order
+    - all receivers all multicasts in the same order
+    - so like linearizability
+    - FIFO & causal looks at sending order, so we can combine them with total which looks at receiving order
+
+### FIFO Multicast
+
+- each process maintains a vector timestamp (sequence number)
+    - $P_{i}[j]$ = the latest sequence number from $P_j$ that $P_i$ has received
+- sending
+    - $P_j[j]$++ -> $P_j$ sends the multicast message with the new $P_j[j]$
+- receiving
+    - $P_i$ receives a message from $P_j$ with the sequence number $S$
+    - if $S=P_i[j]+1$
+        - deliver the message to application
