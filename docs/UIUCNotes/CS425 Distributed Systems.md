@@ -866,3 +866,50 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
     - $P_i$ receives a message from $P_j$ with the sequence number $S$
     - if $S=P_i[j]+1$
         - deliver the message to application
+
+### Total Ordering
+
+- elect a leader / sequencer
+    - maintains a global sequence number $S$
+    - receives message $M$ -> $S$ ++ -> multicasts `<M, S>`
+- send message to group & sequencer
+- $P_i$ receives a message `<M, S(M)>` from sequencer
+    - $P_i$ maintains a local sequence number $S_i$
+    - buffers the message until $S_i+1=S(M)$, and then delivers the message to application, $S_i$ ++
+
+### Causal Ordering
+
+- vector timestamp
+    - similar to [[#FIFO Multicast]]
+- $P_j$ sends
+    - $P_j[j]$ ++ -> $P_j$ sends the message with the whole vector $P_j[1...N]$
+- $P_i$ receives message with vector timestamp $M[1...N]$
+    - buffers until both conditions below satisfied
+        - $M[j]=P_i[j]+1$
+            - $P_i$ is expecting it from $P_j$
+        - $\forall \ k\neq j$, $M[k]\leq P_i[k]$
+            - all events before $M$ has already been received
+    - after conditions met, deliver message to application and set $P_i[j]=M[j]$ 
+
+### Reliable Multicast
+
+- all non-faulty processes receive the same set of multicasts
+- approach 1
+    - sender sends reliable unicast sequentially to all group members
+    - receiver forwards the message received to all group members
+
+### Virtual Synchrony
+
+- views = membership lists
+    - each process maintains one
+    - view change: process join / leave / fail
+- guarantees that all view changes are delivered in the same order to all non-faulty processes
+- a multicast $M$ is delivered in a view $V$ when $M$ is delivered after the process receives $V$ but before it receives the next view
+- guarantees that the set of multicasts delivered in a given view is the same for all processes
+    - if a process didn't deliver $M$ at $V$ while others did, it will be removed
+    - what happens in a view, stays in the view
+- independent to multicast orderings, so can be combined with any of them
+
+## Consensus
+
+
