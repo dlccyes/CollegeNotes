@@ -912,4 +912,35 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
 
 ## Consensus
 
+### Consensus Problem
+
+- goal: a group of processes reaching agreement on same values
+    - ordering of messages
+    - up/down status of processes
+    - leader
+    - mutually exclusive access to a resource
+- constraints
+    - validity: everyone proposes a value -> decision
+    - integrity: decision is proposed by some process
+    - non-triviality: there are some initial system states that will lead to the consensus
+- equivalent problems
+    - perfect [[#Failure Detector]]
+    - leader election
+- harder problem
+    - agreement
+### sync & async models
+
+- synchronous distributed system
+    - each message is received within bounded time
+    - drift of each local clock is bounded
+    - time for each step is bounded
+    - e.g.
+        - processors connected by a communication bus
+        - multicore machine
+    - Consensus is solvable in synchronous distributed system
+- asynchronous distributed system
+    - unbounded
+    - e.g. Internet
+    - more general then synchronous distributed system
+    - Consensus is unsolvable in asynchronous distributed system
 
