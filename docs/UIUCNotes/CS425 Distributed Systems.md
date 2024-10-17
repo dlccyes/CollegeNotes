@@ -759,6 +759,8 @@ approach: synchronize all clocks (sufficient condition: state 1 -> state 2 obeys
     - the snapshot would be causally correct
     - ![[cs425-candy-algo.jpg]]
 
+![[cs425-snap-shot-p4.png]]
+
 ### Consistent Cuts
 
 - cut = a line (snapshot) cutting off all processes on a certain time
@@ -867,6 +869,8 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
     - if $S=P_i[j]+1$
         - deliver the message to application
 
+![[cs425-multicast-fifo-example.png]]
+
 ### Total Ordering
 
 - elect a leader / sequencer
@@ -891,6 +895,8 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
             - all events before $M$ has already been received
     - after conditions met, deliver message to application and set $P_i[j]=M[j]$ 
 
+![[cs425-multicast-causal-example.png]]
+
 ### Reliable Multicast
 
 - all non-faulty processes receive the same set of multicasts
@@ -909,6 +915,8 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
     - if a process didn't deliver $M$ at $V$ while others did, it will be removed
     - what happens in a view, stays in the view
 - independent to multicast orderings, so can be combined with any of them
+
+![[c425-vsync-p15.png]]
 
 ## Consensus
 
@@ -943,4 +951,63 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
     - e.g. Internet
     - more general then synchronous distributed system
     - Consensus is unsolvable in asynchronous distributed system
+
+### Solving Consensus for Synchronous Model
+
+- assumptions
+    - synchronous system
+    - crash-stop
+        - fail by stopping
+- operate in rounds
+    - we can do this since all is bounded
+    - ![[cs425-sync-consensus-round.png]]
+- at most $f$ processes fail
+- flow
+    - do $f+1$ rounds
+    - each round, multicast to all
+- proof by contradiction
+    - assuming $p_2$ has a value $v$ that $p_1$ doesn't 
+    - $p_2$ must have received $v$ in the final round, otherwise it would have sent $v$ to $p_1$
+    - $p_2$ must have received $v$ from another process $p_3$, which crashed before sending $v$ to $p_1$, in the final (f+1th) round
+    - $p_3$ must have received $v$ from another process $p_4$, which crashed before sending $v$ to $p_2$, in the fth round
+    - ... -> there's at least 1 crash in each round -> $f+1$ failures -> contradiction
+
+### Paxos Algo
+
+- impossible to have consensus in async model, because failure is indistinguishable from having a huge delay
+- but Paxos Algo provides safety & eventual liveness
+    - safety: consensus is not violated
+    - eventual liveness: if things go well, there's a good chance that consensus will be reached
+- by Lamport
+- rules
+    - has rounds, each round has a unique ballot id
+    - rounds are async, no time sync
+    - use timeouts
+    - if getting a message from round $k+1$ in round $k$, abort everything and move to round $k+1$
+- 3 phases each round
+    - phase 1: elect a leader (election)
+    - phase 2: leader proposes a value (bill)
+    - phase 3: leader multicasts final value (law)
+- flow
+    - phase 1 - election
+        - potential leaders multicast their ballot ids
+        - each OK to the one with the highest id
+        - a potential leader quits when seeing a higher id
+        - receives majority (quorum) of OK -> becomes the leader
+    - phase 2 - proposal
+        - leader proposes a value and sends to all
+        - if some processes have already decide in the previous round, use their value
+    - phase 3 - decision
+        - leader makes a decision and sends to all when hearing a majority of OKs
+- safety
+    - once deciding on a value, always the value
+- durability
+    - process fails
+        - recover with logs
+    - leader fails
+        - timeout when process is trying to receive bill
+        - start another round
+    - message dropped
+        - can start another round if needed
+    - anyone can start a new round any time 
 
