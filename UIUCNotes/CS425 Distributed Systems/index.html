@@ -1,0 +1,6986 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/roshar-green-trans.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>CS425 Distributed Systems - El Mundo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-GC9K2DFK9F"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-GC9K2DFK9F",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-GC9K2DFK9F",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cs425-distributed-systems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="El Mundo" class="md-header__button md-logo" aria-label="El Mundo" data-md-component="logo">
+      
+  <img src="../../assets/roshar-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            El Mundo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CS425 Distributed Systems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dlccyes/CollegeNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../OtherNotes/sitemap/" class="md-tabs__link">
+          
+  
+    
+  
+  Meta
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../software-development/Sniffing%20Packets%20from%20Wireless%20Networks/" class="md-tabs__link">
+          
+  
+    
+  
+  Posts
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../software-development/Programming%20101/" class="md-tabs__link">
+          
+  
+    
+  
+  Software Development
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../OtherNotes/CS%20Career/" class="md-tabs__link">
+          
+  
+    
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../NTUNotes/Freshman/Logic%20Design/Logic%20Design/" class="md-tabs__link">
+          
+  
+    
+  
+  Electrical Engineering
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../NTUNotes/Freshman/Microeconomics/" class="md-tabs__link">
+          
+  
+    
+  
+  Economics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="El Mundo" class="md-nav__button md-logo" aria-label="El Mundo" data-md-component="logo">
+      
+  <img src="../../assets/roshar-white.png" alt="logo">
+
+    </a>
+    El Mundo
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dlccyes/CollegeNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Meta
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Meta
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OtherNotes/sitemap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sitemap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Posts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Systems and Networking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Systems and Networking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Sniffing%20Packets%20from%20Wireless%20Networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sniffing Packets from Wireless Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/restore%20usb%20bootable%20disk%20to%20normal%20disk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Restore a usb bootable disk to normal disk in Win10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Gitlab%20CICD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab CICD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/GCP%20CICD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCP CICD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Software Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Programming%20101/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming 101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Languages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Go/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/PHP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/JavaScript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/R/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/SQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/YAML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    YAML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Liquid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Liquid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/prolog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    prolog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/RegEx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RegEx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/RISC-V/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RISC-V
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Verilog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verilog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux/Unix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Linux/Unix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OtherNotes/MacOS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MacOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/WSL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WSL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Linux%20Package%20Management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux/Unix Package Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/SSH/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Makefile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Makefile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/base64/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    base64
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/ANSI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ANSI Escape Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/PulseAudio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PulseAudio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/tcpdump/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tcpdump
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Gitlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web 101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/RESTful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RESTful
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_3" id="__nav_4_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Static Site Generators
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Static Site Generators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Hugo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hugo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Jekyll/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jekyll
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_4" id="__nav_4_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web Frameworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Web Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Django/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Flask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flask
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Laravel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laravel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_5" id="__nav_4_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Frontend Frameworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Frontend Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/React/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_6" id="__nav_4_5_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/gRPC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gRPC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_6_2" id="__nav_4_5_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mocking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_5_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mocking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/WireMock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WireMock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Databases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/MySQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/PostgreSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PostgreSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Redis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_4" id="__nav_4_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ORM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            ORM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/SQLAlchemy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQLAlchemy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_1" id="__nav_4_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Domain
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Domain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Domain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Cloudfare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloudfare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_2" id="__nav_4_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/AWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/GCP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Heroku/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heroku
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Firebase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Firebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_3" id="__nav_4_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Containerization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Containerization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_4" id="__nav_4_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CICD
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            CICD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/SonarQube/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SonarQube
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Github%20Action/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Action
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/ArgoCD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ArgoCD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_5" id="__nav_4_7_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Monitoring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Grafana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grafana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OtherNotes/CS%20Career/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CS Career
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/System%20Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DSA
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            DSA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Data%20Structure/Data%20Structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Algorithms/Algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/leetcode.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Computer%20Networks/Computer%20Networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Operating%20Systems/Operating%20Systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operating Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Computer%20Architecture/Computer%20Architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Machine%20Learning/Machine%20Learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Electrical Engineering
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Electrical Engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Logic%20Design/Logic%20Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logic Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Circuit/Circuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    電路學
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Electromagnetism/Electromagnetism/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Electromagnetism
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Senior/Power%20Engineering/Power%20Engineering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Economics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Economics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../NTUNotes/Freshman/Microeconomics/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Microeconomics
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Microeconomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch1%20Supply%2C%20Demand%2C%20and%20Equilibrium/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch1 Supply, Demand, and Equilibrium
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch2%20Prices%2C%20Costs%2C%20and%20the%20Gains%20from%20Trade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 Prices, Costs, and the Gains from Trade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch3%20The%20Behavior%20of%20Consumers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 The Behavior of Consumers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch4%20Consumers%20in%20Marketplace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chap 4 Consumers in Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch5%20The%20Behavior%20of%20Firms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 The Behavior of Firms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch6%20Production%20and%20Costs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 Production and Costs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch7%20Competition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch7 Competition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch8%20Welfare%20Economics%20and%20the%20Gains%20from%20Trade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch8 Welfare Economics and the Gains from Trade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch10%20Monopoly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch10 Monopoly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch11%20Market%20Power%2C%20Colusion%2C%20and%20Obligopoly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch11 Market Power, Collusion, and Oligopoly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch12%20Game%20Theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch12 Game Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch13%20Externality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch13 Externality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch14%20Common%20Property%20and%20Public%20Goods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch14 Common Property and Public Goods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch15%20The%20Demand%20for%20Factors%20of%20Production/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch15 The Demand for Factors of Production
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch16%20The%20Market%20of%20Labor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch16 The Market of Labor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch17%20Allocating%20Goods%20Over%20Time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch17 Allocating Goods Over Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch18%20Risk%20and%20Uncertainty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch18 Risk and Uncertainty
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Macroeconomics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Macroeconomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Senior/Principle%20of%20Macroeconomics/Principle%20of%20Macroeconomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principle of Macroeconomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Macroeconomics/Macroeconomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macroeconomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Senior/Statistics/Statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Econometrics/Econometrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Econometrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Money and Banking
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Money and Banking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch1%20%E5%89%8D%E5%B0%8E/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch1 前導
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch2%20%E9%87%91%E8%9E%8D%E9%AB%94%E7%B3%BB%E6%A6%82%E8%A6%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 金融體系概要
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch3%20%E8%B2%A8%E5%B9%A3%E8%88%87%E6%94%AF%E4%BB%98%E7%B3%BB%E7%B5%B1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 貨幣與支付系統
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch4%20%E7%8F%BE%E5%80%BC%E8%88%87%E5%88%A9%E7%8E%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 現值與利率
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch5%20%E5%82%B5%E5%88%B8%E5%B8%82%E5%A0%B4%E8%88%87%E5%88%A9%E7%8E%87%E7%9A%84%E6%B1%BA%E5%AE%9A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 債券市場與利率的決定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch6%20%E5%88%A9%E7%8E%87%E9%A2%A8%E9%9A%AA%E7%B5%90%E6%A7%8B%E5%92%8C%E6%9C%9F%E9%99%90%E7%B5%90%E6%A7%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 利率風險結構和期限結構
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch7%20%E9%87%91%E8%9E%8D%E9%AB%94%E7%B3%BB%E7%9A%84%E7%B6%93%E6%BF%9F%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch7 金融體系的經濟分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch8%20%E9%8A%80%E8%A1%8C%E7%9A%84%E7%B6%93%E7%87%9F%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch8 銀行的經營管理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch9%20%E5%8F%B0%E7%81%A3%E9%8A%80%E8%A1%8C%E6%A5%AD%E7%9A%84%E7%B5%90%E6%A7%8B%E8%88%87%E7%99%BC%E5%B1%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch9 台灣銀行業的結構與發展
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch11%20%E9%87%91%E8%9E%8D%E5%AE%89%E5%85%A8%E7%B6%B2%20%E6%9C%80%E7%B5%82%E5%80%9F%E8%B2%B8%E8%80%85%E8%88%87%E5%AD%98%E6%AC%BE%E4%BF%9D%E9%9A%AA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch11 金融安全網 最終借貸者與存款保險
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch12%20%E9%87%91%E8%9E%8D%E5%AE%89%E5%85%A8%E7%B6%B2%20%E9%87%91%E8%9E%8D%E6%A9%9F%E6%A7%8B%E7%9A%84%E7%AE%A1%E5%88%B6%E8%88%87%E5%AF%A9%E6%85%8E%E7%9B%A3%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch12 金融安全網 金融機構的管制與審慎監理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch13%20%E4%B8%AD%E5%A4%AE%E9%8A%80%E8%A1%8C%E7%9A%84%E5%8A%9F%E8%83%BD%E8%88%87%E6%94%BF%E7%AD%96%E7%9B%AE%E6%A8%99/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch13 中央銀行的功能與政策目標
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch14%20%E9%87%91%E8%9E%8D%E7%A9%A9%E5%AE%9A%E8%88%87%E7%B8%BD%E9%AB%94%E5%AF%A9%E6%85%8E%E6%94%BF%E7%AD%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch14 金融穩定與總體審慎政策
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch15%20%E6%BA%96%E5%82%99%E8%B2%A8%E5%B9%A3%E8%88%87%E8%B2%A8%E5%B9%A3%E7%9A%84%E5%89%B5%E9%80%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch15 準備貨幣與貨幣的創造
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch16%20%E5%82%B3%E7%B5%B1%E8%88%87%E9%9D%9E%E5%82%B3%E7%B5%B1%E7%9A%84%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch16 傳統與非傳統的貨幣政策工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch17%20%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E7%9A%84%E7%9B%AE%E6%A8%99%E6%A9%9F%E5%88%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch17 貨幣政策的目標機制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch18%20%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E7%9A%84%E5%82%B3%E9%81%9E%E6%A9%9F%E5%88%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch18 貨幣政策的傳遞機制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Eurozone/Eurozone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    經濟貨幣整合：歐元區理論與實證
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Industrial%20Organization/Industrial%20Organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industrial Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Senior/International%20Finance/International%20Finance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    International Finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Game Theory
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9">
+            <span class="md-nav__icon md-icon"></span>
+            Game Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Game%20Theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Game Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9_2" id="__nav_7_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Game Theory for Wireless Networks Papers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Game Theory for Wireless Networks Papers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Opportunistic%20Data%20Collection%20in%20Cognitive%20Wireless%20%20Sensor%20Networks%20-%20Air%E2%80%93Ground%20Collaborative%20Online%20Planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opportunistic Data Collection in Cognitive Wireless Sensor Networks - Air–Ground Collaborative Online Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Hung-Yu/Game%20Theory%20for%20Wireless%20Network/privacy-preserving%20incentive%20mechanism%20for%20the%20federated%20cloud-edge%20learning%2C%20PFCEL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mapreduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      MapReduce
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gossip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gossip
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gossip">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multicast-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multicast Protocols
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multicast Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#centralized" class="md-nav__link">
+    <span class="md-ellipsis">
+      Centralized
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree-based
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epidemic-multicast-gossip-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epidemic Multicast / Gossip Protocol
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Epidemic Multicast / Gossip Protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#push-gossip" class="md-nav__link">
+    <span class="md-ellipsis">
+      push gossip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-gossip" class="md-nav__link">
+    <span class="md-ellipsis">
+      pull gossip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-push-pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      hybrid - push pull
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topology-aware-gossip" class="md-nav__link">
+    <span class="md-ellipsis">
+      topology-aware gossip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#membership" class="md-nav__link">
+    <span class="md-ellipsis">
+      Membership
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Membership">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#group-memebership-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Memebership Protocol
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Group Memebership Protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#failure-detector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failure Detector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dissemination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dissemination
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p2p-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      P2P Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="P2P Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#napster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Napster
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gnutella" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gnutella
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fasttrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      FastTrack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bittorrent" class="md-nav__link">
+    <span class="md-ellipsis">
+      BitTorrent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chord" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chord
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pastry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pastry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kelips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kelips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      NoSQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cassandra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cassandra
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cassandra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-replication-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      key replication strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snitches" class="md-nav__link">
+    <span class="md-ellipsis">
+      snitches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writes" class="md-nav__link">
+    <span class="md-ellipsis">
+      writes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloom-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      bloom filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reads" class="md-nav__link">
+    <span class="md-ellipsis">
+      reads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      deletion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      compaction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#membership_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      membership
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latency" class="md-nav__link">
+    <span class="md-ellipsis">
+      latency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistency-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      consistency levels
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consistency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hbase" class="md-nav__link">
+    <span class="md-ellipsis">
+      HBase
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HBase">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      HFile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      HLog
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clock-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clock Synchronization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clock Synchronization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cristians-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cristian's Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntp-network-time-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTP Network Time Protocol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lamport-timestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lamport Timestamp
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Snapshot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Global Snapshot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-snapshot-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Snapshot Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistent-cuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consistent Cuts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correctness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correctness
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Correctness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liveness" class="md-nav__link">
+    <span class="md-ellipsis">
+      liveness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      safety
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dilemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      dilemma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multicast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multicast
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multicast">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordering-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      ordering types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fifo-multicast" class="md-nav__link">
+    <span class="md-ellipsis">
+      FIFO Multicast
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#total-ordering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Total Ordering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#causal-ordering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Causal Ordering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reliable-multicast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reliable Multicast
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-synchrony" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Synchrony
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consensus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consensus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consensus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consensus-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consensus Problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-async-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      sync &amp; async models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solving-consensus-for-synchronous-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solving Consensus for Synchronous Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paxos-algo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paxos Algo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="cs425-distributed-systems">CS425 Distributed Systems<a class="headerlink" href="#cs425-distributed-systems" title="Permanent link">&para;</a></h1>
+<h2 id="mapreduce">MapReduce<a class="headerlink" href="#mapreduce" title="Permanent link">&para;</a></h2>
+<ul>
+<li>reduce doesn't start until all map is done, generally speaking</li>
+<li>map -&gt; shuffle -&gt; reduce</li>
+<li>cannot concat map or reduce, only map - reduce - map - reduce - ...</li>
+<li>shuffling<ul>
+<li>map jobs output -&gt; shuffle them -&gt; distribute to reduce jobs</li>
+<li>so if MapReduce is running across 20 machines, 1/20 of the data would not need to be transferred across networks but since it's local</li>
+</ul>
+</li>
+<li>distributed file system<ul>
+<li>e.g. GFS (Google File System), HDFS (Hadoop Distributed File System)</li>
+</ul>
+</li>
+<li>map<ul>
+<li>input: distributed file system</li>
+<li>output: local file system</li>
+</ul>
+</li>
+<li>reduce<ul>
+<li>input: local file system</li>
+<li>output: distributed file system</li>
+</ul>
+</li>
+<li>output sorted for easy distribution &amp; partitioning (range-based)</li>
+<li>YARN (Yet Another Resource Manager) scheduler<ul>
+<li>global resource manager (RM)<ul>
+<li>scheduling</li>
+</ul>
+</li>
+<li>per-server node manager (NM)<ul>
+<li>daemon</li>
+</ul>
+</li>
+<li>per-application (job) application master (AM)</li>
+</ul>
+</li>
+</ul>
+<h2 id="gossip">Gossip<a class="headerlink" href="#gossip" title="Permanent link">&para;</a></h2>
+<h3 id="multicast-protocols">Multicast Protocols<a class="headerlink" href="#multicast-protocols" title="Permanent link">&para;</a></h3>
+<ul>
+<li>send info to multiple nodes</li>
+<li>fault tolerant</li>
+<li>available</li>
+<li>scalable</li>
+<li>application level</li>
+</ul>
+<h4 id="centralized">Centralized<a class="headerlink" href="#centralized" title="Permanent link">&para;</a></h4>
+<ul>
+<li>one node send info to multiple nodes directly<ul>
+<li>with a loop</li>
+</ul>
+</li>
+<li>not fault tolerant<ul>
+<li>fails halfway through the loop -&gt; a lot don't receive</li>
+</ul>
+</li>
+<li>high latency <span class="arithmatex">\(O(N)\)</span></li>
+</ul>
+<h4 id="tree-based">Tree-based<a class="headerlink" href="#tree-based" title="Permanent link">&para;</a></h4>
+<ul>
+<li>fault tolerant <ul>
+<li>if a node on the higher hierarchy fails, lots of the nodes won't receive</li>
+<li>use ACK or NAK to repair<ul>
+<li>can add random delay &amp; use exponential backoff to avoid too much ACK/NAK</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>latency <span class="arithmatex">\(O(\log N)\)</span> if balanced</li>
+<li>high overhead of <span class="arithmatex">\(O(N)\)</span> ACK/NAK</li>
+</ul>
+<h3 id="epidemic-multicast-gossip-protocol">Epidemic Multicast / Gossip Protocol<a class="headerlink" href="#epidemic-multicast-gossip-protocol" title="Permanent link">&para;</a></h3>
+<h4 id="push-gossip">push gossip<a class="headerlink" href="#push-gossip" title="Permanent link">&para;</a></h4>
+<ul>
+<li>receive message -&gt; push to a random set of nodes</li>
+<li>if received multiple messages, push a subset of them by random / recency / priority</li>
+<li>the spread<ul>
+<li><span class="arithmatex">\(n+1\)</span> nodes</li>
+<li><span class="arithmatex">\(x_t\)</span> = uninfected notes at <span class="arithmatex">\(t\)</span></li>
+<li><span class="arithmatex">\(y_t\)</span> = infected notes at <span class="arithmatex">\(t\)</span></li>
+<li><span class="arithmatex">\(x_t+y_t=n+1\)</span></li>
+<li><span class="arithmatex">\(x_0=n\)</span> </li>
+<li><span class="arithmatex">\(y_0=1\)</span> (root)</li>
+<li><span class="arithmatex">\(\dfrac{dx}{dt}=-\beta xy\)</span> = infection rate<ul>
+<li><span class="arithmatex">\(xy\)</span> = the number of possible contacts between the uninfected &amp; infected at a given time</li>
+<li><span class="arithmatex">\(0\leq\beta\leq 1\)</span>, the fraction that actuall happens</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(x=\dfrac{n(n+1)}{n+e^{\beta(n+1)t}}\)</span></li>
+<li><span class="arithmatex">\(y=\dfrac{n+1}{1+ne^{-\beta(n+1)t}}\)</span></li>
+</ul>
+</li>
+<li>the convergence<ul>
+<li><span class="arithmatex">\(\beta=\dfrac{b}{n}\)</span>, <span class="arithmatex">\(b\)</span> is the fanout</li>
+<li><span class="arithmatex">\(t=c\log(n)\)</span></li>
+<li><span class="arithmatex">\(x\approx\dfrac{1}{n^{cb-2}}\)</span><ul>
+<li>for <span class="arithmatex">\(b=c=2\)</span>, <span class="arithmatex">\(x=\dfrac{1}{n^2}\)</span>, which is close to 0</li>
+</ul>
+</li>
+<li>meaning the gossip converges in <span class="arithmatex">\(O(\log n)\)</span></li>
+<li>each node transmits <span class="arithmatex">\(bc\log(n)\in O(\log n)\)</span> messages</li>
+</ul>
+</li>
+<li>failures<ul>
+<li>packet loss<ul>
+<li>50% packet drop -&gt; analyze with <span class="arithmatex">\(b/2\)</span> -&gt; 2x latency </li>
+</ul>
+</li>
+<li>node failure<ul>
+<li>50% nodes fail -&gt; analyze with <span class="arithmatex">\(n/2\)</span> &amp; <span class="arithmatex">\(b/2\)</span> (because 50% sent to bad nodes)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(O(\log n)\)</span> is practically almost constant<ul>
+<li>ln(1K) = 10</li>
+<li>ln(1B) = 30</li>
+</ul>
+</li>
+<li>pros<ul>
+<li>spreads quickly -&gt; low latency</li>
+<li>lightweight</li>
+<li>highly fault tolerant </li>
+</ul>
+</li>
+</ul>
+<h4 id="pull-gossip">pull gossip<a class="headerlink" href="#pull-gossip" title="Permanent link">&para;</a></h4>
+<ul>
+<li>periodic pull from a random set of nodes </li>
+<li>the spread<ul>
+<li>a tree with constant fanout / degree / num of children</li>
+<li><span class="arithmatex">\(O(\log n)\)</span> to spread to <span class="arithmatex">\(n/2\)</span></li>
+<li><span class="arithmatex">\(p_t\)</span> = the fraction / ratio of uninfected nodes at <span class="arithmatex">\(t\)</span></li>
+<li>fanout = <span class="arithmatex">\(k\)</span> i.e. the number of nodes to pull each iteration</li>
+<li>for an uninfected node to stay uninfected at <span class="arithmatex">\(t+1\)</span>, the <span class="arithmatex">\(k\)</span> nodes it pulls need to all be uninfected</li>
+<li><span class="arithmatex">\(p_{t+1}=p_tp_t^k=p_t^{k+1}\)</span> - super exponential</li>
+<li>from <span class="arithmatex">\(n/2\)</span> to <span class="arithmatex">\(n\)</span> takes <span class="arithmatex">\(O(\log\log n)\)</span></li>
+</ul>
+</li>
+</ul>
+<h4 id="hybrid-push-pull">hybrid - push pull<a class="headerlink" href="#hybrid-push-pull" title="Permanent link">&para;</a></h4>
+<ul>
+<li>use push to infect half of the nodes in <span class="arithmatex">\(O(\log n)\)</span></li>
+<li>use pull to quickly converge in <span class="arithmatex">\(O(\log\log n)\)</span></li>
+</ul>
+<h4 id="topology-aware-gossip">topology-aware gossip<a class="headerlink" href="#topology-aware-gossip" title="Permanent link">&para;</a></h4>
+<ul>
+<li>if nodes are distributed across data centers / racks evenly, and if push/pull randomly, router load would be <span class="arithmatex">\(O(N)\)</span></li>
+<li><img alt="cs425-gossip-topology.jpg" src="../cs425-gossip-topology.jpg" /></li>
+<li>make the probability of picking outside the subnet <span class="arithmatex">\(1/n_i\)</span><ul>
+<li><span class="arithmatex">\(n_i\)</span> = the num of nodes in the subnet</li>
+</ul>
+</li>
+<li>router load <span class="arithmatex">\(O(1)\)</span></li>
+<li>still <span class="arithmatex">\(O(\log n)\)</span> spread time</li>
+</ul>
+<h4 id="implementations">Implementations<a class="headerlink" href="#implementations" title="Permanent link">&para;</a></h4>
+<ul>
+<li>AWS EC2 &amp; S3</li>
+<li><a href="../../software-development/Cassandra/">Cassandra</a></li>
+</ul>
+<h2 id="membership">Membership<a class="headerlink" href="#membership" title="Permanent link">&para;</a></h2>
+<ul>
+<li>suppose machine fails once every 10 years<ul>
+<li>120 servers -&gt; MTTF (mean time to failure) = 10y x 12m / 120 = 1 month</li>
+<li>12k servers -&gt; MTTF = 7.2hr</li>
+</ul>
+</li>
+<li>use membership protocol to auto detect failures</li>
+</ul>
+<h3 id="group-memebership-protocol">Group Memebership Protocol<a class="headerlink" href="#group-memebership-protocol" title="Permanent link">&para;</a></h3>
+<ul>
+<li>maintain a membership list of working nodes<ul>
+<li>dealing with join/fail/leave</li>
+<li>different implementations of the list<ul>
+<li>complete list<ul>
+<li>strongly consistent</li>
+</ul>
+</li>
+<li>almost-complete list<ul>
+<li>weakly consistent</li>
+<li>e.g. using <a href="#gossip">#Gossip</a> </li>
+</ul>
+</li>
+<li>partial-random list</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>components<ul>
+<li>failure detector</li>
+<li>dissemination<ul>
+<li>spread info about join/fail/leave</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="failure-detector">Failure Detector<a class="headerlink" href="#failure-detector" title="Permanent link">&para;</a></h4>
+<ul>
+<li>crash frequency is <span class="arithmatex">\(O(N)\)</span></li>
+<li>properties<ul>
+<li>completeness vs. accuracy<ul>
+<li>completeness<ul>
+<li>no miss</li>
+</ul>
+</li>
+<li>accuracy<ul>
+<li>no false alarm</li>
+</ul>
+</li>
+<li>not possible to achieve both in a lossy network (consensus problem)<ul>
+<li>irl we guarantee completeness, while having partial or probabilistic accuracy because a miss is more costly</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>speed<ul>
+<li>time to first detection of failure</li>
+</ul>
+</li>
+<li>scale<ul>
+<li>distribute load evenly on each member</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>centralized heartbeating<ul>
+<li>all nodes send heartbeats to a node</li>
+<li>if not receiving from a node withing timeout, mark it as failed</li>
+<li>cons<ul>
+<li>single point of failure</li>
+<li>central node may be overloaded (hotspot)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ring heartbeating<ul>
+<li>circular doublly linked list</li>
+<li>pros<ul>
+<li>no single point of failure</li>
+<li>no hotspot</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>if a node's prev &amp; next nodes both failed, its failure can't be detected</li>
+<li>overhead for ring repairing </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>all-to-all heartbeating<ul>
+<li>broadcast heartbeat to all other nodes</li>
+<li>pros<ul>
+<li>equal load for each node </li>
+<li>no miss (unless all other nodes have also failed)</li>
+</ul>
+</li>
+<li>cons  <ul>
+<li>high load on each node</li>
+<li>if a node is having longer delay at receiving packets, it may mark all other nodes as failed -&gt; low accuracy</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>gossip-style heartbeating<ul>
+<li>nodes periodic gossip their memebership list<ul>
+<li><code>(member ID, heartbeart counter, timestamp)</code> </li>
+</ul>
+</li>
+<li>update local memebership list with the info received</li>
+<li>if a heartbeart hasn't been increased within the timeout, mark the member as failed</li>
+<li>to prevent gossipping dead info, remember the deleted member for another timeout, and ignore any info about it if received<ul>
+<li>e.g. node 3 died -&gt; node 1 delete node 3 because it's reached timeout -&gt; node 2 sends node 1 its list which contains node 3 within timeout -&gt; add node 3 back with current time -&gt; node 3 never gets deleted</li>
+</ul>
+</li>
+<li>spread<ul>
+<li>a single heartbeat takes <span class="arithmatex">\(O(\log N)\)</span> to propagate</li>
+<li><span class="arithmatex">\(N\)</span> single heartbeat takes <ul>
+<li><span class="arithmatex">\(O(\log N)\)</span> to propagate if bandwidth is <span class="arithmatex">\(O(N)\)</span></li>
+<li><span class="arithmatex">\(O(N\log N)\)</span> to propagate if bandwidth is <span class="arithmatex">\(O(1)\)</span></li>
+</ul>
+</li>
+<li>gossip frequency tradeoff - bandwidth vs. detection time</li>
+<li>timeout tradeoff - detection time vs. false alarm rate / accuracy</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>all-to-all &amp; gossip-style heartbeating<ul>
+<li>mixing failure detection &amp; dissemination</li>
+<li>sub-optimal</li>
+</ul>
+</li>
+<li>SWIM<ul>
+<li>use ping instead of hearbeat</li>
+<li>every period, ping a random node <span class="arithmatex">\(j\)</span><ul>
+<li>if not recieving ACK, ping again but with an indirect path<ul>
+<li>make random <span class="arithmatex">\(K\)</span> other nodes forward the ping to node <span class="arithmatex">\(j\)</span> and its ACK</li>
+<li>if received <span class="arithmatex">\(0\)</span> ACK, mark node <span class="arithmatex">\(j\)</span> as failed</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>constant detection time &amp; load</li>
+<li>tune false alarm rate with <span class="arithmatex">\(K\)</span> </li>
+<li><img alt="cs425-swim-comparison.jpg" src="../cs425-swim-comparison.jpg" /></li>
+</ul>
+</li>
+<li>misc<ul>
+<li><img alt="sys-des-fail-ex.png" src="../sys-des-fail-ex.png" /></li>
+<li>decrease hearteating frequency -&gt; increase false alarm rate if timeout stays the same</li>
+<li><img alt="sys-des-cs425-q2-3.png" src="../sys-des-cs425-q2-3.png" /><ul>
+<li>in Alice's protocol, each node pings 3 other nodes, while in Bob's protocol, there may be leaves (no outgoing edge) that can't be detected</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="dissemination">Dissemination<a class="headerlink" href="#dissemination" title="Permanent link">&para;</a></h4>
+<ul>
+<li>multicast<ul>
+<li>hardware or IP</li>
+<li>unreliable</li>
+</ul>
+</li>
+<li>point-to-point<ul>
+<li>send to all other nodes</li>
+<li>expensive</li>
+</ul>
+</li>
+<li>piggyback - gossip / infection style<ul>
+<li>use it with SWIM</li>
+<li>carry info with the ping &amp; ACK if SWIM, and update membership list</li>
+<li>no extra messages needed  </li>
+<li><span class="arithmatex">\(O(\log N)\)</span> time dissemination<ul>
+<li>after <span class="arithmatex">\(\lambda\log N\)</span> periods, <span class="arithmatex">\(\dfrac{1}{N^{2\lambda-2}}\)</span> nodes left unineffected</li>
+</ul>
+</li>
+<li>may have high false alarm rate<ul>
+<li>packet losses<ul>
+<li>e.g. from congestion</li>
+</ul>
+</li>
+<li>if there's a high message loss rate around a node, indirect pinging to this node won't prevent it from being wrongfully marked as failed</li>
+<li>solution: add a suspect state between alive &amp; dead</li>
+</ul>
+</li>
+<li>suspicion<ul>
+<li><img alt="sys-des-diss-sus.jpg" src="../sys-des-diss-sus.jpg" /></li>
+<li>use incarnation number</li>
+<li>when a node receives messages about it being sus, increment incarnation number and disseminate messages about it being alive</li>
+<li>failed overrides everyone<ul>
+<li>marked as failed forever once marked as failed by a node</li>
+</ul>
+</li>
+<li>if not failed, higher incarnation overrides lower ones<ul>
+<li>if the same, suspect overrides alive</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="grid">Grid<a class="headerlink" href="#grid" title="Permanent link">&para;</a></h2>
+<ul>
+<li>using geographically distributed computing resources</li>
+<li>use APIs to communicate with the protocols of each site</li>
+<li>e.g. Globus</li>
+<li>security challenges: it's federated so there may be different protocols &amp; mechanisms for each site<ul>
+<li>single sign-on<ul>
+<li>s.t. user don't have to log in to each site</li>
+</ul>
+</li>
+<li>mapping to local security mechanisms</li>
+<li>credentials inheritance<ul>
+<li>children should have access to the resources of its parent</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="p2p-systems">P2P Systems<a class="headerlink" href="#p2p-systems" title="Permanent link">&para;</a></h2>
+<h3 id="napster">Napster<a class="headerlink" href="#napster" title="Permanent link">&para;</a></h3>
+<ul>
+<li>server maintain <code>(filename, ip address, port)</code> tuples</li>
+<li>servers don't store files but pointers for all file</li>
+<li>search<ul>
+<li><img alt="cs425-napster-search.jpg" src="../cs425-napster-search.jpg" /></li>
+<li>flow<ol>
+<li>client send search query to server</li>
+<li>server returns the list of host tuples relevant to the query</li>
+<li>client pings each host to find transfer rates</li>
+<li>client requests file from the best host</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>use TCP</li>
+<li>cons<ul>
+<li>no security: plain text messages &amp; passwords</li>
+<li>indirect infringement of copyright</li>
+</ul>
+</li>
+<li>centralized server<ul>
+<li>may have congestion</li>
+<li>single point of failure</li>
+</ul>
+</li>
+</ul>
+<h3 id="gnutella">Gnutella<a class="headerlink" href="#gnutella" title="Permanent link">&para;</a></h3>
+<p><a href="https://courses.cs.washington.edu/courses/cse522/05au/gnutella_protocol_0.4.pdf">Gnetella Doc</a></p>
+<ul>
+<li>no servers, clients (servents) do all the work</li>
+<li>clients / servants / peers form a graph (overlay graph)</li>
+<li>message types<ul>
+<li>Query: search</li>
+<li>QueryHit: query response</li>
+<li>Ping: ping a peer</li>
+<li>Pong: ping response</li>
+<li>Push: initiate file transfer</li>
+</ul>
+</li>
+<li>header format<ul>
+<li><img alt="cs425-nutella-header.jpg" src="../cs425-nutella-header.jpg" /></li>
+<li>use TTL to prevent query from circulating forever</li>
+<li>TTL = number of hops</li>
+</ul>
+</li>
+<li>use HTTP</li>
+<li>search<ul>
+<li>BFS query out (flood)<ul>
+<li><img alt="cs425-nutella-payload.png" src="../cs425-nutella-payload.png" /></li>
+<li>use Descriptor ID to prevent duplicate visits</li>
+</ul>
+</li>
+<li>when a node has it, return QueryHit back to the path<ul>
+<li><img alt="cs425-nutella-queryhit.png" src="../cs425-nutella-queryhit.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>file transfer<ul>
+<li>requestor choose the best info received from search</li>
+<li>request file with HTTP</li>
+<li>if blocked because of firewall, send Push message, responder then establish a TCP connection with the requester and sends a GIV HTTP message, requester then do <code>GET</code> request<ul>
+<li><img alt="cs425-nutella-push.png" src="../cs425-nutella-push.png" /></li>
+<li><code>GIV &lt;file index&gt;:&lt;server id&gt;/&lt;file name&gt;</code></li>
+<li>if requester is also behind the firewall, then not possible</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ping-pong<ul>
+<li>ping has no payload</li>
+<li><img alt="cs425-pong-payload.png" src="../cs425-pong-payload.png" /></li>
+<li>to maintain active neighbor list</li>
+</ul>
+</li>
+<li>problems<ul>
+<li>50% traffic from ping/pong<ul>
+<li>sol<ul>
+<li>multiplex<ul>
+<li>receives multiple pings -&gt; aggregate and send out one pong</li>
+</ul>
+</li>
+<li>cache<ul>
+<li>memoization pong (return value) of ping (key)</li>
+</ul>
+</li>
+<li>reduce ping frequency</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>repeated searches<ul>
+<li>sol: cache Query &amp; QueryHit</li>
+</ul>
+</li>
+<li>some peers don't have enough bandwidth<ul>
+<li>sol<ul>
+<li>use central server as proxies for them</li>
+<li>FastTrack: leverage more powerful peers</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>many freeloaders<ul>
+<li>70% in 2000</li>
+<li>only download, never upload</li>
+<li>not Gnetella-specific</li>
+</ul>
+</li>
+<li>flooding causes excessive traffic<ul>
+<li>sol: structured p2p system e.g. Chord</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="cs425-gnutella-q9.png" src="../cs425-gnutella-q9.png" /></p>
+<h3 id="fasttrack">FastTrack<a class="headerlink" href="#fasttrack" title="Permanent link">&para;</a></h3>
+<ul>
+<li>hybrid of <a href="#napster">#Napster</a> &amp; <a href="#gnutella">#Gnutella</a></li>
+<li>some nodes become supernode, acting like <a href="#napster">#Napster</a> servers<ul>
+<li>based on reputation</li>
+</ul>
+</li>
+</ul>
+<h3 id="bittorrent">BitTorrent<a class="headerlink" href="#bittorrent" title="Permanent link">&para;</a></h3>
+<ul>
+<li>split files into blocks<ul>
+<li>seed: node with all blocks of a file</li>
+<li>leecher: node with some blocks of a file</li>
+</ul>
+</li>
+<li>local rarest block first: download least replicated block first</li>
+<li>incentive sharing - tit for tat bandwidth usage<ul>
+<li>provide blocks to neighbors providing best download rate in the past</li>
+<li>incentivize nodes to provide good download rates</li>
+</ul>
+</li>
+<li>choking: limit number of concurrent uploads</li>
+</ul>
+<h3 id="chord">Chord<a class="headerlink" href="#chord" title="Permanent link">&para;</a></h3>
+<ul>
+<li>DHT (distributed hash table)<ul>
+<li>operations: insert/lookup/delete keys</li>
+<li>challenges<ul>
+<li>load balancing</li>
+<li>fault tolerance</li>
+<li>operation efficiency</li>
+<li>locality: transmit with shortest path of the underlying network topology</li>
+</ul>
+</li>
+<li><a href="#napster">#Napster</a>, <a href="#gnutella">#Gnutella</a>, and <a href="#fasttrack">#FastTrack</a> are unoptimized DHTs</li>
+</ul>
+</li>
+<li><img alt="dht-p2p-compare.jpg" src="../dht-p2p-compare.jpg" /><ul>
+<li><a href="#napster">#Napster</a> client store <span class="arithmatex">\(O(1)\)</span>, server stores <span class="arithmatex">\(O(N)\)</span></li>
+<li><a href="#gnutella">#Gnutella</a> <span class="arithmatex">\(O(N)\)</span> lookup when the graph is a straight line</li>
+</ul>
+</li>
+<li>use consistent hashing to map peers to hash ring<ul>
+<li><code>(ip address, port)</code> -&gt; SHA-1 -&gt; 160-bit binary string (often represented as 40-bit hex string) -&gt; pick <span class="arithmatex">\(m\)</span> bits and map to a number in <span class="arithmatex">\([0, 2^m-1]\)</span> as peer ID</li>
+<li>finger table<ul>
+<li>for each peer, has pointer to the closest bigger entry to + <span class="arithmatex">\(2^0, 2^1, 2^2,\cdots\)</span> (mod <span class="arithmatex">\(2^m\)</span>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>map filename to peers using consistent hashing<ul>
+<li>filename -&gt; SHA-1 -&gt; 160-bit binary string -&gt; mod <span class="arithmatex">\(2^m\)</span> -&gt; find closest greater peer ID</li>
+</ul>
+</li>
+<li>searching for a filename in <span class="arithmatex">\(O(\log N)\)</span> (same for insertion)<ul>
+<li>hash filename and mod to get a number <span class="arithmatex">\(k\)</span></li>
+<li>at each peer, send query to furthest finger table entry before <span class="arithmatex">\(k\)</span> (clockwise), if the 1st entry (successor) is after <span class="arithmatex">\(k\)</span>, send to successor</li>
+</ul>
+</li>
+<li>fault tolerance <ul>
+<li>maintain <span class="arithmatex">\(r=2\ln N\)</span> successor entries and use successor during failure<ul>
+<li>if 50% failure, probability of at least 1 successor is alive for a node = <span class="arithmatex">\(1-0.5^{2\ln N}=1-\dfrac{1}{2^{\ln N^2}}=1-\dfrac{1}{N^2}\)</span></li>
+<li>if 50% failure, probability of at least 1 successor is alive for ALL ALIVE node = <span class="arithmatex">\((1-\dfrac{1}{N^2})^{\frac{N}{2}}=e^{-\frac{1}{2N}}\approx 1\)</span> with big <span class="arithmatex">\(N\)</span><ul>
+<li>because <span class="arithmatex">\(\ln (1-x)\approx -x\)</span> if <span class="arithmatex">\(x&lt;&lt;1\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>replicate key/file to <span class="arithmatex">\(r\)</span> successors &amp; predecessors</li>
+</ul>
+</li>
+<li>join/leave/fail<ul>
+<li>update successors &amp; finger tables<ul>
+<li>fail -&gt; affect all finger tables with the failed node inside</li>
+</ul>
+</li>
+<li>join<ul>
+<li>affects <span class="arithmatex">\(O(\log N)\)</span> finger table entries</li>
+<li><span class="arithmatex">\(O(\log N)\times O(\log N)\)</span> messages</li>
+</ul>
+</li>
+<li>stabilization protocol: each node periodically ask immediate neighbors for their finger table &amp; successors<ul>
+<li>fix loops occur during concurrent joins/leaves/failures</li>
+<li><span class="arithmatex">\(O(N^2)\)</span> stabilization rounds to reach strong stability</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="cs425-chord-q13.png" src="../cs425-chord-q13.png" /></p>
+<ol>
+<li><code>45</code>'s finger table: <code>[46 (99), 47 (99), 49 (99), 53 (99), 61 (99), 77 (99), 109 (132), 173 (199)]</code>, so choose <code>199</code></li>
+<li><code>199</code>'s finger table: <code>[200 (234), 201 (234), 203 (234), 207 (234), 215 (234), 231 (234), 8 (32), 72 (99)]</code>, so choose <code>234</code></li>
+<li><code>234</code>'s finger table: <code>[235 (32), 236 (32), 238 (32), 242 (32), 250 (32), 11 (32), 43 (45), 107 (132)</code>, no entry is before <code>12</code>, so send to successor <code>32</code></li>
+<li><code>12</code> found in <code>32</code> </li>
+</ol>
+<h3 id="pastry">Pastry<a class="headerlink" href="#pastry" title="Permanent link">&para;</a></h3>
+<ul>
+<li>hash to a hash ring like <a href="#chord">#Chord</a> </li>
+<li>routing with prefix matching <span class="arithmatex">\(O(\log N)\)</span></li>
+<li>maintain pointers to peer for each matched prefix<ul>
+<li>for peer with id <code>010101</code>:<ul>
+<li><code>*</code></li>
+<li><code>0*</code></li>
+<li><code>01*</code></li>
+<li><code>010*</code></li>
+<li><code>0101*</code></li>
+<li><code>01010*</code></li>
+</ul>
+</li>
+<li>when routing a message, send to the entry with the largest matching prefix<ul>
+<li>tie breaker: shortest round-trip-time</li>
+<li>shorter early hops, longer late hops</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>use stabilization protocol </li>
+</ul>
+<h3 id="kelips">Kelips<a class="headerlink" href="#kelips" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(k \approx \sqrt{N}\)</span> affinity groups</li>
+<li>each node is hashed to an affinity group</li>
+<li>a node points to all other nodes in the same group and one for each other group<ul>
+<li>~ <span class="arithmatex">\(2\sqrt{N}\)</span> neighbors</li>
+<li>for contacts in other groups, use the ones with the shortest underlying path (round-trip-time)</li>
+<li><img alt="cs425-p2p-kelips.jpg" src="../cs425-p2p-kelips.jpg" /></li>
+</ul>
+</li>
+<li>hash filename to affinity group -&gt; all nodes inside store the filename and the file metadata (address)<ul>
+<li>they don't store files but only info</li>
+</ul>
+</li>
+<li>search for a filename <span class="arithmatex">\(O(1)\)</span><ul>
+<li>hash filename to group -&gt; ask its contact in that group for file info<ul>
+<li>if the contact is down, route via a node in the same group</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>memory <span class="arithmatex">\(O(\log N)\)</span>, but still small<ul>
+<li>1.93MB for 100k nodes, 10M files </li>
+</ul>
+</li>
+<li>use gossip to maintain membership lists<ul>
+<li><span class="arithmatex">\(O(\log N)\)</span> dissemination time</li>
+</ul>
+</li>
+<li>file metadata maintenance<ul>
+<li>gossip-style heartbeating, timeout delete</li>
+</ul>
+</li>
+<li>compared to <a href="#chord">#Chord</a> &amp; <a href="#pastry">#Pastry</a><ul>
+<li>shorter lookup time, more memory used, more background bandwidth used</li>
+</ul>
+</li>
+</ul>
+<h2 id="nosql">NoSQL<a class="headerlink" href="#nosql" title="Permanent link">&para;</a></h2>
+<ul>
+<li>column-oriented store<ul>
+<li>more efficient range query</li>
+<li>reduce scan on query on specific field</li>
+</ul>
+</li>
+</ul>
+<h2 id="cassandra"><a href="../../software-development/Cassandra/">Cassandra</a><a class="headerlink" href="#cassandra" title="Permanent link">&para;</a></h2>
+<ul>
+<li>distribute key-value store, designed to run in a datacenter (and across)</li>
+<li>from Facebook</li>
+<li>routing with a coordinator to servers on a hash ring in each data center<ul>
+<li>no finger tables</li>
+</ul>
+</li>
+</ul>
+<h3 id="key-replication-strategy">key replication strategy<a class="headerlink" href="#key-replication-strategy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>simple strategy<ul>
+<li>random partitioner: hash based assignment</li>
+<li>byte ordered partitioner: range based assignment</li>
+</ul>
+</li>
+<li>network topology strategy: for multi data centers<ul>
+<li><span class="arithmatex">\(k\)</span> replicas for each key per data center</li>
+<li>assign each replica to a different rack (search clockwise)</li>
+</ul>
+</li>
+</ul>
+<h3 id="snitches">snitches<a class="headerlink" href="#snitches" title="Permanent link">&para;</a></h3>
+<p>mapping IPs to racks &amp; data centers</p>
+<ul>
+<li>simple snitch: rack-unaware</li>
+<li>rack inferring: deduct topology from ip address<ul>
+<li>e.g. <code>101.102.103.104</code> -&gt; <code>x.&lt;data center&gt;.&lt;rack&gt;.&lt;node&gt;</code></li>
+</ul>
+</li>
+<li>property file snitch: store the mapping in a config file</li>
+<li>EC2 snitch: if using EC2<ul>
+<li>EC2 region -&gt; data center</li>
+<li>availability zone -&gt; rack</li>
+</ul>
+</li>
+</ul>
+<h3 id="writes">writes<a class="headerlink" href="#writes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>send write to coordinator<ul>
+<li>coordinator can be per key / client / query</li>
+<li>per key coordinator will ensure serialized writes</li>
+</ul>
+</li>
+<li>coordinator uses partitioner to send query to all responsible replicas<ul>
+<li>ACK after receiving <span class="arithmatex">\(w\)</span> confirmations</li>
+</ul>
+</li>
+<li>uses sloppy quorum &amp; hinted handoff, see <a href="../../software-development/System%20Design/#quorums">System Design#Quorums</a></li>
+<li>elect data center coordinator with Apache Zookeeper<ul>
+<li>variant of Paxos</li>
+</ul>
+</li>
+</ul>
+<p>steps</p>
+<ol>
+<li>log the write request in commit log</li>
+<li>save to memtable i.e. memory cache as a write-back cache</li>
+<li>when memtable is full or old, flush the data to disk<ul>
+<li>an SSTable (sorted-string table) for data (key-value pairs)</li>
+<li>an SSTable for index (key-location pairs)<ul>
+<li><span class="arithmatex">\(O(\log N)\)</span> lookup</li>
+</ul>
+</li>
+<li>bloom filter for efficient search</li>
+</ul>
+</li>
+</ol>
+<h3 id="bloom-filter">bloom filter<a class="headerlink" href="#bloom-filter" title="Permanent link">&para;</a></h3>
+<ul>
+<li>stored in off-heap memory</li>
+<li>check if a key exists in a probabilistic way</li>
+<li>may have false alarms / false positives, but never a miss</li>
+<li>a large bitmap<ul>
+<li>initially all 0</li>
+<li>insert a key -&gt; hash with <span class="arithmatex">\(k\)</span> hash functions -&gt; mark all <span class="arithmatex">\(k\)</span> numbers as 1</li>
+<li>check a key's existence: if all hashed <span class="arithmatex">\(k\)</span> numbers are 1, return True, if any is 0 then False<ul>
+<li>false alarm scenario: the 1s are set by other keys</li>
+</ul>
+</li>
+<li><img alt="cs425-bloom-filter.png" src="../cs425-bloom-filter.png" /></li>
+</ul>
+</li>
+<li>low false alarm rate<ul>
+<li>e.g. <span class="arithmatex">\(k=4\)</span>, 100 keys, 3200 bits, false alarm rate = 0.02%</li>
+</ul>
+</li>
+</ul>
+<h3 id="reads">reads<a class="headerlink" href="#reads" title="Permanent link">&para;</a></h3>
+<ul>
+<li>coordinator sends read query to <span class="arithmatex">\(r\)</span> replicas that respond the fastest in the past, and return the one with the latest timestamp</li>
+<li>do read repair if conflict</li>
+<li>a row may be split across multiple SSTables (like before the compaction algo cleans them up) -&gt; a read may need to fetch from multiple SSTables -&gt; read is slower than write </li>
+</ul>
+<h3 id="deletion">deletion<a class="headerlink" href="#deletion" title="Permanent link">&para;</a></h3>
+<p>When deleting a key, it inserted a timestamp deletion marker called a <a href="https://cassandra.apache.org/doc/latest/cassandra/managing/operating/compaction/tombstones.html">tombstone</a> rather than removing it.</p>
+<blockquote>
+<p>If a node receives a delete command for data it stores locally, the node tombstones the specified object and tries to pass the tombstone to other nodes containing replicas of that object. But if one replica node is unresponsive at that time, it does not receive the tombstone immediately, so it still contains the pre-delete version of the object. If the tombstoned object has already been deleted from the rest of the cluster before that node recovers, Cassandra treats the object on the recovered node as new data, and propagates it to the rest of the cluster. This kind of deleted but persistent object is called a zombie.</p>
+</blockquote>
+<h3 id="compaction">compaction<a class="headerlink" href="#compaction" title="Permanent link">&para;</a></h3>
+<ul>
+<li>periodically merging SSTables i.e. merging updates for a key</li>
+<li>remove keys with a tombstone though the compaction algo</li>
+</ul>
+<h3 id="membership_1">membership<a class="headerlink" href="#membership_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>every server can be a coordinator, so every server needs to maintain a list of all other servers</li>
+<li>use <a href="#gossip">#Gossip</a>-style heartbeating </li>
+<li>use a suspicion mechanism to dynamically adjust the timeout<ul>
+<li>different from the one in <a href="#group-memebership-protocol">#Group Memebership Protocol</a></li>
+<li>failure detector outputs a PHI value indicating suspicion level<ul>
+<li>looks at historical heartbeat inter-arrival times and determines timeout</li>
+<li>PHI = 5 -&gt; 10-15s timeout</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="latency">latency<a class="headerlink" href="#latency" title="Permanent link">&para;</a></h3>
+<ul>
+<li>orders of magnitudes faster than RDBMS</li>
+<li>for 50GB data<ul>
+<li><a href="../../software-development/MySQL/">MySQL</a> writes 300ms, read 350ms</li>
+<li><a href="../../software-development/Cassandra/">Cassandra</a> writes 0.12ms, read 15ms</li>
+</ul>
+</li>
+</ul>
+<h3 id="consistency-levels">consistency levels<a class="headerlink" href="#consistency-levels" title="Permanent link">&para;</a></h3>
+<p>a client can specify the consistency level for each read/write operation</p>
+<ul>
+<li>ANY: ACK from anyone (even the coordinator)<ul>
+<li>fastest</li>
+</ul>
+</li>
+<li>ALL: ACK from all replicas<ul>
+<li>strong consistency</li>
+<li>slowest</li>
+</ul>
+</li>
+<li>ONE: ACK from at least 1 replica</li>
+<li>quorum: <span class="arithmatex">\(k\)</span> ACKs, see <a href="../../software-development/System%20Design/#quorums">System Design#Quorums</a><ul>
+<li>global quorum: quorum across data centers</li>
+<li>local quorum: quorum in the coordinator's data center</li>
+<li>each quorum: quorum in each data center</li>
+</ul>
+</li>
+</ul>
+<h2 id="consistency">Consistency<a class="headerlink" href="#consistency" title="Permanent link">&para;</a></h2>
+<p><img alt="cs425-consistency.png" src="../cs425-consistency.png" /></p>
+<ul>
+<li>per-key sequential</li>
+<li>CRDTs (commutative replicated data types)<ul>
+<li>order of operations don't matter</li>
+<li>e.g. in a counter, A do +1 -&gt; B do +1 == B do +1 -&gt; A do +1 </li>
+</ul>
+</li>
+<li>red-blue consistency<ul>
+<li>blue: CRDTs</li>
+<li>red: sequential operations</li>
+</ul>
+</li>
+<li>causal consistency<ul>
+<li><img alt="cs425-causal-con.jpg" src="../cs425-causal-con.jpg" /></li>
+<li>return one of the causal results</li>
+</ul>
+</li>
+<li>strong consistency<ul>
+<li>linearizability<ul>
+<li>maintain a global order</li>
+<li>all operations across clients are ordered based on time</li>
+</ul>
+</li>
+<li>sequential consistency<ul>
+<li>maintain a global order</li>
+<li>operations in each client are ordered, but can be interleaved across clients</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="hbase">HBase<a class="headerlink" href="#hbase" title="Permanent link">&para;</a></h2>
+<ul>
+<li>origin<ul>
+<li>Google's BigTable - 1st blob-based storage</li>
+<li>HBase - Yahoo's open source version of BigTable</li>
+<li>now part of Apache</li>
+</ul>
+</li>
+<li>functions<ul>
+<li>get/put row</li>
+<li>scan (range queries) </li>
+<li>multiput</li>
+</ul>
+</li>
+<li>CAP: consistency over availability</li>
+<li><img alt="cs425-hbase-arch.jpg" src="../cs425-hbase-arch.jpg" /></li>
+<li>replicated across regions</li>
+<li>ColumnFamily = a set of columns</li>
+<li>each ColumnFamily in a region has a Store</li>
+<li>MemStore: memtable / memory cache, store updates, flush to disk when full</li>
+<li>StoreFile: on-disk storage, like SSTable</li>
+</ul>
+<h3 id="hfile">HFile<a class="headerlink" href="#hfile" title="Permanent link">&para;</a></h3>
+<p><img alt="cs425-hfile.jpg" src="../cs425-hfile.jpg" /></p>
+<ul>
+<li>magic: unique data id</li>
+</ul>
+<h3 id="hlog">HLog<a class="headerlink" href="#hlog" title="Permanent link">&para;</a></h3>
+<p><img alt="cs425-hlog.jpg" src="../cs425-hlog.jpg" /></p>
+<ul>
+<li>maintain strong consistency with HLog, a write-ahead log<ul>
+<li>write to append only log -&gt; write to MemStore</li>
+</ul>
+</li>
+<li>log replay<ul>
+<li>after failure recovery or reboot</li>
+<li>replay stale logs (check with timestamp)</li>
+<li>add edit to MemStore</li>
+</ul>
+</li>
+<li>cross-datacenter replication<ul>
+<li>leader-based</li>
+<li>leader cluster sends HLogs to follower clusters synchronously -&gt; update respective MemStores</li>
+<li>use Zookeeper for coordination</li>
+</ul>
+</li>
+</ul>
+<h2 id="clock-synchronization">Clock Synchronization<a class="headerlink" href="#clock-synchronization" title="Permanent link">&para;</a></h2>
+<p>we want to order events across processes in a distributed system</p>
+<ul>
+<li>each process has a local clock</li>
+<li>clock difference<ul>
+<li>clock skew<ul>
+<li>offset</li>
+</ul>
+</li>
+<li>clock drift<ul>
+<li>clock speed difference</li>
+<li>causes clock skew</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>clock sync period = <span class="arithmatex">\(\dfrac{M}{2\times\text{MDR}}\)</span> <ul>
+<li><span class="arithmatex">\(M\)</span> = max acceptable skew</li>
+<li>MDR = maximum drift rate of each clock compared to UTC</li>
+<li>max drift rate between 2 clocks 2 x MDR</li>
+</ul>
+</li>
+<li>sync of a group of processes<ul>
+<li>external sync<ul>
+<li>make sure each local process clock is within bound with an external source</li>
+<li><span class="arithmatex">\(|C_i-S|&lt;D\)</span><ul>
+<li><span class="arithmatex">\(C_i\)</span> = clock of process <span class="arithmatex">\(i\)</span></li>
+<li><span class="arithmatex">\(S\)</span> = external clock</li>
+<li><span class="arithmatex">\(D\)</span> = bound</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>internal sync<ul>
+<li>make sure the max skew between any 2 local process clock is within bound</li>
+<li><span class="arithmatex">\(|C_i-C_j|&lt;D \ \forall i,j\)</span></li>
+</ul>
+</li>
+<li>external sync guarantees internal sync, but not vice versa<ul>
+<li>external sync with bound <span class="arithmatex">\(D\)</span> -&gt; internal sync bound of <span class="arithmatex">\(2D\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="cristians-algorithm">Cristian's Algorithm<a class="headerlink" href="#cristians-algorithm" title="Permanent link">&para;</a></h3>
+<p>We want to the actual time based on external sync clock time with a bounded error</p>
+<ul>
+<li><img alt="cs425-cristian.png" src="../cs425-cristian.png" /></li>
+<li>we assume<ul>
+<li>min1 = min latency from process P to external source S</li>
+<li>min2 = min latency from S to P</li>
+</ul>
+</li>
+<li>we know<ul>
+<li>RTT &gt; min1 + min2</li>
+<li>t = clock time received from S</li>
+</ul>
+</li>
+<li>actual time at P when receiving t = <code>[t + min2, t + (RTT - min1)]</code></li>
+<li>set the time to halfway of the interval = <span class="arithmatex">\(t+\dfrac{RTT+min2-min1}{2}\)</span><ul>
+<li>max error = <span class="arithmatex">\(\dfrac{RTT-min2-min1}{2}\)</span></li>
+</ul>
+</li>
+<li>rules<ul>
+<li>never decrease clock value, or may violate event ordering within the same process</li>
+<li>can increase or decrease the clock speed</li>
+<li>error is too high -&gt; average multiple readings </li>
+</ul>
+</li>
+</ul>
+<h3 id="ntp-network-time-protocol">NTP Network Time Protocol<a class="headerlink" href="#ntp-network-time-protocol" title="Permanent link">&para;</a></h3>
+<p><img alt="cs425-ntp-tree.png" src="../cs425-ntp-tree.png" /></p>
+<ul>
+<li>hierarchical, a tree</li>
+<li>non-leaf -&gt; server</li>
+<li>leaf -&gt; client</li>
+<li>each node sync with parent</li>
+</ul>
+<p><img alt="cs425-ntp-flow.jpg" src="../cs425-ntp-flow.jpg" /></p>
+<ul>
+<li>parent sends message 1 to child -&gt; child sends message 2 to parent</li>
+<li>offset = difference between the 2 latency / 2<ul>
+<li><span class="arithmatex">\(o=\dfrac{(tr_1-ts_2)-(tr_2-ts_2)}{2}\)</span></li>
+</ul>
+</li>
+<li>the error between calculated offset and the real offset is bounded by RTT<ul>
+<li>real offset = <span class="arithmatex">\(o_r\)</span> = child time - parent time</li>
+<li><span class="arithmatex">\(L_1\)</span> = latency of message 1</li>
+<li><span class="arithmatex">\(L_2\)</span> = latency of message 2</li>
+<li><span class="arithmatex">\(tr_1=ts_1+L_1+o_r\)</span></li>
+<li><span class="arithmatex">\(tr_2=ts_2+L_2-o_r\)</span></li>
+<li><span class="arithmatex">\(o=\dfrac{(tr_1-ts_2)-(tr_2-ts_2)}{2}=\dfrac{L_1-L_2}{2}+o_r\)</span></li>
+<li>error = <span class="arithmatex">\(|o-o_r|=|\dfrac{L_1-L_2}{2}|&lt;|\dfrac{L_1+L_2}{2}|=|\dfrac{\text{RTT}}{2}|\)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="lamport-timestamp">Lamport Timestamp<a class="headerlink" href="#lamport-timestamp" title="Permanent link">&para;</a></h3>
+<p>The goal is to maintain causality, the order of the events. The absolute timestamp doesn't necessarily matter.</p>
+<ul>
+<li>same process: a -&gt; b if <span class="arithmatex">\(t_a&lt;t_b\)</span></li>
+<li>message between 2 processes: send -&gt; receive</li>
+<li>transitivity: a -&gt; b &amp; b -&gt; c then a -&gt; c</li>
+</ul>
+<p>each process maintains a local counter treated as timestamp</p>
+<ul>
+<li>init = 0</li>
+<li>increment counter on each process instruction</li>
+<li>increment counter on sending a message (with counter attached)</li>
+<li>receive a message -&gt; update counter with <code>max(local counter, message counter) + 1</code></li>
+<li>an event = process instruction / send / receive</li>
+</ul>
+<p>Lamport timestamp can't order concurrent events i.e. events without a causal relationship</p>
+<p><strong>examples</strong></p>
+<p><img alt="cs425-lamport-e1.png" src="../cs425-lamport-e1.png" /></p>
+<p>vector timestamp version  </p>
+<p><img alt="cs425-lamport-vector-e1.png" src="../cs425-lamport-vector-e1.png" /></p>
+<p><img alt="cs425-hw2-lamport.jpg" src="../cs425-hw2-lamport.jpg" /></p>
+<p><img alt="cs425-hw2-lamport-ans.png" src="../cs425-hw2-lamport-ans.png" /></p>
+<h2 id="global-snapshot">Global Snapshot<a class="headerlink" href="#global-snapshot" title="Permanent link">&para;</a></h2>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h3>
+<p>We want to capture the global state, the state of each process &amp; each communication channel.</p>
+<p>purpose:</p>
+<ul>
+<li>recovery checkpoint</li>
+<li>garbage collection of unused objects (without pointers)</li>
+<li>deadlock detection</li>
+<li>termination of computations</li>
+</ul>
+<p>approach: synchronize all clocks (sufficient condition: state 1 -&gt; state 2 obeys causality) -&gt; ask processes to record state at a specific time</p>
+<ul>
+<li>problems<ul>
+<li>time sync error</li>
+<li>no channel states, the states of messages in the channels</li>
+</ul>
+</li>
+</ul>
+<h3 id="global-snapshot-algorithm">Global Snapshot Algorithm<a class="headerlink" href="#global-snapshot-algorithm" title="Permanent link">&para;</a></h3>
+<ul>
+<li>requirements<ul>
+<li>not interfering the normal processes</li>
+<li>each process records its own state<ul>
+<li>process state</li>
+<li>heap, registers, program counter, code, etc. (coredump)</li>
+</ul>
+</li>
+<li>global state collected distributedly</li>
+<li>any process can initiate the snapshot</li>
+</ul>
+</li>
+<li>Candy-Lamport Global Snapshot Algorithm<ul>
+<li>init: <span class="arithmatex">\(P_i\)</span> initiate the snapshot<ul>
+<li>records its own state</li>
+<li>creates a marker message</li>
+<li>sends a marker message to all of its outgoing channels</li>
+<li>starts recording all the incoming messages from the incoming channels</li>
+</ul>
+</li>
+<li>spread: when a process <span class="arithmatex">\(P_j\)</span> receives a marker message from the incoming channel <span class="arithmatex">\(C_{ij}\)</span><ul>
+<li>if first time receiving the marker message<ul>
+<li>records its own state</li>
+<li>mark the state of the channel <span class="arithmatex">\(C_{ij}\)</span> as "empty"</li>
+<li>sends a marker message to all of its outgoing channels</li>
+<li>starts recording all the incoming messages from the incoming channels (except <span class="arithmatex">\(C_{ij}\)</span>)</li>
+</ul>
+</li>
+<li>if not the first time<ul>
+<li>mark the state of the channel <span class="arithmatex">\(C_{ij}\)</span> as all the messages since it starts recording i.e. first receive the marker message</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>termination: when all processes have received a marker on all of their incoming channels</li>
+<li>optional: a central server collects all the individual snapshots and assemble them into a global snapshot</li>
+<li>the snapshot would be causally correct</li>
+<li><img alt="cs425-candy-algo.jpg" src="../cs425-candy-algo.jpg" /></li>
+</ul>
+</li>
+</ul>
+<p><img alt="cs425-snap-shot-p4.png" src="../cs425-snap-shot-p4.png" /></p>
+<h3 id="consistent-cuts">Consistent Cuts<a class="headerlink" href="#consistent-cuts" title="Permanent link">&para;</a></h3>
+<ul>
+<li>cut = a line (snapshot) cutting off all processes on a certain time<ul>
+<li>events before the cut -&gt; in the cut</li>
+<li>after -&gt; out of the cut</li>
+</ul>
+</li>
+<li>consistent cut = cut that preserves causality<ul>
+<li>for every event <span class="arithmatex">\(e_j\)</span> in the cut, if <span class="arithmatex">\(e_i\rightarrow e_j\)</span>, then event <span class="arithmatex">\(e_i\)</span> is also in the cut</li>
+<li><img alt="cs425-consistent-cut.jpg" src="../cs425-consistent-cut.jpg" /></li>
+</ul>
+</li>
+<li>Candy-Lamport Global Snapshot Algorithm always creates a consistent cut<ul>
+<li>pf: if event <span class="arithmatex">\(e_j\)</span> in process <span class="arithmatex">\(P_j\)</span> happens before <span class="arithmatex">\(P_j\)</span> records its state (<span class="arithmatex">\(e_j\)</span> is in the cut) and <span class="arithmatex">\(e_i\rightarrow e_j\)</span>, then <span class="arithmatex">\(e_i\)</span> happens before <span class="arithmatex">\(P_i\)</span> records its state s.t. both are in the cut<ul>
+<li>suppose <span class="arithmatex">\(P_i\)</span> snaps -&gt; <span class="arithmatex">\(e_i\)</span> -&gt; <span class="arithmatex">\(e_j\)</span> -&gt; <span class="arithmatex">\(P_j\)</span> snaps</li>
+<li><span class="arithmatex">\(P_i\)</span> snaps -&gt; <span class="arithmatex">\(e_i\)</span> -&gt; <span class="arithmatex">\(e_j\)</span> means that <span class="arithmatex">\(P_j\)</span> will receive marker and snap before <span class="arithmatex">\(e_j\)</span>, meaning <span class="arithmatex">\(e_j\)</span> won't be in the cut -&gt; contradiction</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="correctness">Correctness<a class="headerlink" href="#correctness" title="Permanent link">&para;</a></h2>
+<h3 id="liveness">liveness<a class="headerlink" href="#liveness" title="Permanent link">&para;</a></h3>
+<p>guarantee a certain good thing will happen eventually</p>
+<p>e.g. </p>
+<ul>
+<li>distributed computation: will terminate</li>
+<li><a href="#failure-detector">#Failure Detector</a>: completeness</li>
+<li>consensus: all processes will decide on a value</li>
+</ul>
+<h3 id="safety">safety<a class="headerlink" href="#safety" title="Permanent link">&para;</a></h3>
+<p>guarantee that a certain bad thing will never happen</p>
+<p>e.g.</p>
+<ul>
+<li>no deadlock in a distributed transaction system</li>
+<li>no orphan in a distributed object system</li>
+<li><a href="#failure-detector">#Failure Detector</a>: accuracy</li>
+<li>consensus: no conflict</li>
+</ul>
+<h3 id="dilemma">dilemma<a class="headerlink" href="#dilemma" title="Permanent link">&para;</a></h3>
+<p>it's difficult to satisfy both liveness &amp; safety in a distributed system, in many cases it's the tradeoff between no miss &amp; no false alarm</p>
+<ul>
+<li><a href="#failure-detector">#Failure Detector</a>: completeness (liveness) vs. accuracy (safety)</li>
+<li>consensus: decision (liveness) vs . correct decisions (safety)</li>
+<li>legal system: jails all criminals (liveness) vs. jails no innocents (safety)</li>
+</ul>
+<h3 id="global-properties">Global Properties<a class="headerlink" href="#global-properties" title="Permanent link">&para;</a></h3>
+<ul>
+<li>for a state <span class="arithmatex">\(S\)</span> to achieve <a href="#liveness">#liveness</a> about a property <span class="arithmatex">\(Pr\)</span><ul>
+<li><span class="arithmatex">\(S\)</span> satisfies <span class="arithmatex">\(Pr\)</span> || <span class="arithmatex">\(\exists\)</span> <span class="arithmatex">\(S\rightarrow S'\)</span> where <span class="arithmatex">\(S'\)</span> satisfies <span class="arithmatex">\(Pr\)</span></li>
+</ul>
+</li>
+<li>for a state <span class="arithmatex">\(S\)</span> to achieve <a href="#safety">#safety</a> about a property <span class="arithmatex">\(Pr\)</span><ul>
+<li><span class="arithmatex">\(S\)</span> satisfies <span class="arithmatex">\(Pr\)</span> &amp;&amp; <span class="arithmatex">\(\forall\)</span> <span class="arithmatex">\(S\rightarrow S'\)</span> <span class="arithmatex">\(S'\)</span> satisfies <span class="arithmatex">\(Pr\)</span></li>
+</ul>
+</li>
+<li>stable = once true, stays true forever<ul>
+<li>stable liveness<ul>
+<li>e.g. computation has terminated</li>
+</ul>
+</li>
+<li>stable non-safety<ul>
+<li>e.g. there's a dead lock</li>
+<li>an object is orphaned</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Candy-Lamport algo can detect stable global properties</li>
+</ul>
+<h2 id="multicast">Multicast<a class="headerlink" href="#multicast" title="Permanent link">&para;</a></h2>
+<ul>
+<li>definitions<ul>
+<li>multicast: send to a group of processes</li>
+<li>broadcast: send to all processes</li>
+<li>unicast: send to a process</li>
+</ul>
+</li>
+<li>usages<ul>
+<li><a href="#cassandra">#Cassandra</a> &amp; other db<ul>
+<li>replication: multicast read/write to a replica group</li>
+<li>membership info (e.g. heartbeats)</li>
+</ul>
+</li>
+<li>online scoreboards<ul>
+<li>multicast to a group of interested clients</li>
+</ul>
+</li>
+<li>stock exchange<ul>
+<li>multicast trade info to other broker computers in the same set</li>
+<li>HFT</li>
+</ul>
+</li>
+<li>air traffic control system<ul>
+<li>multicast to other controllers</li>
+<li>all controllers need to receive same updates in the same order</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="ordering-types">ordering types<a class="headerlink" href="#ordering-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li>FIFO ordering<ul>
+<li>from the same sender, order of messages received = order of messages sent</li>
+<li>doesn't care about messages from different senders</li>
+</ul>
+</li>
+<li>causal ordering<ul>
+<li>events received obeys the originally causal relationship</li>
+<li>systems with causal ordering<ul>
+<li>social networks</li>
+<li>bulletin boards</li>
+<li>website comments</li>
+</ul>
+</li>
+<li>causal <span class="arithmatex">\(\rightarrow\)</span> FIFO<ul>
+<li>assume process <span class="arithmatex">\(P\)</span> sends message <span class="arithmatex">\(M\)</span> and then <span class="arithmatex">\(M'\)</span>, to satisfy causal ordering, it needs to send <span class="arithmatex">\(M\)</span> before <span class="arithmatex">\(M'\)</span>, which also satisfied FIFO ordering</li>
+<li>NOT vice versa</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>total ordering / atomic broadcast<ul>
+<li>doesn't care about send order</li>
+<li>all receivers all multicasts in the same order</li>
+<li>so like linearizability</li>
+<li>FIFO &amp; causal looks at sending order, so we can combine them with total which looks at receiving order</li>
+</ul>
+</li>
+</ul>
+<h3 id="fifo-multicast">FIFO Multicast<a class="headerlink" href="#fifo-multicast" title="Permanent link">&para;</a></h3>
+<ul>
+<li>each process maintains a vector timestamp (sequence number)<ul>
+<li><span class="arithmatex">\(P_{i}[j]\)</span> = the latest sequence number from <span class="arithmatex">\(P_j\)</span> that <span class="arithmatex">\(P_i\)</span> has received</li>
+</ul>
+</li>
+<li>sending<ul>
+<li><span class="arithmatex">\(P_j[j]\)</span>++ -&gt; <span class="arithmatex">\(P_j\)</span> sends the multicast message with the new <span class="arithmatex">\(P_j[j]\)</span></li>
+</ul>
+</li>
+<li>receiving<ul>
+<li><span class="arithmatex">\(P_i\)</span> receives a message from <span class="arithmatex">\(P_j\)</span> with the sequence number <span class="arithmatex">\(S\)</span></li>
+<li>if <span class="arithmatex">\(S=P_i[j]+1\)</span><ul>
+<li>deliver the message to application</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="cs425-multicast-fifo-example.png" src="../cs425-multicast-fifo-example.png" /></p>
+<h3 id="total-ordering">Total Ordering<a class="headerlink" href="#total-ordering" title="Permanent link">&para;</a></h3>
+<ul>
+<li>elect a leader / sequencer<ul>
+<li>maintains a global sequence number <span class="arithmatex">\(S\)</span></li>
+<li>receives message <span class="arithmatex">\(M\)</span> -&gt; <span class="arithmatex">\(S\)</span> ++ -&gt; multicasts <code>&lt;M, S&gt;</code></li>
+</ul>
+</li>
+<li>send message to group &amp; sequencer</li>
+<li><span class="arithmatex">\(P_i\)</span> receives a message <code>&lt;M, S(M)&gt;</code> from sequencer<ul>
+<li><span class="arithmatex">\(P_i\)</span> maintains a local sequence number <span class="arithmatex">\(S_i\)</span></li>
+<li>buffers the message until <span class="arithmatex">\(S_i+1=S(M)\)</span>, and then delivers the message to application, <span class="arithmatex">\(S_i\)</span> ++</li>
+</ul>
+</li>
+</ul>
+<h3 id="causal-ordering">Causal Ordering<a class="headerlink" href="#causal-ordering" title="Permanent link">&para;</a></h3>
+<ul>
+<li>vector timestamp<ul>
+<li>similar to <a href="#fifo-multicast">#FIFO Multicast</a></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(P_j\)</span> sends<ul>
+<li><span class="arithmatex">\(P_j[j]\)</span> ++ -&gt; <span class="arithmatex">\(P_j\)</span> sends the message with the whole vector <span class="arithmatex">\(P_j[1...N]\)</span></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(P_i\)</span> receives message with vector timestamp <span class="arithmatex">\(M[1...N]\)</span><ul>
+<li>buffers until both conditions below satisfied<ul>
+<li><span class="arithmatex">\(M[j]=P_i[j]+1\)</span><ul>
+<li><span class="arithmatex">\(P_i\)</span> is expecting it from <span class="arithmatex">\(P_j\)</span></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(\forall \ k\neq j\)</span>, <span class="arithmatex">\(M[k]\leq P_i[k]\)</span><ul>
+<li>all events before <span class="arithmatex">\(M\)</span> has already been received</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>after conditions met, deliver message to application and set <span class="arithmatex">\(P_i[j]=M[j]\)</span> </li>
+</ul>
+</li>
+</ul>
+<p><img alt="cs425-multicast-causal-example.png" src="../cs425-multicast-causal-example.png" /></p>
+<h3 id="reliable-multicast">Reliable Multicast<a class="headerlink" href="#reliable-multicast" title="Permanent link">&para;</a></h3>
+<ul>
+<li>all non-faulty processes receive the same set of multicasts</li>
+<li>approach 1<ul>
+<li>sender sends reliable unicast sequentially to all group members</li>
+<li>receiver forwards the message received to all group members</li>
+</ul>
+</li>
+</ul>
+<h3 id="virtual-synchrony">Virtual Synchrony<a class="headerlink" href="#virtual-synchrony" title="Permanent link">&para;</a></h3>
+<ul>
+<li>views = membership lists<ul>
+<li>each process maintains one</li>
+<li>view change: process join / leave / fail</li>
+</ul>
+</li>
+<li>guarantees that all view changes are delivered in the same order to all non-faulty processes</li>
+<li>a multicast <span class="arithmatex">\(M\)</span> is delivered in a view <span class="arithmatex">\(V\)</span> when <span class="arithmatex">\(M\)</span> is delivered after the process receives <span class="arithmatex">\(V\)</span> but before it receives the next view</li>
+<li>guarantees that the set of multicasts delivered in a given view is the same for all processes<ul>
+<li>if a process didn't deliver <span class="arithmatex">\(M\)</span> at <span class="arithmatex">\(V\)</span> while others did, it will be removed</li>
+<li>what happens in a view, stays in the view</li>
+</ul>
+</li>
+<li>independent to multicast orderings, so can be combined with any of them</li>
+</ul>
+<p><img alt="c425-vsync-p15.png" src="../c425-vsync-p15.png" /></p>
+<h2 id="consensus">Consensus<a class="headerlink" href="#consensus" title="Permanent link">&para;</a></h2>
+<h3 id="consensus-problem">Consensus Problem<a class="headerlink" href="#consensus-problem" title="Permanent link">&para;</a></h3>
+<ul>
+<li>goal: a group of processes reaching agreement on same values<ul>
+<li>ordering of messages</li>
+<li>up/down status of processes</li>
+<li>leader</li>
+<li>mutually exclusive access to a resource</li>
+</ul>
+</li>
+<li>constraints<ul>
+<li>validity: everyone proposes a value -&gt; decision</li>
+<li>integrity: decision is proposed by some process</li>
+<li>non-triviality: there are some initial system states that will lead to the consensus</li>
+</ul>
+</li>
+<li>equivalent problems<ul>
+<li>perfect <a href="#failure-detector">#Failure Detector</a></li>
+<li>leader election</li>
+</ul>
+</li>
+<li>harder problem<ul>
+<li>agreement</li>
+</ul>
+</li>
+</ul>
+<h3 id="sync-async-models">sync &amp; async models<a class="headerlink" href="#sync-async-models" title="Permanent link">&para;</a></h3>
+<ul>
+<li>synchronous distributed system<ul>
+<li>each message is received within bounded time</li>
+<li>drift of each local clock is bounded</li>
+<li>time for each step is bounded</li>
+<li>e.g.<ul>
+<li>processors connected by a communication bus</li>
+<li>multicore machine</li>
+</ul>
+</li>
+<li>Consensus is solvable in synchronous distributed system</li>
+</ul>
+</li>
+<li>asynchronous distributed system<ul>
+<li>unbounded</li>
+<li>e.g. Internet</li>
+<li>more general then synchronous distributed system</li>
+<li>Consensus is unsolvable in asynchronous distributed system</li>
+</ul>
+</li>
+</ul>
+<h3 id="solving-consensus-for-synchronous-model">Solving Consensus for Synchronous Model<a class="headerlink" href="#solving-consensus-for-synchronous-model" title="Permanent link">&para;</a></h3>
+<ul>
+<li>assumptions<ul>
+<li>synchronous system</li>
+<li>crash-stop<ul>
+<li>fail by stopping</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>operate in rounds<ul>
+<li>we can do this since all is bounded</li>
+<li><img alt="cs425-sync-consensus-round.png" src="../cs425-sync-consensus-round.png" /></li>
+</ul>
+</li>
+<li>at most <span class="arithmatex">\(f\)</span> processes fail</li>
+<li>flow<ul>
+<li>do <span class="arithmatex">\(f+1\)</span> rounds</li>
+<li>each round, multicast to all</li>
+</ul>
+</li>
+<li>proof by contradiction<ul>
+<li>assuming <span class="arithmatex">\(p_2\)</span> has a value <span class="arithmatex">\(v\)</span> that <span class="arithmatex">\(p_1\)</span> doesn't </li>
+<li><span class="arithmatex">\(p_2\)</span> must have received <span class="arithmatex">\(v\)</span> in the final round, otherwise it would have sent <span class="arithmatex">\(v\)</span> to <span class="arithmatex">\(p_1\)</span></li>
+<li><span class="arithmatex">\(p_2\)</span> must have received <span class="arithmatex">\(v\)</span> from another process <span class="arithmatex">\(p_3\)</span>, which crashed before sending <span class="arithmatex">\(v\)</span> to <span class="arithmatex">\(p_1\)</span>, in the final (f+1th) round</li>
+<li><span class="arithmatex">\(p_3\)</span> must have received <span class="arithmatex">\(v\)</span> from another process <span class="arithmatex">\(p_4\)</span>, which crashed before sending <span class="arithmatex">\(v\)</span> to <span class="arithmatex">\(p_2\)</span>, in the fth round</li>
+<li>... -&gt; there's at least 1 crash in each round -&gt; <span class="arithmatex">\(f+1\)</span> failures -&gt; contradiction</li>
+</ul>
+</li>
+</ul>
+<h3 id="paxos-algo">Paxos Algo<a class="headerlink" href="#paxos-algo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>impossible to have consensus in async model, because failure is indistinguishable from having a huge delay</li>
+<li>but Paxos Algo provides safety &amp; eventual liveness<ul>
+<li>safety: consensus is not violated</li>
+<li>eventual liveness: if things go well, there's a good chance that consensus will be reached</li>
+</ul>
+</li>
+<li>by Lamport</li>
+<li>rules<ul>
+<li>has rounds, each round has a unique ballot id</li>
+<li>rounds are async, no time sync</li>
+<li>use timeouts</li>
+<li>if getting a message from round <span class="arithmatex">\(k+1\)</span> in round <span class="arithmatex">\(k\)</span>, abort everything and move to round <span class="arithmatex">\(k+1\)</span></li>
+</ul>
+</li>
+<li>3 phases each round<ul>
+<li>phase 1: elect a leader (election)</li>
+<li>phase 2: leader proposes a value (bill)</li>
+<li>phase 3: leader multicasts final value (law)</li>
+</ul>
+</li>
+<li>flow<ul>
+<li>phase 1 - election<ul>
+<li>potential leaders multicast their ballot ids</li>
+<li>each OK to the one with the highest id</li>
+<li>a potential leader quits when seeing a higher id</li>
+<li>receives majority (quorum) of OK -&gt; becomes the leader</li>
+</ul>
+</li>
+<li>phase 2 - proposal<ul>
+<li>leader proposes a value and sends to all</li>
+<li>if some processes have already decide in the previous round, use their value</li>
+</ul>
+</li>
+<li>phase 3 - decision<ul>
+<li>leader makes a decision and sends to all when hearing a majority of OKs</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>safety<ul>
+<li>once deciding on a value, always the value</li>
+</ul>
+</li>
+<li>durability<ul>
+<li>process fails<ul>
+<li>recover with logs</li>
+</ul>
+</li>
+<li>leader fails<ul>
+<li>timeout when process is trying to receive bill</li>
+<li>start another round</li>
+</ul>
+</li>
+<li>message dropped<ul>
+<li>can start another round if needed</li>
+</ul>
+</li>
+<li>anyone can start a new round any time </li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.derricklin.net" target="_blank" rel="noopener" title="www.derricklin.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M244 246c-3.2-2-6.3-2.9-10.1-2.9-6.6 0-12.6 3.2-19.3 3.7l1.7 4.9zm135.9 197.9c-19 0-64.1 9.5-79.9 19.8l6.9 45.1c35.7 6.1 70.1 3.6 106-9.8-4.8-10-23.5-55.1-33-55.1zM340.8 177c6.6 2.8 11.5 9.2 22.7 22.1 2-1.4 7.5-5.2 7.5-8.6 0-4.9-11.8-13.2-13.2-23 11.2-5.7 25.2-6 37.6-8.9 68.1-16.4 116.3-52.9 146.8-116.7C548.3 29.3 554 16.1 554.6 2l-2 2.6c-28.4 50-33 63.2-81.3 100-31.9 24.4-69.2 40.2-106.6 54.6l-6.3-.3v-21.8c-19.6 1.6-19.7-14.6-31.6-23-18.7 20.6-31.6 40.8-58.9 51.1-12.7 4.8-19.6 10-25.9 21.8 34.9-16.4 91.2-13.5 98.8-10zM555.5 0l-.6 1.1-.3.9.6-.6zm-59.2 382.1c-33.9-56.9-75.3-118.4-150-115.5l-.3-6c-1.1-13.5 32.8 3.2 35.1-31l-14.4 7.2c-19.8-45.7-8.6-54.3-65.5-54.3-14.7 0-26.7 1.7-41.4 4.6 2.9 18.6 2.2 36.7-10.9 50.3l19.5 5.5c-1.7 3.2-2.9 6.3-2.9 9.8 0 21 42.8 2.9 42.8 33.6 0 18.4-36.8 60.1-54.9 60.1-8 0-53.7-50-53.4-60.1l.3-4.6 52.3-11.5c13-2.6 12.3-22.7-2.9-22.7-3.7 0-43.1 9.2-49.4 10.6-2-5.2-7.5-14.1-13.8-14.1-3.2 0-6.3 3.2-9.5 4-9.2 2.6-31 2.9-21.5 20.1L15.9 298.5c-5.5 1.1-8.9 6.3-8.9 11.8 0 6 5.5 10.9 11.5 10.9 8 0 131.3-28.4 147.4-32.2 2.6 3.2 4.6 6.3 7.8 8.6 20.1 14.4 59.8 85.9 76.4 85.9 24.1 0 58-22.4 71.3-41.9 3.2-4.3 6.9-7.5 12.4-6.9.6 13.8-31.6 34.2-33 43.7-1.4 10.2-1 35.2-.3 41.1 26.7 8.1 52-3.6 77.9-2.9 4.3-21 10.6-41.9 9.8-63.5l-.3-9.5c-1.4-34.2-10.9-38.5-34.8-58.6-1.1-1.1-2.6-2.6-3.7-4 2.2-1.4 1.1-1 4.6-1.7 88.5 0 56.3 183.6 111.5 229.9 33.1-15 72.5-27.9 103.5-47.2-29-25.6-52.6-45.7-72.7-79.9zm-196.2 46.1v27.2l11.8-3.4-2.9-23.8zm-68.7-150.4 24.1 61.2 21-13.8-31.3-50.9zm84.4 154.9 2 12.4c9-1.5 58.4-6.6 58.4-14.1 0-1.4-.6-3.2-.9-4.6-26.8 0-36.9 3.8-59.5 6.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://blog.derricklin.net" target="_blank" rel="noopener" title="blog.derricklin.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/derrick-lin" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dlccyes" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.indexes", "toc.follow", "search.suggest"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../assets/script.js"></script>
+      
+        <script src="../../assets/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
