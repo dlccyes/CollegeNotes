@@ -128,7 +128,7 @@
     - 12k servers -> MTTF = 7.2hr
 - use membership protocol to auto detect failures
 
-### Group Memebership Protocol
+### Group Membership Protocol
 
 - maintain a membership list of working nodes
     - dealing with join/fail/leave
@@ -195,6 +195,7 @@
             - $O(N\log N)$ to propagate if bandwidth is $O(1)$
         - gossip frequency tradeoff - bandwidth vs. detection time
         - timeout tradeoff - detection time vs. false alarm rate / accuracy
+    - ![[cs425-heartbeat-13.png]]
 - all-to-all & gossip-style heartbeating
     - mixing failure detection & dissemination
     - sub-optimal
@@ -1011,3 +1012,64 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
         - can start another round if needed
     - anyone can start a new round any time 
 
+## Leader Election
+
+- for coordination between distributed servers, e.g.
+    - leader-follower replication
+    - sequencer in total ordering
+    - [[#NTP Network Time Protocol]] root server
+    - Zookeeper
+- goal
+    - elect a leader among non-faulty processes
+    - all non-faulty processes agree on the leader
+    - detect leader failure and fix
+- system model
+    - N processes
+    - messages are eventually delivered
+    - election protocol may have failures
+- init
+    - any process can raise an election
+    - a process can raise 1 election at a time
+    - can have multiple elections at the same time
+    - only a single leader is elected
+    - election result not dependent on initiator
+- properties
+    - safety: process must select the best one (e.g. highest id), or null
+    - liveness: no process select null
+
+### ring leader
+
+- N processes in a ring
+- clockwise messages
+- can send message to successor
+- algo
+    - process $p_i$ finds out the old coordinator has failed
+    - $p_i$ initiates with an election message containing id & attributes
+    - $p_j$ receives the election message
+        - if the incoming attribute is greater, forward the message
+        - if the incoming attribute is smaller, and $p_j$ hasn't forward an election message before, forward its own id & attributes
+        - if the incoming attribute is the same, it means that $p_j$ is the best, and becomes the new coordinator -> sends an elected message
+    - receives the elected message -> forward it if not the elected leader itself
+- analysis
+    - best case - initiator is the new leader
+        - 2N messages
+        - 2N time
+            - 1 election circle, 1 elected circle
+- handling concurrent elections
+    - drop the message when the received message's initiator is lower than history high
+    - so only the initiator with the highest id gets to have the election completed
+- failures handling
+    - if the new leader crashed during the elected announcement stage, the elected message will circulate around forever
+    - sol 1: have the predecessor / successor of the new leader detect & recover the failure
+        - re-initiate election if
+            - received election message but timeout waiting for elected message
+            - received elected message but didn't hear from the new leader
+        - e.g. Zookeeper
+        - problem: failure of predecessor
+    - sol 2: failure detector
+        - but failure detector can't be both complete & accurate
+        - incomplete -> failure may be missed -> violate safety
+        - inaccurate -> may wrongfully mark the leader as failed -> new election initiated forever, violating liveness
+- election is a consensus problem
+    - consensus of the new leader's id's last bit
+    - so it's impossible to solve in async system
