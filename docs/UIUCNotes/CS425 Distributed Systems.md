@@ -1073,3 +1073,44 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
 - election is a consensus problem
     - consensus of the new leader's id's last bit
     - so it's impossible to solve in async system
+
+### approaches
+
+- approach 1
+    - each process proposes a value
+    - everyone reaches a consensus on one
+- approach 2 Paxos-like
+    - e.g. Zookeeper & Google Chubby
+- Google Chubby
+    - essential part of Google's infra
+    - need a master / leader
+    - election
+        - each server votes for at most 1 leader
+        - the server with the majority vote becomes the leader
+        - have cooldown time after an election
+        - master lease (leader validity) can be renewed as long as it can get the majority
+        - auto re-election when master doesn't renew the lease
+    - properties
+        - safety
+            - quorum / majority voting -> only 1 leader
+        - liveness
+            - eventually will select a leader
+            - irl, normally a few seconds, worst-case 30s
+- Zookeeper
+    - centralized system for mainting config info
+    - Paxos variant called ZAB (Zookeeper Atomic Broadcast)
+    - need a leader
+    - each server chooses the next highest id
+    - election
+        - the one with the highest id becomes the leader
+        - two-phase commit
+            - leader candidates send `NEW_LEADER` message to all
+            - each process `ACK` to the highest id
+            - leader waits for `ACK` majority and sends `COMMIT`
+            - receives `COMMIT` -> update local leader var
+    - failure handling
+        - linked list sorted by id
+        - each node monitors the node with the next higher id
+        - leader fails -> its predecessor becomes the leader
+        - node fails -> its predecessor points to the node's successor
+
