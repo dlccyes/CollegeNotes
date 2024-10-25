@@ -2317,6 +2317,7 @@ $$lim_{N\rightarrow\infty}=\frac{1}{S}$$
 ### Classic Problems
 
 #### Bounded-Buffer Problem
+
 - multiple producers & consumers
 - buffer with capacity N
 - 2 producers can't write to the same buffer (slot)

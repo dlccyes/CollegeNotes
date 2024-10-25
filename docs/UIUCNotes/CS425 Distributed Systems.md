@@ -1114,3 +1114,231 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
         - leader fails -> its predecessor becomes the leader
         - node fails -> its predecessor points to the node's successor
 
+### bully algo
+
+- process $p_i$ detects the leader / coordinator has crashed
+    - $p_i$ is the next highest -> elects itself and sends out `coordinator` message
+    - $p_i$ is not the next highest -> initiates election
+        - sends election message to those with higher id
+        - timeout no response -> elects itself and sends out `coordinator` message
+        - receives `OK` but timeout waiting for `coordinator` message -> starts new election 
+- a process receives `election` message -> replies `OK` and starts its own election
+- "bully" because the lower ids have to ask the higher ids and wait for their response before acting
+- set timeout to worst case election completion time = message transmission time x5
+    - `election` from lowest id
+    - reply from 2nd highest id
+    - election from 2nd highest id to highest id (failed leader)
+    - timeout
+    - `coordinator` from 2nd highest id
+- worse-case: lowest id detects the failure
+    - $i$th highest process sends $i-1$ election messages
+    - num of `election` messages = $O(N^2)$
+- best-case: 2nd highest detects the failure
+    - num of `coordinator` messages = $N-2$
+    - completion time = 1 message transmission time
+- guarantees liveness in synchronous model
+    - worse cast one way latency = worse case process time + message latency
+    - eventual liveness in async
+
+## Mutual Exclusion
+
+- make sure at most one server has access to an object at any point of time
+- mutually exclusive access on important stuff
+    - bank account
+        - without -> 2 clients doing deposits simultaneously to the same account
+            - both read $1000 -> add $10000 -> write $11000
+            - losing $10000
+    - files & dirs
+- flow
+    - `enter()`
+    - `AccessResource()`
+    - `exit()`
+- approaches
+    - single OS
+        - using semaphores, mutexes, condition vars, monitors, etc.
+    - distributed system
+        - using messages
+
+### Mutual Exclusion in Distributed Systems
+
+- system model
+    - reliable transfer
+    - messages are eventually delivered, FIFO
+    - processes do not fail
+- properties
+    - safety: at most on process executes in critical section at any time
+    - liveness: every request is granted eventually
+    - ordering (good to have): FIFO
+
+#### central solution
+
+- elect a leader
+    - maintains a queue for critical section access
+    - give a special token allowing holder to access critical section
+- leader actions
+    - receive a request from $P_i$
+        - has token -> give token to $P_i$
+        - no token -> add $P_i$ to queue
+    - receive a token
+        - queue not empty -> dequeue queue head and give token to it
+        - queue empty -> retain token
+- process actions
+    - `enter()`
+    - `exit()`
+- properties
+    - safety: True
+    - liveness: True
+        - $N$ processes -> max $N$ processes in queue
+        - if each process exits critical section eventually then liveness guaranteed
+    - FIFO ordering: True
+- performance
+    - bandwidth: total numbers of messages sent in each `enter` and `exit`
+        - 2 messages for enter
+        - 1 message for exit
+    - client delay: delay of `enter` & `exit`
+        - not counting queueing delay
+        - 2 message latencies: request & grant
+    - synchronization delay: interval between one exiting and another entering 
+        - 2 message latencies: release & grant
+- leader is performance bottleneck & single point of failure
+
+#### ring-based
+
+- no leader
+- pass token around
+- ![[cs425-dis-mutual-exc-ring.png]]
+- system model
+    - $N$ processes in a virtual ring
+    - each process can send message to successor
+    - 1 token
+    - actions
+        - `enter()`
+            - wait until getting token
+        - `exit()`
+    - if get token but not in `enter()`, pass it forward
+- properties
+    - safety
+        - 1 token
+    - liveness
+        - token eventually reaches the requesting process
+- performance
+    - bandwidth
+        - `enter()`
+            - 1 message per requesting process
+            - $N$ messages total, for transporting the token around
+        - `exit()`
+            - 1 message, to pass the token forward
+    - client delay: 0 ~ N message transmissions after `enter()`
+        - distance between the token and the entering process
+    - synchronization delay: 1 ~ N-1 message transmissions
+        - distance between the exiting process and the next entering process
+
+#### Ricart-Argawala's Algorithm
+
+- system model
+    - reliable transfer
+    - messages are eventually delivered, FIFO
+    - processes do not fail
+- no token
+- lower waiting time than ring-based
+- requests granted in order of causality
+- algo
+    - `enter()` at `Pi`
+        - set state to `Wanted`
+        - multicast to all processes
+            - request `<Ti, Pi>`
+            - `Ti` = current Lamport timestamp at `Pi`
+            - `Pi` used for tiebreaking
+        - wait until all other processes `Reply`
+        - set state to `Held` and enter critical section
+    - `Pi` receives `<Tj, Pj>` 
+        - `if state == Held || (state = Wanted && (Ti, i) < (Tj, j))`
+            - (already using or want to use and incoming is later)
+            - add request to local queue
+        - `else` `Reply`
+    - `exit()` at `Pi`
+        - set state to `Released` and `Reply` to all queued requests
+- properties
+    - safety
+        - 2 processes can't both have access to critical section
+    - liveness
+    - ordering: causality
+        - by Lamport timestamp
+- performance
+    - bandwidth
+        - `enter()`: $2(N-1)$ messages
+        - `exit()`: $N-1$ messages
+    - client delay $O(1)$
+    - synchronization delay $O(1)$
+    - bandwidth $O(N)$
+
+#### Maekawa's Algorithm
+
+- get replies from only some processes instead of all
+- voting set
+    - each process $P_i$ has its own voting set $V_i$ -> total $N$ voting sets
+    - each process belongs to $M$ voting sets 
+    - intersection of any 2 voting sets is non-empty
+        - like quorum for strong consistency
+        - one approach
+            - arrange $N$ processes in $\sqrt{N}\times\sqrt{N}$
+            - each row + col forms a voting set
+            - $K=M=2\sqrt{N}-1$
+    - each voting set size $K$
+    - $K=M=\sqrt{N}$ works best
+        - total number of voting set members = $KN$
+        - each process in $M$ voting sets -> $KN=MN$ -> $K=M$
+        - for a process, total number of voting sets = members in its voting set and all their voting sets = $(M-1)K+1$
+        - $N=(M-1)K+1=(K-1)K+1$
+        - $K \approx \sqrt{N}$
+- each process $P_i$ request permission from only its voting set $V_i$ members
+- each process gives permission to at most 1 process at a time
+- algo
+    - `enter()` at `Pi`
+        - set state to `Wanted`
+        - multicast `Request` to all processes in `Vi`
+        - wait for `Reply` from all processes in `Vi`
+        - set state to `Held`
+    - `Pi` receives `Request` from `Pj`
+        - `if state == Held || voted == True`
+            - queue request
+        - `else`
+            - send `Reply` to `Pj` and set `voted` to true
+    - `Pi` receives `Release`
+        - if queue empty
+            - set `voted` to false
+        - else
+            - dequeue and send `Reply` to queue head
+            - set `voted` to true
+    - `exit` at `Pi`
+        - set state to `Released`
+        - multicase `Release` to all processes in `Vi`
+- properties
+    - safety: when `Pi` receives all `Reply` from all members in `Vi`, no other process `Pj` could have received `Reply` from all members in `Vj`
+        - `Vi` & `Vj` intersect at least 1 process `Pk`
+        - `Pk` can only send 1 `Reply` at a time
+    - liveness: NO
+        - can have deadlock
+            - ![[Pasted image 20241025095119.png]]
+            - P1 waits P3 waits P4 wats P2 waits P1
+- performance
+    - bandwidth
+        - `enter()`: $2\sqrt{N}$ messages
+        - `exit()`: $\sqrt{N}$ messages
+    - client delay
+        - 1 round trip time
+    - synchronization delay: 2 messages 
+
+#### Handling failures with Chubby
+
+- Google Chubby
+- advisory locks only
+- uses Paxos
+- all servers replicate same info
+- have a leader
+- clients send read requests to leader
+- clients send write request to leader
+    - leader sends to all servers, gets majority (quorum), and responds
+- leader failure -> election
+- replica failure -> replace and recover
+
