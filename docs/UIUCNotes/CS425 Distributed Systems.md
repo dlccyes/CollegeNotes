@@ -912,7 +912,7 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
     - view change: process join / leave / fail
 - guarantees that all view changes are delivered in the same order to all non-faulty processes
 - a multicast $M$ is delivered in a view $V$ when $M$ is delivered after the process receives $V$ but before it receives the next view
-- guarantees that the set of multicasts delivered in a given view is the same for all processes
+- guarantees that the set of multicasts delivered in a given view is the same for all non-faulty processes
     - if a process didn't deliver $M$ at $V$ while others did, it will be removed
     - what happens in a view, stays in the view
 - independent to multicast orderings, so can be combined with any of them
@@ -1114,7 +1114,7 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
         - leader fails -> its predecessor becomes the leader
         - node fails -> its predecessor points to the node's successor
 
-### bully algo
+### Bully Algorithm
 
 - process $p_i$ detects the leader / coordinator has crashed
     - $p_i$ is the next highest -> elects itself and sends out `coordinator` message
@@ -1137,7 +1137,7 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
     - num of `coordinator` messages = $N-2$
     - completion time = 1 message transmission time
 - guarantees liveness in synchronous model
-    - worse cast one way latency = worse case process time + message latency
+    - worse-case one way latency = worse case process time + message latency
     - eventual liveness in async
 
 ## Mutual Exclusion
@@ -1158,19 +1158,17 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
         - using semaphores, mutexes, condition vars, monitors, etc.
     - distributed system
         - using messages
+- in distributed systems
+    - system model
+        - reliable transfer
+        - messages are eventually delivered, FIFO
+        - processes do not fail
+    - properties
+        - safety: at most on process executes in critical section at any time
+        - liveness: every request is granted eventually
+        - ordering (good to have): FIFO
 
-### Mutual Exclusion in Distributed Systems
-
-- system model
-    - reliable transfer
-    - messages are eventually delivered, FIFO
-    - processes do not fail
-- properties
-    - safety: at most on process executes in critical section at any time
-    - liveness: every request is granted eventually
-    - ordering (good to have): FIFO
-
-#### central solution
+### central solution
 
 - elect a leader
     - maintains a queue for critical section access
@@ -1202,7 +1200,7 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
         - 2 message latencies: release & grant
 - leader is performance bottleneck & single point of failure
 
-#### ring-based
+### ring-based
 
 - no leader
 - pass token around
@@ -1233,7 +1231,9 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
     - synchronization delay: 1 ~ N-1 message transmissions
         - distance between the exiting process and the next entering process
 
-#### Ricart-Argawala's Algorithm
+![[cs425-ring-election-p1.png]]
+
+### Ricart-Argawala's Algorithm
 
 - system model
     - reliable transfer
@@ -1272,7 +1272,9 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
     - synchronization delay $O(1)$
     - bandwidth $O(N)$
 
-#### Maekawa's Algorithm
+![[c425-richard-p9.png]]
+
+### Maekawa's Algorithm
 
 - get replies from only some processes instead of all
 - voting set
