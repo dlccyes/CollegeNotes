@@ -754,7 +754,7 @@ approach: synchronize all clocks (sufficient condition: state 1 -> state 2 obeys
             - sends a marker message to all of its outgoing channels
             - starts recording all the incoming messages from the incoming channels (except $C_{ij}$)
         - if not the first time
-            - mark the state of the channel $C_{ij}$ as all the messages since it starts recording i.e. first receive the marker message
+            - mark the state of the channel $C_{ij}$ as all the messages since it starts recording i.e. first received the marker message
     - termination: when all processes have received a marker on all of their incoming channels
     - optional: a central server collects all the individual snapshots and assemble them into a global snapshot
     - the snapshot would be causally correct
@@ -937,6 +937,7 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
     - leader election
 - harder problem
     - agreement
+
 ### sync & async models
 
 - synchronous distributed system
@@ -962,10 +963,13 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
 - operate in rounds
     - we can do this since all is bounded
     - ![[cs425-sync-consensus-round.png]]
-- at most $f$ processes fail
+- allows at most $f\leq N$ processes fail
 - flow
     - do $f+1$ rounds
-    - each round, multicast to all
+    - initially, each process has its own value
+    - each round, each process multicasts all new values received to all
+        - for 1st round just sends its own value
+    - in the end, each process uses the min of all values received as decision
 - proof by contradiction
     - assuming $p_2$ has a value $v$ that $p_1$ doesn't 
     - $p_2$ must have received $v$ in the final round, otherwise it would have sent $v$ to $p_1$
@@ -1344,3 +1348,89 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
 - leader failure -> election
 - replica failure -> replace and recover
 
+## RPC
+
+- LPC (local procedure call): regular function call
+- calling a function in another process
+- access objects via global references
+    - e.g. object address + ip + port + object number
+- function may not be executed if
+    - request / reply is dropped
+    - called process failed before / after executing the called function
+    - hard for caller to determine the cause
+- function may be executed multiple times if
+    - request is duplicated
+- variants
+    - at most once
+        - e.g. Java RMI
+        - plays well with idempotent operations
+    - at least once
+        - e.g. Sun RPC
+    - best-effort
+        - e.g. COBRA
+    - ![[cs425-rpc-semantics.png]]
+- implementations
+    - ![[cs425-rpc-impl.png]]
+    - client
+        - client stub
+            - same function interface as `callee()`
+        - communication module
+            - forwards requests
+            - replies
+    - server
+        - dispatcher
+            -  selects which server stub to forward request to
+        - server stub
+            - calls `callee()`
+- generating code
+    - human only writes `caller()` & `calleeO()`
+    - the rest is generated from interfaces
+- marshalling
+    - different architectures use different ways to represent data
+        - big endian & little endian
+    - middleware uses platform-independent CDR (common data representation)
+    - marshalling: caller converts arguments to CDR format
+    - unmarshalling: callee converts arguments to its own format
+
+## Transaction
+
+- ACID
+    - atomicity
+        - all or none
+    - consistency
+        - a transaction starts in a consistent state -> ends in a consistent state
+    - isolation
+        - a transaction is indivisible (atomic)
+        - no access to intermediate results
+    - durability
+        - after a transaction is completed, all is saved in permanent storage
+- problems
+    - client & server may crash
+    - clients may run transactions concurrently
+        - we want to maximize transactions per second
+    - a transaction may run distributedly across different servers
+- lost update problem
+    - 2 client doing transactions concurrently on the same value, they read the same value but modifies it differently and write, leading to an update being lost
+- inconsistent retrieval problem
+    - when a transaction reads the intermediate value from another transaction
+
+### concurrent transactions
+
+- goal: increase concurrency while maintaining correctness (ACID)
+
+### serial equivalence
+
+- an interleaving of transaction operations is serially equivalence iff there's some consecutive ordering that gives the same end result
+- 2 operations is conflicting if the combined effect depends on the execution order
+    - write has effect on server
+    - read has effect on client
+    - e.g. 
+        - read x -> write x
+        - write x -> read x
+        - write x -> write x
+    - 2 reads on x or read/write on different key is fine 
+- 2 transactions are serially equivalent iff all pairs of conflicting operations (one from transaction A another from B) are executed in the same order for all objects the both access
+    - e.g. operation Ax from transaction A, operation Bx from transaction B, Ax & Bx are conflicting, if A1 before B1, then Ax before Bx for all x 
+    - solves lost update problem & inconsistent retrieval problem
+- before committing a transaction, check for serial equivalence with all other transactions
+    - not -> abort and roll back
