@@ -1368,9 +1368,9 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
         - e.g. Sun RPC
     - best-effort
         - e.g. COBRA
-    - ![[cs425-rpc-semantics.png]]
+    - ![[cs425-rpc-semantics.jpg]]
 - implementations
-    - ![[cs425-rpc-impl.png]]
+    - ![[cs425-rpc-impl.jpg]]
     - client
         - client stub
             - same function interface as `callee()`
@@ -1434,3 +1434,49 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
     - solves lost update problem & inconsistent retrieval problem
 - before committing a transaction, check for serial equivalence with all other transactions
     - not -> abort and roll back
+
+### pessimistic & optimistic
+
+- pessimistic: prevent transactions from accessing same object
+    - exclusive locking
+        - each object has a lock
+        - at most 1 transaction inside lock
+        - call `lock()` before read/write
+        - `unlock()` when done
+        - cons: reduces concurrency
+            - sol: read-read is never conflicting so should allow it
+    - read-write locks
+        - read mode & write mode
+        - read mode: allows multiple transactions
+        - write mode: exclusive lock
+        - reading only allowed if all transactions inside the lock is read mode
+        - writing only allowed when no transaction is in the lock
+        - if already reading and want to write, try promoting lock
+            - succeeds if no other transactions
+    - 2-phase locking -> serial equivalence
+        - growing phase & shrinking phase
+        - growing phase: acquires / promotes lock
+        - shrinking phase: release lock
+            - release only at commit 
+        - guarantees serial equivalence cuz one's growing phase must overlap or be after another's shrinking phase
+    - problem of locks - deadlock
+        - 2 processes waiting each other to release a lock
+        - ![[cs425-deadlock-prob.jpg]]
+        - conditions of deadlock (needs all)
+            - some objects in exclusive lock
+            - transactions holding locks can't be preempted
+            - cycle in wait-for graph
+    - deadlock solution
+        - lock timeout: abort transaction if timeout trying to acquire lock
+            - cons: expensive & wasted work
+        - deadlock detection
+            - maintain wait-for graph with global snapshot
+            - find cycle periodically
+            - have cycle -> have deadlock -> abort certain transactions to break cycle
+            - cons: allows deadlock to happen
+        - deadlock prevention: destroy one of the deadlock necessary conditions
+            - ~~some objects in exclusive lock~~ all read-only
+            - ~~transactions holding locks can't be preempted~~ allow preemption of some transactions
+            - ~~cycle in wait-for graph~~ no edges in the wait-for cycle
+                - try locking all objects in the start of the transaction, abort if any fails -> a transaction either has access to all objects or none -> all transactions wait for no one
+- optimistic: allows transactions to write first, check later
