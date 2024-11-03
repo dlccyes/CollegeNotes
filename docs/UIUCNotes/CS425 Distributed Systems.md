@@ -1435,48 +1435,147 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
 - before committing a transaction, check for serial equivalence with all other transactions
     - not -> abort and roll back
 
-### pessimistic & optimistic
+### concurrency control
 
-- pessimistic: prevent transactions from accessing same object
-    - exclusive locking
-        - each object has a lock
-        - at most 1 transaction inside lock
-        - call `lock()` before read/write
-        - `unlock()` when done
-        - cons: reduces concurrency
-            - sol: read-read is never conflicting so should allow it
-    - read-write locks
-        - read mode & write mode
-        - read mode: allows multiple transactions
-        - write mode: exclusive lock
-        - reading only allowed if all transactions inside the lock is read mode
-        - writing only allowed when no transaction is in the lock
-        - if already reading and want to write, try promoting lock
-            - succeeds if no other transactions
-    - 2-phase locking -> serial equivalence
-        - growing phase & shrinking phase
-        - growing phase: acquires / promotes lock
-        - shrinking phase: release lock
-            - release only at commit 
-        - guarantees serial equivalence cuz one's growing phase must overlap or be after another's shrinking phase
-    - problem of locks - deadlock
-        - 2 processes waiting each other to release a lock
-        - ![[cs425-deadlock-prob.jpg]]
-        - conditions of deadlock (needs all)
-            - some objects in exclusive lock
-            - transactions holding locks can't be preempted
-            - cycle in wait-for graph
-    - deadlock solution
-        - lock timeout: abort transaction if timeout trying to acquire lock
-            - cons: expensive & wasted work
-        - deadlock detection
-            - maintain wait-for graph with global snapshot
-            - find cycle periodically
-            - have cycle -> have deadlock -> abort certain transactions to break cycle
-            - cons: allows deadlock to happen
-        - deadlock prevention: destroy one of the deadlock necessary conditions
-            - ~~some objects in exclusive lock~~ all read-only
-            - ~~transactions holding locks can't be preempted~~ allow preemption of some transactions
-            - ~~cycle in wait-for graph~~ no edges in the wait-for cycle
-                - try locking all objects in the start of the transaction, abort if any fails -> a transaction either has access to all objects or none -> all transactions wait for no one
-- optimistic: allows transactions to write first, check later
+#### pessimistic
+
+prevent transactions from accessing same object
+
+- exclusive locking
+    - each object has a lock
+    - at most 1 transaction inside lock
+    - call `lock()` before read/write
+    - `unlock()` when done
+    - cons: reduces concurrency
+        - sol: read-read is never conflicting so should allow it
+- read-write locks
+    - read mode & write mode
+    - read mode: allows multiple transactions
+    - write mode: exclusive lock
+    - reading only allowed if all transactions inside the lock is read mode
+    - writing only allowed when no transaction is in the lock
+    - if already reading and want to write, try promoting lock
+        - succeeds if no other transactions
+- 2-phase locking -> serial equivalence
+    - growing phase & shrinking phase
+    - growing phase: acquires / promotes lock
+    - shrinking phase: release lock
+        - release only at commit 
+    - guarantees serial equivalence cuz one's growing phase must overlap or be after another's shrinking phase
+- problem of locks - deadlock
+    - 2 processes waiting each other to release a lock
+    - ![[cs425-deadlock-prob.jpg]]
+    - conditions of deadlock (needs all)
+        - some objects in exclusive lock
+        - transactions holding locks can't be preempted
+        - cycle in wait-for graph
+- deadlock solution
+    - lock timeout: abort transaction if timeout trying to acquire lock
+        - cons: expensive & wasted work
+    - deadlock detection
+        - maintain wait-for graph with global snapshot
+        - find cycle periodically
+        - have cycle -> have deadlock -> abort certain transactions to break cycle
+        - cons: allows deadlock to happen
+    - deadlock prevention: destroy one of the deadlock necessary conditions
+        - ~~some objects in exclusive lock~~ all read-only
+        - ~~transactions holding locks can't be preempted~~ allow preemption of some transactions
+        - ~~cycle in wait-for graph~~ no edges in the wait-for cycle
+            - try locking all objects in the start of the transaction, abort if any fails -> a transaction either has access to all objects or none -> all transactions wait for no one
+
+
+#### optimistic
+
+allows transactions to write first, check later
+
+- more concurrency than pessimistic -> higher transactions per second -> less latency
+- used when conflicts are rare
+- first-cut approach
+    - read/write as will
+    - check for serial equivalence at commit time
+    - rollback if abort
+        - also abort transactions reading dirty data
+    - cons: cascading aborts
+- timestamp ordering
+    - transaction id determines its position in serialization order
+    - a transaction can write to object O only if all transactions that have read/write O have lower ids
+    - a transaction can read object O only if the last transaction writing O has a lower id
+    - maintain read/write timestamp
+- multi-version concurrency control
+    - maintain per-transaction version, tentative version, with timestamp
+    - read/write to correct tentative version
+        - read from immediately previous transaction
+- eventual consistency in Cassandra & DynamoDB
+    - only one version for each key-value pair
+    - last-write wins
+        - use unsynchronized timestamps
+            - so slightly older write may win
+- eventual consistency in Riak
+    - use vector clocks to determine causal ordering
+    - conflicting / sibling value need to be resolved by user or application logic
+    - size-based pruning to prevent vector clock from growing too big
+    - time-based pruning to remove very old entries
+
+### in distributed systems
+
+- need to ensure all servers involved commit their updates
+- one-phase commit
+    - coordinator asks each server commit or abort
+    - problems
+        - server has no say
+        - if object is corrupted it can't commit
+        - server may crash before receiving order to commit, leading to data loss
+- two-phase commit
+    - coordinator
+        - send prepare message to all -> 
+            - if received any "no" or timeout, tell everyone to abort
+            - if all yes, send commit message to all
+    - server
+        - receive prepare message -> save updates to disk -> reply yes/no
+        - receive commit message -> commit updates from disk to data store -> reply ACK
+    - failure handling
+        - coordinator
+            - logs all decisions & received/sent messages on disk
+                - crash -> recover from them
+        - commit/abort message lost
+            - server can poll coordinator
+    - Paxos
+        - can use paxos to decide commit or not and ordering updates
+
+## Replication
+
+- pros of replication
+    - fault tolerance
+    - load balancing
+    - higher availability
+        - if a server is down $f$ of the time, probability of at least 1 replica is on with $k$ replicas = $1-f^k$
+- challenges
+    - transparency
+        - client should be treated as if there's only a copy
+    - consistency
+        - all clients see consistent copy of data
+        - ACID transactions
+
+### transparency
+
+- request forwarding approaches
+    - passive replication
+        - have primary replica
+        - [[System Design#Leader-Based Replication]]
+    - active replication
+        - all replicas equal
+        - [[System Design#Leaderless Replication]]
+        - multicast to all other replicas
+            - can use any ordering
+        - failure handling
+            - [[#Virtual Synchrony]]
+    - both uses replicated state machine
+
+### consistency
+
+- one-copy-serializability
+    - a concurrent execution of transactions in a replicated db is one-copy-serializable if = a serial of these transactions over a single copy
+- correctness
+    - serial equivalence in single copy
+    - serial equivalence + one-copy-serializability in replicated system
+
