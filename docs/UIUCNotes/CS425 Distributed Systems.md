@@ -1579,3 +1579,342 @@ allows transactions to write first, check later
     - serial equivalence in single copy
     - serial equivalence + one-copy-serializability in replicated system
 
+## Stream Processing in Storm
+
+- background
+    - real-time view of large data
+        - social network trends e.g. Twitter real-time search
+        - website analytics e.g. GA
+        - intrusion detection system e.g. in datacenters
+    - requirements
+        - latency of few seconds
+        - high throughput
+- used by many companies
+    - e.g. Twitter for personalization & search
+- components
+    - tuple = ordered list of elements
+        - e.g.
+            - `<tweeter, tweet>`
+            - `<url, clicker ip, date, time>`
+    - stream = sequence of tuples
+    - spout = source of streams
+        - e.g. crawler or DB
+    - bolt: operations with streams as input & output
+        - bolts -> nodes, streams -> edges
+        - operations
+            - filter
+            - join
+            - apply/transform
+            - etc.
+        - has multiple processes / tasks
+            - each incoming tuple goes to a task (grouping)
+        - grouping
+            - shuffle grouping
+                - even
+                - round-robin
+            - fields grouping
+                - by a subset of fields
+                - e.g. ranged based
+            - all grouping
+                - all tuples go to all tasks
+                - good for join
+    - topology: directed graph of spouts (roots) & bolts (nodes)
+        - correspond to a Storm app
+        - can have cycle
+    - cluster
+        - master node
+            - runs Nimbus
+        - worker node
+            - runs Supervisor
+        - Zookeeper
+            - coordinates Nimbus & Supervisor
+            - keeps states of Nimbus & Supervisor
+- fault tolerance
+    - anchoring
+    - APIs
+        - emit
+        - ack
+            - a tuple is processed
+        - fail
+            - fail the sprout tuple at the root (?)
+
+## Distributed Graph Processing
+
+- store large graph distributedly
+- typical graph processing
+    - iterative
+    - each node has a value
+    - in each iteration, each node
+        - gets values from neighbors -> do some computation -> updates its value and spreads
+- run with Hadoop / MapReduce
+    - one Map -> Reduce stage for each iteration
+    - use node id as keys for reduce
+    - at the end of each stage all the node values need to be written to HDFS -> slow
+- run with bulk synchronous parallel model
+    - assign each node to a server
+        - hash-based
+        - locality based
+            - node & its neighbors go to the same server
+            - reduces inter-server communications
+    - each server has a set of nodes
+    - in each iteration, each server
+        - Gather
+            - gets values from neighbors
+        - Apply
+            - calculate new value
+        - Scatter
+            - send new value to neighbors
+- run with Pregel System
+    - master & workers
+    - persistent data stored in distributed storage
+    - temp data stored on local disk
+    - flow
+        - master assigns a partition of nodes (input) to each worker -> workers mark the assigned nodes as active
+        - master tells workers to do iteration -> starts new one when all finished
+        - terminate when no active nodes && no messages in transit -> master tells workers to save its portion of the graph
+    - fault tolerance
+        - checkpointing
+            - master tells workers to save partition state to persistent storage periodically
+        - failure detection
+            - master pings workers periodically
+        - recovery
+
+## Distributed File System
+
+- file system
+    - abstraction of disk and memory blocks
+    - file
+        - header & blocks
+        - timestamps
+        - file type
+        - ownership
+        - access control list
+        - reference count = number of dirs containing this file
+            - 0 -> delete
+    - directory
+        - special case of files
+        - contain pointers to files
+- security
+    - authentication
+    - authorization
+        - access control list
+            - per file, allowed users & type of accesses
+        - capability list\
+            - per user, allowed files & type of accesses
+
+### vanilla DFS
+
+- flat file service
+    - at server
+    - `read(file_id, buffer, position, num_bytes)`
+        - read `num_bytes` from `position`
+        - no automatic read-write pointer
+            - -> idempotent
+        - no file descriptors
+            - -> stateless
+        - unix is neither idempotent or stateless
+    - `write(file_id, buffer, position, num_bytes)`
+    - `create(file_id)`
+    - `delete(file_id)`
+    - `get_attributes(file_id, buffer)`
+    - `set_attributes(file_id, buffer)`
+- directory service
+    - at server
+    - talks to flat file service
+    - `file_id = lookup(dir, file_name)`
+    - `add_name(dir, file_name)`
+    - `un_name(dir, file_name)`
+    - `list = get_names(dir, pattern)`
+        - like `ls | grep pattern`
+- client service
+    - at client
+    - talk to flat file service & directory service
+
+### NFS Network File System
+
+![[cs425-nfs-arch.jpg]]
+
+- client
+    - like client service in vanilla
+    - integrated with kernel
+    - do RPCs to server
+- server
+    - like flat file service + directory service in vanilla
+    - mounting files & dirs
+- virtual file system module
+    - access files via file descriptors
+    - local & remote files are indistinguishable
+    - a data structure for each mounted file system
+    - a data structure v-note for all open files
+        - local: v-note points to local disk i-node
+        - remote: v-note contains address to remote NFS server
+- server optimizations
+    - server caching
+        - caches recently accessed blocks
+        - -> fast reads
+        - locality
+    - write approaches
+        - delayed write
+            - write in memory -> flush to disk every 30s
+            - fast but not consistent
+        - write-through
+            - write to disk immediately
+            - consistent but slow
+- client caching
+    - caches recently accessed blocks
+    - each block in cache tagged with
+        - Tc = last validated time
+        - Tm = last modified time at the server
+        - t = freshness interval
+            - consistency vs. efficiency tradeoff
+            - Sun Solaris: 3-30s for files, 30-60s for dirs
+        - cache entry at time T is valid if $T - Tc < t$ || $Tm_{client}=Tm_{server}$
+    - when block is written, do a delayed-write to server
+
+### AFS Andrew File System
+
+- design principles
+    - whole file servings
+        - rather than blocks
+    - whole file caching
+        - permanent cache on disk, not flushed after reboot
+- based on assumptions
+    - most file accesses are by a single user
+    - most files are small
+    - read >> write, and typically sequential
+- design
+    - client = venus
+    - server = vice
+    - optimistic reads & writes
+        - done on local copy at client
+        - changes propagated to server when file closed
+    - client opens a file -> server sends over the entire file and gives a callback promise
+    - callback
+        - state = validated / cancelled
+
+### DSM Distributed Shared Memory
+
+- processes virtually sharing memory pages
+- owner = process with the latest version of a page
+- each page in R/W state
+- R state -> all processes have copy
+- W state -> only owner has copy
+- read scenarios
+    - process 1 wants to read but has no copy while others have R copy -> ask for copy with multicast -> get page, mark as R, and save to cache -> read
+    - process 1 wants to read but has no copy while the owner has W copy -> locate owner with multicast and ask it to degrade from W to R -> get page, mark as R, and save to cache -> read
+- write scenarios
+    - process 1 wants to write while it's the owner and it & others have the page in R state -> ask others to invalidate their copy with multicast -> mark page as W -> write
+    - process 1 wants to write while it's NOT the owner and it & others have the page in R state -> ask others to invalidate their copy with multicast -> mark page as W -> become owner -> write
+    - process 1 wants to write while it doesn't have a copy and others have the page in R/W state -> ask others to invalidate their copy with multicast -> fetch all copies -> use the latest copy -> mark page as W -> become owner -> write
+
+## Networks
+
+- properties
+    - clustering coefficient
+        - probability of A & C are connected given that A & B are connected && B & C are connected 
+            - i.e. probability of 2 neighbors  of a node are connected
+        - tree -> 0
+        - complete graph (every node connects every other node) -> 1
+    - path length
+        - average shortest path length between each pair of nodes
+- different graphs
+    - extended ring graph: ring with each node connecting k predecessors & k successors 
+        - high clustering coeff, long path length
+    - random graph
+        - low clustering coeff, short path length
+    - small world networks: all naturally evolved networks
+        - high clustering coeff, short path length
+    - ![[cs425-networks-comp.png]]
+
+### Degrees
+
+- degree = num of neighbors of a node
+- degree distribution
+    - regular graph: all nodes same degree
+    - Gaussian
+    - random graph: probability of having $k$ edges is $e^{-kc}$ 
+    - power law: $k^{-\alpha}$
+        - scale-free
+        - most nodes have a small degree, a few have a high degree
+        - lots of small world networks are this
+            - but some are not
+                - e.g. co-author networks
+            - some power law networks are not small world
+                - e.g. disconnected power law network
+        - WWW is this with $\alpha=2.1 - 2.4$
+    - heavy-tailed
+        - [[#Gnutella]]
+    - ![[cs425-networks-degree-dist.png]]
+
+### Small World Power Law Networks
+
+- removing a few high-degree nodes can disconnect the graph
+    - e.g. vital vitamins & electric grid
+- when building shortest path between every pair of nodes, most will pass through the few high-degree nodes
+    - -> those high-degree nodes will be overloaded -> congestion or crash -> disconnect the graph -> outage
+    - sol: introduce some random hops
+
+## Single Processor Scheduling
+
+see [[Operating Systems#scheduling algorithms]]
+
+- FIFO / FCFS (first come first serve)
+- SJC shortest job first
+    - optimal in terms of average completion time
+    - a case of priority scheduling (with time as priority)
+    - challenge: don't know the runtime of a task
+        - sol: estimation
+            - by input size
+            - by average runtime of other tasks in the same job
+- round-robin
+    - preemptive
+    - cut each task into small portions, serve them in round robin
+    - good for
+        - interactive app
+        - need quick response
+- FIFO & SJC are better for batch app
+
+## Distributed Scheduling
+
+### Hadoop Scheduling
+
+- Hadoop Capacity Scheduler
+    - multiple queues
+    - each queue
+        - has multiple jobs
+        - FIFO for jobs in the queue
+    - capacity allocation
+        - guarantees each queue a certain capacity
+        - can set hard upper limit on each queue
+        - allows queues to use idle resources
+        - no preemption
+            - when reducing a queue's usage, wait for its task to finish
+    - support nested queues
+- Hadoop Fair Scheduler
+    - goal: all jobs have same share of resources
+        - e.g. same equal of containers
+    - divide cluster into pools, evenly 
+        - typically one pool per user
+        - can use whatever scheduling within a pool
+    - pool resource
+        - can set min share of resources
+        - min not met -> get resources from other pools, preemptive
+        - kill the most recently started task first
+    - can set limit on
+        - num of concurrent jobs per user
+        - num of concurrent jobs per pool
+        - num of concurrent tasks per pool
+
+### Dominant Resource Fairness (DRF)
+
+- fairness across jobs with multi-resource
+    - fair for multi-tenant system
+    - truthful: tenant has no interest in lying
+    - envy-fee (stable): tenant can't envy other's allocations
+- scenario
+    - scheduling VMs in a cluster
+    - scheduling Hadoop in a cluster
+- algo
+    - dominant resource of a job = the resource where resource needed / total cluster resource is the highest for all resources of the job
+        - e.g. a job needs 1 CPU / 10 CPU & 16 GB / 32GB RAM -> dominant resource is RAM
+    - ensure that the dominant resource percentage is the same for all jobs
