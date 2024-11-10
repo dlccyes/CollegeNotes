@@ -1638,6 +1638,8 @@ allows transactions to write first, check later
         - fail
             - fail the sprout tuple at the root (?)
 
+![[cs425-stream-p7.png]]
+
 ## Distributed Graph Processing
 
 - store large graph distributedly
@@ -1918,3 +1920,45 @@ see [[Operating Systems#scheduling algorithms]]
     - dominant resource of a job = the resource where resource needed / total cluster resource is the highest for all resources of the job
         - e.g. a job needs 1 CPU / 10 CPU & 16 GB / 32GB RAM -> dominant resource is RAM
     - ensure that the dominant resource percentage is the same for all jobs
+
+## Distributed Machine Learning
+
+- ML basics
+    - SGD Stochastic Gradient Descent
+        - AdaGrad: adaptive gradient
+        - Adam: adaptive moment
+        - RMSProp
+    - neural network
+        - ANN: Artificial Neural Network
+            - FFNN: feed forward neural net
+            - DNN: Deep NN
+                - hidden layers
+            - CNN: Convolutional NN
+                - DNN + convolution layers
+            - RNN: Recurrent NN
+            - GNN: graph NN
+        - training
+            - forward pass: calculating error
+            - backward pass: adjust weights
+        - tensor: data between operators
+        - inference
+            - prediction
+            - only forward pass
+        - hyperparameter: config parameters
+            - e.g. batch size
+            - not model weight
+- data parallelism
+    - many workers on same model, send different data to each worker
+    - can use async training
+    - approaches
+        - central parameter server
+            - maintain weights
+            - aggregate weight updates from each worker
+            - ![[cs425-dml-paraserver.png]]
+        - all-reduce
+            - each worker multicasts weights to all other workers
+- model parallelism
+    - a model split across devices
+    - one input
+
+
