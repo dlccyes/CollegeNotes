@@ -44,18 +44,26 @@ layout: meth
 ### Websites
 
 - company salaries
-	- <https://www.levels.fyi/>
+	- [Levels.fyi](https://www.levels.fyi/)
 		- submitted by people
-	- <https://www.comprehensive.io/>
+	- [Comprehensive.io](https://www.comprehensive.io/)
 		- scraped from job posts, only base
-- <https://www.glassdoor.com/>
-	- company salaries, reviews, and interviews
-- <https://interview.tw/>
-	- glassdoor (a crippled one) of Taiwan
-- <https://www.libaspace.com/questions/>
-	- real interview questions
-- rooftopslushie.com
-	- get referral (for some money) (just use Blind)
+- company experience
+    - [Glassdoor](https://www.glassdoor.com/)
+    	- company salaries, reviews, and interviews
+    - [interview.tw](https://interview.tw/) (Taiwan)
+- interview questions
+	- [[LeetCode]] premium company tagged
+	- <https://www.libaspace.com/questions/>
+		- real interview questions
+- layoffs
+    - [WARN data](https://data.usatoday.com/see-which-companies-announced-mass-layoffs-closings/)
+        - companies with >100 people are required to notify the government about layoffs 60-day prior
+    - [Layoffs.fyi](https://layoffs.fyi/)
+        - layoffs data & stats
+- referrals
+	- Blind dm
+	- rooftopslushie.com (paid)
 - grinding
 	- leetcode
 	- codewars
@@ -68,6 +76,12 @@ layout: meth
 - underdog.io
 - triplebyte.com
 - Jobot
+- startups
+    - <https://angel.co/jobs>
+    - <https://www.ycombinator.com/jobs>
+- new grads
+    - various github repos
+    - <https://simplify.jobs/l/New-Grad-Roles-with-Visa-Sponsorship>
 
 ## Good posts or threads
 

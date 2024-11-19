@@ -1681,134 +1681,6 @@ allows transactions to write first, check later
             - master pings workers periodically
         - recovery
 
-## Distributed File System
-
-- file system
-    - abstraction of disk and memory blocks
-    - file
-        - header & blocks
-        - timestamps
-        - file type
-        - ownership
-        - access control list
-        - reference count = number of dirs containing this file
-            - 0 -> delete
-    - directory
-        - special case of files
-        - contain pointers to files
-- security
-    - authentication
-    - authorization
-        - access control list
-            - per file, allowed users & type of accesses
-        - capability list\
-            - per user, allowed files & type of accesses
-
-### vanilla DFS
-
-- flat file service
-    - at server
-    - `read(file_id, buffer, position, num_bytes)`
-        - read `num_bytes` from `position`
-        - no automatic read-write pointer
-            - -> idempotent
-        - no file descriptors
-            - -> stateless
-        - unix is neither idempotent or stateless
-    - `write(file_id, buffer, position, num_bytes)`
-    - `create(file_id)`
-    - `delete(file_id)`
-    - `get_attributes(file_id, buffer)`
-    - `set_attributes(file_id, buffer)`
-- directory service
-    - at server
-    - talks to flat file service
-    - `file_id = lookup(dir, file_name)`
-    - `add_name(dir, file_name)`
-    - `un_name(dir, file_name)`
-    - `list = get_names(dir, pattern)`
-        - like `ls | grep pattern`
-- client service
-    - at client
-    - talk to flat file service & directory service
-
-### NFS Network File System
-
-![[cs425-nfs-arch.jpg]]
-
-- client
-    - like client service in vanilla
-    - integrated with kernel
-    - do RPCs to server
-- server
-    - like flat file service + directory service in vanilla
-    - mounting files & dirs
-- virtual file system module
-    - access files via file descriptors
-    - local & remote files are indistinguishable
-    - a data structure for each mounted file system
-    - a data structure v-note for all open files
-        - local: v-note points to local disk i-node
-        - remote: v-note contains address to remote NFS server
-- server optimizations
-    - server caching
-        - caches recently accessed blocks
-        - -> fast reads
-        - locality
-    - write approaches
-        - delayed write
-            - write in memory -> flush to disk every 30s
-            - fast but not consistent
-        - write-through
-            - write to disk immediately
-            - consistent but slow
-- client caching
-    - caches recently accessed blocks
-    - each block in cache tagged with
-        - Tc = last validated time
-        - Tm = last modified time at the server
-        - t = freshness interval
-            - consistency vs. efficiency tradeoff
-            - Sun Solaris: 3-30s for files, 30-60s for dirs
-        - cache entry at time T is valid if $T - Tc < t$ || $Tm_{client}=Tm_{server}$
-    - when block is written, do a delayed-write to server
-
-### AFS Andrew File System
-
-- design principles
-    - whole file servings
-        - rather than blocks
-    - whole file caching
-        - permanent cache on disk, not flushed after reboot
-- based on assumptions
-    - most file accesses are by a single user
-    - most files are small
-    - read >> write, and typically sequential
-- design
-    - client = venus
-    - server = vice
-    - optimistic reads & writes
-        - done on local copy at client
-        - changes propagated to server when file closed
-    - client opens a file -> server sends over the entire file and gives a callback promise
-    - callback
-        - state = validated / cancelled
-
-### DSM Distributed Shared Memory
-
-- processes virtually sharing memory pages
-- owner = process with the latest version of a page
-- each page in R/W state
-- R state -> all processes have copy
-- W state -> only owner has copy
-- read scenarios
-    - process 1 wants to read but has no copy while others have R copy -> ask for copy with multicast -> get page, mark as R, and save to cache -> read
-    - process 1 wants to read but has no copy while the owner has W copy -> locate owner with multicast and ask it to degrade from W to R -> get page, mark as R, and save to cache -> read
-- write scenarios
-    - process 1 wants to write while it's the owner and it & others have the page in R state -> ask others to invalidate their copy with multicast -> mark page as W -> write
-    - process 1 wants to write while it's NOT the owner and it & others have the page in R state -> ask others to invalidate their copy with multicast -> mark page as W -> become owner -> write
-    - process 1 wants to write while it doesn't have a copy and others have the page in R/W state -> ask others to invalidate their copy with multicast -> fetch all copies -> use the latest copy -> mark page as W -> become owner -> write
-
 ## Networks
 
 - properties
@@ -1961,4 +1833,224 @@ see [[Operating Systems#scheduling algorithms]]
     - a model split across devices
     - one input
 
+## Distributed File System
+
+- file system
+    - abstraction of disk and memory blocks
+    - file
+        - header & blocks
+        - timestamps
+        - file type
+        - ownership
+        - access control list
+        - reference count = number of dirs containing this file
+            - 0 -> delete
+    - directory
+        - special case of files
+        - contain pointers to files
+- security
+    - authentication
+    - authorization
+        - access control list
+            - per file, allowed users & type of accesses
+        - capability list\
+            - per user, allowed files & type of accesses
+
+### vanilla DFS
+
+- flat file service
+    - at server
+    - `read(file_id, buffer, position, num_bytes)`
+        - read `num_bytes` from `position`
+        - no automatic read-write pointer
+            - -> idempotent
+        - no file descriptors
+            - -> stateless
+        - unix is neither idempotent or stateless
+    - `write(file_id, buffer, position, num_bytes)`
+    - `create(file_id)`
+    - `delete(file_id)`
+    - `get_attributes(file_id, buffer)`
+    - `set_attributes(file_id, buffer)`
+- directory service
+    - at server
+    - talks to flat file service
+    - `file_id = lookup(dir, file_name)`
+    - `add_name(dir, file_name)`
+    - `un_name(dir, file_name)`
+    - `list = get_names(dir, pattern)`
+        - like `ls | grep pattern`
+- client service
+    - at client
+    - talk to flat file service & directory service
+
+### NFS Network File System
+
+![[cs425-nfs-arch.jpg]]
+
+- client
+    - like client service in vanilla
+    - integrated with kernel
+    - do RPCs to server
+- server
+    - like flat file service + directory service in vanilla
+    - mounting files & dirs
+- virtual file system module
+    - access files via file descriptors
+    - local & remote files are indistinguishable
+    - a data structure for each mounted file system
+    - a data structure v-note for all open files
+        - local: v-note points to local disk i-node
+        - remote: v-note contains address to remote NFS server
+- server optimizations
+    - server caching
+        - caches recently accessed blocks
+        - -> fast reads
+        - locality
+    - write approaches
+        - delayed write
+            - write in memory -> flush to disk every 30s
+            - fast but not consistent
+        - write-through
+            - write to disk immediately
+            - consistent but slow
+- client caching
+    - caches recently accessed blocks
+    - each block in cache tagged with
+        - Tc = last validated time
+        - Tm = last modified time at the server
+        - t = freshness interval
+            - consistency vs. efficiency tradeoff
+            - Sun Solaris: 3-30s for files, 30-60s for dirs
+        - cache entry at time T is valid if $T - Tc < t$ || $Tm_{client}=Tm_{server}$
+    - when block is written, do a delayed-write to server
+
+### AFS Andrew File System
+
+- design principles
+    - whole file servings
+        - rather than blocks
+    - whole file caching
+        - permanent cache on disk, not flushed after reboot
+- based on assumptions
+    - most file accesses are by a single user
+    - most files are small
+    - read >> write, and typically sequential
+- design
+    - client = venus
+    - server = vice
+    - optimistic reads & writes
+        - done on local copy at client
+        - changes propagated to server when file closed
+    - client opens a file -> server sends over the entire file and gives a callback promise
+    - callback
+        - state = validated / cancelled
+
+### DSM Distributed Shared Memory
+
+- processes virtually sharing memory pages
+- owner = process with the latest version of a page
+- each page in R/W state
+- R state -> all processes have copy
+- W state -> only owner has copy
+- read scenarios
+    - process 1 wants to read but has no copy while others have R copy -> ask for copy with multicast -> get page, mark as R, and save to cache -> read
+    - process 1 wants to read but has no copy while the owner has W copy -> locate owner with multicast and ask it to degrade from W to R -> get page, mark as R, and save to cache -> read
+- write scenarios
+    - process 1 wants to write while it's the owner and it & others have the page in R state -> ask others to invalidate their copy with multicast -> mark page as W -> write
+    - process 1 wants to write while it's NOT the owner and it & others have the page in R state -> ask others to invalidate their copy with multicast -> mark page as W -> become owner -> write
+    - process 1 wants to write while it doesn't have a copy and others have the page in R/W state -> ask others to invalidate their copy with multicast -> fetch all copies -> use the latest copy -> mark page as W -> become owner -> write
+    - problems of invalidation: if 2 processes writing the same page concurrently
+        - invalidating each other
+        - lots of network transfer
+        - false sharing: when unrelated variables are on the same page
+            - page size too big -> many false sharing
+            - page size too small -> too many page transfers -> inefficient
+            - we want the page size to capture the locality of interest
+- update approach
+    - can have multiple processes in W state
+    - write -> multicast newly written value to all holders of the page
+    - update > invalidate
+        - lots of sharing among processes
+        - writing to small vars
+        - big pages
+    - but generally invalidate > update
+- consistency levels
+    - linearizability
+    - sequential
+    - causal
+    - pipelines RAM (FIFO)
+    - eventual 
+
+## sensors
+
+- RF radio frequency
+    - broadcast
+    - routing: store and forward
+    - bidirectional links
+    - consumes high power
+- optical transmission
+    - simple hardware, consumes less powe
+    - directional antennas
+    - wormhole routing: can use mirrors to reflect, so no storing
+    - costly to broadcast
+    - costly to switch links
+- TinyOS
+    - small - 3.4KB
+    - dataflow-driven
+    - multiple data streams, high concurrency
+    - real-time computations
+    - power conservation
+        - active / idle / sleep
+    - event-driven
+    - modular
+    - support a variety of power supplies
+    - in-network aggregation
+        - transmit more costly than compute
+            - radio transmit 12ma
+            - CPU active 4.6ma
+        - build trees among sensor nodes, with base station as root
+        - children sends data to parent, root get summary value
+    - handling hostile environments
+        - high failure rates for sensor nodes
+        - required sensor networks qualities
+            - self-organizing
+            - self-managing
+            - self-healing
+            - scalable
+- other directions
+    - ASICS application-specific integrated chips
+    - FPGA field programmable gate arrays
+
+
+## Security
+
+- threats
+    - leakage: unauthorized access
+    - tampering: unauthorized modification
+    - vandalism: interference of service 
+        - e.g. denial of service
+- common attacks
+    - eavesdropping
+    - masquerading: impersonate
+        - e.g. identify theft
+    - message tampering: modifies message
+    - replay attack: replays old message
+        - e.g. to impersonate
+    - denial of service: bombard a port
+- CIA properties
+    - confidentiality: no leakage
+    - integrity: no tampering
+    - availability: no vandalism
+ - policy & mechanism
+    - policy: the goals of a system
+    - mechanism: how are the goals accomplished
+ - mechanisms
+      - authentication: about user
+      - authorization: about access to an operation on an object
+      - auditing: logging
+- design secure systems
+    - specify attacker model
+    - design & prove mechanisms to satisfy policy under the attacker model
+    - monitor
 
