@@ -1429,11 +1429,17 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
         - write x -> read x
         - write x -> write x
     - 2 reads on x or read/write on different key is fine 
-- 2 transactions are serially equivalent iff all pairs of conflicting operations (one from transaction A another from B) are executed in the same order for all objects the both access
-    - e.g. operation Ax from transaction A, operation Bx from transaction B, Ax & Bx are conflicting, if A1 before B1, then Ax before Bx for all x 
+- 2 transactions are serially equivalent iff all pairs of conflicting operations (one from transaction A another from B) are executed in the same order for all objects both access
+    - e.g. we have operation Ax from transaction A, operation Bx from transaction B, Ax & Bx are conflicting, if A1 before B1, then Ax before Bx for all x 
     - solves lost update problem & inconsistent retrieval problem
 - before committing a transaction, check for serial equivalence with all other transactions
     - not -> abort and roll back
+
+e.g.
+
+- `read(b, T2); write(b, bar, T2); write(a, foo, T1); read(b, T1); write(a, baz, T2); read(a, T1)` -> not serially equivalent
+- `write(a, foo, T1); read(b, T1); read(b, T2); write(b, bar, T2); read(a, T1); write(a, baz, T2` -> serially equivalent
+
 
 ### concurrency control
 
@@ -1457,7 +1463,7 @@ prevent transactions from accessing same object
     - if already reading and want to write, try promoting lock
         - succeeds if no other transactions
 - 2-phase locking -> serial equivalence
-    - growing phase & shrinking phase
+    - growing phase -> shrinking phase in a transaction
     - growing phase: acquires / promotes lock
     - shrinking phase: release lock
         - release only at commit 
@@ -1923,6 +1929,7 @@ see [[Operating Systems#scheduling algorithms]]
             - consistency vs. efficiency tradeoff
             - Sun Solaris: 3-30s for files, 30-60s for dirs
         - cache entry at time T is valid if $T - Tc < t$ || $Tm_{client}=Tm_{server}$
+            - the first check `$T - Tc < t$` is for server load / bandwidth usage / latency vs. correctness tradeoff
     - when block is written, do a delayed-write to server
 
 ### AFS Andrew File System
