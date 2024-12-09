@@ -919,6 +919,26 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
 
 ![[c425-vsync-p15.png]]
 
+![[cs425-hw3-p9-a.png]]
+
+![[cs425-hw3-p9-as.png]]
+
+![[cs425-hw3-p9-b.png]]
+
+![[cs425-hw3-p9-bs.png]]
+
+![[cs425-hw3-p9-c.png]]
+
+![[cs425-hw3-p9-cs.png]]
+
+![[cs425-hw3-p9-d.png]]
+
+![[cs425-hw3-p9-ds.png]]
+
+![[cs425-hw3-p9-e.png]]
+
+![[cs425-hw3-p9-es.png]]
+
 ## Consensus
 
 ### Consensus Problem
@@ -1263,9 +1283,8 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
     - `exit()` at `Pi`
         - set state to `Released` and `Reply` to all queued requests
 - properties
-    - safety
-        - 2 processes can't both have access to critical section
-    - liveness
+    - safety: 2 processes can't both have access to critical section
+    - liveness: if a process enters CS, its request will eventually be granted
     - ordering: causality
         - by Lamport timestamp
 - performance
