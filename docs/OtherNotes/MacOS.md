@@ -460,3 +460,9 @@ rm -r ~/.docker
 ### "App" cannot be opened because the developer cannot be verified.**
 
 Control + click the app in finder -> open (1st attempt may fail)
+
+### public wifi sign in page doesn't prompt
+
+1. Forget network
+2. `/System/Library/CoreServices.Captive Network Assistant`
+3. Click to connect the network

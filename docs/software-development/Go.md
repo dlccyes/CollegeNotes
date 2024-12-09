@@ -15,9 +15,15 @@ brew upgrade
 brew install go
 ```
 
-**Install multiple versions**
+### Handling multiple versions with HomeBrew
 
-See [[Linux Package Management#Handling multiple versions]]
+Let's say you have go 1.23 currently, and you want to install and use go 1.22
+
+```
+brew install go@1.22
+brew unlink go
+brew link go@1.22
+```
 
 ## Style
 
@@ -1061,7 +1067,7 @@ Don't forget to specify `Content-Type: applicaiton/json` in request header to bi
 
 ### mock
 
-A helper function helping you set up a mock context and a recorder recording the reponse of your request
+A helper function helping you set up a mock context and a recorder recording the response of your request
 
 ```go
 func MockGin() (*gin.Context, *httptest.ResponseRecorder) {
@@ -1468,3 +1474,17 @@ executable file not found in $PATH
 ```
 
 Just close the window and reopen. Reloading won't work!
+
+### VsCode: Failed to find the "go" binary in either GOROOT() or PATH(/usr/bin:/bin:/usr/sbin:/sbin)
+
+<https://github.com/golang/vscode-go/issues/971#issuecomment-927666108>
+
+in settings.json add
+
+```
+    "go.goroot": "/opt/homebrew/Cellar/go/1.23.2/libexec"
+```
+
+### Same piece of code works in one file but not in another
+
+Check if you're actually using the same package. Your IDE helps you import all the packages but they sometimes get it wrong. You may be importing different package with the same name.
