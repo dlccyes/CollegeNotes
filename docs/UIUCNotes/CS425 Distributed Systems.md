@@ -28,7 +28,6 @@
 
 ### Multicast Protocols
 
-
 - send info to multiple nodes
 - fault tolerant
 - available
@@ -200,9 +199,9 @@
     - mixing failure detection & dissemination
     - sub-optimal
 - SWIM
-    - use ping instead of hearbeat
+    - use ping instead of heartbeat
     - every period, ping a random node $j$
-        - if not recieving ACK, ping again but with an indirect path
+        - if not receiving ACK, ping again but with an indirect path
             - make random $K$ other nodes forward the ping to node $j$ and its ACK
             - if received $0$ ACK, mark node $j$ as failed
     - constant detection time & load
@@ -1098,6 +1097,8 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
     - consensus of the new leader's id's last bit
     - so it's impossible to solve in async system
 
+![[cs425-ring-election-p1.png]]
+
 ### approaches
 
 - approach 1
@@ -1121,9 +1122,9 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
             - eventually will select a leader
             - irl, normally a few seconds, worst-case 30s
 - Zookeeper
-    - centralized system for mainting config info
+    - centralized system for maintaining config info
     - Paxos variant called ZAB (Zookeeper Atomic Broadcast)
-    - need a leader
+    - needs a leader
     - each server chooses the next highest id
     - election
         - the one with the highest id becomes the leader
@@ -1163,6 +1164,8 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
 - guarantees liveness in synchronous model
     - worse-case one way latency = worse case process time + message latency
     - eventual liveness in async
+
+![[cs425-bully-p5.png]]
 
 ## Mutual Exclusion
 
@@ -1254,8 +1257,6 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
         - distance between the token and the entering process
     - synchronization delay: 1 ~ N-1 message transmissions
         - distance between the exiting process and the next entering process
-
-![[cs425-ring-election-p1.png]]
 
 ### Ricart-Argawala's Algorithm
 
@@ -1996,7 +1997,7 @@ see [[Operating Systems#scheduling algorithms]]
 - update approach
     - can have multiple processes in W state
     - write -> multicast newly written value to all holders of the page
-    - update > invalidate
+    - update > invalidate when:
         - lots of sharing among processes
         - writing to small vars
         - big pages
@@ -2079,4 +2080,3 @@ see [[Operating Systems#scheduling algorithms]]
     - specify attacker model
     - design & prove mechanisms to satisfy policy under the attacker model
     - monitor
-
