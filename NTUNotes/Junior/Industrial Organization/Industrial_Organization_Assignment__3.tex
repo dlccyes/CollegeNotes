@@ -1,0 +1,81 @@
+\documentclass[a4paper]{article}
+\usepackage{student}
+\usepackage{fontspec}
+\usepackage{tikz}
+\newfontfamily\cjkfont{Noto Serif CJK TC}
+%\setmainfont{Noto Serif CJK SC}
+%\setsansfont{Noto Sans CJK SC}
+% \graphicspath{ {./picture} }
+
+% Metadata
+\date{\today}
+\setmodule{ECON5107: Industrial Organization Assignment \#3}
+\setterm{Mar, 2022}
+
+%-------------------------------%
+% Other details
+% TODO: Fill these
+%-------------------------------%
+\title{Assignment 3}
+\setmembername{{\cjkfont 魏珈民、羅啟帆、李嘉芸、黃耀霆、林雋哲}}  % Fill group member names
+\setmemberuid{b07303025, b07902047, b07303087, b08902136, b08901064}  % Fill group member uids (same order)
+
+%-------------------------------%
+% Add / Delete commands and packages
+% TODO: Add / Delete here as you need
+%-------------------------------%
+\usepackage{amsmath,amssymb,bm}
+
+\newcommand{\KL}{\mathrm{KL}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\T}{\top}
+
+\newcommand{\expdist}[2]{%
+        \normalfont{\textsc{Exp}}(#1, #2)%
+    }
+\newcommand{\expparam}{\bm \lambda}
+\newcommand{\Expparam}{\bm \Lambda}
+\newcommand{\natparam}{\bm \eta}
+\newcommand{\Natparam}{\bm H}
+\newcommand{\sufstat}{\bm u}
+
+% Main document
+\begin{document}
+    % Add header
+    \header{}
+
+    % Use `answer` environment to add solutions
+    % \begin{answer}[Question 1.1] for example starts an environment formatted
+    % for Question 1.1
+    %\begin{answer}[Question 1.1]
+    %    Your answer here.
+
+    %    An equation with numbering:
+    %    \begin{equation}
+    %        \expdist{\sufstat}{\natparam}.
+    %    \end{equation}
+
+    %    An equation without numbering (notice the $*$):
+    %    \begin{equation*}
+    %        \expparam^{\T} \sufstat(x).
+    %    \end{equation*}
+    %\end{answer}
+    
+    \section{NutraSweet}
+    \begin{answer}[problem]
+    Let us first analyze this problem from the competition perspective. From the fact that Pepsi and Coke share the US market almost evenly, we assume that they have high cross elasticity. Base on this assumption, we can reason that if Pepsi or Coke has a lower price compared to their counterparts, it can steal some portion of markets from the other.
+    
+    Faced potential competition from the entrant HSC, Monsanto wanted to sign contracts with Pepsi and Coke to deter entrance. Since Pepsi and Coke also knew this fact, Monsanto should had offered them a discount to persuade them to sign the contract. Pepsi and Coke knew that after HSC enters the market, Monsanto would probably face fierce competition and Pepsi and Coke would have larger bargaining power, and maybe can have lower price. However, if one of them, Pepsi or Coke, signed the contract and the other did not, the one that sign the contract may lower the price and steal the market (notice that the contract was sign prior to the patent release, implying that Monsanto was still the sole supplier, and the one which did not sign the contract would need to buy in a more expensive price). 
+    
+    This scenario is actually similar to the famous "prisoner dilemma", where Pepsi and Coke are the prisoners, and to sign/not sign the contract corresponds to defect/cooperate. The unique Nash equilibrium of this dilemma is both prisoners defecting, which corresponds to both companies signing the contract.
+    
+    % 2.
+    Apart from game theory's point of view, we can see how signing a long-term contract is better by analyzing the cost and risk.
+    
+    Monsanto provides “meet-or-release” and “most-favored-nation” clauses, so for the soft drink manufacturers, cost-wise speaking, signing a long-term contract with Monsanto is indifferent from embracing competition between suppliers. Also, Monsanto's NutraSweet has already been used for years and has been`` familiar to customers. As a result, choosing other products involves more risk. Therefore, comparing with letting suppliers competing themselves, signing a long term contract with Monsanto has the same cost with smaller risk $\rightarrow$ more favorable.
+    \end{answer}
+    
+
+\end{document}
+
