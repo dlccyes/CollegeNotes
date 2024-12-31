@@ -165,7 +165,7 @@
         - single point of failure
         - central node may be overloaded (hotspot)
 - ring heartbeating
-    - circular doublly linked list
+    - circular doubly linked list
     - pros
         - no single point of failure
         - no hotspot
@@ -740,7 +740,7 @@ approach: synchronize all clocks (sufficient condition: state 1 -> state 2 obeys
         - heap, registers, program counter, code, etc. (coredump)
     - global state collected distributedly
     - any process can initiate the snapshot
-- Candy-Lamport Global Snapshot Algorithm
+- Chandy-Lamport Global Snapshot Algorithm
     - init: $P_i$ initiate the snapshot
         - records its own state
         - creates a marker message
@@ -1346,7 +1346,7 @@ it's difficult to satisfy both liveness & safety in a distributed system, in man
     - liveness: NO
         - can have deadlock
             - ![[Pasted image 20241025095119.png]]
-            - P1 waits P3 waits P4 wats P2 waits P1
+            - P1 waits P3 waits P4 waits P2 waits P1
 - performance
     - bandwidth
         - `enter()`: $2\sqrt{N}$ messages
@@ -1712,7 +1712,7 @@ allows transactions to write first, check later
 - properties
     - clustering coefficient
         - probability of A & C are connected given that A & B are connected && B & C are connected 
-            - i.e. probability of 2 neighbors  of a node are connected
+            - i.e. probability of 2 neighbors of a node are connected
         - tree -> 0
         - complete graph (every node connects every other node) -> 1
     - path length
@@ -1778,7 +1778,7 @@ see [[Operating Systems#scheduling algorithms]]
 
 ### Hadoop Scheduling
 
-- Hadoop Capacity Scheduler
+- Hadoop Capacity Scheduler HCS
     - multiple queues
     - each queue
         - has multiple jobs
@@ -1790,9 +1790,9 @@ see [[Operating Systems#scheduling algorithms]]
         - no preemption
             - when reducing a queue's usage, wait for its task to finish
     - support nested queues
-- Hadoop Fair Scheduler
+- Hadoop Fair Scheduler HFS
     - goal: all jobs have same share of resources
-        - e.g. same equal of containers
+        - e.g. equal containers
     - divide cluster into pools, evenly 
         - typically one pool per user
         - can use whatever scheduling within a pool
@@ -1978,7 +1978,7 @@ see [[Operating Systems#scheduling algorithms]]
 - processes virtually sharing memory pages
 - owner = process with the latest version of a page
 - each page in R/W state
-- R state -> all processes have copy
+- R state -> all processes can have copy
 - W state -> only owner has copy
 - read scenarios
     - process 1 wants to read but has no copy while others have R copy -> ask for copy with multicast -> get page, mark as R, and save to cache -> read
@@ -2008,6 +2008,10 @@ see [[Operating Systems#scheduling algorithms]]
     - causal
     - pipelines RAM (FIFO)
     - eventual 
+
+![[cs425-dsm-p6.png]]
+
+![[cs425-dsm-p6-sol.png]]
 
 ## sensors
 
