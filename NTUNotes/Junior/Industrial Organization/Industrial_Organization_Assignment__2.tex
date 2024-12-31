@@ -1,0 +1,293 @@
+\documentclass[a4paper]{article}
+\usepackage{student}
+\usepackage{fontspec}
+\usepackage{tikz}
+\newfontfamily\cjkfont{Noto Serif CJK TC}
+%\setmainfont{Noto Serif CJK SC}
+%\setsansfont{Noto Sans CJK SC}
+% \graphicspath{ {./picture} }
+
+% Metadata
+\date{\today}
+\setmodule{ECON5107: Industrial Organization Assignment \#2}
+\setterm{Mar, 2022}
+
+%-------------------------------%
+% Other details
+% TODO: Fill these
+%-------------------------------%
+\title{Assignment 2}
+\setmembername{{\cjkfont 魏珈民、羅啟帆、李嘉芸、黃耀霆、林雋哲}}  % Fill group member names
+\setmemberuid{b07303025, b07902047, b07303087, b08902136, b08901064}  % Fill group member uids (same order)
+
+%-------------------------------%
+% Add / Delete commands and packages
+% TODO: Add / Delete here as you need
+%-------------------------------%
+\usepackage{amsmath,amssymb,bm}
+
+\newcommand{\KL}{\mathrm{KL}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\T}{\top}
+
+\newcommand{\expdist}[2]{%
+        \normalfont{\textsc{Exp}}(#1, #2)%
+    }
+\newcommand{\expparam}{\bm \lambda}
+\newcommand{\Expparam}{\bm \Lambda}
+\newcommand{\natparam}{\bm \eta}
+\newcommand{\Natparam}{\bm H}
+\newcommand{\sufstat}{\bm u}
+
+% Main document
+\begin{document}
+    % Add header
+    \header{}
+
+    % Use `answer` environment to add solutions
+    % \begin{answer}[Question 1.1] for example starts an environment formatted
+    % for Question 1.1
+    %\begin{answer}[Question 1.1]
+    %    Your answer here.
+
+    %    An equation with numbering:
+    %    \begin{equation}
+    %        \expdist{\sufstat}{\natparam}.
+    %    \end{equation}
+
+    %    An equation without numbering (notice the $*$):
+    %    \begin{equation*}
+    %        \expparam^{\T} \sufstat(x).
+    %    \end{equation*}
+    %\end{answer}
+    
+    \section{Bundling of Office Suites}
+    \begin{answer}[Q1]
+    Observe that it is not optimal to charge a price $p$ between two different WTP , say $p_1 > p_2$ in the table because the revenue of charging $p_1$ must be greater that $p$. So we only have to consider the WTPs shown in the table.
+    One can obtain that Microsoft Word should charge a price of $300$ for MS Word and also $300$ for MS Excel in order to maximize the revenue. 
+    
+    \end{answer}
+    
+    \begin{answer}
+    For the optimal price for the bundle, we add the WTPs of MS Word and WTPs of MS Excel in the two tables for each separate group. Similarly, the optimal price must be one of the WTPs. One can obtain 500 is the optimal price in order to maximize the revenue.
+    \end{answer}
+    
+    \begin{answer}[Q3]
+    Let $P_1$ be the random variable of WTP for MS Word.
+    
+    Let $P_2$ be the random variable of WTP for MS Excel.
+    
+    Both $P_1$ and $P_2$ is uniformly distributed on $[0,400]$. We seek to maximize $p_1(1-F_{P_1}(p_1))$ and $p_2(1-F_{P_2}(p_2))$. 
+    \begin{equation*}
+        R_1 = p_1(1-F_{P_1}(p_1)) = p - \frac{p^2}{400}
+    \end{equation*}
+    By the first order condition,
+    \begin{align*}
+        & \frac{dR_1}{dp_1} = 1 - \frac{p_1}{200} = 0 \iff p_1 = 200 \\
+        & \max R_1 = 100 \; (\times \; 10 \text{ million} )
+    \end{align*}
+    So $p_1 = 200$ is the optimal price for MS Word. Similarly, one can obtain that $p_2 = 200$ is the optimal price for MS Excel and the maximum revenue is 1000 million.
+    \end{answer}
+    
+    \begin{answer}[Q4]
+    Let $P = P_1 + P_2$ be the random variable of WTP for a bundle that contains MS Word and MS Excel. We interpret the "non-correlated" in the text as $P_1$ and $P_2$ being independent (or else there's not much we can do). $P$ follows the Irwin-Hall Distribution ($n = 2$):
+    \begin{align*}
+        &f_P(p) = \begin{cases} \frac{p}{400^2} & 0 \leq p \leq 400 \\
+                    \frac{1}{200} - \frac{p}{400^2} & 400 \leq p \leq 800\end{cases} \\
+        &F_P(p) = \begin{cases} \frac{1}{2} \frac{p^2}{400^2} &0 \leq p \leq 400 \\
+                1 - \frac{1}{2}(800-p)(\frac{1}{200}-\frac{p}{400^2}) & 400 \leq p \leq 800 \end{cases}
+    \end{align*}
+    For $p \leq 400 $,
+    \begin{align*}
+        &R = p (1-\frac{p^2}{400^2}\frac{1}{2}) = p -\frac{p^3}{400^2}\frac{1}{2}\\
+        & \frac{dR}{dp} = 1 - \frac{p^2}{400^2}\frac{3}{2} = 0 \iff p = 400\sqrt{\frac{2}{3}} \approx 327  \\
+        & \max R = 217 \; ( \times \; 10  \text{ million}) \\
+    \end{align*}
+    For $ 800 \geq p \geq 400$, 
+    \begin{align*}
+        & R = p \left(\frac{1}{2}(800-p)(\frac{1}{200}-\frac{p}{400^2})\right) \\
+        & \frac{dR}{dp} = \frac{(p-800)(3p-800)}{32000} < 0 \Rightarrow \text{ optimal } p = 400 \\
+        & \max R = 200 \; ( \times \; 10  \text{ million})
+    \end{align*} 
+    Hence, Microsoft should charge a price of $327$.
+    The revenue of selling MS Word and Excel separately is 
+    $\max R_1+ \max R_2 = 2000$ (million). The revenue of selling MS Word and Excel as a bundle is $\max R = 2170$ (million).
+    Microsoft earns greater profits if it sells the two products as a bundle.
+    
+    \end{answer}
+    
+    \begin{answer}[Q5]
+    Consider two different cases.
+    \begin{enumerate}
+        \item Customers with WTP greater than $200$ has already bought MS Word. 
+        
+        In this case, WordPerfect is left with a market of 5 million people with WTP uniformly distributed on $[0,200]$. Following the steps identical to Q3, one can calculate that the optimal price is $100$ and the maxmimum revenue is $250$ million. It is not profitable to enter the market.
+        
+        \item MS Word is not on the market currently. But for some reason WordPerfect knows the price that MS Word chooses.
+        
+        In this case, WordPerfect can charge a price slightly smaller than 200 and its revenue can be very close to $1000$ million. It is profitable to enter the market.
+    \end{enumerate}
+    \end{answer}
+    
+    \begin{answer}[Q6]
+        Consider two different cases:
+    \begin{enumerate}
+        \item Customers with "WTP for the bundle" greater than $327$ has already bought the bundle. 
+        
+        Observe that the market size left for WordPerfect is
+        \begin{equation*}
+            F_P(327) = \frac{327^2}{2*400^2} \approx 33\%
+        \end{equation*}
+        It is hard to know that customers with what "WTP for MS Word" have bought the bundle, and thus it is hard to calculate the maximum revenue for WordPerfect. But one can first consider the scenario that the market left is the highest $33$ percent. In this scenario, the customers left are 3.3 million, with "WTP for MS Word" uniformly distributed on $[268, 400]$. The maximum revenue in this scenario, denote $\max R_U$, can be used as an upper bound for the real maximum revenue, denote $R_{WP}$. 
+        \begin{align*}
+            \max R_{WP} \leq \max R_U = 275.55 ( \text{ million } )
+        \end{align*}
+    $\max R_U$ can be calculated using the steps in Q3.
+    We thus conclude that it is not profitable to enter the market.
+    
+    \item The bundle is not on the market currently. But for some reason WordPerfect knows the price that Microsoft chooses for the bundle.
+    
+    Let $p_{WP}$ be the price with which WordPerfect chooses to sell its product. A customer chooses to buy WordPerfect's product if and only if
+    \begin{itemize}
+        \item He gains a higher payoff buying this product instead of buying the bundle provided by Microsoft, namely,
+        \begin{equation*}
+            P_1 - p_{WP} \geq P_1 + P_2 - 327 \iff P_2 \leq 327 - p_{WP}
+        \end{equation*}
+        
+        \item His willingness to pay for the product is greater than $p_{WP}$
+        \begin{equation*}
+            P_1 \geq p_{WP}
+        \end{equation*}
+    \end{itemize}
+    The percentage of people that will buy the product:
+    \begin{equation*}
+        \mathbb{P}\{P_1 \geq p_{WP} \text{ and } P_2 \leq 327- p_{WP}\}
+         = (1 - \frac{p_{WP}}{400}) \frac{327-p_{WP}}{400}
+    \end{equation*}
+    The above equation holds since we assumed that $P_1$ and $P_2$ are independent. The revenue gained:
+    \begin{align*}
+        &R_{WP} = p_{WP}(1 - \frac{p_{WP}}{400}) \frac{327-p_{WP}}{400} \\ 
+        &\frac{dR_{WP}}{dp_{WP}} = \frac{3p_{WP}^2 - 1454 p_{WP} + 130800}{160000} \Rightarrow p_{WP} \approx 120 \\
+        & \max R_{WP} = 43.47 \; (\times \text{ 10 million} )
+    \end{align*}
+    The maximum revenue is smaller than the fixed cost. It is not profitable to enter the market.
+    \end{enumerate}
+    We see that in both cases, it is not profitable to enter the market.
+    \end{answer}
+    
+    \begin{answer}[Q7]
+    If MS Word is already on the market (or they enter the market first), then their pricing strategy should not be influenced by the possibility of entry, assuming that Word and Excel are durable goods i.e. a customer will only purchase them once.
+    
+    If MS Word is not on the market currently, but for some reason WordPerfect knows the price that MS Word chooses, MS should sell at a price so that total profit = 500M, which is the fixed costs for development. 
+    
+    If sell separately,
+    \begin{align*}
+        &2P(1-\dfrac{P}{400})10M=500M \\
+        &P^2-400P+10000=0 \\
+        &P=26.795, Rev=500M \tag{another solution 373.025 is not feasible} %\lor 373.025
+    \end{align*}
+    If sell as a bundle, according to the analysis in Q6, MS can deter entry by setting price equals to 327 (which is the price that maximize the revenue).
+    %\begin{align*}
+    %    &(P-\dfrac{P^3}{2\times 400^2})10M=500M \\
+    %    &P = 50.400, Rev=500M
+    %\end{align*}
+    \end{answer}
+    
+    \section{Location Choice as a Means to Deter Entry}
+    \begin{answer}[Q1]
+    LC Burger should open two stores at $\frac{1}{4}$ and $\frac{3}{4}$. This setting allows them to obtain the entire market, and each store serves half of the market. Any more stores will not raise the market size but will increase the cost. The resulting profit is
+    \[
+        \frac{1000\times(4-1)}{0.1\%}-600000\times2 = 1800000
+    \]
+    \end{answer}
+    
+    \begin{answer}[Q2]
+    CS Burger should open four stores, located at the immediate left and right of LC Burger's store ($\frac{1}{4}\pm\epsilon,\frac{3}{4}\pm\epsilon$). This setting allows them to obtain the whole market with profit
+    \[
+        \frac{1000\times(4-1)}{0.1\%} - 600000\times 4 = 600000
+    \]
+    If CS Burger only open three stores ($\frac{1}{4}-\epsilon,\frac{1}{2},\frac{1}{4}+\epsilon,$, they will only make profit
+    \[
+        \frac{750\times(4-1)}{0.1\%} - 600000\times 3 = 450000
+    \]
+    which is less than the previous one. One can calculate that only opening two stores or one stores obtain even less profit.
+    \end{answer}
+    
+    \begin{answer}[Q3]
+    Observe that for a store to be profitable, it should have at least 200 customers, which corresponds to 0.2 miles:
+    \[
+        \frac{1000x\times (4-1)}{0.1\%}\ge 600000 \Rightarrow x \ge 0.2
+    \]
+    This implies that when the distance between two stores is less than 0.4 miles (or less than 0.2 miles between a store and an edge), the incomer will not open a new store. With this observation, LC Burger can set three stores at $\frac{1}{6}, \frac{1}{2}, \frac{5}{6}$ and make profit
+    \[
+        \frac{1000\times(4-1)}{0.1\%} - 600000\times 3 = 1200000
+    \]
+    CS Burger will not enter at all since no place is profitable.
+    \end{answer}
+    
+    \begin{answer}[Q4]
+    Yes. Our analysis in Q2 will be different since this situation becomes a Bertrand competition (setting price only) and the resulting profit will be zero.
+    \end{answer}
+    
+    \begin{answer}[Q5]
+    Considering the example above, it is clear that there exist a first-mover advantage: the first-mover earn all the market and makes positive profit, and the second-mover makes zero profit. However, if there exist resource constraint and each firm can not open unlimited number of stores, the result might be different. For example, if each firm can only open one store, than the second firm can earn at least the profit as large as the first firm.
+    \end{answer}
+    
+    \begin{answer}[Q6]
+    %Application 1: The location of McDonald's tends to be really close to that of KFC.
+    
+    Application 1: 7-11 and Family Mart
+    
+    Application 2: vending machines
+    
+    For the first application, once 7-11 first opens the store,
+    Family Mart is unlikely to enter the same region.
+    For the second application, once the first vending machine opens, other vending machines selling similar products(drinks or food) does not open at the same region.
+    \end{answer}
+    
+    
+    \section{Coors in the 1970s}
+    \begin{answer}[problem]
+    
+    %\begin{figure}
+    %    \centering
+    %    \includegraphics{picture/q3.jpg}
+    %    \caption{Caption}
+    %    \label{fig:my_label}
+    %%\end{figure}
+    
+    \begin{enumerate}
+        \item If Coors conducts a marketing campaign preemptively,
+        \begin{enumerate}
+            \item If A-B still builds the plant regardless, Coors would lose the money spent on ads and some market share, while A-B would lose the construction cost but gain some market share. A-B would get zero or negative ROI in this case.
+            \item If A-B decides not to enter, Coors would lose the money spent on ads while A-B ending up as the same as before.
+        \end{enumerate}
+        \item If Coors declares that if A-B or Miller comes, they'll conduct a marketing campaign,
+        \begin{enumerate}
+            \item If A-B still builds the plant regardless,
+            \begin{enumerate}
+                \item If Coors does conduct a marketing campaign in response, Coors would lose the money spent on ads and some market share, while A-B would lose the construction money but gaining some market share.
+                \item If Coors doesn't conduct a marketing campaign as it said, Coors would lose big market share, while A-B would lose the construction money but gain big market share. A-B would get positive ROI in this case.
+            \end{enumerate}
+            \item If A-B decides not to enter, both Coors and A-B would end up as the same as before.
+        \end{enumerate}
+        \item If Coors does nothing,
+        \begin{enumerate}
+            \item If A-B decides to build the plant, Coors would lose big market share while A-B would lose the construction money but gain big market share and end up in positive ROI.
+            \item If A-B does nothing as well, both Coors and A-B would end up as the same as before.
+        \end{enumerate}
+    \end{enumerate}
+
+    \begin{minipage}[t]{\textwidth}
+        \centering
+        \includegraphics[width=0.7\textwidth]{picture/q3.png}
+        %\captionsetup{format=hang, justification= raggedright, font=small}
+    \end{minipage}
+    Using backward induction, the subgame perfect equilibrium is that Coors uses strategy 2: declares that if A-B or Miller comes, they'll conduct a marketing campaign. After that, A-B wouldn't commit in building the plant, and both Coors and A-B would end up as the same as before.
+    
+    \end{answer}
+    
+
+\end{document}
+
