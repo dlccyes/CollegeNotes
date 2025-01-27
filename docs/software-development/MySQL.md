@@ -65,6 +65,12 @@ Notice there's no space after `-p` and port is specified with `-P`
 
 Just type it
 
+### Change password
+
+```
+ALTER USER 'root'@'localhost' IDENTIFIED BY '<password>';
+```
+
 ## Query
 
 - show databases

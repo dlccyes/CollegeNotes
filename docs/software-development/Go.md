@@ -25,6 +25,15 @@ brew unlink go
 brew link go@1.22
 ```
 
+<https://gist.github.com/BigOokie/d5817e88f01e0d452ed585a1590f5aeb>
+
+If you're using VsCode, set the go version it used in `settings.json`
+
+```json
+// replace with your path
+"go.goroot": "/opt/homebrew/Cellar/go@1.22/1.22.10/libexec",
+```
+
 ## Style
 
 <https://github.com/Pungyeon/clean-go-article>
@@ -188,6 +197,11 @@ viper.ReadInConfig()
 ```
 
 ## Slice
+
+### handy libraries
+
+- slices
+- [gslice](https://pkg.go.dev/github.com/XQ-Gang/gg/gslice)
 
 ### The internal of slice
 
@@ -354,7 +368,7 @@ go install golang.org/x/perf/cmd/benchstat@latest
 and then
 
 ```
-go test -bench . -count 3 -benchmem >> benchmark.txt
+go test -bench . -count 3 -benchmem > benchmark.txt
 benchstat benchmark.txt 
 ```
 
@@ -433,6 +447,85 @@ Discussions containing partial truths
 - [Bad Go: slices of pointers | Medium](https://medium.com/@philpearl/bad-go-slices-of-pointers-ed3c06b8bb41)
 - [Slices of structs vs. slices of pointers to structs | Stack Overflow](https://stackoverflow.com/a/37621532/15493213)
 
+### slice iteration vs. map lookup
+
+for N < 20, average case of slice iteration is faster than map lookup
+
+`main_test.go`
+
+```gp
+package main
+
+import (
+	"slices"
+	"testing"
+)
+
+const (
+	N   = 20
+	key = 10
+)
+
+// Generate a slice of N integers
+func generateSlice(n int) []int {
+	slice := make([]int, n)
+	for i := 0; i < n; i++ {
+		slice[i] = i
+	}
+	return slice
+}
+
+// Generate a map of N integers
+func generateMap(n int) map[int]struct{} {
+	m := make(map[int]struct{}, n)
+	for i := 0; i < n; i++ {
+		m[i] = struct{}{}
+	}
+	return m
+}
+
+// Benchmark for slice lookup
+func BenchmarkSliceLookup(b *testing.B) {
+	slice := generateSlice(N)
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		if ok := slices.Contains(slice, key); ok {
+		}
+		// for _, v := range slice {
+		// 	if v == key {
+		// 		break
+		// 	}
+		// }
+	}
+}
+
+// Benchmark for map lookup
+func BenchmarkMapLookup(b *testing.B) {
+	m := generateMap(N)
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		if _, ok := m[key]; ok {
+		}
+	}
+}
+```
+
+command
+
+```
+go test -bench . -count 6 -benchmem > benchmark.txt
+benchstat benchmark.txt
+```
+
+result
+
+```
+               │ benchmark.txt │
+               │    sec/op     │
+SliceLookup-12    4.050n ±  5%
+MapLookup-12      4.886n ± 18%
+geomean           4.448n
+```
 
 ## Docstring
 
@@ -1488,3 +1581,9 @@ in settings.json add
 ### Same piece of code works in one file but not in another
 
 Check if you're actually using the same package. Your IDE helps you import all the packages but they sometimes get it wrong. You may be importing different package with the same name.
+
+### VsCode language server not working
+
+Click the go version in bottom right -> Open gopls trace -> find and fix the issue
+
+Don't easily clean the go mod cache as it may take forever to download everything back
