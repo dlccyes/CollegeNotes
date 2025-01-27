@@ -1,0 +1,77 @@
+[data-md-color-scheme="thrill"] {
+  --md-primary-fg-color: #5428a3;
+}
+
+[data-md-color-scheme="caliente"] {
+  --md-primary-fg-color: #942929;
+  --md-typeset-color: #fff;
+  --md-default-bg-color: #22165e;
+}
+
+[data-md-color-scheme="caliente"] a {
+  color: #e17070
+}
+
+[data-md-color-scheme="caliente"] h1 {
+  color: #fff
+}
+
+/* image limit height*/
+.img {
+  border-radius: 15px;
+  max-height: 700px;
+}
+/* image center */
+.img {
+  position: relative;
+  transform: translate(-50%);
+  left: 50%;
+}
+
+/* header */
+.md-header {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Github link */
+.md-source {
+  display: none;
+}
+
+/* edit this page */
+.md-typeset .md-content__button {
+  display: none;
+}
+
+/* next page footer */
+.md-footer__inner {
+  display: none !important;
+}
+
+/* MkDocs footer */
+/* .md-footer-meta {
+  display: none;
+} */
+
+/* copyright */
+.md-copyright {
+  display: none;
+}
+
+.md-footer-meta::before {
+  color: #fff;
+  font-family: 'Consolas', Hack, monospace;
+  content: "Derrick Lin © 2024";
+  display: flex;
+  align-items: center;
+}
+
+.md-footer-meta {
+  display: flex;
+  justify-content: center;
+}
+
+.md-footer-meta__inner.md-grid {
+  margin-left: inherit;
+  margin-right: inherit;
+}
