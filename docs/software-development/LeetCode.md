@@ -261,3 +261,44 @@ It often helps to have a dummy head pointing to the actual head.
 
 - [146. LRU Cache](https://leetcode.com/problems/lru-cache/)
 
+## Sparse Table
+
+For solving range min/max query problems. e.g.
+
+- [239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+
+See <https://www.geeksforgeeks.org/sparse-table/> for explanation
+
+To build a sparse table for array `nums` storing the max num of each range:
+
+```python
+def buildSparseTable(nums: list[int]) -> list[list[int]]:
+    n = len(nums)
+    lnn = int(math.log(n, 2))+1
+
+    # sparseTable[i][j] = the max of subarray nums[i:i+2^j]
+    sparseTable = [[0] * lnn for _ in range(n)]
+    
+    # init: sparseTable[i][0] = max of subarray nums[i:i+1] = nums[i]
+    for i in range(n):
+        sparseTable[i][0] = nums[i]
+
+    # fill values
+    # sparse[i][j] = max(sparse[i][j-1], sparse[i+2^j-1][j-1])
+    for j in range(1, lnn):
+        for i in range(n):
+            if i + pow2(j-1) >= n:
+                break
+            sparseTable[i][j] = max(sparseTable[i][j-1], sparseTable[i+pow2(j-1)][j-1])
+    return sparseTable
+
+def query(sparseTable, l: int, r: int) -> int:
+    j = int(math.log(r-l+1, 2))
+    return max(sparseTable[l][j], sparseTable[r-pow2(j)+1][j]
+
+def pow2(k: int) -> int:
+    return 1 << k
+```
+
+Use `query(sparseTable, l, r)` to find the max num in subarray `nums[l][r+1]`
+
