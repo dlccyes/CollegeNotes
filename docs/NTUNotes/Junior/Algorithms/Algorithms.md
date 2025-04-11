@@ -1,8 +1,6 @@
 ---
 aliases: [演算法]
-has_children: true
 title: Algorithms
-layout: meth
 ---
  
 # Algorithms
@@ -591,19 +589,23 @@ ith order statistic = ith smallest element
 		- W may not be polynomial to n
 
 ### Knapsacks
+
 - [[#Subset Sums]] problem but each item has a value and the goal is to maximize the total value
 - ![[algorithms-106.png]]
 
 ### Traveling Salesman Problem
+
 - ![[algorithms-107.png]]
 - space $\in O(2^nn^2)$
 - runtime $\in O(2^nn^3)$
 
 ## Greedy
 ### properties
+
 ![[algorithms-108.png]]
 
 ### interval scheduling
+
 - solution
 	1. sort by finished time
 	2. select the 1st one

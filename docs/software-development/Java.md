@@ -89,6 +89,22 @@ To run your file
 java -jar build/libs/<project name>.jar
 ```
 
+### Set a compatible version
+
+Check your java version
+
+```
+java --version
+```
+
+Find the gradle version that works with your java version [here](https://docs.gradle.org/current/userguide/compatibility.html)
+
+To change your gradlew version to 8.5
+
+```
+./gradlew wrapper --gradle-version 8.5
+```
+
 ## Java Version Manager - SDKMAN
 
 ### install

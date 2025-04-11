@@ -22,9 +22,10 @@ So if you want to do for example substring hashing, better maintain the factor i
     - DP
     - DFS
     - BFS
-- shortest path
+- shortest/longest path
     - BFS
     - DP
+    - topological sort
 
 
 ## Python Libaries
@@ -214,16 +215,17 @@ or
 ```python
 def get_kmp_table(s: str) -> list[int]:
     # build kmp table
-    kmp_table = [0] * n_new
+    n = len(s)
+    kmp_table = [0] * n
     # 2 pointers
     # l on the end of the current longest prefix
     # r on the end of the current longest suffix
     l = 0
-    for r in range(1, n_new):
-        # go back to the end of earlier longest prefix if not match
-        while l > 0 and s_new[l] != s_new[r]:
+    for r in range(1, n):
+        # go back to the end of the earlier longest prefix if not match
+        while l > 0 and s[l] != s[r]:
             l = kmp_table[l-1]
-        if s_new[l] == s_new[r]:
+        if s[l] == s[r]:
             l += 1
         kmp_table[r] = l
     return kmp_table
@@ -240,7 +242,6 @@ $$\sum_{i=l}^rs[i]r^{i}$$
 where `s[l:r+1]` is the substring and `r` is the radix/base. In the case of small case letters, if we convert all of them to 0 ~ 25, the radix/base should be at least 26 so that a collision won't happen.
 
 **Double Hashing**
-
 
 It is very possible that the calculated hash will overflow, so we need to mod the result after every calculation. However, this also provides another chance for collision. To make the probability of collision ignorable, we can calculate another hash with a different radix/base and mod.
 Be aware that **calculating the power of a number isn't constant time**.
