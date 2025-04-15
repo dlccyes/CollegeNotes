@@ -590,6 +590,16 @@ ith order statistic = ith smallest element
 
 ### Knapsacks
 
+There are $n$ items with values $v_1$ to $v_n$ and weight $w_1$ to $w_n$. 
+
+The max total value attainable from the first $i$ items for a bag with weight limit $w$ = $dp(i, w)$ =  
+
+- $\max(dp(i-1, w), v_i+dp(i-1, w-w_i))$ if $w>=w_i$
+- $dp(i-1, w)$ else
+
+time & space complexity = $O(nW)$ where $W$ is the weightcapacity
+
+
 - [[#Subset Sums]] problem but each item has a value and the goal is to maximize the total value
 - ![[algorithms-106.png]]
 

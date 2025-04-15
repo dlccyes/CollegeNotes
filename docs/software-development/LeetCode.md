@@ -10,6 +10,16 @@ parent: Software Development
 
 So if you want to do for example substring hashing, better maintain the factor in the for loop instead of calling `RADIX**i` each time.
 
+### Hashing a string is O(L)
+
+Hashing a string of length $L$ is not $O(1)$ but $O(L)$, meaning
+
+```python
+my_map = dict()
+my_map["key1"] = 1 # O(N)
+val = my_map["key1"] # O(N)
+```
+
 ## Patterns
 
 - array

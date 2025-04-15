@@ -1,6 +1,5 @@
 ---
 title: Data Structure
-layout: meth
 ---
  
 # Data Structure
@@ -17,8 +16,11 @@ layout: meth
   - $\lim_{x\to\infty} \frac{f(x+1)}{f(x)}$
 
 ![[data-structure-1.png]]
+
 ![[data-structure-2.png]]
+
 [cheatsheet](https://www.bigocheatsheet.com/)
+
 ![[data-structure-3.png]]
 
 If $\lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)}$ exists, then
@@ -26,11 +28,17 @@ $$\lim_{n \rightarrow \infty} \inf_{m \geq n} \frac{|T(m)|}{\phi(m)} = \lim_{n \
 Therefore
 
 $$T(n) \in O(\phi(n)) \Leftrightarrow \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} < \infty$$
+
 $$T(n) \in \Omega(\phi(n)) \Leftrightarrow \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} > 0$$
+
 $$T(n) \in \Theta(\phi(n)) \Leftrightarrow 0 < \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} < \infty$$
+
 $$T(n) \in o(\phi(n)) \Leftrightarrow \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} = 0$$
+
 $$T(n) \in \omega(\phi(n)) \Leftrightarrow \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} = \infty$$
+
 ### Properties of Big-Oh Notation
+
 Assume all functions are positive.
 
 * Constant factors can be ignored.
@@ -230,7 +238,7 @@ Bell (W2)
 - [Binary Tree](../../obs_autolink/Binary%20Tree)
 - 每個 node 有 0-2 個分支 → binary tree
   - inorder 順序正確(小→大 or 大→小) → binary search tree
-- order 
+- order
   - preorder/prefix
     - 接到任務的先後順序 (左支先)
     - ![[data-structure-13.png]]
