@@ -175,7 +175,7 @@ Exponential 的 general 版本
 
 ## Expected Value
 
-### E[X] = complementary CDF
+### `E[X]` = complementary CDF
 
 ![image-20200617230129402](https://i.loli.net/2020/06/17/psabIy9Q7F8o3H4.png)
 

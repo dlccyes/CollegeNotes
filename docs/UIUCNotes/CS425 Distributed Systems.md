@@ -1733,7 +1733,7 @@ allows transactions to write first, check later
     - regular graph: all nodes same degree
     - Gaussian
     - random graph: probability of having $k$ edges is $e^{-kc}$ 
-    - power law: $k^{-\alpha}$
+    - power law / [[Pareto Distribution]]: P(degree > k) $=k^{-\alpha}$
         - scale-free
         - most nodes have a small degree, a few have a high degree
         - lots of small world networks are this

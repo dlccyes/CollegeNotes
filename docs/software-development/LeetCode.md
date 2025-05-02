@@ -10,6 +10,8 @@ parent: Software Development
 
 So if you want to do for example substring hashing, better maintain the factor in the for loop instead of calling `RADIX**i` each time.
 
+$a^n$ is $O(n)$, or $O(\log n)$ with fast power
+
 ### Hashing a string is O(L)
 
 Hashing a string of length $L$ is not $O(1)$ but $O(L)$, meaning
@@ -18,6 +20,28 @@ Hashing a string of length $L$ is not $O(1)$ but $O(L)$, meaning
 my_map = dict()
 my_map["key1"] = 1 # O(N)
 val = my_map["key1"] # O(N)
+```
+
+### concating strings is O(n)
+
+This is $O(N^2)$ because each `ans += "c"` creates a new string every time which is $O(N)$
+
+```python
+def get_1_to_n_str(n: int):
+    ans = ""
+    for i in range(n):
+      ans += str(i) # O(n)
+    return ans
+```
+
+This is $O(N)$
+
+```python
+def get_1_to_n_str(n: int):
+    ans = []
+    for i in range(n):
+      ans.append(str(i))
+    return "".join(ans)
 ```
 
 ## Patterns
@@ -69,6 +93,22 @@ returns a hashmap of key -> appearance count in an array
 from collections import Counter
 arr = [1,4,2,5,7,4,5,1,1]
 cmap = Counter(arr)
+```
+
+## Binary Search
+
+template
+
+```python
+def binary_search(sortedArr, target):
+    l, r = 0, len(sortedArr)
+    while l < r:
+        m = (l + r) // 2
+        if sortedArr[m] < target:
+            l = m + 1
+        else:
+            r = m
+    return l
 ```
 
 ## Sliding window
@@ -263,6 +303,7 @@ Reference: the editorial of [28. Find the Index of the First Occurrence in a Str
 - [28. Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
 - [1392. Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/description/)
 - [2223. Sum of Scores of Build Strings](https://leetcode.com/problems/sum-of-scores-of-built-strings/)
+- [2851. String Transformation](https://leetcode.com/problems/string-transformation)
 
 ## Linked List Problems
 
@@ -271,6 +312,7 @@ It often helps to have a dummy head pointing to the actual head.
 ### Problems
 
 - [146. LRU Cache](https://leetcode.com/problems/lru-cache/)
+- [23. Merge k Sorted lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 
 ## Sparse Table
 

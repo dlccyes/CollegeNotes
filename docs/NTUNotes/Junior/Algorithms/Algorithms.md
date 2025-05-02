@@ -444,6 +444,7 @@ ith order statistic = ith smallest element
 
 ## Trees
 ### [[Binary Tree]]
+
 - see [[Data Structure#Binary Tree]]
 - tree construction
 	- worst case $O(n^2)$
@@ -845,6 +846,7 @@ exchange → 數量一樣
 	- subpaths of shortest paths are shortest paths
 
 ### SSSP
+
 - single-source shortest path
 - shortest path from source node s to every other nodes
 - if have negative edges
@@ -875,12 +877,33 @@ exchange → 數量一樣
 	- solution: [[#Johnson's Algorithm]]
 
 #### in DAGs
+
 - ![[algorithms-140.png]]
 - time complexity $\in O(V+E)$
 - e.g.
 	- ![[algorithms-141.png]]
 
 #### [[Bellman-Ford Algorithm]]
+
+```python
+def bellman_ford(graph, src):
+    # graph format: {"node1", [("node2", 10)]}
+    dist = {node: float('inf') for node in graph}
+    dist[src] = 0
+
+    n = len(graph)
+    for _ in range(n - 1): # at most n-1 edge from src to dst
+        for n1, (n2, weight) in graph.items():
+            dist[n2] = min(dist[n2], dist[n1] + weight)
+
+    # detect negative cycles
+    for n1, (n2, weight) in graph.items():
+        if dist[n1] + weight < distances[n2]:
+            raise ValueError("Graph contains a negative-weight cycle")
+
+    return distances
+```
+
 - 接受 negative weight edge
 - detect negative cycle
 - ![[algorithms-142.png]]
@@ -932,10 +955,11 @@ exchange → 數量一樣
 	-  ![[algorithms-155.png]]
 
 #### Johnson's Algorithm
+
 - <https://www.geeksforgeeks.org/johnsons-algorithm/>
 - can't have negative cycle (use [[Bellman-Ford Algorithm]] to verify)
 - reweight s.t. all edges are nonnegative without changing the shortest path solution → [[Dijkstra's Algorithm]]
-- 移動 node 的位置
+    - 移動 node 的位置
 - $h(u)$ = 把 node u 往前移動多少
 - $\hat{w}(u,v)=w(u,v)+h(u)-h(v)$
 	- 經過很多點，各點會互相 cancel，只留起終點的淨移動量，so 兩點間的每個 path 改變相同，shortest path 不變

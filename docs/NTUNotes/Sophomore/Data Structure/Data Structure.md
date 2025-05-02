@@ -631,13 +631,15 @@ implementations:
 
 - quick find: in the array, store each's root node
     - ![[ds-djs-f.png]]
-    - $O(N)$ find
+    - $O(1)$ find
     - $O(N)$ union
-- quick union: in the array, store each's parent node
+        - merge y's tree into x by setting the root of all y's tree's nodes to x's root
+- quick union: in the array, store node's parent
     - ![[ds-djs-u.png]]
     - $O(N)$ find
     - $O(N)$ union
-- union by rank: always move short tree under tall tree when doing union
+        - merge y's tree into x by setting the parent of all y's root to x's root
+- union by rank: quick union but always move short tree under tall tree when doing union
     - ![[Pasted image 20240806005352.png]]
     - $O(\log N)$ find
     - $O(\log N)$ union
@@ -655,12 +657,13 @@ class UnionFind:
     def union(self, x, y): # O(N)
         rootX = self.find(x)
         rootY = self.find(y)
-        if rootX != rootY:
-            for i in range(len(self.root)):
-                if self.root[i] == rootY:
-                    self.root[i] = rootX
+        if rootX == rootY:
+            return
+        for i in range(len(self.root)):
+            if self.root[i] == rootY:
+                self.root[i] = rootX
 
-    def connected(self, x, y):
+    def is_connected(self, x, y):
         return self.find(x) == self.find(y)
 ```
 
@@ -676,21 +679,23 @@ class UnionFind:
             x = self.parent[x]
         return x
 
-    def find(self, x): # recursive version with path compression
-        if x != self.parent[x]:
-            self.parent[x] = self.find(self.parent[x])
+    def find(self, x): # recursive version with path compression 
+        if x == self.parent[x]:
+            return x
+        # set all the node's parent along the way to root
+        self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
 		
     def union(self, x, y): # O(N)
         rootX = self.find(x)
         rootY = self.find(y)
-        if rootX != rootY:
-            self.parent[rootY] = rootX
+        if rootX == rootY:
+            return
+        self.parent[rootY] = rootX
 
-    def connected(self, x, y):
+    def is_connected(self, x, y): # O(N)
         return self.find(x) == self.find(y)
 ```
-
 
 
 Union by Rank:
@@ -710,14 +715,15 @@ class UnionFind:
     def union(self, x, y):
         rootX = self.find(x)
         rootY = self.find(y)
-        if rootX != rootY:
-            if self.rank[rootX] > self.rank[rootY]:
-                self.parent[rootY] = rootX
-            elif self.rank[rootX] < self.rank[rootY]:
-                self.parent[rootX] = rootY
-            else:
-                self.parent[rootY] = rootX
-                self.rank[rootX] += 1
+        if rootX == rootY:
+            return
+        if self.rank[rootX] > self.rank[rootY]:
+            self.parent[rootY] = rootX
+        elif self.rank[rootX] < self.rank[rootY]:
+            self.parent[rootX] = rootY
+        else:
+            self.parent[rootY] = rootX
+            self.rank[rootX] += 1
 
     def connected(self, x, y):
         return self.find(x) == self.find(y)
@@ -780,6 +786,7 @@ class UnionFind:
     (rank lemma)
 
 ### path compression
+
 - 把一路經過的都直接指到 root
 - ![[data-structure-69.png]]
 - method
@@ -919,8 +926,9 @@ class UnionFind:
   - so merge, insert, delete 皆 $\in O(logn)$ 
 
 ## skew heap
+
 - interactive visualization  
-<https://people.ksp.sk/~kuko/gnarley-trees/Skew.html>
+    - <https://people.ksp.sk/~kuko/gnarley-trees/Skew.html>
 - binary heap property
 - minheap or maxheap property
 - no NPL
@@ -950,7 +958,9 @@ class UnionFind:
       - amortized cost = 2log(n) + 0 $\in O(logn)$
 
 ## Dijkstra's Algorithm
-[Dijkstra's Algorithm](../../obs_autolink/Dijkstra's%20Algorithm)
+
+[[Dijkstra's Algorithm]]
 
 ![[data-structure-82.png]]
+
 ![[data-structure-83.png]]
