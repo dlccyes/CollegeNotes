@@ -154,7 +154,7 @@ There are many ways to check if a string is a substring to another string in lin
 
 ### Z Algorithm
 
-In the z array of string `s`, `z[i]` = the length of longest matching prefix between `s` and `s[i:]`
+In the z array of string `s`, `z[i]` = the length of longest matching prefix between `s` and `s[i:]` i.e. `z[i]` = the length of substring starting from `i` that is also a prefix of `s`.
 
 To construct a z array:
 

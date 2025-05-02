@@ -235,6 +235,13 @@ See [[Good Tools#Mackup]]
 brew install --cask rectangle
 ```
 
+If the settings are reset after quitting
+
+```
+brew uninstall --zap rectangle
+brew install rectangle
+```
+
 ### command+number to launch apps on dock
 
 Download [Snap](https://apps.apple.com/us/app/snap/id418073146?). Would work out of the box.
@@ -466,3 +473,7 @@ Control + click the app in finder -> open (1st attempt may fail)
 1. Forget network
 2. `/System/Library/CoreServices.Captive Network Assistant`
 3. Click to connect the network
+
+### System Settings reset after rebooting
+
+If you're using Mackup, it will create symlink in `~/Library/Preferences` point to the configs in your Mackup dir, but they won't be recognized by MacOS. To resolve this, remove those symlinks.
