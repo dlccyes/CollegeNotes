@@ -18,8 +18,8 @@ Case Studies: [[System Design Interview]]
     - 13 problems
 - DDIA (2017)
 	- a textbook for system design
-	- [DDIA pdf | github](https://github.com/jeffrey-xiao/papers/blob/master/textbooks/designing-data-intensive-applications.pdf)
-	- [DDIA pdf | libgen](http://library.lol/main/FB796AE8FD912C78AA1A34870ACA6BE8)
+	- [DDIA pdf | github](https://github.com/samayun/devbooks/blob/master/Designing%20Data-Intensive%20Applications%20The%20Big%20Ideas%20Behind%20Reliable%2C%20Scalable%2C%20and%20Maintainable%20Systems%20(%20PDFDrive%20).pdf)
+	- [DDIA pdf | libgen](https://libgen.is/book/index.php?md5=BF7C3FECFE5DCFFCEB170B2AA6D34C31)
 - Grokking the System Design Interview
 	- [pdf | github](https://raw.githubusercontent.com/sharanyaa/grok_sdi_educative/master/grok_system_design_interview.pdf)
 	- [pdf | libgen](http://libgen.rs/book/index.php?md5=3CC8A0D02BBB0644A3839F6B621BB86B)
@@ -31,7 +31,7 @@ Case Studies: [[System Design Interview]]
 	- from <https://leetcode.com/discuss/interview-question/system-design/1205825>
 - [Database Schema Templates](https://drawsql.app/templates/popular)
 
- ### newsletters / blogs
+### newsletters / blogs
  
 - The Pragmatic Engineer
 - Quastor
