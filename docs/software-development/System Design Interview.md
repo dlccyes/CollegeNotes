@@ -1,12 +1,14 @@
 # System Design Interview
 
+- basic calculations
+    - 1 byte / 1B = 8 bits
+    - an ASCII character uses 1B
+
 ## Template
 
 [System Design Interview: A Step-By-Step Guide](https://www.youtube.com/watch?v=i7twT3x5yv8)
 
-- basic calculations
-    - 1 byte / 1B = 8 bits
-    - an ASCII character uses 1B
+
 - clarify requirements
     - features
     - expected traffic
@@ -95,7 +97,7 @@
             - base62 with `+` & `/`
             - not suitable for a url
     - a dedicated key generation service & db
-        - see [[#Unique ID Generator]]
+        - [[System Design#Unique ID Generator]]
         - generate keys and store in key db
         - when we need a new url just fetch a generated one from db
         - pros
