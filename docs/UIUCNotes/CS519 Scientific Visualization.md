@@ -88,3 +88,78 @@ originally, $V_{\text{display}}=V_{\text{signal}}^\gamma$
 So we do gamma correction on the signal first, making it $V_{\text{signal}}^\frac{1}{\gamma}$, s.t. the display would be $V_{\text{signal}}$
 
 When saving an image, the gamma correction would be auto applied
+
+## computer graphics
+
+- surface is modeled in triangles
+
+### rendering
+
+- rasterization
+    - project to 2D plane
+    - fast
+    - raster: a grid of pixel values
+    - done on GPU
+        - vector shader
+            - convert coordinates
+        - fragment shader
+            - color
+- ray tracing
+    - follow ray of light bouncing off surface -> can capture global illumination effect
+    - slow
+    - can do semi-transparent rendering
+- ![[cs519-rendering.png]]
+
+### shading
+
+- real light source is too complex to model
+- simple light source
+    - point source
+    - directional source
+    - ambient light
+        - same light level everywhere
+- reflection
+    - phong reflection
+        - simple and fast
+        - ![[cs519-phone.png]]
+        - specular reflection
+        - diffuse reflection
+            - scatter equally in all directions
+        - ambient
+            - equal light everywhere, no attenuation
+        - attenuation $\dfrac{1}{ad^2+bd+c}$
+            - $d$ = distance
+            - a, b, c are constants
+    - Blinn-Phong Reflection
+        - replace $(V\cdot R)^a$ with $(N\cdot H)^b$ 
+            - halfway vector $H=\dfrac{L+V}{||L+V||}$
+        - more efficient (less operations)
+        - closer to real lighting
+        - ![[cs519-bling-p4.png]]
+- shading
+    - gouraud shading
+        - compute shade at each vertex
+    - phong shading
+        - compute shade at each fragment
+        - more computation
+    - ![[cs519-shading.png]]
+
+## Interpolation
+
+### Bilinear Interpolation
+
+interpolation for $z = f(x, y)$ using 4 data points forming a rectangle
+
+1. cast the target point on 2 sides of the rectangle
+2. Do interpolation to calculate the value of the 2 points
+3. Do interpolation with the 2 points
+
+![[cs519-bil.png]]
+
+### Barycentric Interpolation
+
+Interpolate a point using 3 points forming a triangle
+
+![[cs519-bary1.png]]
+
+![[cs519-bary.png]]
