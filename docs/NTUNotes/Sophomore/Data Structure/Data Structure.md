@@ -442,7 +442,7 @@ Bell (W2)
     - sum of ASCII
       - len = 8 → 只會用到 127x8 個 slot
     - ![[data-structure-49.png]]
-- seperate chaining 
+- separate chaining
   - 可每個 slot 存 linked list
     - collision → 加到後面
     - insertion O(1)

@@ -674,7 +674,7 @@ with open('deployment.yaml', 'r') as f:
     deploy = yaml.safe_load(f)
 ```
 
-For multiple document combined (with `---` seperator, see [this](https://stackoverflow.com/questions/47593695/)):
+For multiple documents combined (with `---` separator, see [this](https://stackoverflow.com/questions/47593695/)):
 
 ```python
 import yaml

@@ -130,7 +130,7 @@ concave utility funcion -> risk averse
 
 $$u(E(X))>E(u(X))$$
 
-See this utility vs. wealth diagram, with the green line being the person's utility funciton.
+See this utility vs. wealth diagram, with the green line being the person's utility function.
 
 ![[principle-of-macroeconomics-9.png]]
 
@@ -322,10 +322,10 @@ $$NCO=NX$$
 
 ## Ch33 Aggregate Demand and Supply
 
-### Economic Flunctations
+### Economic Fluctuations
 
-- economic flunctuations are irregular and unpredictable
-- most macroeconomic quantities flunctuate together
+- economic fluctuations are irregular and unpredictable
+- most macroeconomic quantities fluctuate together
 - when output falls, unemployment rises
 
 ### Aggregated Demand

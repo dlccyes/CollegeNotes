@@ -169,7 +169,7 @@ $profit=(P-MC)(1-\dfrac{P}{400})10M=P(1-\dfrac{P}{400})10M$
 profit maximized when P = 200
 
 #### (4)
-if sell seperately, total profit = 200x5Mx2 = 2B
+if sell separately, total profit = 200x5Mx2 = 2B
 
 ![[industrial-organization-hw-23.png]]
 ![[industrial-organization-hw-24.png]]
@@ -191,7 +191,7 @@ profit = 2.177B - 500M > 0, so yes
 #### (7)
 sell at a price so that total profit = 500M
 
-- if sell seperately
+- if sell separately
 	- $2P(1-\dfrac{P}{400})10M=500M$  
 	- $P^2-400P+10000=0$
 	- P=26.795 (373.02 不合)

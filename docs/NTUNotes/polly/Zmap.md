@@ -313,7 +313,7 @@ parent: polly
 - regional biases existed
 	- some websites are only accessible from 1 country
 		- not significant at global scale
-	- may be more severe at countries with seperate Internet infrastructure
+	- may be more severe at countries with separate Internet infrastructure
 		- e.g. China & Russia
 
 ## polly's comments

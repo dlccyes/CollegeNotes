@@ -2441,10 +2441,10 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - conducir = drive
 - alcohol /alcol/
 - alojar = accommodate
-- aloharse = stay
-	- aloharse en un hotel
-- hotel accomodation plan
-	- pensión completa = full-board accomodation (all meals)
+- alojarse = stay
+	- alojarse en un hotel
+- hotel accommodation plan
+	- pensión completa = full-board accommodation (all meals)
 	- media pensión (breakfast & lunch)
 	- alojamiento y desayuno (only breakfast)
 - maleta = suitcase

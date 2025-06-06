@@ -66,7 +66,7 @@ You may see a lot of older Internet guides using `go get`, but it's deprecated. 
 
 ### Install current project's dependencies
 
-Auto check your codes and update `go.mod` and install all required dependecies in `go.mod` to `GOMODACHE` if haven't
+Automatically check your code, update `go.mod`, and install all required dependencies in `go.mod` to `GOMODCACHE` if you haven't
 
 ```
 go mod tidy
@@ -775,7 +775,7 @@ func (r projectRepository) GetProjectID(ctx context.Context, projectID uuid.UUID
 }
 ```
 
-If you look at its raw query, it still makes 2 seperate query for `Project` & `Incident` table, but at least you don't have to handle it youself.
+If you look at its raw query, it still makes 2 separate queries for `Project` & `Incident` table, but at least you don't have to handle it yourself.
 
 ### Set a nullable field back to null
 
