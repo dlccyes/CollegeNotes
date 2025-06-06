@@ -205,7 +205,7 @@ Starband, HughesNet
 	- link-layer switches
 - store-and-forward transmission
 	- receive the entire packet → transmit
-	- store/buffer the bits until the entire packet is recieved
+	- store/buffer the bits until the entire packet is received
 	- forward/transmit the packet onto the outbound link
 	- delay (see [Delay Loss Throughput](#Delay%20Loss%20Throughput))
 		- a packet of $L$ bits (L=packet length)
@@ -997,9 +997,9 @@ so there're many security problems now
 
 #### RTT & Timeout
 ##### Estimated RTT
-- RTT = rount trip time
+- RTT = round trip time
 	- time from data sent to ACK received
-- SampleRTT = the RTT of the newly recieved ACK
+- SampleRTT = the RTT of the newly received ACK
 	- won't measure retransmissions
 	- measured about once every RTT
 - $EstimatedRTT = (1-\alpha)\cdot EstimatedRTT+\alpha\cdot SampleRTT$
@@ -1018,7 +1018,7 @@ so there're many security problems now
 ##### Timeout
 
 $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
-- timeout interval should > Estimated RTT, and the more fluntuating RTT is, the bigger the margin
+- timeout interval should > Estimated RTT, and the more fluctuating RTT is, the bigger the margin
 - TimeoutInterval will double after timeout, follow the formula again after receiving next segment
 	- exponential backoff
 
@@ -1031,7 +1031,7 @@ $TimeoutInterval = EstimatedRTT+4\cdot DevRTT$
 
 ##### cumulative ACK
 - hybrid of [[#Go Back N GBN]] & [[#Selective Repeat SR]]
-	- reciever ACK the ==next bit== to be received
+	- receiver ACK the ==next bit== to be received
 	- differences with GBN
 		- TCP will buffer out-of-order segments
 		- TCP uses cumulative ACK

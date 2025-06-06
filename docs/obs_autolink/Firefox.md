@@ -13,7 +13,7 @@ parent: Miscellaneous
 
 Set the environmental variable `MOZ_USE_XINPUT2` as `1`.
 
-For exmaple, in `/etc/profile.d/use-xinput2.sh` (create if don't exist)
+For example, in `/etc/profile.d/use-xinput2.sh` (create if it doesn't exist)
 
 ```
 export MOZ_USE_XINPUT2=1

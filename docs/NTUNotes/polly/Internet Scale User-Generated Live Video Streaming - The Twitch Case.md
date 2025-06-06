@@ -31,7 +31,7 @@ parent: polly
 
 ## Stream Hosting Strategy
 
-- for a channel, the amount of servers allocated flunctuated with current viewer counts
+- for a channel, the amount of servers allocated fluctuated with current viewer counts
 	- ![[internet-scale-user-generated-live-video-streaming---the-twitch-case-2.png]]
 - each region scales independently, based on the viewer counts of the region
 - cross continent hosting strat

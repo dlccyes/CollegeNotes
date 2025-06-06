@@ -3179,7 +3179,7 @@ The result is the same whether the government funds the purchase through lump-su
 	- consumption down, labor up, wage down -> current utility down
 	- firm investment down -> future output down -> future consumption down -> future utility down
 	- however, the model leaves out the fact that government purchases have externality irl
-- government purchase is not the determining force to economic flunctuations
+- government purchase is not the determining force to economic fluctuations
 	- empirical data: GDP $\propto$ $1/r$, GDP $\propto C, I, w$ 
 	- RBC analysis of government purchase up:  GDP $\propto$ $r$, GDP $\propto 1/C, 1/I, 1/w$ 
 

@@ -31,10 +31,10 @@ source: <https://ieeexplore.ieee.org/document/8917566>
 		- superpose signals from various users
 	- receiver side
 		- interference cancellation to decode the signals
-	- accomodate more UEs than the number of available subcarriers
+	- accommodate more UEs than the number of available subcarriers
 	- key tech for massive connectivities
 		- e.g. IoT
-	- can enable grant-free acess & flexible scheduling  → more UEs served simultneously → reduce latency
+	- can enable grant-free access & flexible scheduling  → more UEs served simultaneously → reduce latency
 	- better than OMA
 		- can utilize all subcarriers channels
 		- fairness provisioning (?)
