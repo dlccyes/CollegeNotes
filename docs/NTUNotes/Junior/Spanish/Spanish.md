@@ -10,14 +10,14 @@ layout: meth
 
 Long press on a letter and select or press the following key combinations:
 
--   á — Option + e, a.
--   Á — Option + e, Shift + a.
--   é — Option + e, e.
--   É — Option + e, Shift + e.
--   í — Option + e, i.
--   Í — Option + e, Shift + i.
--   ñ — Option + n, n.
--   Ñ — Option + n, Shift + n.
+- á — Option + e, a.
+- Á — Option + e, Shift + a.
+- é — Option + e, e.
+- É — Option + e, Shift + e.
+- í — Option + e, i.
+- Í — Option + e, Shift + i.
+- ñ — Option + n, n.
+- Ñ — Option + n, Shift + n.
 
 ## Present Participle / Gerundio
 
@@ -2441,10 +2441,10 @@ Messi dejó FC Barcelona para PSG, un club plástico, por que Bartomeu, el expre
 - conducir = drive
 - alcohol /alcol/
 - alojar = accommodate
-- aloharse = stay
-	- aloharse en un hotel
-- hotel accomodation plan
-	- pensión completa = full-board accomodation (all meals)
+- alojarse = stay
+        - alojarse en un hotel
+- hotel accommodation plan
+        - pensión completa = full-board accommodation (all meals)
 	- media pensión (breakfast & lunch)
 	- alojamiento y desayuno (only breakfast)
 - maleta = suitcase
