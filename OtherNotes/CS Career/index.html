@@ -1,0 +1,6222 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../software-development/Grafana/">
+      
+      
+        <link rel="next" href="../../software-development/System%20Design/">
+      
+      
+      <link rel="icon" href="../../assets/roshar-green-trans.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>CS Career - El Mundo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-GC9K2DFK9F"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-GC9K2DFK9F",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-GC9K2DFK9F",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cs-career" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="El Mundo" class="md-header__button md-logo" aria-label="El Mundo" data-md-component="logo">
+      
+  <img src="../../assets/roshar-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            El Mundo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CS Career
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dlccyes/CollegeNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../sitemap/" class="md-tabs__link">
+          
+  
+    
+  
+  Meta
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../software-development/Sniffing%20Packets%20from%20Wireless%20Networks/" class="md-tabs__link">
+          
+  
+    
+  
+  Posts
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../software-development/Programming%20101/" class="md-tabs__link">
+          
+  
+    
+  
+  Software Development
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../NTUNotes/Freshman/Logic%20Design/Logic%20Design/" class="md-tabs__link">
+          
+  
+    
+  
+  Electrical Engineering
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../NTUNotes/Freshman/Microeconomics/" class="md-tabs__link">
+          
+  
+    
+  
+  Economics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="El Mundo" class="md-nav__button md-logo" aria-label="El Mundo" data-md-component="logo">
+      
+  <img src="../../assets/roshar-white.png" alt="logo">
+
+    </a>
+    El Mundo
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dlccyes/CollegeNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Meta
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Meta
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sitemap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sitemap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Posts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Systems and Networking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Systems and Networking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Sniffing%20Packets%20from%20Wireless%20Networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sniffing Packets from Wireless Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/restore%20usb%20bootable%20disk%20to%20normal%20disk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Restore a usb bootable disk to normal disk in Win10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Gitlab%20CICD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab CICD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/GCP%20CICD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCP CICD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Software Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Programming%20101/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming 101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Languages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Go/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/PHP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/JavaScript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/R/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/SQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/YAML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    YAML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Liquid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Liquid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/prolog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    prolog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/RegEx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RegEx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/RISC-V/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RISC-V
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Verilog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verilog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux/Unix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Linux/Unix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MacOS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MacOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/WSL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WSL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Linux%20Package%20Management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux/Unix Package Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/SSH/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Makefile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Makefile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/base64/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    base64
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/ANSI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ANSI Escape Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/PulseAudio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PulseAudio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/tcpdump/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tcpdump
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Gitlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web 101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/RESTful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RESTful
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_3" id="__nav_4_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Static Site Generators
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Static Site Generators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Hugo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hugo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Jekyll/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jekyll
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_4" id="__nav_4_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web Frameworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Web Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Django/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Flask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flask
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Laravel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laravel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_5" id="__nav_4_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Frontend Frameworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Frontend Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/React/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_6" id="__nav_4_5_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/gRPC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gRPC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_6_2" id="__nav_4_5_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mocking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_5_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mocking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/WireMock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WireMock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Databases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/MySQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/PostgreSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PostgreSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Redis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_4" id="__nav_4_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ORM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            ORM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/SQLAlchemy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQLAlchemy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_1" id="__nav_4_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Domain
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Domain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Domain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Cloudfare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloudfare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_2" id="__nav_4_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/AWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/GCP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Heroku/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heroku
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Firebase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Firebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_3" id="__nav_4_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Containerization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Containerization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_4" id="__nav_4_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CICD
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            CICD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/SonarQube/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SonarQube
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Github%20Action/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Action
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/ArgoCD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ArgoCD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_5" id="__nav_4_7_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Monitoring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/Grafana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grafana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CS Career
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CS Career
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#acronyms" class="md-nav__link">
+    <span class="md-ellipsis">
+      acronyms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Websites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-searching-websites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Job Searching Websites
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-posts-or-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good posts or threads
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-portfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building portfolio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building portfolio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      projects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cover-letters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cover letters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interview-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interview preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interview preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mock-interviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mock Interviews
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leetcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      DevOps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interviews
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interviews">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-interviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting interviews
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#online-assessments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Assessments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Online Assessments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codesignal" class="md-nav__link">
+    <span class="md-ellipsis">
+      CodeSignal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavioral-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavioral Questions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-leadership-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Leadership Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qa-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q&amp;A Section
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#posts-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Posts &amp; Threads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tc" class="md-nav__link">
+    <span class="md-ellipsis">
+      TC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offer-negotiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Offer Negotiation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkedin" class="md-nav__link">
+    <span class="md-ellipsis">
+      LinkedIn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      TC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offer-negotiation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      offer negotiation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#company-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Company details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-engineer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Engineer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/System%20Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DSA
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            DSA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Data%20Structure/Data%20Structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Algorithms/Algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software-development/leetcode.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Computer%20Networks/Computer%20Networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Operating%20Systems/Operating%20Systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operating Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Computer%20Architecture/Computer%20Architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Machine%20Learning/Machine%20Learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Electrical Engineering
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Electrical Engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Logic%20Design/Logic%20Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logic Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Circuit/Circuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    電路學
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Electromagnetism/Electromagnetism/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Electromagnetism
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Senior/Power%20Engineering/Power%20Engineering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Economics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Economics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../NTUNotes/Freshman/Microeconomics/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Microeconomics
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Microeconomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch1%20Supply%2C%20Demand%2C%20and%20Equilibrium/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch1 Supply, Demand, and Equilibrium
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch2%20Prices%2C%20Costs%2C%20and%20the%20Gains%20from%20Trade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 Prices, Costs, and the Gains from Trade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch3%20The%20Behavior%20of%20Consumers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 The Behavior of Consumers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch4%20Consumers%20in%20Marketplace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chap 4 Consumers in Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch5%20The%20Behavior%20of%20Firms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 The Behavior of Firms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch6%20Production%20and%20Costs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 Production and Costs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch7%20Competition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch7 Competition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch8%20Welfare%20Economics%20and%20the%20Gains%20from%20Trade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch8 Welfare Economics and the Gains from Trade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch10%20Monopoly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch10 Monopoly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch11%20Market%20Power%2C%20Colusion%2C%20and%20Obligopoly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch11 Market Power, Collusion, and Oligopoly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch12%20Game%20Theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch12 Game Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch13%20Externality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch13 Externality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch14%20Common%20Property%20and%20Public%20Goods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch14 Common Property and Public Goods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch15%20The%20Demand%20for%20Factors%20of%20Production/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch15 The Demand for Factors of Production
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch16%20The%20Market%20of%20Labor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch16 The Market of Labor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch17%20Allocating%20Goods%20Over%20Time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch17 Allocating Goods Over Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch18%20Risk%20and%20Uncertainty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch18 Risk and Uncertainty
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Macroeconomics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Macroeconomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Senior/Principle%20of%20Macroeconomics/Principle%20of%20Macroeconomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principle of Macroeconomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Macroeconomics/Macroeconomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macroeconomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Senior/Statistics/Statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Econometrics/Econometrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Econometrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Money and Banking
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Money and Banking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch1%20%E5%89%8D%E5%B0%8E/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch1 前導
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch2%20%E9%87%91%E8%9E%8D%E9%AB%94%E7%B3%BB%E6%A6%82%E8%A6%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 金融體系概要
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch3%20%E8%B2%A8%E5%B9%A3%E8%88%87%E6%94%AF%E4%BB%98%E7%B3%BB%E7%B5%B1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 貨幣與支付系統
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch4%20%E7%8F%BE%E5%80%BC%E8%88%87%E5%88%A9%E7%8E%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 現值與利率
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch5%20%E5%82%B5%E5%88%B8%E5%B8%82%E5%A0%B4%E8%88%87%E5%88%A9%E7%8E%87%E7%9A%84%E6%B1%BA%E5%AE%9A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 債券市場與利率的決定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch6%20%E5%88%A9%E7%8E%87%E9%A2%A8%E9%9A%AA%E7%B5%90%E6%A7%8B%E5%92%8C%E6%9C%9F%E9%99%90%E7%B5%90%E6%A7%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 利率風險結構和期限結構
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch7%20%E9%87%91%E8%9E%8D%E9%AB%94%E7%B3%BB%E7%9A%84%E7%B6%93%E6%BF%9F%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch7 金融體系的經濟分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch8%20%E9%8A%80%E8%A1%8C%E7%9A%84%E7%B6%93%E7%87%9F%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch8 銀行的經營管理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch9%20%E5%8F%B0%E7%81%A3%E9%8A%80%E8%A1%8C%E6%A5%AD%E7%9A%84%E7%B5%90%E6%A7%8B%E8%88%87%E7%99%BC%E5%B1%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch9 台灣銀行業的結構與發展
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch11%20%E9%87%91%E8%9E%8D%E5%AE%89%E5%85%A8%E7%B6%B2%20%E6%9C%80%E7%B5%82%E5%80%9F%E8%B2%B8%E8%80%85%E8%88%87%E5%AD%98%E6%AC%BE%E4%BF%9D%E9%9A%AA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch11 金融安全網 最終借貸者與存款保險
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch12%20%E9%87%91%E8%9E%8D%E5%AE%89%E5%85%A8%E7%B6%B2%20%E9%87%91%E8%9E%8D%E6%A9%9F%E6%A7%8B%E7%9A%84%E7%AE%A1%E5%88%B6%E8%88%87%E5%AF%A9%E6%85%8E%E7%9B%A3%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch12 金融安全網 金融機構的管制與審慎監理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch13%20%E4%B8%AD%E5%A4%AE%E9%8A%80%E8%A1%8C%E7%9A%84%E5%8A%9F%E8%83%BD%E8%88%87%E6%94%BF%E7%AD%96%E7%9B%AE%E6%A8%99/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch13 中央銀行的功能與政策目標
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch14%20%E9%87%91%E8%9E%8D%E7%A9%A9%E5%AE%9A%E8%88%87%E7%B8%BD%E9%AB%94%E5%AF%A9%E6%85%8E%E6%94%BF%E7%AD%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch14 金融穩定與總體審慎政策
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch15%20%E6%BA%96%E5%82%99%E8%B2%A8%E5%B9%A3%E8%88%87%E8%B2%A8%E5%B9%A3%E7%9A%84%E5%89%B5%E9%80%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch15 準備貨幣與貨幣的創造
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch16%20%E5%82%B3%E7%B5%B1%E8%88%87%E9%9D%9E%E5%82%B3%E7%B5%B1%E7%9A%84%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch16 傳統與非傳統的貨幣政策工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch17%20%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E7%9A%84%E7%9B%AE%E6%A8%99%E6%A9%9F%E5%88%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch17 貨幣政策的目標機制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch18%20%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E7%9A%84%E5%82%B3%E9%81%9E%E6%A9%9F%E5%88%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch18 貨幣政策的傳遞機制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Eurozone/Eurozone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    經濟貨幣整合：歐元區理論與實證
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Industrial%20Organization/Industrial%20Organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industrial Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Senior/International%20Finance/International%20Finance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    International Finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Game Theory
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9">
+            <span class="md-nav__icon md-icon"></span>
+            Game Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Game%20Theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Game Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9_2" id="__nav_7_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Game Theory for Wireless Networks Papers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Game Theory for Wireless Networks Papers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Opportunistic%20Data%20Collection%20in%20Cognitive%20Wireless%20%20Sensor%20Networks%20-%20Air%E2%80%93Ground%20Collaborative%20Online%20Planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opportunistic Data Collection in Cognitive Wireless Sensor Networks - Air–Ground Collaborative Online Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Hung-Yu/Game%20Theory%20for%20Wireless%20Network/privacy-preserving%20incentive%20mechanism%20for%20the%20federated%20cloud-edge%20learning%2C%20PFCEL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#acronyms" class="md-nav__link">
+    <span class="md-ellipsis">
+      acronyms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Websites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-searching-websites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Job Searching Websites
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-posts-or-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good posts or threads
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-portfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building portfolio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building portfolio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      projects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cover-letters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cover letters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interview-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interview preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interview preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mock-interviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mock Interviews
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leetcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      DevOps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interviews
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interviews">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-interviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting interviews
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#online-assessments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Assessments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Online Assessments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codesignal" class="md-nav__link">
+    <span class="md-ellipsis">
+      CodeSignal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavioral-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavioral Questions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-leadership-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Leadership Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qa-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q&amp;A Section
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#posts-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Posts &amp; Threads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tc" class="md-nav__link">
+    <span class="md-ellipsis">
+      TC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offer-negotiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Offer Negotiation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkedin" class="md-nav__link">
+    <span class="md-ellipsis">
+      LinkedIn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      TC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offer-negotiation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      offer negotiation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#company-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Company details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-engineer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Engineer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="cs-career">CS Career<a class="headerlink" href="#cs-career" title="Permanent link">&para;</a></h1>
+<h2 id="acronyms">acronyms<a class="headerlink" href="#acronyms" title="Permanent link">&para;</a></h2>
+<ul>
+<li>OA = online assessment<ul>
+<li>1st stage in applying</li>
+</ul>
+</li>
+<li>HCOL = high cost of living</li>
+<li>job name<ul>
+<li>SDE = software development engineer<ul>
+<li>Microsoft, Amazon</li>
+</ul>
+</li>
+<li>SWE = software engineer<ul>
+<li>Google</li>
+</ul>
+</li>
+<li>SRE = site realiability engineer</li>
+<li>SE = security engineer || system engineer</li>
+</ul>
+</li>
+<li>LC = leetcode</li>
+<li>money<ul>
+<li>RSU = restricted stock unit<ul>
+<li>give you stock over a period</li>
+</ul>
+</li>
+<li>TC = total compensation<ul>
+<li>total equivalence of money you got</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>YoE = years of experience</li>
+<li>WLB<ul>
+<li>work life balance</li>
+</ul>
+</li>
+<li>FAANG<ul>
+<li>Facebook Amazon Apple Netflix Google</li>
+</ul>
+</li>
+<li>PIP = performance improvement plan<ul>
+<li>get PIPed = about to get fired</li>
+</ul>
+</li>
+<li>FTE = full-time employee</li>
+<li>MTS = member of technical staff = SWE</li>
+</ul>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<h3 id="forums">Forums<a class="headerlink" href="#forums" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Blind</li>
+<li>r/cscareerquestions</li>
+<li>r/csmajors</li>
+</ul>
+<h3 id="websites">Websites<a class="headerlink" href="#websites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>company salaries<ul>
+<li><a href="https://www.levels.fyi/">Levels.fyi</a><ul>
+<li>submitted by people</li>
+</ul>
+</li>
+<li><a href="https://www.comprehensive.io/">Comprehensive.io</a><ul>
+<li>scraped from job posts, only base</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>company experience<ul>
+<li><a href="https://www.glassdoor.com/">Glassdoor</a><ul>
+<li>company salaries, reviews, and interviews</li>
+</ul>
+</li>
+<li><a href="https://interview.tw/">interview.tw</a> (Taiwan)</li>
+</ul>
+</li>
+<li>interview questions<ul>
+<li><a href="../../software-development/LeetCode/">LeetCode</a> premium company tagged</li>
+<li><a href="https://www.libaspace.com/questions/">https://www.libaspace.com/questions/</a><ul>
+<li>real interview questions</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>layoffs<ul>
+<li><a href="https://data.usatoday.com/see-which-companies-announced-mass-layoffs-closings/">WARN data</a><ul>
+<li>companies with &gt;100 people are required to notify the government about layoffs 60-day prior</li>
+</ul>
+</li>
+<li><a href="https://layoffs.fyi/">Layoffs.fyi</a><ul>
+<li>layoffs data &amp; stats</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>referrals<ul>
+<li>Blind dm</li>
+<li>rooftopslushie.com (paid)</li>
+</ul>
+</li>
+<li>grinding<ul>
+<li>leetcode</li>
+<li>codewars</li>
+</ul>
+</li>
+<li>every details in the pipeline<ul>
+<li><a href="https://resumeworded.com/playbooks/job-search-checklist">https://resumeworded.com/playbooks/job-search-checklist</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="job-searching-websites">Job Searching Websites<a class="headerlink" href="#job-searching-websites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>LinkedIn</li>
+<li>underdog.io</li>
+<li>triplebyte.com</li>
+<li>Jobot</li>
+<li>startups<ul>
+<li><a href="https://angel.co/jobs">https://angel.co/jobs</a></li>
+<li><a href="https://www.ycombinator.com/jobs">https://www.ycombinator.com/jobs</a></li>
+</ul>
+</li>
+<li>new grads<ul>
+<li>various github repos</li>
+<li><a href="https://simplify.jobs/l/New-Grad-Roles-with-Visa-Sponsorship">https://simplify.jobs/l/New-Grad-Roles-with-Visa-Sponsorship</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="good-posts-or-threads">Good posts or threads<a class="headerlink" href="#good-posts-or-threads" title="Permanent link">&para;</a></h2>
+<ul>
+<li>interview preparation &amp; process<ul>
+<li><a href="https://medium.com/@stevenzhang/how-i-landed-18-faang-software-engineer-offers-after-not-interviewing-for-5-years-fc0dfc957a5d">How I landed 18 FAANG+ software engineer offers after not interviewing for 5 years | Medium</a></li>
+<li><a href="https://www.teamblind.com/post/LZLoXM7t">Cracked 7 Offers. 4 of them are Principal/Staff and 3 Senior. Doubled my TC. (2021) | Blind</a></li>
+<li><a href="https://www.teamblind.com/post/5-interviews-5-offers-zvRTcqoP">5 interviews, 5 offers (2021) | Blind</a></li>
+<li><a href="https://www.reddit.com/r/cscareerquestions/comments/qpxbpg">Review of 2022 New Grad Recruiting Process | r/cscq</a></li>
+</ul>
+</li>
+<li>TC negotiation<ul>
+<li><a href="https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/">Ten Rules for Negotiating a Job Offer</a></li>
+</ul>
+</li>
+<li>台灣狀況<ul>
+<li><a href="https://forum.gamer.com.tw/C.php?bsn=60076&amp;snA=5444020">https://forum.gamer.com.tw/C.php?bsn=60076&amp;snA=5444020</a></li>
+</ul>
+</li>
+<li>resume<ul>
+<li><a href="https://chonyy.medium.com/f1dcb67e4798">https://chonyy.medium.com/f1dcb67e4798</a></li>
+<li><a href="https://www.teamblind.com/post/pQ43s0TA">https://www.teamblind.com/post/pQ43s0TA</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="building-portfolio">Building portfolio<a class="headerlink" href="#building-portfolio" title="Permanent link">&para;</a></h2>
+<h3 id="projects">projects<a class="headerlink" href="#projects" title="Permanent link">&para;</a></h3>
+<ul>
+<li>solve real problems<ul>
+<li>a story behind it</li>
+</ul>
+</li>
+<li>good code structure<ul>
+<li>consistent style</li>
+<li>reusable codes</li>
+<li>maintainable</li>
+</ul>
+</li>
+<li>have docs<ul>
+<li>how to run</li>
+</ul>
+</li>
+<li>deployed as a site, can be easily run<ul>
+<li>ability to deploy and host a site</li>
+</ul>
+</li>
+<li>have dockerfile</li>
+<li>references<ul>
+<li>what a good full stack project need <ul>
+<li><a href="https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwyopk/">https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwyopk/</a></li>
+</ul>
+</li>
+<li>build a site yourself<ul>
+<li><a href="https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwz0dx">https://www.reddit.com/r/cscareerquestions/comments/a6nms2/comment/ebwz0dx</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="resume">Resume<a class="headerlink" href="#resume" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://resumeworded.com/">Resume Worded</a><ul>
+<li>auto resume suggestions</li>
+<li>very comprehensive</li>
+<li>free</li>
+</ul>
+</li>
+<li><a href="https://www.reddit.com/r/cscareerquestions/comments/e8narz">r/cscq resume sharing</a></li>
+<li><a href="https://thetechresume.com/A_Good_Tech_Resume.pdf">A Good Tech Resume | The Pragmatic Engineer </a> (<a href="https://web.archive.org/web/20220520083345/https://thetechresume.com/A_Good_Tech_Resume.pdf">archive</a>)</li>
+<li>templates<ul>
+<li><a href="https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs">Jake's Resume</a></li>
+<li><a href="https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf">Software Engineer Resume</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="cover-letters">Cover letters<a class="headerlink" href="#cover-letters" title="Permanent link">&para;</a></h2>
+<ul>
+<li>templates<ul>
+<li><a href="https://www.overleaf.com/latex/templates/deedy-cover-letter/yhdwrhyvqjwy">Deedy Cover Letter</a></li>
+</ul>
+</li>
+<li><a href="https://resumeworded.com/cover-letters/cover-letter-checklist">https://resumeworded.com/cover-letters/cover-letter-checklist</a></li>
+<li><a href="https://resumegenius.com/cover-letter-examples/software-engineer-cover-letter-sample">https://resumegenius.com/cover-letter-examples/software-engineer-cover-letter-sample</a></li>
+<li><a href="https://www.reddit.com/r/cscareerquestions/comments/2afejd">https://www.reddit.com/r/cscareerquestions/comments/2afejd</a></li>
+</ul>
+<h2 id="interview-preparation">Interview preparation<a class="headerlink" href="#interview-preparation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://techinterviewhandbook.org/">Tech Interview Handbook</a><ul>
+<li>author of Blind 75</li>
+</ul>
+</li>
+<li><a href="#leetcode">#LeetCode</a></li>
+<li>complex personal projects</li>
+<li><a href="#system-design">#System Design</a></li>
+</ul>
+<h3 id="mock-interviews">Mock Interviews<a class="headerlink" href="#mock-interviews" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://interviewing.io/">Interviewing.io</a><ul>
+<li>$225 per interview with pro</li>
+<li>free with peer</li>
+</ul>
+</li>
+<li><a href="https://igotanoffer.com/">IGotAnOffer</a><ul>
+<li><span class="arithmatex">\(100-\)</span>150 per interview with pro</li>
+</ul>
+</li>
+</ul>
+<h3 id="leetcode"><a href="../../software-development/LeetCode/">LeetCode</a><a class="headerlink" href="#leetcode" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU">Blind 75</a></li>
+<li>patterns<ul>
+<li><a href="https://leetcode.com/discuss/career/448285">https://leetcode.com/discuss/career/448285</a></li>
+<li>all questions with various filters (e.g. companies, patterns)<ul>
+<li><a href="https://seanprashad.com/leetcode-patterns/">https://seanprashad.com/leetcode-patterns/</a></li>
+</ul>
+</li>
+<li>By company frequency<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1hzP8j7matoUiJ15N-RhsL5Dmig8_E3aP/edit#gid=1377915986">https://docs.google.com/spreadsheets/d/1hzP8j7matoUiJ15N-RhsL5Dmig8_E3aP/edit#gid=1377915986</a><ul>
+<li>by <a href="https://www.youtube.com/c/DestinationFAANG">https://www.youtube.com/c/DestinationFAANG</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://hackernoon.com/c5bb3357f6ed">https://hackernoon.com/c5bb3357f6ed</a></li>
+<li><a href="https://hn.jeffjadulco.com/29775023">https://hn.jeffjadulco.com/29775023</a></li>
+<li><a href="https://docs.google.com/spreadsheets/u/0/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/">every blind 75 explained</a></li>
+</ul>
+</li>
+<li>Cracking the Coding Interview<ul>
+<li><a href="https://github.com/Avinash987/Coding/blob/master/Cracking-the-Coding-Interview-6th-Edition-189-Programming-Questions-and-Solutions.pdf">pdf link</a></li>
+<li><a href="../cracking.pdf">pdf with my annotations</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="system-design">System Design<a class="headerlink" href="#system-design" title="Permanent link">&para;</a></h3>
+<p>See <a href="../../software-development/System%20Design/">System Design</a></p>
+<h3 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h3>
+<ul>
+<li>threads<ul>
+<li><a href="https://www.reddit.com/r/devops/comments/eo5r1q">https://www.reddit.com/r/devops/comments/eo5r1q</a></li>
+</ul>
+</li>
+<li>question collections<ul>
+<li><a href="https://github.com/bregman-arie/devops-exercises">https://github.com/bregman-arie/devops-exercises</a></li>
+<li>CICD
+     <a href="https://www.fullstack.cafe/blog/15-continuous-integration-interview-questions-in-2018">https://www.fullstack.cafe/blog/15-continuous-integration-interview-questions-in-2018</a></li>
+<li>K8s<ul>
+<li><a href="https://www.fullstack.cafe/blog/kubernetes-interview-questions">https://www.fullstack.cafe/blog/kubernetes-interview-questions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="interviews">Interviews<a class="headerlink" href="#interviews" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.linkedin.com/in/jianbang-xiao/recent-activity/shares/">https://www.linkedin.com/in/jianbang-xiao/recent-activity/shares/</a><ul>
+<li>lots of posts about interview questions</li>
+</ul>
+</li>
+</ul>
+<h3 id="getting-interviews">Getting interviews<a class="headerlink" href="#getting-interviews" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.reddit.com/r/cscareerquestions/comments/uczkay/">https://www.reddit.com/r/cscareerquestions/comments/uczkay/</a></p>
+<h3 id="online-assessments">Online Assessments<a class="headerlink" href="#online-assessments" title="Permanent link">&para;</a></h3>
+<h4 id="codesignal">CodeSignal<a class="headerlink" href="#codesignal" title="Permanent link">&para;</a></h4>
+<p><a href="https://github.com/Leader-board/OA-and-Interviews/blob/main/Online%20Assessments.md#codesignal">https://github.com/Leader-board/OA-and-Interviews/blob/main/Online%20Assessments.md#codesignal</a></p>
+<ul>
+<li>4 questions in 70 min.</li>
+<li>grading<ul>
+<li>purely algorithmic &amp; automatic</li>
+<li>neet to pass all test cases in a problem to get a meaningful score</li>
+</ul>
+</li>
+<li>Q1 &amp; Q2 LC Easy<ul>
+<li>brute force will pass</li>
+</ul>
+</li>
+<li>Q3 implementation style LC Medium<ul>
+<li>brute force will pass</li>
+</ul>
+</li>
+<li>Q4 LC Medium/Hard</li>
+</ul>
+<p><img alt="cs-career-1.png" src="../cs-career-1.png" /></p>
+<h3 id="behavioral-questions">Behavioral Questions<a class="headerlink" href="#behavioral-questions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>resources<ul>
+<li><a href="https://www.productmanagementexercises.com/interview-questions">https://www.productmanagementexercises.com/interview-questions</a></li>
+<li><a href="https://www.linkedin.com/interview-prep/">https://www.linkedin.com/interview-prep/</a></li>
+</ul>
+</li>
+<li>Posts<ul>
+<li><a href="https://leetcode.com/discuss/interview-experience/1532708/tips-for-answering-few-tricky-behavioural-interview-questions">https://leetcode.com/discuss/interview-experience/1532708/tips-for-answering-few-tricky-behavioural-interview-questions</a></li>
+</ul>
+</li>
+<li>nugget<ul>
+<li>summary about the event</li>
+</ul>
+</li>
+<li>STAR method<ul>
+<li>situation</li>
+<li>task</li>
+<li>action</li>
+<li>result</li>
+</ul>
+</li>
+<li><img alt="" src="https://s2.loli.net/2022/01/11/N1g7h4VZbfejpXE.png" /></li>
+</ul>
+<h3 id="amazon-leadership-principles">Amazon Leadership Principles<a class="headerlink" href="#amazon-leadership-principles" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Resources<ul>
+<li><a href="https://www.amazon.jobs/en/principles">official</a></li>
+<li><a href="https://www.scarletink.com/interviewing-at-amazon-leadership-principles/">explanations</a><ul>
+<li>sign up free to view the full article</li>
+</ul>
+</li>
+<li>questions<ul>
+<li><a href="https://www.teamblind.com/post/RiwtSu0o">https://www.teamblind.com/post/RiwtSu0o</a></li>
+</ul>
+</li>
+<li>questions &amp; answers<ul>
+<li><a href="https://www.reddit.com/r/jobsearchhacks/comments/g2iv42">https://www.reddit.com/r/jobsearchhacks/comments/g2iv42</a><ul>
+<li>all related to sales tho</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Tips<ul>
+<li>use STAR format</li>
+<li>each LP has 2 stories (different LPs may share)</li>
+<li><a href="https://www.teamblind.com/post/u8kPJm15">Good leaders understand which principle to prioritize in what situation.</a>   </li>
+<li><a href="https://www.teamblind.com/post/X7uqnVjG">use one LP to explain another LP</a><ul>
+<li>
+<blockquote>
+<p>Best method is using one LP to explain the other, like I Dive Deep because I'm Curious and wanna Learn, or I like to Invent and Simplify because I'm Frugal. Or I take Ownership because I'm Obsessed with the Customer.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Customer Obsession<ul>
+<li>customer is always the most important, even more important than profit</li>
+</ul>
+</li>
+<li>Ownership<ul>
+<li>everthing is your job, it's your job to keep everything running perfectly, even if it's actually not your job</li>
+</ul>
+</li>
+<li>Invent and Simplify<ul>
+<li>you need to have infinite ideas, never say never</li>
+<li>the simpler the better<ul>
+<li>remove &gt; add</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Are Right, A Lot<ul>
+<li>learn from many sources to make your decision<ul>
+<li>past experiences</li>
+<li>others' opinions</li>
+<li>diverse set of perspectives</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Learn and Be Curious<ul>
+<li>open to new things</li>
+</ul>
+</li>
+<li>Hire and Develop the Best<ul>
+<li>treat top performers differently</li>
+<li>step out of comfort zone</li>
+</ul>
+</li>
+<li>Insist on the Highest Standards<ul>
+<li>never be satisfied</li>
+<li>never enough</li>
+<li>fixing the root cause</li>
+<li>always seek to improve</li>
+</ul>
+</li>
+<li>Think Big<ul>
+<li>have impossible &amp; over the top ideas</li>
+<li>practical &amp; realistic ideas are never big enough</li>
+</ul>
+</li>
+<li>Bias for Action<ul>
+<li>take risks</li>
+<li>take quick &amp; bold decisions</li>
+</ul>
+</li>
+<li>Frugality<ul>
+<li>be cheap</li>
+<li>deliver with insufficient resources</li>
+<li>"Invent and Simplify"</li>
+</ul>
+</li>
+<li>Earn Trust<ul>
+<li>related to "what mistakes have you made" type of questions</li>
+<li>self-critical</li>
+<li>admit you're wrong</li>
+<li>share the failure<ul>
+<li>"Ownership"</li>
+</ul>
+</li>
+<li>"Insist on the Highest Standards"</li>
+</ul>
+</li>
+<li>Dive Deep<ul>
+<li>know every detail</li>
+<li>find the root cause</li>
+<li>"Ownership"</li>
+<li>"Insist on the Highest Standards"</li>
+</ul>
+</li>
+<li>Have Backbone; Disagree and Commit<ul>
+<li>"Ownership"</li>
+<li>don't do it because your boss said so</li>
+<li>use data to support your disagreement</li>
+</ul>
+</li>
+<li>Deliver Results<ul>
+<li>"Ownership"</li>
+<li>"Bias for Action"</li>
+<li>"Frugality"</li>
+<li>take calculated risk to deliver the right result in time</li>
+</ul>
+</li>
+<li>Strive to be Earth's Best Employer<ul>
+<li>care about people</li>
+<li>invest in people</li>
+<li>"Hire and Develop the Best"</li>
+</ul>
+</li>
+<li>Success and Scale Bring Broad Responsibility<ul>
+<li>do the right thing</li>
+<li>care not only about business</li>
+<li>"Customer Obsession"</li>
+</ul>
+</li>
+</ul>
+<h3 id="qa-section">Q&amp;A Section<a class="headerlink" href="#qa-section" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://resumeworded.com/interviews/questions-to-ask-interviewer">https://resumeworded.com/interviews/questions-to-ask-interviewer</a></li>
+</ul>
+<h3 id="posts-threads">Posts &amp; Threads<a class="headerlink" href="#posts-threads" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Aggregation<ul>
+<li><a href="https://www.linkedin.com/posts/pratham-kohli_topleetcodeposts-that-you-cannot-miss-activity-6985883736722583553-ucr6">Top LeetCode posts that you cannot miss | LinkedIn</a></li>
+</ul>
+</li>
+<li>Generic<ul>
+<li><a href="https://angelswengineer.medium.com/b9262fccaa2">https://angelswengineer.medium.com/b9262fccaa2</a> </li>
+<li><a href="https://angelswengineer.medium.com/b1a52d97201a">https://angelswengineer.medium.com/b1a52d97201a</a></li>
+</ul>
+</li>
+<li>台灣小公司<ul>
+<li><a href="https://chonyy.medium.com/208b417e8140">https://chonyy.medium.com/208b417e8140</a></li>
+<li><a href="https://www.ptt.cc/bbs/Soft_Job/M.1632988517.A.302.html">https://www.ptt.cc/bbs/Soft_Job/M.1632988517.A.302.html</a></li>
+<li>Umbo CV &amp; Appier<ul>
+<li><a href="https://rain-wu.medium.com/94d514ac576">https://rain-wu.medium.com/94d514ac576</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>台灣大公司<ul>
+<li>大雜燴<ul>
+<li>intern<ul>
+<li><a href="https://chonyy.medium.com/944c81dca809">https://chonyy.medium.com/944c81dca809</a></li>
+<li><a href="https://hackmd.io/@lindaya0913/HkekYB1dPO">https://hackmd.io/@lindaya0913/HkekYB1dPO</a></li>
+<li><a href="https://medium.com/@garychen0975321741/b0df2937036e">https://medium.com/@garychen0975321741/b0df2937036e</a></li>
+</ul>
+</li>
+<li>senior<ul>
+<li><a href="https://angelswengineer.medium.com/92d5c6ba384c">https://angelswengineer.medium.com/92d5c6ba384c</a></li>
+</ul>
+</li>
+<li><a href="https://juihsiuhsu.medium.com/68ee9411e4d1">https://juihsiuhsu.medium.com/68ee9411e4d1</a><ul>
+<li>台大學碩輔資工</li>
+<li><a href="https://www.ptt.cc/bbs/Soft_Job/M.1626282169.A.4BD.html">ptt version</a></li>
+</ul>
+</li>
+<li><a href="https://ptt-life.com/Soft_Job/l/LIFE.M.1622535654.A.079">https://ptt-life.com/Soft_Job/l/LIFE.M.1622535654.A.079</a><ul>
+<li>112 CS 全滅 哭</li>
+</ul>
+</li>
+<li><a href="https://medium.com/@kevin1kevin1k/9906bfeaaecc">https://medium.com/@kevin1kevin1k/9906bfeaaecc</a><ul>
+<li>台大資工學碩</li>
+<li><a href="https://www.ptt.cc/bbs/Soft_Job/M.1628227346.A.7C5.html">ptt version</a></li>
+</ul>
+</li>
+<li><a href="https://louisfghbvc.pixnet.net/blog/post/331156456">https://louisfghbvc.pixnet.net/blog/post/331156456</a><ul>
+<li>學店</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Yahoo<ul>
+<li><a href="https://bookgin.tw/2017/09/02/2017-yahoo-實習心得/">https://bookgin.tw/2017/09/02/2017-yahoo-實習心得/</a></li>
+</ul>
+</li>
+<li>Line<ul>
+<li>Line Pay<ul>
+<li><a href="https://angelswengineer.medium.com/d9c36d28615">https://angelswengineer.medium.com/d9c36d28615</a></li>
+</ul>
+</li>
+<li>Line Tech Fresh<ul>
+<li><a href="https://medium.com/@troychiu/165597015e02">https://medium.com/@troychiu/165597015e02</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Google<ul>
+<li><a href="https://keep-brain-alive.com/taiwan-google-interview-experience/">https://keep-brain-alive.com/taiwan-google-interview-experience/</a></li>
+</ul>
+</li>
+<li>Amazon<ul>
+<li><a href="https://www.dcard.tw/f/job/p/236316977">https://www.dcard.tw/f/job/p/236316977</a></li>
+<li><a href="https://jackkuo.org/post/台灣亞馬遜實習心得/">https://jackkuo.org/post/台灣亞馬遜實習心得/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>FAANG+<ul>
+<li><a href="https://reddit.com/eitna9">https://reddit.com/eitna9</a> (removed)<ul>
+<li>all FAAMG detailed interview process </li>
+<li><a href="https://www.unddit.com/r/cscareerquestions/comments/eitna9/processes_at_each_company_at_least_what_i_remember/">uddit archive</a></li>
+<li><a href="https://camas.github.io/reddit-search/#{&quot;author&quot;:&quot;d2k9000&quot;,&quot;subreddit&quot;:&quot;cscareerquestions&quot;,&quot;searchFor&quot;:1,&quot;resultSize&quot;:100,&quot;query&quot;:&quot;Processes&quot;}">camas archive</a></li>
+</ul>
+</li>
+<li>Facebook<ul>
+<li><a href="https://angelswengineer.medium.com/32fe51382005">https://angelswengineer.medium.com/32fe51382005</a> (幹話)</li>
+</ul>
+</li>
+<li>Amazon behavioral questions (Leadership Principles)<ul>
+<li><a href="https://www.reddit.com/r/jobsearchhacks/comments/g2iv42">https://www.reddit.com/r/jobsearchhacks/comments/g2iv42</a></li>
+</ul>
+</li>
+<li><a href="https://www.ptt.cc/bbs/Soft_Job/M.1656312014.A.7C6.html">https://www.ptt.cc/bbs/Soft_Job/M.1656312014.A.7C6.html</a></li>
+<li>Microsoft Onsite Questions<ul>
+<li><a href="https://leetcode.com/discuss/general-discussion/1893215/">https://leetcode.com/discuss/general-discussion/1893215/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Offers<ul>
+<li><a href="https://www.teamblind.com/post/hLE5CRYQ">https://www.teamblind.com/post/hLE5CRYQ</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="tc">TC<a class="headerlink" href="#tc" title="Permanent link">&para;</a></h2>
+<p>Check <a href="https://www.levels.fyi/">https://www.levels.fyi/</a></p>
+<h3 id="offer-negotiation">Offer Negotiation<a class="headerlink" href="#offer-negotiation" title="Permanent link">&para;</a></h3>
+<p><strong>knowledge</strong></p>
+<ul>
+<li>they have already invested thousands of dollars on you during the whole process</li>
+<li>they will never walk away because of you asking too high or asking to delay the deadline</li>
+<li>recruiters don't get rewarded from lowballing you</li>
+</ul>
+<p><strong>tips</strong></p>
+<ul>
+<li>deflect during call and do actual negotiations in email</li>
+<li>ask for written offer, or write down discussed numbers and ask for confirmation in email</li>
+</ul>
+<p><strong>resources</strong></p>
+<ul>
+<li><a href="https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/">Ten Rules for Negotiating a Job Offer | haseeb qureshi</a></li>
+<li><a href="https://www.youtube.com/watch?v=fyn0CKPuPlA">How to Negotiate Your Tech Salary Simulation ft. Levels.fyi | YouTube</a></li>
+<li><a href="https://www.youtube.com/watch?v=sJ5Shzq68Ac">Everything I Learned to Negotiate Your Salary 💸💸 | YouTube</a></li>
+<li><a href="https://www.youtube.com/watch?v=5pNZw92CCAo">42 Minutes of $10m Salary Negotiation Advice (From A Sr. Director In Tech) | YouTube</a></li>
+</ul>
+<h2 id="linkedin">LinkedIn<a class="headerlink" href="#linkedin" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Skill assessment answers<ul>
+<li><a href="https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes">https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes</a></li>
+</ul>
+</li>
+<li>chrome extension for displaying YoE needed for jobs<ul>
+<li><a href="https://chromewebstore.google.com/detail/add-exp-for-linkedin/kjjmadhfcibknloppnmaaaeoccdgdfha">https://chromewebstore.google.com/detail/add-exp-for-linkedin/kjjmadhfcibknloppnmaaaeoccdgdfha</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="tc_1">TC<a class="headerlink" href="#tc_1" title="Permanent link">&para;</a></h2>
+<h3 id="offer-negotiation_1">offer negotiation<a class="headerlink" href="#offer-negotiation_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/">Ten Rules for Negotiating a Job Offer | Haseeb</a></li>
+<li><a href="https://www.youtube.com/watch?v=fyn0CKPuPlA">How to Negotiate Your Tech Salary Simulation ft. Levels.fyi | YouTube</a></li>
+</ul>
+<h2 id="company-details">Company details<a class="headerlink" href="#company-details" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://prestigehunt.com/">"Prestige Hunt"</a></li>
+<li>WLB<ul>
+<li>threads<ul>
+<li><a href="https://www.teamblind.com/post/Data-on-WLB-and-job-security-from-polls-on-FAANG-other-large-tech-companies-[x-post]-74bA5ySP">FAANG+ WLB | Blind</a></li>
+<li><a href="https://www.teamblind.com/post/My-2022-WLB-company-rankings-6NiXQBEJ">My 2022 WLB company rankings | Blind</a></li>
+</ul>
+</li>
+<li>team dependent</li>
+<li>good WLB<ul>
+<li>Google</li>
+<li>Salesforce</li>
+<li>Microsoft</li>
+<li>Jane Street</li>
+<li>American Express</li>
+</ul>
+</li>
+<li>bad WLB<ul>
+<li>Amazon</li>
+<li>Meta</li>
+<li>Citadel</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="security-engineer">Security Engineer<a class="headerlink" href="#security-engineer" title="Permanent link">&para;</a></h2>
+<ul>
+<li>TC<ul>
+<li><a href="https://www.teamblind.com/post/Security-Engineer-Salary-Ceiling-1BosMpUc">https://www.teamblind.com/post/Security-Engineer-Salary-Ceiling-1BosMpUc</a></li>
+</ul>
+</li>
+<li>Interviews<ul>
+<li><a href="https://www.teamblind.com/post/LyANPVE6">https://www.teamblind.com/post/LyANPVE6</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.derricklin.net" target="_blank" rel="noopener" title="www.derricklin.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M244 246c-3.2-2-6.3-2.9-10.1-2.9-6.6 0-12.6 3.2-19.3 3.7l1.7 4.9zm135.9 197.9c-19 0-64.1 9.5-79.9 19.8l6.9 45.1c35.7 6.1 70.1 3.6 106-9.8-4.8-10-23.5-55.1-33-55.1zM340.8 177c6.6 2.8 11.5 9.2 22.7 22.1 2-1.4 7.5-5.2 7.5-8.6 0-4.9-11.8-13.2-13.2-23 11.2-5.7 25.2-6 37.6-8.9 68.1-16.4 116.3-52.9 146.8-116.7C548.3 29.3 554 16.1 554.6 2l-2 2.6c-28.4 50-33 63.2-81.3 100-31.9 24.4-69.2 40.2-106.6 54.6l-6.3-.3v-21.8c-19.6 1.6-19.7-14.6-31.6-23-18.7 20.6-31.6 40.8-58.9 51.1-12.7 4.8-19.6 10-25.9 21.8 34.9-16.4 91.2-13.5 98.8-10zM555.5 0l-.6 1.1-.3.9.6-.6zm-59.2 382.1c-33.9-56.9-75.3-118.4-150-115.5l-.3-6c-1.1-13.5 32.8 3.2 35.1-31l-14.4 7.2c-19.8-45.7-8.6-54.3-65.5-54.3-14.7 0-26.7 1.7-41.4 4.6 2.9 18.6 2.2 36.7-10.9 50.3l19.5 5.5c-1.7 3.2-2.9 6.3-2.9 9.8 0 21 42.8 2.9 42.8 33.6 0 18.4-36.8 60.1-54.9 60.1-8 0-53.7-50-53.4-60.1l.3-4.6 52.3-11.5c13-2.6 12.3-22.7-2.9-22.7-3.7 0-43.1 9.2-49.4 10.6-2-5.2-7.5-14.1-13.8-14.1-3.2 0-6.3 3.2-9.5 4-9.2 2.6-31 2.9-21.5 20.1L15.9 298.5c-5.5 1.1-8.9 6.3-8.9 11.8 0 6 5.5 10.9 11.5 10.9 8 0 131.3-28.4 147.4-32.2 2.6 3.2 4.6 6.3 7.8 8.6 20.1 14.4 59.8 85.9 76.4 85.9 24.1 0 58-22.4 71.3-41.9 3.2-4.3 6.9-7.5 12.4-6.9.6 13.8-31.6 34.2-33 43.7-1.4 10.2-1 35.2-.3 41.1 26.7 8.1 52-3.6 77.9-2.9 4.3-21 10.6-41.9 9.8-63.5l-.3-9.5c-1.4-34.2-10.9-38.5-34.8-58.6-1.1-1.1-2.6-2.6-3.7-4 2.2-1.4 1.1-1 4.6-1.7 88.5 0 56.3 183.6 111.5 229.9 33.1-15 72.5-27.9 103.5-47.2-29-25.6-52.6-45.7-72.7-79.9zm-196.2 46.1v27.2l11.8-3.4-2.9-23.8zm-68.7-150.4 24.1 61.2 21-13.8-31.3-50.9zm84.4 154.9 2 12.4c9-1.5 58.4-6.6 58.4-14.1 0-1.4-.6-3.2-.9-4.6-26.8 0-36.9 3.8-59.5 6.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://blog.derricklin.net" target="_blank" rel="noopener" title="blog.derricklin.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/derrick-lin" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dlccyes" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.indexes", "toc.follow", "search.suggest"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../assets/script.js"></script>
+      
+        <script src="../../assets/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

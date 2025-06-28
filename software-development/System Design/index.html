@@ -1,0 +1,8407 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../OtherNotes/CS%20Career/">
+      
+      
+        <link rel="next" href="../../NTUNotes/Sophomore/Data%20Structure/Data%20Structure/">
+      
+      
+      <link rel="icon" href="../../assets/roshar-green-trans.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>System Design - El Mundo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-GC9K2DFK9F"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-GC9K2DFK9F",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-GC9K2DFK9F",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#system-design" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="El Mundo" class="md-header__button md-logo" aria-label="El Mundo" data-md-component="logo">
+      
+  <img src="../../assets/roshar-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            El Mundo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              System Design
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dlccyes/CollegeNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../OtherNotes/sitemap/" class="md-tabs__link">
+          
+  
+    
+  
+  Meta
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Sniffing%20Packets%20from%20Wireless%20Networks/" class="md-tabs__link">
+          
+  
+    
+  
+  Posts
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Programming%20101/" class="md-tabs__link">
+          
+  
+    
+  
+  Software Development
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../OtherNotes/CS%20Career/" class="md-tabs__link">
+          
+  
+    
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../NTUNotes/Freshman/Logic%20Design/Logic%20Design/" class="md-tabs__link">
+          
+  
+    
+  
+  Electrical Engineering
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../NTUNotes/Freshman/Microeconomics/" class="md-tabs__link">
+          
+  
+    
+  
+  Economics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="El Mundo" class="md-nav__button md-logo" aria-label="El Mundo" data-md-component="logo">
+      
+  <img src="../../assets/roshar-white.png" alt="logo">
+
+    </a>
+    El Mundo
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dlccyes/CollegeNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Meta
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Meta
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OtherNotes/sitemap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sitemap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Posts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Systems and Networking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Systems and Networking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sniffing%20Packets%20from%20Wireless%20Networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sniffing Packets from Wireless Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../restore%20usb%20bootable%20disk%20to%20normal%20disk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Restore a usb bootable disk to normal disk in Win10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gitlab%20CICD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab CICD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GCP%20CICD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCP CICD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Software Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programming%20101/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming 101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Languages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Go/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PHP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JavaScript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../R/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../YAML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    YAML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Liquid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Liquid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prolog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    prolog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RegEx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RegEx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RISC-V/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RISC-V
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Verilog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verilog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux/Unix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Linux/Unix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OtherNotes/MacOS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MacOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WSL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WSL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux%20Package%20Management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux/Unix Package Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SSH/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Makefile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Makefile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base64/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    base64
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ANSI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ANSI Escape Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PulseAudio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PulseAudio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tcpdump/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tcpdump
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gitlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web 101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESTful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RESTful
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_3" id="__nav_4_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Static Site Generators
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Static Site Generators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hugo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hugo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Jekyll/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jekyll
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_4" id="__nav_4_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web Frameworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Web Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Django/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flask
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Laravel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laravel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_5" id="__nav_4_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Frontend Frameworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Frontend Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_6" id="__nav_4_5_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gRPC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gRPC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_6_2" id="__nav_4_5_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mocking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_5_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mocking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WireMock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WireMock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Databases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MySQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PostgreSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PostgreSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Redis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_4" id="__nav_4_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ORM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            ORM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SQLAlchemy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQLAlchemy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_1" id="__nav_4_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Domain
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Domain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Domain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cloudfare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloudfare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_2" id="__nav_4_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GCP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Heroku/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heroku
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Firebase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Firebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_3" id="__nav_4_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Containerization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Containerization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_4" id="__nav_4_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CICD
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            CICD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SonarQube/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SonarQube
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Github%20Action/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Action
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ArgoCD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ArgoCD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_5" id="__nav_4_7_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Monitoring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Grafana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grafana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OtherNotes/CS%20Career/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CS Career
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    System Design
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    System Design
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#newsletters-blogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      newsletters / blogs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-characteristics-of-a-distributed-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Characteristics of a Distributed System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Characteristics of a Distributed System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consistency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consistency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strong-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      strong consistency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weak-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      weak consistency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventual-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      eventual consistency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-your-writes-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      read-your-writes consistency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monotonic-reads" class="md-nav__link">
+    <span class="md-ellipsis">
+      monotonic reads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scaling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vertical-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vertical Scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horizontal-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Horizontal Scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-data-centers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi Data Centers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#networking-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Networking Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintenability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maintenability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplicity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-to-many-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      One-to-Many Relationship
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#many-to-one-many-to-many-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      Many-to-One &amp; Many-to-Many Relationship
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acid" class="md-nav__link">
+    <span class="md-ellipsis">
+      ACID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cap" class="md-nav__link">
+    <span class="md-ellipsis">
+      CAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primary-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Index
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-hierarchical-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Hierarchical Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Handling Hierarchical Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjacency-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjacency List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lineage-column-path-enumeration-materialized-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lineage Column / Path Enumeration / Materialized Path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closure-table-bridge-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closure Table / Bridge Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#federation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Federation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#denormalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Denormalization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storing-passwords-in-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storing passwords in the database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cqrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      CQRS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      NoSQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NoSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base" class="md-nav__link">
+    <span class="md-ellipsis">
+      BASE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wide-column-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wide Column Store
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Replication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leader-based-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leader-Based Replication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leader-Based Replication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#replication-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      replication methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-follower" class="md-nav__link">
+    <span class="md-ellipsis">
+      adding a new follower
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failover" class="md-nav__link">
+    <span class="md-ellipsis">
+      failover
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-leader-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Leader Replication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaderless-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leaderless Replication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leaderless Replication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quorums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quorums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolving-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolving conflicts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolving conflicts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-vector-vector-clocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      version vector / vector clocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last-write-wins" class="md-nav__link">
+    <span class="md-ellipsis">
+      last write wins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling failures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sharding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sharding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#range-based-sharding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range Based Sharding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertical-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vertical Partitioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyhash-based-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key/Hash-Based Partitioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directory-based-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory-Based Partitioning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-balancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Load Balancing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Load Balancing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-balancer-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      load balancer features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-balancing-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      load balancing layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-of-adding-new-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost of adding new servers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistent-hashing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consistent Hashing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributed-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributed Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distributed Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-limiter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rate Limiter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rate Limiter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      motivation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      placement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    <span class="md-ellipsis">
+      design
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unique-id-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unique ID Generator
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unique ID Generator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-leader-replication-auto-increment" class="md-nav__link">
+    <span class="md-ellipsis">
+      #Multi-Leader Replication auto increment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uuid" class="md-nav__link">
+    <span class="md-ellipsis">
+      UUID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticket-server-flickr" class="md-nav__link">
+    <span class="md-ellipsis">
+      ticket server (Flickr)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snowflake-twitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snowflake (Twitter)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-value-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key-Value Store
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key-Value Store">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      single server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distributed-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      distributed server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advantages-of-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages of caching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-memory-cache-vs-global-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      In-memory cache vs. global cache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-population-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache Population Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-eviction-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache Eviction Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      CDN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async" class="md-nav__link">
+    <span class="md-ellipsis">
+      Async
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Async">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-queues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Queues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Queues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scaling_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#back-pressure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Back Pressure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microservices-vs-monolith" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microservices vs. Monolith
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microservices vs. Monolith">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bad-microservices-design-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bad microservices design examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapreduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      MapReduce
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stream-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stream Processing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DSA
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            DSA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Data%20Structure/Data%20Structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Algorithms/Algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leetcode.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Computer%20Networks/Computer%20Networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Operating%20Systems/Operating%20Systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operating Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Computer%20Architecture/Computer%20Architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Machine%20Learning/Machine%20Learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Electrical Engineering
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Electrical Engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Logic%20Design/Logic%20Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logic Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Circuit/Circuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    電路學
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Electromagnetism/Electromagnetism/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Electromagnetism
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Senior/Power%20Engineering/Power%20Engineering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Economics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Economics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../NTUNotes/Freshman/Microeconomics/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Microeconomics
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Microeconomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch1%20Supply%2C%20Demand%2C%20and%20Equilibrium/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch1 Supply, Demand, and Equilibrium
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch2%20Prices%2C%20Costs%2C%20and%20the%20Gains%20from%20Trade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 Prices, Costs, and the Gains from Trade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch3%20The%20Behavior%20of%20Consumers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 The Behavior of Consumers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch4%20Consumers%20in%20Marketplace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chap 4 Consumers in Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch5%20The%20Behavior%20of%20Firms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 The Behavior of Firms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch6%20Production%20and%20Costs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 Production and Costs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch7%20Competition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch7 Competition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch8%20Welfare%20Economics%20and%20the%20Gains%20from%20Trade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch8 Welfare Economics and the Gains from Trade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch10%20Monopoly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch10 Monopoly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch11%20Market%20Power%2C%20Colusion%2C%20and%20Obligopoly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch11 Market Power, Collusion, and Oligopoly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch12%20Game%20Theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch12 Game Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch13%20Externality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch13 Externality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch14%20Common%20Property%20and%20Public%20Goods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch14 Common Property and Public Goods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch15%20The%20Demand%20for%20Factors%20of%20Production/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch15 The Demand for Factors of Production
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch16%20The%20Market%20of%20Labor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch16 The Market of Labor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch17%20Allocating%20Goods%20Over%20Time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch17 Allocating Goods Over Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Microeconomics/Ch18%20Risk%20and%20Uncertainty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch18 Risk and Uncertainty
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Macroeconomics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Macroeconomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Senior/Principle%20of%20Macroeconomics/Principle%20of%20Macroeconomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principle of Macroeconomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Macroeconomics/Macroeconomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macroeconomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Senior/Statistics/Statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Econometrics/Econometrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Econometrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Money and Banking
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Money and Banking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch1%20%E5%89%8D%E5%B0%8E/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch1 前導
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch2%20%E9%87%91%E8%9E%8D%E9%AB%94%E7%B3%BB%E6%A6%82%E8%A6%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 金融體系概要
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch3%20%E8%B2%A8%E5%B9%A3%E8%88%87%E6%94%AF%E4%BB%98%E7%B3%BB%E7%B5%B1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 貨幣與支付系統
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch4%20%E7%8F%BE%E5%80%BC%E8%88%87%E5%88%A9%E7%8E%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 現值與利率
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch5%20%E5%82%B5%E5%88%B8%E5%B8%82%E5%A0%B4%E8%88%87%E5%88%A9%E7%8E%87%E7%9A%84%E6%B1%BA%E5%AE%9A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 債券市場與利率的決定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch6%20%E5%88%A9%E7%8E%87%E9%A2%A8%E9%9A%AA%E7%B5%90%E6%A7%8B%E5%92%8C%E6%9C%9F%E9%99%90%E7%B5%90%E6%A7%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 利率風險結構和期限結構
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch7%20%E9%87%91%E8%9E%8D%E9%AB%94%E7%B3%BB%E7%9A%84%E7%B6%93%E6%BF%9F%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch7 金融體系的經濟分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch8%20%E9%8A%80%E8%A1%8C%E7%9A%84%E7%B6%93%E7%87%9F%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch8 銀行的經營管理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch9%20%E5%8F%B0%E7%81%A3%E9%8A%80%E8%A1%8C%E6%A5%AD%E7%9A%84%E7%B5%90%E6%A7%8B%E8%88%87%E7%99%BC%E5%B1%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch9 台灣銀行業的結構與發展
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch11%20%E9%87%91%E8%9E%8D%E5%AE%89%E5%85%A8%E7%B6%B2%20%E6%9C%80%E7%B5%82%E5%80%9F%E8%B2%B8%E8%80%85%E8%88%87%E5%AD%98%E6%AC%BE%E4%BF%9D%E9%9A%AA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch11 金融安全網 最終借貸者與存款保險
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch12%20%E9%87%91%E8%9E%8D%E5%AE%89%E5%85%A8%E7%B6%B2%20%E9%87%91%E8%9E%8D%E6%A9%9F%E6%A7%8B%E7%9A%84%E7%AE%A1%E5%88%B6%E8%88%87%E5%AF%A9%E6%85%8E%E7%9B%A3%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch12 金融安全網 金融機構的管制與審慎監理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch13%20%E4%B8%AD%E5%A4%AE%E9%8A%80%E8%A1%8C%E7%9A%84%E5%8A%9F%E8%83%BD%E8%88%87%E6%94%BF%E7%AD%96%E7%9B%AE%E6%A8%99/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch13 中央銀行的功能與政策目標
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch14%20%E9%87%91%E8%9E%8D%E7%A9%A9%E5%AE%9A%E8%88%87%E7%B8%BD%E9%AB%94%E5%AF%A9%E6%85%8E%E6%94%BF%E7%AD%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch14 金融穩定與總體審慎政策
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch15%20%E6%BA%96%E5%82%99%E8%B2%A8%E5%B9%A3%E8%88%87%E8%B2%A8%E5%B9%A3%E7%9A%84%E5%89%B5%E9%80%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch15 準備貨幣與貨幣的創造
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch16%20%E5%82%B3%E7%B5%B1%E8%88%87%E9%9D%9E%E5%82%B3%E7%B5%B1%E7%9A%84%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch16 傳統與非傳統的貨幣政策工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch17%20%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E7%9A%84%E7%9B%AE%E6%A8%99%E6%A9%9F%E5%88%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch17 貨幣政策的目標機制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Sophomore/Money%20and%20Banking/Ch18%20%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E7%9A%84%E5%82%B3%E9%81%9E%E6%A9%9F%E5%88%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch18 貨幣政策的傳遞機制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Freshman/Eurozone/Eurozone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    經濟貨幣整合：歐元區理論與實證
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Junior/Industrial%20Organization/Industrial%20Organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industrial Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Senior/International%20Finance/International%20Finance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    International Finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Game Theory
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9">
+            <span class="md-nav__icon md-icon"></span>
+            Game Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Game%20Theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Game Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9_2" id="__nav_7_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Game Theory for Wireless Networks Papers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Game Theory for Wireless Networks Papers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Opportunistic%20Data%20Collection%20in%20Cognitive%20Wireless%20%20Sensor%20Networks%20-%20Air%E2%80%93Ground%20Collaborative%20Online%20Planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opportunistic Data Collection in Cognitive Wireless Sensor Networks - Air–Ground Collaborative Online Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NTUNotes/Hung-Yu/Game%20Theory%20for%20Wireless%20Network/privacy-preserving%20incentive%20mechanism%20for%20the%20federated%20cloud-edge%20learning%2C%20PFCEL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#newsletters-blogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      newsletters / blogs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-characteristics-of-a-distributed-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Characteristics of a Distributed System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Characteristics of a Distributed System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consistency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consistency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strong-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      strong consistency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weak-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      weak consistency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventual-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      eventual consistency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-your-writes-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      read-your-writes consistency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monotonic-reads" class="md-nav__link">
+    <span class="md-ellipsis">
+      monotonic reads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scaling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vertical-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vertical Scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horizontal-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Horizontal Scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-data-centers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi Data Centers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#networking-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Networking Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintenability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maintenability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplicity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-to-many-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      One-to-Many Relationship
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#many-to-one-many-to-many-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      Many-to-One &amp; Many-to-Many Relationship
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acid" class="md-nav__link">
+    <span class="md-ellipsis">
+      ACID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cap" class="md-nav__link">
+    <span class="md-ellipsis">
+      CAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primary-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Index
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-hierarchical-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Hierarchical Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Handling Hierarchical Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjacency-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjacency List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lineage-column-path-enumeration-materialized-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lineage Column / Path Enumeration / Materialized Path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closure-table-bridge-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closure Table / Bridge Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#federation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Federation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#denormalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Denormalization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storing-passwords-in-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storing passwords in the database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cqrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      CQRS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      NoSQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NoSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base" class="md-nav__link">
+    <span class="md-ellipsis">
+      BASE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wide-column-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wide Column Store
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Replication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leader-based-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leader-Based Replication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leader-Based Replication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#replication-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      replication methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-follower" class="md-nav__link">
+    <span class="md-ellipsis">
+      adding a new follower
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failover" class="md-nav__link">
+    <span class="md-ellipsis">
+      failover
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-leader-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Leader Replication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaderless-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leaderless Replication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leaderless Replication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quorums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quorums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolving-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolving conflicts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolving conflicts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-vector-vector-clocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      version vector / vector clocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last-write-wins" class="md-nav__link">
+    <span class="md-ellipsis">
+      last write wins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling failures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sharding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sharding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#range-based-sharding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range Based Sharding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertical-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vertical Partitioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyhash-based-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key/Hash-Based Partitioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directory-based-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory-Based Partitioning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-balancing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Load Balancing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Load Balancing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-balancer-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      load balancer features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-balancing-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      load balancing layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-of-adding-new-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost of adding new servers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consistent-hashing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consistent Hashing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributed-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributed Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distributed Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-limiter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rate Limiter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rate Limiter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      motivation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      placement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    <span class="md-ellipsis">
+      design
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unique-id-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unique ID Generator
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unique ID Generator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-leader-replication-auto-increment" class="md-nav__link">
+    <span class="md-ellipsis">
+      #Multi-Leader Replication auto increment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uuid" class="md-nav__link">
+    <span class="md-ellipsis">
+      UUID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticket-server-flickr" class="md-nav__link">
+    <span class="md-ellipsis">
+      ticket server (Flickr)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snowflake-twitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snowflake (Twitter)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-value-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key-Value Store
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key-Value Store">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      single server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distributed-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      distributed server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advantages-of-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages of caching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-memory-cache-vs-global-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      In-memory cache vs. global cache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-population-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache Population Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-eviction-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache Eviction Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      CDN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async" class="md-nav__link">
+    <span class="md-ellipsis">
+      Async
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Async">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-queues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Queues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Queues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scaling_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#back-pressure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Back Pressure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microservices-vs-monolith" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microservices vs. Monolith
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microservices vs. Monolith">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bad-microservices-design-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bad microservices design examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapreduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      MapReduce
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stream-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stream Processing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="system-design">System Design<a class="headerlink" href="#system-design" title="Permanent link">&para;</a></h1>
+<p>Case Studies: <a href="../System%20Design%20Interview/">System Design Interview</a></p>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Draw charts: <a href="https://miro.com/">Miro</a></li>
+<li>Draw relational schemas: <a href="https://drawsql.app/">Draw.sql</a></li>
+</ul>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://gist.github.com/vasanthk/485d1c25737e8e72759f">System Design Cheatsheet</a><ul>
+<li>study guide</li>
+</ul>
+</li>
+<li><a href="https://github.com/donnemartin/system-design-primer">System Design Primer</a><ul>
+<li>more detailed study guide</li>
+</ul>
+</li>
+<li><a href="https://github.com/mukul96/System-Design-AlexXu/blob/master/System%20Design%20Interview%20An%20Insider%E2%80%99s%20Guide%20by%20Alex%20Xu%20(z-lib.org).pdf">System Design Interview An Insider’s Guide by Alex Xu.pdf</a><ul>
+<li>a tutorial on system design interviews</li>
+<li>13 problems</li>
+</ul>
+</li>
+<li>DDIA (2017)<ul>
+<li>a textbook for system design</li>
+<li><a href="https://github.com/samayun/devbooks/blob/master/Designing%20Data-Intensive%20Applications%20The%20Big%20Ideas%20Behind%20Reliable%2C%20Scalable%2C%20and%20Maintainable%20Systems%20(%20PDFDrive%20).pdf">DDIA pdf | github</a></li>
+<li><a href="https://libgen.is/book/index.php?md5=BF7C3FECFE5DCFFCEB170B2AA6D34C31">DDIA pdf | libgen</a></li>
+</ul>
+</li>
+<li>Grokking the System Design Interview<ul>
+<li><a href="https://raw.githubusercontent.com/sharanyaa/grok_sdi_educative/master/grok_system_design_interview.pdf">pdf | github</a></li>
+<li><a href="http://libgen.rs/book/index.php?md5=3CC8A0D02BBB0644A3839F6B621BB86B">pdf | libgen</a></li>
+<li><a href="https://www.designgurus.io/course/grokking-the-system-design-interview">Design Guru paid course</a></li>
+<li><a href="https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers">Educative.io paid course</a></li>
+</ul>
+</li>
+<li><a href="https://www.youtube.com/playlist?app=desktop&amp;list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX">Gaurav System Design Playlist | Youtube</a></li>
+<li><a href="https://www.youtube.com/@tryexponent">Exponent | Youtube</a></li>
+<li><a href="https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view">Problems Aggretation</a><ul>
+<li>from <a href="https://leetcode.com/discuss/interview-question/system-design/1205825">https://leetcode.com/discuss/interview-question/system-design/1205825</a></li>
+</ul>
+</li>
+<li><a href="https://drawsql.app/templates/popular">Database Schema Templates</a></li>
+</ul>
+<h3 id="newsletters-blogs">newsletters / blogs<a class="headerlink" href="#newsletters-blogs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The Pragmatic Engineer</li>
+<li>Quastor</li>
+</ul>
+<h2 id="key-characteristics-of-a-distributed-system">Key Characteristics of a Distributed System<a class="headerlink" href="#key-characteristics-of-a-distributed-system" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#scaling">Scalability</a></li>
+<li>Reliability</li>
+<li>Availability</li>
+<li>Efficiency</li>
+<li><a href="#maintenability">#Maintenability</a></li>
+</ul>
+<h3 id="consistency">Consistency<a class="headerlink" href="#consistency" title="Permanent link">&para;</a></h3>
+<h4 id="strong-consistency">strong consistency<a class="headerlink" href="#strong-consistency" title="Permanent link">&para;</a></h4>
+<p>guaranteed to read the latest data</p>
+<h4 id="weak-consistency">weak consistency<a class="headerlink" href="#weak-consistency" title="Permanent link">&para;</a></h4>
+<p>not guaranteed to read the latest data</p>
+<h4 id="eventual-consistency">eventual consistency<a class="headerlink" href="#eventual-consistency" title="Permanent link">&para;</a></h4>
+<p>if no new input, all replicas will eventually have the latest data</p>
+<h4 id="read-your-writes-consistency">read-your-writes consistency<a class="headerlink" href="#read-your-writes-consistency" title="Permanent link">&para;</a></h4>
+<ul>
+<li>after a user updating its own stuff, it should be able to see the updates</li>
+<li>can be achieve by reading the user's profile from leader and other stuff from followers</li>
+</ul>
+<h4 id="monotonic-reads">monotonic reads<a class="headerlink" href="#monotonic-reads" title="Permanent link">&para;</a></h4>
+<ul>
+<li>read<span class="arithmatex">\(_t\)</span> should retrieves a later state than read<span class="arithmatex">\(_{t-1}\)</span></li>
+<li>can be achieved by each user always reads from the same replica<ul>
+<li>can be achieved by ranged based <a href="#load-balancing">#load balancing</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="scaling">Scaling<a class="headerlink" href="#scaling" title="Permanent link">&para;</a></h2>
+<h3 id="vertical-scaling">Vertical Scaling<a class="headerlink" href="#vertical-scaling" title="Permanent link">&para;</a></h3>
+<p>make a server bigger &amp; stronger</p>
+<ul>
+<li>pros<ul>
+<li>fast inter-process communication</li>
+<li>data consistent</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>single point of failure<ul>
+<li>only 1 server -&gt; no failover &amp; redundancy</li>
+</ul>
+</li>
+<li>hardware limit</li>
+<li>expensive</li>
+</ul>
+</li>
+</ul>
+<h3 id="horizontal-scaling">Horizontal Scaling<a class="headerlink" href="#horizontal-scaling" title="Permanent link">&para;</a></h3>
+<p>add more servers</p>
+<ul>
+<li>pros<ul>
+<li>scale well</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>slow inter-process communication<ul>
+<li>need RPC between machines</li>
+</ul>
+</li>
+<li>need load-balancing</li>
+<li>data inconsistency</li>
+</ul>
+</li>
+</ul>
+<h3 id="multi-data-centers">Multi Data Centers<a class="headerlink" href="#multi-data-centers" title="Permanent link">&para;</a></h3>
+<p>To scale internationally, we can have data centers across the globe.</p>
+<p><img alt="sys-des-geo-dc.jpg" src="../sys-des-geo-dc.jpg" /></p>
+<p>challenges</p>
+<ul>
+<li>traffic redirection<ul>
+<li>use geoDNS to resolve domain names -&gt; IP addresses based on the user's location to point to the best data center</li>
+</ul>
+</li>
+<li>data sync<ul>
+<li><a href="#multi-leader-replication">#Multi-Leader Replication</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h2>
+<ul>
+<li>the performance of the 99.9th percentile is the most important<ul>
+<li>slow requests -&gt; have many data -&gt; valuable customer</li>
+<li>Amazon:<ul>
+<li>
+<ul>
+<li>100ms -&gt; -1% revenue</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>1s -&gt; -16% revenue</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>service level agreements (SLAs)<ul>
+<li>service is up when <ul>
+<li>median &lt; 200ms</li>
+<li>99th &lt; 1s</li>
+</ul>
+</li>
+<li>service needs to be up &gt; 99.9% of the time</li>
+<li>refund if not met</li>
+</ul>
+</li>
+</ul>
+<h3 id="networking-metrics">Networking Metrics<a class="headerlink" href="#networking-metrics" title="Permanent link">&para;</a></h3>
+<ul>
+<li>bandwidth<ul>
+<li>max throughput</li>
+</ul>
+</li>
+<li>throughput</li>
+<li>latency</li>
+</ul>
+<h2 id="maintenability">Maintenability<a class="headerlink" href="#maintenability" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Operability<ul>
+<li>easy to operate</li>
+</ul>
+</li>
+<li>Simplicity<ul>
+<li>easy to understand</li>
+</ul>
+</li>
+<li>Evolvability<ul>
+<li>easy to make changes</li>
+</ul>
+</li>
+</ul>
+<h3 id="operability">Operability<a class="headerlink" href="#operability" title="Permanent link">&para;</a></h3>
+<p>To make things easier to operate</p>
+<ul>
+<li>provide observability</li>
+<li>avoid single point of failure<ul>
+<li>-&gt; no down time when updating a machine</li>
+</ul>
+</li>
+<li>good documentation<ul>
+<li>finite state machine of all the things that may happen</li>
+</ul>
+</li>
+</ul>
+<h3 id="simplicity">Simplicity<a class="headerlink" href="#simplicity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>complex -&gt; bad operability &amp; evolvability</li>
+<li>abstraction reduces accidental complexity<ul>
+<li>accidental complexity = complexity rising not from design but implementation</li>
+<li>pros of abstraction<ul>
+<li>hides implementation details</li>
+<li>can be reused</li>
+<li>benefits all apps using it when improved</li>
+</ul>
+</li>
+<li>e.g. SQL</li>
+</ul>
+</li>
+</ul>
+<h2 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h2>
+<h3 id="one-to-many-relationship">One-to-Many Relationship<a class="headerlink" href="#one-to-many-relationship" title="Permanent link">&para;</a></h3>
+<p><strong>Object-Relational Mismatch Problem</strong></p>
+<p>Many real life data has <strong>one-to-many</strong> relationship e.g. a person may have several work experience, but relational tables aren't like that, so a translation layer between database model &amp; application code is needed.</p>
+<p><img alt="ddia-fig2-2.png" src="../ddia-fig2-2.png" /></p>
+<p><strong>Solutions</strong></p>
+<ul>
+<li>traditional SQL model: creating multiple tables with foreign keys to the common table<ul>
+<li>cons<ul>
+<li>bad locality: needs to perform multiple queries or multi-way join to get all data</li>
+</ul>
+</li>
+<li><img alt="ddia-fig2-1.png" src="../ddia-fig2-1.png" /></li>
+</ul>
+</li>
+<li>later SQL versions<ul>
+<li>use JSON datatype</li>
+<li>pros<ul>
+<li>good locality<ul>
+<li>everything in one place</li>
+<li>only need one query</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>encode those as JSON and store as text<ul>
+<li>cons<ul>
+<li>can't query the keys in the text json</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="many-to-one-many-to-many-relationship">Many-to-One &amp; Many-to-Many Relationship<a class="headerlink" href="#many-to-one-many-to-many-relationship" title="Permanent link">&para;</a></h3>
+<p><strong>Problems of document model</strong></p>
+<blockquote>
+<p>Data has a tendency of becoming more interconnected as features are added to applications.</p>
+</blockquote>
+<p>Many tree-like one-to-many data actually become graph-like many-to-many relationship when scaling and adding new features. </p>
+<p>e.g. a person has 2 schools in his profile page, but the schools should also have the person in their profile page</p>
+<p>Document databases e.g. MongoDB, which excel at tree-like structures, have weak or no support for joins as one-to-many relationships don't need joins. This makes them not suitable for many-to-many relationships.</p>
+<p><img alt="ddia-fig2-4.png" src="../ddia-fig2-4.png" /></p>
+<p><strong>Problems of network model</strong></p>
+<p>Network model stores hierarchical as a graph. Each record can have multiple parents.</p>
+<p>To query or update a record, the application code has to go through the graph from the root, making it complicated and inflexible.</p>
+<p><strong>Relational model the solution</strong></p>
+<ul>
+<li>query optimizer does the heavy-lifting, not the application code</li>
+<li>declare a new index to query data in a new way<ul>
+<li>query optimizer will automatically choose the best index</li>
+</ul>
+</li>
+</ul>
+<h3 id="acid">ACID<a class="headerlink" href="#acid" title="Permanent link">&para;</a></h3>
+<p>The 4 properties that define a <strong>transaction</strong>.</p>
+<ul>
+<li>atomicity</li>
+<li>consistency</li>
+<li>isolation<ul>
+<li>transactions are isolated to each other</li>
+</ul>
+</li>
+<li>durability</li>
+</ul>
+<p>Typically a trait of RDBMS, while NoSQL DBs typically don't support it.</p>
+<h3 id="cap">CAP<a class="headerlink" href="#cap" title="Permanent link">&para;</a></h3>
+<p>A distributed system will either be consistent or available when partitioned (a part is down).</p>
+<ul>
+<li>Consistency<ul>
+<li>the read value is always the most recent</li>
+</ul>
+</li>
+<li>Availability<ul>
+<li>you can read whenever you want</li>
+</ul>
+</li>
+<li>Partition tolerance<ul>
+<li>misleading because partition will happen</li>
+</ul>
+</li>
+</ul>
+<p>Partition / network failure is unavoidable in a distributed system, so the choice is whether we want consistency or availability when it happens. Typically, RDBMS chooses consistency over availability, while NoSQL chooses availability over consistency.</p>
+<p>If we have 3 servers, and one of them is down i.e. the network is partitioned</p>
+<p><img alt="sys-des-cap-ex.png" src="../sys-des-cap-ex.png" /></p>
+<p>If we choose consistency, we will block all writes to the other servers (n1 &amp; n2), thus making the system unavailable. If we choose availability, we will accept writes to n1 &amp; n2 and sync them to n3 when it's back up.</p>
+<h3 id="primary-key">Primary Key<a class="headerlink" href="#primary-key" title="Permanent link">&para;</a></h3>
+<ul>
+<li>uuid (universally unique identifier)<ul>
+<li>how to generate<ul>
+<li>timestamp</li>
+<li>random</li>
+</ul>
+</li>
+<li>pros<ul>
+<li>unique</li>
+<li>stateless</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>not intrinsically sortable</li>
+<li>performance issue for MySQL</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>integer<ul>
+<li>how to generate<ul>
+<li>auto increment</li>
+</ul>
+</li>
+<li>pros<ul>
+<li>readable</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>not unique across distributed systems</li>
+<li>stateful<ul>
+<li>neet to consult db to know the next integer</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="index">Index<a class="headerlink" href="#index" title="Permanent link">&para;</a></h3>
+<ul>
+<li>lookup time with <a href="../../UIUCNotes/CS%20411%20Database%20Systems/#b-tree">B Tree</a> is <span class="arithmatex">\(O(\log n)\)</span></li>
+</ul>
+<h3 id="handling-hierarchical-data">Handling Hierarchical Data<a class="headerlink" href="#handling-hierarchical-data" title="Permanent link">&para;</a></h3>
+<p>If your data is a tree-like structure (undirected graph), you can design your relational db schema in multiple ways.</p>
+<h4 id="multiple-tables">Multiple Tables<a class="headerlink" href="#multiple-tables" title="Permanent link">&para;</a></h4>
+<p>Use multiple tables with each non-root table having a foreign key referencing to the parent.</p>
+<p><strong>Analysis</strong></p>
+<ul>
+<li>pros<ul>
+<li>?</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>may have multiple tables storing the same kinds of information<ul>
+<li>e.g. managers &amp; SWEs are all employees</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="adjacency-list">Adjacency List<a class="headerlink" href="#adjacency-list" title="Permanent link">&para;</a></h4>
+<p>Have a column recording to the parents. </p>
+<p><strong>Minimal schema example</strong></p>
+<ul>
+<li>id</li>
+<li>parent_id</li>
+</ul>
+<p>See <a href="../SQL/#recursive-queries">SQL#Recursive Queries</a> for quering a subtree</p>
+<p><strong>Analysis</strong></p>
+<ul>
+<li>pros<ul>
+<li>simple</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>need recursive queries to get a subtree, slow in deep trees</li>
+</ul>
+</li>
+</ul>
+<h4 id="nested-sets">Nested Sets<a class="headerlink" href="#nested-sets" title="Permanent link">&para;</a></h4>
+<p>A segment tree. Record left &amp; right values in a row.</p>
+<p><strong>Example table</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>left</th>
+<th>right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Electronics</td>
+<td>1</td>
+<td>12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cell Phones</td>
+<td>2</td>
+<td>7</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Smartphones</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Basic Phones</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Computers</td>
+<td>8</td>
+<td>11</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Laptops</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Desktops</td>
+<td>8</td>
+<td>9</td>
+</tr>
+<tr>
+<td>8</td>
+<td>TV &amp; Home Theater</td>
+<td>11</td>
+<td>12</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Books</td>
+<td>13</td>
+<td>18</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Fiction</td>
+<td>14</td>
+<td>15</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Non-Fiction</td>
+<td>16</td>
+<td>17</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Music</td>
+<td>19</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p>Exclusively use <code>left</code> &amp; <code>right</code> to do queries (i.e. <code>id</code> isn't involved when quering)</p>
+<p><strong>Analysis</strong></p>
+<ul>
+<li>pros<ul>
+<li>faster to query a deep subtree</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>slow insertion: need to update the <code>left</code> &amp; <code>right</code> fields of many records when inserting or moving a node</li>
+</ul>
+</li>
+</ul>
+<h4 id="lineage-column-path-enumeration-materialized-path">Lineage Column / Path Enumeration / Materialized Path<a class="headerlink" href="#lineage-column-path-enumeration-materialized-path" title="Permanent link">&para;</a></h4>
+<p>Store the path in a field.</p>
+<p><strong>Example table</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Electronics</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cell Phones</td>
+<td>1/2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Smartphones</td>
+<td>1/2/3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Basic Phones</td>
+<td>1/2/4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Computers</td>
+<td>1/5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Laptops</td>
+<td>1/5/6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Desktops</td>
+<td>1/5/7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>TV &amp; Home Theater</td>
+<td>1/8</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Books</td>
+<td>9</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Fiction</td>
+<td>9/10</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Non-Fiction</td>
+<td>9/11</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Music</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Analysis</strong></p>
+<ul>
+<li>pros<ul>
+<li>very easy to query a subtree<ul>
+<li>e.g. <code>LIKE '1/2/%'</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>very complex to move a node<ul>
+<li>need to update the path of itself and all its children</li>
+</ul>
+</li>
+<li>no referential integrity</li>
+</ul>
+</li>
+</ul>
+<h4 id="closure-table-bridge-table">Closure Table / Bridge Table<a class="headerlink" href="#closure-table-bridge-table" title="Permanent link">&para;</a></h4>
+<p>Have a dedicated table recording the relationship.</p>
+<p><strong>Example relationship table</strong></p>
+<p>For 1 -&gt; 2 -&gt; 3</p>
+<table>
+<thead>
+<tr>
+<th>ancestor_id</th>
+<th>node_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>(omitting primary key)</p>
+<p><strong>Analysis</strong></p>
+<ul>
+<li>pros<ul>
+<li>easy to select a subtree</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>complex to move a node</li>
+<li>relationship table <span class="arithmatex">\(O(n^2)\)</span> space worst case</li>
+</ul>
+</li>
+</ul>
+<h4 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://www.databasestar.com/hierarchical-data-sql/">Hierarchical Data in SQL: The Ultimate Guide</a></li>
+<li><a href="https://stackoverflow.com/a/2341295/15493213">Hierarchical Database, multiple tables or column with parent id? | Stack Overflow</a></li>
+</ul>
+<h3 id="federation">Federation<a class="headerlink" href="#federation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>split db by functions</li>
+<li>similar pros &amp; cons to <a href="#sharding">#Sharding</a></li>
+<li>pros<ul>
+<li>less traffic for each db</li>
+<li>smaller db -&gt; more fit into memory -&gt; less cache misses</li>
+<li>can write to different dbs in parallel</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>joining data from 2 dbs is complex</li>
+</ul>
+</li>
+</ul>
+<h3 id="denormalization">Denormalization<a class="headerlink" href="#denormalization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>normalization reduced data duplication, while denormalization increases it</li>
+<li>good for read-heavy applications</li>
+<li>pros<ul>
+<li>reduce needs of complex joins<ul>
+<li>especially if data is distributed with <a href="#federation">#Federation</a> or <a href="#sharding">#Sharding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>duplicated data</li>
+<li>expensive writes</li>
+<li>more complicated to enure that redundant copies of data is consistent</li>
+</ul>
+</li>
+</ul>
+<h3 id="storing-passwords-in-the-database">Storing passwords in the database<a class="headerlink" href="#storing-passwords-in-the-database" title="Permanent link">&para;</a></h3>
+<ul>
+<li>db entry<ul>
+<li>hash(password + salt)</li>
+<li>salt</li>
+</ul>
+</li>
+<li>register flow<ul>
+<li>randomly generate a salt -&gt; combine with user entered password -&gt; hash -&gt; store hashing result &amp; salt into database</li>
+</ul>
+</li>
+<li>auth flow<ul>
+<li>retrieve user's salt from db -&gt; combine with entered password -&gt; hash -&gt; compare with db entry</li>
+</ul>
+</li>
+<li>ref<ul>
+<li><a href="https://www.youtube.com/watch?v=zt8Cocdy15c">https://www.youtube.com/watch?v=zt8Cocdy15c</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="cqrs">CQRS<a class="headerlink" href="#cqrs" title="Permanent link">&para;</a></h3>
+<p>Command and Query Responsibility Segregation, separating read and write layer s.t. we can optimize &amp; scale each side separately</p>
+<p>motivation: a model optimized for read may be very unoptimized for write, vice versa</p>
+<p>You can separate read &amp; write mode virtually, or physically. If you use different DB for read &amp; write, you'll need to implement syncing from write DB to read DB.</p>
+<p>articles</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs">CQRS pattern | Azure</a></li>
+<li><a href="https://www.reddit.com/r/node/comments/12bi4c5/comment/jewvnaj">https://www.reddit.com/r/node/comments/12bi4c5/comment/jewvnaj</a></li>
+</ul>
+<h2 id="nosql">NoSQL<a class="headerlink" href="#nosql" title="Permanent link">&para;</a></h2>
+<ul>
+<li>high scalability with horizontal scaling</li>
+<li>high availability with <a href="#replication">#Replication</a></li>
+<li>data don't get removed instantly -&gt; can undelete</li>
+</ul>
+<p>choose it over RDBMS if</p>
+<ul>
+<li>needs very low latency</li>
+<li>values availability over consistency</li>
+<li>no relationship between data</li>
+<li>unstructured / schema always changing</li>
+<li>huge amount of data (large scale)</li>
+</ul>
+<h3 id="base">BASE<a class="headerlink" href="#base" title="Permanent link">&para;</a></h3>
+<p>properties of <a href="#nosql">#NoSQL</a></p>
+<ul>
+<li>Basically Available<ul>
+<li>guarantees availability</li>
+</ul>
+</li>
+<li>Soft state<ul>
+<li>the state of the system may change over time even without input</li>
+</ul>
+</li>
+<li>Eventual consistency</li>
+</ul>
+<h3 id="wide-column-store">Wide Column Store<a class="headerlink" href="#wide-column-store" title="Permanent link">&para;</a></h3>
+<p><img alt="Pasted image 20240823064002.png" src="../Pasted%20image%2020240823064002.png" /></p>
+<ul>
+<li>good for<ul>
+<li>time series data</li>
+<li>large scale data</li>
+<li>write-heavy scenario</li>
+<li>e.g. logging &amp; real time analytics</li>
+</ul>
+</li>
+<li>e.g. HBase &amp; Casandra</li>
+</ul>
+<h2 id="replication">Replication<a class="headerlink" href="#replication" title="Permanent link">&para;</a></h2>
+<h3 id="leader-based-replication">Leader-Based Replication<a class="headerlink" href="#leader-based-replication" title="Permanent link">&para;</a></h3>
+<ul>
+<li>1 replica leader/master, others followers/slaves</li>
+<li>write to leader, read from any</li>
+<li>leader replicates changes to followers (sync or async)<ul>
+<li>with replication logs</li>
+</ul>
+</li>
+<li>built-in for relational databases &amp; message queues of high availability (e.g. Kafka &amp; RabbitMQ)</li>
+</ul>
+<h4 id="replication-methods">replication methods<a class="headerlink" href="#replication-methods" title="Permanent link">&para;</a></h4>
+<ul>
+<li>sync<ul>
+<li>leader wait for response</li>
+<li>-&gt; high durability</li>
+</ul>
+</li>
+<li>async<ul>
+<li>leader don't wait for response</li>
+<li>-&gt; high avaibility</li>
+</ul>
+</li>
+</ul>
+<p>Leader-Based Replication often uses async replication</p>
+<h4 id="adding-a-new-follower">adding a new follower<a class="headerlink" href="#adding-a-new-follower" title="Permanent link">&para;</a></h4>
+<ol>
+<li>set up a follower node with a snapshot of the leader</li>
+<li>sync with the leader with leader's log </li>
+</ol>
+<h4 id="failover">failover<a class="headerlink" href="#failover" title="Permanent link">&para;</a></h4>
+<ul>
+<li>only 1 follower and it dies -&gt; read from leader</li>
+<li>multiple followers and one dies -&gt; redirect its traffic to other followers</li>
+<li>leader dies -&gt; promote a follower to leader<ul>
+<li>possible data loss since it may not be up to date with the leader if using async</li>
+</ul>
+</li>
+</ul>
+<h3 id="multi-leader-replication">Multi-Leader Replication<a class="headerlink" href="#multi-leader-replication" title="Permanent link">&para;</a></h3>
+<ul>
+<li>only for across data centers, while still using <a href="#leader-based-replication">#Leader-Based Replication</a> inside each data center</li>
+<li>needs to resolve write conflicts</li>
+</ul>
+<h3 id="leaderless-replication">Leaderless Replication<a class="headerlink" href="#leaderless-replication" title="Permanent link">&para;</a></h3>
+<ul>
+<li>writes to several replicas in parallel<ul>
+<li>defined as success if <span class="arithmatex">\(x\)</span> out of <span class="arithmatex">\(n\)</span> is successful</li>
+</ul>
+</li>
+<li>read from several replicas in parallel, and use version number to decide which is newer</li>
+<li>no failover</li>
+<li>used by key-value stores to support high availability<ul>
+<li>e.g. DynamoDB</li>
+</ul>
+</li>
+</ul>
+<h4 id="quorums">Quorums<a class="headerlink" href="#quorums" title="Permanent link">&para;</a></h4>
+<ul>
+<li><span class="arithmatex">\(n\)</span> relicas</li>
+<li><span class="arithmatex">\(w\)</span> confirmations required for each write</li>
+<li><span class="arithmatex">\(r\)</span> confirmations required for each read</li>
+<li>if <span class="arithmatex">\(w+r&gt;n\)</span>, we're gauranteed to read the latest data -&gt; <a href="#strong-consistency">#strong consistency</a><ul>
+<li>for fast read, <span class="arithmatex">\(r=1, w=n\)</span></li>
+<li>for fast write, <span class="arithmatex">\(w=1, r=n\)</span></li>
+<li>data loss may still happen if there are 2 concurrent conflicting writes, which need to be resolved</li>
+</ul>
+</li>
+<li>sloppy quorums<ul>
+<li>when some of the replicas fails, we can activate some backup nodes, which will result in a different set of nodes</li>
+<li>if we still accept the writes as long as there are <span class="arithmatex">\(w\)</span> nodes available, it's called a sloppy quorum, where <span class="arithmatex">\(w+r&gt;n\)</span> don't guaranteed <a href="#strong-consistency">#strong consistency</a></li>
+<li>hinted handoff - when a node is back up, the backup node will push the changes to the node</li>
+<li>improve availability at the cost of consistency</li>
+</ul>
+</li>
+</ul>
+<h4 id="resolving-conflicts">Resolving conflicts<a class="headerlink" href="#resolving-conflicts" title="Permanent link">&para;</a></h4>
+<h5 id="version-vector-vector-clocks">version vector / vector clocks<a class="headerlink" href="#version-vector-vector-clocks" title="Permanent link">&para;</a></h5>
+<ul>
+<li>a way to detect conflicts</li>
+<li>maintain a vector of tuple <code>(Server No., write counter of this server / version)</code></li>
+<li>compare 2 vectors to check if there's a conflict<ul>
+<li>ancestor-descendant -&gt; no conflict</li>
+<li>siblings -&gt; have conflict</li>
+</ul>
+</li>
+<li><img alt="sys-des-vector-lock.png" src="../sys-des-vector-lock.png" /></li>
+<li>cons<ul>
+<li>vector can grow rapidly</li>
+</ul>
+</li>
+</ul>
+<h5 id="last-write-wins">last write wins<a class="headerlink" href="#last-write-wins" title="Permanent link">&para;</a></h5>
+<ul>
+<li>a way to resolve conflicts</li>
+<li>have a timestamp for each write</li>
+<li>when resolving write conflicts, use the one with the biggest timestamp</li>
+<li>supported by <a href="../Cassandra/">Cassandra</a> &amp; Redis</li>
+<li>achieves eventual consistency</li>
+<li>sacrifice durability, may have data loss<ul>
+<li>concurrent writes to the same key all appear as successfuly, but only one of them is used</li>
+<li>we can minimize data loss by update each field based on primary key independently (<a href="../Cassandra/">Cassandra</a>'s approach)<ul>
+<li><img alt="sys-des-cass-res.png" src="../sys-des-cass-res.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="handling-failures">Handling failures<a class="headerlink" href="#handling-failures" title="Permanent link">&para;</a></h3>
+<ul>
+<li>for <a href="#leaderless-replication">#Leaderless Replication</a>, handle temporary failure with using sloppy quorum</li>
+<li>use merkle tree to sync data<ul>
+<li>tree with each node being the hash of its subtree</li>
+</ul>
+</li>
+</ul>
+<h2 id="sharding">Sharding<a class="headerlink" href="#sharding" title="Permanent link">&para;</a></h2>
+<p>Partitioning/splitting the database accross nodes/servers. <a href="#horizontal-scaling">#Horizontal Scaling</a> for database.</p>
+<ul>
+<li>pros<ul>
+<li>lower traffic per server</li>
+<li>failure more localized</li>
+<li>less data in a server -&gt; more data in cache -&gt; less cache misses</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>complicated joins across different shards</li>
+</ul>
+</li>
+</ul>
+<h3 id="range-based-sharding">Range Based Sharding<a class="headerlink" href="#range-based-sharding" title="Permanent link">&para;</a></h3>
+<ul>
+<li>distribute based on the 1st letter of the key<ul>
+<li>e.g. A-C at shard 1, D-F at shart 2, ...</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>may have unbalanced servers</li>
+</ul>
+</li>
+</ul>
+<h3 id="vertical-partitioning">Vertical Partitioning<a class="headerlink" href="#vertical-partitioning" title="Permanent link">&para;</a></h3>
+<ul>
+<li>partition by different features<ul>
+<li>e.g. profiles, messages, connections, etc.</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>table can still be large -&gt; need repartition</li>
+</ul>
+</li>
+</ul>
+<h3 id="keyhash-based-partitioning">Key/Hash-Based Partitioning<a class="headerlink" href="#keyhash-based-partitioning" title="Permanent link">&para;</a></h3>
+<ul>
+<li>hash -&gt; mod by N to distribute to N servers</li>
+<li>problems<ul>
+<li>add servers -&gt; need to redistribute all the data -&gt; very expensive<ul>
+<li>solution: <a href="#consistent-hashing">#Consistent Hashing</a><ul>
+<li>MemCached uses this</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>some keys are more popular than the others<ul>
+<li>solution: dedicated shards for celebrities</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="directory-based-partitioning">Directory-Based Partitioning<a class="headerlink" href="#directory-based-partitioning" title="Permanent link">&para;</a></h3>
+<ul>
+<li>maintain a lookup table</li>
+<li>pros<ul>
+<li>easy to add servers</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>lookup table -&gt; single point of failure</li>
+<li>constantly access lookup table -&gt; impact performance</li>
+</ul>
+</li>
+</ul>
+<h2 id="load-balancing">Load Balancing<a class="headerlink" href="#load-balancing" title="Permanent link">&para;</a></h2>
+<p>request id -&gt; hashed request id -&gt; mod by n (# of servers) -&gt; direct to the server</p>
+<h3 id="load-balancer-features">load balancer features<a class="headerlink" href="#load-balancer-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>distribute loads across backend servers</li>
+<li>SSL termination<ul>
+<li>decrypt requests &amp; encrypt responses s.t. backend servers don't need to do it</li>
+</ul>
+</li>
+<li>can act as a reverse proxy</li>
+</ul>
+<h3 id="load-balancing-layers">load balancing layers<a class="headerlink" href="#load-balancing-layers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>layer 4 - transport layer<ul>
+<li>distribute loads based on ip address</li>
+<li>faster &amp; less computation needed</li>
+</ul>
+</li>
+<li>layer 7 - applicaton layer<ul>
+<li>distribute loads based on contents</li>
+</ul>
+</li>
+</ul>
+<h3 id="cost-of-adding-new-servers">Cost of adding new servers<a class="headerlink" href="#cost-of-adding-new-servers" title="Permanent link">&para;</a></h3>
+<p>New servers -&gt; some requests will be directed to a different server -&gt; cache miss</p>
+<h3 id="consistent-hashing">Consistent Hashing<a class="headerlink" href="#consistent-hashing" title="Permanent link">&para;</a></h3>
+<p>Goal: Minimize the cost when adding new servers. To do that we want to have as few mappings changed as possible.</p>
+<p>Key concept: Randomly assign servers to a position in an arbitrary circle, and each of them serve the requests closest to them (in the counterclockwise direction)</p>
+<p>Each object's location = hashed key mod # seats in the ring</p>
+<p><img alt="consistency-hashing.png" src="../consistency-hashing.png" /></p>
+<p>To make it more balanced, we'll have multiple angles for each server scattered around the pseudo hash circle.</p>
+<p><img alt="sys-des-consis-hash-2.png" src="../sys-des-consis-hash-2.png" /></p>
+<p>When 1 server is added, only <span class="arithmatex">\(k/N\)</span> keys would be reassigned, where there are <span class="arithmatex">\(k\)</span> keys &amp; <span class="arithmatex">\(N\)</span> servers.</p>
+<p>reference</p>
+<ul>
+<li><a href="https://www.toptal.com/big-data/consistent-hashing">https://www.toptal.com/big-data/consistent-hashing</a></li>
+<li><a href="https://www.youtube.com/watch?v=zaRkONvyGr8">https://www.youtube.com/watch?v=zaRkONvyGr8</a></li>
+</ul>
+<h2 id="distributed-systems">Distributed Systems<a class="headerlink" href="#distributed-systems" title="Permanent link">&para;</a></h2>
+<h3 id="rate-limiter">Rate Limiter<a class="headerlink" href="#rate-limiter" title="Permanent link">&para;</a></h3>
+<h4 id="motivation">motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>prevent DoS attacks</li>
+<li>reduce cost / resource used<ul>
+<li>if using paid 3rd party APIs</li>
+</ul>
+</li>
+</ul>
+<h4 id="requirements">requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h4>
+<ul>
+<li>client-side or server-side (assuming server-side)</li>
+<li>rate limit based on IP? User ID? etc.</li>
+<li>Work in a distributed environment?<ul>
+<li>shared across servers / processes or not</li>
+</ul>
+</li>
+<li>separate service or in application code</li>
+<li>Do we inform the user?</li>
+</ul>
+<h4 id="placement">placement<a class="headerlink" href="#placement" title="Permanent link">&para;</a></h4>
+<ul>
+<li>at server side</li>
+<li>between client &amp; server, as a middleware<ul>
+<li>normally supported by API gateway (a kind of reverse proxy)</li>
+</ul>
+</li>
+</ul>
+<h4 id="algorithm">algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h4>
+<ul>
+<li>token bucket<ul>
+<li>a bucket of tokens, indicating capacity</li>
+<li>each accepted request consumes a token</li>
+<li>if no token in the bucket, drop the request</li>
+<li>bucket refill tokens periodically</li>
+<li>parameters<ul>
+<li>bucket size</li>
+<li>refill rate <ul>
+<li>how many tokens per second</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>leaking bucket<ul>
+<li>a fixed sized FIFO queue</li>
+<li>request processed at  rate </li>
+<li>parameters<ul>
+<li>bucket size</li>
+<li>process rate </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>fixed window counter<ul>
+<li>a max amount of requests per time slot</li>
+<li>parameters</li>
+<li>parameters: <span class="arithmatex">\(n\)</span> requests per <span class="arithmatex">\(p\)</span> seconds window</li>
+<li>memory needed<ul>
+<li>assuming rate limit based on user ID</li>
+<li>user ID 8B</li>
+<li>timestamp 4B (32-bit)<ul>
+<li>2B if only store minutes &amp; seconds</li>
+</ul>
+</li>
+<li>counter 2B</li>
+<li>each user 12B, excluding overheads</li>
+<li>1M users -&gt; 12MB</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>burst requests around the split of 2 time windows can cause more requests than the quota to go through</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sliding window log<ul>
+<li>keep track of request timestamps</li>
+<li>window = <span class="arithmatex">\([t-p, t]\)</span>, where <span class="arithmatex">\(t\)</span> = timestamp of the latest request, <span class="arithmatex">\(p\)</span> = window size in time</li>
+<li>when a new request comes in, remove the timestamps in window smaller than <span class="arithmatex">\(t-p\)</span>, and set window start time as <span class="arithmatex">\(t-p\)</span></li>
+<li>if window size smaller than max, accept the request and add the timestamp in the window</li>
+<li>parameters: <span class="arithmatex">\(n\)</span> requests per <span class="arithmatex">\(p\)</span> seconds</li>
+<li>memory needed<ul>
+<li>assuming rate limited based on user ID, max requests an hour</li>
+<li>user ID 8B</li>
+<li>each timestamp 4B</li>
+<li>each user 8B + 4B x 500 = 2kB, excluding overheads</li>
+<li>1M users -&gt; 2GB</li>
+</ul>
+</li>
+<li>pros<ul>
+<li>accurate rate limiting</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>requires a lot of memory since we're storin timestamps instead of counters</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sliding window of tiny fixed window counters<ul>
+<li>fixed window counter + sliding window</li>
+<li>rate limit: <span class="arithmatex">\(n\)</span> requests in 1 hour</li>
+<li>use fixed windows of size <span class="arithmatex">\(\dfrac{1}{k}\)</span> hr, aggregate the counters of the past <span class="arithmatex">\(k\)</span> windows, and compare with <span class="arithmatex">\(n\)</span></li>
+<li>set counter TTL to 1 hr</li>
+<li>memory usage much smaller than "sliding window log" since we store counters instead of timestamps<ul>
+<li>roughly <span class="arithmatex">\(k\)</span> times the usage of "fixed window counter" since we use <span class="arithmatex">\(k\)</span>x more windows</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sliding window counter<ul>
+<li>if a request comes in at <span class="arithmatex">\(x\%\)</span> of the current window, window size = <span class="arithmatex">\((1-x\%)\)</span> x number of requests in previous window +  number of requests in current window</li>
+<li>accept if window size &lt; max</li>
+<li>parameters: <span class="arithmatex">\(n\)</span> requests per <span class="arithmatex">\(p\)</span> seconds</li>
+<li><img alt="sys-des-sliding-window-counter.png" src="../sys-des-sliding-window-counter.png" /></li>
+<li>pros<ul>
+<li>solve the spike problem in fixed window counter</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>it assumes the requests in the previous window is evenly distributed</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="design">design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Use in-memory cache like Redis to store the counters.</li>
+<li>high level architecture<ul>
+<li><img alt="rate-limiter-high-arch.png" src="../rate-limiter-high-arch.png" /></li>
+</ul>
+</li>
+<li>save rules as config files on disk<ul>
+<li>have workers to pull and store in cache</li>
+</ul>
+</li>
+<li>response headers<ul>
+<li><code>X-Ratelimit-Remaining</code></li>
+<li><code>X-Ratelimit-Limit</code></li>
+</ul>
+</li>
+<li>when exceeds rate limit<ul>
+<li>return 429 too many requests</li>
+<li>return <code>X-Ratelimit-Retry-After</code> in header</li>
+<li>can choose to drop it or send it in a queue</li>
+</ul>
+</li>
+<li>detailed architecture<ul>
+<li><img alt="sys-des-rate-limiter-detailed-arch.png" src="../sys-des-rate-limiter-detailed-arch.png" /></li>
+</ul>
+</li>
+<li>challenges in a distributed environment<ul>
+<li>race condition<ul>
+<li>when 2 requests read the same counter at the same time<ul>
+<li>solution: lock<ul>
+<li>slow</li>
+</ul>
+</li>
+<li>solution: atomic operation with Redis<ul>
+<li>read count -&gt; write new count, as an atomic operation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>synchronization across rate limiters<ul>
+<li>solution: sticky session - a client always use a specific rate limiter<ul>
+<li>neither scalable nor flexible</li>
+</ul>
+</li>
+<li>solution: use the same Redis as data store</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>performance optimization<ul>
+<li><a href="#multi-data-centers">#Multi Data Centers</a> (or edge servers) setup s.t. rate limiters can be close to users<ul>
+<li>sync with eventual consistency</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>monitoring<ul>
+<li>gather data to understand if the rules or algorithms are working well</li>
+</ul>
+</li>
+</ul>
+<h3 id="unique-id-generator">Unique ID Generator<a class="headerlink" href="#unique-id-generator" title="Permanent link">&para;</a></h3>
+<p><strong>Requirements</strong></p>
+<ul>
+<li>unique &amp; sortable</li>
+<li>ID increments by time but not necessarily by 1</li>
+<li>numerical</li>
+<li>within 64-bit</li>
+<li>generate 10k IDs per second</li>
+</ul>
+<h4 id="multi-leader-replication-auto-increment"><a href="#multi-leader-replication">#Multi-Leader Replication</a> auto increment<a class="headerlink" href="#multi-leader-replication-auto-increment" title="Permanent link">&para;</a></h4>
+<ul>
+<li>auto increment but by <span class="arithmatex">\(k\)</span> where there are <span class="arithmatex">\(k\)</span> db servers</li>
+<li>cons<ul>
+<li>hard to scale with <a href="#multi-data-centers">#Multi Data Centers</a></li>
+<li>no time consistency (later time -&gt; bigger number) across servers</li>
+<li>problems when servers are added/removed</li>
+</ul>
+</li>
+</ul>
+<h4 id="uuid">UUID<a class="headerlink" href="#uuid" title="Permanent link">&para;</a></h4>
+<ul>
+<li>128-bit</li>
+<li>low probablity of collision<ul>
+<li>1B per second x 100 years -&gt; P = 50% for having 1 collision</li>
+</ul>
+</li>
+<li>pros<ul>
+<li>each server generate their own UUID independently</li>
+<li>easy to scale</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>128-bit long</li>
+<li>no time consistency</li>
+<li>non-numeric</li>
+</ul>
+</li>
+</ul>
+<h4 id="ticket-server-flickr">ticket server (Flickr)<a class="headerlink" href="#ticket-server-flickr" title="Permanent link">&para;</a></h4>
+<ul>
+<li>central server in charge of auto increment</li>
+<li>pros<ul>
+<li>works well with medium-scale apps</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>single point of failure</li>
+</ul>
+</li>
+</ul>
+<h4 id="snowflake-twitter">Snowflake (Twitter)<a class="headerlink" href="#snowflake-twitter" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="sys-des-snowflake-id.png" src="../sys-des-snowflake-id.png" /></li>
+<li>64-bit<ul>
+<li>sign bit - 1 bit<ul>
+<li>always 0</li>
+</ul>
+</li>
+<li>timestamp - 41 bits<ul>
+<li>epoch time</li>
+<li>69 years</li>
+</ul>
+</li>
+<li>datacenter ID - 5 bits<ul>
+<li>max 32 datacenters</li>
+</ul>
+</li>
+<li>machine ID - 5 bits<ul>
+<li>max 32 machines each data center</li>
+</ul>
+</li>
+<li>sequence number - 12 bits<ul>
+<li>auto increment by 1, reset to 0 every ms</li>
+<li>max 4096 IDs per ms for a machine</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>pros<ul>
+<li>satisfies all the requirements</li>
+</ul>
+</li>
+<li>important problems / tradeoffs<ul>
+<li>clock synchronization problem<ul>
+<li>sol: Network Time Protocol</li>
+</ul>
+</li>
+<li>we can allocate the timestamp &amp; sequence number bits to fit our needs<ul>
+<li>more timestamp bits &amp; less sequence number bits -&gt; for low concurrency long-term applications</li>
+</ul>
+</li>
+<li>needs high availability</li>
+</ul>
+</li>
+</ul>
+<h3 id="key-value-store">Key-Value Store<a class="headerlink" href="#key-value-store" title="Permanent link">&para;</a></h3>
+<h4 id="requirements_1">requirements<a class="headerlink" href="#requirements_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>operations<ul>
+<li><code>put(key, value)</code></li>
+<li><code>get(key)</code></li>
+</ul>
+</li>
+<li>small key-value pair, &lt; 10kB</li>
+<li>high availability</li>
+<li>high scalability</li>
+<li>automatic scaling<ul>
+<li>add/remove servers automatically based on traffic</li>
+</ul>
+</li>
+<li>low latency</li>
+</ul>
+<h4 id="single-server">single server<a class="headerlink" href="#single-server" title="Permanent link">&para;</a></h4>
+<ul>
+<li>store as a hash table in memory</li>
+<li>to fit more data<ul>
+<li>data compression</li>
+<li>store frequenty used data in memory, the rest on disk</li>
+</ul>
+</li>
+<li>reaches capacity easily</li>
+</ul>
+<h4 id="distributed-server">distributed server<a class="headerlink" href="#distributed-server" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="#cap">#CAP</a> - do we want consistency or availability during network failures?</li>
+<li>data partition<ul>
+<li>for a large applicaton with a lot of data, it's not possible to fit all data inside a single server, so we would want to partition it</li>
+<li>challenges<ul>
+<li>distribute data evenly</li>
+<li>minimize data movement when add/remove nodes</li>
+</ul>
+</li>
+<li><a href="#consistent-hashing">#Consistent Hashing</a><ul>
+<li>auto scaling - add/remove servers based on loads with minimal cost of data movement</li>
+<li>allocate virtual nodes based on server capacity </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>data <a href="#replication">#replication</a><ul>
+<li>replicate data to <span class="arithmatex">\(k\)</span> servers <ul>
+<li>to closest <span class="arithmatex">\(k\)</span> servers on the hash ring clockwise<ul>
+<li>physical servers not virtual nodes since a physical server may have multiple virtual nodes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>replicas are placed across data centers for better reliability<ul>
+<li>since nodes at the same data center often go down together</li>
+</ul>
+</li>
+<li>we can achieve <a href="#strong-consistency">#strong consistency</a> or not by setting <a href="#quorums">#Quorums</a> parameters</li>
+<li>eventual consistency is usually selected for highly available systems</li>
+</ul>
+</li>
+<li>resolving inconsistency - see <a href="#leaderless-replicationresolving-conflicts">#Leaderless Replication#Resolving conflicts</a></li>
+<li>handling failures<ul>
+<li>detecting failures - <a href="../../UIUCNotes/CS425%20Distributed%20Systems/#epidemic-multicast-gossip-protocol">gossip protocol</a><ul>
+<li>we need multiple sources to confirm a server is down, but all-to-all multicasting (each tells everyone else) is inefficient</li>
+<li>instead, each node pings its status to some random nodes periodically, if one node hasn't been updated for a long while, it's considered online</li>
+</ul>
+</li>
+<li><a href="#handling-failures">#Handling failures</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="architecture">architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h4>
+<ul>
+<li>main features<ul>
+<li><code>get(key)</code> &amp; <code>put(key, value)</code> APIs</li>
+<li>a coordinator node between client and nodes</li>
+<li>nodes distributed using <a href="#consistent-hashing">#Consistent Hashing</a></li>
+<li>data is replicated to multiple nodes</li>
+<li><img alt="sys-arch-kv-store-techniques.png" src="../sys-arch-kv-store-techniques.png" /></li>
+</ul>
+</li>
+<li><img alt="sys-des-cassandra-arch.png" src="../sys-des-cassandra-arch.png" /><ul>
+<li><a href="../Cassandra/">Cassandra</a> architecture</li>
+</ul>
+</li>
+<li>write operation<ul>
+<li>log the write request in commit log</li>
+<li>save to memory cache</li>
+<li>flush the data to SSTable (sorted-string table) when memory cache is full</li>
+</ul>
+</li>
+<li>read operation<ul>
+<li>return data if key is in memory cache</li>
+<li>read from SSTable with bloom filter if not in memory cache</li>
+</ul>
+</li>
+</ul>
+<h2 id="caching">Caching<a class="headerlink" href="#caching" title="Permanent link">&para;</a></h2>
+<ul>
+<li>See <a href="../../NTUNotes/Junior/Computer%20Architecture/Computer%20Architecture/#cache">Computer Architecture#cache</a></li>
+</ul>
+<h3 id="advantages-of-caching">Advantages of caching<a class="headerlink" href="#advantages-of-caching" title="Permanent link">&para;</a></h3>
+<ul>
+<li>reduce network calls</li>
+<li>reduce repetitive calculations</li>
+<li>reduce DB load</li>
+</ul>
+<h3 id="in-memory-cache-vs-global-cache">In-memory cache vs. global cache<a class="headerlink" href="#in-memory-cache-vs-global-cache" title="Permanent link">&para;</a></h3>
+<ul>
+<li>in-memory cache<ul>
+<li>fast</li>
+<li>data inconsistency across multiple caches</li>
+<li>if requests are randomly load balanced across servers, there would be a lot of cache misses</li>
+<li>e.g. Memcached, Redis</li>
+</ul>
+</li>
+<li>global cache<ul>
+<li>slower</li>
+<li>all clients access the same global cache so no data inconsistency problem</li>
+<li>e.g. CDN</li>
+</ul>
+</li>
+</ul>
+<h3 id="cache-population-policy">Cache Population Policy<a class="headerlink" href="#cache-population-policy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>read strategies<ul>
+<li>cache aside<ul>
+<li>cache miss -&gt; application fetch data from db -&gt; application write to cache</li>
+<li>application manages all the stuff</li>
+</ul>
+</li>
+<li>read-through<ul>
+<li>cache miss -&gt; cache fetch data from db -&gt; write to cache</li>
+<li>cache handles everything, application doesn't communicate with db directly</li>
+</ul>
+</li>
+<li>refresh-ahead<ul>
+<li>when cache entry is fetched, fetch latest data from db if close to expiration</li>
+<li>performance depends on prediction accuracy</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>write strategies<ul>
+<li>write-around<ul>
+<li>directly write to db, bypassing cache</li>
+</ul>
+</li>
+<li>write-through<ul>
+<li>write to cache -&gt; write to db, SYNCHRONOUSLY</li>
+<li>pros<ul>
+<li>consistent data</li>
+<li>no data loss</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>high latency</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>write-behind/write-back<ul>
+<li>write to cache -&gt; write to db, ASYNCHRONOUSLY<ul>
+<li>with a queue</li>
+</ul>
+</li>
+<li>pros<ul>
+<li>low latency</li>
+</ul>
+</li>
+<li>cons<ul>
+<li>low consistency</li>
+<li>may have data loss</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="cache-eviction-policy">Cache Eviction Policy<a class="headerlink" href="#cache-eviction-policy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>first in first out</li>
+<li>least recently used</li>
+<li>least frequently used</li>
+</ul>
+<h3 id="cdn">CDN<a class="headerlink" href="#cdn" title="Permanent link">&para;</a></h3>
+<p>mostly static files</p>
+<p><img alt="sys-design-cdn.png" src="../sys-design-cdn.png" /></p>
+<h2 id="async">Async<a class="headerlink" href="#async" title="Permanent link">&para;</a></h2>
+<ul>
+<li>slow operations should be done asyncly</li>
+<li>pre-process<ul>
+<li>have the thing ready before user access if being out-of-date is acceptable</li>
+</ul>
+</li>
+</ul>
+<h3 id="message-queues">Message Queues<a class="headerlink" href="#message-queues" title="Permanent link">&para;</a></h3>
+<p><img alt="sys-des-mq.png" src="../sys-des-mq.png" /></p>
+<ul>
+<li>a queue for requests</li>
+<li>in memory</li>
+</ul>
+<h4 id="scaling_1">scaling<a class="headerlink" href="#scaling_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>can scale producer &amp; consumer independently</li>
+<li>queue to big -&gt; add more workers in consumer</li>
+</ul>
+<h4 id="back-pressure">Back Pressure<a class="headerlink" href="#back-pressure" title="Permanent link">&para;</a></h4>
+<ul>
+<li>stop accepting requests when queue is full</li>
+<li>can be used with <a href="../../NTUNotes/Junior/Computer%20Networks/Computer%20Networks/#exponential-backoff">exponential backoff</a></li>
+</ul>
+<h2 id="microservices-vs-monolith">Microservices vs. Monolith<a class="headerlink" href="#microservices-vs-monolith" title="Permanent link">&para;</a></h2>
+<p>You probably don't need to use microservices.</p>
+<p><a href="https://www.microservice-stories.com/">Microservice Story - A collection of technical blog ahout microservice &amp; monolith</a></p>
+<h3 id="bad-microservices-design-examples">Bad microservices design examples<a class="headerlink" href="#bad-microservices-design-examples" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90">Scaling up the Prime Video audio/video monitoring service and reducing costs by 90%</a></p>
+<p><a href="https://news.ycombinator.com/item?id=35811741">HackerNews dicussion</a></p>
+<blockquote>
+<p>This is not a discussion of monolith vs serverless. This is some terrible engineering all over that was "fixed". - <a href="https://news.ycombinator.com/user?id=LASR">LASR</a></p>
+</blockquote>
+<h2 id="mapreduce">MapReduce<a class="headerlink" href="#mapreduce" title="Permanent link">&para;</a></h2>
+<ul>
+<li>to process large amounts of data in parallel</li>
+<li>map: label<ul>
+<li>input: raw data</li>
+<li>output: (key, value)</li>
+</ul>
+</li>
+<li>reduceL aggregate and organize<ul>
+<li>input: many (key, value)</li>
+<li>output: (key, value)</li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li><img alt="sys-des-mr-1.jpg" src="../sys-des-mr-1.jpg" /></li>
+<li><img alt="sys-des-mr-2.png" src="../sys-des-mr-2.png" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h2>
+<ul>
+<li>change data capture: streaming db changes (from db log) to downstream systems</li>
+<li>PII: Personally Identifiable Information</li>
+<li>Apache Iceberg: metadata augmenting a table stored as an object (like Parquet files in a data warehouse) to become usable as an ACID table</li>
+<li>RBAC: role based access control</li>
+</ul>
+<h3 id="stream-processing">Stream Processing<a class="headerlink" href="#stream-processing" title="Permanent link">&para;</a></h3>
+<p>input -&gt; process -&gt; output</p>
+<ul>
+<li>Apache Spark: micro-batching</li>
+<li>Apache Flink: streaming</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.derricklin.net" target="_blank" rel="noopener" title="www.derricklin.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M244 246c-3.2-2-6.3-2.9-10.1-2.9-6.6 0-12.6 3.2-19.3 3.7l1.7 4.9zm135.9 197.9c-19 0-64.1 9.5-79.9 19.8l6.9 45.1c35.7 6.1 70.1 3.6 106-9.8-4.8-10-23.5-55.1-33-55.1zM340.8 177c6.6 2.8 11.5 9.2 22.7 22.1 2-1.4 7.5-5.2 7.5-8.6 0-4.9-11.8-13.2-13.2-23 11.2-5.7 25.2-6 37.6-8.9 68.1-16.4 116.3-52.9 146.8-116.7C548.3 29.3 554 16.1 554.6 2l-2 2.6c-28.4 50-33 63.2-81.3 100-31.9 24.4-69.2 40.2-106.6 54.6l-6.3-.3v-21.8c-19.6 1.6-19.7-14.6-31.6-23-18.7 20.6-31.6 40.8-58.9 51.1-12.7 4.8-19.6 10-25.9 21.8 34.9-16.4 91.2-13.5 98.8-10zM555.5 0l-.6 1.1-.3.9.6-.6zm-59.2 382.1c-33.9-56.9-75.3-118.4-150-115.5l-.3-6c-1.1-13.5 32.8 3.2 35.1-31l-14.4 7.2c-19.8-45.7-8.6-54.3-65.5-54.3-14.7 0-26.7 1.7-41.4 4.6 2.9 18.6 2.2 36.7-10.9 50.3l19.5 5.5c-1.7 3.2-2.9 6.3-2.9 9.8 0 21 42.8 2.9 42.8 33.6 0 18.4-36.8 60.1-54.9 60.1-8 0-53.7-50-53.4-60.1l.3-4.6 52.3-11.5c13-2.6 12.3-22.7-2.9-22.7-3.7 0-43.1 9.2-49.4 10.6-2-5.2-7.5-14.1-13.8-14.1-3.2 0-6.3 3.2-9.5 4-9.2 2.6-31 2.9-21.5 20.1L15.9 298.5c-5.5 1.1-8.9 6.3-8.9 11.8 0 6 5.5 10.9 11.5 10.9 8 0 131.3-28.4 147.4-32.2 2.6 3.2 4.6 6.3 7.8 8.6 20.1 14.4 59.8 85.9 76.4 85.9 24.1 0 58-22.4 71.3-41.9 3.2-4.3 6.9-7.5 12.4-6.9.6 13.8-31.6 34.2-33 43.7-1.4 10.2-1 35.2-.3 41.1 26.7 8.1 52-3.6 77.9-2.9 4.3-21 10.6-41.9 9.8-63.5l-.3-9.5c-1.4-34.2-10.9-38.5-34.8-58.6-1.1-1.1-2.6-2.6-3.7-4 2.2-1.4 1.1-1 4.6-1.7 88.5 0 56.3 183.6 111.5 229.9 33.1-15 72.5-27.9 103.5-47.2-29-25.6-52.6-45.7-72.7-79.9zm-196.2 46.1v27.2l11.8-3.4-2.9-23.8zm-68.7-150.4 24.1 61.2 21-13.8-31.3-50.9zm84.4 154.9 2 12.4c9-1.5 58.4-6.6 58.4-14.1 0-1.4-.6-3.2-.9-4.6-26.8 0-36.9 3.8-59.5 6.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://blog.derricklin.net" target="_blank" rel="noopener" title="blog.derricklin.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/derrick-lin" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dlccyes" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.indexes", "toc.follow", "search.suggest"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../assets/script.js"></script>
+      
+        <script src="../../assets/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
