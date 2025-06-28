@@ -163,3 +163,80 @@ Interpolate a point using 3 points forming a triangle
 ![[cs519-bary1.png]]
 
 ![[cs519-bary.png]]
+
+### RBF Interpolation
+
+![[cs519-radio-b.png]]
+
+![[cs519-rbf.png]]
+
+## Terrain
+
+- Euler characteristics: $V-E+F=2(1+G)$
+    - V = number of vertices
+    - E = number of edges
+    - F = number of faces
+    - G = genus = number of holes in the surface
+- triangle mesh
+    - $E\approx 3V$
+    - $F\approx 2V$
+        - $V-E+F=2=V-0.5F$
+    - average valence = average num of edge a node is connected to = 6
+        - each edge connects to 2 nodes -> average valence = 2E/V = 6
+- curvilinear: each point has `(x, y, z)`
+- digital elevation model (DEM)
+    - raster data set
+    - rectangular grid of elevations arranged by col and row
+    - is: raster, uniform, surface
+    - not: volume, curvilinear, polygonal, unstructured, rectilinear
+- Delaunay triangulation: no vertex is inside any circle
+- triangulated irregular networks (TIN)
+    - irregular = unstructured
+    - ![[cs519-q4.4.png]]
+
+## Contour
+
+### marching cubes
+
+- isosurface: points with the same value form a surface
+    - $f(x, y, z)=C$
+- internal ambiguity: an isosurface splits the cube into 2
+    - e.g. here the 2 pyramids are separated from the other parts of the cube
+        - ![[cs519-internal-amb-mc.png]]
+- face ambiguity: an isosurface cuts through a face of the cube
+- ![[cs519-mc-q.png]]
+
+### marching tetrahedra
+
+- tetrahedron = pyramid
+- $2^4=16$ possible cell configurations
+    - each point can be in or out of the isosurface
+- 5 rotationally unique cell configurations
+    - 1 case for 0 - 5 points inside the isosurface each
+- no ambiguity
+- cons compared to marching cubes
+    - generate more triangles
+    - less scalable
+- cube tetrahedralization: apply marching tetrahedra to cubes
+    - 5-6 tetrahedra per cube
+
+### dual marching squares
+
+- isosurface vertex = the middle point between the 2 points the isosurface intersect with the square edge
+    - ![[cs519-dms-cal.png]]
+    - use linear interpolation
+
+### dual marching cubes
+
+![[cs519-q5.2.png]]
+
+![[cs519-q5.8.png]]
+
+## Volume Visualization
+
+- gradient
+    - ![[cs519-gradient.png]]
+- compositing
+    - over ![[cs519-compositing.png]]
+    - ![[cs519-over-compo.png]]
+
