@@ -1,0 +1,6721 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../../../software-development/System%20Design/">
+      
+      
+        <link rel="next" href="../../../Junior/Algorithms/Algorithms/">
+      
+      
+      <link rel="icon" href="../../../../assets/roshar-green-trans.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Data Structure - El Mundo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-GC9K2DFK9F"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-GC9K2DFK9F",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-GC9K2DFK9F",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-structure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="El Mundo" class="md-header__button md-logo" aria-label="El Mundo" data-md-component="logo">
+      
+  <img src="../../../../assets/roshar-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            El Mundo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Structure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dlccyes/CollegeNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../OtherNotes/sitemap/" class="md-tabs__link">
+          
+  
+    
+  
+  Meta
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../software-development/Sniffing%20Packets%20from%20Wireless%20Networks/" class="md-tabs__link">
+          
+  
+    
+  
+  Posts
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../software-development/Programming%20101/" class="md-tabs__link">
+          
+  
+    
+  
+  Software Development
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../OtherNotes/CS%20Career/" class="md-tabs__link">
+          
+  
+    
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Freshman/Logic%20Design/Logic%20Design/" class="md-tabs__link">
+          
+  
+    
+  
+  Electrical Engineering
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Freshman/Microeconomics/" class="md-tabs__link">
+          
+  
+    
+  
+  Economics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="El Mundo" class="md-nav__button md-logo" aria-label="El Mundo" data-md-component="logo">
+      
+  <img src="../../../../assets/roshar-white.png" alt="logo">
+
+    </a>
+    El Mundo
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dlccyes/CollegeNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Meta
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Meta
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../OtherNotes/sitemap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sitemap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Posts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Systems and Networking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Systems and Networking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Sniffing%20Packets%20from%20Wireless%20Networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sniffing Packets from Wireless Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/restore%20usb%20bootable%20disk%20to%20normal%20disk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Restore a usb bootable disk to normal disk in Win10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Gitlab%20CICD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab CICD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/GCP%20CICD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCP CICD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Software Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Programming%20101/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming 101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Languages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Go/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/PHP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/JavaScript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/R/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/SQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/YAML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    YAML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Liquid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Liquid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/prolog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    prolog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/RegEx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RegEx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/RISC-V/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RISC-V
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Verilog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verilog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux/Unix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Linux/Unix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../OtherNotes/MacOS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MacOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/WSL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WSL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Linux%20Package%20Management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux/Unix Package Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/SSH/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Makefile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Makefile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/base64/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    base64
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/ANSI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ANSI Escape Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/PulseAudio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PulseAudio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/tcpdump/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tcpdump
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Gitlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web 101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/RESTful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RESTful
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_3" id="__nav_4_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Static Site Generators
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Static Site Generators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Hugo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hugo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Jekyll/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jekyll
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_4" id="__nav_4_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web Frameworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Web Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Django/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Flask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flask
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Laravel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laravel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_5" id="__nav_4_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Frontend Frameworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Frontend Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/React/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_6" id="__nav_4_5_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/gRPC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gRPC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_6_2" id="__nav_4_5_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mocking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_5_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mocking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/WireMock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WireMock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Databases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/MySQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/PostgreSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PostgreSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Redis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_4" id="__nav_4_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ORM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            ORM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/SQLAlchemy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQLAlchemy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_1" id="__nav_4_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Domain
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Domain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Domain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Cloudfare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloudfare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_2" id="__nav_4_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/AWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/GCP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Heroku/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heroku
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Firebase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Firebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_3" id="__nav_4_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Containerization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Containerization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_4" id="__nav_4_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CICD
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            CICD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/SonarQube/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SonarQube
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Github%20Action/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Action
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/ArgoCD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ArgoCD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_5" id="__nav_4_7_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Monitoring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Grafana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grafana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../OtherNotes/CS%20Career/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CS Career
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/System%20Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DSA
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            DSA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Data Structure
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Data Structure
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#big-oh-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Big-Oh Notation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Big-Oh Notation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-big-oh-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties of Big-Oh Notation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyzing-an-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyzing an Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-list-actual-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      python list actual implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-built-in-dictionary-operation-time-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Built-in Dictionary Operation Time Complexity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#master-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Master Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      generating function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Programming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avl-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      AVL Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splay-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splay Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-way-search-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Way Search Trees
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-Way Search Trees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-3-4-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-3-4 Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-black-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Red-Black Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aa-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      AA Tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      hash
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-priority-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      heap (priority queue)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="heap (priority queue)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bineary-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      bineary heap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binomial-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      binomial heap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fibonocci-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fibonocci heap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disjoint-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disjoint Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disjoint Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      path compression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tarjans-analysis-of-path-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarjan's analysis of path compression
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leftlist-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      leftlist heap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skew-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      skew heap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dijkstras-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dijkstra's Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Junior/Algorithms/Algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/leetcode.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Junior/Computer%20Networks/Computer%20Networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Junior/Operating%20Systems/Operating%20Systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operating Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Junior/Computer%20Architecture/Computer%20Architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Junior/Machine%20Learning/Machine%20Learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Electrical Engineering
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Electrical Engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Logic%20Design/Logic%20Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logic Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Circuit/Circuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    電路學
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Electromagnetism/Electromagnetism/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Electromagnetism
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Senior/Power%20Engineering/Power%20Engineering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Economics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Economics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Freshman/Microeconomics/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Microeconomics
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Microeconomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch1%20Supply%2C%20Demand%2C%20and%20Equilibrium/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch1 Supply, Demand, and Equilibrium
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch2%20Prices%2C%20Costs%2C%20and%20the%20Gains%20from%20Trade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 Prices, Costs, and the Gains from Trade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch3%20The%20Behavior%20of%20Consumers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 The Behavior of Consumers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch4%20Consumers%20in%20Marketplace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chap 4 Consumers in Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch5%20The%20Behavior%20of%20Firms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 The Behavior of Firms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch6%20Production%20and%20Costs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 Production and Costs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch7%20Competition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch7 Competition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch8%20Welfare%20Economics%20and%20the%20Gains%20from%20Trade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch8 Welfare Economics and the Gains from Trade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch10%20Monopoly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch10 Monopoly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch11%20Market%20Power%2C%20Colusion%2C%20and%20Obligopoly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch11 Market Power, Collusion, and Oligopoly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch12%20Game%20Theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch12 Game Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch13%20Externality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch13 Externality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch14%20Common%20Property%20and%20Public%20Goods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch14 Common Property and Public Goods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch15%20The%20Demand%20for%20Factors%20of%20Production/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch15 The Demand for Factors of Production
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch16%20The%20Market%20of%20Labor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch16 The Market of Labor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch17%20Allocating%20Goods%20Over%20Time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch17 Allocating Goods Over Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch18%20Risk%20and%20Uncertainty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch18 Risk and Uncertainty
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Macroeconomics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Macroeconomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Senior/Principle%20of%20Macroeconomics/Principle%20of%20Macroeconomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principle of Macroeconomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Junior/Macroeconomics/Macroeconomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macroeconomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Senior/Statistics/Statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Econometrics/Econometrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Econometrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Money%20and%20Banking/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Money and Banking
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Money and Banking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch1%20%E5%89%8D%E5%B0%8E/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch1 前導
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch2%20%E9%87%91%E8%9E%8D%E9%AB%94%E7%B3%BB%E6%A6%82%E8%A6%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 金融體系概要
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch3%20%E8%B2%A8%E5%B9%A3%E8%88%87%E6%94%AF%E4%BB%98%E7%B3%BB%E7%B5%B1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 貨幣與支付系統
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch4%20%E7%8F%BE%E5%80%BC%E8%88%87%E5%88%A9%E7%8E%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 現值與利率
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch5%20%E5%82%B5%E5%88%B8%E5%B8%82%E5%A0%B4%E8%88%87%E5%88%A9%E7%8E%87%E7%9A%84%E6%B1%BA%E5%AE%9A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 債券市場與利率的決定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch6%20%E5%88%A9%E7%8E%87%E9%A2%A8%E9%9A%AA%E7%B5%90%E6%A7%8B%E5%92%8C%E6%9C%9F%E9%99%90%E7%B5%90%E6%A7%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 利率風險結構和期限結構
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch7%20%E9%87%91%E8%9E%8D%E9%AB%94%E7%B3%BB%E7%9A%84%E7%B6%93%E6%BF%9F%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch7 金融體系的經濟分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch8%20%E9%8A%80%E8%A1%8C%E7%9A%84%E7%B6%93%E7%87%9F%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch8 銀行的經營管理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch9%20%E5%8F%B0%E7%81%A3%E9%8A%80%E8%A1%8C%E6%A5%AD%E7%9A%84%E7%B5%90%E6%A7%8B%E8%88%87%E7%99%BC%E5%B1%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch9 台灣銀行業的結構與發展
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch11%20%E9%87%91%E8%9E%8D%E5%AE%89%E5%85%A8%E7%B6%B2%20%E6%9C%80%E7%B5%82%E5%80%9F%E8%B2%B8%E8%80%85%E8%88%87%E5%AD%98%E6%AC%BE%E4%BF%9D%E9%9A%AA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch11 金融安全網 最終借貸者與存款保險
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch12%20%E9%87%91%E8%9E%8D%E5%AE%89%E5%85%A8%E7%B6%B2%20%E9%87%91%E8%9E%8D%E6%A9%9F%E6%A7%8B%E7%9A%84%E7%AE%A1%E5%88%B6%E8%88%87%E5%AF%A9%E6%85%8E%E7%9B%A3%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch12 金融安全網 金融機構的管制與審慎監理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch13%20%E4%B8%AD%E5%A4%AE%E9%8A%80%E8%A1%8C%E7%9A%84%E5%8A%9F%E8%83%BD%E8%88%87%E6%94%BF%E7%AD%96%E7%9B%AE%E6%A8%99/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch13 中央銀行的功能與政策目標
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch14%20%E9%87%91%E8%9E%8D%E7%A9%A9%E5%AE%9A%E8%88%87%E7%B8%BD%E9%AB%94%E5%AF%A9%E6%85%8E%E6%94%BF%E7%AD%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch14 金融穩定與總體審慎政策
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch15%20%E6%BA%96%E5%82%99%E8%B2%A8%E5%B9%A3%E8%88%87%E8%B2%A8%E5%B9%A3%E7%9A%84%E5%89%B5%E9%80%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch15 準備貨幣與貨幣的創造
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch16%20%E5%82%B3%E7%B5%B1%E8%88%87%E9%9D%9E%E5%82%B3%E7%B5%B1%E7%9A%84%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch16 傳統與非傳統的貨幣政策工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch17%20%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E7%9A%84%E7%9B%AE%E6%A8%99%E6%A9%9F%E5%88%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch17 貨幣政策的目標機制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Money%20and%20Banking/Ch18%20%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E7%9A%84%E5%82%B3%E9%81%9E%E6%A9%9F%E5%88%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch18 貨幣政策的傳遞機制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Eurozone/Eurozone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    經濟貨幣整合：歐元區理論與實證
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Junior/Industrial%20Organization/Industrial%20Organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industrial Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Senior/International%20Finance/International%20Finance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    International Finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Game Theory
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9">
+            <span class="md-nav__icon md-icon"></span>
+            Game Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Game%20Theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Game Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9_2" id="__nav_7_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Game Theory for Wireless Networks Papers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Game Theory for Wireless Networks Papers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Opportunistic%20Data%20Collection%20in%20Cognitive%20Wireless%20%20Sensor%20Networks%20-%20Air%E2%80%93Ground%20Collaborative%20Online%20Planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opportunistic Data Collection in Cognitive Wireless Sensor Networks - Air–Ground Collaborative Online Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/privacy-preserving%20incentive%20mechanism%20for%20the%20federated%20cloud-edge%20learning%2C%20PFCEL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#big-oh-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Big-Oh Notation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Big-Oh Notation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-big-oh-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties of Big-Oh Notation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyzing-an-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyzing an Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-list-actual-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      python list actual implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-built-in-dictionary-operation-time-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Built-in Dictionary Operation Time Complexity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#master-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Master Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      generating function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Programming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avl-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      AVL Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splay-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splay Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-way-search-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Way Search Trees
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-Way Search Trees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-3-4-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-3-4 Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-black-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Red-Black Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aa-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      AA Tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      hash
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-priority-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      heap (priority queue)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="heap (priority queue)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bineary-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      bineary heap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binomial-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      binomial heap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fibonocci-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fibonocci heap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disjoint-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disjoint Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disjoint Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      path compression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tarjans-analysis-of-path-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarjan's analysis of path compression
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leftlist-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      leftlist heap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skew-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      skew heap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dijkstras-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dijkstra's Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="data-structure">Data Structure<a class="headerlink" href="#data-structure" title="Permanent link">&para;</a></h1>
+<ul>
+<li>inf: greatest lower bound</li>
+<li>sup: least upper bound</li>
+</ul>
+<h2 id="big-oh-notation">Big-Oh Notation<a class="headerlink" href="#big-oh-notation" title="Permanent link">&para;</a></h2>
+<p>檢測</p>
+<ul>
+<li><span class="arithmatex">\(f(x)=\dfrac{h(x)}{g(x)}\)</span></li>
+<li><span class="arithmatex">\(\lim_{x\to\infty} f(x)\)</span></li>
+<li><span class="arithmatex">\(\lim_{x\to\infty} \frac{f(x+1)}{f(x)}\)</span></li>
+</ul>
+<p><img alt="data-structure-1.png" src="../data-structure-1.png" /></p>
+<p><img alt="data-structure-2.png" src="../data-structure-2.png" /></p>
+<p><a href="https://www.bigocheatsheet.com/">cheatsheet</a></p>
+<p><img alt="data-structure-3.png" src="../data-structure-3.png" /></p>
+<p>If <span class="arithmatex">\(\lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)}\)</span> exists, then
+<span class="arithmatex">\(<span class="arithmatex">\(\lim_{n \rightarrow \infty} \inf_{m \geq n} \frac{|T(m)|}{\phi(m)} = \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} = \lim_{n \rightarrow \infty} \sup_{m \geq n} \frac{|T(m)|}{\phi(m)}\)</span>\)</span>
+Therefore</p>
+<div class="arithmatex">\[T(n) \in O(\phi(n)) \Leftrightarrow \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} &lt; \infty\]</div>
+<div class="arithmatex">\[T(n) \in \Omega(\phi(n)) \Leftrightarrow \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} &gt; 0\]</div>
+<div class="arithmatex">\[T(n) \in \Theta(\phi(n)) \Leftrightarrow 0 &lt; \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} &lt; \infty\]</div>
+<div class="arithmatex">\[T(n) \in o(\phi(n)) \Leftrightarrow \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} = 0\]</div>
+<div class="arithmatex">\[T(n) \in \omega(\phi(n)) \Leftrightarrow \lim_{n \rightarrow \infty} \frac{|T(n)|}{\phi(n)} = \infty\]</div>
+<h3 id="properties-of-big-oh-notation">Properties of Big-Oh Notation<a class="headerlink" href="#properties-of-big-oh-notation" title="Permanent link">&para;</a></h3>
+<p>Assume all functions are positive.</p>
+<ul>
+<li>Constant factors can be ignored.</li>
+<li><span class="arithmatex">\(kT(n) \in \Theta(T(n)), \forall k &gt; 0\)</span></li>
+<li>Higher power grows faster</li>
+<li><span class="arithmatex">\(n^r \in O(n^s), \forall r \leq s\)</span></li>
+<li>Fastest growing term dominates a sum</li>
+<li><span class="arithmatex">\(f(n) \in O(g(n)) \Rightarrow f(n) + g(n) \in \Theta(g(n))\)</span></li>
+<li>Ex. <span class="arithmatex">\(5n^2+27n+1005 \in O(n^2)\)</span></li>
+<li>Polynomial's growth is determined by leading term.</li>
+<li>If <span class="arithmatex">\(f(n)\)</span> is a polynomial of degree <span class="arithmatex">\(d\)</span>, then <span class="arithmatex">\(f(n) \in \Theta(n^d)\)</span>.</li>
+<li>Transitivity</li>
+<li>If <span class="arithmatex">\(f(n) \in O(g(n))\)</span> and <span class="arithmatex">\(g(n) \in O(h(n))\)</span>, then <span class="arithmatex">\(f(n) \in O(h(n))\)</span></li>
+<li>Product of asymptotic upper bounds is asymptotic upper bounds for products</li>
+<li>If <span class="arithmatex">\(f_1(n) \in O(g_1(n))\)</span> and <span class="arithmatex">\(f_2(n) \in O(g_2(n))\)</span>, then <span class="arithmatex">\(f_1(n)f_2(n) \in O(g_1(n)g_2(n))\)</span>.</li>
+<li>Exponential functions grow faster than powers</li>
+<li><span class="arithmatex">\(n^k \in o(b^n), \forall b &gt; 1\)</span></li>
+<li>Ex. <span class="arithmatex">\(n^{100} \in O(1.01^n)\)</span></li>
+<li>Logarithmic grows slower than powers</li>
+<li><span class="arithmatex">\(\log_b n \in o(n^k), \forall b &gt; 1\)</span> and <span class="arithmatex">\(k &gt; 0\)</span>.</li>
+<li>Ex. <span class="arithmatex">\(\log_2 n \in O(n^{1/3})\)</span>.</li>
+<li>All logarithms grow at the same rate</li>
+<li><span class="arithmatex">\(\log_b n \in \Theta(\log_d n), \forall b,d &gt; 1\)</span>.</li>
+<li>Sum of the first <span class="arithmatex">\(n\)</span> <span class="arithmatex">\(r\)</span>'th power grows as the <span class="arithmatex">\((r+1)\)</span>'th power</li>
+<li><span class="arithmatex">\(\sum_{k=1}^n k^r \in \Theta(n^{r+1})\)</span>, for all <span class="arithmatex">\(r &gt; -1\)</span>.</li>
+<li>Ex. <span class="arithmatex">\(\sum_{k=1}^n k = \frac{n(n+1)}{2} \in \Theta(n^2)\)</span>.</li>
+</ul>
+<p>The performance of an algorithm may also depend on the exact values of the data, specified by the <strong>best case</strong>, <strong>worst case</strong>, and <strong>average case</strong> performance.</p>
+<p>題目
+<img alt="data-structure-4.png" src="../data-structure-4.png" />
+<img alt="data-structure-5.png" src="../data-structure-5.png" /></p>
+<h2 id="analyzing-an-algorithm">Analyzing an Algorithm<a class="headerlink" href="#analyzing-an-algorithm" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Simple statement sequence
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="n">Statement_1</span>  <span class="c1"># O(1)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">Statement_2</span>  <span class="c1"># O(1)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">...</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">Statement_k</span>  <span class="c1"># O(1)</span>
+</code></pre></div></li>
+<li>
+<p>Time complexity is <span class="arithmatex">\(O(1)\)</span> as long as <span class="arithmatex">\(k\)</span> is constant</p>
+</li>
+<li>
+<p>Simple loops
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>        <span class="n">Statement</span>  <span class="c1"># O(1)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Time complexity is <span class="arithmatex">\(O(n)\)</span></p>
+</li>
+<li>
+<p>Nested loops
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>            <span class="n">Statement</span>  <span class="c1"># O(1)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Time complexity is <span class="arithmatex">\(O(n^2)\)</span></p>
+</li>
+<li>
+<p>Loop index does't vary linearily
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    <span class="k">while</span> <span class="n">h</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>        <span class="n">h</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="mi">2</span>
+</code></pre></div></p>
+</li>
+<li>h = 1,2,4,8,... until exceeding n</li>
+<li>
+<p>大概有 <span class="arithmatex">\(\log_2 n\)</span> 項 → Time complexity is <span class="arithmatex">\(O(\log_2 n)\)</span></p>
+</li>
+<li>
+<p>Loop index depends on outer loop index
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>            <span class="n">Statement</span>  <span class="c1"># O(1)</span>
+</code></pre></div></p>
+</li>
+<li>Inner loop executed <span class="arithmatex">\(1+2+...+n = \frac{n(n+1)}{2}\)</span> times</li>
+<li>Time complexity <span class="arithmatex">\(O(n^2)\)</span></li>
+</ul>
+<p>Let's analyze the time complexity for the following algorithms:</p>
+<p>Example 1:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">myFunc</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">u</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">w</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>            <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>            <span class="n">z</span> <span class="o">=</span> <span class="n">z</span> <span class="o">+</span> <span class="n">j</span> <span class="o">*</span> <span class="n">j</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>        <span class="n">u</span> <span class="o">=</span> <span class="n">w</span> <span class="o">+</span> <span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">k</span> <span class="o">+</span> <span class="mi">45</span><span class="p">)</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>        <span class="n">v</span> <span class="o">=</span> <span class="n">v</span> <span class="o">+</span> <span class="n">k</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">k</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    <span class="n">w</span> <span class="o">=</span> <span class="n">u</span><span class="o">+</span><span class="n">v</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    <span class="k">return</span> <span class="n">w</span>
+</code></pre></div>
+<span class="arithmatex">\(O(n^2)+O(n) → O(n^2)\)</span></p>
+<p>Example 2:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">maxSubSum</span><span class="p">(</span><span class="n">myArray</span><span class="p">):</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">maxSum</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">idx_start</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">idx_end</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">myArray</span><span class="p">)):</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">myArray</span><span class="p">)):</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>            <span class="n">thisSum</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>                <span class="n">thisSum</span> <span class="o">=</span> <span class="n">thisSum</span> <span class="o">+</span> <span class="n">myArray</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>            <span class="k">if</span> <span class="n">thisSum</span> <span class="o">&gt;</span> <span class="n">maxSum</span><span class="p">:</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>                <span class="n">maxSum</span> <span class="o">=</span> <span class="n">thisSum</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>                <span class="n">idx_start</span> <span class="o">=</span> <span class="n">i</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>                <span class="n">idx_end</span> <span class="o">=</span> <span class="n">j</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    <span class="k">return</span> <span class="n">maxSum</span><span class="p">,</span><span class="n">idx_start</span><span class="p">,</span><span class="n">idx_end</span>
+</code></pre></div>
+n = len(myArray)<br />
+<span class="arithmatex">\(O(n^3)\)</span></p>
+<h2 id="python-list-actual-implementation">python list actual implementation<a class="headerlink" href="#python-list-actual-implementation" title="Permanent link">&para;</a></h2>
+<p><img alt="data-structure-6.png" src="../data-structure-6.png" />
+pop(2) 需要 O(n) at worst case<br />
+In Python’s implementation, when an item is taken from the front of the list, all the other elements in the list are shifted one position closer to the beginning. For instance, what <code>pop(2)</code> does is as follows:
+<img alt="data-structure-7.png" src="../data-structure-7.png" /></p>
+<p>Though it causes time for pop operation, this allows the index operation to be <span class="arithmatex">\(O(1)\)</span>. This is a tradeoff that the Python implementors makes based on how people most commonly use the list data structure. The implementation is optimized so that the most common operations were very fast, sometimes by sacrificing the performance of less common operations.</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Big-O Efficiency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index []</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>index assignment</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>append</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>pop(i)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>insert(i,item)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>del operator</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>iteration</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>contains (in)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>get slice [x:y]</td>
+<td>O(k)</td>
+</tr>
+<tr>
+<td>del slice</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>reverse</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>concatenate</td>
+<td>O(k)</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>O(n log n)</td>
+</tr>
+<tr>
+<td>multiply</td>
+<td>O(nk)</td>
+</tr>
+<tr>
+<td>- index[]: ** 指到 *0 → 加法到所要位置 → 指到 object</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>It is should be clear that the execution time for <code>pop(0)</code> and <code>pop()</code> are <code>O(n)</code> and <code>O(1)</code>, respectively.</p>
+<p>Some sources of error occurs due to other processes running on the computer which may slow down our code. That is why loop the experiments many times to make the measurement more statistically reliable.</p>
+<h2 id="python-built-in-dictionary-operation-time-complexity">Python Built-in Dictionary Operation Time Complexity<a class="headerlink" href="#python-built-in-dictionary-operation-time-complexity" title="Permanent link">&para;</a></h2>
+<p>If you were the implementor of Python, how do you implement dictionary so that the <code>contain</code>, <code>get item</code> and <code>set item</code> operations all have <em>average case</em> time complexity of <span class="arithmatex">\(O(1)\)</span>.?</p>
+<p>Currently, Python dictionaries are implemented as hash tables (Reference: <em>dictobject.h</em>). We will get into hash tables later in the course, but the following figure might give you some hints on how it works.</p>
+<p><img alt="data-structure-8.png" src="../data-structure-8.png" /></p>
+<!-- https://stackoverflow.com/questions/327311/how-are-pythons-built-in-dictionaries-implemented  -->
+
+<p>The <em>average case</em> time complexity of dictionary operations are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Big-O Efficiency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>copy</code></td>
+<td><span class="arithmatex">\(O(n)\)</span></td>
+</tr>
+<tr>
+<td><code>get item</code></td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
+</tr>
+<tr>
+<td><code>set item</code></td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
+</tr>
+<tr>
+<td><code>delete item</code></td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
+</tr>
+<tr>
+<td><code>contains (in)</code></td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
+</tr>
+<tr>
+<td><code>iteration</code></td>
+<td><span class="arithmatex">\(O(n)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>In the following experiment we compare the performance of the <code>contains</code> operation between lists and dictionaries.</p>
+<h2 id="master-theorem">Master Theorem<a class="headerlink" href="#master-theorem" title="Permanent link">&para;</a></h2>
+<p><img alt="data-structure-9.png" src="../data-structure-9.png" /></p>
+<p><img alt="data-structure-10.png" src="../data-structure-10.png" /></p>
+<h2 id="generating-function">generating function<a class="headerlink" href="#generating-function" title="Permanent link">&para;</a></h2>
+<p><img alt="data-structure-11.png" src="../data-structure-11.png" />
+<img alt="data-structure-12.png" src="../data-structure-12.png" /></p>
+<h2 id="dynamic-programming">Dynamic Programming<a class="headerlink" href="#dynamic-programming" title="Permanent link">&para;</a></h2>
+<ul>
+<li>store the solutions</li>
+<li>查表 (T(1)) instead of recursion(T(n-k)) </li>
+<li>start from small → get big</li>
+<li>用空間換取時間</li>
+</ul>
+<p>Bell (W2)
+- <a href="https://www.geeksforgeeks.org/bell-numbers-number-of-ways-to-partition-a-set/">https://www.geeksforgeeks.org/bell-numbers-number-of-ways-to-partition-a-set/</a></p>
+<h2 id="tree">Tree<a class="headerlink" href="#tree" title="Permanent link">&para;</a></h2>
+<h3 id="binary-tree">Binary Tree<a class="headerlink" href="#binary-tree" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../../obs_autolink/Binary%20Tree">Binary Tree</a></li>
+<li>每個 node 有 0-2 個分支 → binary tree</li>
+<li>inorder 順序正確(小→大 or 大→小) → binary search tree</li>
+<li>order</li>
+<li>preorder/prefix<ul>
+<li>接到任務的先後順序 (左支先)</li>
+<li><img alt="data-structure-13.png" src="../data-structure-13.png" /></li>
+</ul>
+</li>
+<li>postorder/postfix<ul>
+<li>完成任務的先後順序</li>
+<li><img alt="data-structure-14.png" src="../data-structure-14.png" /></li>
+</ul>
+</li>
+<li>inorder/infix<ul>
+<li>由左往右數</li>
+<li><img alt="data-structure-15.png" src="../data-structure-15.png" /></li>
+</ul>
+</li>
+<li>classification</li>
+<li>full/proper/plane<ul>
+<li>每個 node 有 0 or 2 個分支</li>
+</ul>
+</li>
+<li>complete<ul>
+<li>up/left 填滿（2 分支）才能填 bottom/right</li>
+<li>parent of node i is node i//2, unless i=1</li>
+<li>left child of node i is 2i, unless 2i &gt; n</li>
+<li>right child of node i is 2i+1, unless 2i+1 &gt; n</li>
+<li><img alt="data-structure-16.png" src="../data-structure-16.png" /></li>
+</ul>
+</li>
+<li>perfect<ul>
+<li>symmetrical for all branches，同 level 的 node 的分支數都一樣 (balanced)</li>
+<li>height k → <span class="arithmatex">\(2^{k+1}-1\)</span> (等比) nodes</li>
+<li><img alt="data-structure-17.png" src="../data-structure-17.png" /></li>
+<li><span class="arithmatex">\(k\in \Theta(logn)\)</span> (height=k, nodes=n) </li>
+</ul>
+</li>
+<li>insert O(height)</li>
+<li>search O(height)</li>
+<li>delete O(height)</li>
+<li>node with 1 child<ul>
+<li>bypass 掉</li>
+</ul>
+</li>
+<li>node with 2 children<ul>
+<li>replace with 右邊 min，並 delete/bypass 掉右邊 min</li>
+<li><img alt="data-structure-18.png" src="../data-structure-18.png" /></li>
+</ul>
+</li>
+<li>problem</li>
+<li>height <span class="arithmatex">\(\in \Omega(logn)\)</span> (<span class="arithmatex">\(O(logn)\)</span> if perfect), worst cast O(n)</li>
+</ul>
+<h3 id="avl-tree">AVL Tree<a class="headerlink" href="#avl-tree" title="Permanent link">&para;</a></h3>
+<!-- - balanced binary tree -->
+<ul>
+<li>height of left &amp; right node 之差 &lt;= 1 的 binary search tree</li>
+<li><img alt="data-structure-19.png" src="../data-structure-19.png" /></li>
+<li>height <span class="arithmatex">\(\in \Theta(logN)\)</span></li>
+<li>upper bound (兩邊高度差一, smallest)
+  <img alt="data-structure-20.png" src="../data-structure-20.png" /></li>
+<li>lower bound (兩邊等高, biggest)
+  <img alt="data-structure-21.png" src="../data-structure-21.png" /></li>
+<li>rotation</li>
+<li>single rotation
+  <img alt="data-structure-22.png" src="../data-structure-22.png" /><ol>
+<li>原是一個 AVL Tree，x = h+2</li>
+<li>insert C → x = h+1 but unbalanced</li>
+<li>弄成右圖 → y = h+2</li>
+<li>so 對其他地方而言，不變 as 前後都是 h+2，so 整株樹仍是 AVL Tree</li>
+<li>檢查：</li>
+<li>A &lt; y</li>
+<li>A &lt; y &lt; B</li>
+<li>y &lt; B &lt; x</li>
+<li>x &lt; C</li>
+</ol>
+</li>
+<li>double rotation
+  <img alt="data-structure-23.png" src="../data-structure-23.png" /><ul>
+<li>insert B1 B2 後，(由下往上)到 x 才 violate，so B1/B2 = h/h-1</li>
+<li>檢查</li>
+<li>左右圖看進去的 height 相同 → 整株都符合 AVL property</li>
+<li>各個 node</li>
+</ul>
+</li>
+<li>重的(比較高的)在內側 → double rotation</li>
+<li>otherwise → single rotation</li>
+<li>insertion/deletion</li>
+<li>傳統 binary search tree 作法</li>
+<li>往上找，看有無違反 AVL property; if yes → rotation<ul>
+<li>insertion 最多只要 rotate 一次就全 ok </li>
+<li>deletion 需要找到 root 才能完全確定，可能 rotate 很多次</li>
+<li>上方的 node: h+3 → h+2
+   <img alt="data-structure-24.png" src="../data-structure-24.png" />
+   <img alt="data-structure-25.png" src="../data-structure-25.png" /></li>
+<li>上方的 node: 不變
+   <img alt="data-structure-26.png" src="../data-structure-26.png" /></li>
+</ul>
+</li>
+<li>pros</li>
+<li>search <span class="arithmatex">\(\in O(logN)\)</span></li>
+<li>insertion &amp; deletion <span class="arithmatex">\(\in O(logN)\)</span><ul>
+<li>height balancing (rotation) 只是加 constant</li>
+</ul>
+</li>
+<li>cons</li>
+<li>麻煩</li>
+<li>height 還有另外存 </li>
+<li>asymptotically faster but rebalancing costs time</li>
+<li>其他的資料結構也許需要 O(N) 做動作，但會讓後續許多其他動作比較快 → faster in the long run<ul>
+<li>e.g. Splay tree</li>
+</ul>
+</li>
+</ul>
+<h3 id="splay-tree">Splay Tree<a class="headerlink" href="#splay-tree" title="Permanent link">&para;</a></h3>
+<ul>
+<li>性質</li>
+<li>per operation <span class="arithmatex">\(\in O(N)\)</span></li>
+<li>amortized time <span class="arithmatex">\(\in O(logN)\)</span></li>
+<li>good locality<ul>
+<li>常用的會在上面</li>
+</ul>
+</li>
+<li>splay</li>
+<li>x 在外側 → zig-zig<ul>
+<li><img alt="data-structure-27.png" src="../data-structure-27.png" /></li>
+</ul>
+</li>
+<li>x 在內側 → zig-zag<ul>
+<li><img alt="data-structure-28.png" src="../data-structure-28.png" /></li>
+</ul>
+</li>
+<li>insertion</li>
+<li>把找到的那個 node splay 上去<ul>
+<li>就是最後一個在的 node</li>
+</ul>
+</li>
+<li>split</li>
+<li>插進去</li>
+<li>e.g.<ul>
+<li><img alt="data-structure-29.png" src="../data-structure-29.png" /></li>
+</ul>
+</li>
+<li>deletion</li>
+<li>把目標 node splay 上去</li>
+<li>delete 目標 node，變成兩個分開的 subtree</li>
+<li>把 left subtree 的 max node splay 上去</li>
+<li>接上 right subtree</li>
+<li><img alt="data-structure-30.png" src="../data-structure-30.png" /></li>
+<li>e.g.<ul>
+<li><img alt="data-structure-31.png" src="../data-structure-31.png" /></li>
+</ul>
+</li>
+<li>amortized cost</li>
+<li>zig-zig
+  <img alt="data-structure-32.png" src="../data-structure-32.png" /></li>
+<li>zig-zag
+  <img alt="data-structure-33.png" src="../data-structure-33.png" /></li>
+<li>simple rotation
+  <img alt="data-structure-34.png" src="../data-structure-34.png" /></li>
+<li><img alt="data-structure-35.png" src="../data-structure-35.png" /></li>
+<li>locality<ul>
+<li>如果都只對幾個 node 操作 → 很快</li>
+<li><img alt="data-structure-36.png" src="../data-structure-36.png" /></li>
+</ul>
+</li>
+<li>top-down splay</li>
+<li>深度為偶數 → 結果跟 bottom-up 一樣</li>
+<li>深度為奇數 → 結果可能跟 bottom-up 不一樣</li>
+</ul>
+<h3 id="multi-way-search-trees">Multi-Way Search Trees<a class="headerlink" href="#multi-way-search-trees" title="Permanent link">&para;</a></h3>
+<h4 id="2-3-4-tree">2-3-4 Tree<a class="headerlink" href="#2-3-4-tree" title="Permanent link">&para;</a></h4>
+<ul>
+<li>all leaf on same level</li>
+<li>each node has 1/2/3 items</li>
+<li>k items → k+1 children</li>
+<li>insertion<ul>
+<li>insert 到 leaf node</li>
+<li>look before you leap</li>
+<li>經過的每個 4 node 都要 split</li>
+<li>insert 的目的地是 4 node 時，先 split 再 insert</li>
+<li><img alt="data-structure-37.png" src="../data-structure-37.png" /></li>
+<li><a href="https://www.educative.io/page/5689413791121408/80001">https://www.educative.io/page/5689413791121408/80001</a></li>
+<li><img alt="data-structure-38.png" src="../data-structure-38.png" /></li>
+</ul>
+</li>
+<li>deletion <ul>
+<li>bottom-up</li>
+<li><img alt="data-structure-39.png" src="../data-structure-39.png" /></li>
+<li>top-down</li>
+<li>look before you leap<ul>
+<li>經過的每個 2 node 都要 split</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="red-black-tree">Red-Black Tree<a class="headerlink" href="#red-black-tree" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="../../obs_autolink/Red-Black%20Tree">Red-Black Tree</a></li>
+<li>represent 2-3-4 tree as binary tree</li>
+<li><img alt="data-structure-40.png" src="../data-structure-40.png" /></li>
+<li>兩種表示法</li>
+<li><img alt="data-structure-41.png" src="../data-structure-41.png" /></li>
+<li><img alt="data-structure-42.png" src="../data-structure-42.png" /></li>
+<li>properties<ul>
+<li><img alt="data-structure-43.png" src="../data-structure-43.png" /></li>
+</ul>
+</li>
+<li>root 是 black</li>
+<li>注意 ==leaf 是指 NIL==，永遠是黑色</li>
+<li>不會連續兩個 red</li>
+<li>每個 path 黑 node 數都一樣</li>
+<li>2-3-4 leaf nodes 都同 level</li>
+<li><img alt="data-structure-44.png" src="../data-structure-44.png" /></li>
+<li>max height <span class="arithmatex">\(2log(n+1)\)</span></li>
+<li><a href="https://www.codesdope.com/course/data-structures-red-black-trees/">https://www.codesdope.com/course/data-structures-red-black-trees/</a></li>
+<li><a href="https://doctrina.org/maximum-height-of-red-black-tree.html">https://doctrina.org/maximum-height-of-red-black-tree.html</a></li>
+<li>W4-2</li>
+<li>operation：先做 2-3-4 再轉成 Red-Black</li>
+</ul>
+<h4 id="aa-tree">AA Tree<a class="headerlink" href="#aa-tree" title="Permanent link">&para;</a></h4>
+<ul>
+<li>interactive visualization <ul>
+<li><a href="https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html">https://people.ksp.sk/~kuko/gnarley-trees/AAtree.html</a></li>
+</ul>
+</li>
+<li>Red-Black Tree but left-child can't be red</li>
+<li><img alt="data-structure-45.png" src="../data-structure-45.png" /></li>
+<li>level</li>
+<li>leaf = 1</li>
+<li>red = parent's level</li>
+<li>black = parent's level - 1</li>
+<li><img alt="data-structure-46.png" src="../data-structure-46.png" /></li>
+<li>水平：同 level (必指到 red)</li>
+<li>operations</li>
+<li>skew：</li>
+<li>remove 1 left horizontal</li>
+<li>add 1 right horizontal</li>
+<li><img alt="data-structure-47.png" src="../data-structure-47.png" /></li>
+<li>split</li>
+<li>remove consecutive right horizontal</li>
+<li>把中間堤上去</li>
+<li><img alt="data-structure-48.png" src="../data-structure-48.png" /></li>
+<li><strong>不會考 deletion</strong></li>
+</ul>
+<h2 id="hash">hash<a class="headerlink" href="#hash" title="Permanent link">&para;</a></h2>
+<ul>
+<li>hash function</li>
+<li><span class="arithmatex">\(h(k)=k\%m\)</span></li>
+<li>避免是 m≒2^n bc 二進位數/2^n 就是後 n 個 digit 而已</li>
+<li>設 m = 質數<ul>
+<li>若 k = m 的因數的倍數，則只會用到某幾格</li>
+<li>e.g. key%3=0，m=18 → 只會用到 6 格</li>
+</ul>
+</li>
+<li>若 key 是 string<ul>
+<li>sum of ASCII</li>
+<li>len = 8 → 只會用到 127x8 個 slot</li>
+<li><img alt="data-structure-49.png" src="../data-structure-49.png" /></li>
+</ul>
+</li>
+<li>separate chaining</li>
+<li>可每個 slot 存 linked list<ul>
+<li>collision → 加到後面</li>
+<li>insertion O(1)</li>
+<li>加到前面</li>
+<li>deletion/search O(長度)</li>
+</ul>
+</li>
+<li>open addressing</li>
+<li>collision → relocate</li>
+<li><span class="arithmatex">\(h_i(k)=(h(k)+f(i))mod\space m\)</span></li>
+<li>linear probing<ul>
+<li><span class="arithmatex">\(h_i(k)=(k+i)mod\space 10\)</span></li>
+<li>collision → 跳一格</li>
+<li>會形成 cluster → 耗時</li>
+</ul>
+</li>
+<li>quadratic probing<ul>
+<li><span class="arithmatex">\(h_i(k)=(k+i^2)mod\space 10\)</span></li>
+</ul>
+</li>
+<li>double hashing<ul>
+<li><span class="arithmatex">\(f(i)=i\cdot h_2(k)\)</span></li>
+<li><span class="arithmatex">\(h_2(k)=R-(k\space mod\space R)\)</span><ul>
+<li>bc <span class="arithmatex">\(h_2(k)=0\)</span> → 跳零格 → 沒屁用</li>
+<li>就是 collision 時每次跳的格數</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(h_i(k)=(k+i(R-(k\space mod\space R)))mod\space m\)</span></li>
+<li>e.g. <span class="arithmatex">\(h_i(k)=(k+i(7-(k\space mod\space7)))mod\space 10\)</span></li>
+<li><span class="arithmatex">\(gcd(m,h_2(k))=1\)</span></li>
+<li>e.g. R, m = prime AND R &lt; m</li>
+</ul>
+</li>
+<li>deletion</li>
+<li>delete 後要留個墓碑標示先前有人，表示之後 delete 到這空格時要繼續 hash</li>
+<li>insert 到墓碑時，就直接佔用</li>
+</ul>
+<h2 id="heap-priority-queue">heap (priority queue)<a class="headerlink" href="#heap-priority-queue" title="Permanent link">&para;</a></h2>
+<h3 id="bineary-heap">bineary heap<a class="headerlink" href="#bineary-heap" title="Permanent link">&para;</a></h3>
+<ul>
+<li>complete binary tree</li>
+<li>all levels are filled except leaf </li>
+<li>先 fill 左邊</li>
+<li><span class="arithmatex">\(h\in O(logn)\)</span></li>
+<li>MinHeap: parent key &lt;= child key</li>
+<li>MaxHeap: parent ket &gt;= child key</li>
+<li>insertion</li>
+<li>先 insert 到最後一項 (最右 leaf 之右)，再根據大小 percolate up</li>
+<li>deletion</li>
+<li>delete root (min) → 把 bottom level 最右的 node 放到 root → percolate down<ul>
+<li>跟較小的且最小的 children 互換</li>
+<li>s.t. children 被換上去後也會小於另一個 children</li>
+<li><img alt="data-structure-50.png" src="../data-structure-50.png" />
+<img alt="data-structure-51.png" src="../data-structure-51.png" />
+<img alt="data-structure-52.png" src="../data-structure-52.png" />
+<img alt="data-structure-53.png" src="../data-structure-53.png" /></li>
+</ul>
+</li>
+<li>merge</li>
+<li>先放到 root 再 percolate down
+    <img alt="data-structure-54.png" src="../data-structure-54.png" /></li>
+<li>bottom-up construction</li>
+<li>o(n)</li>
+<li>array representation</li>
+<li>index start from 0</li>
+<li>left child = 2i+1</li>
+<li>right child = 2i+2</li>
+<li>i = odd → left child</li>
+<li>i = even → right child</li>
+<li><img alt="data-structure-55.png" src="../data-structure-55.png" /></li>
+</ul>
+<h3 id="binomial-heap">binomial heap<a class="headerlink" href="#binomial-heap" title="Permanent link">&para;</a></h3>
+<ul>
+<li><img alt="data-structure-56.png" src="../data-structure-56.png" /></li>
+<li><img alt="data-structure-57.png" src="../data-structure-57.png" /></li>
+<li>height = k</li>
+<li><span class="arithmatex">\(2^k\)</span> nodes</li>
+<li>roots 是 singly linked list</li>
+<li>砍掉 root → k 個 binomial tree</li>
+<li>每棵都是 min 形式 (大的在下，小的在上)</li>
+<li>n 個 nodes 只會有一種結構</li>
+<li>每棵樹的 order 都不一樣</li>
+<li>n 個 nodes → 一種二進位表示法<ul>
+<li><span class="arithmatex">\(19 = (10011)_2\)</span> → <span class="arithmatex">\(B_4\)</span> + <span class="arithmatex">\(B_2\)</span> + <span class="arithmatex">\(B_1\)</span></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(k \leq \lfloor{log(n)}\rfloor\)</span></li>
+<li><span class="arithmatex">\(2^k\leq n&lt;2^{k+1}\)</span> → <span class="arithmatex">\(log_2(n)-1 &lt; k\leq log_2(n)\)</span></li>
+<li>at most <span class="arithmatex">\(k+1\)</span> (<span class="arithmatex">\(B_0\)</span>~<span class="arithmatex">\(B_k\)</span>) $\leq \lfloor{log(n)}\rfloor+1 $ 個 tree</li>
+<li>union</li>
+<li>大的接到小的 root 下</li>
+<li>二進位加法</li>
+<li>order 相同 → merge → repeat</li>
+<li>每個 order 只能有一棵樹</li>
+<li>delete min</li>
+<li>砍掉最小 root → union rest</li>
+<li><span class="arithmatex">\(\in O(log(n))\)</span></li>
+<li>decrease key</li>
+<li>key 變小 → 重新 order (like percolate up for minheap) to match heap order (parent &lt; child)</li>
+<li><span class="arithmatex">\(\in O(logn)\)</span></li>
+<li>deletion</li>
+<li>把目標 key decrease 成 -inf → delete min → union</li>
+<li><span class="arithmatex">\(\in O(logn)\)</span></li>
+<li>insertion</li>
+<li>worst case <span class="arithmatex">\((111...11)_2+1\)</span> → <span class="arithmatex">\(log_2n\)</span> time</li>
+<li>等同於跟 union(x,H)</li>
+<li>construction</li>
+<li>sequence of inserts</li>
+<li><span class="arithmatex">\(\in O(n)\)</span></li>
+<li><img alt="data-structure-58.png" src="../data-structure-58.png" /></li>
+</ul>
+<h3 id="comparison">comparison<a class="headerlink" href="#comparison" title="Permanent link">&para;</a></h3>
+<p><img alt="data-structure-59.png" src="../data-structure-59.png" /></p>
+<h3 id="fibonocci-heap">Fibonocci heap<a class="headerlink" href="#fibonocci-heap" title="Permanent link">&para;</a></h3>
+<ul>
+<li>roots of trees → circular linked list</li>
+<li>degree</li>
+<li>root 有幾個小孩</li>
+<li>t(H)：幾棵樹</li>
+<li>m(H)：幾棵 marked 的樹</li>
+<li><span class="arithmatex">\(\phi(H)=t(H)+2m(H)\)</span> potential function</li>
+<li>insertion</li>
+<li>放在 min 的左邊</li>
+<li>amortized cost O(1)<ul>
+<li>actual cost O(1)</li>
+<li>potential += 1</li>
+<li>t(H) += 1</li>
+<li>m(H) += 0</li>
+</ul>
+</li>
+<li><img alt="data-structure-60.png" src="../data-structure-60.png" /></li>
+<li>union</li>
+<li>剪開 → 連起來 → update min (among circular linked list roots)</li>
+<li>amortized cost O(1)<ul>
+<li>actual cost O(1) </li>
+<li>potential += 0</li>
+<li>t(H) += 0</li>
+<li>m(H) += 0</li>
+</ul>
+</li>
+<li>delete min</li>
+<li>步驟<ol>
+<li>delete min O(1)</li>
+<li>把原 min 的 children 接上 root list O(D(n)))</li>
+<li>consolitdate  O(t(H)+D(n)) (bc worst case t(H)+D(n) 棵樹)<ol>
+<li>檢查每個 root 的 degree</li>
+<li>若有一樣的，則把較大的 root 接在較小的下面</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>amortized cost O(D(n))<ul>
+<li>actual cost O(D(n)+t(H))</li>
+<li>D(n) = max degree of Fibonocci heap with n nodes</li>
+<li>t(H) = 原 tree 數</li>
+<li>potential += O(D(n)-t(H))</li>
+<li>t(H) += (D(n)+1-t(H))<ul>
+<li>原 t(H)</li>
+<li>做完後 max D(n) + 1 </li>
+<li>D(n-1) &lt;= D(n)</li>
+<li>n-1 個 node 的 max degree &lt;= n 個的</li>
+<li>每棵 degree 不重複 → 0, 1, 2, ..., D(n) → max D(n)+1 棵</li>
+</ul>
+</li>
+<li>m(H) += 0</li>
+</ul>
+</li>
+<li>if 只做 insertion, delete-min &amp; union → only contains binomial tree</li>
+<li>so <span class="arithmatex">\(D(n)\leq\lfloor log_2n\rfloor\)</span></li>
+<li>decrease key (x)</li>
+<li>parent of x = p[x]</li>
+<li>case 0：仍為 min-heap → 就這樣</li>
+<li>case 1：violate min-heap property and p[x] unmarked<ol>
+<li>x 跟 p[x] 斷開</li>
+<li>mark p[x]</li>
+<li>接上 root list</li>
+<li>unmark x</li>
+<li>update min</li>
+</ol>
+</li>
+<li>case 2：violate min-heap property and parent marked<ol>
+<li>x 跟 p[x] 斷開</li>
+<li>x 接上 root list</li>
+<li>從 x 原鍊上溯</li>
+<li>while parent is marked, cut off link with parents, 接上 root list，再上溯</li>
+<li>elif unmarked → mark it，並終止上溯</li>
+</ol>
+</li>
+<li>amortized cost O(1)<ul>
+<li>c = 幾個獨立出來</li>
+<li>actual cost O(c)</li>
+<li>potential += 4-c</li>
+<li>t(H) += c</li>
+<li>m(H) += 1-(c-1) = 2-c</li>
+<li>c+2(-c+2) = 4-c</li>
+</ul>
+</li>
+<li>deletion</li>
+<li>smallest Fib heap<ul>
+<li><img alt="data-structure-61.png" src="../data-structure-61.png" /></li>
+<li><img alt="data-structure-62.png" src="../data-structure-62.png" /></li>
+</ul>
+</li>
+<li>size n 的 Fib heap 之 max degree</li>
+<li>degree d 的最小 Fib heap</li>
+</ul>
+<h2 id="disjoint-set">Disjoint Set<a class="headerlink" href="#disjoint-set" title="Permanent link">&para;</a></h2>
+<p>also called Union-Find</p>
+<p><a href="https://leetcode.com/explore/learn/card/graph/618/disjoint-set/3881/">https://leetcode.com/explore/learn/card/graph/618/disjoint-set/3881/</a></p>
+<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
+<p>methods:</p>
+<ul>
+<li>find: find the root of a key</li>
+<li>union: unite the sets of the 2 keys</li>
+</ul>
+<p>implementations:</p>
+<ul>
+<li>quick find: in the array, store each's root node<ul>
+<li><img alt="ds-djs-f.png" src="../ds-djs-f.png" /></li>
+<li><span class="arithmatex">\(O(1)\)</span> find</li>
+<li><span class="arithmatex">\(O(N)\)</span> union<ul>
+<li>merge y's tree into x by setting the root of all y's tree's nodes to x's root</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>quick union: in the array, store node's parent<ul>
+<li><img alt="ds-djs-u.png" src="../ds-djs-u.png" /></li>
+<li><span class="arithmatex">\(O(N)\)</span> find</li>
+<li><span class="arithmatex">\(O(N)\)</span> union<ul>
+<li>merge y's tree into x by setting the parent of all y's root to x's root</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>union by rank: quick union but always move short tree under tall tree when doing union<ul>
+<li><img alt="Pasted image 20240806005352.png" src="../Pasted%20image%2020240806005352.png" /></li>
+<li><span class="arithmatex">\(O(\log N)\)</span> find</li>
+<li><span class="arithmatex">\(O(\log N)\)</span> union</li>
+</ul>
+</li>
+</ul>
+<p>Quick Find:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">class</span> <span class="nc">UnionFind</span><span class="p">:</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">)]</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span> <span class="c1"># O(1)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="k">def</span> <span class="nf">union</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span> <span class="c1"># O(N)</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>        <span class="n">rootX</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>        <span class="n">rootY</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>        <span class="k">if</span> <span class="n">rootX</span> <span class="o">==</span> <span class="n">rootY</span><span class="p">:</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>            <span class="k">return</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">)):</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">rootY</span><span class="p">:</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">rootX</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="k">def</span> <span class="nf">is_connected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+<p>Quick Union:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">class</span> <span class="nc">UnionFind</span><span class="p">:</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">)]</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span> <span class="c1"># O(N)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>        <span class="k">while</span> <span class="n">x</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">]:</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        <span class="k">return</span> <span class="n">x</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span> <span class="c1"># recursive version with path compression </span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">]:</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>            <span class="k">return</span> <span class="n">x</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>        <span class="c1"># set all the node&#39;s parent along the way to root</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>    <span class="k">def</span> <span class="nf">union</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span> <span class="c1"># O(N)</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>        <span class="n">rootX</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>        <span class="n">rootY</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>        <span class="k">if</span> <span class="n">rootX</span> <span class="o">==</span> <span class="n">rootY</span><span class="p">:</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>            <span class="k">return</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">rootY</span><span class="p">]</span> <span class="o">=</span> <span class="n">rootX</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>    <span class="k">def</span> <span class="nf">is_connected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span> <span class="c1"># O(N)</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+<p>Union by Rank:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">class</span> <span class="nc">UnionFind</span><span class="p">:</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">)]</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">rank</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">size</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">]:</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>            <span class="k">return</span> <span class="n">x</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="k">def</span> <span class="nf">union</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>        <span class="n">rootX</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>        <span class="n">rootY</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>        <span class="k">if</span> <span class="n">rootX</span> <span class="o">==</span> <span class="n">rootY</span><span class="p">:</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>            <span class="k">return</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="p">[</span><span class="n">rootX</span><span class="p">]</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="p">[</span><span class="n">rootY</span><span class="p">]:</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">rootY</span><span class="p">]</span> <span class="o">=</span> <span class="n">rootX</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="p">[</span><span class="n">rootX</span><span class="p">]</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="p">[</span><span class="n">rootY</span><span class="p">]:</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">rootX</span><span class="p">]</span> <span class="o">=</span> <span class="n">rootY</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="n">rootY</span><span class="p">]</span> <span class="o">=</span> <span class="n">rootX</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="p">[</span><span class="n">rootX</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>    <span class="k">def</span> <span class="nf">connected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
+<ul>
+<li>equivalence relation</li>
+<li><img alt="data-structure-63.png" src="../data-structure-63.png" /></li>
+<li>房間是否連通，是 equilavence relation<ul>
+<li>x 跟自己連通</li>
+<li>x 連 y → y 連 X</li>
+<li>x 連 y 且 y 連 z → x 連 z</li>
+</ul>
+</li>
+<li>一個 set 裡面都互相連通</li>
+<li>不同 set 間完全不相連</li>
+<li>name of set</li>
+<li>其中一個元素</li>
+<li>union</li>
+<li>連兩個元素 → 連兩個元素所屬的 set</li>
+<li>步驟<ol>
+<li>找兩個元素</li>
+<li>find 的過程就把經過的全部指到 root</li>
+<li>看這兩個元素的 root 是否一樣</li>
+<li>if 不一樣 → 一個 root 接到另一個 root 下，變一個 up-tree</li>
+</ol>
+</li>
+<li>結果<ul>
+<li>任兩 node 都互通，且只有一條路徑</li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li><img alt="data-structure-64.png" src="../data-structure-64.png" /></li>
+<li><img alt="data-structure-65.png" src="../data-structure-65.png" /></li>
+</ul>
+</li>
+<li>up-tree</li>
+<li><img alt="data-structure-66.png" src="../data-structure-66.png" /></li>
+<li>root 為這個 disjoint set 的代表</li>
+<li>implementation<ul>
+<li>array</li>
+<li><img alt="data-structure-67.png" src="../data-structure-67.png" /></li>
+<li>存 root 的 index</li>
+<li>自己是 root → -1</li>
+</ul>
+</li>
+<li>weighted union<ul>
+<li>把小的 tree 接在大的下面 s.t. 不會太深</li>
+</ul>
+</li>
+<li>height h → min <span class="arithmatex">\(2^h\)</span> nodes<ul>
+<li>a tree with h=k+1 must be formed by 2 trees with h=k</li>
+<li>h=k + h=k-1 → h=k</li>
+<li><img alt="data-structure-68.png" src="../data-structure-68.png" /></li>
+<li><span class="arithmatex">\(h \leq log_2n\)</span></li>
+</ul>
+</li>
+<li>find</li>
+<li>O(max height) = O(<span class="arithmatex">\(log_2n\)</span>)</li>
+<li>intuition<ul>
+<li>find，就順便接起來節省未來時間</li>
+</ul>
+</li>
+<li>ranked union</li>
+<li>initial rank = 0</li>
+<li>union 時比 root 的 rank<ul>
+<li>rank 小者接到大者下，大者 root rank 不變</li>
+<li>rank 相同 → <code>p[x] = y</code>, <code>r(y) += 1</code></li>
+</ul>
+</li>
+<li>要創造 rank=k+1 的 root，需要 2 個 rank=k 的</li>
+<li>rank r → 底下 min <span class="arithmatex">\(2^r\)</span> nodes<ul>
+<li><span class="arithmatex">\(rank \leq log_2r\)</span></li>
+<li>證法同 weighted union</li>
+</ul>
+</li>
+<li>parent rank &gt; child rank<ul>
+<li>x y 相同 rank →  x y 不可能為直系血親 → x y 的 descendents 不可能有交集 → 最多有 <span class="arithmatex">\(\frac{n}{2^r}\)</span> 個 rank=r 的 nodes 
+(rank lemma)</li>
+</ul>
+</li>
+</ul>
+<h3 id="path-compression">path compression<a class="headerlink" href="#path-compression" title="Permanent link">&para;</a></h3>
+<ul>
+<li>把一路經過的都直接指到 root</li>
+<li><img alt="data-structure-69.png" src="../data-structure-69.png" /></li>
+<li>method</li>
+<li>use union by rank</li>
+<li>find-set(x)<ul>
+<li>if x != p[x] i.e. x 不是 root</li>
+<li>p[x] = find-set(p[x]) i.e. 把 x 的 parent 改為 recursive 往上找後得到的 x 的 root
+  → 所有經過的 nodes 都直接接到 root 底下</li>
+</ul>
+</li>
+<li>m 個 find's time complexity with path compression <span class="arithmatex">\(O((m+n)log^*n)\)</span><ul>
+<li>path compression 會增大 rank gap</li>
+<li>x 改成直接接到 root，又 root 的 rank 比原本 parent 的 rank 大</li>
+<li>good &amp; bad nodes</li>
+<li>good, if 符合以下其一<ul>
+<li>x 是 root</li>
+<li>p[x] 是 root</li>
+<li>rank_block(x) &lt; rank_block(p[x])</li>
+<li>表示 rank 會跳很快</li>
+</ul>
+</li>
+<li>bad, otherwise</li>
+<li>visit <span class="arithmatex">\(O(mlog^*n)\)</span> 個 good nodes during m finds</li>
+<li>最多 <span class="arithmatex">\(log^*n+2\in O(log^*n)\)</span> 個 good nodes<ul>
+<li><span class="arithmatex">\(log^*n\)</span> 個 rank block</li>
+<li>root</li>
+<li>child of root</li>
+</ul>
+</li>
+<li>visit <span class="arithmatex">\(O(n(log^*n+1))\)</span> 個 bad nodes</li>
+<li>p[x] 非 root</li>
+<li>rank_block(x) = rank_block(p[x])</li>
+<li>共有 <span class="arithmatex">\(log^*n+1\)</span> 個 rank block<ul>
+<li><span class="arithmatex">\(B_0,...,B_{log^*n}\)</span></li>
+</ul>
+</li>
+<li>一個 rank block 最多被 visit n 次 <ul>
+<li>一個 rank block 裡，每個 node 最多被 visit <span class="arithmatex">\(2^k\)</span> 次</li>
+<li>被 visit | path compression 完，被接到 root → r(p[x]') &gt;= r(p[x])+1 → r(p[x])+=1 at least for each operation → <span class="arithmatex">\(2^k\)</span> visits 次後，p[x] 必會在更大的 rank block，x 變 good node<ul>
+<li><span class="arithmatex">\(B_k\)</span> 有 <span class="arithmatex">\(2^k\)</span> 個數字</li>
+</ul>
+</li>
+<li>一個 rank block 最多有 <span class="arithmatex">\(\displaystyle\sum_{r=k+1}^{2^k}\frac{n}{2^r}\leq\sum_{r=k+1}^{\infty}\frac{n}{2^r}=\frac{n}{2^k}\)</span> 個 nodes</li>
+<li><span class="arithmatex">\(B_k=\{k+1,k+2,...,2^k\}\)</span></li>
+<li>rank lemma: 最多有 <span class="arithmatex">\(\frac{n}{2^r}\)</span> 個 rank=r 的 nodes </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(log^*n\)</span></li>
+<li>= <span class="arithmatex">\(k\)</span> s.t. <span class="arithmatex">\(log^kn\leq 1\)</span></li>
+<li><img alt="data-structure-70.png" src="../data-structure-70.png" /><ul>
+<li>指 <span class="arithmatex">\(log_2()\)</span></li>
+</ul>
+</li>
+<li>成長非常慢</li>
+<li>rank block<ul>
+<li>rank_block(x) = <span class="arithmatex">\(log^*x\)</span></li>
+<li><img alt="data-structure-71.png" src="../data-structure-71.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="tarjans-analysis-of-path-compression">Tarjan's analysis of path compression<a class="headerlink" href="#tarjans-analysis-of-path-compression" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ackermann's function <span class="arithmatex">\(A_k(r)\)</span></li>
+<li><span class="arithmatex">\(A_k(r)=A_{k-1}^r(r)\)</span><ul>
+<li>apply <span class="arithmatex">\(A_{k-1}\)</span> r times to r</li>
+<li><span class="arithmatex">\(A_0(r)=r+1\)</span></li>
+<li><span class="arithmatex">\(A_1(r)=A_0^r(r)=r+r=r\times2\)</span></li>
+<li>r += 1 做 r 次</li>
+<li><span class="arithmatex">\(A_2(r)=A_1^r(r)=r2^r\geq2^r\)</span></li>
+<li>r *= 2 做 r 次</li>
+<li><span class="arithmatex">\(A_3(r)=A_2^r(r)\geq2^{2^{2^{2^{.^{.^{.^{.^{.^{2^{2^r}}}}}}}}}}\geq2^{2^{2^{2^{.^{.^{.^{.^{.^{2^{2}}}}}}}}}}\)</span> (r 個 2 的 tower)</li>
+<li><img alt="data-structure-72.jpg" src="../data-structure-72.jpg" /></li>
+<li>e.g.</li>
+<li><span class="arithmatex">\(A_4(2)=A_3(A_3(2))=A_3(A_2(A_2(2)))=A_3(A_2(A_1(A_1(2)))))=A_3(A_2(A_1(4))))=A_3(A_2(8)))=A_3(2048))\geq\)</span> a tower of 2048 個 2</li>
+</ul>
+</li>
+<li>inverse Ackermann's function <span class="arithmatex">\(\alpha(n)\)</span></li>
+<li><span class="arithmatex">\(\alpha(n)\)</span> = min k s.t. <span class="arithmatex">\(A_k(2)\geq n\)</span></li>
+<li><img alt="data-structure-73.png" src="../data-structure-73.png" /></li>
+<li><span class="arithmatex">\(\alpha\)</span>(a tower of 2048 2s) = 4 &lt;&lt; <span class="arithmatex">\(log^*\)</span>(a tower of 2048 2s) = 2048</li>
+<li>rank gap <span class="arithmatex">\(\delta(x)\)</span></li>
+<li><span class="arithmatex">\(\delta(x)\)</span> = max k s.t. <span class="arithmatex">\(rank(p[x])\geq\)</span> <span class="arithmatex">\(A_k(rank(x))\)</span><ul>
+<li><span class="arithmatex">\(\delta(x)\geq 1\)</span> → <span class="arithmatex">\(r(p[x])\geq A_1(r(x))=2r(x)\)</span></li>
+<li><span class="arithmatex">\(\delta(x)\geq 2\)</span> → <span class="arithmatex">\(r(p[x])\geq A_2(r(x))=r(x)2^{r(x)}\)</span></li>
+<li><span class="arithmatex">\(\delta(x)\geq 3\)</span> → <span class="arithmatex">\(r(p[x])\geq A_3(r(x))\geq\)</span> a tower of r(x) 2s</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(\delta(x)\)</span> 只會增加 but never 減少 over time<ul>
+<li>x 若變成 non-root，則 r(x) 不再變，while r(p[x]) 可能增加</li>
+</ul>
+</li>
+<li>if <span class="arithmatex">\(r(x)\geq2\)</span>, then <span class="arithmatex">\(A_{\alpha(n)}(2)\geq n\geq r(p[x])\geq A_{\delta(x)}(r(x))\)</span> → <span class="arithmatex">\(\alpha(n)\geq \delta(x)\)</span><ul>
+<li><span class="arithmatex">\(A_{\alpha(n)}(2)\geq n\)</span> by def of inverse Ackermann's function</li>
+<li><span class="arithmatex">\(r(p[x])\geq A_{\delta(x)}(r(x))\)</span> by def of rank gap</li>
+</ul>
+</li>
+<li>good &amp; bad nodes</li>
+<li>bad, if 以下四點同時成立<ul>
+<li>x is not a root</li>
+<li>p[x] is not a root</li>
+<li>rank[x] &gt;= 2</li>
+<li>x 有跟自己 rank gap 一樣的 非 root ancestor y </li>
+<li><span class="arithmatex">\(\delta(x)=\delta(y)\)</span></li>
+</ul>
+</li>
+<li>good, otherwise</li>
+<li>cost <span class="arithmatex">\(\in O((m+n)\alpha(n))\)</span></li>
+<li>cost = total visits of nodes = total visit of good nodes + total visit of bad nodes</li>
+<li>good visits <span class="arithmatex">\(\in O(m\alpha(n))\)</span></li>
+<li>bad visits <span class="arithmatex">\(\in O(n\alpha(n))\)</span></li>
+</ul>
+<h2 id="leftlist-heap">leftlist heap<a class="headerlink" href="#leftlist-heap" title="Permanent link">&para;</a></h2>
+<ul>
+<li>interactive visualization<br />
+<a href="https://people.ksp.sk/~kuko/gnarley-trees/Leftist.html">https://people.ksp.sk/~kuko/gnarley-trees/Leftist.html</a></li>
+<li>binary heap property</li>
+<li>minheap property</li>
+<li>比兩個 children 大</li>
+<li>leftheap property</li>
+<li>NPL(leftchild) &gt;= NPL(rightchild)</li>
+<li>違反 → swap children<ul>
+<li><img alt="data-structure-74.png" src="../data-structure-74.png" /></li>
+<li><img alt="data-structure-75.png" src="../data-structure-75.png" /></li>
+</ul>
+</li>
+<li>NPL null path length</li>
+<li>走到只有 0 or 1 child 的 node 的最短路徑</li>
+<li>自己就是 → NPL = 0</li>
+<li>NPL(Null) = -1<ul>
+<li>→ only 1 child 則 left 必不為 Null</li>
+</ul>
+</li>
+<li><img alt="data-structure-76.png" src="../data-structure-76.png" /></li>
+<li>right path 最短</li>
+<li>NPL(x) = NPL(x.rightchild) + 1<ul>
+<li>x has 0 child</li>
+<li>0 = -1 + 1</li>
+<li>x has 1 child</li>
+<li>0 = -1 + 1</li>
+<li>x has 2 children</li>
+<li>NPL(x) = min(NPL(left), NPL(right)) + 1 = NPL(right) + 1</li>
+<li>往右走一次，NPL -= 1</li>
+<li>往左走一次，NPL -= &lt;1</li>
+</ul>
+</li>
+<li>path：走到 NPL=0 → 最短路徑：一直走 right</li>
+<li>pathpath</li>
+<li>merge</li>
+<li>步驟<ol>
+<li>x y 兩 pointer 指向兩個 root</li>
+<li>比大小，較小者加進 stack，並往 right child 移動</li>
+<li>重複 2.，直到一個 pointer 指向 null (假設是 y)</li>
+<li>y 指向 x 指向的 node</li>
+<li><img alt="data-structure-77.png" src="../data-structure-77.png" /></li>
+<li><img alt="data-structure-78.png" src="../data-structure-78.png" /></li>
+<li>檢查 leftheap property, swap if needed</li>
+<li><img alt="data-structure-79.png" src="../data-structure-79.png" /></li>
+<li>根據 stack，一路往回，把 node 變成上一項的 right child，並檢查 NPL</li>
+<li><img alt="data-structure-80.png" src="../data-structure-80.png" /></li>
+<li><img alt="data-structure-81.png" src="../data-structure-81.png" /></li>
+</ol>
+</li>
+<li>cost <span class="arithmatex">\(\in O(logn)\)</span><ul>
+<li>right path  <span class="arithmatex">\(\in O(logn)\)</span></li>
+<li>一直往 right child 走</li>
+<li>會是最短的 path 因為 NPL(left)&gt;=NPL(right)</li>
+<li>right path = h → 所有 path &gt;= h → <span class="arithmatex">\(n\geq 2^{h+1}-1\)</span> → <span class="arithmatex">\(h\leq log_2(n+1)-1\)</span> → max num of stack <span class="arithmatex">\(\in O(2logn)\in O(logn)\)</span> → cost <span class="arithmatex">\(\in O(logn)\)</span></li>
+</ul>
+</li>
+<li>insertion<ul>
+<li>merge leftlist heap with the node</li>
+</ul>
+</li>
+<li>deletion<ul>
+<li>merge left &amp; right subheaps</li>
+</ul>
+</li>
+<li>so merge, insert, delete 皆 <span class="arithmatex">\(\in O(logn)\)</span> </li>
+</ul>
+<h2 id="skew-heap">skew heap<a class="headerlink" href="#skew-heap" title="Permanent link">&para;</a></h2>
+<ul>
+<li>interactive visualization  <ul>
+<li><a href="https://people.ksp.sk/~kuko/gnarley-trees/Skew.html">https://people.ksp.sk/~kuko/gnarley-trees/Skew.html</a></li>
+</ul>
+</li>
+<li>binary heap property</li>
+<li>minheap or maxheap property</li>
+<li>no NPL</li>
+<li>so right path 不一定最短，不一定 <span class="arithmatex">\(\in O(logn)\)</span></li>
+<li>merge</li>
+<li>跟 leftlist heap 一樣 but 根據 stack 回溯時 swap at every step<ul>
+<li>不判斷 NPL</li>
+</ul>
+</li>
+<li>amortized cost <span class="arithmatex">\(\in O(logn)\)</span><ul>
+<li>size = subtree 的 nodes 數</li>
+<li>heavy node</li>
+<li><span class="arithmatex">\(size(x) &gt; size(\frac{p[x]}{2})\)</span></li>
+<li>light node</li>
+<li><span class="arithmatex">\(size(x) \leq size(\frac{p[x]}{2})\)</span></li>
+<li>2 個 children with 1 heavy child → 另一個必為 light</li>
+<li>可為 2 個 light children</li>
+<li>potential function <span class="arithmatex">\(\phi\)</span> = num of <strong>right</strong> heavy nodes</li>
+<li>根據 stack 往回走時 </li>
+<li>經過 light node → size *= 2 at least → 最多經過 log(n) 個 light nodes<ul>
+<li>size = 1 走到 size = n</li>
+<li>actual cost = 1 </li>
+<li>可能被 swap 成 heavy → <span class="arithmatex">\(\Delta\phi\)</span> &lt;= 1</li>
+<li>amortized cost = 1 + 1 = 2</li>
+</ul>
+</li>
+<li>經過 heavy node → right heavy node swap 成 left heavy mode <ul>
+<li>actual cost = 1</li>
+<li><span class="arithmatex">\(\Delta\phi\)</span> = -1</li>
+<li>amortized cost = 1 - 1 = 0</li>
+</ul>
+</li>
+<li>amortized cost = 2log(n) + 0 <span class="arithmatex">\(\in O(logn)\)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="dijkstras-algorithm">Dijkstra's Algorithm<a class="headerlink" href="#dijkstras-algorithm" title="Permanent link">&para;</a></h2>
+<p><a href="../../../../obs_autolink/Dijkstra%27s%20Algorithm/">Dijkstra's Algorithm</a></p>
+<p><img alt="data-structure-82.png" src="../data-structure-82.png" /></p>
+<p><img alt="data-structure-83.png" src="../data-structure-83.png" /></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.derricklin.net" target="_blank" rel="noopener" title="www.derricklin.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M244 246c-3.2-2-6.3-2.9-10.1-2.9-6.6 0-12.6 3.2-19.3 3.7l1.7 4.9zm135.9 197.9c-19 0-64.1 9.5-79.9 19.8l6.9 45.1c35.7 6.1 70.1 3.6 106-9.8-4.8-10-23.5-55.1-33-55.1zM340.8 177c6.6 2.8 11.5 9.2 22.7 22.1 2-1.4 7.5-5.2 7.5-8.6 0-4.9-11.8-13.2-13.2-23 11.2-5.7 25.2-6 37.6-8.9 68.1-16.4 116.3-52.9 146.8-116.7C548.3 29.3 554 16.1 554.6 2l-2 2.6c-28.4 50-33 63.2-81.3 100-31.9 24.4-69.2 40.2-106.6 54.6l-6.3-.3v-21.8c-19.6 1.6-19.7-14.6-31.6-23-18.7 20.6-31.6 40.8-58.9 51.1-12.7 4.8-19.6 10-25.9 21.8 34.9-16.4 91.2-13.5 98.8-10zM555.5 0l-.6 1.1-.3.9.6-.6zm-59.2 382.1c-33.9-56.9-75.3-118.4-150-115.5l-.3-6c-1.1-13.5 32.8 3.2 35.1-31l-14.4 7.2c-19.8-45.7-8.6-54.3-65.5-54.3-14.7 0-26.7 1.7-41.4 4.6 2.9 18.6 2.2 36.7-10.9 50.3l19.5 5.5c-1.7 3.2-2.9 6.3-2.9 9.8 0 21 42.8 2.9 42.8 33.6 0 18.4-36.8 60.1-54.9 60.1-8 0-53.7-50-53.4-60.1l.3-4.6 52.3-11.5c13-2.6 12.3-22.7-2.9-22.7-3.7 0-43.1 9.2-49.4 10.6-2-5.2-7.5-14.1-13.8-14.1-3.2 0-6.3 3.2-9.5 4-9.2 2.6-31 2.9-21.5 20.1L15.9 298.5c-5.5 1.1-8.9 6.3-8.9 11.8 0 6 5.5 10.9 11.5 10.9 8 0 131.3-28.4 147.4-32.2 2.6 3.2 4.6 6.3 7.8 8.6 20.1 14.4 59.8 85.9 76.4 85.9 24.1 0 58-22.4 71.3-41.9 3.2-4.3 6.9-7.5 12.4-6.9.6 13.8-31.6 34.2-33 43.7-1.4 10.2-1 35.2-.3 41.1 26.7 8.1 52-3.6 77.9-2.9 4.3-21 10.6-41.9 9.8-63.5l-.3-9.5c-1.4-34.2-10.9-38.5-34.8-58.6-1.1-1.1-2.6-2.6-3.7-4 2.2-1.4 1.1-1 4.6-1.7 88.5 0 56.3 183.6 111.5 229.9 33.1-15 72.5-27.9 103.5-47.2-29-25.6-52.6-45.7-72.7-79.9zm-196.2 46.1v27.2l11.8-3.4-2.9-23.8zm-68.7-150.4 24.1 61.2 21-13.8-31.3-50.9zm84.4 154.9 2 12.4c9-1.5 58.4-6.6 58.4-14.1 0-1.4-.6-3.2-.9-4.6-26.8 0-36.9 3.8-59.5 6.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://blog.derricklin.net" target="_blank" rel="noopener" title="blog.derricklin.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/derrick-lin" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dlccyes" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.indexes", "toc.follow", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../../../assets/script.js"></script>
+      
+        <script src="../../../../assets/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
