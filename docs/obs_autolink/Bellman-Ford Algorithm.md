@@ -15,7 +15,7 @@ def bellman_ford(graph, src):
 
     # optional: detect negative cycles
     for n1, (n2, weight) in graph.items():
-        if dist[n1] + weight < distances[n2]:
+        if dist[n1] + weight < dist[n2]:
             raise ValueError("Graph contains a negative-weight cycle")
 
     return distances

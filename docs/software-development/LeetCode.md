@@ -49,6 +49,7 @@ def get_1_to_n_str(n: int):
 - array
     - sliding window
     - (non-decreasing) stack
+        - <https://leetcode.com/problems/best-time-to-buy-and-sell-stock/>
     - prefix sum
     - backtracking
     - DP

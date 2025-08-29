@@ -1,5 +1,23 @@
 # CS519 Scientific Visualization
 
+
+![[cs519-glyph-facts.png]]
+
+![[cs519-usingglyphs.png]]
+
+![[cs519-q11.1.png]]
+
+![[cs519-q11.3.png]]
+
+![[cs519-q11.4.png]]
+
+![[cs519-q12.2.png]]
+
+![[cs519-q12.3.png]]
+
+![[cs519-q12.4.png]]
+
+
 ## color
 
 ### color space
@@ -200,7 +218,7 @@ Interpolate a point using 3 points forming a triangle
 
 - isosurface: points with the same value form a surface
     - $f(x, y, z)=C$
-- internal ambiguity: an isosurface splits the cube into 2
+- internal ambiguity: an isosurface splitting the cube into 2
     - e.g. here the 2 pyramids are separated from the other parts of the cube
         - ![[cs519-internal-amb-mc.png]]
 - face ambiguity: an isosurface cuts through a face of the cube
@@ -239,4 +257,8 @@ Interpolate a point using 3 points forming a triangle
 - compositing
     - over ![[cs519-compositing.png]]
     - ![[cs519-over-compo.png]]
+
+## Thresholding, Segmentation, Classification
+
+![[cs519-7.4.png]]
 

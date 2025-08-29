@@ -1,12 +1,21 @@
 # Paragliding
 
+Think of a paraglider as an airplane. 
+
 - AoA (angle of attack) = angle between the wind and the canopy
     - ![[paragliding-aoa.png]]
     - wind blowing horizontally while the wing & you are perpendicular to the ground -> AoA = 0
     - if wind blows straight up to your canopy -> AoA = 90
     - high AoA -> high lift
+    - brake -> head goes up -> AoA increases
+    - speed bar -> head goes down -> AoA decreases
 - brake
     - brake -> wing slows down, dragging behind you -> AoA increase -> lift increase
+    - more break -> less sink
+- speed bar
+    - speed bar decreases the in-air glide ratio, so more speed bar -> more airspeed, more sink, more horizontal airspeed
+    - ground travel = ground speed x air time = (horizontal airspeed - headwind) x (height / sink)
+    - so speed bar increasing ground travel or not depends on headwind
 - trim speed = natural paraglider air speed without any brake
 - airspeed is relative to the air, groundspeed is relative to the ground
 - glide ratio = horizontal speed / vertical speed
@@ -19,6 +28,7 @@
 - polar curve: horizontal speed vs. vertical speed in different angle of attacks
     - ![[para-polar.png]]
     - better paragliders have flatter polar curves
+- ![[paragliding-plane-aoa.png]]
 
 ## right of way
 
