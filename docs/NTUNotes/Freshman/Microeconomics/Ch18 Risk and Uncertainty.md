@@ -85,7 +85,7 @@ sensitivity to movements in the relevant market
 
 ![[ch18-risk-and-uncertainty-14.png]]
 
-## 期貨
+## 期貨 Future
 
 緣起：  
 農夫知道一個月後會收成 1000 tons 的玉米，  
@@ -109,6 +109,7 @@ P~5~^6^ = 現在訂定六月成交的期貨價格
 so 均衡時 P~5~ = P~6~  
 
 ![[ch18-risk-and-uncertainty-15.png]]
+
 ![[ch18-risk-and-uncertainty-16.png]]
 
 結論：  
