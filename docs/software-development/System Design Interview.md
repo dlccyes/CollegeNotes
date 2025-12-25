@@ -723,7 +723,7 @@ See [[Computer Networks#video streaming]] also
     - caches videos
 - completion queue
     - message queue for video metadata
-- completion handler\
+- completion handler
     - workers for pulling metadata from completion queue and update to metadata cache & DB
 - API servers
     - notify user that the video is uploaded

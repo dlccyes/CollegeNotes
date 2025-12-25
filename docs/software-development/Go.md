@@ -1499,6 +1499,18 @@ e.g. You're using a module `github.com/alpha/beta`, but you're also developing t
 
 With workspace, there will be a `go.work` file which you'll need to ignore in your repo before checking out, and with `replace`, you'll need to remove those lines in `go.mod` before checking out. The former saves more hassle when dealing with a lot of local modules.
 
+## Validator
+
+<https://pkg.go.dev/github.com/go-playground/validator/v10>
+
+- `requires` enforces not 0 value
+- `gt=0` enforces not value or len >= 0
+- for string & int, `gt=0` === `required`
+- for `*string` & `*int`, `gt=0` is stronger than `required`
+- can't do `validate:"required_if=Type special,gt=0"` but `validate:"required_if=Type special,omitempty,gt=0"`
+    - <https://github.com/go-playground/validator/issues/907>
+    - error: `test panicked: Bad field type *string`
+
 ## Troubleshooting
 
 ### VsCode: could not import strconv
