@@ -19,7 +19,6 @@
   "quick-explorer",
   "obsidian-fullscreen-plugin",
   "obsidian-code-block-enhancer",
-  "obsidian-image-toolkit",
   "obsidian-git",
   "emoji-shortcodes",
   "obsidian-auto-pair-chinese-symbol",
@@ -29,5 +28,6 @@
   "table-editor-obsidian",
   "obsidian-quiet-outline",
   "cycle-through-panes",
-  "obsidian-rapid-notes"
+  "obsidian-rapid-notes",
+  "obsidian-image-toolkit"
 ]
