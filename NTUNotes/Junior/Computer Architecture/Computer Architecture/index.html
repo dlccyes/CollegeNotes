@@ -1,0 +1,8457 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Operating%20Systems/Operating%20Systems/">
+      
+      
+        <link rel="next" href="../../Machine%20Learning/Machine%20Learning/">
+      
+      
+      <link rel="icon" href="../../../../assets/roshar-green-trans.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Computer Architecture - El Mundo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-GC9K2DFK9F"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-GC9K2DFK9F",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-GC9K2DFK9F",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#computer-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="El Mundo" class="md-header__button md-logo" aria-label="El Mundo" data-md-component="logo">
+      
+  <img src="../../../../assets/roshar-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            El Mundo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Computer Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dlccyes/CollegeNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../OtherNotes/sitemap/" class="md-tabs__link">
+          
+  
+    
+  
+  Meta
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../software-development/Sniffing%20Packets%20from%20Wireless%20Networks/" class="md-tabs__link">
+          
+  
+    
+  
+  Posts
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../software-development/Programming%20101/" class="md-tabs__link">
+          
+  
+    
+  
+  Software Development
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../OtherNotes/CS%20Career/" class="md-tabs__link">
+          
+  
+    
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Freshman/Logic%20Design/Logic%20Design/" class="md-tabs__link">
+          
+  
+    
+  
+  Electrical Engineering
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Freshman/Microeconomics/" class="md-tabs__link">
+          
+  
+    
+  
+  Economics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="El Mundo" class="md-nav__button md-logo" aria-label="El Mundo" data-md-component="logo">
+      
+  <img src="../../../../assets/roshar-white.png" alt="logo">
+
+    </a>
+    El Mundo
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dlccyes/CollegeNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Meta
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Meta
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../OtherNotes/sitemap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sitemap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Posts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Systems and Networking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Systems and Networking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Sniffing%20Packets%20from%20Wireless%20Networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sniffing Packets from Wireless Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/restore%20usb%20bootable%20disk%20to%20normal%20disk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Restore a usb bootable disk to normal disk in Win10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Gitlab%20CICD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab CICD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/GCP%20CICD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCP CICD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Software Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Programming%20101/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming 101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Languages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Languages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/C%2B%2B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Go/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/PHP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/JavaScript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/R/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/SQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/YAML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    YAML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Liquid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Liquid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/prolog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    prolog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/RegEx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RegEx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/RISC-V/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RISC-V
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Verilog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verilog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux/Unix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Linux/Unix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../OtherNotes/MacOS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MacOS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/WSL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WSL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Linux%20Package%20Management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux/Unix Package Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/SSH/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Makefile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Makefile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/base64/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    base64
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/ANSI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ANSI Escape Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/PulseAudio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PulseAudio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/tcpdump/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tcpdump
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Gitlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web 101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/RESTful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RESTful
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_3" id="__nav_4_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Static Site Generators
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Static Site Generators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Hugo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hugo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Jekyll/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jekyll
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_4" id="__nav_4_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web Frameworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Web Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Django/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Flask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flask
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Laravel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laravel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_5" id="__nav_4_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Frontend Frameworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Frontend Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/React/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_6" id="__nav_4_5_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/gRPC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gRPC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_6_2" id="__nav_4_5_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mocking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_5_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mocking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/WireMock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WireMock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Databases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/MySQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/PostgreSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PostgreSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Redis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6_4" id="__nav_4_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ORM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            ORM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/SQLAlchemy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQLAlchemy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_1" id="__nav_4_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Domain
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Domain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Domain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Cloudfare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloudfare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_2" id="__nav_4_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cloud
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cloud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/AWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/GCP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Heroku/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heroku
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Firebase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Firebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_3" id="__nav_4_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Containerization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Containerization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_4" id="__nav_4_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CICD
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            CICD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/SonarQube/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SonarQube
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Github%20Action/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Action
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/ArgoCD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ArgoCD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_5" id="__nav_4_7_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Monitoring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/Grafana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grafana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../OtherNotes/CS%20Career/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CS Career
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/System%20Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DSA
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            DSA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Data%20Structure/Data%20Structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithms/Algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software-development/leetcode.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Networks/Computer%20Networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Operating%20Systems/Operating%20Systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operating Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Computer Architecture
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Computer Architecture
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch1-computer-abstractions-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch1 Computer Abstractions &amp; Technology
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch1 Computer Abstractions & Technology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#execution-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      execution time
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch2-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch2 Instructions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch2 Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risc-v-intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V Intro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bhwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      b/h/w/d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2s-complement" class="md-nav__link">
+    <span class="md-ellipsis">
+      2s complement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signed-unsigned" class="md-nav__link">
+    <span class="md-ellipsis">
+      signed &amp; unsigned
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      sign extension
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      offset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      encoding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overall" class="md-nav__link">
+    <span class="md-ellipsis">
+      overall
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      binary representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      R-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      I-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      S-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sb-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      SB-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uj-format-jal" class="md-nav__link">
+    <span class="md-ellipsis">
+      UJ-format (jal)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      U-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rv32i-instruction-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      RV32I Instruction Sets (查表)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risc-v-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RISC-V operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    <span class="md-ellipsis">
+      if
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while" class="md-nav__link">
+    <span class="md-ellipsis">
+      while
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      load/store
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      dynamic linking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-judging" class="md-nav__link">
+    <span class="md-ellipsis">
+      performance judging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-vs-pointer" class="md-nav__link">
+    <span class="md-ellipsis">
+      array vs. pointer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mips" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIPS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch3-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch3 Arithmetic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch3 Arithmetic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      multiplication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="multiplication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      basic multiplier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signed-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      signed multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faster-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      faster multiplier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      instructions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#division" class="md-nav__link">
+    <span class="md-ellipsis">
+      division
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="division">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#divisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      divisor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signed-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      signed division
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faster-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      faster division
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      instructions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instruction-set-with-multiplication-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      instruction set with multiplication &amp; division
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    <span class="md-ellipsis">
+      float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    <span class="md-ellipsis">
+      format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      number representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplication_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      instructions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escaping-from-barbaric-yanks" class="md-nav__link">
+    <span class="md-ellipsis">
+      escaping from barbaric yanks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      array multiplication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rounding" class="md-nav__link">
+    <span class="md-ellipsis">
+      rounding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch4-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch4 Processor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch4 Processor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logic-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      logic design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-a-datapath" class="md-nav__link">
+    <span class="md-ellipsis">
+      building a datapath
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="building a datapath">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fetching-instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      fetching instruction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-type-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      R-type instructions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadstore_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      load/store
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branch-instructions-beq" class="md-nav__link">
+    <span class="md-ellipsis">
+      branch instructions (beq)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      合起來
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-cycle-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      single-cycle implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="single-cycle implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alu" class="md-nav__link">
+    <span class="md-ellipsis">
+      ALU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main-control-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      main control unit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operation-of-datapath" class="md-nav__link">
+    <span class="md-ellipsis">
+      operation of datapath
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finalizing-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      finalizing control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      performance issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipelining" class="md-nav__link">
+    <span class="md-ellipsis">
+      pipelining
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pipelining">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risc-v-5-stage-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V 5-stage pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-hazards" class="md-nav__link">
+    <span class="md-ellipsis">
+      pipeline hazards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pipeline hazards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structural-hazard" class="md-nav__link">
+    <span class="md-ellipsis">
+      structural hazard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-hazard" class="md-nav__link">
+    <span class="md-ellipsis">
+      data hazard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-hazard" class="md-nav__link">
+    <span class="md-ellipsis">
+      control hazard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datapath" class="md-nav__link">
+    <span class="md-ellipsis">
+      datapath
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      diagram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control" class="md-nav__link">
+    <span class="md-ellipsis">
+      control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-hazard-forwarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      data hazard &amp; forwarding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="data hazard & forwarding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-hazard_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      data hazard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forwarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      forwarding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stalling" class="md-nav__link">
+    <span class="md-ellipsis">
+      stalling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-hazards" class="md-nav__link">
+    <span class="md-ellipsis">
+      control hazards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="control hazards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-branch-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      dynamic branch prediction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      exceptions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instruction-level-parallelism-ilp" class="md-nav__link">
+    <span class="md-ellipsis">
+      instruction level parallelism, ILP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="instruction level parallelism, ILP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static-multiple-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Multiple Issue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-multiple-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Multiple Issue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      problems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch5-memory-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch5 Memory Hierarchy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch5 Memory Hierarchy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      intro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      cache
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="cache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#associative-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      associative cache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miss" class="md-nav__link">
+    <span class="md-ellipsis">
+      miss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multilevel-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      multilevel cache
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependable-memory-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      dependable memory hierarchy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dependable memory hierarchy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hamming-secded" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hamming SEC/DED
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Machine%20Learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Electrical Engineering
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Electrical Engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Logic%20Design/Logic%20Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logic Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Circuit/Circuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    電路學
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Electromagnetism/Electromagnetism/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Electromagnetism
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Senior/Power%20Engineering/Power%20Engineering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power Engineering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Economics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Economics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Freshman/Microeconomics/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Microeconomics
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Microeconomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch1%20Supply%2C%20Demand%2C%20and%20Equilibrium/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch1 Supply, Demand, and Equilibrium
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch2%20Prices%2C%20Costs%2C%20and%20the%20Gains%20from%20Trade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 Prices, Costs, and the Gains from Trade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch3%20The%20Behavior%20of%20Consumers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 The Behavior of Consumers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch4%20Consumers%20in%20Marketplace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chap 4 Consumers in Marketplace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch5%20The%20Behavior%20of%20Firms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 The Behavior of Firms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch6%20Production%20and%20Costs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 Production and Costs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch7%20Competition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch7 Competition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch8%20Welfare%20Economics%20and%20the%20Gains%20from%20Trade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch8 Welfare Economics and the Gains from Trade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch10%20Monopoly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch10 Monopoly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch11%20Market%20Power%2C%20Colusion%2C%20and%20Obligopoly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch11 Market Power, Collusion, and Oligopoly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch12%20Game%20Theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch12 Game Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch13%20Externality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch13 Externality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch14%20Common%20Property%20and%20Public%20Goods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch14 Common Property and Public Goods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch15%20The%20Demand%20for%20Factors%20of%20Production/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch15 The Demand for Factors of Production
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch16%20The%20Market%20of%20Labor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch16 The Market of Labor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch17%20Allocating%20Goods%20Over%20Time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch17 Allocating Goods Over Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Microeconomics/Ch18%20Risk%20and%20Uncertainty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch18 Risk and Uncertainty
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Macroeconomics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Macroeconomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Senior/Principle%20of%20Macroeconomics/Principle%20of%20Macroeconomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principle of Macroeconomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Macroeconomics/Macroeconomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macroeconomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Senior/Statistics/Statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Econometrics/Econometrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Econometrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Sophomore/Money%20and%20Banking/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Money and Banking
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Money and Banking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch1%20%E5%89%8D%E5%B0%8E/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch1 前導
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch2%20%E9%87%91%E8%9E%8D%E9%AB%94%E7%B3%BB%E6%A6%82%E8%A6%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch2 金融體系概要
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch3%20%E8%B2%A8%E5%B9%A3%E8%88%87%E6%94%AF%E4%BB%98%E7%B3%BB%E7%B5%B1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch3 貨幣與支付系統
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch4%20%E7%8F%BE%E5%80%BC%E8%88%87%E5%88%A9%E7%8E%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch4 現值與利率
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch5%20%E5%82%B5%E5%88%B8%E5%B8%82%E5%A0%B4%E8%88%87%E5%88%A9%E7%8E%87%E7%9A%84%E6%B1%BA%E5%AE%9A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch5 債券市場與利率的決定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch6%20%E5%88%A9%E7%8E%87%E9%A2%A8%E9%9A%AA%E7%B5%90%E6%A7%8B%E5%92%8C%E6%9C%9F%E9%99%90%E7%B5%90%E6%A7%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch6 利率風險結構和期限結構
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch7%20%E9%87%91%E8%9E%8D%E9%AB%94%E7%B3%BB%E7%9A%84%E7%B6%93%E6%BF%9F%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch7 金融體系的經濟分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch8%20%E9%8A%80%E8%A1%8C%E7%9A%84%E7%B6%93%E7%87%9F%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch8 銀行的經營管理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch9%20%E5%8F%B0%E7%81%A3%E9%8A%80%E8%A1%8C%E6%A5%AD%E7%9A%84%E7%B5%90%E6%A7%8B%E8%88%87%E7%99%BC%E5%B1%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch9 台灣銀行業的結構與發展
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch11%20%E9%87%91%E8%9E%8D%E5%AE%89%E5%85%A8%E7%B6%B2%20%E6%9C%80%E7%B5%82%E5%80%9F%E8%B2%B8%E8%80%85%E8%88%87%E5%AD%98%E6%AC%BE%E4%BF%9D%E9%9A%AA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch11 金融安全網 最終借貸者與存款保險
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch12%20%E9%87%91%E8%9E%8D%E5%AE%89%E5%85%A8%E7%B6%B2%20%E9%87%91%E8%9E%8D%E6%A9%9F%E6%A7%8B%E7%9A%84%E7%AE%A1%E5%88%B6%E8%88%87%E5%AF%A9%E6%85%8E%E7%9B%A3%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch12 金融安全網 金融機構的管制與審慎監理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch13%20%E4%B8%AD%E5%A4%AE%E9%8A%80%E8%A1%8C%E7%9A%84%E5%8A%9F%E8%83%BD%E8%88%87%E6%94%BF%E7%AD%96%E7%9B%AE%E6%A8%99/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch13 中央銀行的功能與政策目標
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch14%20%E9%87%91%E8%9E%8D%E7%A9%A9%E5%AE%9A%E8%88%87%E7%B8%BD%E9%AB%94%E5%AF%A9%E6%85%8E%E6%94%BF%E7%AD%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch14 金融穩定與總體審慎政策
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch15%20%E6%BA%96%E5%82%99%E8%B2%A8%E5%B9%A3%E8%88%87%E8%B2%A8%E5%B9%A3%E7%9A%84%E5%89%B5%E9%80%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch15 準備貨幣與貨幣的創造
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch16%20%E5%82%B3%E7%B5%B1%E8%88%87%E9%9D%9E%E5%82%B3%E7%B5%B1%E7%9A%84%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch16 傳統與非傳統的貨幣政策工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch17%20%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E7%9A%84%E7%9B%AE%E6%A8%99%E6%A9%9F%E5%88%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch17 貨幣政策的目標機制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Sophomore/Money%20and%20Banking/Ch18%20%E8%B2%A8%E5%B9%A3%E6%94%BF%E7%AD%96%E7%9A%84%E5%82%B3%E9%81%9E%E6%A9%9F%E5%88%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ch18 貨幣政策的傳遞機制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Freshman/Eurozone/Eurozone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    經濟貨幣整合：歐元區理論與實證
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Industrial%20Organization/Industrial%20Organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Industrial Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Senior/International%20Finance/International%20Finance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    International Finance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Game Theory
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9">
+            <span class="md-nav__icon md-icon"></span>
+            Game Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Game%20Theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Game Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9_2" id="__nav_7_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Game Theory for Wireless Networks Papers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Game Theory for Wireless Networks Papers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Coalitional%20Games%20for%20Computation%20Offloading%20in%20NOMA-Enabled%20Multi-Access%20Edge%20Computing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coalitional Games for Computation Offloading in NOMA-Enabled Multi-Access Edge Computing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/Opportunistic%20Data%20Collection%20in%20Cognitive%20Wireless%20%20Sensor%20Networks%20-%20Air%E2%80%93Ground%20Collaborative%20Online%20Planning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opportunistic Data Collection in Cognitive Wireless Sensor Networks - Air–Ground Collaborative Online Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Hung-Yu/Game%20Theory%20for%20Wireless%20Network/privacy-preserving%20incentive%20mechanism%20for%20the%20federated%20cloud-edge%20learning%2C%20PFCEL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Privacy-Preserving Incentive Mechanism Design for Federated Cloud-Edge Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch1-computer-abstractions-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch1 Computer Abstractions &amp; Technology
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch1 Computer Abstractions & Technology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#execution-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      execution time
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch2-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch2 Instructions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch2 Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risc-v-intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V Intro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bhwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      b/h/w/d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2s-complement" class="md-nav__link">
+    <span class="md-ellipsis">
+      2s complement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signed-unsigned" class="md-nav__link">
+    <span class="md-ellipsis">
+      signed &amp; unsigned
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      sign extension
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      offset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      encoding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overall" class="md-nav__link">
+    <span class="md-ellipsis">
+      overall
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      binary representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      R-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      I-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      S-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sb-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      SB-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uj-format-jal" class="md-nav__link">
+    <span class="md-ellipsis">
+      UJ-format (jal)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      U-format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rv32i-instruction-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      RV32I Instruction Sets (查表)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risc-v-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RISC-V operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    <span class="md-ellipsis">
+      if
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while" class="md-nav__link">
+    <span class="md-ellipsis">
+      while
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      load/store
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      dynamic linking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-judging" class="md-nav__link">
+    <span class="md-ellipsis">
+      performance judging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-vs-pointer" class="md-nav__link">
+    <span class="md-ellipsis">
+      array vs. pointer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mips" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIPS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch3-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch3 Arithmetic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch3 Arithmetic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      multiplication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="multiplication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      basic multiplier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signed-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      signed multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faster-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      faster multiplier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      instructions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#division" class="md-nav__link">
+    <span class="md-ellipsis">
+      division
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="division">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#divisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      divisor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signed-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      signed division
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faster-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      faster division
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      instructions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instruction-set-with-multiplication-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      instruction set with multiplication &amp; division
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    <span class="md-ellipsis">
+      float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    <span class="md-ellipsis">
+      format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      number representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplication_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      instructions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escaping-from-barbaric-yanks" class="md-nav__link">
+    <span class="md-ellipsis">
+      escaping from barbaric yanks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      array multiplication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rounding" class="md-nav__link">
+    <span class="md-ellipsis">
+      rounding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch4-processor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch4 Processor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch4 Processor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logic-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      logic design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-a-datapath" class="md-nav__link">
+    <span class="md-ellipsis">
+      building a datapath
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="building a datapath">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fetching-instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      fetching instruction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-type-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      R-type instructions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadstore_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      load/store
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branch-instructions-beq" class="md-nav__link">
+    <span class="md-ellipsis">
+      branch instructions (beq)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      合起來
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-cycle-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      single-cycle implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="single-cycle implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alu" class="md-nav__link">
+    <span class="md-ellipsis">
+      ALU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main-control-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      main control unit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operation-of-datapath" class="md-nav__link">
+    <span class="md-ellipsis">
+      operation of datapath
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finalizing-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      finalizing control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      performance issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipelining" class="md-nav__link">
+    <span class="md-ellipsis">
+      pipelining
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pipelining">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risc-v-5-stage-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V 5-stage pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-hazards" class="md-nav__link">
+    <span class="md-ellipsis">
+      pipeline hazards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pipeline hazards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structural-hazard" class="md-nav__link">
+    <span class="md-ellipsis">
+      structural hazard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-hazard" class="md-nav__link">
+    <span class="md-ellipsis">
+      data hazard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-hazard" class="md-nav__link">
+    <span class="md-ellipsis">
+      control hazard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datapath" class="md-nav__link">
+    <span class="md-ellipsis">
+      datapath
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      diagram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control" class="md-nav__link">
+    <span class="md-ellipsis">
+      control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-hazard-forwarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      data hazard &amp; forwarding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="data hazard & forwarding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-hazard_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      data hazard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forwarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      forwarding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stalling" class="md-nav__link">
+    <span class="md-ellipsis">
+      stalling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-hazards" class="md-nav__link">
+    <span class="md-ellipsis">
+      control hazards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="control hazards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-branch-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      dynamic branch prediction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      exceptions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instruction-level-parallelism-ilp" class="md-nav__link">
+    <span class="md-ellipsis">
+      instruction level parallelism, ILP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="instruction level parallelism, ILP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static-multiple-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Multiple Issue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-multiple-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Multiple Issue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      problems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch5-memory-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch5 Memory Hierarchy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch5 Memory Hierarchy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      intro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      cache
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="cache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#associative-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      associative cache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miss" class="md-nav__link">
+    <span class="md-ellipsis">
+      miss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multilevel-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      multilevel cache
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependable-memory-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      dependable memory hierarchy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dependable memory hierarchy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hamming-secded" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hamming SEC/DED
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="computer-architecture">Computer Architecture<a class="headerlink" href="#computer-architecture" title="Permanent link">&para;</a></h1>
+<h2 id="resources">resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<p><a href="https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architecture.html">https://chi_gitbook.gitbooks.io/personal-note/content/instruction_set_architecture.html</a></p>
+<h2 id="ch1-computer-abstractions-technology">Ch1 Computer Abstractions &amp; Technology<a class="headerlink" href="#ch1-computer-abstractions-technology" title="Permanent link">&para;</a></h2>
+<ul>
+<li>chip<ul>
+<li>台積電 pricing 較高但良率很高</li>
+<li>wafer<ul>
+<li>晶圓</li>
+</ul>
+</li>
+<li>die<ul>
+<li>wafer 切出來的一小片一小片</li>
+<li>晶粒/裸晶</li>
+</ul>
+</li>
+<li>cost<ul>
+<li><img alt="computer-architecture-1.png" src="../computer-architecture-1.png" /><ul>
+<li>經驗公式</li>
+<li>台積電工程師提出的</li>
+</ul>
+</li>
+<li>wafer cost &amp; area<ul>
+<li>fixed</li>
+</ul>
+</li>
+<li>defect rate<ul>
+<li>determined by manufacturing process</li>
+</ul>
+</li>
+<li>die rate<ul>
+<li>determined by disign</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>throughput = total work done per unit time</li>
+<li>performance = execution time 倒數</li>
+</ul>
+<h3 id="execution-time">execution time<a class="headerlink" href="#execution-time" title="Permanent link">&para;</a></h3>
+<ul>
+<li>CPU time</li>
+<li>CPU time = clock cycles x cycle time = cycles / clock rate</li>
+<li>trade-off: clock rate vs. cycle count </li>
+<li>clock cycles = instruction count (IC) x cycles per instruction (CPI)</li>
+<li>CPU time = IC x CPI x cycle time = IC x CPI / clock rate</li>
+<li><img alt="computer-architecture-2.png" src="../computer-architecture-2.png" /></li>
+<li><img alt="computer-architecture-3.png" src="../computer-architecture-3.png" /></li>
+<li>愈高階的語言 CPI 愈高</li>
+<li><span class="arithmatex">\(T_c\)</span>, clock period = seconds/cycle-</li>
+<li>ISA, instruction set architecture</li>
+<li>improvement<ul>
+<li>improvement factor <span class="arithmatex">\(n\)</span></li>
+<li><span class="arithmatex">\(T_{improved}=\dfrac{T_{affected}}{n}+T_{unaffected}\)</span></li>
+</ul>
+</li>
+<li>power<ul>
+<li><span class="arithmatex">\(power\propto CV^2\propto f\)</span> </li>
+</ul>
+</li>
+<li>MIPS: millions of instruction per second<ul>
+<li><img alt="computer-architecture-4.png" src="../computer-architecture-4.png" /></li>
+<li>doesn't account for<ul>
+<li>different ISAs between computers</li>
+<li>different complexity between instructions</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="ch2-instructions">Ch2 Instructions<a class="headerlink" href="#ch2-instructions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>instruction set<ul>
+<li>e.g. x86, ARM, RISC-V</li>
+</ul>
+</li>
+</ul>
+<h3 id="risc-v-intro"><a href="../../../../software-development/RISC-V/">RISC-V</a> Intro<a class="headerlink" href="#risc-v-intro" title="Permanent link">&para;</a></h3>
+<ul>
+<li>較簡單的 instruction set</li>
+<li>regularity → simpler implementation</li>
+<li>simplicity → higher performance, lower cost</li>
+<li>執行邏輯<ul>
+<li>從上到下，該跳則跳</li>
+</ul>
+</li>
+<li>32x64-bit register file<ul>
+<li>32-bit data: word</li>
+<li>64-bit data: doubleword</li>
+<li><img alt="computer-architecture-5.png" src="../computer-architecture-5.png" /></li>
+</ul>
+</li>
+<li>Instructions are word-aligned<ul>
+<li>address 一次跳 4 bytes</li>
+</ul>
+</li>
+<li>little endian<ul>
+<li>least-significant byte @ least address</li>
+</ul>
+</li>
+<li>bytes 不一定要 4 or 8 or whatever 的倍數</li>
+<li>一個 instruction 是 8 bytes</li>
+<li><img alt="computer-architecture-6.png" src="../computer-architecture-6.png" /><ul>
+<li>8x8=64</li>
+<li>12x8=96</li>
+<li>load A[8] to x9</li>
+<li>add x9 &amp; h, store to x9<ul>
+<li>x21 在 register 裡面所以可以直接 access</li>
+</ul>
+</li>
+<li>store x9 to A[12]</li>
+</ul>
+</li>
+</ul>
+<h3 id="bhwd">b/h/w/d<a class="headerlink" href="#bhwd" title="Permanent link">&para;</a></h3>
+<ul>
+<li>byte  = 8 bits</li>
+<li>halfword = 16 bits</li>
+<li>word = 32 bits</li>
+<li>doubleword = 64 bits</li>
+</ul>
+<h3 id="2s-complement">2s complement<a class="headerlink" href="#2s-complement" title="Permanent link">&para;</a></h3>
+<ul>
+<li>1s complement: negation<ul>
+<li>e.g. 0110 → 1001</li>
+</ul>
+</li>
+<li>2s complement: 1s complement +1<ul>
+<li>e.g. 6 = 0110 → -6 = 1001+1 = 1010</li>
+<li>要算 8-D → 算 8+2s(D) = 8+2s(1101) = 8+0011 = 8+3 = 11 = B<ul>
+<li><a href="https://quizlet.com/explanations/questions/assume-that-registers-s0-and-s1-hold-the-values-0x80000000-and-0xd0000000-respectively-1-what-is-the-9a341a5d-4e07-4ef8-8471-fd38030f7e4f">https://quizlet.com/explanations/questions/assume-that-registers-s0-and-s1-hold-the-values-0x80000000-and-0xd0000000-respectively-1-what-is-the-9a341a5d-4e07-4ef8-8471-fd38030f7e4f</a></li>
+<li><img alt="computer-architecture-7.png" src="../computer-architecture-7.png" /></li>
+<li>歷屆 quiz 1 (4.)<ul>
+<li><img alt="computer-architecture-8.png" src="../computer-architecture-8.png" /></li>
+<li><img alt="computer-architecture-9.png" src="../computer-architecture-9.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../Freshman/Logic%20Design/Logic%20Design/">Logic Design</a></p>
+<p><img alt="computer-architecture-10.png" src="../computer-architecture-10.png" />
+<img alt="computer-architecture-11.png" src="../computer-architecture-11.png" /></p>
+<h3 id="signed-unsigned">signed &amp; unsigned<a class="headerlink" href="#signed-unsigned" title="Permanent link">&para;</a></h3>
+<ul>
+<li>signed<ul>
+<li>有正負</li>
+<li>表示負數方法<ul>
+<li>最左邊 1 → 負</li>
+<li>complement (1s 2s etc.)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>unsigned<ul>
+<li>只有正數</li>
+</ul>
+</li>
+</ul>
+<h3 id="sign-extension">sign extension<a class="headerlink" href="#sign-extension" title="Permanent link">&para;</a></h3>
+<p>多加幾個 bits</p>
+<p><img alt="computer-architecture-12.png" src="../computer-architecture-12.png" /></p>
+<h3 id="offset">offset<a class="headerlink" href="#offset" title="Permanent link">&para;</a></h3>
+<p><img alt="computer-architecture-13.png" src="../computer-architecture-13.png" /></p>
+<h3 id="array">array<a class="headerlink" href="#array" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><img alt="computer-architecture-14.png" src="../computer-architecture-14.png" /></p>
+</li>
+<li>
+<p>e.g.</p>
+<ul>
+<li><img alt="computer-architecture-15.png" src="../computer-architecture-15.png" /><ul>
+<li><img alt="computer-architecture-16.png" src="../computer-architecture-16.png" /></li>
+<li>x30 = x10 是 array D 的指標</li>
+<li>addi x30, x30, 32 代表跳 32 bytes i.e. 跳 4 doublewords → array index +4</li>
+<li>若 x30 = 8，0(x30) 代表 D[2]，4(x30) 代表 D[3]<ul>
+<li>前面是 offset，加上括號 除以 8 (for doubleword) → array 的 index<ul>
+<li>像這個是 word = 4 bytes<br><img alt="computer-architecture-17.png" src="../computer-architecture-17.png" /></li>
+</ul>
+</li>
+<li>see <a href="#array-vs-pointer">#array vs pointer</a></li>
+</ul>
+</li>
+<li>題目中會一直蓋掉 D[0:3] 的值，直到 x7 &gt;= x5 = 4</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="encoding">encoding<a class="headerlink" href="#encoding" title="Permanent link">&para;</a></h3>
+<h4 id="overall">overall<a class="headerlink" href="#overall" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-18.png" src="../computer-architecture-18.png" /></li>
+<li>I SB UJ 的 10:5 位置都一樣</li>
+<li>都是 32 bits</li>
+<li>major opcode in bits 0-6</li>
+<li>destination register in bits 7-11</li>
+<li>first source register in bits 15-19</li>
+<li>second source register in bits 20-24</li>
+<li><a href="https://stackoverflow.com/a/39450410/15493213">https://stackoverflow.com/a/39450410/15493213</a></li>
+</ul>
+<h4 id="binary-representation">binary representation<a class="headerlink" href="#binary-representation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>15 → 0xF</li>
+<li>整個 32-bit format，4 bits 一單位，寫成 8 個 16 進位數字，前面加 0x</li>
+</ul>
+<h4 id="r-format">R-format<a class="headerlink" href="#r-format" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-19.png" src="../computer-architecture-19.png" /></li>
+<li>Register-format</li>
+<li><code>add rd, rs1, rs2</code><ul>
+<li>funct7 &amp; funct3 &amp; opcode 決定哪一個 operation<ul>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-20.png" src="../computer-architecture-20.png" /><ul>
+<li>51 是查表來的</li>
+</ul>
+</li>
+<li><a href="https://brainly.com/question/14287027">https://brainly.com/question/14287027</a></li>
+<li><img alt="computer-architecture-21.png" src="../computer-architecture-21.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="i-format">I-format<a class="headerlink" href="#i-format" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Immediate-format</li>
+<li><code>operation rd, imm(rs1)</code></li>
+<li><img alt="computer-architecture-22.png" src="../computer-architecture-22.png" /></li>
+<li>opcode &amp; func3 告訴電腦要做什麼 instruction (arithmetic OR load)</li>
+<li>immediate: constant OR offset for base address </li>
+<li><code>jalr</code><ul>
+<li><code>jalr rd imm(rs1)</code> will jump to the address <code>2imm+rs1</code> &amp;&amp; save the address of next line (i.e. current address + 4) to <code>rd</code><ul>
+<li>e.g. let x10 = 0x14, and <code>jalr x10 0(x10)</code>in address <code>0x24</code>, running this line will jump to address <code>0x14</code> &amp;&amp; set x10 to 0x24+4 = <code>0x28</code></li>
+<li>use <code>x0</code> as <code>rd</code> if don't care about return address</li>
+</ul>
+</li>
+<li><a href="https://electronics.stackexchange.com/a/553160">https://electronics.stackexchange.com/a/553160</a></li>
+</ul>
+</li>
+<li><code>SLLI</code> = left logical shift<ul>
+<li>shift left，補 0</li>
+<li><code>SLLI x10, x10, 2</code> → x10 shift left by 2 bits</li>
+</ul>
+</li>
+<li><code>SRLI</code> = right logical shift<ul>
+<li>shift right，補 0</li>
+</ul>
+</li>
+<li><code>SRAI</code> = right arithmetic shift<ul>
+<li>right shift，補 sign bit</li>
+<li>for signed number</li>
+<li>e.g. -8 = 11111000, -8/2 = -4 = 11111100, the right arithmetic shift of the former</li>
+<li>left arithmetic shift 則等同於 left logical shift, so no SRLI<ul>
+<li>應該是 undefined <a href="https://stackoverflow.com/questions/4009885/arithmetic-bit-shift-on-a-signed-integer">https://stackoverflow.com/questions/4009885/arithmetic-bit-shift-on-a-signed-integer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>ANDI</code> = bit-by-bit AND operation<ul>
+<li><code>ANDI x20, x10, 3</code> → x20 = the result of x10 AND 3 i.e. 只保留最低兩位數 i.e. x10%4</li>
+</ul>
+</li>
+</ul>
+<h4 id="s-format">S-format<a class="headerlink" href="#s-format" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-23.png" src="../computer-architecture-23.png" /></li>
+<li>store byte/halfword/word/doubleword</li>
+<li>immediate: offset for base address (rs1)</li>
+<li><code>sb rs1 rs2</code></li>
+</ul>
+<h4 id="sb-format">SB-format<a class="headerlink" href="#sb-format" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-24.png" src="../computer-architecture-24.png" /></li>
+<li>conditional jump<ul>
+<li>if xxxx jump to branch xxxx</li>
+</ul>
+</li>
+<li>branch addressing</li>
+<li><code>blt</code> <code>bge</code> etc.</li>
+<li>immediate 沒有 0th bit</li>
+<li>immediate 表示要跳多少</li>
+<li>take the branch → go to PC + immediate x 2 (i.e. immediate 後面補回一個 0)<ul>
+<li>bc imm omit 第 0 位 i.e. shift right</li>
+<li><img alt="computer-architecture-25.png" src="../computer-architecture-25.png" /></li>
+</ul>
+</li>
+<li>skip → go to PC + 4 i.e. next line</li>
+<li>1 instruction 4 bytes</li>
+<li><code>beq rs1, rs2, imm</code>→ jump to PC+immx2 if rs1=rs2</li>
+</ul>
+<h4 id="uj-format-jal">UJ-format (jal)<a class="headerlink" href="#uj-format-jal" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-26.png" src="../computer-architecture-26.png" /></li>
+<li>unconditional jump</li>
+<li>only for <code>jal</code>, unconditional jump-and-link</li>
+<li><img alt="computer-architecture-27.png" src="../computer-architecture-27.png" /></li>
+<li>20-bit immediate，表示要從目前位置跳多少<ul>
+<li>往回跳 → 負數 (2s complement)</li>
+<li>1 instruction 4 bytes</li>
+<li>往後跳 x 行 → immediate = 4x/2 (4x 去掉最後一位的 0)</li>
+</ul>
+</li>
+<li>jump to address = PC+imm i.e. 目前位置 + imm/4 行 </li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-28.png" src="../computer-architecture-28.png" /><ul>
+<li><img alt="computer-architecture-29.png" src="../computer-architecture-29.png" /></li>
+<li>往回跳 9 行，每個 instruction 4 bits → imm = -36 = 2s complement of 36，再 shift right i.e. 除 2 i.e. 移掉 0th bit</li>
+<li>jal 的 opcode = 1101111</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="u-format">U-format<a class="headerlink" href="#u-format" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-30.png" src="../computer-architecture-30.png" /></li>
+<li><code>lui rd constant</code></li>
+<li><code>imm[31:12]</code> = constant represented with 20 bits，把這 20 bits 弄到  rd[31:12]</li>
+<li><img alt="computer-architecture-31.png" src="../computer-architecture-31.png" /></li>
+</ul>
+<h4 id="rv32i-instruction-sets">RV32I Instruction Sets (查表)<a class="headerlink" href="#rv32i-instruction-sets" title="Permanent link">&para;</a></h4>
+<p><img alt="computer-architecture-32.png" src="../computer-architecture-32.png" /></p>
+<p>p.119</p>
+<p><img alt="computer-architecture-33.png" src="../computer-architecture-33.png" /></p>
+<p><a href="https://book.rvemu.app/instruction-set/01-rv64i.html">https://book.rvemu.app/instruction-set/01-rv64i.html</a></p>
+<p>I-format <code>LX</code> 的部分，是 load byte/halfword/word/doubleword，以 funct3 值區分</p>
+<ul>
+<li><img alt="computer-architecture-34.png" src="../computer-architecture-34.png" /><ul>
+<li><a href="https://ithelp.ithome.com.tw/articles/10194907">https://ithelp.ithome.com.tw/articles/10194907</a></li>
+</ul>
+</li>
+</ul>
+<p>e.g.</p>
+<ul>
+<li><img alt="computer-architecture-35.png" src="../computer-architecture-35.png" /><ul>
+<li><img alt="computer-architecture-36.png" src="../computer-architecture-36.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="risc-v-operations"><a href="../../../../software-development/RISC-V/">RISC-V</a> operations<a class="headerlink" href="#risc-v-operations" title="Permanent link">&para;</a></h3>
+<p><img alt="computer-architecture-37.png" src="../computer-architecture-37.png" /></p>
+<p><img alt="computer-architecture-38.png" src="../computer-architecture-38.png" /></p>
+<p><code>slli a, b, 1</code> → a = b&lt;&lt;1 (=2b)<br />
+<code>addi a, b, 1</code> → a=b+1</p>
+<h4 id="if">if<a class="headerlink" href="#if" title="Permanent link">&para;</a></h4>
+<p><code>beq a, b, callback</code> → if(a\==b){callback()}
+<code>bne a, b, callback</code> → if(a!=b){callback()}
+<code>blt a, b, callback</code> → if(a&lt;b)</p>
+<p><img alt="computer-architecture-39.png" src="../computer-architecture-39.png" /></p>
+<p><img alt="computer-architecture-40.png" src="../computer-architecture-40.png" /></p>
+<p><code>bge a, b, callback</code> → if(a&gt;=b)</p>
+<p><img alt="computer-architecture-41.png" src="../computer-architecture-41.png" /></p>
+<h4 id="while">while<a class="headerlink" href="#while" title="Permanent link">&para;</a></h4>
+<p><img alt="computer-architecture-42.png" src="../computer-architecture-42.png" /></p>
+<h4 id="jump">jump<a class="headerlink" href="#jump" title="Permanent link">&para;</a></h4>
+<ul>
+<li>leaf procedure<ul>
+<li><img alt="computer-architecture-43.png" src="../computer-architecture-43.png" /><img alt="computer-architecture-44.png" src="../computer-architecture-44.png" /></li>
+</ul>
+</li>
+<li>non-leaf procedure<ul>
+<li>recursive?</li>
+<li><img alt="computer-architecture-45.png" src="../computer-architecture-45.png" /><img alt="computer-architecture-46.png" src="../computer-architecture-46.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="loadstore">load/store<a class="headerlink" href="#loadstore" title="Permanent link">&para;</a></h4>
+<p><img alt="computer-architecture-47.png" src="../computer-architecture-47.png" /></p>
+<p>lui</p>
+<p><img alt="computer-architecture-48.png" src="../computer-architecture-48.png" /></p>
+<p><code>lui x19, 976</code> → 放 12 個 0 到 976 後面 </p>
+<h4 id="example">example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<p><img alt="computer-architecture-49.png" src="../computer-architecture-49.png" />
+<img alt="computer-architecture-50.png" src="../computer-architecture-50.png" /></p>
+<p><img alt="computer-architecture-51.png" src="../computer-architecture-51.png" />
+<img alt="computer-architecture-52.png" src="../computer-architecture-52.png" />
+<img alt="computer-architecture-53.png" src="../computer-architecture-53.png" />
+<img alt="computer-architecture-54.png" src="../computer-architecture-54.png" />
+<img alt="computer-architecture-55.png" src="../computer-architecture-55.png" />
+<img alt="computer-architecture-56.png" src="../computer-architecture-56.png" /></p>
+<p><img alt="computer-architecture-57.png" src="../computer-architecture-57.png" /></p>
+<h3 id="dynamic-linking">dynamic linking<a class="headerlink" href="#dynamic-linking" title="Permanent link">&para;</a></h3>
+<p>only link/load library procedure when called</p>
+<ul>
+<li>Java just in time compiler<ul>
+<li>根據執行狀況做優化</li>
+</ul>
+</li>
+</ul>
+<h3 id="performance-judging">performance judging<a class="headerlink" href="#performance-judging" title="Permanent link">&para;</a></h3>
+<ul>
+<li>IC (why?) &amp; CPI alone 不是好的 performance indicators</li>
+<li>compiler optimizations are sensitive to algorithms</li>
+<li>Java just-in-time &gt;&gt; Java Virtual Machine<ul>
+<li>直逼 C</li>
+</ul>
+</li>
+</ul>
+<h3 id="array-vs-pointer">array vs. pointer<a class="headerlink" href="#array-vs-pointer" title="Permanent link">&para;</a></h3>
+<ul>
+<li>pointer 省略 indexing 的部分</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-58.png" src="../computer-architecture-58.png" /><ul>
+<li>x7 = size-1</li>
+<li>array 每次 loop 都要 <code>slli</code> &amp; <code>add</code><ul>
+<li><code>slli</code>: 算 i 的實際 index</li>
+<li><code>add</code>🔢</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="mips">MIPS<a class="headerlink" href="#mips" title="Permanent link">&para;</a></h3>
+<ul>
+<li>successor of RISC-V</li>
+<li><img alt="computer-architecture-59.png" src="../computer-architecture-59.png" /></li>
+</ul>
+<h2 id="ch3-arithmetic">Ch3 Arithmetic<a class="headerlink" href="#ch3-arithmetic" title="Permanent link">&para;</a></h2>
+<ul>
+<li>for multipedia<ul>
+<li>overflow → 留在最大值</li>
+</ul>
+</li>
+</ul>
+<h3 id="multiplication">multiplication<a class="headerlink" href="#multiplication" title="Permanent link">&para;</a></h3>
+<h4 id="basic-multiplier">basic multiplier<a class="headerlink" href="#basic-multiplier" title="Permanent link">&para;</a></h4>
+<ul>
+<li>每次 cycle 加一次，要很多個 cycle<ul>
+<li>sol: <a href="#faster-multiplier">#faster multiplier</a>，空間換取時間</li>
+</ul>
+</li>
+<li><img alt="computer-architecture-60.png" src="../computer-architecture-60.png" /></li>
+<li>length of product = sum of multiplicand &amp; multiplier length, ignoring the sign bit</li>
+<li><img alt="computer-architecture-61.png" src="../computer-architecture-61.png" /></li>
+<li>每輪都上面 pointer 都左移一格</li>
+<li>每輪下面 pointer 都右移一格<ul>
+<li>指到 1 → 相加</li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-62.png" src="../computer-architecture-62.png" /></li>
+</ul>
+</li>
+<li>optimized<ul>
+<li><img alt="computer-architecture-63.png" src="../computer-architecture-63.png" /></li>
+<li>multiplicand &amp; ALU reduced to 64 bits<ul>
+<li>unused portion of registers &amp; adders</li>
+</ul>
+</li>
+<li>multiplier placed in the right half of product</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-64.png" src="../computer-architecture-64.png" /><ul>
+<li>... 不是吧</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="signed-multiplication">signed multiplication<a class="headerlink" href="#signed-multiplication" title="Permanent link">&para;</a></h4>
+<ul>
+<li>先弄成正的，乘完再轉回去</li>
+</ul>
+<h4 id="faster-multiplier">faster multiplier<a class="headerlink" href="#faster-multiplier" title="Permanent link">&para;</a></h4>
+<ul>
+<li>用多一點加法器，省下時間</li>
+<li>more cost, higher performance<ul>
+<li>cost performance tradeoff</li>
+</ul>
+</li>
+<li><img alt="computer-architecture-65.png" src="../computer-architecture-65.png" /></li>
+<li>可以 pipeline → 可以很多 in parallel → even faster</li>
+</ul>
+<h4 id="instructions">instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h4>
+<ul>
+<li>mul<ul>
+<li>multiply</li>
+<li>return lower 64 bits</li>
+</ul>
+</li>
+<li>mulh<ul>
+<li>multiply high</li>
+<li>return upper 64 bits</li>
+<li>can check 64-bit overflow</li>
+</ul>
+</li>
+<li>mulhu<ul>
+<li>multiply high unsigned</li>
+<li>assume unsigned, return upper 64 bits</li>
+</ul>
+</li>
+<li>mulhsu<ul>
+<li>multiply high signed/unsigned</li>
+<li>assume 1 signed other unsigned, return upper 64 bits</li>
+</ul>
+</li>
+</ul>
+<h3 id="division">division<a class="headerlink" href="#division" title="Permanent link">&para;</a></h3>
+<ul>
+<li><img alt="computer-architecture-66.png" src="../computer-architecture-66.png" /></li>
+<li>long division</li>
+<li>retoring division<ul>
+<li>先剪，小於 0 再加回來</li>
+</ul>
+</li>
+<li>signed division<ul>
+<li>abs()</li>
+</ul>
+</li>
+<li>division 後面 dependent on 前面結果 → 無法 parallel → time complexity 高</li>
+</ul>
+<h4 id="divisor">divisor<a class="headerlink" href="#divisor" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-67.png" src="../computer-architecture-67.png" /></li>
+<li><img alt="computer-architecture-68.png" src="../computer-architecture-68.png" /></li>
+<li>每輪 divisor pointer 右移一格，quotient pointer 左移一格</li>
+<li>e.g.<ul>
+<li>4-bit ver. of 7/2<ul>
+<li><img alt="computer-architecture-69.png" src="../computer-architecture-69.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>每次 cycle 減一次，要很多個 cycle</li>
+<li>optimized divider<ul>
+<li><img alt="computer-architecture-70.png" src="../computer-architecture-70.png" /><ul>
+<li>simultaneously, subtract &amp; shift the operands &amp; shift the quotient</li>
+<li>quotient 放在 remainder 的 right half<ul>
+<li>bc remainder 減完會 shift left，右邊會多出一格 → 給新生出的 quotient 用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>divisor register &amp; ALU halved </li>
+<li>like optimized multiplier<ul>
+<li><img alt="computer-architecture-71.png" src="../computer-architecture-71.png" /></li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-72.png" src="../computer-architecture-72.png" /></li>
+<li><img alt="computer-architecture-73.png" src="../computer-architecture-73.png" /><ul>
+<li>4-bit → shift 4 次完就終止，然後 remainder left half shift right (at 5th operation)</li>
+<li>最後 remainder = remainder left half；quotient = remainder right half</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="signed-division">signed division<a class="headerlink" href="#signed-division" title="Permanent link">&para;</a></h4>
+<ul>
+<li>正負號不應影響數字<ul>
+<li>e.g. <ul>
+<li>7/2 = 3 ... 1</li>
+<li>-7/2 = -3 ... -1 NOT 4 ... 1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="faster-division">faster division<a class="headerlink" href="#faster-division" title="Permanent link">&para;</a></h4>
+<ul>
+<li>不能 parallel 因為需要先知道 remainder 之正負才能繼續<ul>
+<li>if negative → remainder 要加回 divisor</li>
+</ul>
+</li>
+<li>SRT division<ul>
+<li>predict multiple quotient bits in one step, then correct errors later</li>
+</ul>
+</li>
+<li>nonrestoring division<ul>
+<li>don't add the divisor back immediately if the remainder's negative</li>
+<li>1 clock cycle per step</li>
+</ul>
+</li>
+<li>nonperforming division</li>
+</ul>
+<h4 id="instructions_1">instructions<a class="headerlink" href="#instructions_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>div, rem</li>
+<li>divu, remu</li>
+<li>no overflow for 除以 0 &amp; overflow<ul>
+<li>return 定義</li>
+</ul>
+</li>
+</ul>
+<h3 id="instruction-set-with-multiplication-division">instruction set with multiplication &amp; division<a class="headerlink" href="#instruction-set-with-multiplication-division" title="Permanent link">&para;</a></h3>
+<p><img alt="computer-architecture-74.png" src="../computer-architecture-74.png" /></p>
+<h3 id="float">float<a class="headerlink" href="#float" title="Permanent link">&para;</a></h3>
+<ul>
+<li>之前介紹的東西都是 integer 的</li>
+<li><span class="arithmatex">\(\pm 1.xxxxx_2\times 2^{yyyyyyyy}\)</span></li>
+<li>2 representations<ul>
+<li>single precision (32-bit)</li>
+<li>double precision (64-bit)<ul>
+<li><code>double</code> in C</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="format">format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h4>
+<ul>
+<li>IEEE Std 754</li>
+<li><img alt="computer-architecture-75.png" src="../computer-architecture-75.png" /></li>
+<li>placed this way for sorting purpose<ul>
+<li>sign → exponent → fraction</li>
+</ul>
+</li>
+<li>exponent<ul>
+<li>Bias <ul>
+<li>把 exponent 轉成正 → unsigned</li>
+<li><span class="arithmatex">\(2^{-100}\)</span> → <span class="arithmatex">\(2^{-100+Bias}\)</span></li>
+</ul>
+</li>
+<li>127 for single; 1023 for double<ul>
+<li>simplicity for sorting</li>
+<li>不然 negative 的 2s complement 看起來很大</li>
+</ul>
+</li>
+<li>000..00 &amp; 111..11 are reserved<ul>
+<li>single<ul>
+<li>min real exponent = 1-127 = -126</li>
+<li>max real exponent = 254 - 127 = 127</li>
+</ul>
+</li>
+<li>double</li>
+<li>min real exponent = 1-1023 = -1022<ul>
+<li>max real exponent = 2046 - 1023 = 1023</li>
+</ul>
+</li>
+<li>但 fraction 還是可以有全 0 &amp; 全 1</li>
+</ul>
+</li>
+<li>overflow: 太正</li>
+<li>underflow: 太負</li>
+</ul>
+</li>
+<li>fraction = 0-1</li>
+<li>single-precision<ul>
+<li>min 00000001</li>
+<li>max 11111110</li>
+</ul>
+</li>
+<li>double-precision<ul>
+<li>min 00000000001</li>
+<li>max 11111111110</li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-76.png" src="../computer-architecture-76.png" /></li>
+<li><img alt="computer-architecture-77.png" src="../computer-architecture-77.png" /></li>
+<li>1.6875 to hexadicimal representation<ul>
+<li><img alt="computer-architecture-78.jpg" src="../computer-architecture-78.jpg" /></li>
+</ul>
+</li>
+<li>single encode to double<ul>
+<li><img alt="computer-architecture-79.jpg" src="../computer-architecture-79.jpg" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="number-representation">number representation<a class="headerlink" href="#number-representation" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-80.png" src="../computer-architecture-80.png" /></li>
+<li>denormalized number<ul>
+<li>exponent = 0<ul>
+<li>so <span class="arithmatex">\(fraction\times 2^{-Bias}\)</span></li>
+</ul>
+</li>
+<li>&lt; normal numbers</li>
+</ul>
+</li>
+<li>infinity<ul>
+<li>exponent = all 1s</li>
+<li>fraction = 0</li>
+</ul>
+</li>
+<li>not a number (NaN)<ul>
+<li>exponent = all 1s</li>
+<li>fraction != 0</li>
+</ul>
+</li>
+</ul>
+<h4 id="addition">addition<a class="headerlink" href="#addition" title="Permanent link">&para;</a></h4>
+<p><img alt="computer-architecture-81.png" src="../computer-architecture-81.png" /></p>
+<p><img alt="computer-architecture-82.png" src="../computer-architecture-82.png" /></p>
+<p><img alt="computer-architecture-83.png" src="../computer-architecture-83.png" /></p>
+<h4 id="multiplication_1">multiplication<a class="headerlink" href="#multiplication_1" title="Permanent link">&para;</a></h4>
+<p><img alt="computer-architecture-84.png" src="../computer-architecture-84.png" /></p>
+<p><img alt="computer-architecture-85.png" src="../computer-architecture-85.png" /></p>
+<p>FP multiplier is FP adder but use multiplier for significands</p>
+<h4 id="instructions_2">instructions<a class="headerlink" href="#instructions_2" title="Permanent link">&para;</a></h4>
+<p><img alt="computer-architecture-86.png" src="../computer-architecture-86.png" /></p>
+<ul>
+<li><img alt="computer-architecture-87.png" src="../computer-architecture-87.png" /></li>
+</ul>
+<h4 id="examples">examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<h5 id="escaping-from-barbaric-yanks">escaping from barbaric yanks<a class="headerlink" href="#escaping-from-barbaric-yanks" title="Permanent link">&para;</a></h5>
+<p><img alt="computer-architecture-88.png" src="../computer-architecture-88.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flw f0, const5(x3) //f0 = 5
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>flw f1, const(x9) //f1 = 9
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>fdiv.s f0, f0, f1 //f0 = f0/f1 = 5/9
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>flw f1, const32(x3) //f1 = 32
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>fsub.s f10, f10, f1 //f10 = f10 - f1 = f10 - 32
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>fmul.s f10, f0, f10 //f10 = f0 x f10 = 5/9 x f10
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>jalr x0, 0(x1) //return
+</code></pre></div>
+<h5 id="array-multiplication">array multiplication<a class="headerlink" href="#array-multiplication" title="Permanent link">&para;</a></h5>
+<p><img alt="computer-architecture-89.png" src="../computer-architecture-89.png" /></p>
+<p><img alt="computer-architecture-90.png" src="../computer-architecture-90.png" /></p>
+<ul>
+<li><span class="arithmatex">\(a_{2,3}\)</span> in 5x5 → 1x5+3 = 8th item (左到右，上到下)</li>
+<li>64-bit → 要再 x8 <code>slli 3</code></li>
+</ul>
+<p><img alt="computer-architecture-91.png" src="../computer-architecture-91.png" /></p>
+<h4 id="rounding">rounding<a class="headerlink" href="#rounding" title="Permanent link">&para;</a></h4>
+<ul>
+<li>extra bits of precision<ul>
+<li>guard &amp; round<ul>
+<li>guard 存目標位數後 1st 位，round 存目標位數後 2nd 位，then round with 這兩位<ul>
+<li>e.g. (round to 小數點後第二位) 1.5252 → 1.53 bc <span class="arithmatex">\(52\in [51,99]\)</span></li>
+</ul>
+</li>
+<li>without these 2，則永遠只保留目標位數</li>
+<li><img alt="computer-architecture-92.png" src="../computer-architecture-92.png" /></li>
+</ul>
+</li>
+<li>sticky<ul>
+<li>guard &amp; round bit 右邊有非 0 位數 → set to 1，append as 3rd bit</li>
+<li>0.500000...000001 → 0.501</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><img alt="computer-architecture-93.png" src="../computer-architecture-93.png" /><ul>
+<li>nearest even<ul>
+<li>tie (剛好一半) → round to even</li>
+<li>tie 時 round 完 last bit 絕對是 0</li>
+<li><img alt="computer-architecture-94.png" src="../computer-architecture-94.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-95.png" src="../computer-architecture-95.png" /><ul>
+<li><img alt="computer-architecture-96.png" src="../computer-architecture-96.png" /></li>
+</ul>
+</li>
+<li><img alt="computer-architecture-97.png" src="../computer-architecture-97.png" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="ch4-processor">Ch4 Processor<a class="headerlink" href="#ch4-processor" title="Permanent link">&para;</a></h2>
+<h3 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h3>
+<ul>
+<li>implementation of the RISC-V subset<ul>
+<li><img alt="computer-architecture-98.png" src="../computer-architecture-98.png" /></li>
+<li><img alt="computer-architecture-99.png" src="../computer-architecture-99.png" /><ul>
+<li>with multiplexers &amp; control lines</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="logic-design">logic design<a class="headerlink" href="#logic-design" title="Permanent link">&para;</a></h3>
+<ul>
+<li>1 wire 1 bit</li>
+<li>multiple wire → bus</li>
+<li>multiplexer (mux)<ul>
+<li>多個 input，選擇一個 output</li>
+</ul>
+</li>
+<li><img alt="computer-architecture-100.png" src="../computer-architecture-100.png" /></li>
+</ul>
+<h3 id="building-a-datapath">building a datapath<a class="headerlink" href="#building-a-datapath" title="Permanent link">&para;</a></h3>
+<h4 id="fetching-instruction">fetching instruction<a class="headerlink" href="#fetching-instruction" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-101.png" src="../computer-architecture-101.png" /></li>
+<li>用寫死做 Add 的 ALU，每次 PC +4</li>
+<li>instruction memory 用 combinational logic</li>
+</ul>
+<h4 id="r-type-instructions">R-type instructions<a class="headerlink" href="#r-type-instructions" title="Permanent link">&para;</a></h4>
+<ul>
+<li>arithmetic-logical instructions</li>
+<li>don't use sign extender (P4.3.3)</li>
+<li>read 2 registers → perform an ALU operation (arithmetic or logical operation) → write result to register</li>
+<li><img alt="computer-architecture-102.png" src="../computer-architecture-102.png" /></li>
+</ul>
+<h4 id="loadstore_1">load/store<a class="headerlink" href="#loadstore_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>only load &amp; store use data memory (P4.3.1)</li>
+<li>immediate generation: convert 成 ALU 所需的格式<ul>
+<li>32-bit instruction as input </li>
+<li>selects a 12-bit field for load, store, and branch if equal that is sign-extended into a 64-bit result appearing on the output (?)</li>
+</ul>
+</li>
+<li><img alt="computer-architecture-103.png" src="../computer-architecture-103.png" /></li>
+</ul>
+<h4 id="branch-instructions-beq">branch instructions (beq)<a class="headerlink" href="#branch-instructions-beq" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-104.png" src="../computer-architecture-104.png" /></li>
+<li>shift left 是加 0 到 sign-extended offset field 的後面，丟掉 sign bit<ul>
+<li>之前 x2 的部分</li>
+</ul>
+</li>
+<li>branch target = PC + imm slli 1</li>
+<li>用 ALU 做 rs1-rs2，若為 0 則 PC = branch target，otherwise PC = PC+4</li>
+</ul>
+<h4 id="_1">合起來<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-105.png" src="../computer-architecture-105.png" /><ul>
+<li>加上 mux 來連接&amp;控制不同 instruction class</li>
+</ul>
+</li>
+<li><img alt="computer-architecture-106.png" src="../computer-architecture-106.png" /></li>
+</ul>
+<h3 id="single-cycle-implementation">single-cycle implementation<a class="headerlink" href="#single-cycle-implementation" title="Permanent link">&para;</a></h3>
+<h4 id="alu">ALU<a class="headerlink" href="#alu" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-107.png" src="../computer-architecture-107.png" /></li>
+</ul>
+<h4 id="main-control-unit">main control unit<a class="headerlink" href="#main-control-unit" title="Permanent link">&para;</a></h4>
+<ul>
+<li>truth table<ul>
+<li><img alt="computer-architecture-108.png" src="../computer-architecture-108.png" /></li>
+<li>愈多 don't care 愈好</li>
+</ul>
+</li>
+<li><img alt="computer-architecture-109.png" src="../computer-architecture-109.png" /></li>
+<li><img alt="computer-architecture-110.png" src="../computer-architecture-110.png" /><ul>
+<li>rs1 = read register 1</li>
+<li>rs2 = read register 2</li>
+<li>rd = write register</li>
+</ul>
+</li>
+<li>control signals<ul>
+<li><img alt="computer-architecture-111.png" src="../computer-architecture-111.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="operation-of-datapath">operation of datapath<a class="headerlink" href="#operation-of-datapath" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-112.png" src="../computer-architecture-112.png" /><ul>
+<li>加上 control unit，input 是 7-bit opcode，output 控制各種東西</li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li>add<ul>
+<li><img alt="computer-architecture-113.png" src="../computer-architecture-113.png" /><ol>
+<li>read address &amp;&amp; pc+=4</li>
+<li>instruction decode</li>
+<li>read register 等等</li>
+<li>instruction execution</li>
+<li>ALU</li>
+<li>write data back (to destination register)</li>
+<li>R-type 不用處理到 data memory</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>load<ul>
+<li><img alt="computer-architecture-114.png" src="../computer-architecture-114.png" /><ol>
+<li>ALU 算 sum of register 1 &amp; offset → address of data memory</li>
+<li>data from the memory unity write into register file</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>beq<ul>
+<li><img alt="computer-architecture-115.png" src="../computer-architecture-115.png" /><ul>
+<li>imm gen 找 offset<ul>
+<li>offset slli 1</li>
+</ul>
+</li>
+<li>imm slli 1 + pc → branch target</li>
+<li>ALU 做 rs1-rs2<ul>
+<li>= 0 → PC = branch target</li>
+<li>!= 0 → PC = PC+4</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="finalizing-control">finalizing control<a class="headerlink" href="#finalizing-control" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-116.png" src="../computer-architecture-116.png" /></li>
+</ul>
+<h4 id="performance-issues">performance issues<a class="headerlink" href="#performance-issues" title="Permanent link">&para;</a></h4>
+<ul>
+<li>clock period determined by worst-case delay (longest path)<ul>
+<li>load instruction 最慢<ul>
+<li>instruction memory → register file → ALU → data memory register file，5 個 stage 都要跑一遍<ul>
+<li><img alt="computer-architecture-117.png" src="../computer-architecture-117.png" /></li>
+</ul>
+</li>
+<li>but load instruction 又很常用</li>
+</ul>
+</li>
+<li>solution: pipelining</li>
+</ul>
+</li>
+</ul>
+<h3 id="pipelining">pipelining<a class="headerlink" href="#pipelining" title="Permanent link">&para;</a></h3>
+<h4 id="risc-v-5-stage-pipeline">RISC-V 5-stage pipeline<a class="headerlink" href="#risc-v-5-stage-pipeline" title="Permanent link">&para;</a></h4>
+<ol>
+<li>IF = instruction fetch</li>
+<li>ID = instruction decode &amp; register read</li>
+<li>EX = execute operation OR calculate address</li>
+<li>MEM = access memory operand</li>
+<li>WB = write result back to register</li>
+</ol>
+<p>stage utilization of each type</p>
+<p><img alt="computer-architecture-118.png" src="../computer-architecture-118.png" /></p>
+<p><img alt="computer-architecture-117.png" src="../computer-architecture-117.png" /></p>
+<ul>
+<li>jump uses WB</li>
+<li>only R don't use sign extender</li>
+</ul>
+<h4 id="performance">performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h4>
+<ul>
+<li>cycle 數較多，cycle period 較短</li>
+<li>if all stages take the same time, <span class="arithmatex">\(T_c\)</span> /= num of stages with pipelining</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-120.png" src="../computer-architecture-120.png" /><ul>
+<li>如果每個 stage 都花同樣時間，速度就會是 5 倍而非 4 倍</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="pipeline-hazards">pipeline hazards<a class="headerlink" href="#pipeline-hazards" title="Permanent link">&para;</a></h4>
+<h5 id="structural-hazard">structural hazard<a class="headerlink" href="#structural-hazard" title="Permanent link">&para;</a></h5>
+<ul>
+<li>資源不夠用</li>
+<li>一個資源一個時間只能一個人用</li>
+<li>solution: more resources</li>
+</ul>
+<h5 id="data-hazard">data hazard<a class="headerlink" href="#data-hazard" title="Permanent link">&para;</a></h5>
+<ul>
+<li>current instruction depends on the result of previous instructions → NOP (an operation that does nothing)<ul>
+<li>NOP is in code, stall is in hardware</li>
+</ul>
+</li>
+<li>store won't create hazard</li>
+<li>e.g.<ul>
+<li>add x19, x0, x1<br>sub x2, x19, x3<ul>
+<li><img alt="computer-architecture-121.png" src="../computer-architecture-121.png" /></li>
+<li>要等上一個 WB 才能 ID → 要多等 2 個 cycle </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>solution: forwarding/bypassing<ul>
+<li>不等 write back，一生出答案就直接拿</li>
+<li>need extra connection</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-122.png" src="../computer-architecture-122.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>load-use data hazard<ul>
+<li>用到的 variable 來自上一個 instruction 的 load</li>
+<li>load 要到 MEM 後才能被使用，while ALU 計算需要在 EX 前拿到值</li>
+<li>need to wait 1 more cycle even with forwarding<ul>
+<li><img alt="computer-architecture-123.png" src="../computer-architecture-123.png" /></li>
+</ul>
+</li>
+<li>schedule codes to avoid it<ul>
+<li><img alt="computer-architecture-124.png" src="../computer-architecture-124.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="control-hazard">control hazard<a class="headerlink" href="#control-hazard" title="Permanent link">&para;</a></h5>
+<ul>
+<li>depends on branch outcome of previous instruction</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-125.png" src="../computer-architecture-125.png" /><ul>
+<li>要等 beq 判斷（要不要跳）之後才能執行下一個 instruction</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sol: branch prediction<ul>
+<li>static branch prediction<ul>
+<li>assume branch not taken and do the next instruction immediately, if the branch is taken (assumption incorrect), cancel the instruction</li>
+<li><img alt="computer-architecture-126.png" src="../computer-architecture-126.png" /> </li>
+</ul>
+</li>
+<li>dynamic<ul>
+<li>assumption based on history</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="datapath">datapath<a class="headerlink" href="#datapath" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-127.png" src="../computer-architecture-127.png" /></li>
+<li>IF<ul>
+<li><img alt="computer-architecture-128.png" src="../computer-architecture-128.png" /></li>
+</ul>
+</li>
+<li>ID<ul>
+<li><img alt="computer-architecture-129.png" src="../computer-architecture-129.png" /></li>
+</ul>
+</li>
+<li>EX<ul>
+<li>load<ul>
+<li><img alt="computer-architecture-130.png" src="../computer-architecture-130.png" /></li>
+</ul>
+</li>
+<li>store<ul>
+<li><img alt="computer-architecture-131.png" src="../computer-architecture-131.png" /></li>
+<li>2nd register value loaded into EX/MEM </li>
+<li>???</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>MEM</p>
+<ul>
+<li>load<ul>
+<li><img alt="computer-architecture-132.png" src="../computer-architecture-132.png" /></li>
+</ul>
+</li>
+<li>store<ul>
+<li><img alt="computer-architecture-133.png" src="../computer-architecture-133.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>WB</p>
+<ul>
+<li>load<ul>
+<li><img alt="computer-architecture-134.png" src="../computer-architecture-134.png" /><ul>
+<li>would be the wrong register number</li>
+</ul>
+</li>
+<li><img alt="computer-architecture-135.png" src="../computer-architecture-135.png" /><ul>
+<li>correct ver.</li>
+<li>register number passed from ID stage</li>
+<li>有之後需要用到的 information → 需要 pass along with the datapath</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>store<ul>
+<li><img alt="computer-architecture-136.png" src="../computer-architecture-136.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="diagram">diagram<a class="headerlink" href="#diagram" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-137.png" src="../computer-architecture-137.png" /></li>
+<li><img alt="computer-architecture-138.png" src="../computer-architecture-138.png" /></li>
+<li><img alt="computer-architecture-139.png" src="../computer-architecture-139.png" /><ul>
+<li>cycle 5 of previous diagrams</li>
+</ul>
+</li>
+</ul>
+<h4 id="control">control<a class="headerlink" href="#control" title="Permanent link">&para;</a></h4>
+<ul>
+<li><img alt="computer-architecture-140.png" src="../computer-architecture-140.png" /></li>
+<li><img alt="computer-architecture-141.png" src="../computer-architecture-141.png" /></li>
+<li><img alt="computer-architecture-142.png" src="../computer-architecture-142.png" /></li>
+</ul>
+<h3 id="data-hazard-forwarding">data hazard &amp; forwarding<a class="headerlink" href="#data-hazard-forwarding" title="Permanent link">&para;</a></h3>
+<h4 id="data-hazard_1">data hazard<a class="headerlink" href="#data-hazard_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>EX hazard &amp; MEM hazard<ul>
+<li><img alt="computer-architecture-143.png" src="../computer-architecture-143.png" /></li>
+</ul>
+</li>
+<li>destination = 前兩個指令的 register</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-144.png" src="../computer-architecture-144.png" /></li>
+<li><img alt="computer-architecture-145.png" src="../computer-architecture-145.png" /></li>
+</ul>
+</li>
+<li>double hazard<ul>
+<li>EX hazard &amp; MEM hazard both happen</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-146.png" src="../computer-architecture-146.png" /><ul>
+<li>1a &amp; 2a</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="forwarding">forwarding<a class="headerlink" href="#forwarding" title="Permanent link">&para;</a></h4>
+<ul>
+<li>without forwarding<ul>
+<li><img alt="computer-architecture-147.png" src="../computer-architecture-147.png" /></li>
+</ul>
+</li>
+<li>with forwarding<ul>
+<li><img alt="computer-architecture-148.png" src="../computer-architecture-148.png" /></li>
+</ul>
+</li>
+<li>need forwarding when<ul>
+<li>EX/MEM or MEM/WB will write to a register &amp;&amp; RD != x0 &amp;&amp; RD = RS of ID/EX</li>
+<li>EX hazard<ul>
+<li><img alt="computer-architecture-149.png" src="../computer-architecture-149.png" /></li>
+</ul>
+</li>
+<li>MEM hazard<ul>
+<li><img alt="computer-architecture-150.png" src="../computer-architecture-150.png" /></li>
+<li>blue part: only forward this type when no EX hazard to avoid double hazard</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>control<ul>
+<li>哪一種 hazard → mux control</li>
+<li><img alt="computer-architecture-151.png" src="../computer-architecture-151.png" /></li>
+<li>1a → ForwardA = 10</li>
+<li>2a → ForwardA = 01</li>
+<li>1b → ForwardB = 10</li>
+<li>2b → ForwardB = 01</li>
+</ul>
+</li>
+<li>datapath<ul>
+<li><img alt="computer-architecture-152.png" src="../computer-architecture-152.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="stalling">stalling<a class="headerlink" href="#stalling" title="Permanent link">&para;</a></h4>
+<ul>
+<li>hazard detection unit<ul>
+<li><img alt="computer-architecture-153.png" src="../computer-architecture-153.png" /></li>
+<li>operate at ID stage</li>
+<li>have hazard → stall</li>
+</ul>
+</li>
+<li>load-use data hazard 只能 stall → nop i.e. do nothing</li>
+<li><img alt="computer-architecture-154.png" src="../computer-architecture-154.png" /></li>
+<li><img alt="computer-architecture-155.png" src="../computer-architecture-155.png" /></li>
+</ul>
+<h3 id="control-hazards">control hazards<a class="headerlink" href="#control-hazards" title="Permanent link">&para;</a></h3>
+<ul>
+<li><img alt="computer-architecture-156.png" src="../computer-architecture-156.png" /></li>
+</ul>
+<h4 id="dynamic-branch-prediction">dynamic branch prediction<a class="headerlink" href="#dynamic-branch-prediction" title="Permanent link">&para;</a></h4>
+<ul>
+<li>1-bit predictor</li>
+<li>2-bit predictor<ul>
+<li>wrong prediction twice → change</li>
+<li><img alt="computer-architecture-157.png" src="../computer-architecture-157.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="exceptions">exceptions<a class="headerlink" href="#exceptions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>flush instructions</li>
+<li>handling exception<ul>
+<li><img alt="computer-architecture-158.png" src="../computer-architecture-158.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="instruction-level-parallelism-ilp">instruction level parallelism, ILP<a class="headerlink" href="#instruction-level-parallelism-ilp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>to increase ILP<ul>
+<li>deeper pipeline<ul>
+<li>less work per stage → shorter clock cycle</li>
+</ul>
+</li>
+<li>multiple issue<ul>
+<li>multiple pipeline</li>
+<li>multiple instructions per cycle<ul>
+<li>CPI &lt; 1, IPC = 1/CPI &gt; 1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="static-multiple-issue">Static Multiple Issue<a class="headerlink" href="#static-multiple-issue" title="Permanent link">&para;</a></h4>
+<ul>
+<li>two-issue pipeline<ul>
+<li><img alt="computer-architecture-159.png" src="../computer-architecture-159.png" /></li>
+<li>一邊 ALU/branch 一邊 load/store</li>
+<li><img alt="computer-architecture-160.png" src="../computer-architecture-160.png" /></li>
+</ul>
+</li>
+<li>need extra hardware</li>
+<li>more instructions executing in parallel to avoid hazard<ul>
+<li>EX data hazard<ul>
+<li>can't forward ALU result to load/store, need to stall (?)</li>
+</ul>
+</li>
+<li>load-use data hazard<ul>
+<li>load result can't be used at next cycle (?)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>scheduling<ul>
+<li><img alt="computer-architecture-161.png" src="../computer-architecture-161.png" /></li>
+</ul>
+</li>
+<li>loop unrolling<ul>
+<li>replicate loop body multiple times → more things to fill in the blanks, and can 化減</li>
+<li><img alt="computer-architecture-162.png" src="../computer-architecture-162.png" /></li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-163.png" src="../computer-architecture-163.png" /></li>
+<li><img alt="computer-architecture-164.png" src="../computer-architecture-164.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="dynamic-multiple-issue">Dynamic Multiple Issue<a class="headerlink" href="#dynamic-multiple-issue" title="Permanent link">&para;</a></h4>
+<ul>
+<li>dynamic multiple-issue processors = superscalar processors</li>
+<li>dynamic pipeline scheduling<ul>
+<li>can execute instructions out of order</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-165.png" src="../computer-architecture-165.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><img alt="computer-architecture-166.png" src="../computer-architecture-166.png" /></li>
+</ul>
+<h3 id="problems">problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://s2.loli.net/2021/12/22/bqMuJpVXtgOGr2k.png" /></p>
+<p>load &amp; store 會用到 data memory，so 其他的 IF stage 不能跟 ld &amp; sd 的 MEM stage 衝到</p>
+<p><img alt="" src="https://s2.loli.net/2021/12/22/trKeaQEgcOx9u5f.png" /></p>
+<h2 id="ch5-memory-hierarchy">Ch5 Memory Hierarchy<a class="headerlink" href="#ch5-memory-hierarchy" title="Permanent link">&para;</a></h2>
+<h3 id="intro">intro<a class="headerlink" href="#intro" title="Permanent link">&para;</a></h3>
+<ul>
+<li>locality<ul>
+<li>temporal locality<ul>
+<li>時間上很近的會很常被用到</li>
+<li>loop</li>
+</ul>
+</li>
+<li>spatial locality<ul>
+<li>空間上很近的會很常被用到</li>
+<li>sequential instructions</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>memory hierarchy<ul>
+<li><img alt="computer-architecture-167.png" src="../computer-architecture-167.png" /></li>
+<li>faster → more expensive → smaller</li>
+<li>upper level<ul>
+<li>closer to processor</li>
+<li>faster, more expensive, smaller</li>
+</ul>
+</li>
+<li>lower level<ul>
+<li>slower to access, bigger capacity</li>
+</ul>
+</li>
+<li>line/block: min unit of info </li>
+<li><img alt="" src="https://s2.loli.net/2021/12/24/2HgsVT8B9qb7ZoK.png" /></li>
+</ul>
+</li>
+<li>data requested is in upper level → hit<ul>
+<li>hit rate = # found in upper level / # access</li>
+<li>hit time = time to access upper level </li>
+</ul>
+</li>
+<li>data request is not in upper level → miss<ul>
+<li>mis rate = # not found in upper level / # access</li>
+<li>miss penalty = total time to fetch the requested block to the requested level<ul>
+<li>access time + transmit time</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><img alt="" src="https://s2.loli.net/2021/12/24/1KdxXWrO7DABS82.png" /></li>
+</ul>
+<h3 id="memory">memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h3>
+<ul>
+<li>DRAM<ul>
+<li>slow</li>
+<li>smaller area used per bit → cheaper</li>
+</ul>
+</li>
+<li>SRAM<ul>
+<li>fast</li>
+<li>expensive</li>
+<li>used in upper levels</li>
+</ul>
+</li>
+</ul>
+<h3 id="cache">cache<a class="headerlink" href="#cache" title="Permanent link">&para;</a></h3>
+<ul>
+<li>the memory between processor &amp; main memory</li>
+<li>direct mapped cache<ul>
+<li><img alt="computer-architecture-168.png" src="../computer-architecture-168.png" /></li>
+<li>map with block address % num of blocks<br>i.e. n entries/blocks → map with lower <span class="arithmatex">\(log_2n\)</span> bits </li>
+</ul>
+</li>
+<li>tag<ul>
+<li>contain upper portion of block address (block address = {tag}{index})</li>
+</ul>
+</li>
+<li>valid bit<ul>
+<li>contain valid address or not</li>
+<li>not valid → don't match</li>
+</ul>
+</li>
+<li><img alt="" src="https://s2.loli.net/2021/12/24/29CAfUKaLk6trSx.png" /></li>
+<li>total size calculation<ul>
+<li>cache size = <span class="arithmatex">\(2^{n+m}\)</span> words = <span class="arithmatex">\(2^n\)</span> blocks<ul>
+<li>e.g. 16KiB = <span class="arithmatex">\(2^{14}\)</span> bytes = <span class="arithmatex">\(2^{12}\)</span> words</li>
+</ul>
+</li>
+<li>block size = <span class="arithmatex">\(2^m\)</span> words</li>
+<li>word size = address size = <span class="arithmatex">\(2^k\)</span> bytes<ul>
+<li>32 bit address → 1 word = 32 bits = <span class="arithmatex">\(2^2\)</span> bytes</li>
+<li>64 bit address → 1 word = 64 bits = <span class="arithmatex">\(2^3\)</span> bytes</li>
+</ul>
+</li>
+<li>tag size (bits) = address size (bits) - (n+m+k) = address size (bits) - <span class="arithmatex">\(log_2\)</span> cache size (bytes)</li>
+<li>offset = block offset + byte offset = lg of how many bytes per block<ul>
+<li>block offset = lg of how many words per block<ul>
+<li>2-word block → block offset = 1</li>
+</ul>
+</li>
+<li>byte offset = lg of how many bytes per word</li>
+</ul>
+</li>
+<li>1 valid bit</li>
+<li>total size = <span class="arithmatex">\(2^n\)</span> x (block size + tag size + valid size) bits<ul>
+<li>every block need original + tag &amp; valid bits</li>
+<li>i.e. 原本的 cache size 加上 tag &amp; valid 總共所需的 bits</li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-169.png" src="../computer-architecture-169.png" /></li>
+<li><img alt="computer-architecture-170.png" src="../computer-architecture-170.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>cache miss = search for a data in cache but find nothing<ul>
+<li>miss rate = # miss / # all access</li>
+</ul>
+</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-171.png" src="../computer-architecture-171.png" /></li>
+</ul>
+</li>
+<li>block size vs. miss rate<ul>
+<li><img alt="" src="https://s2.loli.net/2021/12/24/8z9ji5sVMHDoYcC.png" /></li>
+<li>larger block size → spatial locality → lower miss rate</li>
+<li>larger block size → fewer blocks can be held in cache → more competition, blocks would be bumped out of cache before all words is accessed → higher miss rate</li>
+<li>larger block size → hit time increases → slower</li>
+<li>larger block size → transfer time increase → bigger miss penalty</li>
+</ul>
+</li>
+<li>miss → CPU pipeline stall → fetch block from lower level</li>
+<li><img alt="computer-architecture-172.png" src="../computer-architecture-172.png" /></li>
+<li>AMAT (average memory access time) = hit time + miss rate x miss penalty</li>
+</ul>
+<h4 id="associative-cache">associative cache<a class="headerlink" href="#associative-cache" title="Permanent link">&para;</a></h4>
+<ul>
+<li>fully associative cache<ul>
+<li>a block can be placed anywhere</li>
+<li>need to search all entries to find a block<ul>
+<li>1 comparator for each entry → costly</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>set associative cache<ul>
+<li>n-way → n blocks in each set, each block can placed in any block of that set</li>
+<li>indexed by (# block) % (# of set)</li>
+</ul>
+</li>
+<li><img alt="" src="https://s2.loli.net/2021/12/24/R43pWNL2mTExec8.png" /><ul>
+<li>middle: 2-way set associative cache i.e. each set has 2 blocks, so need to search 2 blocks</li>
+</ul>
+</li>
+<li>replace policy<ul>
+<li>least recently used (LRU)<ul>
+<li>not scalable, hard for n-way with big n</li>
+</ul>
+</li>
+<li>random<ul>
+<li>same performance for whatever n</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>high associative → low miss rate</li>
+<li>e.g.<ul>
+<li><img alt="computer-architecture-173.png" src="../computer-architecture-173.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="miss">miss<a class="headerlink" href="#miss" title="Permanent link">&para;</a></h4>
+<ul>
+<li>compulsory miss<ul>
+<li>first time access, not in cache yet</li>
+</ul>
+</li>
+<li>capacity miss<ul>
+<li>cache capacity not enough to contain all blocks, so some is replaced</li>
+</ul>
+</li>
+<li>conflict miss<ul>
+<li>multiple blocks compete for same set</li>
+<li>in set-associative &amp; direct-mapped caches</li>
+</ul>
+</li>
+<li><img alt="" src="https://s2.loli.net/2021/12/24/cxU9Cn3a5EAXf7B.png" /></li>
+</ul>
+<h4 id="multilevel-cache">multilevel cache<a class="headerlink" href="#multilevel-cache" title="Permanent link">&para;</a></h4>
+<ul>
+<li>not in 1st level cache → search 2nd level cache</li>
+<li>higher miss penalty if not found in any level of cache</li>
+<li>2-level<ul>
+<li>primary<ul>
+<li>focus on low hit time</li>
+</ul>
+</li>
+<li>L-2<ul>
+<li>focus on low miss rate</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="dependable-memory-hierarchy">dependable memory hierarchy<a class="headerlink" href="#dependable-memory-hierarchy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>MTTF<ul>
+<li>mean time to failure</li>
+</ul>
+</li>
+<li>AFR<ul>
+<li>annual failure rate</li>
+<li>1 year / MTTF</li>
+</ul>
+</li>
+<li>MTTR<ul>
+<li>mean time to repair</li>
+</ul>
+</li>
+<li>MTBF<ul>
+<li>mean time between failures</li>
+<li>MTTF + MTTR</li>
+</ul>
+</li>
+<li>availability = <span class="arithmatex">\(\dfrac{MTTF}{MTBF}\)</span></li>
+<li>improving MTTF<ul>
+<li>fault avoidance</li>
+<li>fault tolerance<ul>
+<li>use redundancy</li>
+</ul>
+</li>
+<li>fault forecasting<ul>
+<li>replace before failure</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="hamming-secded">Hamming SEC/DED<a class="headerlink" href="#hamming-secded" title="Permanent link">&para;</a></h4>
+<ul>
+<li>SEC, single error correcting</li>
+<li>DED, double error detecting code</li>
+<li>hamming distance<ul>
+<li>min distance between 2 different bits<ul>
+<li>e.g. 11111, 10101 → 2</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ECC<ul>
+<li>mark <span class="arithmatex">\(2^k\)</span>th bits as parity bits</li>
+<li>bit 0001 → check bits ending with 1</li>
+<li>bit 0010 → check bits ending with 01</li>
+<li>etc.</li>
+<li><img alt="computer-architecture-174.png" src="../computer-architecture-174.png" /></li>
+<li>parity (p8p4p2p1) is (1010)<span class="arithmatex">\(_2\)</span> = 10 → bit 10 has error → invert bit 10 to correct it</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.derricklin.net" target="_blank" rel="noopener" title="www.derricklin.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M244 246c-3.2-2-6.3-2.9-10.1-2.9-6.6 0-12.6 3.2-19.3 3.7l1.7 4.9zm135.9 197.9c-19 0-64.1 9.5-79.9 19.8l6.9 45.1c35.7 6.1 70.1 3.6 106-9.8-4.8-10-23.5-55.1-33-55.1zM340.8 177c6.6 2.8 11.5 9.2 22.7 22.1 2-1.4 7.5-5.2 7.5-8.6 0-4.9-11.8-13.2-13.2-23 11.2-5.7 25.2-6 37.6-8.9 68.1-16.4 116.3-52.9 146.8-116.7C548.3 29.3 554 16.1 554.6 2l-2 2.6c-28.4 50-33 63.2-81.3 100-31.9 24.4-69.2 40.2-106.6 54.6l-6.3-.3v-21.8c-19.6 1.6-19.7-14.6-31.6-23-18.7 20.6-31.6 40.8-58.9 51.1-12.7 4.8-19.6 10-25.9 21.8 34.9-16.4 91.2-13.5 98.8-10zM555.5 0l-.6 1.1-.3.9.6-.6zm-59.2 382.1c-33.9-56.9-75.3-118.4-150-115.5l-.3-6c-1.1-13.5 32.8 3.2 35.1-31l-14.4 7.2c-19.8-45.7-8.6-54.3-65.5-54.3-14.7 0-26.7 1.7-41.4 4.6 2.9 18.6 2.2 36.7-10.9 50.3l19.5 5.5c-1.7 3.2-2.9 6.3-2.9 9.8 0 21 42.8 2.9 42.8 33.6 0 18.4-36.8 60.1-54.9 60.1-8 0-53.7-50-53.4-60.1l.3-4.6 52.3-11.5c13-2.6 12.3-22.7-2.9-22.7-3.7 0-43.1 9.2-49.4 10.6-2-5.2-7.5-14.1-13.8-14.1-3.2 0-6.3 3.2-9.5 4-9.2 2.6-31 2.9-21.5 20.1L15.9 298.5c-5.5 1.1-8.9 6.3-8.9 11.8 0 6 5.5 10.9 11.5 10.9 8 0 131.3-28.4 147.4-32.2 2.6 3.2 4.6 6.3 7.8 8.6 20.1 14.4 59.8 85.9 76.4 85.9 24.1 0 58-22.4 71.3-41.9 3.2-4.3 6.9-7.5 12.4-6.9.6 13.8-31.6 34.2-33 43.7-1.4 10.2-1 35.2-.3 41.1 26.7 8.1 52-3.6 77.9-2.9 4.3-21 10.6-41.9 9.8-63.5l-.3-9.5c-1.4-34.2-10.9-38.5-34.8-58.6-1.1-1.1-2.6-2.6-3.7-4 2.2-1.4 1.1-1 4.6-1.7 88.5 0 56.3 183.6 111.5 229.9 33.1-15 72.5-27.9 103.5-47.2-29-25.6-52.6-45.7-72.7-79.9zm-196.2 46.1v27.2l11.8-3.4-2.9-23.8zm-68.7-150.4 24.1 61.2 21-13.8-31.3-50.9zm84.4 154.9 2 12.4c9-1.5 58.4-6.6 58.4-14.1 0-1.4-.6-3.2-.9-4.6-26.8 0-36.9 3.8-59.5 6.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://blog.derricklin.net" target="_blank" rel="noopener" title="blog.derricklin.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/derrick-lin" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dlccyes" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.indexes", "toc.follow", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../../../assets/script.js"></script>
+      
+        <script src="../../../../assets/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
