@@ -39,6 +39,7 @@ websites for terrains
 
 - [Caltopo](www.caltopo.com)
 - [GaiaGPS](www.gaiagps.com)
+- onX Backcountry (paid)
 
 #### windloading
 
@@ -181,9 +182,9 @@ entire snowpack released as a unit
 - likelihood
 - size
 
-###  snow surface due to sun, wind, rain, or air temperature?
-
 ## Avalanche Types
+
+![[avi-fatality-type.jpg]]
 
 ### Loose
 
@@ -240,14 +241,14 @@ ALPTRUTh
 - T: Terrain Trap. Is there a terrain trap present, such as gullies, trees, cliffs or other features that increase the severity of being caught?
 - R: Rating. Is the rating of today’s avalanche report CONSIDERABLE, HIGH or EXTREME?
 - U: Unstable snow. Are there any signs of unstable snow such as cracking, collapsing, or whoomping?
-- TH: THaw instability. Has there been recent, rapid warming of the
+- TH: THaw instability. Has there been recent, rapid warming of the snow surface due to sun, wind, rain, or air temperature?
 
 ## Backcountry Planning
 
 - Munter Method
     - 1 travel unit = 
         - 100m vert
-        - 1km horizontal
+        - 1km horizontal (or route distance?)
     - standard rate
         - uphill 4 units / hr
         - downhill 10 units / hr
